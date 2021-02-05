@@ -115,11 +115,26 @@ class ScriptLevel < ApplicationRecord
         sl.levels = levels
       end
 
-      # Generate and store the seed_key, a unique identifier for this script level which should be stable across environments.
-      # We'll use this in our new, JSON-based seeding process.
-      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson])
+      # Generate and store the seed_key, a unique identifier for this script
+      # level which should be stable across environments. We'll use this in our
+      # new, JSON-based seeding process.
+      #
+      # Setting this seed_key also serves the purpose of preventing levels from
+      # being added to the same script twice via the seed process. If we decide
+      # to move away from seed_key, or if we start computing its value in a
+      # different way, we should consider adding a different check to ensure
+      # that levels within scripts are unique when seeding from .script files.
+      seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
       seed_key_data = script_level.seeding_key(seed_context, false)
       script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
+
+      # Preserve the level_keys property. If we detected an existing script
+      # level earlier, then the level keys have not changed and it is safe to
+      # use the existing level_keys. Otherwise these will be regenerated.
+      # These are not strictly needed, because level_keys are only used during
+      # seeding. However, this eliminates the problem where level_keys disappear
+      # from .script_json files after a script is saved.
+      properties[:level_keys] = script_level.get_level_keys(seed_context, true)
 
       script_level.assign_attributes(script_level_attributes)
       # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
@@ -371,8 +386,8 @@ class ScriptLevel < ApplicationRecord
     end
 
     summary = {
-      ids: ids,
-      activeId: oldest_active_level.id,
+      ids: ids.map(&:to_s),
+      activeId: oldest_active_level.id.to_s,
       position: position,
       kind: kind,
       icon: level.icon,
@@ -438,11 +453,11 @@ class ScriptLevel < ApplicationRecord
 
   def summarize_for_lesson_show
     summary = summarize
-    summary[:id] = id
+    summary[:id] = id.to_s
     summary[:levels] = levels.map do |level|
       {
         name: level.name,
-        id: level.id,
+        id: level.id.to_s,
         icon: level.icon,
         isConceptLevel: level.concept_level?
       }
@@ -452,11 +467,11 @@ class ScriptLevel < ApplicationRecord
 
   def summarize_for_lesson_edit
     summary = summarize(for_edit: true)
-    summary[:id] = id
+    summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
       {
-        id: level.id,
+        id: level.id.to_s,
         name: level.name,
         url: edit_level_path(id: level.id)
       }
@@ -475,6 +490,7 @@ class ScriptLevel < ApplicationRecord
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
+      new_level[:page_number] = page_index + 1
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index
@@ -486,7 +502,7 @@ class ScriptLevel < ApplicationRecord
   def summarize_as_bonus(user_id = nil)
     perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
-      id: id,
+      id: id.to_s,
       type: level.type,
       description: level.try(:bubble_choice_description),
       display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
@@ -507,13 +523,26 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
+        id: lesson_extra_user_level.id.to_s,
         bonus: true,
         user_id: student.id,
         status: SharedConstants::LEVEL_STATUS.perfect,
         passed: true
       }.merge!(lesson_extra_user_level.attributes)
+    elsif bonus_level_ids.count == 0
+      {
+        # Some lessons have a lesson extras option without any bonus levels. In
+        # these cases, they just display previous lesson challenges. These should
+        # be displayed as "perfect." Example level: /s/express-2020/stage/28/extras
+        id: '-1',
+        bonus: true,
+        user_id: student.id,
+        passed: true,
+        status: SharedConstants::LEVEL_STATUS.perfect
+      }
     else
       {
+        id: bonus_level_ids.first.to_s,
         bonus: true,
         user_id: student.id,
         passed: false,
@@ -550,6 +579,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     teacher_panel_summary = {
+      id: level.id.to_s,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
       paired: paired,
@@ -564,6 +594,7 @@ class ScriptLevel < ApplicationRecord
       bonus: bonus
     }
     if user_level
+      # note: level.id gets replaced with user_level.id here
       teacher_panel_summary.merge!(user_level.attributes)
     end
 
@@ -571,7 +602,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summary_for_feedback
-    lesson_num = lesson.lockable ? lesson.absolute_position : lesson.relative_position
+    lesson_num = lesson.numbered_lesson? ? lesson.relative_position : lesson.absolute_position
 
     {
       lessonName: lesson.name,
@@ -605,7 +636,8 @@ class ScriptLevel < ApplicationRecord
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
@@ -623,8 +655,16 @@ class ScriptLevel < ApplicationRecord
     my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
     raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{stage_id}" unless my_lesson
     lesson_seeding_key = my_lesson.seeding_key(seed_context)
-
     my_key.merge!(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+
+    # Activity Section must be optional for now, so that we can still compute
+    # the seed key for legacy scripts. Currently, this is necessary because we
+    # output .script_json files for all legacy scripts, even though those aren't
+    # going to be used for seeding yet.
+    my_activity_section = seed_context.activity_sections.select {|s| s.id == activity_section_id}.first
+
+    my_key['activity_section.key'] = my_activity_section.key if my_activity_section
+
     my_key.stringify_keys
   end
 

@@ -32,13 +32,14 @@ const styles = {
   error: {
     fontSize: 14,
     color: color.red,
-    padding: 15
+    padding: 15,
+    maxWidth: 800
   }
 };
 
 export default class SaveBar extends Component {
   static propTypes = {
-    lastSaved: PropTypes.string,
+    lastSaved: PropTypes.number,
     error: PropTypes.string,
     handleSave: PropTypes.func.isRequired,
     isSaving: PropTypes.bool

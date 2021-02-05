@@ -1,0 +1,27 @@
+name 'U4L10 CFU Functions Psuedocode_2021'
+title 'AP Pseudocode: Functions'
+description ''
+right 'School day'
+wrong 'Day off'
+wrong 'Day off   
+ School day'
+wrong 'School day   
+ Day off'
+
+markdown <<MARKDOWN
+## AP Pseudocode
+
+Procedures can be represented on the AP exam like so:
+
+|Block|Text|
+|---|---|
+|![](https://images.code.org/6dad57b48cb2ea069c20175e045734ea-image-1567711218929.png)|![](https://images.code.org/1b24ca8db747e1371d90f63bd10dd58b-image-1567711496918.png)|
+
+
+
+## Practice Question
+
+What will be displayed after this code segment is run?
+
+![](https://images.code.org/08e4ffae55a2fef1a62e963e0369dd87-image-1567714572167.png)
+MARKDOWN

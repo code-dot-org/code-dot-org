@@ -1,0 +1,14 @@
+name 'csp-9-exam1-dog-scatter-2_2021'
+editor_experiment ''
+wrong 'Most dogs breeds have a maximum weight of 100 lbs or more'
+wrong 'Most dog breeds have a maximum life span of 10 or fewer years'
+right 'All dog breeds that weigh less than 50 pounds have a maximum lifespan of more than 10 years'
+wrong 'No dog breeds that weigh more than 150 pounds are expected to live more than 10 years.'
+
+
+markdown <<MARKDOWN
+This question refers to the chart from the previous question.
+
+Which of the following conclusions is BEST supported by the scatter plot?
+
+MARKDOWN

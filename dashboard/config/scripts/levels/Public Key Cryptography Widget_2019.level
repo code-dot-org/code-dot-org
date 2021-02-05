@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skip_dialog": true,
-    "href": "public_key_cryptography/public_key_cryptography.html",
+    "href": "public_key_cryptography/public_key_cryptography.html.haml",
     "cryptography_widget_view": "2",
     "instructions_important": "false",
     "parent_level_id": 13506,

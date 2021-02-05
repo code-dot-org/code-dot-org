@@ -21,7 +21,9 @@ const styles = {
     background: color.cyan,
     borderTopLeftRadius: borderRadius,
     borderTopRightRadius: borderRadius,
-    padding: 10,
+    padding: 10
+  },
+  activityHeaderComponents: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
@@ -69,6 +71,7 @@ const styles = {
 class ActivityCard extends Component {
   static propTypes = {
     activity: activityShape.isRequired,
+    generateActivitySectionKey: PropTypes.func.isRequired,
     activitiesCount: PropTypes.number.isRequired,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
@@ -79,6 +82,7 @@ class ActivityCard extends Component {
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     handleCollapse: PropTypes.func.isRequired,
     collapsed: PropTypes.bool.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired,
 
     //redux
     addActivitySection: PropTypes.func.isRequired,
@@ -90,22 +94,8 @@ class ActivityCard extends Component {
   handleAddActivitySection = () => {
     this.props.addActivitySection(
       this.props.activity.position,
-      this.generateActivitySectionKey()
+      this.props.generateActivitySectionKey()
     );
-  };
-
-  generateActivitySectionKey = () => {
-    let activitySectionNumber = this.props.activity.activitySections.length + 1;
-    while (
-      this.props.activity.activitySections.some(
-        activitySection =>
-          activitySection.key === `activitySection-${activitySectionNumber}`
-      )
-    ) {
-      activitySectionNumber++;
-    }
-
-    return `activitySection-${activitySectionNumber}`;
   };
 
   handleMoveActivity = direction => {
@@ -146,7 +136,8 @@ class ActivityCard extends Component {
       setActivitySectionRef,
       updateTargetActivitySection,
       clearTargetActivitySection,
-      updateActivitySectionMetrics
+      updateActivitySectionMetrics,
+      hasLessonPlan
     } = this.props;
 
     return (
@@ -157,36 +148,43 @@ class ActivityCard extends Component {
             ...(this.props.collapsed && {marginBottom: 10})
           }}
         >
-          <div style={styles.inputsAndIcon}>
-            <FontAwesome
-              icon={this.props.collapsed ? 'expand' : 'compress'}
-              onClick={this.props.handleCollapse}
-            />
-            <label style={styles.labelAndInput}>
-              <span style={styles.label}>{`Activity:`}</span>
-              <input
-                value={activity.displayName}
-                style={{width: 200}}
-                onChange={this.handleChangeDisplayName}
-                className="uitest-activity-name-input"
+          {hasLessonPlan && (
+            <div style={styles.activityHeaderComponents}>
+              <div style={styles.inputsAndIcon}>
+                <FontAwesome
+                  icon={this.props.collapsed ? 'expand' : 'compress'}
+                  onClick={this.props.handleCollapse}
+                />
+
+                <label style={styles.labelAndInput}>
+                  <span style={styles.label}>{`Activity:`}</span>
+                  <input
+                    value={activity.displayName}
+                    style={{width: 200}}
+                    onChange={this.handleChangeDisplayName}
+                    className="uitest-activity-name-input"
+                  />
+                </label>
+                <label style={styles.labelAndInput}>
+                  <span style={styles.label}>{`Duration:`}</span>
+                  <input
+                    value={activity.duration}
+                    style={{width: 35}}
+                    onChange={this.handleChangeDuration}
+                    className="uitest-activity-duration-input"
+                  />
+                  <span style={{fontSize: 10}}>{'(mins)'}</span>
+                </label>
+              </div>
+              <OrderControls
+                name={activity.displayName || 'Unnamed Activity'}
+                move={this.handleMoveActivity}
+                remove={this.handleRemoveActivity}
+                item={this.props.activity}
+                itemType={'activity'}
               />
-            </label>
-            <label style={styles.labelAndInput}>
-              <span style={styles.label}>{`Duration:`}</span>
-              <input
-                value={activity.duration}
-                style={{width: 35}}
-                onChange={this.handleChangeDuration}
-                className="uitest-activity-duration-input"
-              />
-              <span style={{fontSize: 10}}>{'(mins)'}</span>
-            </label>
-          </div>
-          <OrderControls
-            name={activity.key || '(none)'}
-            move={this.handleMoveActivity}
-            remove={this.handleRemoveActivity}
-          />
+            </div>
+          )}
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
@@ -205,6 +203,7 @@ class ActivityCard extends Component {
               targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
               updateActivitySectionMetrics={updateActivitySectionMetrics}
+              hasLessonPlan={hasLessonPlan}
             />
           ))}
           <button

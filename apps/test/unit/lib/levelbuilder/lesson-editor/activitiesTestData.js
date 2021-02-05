@@ -9,8 +9,8 @@ export const sampleActivities = [
         key: 'section-3',
         position: 1,
         displayName: 'Making programs',
+        duration: 10,
         remarks: true,
-        slide: false,
         scriptLevels: [],
         text: 'Simple text',
         tips: []
@@ -19,8 +19,8 @@ export const sampleActivities = [
         key: 'section-1',
         position: 2,
         displayName: '',
+        duration: 0,
         remarks: false,
-        slide: true,
         scriptLevels: [],
         text: 'Details about this section',
         tips: [
@@ -40,17 +40,18 @@ export const sampleActivities = [
         tips: [],
         key: 'progression-1',
         position: 3,
-        displayName: 'Programming Progression',
+        displayName: '',
+        duration: 0,
         remarks: false,
-        slide: false,
         text: 'This progression teaches you programming!',
+        progressionName: 'Programming Progression Name',
         scriptLevels: [
           {
-            id: 10,
+            id: '10',
             levels: [
               {
                 name: 'Level 1',
-                id: 1,
+                id: '1',
                 url: 'levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
@@ -63,7 +64,7 @@ export const sampleActivities = [
             ],
             position: 1,
             levelNumber: 1,
-            activeId: 1,
+            activeId: '1',
             kind: 'puzzle',
             bonus: false,
             assessment: false,
@@ -71,11 +72,11 @@ export const sampleActivities = [
             expand: false
           },
           {
-            id: 11,
+            id: '11',
             levels: [
               {
                 name: 'Level 2',
-                id: 2,
+                id: '2',
                 url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
@@ -87,7 +88,7 @@ export const sampleActivities = [
               },
               {
                 name: 'Level 3',
-                id: 3,
+                id: '3',
                 url: '/levels/598/edit',
                 icon: 'fa-desktop',
                 isUnplugged: false,
@@ -100,7 +101,7 @@ export const sampleActivities = [
             ],
             position: 2,
             levelNumber: 2,
-            activeId: 2,
+            activeId: '2',
             kind: 'assessment',
             bonus: false,
             assessment: true,
@@ -113,11 +114,50 @@ export const sampleActivities = [
   }
 ];
 
-export const levelKeyList = {
-  1: 'Level 1',
-  2: 'Level 2 - 1',
-  3: 'Level 2 - 2',
-  4: 'blockly:Studio:playlab_1'
+export const sampleActivityForLessonWithoutLessonPlan = {
+  key: 'activity-1',
+  displayName: '',
+  position: 1,
+  duration: 0,
+  activitySections: [
+    {
+      tips: [],
+      key: 'progression-1',
+      position: 1,
+      displayName: '',
+      duration: 0,
+      remarks: false,
+      text: '',
+      progressionName: 'Programming Progression Name',
+      scriptLevels: [
+        {
+          id: '10',
+          levels: [
+            {
+              name: 'LevelGroup 1',
+              id: '1',
+              url: 'levels/598/edit',
+              icon: 'fa-desktop',
+              isUnplugged: false,
+              isConceptLevel: false,
+              skin: null,
+              videoKey: null,
+              concepts: '',
+              conceptDifficulty: ''
+            }
+          ],
+          position: 1,
+          levelNumber: 1,
+          activeId: '1',
+          kind: 'puzzle',
+          bonus: false,
+          assessment: true,
+          challenge: false,
+          expand: false
+        }
+      ]
+    }
+  ]
 };
 
 export const searchOptions = {

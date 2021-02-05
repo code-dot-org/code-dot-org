@@ -45,11 +45,12 @@ const studentCode = {
 
 const levels = [];
 for (let i = 0; i < 20; i++) {
+  const id = (1818 + i).toString();
   levels.push({
-    activeId: 1818 + i,
+    activeId: id,
     freePlay: false,
     icon: null,
-    ids: [1818 + i],
+    ids: [id],
     is_concept_level: false,
     kind: 'puzzle',
     position: i + 1,

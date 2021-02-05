@@ -5,16 +5,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
   constructor(workspace, prototypeName, opt_id) {
     super(workspace, prototypeName, ++Blockly.uidCounter_); // Use counter instead of randomly generated IDs
 
-    /* *
-     * Workaround to make block id available on SVG in IE.
-     * I opened https://github.com/google/blockly/issues/4419 so hopefully we can remove this with the next
-     * Blockly release if they fix the issue.
-     * In the meantime, the workaround is to call svgGroup_.setAttribute(), instead of setting
-     * svgGroup_.dataset['id'] directly.
-     */
-    if (this.svgGroup_.dataset === undefined) {
-      this.svgGroup_.setAttribute('data-id', this.id);
-    }
     this.canDisconnectFromParent_ = true;
   }
 

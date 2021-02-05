@@ -25,7 +25,22 @@ describe('ScriptEditor', () => {
 
     registerReducers({...reducers, isRtl});
     store = getStore();
-    store.dispatch(init([], {}));
+    store.dispatch(
+      init(
+        [
+          {
+            bigQuestions: '* One↵* two',
+            description: 'laklkldkla"',
+            displayName: 'Content',
+            key: 'lesson group',
+            lessons: [],
+            position: 1,
+            userFacing: true
+          }
+        ],
+        {}
+      )
+    );
 
     defaultProps = {
       id: 1,
@@ -34,7 +49,9 @@ describe('ScriptEditor', () => {
       i18nData: {
         stageDescriptions: [],
         description:
-          '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+          '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
+        studentDescription:
+          '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       },
       isLevelbuilder: true,
       locales: [],
@@ -46,8 +63,9 @@ describe('ScriptEditor', () => {
       initialTeacherResources: [],
       initialProjectSharing: false,
       initialLocales: [],
+      isMigrated: false,
       initialLessonLevelData:
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n"
+        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };
   });
 
@@ -66,6 +84,34 @@ describe('ScriptEditor', () => {
   };
 
   describe('Script Editor', () => {
+    it('uses old script editor for non migrated script', () => {
+      const wrapper = createWrapper({initialHidden: false});
+
+      expect(wrapper.find('input').length).to.equal(23);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('textarea').length).to.equal(3);
+      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
+      expect(wrapper.find('SaveBar').length).to.equal(1);
+
+      expect(wrapper.find('UnitCard').length).to.equal(0);
+      expect(wrapper.find('#script_text').length).to.equal(1);
+    });
+
+    it('uses new script editor for migrated script', () => {
+      const wrapper = createWrapper({initialHidden: false, isMigrated: true});
+
+      expect(wrapper.find('input').length).to.equal(23);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('textarea').length).to.equal(4);
+      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
+      expect(wrapper.find('SaveBar').length).to.equal(1);
+
+      expect(wrapper.find('UnitCard').length).to.equal(1);
+      expect(wrapper.find('#script_text').length).to.equal(0);
+    });
+
     describe('Teacher Resources', () => {
       it('adds empty resources if passed none', () => {
         const wrapper = createWrapper({});
@@ -111,27 +157,26 @@ describe('ScriptEditor', () => {
       });
     });
 
-    it('has the correct number of each editor field type', () => {
-      const wrapper = createWrapper({
-        initialHidden: false
-      });
-      expect(wrapper.find('input').length).to.equal(23);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
-      expect(wrapper.find('textarea').length).to.equal(2);
-      expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
-      expect(wrapper.find('SaveBar').length).to.equal(1);
-    });
-
     it('has correct markdown for preview of unit description', () => {
       const wrapper = createWrapper({
         initialHidden: false
       });
-      expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(1);
+      expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
       expect(
-        wrapper.find('TextareaWithMarkdownPreview').prop('markdown')
+        wrapper
+          .find('TextareaWithMarkdownPreview')
+          .at(0)
+          .prop('markdown')
       ).to.equal(
-        '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+        '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+      );
+      expect(
+        wrapper
+          .find('TextareaWithMarkdownPreview')
+          .at(1)
+          .prop('markdown')
+      ).to.equal(
+        '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
     });
 
@@ -157,12 +202,20 @@ describe('ScriptEditor', () => {
   });
 
   describe('Saving Script Editor', () => {
+    let clock;
+
+    afterEach(() => {
+      if (clock) {
+        clock.restore();
+        clock = undefined;
+      }
+    });
+
     it('can save and keep editing', () => {
       const wrapper = createWrapper({});
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
         scriptPath: '/s/test-script'
       };
       let server = sinon.fakeServer.create();
@@ -183,13 +236,15 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(scriptEditor.state().isSaving).to.equal(true);
 
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      const expectedLastSaved = Date.now();
       server.respond();
+      clock.tick(50);
+
       scriptEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
       expect(scriptEditor.state().isSaving).to.equal(false);
-      expect(scriptEditor.state().lastSaved).to.equal(
-        '2020-11-06T21:33:32.000Z'
-      );
+      expect(scriptEditor.state().lastSaved).to.equal(expectedLastSaved);
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
@@ -236,7 +291,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
         scriptPath: '/s/test-script'
       };
       let server = sinon.fakeServer.create();

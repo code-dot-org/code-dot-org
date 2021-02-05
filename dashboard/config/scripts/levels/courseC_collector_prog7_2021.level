@@ -1,0 +1,195 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:23:38.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "skin": "collector",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "2",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "short_instructions": "Use blocks from the toolbox to collect all of the treasure.",
+    "long_instructions": "**Challenge:** *\"What is going on here?\"*\r\n\r\nEven if we put these in the right order, there will still be some missing.  \r\nUse blocks from the toolbox to collect all of the treasure.",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_collector_prog7_1\",\r\n  \"callout_text\": \"You can take more blocks from the toolbox if you need them!\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": -50,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "ideal": "16",
+    "instructions_important": "false",
+    "min_collected": "5",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There is already a lot of great code in the workspace.  You don't need to delete any of it to solve this puzzle.  \",\"hint_id\":\"courseC_collector_prog7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3b25dd2636eec22b658510ea54bd64b3/courseC_collector_prog7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.\",\"hint_id\":\"courseC_collector_prog7_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d6cd6bb3b9c33243624fd62c2a34775b/courseC_collector_prog7.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Having trouble seeing a route to collect all of the treasure?  Try this path!\",\"hint_id\":\"courseC_collector_prog7_c\",\"hint_type\":\"general\",\"hint_path\":\"[[5,1],[5,4],[1,4],[1,5]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4450d5aa5d254537d2f21acf3911b00/courseC_collector_prog7.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
+    "parent_level_id": 21176,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "P7 Some blocks already attached, a little in the wrong order, need to pull more from the toolbar (Challenge) [length or something to create desire for loops]\r\n",
+  "audit_log": "[{\"changed_at\":\"2017-11-09 03:26:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move" deletable="false">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="maze_move" deletable="false">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="collector_collect" deletable="false">
+                      <next>
+                        <block type="maze_turn" deletable="false">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="maze_move" deletable="false">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="collector_collect" deletable="false">
+                                  <next>
+                                    <block type="maze_move" deletable="false">
+                                      <title name="DIR">moveForward</title>
+                                      <next>
+                                        <block type="collector_collect" deletable="false">
+                                          <next>
+                                            <block type="maze_move" deletable="false">
+                                              <title name="DIR">moveForward</title>
+                                              <next>
+                                                <block type="maze_turn" deletable="false">
+                                                  <title name="DIR">turnRight</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+        <block type="collector_collect"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="collector_collect">
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnRight</title>
+                                      <next>
+                                        <block type="maze_move">
+                                          <title name="DIR">moveForward</title>
+                                          <next>
+                                            <block type="maze_move">
+                                              <title name="DIR">moveForward</title>
+                                              <next>
+                                                <block type="collector_collect">
+                                                  <next>
+                                                    <block type="maze_move">
+                                                      <title name="DIR">moveForward</title>
+                                                      <next>
+                                                        <block type="maze_move">
+                                                          <title name="DIR">moveForward</title>
+                                                          <next>
+                                                            <block type="maze_turn">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect"/>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

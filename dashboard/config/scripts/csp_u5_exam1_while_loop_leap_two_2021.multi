@@ -1,0 +1,28 @@
+name 'csp-u5-exam1-while-loop-leap-two_2021'
+editor_experiment ''
+wrong '0  
+2  
+4  
+6'
+wrong '0  
+2  
+4'
+wrong '2  
+4  
+6'
+right 'The program will result in an infinite loop'
+
+
+
+markdown <<MARKDOWN
+What will be displayed in the console when the following program runs?
+
+```
+var count = 0
+while (count != 5){
+  console.log(count);
+  count = count + 2;
+}
+```
+
+MARKDOWN

@@ -18,15 +18,17 @@ import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 const styles = {
   frontPage: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginTop: 40
   },
   left: {
-    width: '60%'
+    width: '60%',
+    paddingRight: 20
   },
   right: {
     width: '40%',
-    padding: 10,
-    borderLeft: 'solid 1px black'
+    padding: '0px 10px 10px 20px',
+    borderLeft: 'solid 1px #333'
   },
   header: {
     margin: '10px 0px',
@@ -34,8 +36,20 @@ const styles = {
     justifyContent: 'space-between'
   },
   navLink: {
-    fontSize: 18,
-    color: color.purple
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
+  },
+  copyResourceWarningArea: {
+    color: '#8a6d3b',
+    backgroundColor: '#fcf8e3',
+    border: '2px solid #f5e79e',
+    borderRadius: 4,
+    padding: '10px 10px 0px 10px'
+  },
+  titleNoTopMargin: {
+    marginTop: 0
   }
 };
 
@@ -116,30 +130,40 @@ class LessonOverview extends Component {
           />
         )}
         <h1>
-          {lesson.lockable
-            ? lesson.displayName
-            : i18n.lessonNumbered({
-                lessonNumber: lesson.position,
-                lessonName: lesson.displayName
-              })}
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.displayName
+          })}
         </h1>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
-            <h2>{i18n.overview()}</h2>
-            <SafeMarkdown markdown={lesson.overview} />
-
-            <h2>{i18n.purpose()}</h2>
-            <SafeMarkdown markdown={lesson.purpose} />
-
+            {lesson.overview && (
+              <div>
+                <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
+                <SafeMarkdown markdown={lesson.overview} />
+              </div>
+            )}
+            {lesson.purpose && (
+              <div>
+                <h2>{i18n.purpose()}</h2>
+                <SafeMarkdown markdown={lesson.purpose} />
+              </div>
+            )}
+            {lesson.assessmentOpportunities && (
+              <div>
+                <h2>{i18n.assessmentOpportunities()}</h2>
+                <SafeMarkdown markdown={lesson.assessmentOpportunities} />
+              </div>
+            )}
             <h2>{i18n.agenda()}</h2>
             <LessonAgenda activities={this.props.activities} />
           </div>
           <div style={styles.right}>
             {lesson.objectives.length > 0 && (
               <div>
-                <h2>{i18n.objectives()}</h2>
-                <h3>{i18n.objectivesSubheading()}</h3>
+                <h2 style={styles.titleNoTopMargin}>{i18n.objectives()}</h2>
+                <h5>{i18n.objectivesSubheading()}</h5>
                 <ul>
                   {lesson.objectives.map(objective => (
                     <li key={objective.id}>
@@ -149,29 +173,50 @@ class LessonOverview extends Component {
                 </ul>
               </div>
             )}
-            <h2>{i18n.preparation()}</h2>
-            <SafeMarkdown markdown={lesson.preparation} />
+            {lesson.preparation && (
+              <div>
+                <h2>{i18n.preparation()}</h2>
+                <SafeMarkdown markdown={lesson.preparation} />
+              </div>
+            )}
             {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
                 <h2>{i18n.links()}</h2>
+                <div style={styles.copyResourceWarningArea}>
+                  <SafeMarkdown markdown={i18n.copyResourcesWarning()} />
+                </div>
                 {lesson.resources['Teacher'] && (
                   <div>
-                    <h3>{i18n.forTheTeachers()}</h3>
+                    <h5>{i18n.forTheTeachers()}</h5>
                     {this.compileResourceList('Teacher')}
                   </div>
                 )}
                 {lesson.resources['Student'] && (
                   <div>
-                    <h3>{i18n.forTheStudents()}</h3>
+                    <h5>{i18n.forTheStudents()}</h5>
                     {this.compileResourceList('Student')}
                   </div>
                 )}
                 {lesson.resources['All'] && (
                   <div>
-                    <h3>{i18n.forAll()}</h3>
+                    <h5>{i18n.forAll()}</h5>
                     {this.compileResourceList('All')}
                   </div>
                 )}
+              </div>
+            )}
+            {lesson.vocabularies.length > 0 && (
+              <div>
+                <h2 style={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
+                <ul>
+                  {lesson.vocabularies.map(vocab => (
+                    <li key={vocab.key}>
+                      <InlineMarkdown
+                        markdown={`**${vocab.word}** - ${vocab.definition}`}
+                      />
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>

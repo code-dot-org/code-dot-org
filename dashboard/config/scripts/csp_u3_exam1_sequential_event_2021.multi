@@ -1,0 +1,21 @@
+name 'csp-u3-exam1-sequential-event_2021'
+height 'auto'
+
+question ‘Which of the following BEST describes the differences between sequential and event-driven programming?’
+
+wrong ‘In sequential programming commands run one at a time. In event-driven programming all commands run at the same time.’
+
+wrong ‘In sequential programming commands run faster than in event-driven programming.’
+
+wrong ‘In sequential programming each command is run many times in sequence. In event-driven programming all commands are run a single time as an event.’
+
+right ‘In sequential programming commands run in the order they are written. In event-driven programming some commands run in response to user interactions or other events.’
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

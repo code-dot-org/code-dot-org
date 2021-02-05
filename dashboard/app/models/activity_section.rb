@@ -22,23 +22,24 @@
 #
 # @attr [String] name - The user-visible heading of this section of the activity
 # @attr [boolean] remarks - Whether to show the remarks icon
-# @attr [boolean] slide - Whether to show the slides icon
 # @attr [String] description - Text describing the activity
 # @attr [Array<Hash>] tips - An array of instructional tips to display
 class ActivitySection < ApplicationRecord
   include SerializedProperties
 
   belongs_to :lesson_activity
+  has_one :script, through: :lesson_activity
   has_one :lesson, through: :lesson_activity
 
   has_many :script_levels, -> {order(:activity_section_position)}, dependent: :destroy
 
   serialized_attrs %w(
     name
+    duration
     remarks
-    slide
     description
     tips
+    progression_name
   )
 
   def summarize
@@ -46,10 +47,11 @@ class ActivitySection < ApplicationRecord
       id: id,
       position: position,
       name: name,
+      duration: duration,
       remarks: remarks,
-      slide: slide,
       description: description,
       tips: tips,
+      progressionName: progression_name
     }
   end
 
@@ -75,15 +77,33 @@ class ActivitySection < ApplicationRecord
         # position and chapter will be updated based on activity_section_position later
         activity_section_position: sl_data['activitySectionPosition'] || 0,
         # Script levels containing anonymous levels must be assessments.
-        assessment: !!sl_data['assessment'] || sl.anonymous?,
-        bonus: !!sl_data['bonus'],
+        assessment: sl_data['assessment'] || sl.anonymous?,
+        bonus: sl_data['bonus'],
         challenge: !!sl_data['challenge'],
-        progression: name.present? && name
+        progression: progression_name.present? && progression_name
       )
       # TODO(dave): check and update script level variants
       sl.update_levels(sl_data['levels'] || [])
       sl
     end
+  end
+
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context)
+    my_lesson_activity = seed_context.lesson_activities.select {|la| la.id == lesson_activity_id}.first
+    raise "No LessonActivity found for #{self.class}: #{my_key}, LessonActivity ID: #{lesson_activity_id}" unless my_lesson_activity
+    {
+      'activity_section.key': key,
+      'lesson_activity.key': my_lesson_activity.key
+    }.stringify_keys
   end
 
   private

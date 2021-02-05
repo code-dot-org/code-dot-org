@@ -1,6 +1,6 @@
 hidden false
 
-lesson 'Infinity', display_name: 'Infinity'
+lesson 'Infinity', display_name: 'Infinity', has_lesson_plan: false
 level 'Infinity_move_right'
 level 'Infinity_say'
 level 'Infinity_move_directions'

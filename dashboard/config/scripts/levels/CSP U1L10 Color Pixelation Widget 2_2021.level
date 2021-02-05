@@ -1,0 +1,27 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-12-04T21:59:13.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "This time, we'll use 2 bits for each color channel, which means 6 bits per pixel! We've done all the shades of red for you in the first row. You should follow a similar pattern to do the shades of green and blue in the last two rows. ",
+    "long_instructions": "# Color Pixelation: Task 2\r\n**Directions:**\r\nThis time, we'll use 2 bits for each color channel, which means 6 bits per pixel! We've done all the shades of red for you in the first row. You should follow a similar pattern to do the shades of green and blue in the last two rows. ",
+    "version": "3",
+    "data": "\r\n000001000000001100000110000000010000100000110000",
+    "href": "pixelation/pixelation.html",
+    "video_key": "csp_pixelation_color_2",
+    "skip_dialog": true,
+    "parent_level_id": 18943,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-05 00:46:12 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-08-02 03:24:12 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-02 03:25:04 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Pixelation>

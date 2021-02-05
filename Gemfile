@@ -153,7 +153,7 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 2.2.0'
+gem 'cancancan', '~> 3.0.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 1.6.0'
 
@@ -256,7 +256,7 @@ gem 'aws-sdk-s3'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
-group :development, :staging do
+group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
   gem 'rubocop', '~> 0.52', require: false
   gem 'scss_lint', require: false

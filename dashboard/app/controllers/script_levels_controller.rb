@@ -228,7 +228,7 @@ class ScriptLevelsController < ApplicationController
     return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
-    @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
+    @stage = @script.lesson_by_relative_position(params[:stage_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
@@ -244,7 +244,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
+    @stage = Script.get_from_cache(params[:script_id]).lesson_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
       next_stage_number: @stage.next_level_number_for_lesson_extras(current_user),
@@ -267,9 +267,9 @@ class ScriptLevelsController < ApplicationController
 
     stage =
       if params[:stage_position]
-        script.stage_by_relative_position(params[:stage_position])
+        script.lesson_by_relative_position(params[:stage_position])
       else
-        script.stage_by_relative_position(params[:lockable_stage_position], true)
+        script.lesson_by_relative_position(params[:lockable_stage_position], true)
       end
 
     render json: stage.summary_for_lesson_plans
@@ -373,7 +373,7 @@ class ScriptLevelsController < ApplicationController
     return if params[:user_id].blank?
 
     if current_user.nil?
-      render html: 'Teacher view is not available for this puzzle', layout: true
+      render html: I18n.t('teacher.student_code_view_diabled'), layout: true
       return
     end
 
@@ -483,7 +483,9 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      useGoogleBlockly: params[:blocklyVersion] == "Google"
+      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      azure_speech_service_voices: azure_speech_service_options[:voices],
+      authenticity_token: form_authenticity_token
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 

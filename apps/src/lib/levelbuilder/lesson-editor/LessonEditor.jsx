@@ -2,21 +2,26 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
 import {
   relatedLessonShape,
   activityShape,
-  resourceShape
+  resourceShape,
+  vocabularyShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
-import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {
+  getSerializedActivities,
+  mapActivityDataForEditor,
+  initActivities
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
@@ -39,27 +44,25 @@ const styles = {
   dropdown: {
     margin: '0 6px',
     width: 300
+  },
+  warning: {
+    fontSize: 20,
+    fontStyle: 'italic',
+    padding: 10
   }
 };
 
 class LessonEditor extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
-    initialDisplayName: PropTypes.string.isRequired,
-    initialOverview: PropTypes.string,
-    initialStudentOverview: PropTypes.string,
-    initialUnplugged: PropTypes.bool,
-    initialLockable: PropTypes.bool,
-    initialAssessment: PropTypes.bool,
-    initialCreativeCommonsLicense: PropTypes.string,
-    initialPurpose: PropTypes.string,
-    initialPreparation: PropTypes.string,
-    initialAnnouncements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
+    initialLessonData: PropTypes.object,
+
+    // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-    courseVersionId: PropTypes.number
+    vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
+    initActivities: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -69,17 +72,22 @@ class LessonEditor extends Component {
       isSaving: false,
       error: null,
       lastSaved: null,
-      displayName: this.props.initialDisplayName,
-      overview: this.props.initialOverview,
-      studentOverview: this.props.initialStudentOverview,
-      unplugged: this.props.initialUnplugged,
-      lockable: this.props.initialLockable,
-      creativeCommonsLicense: this.props.initialCreativeCommonsLicense,
-      assessment: this.props.initialAssessment,
-      purpose: this.props.initialPurpose,
-      preparation: this.props.initialPreparation,
-      announcements: this.props.initialAnnouncements,
-      objectives: this.props.initialObjectives
+      displayName: this.props.initialLessonData.name,
+      overview: this.props.initialLessonData.overview || '',
+      studentOverview: this.props.initialLessonData.studentOverview || '',
+      assessmentOpportunities:
+        this.props.initialLessonData.assessmentOpportunities || '',
+      unplugged: this.props.initialLessonData.unplugged,
+      lockable: this.props.initialLessonData.lockable,
+      hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
+      creativeCommonsLicense: this.props.initialLessonData
+        .creativeCommonsLicense,
+      assessment: this.props.initialLessonData.assessment,
+      purpose: this.props.initialLessonData.purpose || '',
+      preparation: this.props.initialLessonData.preparation || '',
+      announcements: this.props.initialLessonData.announcements || [],
+      objectives: this.props.initialObjectives,
+      originalLessonData: this.props.initialLessonData
     };
   }
 
@@ -89,32 +97,54 @@ class LessonEditor extends Component {
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     $.ajax({
-      url: `/lessons/${this.props.id}`,
+      url: `/lessons/${this.state.originalLessonData.id}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
         name: this.state.displayName,
         lockable: this.state.lockable,
+        hasLessonPlan: this.state.hasLessonPlan,
         creativeCommonsLicense: this.state.creativeCommonsLicense,
         assessment: this.state.assessment,
         unplugged: this.state.unplugged,
         overview: this.state.overview,
         studentOverview: this.state.studentOverview,
+        assessmentOpportunities: this.state.assessmentOpportunities,
         purpose: this.state.purpose,
         preparation: this.state.preparation,
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
-        announcements: JSON.stringify(this.state.announcements)
+        vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
+        announcements: JSON.stringify(this.state.announcements),
+        originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
     })
       .done(data => {
-        console.log(data);
         if (shouldCloseAfterSave) {
-          navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
+          if (data.hasLessonPlan) {
+            navigateToHref(
+              `${this.state.originalLessonData.lessonPath}${
+                window.location.search
+              }`
+            );
+          } else {
+            navigateToHref(
+              `${this.state.originalLessonData.scriptPath}${
+                window.location.search
+              }`
+            );
+          }
         } else {
-          this.setState({lastSaved: data.updated_at, isSaving: false});
+          const activities = mapActivityDataForEditor(data.activities);
+
+          this.props.initActivities(activities);
+          this.setState({
+            lastSaved: Date.now(),
+            isSaving: false,
+            originalLessonData: data
+          });
         }
       })
       .fail(error => {
@@ -135,8 +165,10 @@ class LessonEditor extends Component {
       displayName,
       overview,
       studentOverview,
+      assessmentOpportunities,
       unplugged,
       lockable,
+      hasLessonPlan,
       creativeCommonsLicense,
       assessment,
       purpose,
@@ -158,24 +190,57 @@ class LessonEditor extends Component {
 
         <RelatedLessons relatedLessons={relatedLessons} />
 
+        {!hasLessonPlan && (
+          <div style={styles.warning}>
+            All lesson plan fields are hidden because "Has Lesson Plan" is NOT
+            checked. If you would like to edit the lesson plan for this lesson
+            please go to General Lesson Settings and check "Has Lesson Plan".
+          </div>
+        )}
+
         <CollapsibleEditorSection
           title="General Lesson Settings"
-          collapsed={true}
+          collapsed={hasLessonPlan}
         >
           <label>
             Lockable
             <input
               type="checkbox"
               checked={lockable}
+              disabled={this.props.initialLessonData.scriptIsVisible}
               style={styles.checkbox}
               onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
-              <p>
-                Check this box if this lesson should be locked for students. If
-                checked, teachers will be able to unlock the lesson for their
-                students.
-              </p>
+              {this.props.initialLessonData.scriptIsVisible ? (
+                <p>Can't update lockable for visible script.</p>
+              ) : (
+                <p>
+                  Check this box if this lesson should be locked for students.
+                  If checked, teachers will be able to unlock the lesson for
+                  their students.
+                </p>
+              )}
+            </HelpTip>
+          </label>
+          <label>
+            Has Lesson Plan
+            <input
+              type="checkbox"
+              checked={hasLessonPlan}
+              disabled={this.props.initialLessonData.scriptIsVisible}
+              style={styles.checkbox}
+              onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
+            />
+            <HelpTip>
+              {this.props.initialLessonData.scriptIsVisible ? (
+                <p>Can't update has lesson plan for visible script.</p>
+              ) : (
+                <p>
+                  Check this box if this lesson should have a lesson plan for
+                  teachers associated with it.
+                </p>
+              )}
             </HelpTip>
           </label>
           <label>
@@ -228,14 +293,6 @@ class LessonEditor extends Component {
             </HelpTip>
           </label>
         </CollapsibleEditorSection>
-        <CollapsibleEditorSection title="Announcements" collapsed={true}>
-          <AnnouncementsEditor
-            announcements={announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
-        </CollapsibleEditorSection>
-
         <CollapsibleEditorSection
           title="Overviews"
           collapsed={true}
@@ -261,49 +318,108 @@ class LessonEditor extends Component {
             }
           />
         </CollapsibleEditorSection>
+        {hasLessonPlan && (
+          <div>
+            <CollapsibleEditorSection title="Announcements" collapsed={true}>
+              <AnnouncementsEditor
+                announcements={announcements}
+                inputStyle={styles.input}
+                updateAnnouncements={this.handleUpdateAnnouncements}
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Purpose and Prep"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <TextareaWithMarkdownPreview
-            markdown={purpose}
-            label={'Purpose'}
-            inputRows={5}
-            handleMarkdownChange={e => this.setState({purpose: e.target.value})}
-          />
-          <TextareaWithMarkdownPreview
-            markdown={preparation}
-            label={'Preparation'}
-            inputRows={5}
-            handleMarkdownChange={e =>
-              this.setState({preparation: e.target.value})
-            }
-          />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Purpose and Prep"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <TextareaWithMarkdownPreview
+                markdown={purpose}
+                label={'Purpose'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({purpose: e.target.value})
+                }
+              />
+              <TextareaWithMarkdownPreview
+                markdown={preparation}
+                label={'Preparation'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({preparation: e.target.value})
+                }
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Resources"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <ResourcesEditor courseVersionId={this.props.courseVersionId} />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Assessment Opportunities"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <TextareaWithMarkdownPreview
+                markdown={assessmentOpportunities}
+                label={'Assessment Opportunities'}
+                inputRows={5}
+                handleMarkdownChange={e =>
+                  this.setState({assessmentOpportunities: e.target.value})
+                }
+              />
+            </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Objectives"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <ObjectivesEditor
-            objectives={this.state.objectives}
-            updateObjectives={this.handleUpdateObjectives}
-          />
-        </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Resources"
+              collapsed={true}
+              fullWidth={true}
+            >
+              {this.state.originalLessonData.courseVersionId ? (
+                <ResourcesEditor
+                  courseVersionId={
+                    this.state.originalLessonData.courseVersionId
+                  }
+                />
+              ) : (
+                <h4>
+                  A unit must be in a course version, i.e. a unit must belong to
+                  a course or have 'Is a Standalone Course' checked, in order to
+                  add resources.
+                </h4>
+              )}
+            </CollapsibleEditorSection>
 
+            <CollapsibleEditorSection
+              title="Vocabulary"
+              collapsed={true}
+              fullWidth={true}
+            >
+              {this.state.originalLessonData.courseVersionId ? (
+                <VocabulariesEditor
+                  courseVersionId={
+                    this.state.originalLessonData.courseVersionId
+                  }
+                />
+              ) : (
+                <h4>
+                  A unit must be in a course version, i.e. a unit must belong to
+                  a course or have 'Is a Standalone Course' checked, in order to
+                  add vocabulary.
+                </h4>
+              )}
+            </CollapsibleEditorSection>
+
+            <CollapsibleEditorSection
+              title="Objectives"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <ObjectivesEditor
+                objectives={this.state.objectives}
+                updateObjectives={this.handleUpdateObjectives}
+              />
+            </CollapsibleEditorSection>
+          </div>
+        )}
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor />
+          <ActivitiesEditor hasLessonPlan={hasLessonPlan} />
         </CollapsibleEditorSection>
 
         <SaveBar
@@ -319,7 +435,13 @@ class LessonEditor extends Component {
 
 export const UnconnectedLessonEditor = LessonEditor;
 
-export default connect(state => ({
-  activities: state.activities,
-  resources: state.resources
-}))(LessonEditor);
+export default connect(
+  state => ({
+    activities: state.activities,
+    resources: state.resources,
+    vocabularies: state.vocabularies
+  }),
+  {
+    initActivities
+  }
+)(LessonEditor);

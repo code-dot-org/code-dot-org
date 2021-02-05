@@ -25,11 +25,6 @@ class LevelsHelperTest < ActionView::TestCase
     stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
-  teardown do
-    # Some tests access and store data in the cache, so clear between tests to avoid state leakage
-    Rails.cache.clear
-  end
-
   test "blockly_options refuses to generate options for non-blockly levels" do
     @level = create(:match)
     assert_raises(ArgumentError) do
@@ -332,111 +327,6 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not app_options[:level]['submittable']
   end
 
-  test 'get_azure_speech_service_token returns token on success' do
-    region = 'westus'
-    api_key = 'abc123'
-    mock_token = 'a1b2c3d4'
-    stub_request(:post, "https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
-      with(headers: {'Ocp-Apim-Subscription-Key' => api_key}).
-      to_return(status: 200, body: mock_token)
-    assert_equal mock_token, get_azure_speech_service_token(region, api_key, 1)
-  end
-
-  test 'get_azure_speech_service_token returns nil on error' do
-    region = 'westus'
-    api_key = 'abc123'
-    stub_request(:post, "https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
-      with(headers: {'Ocp-Apim-Subscription-Key' => api_key}).
-      to_raise(ArgumentError)
-    Honeybadger.expects(:notify).once
-    assert_nil get_azure_speech_service_token(region, api_key, 1)
-  end
-
-  test 'get_azure_speech_service_voices returns voices array on success' do
-    region = 'eastus'
-    mock_token = 'a1b2c3d4'
-    voices_url = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list"
-
-    # Empty response
-    stub_request(:get, voices_url).
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_return(status: 200, body: '')
-    assert_equal [], get_azure_speech_service_voices(region, mock_token, 1)
-
-    # Voices are cached, so delete cache key
-    Rails.cache.delete("azure_speech_service/voices")
-
-    # Voices list response
-    mock_voices = [{'Locale': 'en-US', 'Gender': 'female'}].to_json
-    stub_request(:get, voices_url).
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_return(status: 200, body: mock_voices)
-    assert_equal JSON.parse(mock_voices), get_azure_speech_service_voices(region, mock_token, 1)
-
-    # Make sure voices are cached
-    stub_request(:get, voices_url).
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_raise(ArgumentError)
-    assert_equal JSON.parse(mock_voices), get_azure_speech_service_voices(region, mock_token, 1)
-  end
-
-  test 'get_azure_speech_service_voices returns nil on error' do
-    region = 'eastus'
-    mock_token = 'a1b2c3'
-    stub_request(:get, "https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list").
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_raise(ArgumentError)
-    assert_nil get_azure_speech_service_voices(region, mock_token, 1)
-  end
-
-  test 'azure_speech_service_options returns options object on success' do
-    @level.game.expects(:use_azure_speech_service?).returns(true)
-    CDO.stubs(:azure_speech_service_region).returns('westus')
-    CDO.stubs(:azure_speech_service_key).returns('abc123')
-    stubs(:get_azure_speech_service_token).returns('a1b2c3')
-    Languages.expects(:get_native_name_by_locale).with('en-US').returns([{native_name_s: 'English'}]).twice
-    Languages.expects(:get_native_name_by_locale).with('it-IT').returns([{native_name_s: 'Italian'}]).once
-    mock_voices = [
-      {'Locale' => 'en-US', 'Gender' => 'Female', 'ShortName' => 'Alice'},
-      {'Locale' => 'en-US', 'Gender' => 'Male', 'ShortName' => 'Bob'},
-      {'Locale' => 'it-IT', 'Gender' => 'Male', 'ShortName' => 'Dan'}, # Will be filtered out
-    ]
-    stubs(:get_azure_speech_service_voices).returns(mock_voices)
-
-    expected_options = {
-      token: 'a1b2c3',
-      url: "https://westus.tts.speech.microsoft.com/cognitiveservices/v1",
-      voices: {'English' => {'female' => 'Alice', 'languageCode' => 'en-US', 'male' => 'Bob'}}
-    }
-    assert_equal expected_options, azure_speech_service_options
-  end
-
-  test 'azure_speech_service_options returns an empty object if gatekeeper disallows it' do
-    expects(:get_azure_speech_service_token).never
-    Gatekeeper.expects(:allows).with('azure_speech_service', default: true).returns(false)
-    assert_empty azure_speech_service_options
-  end
-
-  test 'azure_speech_service_options returns empty object if any responses are empty' do
-    @level.game.stubs(:use_azure_speech_service?).returns(true)
-    CDO.stubs(:azure_speech_service_region).returns('westus')
-    CDO.stubs(:azure_speech_service_key).returns('abc123')
-
-    # Empty token response
-    stubs(:get_azure_speech_service_token).returns(nil)
-    assert_empty azure_speech_service_options
-
-    # Empty voices response
-    stubs(:get_azure_speech_service_token).returns('a1b2c3')
-    stubs(:get_azure_speech_service_voices).returns([])
-    assert_empty azure_speech_service_options
-
-    # Nil voices response
-    stubs(:get_azure_speech_service_token).returns('a1b2c3')
-    stubs(:get_azure_speech_service_voices).returns(nil)
-    assert_empty azure_speech_service_options
-  end
-
   test 'submittable level is submittable for student with teacher' do
     @level = create(:applab, submittable: true)
 
@@ -535,30 +425,31 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not can_view_solution?
   end
 
-  test 'build_script_level_path differentiates lockable and non-lockable' do
-    # (position 1) Lockable 1
-    # (position 2) Non-Lockable 1
-    # (position 3) Lockable 2
-    # (position 4) Lockable 3
-    # (position 5) Non-Lockable 2
+  test 'build_script_level_path differentiates lesson and survey' do
+    # (position 1) Survey 1 (lockable: true, has_lesson_plan: false)
+    # (position 2) Lesson 1 (lockable: false, has_lesson_plan: false)
+    # (position 3) Survey 2 (lockable: true, has_lesson_plan: false)
+    # (position 4) Survey 3 (lockable: true, has_lesson_plan: false)
+    # (position 5) Lesson 2 (lockable: true, has_lesson_plan: true)
+    # (position 6) Lesson 3 (lockable: false, has_lesson_plan: true)
 
     input_dsl = <<~DSL
-      lesson 'Lockable1', display_name: 'Lockable1',
-        lockable: true;
+      lesson 'Survey1', display_name: 'Survey1', has_lesson_plan: false, lockable: true;
       assessment 'LockableAssessment1';
 
-      lesson 'Nonockable1', display_name: 'NonLockable1'
+      lesson 'Lesson1', display_name: 'Lesson1', has_lesson_plan: false
       assessment 'NonLockableAssessment1';
 
-      lesson 'Lockable2', display_name: 'Lockable2',
-        lockable: true;
+      lesson 'Survey2', display_name: 'Survey2', has_lesson_plan: false, lockable: true;
       assessment 'LockableAssessment2';
 
-      lesson 'Lockable3', display_name: 'Lockable3',
-        lockable: true;
+      lesson 'Survey3', display_name: 'Survey3', has_lesson_plan: false, lockable: true;
       assessment 'LockableAssessment3';
 
-      lesson 'Nonockable2', display_name: 'NonLockable2'
+      lesson 'Lesson2', display_name: 'Lesson2', has_lesson_plan: true, lockable: true;
+      assessment 'LockableAssessment4';
+
+      lesson 'Lesson3', display_name: 'Lesson3', has_lesson_plan: true
       assessment 'NonLockableAssessment2';
     DSL
 
@@ -566,6 +457,7 @@ class LevelsHelperTest < ActionView::TestCase
     create :level, name: 'NonLockableAssessment1'
     create :level, name: 'LockableAssessment2'
     create :level, name: 'LockableAssessment3'
+    create :level, name: 'LockableAssessment4'
     create :level, name: 'NonLockableAssessment2'
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -604,6 +496,12 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 2, stage.relative_position
     assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.lessons[5]
+    assert_equal 6, stage.absolute_position
+    assert_equal 3, stage.relative_position
+    assert_equal '/s/test_script/stage/3/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/stage/3/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
   end
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do

@@ -71,6 +71,13 @@ const styles = {
   },
   title: {
     marginRight: 5
+  },
+  titleInput: {
+    width: 275,
+    marginRight: 10
+  },
+  durationInput: {
+    width: 50
   }
 };
 
@@ -87,7 +94,7 @@ of text that explains to the teacher what to say or do to run the lesson or
 it could be a section of a lesson that shows a set of levels that are used
 at that point in the lesson (also known as a progression). ActivitySections
 can have tips attached to the beginning of their content and can be marked with
-slide or remarks as well.
+remarks as well.
  */
 
 class ActivitySectionCard extends Component {
@@ -102,6 +109,7 @@ class ActivitySectionCard extends Component {
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired,
 
     //redux
     moveActivitySection: PropTypes.func.isRequired,
@@ -272,15 +280,6 @@ class ActivitySectionCard extends Component {
     });
   };
 
-  toggleSlides = () => {
-    this.props.updateActivitySectionField(
-      this.props.activityPosition,
-      this.props.activitySection.position,
-      'slide',
-      !this.props.activitySection.slide
-    );
-  };
-
   toggleRemarks = () => {
     this.props.updateActivitySectionField(
       this.props.activityPosition,
@@ -291,11 +290,17 @@ class ActivitySectionCard extends Component {
   };
 
   handleMoveActivitySection = direction => {
-    if (
-      (this.props.activitySection.position !== 1 && direction === 'up') ||
-      (this.props.activitySection.position !==
+    const firstActivitySectionInLesson =
+      this.props.activitySection.position === 1 &&
+      this.props.activityPosition === 1;
+    const lastActivitySectionInLesson =
+      this.props.activitySection.position ===
         this.props.activitySectionsCount &&
-        direction === 'down')
+      this.props.activityPosition === this.props.activitiesCount;
+
+    if (
+      (!firstActivitySectionInLesson && direction === 'up') ||
+      (!lastActivitySectionInLesson && direction === 'down')
     ) {
       this.props.moveActivitySection(
         this.props.activityPosition,
@@ -321,6 +326,24 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  handleChangeDuration = event => {
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'duration',
+      event.target.value
+    );
+  };
+
+  handleChangeProgressionName = event => {
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'progressionName',
+      event.target.value
+    );
+  };
+
   handleChangeText = event => {
     this.props.updateActivitySectionField(
       this.props.activityPosition,
@@ -330,14 +353,26 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  appendResourceLink = resourceKey => {
+  appendMarkdownSyntax = strToAppend => {
     const currentText = this.props.activitySection.text;
     this.props.updateActivitySectionField(
       this.props.activityPosition,
       this.props.activitySection.position,
       'text',
-      currentText + `\n[r ${resourceKey}]`
+      currentText + strToAppend
     );
+  };
+
+  appendResourceLink = resourceKey => {
+    this.appendMarkdownSyntax(`\n[r ${resourceKey}]`);
+  };
+
+  appendVocabularyLink = vocabularyKey => {
+    this.appendMarkdownSyntax(`\n[v ${vocabularyKey}]`);
+  };
+
+  appendSlide = () => {
+    this.appendMarkdownSyntax(' [slide]');
   };
 
   handleRemoveLevel = levelPos => {
@@ -385,12 +420,17 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  handleUploadImage = url => {
+    this.appendMarkdownSyntax(`\n\n![](${url})`);
+  };
+
   render() {
     const {
       activitySection,
       targetActivityPos,
       targetActivitySectionPos,
-      activityPosition
+      activityPosition,
+      hasLessonPlan
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
@@ -406,23 +446,36 @@ class ActivitySectionCard extends Component {
       >
         <div style={styles.activitySectionCardHeader}>
           <label>
-            <span style={styles.title}>Title:</span>
-            <input
-              value={this.props.activitySection.displayName}
-              onChange={this.handleChangeDisplayName}
-            />
+            {hasLessonPlan && (
+              <span>
+                <span style={styles.title}>Title:</span>
+                <input
+                  style={styles.titleInput}
+                  value={this.props.activitySection.displayName}
+                  onChange={this.handleChangeDisplayName}
+                />
+                <span style={styles.title}>Duration:</span>
+                <input
+                  style={styles.durationInput}
+                  value={this.props.activitySection.duration}
+                  onChange={this.handleChangeDuration}
+                />
+              </span>
+            )}
             <OrderControls
               name={
                 this.props.activitySection.displayName ||
-                this.props.activitySection.key
+                'Unnamed Activity Section'
               }
               move={this.handleMoveActivitySection}
               remove={this.handleRemoveActivitySection}
+              item={this.props.activitySection}
+              itemType={'activitySection'}
             />
           </label>
-          <div style={styles.checkboxesAndButtons}>
-            <span style={styles.checkboxes}>
-              {this.props.activitySection.scriptLevels.length === 0 && (
+          {hasLessonPlan && (
+            <div style={styles.checkboxesAndButtons}>
+              <span style={styles.checkboxes}>
                 <label style={styles.labelAndCheckbox}>
                   Remarks
                   <input
@@ -432,55 +485,65 @@ class ActivitySectionCard extends Component {
                     style={styles.checkbox}
                   />
                 </label>
-              )}
-              <label style={styles.labelAndCheckbox}>
-                Slides
-                <input
-                  checked={this.props.activitySection.slide}
-                  onChange={this.toggleSlides}
-                  type="checkbox"
-                  style={styles.checkbox}
-                />
-              </label>
-            </span>
-          </div>
-        </div>
-        <textarea
-          value={this.props.activitySection.text}
-          rows={Math.max(
-            this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
-            2
+              </span>
+            </div>
           )}
-          style={styles.input}
-          onChange={this.handleChangeText}
-        />
-        {this.props.activitySection.scriptLevels.length > 0 &&
-          this.props.activitySection.scriptLevels.map(scriptLevel => (
-            <LevelToken
-              ref={levelToken => {
-                if (levelToken) {
-                  const metrics = ReactDOM.findDOMNode(
-                    levelToken
-                  ).getBoundingClientRect();
-                  this.levelTokenMetrics[scriptLevel.position] = metrics;
+        </div>
+        {hasLessonPlan && (
+          <textarea
+            value={this.props.activitySection.text}
+            rows={Math.max(
+              this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
+              2
+            )}
+            style={styles.input}
+            onChange={this.handleChangeText}
+          />
+        )}
+        {this.props.activitySection.scriptLevels.length > 0 && (
+          <div>
+            <label>
+              <span style={styles.title}>Progression Title:</span>
+              <input
+                style={styles.titleInput}
+                value={this.props.activitySection.progressionName}
+                onChange={this.handleChangeProgressionName}
+              />
+            </label>
+            {this.props.activitySection.scriptLevels.map(scriptLevel => (
+              <LevelToken
+                ref={levelToken => {
+                  if (levelToken) {
+                    const metrics = ReactDOM.findDOMNode(
+                      levelToken
+                    ).getBoundingClientRect();
+                    this.levelTokenMetrics[scriptLevel.position] = metrics;
+                  }
+                }}
+                key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
+                scriptLevel={scriptLevel}
+                removeLevel={this.handleRemoveLevel}
+                activitySectionPosition={this.props.activitySection.position}
+                activityPosition={activityPosition}
+                dragging={!!draggedLevelPos}
+                draggedLevelPos={scriptLevel.position === draggedLevelPos}
+                delta={
+                  this.state.currentYOffsets[scriptLevel.position - 1] || 0
                 }
-              }}
-              key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
-              scriptLevel={scriptLevel}
-              removeLevel={this.handleRemoveLevel}
-              activitySectionPosition={this.props.activitySection.position}
-              activityPosition={activityPosition}
-              dragging={!!draggedLevelPos}
-              draggedLevelPos={scriptLevel.position === draggedLevelPos}
-              delta={this.state.currentYOffsets[scriptLevel.position - 1] || 0}
-              handleDragStart={this.handleDragStart}
-            />
-          ))}
+                handleDragStart={this.handleDragStart}
+              />
+            ))}
+          </div>
+        )}
         <ActivitySectionCardButtons
           activitySection={this.props.activitySection}
           addLevel={this.handleAddLevel}
+          uploadImage={this.handleUploadImage}
           activityPosition={this.props.activityPosition}
           appendResourceLink={this.appendResourceLink}
+          appendVocabularyLink={this.appendVocabularyLink}
+          appendSlide={this.appendSlide}
+          hasLessonPlan={hasLessonPlan}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

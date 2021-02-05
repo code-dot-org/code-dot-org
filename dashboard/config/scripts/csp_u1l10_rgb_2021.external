@@ -1,0 +1,10 @@
+name 'CSP U1L10 RGB_2021'
+display_name 'Red, Green, and Blue (RGB)'
+css 'unplugged'
+markdown <<MARKDOWN
+# Red, Green, and Blue (RGB)
+
+![](https://images.code.org/95cf43cf3465480ceda6c6e06ec77136-image-1564715410740.PNG)
+
+![](https://images.code.org/d7789b5d611a6c7fe989ded5627379c0-image-1564715455251.PNG)
+MARKDOWN

@@ -8,7 +8,7 @@ Scenario: New workshop: CSF intro
   Then I open my eyes to test "New workshop: CSF intro"
 
   And I press keys "Code.org Office" for element "input#location_name"
-  And I press keys "Seattle, WA" for element "input#location_address"
+  And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
   And I press keys "25" for element "input#capacity"
   And I select the "CS Fundamentals" option in dropdown "course"
   And I select the "Intro" option in dropdown "subject"
@@ -40,7 +40,7 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
   Then I open my eyes to test "New workshop: CSD units 2-3 with 2 facilitators"
 
   And I press keys "Code.org Office" for element "input#location_name"
-  And I press keys "Seattle, WA" for element "input#location_address"
+  And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
   And I press keys "25" for element "input#capacity"
   And I select the "CS Discoveries" option in dropdown "course"
   And I select the "Academic Year Workshop 1" option in dropdown "subject"
@@ -72,7 +72,7 @@ Scenario: New workshop: CSP local summer with 1 facilitator
   Then I open my eyes to test "New workshop: CSP local summer with 1 facilitator"
 
   And I press keys "Code.org Office" for element "input#location_name"
-  And I press keys "Seattle, WA" for element "input#location_address"
+  And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
   And I press keys "25" for element "input#capacity"
   And I select the "CS Principles" option in dropdown "course"
   And I select the "5-day Summer" option in dropdown "subject"

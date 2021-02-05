@@ -6,31 +6,58 @@ import {sampleActivities} from './activitiesTestData';
 import sinon from 'sinon';
 
 describe('ActivitySectionCardButtons', () => {
-  let defaultProps, addTip, updateTip, addLevel, removeTip, appendResourceLink;
+  let defaultProps,
+    addTip,
+    updateTip,
+    addLevel,
+    uploadImage,
+    removeTip,
+    appendResourceLink,
+    appendVocabularyLink,
+    appendSlide;
   beforeEach(() => {
     addTip = sinon.spy();
     updateTip = sinon.spy();
     addLevel = sinon.spy();
+    uploadImage = sinon.spy();
     removeTip = sinon.spy();
     appendResourceLink = sinon.spy();
+    appendVocabularyLink = sinon.spy();
+    appendSlide = sinon.spy();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
       activityPosition: 1,
       addTip,
       updateTip,
       addLevel,
+      uploadImage,
       removeTip,
-      appendResourceLink
+      appendResourceLink,
+      appendVocabularyLink,
+      appendSlide,
+      hasLessonPlan: true,
+      vocabularies: []
     };
   });
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(3);
+    expect(wrapper.find('button').length).to.equal(5);
     expect(wrapper.find('Connect(FindResourceDialog)').length).to.equal(1);
     expect(wrapper.find('AddLevelDialog').length).to.equal(1);
     expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(2);
     // Don't render this component until add tip button or tip icon are clicked
+    expect(wrapper.find('EditTipDialog').length).to.equal(0);
+  });
+
+  it('renders only level button when hasLessonPlan false', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons {...defaultProps} hasLessonPlan={false} />
+    );
+    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('Connect(FindResourceDialog)').length).to.equal(0);
+    expect(wrapper.find('AddLevelDialog').length).to.equal(1);
+    expect(wrapper.find('LessonTipIconWithTooltip').length).to.equal(0);
     expect(wrapper.find('EditTipDialog').length).to.equal(0);
   });
 
@@ -65,8 +92,33 @@ describe('ActivitySectionCardButtons', () => {
     const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
 
     const button = wrapper.find('button').at(2);
-    expect(button.text()).to.include('Resource Link');
+    expect(button.text()).to.include('Resource');
     button.simulate('mouseDown');
     expect(wrapper.state().addResourceOpen).to.equal(true);
+  });
+
+  it('add vocabulary link pressed', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons
+        {...defaultProps}
+        vocabularies={[
+          {id: 1, key: 'word1', word: 'word1', definition: 'definition1'}
+        ]}
+      />
+    );
+
+    const button = wrapper.find('button').at(3);
+    expect(button.text()).to.include('Vocab');
+    button.simulate('mouseDown');
+    expect(wrapper.state().addVocabularyOpen).to.equal(true);
+  });
+
+  it('add slide pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+
+    const button = wrapper.find('button').at(3);
+    expect(button.text()).to.include('Slide');
+    button.simulate('mouseDown');
+    expect(appendSlide).to.have.been.calledOnce;
   });
 });

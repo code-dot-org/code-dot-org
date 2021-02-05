@@ -1,0 +1,22 @@
+<TextCompression>
+  <config><![CDATA[{
+  "game_id": 45,
+  "created_at": "2020-12-04T21:59:13.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "href": "text-compression/text-compression.html",
+    "skip_dialog": true,
+    "short_instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.",
+    "long_instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.",
+    "parent_level_id": 18888,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Widget: Text Compression",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-10 17:41:03 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-22 15:16:42 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</TextCompression>

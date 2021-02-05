@@ -1,0 +1,10 @@
+name 'EnvelopeVariables-Unplugged_2021'
+video_key 'C4_unplugged_variables'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Blank Space Variables
+
+This lesson helps to explain what variables are and how we can use them in many different ways.
+MARKDOWN

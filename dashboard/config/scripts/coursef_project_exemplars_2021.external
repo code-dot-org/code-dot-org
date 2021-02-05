@@ -1,0 +1,28 @@
+name 'courseF_project_exemplars_2021'
+editor_experiment ''
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# Project Examples
+
+You are about to start your final project. Before you begin, spend some time looking at the example projects.
+
+## Sprite Lab
+
+| Cupcake Game (Sprite Lab) | 	Airplane Game (Sprite Lab) |
+|---|---|
+| [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game \(Sprite Lab\)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png "Airplane Game \(Sprite Lab\)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+| Try adding text or a score to this game! | Try adding text or a score to this game! |
+
+## Artist
+
+| Flowers (Artist) | Spiral (Artist) |
+|---|---|
+| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flowers \(Artist\)")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Spiral \(Artist\)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)  |
+| Let's get creative with variables! | Let's get creative with For Loops! |
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

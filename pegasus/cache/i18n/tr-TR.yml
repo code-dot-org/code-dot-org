@@ -2178,8 +2178,8 @@ tr-TR:
   hoc_overview_more_resources: Uzak sınıfınızla nasıl etkileşim kuracağınızla ilgili
     daha fazla kaynak için [sanal Hour of Code] (https://hourofcode.com/us/how-to/virtual)
     düzenleme kılavuzumuza bakın. Sınırlı teknoloji ve bağlantıya sahip veya hiç teknolojisi
-    veya bağlantısı olmayan öğrenciler için, bu [bağımsız Hour of Code etkinlikleri]
-    paketini paylaşın (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+    veya bağlantısı olmayan öğrenciler için, bu [bağımsız Hour of Code etkinlikleri](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)  paketini
+    paylaşın .
   hoc_overview_view_teacher_guide: Öğretmen kılavuzunu görüntüle
   hoc2018_creativity: keşif ve Tasarlama
   hoc2018_creativity_create: Oluştur
@@ -2387,3 +2387,4 @@ tr-TR:
     adresine e-posta gönderin.
   page_not_available_button: Anasayfaya Dön
   footer_powered_by_aws: Amazon Web Services tarafından desteklenmektedir
+  codebytes_skinny_banner_english_only: Sadece İngilizce

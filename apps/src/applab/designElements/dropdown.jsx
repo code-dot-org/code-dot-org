@@ -72,12 +72,12 @@ class DropdownProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'text color'}
-          initialValue={elementUtils.rgb2hex(element.style.color)}
+          initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <FontFamilyPropertyRow

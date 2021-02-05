@@ -1,0 +1,24 @@
+name 'CSP 20-21 Phishing_2021'
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+#Phishing
+
+## Vocabulary
+
+**Phishing:** a technique that attempts to trick a user into providing personal information. That personal information can then be used to access sensitive online resources, such as bank accounts and emails. 
+
+## Visual
+
+![](https://images.code.org/412b4bf979c6e0230722fc3ac7eb84ab-image-1573051952520.png)
+
+## Video
+
+[Phishing and Spear Phishing](https://www.youtube.com/watch?v=ygON2B9-xTw)
+
+## Article
+
+[5 Ways to Detect a Phishing Email - With Examples](https://www.itgovernance.co.uk/blog/5-ways-to-detect-a-phishing-email)
+
+MARKDOWN

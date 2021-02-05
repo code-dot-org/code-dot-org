@@ -82,7 +82,7 @@ class LessonTest < ActiveSupport::TestCase
 
     summary = lesson.summarize(true)
     assert_equal 1, summary[:levels].length
-    assert_equal [level.id], summary[:levels].first[:ids]
+    assert_equal [level.id.to_s], summary[:levels].first[:ids]
   end
 
   test "summary of levels for lesson plan" do
@@ -100,7 +100,7 @@ class LessonTest < ActiveSupport::TestCase
         assessment: script_level.assessment,
         progression: script_level.progression,
         path: script_level.path,
-        level_id: level.id,
+        level_id: level.id.to_s,
         type: level.class.to_s,
         name: level.name,
         display_name: level.display_name
@@ -159,6 +159,18 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'Lesson1', summary[:key]
   end
 
+  test 'can summarize lesson with and without lesson plan' do
+    script = create :script, name: 'test-script'
+    lesson_group = create :lesson_group, script: script
+    lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+    lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false
+
+    lesson1_summary = lesson1.summarize
+    lesson2_summary = lesson2.summarize
+    assert_equal '//test.code.org/curriculum/test-script/1/Teacher', lesson1_summary[:lesson_plan_html_url]
+    assert_equal nil, lesson2_summary[:lesson_plan_html_url]
+  end
+
   test 'can summarize lesson for lesson plan' do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -194,6 +206,23 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'lesson-1', summary[:key]
     assert_equal "/lessons/#{lesson.id}", summary[:link]
     assert_equal 1, summary[:position]
+  end
+
+  test 'summarize for script edit includes bonus levels' do
+    script = create :script, is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
+    activity = create :lesson_activity, lesson: lesson
+    section = create :activity_section, lesson_activity: activity
+    level1 = create :level
+    level2 = create :level
+    create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level1]
+    create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 2, levels: [level2], bonus: true
+
+    levels_data = lesson.summarize_for_script_edit[:levels]
+    assert_equal 2, levels_data.length
+    refute levels_data.first[:bonus]
+    assert levels_data.last[:bonus]
   end
 
   test 'raises error when creating invalid lockable lessons' do
@@ -233,6 +262,7 @@ class LessonTest < ActiveSupport::TestCase
       {
         key: "L1",
         name: "Lesson 1",
+        has_lesson_plan: true,
         script_levels: [
           {levels: [{name: "Level1"}]},
           {levels: [{name: "Level2"}]}
@@ -241,6 +271,7 @@ class LessonTest < ActiveSupport::TestCase
       {
         key: "L2",
         name: "Lesson 2",
+        has_lesson_plan: false,
         script_levels: [
           {levels: [{name: "Level3"}]}
         ]
@@ -249,8 +280,18 @@ class LessonTest < ActiveSupport::TestCase
         key: "L3",
         name: "Lesson 3",
         lockable: true,
+        has_lesson_plan: false,
         script_levels: [
           {levels: [{name: "Level3"}], assessment: true}
+        ]
+      },
+      {
+        key: "L4",
+        name: "Lesson 4",
+        lockable: true,
+        has_lesson_plan: true,
+        script_levels: [
+          {levels: [{name: "Level4"}], assessment: true}
         ]
       }
     ]
@@ -258,23 +299,42 @@ class LessonTest < ActiveSupport::TestCase
 
     lessons = Lesson.add_lessons(script, lesson_group, raw_lessons, counters, nil, nil)
 
-    assert_equal ['L1', 'L2', 'L3'], lessons.map(&:key)
-    assert_equal ['Lesson 1', 'Lesson 2', 'Lesson 3'], lessons.map(&:name)
-    assert_equal [1, 2, 3], lessons.map(&:absolute_position)
-    assert_equal [1, 2, 1], lessons.map(&:relative_position)
+    assert_equal ['L1', 'L2', 'L3', 'L4'], lessons.map(&:key)
+    assert_equal ['Lesson 1', 'Lesson 2', 'Lesson 3', 'Lesson 4'], lessons.map(&:name)
+    assert_equal [1, 2, 3, 4], lessons.map(&:absolute_position)
+    assert_equal [1, 2, 1, 3], lessons.map(&:relative_position)
     assert_equal lesson_group, lessons[0].lesson_group
     assert_equal 2, lessons[0].script_levels.count
     assert_equal 1, lessons[1].script_levels.count
     assert_equal 1, lessons[2].script_levels.count
     assert_equal true, lessons[2].lockable
-    assert_equal LessonGroup::Counters.new(1, 2, 3, 4), counters
+    assert_equal true, lessons[3].lockable
+    assert_equal true, lessons[3].has_lesson_plan
+    assert_equal LessonGroup::Counters.new(3, 1, 4, 5), counters
+  end
+
+  test 'i18n_hash has correct value' do
+    script = create :script, name: 'dummy-script'
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, key: 'dummy-key', name: 'Dummy Name'
+
+    expected_i18n = {
+      'dummy-script' => {
+        'lessons' => {
+          'dummy-key' => {
+            'name' => 'Dummy Name'
+          }
+        }
+      }
+    }
+    assert_equal expected_i18n, lesson.i18n_hash
   end
 
   test 'seeding_key' do
     lesson_group = create :lesson_group
     script = lesson_group.script
     lesson = create :lesson, lesson_group: lesson_group, script: script
-    seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: script.lesson_groups.to_a)
+    seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: script.lesson_groups.to_a)
     lesson.reload # clear out any already loaded association data, for verification of query counts
 
     # seeding_key should not make queries
@@ -334,6 +394,7 @@ class LessonTest < ActiveSupport::TestCase
   test 'find related lessons within CSF curriculum umbrella' do
     course_offering = create :course_offering
 
+    # lesson to find related lessons for
     script1 = create :script, name: 'script1', curriculum_umbrella: 'CSF', version_year: '2999'
     create :course_version, course_offering: course_offering, content_root: script1, key: '2999'
     lesson1 = create :lesson, script: script1, key: 'foo'
@@ -342,11 +403,13 @@ class LessonTest < ActiveSupport::TestCase
     create :course_version, course_offering: course_offering, content_root: script2, key: '3000'
     lesson2 = create :lesson, script: script2, key: 'foo'
 
+    # lesson with different key is excluded
     course_offering3 = create :course_offering
     script3 = create :script, name: 'script3', curriculum_umbrella: 'CSF', version_year: '2999'
     create :course_version, course_offering: course_offering3, content_root: script3, key: '2999'
     create :lesson, script: script3, key: 'bar'
 
+    # lesson in different curriculum umbrella is excluded
     course_offering4 = create :course_offering
     script4 = create :script, name: 'script4', curriculum_umbrella: 'other', version_year: '2999'
     create :course_version, course_offering: course_offering4, content_root: script4, key: '2999'
@@ -357,6 +420,10 @@ class LessonTest < ActiveSupport::TestCase
     create :course_version, course_offering: course_offering5, content_root: script5, key: '2999'
     lesson5 = create :lesson, script: script5, key: 'foo'
 
+    # lesson without course version / version year must still work properly
+    script6 = create :script, name: 'script6', curriculum_umbrella: 'CSF'
+    lesson6 = create :lesson, script: script6, key: 'foo'
+
     course_offering0 = create :course_offering
     script0 = create :script, name: 'script0', curriculum_umbrella: 'CSF', version_year: '2999'
     create :course_version, course_offering: course_offering0, content_root: script0, key: '2999'
@@ -366,15 +433,25 @@ class LessonTest < ActiveSupport::TestCase
     # of related_lessons, so that the count is not artificially reduced by
     # anything being cached from the call to related_lessons.
     summaries = nil
-    assert_queries(1) do
+    assert_queries(2) do
       summaries = lesson1.summarize_related_lessons
     end
 
     assert_queries(1) do
-      assert_equal [lesson0, lesson5, lesson2], lesson1.related_lessons
+      assert_equal [lesson6, lesson0, lesson5, lesson2], lesson1.related_lessons
     end
 
-    assert_equal 3, summaries.count
+    assert_equal 4, summaries.count
+    expected_summary = {
+      scriptTitle: "translation missing: en-US.data.script.name.script6.title",
+      versionYear: nil,
+      lockable: false,
+      relativePosition: 1,
+      id: lesson6.id,
+      editUrl: "/lessons/#{lesson6.id}/edit"
+    }
+    assert_equal expected_summary, summaries[0]
+
     expected_summary = {
       scriptTitle: "translation missing: en-US.data.script.name.script0.title",
       versionYear: "2999",
@@ -383,10 +460,10 @@ class LessonTest < ActiveSupport::TestCase
       id: lesson0.id,
       editUrl: "/lessons/#{lesson0.id}/edit"
     }
-    assert_equal expected_summary, summaries[0]
+    assert_equal expected_summary, summaries[1]
 
-    assert_equal '2999', summaries[1][:versionYear]
-    assert_equal '3000', summaries[2][:versionYear]
+    assert_equal '2999', summaries[2][:versionYear]
+    assert_equal '3000', summaries[3][:versionYear]
   end
 
   test 'find related lessons within a course offering without unit groups' do

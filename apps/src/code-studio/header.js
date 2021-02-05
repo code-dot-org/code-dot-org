@@ -22,6 +22,7 @@ import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
 
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 /**
@@ -30,11 +31,6 @@ import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 // Namespace for manipulating the header DOM.
 var header = {};
-
-/**
- * See ApplicationHelper::PUZZLE_PAGE_NONE.
- */
-const PUZZLE_PAGE_NONE = -1;
 
 /**
  * @param {object} scriptData
@@ -49,19 +45,24 @@ const PUZZLE_PAGE_NONE = -1;
  *   finishLink: string,
  *   finishText: string,
  *   levels: Array.<{
- *     id: number,
+ *     id: string,
  *     position: number,
  *     title: string,
  *     kind: string
  *   }>
  * }}
  * @param {object} progressData
- * @param {string} currentLevelId
- * @param {number} puzzlePage
+ * @param {string} currentLevelId The id of the level the user is currently
+ *   on. This gets used in the url and as a key in many objects. Therefore,
+ *   it is a string despite always being a numerical value
+ * @param {number} currentPageNumber The page we are on if this is a multi-
+ *   page level.
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {boolean} isLessonExtras Boolean indicating we are not on a script
+ *   level and therefore are on lesson extras
  */
 header.build = function(
   scriptData,
@@ -69,11 +70,11 @@ header.build = function(
   lessonData,
   progressData,
   currentLevelId,
-  puzzlePage,
+  currentPageNumber,
   signedIn,
   stageExtrasEnabled,
   scriptNameData,
-  hasAppOptions
+  isLessonExtras
 ) {
   const store = getStore();
   if (progressData) {
@@ -86,8 +87,7 @@ header.build = function(
   progressData = progressData || {};
 
   const linesOfCodeText = progressData.linesOfCodeText;
-
-  let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
+  let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
   // Set up the store immediately.
   progress.generateStageProgress(
@@ -98,7 +98,9 @@ header.build = function(
     currentLevelId,
     saveAnswersBeforeNavigation,
     signedIn,
-    stageExtrasEnabled
+    stageExtrasEnabled,
+    isLessonExtras,
+    currentPageNumber
   );
 
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
@@ -113,7 +115,6 @@ header.build = function(
           scriptData={scriptData}
           currentLevelId={currentLevelId}
           linesOfCodeText={linesOfCodeText}
-          hasAppOptions={hasAppOptions}
         />
       </Provider>,
       document.querySelector('.header_level')

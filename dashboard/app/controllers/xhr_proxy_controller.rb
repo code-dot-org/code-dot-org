@@ -36,11 +36,13 @@ class XhrProxyController < ApplicationController
     api.foursquare.com
     api.fungenerators.com
     api.nasa.gov
+    api.opencagedata.com
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.si.edu
     api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
@@ -50,7 +52,6 @@ class XhrProxyController < ApplicationController
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
-    thecatapi.com
     code.org
     compete.hsctf.com
     covidtracking.com
@@ -93,6 +94,8 @@ class XhrProxyController < ApplicationController
     spreadsheets.google.com
     stats.minecraftservers.org
     swapi.co
+    thecatapi.com
+    thedogapi.com
     theunitedstates.io
     transitchicago.com
     translate.yandex.net

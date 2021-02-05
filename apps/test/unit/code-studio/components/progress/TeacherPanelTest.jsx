@@ -8,6 +8,7 @@ import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSe
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import i18n from '@cdo/locale';
 import FontAwesome from '../../../../../src/templates/FontAwesome';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 
@@ -217,7 +218,13 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [
+                {
+                  id: 11,
+                  user_id: 1,
+                  status: LevelStatus.not_tried
+                }
+              ]
             }}
           />
         );
@@ -250,7 +257,13 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [
+                {
+                  id: 11,
+                  user_id: 1,
+                  status: LevelStatus.not_tried
+                }
+              ]
             }}
           />
         );
@@ -268,7 +281,13 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [
+                {
+                  id: 11,
+                  user_id: 1,
+                  status: LevelStatus.not_tried
+                }
+              ]
             }}
           />
         );

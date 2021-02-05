@@ -1,0 +1,26 @@
+name 'CSP Unit 7 AP-Style Assessment _2021'
+title 'CS Principles Unit 7 Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2021'
+level 'csp-7-exam1-mod-2020_2021'
+level 'csp-7-exam1-API-algorithms-2020_2021'
+level 'csp-7-exam1-API-parameters_2021'
+level 'csp-7-exam1-testing_2021'
+level 'csp-7-exam1-api-documentation_2021'
+
+page
+level 'csp-7-exam1-return_2021'
+level 'csp-7-exam1-mod_2021'
+level 'csp-7-exam1-abstraction_2021'
+level 'csp-7-exam1-return-2_2021'
+level 'csp-7-exam1-return-3_2021'
+
+page
+level 'csp-7-exam1-algorithms_2021'
+level 'csp-7-exam1-algorithms -2_2021'
+level 'csp-7-exam1-library_2021'
+level 'csp-7-exam1-api-2_2021'
+level 'csp-7-exam1-modularity_2021'

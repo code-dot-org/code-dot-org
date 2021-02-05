@@ -1,12 +1,12 @@
 ---
-title: Hour of Code Şirketler için Nasıl Yapılır? Rehberi
+title: Şirketler için Kodlama Saati Nasıl Yapılır? Rehberi
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Şirketiniz Hour of Code'a nasıl dahil olabilir?
+# Şirketiniz Kodlama Saati'ne nasıl dahil olabilir?
 
 ### Siz ve çalışanlarınızın öğrencilere bilgisayar bilimini denemeleri için nasıl ilham verebileceğinizi öğrenin!
 
@@ -14,7 +14,7 @@ nav: how_to_nav
 
 Bilişimsel düşünme, problem çözme becerilerini, mantığı ve yaratıcılığı geliştirmeye yardımcı olur. Teknoloji de gezegendeki her sanayiyi dönüştürüyor. Bugün öğrenciler teknolojiyi kullanmakla kalmayıp onu nasıl üretebileceğini de öğrenmeliler. Erken başlayan öğrenciler, 21. yüzyılın kariyer yolunda başarılı olmak için temel atmış olacaklar.
 
-Hour of Code kampanyası sırasında şirketiniz bilgisayar bilimi hareketinde farkındalık yaratmaya yardımcı olabilir. İster bireysel olarak gönüllü olun isterse şirketiniz için etkinlik planlayın, tüm çabalarınız genç kadınların ve ötekileştirilen ırk ve etnik gruplardan olan öğrencilerin bilgisayar bilimlerine ve kendi potansiyellerine bakış açısında büyük bir etki yaratabilir.
+Kodlama Saati kampanyası sırasında şirketiniz bilgisayar bilimi hareketinde farkındalık yaratmaya yardımcı olabilir. İster bireysel olarak gönüllü olun isterse şirketiniz için etkinlik planlayın, tüm çabalarınız genç kadınların ve ötekileştirilen ırk ve etnik gruplardan olan öğrencilerin bilgisayar bilimlerine ve kendi potansiyellerine bakış açısında büyük bir etki yaratabilir.
 
 - [Çalışanlarınızı bir sınıf için gönüllü olmaya teşvik edin](#encourage-employees)
 - [Şirketiniz ile bir okulun bağlantısını sağlayın](#connect-with-a-school)
@@ -36,7 +36,7 @@ Hour of Code'a katılmanın en tatmin edici yollarından biri, bizzat ya da sana
 
 Bir gönüllü kaydolduğunda öğretmenler gönüllünün profilini [gönüllü haritamızda](https://code.org/volunteer/local) gözden geçirebilirler. Dolayısıyla profillerin mümkün olduğunca eksiksiz olması gerekir. Sınıflarına uygun olduğunuz öğretmenler sizinle platform üzerinden iletişim kuracaklardır (e-posta adresinizi öğretmenlerle asla paylaşmayız). [Sınıflarına en iyi nasıl katkı sağlayabileceğinizi](https://hourofcode.com/us/how-to/volunteers) anlamak için ayrıntıları doğrudan öğretmenle koordine edebilirsiniz..
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Şirketinizi Hour of Code konusunda heyecanladırmak için gönüllülük ve örnek mesajlaşma hakkında daha fazla bilgi almak istiyorsanız, [kurumsal ortaklara yönelik kılavuz]({{ localized_files/hoc_corporate_toolkit }})a göz atın.
 
 * * *
 
@@ -182,6 +182,6 @@ Posterler, videolar, çıkartmalar ve etkinliğinizi topluluğunuza tanıtmanın
 - Her öğrencinin, bilgisayar bilimini öğrenme fırsatına sahip olduğundan emin olmak için [bu dilekçeyi imzalayın](https://code.org/promote). 
 - Eğitim kaynaklarımızın ücretsiz ve herkesin erişimine açık olmaya devam edebilmesi için Code.org'a [bağışta bulunun](https://code.org/donate). 
 
-Code.org'u ve Hour of Code'u nasıl destekleyebileceğiniz ile ilgili daha fazla öneri için[Code.org/Help](https://code.org/help) adresini ziyaret edin
+Code.org'u ve Kodlama Saati'ni nasıl destekleyebileceğiniz ile ilgili daha fazla öneri için[Code.org/Help](https://code.org/help) adresini ziyaret edin
 
 {{ signup_button }}

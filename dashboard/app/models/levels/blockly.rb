@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -388,7 +388,7 @@ class Blockly < Level
       level_prop['editCode'] = uses_droplet?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|
@@ -565,6 +565,28 @@ class Blockly < Level
         arg["name"] = localized_parameter if localized_parameter
       end
       mutation.set_attribute('name', localized_name) if localized_name
+    end
+    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="VAR"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="NAME"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
     end
 
     localize_behaviors(block_xml)
