@@ -8,7 +8,7 @@ import {jumpToLessonDetails} from '@cdo/apps/templates/sectionProgress/sectionPr
 import {scriptDataPropType} from '../sectionProgressConstants';
 import {
   summarizeProgressInStage,
-  stageIsAllAssessment
+  lessonIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StudentProgressSummaryCell from './StudentProgressSummaryCell';
@@ -127,7 +127,7 @@ class VirtualizedSummaryView extends Component {
         levelProgressByStudent[student.id],
         stageLevels
       );
-      const assessmentStage = stageIsAllAssessment(stageLevels);
+      const assessmentStage = lessonIsAllAssessment(stageLevels);
       child = (
         <StudentProgressSummaryCell
           studentId={student.id}
