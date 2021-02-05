@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {appendInputLog} from './redux';
-import CommandHistory from '../lib/tools/jsdebugger/CommandHistory';
-import {KeyCodes} from '../constants';
+import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
+import {KeyCodes} from '@cdo/apps/constants';
 
 const style = {
   consoleStyle: {
@@ -12,40 +12,31 @@ const style = {
     height: '200px',
     overflowY: 'auto'
   },
-  debugOutput: {
+  consoleLogs: {
     overflow: 'auto',
     lineHeight: 'normal',
     cursor: 'text',
     whiteSpace: 'pre-wrap',
     flexGrow: 1
   },
-  debugInputWrapper: {
+  consoleInputWrapper: {
     flexGrow: 0,
     flexShrink: 0,
     display: 'flex'
   },
-  debugInputWrapperDisabled: {
-    flexGrow: 0,
-    flexShrink: 0,
-    display: 'flex',
-    backgroundColor: '#eee'
-  },
-  debugInputPrompt: {
+  consoleInputPrompt: {
     display: 'block',
     width: 15,
     cursor: 'text',
     flexGrow: 0
   },
-  debugInput: {
+  consoleInput: {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',
     backgroundColor: 'black',
     color: 'white',
     border: 'none'
-  },
-  inspector: {
-    display: 'inline-flex'
   }
 };
 
@@ -98,7 +89,7 @@ class JavaConsole extends React.Component {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
   };
 
-  displayConsoleOutput() {
+  displayConsoleLogs() {
     return this.props.consoleLogs.map((log, i) => {
       let prefix = '<';
       if (log.type === 'input') {
@@ -133,17 +124,16 @@ class JavaConsole extends React.Component {
   render() {
     return (
       <div style={style.consoleStyle} ref={el => (this._consoleLogs = el)}>
-        <div style={style.debugOutput}>{this.displayConsoleOutput()}</div>
-        <div style={style.debugInputWrapper}>
-          <span style={style.debugInputPrompt} onClick={this.focus}>
+        <div style={style.consoleLogs}>{this.displayConsoleLogs()}</div>
+        <div style={style.consoleInputWrapper}>
+          <span style={style.consoleInputPrompt} onClick={this.focus}>
             &gt;
           </span>
           <input
             type="text"
             spellCheck="false"
             id="debug-input"
-            style={style.debugInput}
-            ref={el => (this._debugInput = el)}
+            style={style.consoleInput}
             onKeyDown={this.onInputKeyDown}
           />
         </div>
