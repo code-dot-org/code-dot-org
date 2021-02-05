@@ -788,7 +788,7 @@
       "key": "1b0af819-cb8a-49e2-ab3d-14bbfeb379b3",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n**Prompt (10 mins):** Answer each of these prompts in your journal:",
+        "description": "[slide] \n**Prompt (10 mins):** Answer each of these prompts in your journal:\n\n* What is the Internet?\n* What questions do you have about how the Internet works?",
         "tips": [
           {
             "type": "teachingTip",
@@ -803,19 +803,8 @@
       }
     },
     {
-      "key": "39c9c83b-5599-4879-a629-ada8bcbaa649",
-      "position": 2,
-      "properties": {
-        "description": "* What is the Internet?\r\n* What questions do you have about how the Internet works?"
-      },
-      "seeding_key": {
-        "activity_section.key": "39c9c83b-5599-4879-a629-ada8bcbaa649",
-        "lesson_activity.key": "d0400f34-8c9c-472a-8bed-b69c4c6dbe4c"
-      }
-    },
-    {
       "key": "a759638c-aa9f-4293-8f10-f1d1290e709b",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "**Discuss:** Ask a few students to share their answers with the class.",
         "tips": [
@@ -832,7 +821,7 @@
     },
     {
       "key": "5ec0f064-b813-46bd-8439-02993fa3086d",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "It's ok if you have a lot of questions about the Internet or aren't sure how it works. You are not alone!",
         "remarks": true
@@ -844,7 +833,7 @@
     },
     {
       "key": "a77802fb-45f0-48dc-8455-2d6ef8e4a255",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "[slide] \r\n**Do This:** Direct students to take two sticky notes and choose one response or question to put on each sticky note. Post the sticky notes on a poster in the front of the room to refer back to throughout the unit as questions are answered."
       },
@@ -855,12 +844,11 @@
     },
     {
       "key": "0eb22a0a-92c3-407f-8115-f11e642ade02",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "[slide] \r\n**Video:** Play \"What is the Internet\". Stop at 1:30.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Use the video to normalize students' misconceptions about how the Internet works. Over the course of the unit, we will work to address those points of confusion.\r\n\r\n"
           }
@@ -873,7 +861,7 @@
     },
     {
       "key": "1146f67d-830d-4036-9ef1-a08cef582b5c",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "In this unit, we are going to use a tool to understand how the Internet works, layer by layer. Just like when we talked about layers of abstraction in representing digital information, there are layers to the Internet. \r\n\r\nThis tool is called the Internet Simulator. Let's check it out!",
         "remarks": true,
@@ -886,7 +874,7 @@
     },
     {
       "key": "e82a3a35-f14a-4ec7-926e-bfd76533c68c",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "**Group:** Pair up students.\r\n\r\n\r\n[slide] \r\n**Do This:** Direct students to Level 2 on Code Studio. Students should join their partners following the instructions on the slide."
       },
@@ -897,7 +885,7 @@
     },
     {
       "key": "eda6bba0-b935-4f5f-ac2f-33d237017e6e",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "[slide] Take five minutes to explore the tool and see what you can do with it. What are the limitations?",
         "remarks": true
@@ -909,7 +897,7 @@
     },
     {
       "key": "ba0e735e-8301-4590-a110-949519e94883",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "**Do This:** After five minutes are done, join the Internet Simulator yourself (as a teacher) and join a volunteer student. Model how the widget works. \r\n\r\n* Call out the different sections of the widget: \r\n\t* Received Message Log\r\n    * Sent Message Log\r\n    * Send a Message\r\n* Show students the \"My Device\" tab and demonstrate how you can turn on or off the layers of abstraction (binary, decimal, ASCII).\r\n* Talk about what the graphic represents - a direct line between you and your partner."
       },
@@ -920,7 +908,7 @@
     },
     {
       "key": "d25e79d0-2d8e-45da-b114-fe10597d29a6",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "**Prompt:** How is the Internet Simulator similar to the Internet? How is it different?",
         "tips": [
@@ -937,10 +925,11 @@
     },
     {
       "key": "5ad11dce-ef4f-4c1a-8407-e9bab74c4ab5",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "One of the key things you may have noticed is that this version of the Internet Simulator only allows us to connect to one person! This will change as we explore new versions on the Internet Simulator while learning about how the Internet works.",
-        "remarks": true
+        "remarks": true,
+        "progression_name": "Internet Simulator"
       },
       "seeding_key": {
         "activity_section.key": "5ad11dce-ef4f-4c1a-8407-e9bab74c4ab5",
@@ -997,7 +986,6 @@
       "key": "ebc976e9-8938-43d0-98e3-d8c1b3f6f995",
       "position": 1,
       "properties": {
-        "name": "Widget: Internet Simulator",
         "progression_name": "Widget: Internet Simulator"
       },
       "seeding_key": {
@@ -1009,7 +997,6 @@
       "key": "a5519a74-81b5-47c5-b6e0-2cd121cadfbb",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -2583,10 +2570,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L1 Internet Simulator: Sending Text_2021"
-        ],
-        "progression": "Widget: Internet Simulator"
+        "progression": "Internet Simulator"
       },
       "named_level": null,
       "bonus": null,
@@ -2597,7 +2581,7 @@
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "ebc976e9-8938-43d0-98e3-d8c1b3f6f995"
+        "activity_section.key": "5ad11dce-ef4f-4c1a-8407-e9bab74c4ab5"
       },
       "level_keys": [
         "CSP U2L1 Internet Simulator: Sending Text_2021"
@@ -2609,10 +2593,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L1 CFU how use internet_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2635,10 +2619,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L1 CFU paths_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2661,10 +2645,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Internet Simulator: Broadcast Mode",
         "level_keys": [
           "U2L2 CSP Internet Simulator Broadcast_2021"
-        ],
-        "progression": "Internet Simulator: Broadcast Mode"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2687,10 +2671,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP Addresses_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2713,10 +2697,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP works_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2739,10 +2723,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Internet Simulator: Routers",
         "level_keys": [
           "U1L3 CSP Internet Simulator Routers_2021"
-        ],
-        "progression": "Internet Simulator: Routers"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2765,10 +2749,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Routers_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2791,10 +2775,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Redundancy_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2817,10 +2801,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Internet Simulator: Packets",
         "level_keys": [
           "U1L4 CSP Internet Simulator Packets 2_2021"
-        ],
-        "progression": "Internet Simulator: Packets"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2843,10 +2827,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 Multiple Choice packets_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2869,10 +2853,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 CSP CFU terms_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2895,10 +2879,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Internet Simulator: DNS",
         "level_keys": [
           "U1L5 CSP Internet Simulator DNS_2021"
-        ],
-        "progression": "Internet Simulator: DNS"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2921,10 +2905,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 CSP CFU scale_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2947,10 +2931,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U2L5 CSP CFU subgroups_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2973,10 +2957,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Unit 2 Exam",
         "level_keys": [
           "CSP Unit 2 MC Assessment _2021"
-        ],
-        "progression": "Unit 2 Exam"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3004,7 +2988,7 @@
         "lesson.key": "Welcome to the Internet",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "ebc976e9-8938-43d0-98e3-d8c1b3f6f995"
+        "activity_section.key": "5ad11dce-ef4f-4c1a-8407-e9bab74c4ab5"
       }
     },
     {

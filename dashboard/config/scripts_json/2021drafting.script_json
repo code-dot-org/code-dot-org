@@ -130,21 +130,6 @@
       }
     },
     {
-      "key": "lesson-2",
-      "name": "Storing and Retrieving Text",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2021drafting"
-      }
-    },
-    {
       "key": "blank space stories",
       "name": "Blank Space Stories",
       "absolute_position": 4,
@@ -160,9 +145,24 @@
       }
     },
     {
+      "key": "lesson-2",
+      "name": "Text and Prompts",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
       "key": "lesson-3",
       "name": "Create a Chat-Bot",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 6,
@@ -177,7 +177,7 @@
     {
       "key": "lesson-3-ci",
       "name": "Create a Haiku Bot",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 7,
@@ -192,7 +192,7 @@
     {
       "key": "lesson-4",
       "name": "Counting with Variables",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 8,
@@ -207,7 +207,7 @@
     {
       "key": "lesson-5",
       "name": "Groups of Sprites",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 9,
@@ -222,7 +222,7 @@
     {
       "key": "lesson-6",
       "name": "Create a Collector Game",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 10,
@@ -788,31 +788,6 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Prediction",
-        "level_keys": [
-          "courseF_variables_predict"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_variables_predict"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2021drafting"
-      },
-      "level_keys": [
-        "courseF_variables_predict"
-      ]
-    },
-    {
       "chapter": 21,
       "position": 1,
       "activity_section_position": null,
@@ -838,7 +813,182 @@
       ]
     },
     {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Prediction",
+        "level_keys": [
+          "courseF_variables_predict"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_predict"
+      ]
+    },
+    {
       "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_review"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_review"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_print"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_print"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_events"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_events"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_prompts"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_answer"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_answer"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_concat"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_concat"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -863,7 +1013,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -888,7 +1038,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -913,7 +1063,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -938,7 +1088,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -963,7 +1113,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -988,7 +1138,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1013,7 +1163,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1038,7 +1188,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1063,7 +1213,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1089,7 +1239,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 39,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1115,7 +1265,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 40,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1140,7 +1290,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 41,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1165,7 +1315,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1190,7 +1340,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1215,7 +1365,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1240,7 +1390,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1265,7 +1415,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1290,7 +1440,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1315,7 +1465,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1577,6 +1727,72 @@
         "level.key": "courseF_variables_predict",
         "script_level.level_keys": [
           "courseF_variables_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_review",
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_print",
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events",
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_prompts",
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_answer",
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat",
+        "script_level.level_keys": [
+          "courseF_text_concat"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
