@@ -13,6 +13,11 @@ import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLevelIcon from './ProgressTableLevelIcon';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 
+// This component displays progress bubbles for all levels in all lessons
+// for each student in the section. It combines detail-specific components such as
+// ProgressTableLevelIcon, ProgressTableDetailCell with shared progress view
+// components like ProgressTableContainer. An equivalent compact
+// ProgressTableSummaryView component also exists
 class ProgressTableDetailView extends React.Component {
   static propTypes = {
     // redux
@@ -23,17 +28,17 @@ class ProgressTableDetailView extends React.Component {
 
   constructor(props) {
     super(props);
-    this.levelIconFormatter = this.levelIconFormatter.bind(this);
+    this.levelIconHeaderFormatter = this.levelIconHeaderFormatter.bind(this);
     this.detailCellFormatter = this.detailCellFormatter.bind(this);
   }
 
   getTableWidth(lessons) {
-    return lessons.reduce((lessonSum, lesson) => {
-      return lessonSum + ProgressTableDetailCell.widthForLevels(lesson.levels);
+    return lessons.reduce((totalWidth, lesson) => {
+      return totalWidth + ProgressTableDetailCell.widthForLevels(lesson.levels);
     }, 0);
   }
 
-  levelIconFormatter(_, {columnIndex}) {
+  levelIconHeaderFormatter(_, {columnIndex}) {
     return (
       <ProgressTableLevelIcon
         levels={this.props.scriptData.stages[columnIndex].levels}
@@ -64,7 +69,7 @@ class ProgressTableDetailView extends React.Component {
         columnWidths={columnWidths}
         lessonCellFormatter={this.detailCellFormatter}
         includeHeaderArrows={true}
-        extraHeaderFormatters={[this.levelIconFormatter]}
+        extraHeaderFormatters={[this.levelIconHeaderFormatter]}
         extraHeaderLabels={[i18n.levelType()]}
       >
         <ProgressLegend excludeCsfColumn={!this.props.scriptData.csf} />
