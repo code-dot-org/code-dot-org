@@ -14,7 +14,7 @@ import {
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
+import {levelProgressFromStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -31,13 +31,13 @@ describe('VirtualizedSummaryView', () => {
     defaultProps = {
       levelProgressByStudent: {
         0: {
-          '789': levelProgressWithStatus(LevelStatus.perfect)
+          '789': levelProgressFromStatus(LevelStatus.perfect)
         },
         1: {
-          '789': levelProgressWithStatus(LevelStatus.perfect)
+          '789': levelProgressFromStatus(LevelStatus.perfect)
         },
         3: {
-          '789': levelProgressWithStatus(LevelStatus.perfect)
+          '789': levelProgressFromStatus(LevelStatus.perfect)
         }
       },
       lessonOfInterest: 1,
