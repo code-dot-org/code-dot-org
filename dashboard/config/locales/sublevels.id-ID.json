@@ -1,0 +1,254 @@
+{
+  "id-ID": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Aksi",
+              "Events": "kegiatan",
+              "Loops": "Loop",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Games/Score": "Permainan/Skor"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dunia",
+              "Dancers": "Pedansa",
+              "Properties": "Properti",
+              "Events": "kegiatan",
+              "Numbers": "Nomor",
+              "Logic": "Logika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "gambar bintang",
+                "parameters": {
+                  "points": "poin",
+                  "length": "panjang"
+                }
+              },
+              "draw a circle": {
+                "name": "Gambar sebuah lingkaran"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "panjang",
+                  "repeat": "Ulangi"
+                }
+              },
+              "draw a triangle": {
+                "name": "menggambar sebuah segitiga",
+                "parameters": {
+                  "length": "panjang"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "panjang"
+                }
+              },
+              "draw a house": {
+                "name": "gambar sebuah rumah",
+                "parameters": {
+                  "length": "panjang"
+                }
+              },
+              "draw a square": {
+                "name": "menggambar sebuah persegi empat",
+                "parameters": {
+                  "length": "panjang"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Sprites",
+              "Actions": "Aksi",
+              "Events": "kegiatan",
+              "Behaviors": "Perilaku"
+            },
+            "behavior_names": {
+              "wandering": "pengembaraan",
+              "moving east": "bergerak ke timur",
+              "spinning left": "berputar ke kiri",
+              "spinning right": "berputar ke kanan",
+              "shrinking": "penyusutan",
+              "growing": "pertumbuhan",
+              "moving south": "bergerak ke selatan",
+              "swimming left and right": "berenang ke kiri dan kanan",
+              "moving north": "bergerak ke utara",
+              "jittering": "gugup",
+              "moving west": "bergerak ke barat",
+              "patrolling": "perondaan"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dunia",
+              "Dancers": "Pedansa",
+              "Properties": "Properti",
+              "Events": "kegiatan",
+              "Numbers": "Nomor",
+              "Logic": "Logika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Aksi",
+              "Brushes": "Kuas",
+              "Loops": "Loop",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "fungsi",
+              "Variables": "variabel"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Sprites",
+              "Locations": "Lokasi",
+              "Actions": "Aksi",
+              "Events": "kegiatan",
+              "Behaviors": "Perilaku",
+              "Variables": "variabel",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "fungsi",
+              "Text": "Teks",
+              "Comments": "Komentar"
+            },
+            "behavior_names": {
+              "moving east": "bergerak ke timur",
+              "spinning left": "berputar ke kiri",
+              "spinning right": "berputar ke kanan",
+              "shrinking": "penyusutan",
+              "growing": "pertumbuhan",
+              "moving south": "bergerak ke selatan",
+              "swimming left and right": "berenang ke kiri dan kanan",
+              "moving north": "bergerak ke utara",
+              "jittering": "gugup",
+              "moving west": "bergerak ke barat",
+              "patrolling": "perondaan",
+              "wandering": "pengembaraan"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Sprites",
+              "Locations": "Lokasi",
+              "Actions": "Aksi",
+              "Events": "kegiatan",
+              "Behaviors": "Perilaku",
+              "Variables": "variabel",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "fungsi",
+              "Text": "Teks",
+              "Comments": "Komentar"
+            },
+            "behavior_names": {
+              "moving east": "bergerak ke timur",
+              "spinning left": "berputar ke kiri",
+              "spinning right": "berputar ke kanan",
+              "shrinking": "penyusutan",
+              "growing": "pertumbuhan",
+              "moving south": "bergerak ke selatan",
+              "swimming left and right": "berenang ke kiri dan kanan",
+              "moving north": "bergerak ke utara",
+              "jittering": "gugup",
+              "moving west": "bergerak ke barat",
+              "patrolling": "perondaan",
+              "wandering": "pengembaraan"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Aksi",
+              "Brushes": "Kuas",
+              "Loops": "Loop",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "fungsi",
+              "Variables": "variabel"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Sprites",
+              "Actions": "Aksi",
+              "Events": "kegiatan",
+              "Logic": "Logika",
+              "Math": "Matematika"
+            },
+            "behavior_names": {
+              "recovering": "memulihkan",
+              "wandering": "pengembaraan",
+              "moving east": "bergerak ke timur",
+              "spinning left": "berputar ke kiri",
+              "spinning right": "berputar ke kanan",
+              "shrinking": "penyusutan",
+              "growing": "pertumbuhan",
+              "moving south": "bergerak ke selatan",
+              "moving left and right": "bergerak ke kiri dan ke kanan",
+              "moving north": "bergerak ke utara",
+              "jittering": "gugup",
+              "moving west": "bergerak ke barat",
+              "patrolling": "perondaan",
+              "moving with arrow keys": "bergerak dengan tanda panah"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Sprites",
+              "Actions": "Aksi",
+              "Behaviors": "Perilaku",
+              "Events": "kegiatan",
+              "Locations": "Lokasi",
+              "Logic": "Logika",
+              "Loops": "Loop",
+              "Math": "Matematika",
+              "Variables": "variabel",
+              "Functions": "fungsi",
+              "Comments": "Komentar"
+            },
+            "behavior_names": {
+              "recovering": "memulihkan",
+              "wandering": "pengembaraan",
+              "moving east": "bergerak ke timur",
+              "spinning left": "berputar ke kiri",
+              "spinning right": "berputar ke kanan",
+              "shrinking": "penyusutan",
+              "growing": "pertumbuhan",
+              "moving south": "bergerak ke selatan",
+              "moving left and right": "bergerak ke kiri dan ke kanan",
+              "moving north": "bergerak ke utara",
+              "jittering": "gugup",
+              "moving west": "bergerak ke barat",
+              "patrolling": "perondaan",
+              "moving with arrow keys": "bergerak dengan tanda panah"
+            }
+          }
+        }
+      }
+    }
+  }
+}

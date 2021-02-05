@@ -297,7 +297,7 @@ Resources:
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
 <% if rack_env?(:production) -%>
-        # Grant scheduled processes (Contact Rollups, Export to Redshift, etc.) permission to clone/delete RDS clusters.
+        # Grant scheduled processes (Export to Redshift, etc.) permission to clone/delete RDS clusters.
         - PolicyName: CloneDeleteRDSClusters
           PolicyDocument:
             Statement:
@@ -509,7 +509,7 @@ Resources:
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
 <%   if database %>
     DependsOn: Aurora1
-<%   end -%>      
+<%   end -%>
 <% end-%>
 <% if alarms-%>
 <%=  component 'alarms'%>

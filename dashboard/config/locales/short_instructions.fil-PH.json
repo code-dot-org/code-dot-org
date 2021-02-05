@@ -2231,7 +2231,15 @@
         "courseE_bee_ramp14": "Lumakad pasulong hanggang sa maabotan mo ang letsugas, pagkatapos ay pulutin ang lahat gamit ang `while` na loop.",
         "courseE_farmer_predict1": "Habang may letsugas pa, kumuha ng letsugas!",
         "courseE_farmer_predict2": "Lumakad pasulong hanggang sa maabotan mo ang letsugas, pagkatapos ay pulutin ang lahat gamit ang `while` na loop.",
-        "scrat 19": "Isa pang pagsasanay sa mga \"if-else\" na bloke, magagawa mo ba ito nang tama sa unang pagsubok lang?"
+        "scrat 19": "Isa pang pagsasanay sa mga \"if-else\" na bloke, magagawa mo ba ito nang tama sa unang pagsubok lang?",
+        "outbreak1": "Lumikha ng 10 malusog na tianak at 1 na may sakit. Baguhin ang kanilang laki at hayaan silang gumala.",
+        "outbreak2": "Gawing may sakit na halimaw ang malulusog na halimaw kapag dumampi sila.",
+        "outbreak3": "Palitan ang mga halimaw kapag na-click mo sila sa mga halimaw na may mga mask sa mukha.",
+        "outbreak4": "Baguhin ang bilang at laki ng mga tianak ng halimaw sa iyong simulasyon.",
+        "outbreak5": "Gawin ang lahat ng mga may sakit na halimaw na magsimulang gumaling kapag ang isang malusog na halimaw ay dumampi sa isang may sakit na halimaw.",
+        "outbreak6": "Magdagdag ng isang porsyentong posibilidad sa mga halimaw na magkasakit tuwing dumampi ang mga may sakit na halimaw sa malulusog na halimaw. Gawin ito para sa lahat ng mga kumbinasyon ng mga halimaw na meron at walang mga mask.",
+        "outbreak7": "Lumikha ng isang bagong kasuutan para sa mga halimaw na may imyunidad sa virus at gamitin ito sa simulasyon mo.",
+        "outbreak8": "Magbahagi ng isang mensahe sa iyong simulasyon."
       }
     }
   }

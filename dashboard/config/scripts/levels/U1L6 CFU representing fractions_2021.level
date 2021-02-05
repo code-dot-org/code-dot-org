@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "When using bits to represent fractions of a number, can you create all possible fractions? Why or why not?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18868,
+    "name_suffix": "_2021",
+    "encrypted_solution": "EhCzzdUdv7U7W5nYx7vwZzdPuppIP1d49HFZlZeJCGdZmfSwW4bgwtixm5hN\n0kIwkFegR1w75xFRhNUBMZPL1cYBgkOW7hp/6GYkrzJTvscZJHTjETMnVsik\nJXwLv53zKVrJQB+S5VooowpzBO4gZX65g++Ic5K8mXOeNxx2NiXUylEpfF1T\nOQDWA4j6lDCbV54qocr00IJ2kI9RefrTaF1Ye+EQ6zAQr9p7/mhkq7zRSg4f\naY2PojwkSP3CLvsXglrFbH5UA+mz0qV4Xm3sktoeWx+Uheg/Yk5vh3bifxRR\nnDJTlkpWflr9H03DI3aO\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Reflection: Binary Fractions"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-22 13:25:01 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:26:45 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:29:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:33:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:33:39 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:36:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:39:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

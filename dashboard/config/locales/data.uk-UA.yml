@@ -53,7 +53,7 @@ uk:
         loop_until: Блок „Повторити до“
         loop_while: Блок "повторити поки"
         loop_for: Блок лічильника
-        function: функції
+        function: Функції
         parameters: Функції з параметрами
     level:
       instructions:

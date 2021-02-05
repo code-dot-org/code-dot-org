@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: Dasturlash soatini o'tkazish bo'yicha mutassadilar uchun yo'riqnoma
 ---
 
 {{ signup_button }}

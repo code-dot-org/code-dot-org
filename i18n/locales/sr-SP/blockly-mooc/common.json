@@ -331,6 +331,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Проверава да ли је вредност мања или једнака другој вредности. Враћа \"тачно\" ако је вредност на левој страни мања или једнака вредности на десној страни.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Оператор мање или једнако",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathPow_param1": "у",
   "dropletBlock_mathRandom_description": "Враћа случајни број који је већи или једнак од 0 а мањи од 1",

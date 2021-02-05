@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Resurslar
 ---
 
 {{ signup_button }}

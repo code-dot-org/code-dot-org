@@ -1,5 +1,10 @@
 {
+  "clicked": "haga clic en ",
+  "clickedSprite": "clic en gráfico",
+  "subject": "Asunto:",
+  "subjectSprite": "sprite de sujeto",
   "object": "objeto",
+  "objectSprite": "sprite de objeto",
   "errorLoadingAnimation": "Parece que tenemos problemas al cargar tu animación \"{animationName}\". Asegúrate de que tienes una buena conexión a Internet y vuelve a cargar la página. Si persiste el problema, es posible que la animación esté rota. En ese caso, deberías eliminar la animación para continuar.",
   "reinfFeedbackMsg": "¡Has finalizado! Haz clic en \"Continuar\" para pasar al siguiente nivel.",
   "shareGame": "Comparte tu juego:",
@@ -35,6 +40,7 @@
   "outbreakChangeSize": "Intenta configurar todos tus sprites en un tamaño diferente.",
   "outbreakNoneRecovering": "Asegúrate de usar un bloque `sprite comienza a recuperarse` *después* del bloque `hacer nuevos sprites`:\n <xml><block type=\"gamelab_makeNumSprites\"><title name=\"ANIMATION_NAME\">\"enfermo\"</title><value name=\"NUM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><next><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"enfermo\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">recuperándose</title></block></value></block></next></block></xml>",
   "outbreakOneRecovering": "Asegúrate de usar un bloque `sprite comienza a recuperarse` debajo del evento `cuando toca`:\n <xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"cuando\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"saludable\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"enfermo\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"enfermo\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value><next><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_subjectSpritePointer\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">recuperándose</title></block></value></block></next></block></next></block></xml>",
+  "outbreakRecovering": "Asegúrate de usar un bloque `sprite comienza a recuperarse` debajo del evento `cuando toca`:\n<xml><block type=\"gamelab_addBehaviorSimple\"> <value name=\"SPRITE\"> <block type=\"gamelab_allSpritesWithAnimation\"> <title name=\"ANIMATION\">\"enfermo\"</title> </block> </value> <value name=\"BEHAVIOR\"> <block type=\"gamelab_behavior_get\"> <mutation></mutation> <title name=\"VAR\">recuperando</title> </block> </value> </block></xml>",
   "outbreakCostumeTab": "Haz clic en la pestaña \"Disfraces\" sobre el área de juego para agregar un nuevo disfraz de sprite a tu proyecto.",
   "outbreakUseCostume": "Tu nuevo disfraz de sprite no apareció en tu simulación. Haz clic en la bombilla si deseas una pista.",
   "outbreakReplaySuccess": "¡Asegúrate de reproducir la simulación varias veces antes de continuar!",

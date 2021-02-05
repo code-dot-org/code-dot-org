@@ -8,8 +8,8 @@ require 'cdo/delete_accounts_helper'
 # acceptable affected row counts for each step.  If any query exceeds the
 # acceptable number of affected rows we roll back the transaction and move the
 # account into a manual review queue where an engineer will handle it.
-# Changes that occur outside of the database (removing content from Pardot,
-# S3) all occurs after point-of-no-return after the transaction successfully
+# Changes that occur outside of the database (removing content from S3)
+# all occurs after point-of-no-return after the transaction successfully
 # commits.
 #
 # Pushes audit logs to S3.

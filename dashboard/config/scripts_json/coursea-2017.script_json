@@ -5,35 +5,41 @@
     "hidden": false,
     "login_required": false,
     "properties": {
-      "project_widget_visible": "on",
+      "project_widget_visible": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "has_lesson_plan": true,
       "version_year": "2017",
       "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursea/{LESSON}",
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
+        "de-DE",
         "es-ES",
         "es-MX",
         "fr-FR",
         "hi-IN",
         "id-ID",
         "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "mn-MN",
         "pt-BR",
+        "pt-PT",
+        "ru-RU",
         "sk-SK",
         "tr-TR",
+        "uz-UZ",
         "zh-CN",
         "zh-TW"
       ],
       "curriculum_umbrella": "CSF",
       "family_name": "coursea",
       "tts": true,
-      "lesson_extras_available": "on",
-      "hideable_lessons": "on",
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
       "is_course": true,
       "peer_reviews_to_complete": 0
     },
@@ -226,10 +232,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -250,6 +263,7 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -270,6 +284,7 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -290,6 +305,7 @@
     {
       "chapter": 4,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -310,6 +326,7 @@
     {
       "chapter": 5,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -330,6 +347,7 @@
     {
       "chapter": 6,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -350,6 +368,7 @@
     {
       "chapter": 7,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -370,6 +389,7 @@
     {
       "chapter": 8,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -390,6 +410,7 @@
     {
       "chapter": 9,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -410,6 +431,7 @@
     {
       "chapter": 10,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -430,6 +452,7 @@
     {
       "chapter": 11,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -450,6 +473,7 @@
     {
       "chapter": 12,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -470,6 +494,7 @@
     {
       "chapter": 13,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -490,6 +515,7 @@
     {
       "chapter": 14,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -510,6 +536,7 @@
     {
       "chapter": 15,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -530,6 +557,7 @@
     {
       "chapter": 16,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -550,6 +578,7 @@
     {
       "chapter": 17,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -570,6 +599,7 @@
     {
       "chapter": 18,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -590,6 +620,7 @@
     {
       "chapter": 19,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -610,6 +641,7 @@
     {
       "chapter": 20,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -630,6 +662,7 @@
     {
       "chapter": 21,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -650,6 +683,7 @@
     {
       "chapter": 22,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -670,6 +704,7 @@
     {
       "chapter": 23,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -690,6 +725,7 @@
     {
       "chapter": 24,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -710,6 +746,7 @@
     {
       "chapter": 25,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -730,6 +767,7 @@
     {
       "chapter": 26,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -750,6 +788,7 @@
     {
       "chapter": 27,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -771,6 +810,7 @@
     {
       "chapter": 28,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -792,6 +832,7 @@
     {
       "chapter": 29,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -812,6 +853,7 @@
     {
       "chapter": 30,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -832,6 +874,7 @@
     {
       "chapter": 31,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -852,6 +895,7 @@
     {
       "chapter": 32,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -872,6 +916,7 @@
     {
       "chapter": 33,
       "position": 17,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -892,6 +937,7 @@
     {
       "chapter": 34,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -912,6 +958,7 @@
     {
       "chapter": 35,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -932,6 +979,7 @@
     {
       "chapter": 36,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -952,6 +1000,7 @@
     {
       "chapter": 37,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -972,6 +1021,7 @@
     {
       "chapter": 38,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -992,6 +1042,7 @@
     {
       "chapter": 39,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1012,6 +1063,7 @@
     {
       "chapter": 40,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1032,6 +1084,7 @@
     {
       "chapter": 41,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1052,6 +1105,7 @@
     {
       "chapter": 42,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1072,6 +1126,7 @@
     {
       "chapter": 43,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1092,6 +1147,7 @@
     {
       "chapter": 44,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1112,6 +1168,7 @@
     {
       "chapter": 45,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1132,6 +1189,7 @@
     {
       "chapter": 46,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -1153,6 +1211,7 @@
     {
       "chapter": 47,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1173,6 +1232,7 @@
     {
       "chapter": 48,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1193,6 +1253,7 @@
     {
       "chapter": 49,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1213,6 +1274,7 @@
     {
       "chapter": 50,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1233,6 +1295,7 @@
     {
       "chapter": 51,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1253,6 +1316,7 @@
     {
       "chapter": 52,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1273,6 +1337,7 @@
     {
       "chapter": 53,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1293,6 +1358,7 @@
     {
       "chapter": 54,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1313,6 +1379,7 @@
     {
       "chapter": 55,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1333,6 +1400,7 @@
     {
       "chapter": 56,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1353,6 +1421,7 @@
     {
       "chapter": 57,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1373,6 +1442,7 @@
     {
       "chapter": 58,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1393,6 +1463,7 @@
     {
       "chapter": 59,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1413,6 +1484,7 @@
     {
       "chapter": 60,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1433,6 +1505,7 @@
     {
       "chapter": 61,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1453,6 +1526,7 @@
     {
       "chapter": 62,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -1474,6 +1548,7 @@
     {
       "chapter": 63,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1494,6 +1569,7 @@
     {
       "chapter": 64,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1514,6 +1590,7 @@
     {
       "chapter": 65,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1534,6 +1611,7 @@
     {
       "chapter": 66,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1554,6 +1632,7 @@
     {
       "chapter": 67,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1574,6 +1653,7 @@
     {
       "chapter": 68,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1594,6 +1674,7 @@
     {
       "chapter": 69,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1614,6 +1695,7 @@
     {
       "chapter": 70,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1634,6 +1716,7 @@
     {
       "chapter": 71,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1654,6 +1737,7 @@
     {
       "chapter": 72,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1674,6 +1758,7 @@
     {
       "chapter": 73,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1694,6 +1779,7 @@
     {
       "chapter": 74,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1714,6 +1800,7 @@
     {
       "chapter": 75,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1734,6 +1821,7 @@
     {
       "chapter": 76,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1754,6 +1842,7 @@
     {
       "chapter": 77,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -1774,6 +1863,7 @@
     {
       "chapter": 78,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -2651,5 +2741,14 @@
         "script.name": "coursea-2017"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "objectives": [
+
   ]
 }

@@ -1,0 +1,27 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-12-04T21:59:12.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Can you make all 8 unique colors using 3 bits per color? We've done the first two for you. \r\nHint: Try turning on more than one bit at a time. ",
+    "long_instructions": "# Color Pixelation: Task 1\r\n**Directions:**\r\n\r\n* Can you make all 8 unique colors using 3 bits per color? We've done the first two for you. \r\n* **Hint:** Try turning on more than one bit at a time. \r\n",
+    "version": "3",
+    "data": "000001000000001000000011100010",
+    "href": "pixelation/pixelation.html",
+    "video_key": "csp_pixelation_color_1",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "parent_level_id": 18941,
+    "name_suffix": "_2021",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-09 00:42:08 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-02 03:15:58 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Pixelation>

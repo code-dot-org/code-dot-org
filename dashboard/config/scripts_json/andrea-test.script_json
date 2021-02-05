@@ -7,7 +7,16 @@
     "properties": {
       "peer_reviews_to_complete": 1,
       "student_detail_progress_view": true,
-      "professional_learning_course": "Andrea Test"
+      "professional_learning_course": "Andrea Test",
+      "announcements": [
+        {
+          "notice": "Announcing",
+          "details": "the announcement",
+          "link": "",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ]
     },
     "new_name": null,
     "family_name": null,
@@ -99,10 +108,17 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "What is Deeper Learning"
@@ -124,6 +140,7 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "President Question"
@@ -145,6 +162,7 @@
     {
       "chapter": 3,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Vice President Question"
@@ -166,6 +184,7 @@
     {
       "chapter": 4,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -188,6 +207,7 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Sandwich"

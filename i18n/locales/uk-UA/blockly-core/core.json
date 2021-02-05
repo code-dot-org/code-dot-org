@@ -314,7 +314,7 @@
     "TEXT_CHARAT_RANDOM": "отримати випадковий символ",
     "TEXT_CHARAT_TOOLTIP": "Повертає символ у зазначеній позиції.",
     "TEXT_CREATE_JOIN_ITEM_TOOLTIP": "Додати елемент до тексту.",
-    "TEXT_CREATE_JOIN_TITLE_JOIN": "Приєднатися до",
+    "TEXT_CREATE_JOIN_TITLE_JOIN": "З'єднати",
     "TEXT_CREATE_JOIN_TOOLTIP": "Додати, видалити або змінити порядок груп для налаштування текстового блоку.",
     "TEXT_GET_SUBSTRING_END_FROM_END": "до символу з кінця",
     "TEXT_GET_SUBSTRING_END_FROM_START": "до символу #",

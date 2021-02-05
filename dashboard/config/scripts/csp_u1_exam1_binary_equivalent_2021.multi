@@ -1,0 +1,25 @@
+name 'csp-u1-exam1-binary-equivalent_2021'
+height 'auto'
+
+question 'How many total numbers can be represented with an 8-bit binary (base-2) system?’
+wrong ‘127’
+wrong ‘128’
+wrong ‘255’
+right ‘256’
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Binary is a base 2 number system. With each new bit, we double the amount of unique numbers we can make. With 7 bits, we can make the decimal numbers 0 to 127 (`0000000` to `1111111`), for a total of 128 unique numbers. When we go up to 8 bits, we can make the decimal numbers 0 to 255 (`00000000` to `11111111`) for a total of 256 unique numbers.
+
+[Lesson 4 - Binary Numbers](https://curriculum.code.org/csp-20/unit1/4/) covered place value in binary numbers.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-1.C: For binary numbers:
+	1. Calculate the binary (base 2) equivalent of a positive integer (base 10) and vice versa.
+	2. Compare and order binary numbers.
+:::
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

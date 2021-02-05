@@ -2208,6 +2208,7 @@ es-MX:
   compatibility_unsupported_browser_markdown: Tu navegador no es compatible. Actualiza
     tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url})
     Puedes tratar de ver la página, pero la funcionalidad podría verse afectada.
+  starwars_shortcode: estrella
   mc_shortcode: mc
   flappy_shortcode: aletear
   header_home: Inicio
@@ -2580,7 +2581,4 @@ es-MX:
   homepage_slot_text_blurb_at_home: Aprender es fácil con estos recursos
   page_not_available_button: Volver a la página de inicio
   footer_powered_by_aws: Impulsado por Amazon Web Services
-  codebytes_skinny_banner_title: ¡Únete en CodeBytes el 7 al 11 de diciembre para nuestras mini lecciones en vivo!
-  codebytes_skinny_banner_description: 'Acompáñanos todos los días de la Semana de la Educación en Ciencias de la Computación para CodeBytes, una serie de lecciones interactivas de 20 minutos cada uno sobre las ciencias de la computación. ¡CodeBytes se transmite en vivo dos veces al día y es una excelente oportunidad para que los estudiantes participen en una #HoraDelCódigo virtual!'
   codebytes_skinny_banner_english_only: Solo en inglés
-  codebytes_skinny_banner_learn: 'Aprende más en [code.org/codebytes](%{code_bytes_url}).'

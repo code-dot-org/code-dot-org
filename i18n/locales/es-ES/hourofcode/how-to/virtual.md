@@ -1,71 +1,71 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Guía práctica de la Hora del Código para Eventos Virtuales
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Consejos para un evento virtual de la Hora del Código
 
-### You don't have to be in-person to run a successful Hour of Code!
+### ¡No es necesario estar en persona para ejecutar una Hora del Código con éxito!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Si bien la Hora del Código se lleva a cabo tradicionalmente en las aulas de todo el mundo, ¡no es necesario que estés en persona para disfrutar de la diversión! Todavía puedes organizar una Hora del Código interactiva e inspiradora para los estudiantes de forma remota utilizando algunas de estas recomendaciones.  Consulta nuestra [guía de participación]({{ localized_files/participation_guide_virtual }}) si tienes preguntas.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Puede que estén separados, pero aún pueden comenzar juntos
+Incluso si piensa que los estudiantes completen sus actividades de forma independiente, recomendamos comenzar su evento con un inicio virtual en línea para entusiasmar a los participantes. Hay varias formas interesantes de comenzar su evento: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Invite a un orador</b>: ¡Miles de voluntarios de todos las formaciones están esperando saber de ti! Simplemente usa nuestro <a href="https://code.org/volunteer/local">mapa de voluntarios</a> para buscarlos. Con una Hora del Código virtual, no estás limitado por la distancia, por lo que, si es necesario, considera buscar voluntarios fuera de tu código postal que se ofrezcan a ayudar de forma remota. Una vez que te hayas conectado con un voluntario, puedes hacer referencia a las <a href="http://hourofcode.com/us/how-to/volunteers">Instrucciones para voluntarios de la Hora del Código</a> como una guía para determinar posibles temas, preguntas de debate y más.</li> 
+<li><b>Muestra un video inspirador</b>: Otra posible opción para comenzar tu evento es mostrar a los participantes uno de nuestros diferentes <a href="http://hourofcode.com/us/promote/resources#videos">videos inspiradores</a>. Muchos videos duran menos de 5 minutos y presentan inspiración y aliento de celebridades que tus estudiantes reconocerán.</li> 
+<li><b>Discute las ciencias de la computación para el bien</b>: Convierte tu evento de la Hora del Código en una comprensión más profunda de las ciencias de la computación al considerar el impacto de la tecnología en nuestra vida cotidiana. Haz preguntas de orientación a los estudiantes y convierte el comienzo de tu evento en un debate interactivo. Para obtener ideas sobre cómo iniciar la conversación, consulta estas <a href="https://code.org/csforgood#prompts">preguntas de debate</a>.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Qué preparar con anticipación
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Elige tu plataforma de videoconferencia
+Es probable que ya estés familiarizado con plataformas como Cisco Webex, Google Meet, Microsoft Teams, Skype o Zoom. Cualquiera que sea la herramienta que prefieras, te animamos a que te familiarices, pruebes tus capacidades y revises tu agenda de la Hora del Código antes de la fecha del evento.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Planificar cómo participarán los estudiantes
+**Actividad autodirigida de la Hora del Código ** <br> Recomendamos que, después de iniciada la actividad, permita a los estudiantes salir de la videoconferencia para trabajar en sus <a href="https://hourofcode.com/us/learn"> actividades de la Hora del Código </a> por su cuenta en lugar de todos juntos. Esto permitirá a los estudiantes sumergirse en sus propios proyectos y obtener una comprensión más sólida de los conceptos de informática. También minimizará la distracción y el obstáculo de mantener abierta una ventana de videoconferencia.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Puede ser útil para ti determinar de 1 a 3 opciones de tutoriales para que ellos elijan con anticipación. Esto te permite elegir las actividades que mejor se adapten al nivel de tus estudiantes. Además, si los estudiantes tienen preguntas que requieren tu ayuda, estarás mejor preparado para ayudar si ya estás familiarizado con los tutoriales en los que están trabajando.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Si se espera que tu clase realice su actividad inmediatamente después del inicio, puedes considerar mantener abierta una sala de conferencias virtual, plataforma de chat u otros medios de comunicación para que puedan volver a conectarse contigo con preguntas, según sea necesario.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**Actividad de la Hora del Código juntos en línea** <br> Si prefieres mantener a tus participantes en la misma videollamada durante la duración de tu evento, ten en cuenta que deberán tener dos ventanas abiertas en todo momento: una para la plataforma de videoconferencia y la otra para que los estudiantes trabajen sobre su actividad.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**Con los padres** <br> En el caso de los estudiantes de 4.º grado o menos, considera animar a sus padres a organizar una Hora del Código en casa. Puedes apoyarlos con algunos tutoriales recomendados, así como con esta útil <a href="https://hourofcode.com/us/how-to/parents">Guía práctica para padres</a>.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Recluta a un voluntario
+Puede encontrar un voluntario que se adapte a sus necesidades visitando nuestro <a href="https://code.org/volunteer/local"> mapa de voluntarios </a>. Muchos están disponibles para la participación remota y están más que dispuestos a hablar sobre su experiencia en ciencias de la computación, cómo la tecnología impacta sus roles o simplemente para ayudarlo con la resolución de problemas de los estudiantes. Una vez que encuentres un voluntario, asegúrate de programar una reunión con ellos con anticipación para discutir su papel en el evento, resolver los requisitos técnicos y establecer la logística de participar en línea.
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. Provisiones de celebración
+Eche un vistazo a continuación para obtener ideas sobre cómo celebrar su Hora del Código virtual. Algunos pueden requerir que se prepare con anticipación, como crear <a href="https://code.org/certificates"> certificados </a> de finalización para todos sus participantes.
 
 ---
 
-## Celebrate together
+## Celebrar juntos
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+De manera similar a como comenzó el evento, ¡reúnete después para celebrar! Estas son algunas ideas para hacer que tu celebración virtual sea interactiva y especial:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. ¡Usa #HourOfCode y @codeorg para que también podamos destacar tu éxito!
+- Permite que los estudiantes compartan sus proyectos terminados con el resto de la clase. Si tu plataforma de conferencias lo permite, ¡incluso puedes animar a los estudiantes a tomar una captura de pantalla de sus proyectos y configurarla como su fondo virtual!
+- Discute lo aprendido: ¿Qué han aprendido sobre las ciencias de la computación o la tecnología? ¿Qué hicieron cuando se encontraron con un problema? ¿Cómo lo resolvieron?
+- <a href="https://code.org/certificates">Crea y comparte certificados</a> para tus participantes
+- Comparte fotos y videos de tu Hora del Código virtual en las redes sociales. ¡Usa #HourOfCode y @codeorg para que también podamos destacar tu éxito!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+Por último, si no comenzaste el evento con un <a href="https://code.org/volunteer/local">orador invitado</a>, un <a href="https://hourofcode.com/us/promote/resources#">video inspirador</a> o <a href="https://code.org/csforgood#prompts">preguntas de debate</a>, esta sería otra gran oportunidad para incorporar una de esas experiencias también.
 
 {{ signup_button }}

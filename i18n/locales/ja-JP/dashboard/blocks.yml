@@ -1006,6 +1006,7 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
             '"tint"': 色合い
+            '"speed"': スピード
       gamelab_getThisSprite:
         text: "{CHOICE} スプライト"
         options:
@@ -1130,6 +1131,8 @@ ja:
             '"West"': 西だ
       gamelab_moveToward:
         text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
+      gamelab_newSpritePointer:
+        text: クリック {SPRITE}
       gamelab_objectSpritePointer:
         text: クリック {SPRITE}
       gamelab_playSound:
@@ -1180,6 +1183,13 @@ ja:
             undefined: なし
       gamelab_setBackgroundImageAs:
         text: 背景を次の値に設定する {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 普通
+            '100': large
       gamelab_setProp:
         text: 設定 {SPRITE} {PROPERTY} 宛先 {VAL}
         options:
@@ -1189,6 +1199,7 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+            '"speed"': スピード
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} を {N}%に設定"
         options:
@@ -1284,6 +1295,8 @@ ja:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 魚ではない
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": マイレーベル
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 私のラベルではありません
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

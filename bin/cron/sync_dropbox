@@ -27,7 +27,6 @@ FOLDERS = {
   "curriculum-docs" => "sites/virtual/curriculum-docs",
   "curriculum-misc" => "sites/virtual/curriculum-misc",
   "curriculum-science" => "sites/virtual/curriculum-science",
-  "curriculum-unplugged" => "sites/virtual/curriculum-unplugged",
   "emails" => "emails",
   "hourofcode.com" => "sites.v3/hourofcode.com"
 }.freeze

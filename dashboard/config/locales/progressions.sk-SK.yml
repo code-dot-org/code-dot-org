@@ -10,6 +10,7 @@ sk:
       Challenges: Výzvy
       Collisions: Kolízie "sprite" objektov
       Debugging: Hľadanie a odstraňovanie chýb
+      Design Mode: Dizajnový mód
       Drawing: Kreslenie
       Events: Udalosti
       Finishing Functions: Dokončovanie funkcií
@@ -23,6 +24,7 @@ sk:
       Functions with Parameters: Funkcie s parametrami
       How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
       How to Make a Sprite: Ako vytvoriť postavu
+      Images and Sounds: Obrázky a zvuky
       Intro to Variables: Predstavenie premenných
       Introducing Sprite Lab: Predstavenie Sprite Labu
       Introduction to Arrays: Úvod do zoskupení
@@ -46,7 +48,10 @@ sk:
       Project: Projekt
       Properties: Vlastnosti
       Reflection: Reflexia
+      Setting Properties: Základné nastavenia
+      Share Your App: Zdieľaj svoju appku
       Sprite Lab Project: Lab postáv projekt
+      Stopping the Outbreak with Masks: Zastaviť nákazu pomocou masiek
       The Harvester: Záhradníčka
       Using the Repeat Block: Používanie bloku opakuj
       Velocity: Rýchlosť

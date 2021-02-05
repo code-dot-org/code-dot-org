@@ -40,7 +40,7 @@ class LessonGroup < ApplicationRecord
     big_questions
   )
 
-  Counters = Struct.new(:lockable_count, :non_lockable_count, :lesson_position, :chapter)
+  Counters = Struct.new(:numbered_lesson_count, :unnumbered_lesson_count, :lesson_position, :chapter)
 
   # Finds or creates Lesson Groups with the correct position.
   # In addition it check for 3 things:
@@ -152,7 +152,8 @@ class LessonGroup < ApplicationRecord
     summary
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
@@ -185,7 +186,7 @@ class LessonGroup < ApplicationRecord
   # @return [Boolean] - Whether any changes to this lesson group were saved.
   def update_from_curriculum_builder(cb_chapter_data)
     # In the future, only levelbuilder should be added to this list.
-    raise unless [:development, :adhoc].include? rack_env
+    raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
     cb_questions = cb_chapter_data['questions']
     if cb_questions.present? && big_questions.blank?

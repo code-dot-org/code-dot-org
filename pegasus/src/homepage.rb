@@ -409,7 +409,7 @@ class Homepage
     elsif promote_code_bytes(request)
       "codebytes2020"
     else
-      "hoc2020"
+      "changeworld"
     end
   end
 
@@ -506,7 +506,7 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    false
+    request.locale == "en-US" && DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active)
   end
 
   def self.show_courses_banner(request)
@@ -514,7 +514,7 @@ class Homepage
   end
 
   def self.show_special2020_banner(request)
-    true
+    false
   end
 
   def self.get_dance_stars

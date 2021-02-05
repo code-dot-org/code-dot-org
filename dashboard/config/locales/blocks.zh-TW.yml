@@ -543,7 +543,7 @@ zh-TW:
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
             '"fireworks"': 煙火
-            '"flowers"': 花
+            '"flowers"': 花朵
             '"growing_stars"': 星星
             '"swirl"': 催眠
             '"kaleidoscope"': 萬花筒
@@ -877,7 +877,7 @@ zh-TW:
             '"ripples"': 漣漪
             '"ripples_random"': 隨機漣漪
             '"quads"': 角
-            '"flowers"': 花
+            '"flowers"': 花朵
             '"popsicles"': 冰棒
             '"squiggles"': 蜿曲線段
             '"growing_stars"': 星星
@@ -1029,6 +1029,7 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
             '"tint"': 色調
+            '"speed"': 速度
       gamelab_getThisSprite:
         text: "{CHOICE} 角色"
         options:
@@ -1164,6 +1165,8 @@ zh-TW:
             '"West"': 西
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
+      gamelab_newSpritePointer:
+        text: 點擊 {SPRITE}
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
       gamelab_patrollingUpDown:
@@ -1234,6 +1237,13 @@ zh-TW:
             undefined: 無
       gamelab_setBackgroundImageAs:
         text: 背景設為 {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 中
+            '100': large
       gamelab_setProp:
         text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
@@ -1243,6 +1253,7 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
+            '"speed"': 速度
       gamelab_setSizes:
         text: 角色 {SPRITE} {PROPERTY} 設為 {N}%
         options:
@@ -1342,6 +1353,8 @@ zh-TW:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 不是魚
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 我的標籤
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的標籤
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changeAnim:
         text: 角色 {SPRITE} 造型設為 {COSTUME}
       Mikelab_changePropBy:

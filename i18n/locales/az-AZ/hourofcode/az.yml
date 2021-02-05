@@ -7,8 +7,8 @@ az:
   coming_soon: Tezliklə
   campaign_date_start_short: 4 dek.
   campaign_date_start_long: 4 dekabr
-  campaign_date_short: 4-10 dek.
-  campaign_date_full: 4-10 dekabr
+  campaign_date_short: 7-13 dekabr
+  campaign_date_full: 7-13 dekabr
   campaign_date_year: '2017'
   campaign_date_full_year: 7-13 dekabr 2020
   latam_campaign_date_start_short: Oct. 1
@@ -152,9 +152,9 @@ az:
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
+  activity: Fəaliyyət
+  name: Ad
+  description: Təsvir
   audience: Audience
   ai_resource_header: Teach and Learn about AI
   ai_resource_minecraft: Minecraft AI for Good
@@ -170,7 +170,7 @@ az:
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
   ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
     Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai: Süni İntellektin elementləri
   ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
     and the University of Helsinki.
   ai_resource_cognimates: Cognimates
@@ -496,7 +496,7 @@ az:
     kömək edin
   signup_email_preference_opt_in: Sizə "Code.org" kurslarındakı yeniliklər, yerli
     imkanlar və ya digər informatika xəbərləri barədə e-məktub yaza bilərik?
-  signup_email_preference_privacy: "(See our privacy policy)"
+  signup_email_preference_privacy: "(Məxfilik siyasətimizi nəzərdən keçirin)"
   signup_email_preference_yes: Bəli
   signup_email_preference_no: Xeyr
   signup_email_preference_error: Email preference is required
@@ -562,8 +562,8 @@ az:
   map_legend_title: Şərti işarələr
   map_legend_hoc_events: Kod Saatı tədbiri
   map_legend_cs_tech_jam: Xüsusi tədbir
-  map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
-    page.</a>
+  map_warning: Tədbirlərin tam siyahısına <a href='%{events_url}'>tərbirlər səhifəsi</a>ndə
+    baxmaq olar.
   map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Kod Saatı gəlir
   meta_tag_og_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla

@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SublevelCard from './SublevelCard';
+import {levelTypeWithoutStatus} from '@cdo/apps/templates/progress/progressTypes';
 
 const MARGIN = 10;
 
@@ -29,27 +29,9 @@ const styles = {
 };
 
 export default class BubbleChoice extends React.Component {
-  static propTypes = {
-    level: PropTypes.shape({
-      display_name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      previous_level_url: PropTypes.string,
-      redirect_url: PropTypes.string,
-      script_url: PropTypes.string,
-      sublevels: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.number.isRequired,
-          display_name: PropTypes.string.isRequired,
-          description: PropTypes.string,
-          thumbnail_url: PropTypes.string,
-          url: PropTypes.string.isRequired,
-          position: PropTypes.number,
-          letter: PropTypes.string,
-          perfect: PropTypes.bool
-        })
-      )
-    })
-  };
+  // The bubble choice component doesn't need the status. It's
+  // only rendering the sublevel cards.
+  static propTypes = {level: levelTypeWithoutStatus};
 
   goToUrl = url => {
     navigateToHref(url + location.search);

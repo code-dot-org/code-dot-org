@@ -1,0 +1,14 @@
+name 'csd-post-survey-intro-2019_preview-2021'
+editor_experiment ''
+
+markdown <<MARKDOWN
+# CS Discoveries Post-Course Survey
+
+**Your input and feedback is important to us!** We use it to:
+
+* understand your experience.
+* make improvements to the course.
+
+Thanks for taking the time to help make CS Discoveries even better!
+
+MARKDOWN

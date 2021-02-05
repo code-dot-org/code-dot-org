@@ -439,6 +439,7 @@ zh-CN:
       worked_with: '共事'
       update_lock_settings: '在这里更新锁设置。'
       clear_response: '清除回复'
+    student_code_view_diabled: '无法查看该活动的学生代码。'
   user:
     email_confirm_needed: '电子邮件地址尚未被确认：'
     email_confirm_needed_required: '你的电子邮件地址%{email} 尚未被确认：'
@@ -552,6 +553,7 @@ zh-CN:
     art_from_html_old: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。阿甘妙世界是TM，&copy; %{current_year} 卡通网络。'
     code_from_html: 'Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> 之许可。'
     powered_by_aws: '由亚马逊网络服务'
+    google_copyright: '© Google Inc，在有许可下使用。谷歌课堂是Google Inc的一个商标。'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour of Code&reg; 是 Code.org 的注册商标。'
     copyright: '版权'
     more: '更多'
@@ -1079,6 +1081,7 @@ zh-CN:
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"
   page_not_found_button: "返回主页"
   copy: '复制'
+  confirm: '确认'
   maker:
     google_oauth:
       login_with_google: '登录到Google的制作者应用'

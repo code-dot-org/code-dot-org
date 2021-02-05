@@ -1,0 +1,8 @@
+name 'CSD web movement practice choice_2021'
+display_name 'Practice'
+description 'Try out using the draw loop with these activities.'
+
+sublevels
+level 'CSD U3 Watcher Predict_2021'
+level 'CSD U3 Watcher Debug_2021'
+level 'CSD U3 Movement Gears_2021'

@@ -20,7 +20,7 @@ nl:
             te houden in moeilijke taken. Aan het eind van de cursus maakt de student
             een zelfgemaakte spel of verhaal die ze kunnen delen. aanbevolen voor
             groep 1 - groep 3.
-          description_short: Cursus 1 is bedoeld voor jonge lezers.
+          description_short: Cursus 1 is bedoeld voor beginnende lezers.
           description_audience: Leeftijden 4 + (pre lezers)
           lessons:
             'Artist: Loops':
@@ -59,6 +59,12 @@ nl:
               name: 'Speel Lab: Maak een Verhaal'
             The Big Event:
               name: De grote gebeurtenis
+          student_description: Cursus 1 is ontwikkeld om het voor vroege lezers mogelijk
+            te maken om computerprogramma's te maken die ze helpen met het omgaan
+            met anderen, met het ontwikkelen van probleemoplossende vaardigheden en
+            vol te houden in moeilijke taken. Aan het eind van de cursus maakt de
+            student een zelfgemaakte spel of verhaal die ze kunnen delen. aanbevolen
+            voor groep 1 - groep 3.
         course2:
           title: Cursus 2
           description: Les 2 is ontwikkeld voor studenten die kunnen lezen en geen
@@ -106,6 +112,10 @@ nl:
               name: De grote gebeurtenis
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
+          student_description: Les 2 is ontwikkeld voor studenten die kunnen lezen
+            en geen eerdere programeerervaring hebben. In deze les maken studenten
+            programma's om problemen op te lossen en ontwikkelen ze interactieve spellen
+            en verhalen die ze kunnen delen. Aanbevolen voor graad 2-5.
         course3:
           title: Cursus 3
           description: Cursus 3 is ontwikkeld voor studenten die Cursus 2 hebben gevolgd.
@@ -159,6 +169,12 @@ nl:
               name: Speel Lab - Maak een Spel
             'Studio: Create a Story':
               name: 'Speel Lab: Maak een Verhaal'
+          student_description: Cursus 3 is ontwikkeld voor studenten die Cursus 2
+            hebben gevolgd. Studenten zullen dieper ingaan op de programmeeronderwerpen
+            die geïntroduceerd zijn in vorige cursussen om flexibele oplossingen te
+            maken om moeilijkere problemen op te lossen. Aan het einde van deze cursus
+            kunnen leerlingen interactieve verhalen en spellen maken die ze met iedereen
+            kunnen delen. Aanbevolen voor rangen 4-5.
         playlab:
           title: Speel Lab
           description: Maak een verhaal of een spel met Speel Lab!
@@ -166,6 +182,7 @@ nl:
           lessons:
             Play Lab:
               name: Speel Lab
+          student_description: Maak een verhaal of een spel met Speel Lab!
         artist:
           title: Kunstenaar
           description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
@@ -173,6 +190,7 @@ nl:
           lessons:
             Artist:
               name: Kunstenaar
+          student_description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
         hourofcode:
           title: Klassiek doolhof
           description: Probeer de grondbeginselen van de informatica met figuren uit
@@ -182,6 +200,8 @@ nl:
           lessons:
             Maze:
               name: Doolhof
+          student_description: Probeer de grondbeginselen van de informatica met figuren
+            uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
         frozen:
           title: Code met Anna en Elsa
           description: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken
@@ -193,8 +213,12 @@ nl:
           lessons:
             Artist:
               name: Kunstenaar
+          student_description: laten we code gebruiken om Anna en Elsa te helpen bij
+            het ontdekken van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken
+            en patronen te maken terwijl je schaatst en een een mooi winterlandschap
+            maken dat je kan delen met je vrienden!
         course4:
-          title: Les 4
+          title: Cursus 4
           description: Cursus 4 is bedoeld voor leerlingen die Cursus 2 en 3 hebben
             afgerond. Door verschillende concepten te combineren bij het oplossen
             van de problemen leren de leerlingen om te gaan met moeilijkere opdrachten.
@@ -249,6 +273,12 @@ nl:
               name: 'Unplugged: Liedjes schrijven met Parameters'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
+          student_description: Cursus 4 is bedoeld voor leerlingen die Cursus 2 en
+            3 hebben afgerond. Door verschillende concepten te combineren bij het
+            oplossen van de problemen leren de leerlingen om te gaan met moeilijkere
+            opdrachten. Tegen de tijd dat deze Cursus is afgerond kunnen leerlingen
+            programma's schrijven die verschillende vaardigheden vragen, waaronder
+            for loops en functies met parameters. Geschikt voor groep 6 t/m klas 2.
         Course4pre:
           title: Vereisten voor cursus 4
           description: Een korte samenvatting van concepten voor leerlingen die cursus
@@ -274,6 +304,8 @@ nl:
               name: 'Boer: Zolang-lussen'
             'Maze: Sequence':
               name: 'Doolhof: Nummering'
+          student_description: Een korte samenvatting van concepten voor leerlingen
+            die cursus 2 en 3 niet hebben afgewerkt.
         usability:
           title: Gebruiksvriendelijkheid testen
           description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
@@ -288,6 +320,7 @@ nl:
               name: Introductie
             Variables:
               name: Variabelen
+          student_description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
         algebra:
           title: Informatica in Algebra
           description: Leer functioneel programmeren door Algebra
@@ -311,6 +344,7 @@ nl:
               name: 'Unplugged: Het ontwerp recept'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
+          student_description: Leer functioneel programmeren door Algebra
         infinity:
           title: Disney Infinity Play Lab
           description: Gebruik Play Lab om een verhaal of spel te maken met Disney
@@ -320,6 +354,8 @@ nl:
           lessons:
             Infinity:
               name: Oneindig
+          student_description: Gebruik Play Lab om een verhaal of spel te maken met
+            Disney Infinity figuren in de hoofdrol.
         algebrademo:
           title: Algebra Demo
           description: Een handvol puzzels om de programmeertaal en omgeving te tonen
@@ -337,6 +373,8 @@ nl:
               name: Foto's maken
             The Design Recipe:
               name: Het ontwerp Recept
+          student_description: Een handvol puzzels om de programmeertaal en omgeving
+            te tonen die gebruikt is in Code.org CS in Algebra
         K5PD:
           lessons:
             Introduction to PD:
@@ -356,7 +394,7 @@ nl:
             new stage:
               name: nieuw niveau
         netsim:
-          title: Internet Simulator
+          title: Internetsimulator
           description: Leer hoe het internet werkt
           description_short: Leer hoe het internet werkt
           lessons:
@@ -370,10 +408,12 @@ nl:
               name: Peer to Peer - Verzend Getallen
             Routers and addresses:
               name: Routers en Adressen
+          student_description: Leer hoe het internet werkt
         pixelation:
           title: Pixelachtig
           description: Maak afbeeldingen met bits en bytes.
           description_short: Maak afbeeldingen met bits en bytes.
+          student_description: Maak afbeeldingen met bits en bytes.
         20-hour:
           title: 20-uur Intro cursus
           description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica
@@ -423,6 +463,9 @@ nl:
               name: Het Doolhof
             Wrap-up:
               name: Einde
+          student_description: Deze cursus van 20 uur introduceert basisbegrippen
+            voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen,
+            maar is voor alle leeftijden leuk om te leren.
         edit-code:
           title: Bewerk de code
           description: Bewerk de code
@@ -436,6 +479,7 @@ nl:
               name: De Artiest
             The Maze:
               name: Het Doolhof
+          student_description: Bewerk de code
         events:
           title: Gebeurtenissen
           description: Gebeurtenissen
@@ -449,6 +493,7 @@ nl:
               name: Evalueer
             Studio:
               name: Studio
+          student_description: Gebeurtenissen
         flappy:
           title: Flappy Code
           description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer
@@ -457,6 +502,8 @@ nl:
           lessons:
             Flappy Code:
               name: Flappy Code
+          student_description: Wil je ook binnen 10 minuten je eigen spel schrijven?
+            Probeer onze Flappy Code opdracht!
         jigsaw:
           title: Legpuzzel
           description: probeer onze legpuzzelcursus
@@ -464,6 +511,7 @@ nl:
           lessons:
             Jigsaw:
               name: Legpuzzel
+          student_description: probeer onze legpuzzelcursus
         step:
           title: Stap
           description: stapcursus
@@ -471,6 +519,7 @@ nl:
           lessons:
             Step:
               name: Stap
+          student_description: stapcursus
         Hour of Code:
           title: Uur van Code 2013
           description: Probeer de basis van de informatica met figuren van Angry Birds
@@ -480,18 +529,22 @@ nl:
           lessons:
             Hour of Code 2013:
               name: Uur van Code 2013
+          student_description: Probeer de basis van de informatica met figuren van
+            Angry Birds an Plants vs Zombies!
         CodeStudioPuzzleChallenge:
           description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
           description_short: Daag jezelf uit!
           lessons:
             Puzzles:
               name: Puzzels
+          student_description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
         Tutorial Video - Code Studio Puzzle Challenge:
           description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
           description_short: Daag jezelf uit!
           lessons:
             Puzzles:
               name: Puzzels
+          student_description: Probeer deze leuke programmeerpuzzels uit. Doe je best!
         cspunit1:
           description_short: Programmeren
           lessons:
@@ -503,6 +556,8 @@ nl:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+            Lossy Compression and File Formats:
+              name: Lossy Compressie en Bestandsformaten
             Number Systems:
               name: Systemen voor getalnotatie
             Sending Binary Messages:
@@ -685,6 +740,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         sciencePD3:
           lessons:
             Mystery Model:
@@ -702,6 +758,10 @@ nl:
               name: Sleutels en Paswoorden
             HTTP and Abstraction:
               name: HTTP en Abstractie op het Internet
+            Public Key Crypto:
+              name: Publieke Sleutel Cryptografie
+            Routers and Redundancy:
+              name: Routers en Redundantie
             Tell Me a Secret - Encrypting Text:
               name: De Nood aan Encryptie
             The Internet:
@@ -732,6 +792,7 @@ nl:
               name: Woorden en afbeeldingen
             The Design Recipe:
               name: Het ontwerp Recept
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         allthethings:
           title: Alle dingen!
           description: Alle de level types voor UI testing
@@ -773,6 +834,8 @@ nl:
               name: Pixelachtig
             PlayLab:
               name: SpeelLab
+            Public Key Cryptography:
+              name: Publieke Sleutel Cryptografie
             Star wars:
               name: Star Wars
             Studio:
@@ -785,6 +848,7 @@ nl:
               name: Alleenstaande video
             ML Fish:
               name: ML Vis
+          student_description: Alle de level types voor UI testing
         algebraPD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -809,18 +873,25 @@ nl:
               name: Woorden en afbeeldingen
             Teacher Dashboard:
               name: Dashboard Leerkrachten
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         cspfacilitator:
           lessons:
             App Lab:
               name: App Lab
             Internet Simulator:
-              name: Internet Simulator
+              name: Internetsimulator
+            Pixelation Widget:
+              name: Pixelatie Widget
+            Text Compression Lesson:
+              name: Tekstcompressie Les
+            Text Compression Widget:
+              name: Teksttcompressie widget
             Welcome!:
               name: Welkom!
         K5-OnlinePD:
           lessons:
             Computer Science Fundamentals:
-              name: Basisbegrippen Computer Wetenschappen
+              name: Basisbegrippen Informatica
             Next Steps:
               name: Volgende stappen
             Planning:
@@ -839,6 +910,7 @@ nl:
               name: Welkom!
             Wrap-up:
               name: Einde
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         algebraPD2:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -849,6 +921,7 @@ nl:
               name: Het ontwerp Recept
             Welcome!:
               name: Welkom!
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         sciencePD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -857,6 +930,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         science-PD2:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -865,6 +939,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -877,6 +952,7 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         ECSPD2-iZone:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -891,6 +967,7 @@ nl:
               name: Welkom!
             Wrap-up:
               name: Einde
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
         ECSPD2-NexTech:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -905,6 +982,11 @@ nl:
               name: Welkom!
             Wrap-up:
               name: Einde
+          student_description: 'Fase 2 Online: Gemengde zomer studie'
+        CSPPD2:
+          lessons:
+            Welcome to the Course!:
+              name: Welkom bij de cursus!
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -931,6 +1013,10 @@ nl:
               name: De TLO
             Welcome Back!:
               name: Welkom Terug!
+        ECSPD3-Unit2:
+          lessons:
+            Lesson Overviews:
+              name: Lesoverzichten
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -952,6 +1038,8 @@ nl:
           lessons:
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
+          student_description: Maken een verhaal of een spel met de ijs tijd Speel
+            Lab!
         cspunit3temp:
           description_short: Programmeren
           lessons:
@@ -970,6 +1058,8 @@ nl:
           lessons:
             Gumball Play Lab:
               name: Kauwgom Speel Lab
+          student_description: Maken een verhaal of een spel met de Kauwgom Speel
+            Lab!
         starwars:
           title: 'Star Wars: Bouw een Heelal met Code'
           description: Leer hoe je droids moet programmeren en maak je eigen Star
@@ -979,6 +1069,8 @@ nl:
           lessons:
             Hour of Code 2015:
               name: Uur van Code 2015
+          student_description: Leer hoe je droids moet programmeren en maak je eigen
+            Star Wars-spel in een Melkweg heel, heel ver hier vandaan.
         starwarsblocks:
           title: 'Star Wars: Bouw een Heelal met Code'
           description: Leer hoe je droids moet programmeren en maak je eigen Star
@@ -988,6 +1080,8 @@ nl:
           lessons:
             Hour of Code 2015:
               name: Uur van Code 2015
+          student_description: Leer hoe je droids moet programmeren en maak je eigen
+            Star Wars-spel in een Melkweg heel, heel ver hier vandaan.
         mc:
           title: Minecraft programmeer uur
           description: Gebruik blokken code om Steve of Alex mee te nemen op avontuur
@@ -996,6 +1090,8 @@ nl:
           lessons:
             Hour of Code 2015:
               name: Uur van Code 2015
+          student_description: Gebruik blokken code om Steve of Alex te helpen op
+            hun avontuur door deze Minecraft-wereld.
         oceans:
           lessons:
             Oceans:
@@ -1032,6 +1128,7 @@ nl:
               name: 'Unplugged: Functies ontwerpen'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Het ontwerp recept'
+          student_description: Leer functioneel programmeren door Algebra
         AlgebraB:
           title: Informatica in Algebra
           description: Leer functioneel programmeren door Algebra
@@ -1059,6 +1156,7 @@ nl:
               name: 'Unplugged: Conditionals en stuksgewijze functies'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
+          student_description: Leer functioneel programmeren door Algebra
         algebraPD1:
           lessons:
             Course Overview:
@@ -1073,6 +1171,8 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+            csp1_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen en overbrengen van informatie'
             csp1_2:
               display_name: 'Hoofdstuk 2: Uitvinden van het Internet'
           lessons:
@@ -1080,6 +1180,8 @@ nl:
               name: Binaire getallen
             Number Systems:
               name: Systemen voor getalnotatie
+            Routers and Redundancy:
+              name: Routers en Redundantie
             Sending Binary Messages:
               name: Binaire berichten verzenden
             The Internet:
@@ -1097,6 +1199,8 @@ nl:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+            Lossy Compression and File Formats:
+              name: Lossy Compressie en Bestandsformaten
             Text Compression:
               name: Tekstcompressie
         csp3-2017:
@@ -1122,6 +1226,13 @@ nl:
               name: De Nood Aan Programmeertalen
             Using Simple Commands:
               name: Simpele Commando's Gebruiken
+          student_description: "Deze module introduceert de basisconcepten van programmeren.
+            Dit biedt de mogelijkheid om rijke, interactieve apps te maken. Deze cursus
+            gebruikt JavaScript als programmeertaal en App Lab als programmeeromgeving
+            om apps te bouwen, maar de concepten die in deze lessen worden geleerd,
+            zijn van toepassing op alle programmeertalen en tools.\r\n\r\nDeze module
+            is voor het laatst bijgewerkt op 30 oktober 2017. Lees meer over curriculumupdates
+            op forum.code.org/c/csp/updates."
         csp4-2017:
           lesson_groups:
             cspSurvey:
@@ -1151,6 +1262,12 @@ nl:
               name: Variabelen Gebruiken In Apps
             While Loops:
               name: Zolang-lussen
+          student_description: Deze module vervolgt de introductie van de basisconcepten
+            van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps
+            te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         CSDU3-Draft:
           description_short: Programmeren
           lessons:
@@ -1178,6 +1295,8 @@ nl:
           description_audience: Leeftijden 8 + (na cursus 2)
         ECSPD1:
           lessons:
+            Welcome to Phase 1!:
+              name: Welkom bij Fase 1!
             Wrap Up:
               name: Afronden
         algebraFacilitator:
@@ -1225,12 +1344,18 @@ nl:
           lessons:
             netsim:
               name: netsim
+        csp-facilitators:
+          lessons:
+            Introduction to Text Compression:
+              name: Inleiding tot tekstcompressie
         CSDU4-Draft:
           lessons:
             Design Mode:
               name: Ontwerpmodus
         CSDU2-Draft:
           lessons:
+            Intellectual Property:
+              name: Intellectuele Eigendom
             Holding:
               name: Vasthouden
             Classes:
@@ -1249,6 +1374,11 @@ nl:
               display_name: Content
             practice:
               display_name: Leraarpraktijken
+          lessons:
+            Lesson 1,10:
+              name: 'Les 1.10: Routers en Redundantie'
+            Lesson 2,2:
+              name: 'Les 2.2: Tekstcompressie'
         kinderTest:
           lessons:
             'Bee: Conditionals':
@@ -1331,6 +1461,10 @@ nl:
               name: Welkom!
             Wrap-up:
               name: Einde
+        ecs-unit2:
+          lessons:
+            Lesson Overviews:
+              name: Lesoverzichten
         grade3:
           lessons:
             " Bee: Conditionals":
@@ -1416,6 +1550,8 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            Representing Information:
+              name: Het voorstellen van informatie
             Storage:
               name: Opslag
         csp-online-test:
@@ -1426,6 +1562,13 @@ nl:
               display_name: Content
             practice:
               display_name: Leraarpraktijken
+          lessons:
+            'lessons 10: Routers and Redundancy':
+              name: 'Les 10: Routers en Redundantie'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets':
+              name: 'Lessen 10 - 11: Routers, Redundantie en Pakketten'
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Lessen 1 - 2: Bytes, Bestandsgroottes en Tekstcompressie'
         csp1-support:
           lesson_groups:
             required:
@@ -1434,6 +1577,9 @@ nl:
               display_name: Content
             practice:
               display_name: Leraarpraktijken
+          lessons:
+            'Lessons 10 - 11: Routers, Redundancy, and Packets':
+              name: 'Lessen 10 - 11: Routers, Redundantie en Pakketten'
         basketball:
           lessons:
             Bounce:
@@ -1444,10 +1590,14 @@ nl:
               name: nieuw niveau
             Classes:
               name: Lessen
+            Intellectual Property:
+              name: Intellectuele Eigendom
             Headers:
               name: Headers
             Lists:
               name: Lijsten
+            Intellectual Property and Images:
+              name: Intellectuele Eigendom en Afbeeldingen
             Headings:
               name: Headings
         csp2-support:
@@ -1458,6 +1608,9 @@ nl:
               display_name: Content
             practice:
               display_name: Leraarpraktijken
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Lessen 1 - 2: Bytes, Bestandsgroottes en Tekstcompressie'
         minecraft:
           title: Minecraft Code Uur Code Ontwerper
           description_short: Ga dieren en andere Minecraft wezens programmeren in
@@ -1467,6 +1620,8 @@ nl:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Code Uur Code Ontwerper
+          student_description: Ga dieren en andere Minecraft wezens programmeren in
+            je eigen Minecraft omgeving.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1668,9 +1823,20 @@ nl:
             Input:
               name: Invoer
         csd5-draft:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
           lessons:
             new stage:
               name: nieuw niveau
+            Representing Images:
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers Part 1:
+              name: Het voorstellen van getallen Deel 1
+            Representing Numbers Part 2:
+              name: Het voorstellen van getallen Deel 2
+            Representing Numbers:
+              name: Het voorstellen van getallen
         applab-1hour:
           lessons:
             Extra:
@@ -1726,6 +1892,19 @@ nl:
               name: Functies
             'Project: Design a Game':
               name: 'Project: Ontwerp een Spel'
+        csd5-2017:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+          lessons:
+            Representing Images:
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers Part 1:
+              name: Het voorstellen van getallen Deel 1
+            Representing Numbers Part 2:
+              name: Het voorstellen van getallen Deel 2
+            Representing Numbers:
+              name: Het voorstellen van getallen
         csd3-old:
           lessons:
             Velocity:
@@ -1736,12 +1915,20 @@ nl:
               name: Functies
             'Project: Design a Game':
               name: 'Project: Ontwerp een Spel'
+        csd1-old:
+          lessons:
+            Representing Information:
+              name: Het voorstellen van informatie
         csd2-draft:
           lessons:
+            Intellectual Property:
+              name: Intellectuele Eigendom
             Images:
               name: Afbeeldingen
             Headers:
               name: Headers
+            Intellectual Property and Images:
+              name: Intellectuele Eigendom en Afbeeldingen
             Lists:
               name: Lijsten
         csd1-draft:
@@ -1780,10 +1967,14 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+        public-key-cryptography:
+          title: Publieke Sleutel Cryptografie Widget
         csd2-old:
           lessons:
             Classes:
               name: Lessen
+            Intellectual Property:
+              name: Intellectuele Eigendom
         artist-and-bb8:
           lessons:
             B8 BB8:
@@ -2098,6 +2289,15 @@ nl:
               name: For Lus fun
             Songwriting with Parameters:
               name: Liedjes schrijven met Parameters
+        csd5-old:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+          lessons:
+            Representing Images:
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              name: Het voorstellen van getallen
         subgoals-assessment-staging:
           lessons:
             dummy:
@@ -2132,6 +2332,8 @@ nl:
               name: 'Minecraft\: Heldenreis Uur Code'
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
+          student_description: Minecraft is terug bij Uur Code met een gloednieuwe
+            activiteit! Programmeer om door Minecraft te reizen.
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -2248,6 +2450,8 @@ nl:
               name: Headings
             Lists:
               name: Lijsten
+            Intellectual Property and Images:
+              name: Intellectuele Eigendom en Afbeeldingen
         coursea-2018:
           description_audience: 'Leeftijden: 4-7'
           lessons:
@@ -2413,6 +2617,8 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+            csp1_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen en overbrengen van informatie'
             csp1_2:
               display_name: 'Hoofdstuk 2: Uitvinden van het Internet'
           lessons:
@@ -2426,6 +2632,8 @@ nl:
               name: Het Internet
             The Need for Addressing:
               name: De Nood aan Adressering
+            Routers and Redundancy:
+              name: Routers en Redundantie
             The Need for DNS:
               name: De Nood aan DNS
         csd1-2018:
@@ -2441,8 +2649,15 @@ nl:
               display_name: Vragenlijst
         csd5-2018:
           lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Representing Images:
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              name: Het voorstellen van getallen
         csp2-2018:
           lessons:
             Text Compression:
@@ -2451,6 +2666,12 @@ nl:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+            Lossy Compression and File Formats:
+              name: Lossy Compressie en Bestandsformaten
+            Lossy vs. Lossless Compression:
+              name: Lossy vs. Lossless Compressie
+            Lossy vs Lossless Compression:
+              name: Lossy vs Lossless Compressie
         csp3-2018:
           description_short: Programmeren
           lesson_groups:
@@ -2500,6 +2721,12 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          student_description: Deze module vervolgt de introductie van de basisconcepten
+            van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps
+            te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         csppostap-2018:
           lesson_groups:
             cspSurvey:
@@ -2715,6 +2942,7 @@ nl:
               name: nieuw niveau
             Dance Party:
               name: Dansfeest
+          student_description: Programmeer je eigen dansfeest om te delen met je vrienden!
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2744,8 +2972,35 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            U4 L02 Variables Investigate:
+              name: U4 L02 Variabelen onderzoeken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         dance-extras:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+          student_description: Breid de kennis van het eerste uur uit met uitgebreide
+            projectideeën.
         coursef-2019:
           description_audience: 'Leeftijden: 9-13'
           lesson_groups:
@@ -2912,6 +3167,8 @@ nl:
         dance-extras-gallery:
           title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+          student_description: Breid de kennis van het eerste uur uit met uitgebreide
+            projectideeën.
         coursec-2019:
           description_audience: 'Leeftijden: 6-10'
           lesson_groups:
@@ -2997,6 +3254,8 @@ nl:
               name: Headings
             Lists:
               name: Lijsten
+            Intellectual Property and Images:
+              name: Intellectuele Eigendom en Afbeeldingen
         csd3-2019:
           description_short: Programmeren
           lesson_groups:
@@ -3021,8 +3280,15 @@ nl:
               display_name: Vragenlijst
         csd5-2019:
           lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Representing Images:
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              name: Het voorstellen van getallen
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -3047,12 +3313,36 @@ nl:
             required:
               display_name: Overzicht
           lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
             Surveys:
               name: Enquêtes
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp1-2019:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+            csp1_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen en overbrengen van informatie'
             csp1_2:
               display_name: 'Hoofdstuk 2: Uitvinden van het Internet'
           lessons:
@@ -3066,6 +3356,8 @@ nl:
               name: Het Internet
             The Need for Addressing:
               name: De Nood aan Adressering
+            Routers and Redundancy:
+              name: Routers en Redundantie
             The Need for DNS:
               name: De Nood aan DNS
         csp2-2019:
@@ -3079,6 +3371,8 @@ nl:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+            Lossy vs Lossless Compression:
+              name: Lossy vs Lossless Compressie
         csp3-2019:
           description_short: Programmeren
           lesson_groups:
@@ -3120,6 +3414,12 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          student_description: Deze module vervolgt de introductie van de basisconcepten
+            van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps
+            te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
@@ -3143,10 +3443,46 @@ nl:
               name: nieuw niveau
             Number Systems:
               name: Systemen voor getalnotatie
+            Black and White Images:
+              name: Zwart-witafbeeldingen
+            Color Images:
+              name: Kleurenafbeeldingen
+            Lossless Compression:
+              name: Lossless Compressie
+            Welcome to CSP:
+              name: Welkom bij CSP
             Sending Binary Messages:
               name: Binaire berichten verzenden
+            Lossy Compression:
+              name: Lossy Compressie
+            Intellectual Property:
+              name: Intellectuele Eigendom
+            'Project: Digital Information Dilemmas, pt. 1':
+              name: Project - Digitale informatie dilemma's, deel 1
+            'Project: Digital Information Dilemmas, pt. 2':
+              name: Project - Digitale informatie dilemma's, deel 2
+            'Project: Digital Information Dilemmas, pt 1':
+              name: Project - Digitale informatie dilemma's, deel 1
+            'Project: Digital Information Dilemmas, pt 2':
+              name: Project - Digitale informatie dilemma's, deel 2
             Binary Numbers:
               name: Binaire getallen
+            Overflow and Rounding:
+              name: Overflow en Afronding
+            Representing Information:
+              name: Het voorstellen van informatie
+            Representing Text:
+              name: Het voorstellen van tekst
+            Circle Square Patterns:
+              name: Cirkel-Vierkant-Patronen
+            'Project: Digital Information Dilemmas Part 1':
+              name: 'Project: Digitale informatie dilemma''s Deel 1'
+            'Project: Digital Information Dilemmas Part 2':
+              name: 'Project: Digitale informatie dilemma''s Deel 2'
+            Project - Digital Information Dilemmas Part 1:
+              name: Project - Digitale informatie dilemma's Deel 1
+            Project - Digital Information Dilemmas Part 2:
+              name: Project - Digitale informatie dilemma's Deel 2
         csd-videos:
           lessons:
             new stage:
@@ -3179,6 +3515,29 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3189,8 +3548,75 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp3-pilot-staging:
           lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
+            Introduction to Apps:
+              name: Inleiding tot Apps
+            'Project: Designing an App, pt. 1':
+              name: 'Project: Ontwerp een app, deel 1'
+            'Project: Designing an App, pt. 2':
+              name: 'Project: Ontwerp een app, deel 2'
+            'Project: Designing an App, pt. 3':
+              name: 'Project: Ontwerp een app, deel 3'
+            'Project: Designing an App, pt. 4':
+              name: 'Project: Ontwerp een app, deel 4'
+            'Project: Designing an App pt. 1':
+              name: 'Project: Ontwerp een app deel 1'
+            'Project: Designing an App pt. 2':
+              name: 'Project: Ontwerp een app deel 2'
+            Project - Designing an App Part 1:
+              name: Project - Ontwerp een app Deel 1
+            Project - Designing an App Part 2:
+              name: Project - Ontwerp een app Deel 2
+            Project - Designing an App Part 3:
+              name: Project - Ontwerp een app Deel 3
+            Project - Designing an App Part 4:
+              name: Project - Ontwerp een app Deel 4
             The Need for Programming Languages:
               name: De Nood Aan Programmeertalen
         csp4-pilot-staging:
@@ -3203,6 +3629,29 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
@@ -3214,8 +3663,34 @@ nl:
             csp_libraries:
               display_name: Bibliotheken
           lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
             Mini PT:
               name: Mini-PT
+            Libraries Explore:
+              name: Bibliotheken ontdekken
+            Libraries Investigate:
+              name: Bibliotheken Onderzoeken
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3226,15 +3701,74 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp7-pilot-staging:
           lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
           lessons:
             new stage:
               name: nieuw niveau
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
+            Functions with Parameters and Return Explore:
+              name: Funties met parameters en "return" ontdekken
             Libraries:
               name: Bibliotheken
+            Parameters and Return Values Explore:
+              name: Parameters en resultaten "returnen" ontdekken
+            Parameters and Return Values Investigate:
+              name: Parameters en resultaten "returnen" onderzoeken
+            Parameters and Return Values Practice:
+              name: Parameters en resultaten "returnen" oefeningen
+            Libraries Explore:
+              name: Bibliotheken ontdekken
+            Libraries Investigate:
+              name: Bibliotheken Onderzoeken
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3245,6 +3779,29 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3255,6 +3812,29 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3265,6 +3845,29 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -3292,6 +3895,16 @@ nl:
               name: nieuw niveau
             Mini PT:
               name: Mini-PT
+            Parameters and Return Values Explore:
+              name: Parameters en resultaten "returnen" ontdekken
+            Parameters and Return Values Investigate:
+              name: Parameters en resultaten "returnen" onderzoeken
+            Parameters and Return Values Practice:
+              name: Parameters en resultaten "returnen" oefeningen
+            Libraries Explore:
+              name: Bibliotheken ontdekken
+            Libraries Investigate:
+              name: Bibliotheken Onderzoeken
         fit2019-novice:
           lesson_groups:
             required:
@@ -3339,6 +3952,10 @@ nl:
               name: Headings
             Lists:
               name: Lijsten
+            Intellectual Property and Images:
+              name: Intellectuele Eigendom en Afbeeldingen
+            Intellectual Property:
+              name: Intellectuele Eigendom
             Images:
               name: Afbeeldingen
         csd3-pilot:
@@ -3372,8 +3989,22 @@ nl:
             required:
               display_name: Overzicht
           lessons:
+            Introduction to Apps:
+              name: Inleiding tot Apps
+            Project - Designing an App Part 1:
+              name: Project - Ontwerp een app Deel 1
+            Project - Designing an App Part 2:
+              name: Project - Ontwerp een app Deel 2
+            Project - Designing an App Part 3:
+              name: Project - Ontwerp een app Deel 3
+            Project - Designing an App Part 4:
+              name: Project - Ontwerp een app Deel 4
             The Need for Programming Languages:
               name: De Nood Aan Programmeertalen
+            Project - Designing an App Part 5:
+              name: Project - Ontwerp een app Deel 5
+            Intro to Programming:
+              name: Inleiding tot programmeren
             Debugging:
               name: Foutopsporing
         csl-vn:
@@ -3388,6 +4019,9 @@ nl:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Focus Area 1:
+              name: Lesprogramma
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -3461,12 +4095,24 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Building a Network:
+              name: Het bouwen van een netwerk
             IP Addresses:
               name: IP-adressen
+            Routers and Redundancy:
+              name: Routers en Redundantie
             Packets:
               name: Paketten
+            DNS and HTTP:
+              name: DNS en HTTP
+            Welcome to the Internet:
+              name: Welkom bij het Internet
             The Need for Addressing:
               name: De Nood aan Adressering
+            Project - Internet Dilemmas Part 1:
+              name: Project - Internetdilemma's Deel 1
+            Project - Internet Dilemmas Part 2:
+              name: Project - Internetdilemma's Deel 2
         peru-2019:
           lessons:
             new stage:
@@ -3481,18 +4127,30 @@ nl:
               display_name: Content
             required:
               display_name: Overzicht
+          lessons:
+            Algorithms Solve Problems:
+              name: Algoritmes lossen problemen op
+            Algorithm Efficiency:
+              name: Efficiëntie van algoritmes
+            Unreasonable Time:
+              name: Onredelijke tijd
+            Parallel and Distributed Algorithms:
+              name: Parallelle en Gedistribueerde algoritmes
+            The Limits of Algorithms:
+              name: De limieten van algoritmes
         dance-2019:
           description: Programmeer je eigen dansfeest om te delen met je vrienden!
           lessons:
             Dance Party:
               name: Dansfeest
+          student_description: Programmeer je eigen dansfeest om te delen met je vrienden!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: Volgende stappen
           lessons:
             Computer Science Fundamentals:
-              name: Basisbegrippen Computer Wetenschappen
+              name: Basisbegrippen Informatica
             Planning:
               name: Plannen
             Next Steps:
@@ -3515,10 +4173,50 @@ nl:
               name: For-lussen
         dance-extras-2019:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+          student_description: Breid de kennis van het eerste uur uit met uitgebreide
+            projectideeën.
         csp10-pilot:
           lessons:
             new stage:
               name: nieuw niveau
+            'Project: Innovation Simulation Part 1':
+              name: 'Project: Innovatiesimulatie Deel 1'
+            'Project: Innovation Simulation Part 2':
+              name: 'Project: Innovatiesimulatie Deel 2'
+            Security Risks Part 1:
+              name: Veiligheidsrisico's Deel 1
+            Security Risks Part 2:
+              name: Veiligheidsrisico's Deel 2
+            Data Policies and Privacy:
+              name: Gegevensbeleid en Privacy
+            The Value of Privacy:
+              name: De waarde van privacy
+            'Project: Innovation Simulation Part 3':
+              name: 'Project: Innovatiesimulatie Deel 3'
+            Protecting Data Part 1:
+              name: Het beschermen van data Deel 1
+            Protecting Data Part 2:
+              name: Het beschermen van data Deel 2
+            'Project: Innovation Simulation Part 4':
+              name: 'Project: Innovatiesimulatie Deel 4'
+            'Project: Innovation Simulation Part 5':
+              name: 'Project: Innovatiesimulatie Deel 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Project: Innovatiesimulatie Deel 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Project: Innovatiesimulatie Deel 7'
+            Project - Innovation Simulation Part 1:
+              name: Project - Innovatiesimulatie Deel 1
+            Project - Innovation Simulation Part 2:
+              name: Project - Innovatiesimulatie Deel 2
+            Project - Innovation Simulation Part 3:
+              name: Project - Innovatiesimulatie Deel 3
+            Project - Innovation Simulation Part 4:
+              name: Project - Innovatiesimulatie Deel 4
+            Project - Innovation Simulation Part 6:
+              name: Project - Innovatiesimulatie Deel 6
+            Project - Innovation Simulation Part 7:
+              name: Project - Innovatiesimulatie Deel 7
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -3532,6 +4230,28 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         time4cs-original-unit-1:
           lessons:
             Conditionals:
@@ -3593,10 +4313,43 @@ nl:
               name: Over mij
         csp7-pilot:
           lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
             required:
               display_name: Overzicht
+          lessons:
+            Parameters and Returns Explore:
+              name: Parameters en "return" ontdekken
+            Parameters and Returns Investigate:
+              name: Parameters en "return" onderzoeken
+            Parameters and Returns Practice:
+              name: Parameters en "return" oefeningen
+            Parameters and Returns Make:
+              name: Parameters en "return" Maak
+            Libraries Explore:
+              name: Bibliotheken ontdekken
+            Libraries Investigate:
+              name: Bibliotheken Onderzoeken
+            Libraries Practice:
+              name: Bibliotheken oefeningen
+            Parameters and Return Explore:
+              name: Parameters en "return" ontdekken
+            Parameters and Return Investigate:
+              name: Parameters en "return" onderzoeken
+            Parameters and Return Practice:
+              name: Parameters en "return" oefeningen
+            Parameters and Return Make:
+              name: Parameters en "return" Maak
+            Project - Make a Library Part 1:
+              name: Project - Maak een bibliotheek Deel 1
+            Project - Make a Library Part 2:
+              name: Project - Maak een bibliotheek Deel 2
+            Project - Make a Library Part 3:
+              name: Project - Maak een bibliotheek Deel 3
+            Variables Make Demo:
+              name: Variabelen Maak Demo
         csp8-pilot:
           lessons:
             new stage:
@@ -3611,6 +4364,29 @@ nl:
               display_name: Functies
             csp_project:
               display_name: Project
+          lessons:
+            Variables Explore:
+              name: Variabelen ontdekken
+            Variables Investigate:
+              name: Variabelen onderzoeken
+            Variables Practice:
+              name: Variabelen oefenen
+            Variables Make:
+              name: Variabelen Maak
+            Conditionals Explore:
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              name: Functies oefenen
+            Functions Make:
+              name: Functies Maak
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -3621,12 +4397,39 @@ nl:
               display_name: Project
         csp7-2020:
           lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
             csp_libraries:
               display_name: Bibliotheken
+          lessons:
+            Parameters and Return Explore:
+              name: Parameters en "return" ontdekken
+            Parameters and Return Investigate:
+              name: Parameters en "return" onderzoeken
+            Parameters and Return Practice:
+              name: Parameters en "return" oefeningen
+            Parameters and Return Make:
+              name: Parameters en "return" Maak
+            Libraries Explore:
+              name: Bibliotheken ontdekken
+            Libraries Investigate:
+              name: Bibliotheken Onderzoeken
+            Libraries Practice:
+              name: Bibliotheken oefeningen
+            Project - Make a Library Part 1:
+              name: Project - Maak een bibliotheek Deel 1
+            Project - Make a Library Part 2:
+              name: Project - Maak een bibliotheek Deel 2
+            Project - Make a Library Part 3:
+              name: Project - Maak een bibliotheek Deel 3
+            Variables Make Demo:
+              name: Variabelen Maak Demo
         csp9-pilot:
           lessons:
             new stage:
               name: nieuw niveau
+            Machine Learning and Bias:
+              name: Machinaal leren en vooringenomenheid (bias)
         csd2-2020:
           lesson_groups:
             cspSurvey:
@@ -3634,6 +4437,8 @@ nl:
           lessons:
             Headings:
               name: Headings
+            Intellectual Property:
+              name: Intellectuele Eigendom
             Images:
               name: Afbeeldingen
             Using Images:
@@ -3651,8 +4456,15 @@ nl:
               display_name: Vragenlijst
         csd5-2020:
           lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Representing Images:
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              name: Het voorstellen van getallen
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -3841,28 +4653,88 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Welcome to CSP:
+              name: Welkom bij CSP
+            Representing Information:
+              name: Het voorstellen van informatie
+            Circle Square Patterns:
+              name: Cirkel-Vierkant-Patronen
             Binary Numbers:
               name: Binaire getallen
+            Overflow and Rounding:
+              name: Overflow en Afronding
+            Representing Text:
+              name: Het voorstellen van tekst
+            Black and White Images:
+              name: Zwart-witafbeeldingen
+            Color Images:
+              name: Kleurenafbeeldingen
+            Lossless Compression:
+              name: Lossless Compressie
+            Lossy Compression:
+              name: Lossy Compressie
+            Intellectual Property:
+              name: Intellectuele Eigendom
+            Project - Digital Information Dilemmas Part 1:
+              name: Project - Digitale informatie dilemma's Deel 1
+            Project - Digital Information Dilemmas Part 2:
+              name: Project - Digitale informatie dilemma's Deel 2
         csp2-2020:
           lessons:
             new stage:
               name: nieuw niveau
+            Welcome to the Internet:
+              name: Welkom bij het Internet
+            Building a Network:
+              name: Het bouwen van een netwerk
             The Need for Addressing:
               name: De Nood aan Adressering
+            Routers and Redundancy:
+              name: Routers en Redundantie
             Packets:
               name: Paketten
+            DNS and HTTP:
+              name: DNS en HTTP
+            Project - Internet Dilemmas Part 1:
+              name: Project - Internetdilemma's Deel 1
+            Project - Internet Dilemmas Part 2:
+              name: Project - Internetdilemma's Deel 2
         csp3-2020:
           lessons:
             new stage:
               name: nieuw niveau
+            Introduction to Apps:
+              name: Inleiding tot Apps
+            Project - Designing an App Part 1:
+              name: Project - Ontwerp een app Deel 1
+            Project - Designing an App Part 2:
+              name: Project - Ontwerp een app Deel 2
             The Need for Programming Languages:
               name: De Nood Aan Programmeertalen
+            Intro to Programming:
+              name: Inleiding tot programmeren
             Debugging:
               name: Foutopsporing
+            Project - Designing an App Part 3:
+              name: Project - Ontwerp een app Deel 3
+            Project - Designing an App Part 4:
+              name: Project - Ontwerp een app Deel 4
+            Project - Designing an App Part 5:
+              name: Project - Ontwerp een app Deel 5
         csp6-2020:
           lessons:
             new stage:
               name: nieuw niveau
+            Algorithms Solve Problems:
+              name: Algoritmes lossen problemen op
+            Algorithm Efficiency:
+              name: Efficiëntie van algoritmes
+            Unreasonable Time:
+              name: Onredelijke tijd
+            The Limits of Algorithms:
+              name: De limieten van algoritmes
+            Parallel and Distributed Algorithms:
+              name: Parallelle en Gedistribueerde algoritmes
         csp8-2020:
           lessons:
             new stage:
@@ -3871,10 +4743,44 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Machine Learning and Bias:
+              name: Machinaal leren en vooringenomenheid (bias)
         csp10-2020:
           lessons:
             new stage:
               name: nieuw niveau
+            Project - Innovation Simulation Part 1:
+              name: Project - Innovatiesimulatie Deel 1
+            Project - Innovation Simulation Part 2:
+              name: Project - Innovatiesimulatie Deel 2
+            Project - Innovation Simulation Part 3:
+              name: Project - Innovatiesimulatie Deel 3
+            Data Policies and Privacy:
+              name: Gegevensbeleid en Privacy
+            The Value of Privacy:
+              name: De waarde van privacy
+            Project - Innovation Simulation Part 4:
+              name: Project - Innovatiesimulatie Deel 4
+            Security Risks Part 1:
+              name: Veiligheidsrisico's Deel 1
+            Security Risks Part 2:
+              name: Veiligheidsrisico's Deel 2
+            'Project: Innovation Simulation Part 4':
+              name: 'Project: Innovatiesimulatie Deel 4'
+            Project - Innovation Simulation Part 6:
+              name: Project - Innovatiesimulatie Deel 6
+            Project - Innovation Simulation Part 7:
+              name: Project - Innovatiesimulatie Deel 7
+            Protecting Data Part 1:
+              name: Het beschermen van data Deel 1
+            Protecting Data Part 2:
+              name: Het beschermen van data Deel 2
+            'Project: Innovation Simulation Part 5':
+              name: 'Project: Innovatiesimulatie Deel 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Project: Innovatiesimulatie Deel 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Project: Innovatiesimulatie Deel 7'
         csp-march-virtual:
           lessons:
             Kick-off:
@@ -3908,6 +4814,8 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Tools:
+              name: Hulpmiddelen
             Debugging:
               name: Foutopsporing
             Module 1:
@@ -3930,6 +4838,8 @@ nl:
           lessons:
             Headings:
               name: Headings
+            Intellectual Property:
+              name: Intellectuele Eigendom
             Images:
               name: Afbeeldingen
         csp5-virtual:
@@ -3954,6 +4864,12 @@ nl:
               name: Variabelen
             Keep Going:
               name: Blijven gaan
+          student_description: Deze module - die je in je eigen tempo kan volgen -
+            introduceert fundamentele concepten van programmeren. Dit biedt de mogelijkheid
+            om rijke, interactieve apps te maken. Deze cursus gebruikt JavaScript
+            als programmeertaal en App Lab als programmeeromgeving om apps te bouwen,
+            maar de concepten die in deze lessen worden geleerd, zijn van toepassing
+            op alle programmeertalen en tools.
         virtual-holding-place:
           lesson_groups:
             content:
@@ -3992,6 +4908,12 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          student_description: Deze module introduceert fundamentele concepten van
+            programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
+            maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab
+            als programmeeromgeving om apps te bouwen, maar de concepten die in deze
+            lessen worden geleerd, zijn van toepassing op alle programmeertalen en
+            tools.
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -4147,10 +5069,558 @@ nl:
             lesson group:
               display_name: weergavenaam
           description_audience: Intern
-        ml-playground:
+        virustest:
+          title: Een uitbraak simuleren
+          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
+        outbreak:
           lessons:
-            intro:
-              name: Introductie
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
+          lesson_groups:
+            outbreak:
+              display_name: Uitbraaksimulatie
+          title: Uitbraaksimulator
+          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
+          description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te
+            simuleren.
+          name: uitbraak
+          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
         2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
+          lesson_groups:
+            introduction:
+              display_name: Introductie
+            lessonGroup-3:
+              display_name: Variabelen
+            outbreak:
+              display_name: Uitbraaksimulatie
           description_audience: Intern
           description_short: Intern
+        csd1-2021:
+          lessons:
+            Storage:
+              key: Opslag
+              name: Opslag
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd2-2021:
+          lessons:
+            Headings:
+              key: Headings
+              name: Headings
+            Intellectual Property:
+              key: Intellectuele Eigendom
+              name: Intellectuele Eigendom
+            Using Images:
+              key: Afbeeldingen gebruiken
+              name: Afbeeldingen gebruiken
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd3-2021:
+          description_short: Programmeren
+          lessons:
+            Variables:
+              key: Variabelen
+              name: Variabelen
+            Sprites:
+              key: Sprites
+              name: Sprites
+            Text:
+              key: Tekst
+              name: Tekst
+            Conditionals:
+              key: Voorwaardelijke instructies
+              name: Voorwaardelijke instructies
+            Velocity:
+              key: Snelheid
+              name: Snelheid
+            Collision Detection:
+              key: Botsingdetectie
+              name: Botsingdetectie
+            Functions:
+              key: Functies
+              name: Functies
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd5-2021:
+          lessons:
+            Representing Images:
+              key: Het voorstellen van afbeeldingen
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              key: Het voorstellen van getallen
+              name: Het voorstellen van getallen
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+            cspSurvey:
+              display_name: Vragenlijst
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Functies met Parameters
+              name: Functies met Parameters
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+            cspSurvey:
+              display_name: Vragenlijst
+        csp1-2021:
+          lessons:
+            Welcome to CSP:
+              key: Welkom bij CSP
+              name: Welkom bij CSP
+            Representing Information:
+              key: Het voorstellen van informatie
+              name: Het voorstellen van informatie
+            Circle Square Patterns:
+              key: Cirkel-Vierkant-Patronen
+              name: Cirkel-Vierkant-Patronen
+            Binary Numbers:
+              key: Binaire getallen
+              name: Binaire getallen
+            Overflow and Rounding:
+              key: Overflow en Afronding
+              name: Overflow en Afronding
+            Representing Text:
+              key: Het voorstellen van tekst
+              name: Het voorstellen van tekst
+            Black and White Images:
+              key: Zwart-witafbeeldingen
+              name: Zwart-witafbeeldingen
+            Color Images:
+              key: Kleurenafbeeldingen
+              name: Kleurenafbeeldingen
+            Lossless Compression:
+              key: Lossless Compressie
+              name: Lossless Compressie
+            Lossy Compression:
+              key: Lossy Compressie
+              name: Lossy Compressie
+            Intellectual Property:
+              key: Intellectuele Eigendom
+              name: Intellectuele Eigendom
+            Project - Digital Information Dilemmas Part 1:
+              key: Project - Digitale informatie dilemma's Deel 1
+              name: Project - Digitale informatie dilemma's Deel 1
+            Project - Digital Information Dilemmas Part 2:
+              key: Project - Digitale informatie dilemma's Deel 2
+              name: Project - Digitale informatie dilemma's Deel 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp2-2021:
+          lessons:
+            Welcome to the Internet:
+              key: Welkom bij het Internet
+              name: Welkom bij het Internet
+            Building a Network:
+              key: Het bouwen van een netwerk
+              name: Het bouwen van een netwerk
+            The Need for Addressing:
+              key: De Nood aan Adressering
+              name: De Nood aan Adressering
+            Routers and Redundancy:
+              key: Routers en Redundantie
+              name: Routers en Redundantie
+            Packets:
+              key: Paketten
+              name: Paketten
+            DNS and HTTP:
+              key: DNS en HTTP
+              name: DNS en HTTP
+            Project - Internet Dilemmas Part 1:
+              key: Project - Internetdilemma's Deel 1
+              name: Project - Internetdilemma's Deel 1
+            Project - Internet Dilemmas Part 2:
+              key: Project - Internetdilemma's Deel 2
+              name: Project - Internetdilemma's Deel 2
+        csp3-2021:
+          lessons:
+            Introduction to Apps:
+              key: Inleiding tot Apps
+              name: Inleiding tot Apps
+            Project - Designing an App Part 1:
+              key: Project - Ontwerp een app Deel 1
+              name: Project - Ontwerp een app Deel 1
+            Project - Designing an App Part 2:
+              key: Project - Ontwerp een app Deel 2
+              name: Project - Ontwerp een app Deel 2
+            The Need for Programming Languages:
+              key: De Nood Aan Programmeertalen
+              name: De Nood Aan Programmeertalen
+            Intro to Programming:
+              key: Inleiding tot programmeren
+              name: Inleiding tot programmeren
+            Debugging:
+              key: Foutopsporing
+              name: Foutopsporing
+            Project - Designing an App Part 3:
+              key: Project - Ontwerp een app Deel 3
+              name: Project - Ontwerp een app Deel 3
+            Project - Designing an App Part 4:
+              key: Project - Ontwerp een app Deel 4
+              name: Project - Ontwerp een app Deel 4
+            Project - Designing an App Part 5:
+              key: Project - Ontwerp een app Deel 5
+              name: Project - Ontwerp een app Deel 5
+        csp4-2021:
+          lessons:
+            Variables Explore:
+              key: Variabelen ontdekken
+              name: Variabelen ontdekken
+            Variables Investigate:
+              key: Variabelen onderzoeken
+              name: Variabelen onderzoeken
+            Variables Practice:
+              key: Variabelen oefenen
+              name: Variabelen oefenen
+            Variables Make:
+              key: Variabelen Maak
+              name: Variabelen Maak
+            Conditionals Explore:
+              key: Voorwaardelijke instructies ontdekken
+              name: Voorwaardelijke instructies ontdekken
+            Conditionals Investigate:
+              key: Voorwaardelijke instructies onderzoeken
+              name: Voorwaardelijke instructies onderzoeken
+            Conditionals Practice:
+              key: Voorwaardelijke instructies oefenen
+              name: Voorwaardelijke instructies oefenen
+            Conditional Make:
+              key: Voorwaardelijke instructies Maak
+              name: Voorwaardelijke instructies Maak
+            Functions Explore / Investigate:
+              key: Functies ontdekken / onderzoeken
+              name: Functies ontdekken / onderzoeken
+            Functions Practice:
+              key: Functies oefenen
+              name: Functies oefenen
+            Functions Make:
+              key: Functies Maak
+              name: Functies Maak
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+            csp_project:
+              display_name: Project
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lijsten
+            csp_loops:
+              display_name: Lussen
+            csp_project:
+              display_name: Project
+        csp6-2021:
+          lessons:
+            Algorithms Solve Problems:
+              key: Algoritmes lossen problemen op
+              name: Algoritmes lossen problemen op
+            Algorithm Efficiency:
+              key: Efficiëntie van algoritmes
+              name: Efficiëntie van algoritmes
+            Unreasonable Time:
+              key: Onredelijke tijd
+              name: Onredelijke tijd
+            The Limits of Algorithms:
+              key: De limieten van algoritmes
+              name: De limieten van algoritmes
+            Parallel and Distributed Algorithms:
+              key: Parallelle en Gedistribueerde algoritmes
+              name: Parallelle en Gedistribueerde algoritmes
+        csp7-2021:
+          lessons:
+            Parameters and Return Explore:
+              key: Parameters en "return" ontdekken
+              name: Parameters en "return" ontdekken
+            Parameters and Return Investigate:
+              key: Parameters en "return" onderzoeken
+              name: Parameters en "return" onderzoeken
+            Parameters and Return Practice:
+              key: Parameters en "return" oefeningen
+              name: Parameters en "return" oefeningen
+            Parameters and Return Make:
+              key: Parameters en "return" Maak
+              name: Parameters en "return" Maak
+            Libraries Explore:
+              key: Bibliotheken ontdekken
+              name: Bibliotheken ontdekken
+            Libraries Investigate:
+              key: Bibliotheken Onderzoeken
+              name: Bibliotheken Onderzoeken
+            Libraries Practice:
+              key: Bibliotheken oefeningen
+              name: Bibliotheken oefeningen
+            Project - Make a Library Part 1:
+              key: Project - Maak een bibliotheek Deel 1
+              name: Project - Maak een bibliotheek Deel 1
+            Project - Make a Library Part 2:
+              key: Project - Maak een bibliotheek Deel 2
+              name: Project - Maak een bibliotheek Deel 2
+            Project - Make a Library Part 3:
+              key: Project - Maak een bibliotheek Deel 3
+              name: Project - Maak een bibliotheek Deel 3
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
+            csp_libraries:
+              display_name: Bibliotheken
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              key: Machinaal leren en vooringenomenheid (bias)
+              name: Machinaal leren en vooringenomenheid (bias)
+        csp10-2021:
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: Project - Innovatiesimulatie Deel 1
+              name: Project - Innovatiesimulatie Deel 1
+            Project - Innovation Simulation Part 2:
+              key: Project - Innovatiesimulatie Deel 2
+              name: Project - Innovatiesimulatie Deel 2
+            Data Policies and Privacy:
+              key: Gegevensbeleid en Privacy
+              name: Gegevensbeleid en Privacy
+            The Value of Privacy:
+              key: De waarde van privacy
+              name: De waarde van privacy
+            Project - Innovation Simulation Part 3:
+              key: Project - Innovatiesimulatie Deel 3
+              name: Project - Innovatiesimulatie Deel 3
+            Security Risks Part 1:
+              key: Veiligheidsrisico's Deel 1
+              name: Veiligheidsrisico's Deel 1
+            Security Risks Part 2:
+              key: Veiligheidsrisico's Deel 2
+              name: Veiligheidsrisico's Deel 2
+            'Project: Innovation Simulation Part 4':
+              key: 'Project: Innovatiesimulatie Deel 4'
+              name: 'Project: Innovatiesimulatie Deel 4'
+            Protecting Data Part 1:
+              key: Het beschermen van data Deel 1
+              name: Het beschermen van data Deel 1
+            Protecting Data Part 2:
+              key: Het beschermen van data Deel 2
+              name: Het beschermen van data Deel 2
+            'Project: Innovation Simulation Part 5':
+              key: 'Project: Innovatiesimulatie Deel 5'
+              name: 'Project: Innovatiesimulatie Deel 5'
+            'Project: Innovation Simulation Part 6':
+              key: 'Project: Innovatiesimulatie Deel 6'
+              name: 'Project: Innovatiesimulatie Deel 6'
+            'Project: Innovation Simulation Part 7':
+              key: 'Project: Innovatiesimulatie Deel 7'
+              name: 'Project: Innovatiesimulatie Deel 7'
+        coursea-2021:
+          description_audience: 'Leeftijden: 4-7'
+          lessons:
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        courseb-2021:
+          description_audience: 'Leeftijden: 5-8'
+          lessons:
+            Move It, Move It:
+              key: verplaats het, verplaats het
+              name: verplaats het, verplaats het
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        coursec-2021:
+          description_audience: 'Leeftijden: 6-10'
+          lessons:
+            Binary Bracelets:
+              key: Binaire armbanden
+              name: Binaire armbanden
+            'Events: The Big Event':
+              name: De grote gebeurtenis
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_binary:
+              display_name: Binaire
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        coursed-2021:
+          description_audience: 'Leeftijden: 7-11'
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
+            Relay Programming:
+              key: Estafette Programmeren
+              name: Estafette Programmeren
+            Build a Star Wars Game:
+              key: Bouw een Star Wars Spel!
+              name: Bouw een Star Wars Spel!
+            Dance Party:
+              key: Dansfeest
+              name: Dansfeest
+            Conditionals with Cards:
+              key: Statements met Kaarten
+              name: Statements met Kaarten
+            'Unplugged: Binary':
+              key: 'Unplugged: binair'
+              name: Binaire afbeeldingen
+            Artist Binary:
+              key: Kunstenaar Binary
+              name: Kunstenaar Binary
+          lesson_groups:
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_binary:
+              display_name: Binaire
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+        coursee-2021:
+          description_audience: 'Leeftijden: 8-12'
+          lessons:
+            Conditionals:
+              key: Voorwaardelijke instructies
+            About Me:
+              key: Over mij
+            'Functions: Songwriting':
+              name: Songwriting
+          lesson_groups:
+            ramp_up:
+              display_name: Inleiding
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_nested_loops:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
+        coursef-2021:
+          description_audience: 'Leeftijden: 9-13'
+          lessons:
+            Envelope Variables:
+              key: Envelop variabelen
+              name: Envelop variabelen
+            Internet:
+              key: Internet
+              name: Het Internet
+            For Loop Fun:
+              key: For Lus fun
+              name: For Lus fun
+          lesson_groups:
+            ramp_up:
+              display_name: Inleiding
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+            csf_sprites:
+              display_name: Sprites
+        express-2021:
+          description_audience: 'Leeftijden: 9-18'
+          lessons:
+            Dance Party:
+              key: Dansfeest
+              name: Dansfeest
+          lesson_groups:
+            csf_warmup:
+              display_name: Opwarmen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_functions:
+              display_name: Functies
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+            csf_sprites:
+              display_name: Sprites
+        pre-express-2021:
+          description_audience: 'Leeftijden: 4-8'
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Een simulatie programmeren
+          lesson_groups:
+            ramp_up:
+              display_name: Introductie
+            outbreak:
+              display_name: Uitbraaksimulatie
+            lessonGroup-3:
+              display_name: Variabelen
+            Sprites:
+              display_name: Sprites
+        csd4-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+            csdSurvey:
+              display_name: Vragenlijst
+        csd5-preview-2021:
+          lessons:
+            Representing Images:
+              key: Het voorstellen van afbeeldingen
+              name: Het voorstellen van afbeeldingen
+            Representing Numbers:
+              key: Het voorstellen van getallen
+              name: Het voorstellen van getallen
+          lesson_groups:
+            csd5_1:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+            cspSurvey:
+              display_name: Vragenlijst
+        contagion-pilot:
+          description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
+          description: Gebruik Sprite Lab om een simulatie van een virusuitbraak te
+            simuleren.
+          student_description: Gebruik Sprite Lab om een simulatie van een virusuitbraak
+            te simuleren.
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Les 14
+            lesson15:
+              name: Les 15

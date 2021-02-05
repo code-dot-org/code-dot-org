@@ -1,0 +1,191 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-12-04T22:19:21.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n   // return ((Studio.sprite[0].isCollidingWith(1))&&(Studio.sprite[0].value === \"hidden\"));\r\n}",
+    "failure_condition": "function () {\r\n  Studio.sprite[1].value === \"hidden\";\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":8},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":17},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "short_instructions": "Help your knight get all of the flags!\r\n\r\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "timeout_failure_tick": "850",
+    "first_sprite_index": "0",
+    "protaganist_sprite_index": "1",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need these event blocks:\\n\\n<xml>\\n  <block type=\\\"studio_whenArrow\\\" id=\\\"callMe\\\">\\n    <title name=\\\"VALUE\\\">up</title>\\n  </block>\\n  <block type=\\\"studio_whenArrow\\\" id=\\\"callMe\\\">\\n    <title name=\\\"VALUE\\\">down</title>\\n  </block>\\n  </xml>\",\"hint_id\":\"courseB_playlab_events6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9ed0e0d21196a8e5cd3f55282a8efcd5/courseB_playlab_events6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.\\n\\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)\",\"hint_id\":\"courseB_playlab_events6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a11181ce270475373b041ccbc50b1614/courseB_playlab_events6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Get to all of the flags to pass!\",\"hint_id\":\"courseB_playlab_events6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/11a0536e54b12c3b86bacac7dfcc4694/courseB_playlab_events6.mp3\"}]",
+    "project_template_level_name": "courseB_playlab_eventsTemplate_2021",
+    "long_instructions": "Help your knight get all of the flags!\r\n\r\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseB_playlab_events6_a\",\r\n  \"callout_text\": \"Use the green drop down arrow to change directions.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -30,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 21132,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 16:02:04 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 20:54:23 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-25 17:35:24 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-25 17:36:24 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-25 17:37:11 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-25 17:42:48 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:49:16 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:51:41 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:53:28 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:27:32 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:35:46 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-27 23:58:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <block type="controls_repeat_ext" inline="true" uservisible="false">
+        <value name="TIMES">
+          <block type="math_number" uservisible="false">
+            <title name="NUM">200</title>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="studio_setSpritePosition" uservisible="false">
+            <title name="SPRITE">0</title>
+            <title name="VALUE">random</title>
+            <next>
+              <block type="studio_setSpritesWander" uservisible="false">
+                <title name="VALUE">"dragon"</title>
+                <next>
+                  <block type="studio_wait" uservisible="false">
+                    <title name="VALUE">1000</title>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </initialization_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"cave"</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+        </block>
+        <block type="studio_changeScore"/>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">random</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">1</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">4</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Studio>

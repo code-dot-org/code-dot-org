@@ -24,6 +24,7 @@ import workshopDashboardReducers, {
   setPermission,
   setFacilitatorCourses
 } from './reducers';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import regionalPartnerReducers, {
   setRegionalPartners,
   setRegionalPartnerFilter,
@@ -42,7 +43,8 @@ const browserHistory = useRouterHistory(createHistory)({
 const store = createStore(
   combineReducers({
     workshopDashboard: workshopDashboardReducers,
-    regionalPartners: regionalPartnerReducers
+    regionalPartners: regionalPartnerReducers,
+    mapbox: mapboxReducer
   })
 );
 
@@ -54,7 +56,8 @@ export default class WorkshopDashboard extends React.Component {
   static propTypes = {
     permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
     facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    regionalPartners: PropTypes.arrayOf(RegionalPartnerShape)
+    regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
+    mapboxAccessToken: PropTypes.string
   };
 
   constructor(props) {
@@ -66,6 +69,10 @@ export default class WorkshopDashboard extends React.Component {
 
     if (props.facilitatorCourses) {
       store.dispatch(setFacilitatorCourses(props.facilitatorCourses));
+    }
+
+    if (props.mapboxAccessToken) {
+      store.dispatch(setMapboxAccessToken(props.mapboxAccessToken));
     }
 
     store.dispatch(setRegionalPartners(this.props.regionalPartners));

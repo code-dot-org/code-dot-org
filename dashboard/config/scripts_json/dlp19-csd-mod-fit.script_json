@@ -58,38 +58,45 @@
       }
     },
     {
-      "key": "Understanding the Curriculum",
-      "name": "Understanding the Curriculum",
+      "key": "Focus Area 1",
+      "name": "Curriculum",
       "absolute_position": 2,
       "lockable": false,
       "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Understanding the Curriculum",
+        "lesson.key": "Focus Area 1",
         "lesson_group.key": "content",
         "script.name": "dlp19-csd-mod-fit"
       }
     },
     {
-      "key": "Demonstrating Understanding",
-      "name": "Demonstrating Understanding",
-      "absolute_position": 3,
+      "key": "Focus Area 2",
+      "name": "Learning Platform",
+      "absolute_position": 2,
       "lockable": false,
       "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Demonstrating Understanding",
+        "lesson.key": "Focus Area 2",
         "lesson_group.key": "content",
         "script.name": "dlp19-csd-mod-fit"
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Background"
@@ -111,6 +118,7 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Process"
@@ -132,6 +140,7 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Preparation"
@@ -153,6 +162,7 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Evaluation"
@@ -174,6 +184,7 @@
     {
       "chapter": 5,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Due Dates"
@@ -195,6 +206,7 @@
     {
       "chapter": 6,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -204,7 +216,7 @@
         "script_level.level_keys": [
           "dlp19_csd_prework-fit_content1"
         ],
-        "lesson.key": "Understanding the Curriculum",
+        "lesson.key": "Focus Area 1",
         "lesson_group.key": "content",
         "script.name": "dlp19-csd-mod-fit"
       },
@@ -214,7 +226,8 @@
     },
     {
       "chapter": 7,
-      "position": 1,
+      "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -224,7 +237,49 @@
         "script_level.level_keys": [
           "dlp19_csd_prework-fit-prompt"
         ],
-        "lesson.key": "Demonstrating Understanding",
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_csd_prework-fit-prompt"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ],
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_csd_prework-fit_content1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ],
+        "lesson.key": "Focus Area 2",
         "lesson_group.key": "content",
         "script.name": "dlp19-csd-mod-fit"
       },
@@ -295,7 +350,7 @@
         "script_level.level_keys": [
           "dlp19_csd_prework-fit_content1"
         ],
-        "lesson.key": "Understanding the Curriculum",
+        "lesson.key": "Focus Area 1",
         "lesson_group.key": "content",
         "script.name": "dlp19-csd-mod-fit"
       }
@@ -306,7 +361,29 @@
         "script_level.level_keys": [
           "dlp19_csd_prework-fit-prompt"
         ],
-        "lesson.key": "Demonstrating Understanding",
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_csd_prework-fit_content1",
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ],
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_csd_prework-fit-prompt",
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ],
+        "lesson.key": "Focus Area 2",
         "lesson_group.key": "content",
         "script.name": "dlp19-csd-mod-fit"
       }

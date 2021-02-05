@@ -4,10 +4,10 @@
  * JS to communicate between Bramble and Code Studio
  */
 
-window.requirejs.config({
-  baseUrl: '/blockly/js/bramble/'
-  // DEVMODE: baseUrl: 'http://127.0.0.1:8000/src/'
-});
+const scriptData = document.querySelector('script[data-bramble]');
+const brambleConfig = JSON.parse(scriptData.dataset.bramble);
+const BRAMBLE_BASE_URL = brambleConfig.baseUrl;
+window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
@@ -406,6 +406,10 @@ function uploadAllFilesFromBramble(callback) {
   });
 }
 
+function fileRefresh(callback = () => {}) {
+  brambleProxy_.fileRefresh(callback);
+}
+
 function addFileHTML() {
   brambleProxy_.addNewFile(
     {
@@ -565,6 +569,7 @@ if (parent.getWebLab) {
 // expose object for parent window to talk to us through
 const brambleHost = {
   // return file data from the Bramble editor
+  fileRefresh,
   addFileHTML,
   addFileCSS,
   undo,
@@ -596,10 +601,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load('#bramble', {
-    url:
-      '//downloads.computinginthecore.org/bramble_0.1.26/index.html?disableExtensions=bramble-move-file',
-    // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
-    // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
+    url: BRAMBLE_BASE_URL + '/index.html?disableExtensions=bramble-move-file',
     useLocationSearch: true,
     disableUIState: true,
     initialUIState: {
@@ -820,7 +822,5 @@ function modalError(message, Bramble, showButtons = true) {
 }
 
 // Load bramble.js
-requirejs(['bramble'], function(Bramble) {
-  // DEVMODE: requirejs(["bramble/client/main"], function (Bramble) {
-  load(Bramble);
-});
+const brambleClient = brambleConfig.devMode ? 'bramble/client/main' : 'bramble';
+requirejs([brambleClient], load);

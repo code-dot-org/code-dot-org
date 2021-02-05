@@ -106,7 +106,7 @@ describe('Audio API', function() {
     });
 
     describe('block functionality', function() {
-      let outputWarningSpy, azureTTSStub, appOptions, options;
+      let outputWarningSpy, azureTTSStub, options;
 
       beforeEach(function() {
         outputWarningSpy = sinon.spy();
@@ -116,14 +116,11 @@ describe('Audio API', function() {
           enqueueAndPlay: sinon.spy()
         };
         sinon.stub(AzureTextToSpeech, 'getSingleton').returns(azureTTSStub);
-        appOptions = {
-          azureSpeechServiceToken: 'fake-token',
-          azureSpeechServiceUrl: 'https://fake.tts.url',
+        setAppOptions({
           azureSpeechServiceVoices: {
-            English: {female: 'en-female', languageCode: 'en-US'}
+            English: {female: 'en-female', locale: 'en-US'}
           }
-        };
-        setAppOptions(appOptions);
+        });
         options = {
           text: 'hello world',
           gender: 'female',
@@ -133,16 +130,6 @@ describe('Audio API', function() {
 
       afterEach(function() {
         AzureTextToSpeech.getSingleton.restore();
-      });
-
-      it('outputs warning and returns early if appOptions.azureSpeechServiceToken is missing', async function() {
-        delete appOptions.azureSpeechServiceToken;
-        setAppOptions(appOptions);
-        await commands.playSpeech(options);
-
-        expect(outputWarningSpy).to.have.been.calledOnce;
-        expect(azureTTSStub.createSoundPromise).not.to.have.been.called;
-        expect(azureTTSStub.enqueueAndPlay).not.to.have.been.called;
       });
 
       it('truncates text longer than MAX_SPEECH_TEXT_LENGTH', async function() {
@@ -166,7 +153,7 @@ describe('Audio API', function() {
         expect(azureTTSStub.createSoundPromise).to.have.been.calledOnce;
         const args = azureTTSStub.createSoundPromise.firstCall.args[0];
         expect(args.gender).to.equal('female');
-        expect(args.languageCode).to.equal('en-US');
+        expect(args.locale).to.equal('en-US');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
 
@@ -178,12 +165,7 @@ describe('Audio API', function() {
         const args = azureTTSStub.createSoundPromise.firstCall.args[0];
         expect(args.text).to.equal('hello world');
         expect(args.gender).to.equal('female');
-        expect(args.languageCode).to.equal('en-US');
-        expect(args.url).to.equal('https://fake.tts.url');
-        expect(args.ssml).to.equal(
-          '<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="en-female">hello world</voice></speak>'
-        );
-        expect(args.token).to.equal('fake-token');
+        expect(args.locale).to.equal('en-US');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
     });

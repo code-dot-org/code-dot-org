@@ -2298,15 +2298,11 @@ pl-PL:
     osób w każdym wieku i na każdym poziomie.
   hoc_overview_partner_activities_link: Zobacz aktywności
   hoc_overview_start_tutorial: Rozpocznij
-  hoc_overview_more_resources: 'Zapraszamy na stronę  (https://hourofcode.com/us/how-to/virtual)
-    zawierającą nasz przewodnik prowadzenia [wirtualnej Godziny Kodowania], gdzie
-    można uzyskać dużo więcej materiałów poświęconych sposobom włączenia się  do Twojej
-    klasy zdalnej. Aby uzyskać więcej zasobów na temat angażowania się w zdalną klasę,
-    zapoznaj się z naszym przewodnikiem dotyczącym prowadzenia [wirtualnej Godziny
-    Kodowania]. Należy udostępnić ten pakiet [zajęć Godziny Kodowania w trybie "unplugged"
-    - bez komputera] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
-    uczniom posiadającym ograniczone możliwości technologiczne lub połączenia albo
-    w ogóle bez takich możliwości.
+  hoc_overview_more_resources: 'Aby uzyskać więcej zasobów na temat angażowania się
+    w zdalną klasę, zapoznaj się z naszym przewodnikiem dotyczącym prowadzenia [wirtualnej
+    Godziny Kodowania] (https://hourofcode.com/us/how-to/virtual). Dla uczniów z ograniczoną
+    technologią lub łącznością lub bez niej, udostępnij ten pakiet [zajęć Godziny
+    Kodowania bez komputera] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
 
 '
   hoc_overview_view_teacher_guide: Zobacz przewodnik nauczyciela
@@ -2443,7 +2439,7 @@ pl-PL:
     w inny sposób, aby kontynuowały zdobywanie zawodu w dziedzinie informatyki. [Więcej
     informacji](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_sponsor_section_france_link_markdown: Jeśli jesteś uczniem
-    lub nauczycielem we Francji, wypróbuj [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})
+    lub nauczycielem we Francji, odwiedź [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Dowiedz się więcej
     o programie Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: O programie Amazon Future Engineer
@@ -2504,7 +2500,7 @@ pl-PL:
   hoc2019_mc_more_coding_resources: Więcej zasobów do kodowania
   hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij
     tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link})
-    z ostatniego roku."
+    z 2018."
   homepage_slot_text_title_at_home: Ucz się w domu
   homepage_slot_text_blurb_at_home: Dzięki tym materiałom to jest proste
   homepage_slot_text_link_code_break: Przejdź do Code Brake
@@ -2522,5 +2518,17 @@ pl-PL:
     iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi
     uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu
     nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
-  footer_powered_by_aws: Zasilany przez Amazon Web Services
+  footer_powered_by_aws: 'Amazon Web Services i logo “Powered by AWS” są znakami towarowymi
+    Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych
+    krajach.
+
+'
   footer_built_on_github: Oparty na GitHub firmy Microsoft
+  codebytes_skinny_banner_title: Dołącz do nas 7-11 grudnia do naszych mini-lekcjach
+    na żywo z CodeBytes!
+  codebytes_skinny_banner_description: 'Dołącz do nas każdego dnia Tygodnia Edukacji
+    Informatycznej z CodeBytes, na 20-minutowe interaktywne lekcje informatyki. Transmisja
+    na żywo dwa razy dziennie, CodeBytes to dla uczniów świetny sposób na udział w
+    wirtualnej #HourOfCode!'
+  codebytes_skinny_banner_english_only: Tylko w języku angielskim
+  codebytes_skinny_banner_learn: Dowiedz się więcej tutaj [code.org/codebytes](%{code_bytes_url}).

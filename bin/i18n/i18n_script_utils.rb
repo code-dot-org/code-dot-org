@@ -143,14 +143,14 @@ class I18nScriptUtils
     case route_params[:action]
     when "show"
       script_level = ScriptLevelsController.get_script_level(script, route_params)
-      script_level.level
+      script_level&.level
     when "stage_extras"
       # Copied from ScriptLevelsController.stage_extras
       uri = URI.parse(url)
       uri_params = CGI.parse(uri.query)
       if uri_params.key?('id')
         script_level = Script.cache_find_script_level(uri_params['id'].first)
-        script_level.level
+        script_level&.level
       elsif uri_params.key?('level_name')
         Level.find_by_name(uri_params['level_name'].first)
       end

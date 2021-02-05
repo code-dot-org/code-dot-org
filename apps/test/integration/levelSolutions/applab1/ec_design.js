@@ -670,8 +670,13 @@ module.exports = {
         assertPropertyRowValue(3, 'height (px)', 100, assert);
         assertPropertyRowValue(4, 'x position (px)', 0, assert);
         assertPropertyRowValue(5, 'y position (px)', 0, assert);
-        assertPropertyRowValue(6, 'text color', '#4d575f', assert);
-        assertPropertyRowValue(7, 'background color', '#f2f2f2', assert);
+        assertPropertyRowValue(6, 'text color', 'rgb(77, 87, 95)', assert);
+        assertPropertyRowValue(
+          7,
+          'background color',
+          'rgb(242, 242, 242)',
+          assert
+        );
         assertPropertyRowValue(8, 'font family', 'Arial', assert);
         assertPropertyRowValue(9, 'font size (px)', 13, assert);
 

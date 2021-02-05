@@ -47,8 +47,7 @@ export class UnconnectedTeacherHomepage extends Component {
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
     specialAnnouncement: shapes.specialAnnouncement,
-    beginGoogleImportRosterFlow: PropTypes.func,
-    mapboxAccessToken: PropTypes.string
+    beginGoogleImportRosterFlow: PropTypes.func
   };
 
   state = {
@@ -255,7 +254,6 @@ export class UnconnectedTeacherHomepage extends Component {
                 onInClassChange={event =>
                   this.handleCensusBannerInClassChange(event)
                 }
-                mapboxAccessToken={this.props.mapboxAccessToken}
               />
               <br />
             </div>

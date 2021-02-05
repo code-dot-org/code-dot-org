@@ -20,7 +20,7 @@ const styles = {
   },
   previewBox: {
     border: '1px solid black',
-    padding: 10
+    padding: '0px 25px 10px 25px'
   },
   noPreview: {
     fontStyle: 'italic'
@@ -30,6 +30,7 @@ const styles = {
 export default class ActivityCardAndPreview extends Component {
   static propTypes = {
     activity: activityShape,
+    generateActivitySectionKey: PropTypes.func.isRequired,
     activitiesCount: PropTypes.number,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
@@ -37,7 +38,8 @@ export default class ActivityCardAndPreview extends Component {
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
-    updateActivitySectionMetrics: PropTypes.func.isRequired
+    updateActivitySectionMetrics: PropTypes.func.isRequired,
+    hasLessonPlan: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -60,6 +62,7 @@ export default class ActivityCardAndPreview extends Component {
         <div style={styles.editor}>
           <ActivityCard
             activity={activity}
+            generateActivitySectionKey={this.props.generateActivitySectionKey}
             activitiesCount={this.props.activitiesCount}
             setActivitySectionRef={this.props.setActivitySectionRef}
             updateTargetActivitySection={this.props.updateTargetActivitySection}
@@ -72,6 +75,7 @@ export default class ActivityCardAndPreview extends Component {
             }
             handleCollapse={this.handleCollapse}
             collapsed={this.state.collapsed}
+            hasLessonPlan={this.props.hasLessonPlan}
           />
         </div>
         <div style={styles.preview}>

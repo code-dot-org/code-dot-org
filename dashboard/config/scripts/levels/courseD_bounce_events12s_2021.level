@@ -1,0 +1,106 @@
+<Bounce>
+  <config><![CDATA[{
+  "game_id": 22,
+  "created_at": "2020-12-04T22:28:13.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "basketball",
+    "scale": {
+      "snapRadius": 2
+    },
+    "soft_buttons": [
+      "leftButton",
+      "rightButton"
+    ],
+    "min_workspace_height": "800",
+    "free_play": "true",
+    "short_instructions": "Make this game your own. You can change all the visuals and the rules. When you're done, click \"Finish\" to let friends try your game on their phones.",
+    "maze": "[[1,1,1,2,2,1,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,16,0,0,0,0,1]]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "fail_on_ball_exit": "false",
+    "use_flag_goal": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can speed up the basketball or the hand by attaching those blocks to the `when run` event.\",\"hint_id\":\"courseD_bounce_events12s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8986ed03735a346a824e50699e60ab2b/courseD_bounce_events12s.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try making each shot worth 2 points and changing the team logo to the one from your home town!\",\"hint_id\":\"courseD_bounce_events12s_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7c73438f4d89c3e5e97800b1252af725/courseD_bounce_events12s.mp3\"}]",
+    "project_template_level_name": "courseD_bounce_events_template_2021",
+    "parent_level_id": 21323,
+    "name_suffix": "_2021",
+    "embed": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-04 01:11:50 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"min_workspace_height\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:24:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:30:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:35:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:46:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:49:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 01:42:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 20:56:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-07-08 18:14:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" x="20" y="20"/>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="220"/>
+        <block type="bounce_whenRight" deletable="false" x="180" y="220"/>
+        <block type="bounce_whenPaddleCollided" deletable="false" x="20" y="310"/>
+        <block type="bounce_whenWallCollided" deletable="false" x="20" y="410"/>
+        <block type="bounce_whenBallInGoal" deletable="false" x="20" y="510"/>
+        <block type="bounce_whenBallMissesPaddle" deletable="false" x="20" y="630"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="bounce_setTeam">
+          <title name="VALUE">"Golden State Warriors"</title>
+        </block>
+        <block type="bounce_setPaddleDropdown">
+          <title name="VALUE">"hand_1"</title>
+        </block>
+        <block type="bounce_setPaddleSpeed">
+          <title name="VALUE">Bounce.PaddleSpeed.NORMAL</title>
+        </block>
+        <block type="bounce_setBallSpeed">
+          <title name="VALUE">Bounce.BallSpeed.NORMAL</title>
+        </block>
+        <block type="bounce_playSound">
+          <title name="SOUND">bounce</title>
+        </block>
+        <block type="bounce_launchBall"/>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveRight"/>
+        <block type="bounce_bounceBall"/>
+        <block type="bounce_incrementPlayerScore"/>
+        <block type="bounce_incrementOpponentScore"/>
+        <block type="bounce_whenLeft" deletable="false"/>
+        <block type="bounce_whenRight" deletable="false"/>
+        <block type="bounce_whenPaddleCollided" deletable="false"/>
+        <block type="bounce_whenWallCollided" deletable="false"/>
+        <block type="bounce_whenBallInGoal" deletable="false"/>
+        <block type="bounce_whenBallMissesPaddle" deletable="false"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+  </blocks>
+</Bounce>

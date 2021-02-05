@@ -1,0 +1,7 @@
+name 'CSD U4 test testing multi_2021'
+question 'During user tests for a new app, the users couldn\’t figure out which buttons to push, even though the design team thought it was obvious.  What\’s the BEST way for the design team to deal with this problem?'
+wrong 'Give more hints in the user test to help the users understand the buttons better'
+wrong 'Find users who are better with technology and use them for the tests instead'
+wrong 'Use the design team as users in the tests, because they understand the app better'
+wrong 'Redesign the tests so that the users don\’t need to figure out that part of the app'
+right 'Redesign the app to make it easier to use the buttons, then run more user tests'

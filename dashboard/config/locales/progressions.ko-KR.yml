@@ -9,7 +9,7 @@ ko:
       Animate Your Scene: 장면을 애니메이트 하라
       Artist Intro with JR Hildebrand: 아티스트 인트로 JR 힐데브랜드
       Artist Intro with JR Hildebrande: 아티스트 인트로 JR 힐데브랜드
-      Artist Project: Artist Project
+      Artist Project: 아티스트 프로젝트
       'Artist: Variables': '화가: 변수'
       Attribution: 권한 정보
       Basic Conditionals: 기본 조건
@@ -44,7 +44,7 @@ ko:
       Debugging with the Step Button: 스텝버튼으로 디버깅하기
       Demo Apps: 데모 앱
       Design Mode: 디자인 모드
-      Drawing: 그림
+      Drawing: 그리기
       Events: 이벤트
       Events and Linking Screens: 이벤트 및 연결 화면
       Events and Properties: 이벤트 및 속성
@@ -70,7 +70,7 @@ ko:
       Getting Properties: 속성 얻기
       Headings: 제목
       How to Create a Simple Function: 단순 함수를 만드는 방법
-      How to Make a Sprite: SAT 만드는 방법
+      How to Make a Sprite: 스프라이트 만드는 방법
       Ice Age Loops: 아이스 에이지 루프
       Images and Sounds: 이미지와 소리
       Input Examples: 입력 예제
@@ -139,7 +139,7 @@ ko:
       Properties: 등록 정보
       RGB Exploration: RGB 탐험
       Reading Sensors: 센서 읽기
-      Reflection: 반영
+      Reflection: 성찰
       Repeat Blocks: 반복 블록
       Repeat Blocks with BB-8: BB-8로 블록 반복
       Repeat Blocks with the Artist: 아티스트와 블록 반복
@@ -158,7 +158,7 @@ ko:
       Simple Circuits: 단순 회로
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
-      Sprite Lab Project: Sprite Lab 프로젝트
+      Sprite Lab Project: 스프라이트 랩 프로젝트
       Sprites and the Draw Loop: 스프라이트와 드로 루프
       Star Chaser: 스타 체이서
       Styling Text: 스타일링 텍스트
@@ -180,6 +180,7 @@ ko:
       Video: 비디오
       Warm Up: 워밍업
       Website Project: 웹사이트 프로젝트
+      While Loops with the Farmer: While 루프와 농부
       Wrap-up: 마무리
       Your Personal Website: 개인 웹사이트
       isTouching: |2-

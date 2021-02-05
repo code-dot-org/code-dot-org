@@ -496,6 +496,13 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Sử dụng tùy chọn ở trong khối lệnh để thay thế \"???\" với một số"
+        },
+        "outbreak2": {
+          "minitoolbox": "Nhấn vào đây để mở rộng khối.",
+          "pointerlocation": "Kéo khối nội dung vào đây."
+        },
+        "outbreak7": {
+          "costumes_callout": "Nhấn để tạo trang phục mới"
         }
       }
     }

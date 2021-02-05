@@ -379,6 +379,7 @@ ur-PK:
   dashboard_action_delete_yes: جی
   dashboard_action_delete_no: نہيں
   dashboard_navigation_home_page: ٹیچر ہوم پیج
+  dashboard_sections_close: بند
   dashboard_students_name: نام
   dashboard_grade_other: دیگر
   dashboard_login_none: Email
@@ -389,7 +390,7 @@ ur-PK:
   learn_more: مزید سیکھے
   hoc2014_try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
   frozen_name: اینا اور ایلسا کے ساتھ کوڈ
-  blockly_name: بلاکلی
+  blockly_name: Blockly
   iceage_name: برفانی عہد
   lightbot_gradelevel: Her umer k log
   thinkersmith_gradelevel: Her umer k log
@@ -461,9 +462,10 @@ ur-PK:
     برادرز، نکی میناج، اور 34 مزید!
   hoc_overview_start_tutorial: شروع کریں
   hoc_overview_more_resources: اپنے آنلائن کلاس روم میں دلچسپی بڑھانے کے لئے مزید
-    وسائل [مجازی یعنی آنلائن آور آف کوڈ] کی میزبانی کے ہمارا گائیڈ دیکھیں (https://hourofcode.com/us/how-to/virtual).
-    محدود یا کوئی ٹکنالوجی یا رابطہ نہ رکھنے والے طلبا کے لئے [انپلگڈ Hour of Code]
-    کی سرگرمیوں کا پیکٹ شیئر کریں (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    وسائل [مجازی یعنی آنلائن آور آف کوڈ](https://hourofcode.com/us/how-to/virtual)
+    کی میزبانی کے ہمارا گائیڈ دیکھیں. محدود یا کوئی ٹکنالوجی یا رابطہ نہ رکھنے والے
+    طلبا کے لئے [انپلگڈ Hour of Code](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    کی سرگرمیوں کا پیکٹ شیئر کریں.
   hoc2018_creativity_create: بنائیں
   hoc2018_creativity_what_will_you_create: آپ کیا بنائیں گے؟
   hoc2018_mc_start: شروع کریں

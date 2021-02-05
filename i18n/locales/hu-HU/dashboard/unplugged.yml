@@ -44,7 +44,7 @@ hu:
         title: 'Valós algoritmusok: Ültess el egy magot!'
         desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető szerepet.
       BuildingAFoundation:
-        title: Alapozás
+        title: Az alap megépítése
         desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével. A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg kell tanulniuk megvitatni az elképzeléseiket az állandóan növekvő bonyolultsági fokozat mellett.
       GettingLoopy:
         title: Ciklikusság
@@ -169,7 +169,7 @@ hu:
         title: A digitális lábnyomod
         desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
       courseC_unplugged_buildingAFoundation:
-        title: Alapozás
+        title: Az alap megépítése
         desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével. A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg kell tanulniuk megvitatni az elképzeléseiket az állandóan növekvő bonyolultsági fokozat mellett.
       courseC_unplugged_paperPlanes:
         title: 'Hétköznapi algoritmusok: Papírrepülők'

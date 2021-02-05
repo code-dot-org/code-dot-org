@@ -338,7 +338,13 @@ class FilesApi < Sinatra::Base
     end
 
     # Block libraries with PII/profanity from being published.
-    return bad_request if endpoint == 'libraries' && ShareFiltering.find_failure(body, request.locale)
+    if endpoint == 'libraries'
+      share_failure = ShareFiltering.find_failure(body, request.locale)
+      # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
+      # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
+      # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
+      return bad_request if share_failure && share_failure[:type] != "address"
+    end
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.

@@ -1,0 +1,121 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:23:33.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,4,1,0],[0,1,1,4,1,1,1,0],[0,4,1,0,4,4,1,4],[0,0,1,4,3,1,1,1],[0,1,1,4,1,1,1,0],[0,1,1,1,1,1,4,0],[0,4,4,0,1,4,0,0]]",
+    "skin": "birds",
+    "short_instructions": "The pig is hiding, and the goal is to find it. ",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are many ways to get to the pig. Use your finger to find a path and then program it!\",\"hint_id\":\"courseC_maze_programming_challenge1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4f0ec7ecc923254e4ff032e974292862/courseC_maze_programming_challenge1.mp3\"}]",
+    "long_instructions": "The bird needs your help! The pig is hiding, and the goal is to find it. ",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "step_speed": "5",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 21154,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 15:55:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-16 17:41:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-31 21:14:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_moveForward">
+                                      <next>
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <next>
+                                            <block type="maze_moveForward">
+                                              <next>
+                                                <block type="maze_moveForward">
+                                                  <next>
+                                                    <block type="maze_turn">
+                                                      <title name="DIR">turnLeft</title>
+                                                      <next>
+                                                        <block type="maze_moveForward">
+                                                          <next>
+                                                            <block type="maze_moveForward"/>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

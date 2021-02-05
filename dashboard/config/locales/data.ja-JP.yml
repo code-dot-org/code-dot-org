@@ -325,6 +325,8 @@ ja:
         Unplug11: ラップアップ
         C1_happy_maps_unplugged: ハッピーマップ
         C1_moveitmoveit_unplugged: 動かせ！動かせ！
+        C1_bigevent_unplugged: ビッグイベント
+        C1_getting_loopy: ルーピーをゲット
         C1_pair_programming: ペアプログラミング
         C1_maze_intro_sequencing: 迷路シーケンスのイントロ
         C1_maze_debugging: 迷路：デバッグ
@@ -349,11 +351,11 @@ ja:
         C2_playlab_createstory: Playラボ：　ストーリーを作成
         C2_graph_paper: グラフ用紙のプログラミング
         C2_conditionals_with_cards: 条件
-        C2_binary_bracelets: バイナリブレスレット
+        C2_binary_bracelets: バイナリ ブレスレット
         C2_relay_programming: プログラミングをリレーする
         C2_paper_airplanes: 紙飛行機
-        C2_digital_footprint: あなたのデジタルフットプリント
-        C2_digital_footprint_v2: あなたのデジタルフットプリント
+        C2_digital_footprint: デジタル フットプリント
+        C2_digital_footprint_v2: デジタル フットプリント
         C3_maze_level_4: 迷路ループ
         C3_artist_intro: アーティスト紹介
         C3_artist_functions: アーティスト関数
@@ -529,6 +531,8 @@ ja:
         hoc_dance_events: ダンスパーティー - イベント
         hoc_dance_properties: ダンスパーティー - プロパティ
         hoc_dance_congrats: ダンスパーティー - パーティーオン！
+        c_and_c_great_to_create: 作成してフェアにプレイするのは、素晴らしいことです
+        c_and_c_digital_sharing: デジタル共有
         teaching_csf_how_it_works: 'CS入門を教える: コースのしくみ'
         elem_pd_2: 小学校コンピューター サイエンス - PDビデオ2/2
         what_is_cs: コンピューター サイエンスとは？

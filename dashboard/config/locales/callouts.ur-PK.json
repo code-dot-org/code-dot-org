@@ -100,6 +100,13 @@
         },
         "frozen square iterative": {
           "frozen_create_square": "ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ کریں"
+        },
+        "outbreak2": {
+          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
+          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
+        },
+        "outbreak7": {
+          "costumes_callout": "نیا کاسٹیوم بنانے کے لئے کلک کریں"
         }
       }
     }

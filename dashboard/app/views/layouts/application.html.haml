@@ -1,6 +1,13 @@
 !!! 5
 %html{dir: locale_dir}
   %head
+    // The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows us to view original & translated strings in Crowdin.
+    // "in-TL" is a pseudo-language locale where the Crowdin strings are stored
+    - if request.locale === "in-TL"
+      :javascript
+        var _jipt = [];
+        _jipt.push(['project', 'codeorg']);
+      %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{appname} - #{@page_title}" : appname
     %title= title
@@ -19,7 +26,7 @@
     // essential.js is ordered above application.js to filter new relic errors
     %script{src: webpack_asset_path('js/essential.js')}
     %script{src: webpack_asset_path('js/vendors.js')}
-    = render file: Rails.root.join('..', 'shared', 'haml', 'answerdash.haml') if view_options[:answerdash]
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'answerdash.haml')), type: :haml if view_options[:answerdash]
     = javascript_include_tag 'application'
     %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
     = javascript_include_tag 'https://cdn.optimizely.com/js/12977480133.js' if Rails.env.production?
@@ -100,5 +107,5 @@
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
       = render partial: 'shared/maybe_set_hoc_secret'
 
-    = render file: Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml'), locals: {dashboard: true}
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml')), type: :haml, locals: {dashboard: true}
     = yield :body_scripts

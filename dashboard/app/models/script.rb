@@ -24,7 +24,6 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
-require 'services/script_seed'
 require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
@@ -69,6 +68,31 @@ class Script < ApplicationRecord
     )
   end
 
+  # The set of models which may be touched by ScriptSeed
+  scope :with_seed_models, -> do
+    includes(
+      [
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
+        :course_version,
+        :lesson_groups,
+        {
+          lessons: [
+            {lesson_activities: :activity_sections},
+            :resources,
+            :vocabularies,
+            :objectives
+          ]
+        },
+        :script_levels,
+        :levels
+      ]
+    )
+  end
+
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
@@ -88,14 +112,28 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validate :set_is_migrated_only_for_migrated_scripts
+
   include SerializedProperties
 
   after_save :generate_plc_objects
 
-  SCRIPT_DIRECTORY = 'config/scripts'.freeze
+  SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+
+  def set_is_migrated_only_for_migrated_scripts
+    if !!is_migrated && !hidden
+      errors.add(:is_migrated, "Can't be set on a course that is visible")
+    end
+  end
 
   def self.script_directory
     SCRIPT_DIRECTORY
+  end
+
+  SCRIPT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+
+  def self.script_json_directory
+    SCRIPT_JSON_DIRECTORY
   end
 
   def generate_plc_objects
@@ -139,7 +177,6 @@ class Script < ApplicationRecord
     teacher_resources
     lesson_extras_available
     has_verified_resources
-    has_lesson_plan
     curriculum_path
     announcements
     version_year
@@ -153,6 +190,7 @@ class Script < ApplicationRecord
     is_course
     background
     show_calendar
+    is_migrated
   )
 
   def self.twenty_hour_script
@@ -297,10 +335,14 @@ class Script < ApplicationRecord
     candidate_level
   end
 
-  # Find the lockable or non-locakble stage based on its relative position.
-  # Raises `ActiveRecord::RecordNotFound` if no matching stage is found.
-  def stage_by_relative_position(position, lockable = false)
-    lessons.where(lockable: lockable).find_by!(relative_position: position)
+  # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
+  # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
+  def lesson_by_relative_position(position, unnumbered_lesson = false)
+    if unnumbered_lesson
+      lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
+    else
+      lessons.where(lockable: false).or(lessons.where(has_lesson_plan: true)).find_by!(relative_position: position)
+    end
   end
 
   # For all scripts, cache all related information (levels, etc),
@@ -784,7 +826,7 @@ class Script < ApplicationRecord
     script_levels.find(id: script_level_id.to_i)
   end
 
-  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
+  def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, unnumbered_lesson)
     relative_position ||= 1
     script_levels.find do |sl|
       # make sure we are checking the native properties of the script level
@@ -792,7 +834,7 @@ class Script < ApplicationRecord
       sl.position == puzzle_position.to_i &&
         !sl.bonus &&
         sl.lesson.relative_position == relative_position.to_i &&
-        sl.lesson.lockable? == lockable
+        (unnumbered_lesson == !sl.lesson.numbered_lesson?)
     end
   end
 
@@ -837,12 +879,6 @@ class Script < ApplicationRecord
     if has_banner?
       "banner_#{name}.jpg"
     end
-  end
-
-  def has_lesson_pdf?
-    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
-
-    has_lesson_plan?
   end
 
   def has_banner?
@@ -933,7 +969,10 @@ class Script < ApplicationRecord
 
     # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
     added_script_names = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups|
-      added_script = add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      added_script =
+        options[:properties][:is_migrated] == true ?
+          seed_from_json_file(options[:name]) :
+          add_script(options, raw_lesson_groups, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       progressbar.increment if show_progress
       added_script.name
     rescue => e
@@ -1016,6 +1055,27 @@ class Script < ApplicationRecord
     end
   end
 
+  # Lessons unfortunately have 2 position values:
+  # 1. absolute_position: position within the script (used to order lessons with in lesson groups in correct order)
+  # 2. relative_position: position within the Script relative other numbered/unnumbered lessons
+  # This method updates the position values for all lessons in a script after
+  # a lesson is saved
+  def fix_lesson_positions
+    reload
+
+    total_count = 1
+    numbered_lesson_count = 1
+    unnumbered_lesson_count = 1
+    lessons.each do |lesson|
+      lesson.absolute_position = total_count
+      lesson.relative_position = lesson.numbered_lesson? ? numbered_lesson_count : unnumbered_lesson_count
+      lesson.save!
+
+      total_count += 1
+      lesson.numbered_lesson? ? (numbered_lesson_count += 1) : (unnumbered_lesson_count += 1)
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
@@ -1063,7 +1123,7 @@ class Script < ApplicationRecord
   # Creates a copy of all translations associated with this script, and adds
   # them as translations for the script named new_name.
   def copy_and_write_i18n(new_name)
-    scripts_yml = File.expand_path('config/locales/scripts.en.yml')
+    scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
     i18n.deep_merge!(summarize_i18n_for_copy(new_name))
     File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
@@ -1100,22 +1160,20 @@ class Script < ApplicationRecord
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
-      transaction do
-        script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        Script.add_script(
-          {
-            name: script_name,
-            hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
-            login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
-            wrapup_video: general_params[:wrapup_video],
-            family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-            properties: Script.build_property_hash(general_params)
-          },
-          script_data[:lesson_groups]
-        )
-        if Rails.application.config.levelbuilder_mode
-          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
-        end
+      script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
+      Script.add_script(
+        {
+          name: script_name,
+          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+          wrapup_video: general_params[:wrapup_video],
+          family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
+          properties: Script.build_property_hash(general_params)
+        },
+        script_data[:lesson_groups]
+      )
+      if Rails.application.config.levelbuilder_mode
+        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1127,18 +1185,27 @@ class Script < ApplicationRecord
         script = Script.find_by_name(script_name)
         # Save in our custom Script DSL format. This is still what we're using currently to sync data
         # across environments. The CPlat team is working on replacing it a new JSON-based approach.
-        ScriptDSL.serialize(script, "config/scripts/#{script_params[:name]}.script")
+        script.write_script_dsl
 
         # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
         # pre-launch testing, we'll start generating these files in addition to the old .script files.
-        script_json_filepath = "config/scripts_json/#{script_params[:name]}.script_json"
-        File.write(script_json_filepath, ScriptSeed.serialize_seeding_json(script))
+        script.write_script_json
       end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
       return false
     end
+  end
+
+  def write_script_dsl
+    script_dsl_filepath = "#{Rails.root}/config/scripts/#{name}.script"
+    ScriptDSL.serialize(self, script_dsl_filepath)
+  end
+
+  def write_script_json
+    filepath = Script.script_json_filepath(name)
+    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
   # @param types [Array<string>]
@@ -1169,7 +1236,7 @@ class Script < ApplicationRecord
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
   # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, script_name = '', metadata_i18n = {})
-    scripts_yml = File.expand_path('config/locales/scripts.en.yml')
+    scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
 
     updated_i18n = update_i18n(i18n, lessons_i18n, script_name, metadata_i18n)
@@ -1259,6 +1326,7 @@ class Script < ApplicationRecord
       name: name,
       title: title_for_display,
       description: localized_description,
+      studentDescription: localized_student_description,
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
@@ -1277,7 +1345,6 @@ class Script < ApplicationRecord
       teacher_resources: teacher_resources,
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
-      has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
       announcements: announcements,
       age_13_required: logged_out_age_13_required?,
@@ -1298,8 +1365,9 @@ class Script < ApplicationRecord
       tts: tts?,
       is_course: is_course?,
       background: background,
-      updatedAt: updated_at,
-      scriptPath: script_path(self)
+      is_migrated: is_migrated?,
+      scriptPath: script_path(self),
+      showCalendar: show_calendar
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1318,6 +1386,7 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
+    summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary
   end
 
@@ -1349,7 +1418,7 @@ class Script < ApplicationRecord
     {
       displayName: localized_title,
       link: link,
-      lessons: lessons.map(&:summarize_for_lesson_dropdown)
+      lessons: lessons.select(&:has_lesson_plan).map(&:summarize_for_lesson_dropdown)
     }
   end
 
@@ -1357,7 +1426,7 @@ class Script < ApplicationRecord
   # and its lessons, in a format that can be deep-merged with the contents of
   # scripts.en.yml.
   def summarize_i18n_for_copy(new_name)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1376,7 +1445,7 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit(include_lessons=true)
-    data = %w(title description description_short description_audience).map do |key|
+    data = %w(title description student_description description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
@@ -1453,6 +1522,10 @@ class Script < ApplicationRecord
     I18n.t "data.script.name.#{name}.description"
   end
 
+  def localized_student_description
+    I18n.t "data.script.name.#{name}.student_description"
+  end
+
   def disable_post_milestone?
     !Gatekeeper.allows('postMilestone', where: {script_name: name}, default: true)
   end
@@ -1482,11 +1555,12 @@ class Script < ApplicationRecord
     ]
     boolean_keys = [
       :has_verified_resources,
-      :has_lesson_plan,
       :is_stable,
       :project_sharing,
       :tts,
-      :is_course
+      :is_course,
+      :show_calendar,
+      :is_migrated
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
@@ -1560,6 +1634,11 @@ class Script < ApplicationRecord
     if localized_description
       info[:description] = localized_description
     end
+
+    if localized_student_description
+      info[:student_description] = localized_student_description
+    end
+
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
@@ -1702,7 +1781,8 @@ class Script < ApplicationRecord
     levels + sublevels
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
@@ -1716,11 +1796,17 @@ class Script < ApplicationRecord
 
   # Wrapper for convenience
   def serialize_seeding_json
-    ScriptSeed.serialize_seeding_json(self)
+    Services::ScriptSeed.serialize_seeding_json(self)
   end
 
-  # Wrapper for convenience
-  def self.seed_from_json_file(file_or_path)
-    ScriptSeed.seed_from_json_file(file_or_path)
+  # @param [String] script_name - name of the script to seed from .script_json
+  # @returns [Script] - the newly seeded script object
+  def self.seed_from_json_file(script_name)
+    filepath = script_json_filepath(script_name)
+    Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
+  end
+
+  def self.script_json_filepath(script_name)
+    "#{script_json_directory}/#{script_name}.script_json"
   end
 end

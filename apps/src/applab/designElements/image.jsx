@@ -38,9 +38,7 @@ class ImageProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(
-            element.getAttribute('data-icon-color') || '#000000'
-          )}
+          initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
       );

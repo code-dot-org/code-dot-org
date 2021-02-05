@@ -17,9 +17,6 @@ import {
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import experiments from '@cdo/apps/util/experiments';
-import _ from 'lodash';
-import yaml from 'js-yaml';
-import Button from '@cdo/apps/templates/Button';
 import {BOARD_TYPE} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 
@@ -28,7 +25,6 @@ const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
-const STATUS_BOARD_FIRMWARE = 'statusBoardFirmware';
 
 const initialState = {
   isDetecting: false,
@@ -38,8 +34,7 @@ const initialState = {
   [STATUS_APP_INSTALLED]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
-  [STATUS_BOARD_COMPONENTS]: Status.WAITING,
-  [STATUS_BOARD_FIRMWARE]: Status.ALERT
+  [STATUS_BOARD_COMPONENTS]: Status.WAITING
 };
 
 export default class SetupChecklist extends Component {
@@ -157,23 +152,6 @@ export default class SetupChecklist extends Component {
         this.fail(stepKey);
         return Promise.reject(error);
       });
-  }
-
-  /**
-   * Update the firmware on the attached board. Currently, only the CPClassic can be flashed.
-   * @return {Promise}
-   */
-  updateBoardFirmware() {
-    this.setState({[STATUS_BOARD_FIRMWARE]: Status.ATTEMPTING});
-    latestFirmware(
-      'https://s3.amazonaws.com/downloads.code.org/maker/latest-firmware.yml'
-    ).then(firmware => {
-      return window.MakerBridge.flashBoardFirmware({
-        boardName: 'circuit-playground-classic',
-        hexPath: firmware.url,
-        checksum: firmware.checksum
-      }).then(() => this.setState({[STATUS_BOARD_FIRMWARE]: Status.SUCCEEDED}));
-    });
   }
 
   /**
@@ -339,37 +317,6 @@ export default class SetupChecklist extends Component {
             {this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
-          {experiments.isEnabled('flash-classic') &&
-            (this.state.boardTypeDetected === BOARD_TYPE.CLASSIC ||
-              this.state.boardTypeDetected === BOARD_TYPE.EXPRESS) && (
-              <ValidationStep
-                stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
-                stepName={i18n.validationStepBoardFirmware()}
-              >
-                <div>
-                  <p>{i18n.updateFirmwareExplanation()}</p>
-                  <p>
-                    {this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                      ? i18n.updateFirmwareExplanationClassic()
-                      : i18n.updateFirmwareExplanationExpress()}
-                  </p>
-                  <Button
-                    __useDeprecatedTag
-                    text={i18n.updateFirmware()}
-                    onClick={
-                      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                        ? () => this.updateBoardFirmware()
-                        : null
-                    }
-                    href={
-                      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                        ? null
-                        : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
-                    }
-                  />
-                </div>
-              </ValidationStep>
-            )}
         </div>
         <div>
           <h2>{i18n.support()}</h2>
@@ -380,16 +327,6 @@ export default class SetupChecklist extends Component {
     );
   }
 }
-
-const latestFirmware = _.memoize(latestYamlUrl => {
-  return fetch(latestYamlUrl, {mode: 'cors'})
-    .then(response => response.text())
-    .then(text => yaml.safeLoad(text))
-    .then(data => ({
-      url: data.url,
-      checksum: data.checksum
-    }));
-});
 
 function promiseWaitFor(ms) {
   return new Promise(resolve => {

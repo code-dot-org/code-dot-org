@@ -2770,3 +2770,108 @@ cs-CZ:
         title: Počítač a řešení problémů - test po projektu
       CSD U5 test:
         title: Data a společnost - test po projektu
+      outbreak_freeplay_choice:
+        display_name: Volná hra
+        description: A to je konec kurzu. Pokračujte ve změnách a vylepšování projektu.
+          Můžete dál pracovat se stejnými bloky anebo zkusit panel nástrojů rozšířit.
+      outbreak_story2:
+        markdown: "# Šíření: uvažujte jako vědec\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulace jsou výborné na pochopení
+          jevů, jejichž pozorování může být v reálném světě obtížné. Pomáhají vědcům
+          bezpečně a účinně řešit problémy a testovat nové nápady. Vaše simulace představuje
+          způsob, jak znázornit možný scénář šíření viru ve Městě příšerek.\n\n##
+          Resetujte a spusťte znovu!\nI když jste sami autorem svého kódu, je nemožné
+          vědět přesně, co se stane, až stisknete tlačítko Spustit. Pohyb příšerek
+          je náhodný, takže nemůžete tušit, jestli se virus rozšíří rychle, nebo pomalu.
+          Kdykoli kód upravíte, spusťte simulaci více než jednou. Každé spuštění má
+          unikátní průběh!\n\n## Shromáždění dat\nDoporučujeme zapisovat si během
+          spuštěné simulace svá pozorování. Můžete počítat, kolik příšerek se nakazí,
+          nebo pomocí časovače zjistit, jak rychle se nákaza šíří. Zkusíte třeba zjistit,
+          jak dlouho obvykle trvá, než se nakazí všechny příšerky, pokud žádná z nich
+          nemá roušku? \n\n## Předvídání\nPokud svůj model dobře znáte, může vám pomoct
+          dělat předpovědi. Můžete dokonce měnit průběh simulace a odhadovat, jak
+          se průběh změní. Například:\n* Co by se stalo, kdyby bylo ve městě dvakrát
+          tolik příšerek?\n* Co by se stalo, kdyby se příšerky pohybovaly poloviční
+          rychlostí?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Podobá se Město příšerek reálnému světu?\nKaždý
+          model může být realistický jen do určité míry. \n* Co má simulace šíření
+          společného s šířením viru v reálném světě?\n* Jaké jsou rozdíly?\nAž tuhle
+          aktivitu dokončíte, proberte tyto otázky doma nebo s učitelem ve škole!\n\n##
+          Co dalšího by se dalo modelovat?\nVytvořili jste pracovní model šíření viru
+          ve Městě příšerek. Co vaše simulace nedokáže namodelovat nebo zobrazit,
+          ale vy byste chtěli, aby to uměla? Stiskněte Pokračovat a naučte se vytvářet
+          složitější model, například:\n* zvyšovat počet příšerek v simulaci,\n* pomoct
+          příšerkám, aby se z nákazy vyléčily,\n* řešit pravděpodobnost, imunitu,
+          očkování a další.\n\nO svůj simulační model se můžete podělit s ostatními
+          nebo můžete sdílet své návrhy, co můžeme dělat, abychom pomohli ochránit
+          zdravé obyvatele našeho města, až k nám virus dorazí. \n"
+      outbreak_story:
+        markdown: "# Šíření: napsání vlastního simulátoru\n\n## Vítejte ve Městě příšerek!\nMěsto
+          příšerek bývalo šťastným místem a příšerky, které ho obývají, se těšily
+          dobrému zdraví. Rády se procházely a setkávaly s kamarády. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nJednoho dne se jedna z příšerek přestala cítit dobře.
+          Nakazila se virem. Ostatní příšerky to nijak zvlášť neznepokojilo. Dál navštěvovaly
+          svoje kamarády.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nBrzy nato se nakazily další dvě příšerky. Byl to
+          ten samý virus! Zdálo se, že ho chytly od svého kamaráda.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirus se pomalu šířil mezi ostatní příšerky v okolí.
+          Zdravé příšerky se začaly obávat, že se nákaze nikdo nevyhne. A ty nakažené
+          měly strach, že virem nakazí všechny ostatní.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Zastavení šíření\nNaštěstí po prostudování
+          viru učinili obyvatelé Města příšerek důležitý objev. Uvědomili si, že pravděpodobnost
+          šíření viru se sníží, když budou přes ústa nosit roušku. S nasazenými rouškami
+          bylo méně pravděpodobné, že by nakažené příšerky předaly virus těm zdravým.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Co bude dál?\n\nDnes napíšete kód na vytvoření a spuštění vlastní **simulace**
+          šíření viru ve Městě příšerek. Simulace je počítačový model procesu nebo
+          systému. Naučte se kód a předpovězte, co bude dál s obyvateli Města příšerek.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Jak rychle se virus rozšíří?*\n\n*
+          *Nakazí se všichni?*\n\n* *Jak pomůžou roušky?*\n\n\nAž to budete mít, podělte
+          se o svou simulaci s ostatními. A šiřte zprávu o tom, co podle vás můžeme
+          udělat, abychom ochránili zdraví ostatních obyvatel, až virus dorazí k nám
+          do města. \n"

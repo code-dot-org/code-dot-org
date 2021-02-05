@@ -122,6 +122,8 @@
   "dropletBlock_lessThanOrEqualOperator_description": "Թեստեր, թե արդյոք արժեքը պակաս է կամ հավասար է այլ արժեք: Վերադարձնում է true, եթե արժեքը վրա ձախ կողմում արտահայտվելու պակաս է կամ հավասար է արժեքի վրա աջ կողմում արտահայտվելու.",
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "Պակաս, քան կամ հավասար օպերատոր",
   "dropletBlock_mathAbs_param0": "x",
+  "dropletBlock_mathIncrement_param0": "x",
+  "dropletBlock_mathDecrement_param0": "x",
   "dropletBlock_mathPow_param0": "x",
   "dropletBlock_mathRandom_description": "Վերադարձնում է պատահական համարը սկսած 0 (ներառյալ) մինչեւ, բայց ոչ, այդ թվում `1 (բացառիկ)",
   "dropletBlock_mathRandom_signatureOverride": "Math.random ()",

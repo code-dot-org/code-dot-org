@@ -7,8 +7,7 @@ require 'net/http'
 require_relative '../../deployment'
 require 'cdo/lesson_import_helper'
 
-# Once this script is ready, only levelbuilder should be added to this list.
-raise unless [:development, :adhoc].include? rack_env
+raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
 $verbose = false
 def log(str)
@@ -39,9 +38,9 @@ def parse_options
 
         Usage: #{$0} [options]
 
-        Example: runner.rb -u coursea-2021
-        Example: runner.rb -l -u csd1-2021
-        Example: runner.rb -l -u csp2-2021,csp3-2021,csp4-2021
+        Example: #{0} -u coursea-2021 -m LessonGroup,Lesson,Activity,Resource,Objective,Vocabulary
+        Example: #{0} -l -u csd1-2021 -m Activity,Resource,Objective
+        Example: #{0} -l -u csp2-2021,csp3-2021,csp4-2021 -m Lesson
       BANNER
 
       opts.separator ""
@@ -52,6 +51,10 @@ def parse_options
 
       opts.on('-u', '--unit_names UnitName1,UnitName2', Array, 'Unit names to import') do |unit_names|
         options.unit_names = unit_names
+      end
+
+      opts.on('-m', '--models Resource,Vocabulary', Array, 'Models to import: LessonGroup, Lesson, Activity, Resource, Objective, or Vocabulary') do |models|
+        options.models = models
       end
 
       opts.on('-n', '--dry-run', 'Perform basic validation without importing any data.') do
@@ -77,11 +80,15 @@ def parse_options
 end
 
 def main(options)
+  raise "Must specify models to import" if options.models.blank?
+
   cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
 
   options.unit_names.each do |unit_name|
     script = Script.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
+
+    raise "Only hidden scripts can be imported" unless script.hidden
 
     # If a path is not found, curriculum builder returns a 302 redirect the same
     # path with the /en-us prefix, which then returns 404. to make error
@@ -100,14 +107,14 @@ def main(options)
     next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
-      LessonImportHelper.update_lesson(lesson, cb_lesson)
+      LessonImportHelper.update_lesson(lesson, options.models, cb_lesson)
       log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
     end
 
     paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
     lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
     lockable_lessons_to_update.each do |lockable|
-      LessonImportHelper.update_lesson(lockable)
+      LessonImportHelper.update_lesson(lockable, options.models)
     end
 
     updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
@@ -117,11 +124,13 @@ def main(options)
       # Use a heuristic to make sure we do not import CSF chapter descriptions
       # which are equal to the chapter title.
       cb_chapter['description'] = nil if cb_chapter['description'] == cb_chapter['title']
-      lesson_group.update_from_curriculum_builder(cb_chapter)
+      lesson_group.update_from_curriculum_builder(cb_chapter) if options.models.include?('LessonGroup')
     end
-    script.fix_script_level_positions
 
-    script.update!(show_calendar: !!cb_unit['show_calendar'])
+    script.fix_script_level_positions
+    script.update!(show_calendar: !!cb_unit['show_calendar'], is_migrated: true)
+    script.write_script_dsl
+    script.write_script_json
 
     puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end

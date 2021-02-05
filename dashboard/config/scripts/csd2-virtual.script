@@ -5,10 +5,10 @@ has_verified_resources true
 project_sharing true
 
 lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
-lesson 'Exploring Web Pages', display_name: 'Exploring Web Pages'
+lesson 'Exploring Web Pages', display_name: 'Exploring Web Pages', has_lesson_plan: false
 level 'CSD Web Sample Pages_2020_virtual', named: true
 
-lesson 'Intro to HTML', display_name: 'Intro to HTML'
+lesson 'Intro to HTML', display_name: 'Intro to HTML', has_lesson_plan: false
 level 'CSDU2 - Type Anything_virtual', progression: 'Experiment with Web Lab'
 level 'Intro to Web Lab - Part 1_virtual', named: true
 level 'CSD U2 Inspector Warm Up_virtual', named: true
@@ -19,7 +19,7 @@ level 'CSD Web Debugging_virtual', progression: 'Video: Debugging'
 level 'CSD U2 HTML Debug Paragraphs_virtual', progression: 'Using HTML Tags'
 level 'CSD U2 Heading debug_virtual', progression: 'Using HTML Tags'
 
-lesson 'Headings', display_name: 'Headings'
+lesson 'Headings', display_name: 'Headings', has_lesson_plan: false
 level 'CSD U2 Heading Demo_virtual', progression: 'Headings'
 level 'CSD U2 Heading Sizes_virtual', progression: 'Headings'
 level 'CSD Web Headings practice_2020_virtual', progression: 'Headings'
@@ -27,7 +27,7 @@ level 'CSD Header Size MC_2018_2019_pilot_2020_virtual', progression: 'Headings'
 level 'CSD U2 Heading Test_virtual', progression: 'Headings', assessment: true
 level 'CSD Web Headings challenge_2020_virtual', named: true
 
-lesson 'Styling Text with CSS', display_name: 'Styling Text with CSS'
+lesson 'Styling Text with CSS', display_name: 'Styling Text with CSS', has_lesson_plan: false
 level 'CSD U2 CSS explore CSS_virtual', named: true
 level 'Video: Intro to CSS_virtual', named: true
 level 'CSD U2 text style h1_virtual', progression: 'Styling Text'
@@ -39,7 +39,7 @@ level 'CSD U2 CSS practice_pilot_2020_virtual', progression: 'Styling Text'
 level 'CSD Web CSS Assessment_virtual', progression: 'Styling Text', assessment: true
 level 'CSD U2 CSS challenge_pilot_2020_virtual', progression: 'Styling Text'
 
-lesson 'Images', display_name: 'Images'
+lesson 'Images', display_name: 'Images', has_lesson_plan: false
 level 'CSD U2 Image Tag 1_virtual', progression: 'Adding Images'
 level 'CSD U2 Image Credit_virtual', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_virtual', progression: 'Adding Images'
@@ -49,10 +49,10 @@ level 'CSD U2 Image practice_pilot_2020_virtual', progression: 'Adding Images'
 level 'CSD U2 Image assessment_virtual', progression: 'Adding Images', assessment: true
 level 'CSD U2 Image challenge_pilot_2020_virtual', progression: 'Adding Images Challenges', named: true
 
-lesson 'Websites for Expression ', display_name: 'Websites for Expression '
+lesson 'Websites for Expression ', display_name: 'Websites for Expression ', has_lesson_plan: false
 level 'CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual', named: true
 
-lesson 'Styling Elements with CSS', display_name: 'Styling Elements with CSS'
+lesson 'Styling Elements with CSS', display_name: 'Styling Elements with CSS', has_lesson_plan: false
 level 'CSD U2 layout style sample_virtual', progression: 'Exploring more CSS'
 level 'CSD U2 layout style bgcolor_virtual', progression: 'Exploring more CSS'
 level 'CSD U2 layout style body_virtual', progression: 'Layout with CSS'
@@ -62,7 +62,7 @@ level 'CSD U2 layout style practice_pilot_2020_virtual', progression: 'Layout wi
 level 'CSD U2 add style_virtual', progression: 'Layout with CSS', assessment: true
 level 'CSD U2 layout style challenge_pilot_2020_virtual', progression: 'Layout with CSS'
 
-lesson 'Project - Building a Webpage', display_name: 'Project - Building a Webpage'
+lesson 'Project - Building a Webpage', display_name: 'Project - Building a Webpage', has_lesson_plan: false
 level 'CSD U2 project guide_2018_2019_pilot_2020_virtual', named: true
 level 'CSD U2 upload images_virtual', progression: 'Website Project'
 level 'CSD U2 add content_virtual', progression: 'Website Project'
@@ -72,17 +72,17 @@ level 'CSD U2 publish video_virtual', named: true
 level 'CSD U2 project share_virtual', progression: 'Publishing Your Website', named: true
 
 lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
-lesson 'Purpose of a Websites', display_name: 'Purpose of a Websites'
+lesson 'Purpose of a Websites', display_name: 'Purpose of a Websites', has_lesson_plan: false
 level 'CSD U2 Top Websites_2018_2019_pilot_2020_virtual', named: true
 
-lesson 'CSS Classes', display_name: 'CSS Classes'
+lesson 'CSS Classes', display_name: 'CSS Classes', has_lesson_plan: false
 level 'CSD U2 classes sample_virtual', progression: 'Styling with Classes'
 level 'CSD U2 classes modify_virtual', progression: 'Styling with Classes'
 level 'CSD U2 classes spring_virtual', progression: 'Styling with Classes'
 level 'CSD U2 classes summer_virtual', progression: 'Styling with Classes', assessment: true
 level 'CSD U2 RGB intro_virtual', named: true
 
-lesson 'Linking and Navigation', display_name: 'Linking and Navigation'
+lesson 'Linking and Navigation', display_name: 'Linking and Navigation', has_lesson_plan: false
 level 'CSD U2 link demo_virtual', progression: 'Exploring Links'
 level 'CSD U2 making links_virtual', progression: 'Links and Navigation'
 level 'CSD U2 naming links_virtual', progression: 'Links and Navigation'
@@ -91,13 +91,13 @@ level 'CSD U2 adding pages_virtual', progression: 'Adding Pages', assessment: tr
 level 'CSD U2 naming pages_virtual', progression: 'Adding Pages'
 level 'CSD U2 external links_virtual', progression: 'Challenge: External Links'
 
-lesson 'Project - Website for a Purpose', display_name: 'Project - Website for a Purpose'
+lesson 'Project - Website for a Purpose', display_name: 'Project - Website for a Purpose', has_lesson_plan: false
 level 'CSD web upload images multi_virtual', progression: 'Upload Your Images'
 level 'CSD U2 create page_virtual', progression: 'Create Your Pages'
 level 'CSD web add html_virtual', progression: 'Add Content'
 level 'CSD web add CSS_virtual', progression: 'Add Style'
 level 'CSD web check_virtual', progression: 'Check Your Work'
 
-lesson 'Peer Review and Final Touches', display_name: 'Peer Review and Final Touches'
+lesson 'Peer Review and Final Touches', display_name: 'Peer Review and Final Touches', has_lesson_plan: false
 level 'CSD Web incorporate feedback_virtual', named: true
 

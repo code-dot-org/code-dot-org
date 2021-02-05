@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/csp-explore/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-18/csp-explore/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 announcements [{"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csp-explore'
 version_year '2018'
@@ -13,17 +12,17 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_ap_2', display_name: 'Chapter 2: AP Explore Performance Task'
-lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task'
+lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task', has_lesson_plan: true
 level 'CSP ExploreL01 SFLP', named: true
 level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
-lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan'
+lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan', has_lesson_plan: true
 level 'CSP ExploreL02 SFLP_2018', named: true
 
-lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task'
+lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task', has_lesson_plan: true
 level 'CSP ExploreL03 SFLP', named: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: true
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
 

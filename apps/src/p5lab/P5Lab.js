@@ -359,6 +359,10 @@ P5Lab.prototype.init = function(config) {
 
     this.studioApp_.init(config);
 
+    if (startInAnimationTab(getStore().getState())) {
+      getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
+    }
+
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
@@ -391,8 +395,10 @@ P5Lab.prototype.init = function(config) {
     (!config.hideSource &&
       !config.level.debuggerDisabled &&
       !config.level.iframeEmbedAppAndCode);
+  var showPauseButton = experiments.isEnabled(experiments.SPRITELAB_PAUSE);
   var showDebugConsole = config.level.editCode && !config.hideSource;
-  this.debuggerEnabled = showDebugButtons || showDebugConsole;
+  this.debuggerEnabled =
+    showDebugButtons || showPauseButton || showDebugConsole;
 
   if (this.debuggerEnabled) {
     getStore().dispatch(
@@ -444,10 +450,6 @@ P5Lab.prototype.init = function(config) {
     validationEnabled: !!config.level.validationEnabled
   });
 
-  if (startInAnimationTab(getStore().getState())) {
-    getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
-  }
-
   // Push project-sourced animation metadata into store. Always use the
   // animations specified by the level definition for embed and contained
   // levels.
@@ -456,25 +458,10 @@ P5Lab.prototype.init = function(config) {
   let initialAnimationList = useConfig
     ? config.initialAnimationList
     : this.startAnimations;
+  initialAnimationList = this.loadAnyMissingDefaultAnimations(
+    initialAnimationList
+  );
 
-  // useConfig does not imply that we have startAnimations because GameLab doesn't have startAnimations.
-  if (useConfig && this.startAnimations) {
-    // We need to make sure we include all of the default animations (in case they have changed since this project was created).
-    let configDictionary = {};
-    initialAnimationList.orderedKeys.forEach(key => {
-      const name = initialAnimationList.propsByKey[key].name;
-      configDictionary[name] = key;
-    });
-    this.startAnimations.orderedKeys.forEach(key => {
-      const name = this.startAnimations.propsByKey[key].name;
-      if (!configDictionary[name]) {
-        initialAnimationList.orderedKeys.push(key);
-        initialAnimationList.propsByKey[key] = this.startAnimations.propsByKey[
-          key
-        ];
-      }
-    });
-  }
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
@@ -507,6 +494,7 @@ P5Lab.prototype.init = function(config) {
           <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
+            pauseHandler={this.onPause}
           />
         </Provider>,
         document.getElementById(config.containerId)
@@ -517,6 +505,47 @@ P5Lab.prototype.init = function(config) {
     return loader.catch(() => {});
   }
   return loader;
+};
+
+/**
+ * Load any necessary missing animations. For now, this is mainly for
+ * the "set background to" block, which needs to have backgrounds in the
+ * animation list at the start in order to look not broken.
+ * @param {Object} initialAnimationList
+ */
+P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
+  initialAnimationList
+) {
+  if (!this.isSpritelab) {
+    return initialAnimationList;
+  }
+  let configDictionary = {};
+  initialAnimationList.orderedKeys.forEach(key => {
+    const name = initialAnimationList.propsByKey[key].name;
+    configDictionary[name] = key;
+  });
+  // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+  // This is primarily to handle pre existing levels that don't have animations in their list yet
+  const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
+    const {categories} = initialAnimationList.propsByKey[key];
+    return categories && categories.includes('backgrounds');
+  });
+  const nameCheck = defaultSprites.orderedKeys.filter(key => {
+    return (
+      defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
+      configDictionary[defaultSprites.propsByKey[key].name]
+    );
+  });
+  const hasBackgrounds = categoryCheck.length > 0 || nameCheck.length > 0;
+  if (!hasBackgrounds) {
+    defaultSprites.orderedKeys.forEach(key => {
+      if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+        initialAnimationList.orderedKeys.push(key);
+        initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+      }
+    });
+  }
+  return initialAnimationList;
 };
 
 /**
@@ -620,6 +649,11 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
     }
   });
 };
+
+/**
+ * Override to change pause behavior.
+ */
+P5Lab.prototype.onPause = function() {};
 
 P5Lab.prototype.onIsRunningChange = function() {
   this.setCrosshairCursorForPlaySpace();

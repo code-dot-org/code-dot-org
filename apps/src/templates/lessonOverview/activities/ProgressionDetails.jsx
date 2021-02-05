@@ -10,7 +10,7 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     margin: '10px, 0px',
-    width: '100%',
+    width: '95%',
     backgroundColor: color.lightest_gray,
     padding: '0px 10px 10px 10px'
   },
@@ -21,7 +21,7 @@ const styles = {
 
 export default class ProgressionDetails extends Component {
   static propTypes = {
-    progression: PropTypes.object
+    section: PropTypes.object
   };
 
   convertScriptLevelForProgression = scriptLevel => {
@@ -33,9 +33,12 @@ export default class ProgressionDetails extends Component {
         : scriptLevel.levels[0];
 
     return {
+      id: activeLevel.id,
       status: LevelStatus.not_tried,
       url: scriptLevel.url,
-      name: activeLevel.name,
+      name: this.props.section.progressionName
+        ? this.props.section.progressionName
+        : activeLevel.name,
       kind: scriptLevel.kind,
       icon: activeLevel.icon,
       isConceptLevel: activeLevel.isConceptLevel,
@@ -46,13 +49,13 @@ export default class ProgressionDetails extends Component {
   };
 
   render() {
-    const {progression} = this.props;
+    const {section} = this.props;
 
     return (
       <div style={styles.progressionBox}>
         <ProgressLevelSet
-          name={progression.displayName}
-          levels={progression.scriptLevels.map(scriptLevel =>
+          name={section.progressionName}
+          levels={section.scriptLevels.map(scriptLevel =>
             this.convertScriptLevelForProgression(scriptLevel)
           )}
           disabled={false}

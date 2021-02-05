@@ -52,6 +52,7 @@ Dashboard::Application.routes.draw do
   post 'maker/override', to: 'maker#override'
   get 'maker/google_oauth_login_code', to: 'maker#login_code'
   get 'maker/display_google_oauth_code', to: 'maker#display_code'
+  get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -92,6 +93,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_scripts'
+        get 'require_captcha'
       end
     end
   end
@@ -317,6 +319,10 @@ Dashboard::Application.routes.draw do
   resources :resources, only: [:create, :update]
   get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
 
+  resources :vocabularies, only: [:create, :update]
+  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
@@ -500,11 +506,15 @@ Dashboard::Application.routes.draw do
         end
       end
 
-      post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
-      get 'foorm/form_data', action: :get_form_data, controller: 'foorm'
-      get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
-      get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
-      post 'foorm/validate_form', action: :validate_form, controller: 'foorm'
+      namespace :foorm do
+        namespace :forms do
+          post 'form_with_library_items', action: :fill_in_library_items
+          get 'submissions_csv', action: :get_submissions_as_csv
+          get 'form_names', action: :get_form_names_and_versions
+          post :validate_form
+          get ':id', action: :get_form_data
+        end
+      end
     end
   end
 
@@ -692,6 +702,8 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
       post 'ml_models/save', to: 'ml_models#save'
+      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
+      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
@@ -740,10 +752,10 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
+  post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
+
   get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
   get 'foorm/preview', to: 'foorm_preview#index'
-
-  get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
@@ -765,6 +777,11 @@ Dashboard::Application.routes.draw do
         put :update_questions
         put :publish
       end
+      get :editor, on: :collection
+    end
+
+    resources :library_questions, only: [] do
+      get :editor, on: :collection
     end
   end
 end

@@ -1,0 +1,20 @@
+<CurriculumReference>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-12-04T21:45:09.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Lesson Overview",
+    "reference": "/curriculum/csd-20/unit1/6/overview/index.html",
+    "parent_level_id": 20190,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "teacher_markdown": "[key]\r\n\r\n* [Apps with Processing - Exemplar](https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/export?format=pdf) | [DOCX]( ))\r\n\r\n[/key]\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-09 22:43:36 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:02:44 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:03:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:03:43 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:04:45 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:05:59 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:06:38 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:07:21 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2020-04-21 03:56:23 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-08 17:30:06 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-05-08 17:30:51 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-05-08 17:32:19 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-05-08 17:33:19 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-05-08 17:55:25 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+}]]></config>
+</CurriculumReference>

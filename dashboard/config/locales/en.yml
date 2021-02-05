@@ -281,6 +281,7 @@ en:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
     registered:  "You've registered for %{section_name}."
+    captcha_required: 'Please fill out the CAPTCHA to join this section.'
     error:
       signed_in: 'Please signout before proceeding'
       username_not_found: 'Username %{username} not found'
@@ -454,6 +455,7 @@ en:
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
       clear_response: 'Clear response'
+    student_code_view_diabled: 'Student code cannot be viewed for this activity.'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -830,7 +832,7 @@ en:
     save: "Save"
   race_interstitial:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
-    message: "Please tell us your race (check all that apply)"
+    message: "Please tell us your race or ethnicity (check all that apply)"
     races:
       white: "White"
       black: "Black or African American"
@@ -1146,6 +1148,7 @@ en:
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
   page_not_found_button: "Return home"
   copy: 'Copy'
+  confirm: 'Confirm'
   maker:
     google_oauth:
       login_with_google: 'Login to the Maker App with Google'
@@ -1155,6 +1158,7 @@ en:
       error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
+      confirm_login: 'Select "Confirm" to log in with your Google account.'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
@@ -1162,3 +1166,4 @@ en:
   behaviors:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
+  code_org_logo_alt: "Code.org Home"

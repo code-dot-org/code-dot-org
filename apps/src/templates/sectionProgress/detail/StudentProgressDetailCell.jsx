@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
   bubbles: {
@@ -16,7 +17,7 @@ export default class StudentProgressDetailCell extends Component {
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
+    levelsWithStatus: PropTypes.arrayOf(levelType),
     stageExtrasEnabled: PropTypes.bool
   };
 

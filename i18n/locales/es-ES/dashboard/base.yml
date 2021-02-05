@@ -388,8 +388,8 @@ es:
       sports: 'Deportes'
       spritelab: 'Laboratorio de sprites'
       starwars: 'Star Wars'
-      starwarsblocks: 'Star Wars (bloques)'
-      starwarsblocks_hour: 'Star Wars (bloques)'
+      starwarsblocks: 'La guerra de las galaxias (bloques)'
+      starwarsblocks_hour: 'La guerra de las galaxias (bloques)'
       weblab: 'Web Lab'
       view_all: 'Ver todos los proyectos...'
     popup:
@@ -668,7 +668,7 @@ es:
       body: "Explora un mundo de Minecraft, a través de Code."
     minecraft2016:
       title: "Minecraft"
-      body: "Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
+      body: "Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
     aquatic:
       title: "Minecraft"
     hero:
