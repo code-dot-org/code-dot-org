@@ -30,5 +30,13 @@ module Foorm
         return render status: :bad_request, json: @library_question.errors
       end
     end
+
+    # GET /foorm/library_questions/:id/published_forms_appeared_in
+    def published_forms_appeared_in
+      published_forms = @library_question.published_forms_appeared_in
+      data_to_return = published_forms.map(&:key)
+
+      return render json: data_to_return
+    end
   end
 end
