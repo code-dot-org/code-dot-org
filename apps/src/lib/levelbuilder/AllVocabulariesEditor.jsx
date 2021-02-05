@@ -52,6 +52,7 @@ class AllVocabulariesEditor extends Component {
     removeVocabulary: PropTypes.func.isRequired,
 
     courseVersionId: PropTypes.number.isRequired,
+    courseVersionLessons: PropTypes.arrayOf(PropTypes.object),
     courseName: PropTypes.string.isRequired
   };
 
@@ -181,6 +182,7 @@ class AllVocabulariesEditor extends Component {
               })
             }
             courseVersionId={this.props.courseVersionId}
+            selectableLessons={this.props.courseVersionLessons}
           />
         )}
         {this.state.vocabularyForDeletion && (

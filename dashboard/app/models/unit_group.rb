@@ -164,12 +164,22 @@ class UnitGroup < ApplicationRecord
   def update_scripts(new_scripts, alternate_scripts = nil)
     alternate_scripts ||= []
     new_scripts = new_scripts.reject(&:empty?)
+    new_scripts_objects = new_scripts.map {|s| Script.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
-    scripts_to_delete = default_unit_group_units.map(&:script).map(&:name) - new_scripts
-    scripts_to_delete -= alternate_scripts.map {|hash| hash['alternate_script']}
+    scripts_to_remove = default_unit_group_units.map(&:script) - new_scripts_objects
+    scripts_to_remove -= alternate_scripts.map {|hash| Script.find_by_name!(hash['alternate_script'])}
 
-    new_scripts.each_with_index do |script_name, index|
-      script = Script.find_by_name!(script_name)
+    if scripts_to_remove.any?(&:prevent_course_version_change?)
+      raise 'Cannot remove scripts that have resources or vocabulary'
+    end
+
+    if new_scripts_objects.any? do |s|
+      s.unit_group != self && s.prevent_course_version_change?
+    end
+      raise 'Cannot add scripts that have resources or vocabulary'
+    end
+
+    new_scripts_objects.each_with_index do |script, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |ugu|
         ugu.position = index + 1
       end
@@ -193,8 +203,7 @@ class UnitGroup < ApplicationRecord
       )
     end
 
-    scripts_to_delete.each do |script_name|
-      script = Script.find_by_name!(script_name)
+    scripts_to_remove.each do |script|
       UnitGroupUnit.where(unit_group: self, script: script).destroy_all
     end
     # Reload model so that default_unit_group_units is up to date
