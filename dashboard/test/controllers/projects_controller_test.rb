@@ -13,6 +13,7 @@ class ProjectsControllerTest < ActionController::TestCase
   setup do
     sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
+    stub(:azure_speech_service_options).returns({})
   end
 
   self.use_transactional_test_case = true
@@ -23,6 +24,10 @@ class ProjectsControllerTest < ActionController::TestCase
     @section = create :section
     @section.add_student @driver
     @section.add_student @navigator
+  end
+
+  teardown do
+    unstub(:azure_speech_service_options)
   end
 
   test "index" do
