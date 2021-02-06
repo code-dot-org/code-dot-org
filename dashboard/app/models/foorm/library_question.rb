@@ -38,6 +38,9 @@ class Foorm::LibraryQuestion < ApplicationRecord
     return forms_appeared_in.select {|form| form.published == true}
   end
 
+  # Do names need to be tracked in the question column (and JSON) to make  libraries continue to be valid SurveyJS?
+  # Should check that the library question has the same name in the question as in the question_name field (or can be updated)
+  # Shold check that the library question name is unique within the library (there is DB validation for this)
   def validate_library_question
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
   rescue StandardError => e
