@@ -5,6 +5,27 @@ module Foorm
     before_action :authenticate_user!
     load_and_authorize_resource
 
+    # POST /foorm/library_questions
+    def create
+      library = Foorm::Library.find(params[:library_id])
+
+      @library_question.assign_attributes(
+        {
+          library_name: library.name,
+          library_version: library.version,
+          question: JSON.pretty_generate(get_question),
+          question_name: params[:name],
+          published: true
+        }
+      )
+
+      if @library_question.save
+        return render json: @library_question
+      else
+        return render status: :bad_request, json: @library_question.errors
+      end
+    end
+
     # GET /foorm/library_questions/:id
     def show
       if @library_question
@@ -22,7 +43,7 @@ module Foorm
 
     # PUT /foorm/library_questions/:id/update
     def update
-      @library_question.question = JSON.pretty_generate(params[:question].as_json)
+      @library_question.question = get_question
 
       if @library_question.save
         return render json: @library_question
@@ -37,6 +58,14 @@ module Foorm
       data_to_return = published_forms.map(&:key)
 
       return render json: data_to_return
+    end
+
+    def get_question
+      question_json = params[:question].as_json
+      unless question_json
+        return render(status: :bad_request, plain: "no question provided")
+      end
+      question_json
     end
   end
 end

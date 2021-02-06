@@ -807,7 +807,7 @@ Dashboard::Application.routes.draw do
       get :editor, on: :collection
     end
 
-    resources :library_questions, only: [:show, :update] do
+    resources :library_questions, only: [:create, :show, :update] do
       member do
         get :published_forms_appeared_in
       end
