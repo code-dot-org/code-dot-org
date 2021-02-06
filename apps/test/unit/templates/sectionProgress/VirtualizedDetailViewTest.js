@@ -27,15 +27,27 @@ describe('VirtualizedSummaryView', () => {
     stubRedux();
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
-      levelsByLesson: {
+      levelProgressByStudent: {
         0: {
-          0: [{id: '789', status: 'perfect'}]
+          '789': {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         },
         1: {
-          0: [{id: '789', status: 'perfect'}]
+          '789': {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         },
         3: {
-          0: [{id: '789', status: 'perfect'}]
+          '789': {
+            status: 'perfect',
+            result: 1,
+            paired: false
+          }
         }
       },
       lessonOfInterest: 1,
@@ -96,7 +108,7 @@ describe('VirtualizedSummaryView', () => {
       <UnconnectedVirtualizedDetailView {...defaultProps} />
     );
     wrapper.instance().detailView = {forceUpdateGrids: forceUpdateGridsSpy};
-    wrapper.setProps({levelsByLesson: {}});
+    wrapper.setProps({levelProgressByStudent: {}});
     expect(forceUpdateGridsSpy).to.have.been.calledOnce;
   });
 });

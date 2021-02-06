@@ -305,19 +305,20 @@ export function getPluggedLessonCompletionStatus(state, lesson) {
     const numberStudentsInSection =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;
-    const levelResultsByStudent =
+    const levelProgressByScript =
       state.sectionProgress.studentLevelProgressByScript[scriptId];
 
-    const studentIds = Object.keys(levelResultsByStudent);
-    const levelIds = _.map(lesson.levels, 'activeId');
+    const studentIds = Object.keys(levelProgressByScript);
+    const levelIds = _.map(lesson.levels, 'id');
     let numStudentsCompletedLesson = 0;
     let numStudentsInProgressLesson = 0;
     studentIds.forEach(studentId => {
       let numLevelsInLessonCompletedByStudent = 0;
       levelIds.forEach(levelId => {
+        const levelProgress = levelProgressByScript[studentId][levelId];
         if (
-          levelResultsByStudent[studentId][levelId] >=
-          TestResults.MINIMUM_PASS_RESULT
+          levelProgress &&
+          levelProgress.result >= TestResults.MINIMUM_PASS_RESULT
         ) {
           numLevelsInLessonCompletedByStudent++;
         }
