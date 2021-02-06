@@ -13,7 +13,8 @@ import {
   setSaveError,
   setLibraryQuestionData,
   setHasError,
-  setLastSavedQuestion
+  setLastSavedQuestion,
+  setLibraryData
 } from './library_editor/foormLibraryEditorRedux';
 
 const styles = {
@@ -38,7 +39,8 @@ class FoormLibraryEditorManager extends React.Component {
     setSaveError: PropTypes.func,
     setLibraryQuestionData: PropTypes.func,
     setHasError: PropTypes.func,
-    setLastSavedQuestion: PropTypes.func
+    setLastSavedQuestion: PropTypes.func,
+    setLibraryData: PropTypes.func
   };
 
   constructor(props) {
@@ -70,12 +72,12 @@ class FoormLibraryEditorManager extends React.Component {
     return this.props.availableLibraries.map((libraryNameAndVersion, i) => {
       const libraryName = libraryNameAndVersion['name'];
       const libraryVersion = libraryNameAndVersion['version'];
-      const libraryId = libraryNameAndVersion['id'];
+
       return (
         <MenuItem
           key={i}
           eventKey={i}
-          onClick={() => this.loadLibraryQuestions(libraryId)}
+          onClick={() => this.loadLibraryQuestions(libraryNameAndVersion)}
         >
           {`${libraryName}, version ${libraryVersion}`}
         </MenuItem>
@@ -102,18 +104,23 @@ class FoormLibraryEditorManager extends React.Component {
     );
   }
 
-  loadLibraryQuestions(formId) {
+  loadLibraryQuestions(selectedLibraryNameAndVersion) {
+    let libraryId = selectedLibraryNameAndVersion['id'];
+
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
+    this.props.setLibraryData(selectedLibraryNameAndVersion);
+
+    this.setState({selectedLibraryId: libraryId});
+
     $.ajax({
-      url: `/foorm/libraries/${formId}/question_names`,
+      url: `/foorm/libraries/${libraryId}/question_names`,
       type: 'get'
     })
       .done(result => {
         this.props.setHasError(false);
         this.setState({
           hasLoadError: false,
-          selectedLibraryId: formId,
           libraryQuestionsFromSelectedLibrary: result
         });
       })
@@ -165,12 +172,11 @@ class FoormLibraryEditorManager extends React.Component {
   initializeEmptyCodeMirror = () => {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
-    this.updateFormData({
-      questions: {},
-      published: null,
-      formName: null,
-      formVersion: null,
-      formId: null
+
+    this.updateLibraryQuestionData({
+      question: {},
+      libraryQuestionName: null,
+      libraryQuestionId: null
     });
     this.setState({
       showCodeMirror: true,
@@ -218,18 +224,27 @@ class FoormLibraryEditorManager extends React.Component {
             {this.getFormattedConfigurationDropdownOptions()}
           </DropdownButton>
           <Button onClick={this.initializeEmptyCodeMirror} className="btn">
-            New Form
+            New Library
           </Button>
         </div>
-        <DropdownButton
-          id="load_config"
-          title="Load Library Question..."
-          className="btn"
-          disabled={!this.libraryQuestionOptionsAvailable()}
-        >
-          {this.libraryQuestionOptionsAvailable() &&
-            this.getFormattedLibraryQuestionDropdownOptions()}
-        </DropdownButton>
+        <div>
+          <DropdownButton
+            id="load_config"
+            title="Load Library Question..."
+            className="btn"
+            disabled={!this.libraryQuestionOptionsAvailable()}
+          >
+            {this.libraryQuestionOptionsAvailable() &&
+              this.getFormattedLibraryQuestionDropdownOptions()}
+          </DropdownButton>
+          <Button
+            onClick={this.initializeEmptyCodeMirror}
+            className="btn"
+            disabled={!this.libraryQuestionOptionsAvailable()}
+          >
+            New Library Question
+          </Button>
+        </div>
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
         )}
@@ -259,6 +274,7 @@ export default connect(
       dispatch(setLibraryQuestionData(libraryQuestionData)),
     setHasError: hasError => dispatch(setHasError(hasError)),
     setLastSavedQuestion: libraryQuestion =>
-      dispatch(setLastSavedQuestion(libraryQuestion))
+      dispatch(setLastSavedQuestion(libraryQuestion)),
+    setLibraryData: libraryData => dispatch(setLibraryData(libraryData))
   })
 )(FoormLibraryEditorManager);

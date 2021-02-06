@@ -2,6 +2,7 @@ const SET_LIBRARY_QUESTION = 'foormLibraryEditor/SET_LIBRARY_QUESTION';
 const SET_HAS_ERROR = 'foormLibraryEditor/SET_HAS_ERROR';
 const SET_LIBRARY_QUESTION_DATA =
   'foormLibraryEditor/SET_LIBRARY_QUESTION_DATA';
+const SET_LIBRARY_DATA = 'foormLibraryEditor/SET_LIBRARY_DATA';
 const RESET_AVAILABLE_LIBRARIES =
   'foormLibraryEditor/RESET_AVAILABLE_LIBRARIES';
 const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
@@ -23,6 +24,11 @@ export const setLibraryQuestion = libraryQuestion => ({
 export const setLibraryQuestionData = libraryQuestionData => ({
   type: SET_LIBRARY_QUESTION_DATA,
   libraryQuestionData
+});
+
+export const setLibraryData = libraryData => ({
+  type: SET_LIBRARY_DATA,
+  libraryData
 });
 
 export const setHasError = hasError => ({
@@ -59,13 +65,15 @@ const initialState = {
   libraryQuestion: '',
   isFormPublished: null,
   hasError: false,
-  formName: null,
-  formVersion: null,
-  formId: null,
+  libraryQuestionName: null,
+  libraryQuestionId: null,
+  libraryName: null,
+  libraryId: null,
+  libraryVersion: null,
   availableLibraries: [],
   saveError: null,
   lastSaved: null,
-  lastSavedFormQuestions: ''
+  lastSavedLibraryQuestion: ''
 };
 
 export default function foormLibraryEditorRedux(state = initialState, action) {
@@ -89,6 +97,14 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
       isFormPublished: action.libraryQuestionData['published'],
       libraryQuestionName: action.libraryQuestionData['name'],
       libraryQuestionId: action.libraryQuestionData['id']
+    };
+  }
+  if (action.type === SET_LIBRARY_DATA) {
+    return {
+      ...state,
+      libraryName: action.libraryData['name'],
+      libraryVersion: action.libraryData['version'],
+      libraryId: action.libraryData['id']
     };
   }
   if (action.type === RESET_AVAILABLE_LIBRARIES) {

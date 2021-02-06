@@ -13,9 +13,6 @@ const styles = {
   surveyTitle: {
     marginBottom: 0
   },
-  surveyState: {
-    marginTop: 0
-  },
   validationInfo: {
     marginTop: 10,
     marginLeft: 10
@@ -48,10 +45,9 @@ class FoormEditorHeader extends Component {
     livePreviewStatus: PropTypes.string,
 
     // populated by Redux
-    formQuestions: PropTypes.object,
-    isFormPublished: PropTypes.bool,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number
+    libraryQuestion: PropTypes.object,
+    libraryQuestionName: PropTypes.string,
+    libraryName: PropTypes.string
   };
 
   constructor(props) {
@@ -67,12 +63,12 @@ class FoormEditorHeader extends Component {
   validateQuestions = () => {
     this.setState({validationStarted: true});
     $.ajax({
-      url: '/api/v1/pd/foorm/forms/validate_form',
+      url: '/api/v1/pd/foorm/library_questions/validate_library_question',
       type: 'post',
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        form_questions: this.props.formQuestions
+        question: this.props.libraryQuestion
       })
     })
       .done(result => {
@@ -96,18 +92,13 @@ class FoormEditorHeader extends Component {
   render() {
     return (
       <div>
-        {this.props.formName && (
+        {this.props.libraryName && (
           <div>
             <h2 style={styles.surveyTitle}>
-              {`Form Name: ${this.props.formName}, version ${
-                this.props.formVersion
-              }`}
+              {`Library Name: ${this.props.libraryName}`}
+              <br />
+              {`Library Question Name: ${this.props.libraryQuestionName}`}
             </h2>
-            <h3 style={styles.surveyState}>
-              {`Form State: ${
-                this.props.isFormPublished ? 'Published' : 'Draft'
-              }`}
-            </h3>
           </div>
         )}
         <div style={styles.helperButtons}>
@@ -160,8 +151,7 @@ class FoormEditorHeader extends Component {
 }
 
 export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished,
-  formName: state.foorm.formName,
-  formVersion: state.foorm.formVersion
+  libraryQuestion: state.foorm.libraryQuestion || {},
+  libraryQuestionName: state.foorm.libraryQuestionName,
+  libraryName: state.foorm.libraryName
 }))(FoormEditorHeader);
