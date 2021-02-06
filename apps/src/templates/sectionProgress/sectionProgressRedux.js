@@ -45,10 +45,7 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
-  studentLevelPairingByScript: {},
-  studentTimestampsByScript: {},
-  studentLevelTimeSpentByScript: {},
-  levelsByLessonByScript: {},
+  studentLastUpdateByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
   isRefreshingProgress: false
@@ -112,25 +109,13 @@ export default function sectionProgress(state = initialState, action) {
         ...state.scriptDataByScript,
         ...action.data.scriptDataByScript
       },
-      levelsByLessonByScript: {
-        ...state.levelsByLessonByScript,
-        ...action.data.levelsByLessonByScript
-      },
       studentLevelProgressByScript: {
         ...state.studentLevelProgressByScript,
         ...action.data.studentLevelProgressByScript
       },
-      studentLevelPairingByScript: {
-        ...state.studentLevelPairingByScript,
-        ...action.data.studentLevelPairingByScript
-      },
-      studentTimestampsByScript: {
-        ...state.studentTimestampsByScript,
-        ...action.data.studentTimestampsByScript
-      },
-      studentLevelTimeSpentByScript: {
-        ...state.studentLevelTimeSpentByScript,
-        ...action.data.studentLevelTimeSpentByScript
+      studentLastUpdateByScript: {
+        ...state.studentLastUpdateByScript,
+        ...action.data.studentLastUpdateByScript
       }
     };
   }
@@ -163,17 +148,6 @@ export const jumpToLessonDetails = lessonOfInterest => {
 // Selector functions
 
 /**
- * Retrieves the progress for the section in the selected script
- * @returns {number} keys are student ids, values are
- * objects of {levelIds: LevelStatus}
- */
-export const getCurrentProgress = state => {
-  return state.sectionProgress.studentLevelProgressByScript[
-    state.scriptSelection.scriptId
-  ];
-};
-
-/**
  * Retrieves the script data for the section in the selected script
  * @returns {scriptDataPropType} object containing metadata about the script structure
  */
@@ -181,23 +155,6 @@ export const getCurrentScriptData = state => {
   return state.sectionProgress.scriptDataByScript[
     state.scriptSelection.scriptId
   ];
-};
-
-/**
- * Retrieves the combined script and progress data for the current scriptId for the entire section.
- */
-export const getLevelsByLesson = state => {
-  return state.sectionProgress.levelsByLessonByScript[
-    state.scriptSelection.scriptId
-  ];
-};
-
-/**
- * Retrieves the combined script and progress data for student for the stage.
- * This represents the data for a single cell.
- */
-export const getLevels = (state, studentId, stageId) => {
-  return getLevelsByLesson(state)[studentId][stageId];
 };
 
 /**
