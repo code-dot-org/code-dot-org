@@ -824,6 +824,9 @@ export function getTrainedModelDataToSave(state) {
     dataToSave.columns = state.trainedModelDetails.columns;
   }
 
+  dataToSave.uses = state.trainedModelDetails.uses;
+  dataToSave.misuses = state.trainedModelDetails.misuses;
+
   dataToSave.identify_subgroup = !!state.trainedModelDetails.identify_subgroup;
   dataToSave.represent_subgroup = !!state.trainedModelDetails
     .represent_subgroup;

@@ -16,7 +16,8 @@ class SaveModel extends Component {
     setTrainedModelDetail: PropTypes.func,
     trainedModelDetails: PropTypes.object,
     dataToSave: PropTypes.object,
-    labelColumn: PropTypes.string
+    labelColumn: PropTypes.string,
+    columnDescriptions: PropTypes.array
   };
 
   handleChange = (event, field, isColumn) => {
