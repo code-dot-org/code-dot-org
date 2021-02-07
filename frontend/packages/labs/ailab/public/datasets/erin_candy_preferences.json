@@ -1,49 +1,60 @@
 {
   "defaultLabelColumn": "delicious?",
   "fields": [
-  	{
-  		"id": "name",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "chocolate",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "fruity",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "caramel",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "nuts",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "nougat",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "crispy",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "hard",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "bar",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "pluribus",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "delicious?",
-  		"type": "categorical"
-  	}
+    {
+      "id": "name",
+      "type": "categorical",
+      "description": "Name"
+    },
+    {
+      "id": "chocolate",
+      "type": "categorical",
+      "description": "Whether there is chocolate"
+    },
+    {
+      "id": "fruity",
+      "type": "categorical",
+      "description": "Whether it's fruity"
+    },
+    {
+      "id": "caramel",
+      "type": "categorical",
+      "description": "Whether it has caramel"
+    },
+    {
+      "id": "nuts",
+      "type": "categorical",
+      "description": "Whether it has nuts"
+    },
+    {
+      "id": "nougat",
+      "type": "categorical",
+      "description": "Whether it has nougat"
+    },
+    {
+      "id": "crispy",
+      "type": "categorical",
+      "description": "Whether it's crispy"
+    },
+    {
+      "id": "hard",
+      "type": "categorical",
+      "description": "Whether it's hard"
+    },
+    {
+      "id": "bar",
+      "type": "categorical",
+      "description": "Whether it is a bar"
+    },
+    {
+      "id": "pluribus",
+      "type": "categorical",
+      "description": "Whether there are many in a packet"
+    },
+    {
+      "id": "delicious?",
+      "type": "categorical",
+      "description": "Is it delicious?"
+    }
   ]
 }
