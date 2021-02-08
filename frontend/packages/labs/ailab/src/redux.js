@@ -50,6 +50,7 @@ const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
 const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
+const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 
@@ -173,6 +174,10 @@ export function setTrainedModel(trainedModel) {
 
 export function setTrainedModelDetails(trainedModelDetails) {
   return { type: SET_TRAINED_MODEL_DETAILS, trainedModelDetails };
+}
+
+export function setTrainedModelDetail(field, value, isColumn) {
+  return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
 
 export function setCurrentPanel(currentPanel) {
@@ -387,6 +392,35 @@ export default function rootReducer(state = initialState, action) {
       trainedModelDetails: action.trainedModelDetails
     };
   }
+  if (action.type === SET_TRAINED_MODEL_DETAIL) {
+    let trainedModelDetails = state.trainedModelDetails;
+
+    if (action.isColumn) {
+      if (!trainedModelDetails.columns) {
+        trainedModelDetails.columns = [];
+      }
+
+      const column = trainedModelDetails.columns.find(column => {
+        return column.id === action.field;
+      });
+
+      if (column) {
+        column.description = action.value;
+      } else {
+        trainedModelDetails.columns.push({
+          id: action.field,
+          description: action.value
+        });
+      }
+    } else {
+      trainedModelDetails[action.field] = action.value;
+    }
+
+    return {
+      ...state,
+      ...trainedModelDetails
+    };
+  }
   if (action.type === SET_CURRENT_PANEL) {
     return {
       ...state,
@@ -454,7 +488,8 @@ export function getCurrentColumnData(state) {
     dataType: state.columnsByDataType[state.currentColumn],
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
     range: getRange(state, state.currentColumn),
-    frequencies: getOptionFrequencies(state, state.currentColumn)
+    frequencies: getOptionFrequencies(state, state.currentColumn),
+    description: getColumnDescription(state, state.currentColumn)
   };
 }
 
@@ -546,6 +581,26 @@ export function getRange(state, column) {
   range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
   range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
   return range;
+}
+
+export function getSelectedColumnDescriptions(state) {
+  return getSelectedColumns(state).map(column => {
+    return {
+      id: column.id,
+      description: getColumnDescription(state, column.id)
+    };
+  });
+}
+
+export function getColumnDescription(state, column) {
+  if (!state.metadata || !state.metadata.fields) {
+    return null;
+  }
+
+  const field = state.metadata.fields.find(field => {
+    return field.id === column;
+  });
+  return field.description;
 }
 
 function getKeyByValue(object, value) {
@@ -752,8 +807,31 @@ export function getEmptyCellDetails(state) {
 
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
+
   dataToSave.name = state.trainedModelDetails.name;
-  dataToSave.description = state.trainedModelDetails.description;
+
+  // If we have column descriptions in metadata, use that, otherwise
+  // use what the user has manually entered.
+  if (state.metadata && state.metadata.fields) {
+    dataToSave.columns = [];
+    for (const columnDescription of getSelectedColumnDescriptions(state)) {
+      dataToSave.columns.push({
+        id: columnDescription.id,
+        description: columnDescription.description
+      });
+    }
+  } else {
+    dataToSave.columns = state.trainedModelDetails.columns;
+  }
+
+  dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
+  dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
+
+  dataToSave.identifySubgroup = !!state.trainedModelDetails.identifySubgroup;
+  dataToSave.representSubgroup = !!state.trainedModelDetails
+    .representSubgroup;
+  dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
+
   dataToSave.selectedTrainer = state.selectedTrainer;
   dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;

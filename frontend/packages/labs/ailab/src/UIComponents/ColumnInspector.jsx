@@ -117,6 +117,15 @@ class ColumnInspector extends Component {
                     </div>
                   )}
 
+                  {currentColumnData.description && (
+                    <div>
+                      <br/>
+                      <div>
+                        {currentColumnData.description}
+                      </div>
+                    </div>
+                  )}
+
                   {!currentColumnData.readOnly && (
                     <div>
                       {currentColumnData.id}: &nbsp;
