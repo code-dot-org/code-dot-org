@@ -93,7 +93,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\r\n\r\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
+        "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
         "student_overview": "Learn how to go places safely online.",
         "purpose": "Common Sense Education created this lesson to teach students how they can go places safely online.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- (Optional) Print poem poster for classroom display.",
@@ -969,8 +969,7 @@
       "key": "d532c41b-fba1-4122-8928-17ec3ef36315",
       "position": 4,
       "properties": {
-        "name": "Cross-Curricular Opportunity",
-        "duration": 0
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
         "lesson_activity.key": "d532c41b-fba1-4122-8928-17ec3ef36315",
@@ -2351,7 +2350,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
           }
@@ -2494,8 +2492,8 @@
       "key": "85143426-6671-4809-8601-8502634e2f51",
       "position": 2,
       "properties": {
-        "description": "[**Code My Drawing**](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) is an optional activity aligned to Common Core ELA standards, written by our teacher community. In pairs or groups of three, students will practice clear communication in order to code each other’s drawings in Artist.\n\n*Standards Addressed:*\n    \n   * **CCSS.ELA-Literacy.SL.K.2**: Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.\n   * **CCSS.ELA-Literacy.SL.K.3**: Ask and answer questions in order to seek help, get information, or clarify something that is not understood.\n   * **CCSS.ELA-Literacy.SL.K.6**: Speak audibly and express thoughts, feelings, and ideas clearly.",
-        "name": "![](https://curriculum.code.org/media/uploads/elaSmall.png) Code My Drawing "
+        "description": "![](https://curriculum.code.org/media/uploads/elaSmall.png) **Computer Science + English Language Arts**\n\n[**Code My Drawing**](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) is an optional activity aligned to Common Core ELA standards, written by our teacher community. In pairs or groups of three, students will practice clear communication in order to code each other’s drawings in Artist.\n\n*Standards Addressed:*\n    \n   * **CCSS.ELA-Literacy.SL.K.2**: Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.\n   * **CCSS.ELA-Literacy.SL.K.3**: Ask and answer questions in order to seek help, get information, or clarify something that is not understood.\n   * **CCSS.ELA-Literacy.SL.K.6**: Speak audibly and express thoughts, feelings, and ideas clearly.\n",
+        "name": "Code My Drawing "
       },
       "seeding_key": {
         "activity_section.key": "85143426-6671-4809-8601-8502634e2f51",
