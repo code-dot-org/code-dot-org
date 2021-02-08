@@ -9,7 +9,7 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1'
+    @script = create :script, name: 'unit-1', is_migrated: true, hidden: true
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -35,6 +35,19 @@ class LessonsControllerTest < ActionController::TestCase
       lockable: false,
       absolute_position: 2,
       relative_position: 2
+    )
+
+    @script2 = create :script, name: 'unmigrated-course'
+    lesson_group2 = create :lesson_group, script: @script2
+    @unmigrated_lesson = create(
+      :lesson,
+      script_id: @script2.id,
+      lesson_group: lesson_group2,
+      name: 'unmigrated lesson',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
     )
 
     @script_title = 'Script Display Name'
@@ -82,9 +95,13 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :levelbuilder, response: :forbidden
 
   test 'show lesson when lesson is the only lesson in script' do
+    script = create :script, name: 'one-lesson-script', is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
     @solo_lesson_in_script = create(
       :lesson,
       name: 'lesson display name',
+      script_id: script.id,
+      lesson_group_id: lesson_group.id,
       has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
