@@ -836,13 +836,13 @@ export function getTrainedModelDataToSave(state) {
     dataToSave.columns = state.trainedModelDetails.columns;
   }
 
-  dataToSave.uses = state.trainedModelDetails.uses;
-  dataToSave.misuses = state.trainedModelDetails.misuses;
+  dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
+  dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
-  dataToSave.identify_subgroup = !!state.trainedModelDetails.identify_subgroup;
-  dataToSave.represent_subgroup = !!state.trainedModelDetails
-    .represent_subgroup;
-  dataToSave.decisions_life = !!state.trainedModelDetails.decisions_life;
+  dataToSave.identifySubgroup = !!state.trainedModelDetails.identifySubgroup;
+  dataToSave.representSubgroup = !!state.trainedModelDetails
+    .representSubgroup;
+  dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
   dataToSave.selectedTrainer = state.selectedTrainer;
   dataToSave.selectedFeatures = state.selectedFeatures;

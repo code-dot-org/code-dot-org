@@ -44,26 +44,26 @@ class SaveModel extends Component {
       });
     }
 
-    fields.push({ id: "uses", text: "How can this model be used?" });
+    fields.push({ id: "potentialUses", text: "How can this model be used?" });
     fields.push({
-      id: "misuses",
+      id: "potentialMisuses",
       text: "How can this model be potentially misused?"
     });
     fields.push({
-      id: "identify_subgroup",
+      id: "identifySubgroup",
       type: "checkbox",
       text: "Has this model been trained on data that can identify a subgroup?"
     });
     fields.push({
-      id: "represent_subgroup",
+      id: "representSubgroup",
       type: "checkbox",
       text: "Have we ensured the data has adequate representation of subgroups?"
     });
     fields.push({
-      id: "decisions_life",
+      id: "decisionsLife",
       type: "checkbox",
       text:
-        "Can this model could be used to inform decisions central to human life?"
+        "Could this model be used to inform decisions central to human life?"
     });
 
     return fields;
