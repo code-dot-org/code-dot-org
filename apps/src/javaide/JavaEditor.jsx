@@ -1,7 +1,7 @@
 import React from 'react';
 import AceEditor from 'react-ace';
 import {connect} from 'react-redux';
-import {setEditorText} from './redux';
+import {setEditorText} from './javaIdeRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import 'ace-builds/src-noconflict/mode-java';
@@ -10,8 +10,7 @@ import 'ace-builds/src-noconflict/theme-monokai';
 const style = {
   editor: {
     width: '100%',
-    minHeight: '600px',
-    height: '60%'
+    height: 600
   }
 };
 
@@ -29,7 +28,7 @@ class JavaEditor extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={this.props.style}>
         <PaneHeader hasFocus={true}>
           <PaneSection>Editor</PaneSection>
         </PaneHeader>

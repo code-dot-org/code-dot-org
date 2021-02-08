@@ -3,8 +3,9 @@ import JavaConsole from './JavaConsole';
 import {connect} from 'react-redux';
 import JavaEditor from './JavaEditor';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {appendOutputLog} from './redux';
+import {appendOutputLog} from './javaIdeRedux';
 import PropTypes from 'prop-types';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const style = {
   instructionsAndPreview: {
@@ -29,7 +30,6 @@ const style = {
   },
   javaIde: {
     display: 'flex',
-    backgroundColor: '#1b1c17',
     margin: 15
   },
   consoleAndButtons: {
@@ -42,21 +42,23 @@ const style = {
   buttons: {
     marginRight: 15,
     height: 75,
-    backgroundColor: '#272822',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    flexDirection: 'column'
   },
   singleButton: {
-    margin: 15,
+    backgroundColor: '#272822',
+    color: 'white',
+    width: 95,
     textAlign: 'center'
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
 class JavaIdeView extends React.Component {
   static propTypes = {
     // populated by redux
-    editorText: PropTypes.string,
     appendOutputLog: PropTypes.func
   };
 
@@ -90,27 +92,29 @@ class JavaIdeView extends React.Component {
           </div>
         </div>
         <div style={style.editorAndConsole}>
-          <JavaEditor style={style.editor} />
+          <JavaEditor />
           <div style={style.consoleAndButtons}>
             <div style={style.buttons}>
-              <div
+              <button
+                type="button"
                 style={style.singleButton}
                 onClick={this.compile}
                 className="hover-pointer"
               >
-                <i className="fa fa-cubes fa-2x" />
+                <FontAwesome icon="cubes" className="fa-2x" />
                 <br />
                 Compile
-              </div>
-              <div
+              </button>
+              <button
+                type="button"
                 style={style.singleButton}
                 onClick={this.run}
                 className="hover-pointer"
               >
-                <i className="fa fa-play fa-2x" />
+                <FontAwesome icon="play" className="fa-2x" />
                 <br />
                 Run
-              </div>
+              </button>
             </div>
             <div style={style.consoleStyle}>
               <JavaConsole />
@@ -123,9 +127,7 @@ class JavaIdeView extends React.Component {
 }
 
 export default connect(
-  state => ({
-    editorText: state.javaIde.editorText
-  }),
+  null,
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log))
   })

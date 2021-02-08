@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {appendInputLog} from './redux';
+import {appendInputLog} from './javaIdeRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
 
@@ -10,10 +10,12 @@ const style = {
     backgroundColor: 'black',
     color: 'white',
     height: '200px',
-    overflowY: 'auto'
+    overflowY: 'auto',
+    border: '1px solid #e7e8ea',
+    borderRadius: 15,
+    padding: 5
   },
   consoleLogs: {
-    overflow: 'auto',
     lineHeight: 'normal',
     cursor: 'text',
     whiteSpace: 'pre-wrap',
@@ -22,7 +24,8 @@ const style = {
   consoleInputWrapper: {
     flexGrow: 0,
     flexShrink: 0,
-    display: 'flex'
+    display: 'flex',
+    overflow: 'auto'
   },
   consoleInputPrompt: {
     display: 'block',
@@ -132,7 +135,6 @@ class JavaConsole extends React.Component {
           <input
             type="text"
             spellCheck="false"
-            id="debug-input"
             style={style.consoleInput}
             onKeyDown={this.onInputKeyDown}
           />
