@@ -13,6 +13,8 @@ import {
   Button,
   FormControl
 } from 'react-bootstrap';
+import Select from 'react-select/lib/Select';
+import {SelectStyleProps} from '../../constants';
 import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
@@ -91,6 +93,7 @@ class FoormLibrarySaveBar extends Component {
       isSaving: false,
       showNewLibraryQuestionSave: false,
       libraryQuestionName: null,
+      libraryName: null,
       formsAppearedIn: []
     };
   }
@@ -200,7 +203,8 @@ class FoormLibrarySaveBar extends Component {
       data: JSON.stringify({
         name: this.state.libraryQuestionName,
         question: this.props.libraryQuestion,
-        library_id: this.props.libraryId
+        library_id: this.props.libraryId,
+        library_name: this.state.libraryName
       })
     })
       .done(result => {
@@ -266,6 +270,43 @@ class FoormLibrarySaveBar extends Component {
         </Modal.Header>
         <Modal.Body>
           <FormGroup>
+            {!this.props.libraryId && (
+              <div>
+                <ControlLabel>
+                  Choose a Category
+                  <ModalHelpTip>
+                    Select a category for the library. The library name will be
+                    prefixed with the category name.
+                  </ModalHelpTip>
+                </ControlLabel>
+                <Select
+                  id="folder"
+                  value={this.state.libraryCategory}
+                  onChange={e => this.setState({libraryCategory: e.value})}
+                  placeholder="-"
+                  options={this.props.libraryCategories.map(v => ({
+                    value: v,
+                    label: v
+                  }))}
+                  required={true}
+                  {...SelectStyleProps}
+                />
+                <ControlLabel>
+                  Library Name
+                  <ModalHelpTip>
+                    Library names must be all lowercase letters (numbers
+                    allowed) with underscores to separate words (such as
+                    example_library_name).
+                  </ModalHelpTip>
+                </ControlLabel>
+                <FormControl
+                  id="libraryName"
+                  type="text"
+                  required={true}
+                  onChange={e => this.setState({libraryName: e.target.value})}
+                />
+              </div>
+            )}
             <ControlLabel>
               Library Question Name
               <ModalHelpTip>
