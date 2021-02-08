@@ -21,6 +21,7 @@ export const PUZZLE_PAGE_NONE = -1;
  * @property {string} kind
  * @property {number} pageNumber The page number of the level if
  *   this is a multi-page level, or PUZZLE_PAGE_NONE
+ * @property {array} sublevels An optional array of recursive sublevel objects
  */
 const levelWithoutStatusShape = {
   id: PropTypes.string.isRequired,
@@ -34,8 +35,8 @@ const levelWithoutStatusShape = {
   isConceptLevel: PropTypes.bool,
   kind: PropTypes.string,
   pageNumber: PropTypes.number
+  /** sublevels: PropTypes.array */ // See below
 };
-
 // Avoid recursive definition
 levelWithoutStatusShape.sublevels = PropTypes.arrayOf(
   PropTypes.shape(levelWithoutStatusShape)
@@ -54,6 +55,39 @@ export const levelType = PropTypes.shape({
   ...levelWithoutStatusShape,
   status: PropTypes.string.isRequired
 });
+
+/**
+ * @typedef {Object} StudentLevelProgress
+ *
+ * @property {string} status
+ * A string enum representing student progress status on a level.
+ * See src/util/sharedConstants.LevelStatus.
+ * @property {number} result
+ * A numerical enum of the TestResult a student received for a level.
+ * See src/constants.TestResult.
+ * See src/code-studio/activityUtils.activityCssClass for a mapping to status.
+ * @property {bool} paired
+ * A boolean indicating if a student was paired on a level.
+ * @property {number} timeSpent
+ * An optional value indicating the time a student spent on a level.
+ * @property {array} pages
+ * An optional array of recursive progress objects representing progress on
+ * individual pages of a multi-page assessment
+ */
+const studentLevelProgressShape = {
+  status: PropTypes.string.isRequired,
+  result: PropTypes.number.isRequired,
+  paired: PropTypes.bool.isRequired,
+  timeSpent: PropTypes.number
+  /** pages: PropTypes.array */ // See below
+};
+// Avoid recursive definition
+studentLevelProgressShape.pages = PropTypes.arrayOf(
+  PropTypes.shape(studentLevelProgressShape)
+);
+export const studentLevelProgressType = PropTypes.shape(
+  studentLevelProgressShape
+);
 
 /**
  * @typedef {Object} Lesson
@@ -75,53 +109,6 @@ export const lessonType = PropTypes.shape({
 });
 
 /**
- * @typedef {Object} LessonGroup
- *
- * @property {string} displayName
- * @property {number} id
- * @property {array} bigQuestion
- * @property {string} description
- */
-export const lessonGroupType = PropTypes.shape({
-  id: PropTypes.number,
-  displayName: PropTypes.string,
-  bigQuestions: PropTypes.string,
-  description: PropTypes.string
-});
-
-/**
- * @typedef {Object} StudentLevelProgress
- *
- * @property {string} status
- * A string enum representing student progress status on a level.
- * See src/util/sharedConstants.LevelStatus.
- * @property {number} result
- * A numerical enum of the TestResult a student received for a level.
- * See src/constants.TestResult.
- * See src/code-studio/activityUtils.activityCssClass for a mapping to status.
- * @property {bool} paired
- * A boolean indicating if a student was paired on a level.
- * @property {number} timeSpent
- * An optional value indicating the time a student spent on a level.
- * @property {array} pages
- * Array of StudentLevelProgress objects representing progress on individual
- * pages of a multi-page assessment
- */
-const studentLevelProgressShape = {
-  status: PropTypes.string.isRequired,
-  result: PropTypes.number.isRequired,
-  paired: PropTypes.bool.isRequired,
-  timeSpent: PropTypes.number
-};
-// Avoid recursive definition
-studentLevelProgressShape.pages = PropTypes.arrayOf(
-  PropTypes.shape(studentLevelProgressShape)
-);
-export const studentLevelProgressType = PropTypes.shape(
-  studentLevelProgressShape
-);
-
-/**
  * @typedef {Object} StudentLessonProgress
  *
  * @property {bool} isStarted
@@ -134,4 +121,19 @@ export const studentLessonProgressType = PropTypes.shape({
   incompletePercent: PropTypes.number.isRequired,
   imperfectPercent: PropTypes.number.isRequired,
   completedPercent: PropTypes.number.isRequired
+});
+
+/**
+ * @typedef {Object} LessonGroup
+ *
+ * @property {string} displayName
+ * @property {number} id
+ * @property {array} bigQuestion
+ * @property {string} description
+ */
+export const lessonGroupType = PropTypes.shape({
+  id: PropTypes.number,
+  displayName: PropTypes.string,
+  bigQuestions: PropTypes.string,
+  description: PropTypes.string
 });
