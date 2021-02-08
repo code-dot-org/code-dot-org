@@ -2,21 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  setLabelColumn,
-  setColumnsByDataType,
-  getCurrentColumnData,
-  addSelectedFeature,
-  removeSelectedFeature,
-  getCurrentColumnIsSelectedFeature,
-  getCurrentColumnIsSelectedLabel,
-  getRangesByColumn,
-  setCurrentColumn
-} from "../redux";
-import { ColumnTypes, styles } from "../constants.js";
-import Histogram from "react-chart-histogram";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { styles } from "../constants.js";
 
 class DataCard extends Component {
   static propTypes = {
