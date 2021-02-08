@@ -4,6 +4,7 @@ import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
+import DataCard from "./UIComponents/DataCard";
 import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
@@ -203,6 +204,7 @@ class App extends Component {
           />
           {currentPanel === "dataDisplay" && <ColumnInspector />}
           {currentPanel === "dataDisplay" && <CrossTab />}
+          {currentPanel === "selectDataset" && <DataCard />}
           <PanelButtons
             panels={panels}
             panelButtons={panelButtons}
