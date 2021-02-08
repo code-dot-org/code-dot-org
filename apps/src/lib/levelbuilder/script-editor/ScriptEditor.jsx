@@ -93,6 +93,7 @@ class ScriptEditor extends React.Component {
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
+    initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
 
     // from redux
@@ -117,6 +118,7 @@ class ScriptEditor extends React.Component {
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
+      weeklyInstructionalMinutes: this.props.initialWeeklyInstructionalMinutes,
       description: this.props.i18nData.description,
       studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
@@ -221,6 +223,8 @@ class ScriptEditor extends React.Component {
       family_name: this.state.familyName,
       is_course: this.state.isCourse,
       show_calendar: this.state.showCalendar,
+      weekly_instructional_minutes:
+        parseInt(this.state.weeklyInstructionalMinutes) || 0,
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
@@ -796,9 +800,13 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
             <input
-              value={10}
+              value={this.state.weeklyInstructionalMinutes}
               style={styles.input}
-              onChange={e => console.log(e.target.value)}
+              onChange={e =>
+                this.setState({
+                  weeklyInstructionalMinutes: e.target.value
+                })
+              }
             />
           </label>
         </CollapsibleEditorSection>

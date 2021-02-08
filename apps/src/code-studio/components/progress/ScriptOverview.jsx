@@ -45,6 +45,18 @@ class ScriptOverview extends React.Component {
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
     minimal: PropTypes.bool,
+    lessons: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        duration: PropTypes.number.isRequired,
+        assessment: PropTypes.bool.isRequired,
+        unplugged: PropTypes.bool,
+        url: PropTypes.string
+      })
+    ),
+    weeklyInstructionalMinutes: PropTypes.number,
+    showCalendar: PropTypes.bool,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -104,7 +116,10 @@ class ScriptOverview extends React.Component {
       showAssignButton,
       userId,
       assignedSectionId,
-      minimal
+      minimal,
+      showCalendar,
+      weeklyInstructionalMinutes,
+      lessons
     } = this.props;
 
     const displayRedirectDialog =
@@ -158,6 +173,9 @@ class ScriptOverview extends React.Component {
               resources={teacherResources}
               showAssignButton={showAssignButton}
               assignedSectionId={assignedSectionId}
+              showCalendar={showCalendar}
+              weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+              lessons={lessons}
             />
           </div>
         )}
