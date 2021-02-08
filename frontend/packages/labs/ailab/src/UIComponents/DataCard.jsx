@@ -57,15 +57,15 @@ class DataCard extends Component {
 
                 <div>
                   Potential uses:
-                  {metadata.card.context.potential_uses}
+                  {metadata.card.context.potentialUses}
                 </div>
                 <div>
                   Potential misuses:
-                  {metadata.card.context.potential_misuses}
+                  {metadata.card.context.potentialMisuses}
                 </div>
                 <div>
                   Last updated:
-                  {metadata.card.last_updated}
+                  {metadata.card.lastUpdated}
                 </div>
               </div>
             )}
