@@ -6,6 +6,7 @@ import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import {appendOutputLog} from './javaIdeRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
 
 const style = {
   instructionsAndPreview: {
@@ -20,12 +21,12 @@ const style = {
     height: '25%',
     marginLeft: 15,
     marginRight: 15,
-    backgroundColor: 'white',
-    color: 'black'
+    backgroundColor: color.white,
+    color: color.black
   },
   preview: {
     margin: 15,
-    backgroundColor: 'gray',
+    backgroundColor: color.light_gray,
     height: '200px'
   },
   javaIde: {
@@ -46,8 +47,11 @@ const style = {
     flexDirection: 'column'
   },
   singleButton: {
+    // this matches the current ace editor theme we are using
+    // TODO: either add to color.scss or use a color from there depending
+    // on final theme choice.
     backgroundColor: '#272822',
-    color: 'white',
+    color: color.white,
     width: 95,
     textAlign: 'center'
   },
