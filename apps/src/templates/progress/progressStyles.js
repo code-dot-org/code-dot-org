@@ -1,5 +1,6 @@
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import progressTableStyles from '@cdo/apps/templates/sectionProgress/progressTables/progressTableStyles.scss';
 
 export const DOT_SIZE = 30;
 export const DIAMOND_DOT_SIZE = 22;
@@ -43,6 +44,16 @@ export const font = {
 export const CELL_PADDING = 4;
 export const cellContent = {
   padding: `0px ${CELL_PADDING}px`
+};
+
+export const studentListContent = {
+  height: parseInt(progressTableStyles.ROW_HEIGHT),
+  boxSizing: 'border-box',
+  padding: 10,
+  fontSize: 14,
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden'
 };
 
 // Style used when hovering
