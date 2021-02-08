@@ -1,4 +1,17 @@
 {
+  "card": {
+    "description": "These are Erin's candy preferences.",
+    "lastUpdated": "2020",
+    "source": "Erin's shopping",
+    "context": {
+      "createdBy": "Erin",
+      "preparation": true,
+      "confidentiality": false,
+      "subgroupIdentifiers": false,
+      "potentialUses": "Could be used for good things.",
+      "potentialMisuses": "Could be used for bad things."
+    }
+  },
   "defaultLabelColumn": "delicious?",
   "fields": [
     {

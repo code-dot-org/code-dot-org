@@ -25,6 +25,7 @@ import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
 // Action types
 const RESET_STATE = "RESET_STATE";
 const SET_MODE = "SET_MODE";
+const SET_SELECTED_NAME = "SET_SELECTED_NAME";
 const SET_SELECTED_CSV = "SET_SELECTED_CSV";
 const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
@@ -57,6 +58,10 @@ const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 // Action creators
 export function setMode(mode) {
   return { type: SET_MODE, mode };
+}
+
+export function setSelectedName(name) {
+  return { type: SET_SELECTED_NAME, name };
 }
 
 export function setSelectedCSV(csvfile) {
@@ -189,6 +194,7 @@ export function setCurrentColumn(currentColumn) {
 }
 
 const initialState = {
+  name: undefined,
   csvfile: undefined,
   jsonfile: undefined,
   data: [],
@@ -221,6 +227,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       mode: action.mode
+    };
+  }
+  if (action.type === SET_SELECTED_NAME) {
+    return {
+      ...state,
+      name: action.name
     };
   }
   if (action.type === SET_SELECTED_CSV) {

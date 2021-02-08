@@ -108,6 +108,11 @@ export const styles = {
     position: "relative"
   },
 
+  datasets: {
+    maxHeight: 300,
+    overflow: "scroll"
+  },
+
   dataDisplayTable: {
     whiteSpace: "nowrap",
     borderSpacing: 0,
