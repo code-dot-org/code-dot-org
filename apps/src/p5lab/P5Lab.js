@@ -495,6 +495,7 @@ P5Lab.prototype.init = function(config) {
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
             pauseHandler={this.onPause}
+            hidePauseButton={!!this.level.hidePauseButton}
           />
         </Provider>,
         document.getElementById(config.containerId)
