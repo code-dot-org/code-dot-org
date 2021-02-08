@@ -20,7 +20,11 @@ const AFE_CONSENT_BODY = (
     I give Code.org permission to share my name and email address, and my
     school's name, address, and NCES ID, with Amazon.com (required to
     participate). Use of your personal information is subject to{' '}
-    <a href={AMAZON_PRIVACY_POLICY_URL} target="_blank">
+    <a
+      href={AMAZON_PRIVACY_POLICY_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Amazon’s Privacy Policy
     </a>
     .
@@ -34,7 +38,7 @@ const CSTA_CONSENT_BODY = (
     school's name, address, and NCES ID, with the Computer Science Teachers
     Association (required if you want a CSTA+ membership). I provide my consent
     to the use of my personal data as described in the{' '}
-    <a href={CSTA_PRIVACY_POLICY_URL} target="_blank">
+    <a href={CSTA_PRIVACY_POLICY_URL} target="_blank" rel="noopener noreferrer">
       CSTA Privacy Policy
     </a>
     .
@@ -249,8 +253,8 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
             name="inspirationKit"
-            label="Send my school an Inspiration Kit with posters and stickers to
-              help promote computer science to students and parents."
+            label="Send me a Thank You Kit with Amazon Future Engineer-branded
+            gear (t-shirts, drinkware, stickers, and more!)."
             onChange={this.handleChange}
             value={this.state.inspirationKit}
           />
@@ -260,16 +264,13 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 handleChange={this.handleChange}
                 checkValidationState={this.checkValidationState}
               />
-              <div>
-                For the purposes of shipping you your Inspiration Kit, your
-                email and school address may be shared with a certified third
-                party.
-              </div>
             </div>
           )}
           <SingleCheckbox
             name="csta"
-            label="Send me a free annual Computer Science Teachers Association Plus (CSTA+) membership - which includes access to Amazon expert-led webinars and other exclusive content."
+            label="Send me a free annual Computer Science Teachers Association Plus
+            (CSTA+) membership - which includes access to Amazon expert-led
+            webinars and other exclusive content."
             onChange={this.handleChange}
             value={this.state.csta}
           />
@@ -337,8 +338,11 @@ const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
   return (
     <div>
       <div>
-        Since you checked the box above, please verify your school address
-        below.
+        By checking the box above, I consent to Amazon sharing my email address
+        and school address with its third party vendor, Corporate Imaging
+        Concepts, LLC, solely in order to fulfill my request. I understand
+        Amazon's vendor will email me a promo code to allow me to select and
+        redeem my Thank You Kit items.
       </div>
       <FieldGroup
         id="street1"

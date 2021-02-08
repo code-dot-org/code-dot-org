@@ -11,13 +11,13 @@ layout: wide
 
 # Útmutató a Kódolás órája™ és a Számítástechnikai Oktatási Hét eseményeihez
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+A Code.org, a Hour of Code és CSEdWeek webhelyeken különféle, a Kódolás Órájához™ tartozó tevékenységeket, feladatokat és videókat találhattok. A legfrissebb lista az alábbi linken érhető el: [hourofcode.com/learn]({{ urls/learn }}).
 
 A Code.org különféle Kódolás órája™ tevékenységeket, oktatatóanyagokat és videókat tartalmaz a Code.org, a Hour of Code és a CSEdWeek webhelyeken. A jelenlegi lista a [ hourofcode.com/learn ]({{ urls/learn }}) címen található.
 
-Szeretnéd elküldeni saját önálló játékodat, esetleg tanóra tervedet vagy egyéb tevékenységet, amely segít elmagyarázni a számítástechnika alapelvét? Csatlakozz ehhez a globális mozgalomhoz, és segítsd a világ résztvevőit ösztönözni arra, hogy kezdjenek neki a kódolásnak, akár egy órás vagy akár hosszabb időtartamú - több órás, napos vagy hetes - tevékenységek kipróbálásával. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.</strong> If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+Szeretnéd elküldeni saját önálló játékodat, esetleg tanóra tervedet vagy egyéb tevékenységet, amely segít elmagyarázni a számítástechnika alapelvét? Csatlakozz ehhez a globális mozgalomhoz, és segítsd a világ résztvevőit ösztönözni arra, hogy kezdjenek neki a kódolásnak, akár egy órás vagy akár hosszabb időtartamú - több órás, napos vagy hetes - tevékenységek kipróbálásával. (Az október 1-je után beküldött feladatok már nem kapnak helyet a Kódolás Órája listájában.) Az időben elvégzett minőségi felülvizsgálat érdekében [(a részletek alább) ](#earlyreview) a benyújtás határideje augusztus 16. </strong> Ha bármilyen kérdése van a tevékenység benyújtásával kapcsolatban, kérjük, forduljon hozzánk az alábbi címen: a support@code.org
 
-A few tips:
+Néhány tipp:
 
 1. **Több mint egy ötlet benyújtása**: Ha különböző szintű, különböző korú vagy más kategóriákhoz tartozó tevékenységeket készítettél, akkor ezeket kérlek külön sorold fel, így minden tanár megtalálhatja az osztályához legjobban passzolót. Tehát ha korábban már létrehoztál egy weboldalt, és egyetlen URL-t küldtél meg nekünk a reklámozáshoz, akkor javasoljuk, hogy a jövőben ezt inkább kicsit máshogy csináld. Minden oktatóprogramot, ötletet külön-külön nyújts be nekünk. Tekintettel az elmúlt években beküldött nagyszámú ötletáradatra, a jövőben partnereként csak 5 tevékenység ötletet tudunk felülvizsgálni.
 
@@ -37,40 +37,40 @@ A few tips:
 - [Védjegyre vonatkozó irányelvek](#design)
 - [Pixel követése](#tm)
 - [A tevékenységek, a Számítástechnikai Oktatási Hét és a Kódolás órája népszerűsítése](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Tevékenységek reklámozása, Számítástechnikai Oktatási Hét, Kódolás Órája ](#promote)
 
 <a id="whatsubmit"></a>
 
 ## Mit kell benyújtani
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Önállóan megoldható rejtvény vagy játék ([example](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Ezeket a tevékenységeket arra tervezték, hogy a diákokat önállóan kalauzolják végig egy-egy gyakorlaton. Nem igényelnek tanári közreműködést vagy sok előkészítő munkát.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Tanár által levezényelt foglalkozás ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Most, hogy már oktatók tízezrei kipróbálták a Kódolás Óráját, sok tanterem készen áll a kreatívabb tevékenységekre, amelyek bevezethetik a gyerekeket a számítástechnika alapjaiba. Annak érdekében, hogy a haladóbb szemléletű tanárok is inspirációt találhassanak, különböző "tanár által levezényelt órákat" és tevékenységeket gyűjtünk a Kódolás Órája veteránjainak.
 
-Most, hogy már több tízezer oktató kipróbálta a Kódolás óráját, sok osztály készen áll az újabb izgalmakra, kreatív tevékenységekre, amelyek megtanítják számukra a számítástechnika alapjait. Annak érdekében, hogy a tapasztaltabb tanárok további inspirációt meríthessenek, összegyűjtjük a tanóra-terveket és gondoskodunk arról, hogy a Kódolás órája veteránjainak is újat tudjunk mutatni. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
-
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Most, hogy már több tízezer oktató kipróbálta a Kódolás óráját, sok osztály készen áll az újabb izgalmakra, kreatív tevékenységekre, amelyek megtanítják számukra a számítástechnika alapjait. Annak érdekében, hogy a tapasztaltabb tanárok további inspirációt meríthessenek, összegyűjtjük a tanóra-terveket és gondoskodunk arról, hogy a Kódolás órája veteránjainak is újat tudjunk mutatni. Megfelelő előkészítés esetén a kevésbé keretek közé szorított tevékenységek sokkal inkább megmutatják a számítástechnika kreatív oldalát.
 
 Vannak persze olyan oktatók, akik a Kódolás órája eseményt szeretnék inkább egy hagyományos tanóra mintájára megvalósítani.
 
-**Activities for teachers in other subjects/fields**
+Vannak persze olyan oktatók, akik a Kódolás órája eseményt szeretnék inkább egy hagyományos tanóra mintájára megvalósítani.
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+**Tevékenységek más tantárgyak / szakterületek oktatói számára**
 
-Examples:
+A fentieken túl különböző tantárgyak számára is dolgoztunk ki óraterveket. Ezekből például kiderül, hogyan is zajlik egy óra programozás egy geometria órán. Vagy egy mad-lib gyakorlat egy magyar órán. Vagy netán kvíz-készítés történelem órán. Mindez segítséget nyújt azoknak a tanároknak, akik ugyan más tantárgyakat oktatnak, de szeretnének megrendezni egy Kódolás órája eseményt. A tantervek ráirányítják a figyelmet a szaktárgy jellemző területeire, segítenek a megértésében, és mindeközben bemutatják a számítástechnika fontosságát is.
+
+Példák:
 
 - Tükörképek (tanóraterv egy rajztanár számára)
 - Arduino tevékenység bemutatása egy fizika tanár számára
 - A technológia története egy történelem tanár számára
 - Az alábbi [listában](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) további ötleteket találsz más tanároktól (de te is hozzáadhatod a saját ötletedet, hogy másokat is inpirálhasson.)
 
-**For students with special needs**
+**Speciális igényű hallgatók számára**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Ha olyan tevékenységet vagy oktatóanyagot hozol létre, amelyet speciális igényű hallgatóknak szántál, akkor ez alapján jelöld a listában, hogy mások is megtalálhassák. Ugyanis különösen nagy a hiány a látássérült diákok számára készült anyagokból. Amennyiben az általad létrehozott tanóraterv a speciális igényűeket célozza, kérlek, oszd meg velünk.
 
 [**Vissza az elejére**](#top)
 
@@ -78,19 +78,19 @@ If you create an activity or tutorial that is designed for special needs student
 
 ## Általános irányelvek a Kódolás órája esemény létrehozásához
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+A Kódolás órájának célja, hogy közérthető módon mutassa be a számítástechnikát és a programozás világát mindazoknak, akik elsőként vágnak neki ennek az útnak. Fontosnak tartjuk kihangsúlyozni, hogy:
 
 - Bárki tanulhat számítástechnikát - kortól, nemtől és bőrszíntől függetlenül. 
 - A számítástechnika számos területhez és érdeklődési körhöz kapcsolódik. Mindenkinek érdemes lenne megismerkednie vele!
 - Bátorítsd te is diákjaidat, hogy hozzanak létre valami egyedit, amelyet megoszthatnak szüleikkel/barátaikkal, vagy közzétehetnek online. 
 
-A Kódolás órájának célja, hogy közérthető módon mutassa be a számítástechnikát és a programozás világát mindazoknak, akik elsőként vágnak neki ennek az útnak. Fontosnak tartjuk kihangsúlyozni, hogy: For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+A Kódolás órájának célja, hogy közérthető módon mutassa be a számítástechnikát és a programozás világát mindazoknak, akik elsőként vágnak neki ennek az útnak. Fontosnak tartjuk kihangsúlyozni, hogy: Erre példa a felhasználói felületek tervezésének oktatása is, amely olyan alkalmazások készítésére irányul, amelyek fontos szerepet töltenek be a mindennapi ember életében. Nem támogatjuk viszont azokat a tevékenységeket, amelyek a koncepcióalkotás helyett a programozás mondattanának elsajátítsára koncentrálnak. Például bár közzéteszük, de nem reklámozzuk azokat a tevékenységeket, amelyek a HTML nyelvet oktatják. Hasonlóképpen elutasítjuk azokat a tanóraterveket, amelyek a konfigurációs beállításokra vagy azok megváltoztatására összpontosítanak, nem pedig az algoritmus vagy a folyamat modellezésére.
 
 Ezeken a tevékenységeken keresztül elsajátíthatók a számítástechnika alapfogalmai és elvei, mint például a ciklus, feltétel, titkosítás vagy az Internet működése. Egy-egy tevékenység azt is megtaníthatja, hogy a számítástechnika hogyan kapcsolódik a mindennapi élethez, egyes szakmákhoz, eseményekhez vagy akár a történelemhez. Erre példa a felhasználói felületek tervezésének oktatása is, amely olyan alkalmazások készítésére irányul, amelyek fontos szerepet töltenek be a mindennapi ember életében. Nem támogatjuk viszont azokat a tevékenységeket, amelyek a koncepcióalkotás helyett a programozás mondattanának elsajátítsára koncentrálnak.
 
 * Technikai követelmények: * Mivel az iskolák jellemzően eltérő technológiai felszereltséggel rendelkeznek, a legnépszerűbb feladatokat web vagy mobil alapúra terveztük, illetve vannak olyanok, amelyek eszközök használata nélkül is megoldhatók.(További részletekért látogasd meg a[ http://csunplugged.com/](http://csunplugged.com/) weboldalt). Olyan tevékenységek, amelyek kiegészítő alkalmazások telepítését vagy játékkonzol használatát igénylik, nem a legideálisabbak. Azokat a tevékenységeket, amelyek regisztrációt vagy fizetést igényelnek, nem tesszük közzé. (A robotika tevékenységekhez robotikai kiegészítők vásárlása szükséges.)
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Ha meg szeretnéd ismerni a létrehozható oktatóanyagok és óratervek sokféleségét, látogass el a [ A Kódolás Órája, Tevékenységek](https://hourofcode.com/us/learn) oldalra.
 
 [**Vissza az elejére**](#top)
 
@@ -106,7 +106,7 @@ Amire szükséged lesz:
 * Tevékenység neve (nem tartalmazhatja a "Kódolás órája" elnevezést)
 * URL link a tevékenységhez
 * Tevékenység leírása 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Kérlek, tüntesd fel a leírásban, hogy a tevékenység elsősorban önálló munkát vagy tanári támogatást igényel-e. Mindemellett néhány iskola érdeklődik a Common Core, illetve a Next Generation Science Standardok iránt is. Amennyiben a tevékenység tartalmaz ilyeneket, említsd meg ezeket az információkat is.
 * Ajánlott felhasználói szint(ek). Utalás tehető a Számítástechnika Tanárok Egyesületének K-12 szabványára (https://k12cs.org/framework-statements-by-grade-band/) az egyes szinteket leíró informatika fogalmak kapcsán. Példák az egyes szintekre: 
     * Óvoda - 1. kategória (4-6 éves korig)
     * 2-5. kategória (7-10 év között)
@@ -120,12 +120,12 @@ Amire szükséged lesz:
     * 1 órás
     * 1 órás, melyet további tanfolyamrészek követnek
     * 2-6 óra (lehet több óra is)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Az akadálymentesített eszközök listája, amennyiben a tevékenységhez szükséges ilyen. Ide tartoznak a képernyőolvasók és kompatibilitási adataik, a szövegfelolvasók képességei, a nagy kontrasztú színek használata vagy bármilyen más, fogyatékossággal élő tanulók számára kialakított eszköz és segédeszköz.
 
 #### További dolgok, amire szükséged van az órai tervek benyújtásakor
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. Nothing?)
+* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. 
+* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. Esetleg semmi?)
 
 #### További dolgok, amelyekre szükséged van online tevékenységek benyújtásakor
 
@@ -140,14 +140,14 @@ Amire szükséged lesz:
         * Android Chrome (mobilra optimalizált)
     * Nem web alapú: add meg a forrás kód platformját (Mac, Win, iOS, Android, xBox, egyéb)
     * Unplugged
-* A Kódolás órája tevékenység képernyőképe vagy marketing képe. Kérlek, küldj legalább egy képet 4:3 méretben. Legyen legalább 520x390 képpont méretű. Amennyiben nem áll rendelkezésre megfelelő kép, előfordulhat, hogy mi készítünk saját képernyőképet az oktatóanyagból, VAGY dönthetünk úgy is, hogy nem soroljuk fel az oktatóanyagot a listában. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+* A Kódolás órája tevékenység képernyőképe vagy marketing képe. Kérlek, küldj legalább egy képet 4:3 méretben. Legyen legalább 520x390 képpont méretű. Amennyiben nem áll rendelkezésre megfelelő kép, előfordulhat, hogy mi készítünk saját képernyőképet az oktatóanyagból, VAGY dönthetünk úgy is, hogy nem soroljuk fel az oktatóanyagot a listában. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz. Az összes képet URL-linkként szükséges elküldeni a .jpg, .jpeg vagy .png fájlhoz.
 * A részvétel pontosabb nyomon követése érdekében a harmadik fél partnereinek 1 kocka méretű nyomkövető képet kell alkalmaznia a Kódolás órája gyakorlataik első oldalán. Helyezd el a pixelt a kezdőlapra.
 * A tevékenység befejezése után a felhasználókat a [ code.org/api/hour/finish ](https://code.org/api/hour/finish) webhelyre szükséges irányítani, ahol képesek lesznek: 
     * Megosztani a hírt a közösségi médiában, hogy befejezték a Kódolás órája gyakorlatot
     * Igazolást kapni arról, hogy teljesítették az egy órás kódot
     * Megtekinteni a ranglistákat arról, hogy mely országok / városok vesznek részt legeredményesebben a Kódolás órája tevékenységekben
     * Azon felhasználók számára, akik bár egy órát eltöltenek a tevékenység megoldásával, de be nem fejezik azt, kérlek, tégy be egy gombot, amelynek felirata az alábbi: „Befejeztem a Kódolás óráját”, amely visszirányítja őket a <a href = "https: // kódra mutat..org / api / hour / finish "> code.org/api/hour/finish </a> oldalra.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
+* (Opcionális) Az online felmérés / űrlap hivatkozással nyomon követhetjük a tevékenységekkel kapcsolatos mutatók eredményeit a decemberi esemény hetén. 
     * Online tevékenységekhez (különösen okostelefon- / táblagép-alkalmazásokhoz): 
         * Felhasználók száma
         * Mennyien tejesítették a feladatot
@@ -203,22 +203,22 @@ A tanárok és a diákok képesek lesznek a tevékenységek listájában keresni
 
 ## Javaslatok egyórás önálló gyakorlatok megtervezéséhez
 
-Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
+Az április 30. és augusztus 16. között benyújtott tevékenységek minőségi szempontból átnézésre kerülnek a  Kódolás Órája Tevékenység Felügyelő Bizottág legalább három tagja által.</p> 
 
-Reviewers will focus on providing the following:
+A bírálók a következőkre fognak összpontosítani:
 
 * Mely platformon és böngészőn működik a legjobban az oktatóprogram?
-* Critical feedback - What could be improved?
-* Bugs or errors - Are there any bugs, syntax errors, or grammatical errors? If so, where in the activity?
-* Does this activity encourage students to create something unique?
+* Kritikai szempontok - Mit lehetne javítani?
+* Hibák - Vannak-e hibák, szintaktikai problémák vagy nyelvtani elütések? Ha igen, akkor hol tart a tevékenység?
+* Arra ösztönzi ez a tevékenység a diákokat, hogy valami egyedi dolgot alkossanak?
 
 ** Tartalmazzon tanároknak szóló feljegyzéseket. ** A legtöbb tevékenységnek bár önállóan végrehajthatónak kell lennie, de ha egy tevékenység során esetleg egy tanár irányítására lesz szükség, kérjük, csatolj egy egyértelmű és egyszerű utasításításokat tartalmazó leírást külön tanári jegyzetek formájában. A tevékenységedhez benyújtott URL nemcsak a hallgatóknak lesz ismeretlen, hanem a tanárok egy részének is. Adj meg olyan információkat, mint például:
 
-**The early review is not an opportunity to collect feedback on an unfinished activity. Any activity a reviewer deems too incomplete to assess will not be reviewed.**
+**A bizottság általi áttekintés nem arra ad lehetőséget, hogy egy befejezetlen munka esetén visszajelzéseket gyűjthessetek. Minden olyan tevékenységet, amelyet a bíráló túl hiányosnak tart az értékeléséhez, nem fogjuk felülvizsgálni.**
 
 ** Ösztönözd a diákokat arra, hogy osszák meg munkájukat a közösségi médiában. ** Például: „Egyórás kódot csináltam ________-kel? #HourOfCode” vagy "#HourOfCode-ot csináltam a #CSEdWeek részeként.
 
-Every activity submitted before October 1st will receive a standard review, whether it receives an early review or not. During the standard review period (September-October), reviewers will focus on rating the activities according to the criteria described in the "How activities will be evaluated" section above. Unless you note specific changes to an activity, reviewers can and likely will rely on early review feedback to rate activities.
+Minden október 1-je előtt beküldött tevékenység normál áttekintésben részesül, függetlenül attól, hogy részt vesz-e a korai felülvizsgálatban. A szokásos felülvizsgálati időszakban (szeptember-október) a bírálók a tevékenységek értékelésére összpontosítanak a fenti "Hogyan értékeljük a tevékenységeket" részben ismertetett kritériumok szerint. Hacsak te nem szeretnél változtatni a tevékenységen, a véleményezők a korai felülvizsgálati visszajelzésekre fognak támaszkodni a tevékenységek értékelésénél.
 
 [**Vissza az elejére**](#top)
 
@@ -226,26 +226,26 @@ Every activity submitted before October 1st will receive a standard review, whet
 
 ## Védjegyre vonatkozó irányelvek
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Az oktatóanyagba beillesztheted a [ A Kódolás órája logóját](https://hourofcode.com/us/promote/resources#logo), de nem kötelező. Ha a Kódolás órája logót használod, olvasd el az alábbi védjegy-irányelveket. <u> A Code.org embléma és név semmilyen körülmények között nem használható fel.</u> Mindkettő védjegyoltalom alatt áll, és kifejezett írásbeli engedély nélkül nem keverhető össze harmadik fél márkanevével.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+** Ügyelj arra, hogy egy átlagos diák is képes legyen egy óra alatt kényelmesen befejezni a gyakorlatot. ** Fontold meg azt is, hogy a végén további tevékenységet adsz hozzá azoknak a hallgatóknak, akik gyorsabban haladnak az óra alatt. Ne feledd, hogy a legtöbb gyerek abszolút kezdőnek számít a számítástechnika és a kódolás területén.
 
-Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet weboldalain. Nem akarjuk mindezt megakadályozni, viszont meg akarunk győződni arról, hogy a használat megfelel az alábbi szabályoknak: Include info such as:
+Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet weboldalain. Nem akarjuk mindezt megakadályozni, viszont meg akarunk győződni arról, hogy a használat megfelel az alábbi szabályoknak: Adj meg olyan információkat, mint például:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
+- Mely platformon és böngészőn működik a legjobban az oktatóprogram?
+- Működik-e okostelefonokon? Tableten?
 - Szervezz Te egy rendezvény vagy kérd meg alkalmazottaidat, hogy segítsenek a rendezvények népszerűsítésében a helyi iskolákban, közösségi csoportokban. 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Az osztályteremben történő használat szempontjai? Például, ha vannak videók, javasold a tanárokat, hogy mutassák meg a őket az egész osztálynak
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+** Adj lehetőséget a visszajelzésre a tevékenységek végén. ** (Pl. „Befejezted a 10. szintet, mellyel megtanultad a loopokat!”. Remek munka!")
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+** Ösztönözd a diákokat arra, hogy osszák meg munkájukat a közösségi médiában. ** Például: „Egyórás kódot csináltam ________-kel? #HourOfCode” vagy "#HourOfCode-ot csináltam a #CSEdWeek részeként. És te? @Scratch.” Használd a ** #HourOfCode ** hashtag-et (nagybetűkkel H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Hozd létre tevékenységet spanyol vagy más nyelveken, az angol mellett.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+** Kapcsold össze és magyarázd el a tevékenység egy társadalmilag jelentős kontextusát.** A számítógépes programozás szuperhatalommá válik, amikor a diákok meglátják, hogyan képes jobbá tenni a világot!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+** Győződj meg arról, hogy az oktatóanyag használható [ páros programozásra is](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). ** Ez különösen hasznos a Kódolás órája számára, ugyanis sok osztályteremben nem jut minden diákra egy számítógép.
 
 [**Vissza az elejére**](#top)
 
@@ -253,7 +253,7 @@ Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet webol
 
 ## Pixel követése
 
-Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
+Sok oktatópartnerünk felhasználta már a "Kódolás órája" védjegyet weboldalain. Nem akarjuk mindezt megakadályozni, viszont meg akarunk győződni arról, hogy a használat megfelel az alábbi szabályoknak: 
 
 1. A Kódolás órájára történő bármilyen utalást csak az alábbi módokon szabad alkalmazni. Példa helyes felhasználásra: "Vegyen részt a Kódolás óráján™ az ACMECorp.com-on". Példa helytelen felhasználásra: "Próbálja ki a Kódolás óráját az ACME Corp-nál".
 2. Használd a "TM" feliratot a legfontosabb megjelenésekkor, weboldalakon vagy az alkalmazásleírásokban.
@@ -268,29 +268,29 @@ Many of our tutorial partners have used our trademark "Hour of Code" on their we
 
 Kérjük, hogy reklámozd tevékenységeid saját hálózatodon! Hivatkozd meg a Kódolás órája oldaladdal. A felhasználók sokkal nagyobb valószínűséggel reagálnak a Tőled érkező levelekre.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Ez lehetővé teszi számunkra, hogy megszámoljuk azokat a felhasználókat, akik elkészítik a Kódolás óráját. Mindez pontosabb részvételi adatokat eredményez az oktatóprogramban.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Ha az oktatóprogram jóváhagyásra és beillesztésre kerül a végső oktatóoldalon, akkor a Code.org egyedi nyomkövetési képpontot biztosít Neked, amelyet integrálhatsz az oktatóanyagba. Mutatunk egy példát.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+MEGJEGYZÉS: a telepíthető alkalmazásokra (iOS / Android vagy asztali) ez nem vonatkozik
 
-Example tracking pixels for Dance Party:
+Példakövető pixelek az AppInventor számára:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 
 
 [**Vissza az elejére**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Tevékenységeid promotálása, a CSEdWeek és a Kódolás órája
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Kérjük, hogy reklámozd tevékenységeid saját hálózatodon! Hivatkozd meg a Kódolás órája oldaladdal. A felhasználók sokkal nagyobb valószínűséggel reagálnak a Tőled érkező levelekre. Használd a Számítástechnika Ismeretek Oktatási Hetének nemzetközi Kódolás órája kampányát arra, hogy ösztönzöd a felhasználókat mások meghívására, igy sikerülhet közösen elérnünk a 100 millió résztvevőt.
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Ajánld a Kódolás óráját és CSEdWeek-et a weboldaladon. Pl.: <http://www.tynker.com/hour-of-code>
+- Reklámozd a Kódolás óráját a közösségi médiában, a hagyományos médiában, levelezőlistákon stb. használva a #HourOfCode hashtag-et (nagybetűkkel H, O, C)
+- Szervezz Te egy rendezvény vagy kérd meg alkalmazottaidat, hogy segítsenek a rendezvények népszerűsítésében a helyi iskolákban, közösségi csoportokban.
+- További információért olvasd el a [erőforráskészletünket](https://hourofcode.com/us/promote).
 
 [**Vissza az elejére**](#top)
 

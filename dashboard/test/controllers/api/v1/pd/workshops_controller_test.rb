@@ -707,7 +707,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       create :pd_enrollment, workshop: @workshop
     end
     mock_mail = stub(deliver_now: nil)
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).times(7)
     Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)
@@ -784,7 +783,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_updated_start = session_initial_start + 2.days
     session_updated_end = session_initial_end + 2.days + 2.hours
     params = {
-      sessions_attributes: [{id: session.id, start: session_updated_start, end: session_updated_end}]
+      sessions_attributes: [{id: session.id.to_s, start: session_updated_start, end: session_updated_end}]
     }
 
     put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
@@ -809,7 +808,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_updated_start = session_initial_start + 2.days
     session_updated_end = session_initial_end + 2.days + 2.hours
     params = {
-      sessions_attributes: [{id: session.id, start: session_updated_start, end: session_updated_end}]
+      sessions_attributes: [{id: session.id.to_s, start: session_updated_start, end: session_updated_end}]
     }
     put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
@@ -828,7 +827,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @organizer_workshop.save!
     assert_equal 1, @organizer_workshop.sessions.count
 
-    params = {sessions_attributes: [{id: session.id, _destroy: true}]}
+    params = {sessions_attributes: [{id: session.id.to_s, _destroy: true}]}
 
     put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
     assert_response :success
@@ -842,7 +841,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session = workshop.sessions.first
 
     sign_in program_manager
-    params = {sessions_attributes: [{id: session.id, _destroy: true}]}
+    params = {sessions_attributes: [{id: session.id.to_s, _destroy: true}]}
     put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
 

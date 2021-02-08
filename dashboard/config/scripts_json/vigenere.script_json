@@ -1,0 +1,80 @@
+{
+  "script": {
+    "name": "vigenere",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "vigenere"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vigenere"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Vigenere",
+      "name": "Vigenere",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Vigenere",
+        "lesson_group.key": "",
+        "script.name": "vigenere"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Vigenere"
+        ],
+        "lesson.key": "Vigenere",
+        "lesson_group.key": "",
+        "script.name": "vigenere"
+      },
+      "level_keys": [
+        "Vigenere"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Vigenere",
+        "script_level.level_keys": [
+          "Vigenere"
+        ],
+        "lesson.key": "Vigenere",
+        "lesson_group.key": "",
+        "script.name": "vigenere"
+      }
+    }
+  ]
+}

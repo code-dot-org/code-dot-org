@@ -1,0 +1,10 @@
+name 'CSD Games Parameters challenge_2021'
+display_name 'Shapes and Parameters Challenges'
+description 'Check out one or more of these extra blocks that you can use to make your pictures more interesting.'
+
+sublevels
+level 'CSD U3 shapes polygon_2021'
+level 'CSD U3 shapes_2021'
+level 'CSD U3 shapes line_2021'
+level 'CSD U3 shapes arc_2021'
+level 'CSD U3 parameters shape scene_2021'

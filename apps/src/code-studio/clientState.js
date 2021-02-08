@@ -3,10 +3,9 @@
  *       combination of cookies and HTML5 web storage.
  */
 import {trySetSessionStorage} from '../utils';
-import cookies from 'js-cookie';
+import {getStore} from './redux';
+// Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
-
-import {mergeActivityResult} from './activityUtils';
 
 var clientState = (module.exports = {});
 
@@ -32,16 +31,15 @@ var MAX_LINES_TO_SAVE = 1000;
  */
 clientState.MAXIMUM_CACHABLE_RESULT = 999;
 
-var COOKIE_OPTIONS = {
-  expires: clientState.EXPIRY_DAYS,
-  path: '/'
-};
-
 clientState.reset = function() {
   try {
-    cookies.remove('lines', {path: '/'});
     sessionStorage.clear();
   } catch (e) {}
+};
+
+clientState.clearProgress = function() {
+  sessionStorage.removeItem('progress');
+  sessionStorage.removeItem('lines');
 };
 
 /**
@@ -69,9 +67,7 @@ clientState.sourceForLevel = function(scriptName, levelId, timestamp) {
 };
 
 /**
- * Cache a copy of the level source along with a timestamp. Posts to /milestone
- * may be queued, so save the data in sessionStorage to present a consistent
- * client view.
+ * Cache a copy of the level source along with a timestamp.
  * @param {string} scriptName
  * @param {number} levelId
  * @param {number} timestamp
@@ -83,6 +79,9 @@ clientState.writeSourceForLevel = function(
   timestamp,
   source
 ) {
+  if (source === undefined) {
+    return;
+  }
   trySetSessionStorage(
     createKey(scriptName, levelId, 'source'),
     JSON.stringify({
@@ -93,42 +92,18 @@ clientState.writeSourceForLevel = function(
 };
 
 /**
- * Returns the progress attained for the given level.
- * @param {string} scriptName The script name
- * @param {number} levelId The level
- * @returns {number}
- */
-clientState.levelProgress = function(scriptName, levelId) {
-  var progressMap = clientState.allLevelsProgress();
-  return (progressMap[scriptName] || {})[levelId] || 0;
-};
-
-/**
- * Tracks the users progress after they click run. Results larger than 999 are
- * reserved for server-dependent changes and can't be cached locally.
+ * Tracks the lines of code written after the user clicks run if their
+ * solution is successful. Skips if the user is logged in.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
- * @param {TestResult} testResult - Indicates pass, fail, perfect
- * @param {string} scriptName - Which script this is for
- * @param {number} levelId - Which level this is for
  */
-clientState.trackProgress = function(
-  result,
-  lines,
-  testResult,
-  scriptName,
-  levelId
-) {
-  if (result && isFinite(lines)) {
-    addLines(lines);
-  }
-
-  var savedResult = clientState.levelProgress(scriptName, levelId);
+clientState.trackLines = function(result, lines) {
   if (
-    testResult <= clientState.MAXIMUM_CACHABLE_RESULT &&
-    savedResult !== mergeActivityResult(savedResult, testResult)
+    result &&
+    isFinite(lines) &&
+    !getStore().getState().progress.usingDbProgress
   ) {
-    setLevelProgress(scriptName, levelId, testResult);
+    addLines(lines);
   }
 };
 
@@ -156,21 +131,6 @@ clientState.batchTrackProgress = function(scriptName, progress) {
 };
 
 /**
- * Sets the progress attained for the given level
- * @param {string} scriptName The script name
- * @param {number} levelId The level
- * @param {number} progress Indicates pass, fail, perfect
- */
-function setLevelProgress(scriptName, levelId, progress) {
-  var progressMap = clientState.allLevelsProgress();
-  if (!progressMap[scriptName]) {
-    progressMap[scriptName] = {};
-  }
-  progressMap[scriptName][levelId] = progress;
-  trySetSessionStorage('progress', JSON.stringify(progressMap));
-}
-
-/**
  * Returns a map from (string) level id to progress value.
  * @return {Object<String, number>}
  */
@@ -185,32 +145,11 @@ clientState.allLevelsProgress = function() {
 };
 
 /**
- * Returns the best progress of any of the specified levels
- * @param {Array.<number>} levelIds List of level ids to check for progress
- * @param {string} scriptName Script in which to check for progress
- * @param {Object=} progress A map from level id to progress values. Will be
- *  fetched from sessionStorage if not provided.
- */
-clientState.bestProgress = function(levelIds, scriptName, progress) {
-  if (!progress) {
-    progress = clientState.allLevelsProgress();
-  }
-  return (
-    Math.max.apply(
-      Math,
-      levelIds
-        .filter(id => progress[scriptName][id])
-        .map(id => progress[scriptName][id])
-    ) || 0
-  );
-};
-
-/**
  * Returns the number of lines completed from the cookie.
  * @returns {number}
  */
 clientState.lines = function() {
-  var linesStr = cookies.get('lines');
+  var linesStr = sessionStorage.getItem('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
 
@@ -224,7 +163,7 @@ function addLines(addedLines) {
     MAX_LINES_TO_SAVE
   );
 
-  cookies.set('lines', String(newLines), COOKIE_OPTIONS);
+  trySetSessionStorage('lines', String(newLines));
 }
 
 /**

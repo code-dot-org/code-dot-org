@@ -162,7 +162,7 @@ const ImageThumbnail = Radium(
 
     render() {
       return (
-        <a href={this.props.src} target="_blank">
+        <a href={this.props.src} target="_blank" rel="noopener noreferrer">
           <img
             src={this.props.src}
             style={assetThumbnailStyle}

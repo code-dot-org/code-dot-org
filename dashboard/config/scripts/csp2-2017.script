@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
 has_verified_resources true
-has_lesson_plan true
 new_name 'csp2-2017'
 family_name 'csp2'
 version_year '2017'
@@ -13,13 +12,13 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp2_1', display_name: 'Chapter 1: Encoding and Compressing Complex Information'
-lesson 'Bytes and File Sizes', display_name: 'Bytes and File Sizes'
+lesson 'Bytes and File Sizes', display_name: 'Bytes and File Sizes', has_lesson_plan: true
 level 'v2 U2L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U1L12 Reflection Free Response', progression: 'Check Your Understanding', assessment: true
 level 'CSP_U2_Shakespeare_Question', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-2-levelgroup-U2Ch1', progression: 'Quick Check-In', assessment: true
 
-lesson 'Text Compression', display_name: 'Text Compression'
+lesson 'Text Compression', display_name: 'Text Compression', has_lesson_plan: true
 level 'v2 U2L2 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
 level 'Text Compression', progression: 'Text Compression', named: true
 level 'Widget: Text Compression', progression: 'Widget: Text Compression', named: true
@@ -28,7 +27,7 @@ level 'U1L13 Assess Text Compression amount', progression: 'Check Your Understan
 level 'U1L13 Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U1L13 Assessment 2', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Encoding B&W Images', display_name: 'Encoding B&W Images'
+lesson 'Encoding B&W Images', display_name: 'Encoding B&W Images', has_lesson_plan: true
 level 'v2 U2L3 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
 level 'Pixelation - Lesson 14 - Make the Letter A', progression: 'Pixelation Widget: Black and White Pixelation'
 level 'Pixelation - Lesson 14 - Fix bit offset', progression: 'Pixelation Widget: Black and White Pixelation'
@@ -36,7 +35,7 @@ level 'Widget: Black and White Pixelation', progression: 'Pixelation Widget: Bla
 level 'U1L14 Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U1L14 - Assessment 2', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Encoding Color Images', display_name: 'Encoding Color Images'
+lesson 'Encoding Color Images', display_name: 'Encoding Color Images', has_lesson_plan: true
 level 'v2 U2L4 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
 level 'Images, Pixels, and RGB', progression: 'Images, Pixels, and RGB', named: true
 level 'Pixelation - Lesson 15 - Complete 3-bit color', progression: 'Pixelation'
@@ -49,38 +48,38 @@ level 'Widget: Color Pixelation', progression: 'Widget: Color Pixelation', named
 level 'U2L5 Color Pixel MC Question', progression: 'Check Your Understanding', assessment: true
 level 'U2L5 FR brighten darken image', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Lossy Compression and File Formats', display_name: 'Lossy Compression and File Formats'
+lesson 'Lossy Compression and File Formats', display_name: 'Lossy Compression and File Formats', has_lesson_plan: true
 level 'v2 U2L5 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U1L16 - Matching File Compression Types', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Practice PT - Encode an Experience', display_name: 'Practice PT - Encode an Experience'
+lesson 'Practice PT - Encode an Experience', display_name: 'Practice PT - Encode an Experience', has_lesson_plan: true
 level 'v2 U2L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-lesson 'Unit 2 Chapter 1 Assessment', display_name: 'Unit 2 Chapter 1 Assessment', lockable: true
+lesson 'Unit 2 Chapter 1 Assessment', display_name: 'Unit 2 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 level 'CSP Unit 2 Ch1 Cumulative Assessment MC', assessment: true
 
 lesson_group 'csp2_2', display_name: 'Chapter 2: Manipulating and Visualizing Data'
-lesson 'Intro to Data', display_name: 'Intro to Data'
+lesson 'Intro to Data', display_name: 'Intro to Data', has_lesson_plan: true
 level 'v2 U2L7 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'csp-pulse-check-survey-3-levelgroup-U2Ch2', progression: 'Quick Check-In', assessment: true
 
-lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations'
+lesson 'Finding Trends with Visualizations', display_name: 'Finding Trends with Visualizations', has_lesson_plan: true
 level 'v2 U2L8 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U2L8 google trends MC', progression: 'Check Your Understanding', assessment: true
 level 'U2L8 google trends hypothesis', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Check Your Assumptions', display_name: 'Check Your Assumptions'
+lesson 'Check Your Assumptions', display_name: 'Check Your Assumptions', has_lesson_plan: true
 level 'v2 U2L9 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U2L9 What is digital divide MC', progression: 'Check Your Understanding', assessment: true
 level 'U2L9 FR digital divide issue', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations'
+lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations', has_lesson_plan: true
 level 'v2 U2L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Collection A: Good and Bad Visualizations', progression: 'Collection A: Good and Bad Visualizations', named: true
 level 'Collection B: Good and Bad Visualizations', progression: 'Collection B: Good and Bad Visualizations', named: true
 level 'U2L10 FR why best worst viz', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations'
+lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations', has_lesson_plan: true
 level 'v2 U2L11 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Downloading the Data Set', progression: 'Downloading the Data Set', named: true
 level 'Making a Scatter Plot', progression: 'Making a Scatter Plot', named: true
@@ -90,11 +89,11 @@ level 'Editing Chart Appearance', progression: 'Editing Chart Appearance', named
 level 'U4 - Making Data Visualizations - Free Play', progression: 'Making Data Visualizations - Free Play'
 level 'U2L10 FR describe what you made from lesson prompt', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Discover a Data Story', display_name: 'Discover a Data Story'
+lesson 'Discover a Data Story', display_name: 'Discover a Data Story', has_lesson_plan: true
 level 'v2 U2L12 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U2L12 FR reflection on collaboration', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Cleaning Data', display_name: 'Cleaning Data'
+lesson 'Cleaning Data', display_name: 'Cleaning Data', has_lesson_plan: true
 level 'v2 U2L13 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Getting to Know Your Data', progression: 'Getting to Know Your Data', named: true
 level 'Cleaning Data', progression: 'Cleaning Data', named: true
@@ -102,17 +101,17 @@ level 'Categorizing Data', progression: 'Categorizing Data', named: true
 level 'U2L13 Cleaning Data MC', progression: 'Check Your Understanding', assessment: true
 level 'U2L13 FR Reflection data analysis objective', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables'
+lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables', has_lesson_plan: true
 level 'v2 U2L14 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Making Pivot Tables Part 1 - The Basics', progression: 'Making Pivot Tables Part 1 - The Basics', named: true
 level 'Making Pivot Tables Part 2 - Manipulation and Visualization', progression: 'Making Pivot Tables Part 2 - Manipulation and Visualizations', named: true
 level 'U4L08v2 Making Pivot Tables Part 3', progression: 'Making Pivot Tables Part 3'
 level 'U2L14 Summary Tables MC', progression: 'Check Your Understanding', assessment: true
 
-lesson 'Practice PT - Tell a Data Story', display_name: 'Practice PT - Tell a Data Story'
+lesson 'Practice PT - Tell a Data Story', display_name: 'Practice PT - Tell a Data Story', has_lesson_plan: true
 level 'v2 U2L15 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
-lesson 'Unit 2 Chapter 2 Assessment', display_name: 'Unit 2 Chapter 2 Assessment', lockable: true
+lesson 'Unit 2 Chapter 2 Assessment', display_name: 'Unit 2 Chapter 2 Assessment', lockable: true, has_lesson_plan: false
 variants
   level 'csp_affirmation_control_2', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_2', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
@@ -120,7 +119,7 @@ endvariants
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'Post-Course Survey', display_name: 'Post-Course Survey'
+lesson 'Post-Course Survey', display_name: 'Post-Course Survey', has_lesson_plan: true
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'
 

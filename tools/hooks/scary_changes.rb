@@ -39,6 +39,26 @@ class ScaryChangeDetector
       "the code that adds it to scripts."
   end
 
+  def detect_changed_feature_files
+    changes = @all.grep(/^dashboard\/test\/ui\/features\//)
+    return if changes.empty?
+
+    puts red <<-EOS
+
+        Looks like you added or edited UI tests:
+
+        #{changes.join("\n")}
+
+        If you'd like Drone to test your changes across all browsers
+        (instead of only in Chrome, the default),
+        amend your commit message to include the tag [test all browsers] if you haven't already.
+
+        Note that (as of January 2021) Drone will not successfully run all tests across all browsers,
+        so you may need another commit without the [test all browsers] tag
+        if you'd like to see all tests (in Chrome) passing in Drone without manual inspection.
+    EOS
+  end
+
   def detect_new_table_or_new_column
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || !@changed_lines.include?("create_table"))
@@ -114,6 +134,7 @@ class ScaryChangeDetector
     detect_missing_yarn_lock
     detect_special_files
     detect_dropbox_conflicts
+    detect_changed_feature_files
   end
 end
 

@@ -24,6 +24,7 @@ module Cdo::CloudFormation
     end
 
     # Hard-coded constants and default values.
+    CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
     INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
@@ -32,11 +33,12 @@ module Cdo::CloudFormation
     DOMAIN = 'cdn-code.org'
     SSH_KEY_NAME = 'server_access_key'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
+    BOOTSTRAP_CHEF = aws_dir('cloudformation/bootstrap_chef_stack.sh.erb')
 
     # number of seconds to configure as Time To Live for DNS record
     DNS_TTL = 60
 
-    attr_reader :daemon, :daemon_instance_id
+    attr_reader :daemon
 
     # Struct providing arbitrary configuration options used by the template.
     # @return [OpenStruct]
@@ -59,34 +61,28 @@ module Cdo::CloudFormation
       options.branch        ||= (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
       options.commit        ||= `git ls-remote origin #{branch}`.split.first
       options.domain        ||= DOMAIN
+      options.console       ||= rack_env?(:production)
 
       stack_name << "-#{branch}" if stack_name == 'adhoc'
       raise "Stack name must not include 'dashboard'" if stack_name.include?('dashboard')
 
-      check_branch!
-
-      # Don't provision daemon where manually-provisioned daemon instances already exist.
-      # Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
-      # TODO import manually-provisioned instances into cloudformation stacks.
-      if %w(autoscale-prod test staging levelbuilder).include? stack_name
-        @daemon_instance_id = {
-          'autoscale-prod' => 'i-08f5f8ace0a473b8d',
-          'test' => 'i-004727200191f3251',
-          'staging' => 'i-02e6cdc765421ab34',
-          'levelbuilder' => 'i-0907b146f7e6503f6'
-        }[stack_name]
-      else
-        @daemon = 'Daemon'
-      end
       # Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
-      @daemon = 'WebServer' if rack_env?(:adhoc) && !frontends
+      @daemon = rack_env?(:adhoc) && !frontends ?
+                  'WebServer' :
+                  'Daemon'
 
       log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
       tags.push(key: 'environment', value: rack_env)
       tags.push(key: 'owner', value: Aws::STS::Client.new.get_caller_identity.arn) if rack_env?(:adhoc)
     end
 
+    def render(*)
+      check_branch!
+      super
+    end
+
     def check_branch!
+      return if dry_run
       if rack_env?(:adhoc) && RakeUtils.git_branch == branch
         # Current branch is the one we're deploying to the adhoc server,
         # so check whether it's up-to-date with the remote before we get any further.

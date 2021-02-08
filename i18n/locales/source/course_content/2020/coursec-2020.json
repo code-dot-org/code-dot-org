@@ -221,29 +221,29 @@
         "dsls": {
           "answers": [
             {
-              "text": "The program won't fail. Scrat will get to the acorn.",
+              "text": "Scrat will reach the acorn. There are no bugs in the code.",
               "correct": false,
-              "feedback": "Incorrect. Scrat goes the wrong way after his final turn."
+              "feedback": "Incorrect. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             },
             {
-              "text": "Scrat will go the wrong way after his final turn.",
+              "text": "Scrat will not reach the acorn because he turns the wrong way.",
               "correct": true,
-              "feedback": "Correct!"
+              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             },
             {
-              "text": "Scrat takes one too few steps and ends up short of the acorn.",
-              "correct": false,
-              "feedback": "Incorrect. Taking one too few steps happens after Scrat turns the wrong way."
+              "text": "Scrat will not reach the acorn because there are not enough `move forward` blocks.",
+              "correct": true,
+              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             },
             {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+              "feedback": "There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
             }
           ],
           "questions": [
             {
-              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
+              "text": "Look for bugs in this code. Will Scrat reach the acorn or is there a problem?"
             }
           ]
         }
@@ -1246,6 +1246,17 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "d93dfc24c6ce3e53d8ee07416c743e60": "A dog!",
+      "336ad881e37e713ba0325500a8fa1f00": " dogs!",
+      "27944770529dd15319a983bee8951560": "A cat!",
+      "22f6f6821f4d6d0a08653935b466ac2f": " cats!",
+      "1c64ef29c853587fbe94f69f05272b79": "A bird!",
+      "5b402e6ea05e847a076e03ad74420c45": " birds!",
+      "4b23c908b939eaf7918e07142b9e05e0": "A dragon!",
+      "7f945c111ba5ea6d7b1547601db6ba0e": " dragons!",
+      "71fc859f3abd22273bad5d0d8eda2173": "Count all the animals!"
     }
   },
   "https://studio.code.org/s/coursec-2020/stage/18/puzzle/1": {

@@ -41,7 +41,7 @@
 #  index_school_stats_by_years_on_school_id  (school_id)
 #
 
-class SchoolStatsByYear < ActiveRecord::Base
+class SchoolStatsByYear < ApplicationRecord
   self.primary_keys = :school_id, :school_year
 
   belongs_to :school

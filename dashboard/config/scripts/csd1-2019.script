@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit1/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit1/{LESSON}'
 family_name 'csd1'
 version_year '2019'
@@ -13,38 +12,38 @@ project_sharing true
 curriculum_umbrella 'CSD'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true
+lesson 'CS Discoveries Pre-survey', display_name: 'CS Discoveries Pre-survey', lockable: true, has_lesson_plan: false
 level 'csd-pre-survey-levelgroup_2019', assessment: true
 
 lesson_group 'csd1_1', display_name: 'Chapter 1: The Problem Solving Process'
-lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving'
+lesson 'Intro to Problem Solving', display_name: 'Intro to Problem Solving', has_lesson_plan: true
 level 'CSD U1L01 TFMD_2019', named: true
 
-lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process'
+lesson 'The Problem Solving Process', display_name: 'The Problem Solving Process', has_lesson_plan: true
 level 'CSD U1L02 TFMD_2019', named: true
 level 'CSD Problem Solving Process Video', named: true
 
-lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving'
+lesson 'Exploring Problem Solving', display_name: 'Exploring Problem Solving', has_lesson_plan: true
 level 'CSD U1L03 TFMD_2019', named: true
 
 lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
-lesson 'What is a Computer?', display_name: 'What is a Computer?'
+lesson 'What is a Computer?', display_name: 'What is a Computer?', has_lesson_plan: true
 level 'CSD U1L04 TFMD_2019', named: true
 level 'CSD What Makes a Computer a Computer Video_2019', named: true
 
-lesson 'Input and Output', display_name: 'Input and Output'
+lesson 'Input and Output', display_name: 'Input and Output', has_lesson_plan: true
 level 'CSD U1L05 TFMD_2019', named: true
 
-lesson 'Processing', display_name: 'Processing'
+lesson 'Processing', display_name: 'Processing', has_lesson_plan: true
 level 'CSD U1L06 TFMD_2019', named: true
 
-lesson 'Apps and Storage', display_name: 'Apps and Storage'
+lesson 'Apps and Storage', display_name: 'Apps and Storage', has_lesson_plan: true
 level 'CSD U1L07 TFMD_2019', named: true
 
-lesson 'Project - Propose an App', display_name: 'Project - Propose an App'
+lesson 'Project - Propose an App', display_name: 'Project - Propose an App', has_lesson_plan: true
 level 'CSD U1L09 TFMD_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD U1 Test', assessment: true
 

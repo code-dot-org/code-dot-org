@@ -53,7 +53,14 @@ class SharedBlocklyFunction < ApplicationRecord
           end
           xml.description description
         end
-        xml.title(name, name: 'NAME')
+        localized_name = I18n.t(
+          name,
+          scope: [:data, :shared_functions],
+          default: nil,
+          smart: true
+        )
+        localized_name ||= name
+        xml.title(localized_name, name: 'NAME', id: name)
         xml.statement(name: 'STACK') do
           xml << stack.gsub(/\n */, '')
         end

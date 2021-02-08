@@ -393,6 +393,7 @@ const LessonExtrasField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainLessonExtrasLearnMore()}
       </a>
@@ -414,6 +415,7 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainPairProgrammingLearnMore()}
       </a>

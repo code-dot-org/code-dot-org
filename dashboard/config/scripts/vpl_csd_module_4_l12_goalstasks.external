@@ -4,25 +4,29 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Lesson 12:  Digital Design  
+#Unit 4 - Lesson 12:  Digital Design
+**Estimated time: 30 minutes**
+
 
 
 
 ## Investigation Goals
 
-**Become familiar with the Design Mode features within App Lab with a specific focus on available resources for future reference**
+**Become familiar with the Design Mode features within App Lab with a specific focus on the available resources for future reference**
 
 ## Investigation Tasks
 
 * Watch Video: CS Discoveries: App Lab - Design Mode
 
-* Complete levels 3-6
+* Complete Levels 3-6
 
-    * Read the information within the "Helps & Tips" tab starting in level 3 (and builds on in level 6) for students to 		reference throughout the unit
+    * Read the information within the "Helps & Tips" tab starting in Level 3 (and builds on in Level 6) for students to 		reference throughout the unit
+    * Identify resources available for reference
+    
+**Optional:** Navigate to and complete<a href="https://https://studio.code.org/s/csd4-2020/stage/12/puzzle/7" target="_blank"> Levels 7-9 </a>.  You will need to return to this page to access Levels 7-9 or can access by logging in to Code Studio, separately.  
 
-Optional: Complete levels 7-9
 
-**Click "Continue" to begin investigation tasks.**
+Click the **"Continue"** button to begin investigation tasks.
 
 
 

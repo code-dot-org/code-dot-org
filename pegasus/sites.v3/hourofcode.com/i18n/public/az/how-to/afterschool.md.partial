@@ -1,5 +1,5 @@
 ---
-title: Təlimat
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # Məktəb müddəti və klublarda bir Saat Kodunu necə öyrətmək olar
 
-### Hərəkətə qoşulun və bir qrup şagirdin bu addımlarla ilk dəfə kompüter biliklərini təqdim edin. Kod saatı asan başlayır - hətta yeni başlayanlar üçün! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -81,6 +87,6 @@ Sənin sinfiniz üçün qulaqlıq təmin edin və ya seçdiyiniz təlimçi səs 
 
 ## Kod Saatından sonra nə gəlir?
 
-Kod Saatı sadəcə texnologiyanın necə işlədiyi və proqram təminatının necə hazırlandığını haqqında daha çox öyrənmə səyahətində atılan birinci addımdır. Help students continue their journey and encourage them to [learn more online](/beyond)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

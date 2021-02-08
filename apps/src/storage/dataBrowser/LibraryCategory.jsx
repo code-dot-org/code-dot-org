@@ -60,7 +60,11 @@ class LibraryCategory extends React.Component {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     return (
       <div>
-        <a style={styles.categoryName} onClick={this.toggleCollapsed}>
+        <a
+          style={styles.categoryName}
+          onClick={this.toggleCollapsed}
+          className="uitest-dataset-category"
+        >
           <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
           <span style={styles.tableNumber}>

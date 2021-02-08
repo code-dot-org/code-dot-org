@@ -1,0 +1,20 @@
+name 'csp-u6-exam1-sequencing_2021'
+editor_experiment ''
+right 'Sequencing'
+wrong 'Selection'
+wrong 'Iteration'
+wrong 'Execution'
+
+markdown <<MARKDOWN
+The following algorithm is followed by a person every morning when they get up from bed to go to school
+
+1. Wake up
+2. Brush teeth
+3. Put on shirt
+4. Put on pants
+5. Put on socks
+6. Put on shoes
+7. Tie shoes
+
+Which concept does this algorithm BEST demonstrate?
+MARKDOWN

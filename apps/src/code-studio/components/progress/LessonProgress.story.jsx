@@ -11,8 +11,8 @@ import progress, {
 import {TestResults} from '@cdo/apps/constants';
 
 const activityPuzzle = {
-  ids: [123],
-  activeId: 123,
+  ids: ['123'],
+  activeId: '123',
   position: 1,
   kind: 'puzzle',
   icon: '',
@@ -23,8 +23,8 @@ const activityPuzzle = {
 };
 
 const conceptPuzzle = {
-  ids: [5086],
-  activeId: 5086,
+  ids: ['5086'],
+  activeId: '5086',
   position: 2,
   kind: 'puzzle',
   icon: 'fa-file-text',
@@ -36,8 +36,8 @@ const conceptPuzzle = {
 };
 
 const assessment1 = {
-  ids: [2441],
-  activeId: 2441,
+  ids: ['2441'],
+  activeId: '2441',
   position: 3,
   kind: 'assessment',
   icon: 'fa-check-square-o',
@@ -48,8 +48,8 @@ const assessment1 = {
 };
 
 const assessment2 = {
-  ids: [2444],
-  activeId: 2444,
+  ids: ['2444'],
+  activeId: '2444',
   position: 4,
   kind: 'assessment',
   icon: 'fa-check-square-o',
@@ -60,8 +60,8 @@ const assessment2 = {
 };
 
 const assessment3 = {
-  ids: [2744],
-  activeId: 2744,
+  ids: ['2744'],
+  activeId: '2744',
   position: 5,
   kind: 'assessment',
   icon: 'fa-check-square-o',
@@ -72,11 +72,10 @@ const assessment3 = {
 };
 
 const unplugged = {
-  ids: [2093],
-  activeId: 2093,
+  ids: ['2093'],
+  activeId: '2093',
   is_concept_level: false,
   kind: 'unplugged',
-  // kind: 'puzzle',
   position: 1,
   title: 1,
   url: 'http://studio.code.org/s/course1/stage/1/puzzle/1'

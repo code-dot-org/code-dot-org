@@ -1,0 +1,14 @@
+name 'U7L1 CFU Return_2021'
+editor_experiment ''
+title 'Parameters and Return'
+description ''
+
+wrong '15'
+right '16'
+wrong '21'
+wrong '18'
+markdown <<MARKDOWN
+What will print to the console after running this code segment?
+
+![](https://images.code.org/730973e58f5fca6de151b2652e45327d-image-1575656474007.png)
+MARKDOWN

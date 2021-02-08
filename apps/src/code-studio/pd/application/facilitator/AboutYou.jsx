@@ -40,7 +40,7 @@ export default class AboutYou extends LabeledFormComponent {
           will not be saved. Fields marked with a{' '}
           <span style={{color: 'red'}}>*</span> are required. If you need more
           information about the program before you apply, please visit{' '}
-          <a href={FACILITATOR_URL} target="_blank">
+          <a href={FACILITATOR_URL} target="_blank" rel="noopener noreferrer">
             {FACILITATOR_URL}
           </a>
           . If you have questions regarding the Facilitator Development Program

@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -158,7 +158,7 @@ class DSLDefined < Level
   end
 
   def clone_with_name(new_name, editor_experiment: nil)
-    raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
+    raise ArgumentError, "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     old_dsl = dsl_text
     new_dsl = old_dsl.try(:sub, "name '#{name}'", "name '#{new_name}'")
 

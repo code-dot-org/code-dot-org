@@ -7,6 +7,7 @@ export const MAX_TABLE_SIZE = 680;
 export const PROGRESS_BUBBLE_WIDTH = 38;
 export const DIAMOND_BUBBLE_WIDTH = 38;
 export const PILL_BUBBLE_WIDTH = 180;
+export const MIN_COLUMN_WIDTH = 39;
 
 export const progressStyles = {
   lessonHeading: {

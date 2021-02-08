@@ -12,7 +12,7 @@ Data informs district and school recruitment by supporting your case and alignin
 - [Access Your Data Dashboard](#tableau)
 - [Data Dashboard How-To Guide](#guide)
 - [Access Report](#access)
-- [2019 Fall Data Clean Up](#cleanupinstructions)
+- [2020 Data Clean-up](#cleanup)
 
 
 <a name="tableau"></a>
@@ -80,34 +80,37 @@ The data we gather can be an incredible resource to you, but only if it is robus
 </p>
 </details>
 
-<a name="cleanupinstructions"></a>
-## 2019 Fall Data Clean-up
-Teacher data from your 2019-20 CS Principles and CS Discoveries summer workshops are now available in Tableau. Use the steps outlined below to review your teacher roster and follow up with non-implementing teachers to see if they may be, or planning, to implement.
-
-Note: We do expect to see a modest rise in your implementation rates since many CS Discoveries teachers are still starting to implement the online units through the end of October. You may still want to include these teachers in your follow-up with non-implementing teachers since it will be hard to know which teachers are implementing later than usual versus not at all.
+<a name="cleanup"></a>
+## 2020 Fall Data Clean-up
+Teacher data from your 2020-21 CS Principles and CS Discoveries summer workshops are now available in Tableau. Use the steps outlined below to review your teacher roster and follow up with non-implementing teachers to see if they may be, or planning, to implement.
 
 **Timeline**
-- Review your teacher rosters and follow-up with non-implementing teachers between now and November 8th using the process outlined below.
-- Submit all corrections to teacher rosters by November 8th using the process outlined below.
-- Code.org will make corrections after November 8th. Corrections will be visible in your Tableau data dashboard by the end of November.
+- Review your teacher rosters and follow-up with non-implementing teachers between now and October 30th using the process outlined below.
+- Submit all corrections to teacher rosters by October 30th using the process outlined below.
+- Code.org will make corrections beginning in early November. Corrections will be visible in your Tableau data dashboard by the end of November.
 
-**Step 1:** Navigate to the [Teacher Roster tab](https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharing/TeacherRoster?:iid=1) of your data dashboard and filter to the 2019-20 school year.
+**Step 1:** Navigate to the [Teacher Roster tab](https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharing/TeacherRoster?:iid=1) of your data dashboard and filter to the 2020-21 school year.
 
 **Step 2:** Look for the following inaccuracies (for both CS Discoveries and CS Principles courses). Take note of teacher names and the email associated with the Code.org account they use to teach.
-- Teachers to remove: Teachers not in your cohort (e.g., staff, facilitators, etc). Note: You should not remove teachers that are simply no longer implementing or attending PD. This information is important to retain for implementation rates.
-- Teachers to add: Teachers missing from your cohort.
-- Teachers listed with multiple email address: Identify which email they are using. We can then link their accounts so that they only appear once in your roster.
-- Teacher listed in multiple courses: Identify the email address they are using to teach and what the correct course is for the teacher.
-- Teachers who are implementing, but show 0 students: Identify which email they are using to teach and any other associated emails (e.g., a different email they used to register). We can link their account to show the number of students they are teaching.
+
+Teachers to add: 
+
+- If a teacher is missing from your roster, perhaps because they attended another partner’s summer workshop, provide the details required in the form for us to add them. The address you provide should be associated with the Code.org account they use to teach. 
+
+Teachers to remove: 
+
+- It is possible that the same teacher might appear multiple times on your list if they enrolled in multiple workshops, either for the same program or both. Please identify these people so we can remove one of the two entries.
+- Teachers that enrolled in a workshop but withdrew from the program before the summer workshop can be removed. You should not remove teachers that are no longer teaching the course or participating in PL for any reason. This information is important to retain for implementation rates.
+- If someone that is not a teacher took attendance in a workshop (e.g. staff, facilitators, etc), they may appear on your roster. Please identify these people so we can remove them.
+
+Teachers who are actually implementing, but are listed as having 0 students: 
+
+- This can happen if a teacher is teaching under a Code.org account that is associated with an email address different from the one they used to enroll in your workshop. If you are able to give us the email address of the teacher’s Code.org account, we can link them in Tableau to display student progress.
+- Note: Refer to the *Met Implementation Bar?* column for this process. Our data team is working on the issue causing the *Null* values in the *Highest Unit* column.
 
 **Step 3:** Reach out to any teachers that are not implementing. Use this [template](https://docs.google.com/document/d/1nR_851Tpb-5V6pYnw9rAry_UUuvKLNR2TU1W9ltiZfQ/edit) or create your own.
 
-**Step 4:** Indicate the changes that you’re requesting to Code.org by completing [this survey](https://docs.google.com/forms/d/e/1FAIpQLSdFDQhjYld7bJYAoD-aSSZwrIAP_OcqTcgvmQMNzDmsUhnH4w/viewform) by November 8th.
+**Step 4:** Indicate the changes that you’re requesting to Code.org by completing [this survey](https://docs.google.com/forms/d/e/1FAIpQLSdKb2cHTPBu3kreR6PhsoSvMBBsipmkMEKgoOTKBPVXO0Sa8g/viewform?usp=sf_link) by October 30th.
 
-**Step 5:** Review your final implementation rates. Code.org will notify you when your rosters have been corrected. This will be towards the end of November. Group 1 & 2 Partners receiving scholarship funding for 2019-20 will get a specific email message to review their implementation rates and subsequent funding adjustments if any.
+**Step 5:** Review your final implementation rates. Code.org will notify you when your rosters have been corrected. This will be towards the end of November. Final scholarship payments, which are dependent on implementation rates, will also be calculated during that time. 
 
-**Step 6:** Reflect on your recruitment strategies for 2020-21 and consider improvements you could make to increase implementation rates next year. Some things to consider:
-
-- Make sure to get principal approval. Teachers are 9% more likely to implement if you get confirmation from the principal the course will be implemented.
-- Find teachers who are teaching the right amount of hours and units ([implementation recommendations](https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit)). Teachers are 5% more likely to implement if they are teaching to the implementation recommendations.
-- Consider ways you can support and help administrators think about how to make implementation possible.

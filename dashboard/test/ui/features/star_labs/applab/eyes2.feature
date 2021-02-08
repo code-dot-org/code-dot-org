@@ -18,13 +18,13 @@ Scenario: Applab visualization scaling
   And I press "show-code-header"
   And I add code for a canvas and a button
   And I press "runButton"
-  And I see no difference for "medium scaling"
+  And I see no difference for "medium scaling" using stitch mode "none"
 
   Then I drag the visualization grippy by 100 pixels
-  And I see no difference for "large scaling"
+  And I see no difference for "large scaling" using stitch mode "none"
 
   Then I drag the visualization grippy by -400 pixels
-  And I see no difference for "small scaling"
+  And I see no difference for "small scaling" using stitch mode "none"
 
   Then I close my eyes
 

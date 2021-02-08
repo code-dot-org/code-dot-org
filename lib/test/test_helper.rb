@@ -51,6 +51,16 @@ class LevelSpriteLab
   end
 end
 
+class LevelWebLab
+  def report_bug_url(request)
+    "url"
+  end
+
+  def game
+    "WebLab"
+  end
+end
+
 class Game
   def self.gamelab
     "GameLab"
@@ -62,5 +72,9 @@ class Game
 
   def self.spritelab
     "SpriteLab"
+  end
+
+  def self.weblab
+    "WebLab"
   end
 end

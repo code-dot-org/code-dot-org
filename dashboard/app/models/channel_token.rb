@@ -16,7 +16,7 @@
 #  index_channel_tokens_on_storage_id_and_level_id  (storage_id,level_id) UNIQUE
 #
 
-class ChannelToken < ActiveRecord::Base
+class ChannelToken < ApplicationRecord
   belongs_to :user
   belongs_to :level
 

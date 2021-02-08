@@ -49,15 +49,18 @@ export default class GDPRDialog extends Component {
         style={styles.dialog}
         uncloseable
       >
-        <h2 className="ui-test-gdpr-dialog">{i18n.gdprDialogHeader()}</h2>
-        <div>{i18n.gdprDialogDetails()}</div>
+        <h2 className="ui-test-gdpr-dialog">
+          {i18n.gdprDialogHeaderUpdated()}
+        </h2>
+        <div>{i18n.gdprDialogDetailsUpdated()}</div>
         <div style={styles.instructions}>
           <a
             href={pegasus('/privacy')}
             className="ui-test-gdpr-dialog-privacy-link"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            {i18n.gdprDialogSeePrivacyPolicy()}.
+            {i18n.gdprDialogVisitPrivacyPolicy()}
           </a>
         </div>
         <DialogFooter>

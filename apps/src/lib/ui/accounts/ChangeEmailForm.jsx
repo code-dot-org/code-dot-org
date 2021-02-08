@@ -64,7 +64,12 @@ export default class ChangeEmailForm extends React.Component {
     return (
       <span>
         {i18n.changeEmailModal_emailOptIn_description()}{' '}
-        <a href={pegasus('/privacy')} tabIndex="3" target="_blank">
+        <a
+          href={pegasus('/privacy')}
+          tabIndex="3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {i18n.changeEmailModal_emailOptIn_privacyPolicy()}
         </a>
       </span>

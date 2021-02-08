@@ -1,13 +1,13 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2018-10-31T19:52:13.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C4_unplugged_forloops",
     "name_suffix": "_2019",
     "parent_level_id": 10995
   },
+  "game_id": 31,
+  "created_at": "2018-10-31T19:52:13.000Z",
+  "user_id": 1,
   "published": true
 }]]></config>
 </Unplugged>

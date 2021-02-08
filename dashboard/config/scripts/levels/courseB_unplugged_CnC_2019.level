@@ -1,14 +1,14 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2019-01-22T18:21:33.000Z",
-  "level_num": "custom",
-  "user_id": 684,
   "properties": {
     "name_suffix": "_2019",
     "parent_level_id": 14142,
     "video_key": "c_and_c_great_to_create"
   },
+  "game_id": 31,
+  "level_num": "custom",
+  "created_at": "2019-01-22T18:21:33.000Z",
+  "user_id": 684,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-06-29 17:55:08 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-19 16:03:39 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-02-07 18:46:04 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-09 22:26:43 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-12-14 18:27:06 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
 }]]></config>

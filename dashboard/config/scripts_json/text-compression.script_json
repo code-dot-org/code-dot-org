@@ -1,0 +1,111 @@
+{
+  "script": {
+    "name": "text-compression",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "text-compression"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "text-compression"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Text Compression",
+      "name": "Text Compression",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "text-compression"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Text Compression"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "text-compression"
+      },
+      "level_keys": [
+        "Text Compression"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Widget: Text Compression"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "text-compression"
+      },
+      "level_keys": [
+        "Widget: Text Compression"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Text Compression",
+        "script_level.level_keys": [
+          "Text Compression"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "text-compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Widget: Text Compression",
+        "script_level.level_keys": [
+          "Widget: Text Compression"
+        ],
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "",
+        "script.name": "text-compression"
+      }
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
 import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   heading: {
@@ -24,6 +25,12 @@ const styles = {
   },
   scriptLink: {
     color: color.teal
+  },
+  refreshing: {
+    color: color.orange
+  },
+  refreshSpinner: {
+    marginRight: 5
   }
 };
 
@@ -32,6 +39,7 @@ class ProgressViewHeader extends Component {
     scriptId: PropTypes.number,
     //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
+    refreshing: PropTypes.bool,
     section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType
@@ -58,7 +66,7 @@ class ProgressViewHeader extends Component {
   };
 
   render() {
-    const {currentView, scriptFriendlyName} = this.props;
+    const {currentView, scriptFriendlyName, refreshing} = this.props;
     const linkToOverview = this.getLinkToOverview();
     const headingText = {
       [ViewType.SUMMARY]: i18n.lessonsAttempted() + ' ',
@@ -77,6 +85,17 @@ class ProgressViewHeader extends Component {
             {scriptFriendlyName}
           </a>
         </span>
+        {refreshing && (
+          <span style={styles.refreshing}>
+            <FontAwesome
+              id="uitest-spinner"
+              icon="spinner"
+              className="fa-pulse"
+              style={styles.refreshSpinner}
+            />
+            {i18n.updating()}
+          </span>
+        )}
         {currentView === ViewType.STANDARDS && (
           <StandardsViewHeaderButtons sectionId={this.props.section.id} />
         )}
@@ -90,6 +109,7 @@ export const UnconnectedProgressViewHeader = ProgressViewHeader;
 export default connect(state => ({
   section: state.sectionData.section,
   currentView: state.sectionProgress.currentView,
+  refreshing: state.sectionProgress.isRefreshingProgress,
   scriptData: getCurrentScriptData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state)
 }))(ProgressViewHeader);

@@ -91,7 +91,11 @@ class ErrorDialogStack extends React.Component {
             </p>
             <p>
               {msg.contactWithoutEmail()}{' '}
-              <a href={pegasus('/contact')} target="_blank">
+              <a
+                href={pegasus('/contact')}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://code.org/contact
               </a>
               .

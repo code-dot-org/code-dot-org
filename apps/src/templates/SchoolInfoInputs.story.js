@@ -45,7 +45,7 @@ export default storybook => {
       return (
         <div>
           <SchoolInfoInputs
-            useGoogleLocationSearch={false}
+            useLocationSearch={false}
             onCountryChange={this.onCountryChange.bind(this)}
             onSchoolTypeChange={this.onSchoolTypeChange.bind(this)}
             onSchoolChange={this.onSchoolChange.bind(this)}

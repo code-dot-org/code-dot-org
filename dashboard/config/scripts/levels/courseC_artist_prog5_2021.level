@@ -1,0 +1,207 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-12-04T22:23:42.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Finish this tag by drawing a rectangle around the outside.\r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "x": "100",
+    "y": "150",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": "0.4",
+    "embed": "false",
+    "long_instructions": "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\r\n\r\nFinish this tag by drawing a rectangle around the outside.  \r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.\",\"hint_id\":\"courseC_artist_prog5_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0bf6f732259a2c6f617ebf2bc40d2ed1/courseC_artist_prog5_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseC_artist_prog5_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseC_artist_prog5_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can use the drop down menus in the blocks to change what they do!\",\"hint_id\":\"courseC_artist_prog5_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be20c380bc3b83202d03207aa8892e40/courseC_artist_prog5_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Each turn should be 90 degrees to the right.\",\"hint_id\":\"courseC_artist_prog5_d\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/681349f918d41a357f99041242654449/courseC_artist_prog5_2018.mp3\"}]",
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "images": "[{\"filename\": \"https://images.code.org/8c4ddb11bc4115eea1757917c1f4b98f-image-1475789587541.png\", \"position\": [77, 120]}]",
+    "ideal": "8",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "parent_level_id": 21190,
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/71332e0584dba451fcad5a6ee70953fb=levelbuilder/51581.png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:46:54 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 17:59:30 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-23 15:52:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-25 20:35:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2020-10-28 17:12:50 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-10-28 17:13:20 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">200</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">200</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">100</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="alpha" inline="true" id="alpha">
+                  <value name="VALUE">
+                    <block type="math_number_dropdown">
+                      <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">60</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_width" inline="false">
+                      <value name="WIDTH">
+                        <block type="math_number">
+                          <title name="NUM">12</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_repeat_dropdown">
+                          <title name="TIMES" config="2-10">2</title>
+                          <statement name="DO">
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">200</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">100</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant_dropdown">
+                                          <title name="DIR">turnRight</title>
+                                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

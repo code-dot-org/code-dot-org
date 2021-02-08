@@ -145,6 +145,14 @@ body {
   opacity: 0.5;
 }
 
+#powered-by-aws {
+  width: 100%;
+}
+
+#powered-by-aws img {
+  margin-top: 12px;
+}
+
 /* styling for the embedded dashboard components... */
 
 #sign_in_or_user .button-signin {
@@ -235,6 +243,12 @@ body {
     float: none;
     text-align: center;
   }
+
+  #powered-by-aws {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -281,6 +295,16 @@ body {
   }
 
   #copyright {
-    padding: 12px 12px 36px 12px;
+    padding: 12px 12px 12px 12px;
+  }
+
+  #powered-by-aws {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  #powered-by-aws img {
+    margin-bottom: 12px;
   }
 }

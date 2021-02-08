@@ -172,6 +172,7 @@ az-AZ:
   studiobar_title_nolink: Kod Studiyasını kəşf edin
   studiobar_elementary_title: İbtidai kurslar
   studiobar_elementary_body: K-5 (11-12 yaşlılar) üçün üç yeni kursumuz
+  studiobar_dance_title: Rəqs şənliyi
   studiobar_hoc_title: Kod Saatı
   studiobar_flappy_title: Qanadlı Kod
   studiobar_flappy_body: Öz qanadlı oyununuzu düzəldib bölüşün
@@ -202,6 +203,7 @@ az-AZ:
   homepage_hero_text_stat_served: 'Kod Saatı: #served nəfər faydalanıb'
   homepage_slot_text_hoc: Kod Saatı
   homepage_slot_text_frozen: Anna və Elza ilə Buzlu ürək
+  homepage_slot_text_teacher: Müəllimin idarəetmə paneli
   homepage_slot_text_studio: Bütün dərsliklərimiz
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Dükan
@@ -584,7 +586,9 @@ az-AZ:
     və yoxlama oyunları daxildir.
   flappy_shortcode: qanad çal
   header_home: Ev səhifəsi
+  header_my_dashboard: İdarəetmə panelim
   header_courses: marşrutlar
+  header_course_catalog: Kurs kataloqu
   header_project_gallery: Layihə qalereyası
   header_sections: Bölmələr
   header_professional_learning: Peşəkar təhsil
@@ -624,17 +628,21 @@ az-AZ:
   user_header_logout: Çıxın
   user_header_signin: Daxil olun
   user_header_playlab: Oyun labı
+  user_header_dance: Rəqs şənliyi
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   applab_tile_start_tutorial: Başlayın
+  hoc_overview_dance_title: Rəqs şənliyi
   hoc_overview_start_tutorial: Başlayın
   hoc2018_creativity_create: Düzəlt
   hoc2018_mc_start: Başlayın
   hoc2018_mc_video_title_inspire_girl: Bir qızı həvəsləndirin
   hoc2018_mc_homepage_join_us: Bizə qoşulun
   hoc2018_mc_homepage_try_it: Sınaqdan keçirin
+  hoc2018_dance_party_main_heading: Rəqs şənliyi
   hoc2018_dance_party_subheading: Rəqs Şənliyini tərcümə etməyə kömək edin
   hoc2018_dance_create_your_own_dance_title: Öz rəqs şənliyinizi düzəldin
+  hoc2018_dance_party_box_title: Rəqs şənliyi
   hoc2018_dance_party_box_description: Dostlarınızla bölüşmək üçün bir Rəqs Şənliyi
     proqramlaşdırın!
   hoc2018_dance_party_specs: Dil | Format | Yaş 6-106

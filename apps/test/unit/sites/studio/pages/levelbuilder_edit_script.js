@@ -18,13 +18,15 @@ describe('the level builder page init script', () => {
       i18n: {
         stageDescriptions: [],
         description:
-          '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+          '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
+        studentDescription:
+          '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       },
       beta: false,
-      levelKeyList: [],
       locales: [['English', 'en-US'], ['French', 'fr-FR']],
       script_families: ['coursea', 'csd1'],
-      version_year_options: ['2017', '2018']
+      version_year_options: ['2017', '2018'],
+      levelKeyList: {}
     });
   });
 

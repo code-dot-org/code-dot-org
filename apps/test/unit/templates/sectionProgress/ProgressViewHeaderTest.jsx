@@ -36,10 +36,17 @@ describe('ProgressViewHeader', () => {
       wrapper.find('Connect(StandardsViewHeaderButtons)')
     ).to.have.lengthOf(1);
   });
+
   it('does not show buttons when in standards view', () => {
     const wrapper = shallow(<ProgressViewHeader {...DEFAULT_PROPS} />);
     expect(
       wrapper.find('Connect(StandardsViewHeaderButtons)')
     ).to.have.lengthOf(0);
+  });
+
+  it('displays a spinner when refreshing', () => {
+    let headerProps = {...DEFAULT_PROPS, ...{refreshing: true}};
+    const wrapper = shallow(<ProgressViewHeader {...headerProps} />);
+    expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
   });
 });

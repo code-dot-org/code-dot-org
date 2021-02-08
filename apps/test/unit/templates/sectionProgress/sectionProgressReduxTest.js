@@ -5,8 +5,9 @@ import sectionProgress, {
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
-  getCurrentProgress,
-  getCurrentScriptData
+  getCurrentScriptData,
+  startRefreshingProgress,
+  finishRefreshingProgress
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -83,8 +84,7 @@ describe('sectionProgressRedux', () => {
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.scriptDataByScript, {});
       assert.deepEqual(nextState.studentLevelProgressByScript, {});
-      assert.deepEqual(nextState.levelsByLessonByScript, {});
-      assert.deepEqual(nextState.studentTimestampsByScript, {});
+      assert.deepEqual(nextState.studentLastUpdateByScript, {});
     });
   });
 
@@ -100,6 +100,24 @@ describe('sectionProgressRedux', () => {
         finishLoadingProgress()
       );
       assert.deepEqual(nextState.isLoadingProgress, false);
+    });
+  });
+
+  describe('isRefreshingProgress', () => {
+    it('startRefreshingProgress sets isRefreshingProgress to true', () => {
+      const nextState = sectionProgress(
+        initialState,
+        startRefreshingProgress()
+      );
+      assert.deepEqual(nextState.isRefreshingProgress, true);
+    });
+
+    it('finishRefreshingProgress sets isRefreshingProgress to false', () => {
+      const nextState = sectionProgress(
+        {isLoadingProgress: true},
+        finishRefreshingProgress()
+      );
+      assert.deepEqual(nextState.isRefreshingProgress, false);
     });
   });
 
@@ -137,23 +155,6 @@ describe('sectionProgressRedux', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
-    });
-  });
-
-  describe('getCurrentProgress', () => {
-    it('gets the progress for the current script', () => {
-      const stateWithProgress = {
-        scriptSelection: {scriptId: 123},
-        sectionProgress: {
-          studentLevelProgressByScript: {
-            123: 'fake progress 1',
-            456: 'fake progress 2'
-          }
-        }
-      };
-      expect(getCurrentProgress(stateWithProgress)).to.deep.equal(
-        'fake progress 1'
-      );
     });
   });
 

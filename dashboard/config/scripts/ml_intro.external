@@ -1,0 +1,16 @@
+name 'ml-intro'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+## Curriculum Notes
+- Unplugged
+- Videos / articles / examples of different styles of machine learning (supervised, unsupervised, reinforcement)
+- Emphasize ML process: collect data, train data, evaluate, deploy
+
+## AI-Lab Notes:
+- None
+
+## Dataset Notes:
+- None
+MARKDOWN

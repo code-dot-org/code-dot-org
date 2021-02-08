@@ -100,7 +100,7 @@ module Pd::Payment
     # @return [Array<SessionAttendanceSummary>] summary of attendance for each session.
     def get_session_attendance_summaries(workshop)
       workshop.sessions.map do |session|
-        session_attendances = Pd::Attendance.where(pd_session_id: session.id)
+        session_attendances = Pd::Attendance.where(pd_session_id: session.id.to_s)
         enrollment_ids = session_attendances.all.map(&:resolve_enrollment).compact.map(&:id).uniq
         SessionAttendanceSummary.new session.hours, enrollment_ids
       end

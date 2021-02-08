@@ -236,6 +236,7 @@ module ScriptConstants
     K1HOC_2017 = 'k1hoc2017'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
+    OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,

@@ -1,0 +1,15 @@
+name 'U10 SSQRP1 part 5_2021'
+editor_experiment ''
+
+
+
+
+description 'Which of the following is the most likely data privacy concern for _GroceryGrabbr_ users?'
+wrong 'A user\'s grocery list is stored.'
+wrong 'A user is able to look up grocery stores stored in a database.'
+wrong 'A user needs to have their smartphone on while grocery shopping to use the app.'
+right 'A user\'s location is always being tracked. '
+
+markdown <<MARKDOWN
+
+MARKDOWN

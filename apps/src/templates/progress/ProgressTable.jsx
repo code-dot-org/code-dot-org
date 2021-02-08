@@ -5,7 +5,7 @@ import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
-import {levelType, lessonType} from './progressTypes';
+import {levelType, lessonType, lessonGroupType} from './progressTypes';
 
 export const styles = {
   hidden: {
@@ -19,7 +19,7 @@ class ProgressTable extends React.Component {
     isSummaryView: PropTypes.bool.isRequired,
     groupedLessons: PropTypes.arrayOf(
       PropTypes.shape({
-        group: PropTypes.string.isRequired,
+        lessonGroup: lessonGroupType,
         lessons: PropTypes.arrayOf(lessonType).isRequired,
         levels: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired
       })
@@ -70,9 +70,9 @@ class ProgressTable extends React.Component {
         <div>
           {groupedLessons.map(group => (
             <LessonGroup
-              key={group.group}
+              key={group.lessonGroup.displayName}
               isPlc={isPlc}
-              groupName={group.group}
+              lessonGroup={group.lessonGroup}
               isSummaryView={isSummaryView}
               lessons={group.lessons}
               levelsByLesson={group.levels}

@@ -101,7 +101,7 @@ class ScriptOverviewTopRow extends React.Component {
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
           resources.length > 0 && (
-            <TeacherResourcesDropdown resources={resources} />
+            <TeacherResourcesDropdown resources={resources} unitId={scriptId} />
           )}
         {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <SectionAssigner

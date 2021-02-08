@@ -28,6 +28,7 @@ en:
       Challenge: Challenge
       Challenge Levels: Challenge Levels
       Challenges: Challenges
+      Chance: Chance
       Change: Change
       Checking for a Winner: Checking for a Winner
       Code Your Own Flappy Game: Code Your Own Flappy Game
@@ -42,6 +43,7 @@ en:
       Create Your Own Animation: Create Your Own Animation
       Create a Story: Create a Story
       Create your project: Create your project
+      Creating a Simulation: Creating a Simulation
       Data Visualization: Data Visualization
       De-bugging with the Step Button: De-bugging with the Step Button
       Debugging: Debugging
@@ -89,6 +91,7 @@ en:
       Keyboard Input: Keyboard Input
       LED Apps: LED Apps
       Layout with CSS: Layout with CSS
+      Learning from Simulations: Learning from Simulations
       Lesson Extras: Lesson Extras
       Light Show: Light Show
       Linking Pages: Linking Pages
@@ -117,6 +120,7 @@ en:
       'Mini-project: Sticker Design': 'Mini-project: Sticker Design'
       Modify simulation variables: Modify simulation variables
       More Input: More Input
+      More Monsters: More Monsters
       More Parameters: More Parameters
       Motorcycle: Motorcycle
       Movement with the Counter Pattern: Movement with the Counter Pattern
@@ -137,6 +141,7 @@ en:
       Predict: Predict
       Prediction: Prediction
       Problem Solving: Problem Solving
+      Programming with Events: Programming with Events
       Programming with Rey and BB-8: Programming with Rey and BB-8
       Programs that Repeat: Programs that Repeat
       Project: Project
@@ -147,6 +152,7 @@ en:
       Publishing Your Website: Publishing Your Website
       RGB Exploration: RGB Exploration
       Reading Sensors: Reading Sensors
+      Recovery: Recovery
       Reflection: Reflection
       Repeat Blocks: Repeat Blocks
       Repeat Blocks with BB-8: Repeat Blocks with BB-8
@@ -162,6 +168,7 @@ en:
       Setting Properties: Setting Properties
       Shapes and the Draw Loop: Shapes and the Draw Loop
       Share Your App: Share Your App
+      Share Your Message: Share Your Message
       Side Scroller: Side Scroller
       Simple Circuits: Simple Circuits
       Sliders: Sliders
@@ -169,6 +176,7 @@ en:
       Sprite Lab Project: Sprite Lab Project
       Sprites and the Draw Loop: Sprites and the Draw Loop
       Star Chaser: Star Chaser
+      Stopping the Outbreak with Masks: Stopping the Outbreak with Masks
       Styling Text: Styling Text
       Styling with Classes: Styling with Classes
       Styling your Website: Styling your Website
@@ -184,11 +192,13 @@ en:
       Using the LED: Using the LED
       Using the Repeat Block: Using the Repeat Block
       Using the Switch: Using the Switch
+      Vaccines: Vaccines
       Velocity: Velocity
       Velocity and the Counter Pattern: Velocity and the Counter Pattern
       Video: Video
       Warm Up: Warm Up
       Website Project: Website Project
+      Welcome to Monster Town: Welcome to Monster Town
       While Loops with the Farmer: While Loops with the Farmer
       Wrap-up: Wrap-up
       Your Personal Website: Your Personal Website

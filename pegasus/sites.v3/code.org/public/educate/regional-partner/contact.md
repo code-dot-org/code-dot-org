@@ -45,7 +45,7 @@ Code.org works with many organizations around the country to bring computer scie
 | Nextech | Stephanie Zircher | teachers@nextech.org |
 | Oklahoma Public School Resource Center (OPSRC) | McKalyn Danner | mckalyn.danner@opsrc.net |
 | Orlando Science Center | Nicole Pechin and Emily Duguid| classes@osc.org|
-| Rice University | Debbie Campbell | rusmpcoding@rice.edu |
+| Rice University School Mathematics Project | Shaina Glass | rusmpcoding@rice.edu |
 | Riverside County Office of Education | Mike Leffin | mleffin@rcoe.us |
 | Sacramento County Office of Education | Dave Chun | dchun@scoe.net |
 | Sacred Heart University | Cenk Erdil and Darcy Ronan | erdild@sacredheart.edu, ronand@sacredheart.edu |

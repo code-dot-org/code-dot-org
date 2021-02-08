@@ -1,0 +1,12 @@
+name 'csp-u5-exam1-simulation-3_2021'
+editor_experiment ''
+
+
+wrong 'The computer simulation will be able to include more details and complexity than the real-world job placement process.'
+right 'The computer simulation could be used to test hypotheses about patterns in the job placement process that are costly or time consuming to observe in reality.'
+wrong 'The computer simulation will be able to precisely predict the real-world outcomes for each job seeker.'
+wrong 'The computer simulation will remove the bias that may arise in the real-world job placement process.'
+
+markdown <<MARKDOWN
+A job placement agency helps match job seekers with potential employers. The agency would like to design a simulation in order to help predict the likely job placement outcomes for job seekers based on historical trends and patterns. Which of the following is most likely to be a benefit of the simulation?
+MARKDOWN

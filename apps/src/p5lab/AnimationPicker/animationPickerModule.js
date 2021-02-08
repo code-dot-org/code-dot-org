@@ -22,6 +22,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 export const Goal = makeEnum('NEW_ANIMATION', 'NEW_FRAME');
 
 const SHOW = 'AnimationPicker/SHOW';
+const SHOW_BACKGROUND = 'AnimationPicker/SHOW_BACKGROUND';
 const HIDE = 'AnimationPicker/HIDE';
 const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
@@ -32,7 +33,9 @@ const initialState = {
   goal: null,
   uploadInProgress: false,
   uploadFilename: null,
-  uploadError: null
+  uploadError: null,
+  isSpriteLab: false,
+  isBackground: false
 };
 
 export default function reducer(state, action) {
@@ -42,7 +45,20 @@ export default function reducer(state, action) {
       if (!state.visible) {
         return _.assign({}, initialState, {
           visible: true,
-          goal: action.goal
+          goal: action.goal,
+          isBackground: false,
+          isSpriteLab: action.isSpriteLab
+        });
+      }
+      return state;
+
+    case SHOW_BACKGROUND:
+      if (!state.visible) {
+        return _.assign({}, initialState, {
+          visible: true,
+          goal: action.goal,
+          isBackground: true,
+          isSpriteLab: true
         });
       }
       return state;
@@ -74,11 +90,18 @@ export default function reducer(state, action) {
  * @returns {{type: string, goal: AnimationPicker.Goal }}
  * @throws {TypeError} if a valid goal is not provided
  */
-export function show(goal) {
+export function show(goal, isSpriteLab) {
   if ([Goal.NEW_ANIMATION, Goal.NEW_FRAME].indexOf(goal) === -1) {
     throw new TypeError('Must provide a valid goal');
   }
-  return {type: SHOW, goal: goal};
+  return {type: SHOW, goal: goal, isSpriteLab: isSpriteLab};
+}
+
+export function showBackground(goal) {
+  if (goal !== Goal.NEW_ANIMATION) {
+    throw new TypeError('Must provide a valid goal');
+  }
+  return {type: SHOW_BACKGROUND, goal: goal};
 }
 
 /**
@@ -212,7 +235,9 @@ export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(addLibraryAnimation(animation));
+      dispatch(
+        addLibraryAnimation(animation, getState().animationPicker.isSpriteLab)
+      );
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
     }

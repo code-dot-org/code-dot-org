@@ -1,0 +1,92 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-12-04T22:19:19.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "x": "200",
+    "y": "40",
+    "start_direction": "180",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to use a `repeat` <xml><block type=\\\"controls_repeat_simplified\\\">\\n    <title name=\\\"TIMES\\\">???</title>\\n  </block></xml> loop for better code!\",\"hint_id\":\"courseB_artist_loops3_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c56805b4d7ec7fb024e3a5e27225c4b7/courseB_artist_loops3_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The artist will want to move South to draw this line.\",\"hint_id\":\"courseB_artist_loops3_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f2c91ab1620ff301cc81eb67c4ae707b/courseB_artist_loops3_2018.mp3\"}]",
+    "ideal": "3",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseB_artist_loops3_1\",\r\n  \"callout_text\": \"There is only one of these blocks in the toolbox.  How will you use it?\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 10,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/d88fa03d0c42a961968b1b50a96bf4b9-image-1478557169080.png\", \"position\": [0,0]}\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "permitted_errors": "0",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 21115,
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "encrypted": "false",
+    "long_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-29 16:59:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:07:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-22 22:15:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-08-08 23:58:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+
+</xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down" limit="1" id="callMe"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-9">???</title>
+        </block>
+        <block type="draw_colour_simple">
+          <title name="COLOUR">#ff0000</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-9">7</title>
+              <statement name="DO">
+                <block type="simple_move_down"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

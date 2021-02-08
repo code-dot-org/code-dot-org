@@ -56,6 +56,7 @@ class ManageStudentNameCell extends Component {
                 style={tableLayoutStyles.link}
                 href={studentUrl}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {name}
               </a>

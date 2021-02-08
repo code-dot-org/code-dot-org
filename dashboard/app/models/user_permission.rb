@@ -15,7 +15,7 @@
 
 require 'cdo/chat_client'
 
-class UserPermission < ActiveRecord::Base
+class UserPermission < ApplicationRecord
   belongs_to :user
 
   VALID_PERMISSIONS = [
@@ -61,7 +61,7 @@ class UserPermission < ActiveRecord::Base
   before_destroy :log_permission_delete
 
   def log_permission_save
-    return if changed_attributes.empty?
+    return if saved_changes.empty?
 
     # In particular, we do not log for adhoc or test environments.
     return unless UserPermission.should_log?

@@ -1,0 +1,99 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:28:20.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "pvz",
+    "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible!",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "start_direction": "3",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,4,1,1,1,2],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[4,1,1,1,1,0,0,0],[0,1,0,0,4,0,0,0],[0,1,0,0,0,0,0,0],[0,3,0,0,0,0,0,0]]",
+    "ideal": "8",
+    "step_speed": "2",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Look for a stair-step pattern in this maze to find where a nested loop can be used.\",\"hint_id\":\"courseD_maze_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c535ba90030522858e57e315b3fe6a33/courseD_maze_nestedLoops5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern.\",\"hint_id\":\"courseD_maze_nestedLoops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0c3029016e3eab1e4d341f3759d7219a/courseD_maze_nestedLoops5.mp3\"}]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "name_suffix": "_2021",
+    "parent_level_id": 21356,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 19:27:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-05-30 21:17:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat" limit="3">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">3</title>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

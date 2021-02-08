@@ -1,18 +1,19 @@
 
-.col {
-    width: 100%;
-
-}
 
 h1 {
   color: grey;
   text-align: center;
 }
 
-.button {
-  background-color: black;
+.dropbtn:hover, .dropbtn:focus {
+    background-color:#679196;
 }
 
-.banner {
-  
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}

@@ -114,7 +114,8 @@ function getSerializedAnimationProps(animation) {
     'frameCount',
     'looping',
     'frameDelay',
-    'version'
+    'version',
+    'categories'
   ]);
 }
 

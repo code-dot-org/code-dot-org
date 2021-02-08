@@ -1,4 +1,5 @@
 {
+ "published": true,
  "pages": [
   {
    "name": "page1",
@@ -166,7 +167,10 @@
          "value": "collaboration_unit4",
          "text": "Collaboration and Independent Work in Unit 4"
         },
-        "Wrap Up"
+        {
+         "value": "wrap_up",
+         "text": "Wrap Up"
+        }
        ]
       },
       {

@@ -1,0 +1,2112 @@
+{
+  "script": {
+    "name": "csp1-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pilot_experiment": "csp-piloters",
+      "has_verified_resources": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}",
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp1-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "csp1-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CS Principles Pre-survey",
+      "name": "CS Principles Pre-survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Welcome to CSP",
+      "name": "Welcome to CSP",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Representing Information",
+      "name": "Representing Information",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Circle Square Patterns",
+      "name": "Circle Square Patterns",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Binary Numbers",
+      "name": "Binary Numbers",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Overflow and Rounding",
+      "name": "Overflow and Rounding",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Representing Text",
+      "name": "Representing Text",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Black and White Images",
+      "name": "Black and White Images",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Color Images",
+      "name": "Color Images",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Lossless Compression",
+      "name": "Lossless Compression",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Lossy Compression",
+      "name": "Lossy Compression",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Intellectual Property",
+      "name": "Intellectual Property",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Project - Digital Information Dilemmas Part 1",
+      "name": "Project - Digital Information Dilemmas Part 1",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Project - Digital Information Dilemmas Part 2",
+      "name": "Project - Digital Information Dilemmas Part 2",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Lesson 14: Assessment Day",
+      "name": "Lesson 14: Assessment Day",
+      "absolute_position": 15,
+      "lockable": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 14: Assessment Day",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Unit 1 STUDENT Survey",
+      "name": "Unit 1 STUDENT Survey",
+      "absolute_position": 16,
+      "lockable": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 STUDENT Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "key": "Unit 1 TEACHER Survey",
+      "name": "Unit 1 TEACHER Survey",
+      "absolute_position": 17,
+      "lockable": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 TEACHER Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp1-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pre-survey-2017-levelgroup_2020 pilot"
+        ],
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "csp-pre-survey-2017-levelgroup_2020 pilot"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L1 SFLP 20-21"
+        ],
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L1 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Computer Science is Changing Everything"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Science is Changing Everything_2020"
+        ],
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "Computer Science is Changing Everything_2020"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_socialBelonging_control_2018"
+        ],
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "csp_socialBelonging_control_2018"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L2 SFLP 20-21"
+        ],
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L2 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L3 CFU Sending Complex Messages"
+        ],
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L3 CFU Sending Complex Messages"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L4 SFLP 20-21"
+        ],
+        "lesson.key": "Circle Square Patterns",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L4 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L4 CYU3"
+        ],
+        "lesson.key": "Circle Square Patterns",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L4 CYU3"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L5 SFLP 20-21"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L5 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 CFU how many bits"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L5 CFU how many bits"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 CFU adding bits"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L5 CFU adding bits"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 CFU bin dec similarities"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L5 CFU bin dec similarities"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L6 SFLP 20-21"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L6 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Widget: Binary Odometer"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Widget: Binary Odometer_2020"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "Widget: Binary Odometer_2020"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 CFU beyond odometer"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L6 CFU beyond odometer"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 CFU representing fractions"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L6 CFU representing fractions"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L7 SFLP 20-21"
+        ],
+        "lesson.key": "Representing Text",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L7 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L8 Reflection Multiple Representations CSP"
+        ],
+        "lesson.key": "Representing Text",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L8 Reflection Multiple Representations CSP"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L8 SFLP 20-21"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L8 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Intro to Pixelation Encoding B&W"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 L9 Introduction to Pixelation"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1 L9 Introduction to Pixelation"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: B&W"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2019"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 Pixelation - Make the Letter A_2019"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: B&W"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget Fix bit offset"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: B&W"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge a"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget challenge a"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: B&W"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge B"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget challenge B"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: B&W"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge C"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget challenge C"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 8,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 CFU pixel data"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 CFU pixel data"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 9,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Multiple Choice Digital Analog"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 Multiple Choice Digital Analog"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 10,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 CFU Sampling"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L9 CFU Sampling"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L9 SFLP 20-21"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L9 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "RGB Color"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 RGB"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 RGB"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: Color"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 Color Pixelation Widget 1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "More Shades of Color"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 More Shades of Color"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 More Shades of Color"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: Color"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 Color Pixelation Widget 2"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: Color"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 Color Pixelation Widget 3"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Color Sampling"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 Color Sampling"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 Color Sampling"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Pixelation Widget: Color"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 Color Pixelation Widget 4"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Multiple Choice analog vs digital"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L10 Multiple Choice analog vs digital"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 10,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 CFU Sampling"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L10 CFU Sampling"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L10 SFLP 20-21"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L10 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Widget: Text Compression"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Widget: Text Compression"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L11 Widget: Text Compression"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Text Compression Widget with Aloe Blacc"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 L11 Text Compression Widget Aloe Blacc"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1 L11 Text Compression Widget Aloe Blacc"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Multiple Choice lossless compression"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L11 Multiple Choice lossless compression"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 CFU Compression for Email"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L11 CFU Compression for Email"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L11 SFLP 20-21"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L11 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Lossy Compression Widget"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v1"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1 Lossy Compression Widget v1"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Lossy Compression Widget"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v2"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1 Lossy Compression Widget v2"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 CPS CFU Cell Phone"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L11 CPS CFU Cell Phone"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L12 SFLP 20-21"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L12 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L12 CFU Creative Commons"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L12 CFU Creative Commons"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L12 CFU Copyright"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L12 CFU Copyright"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L13 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L13 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L13 CFU Digital Representation"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L13 CFU Digital Representation"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L14 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1L14 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L14 CSP CFU digital information"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "U1L14 CSP CFU digital information"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 1 Exam"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 1 AP-Style Assessment _2020"
+        ],
+        "lesson.key": "Lesson 14: Assessment Day",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP Unit 1 AP-Style Assessment _2020"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 1 STUDENT Survey"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1 20-21 Student Pilot Survey"
+        ],
+        "lesson.key": "Unit 1 STUDENT Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1 20-21 Student Pilot Survey"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 1 TEACHER Survey"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1 20-21 Teacher Pilot Survey"
+        ],
+        "lesson.key": "Unit 1 TEACHER Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp1-pilot"
+      },
+      "level_keys": [
+        "CSP U1 20-21 Teacher Pilot Survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp-pre-survey-2017-levelgroup_2020 pilot",
+        "script_level.level_keys": [
+          "csp-pre-survey-2017-levelgroup_2020 pilot"
+        ],
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L1 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L1 SFLP 20-21"
+        ],
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Science is Changing Everything_2020",
+        "script_level.level_keys": [
+          "Computer Science is Changing Everything_2020"
+        ],
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_socialBelonging_control_2018",
+        "script_level.level_keys": [
+          "csp_socialBelonging_control_2018"
+        ],
+        "lesson.key": "Welcome to CSP",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L2 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L2 SFLP 20-21"
+        ],
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L3 CFU Sending Complex Messages",
+        "script_level.level_keys": [
+          "U1L3 CFU Sending Complex Messages"
+        ],
+        "lesson.key": "Representing Information",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L4 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L4 SFLP 20-21"
+        ],
+        "lesson.key": "Circle Square Patterns",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L4 CYU3",
+        "script_level.level_keys": [
+          "CSP U1L4 CYU3"
+        ],
+        "lesson.key": "Circle Square Patterns",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L5 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L5 SFLP 20-21"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 CFU how many bits",
+        "script_level.level_keys": [
+          "U1L5 CFU how many bits"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 CFU adding bits",
+        "script_level.level_keys": [
+          "U1L5 CFU adding bits"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 CFU bin dec similarities",
+        "script_level.level_keys": [
+          "U1L5 CFU bin dec similarities"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L6 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L6 SFLP 20-21"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Widget: Binary Odometer_2020",
+        "script_level.level_keys": [
+          "Widget: Binary Odometer_2020"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 CFU beyond odometer",
+        "script_level.level_keys": [
+          "U1L6 CFU beyond odometer"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 CFU representing fractions",
+        "script_level.level_keys": [
+          "U1L6 CFU representing fractions"
+        ],
+        "lesson.key": "Overflow and Rounding",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L7 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L7 SFLP 20-21"
+        ],
+        "lesson.key": "Representing Text",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L8 Reflection Multiple Representations CSP",
+        "script_level.level_keys": [
+          "U1L8 Reflection Multiple Representations CSP"
+        ],
+        "lesson.key": "Representing Text",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L8 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L8 SFLP 20-21"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 L9 Introduction to Pixelation",
+        "script_level.level_keys": [
+          "U1 L9 Introduction to Pixelation"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation - Make the Letter A_2019",
+        "script_level.level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2019"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget Fix bit offset",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget challenge a",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge a"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget challenge B",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge B"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget challenge C",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge C"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 CFU pixel data",
+        "script_level.level_keys": [
+          "U1L9 CFU pixel data"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Multiple Choice Digital Analog",
+        "script_level.level_keys": [
+          "U1L9 Multiple Choice Digital Analog"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 CFU Sampling",
+        "script_level.level_keys": [
+          "U1L9 CFU Sampling"
+        ],
+        "lesson.key": "Black and White Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L9 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L9 SFLP 20-21"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 RGB",
+        "script_level.level_keys": [
+          "CSP U1L10 RGB"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 Color Pixelation Widget 1",
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 More Shades of Color",
+        "script_level.level_keys": [
+          "CSP U1L10 More Shades of Color"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 Color Pixelation Widget 2",
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 Color Pixelation Widget 3",
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 Color Sampling",
+        "script_level.level_keys": [
+          "CSP U1L10 Color Sampling"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 Color Pixelation Widget 4",
+        "script_level.level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Multiple Choice analog vs digital",
+        "script_level.level_keys": [
+          "U1L10 Multiple Choice analog vs digital"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 CFU Sampling",
+        "script_level.level_keys": [
+          "U1L10 CFU Sampling"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L10 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L10 SFLP 20-21"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Widget: Text Compression",
+        "script_level.level_keys": [
+          "U1L11 Widget: Text Compression"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 L11 Text Compression Widget Aloe Blacc",
+        "script_level.level_keys": [
+          "U1 L11 Text Compression Widget Aloe Blacc"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Multiple Choice lossless compression",
+        "script_level.level_keys": [
+          "U1L11 Multiple Choice lossless compression"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 CFU Compression for Email",
+        "script_level.level_keys": [
+          "U1L11 CFU Compression for Email"
+        ],
+        "lesson.key": "Lossless Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L11 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L11 SFLP 20-21"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 Lossy Compression Widget v1",
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v1"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 Lossy Compression Widget v2",
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v2"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 CPS CFU Cell Phone",
+        "script_level.level_keys": [
+          "U1L11 CPS CFU Cell Phone"
+        ],
+        "lesson.key": "Lossy Compression",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L12 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L12 SFLP 20-21"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L12 CFU Creative Commons",
+        "script_level.level_keys": [
+          "U1L12 CFU Creative Commons"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L12 CFU Copyright",
+        "script_level.level_keys": [
+          "U1L12 CFU Copyright"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L13 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L13 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L13 CFU Digital Representation",
+        "script_level.level_keys": [
+          "U1L13 CFU Digital Representation"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L14 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U1L14 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L14 CSP CFU digital information",
+        "script_level.level_keys": [
+          "U1L14 CSP CFU digital information"
+        ],
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 1 AP-Style Assessment _2020",
+        "script_level.level_keys": [
+          "CSP Unit 1 AP-Style Assessment _2020"
+        ],
+        "lesson.key": "Lesson 14: Assessment Day",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1 20-21 Student Pilot Survey",
+        "script_level.level_keys": [
+          "CSP U1 20-21 Student Pilot Survey"
+        ],
+        "lesson.key": "Unit 1 STUDENT Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U1 20-21 Teacher Pilot Survey",
+        "script_level.level_keys": [
+          "CSP U1 20-21 Teacher Pilot Survey"
+        ],
+        "lesson.key": "Unit 1 TEACHER Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp1-pilot"
+      }
+    }
+  ]
+}

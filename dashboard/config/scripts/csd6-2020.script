@@ -5,7 +5,6 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit6/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit6/code/"]]
 lesson_extras_available true
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit6/{LESSON}'
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
@@ -17,11 +16,11 @@ curriculum_umbrella 'CSD'
 tts true
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
-lesson 'Innovations in Computing', display_name: 'Innovations in Computing'
+lesson 'Innovations in Computing', display_name: 'Innovations in Computing', has_lesson_plan: true
 level 'CSD U6L01 TFMD_2020', named: true
 level 'CSDU6 Innovation_2018_2019_2020', named: true
 
-lesson 'Designing Screens with Code', display_name: 'Designing Screens with Code'
+lesson 'Designing Screens with Code', display_name: 'Designing Screens with Code', has_lesson_plan: true
 level 'CSD U6L02 TFMD_2020', named: true
 level 'CSD U6 setProperty predict app_2020', progression: 'Setting Properties'
 level 'CSD U6 setProperty Text_2020', progression: 'Setting Properties'
@@ -36,7 +35,7 @@ level 'CSD U6 emotion machine 2_2020', progression: 'Building an App'
 level 'CSD U6 emotion machine 3_2020', progression: 'Building an App'
 level 'CSD U6 emotion machine 4_2020', progression: 'Building an App', assessment: true
 
-lesson 'The Circuit Playground', display_name: 'The Circuit Playground'
+lesson 'The Circuit Playground', display_name: 'The Circuit Playground', has_lesson_plan: true
 level 'CSD U6L03 TFMD_2020', named: true
 level 'CSD U6 hardware software video_2020', named: true
 level 'CSDU6 Circuit Playground Test_2020', progression: 'Using the LED'
@@ -51,12 +50,12 @@ level 'CSD U6 Catch the Mouse_2020', progression: 'LED Apps'
 level 'CSD U6 create LED app_2020', progression: 'LED Apps'
 level 'CSD U6 create LED app 2_2020', progression: 'LED Apps', assessment: true
 
-lesson 'Input Unplugged', display_name: 'Input Unplugged'
+lesson 'Input Unplugged', display_name: 'Input Unplugged', has_lesson_plan: true
 level 'CSD U6L04 TFMD_2020', named: true
 level 'CSDU6 GameLab Input 1_2020', progression: 'Input Examples'
 level 'CSDU6 AppLab Input 1_2020', progression: 'Input Examples'
 
-lesson 'Board Events', display_name: 'Board Events'
+lesson 'Board Events', display_name: 'Board Events', has_lesson_plan: true
 level 'CSD U6L05 TFMD_2020', named: true
 level 'CSDU6 - button LED prediction_2020', progression: 'Board Events'
 level 'CSDU6 - LED buttonL_2020', progression: 'Board Events'
@@ -69,7 +68,7 @@ level 'CSDU6 - buzzer duration_2020', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration buttons_2020', progression: 'The Buzzer'
 bonus 'CSDU6 - board event challenge_2020'
 
-lesson 'Getting Properties', display_name: 'Getting Properties'
+lesson 'Getting Properties', display_name: 'Getting Properties', has_lesson_plan: true
 level 'CSD U6L06 TFMD_2020', named: true
 level 'CSD U6 getProperty Demo_2020', progression: 'Getting Properties'
 level 'CSD U6 getProperty input_2020', progression: 'Getting Properties'
@@ -86,7 +85,7 @@ level 'CSD U6 move motorcycle_2020', progression: 'Motorcycle'
 level 'CSD U6 design motorcycle_2020', progression: 'Motorcycle'
 bonus 'CSD U6 challenge motorcycle_2020'
 
-lesson 'Analog Input', display_name: 'Analog Input'
+lesson 'Analog Input', display_name: 'Analog Input', has_lesson_plan: true
 level 'CSD U6L07 TFMD_2020', named: true
 level 'CSD U6 sensor experiment embedded_2020', named: true
 level 'CSD U6 analog sound_2020', progression: 'Reading Sensors'
@@ -101,7 +100,7 @@ level 'CSD U6 analog rbg 2_2020', progression: 'Sensors to Colors'
 level 'CSD U6 analog rgb 3_2020', progression: 'Sensors to Colors', assessment: true
 bonus 'CSD U6 analog challenge_2020'
 
-lesson 'The Program Design Process', display_name: 'The Program Design Process'
+lesson 'The Program Design Process', display_name: 'The Program Design Process', has_lesson_plan: true
 level 'CSD U6L08 TFMD_2020', named: true
 level 'CSD U6 emoji race demo_2020', named: true
 level 'CSD U6 tugowar stop_2018_2019_2020', named: true
@@ -117,7 +116,7 @@ level 'CSD U6 tugowar setProperty_2020', progression: 'Checking for a Winner'
 level 'CSD U6 tugowar buzzer_2020', progression: 'Checking for a Winner', assessment: true
 level 'CSD U6 tugowar final_2020', named: true
 
-lesson 'Project: Make a Game', display_name: 'Project: Make a Game'
+lesson 'Project: Make a Game', display_name: 'Project: Make a Game', has_lesson_plan: true
 level 'CSD U6L09 TFMD_2020', named: true
 level 'CSD U6 tugowar demo_2020', named: true
 level 'CSD U6 game project stop_2018_2019_2020', named: true
@@ -130,7 +129,7 @@ level 'CSD U6 game project finish_2020', progression: 'Finishing Touches'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019_2020', progression: 'Reflection', assessment: true
 
 lesson_group 'csd6_2', display_name: 'Chapter 2: Building Physical Prototypes'
-lesson 'Arrays and Color LEDs', display_name: 'Arrays and Color LEDs'
+lesson 'Arrays and Color LEDs', display_name: 'Arrays and Color LEDs', has_lesson_plan: true
 level 'CSD U6L10 TFMD_2020', named: true
 level 'CSD U6 arrays video_2020', named: true
 level 'CSD U6 arrays select predict_2020', progression: 'Introduction to Arrays'
@@ -148,7 +147,7 @@ level 'CSD U6 colorLeds light pattern_2020', progression: 'Light Show'
 level 'CSD U6 light pattern off_2020', progression: 'Light Show', assessment: true
 bonus 'CSD U6 light pattern challenge_2020', progression: 'Challenge Levels'
 
-lesson 'Making Music', display_name: 'Making Music'
+lesson 'Making Music', display_name: 'Making Music', has_lesson_plan: true
 level 'CSD U6L11 TFMD_2020', named: true
 level 'CSDU6 circuit playground piano_2020', progression: 'Playing Notes'
 level 'CSDU6 frequency modification_2020', progression: 'Playing Notes'
@@ -164,7 +163,7 @@ level 'CDU U6 Playground Sound Board_2020', progression: 'Making Songs', assessm
 bonus 'CSDU6 buzzer 2d arrays_2020'
 bonus 'CSDU6 buzzer.stop_2020'
 
-lesson 'Arrays and For Loops', display_name: 'Arrays and For Loops'
+lesson 'Arrays and For Loops', display_name: 'Arrays and For Loops', has_lesson_plan: true
 level 'CSD U6L12 TFMD_2020', named: true
 level 'CSD U6 for loop click predict_2020', progression: 'Programs that Repeat'
 level 'CSD U6 for loop click exit_2020', progression: 'Programs that Repeat'
@@ -179,7 +178,7 @@ level 'CSD U6 for loop led off_2020', progression: 'For Loops and Color LEDs'
 level 'CSD U6 for loop led color_2020', progression: 'For Loops and Color LEDs'
 level 'CSD U6 for loop led personalize_2020', progression: 'For Loops and Color LEDs', assessment: true
 
-lesson 'Accelerometer', display_name: 'Accelerometer'
+lesson 'Accelerometer', display_name: 'Accelerometer', has_lesson_plan: true
 level 'CSD U6L13 TFMD_2020', named: true
 level 'CSD U6 Airplane predict_2020', progression: 'Orientation'
 level 'CSD U6 investigate orientation_2020', progression: 'Orientation'
@@ -191,7 +190,7 @@ level 'CSD U6 goalie_2020', progression: 'Accelerometer Events', assessment: tru
 level 'CSD U6 Driver pt1_2020', progression: 'Accelerometer Events'
 level 'CSD U6 Driver pt 2_2020', progression: 'Accelerometer Events'
 
-lesson 'Functions with Parameters', display_name: 'Functions with Parameters'
+lesson 'Functions with Parameters', display_name: 'Functions with Parameters', has_lesson_plan: true
 level 'CSD U6L14 TFMD_2020', named: true
 level 'CSD U6 params predict_2020', progression: 'Functions with Parameters'
 level 'CSD U6 functions paramters video_2020', named: true
@@ -210,7 +209,7 @@ level 'CSD U6 params starchaser 5_2020', progression: 'Star Chaser', assessment:
 bonus 'CSD U6 params starchaser challenge 1_2020', progression: 'Star Chaser'
 bonus 'CSD U6 params starchaser challenge 2_2020', progression: 'Star Chaser'
 
-lesson 'Circuits and Physical Prototypes', display_name: 'Circuits and Physical Prototypes'
+lesson 'Circuits and Physical Prototypes', display_name: 'Circuits and Physical Prototypes', has_lesson_plan: true
 level 'CSD U6L15 TFMD_2020', named: true
 level 'CSD U6 circuit logic video_2020', named: true
 level 'CSD U6 circuit predict_2020', progression: 'Simple Circuits'
@@ -225,7 +224,7 @@ level 'CSD U6 circuit smart bike buzzer_2020', progression: 'Finish the Prototyp
 level 'CSD U6 circuit smart bike light_2020', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike final_2020', progression: 'Finish the Prototype', assessment: true
 
-lesson 'Project: Prototype an Innovation', display_name: 'Project: Prototype an Innovation'
+lesson 'Project: Prototype an Innovation', display_name: 'Project: Prototype an Innovation', has_lesson_plan: true
 level 'CSD U6L16 TFMD_2020', named: true
 level 'CSD U6 final intro_2018_2019_2020', named: true
 level 'CSDU6 - final project 1_2020', progression: 'User Interface'
@@ -236,11 +235,11 @@ level 'CSDU6 - final project 4_2020', progression: 'Finishing Touches'
 level 'CSDU6 - final project 6_2020', progression: 'Finishing Touches'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019_2020', progression: 'Reflection', assessment: true
 
-lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD Physical Computing Post-Project Test_2020', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019_2020'
 level 'csd-post-survey-levelgroup_2019_2020', assessment: true
 

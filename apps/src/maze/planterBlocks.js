@@ -5,7 +5,7 @@ var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
 exports.install = function(blockly, blockInstallOptions) {
-  var generator = blockly.Generator.get('JavaScript');
+  var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
   blockUtils.generateSimpleBlock(blockly, generator, {

@@ -586,10 +586,6 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
 end
 
-Then /^mark the current level as completed on the client/ do
-  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
-end
-
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"
@@ -1010,13 +1006,25 @@ Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
   )
 end
 
-Given(/^I create a temp script$/) do
+Given(/^I create a temp script and lesson$/) do
   response = browser_request(
     url: '/api/test/create_script',
     method: 'POST'
   )
-  @temp_script_name = JSON.parse(response)['script_name']
-  puts "created temp script named '#{@temp_script_name}'"
+  data = JSON.parse(response)
+  @temp_script_name = data['script_name']
+  @temp_lesson_id = data['lesson_id']
+end
+
+Given(/^I create a temp migrated script with lessons$/) do
+  response = browser_request(
+    url: '/api/test/create_migrated_script',
+    method: 'POST'
+  )
+  data = JSON.parse(response)
+  @temp_script_name = data['script_name']
+  @temp_lesson_id = data['lesson_id']
+  @temp_lesson_without_lesson_plan_id = data['lesson_without_lesson_plan_id']
 end
 
 Given(/^I view the temp script overview page$/) do
@@ -1039,11 +1047,69 @@ Given(/^I try to view the temp script edit page$/) do
   }
 end
 
-Given(/^I delete the temp script$/) do
+Given(/^I view the temp lesson edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_id}/edit"
+    And I wait until element "#edit-container" is visible
+  }
+end
+
+Given(/^I view the temp lesson edit page for lesson without lesson plan$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_without_lesson_plan_id}/edit"
+    And I wait until element "#edit-container" is visible
+  }
+end
+
+Given (/^I remove the temp script from the cache$/) do
+  browser_request(
+    url: '/api/test/invalidate_script',
+    method: 'POST',
+    body: {script_name: @temp_script_name}
+  )
+end
+Given(/^I delete the temp script with lessons$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',
     body: {script_name: @temp_script_name}
+  )
+end
+
+Given(/^I create a temp multi level$/) do
+  @temp_level_name = "temp-level-#{Time.now.to_i}-#{rand(1_000_000)}"
+  steps "And I am on \"http://studio.code.org/levels/new?type=Multi\""
+  steps 'And I enter temp level multi dsl text'
+  steps 'And I click "input[type=\'submit\']" to load a new page'
+  @temp_level_id = @browser.current_url.split('/')[-2]
+  puts "created temp level with id #{@temp_level_id}"
+end
+
+Given(/^I enter temp level multi dsl text$/) do
+  dsl = <<~DSL
+    name '#{@temp_level_name}'
+    title 'title'
+    description 'description here'
+    question 'Question'
+    wrong 'incorrect answer'
+    right 'correct answer'
+  DSL
+  steps 'And I clear the text from element "#level_dsl_text"'
+  steps "And I press keys #{dsl.dump} for element \"#level_dsl_text\""
+end
+
+Given(/^I check I am on the temp level (show|edit) page$/) do |page|
+  suffix = (page == 'edit') ? '/edit' : ''
+  url = "http://studio.code.org/levels/#{@temp_level_id}#{suffix}"
+  url = replace_hostname(url)
+  expect(@browser.current_url.split('?').first).to eq(url)
+end
+
+Given(/^I delete the temp level$/) do
+  browser_request(
+    url: '/api/test/destroy_level',
+    method: 'POST',
+    body: {id: @temp_level_id}
   )
 end
 
@@ -1341,6 +1407,26 @@ And(/^I join the section$/) do
   end
 end
 
+And(/^I attempt to join the section$/) do
+  steps %Q{
+    Given I am on "#{@section_url}"
+  }
+end
+
+And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |invalid, name|
+  password = invalid ? 'Short' : 'ExtraLong'
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  age = "10"
+  steps %Q{
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "#{age}" option in dropdown "user_age"
+    And I click ".btn.btn-primary" to load a new page
+  }
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
@@ -1365,6 +1451,13 @@ And(/I type the section code into "([^"]*)"$/) do |selector|
   steps %Q{
     And I type "#{section_code}" into "#{selector}"
   }
+end
+
+# press keys allows React to pick up on the changes
+And(/I enter the section code into "([^"]*)"$/) do |selector|
+  element = @browser.find_element(:css, selector)
+  section_code = @section_url.split('/').last
+  press_keys(element, section_code)
 end
 
 When(/^I sign out$/) do
@@ -1430,6 +1523,11 @@ end
 
 When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(*convert_keys(keys)).perform
+end
+
+When /^I clear the text from element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  element.clear
 end
 
 # Press backspace repeatedly to clear an element.  Handy for React.
@@ -1596,6 +1694,13 @@ Then /^I open the stage lock dialog$/ do
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")
   wait_short_until {jquery_is_element_visible('.modal-body')}
+end
+
+Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
+  wait_for_jquery
+  wait_short_until {@browser.execute_script("return $('.uitest-sendlesson').length") > lesson_num}
+  @browser.execute_script("$('.uitest-sendlesson').eq(#{lesson_num - 1}).children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal')}
 end
 
 Then /^I unlock the stage for students$/ do

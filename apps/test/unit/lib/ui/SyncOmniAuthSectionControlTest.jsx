@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {stub} from 'sinon';
 import {expect} from '../../../util/deprecatedChai';
 import * as utils from '@cdo/apps/utils';
-import {OAuthSectionTypes} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {
   UnconnectedSyncOmniAuthSectionControl as SyncOmniAuthSectionControl,
   SyncOmniAuthSectionButton,
