@@ -14,6 +14,7 @@ import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigne
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -26,6 +27,31 @@ const defaultProps = {
   resources: [],
   showAssignButton: true
 };
+
+const sampleLessons = [
+  {
+    id: 1,
+    title: 'Lesson 1',
+    duration: 87,
+    assessment: true,
+    unplugged: false,
+    isStart: true,
+    isEnd: true,
+    isMajority: true,
+    url: 'https://www.google.com/'
+  },
+  {
+    id: 2,
+    title: 'Lesson 2',
+    duration: 40,
+    assessment: false,
+    unplugged: true,
+    isStart: true,
+    isEnd: true,
+    isMajority: true,
+    url: 'https://www.google.com/'
+  }
+];
 
 describe('ScriptOverviewTopRow', () => {
   it('renders "Try Now" for student', () => {
@@ -55,6 +81,7 @@ describe('ScriptOverviewTopRow', () => {
               size={Button.ButtonSize.large}
             />
           </div>
+          <div />
           <div>
             <span>
               <ProgressDetailToggle />
@@ -115,6 +142,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <div>
+          <div />
           <SectionAssigner
             sections={defaultProps.sectionsForDropdown}
             courseId={defaultProps.currentCourseId}
@@ -164,6 +192,43 @@ describe('ScriptOverviewTopRow', () => {
         />
       )
     ).to.be.true;
+  });
+
+  it('renders the unit calendar when showCalendar true', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        showCalendar
+        lessons={sampleLessons}
+        weeklyInstructionalMinutes={90}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendarButton
+          lessons={sampleLessons}
+          weeklyInstructionalMinutes={90}
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('does not render the unit calendar when showCalendar false', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        lessons={sampleLessons}
+        weeklyInstructionalMinutes={90}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendarButton
+          lessons={sampleLessons}
+          weeklyInstructionalMinutes={90}
+        />
+      )
+    ).to.be.false;
   });
 
   it('renders RTL without errors', () => {

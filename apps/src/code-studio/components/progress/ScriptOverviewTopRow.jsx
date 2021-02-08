@@ -11,6 +11,7 @@ import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import UnitCalendarButton from './UnitCalendarButton';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -40,6 +41,9 @@ const styles = {
   },
   dropdown: {
     display: 'inline-block'
+  },
+  resourcesRow: {
+    display: 'flex'
   }
 };
 
@@ -57,7 +61,19 @@ class ScriptOverviewTopRow extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-    showAssignButton: PropTypes.bool
+    showAssignButton: PropTypes.bool,
+    lessons: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        duration: PropTypes.number.isRequired,
+        assessment: PropTypes.bool.isRequired,
+        unplugged: PropTypes.bool,
+        url: PropTypes.string
+      })
+    ),
+    weeklyInstructionalMinutes: PropTypes.number,
+    showCalendar: PropTypes.bool
   };
 
   render() {
@@ -74,7 +90,10 @@ class ScriptOverviewTopRow extends React.Component {
       isRtl,
       resources,
       showAssignButton,
-      assignedSectionId
+      assignedSectionId,
+      showCalendar,
+      lessons,
+      weeklyInstructionalMinutes
     } = this.props;
 
     return (
@@ -98,11 +117,24 @@ class ScriptOverviewTopRow extends React.Component {
             {assignedSectionId && <Assigned />}
           </div>
         )}
-        {!professionalLearningCourse &&
-          viewAs === ViewType.Teacher &&
-          resources.length > 0 && (
-            <TeacherResourcesDropdown resources={resources} unitId={scriptId} />
-          )}
+        {(!professionalLearningCourse || showCalendar) && (
+          <div style={styles.resourcesRow}>
+            {!professionalLearningCourse &&
+              viewAs === ViewType.Teacher &&
+              resources.length > 0 && (
+                <TeacherResourcesDropdown
+                  resources={resources}
+                  unitId={scriptId}
+                />
+              )}
+            {showCalendar && (
+              <UnitCalendarButton
+                lessons={lessons}
+                weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+              />
+            )}
+          </div>
+        )}
         {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <SectionAssigner
             sections={sectionsForDropdown}
