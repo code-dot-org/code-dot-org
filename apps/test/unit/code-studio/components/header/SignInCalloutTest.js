@@ -1,7 +1,8 @@
 import React from 'react';
-import {assert} from '../../../util/reconfiguredChai';
 import {SignInCallout as Callout} from '@cdo/apps/code-studio/components/header/SignInCallout';
 import {shallow} from 'enzyme';
+
+var assert = require('assert');
 
 describe('ViewPopup', () => {
   it('renders a sign in reminder popup', () => {
