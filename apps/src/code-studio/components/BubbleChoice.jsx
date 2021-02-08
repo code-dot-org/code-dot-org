@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SublevelCard from './SublevelCard';
+import {levelTypeWithoutStatus} from '@cdo/apps/templates/progress/progressTypes';
 
 const MARGIN = 10;
 
@@ -29,27 +29,9 @@ const styles = {
 };
 
 export default class BubbleChoice extends React.Component {
-  static propTypes = {
-    level: PropTypes.shape({
-      display_name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      previous_level_url: PropTypes.string,
-      next_level_url: PropTypes.string,
-      script_url: PropTypes.string,
-      sublevels: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.number.isRequired,
-          display_name: PropTypes.string.isRequired,
-          description: PropTypes.string,
-          thumbnail_url: PropTypes.string,
-          url: PropTypes.string.isRequired,
-          position: PropTypes.number,
-          letter: PropTypes.string,
-          perfect: PropTypes.bool
-        })
-      )
-    })
-  };
+  // The bubble choice component doesn't need the status. It's
+  // only rendering the sublevel cards.
+  static propTypes = {level: levelTypeWithoutStatus};
 
   goToUrl = url => {
     navigateToHref(url + location.search);
@@ -58,7 +40,7 @@ export default class BubbleChoice extends React.Component {
   renderButtons = () => {
     const {level} = this.props;
     const backButtonUrl = level.previous_level_url || level.script_url;
-    const continueButtonUrl = level.next_level_url || level.script_url;
+    const finishButtonUrl = level.redirect_url || level.script_url;
 
     return (
       <div>
@@ -71,13 +53,13 @@ export default class BubbleChoice extends React.Component {
             {i18n.back()}
           </button>
         )}
-        {continueButtonUrl && (
+        {finishButtonUrl && (
           <button
             type="button"
-            onClick={() => this.goToUrl(continueButtonUrl)}
+            onClick={() => this.goToUrl(finishButtonUrl)}
             style={{...styles.btn, ...styles.btnOrange}}
           >
-            {level.next_level_url ? i18n.continue() : i18n.finish()}
+            {i18n.finish()}
           </button>
         )}
       </div>

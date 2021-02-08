@@ -537,6 +537,8 @@ fr:
         codebreak_e03: 'Code Break 3.0: Chiffrement avec Ashton Kutcher et Mia Gil Epner'
         codebreak_e04: Code Break 4.0 Information Digitale avec Mike Krieger et Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulations & Données avec Bill Gates'
+        csd_how_teamwork_works: Comment fonctionne le Travail d'Équipe
+        csd_teamwork_and_disagreement: Travail d'équipe - Gérer le Désaccord
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

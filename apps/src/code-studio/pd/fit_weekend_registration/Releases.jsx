@@ -27,6 +27,7 @@ export default class Releases extends LabeledFormComponent {
             Please read this{' '}
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://docs.google.com/document/d/1zke9hlGbI1XbSzwQ1rNZofXuXaOboJuTFPW2Z_XOA1w/edit"
             >
               photo release.
@@ -37,6 +38,7 @@ export default class Releases extends LabeledFormComponent {
             Please read this{' '}
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit"
             >
               liability waiver.

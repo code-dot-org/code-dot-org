@@ -5,11 +5,11 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Lesson 2: Understanding Your User
-**Estimated Time: 20 minutes**
+**Estimated Time: 25 minutes**
 
 ## Investigation Goals
 
-**Consider how this lesson support students in thinking about intended users as well as potential users.  Also, consider how this lesson continues to include empathy as a part of the Problem Solving Process.**
+**Consider how this lesson supports students in thinking about intended users as well as potential users.  Also, consider how this lesson continues to include empathy as a part of the Problem Solving Process.**
 
 ## Investigation Tasks
 

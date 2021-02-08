@@ -1,12 +1,18 @@
 ---
-title: Vodič s uputama
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # Kako poučavati jedan Sat kodiranja u izvannastavnim aktivnostima i školskim klubovima
 
-### Pridružite se pokretu i uvjerite skupinu učenika u njihov prvi sat informatike pomoću ovih koraka. Sat kodiranja je lako pokrenuti - čak i za početnike! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -28,7 +34,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. **Nije** potrebno računalo za svako dijete, a Sat kodiranja možete održavati i bez računala.
+The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 Svakako testirajte vodiče o učeničkim računalima ili uređajima kako bi se osiguralo da rade ispravno u preglednicima sa zvukom i videozapisom. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 

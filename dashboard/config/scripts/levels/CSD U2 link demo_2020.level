@@ -28,6 +28,7 @@
     "map_reference": "/docs/concepts/html/hyperlinks/",
     "encrypted": "false",
     "mini_rubric": "false",
+    "validation_enabled": "false",
     "encrypted_examples": [
 
     ]

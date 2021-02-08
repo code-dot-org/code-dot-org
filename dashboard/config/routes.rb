@@ -52,6 +52,7 @@ Dashboard::Application.routes.draw do
   post 'maker/override', to: 'maker#override'
   get 'maker/google_oauth_login_code', to: 'maker#login_code'
   get 'maker/display_google_oauth_code', to: 'maker#display_code'
+  get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -92,6 +93,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_scripts'
+        get 'require_captcha'
       end
     end
   end
@@ -246,6 +248,9 @@ Dashboard::Application.routes.draw do
   end
 
   resources :levels do
+    collection do
+      get 'get_filtered_levels'
+    end
     member do
       get 'get_rubric'
       get 'embed_level'
@@ -260,7 +265,7 @@ Dashboard::Application.routes.draw do
 
   resources :level_starter_assets, only: [:show], param: 'level_name', constraints: {level_name: /[^\/]+/} do
     member do
-      get '/:filename', to: 'level_starter_assets#file'
+      get '/:filename', to: 'level_starter_assets#file', format: true
       post '', to: 'level_starter_assets#upload'
       delete '/:filename', to: 'level_starter_assets#destroy'
     end
@@ -310,6 +315,13 @@ Dashboard::Application.routes.draw do
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
   resources :lessons, only: [:show, :edit, :update]
+
+  resources :resources, only: [:create, :update]
+  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
+
+  resources :vocabularies, only: [:create, :update]
+  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -445,6 +457,8 @@ Dashboard::Application.routes.draw do
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
         get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
+        get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
       end
 
       resources :workshop_summary_report, only: :index
@@ -492,8 +506,15 @@ Dashboard::Application.routes.draw do
         end
       end
 
-      post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
-      get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
+      namespace :foorm do
+        namespace :forms do
+          post 'form_with_library_items', action: :fill_in_library_items
+          get 'submissions_csv', action: :get_submissions_as_csv
+          get 'form_names', action: :get_form_names_and_versions
+          post :validate_form
+          get ':id', action: :get_form_data
+        end
+      end
     end
   end
 
@@ -680,6 +701,10 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+      post 'ml_models/save', to: 'ml_models#save'
+      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
+      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
+
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
@@ -727,10 +752,10 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
+  post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
+
   get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
   get 'foorm/preview', to: 'foorm_preview#index'
-
-  get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
@@ -741,4 +766,29 @@ Dashboard::Application.routes.draw do
   get '/help', to: redirect("https://support.code.org")
 
   get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
+
+  get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
+
+  post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
+
+  get 'java_ide', to: 'java_ide#index'
+
+  namespace :foorm do
+    resources :forms, only: [:create] do
+      member do
+        put :update_questions
+        put :publish
+      end
+      get :editor, on: :collection
+    end
+
+    resources :libraries, only: [] do
+      member do
+        get :question_names
+      end
+      get :editor, on: :collection
+    end
+
+    resources :library_questions, only: [:show, :update]
+  end
 end

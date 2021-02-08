@@ -10,7 +10,15 @@
 
 <!-- ### Background -->
 <!-- ### Privacy -->
+<!--
+1.	Does the Project involve the collection, use or sharing of new Personal Data?
+
+2.	Does the Project involve a new or changed use or sharing of existing Personal Data?
+-->
 <!-- ### Security -->
+<!--
+Link to Jira Task where sensitive security issues are discussed privately.
+-->
 <!-- ### Caching -->
 <!-- ### Deployment strategy -->
 <!-- ### Future work -->
@@ -38,6 +46,7 @@
 # Reviewer Checklist:
 
 - [ ] Tests provide adequate coverage
+- [ ] Privacy and Security impacts have been assessed
 - [ ] Code is well-commented
 - [ ] New features are translatable or updates will not break translations
 - [ ] Relevant documentation has been added or updated

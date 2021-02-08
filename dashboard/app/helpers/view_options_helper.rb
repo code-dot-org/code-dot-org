@@ -35,9 +35,8 @@ module ViewOptionsHelper
     :responsive_content, # The container for the main page content will be responsive to small screen sizes.
     :answerdash,
     :signed_replay_log_url,
-    :azure_speech_service_token,
-    :azure_speech_service_region,
-    :azure_speech_service_languages,
+    :azure_speech_service_voices,
+    :authenticity_token,
     :useGoogleBlockly
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.

@@ -1,0 +1,36 @@
+name 'VPL - CSD - Module 8 - U6L9'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 9:  Project - Make a Game  
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goals
+
+**Explore Unit 6 - Chapter 1 project resources and examples**
+
+## Investigation Tasks
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit6/9/" target="_blank">Lesson 9: Project - Make a Game</a>
+
+	* Focus on the project resources included:
+    	* rubric
+        * CS practices reflection
+        * project guide
+        * sample marked rubrics
+
+* complete Level 2 (click continue to begin)
+
+
+
+
+
+
+
+
+MARKDOWN

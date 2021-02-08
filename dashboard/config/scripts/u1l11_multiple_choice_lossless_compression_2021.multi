@@ -1,0 +1,8 @@
+name 'U1L11 Multiple Choice lossless compression_2021'
+title 'Multiple Choice: Lossless Compression'
+description ''
+question 'What is the most important quality of lossless compression?'
+right 'The data is transformed to usually make it smaller. It can always be re-constructed back to the original. '
+wrong 'The data is transformed to always make it smaller. It can always be re-constructed back to the original.'
+wrong 'The data is transformed to usually make it smaller. It cannot always be re-constructed back to the original.'
+wrong 'The data is transformed to always make it smaller. It cannot always be re-constructed back to the original.'

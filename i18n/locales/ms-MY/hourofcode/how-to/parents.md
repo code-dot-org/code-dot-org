@@ -1,5 +1,5 @@
 ---
-title: Panduan Bagaimana untuk ibu bapa
+title: Hour of Code How-to Guide for parents
 ---
 
 # How to do an Hour of Code with your child
@@ -16,7 +16,7 @@ The Hour of Code is simple to run - even for beginners. You don’t need experie
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -30,7 +30,7 @@ All of our activities integrate problem-solving and critical-thinking with fun a
 
 - For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
 - For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
-- For the child who loves to learn: [AI for Oceans](https://code.org/oceans) or [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
+- Untuk kanak-kanak yang suka belajar: [AI for Oceans (Kecerdasan Buatan untuk Lautan)](https://code.org/oceans) atau [Mencipta Muzik dengan Menggunakan Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) 
 
 <h3>Low-tech or no-tech?</h3>
 
@@ -71,7 +71,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
+<h3>Have young women at home?</h3>
 
 <a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
 
@@ -95,4 +95,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

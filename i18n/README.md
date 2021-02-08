@@ -13,6 +13,18 @@ they will be handled.
 When adding a string, please make the key as descriptive as possible because
 this is used as context for translators.
 
+Make sure your string value only has plain text, Markdown-formatted text, and/or
+simple HTML. Try to always use plain text. If you want to add formatting, use Markdown.
+If you want to do something that Markdown can't do, you can add HTML.
+
+If you want your string to support embedded HTML you **must** render it as Markdown.
+This is because translation strings come from unstruted sources and our Markdown
+renderer will remove any potentially-dangerous HTML.
+You can render a string as Markdown by passing `markdown: true` or `markdown: :inline`
+to the `I18n.t` method. With `markdown: true` option, Markdown will handle its own
+block-level elements like paragraphs and lists, while the `markdown: inline` option
+will produce content suitable for embedding inside an existing block-level element.
+
 ### Pegasus
 
 #### Modifying an existing string
@@ -23,9 +35,9 @@ this is used as context for translators.
 
 #### Adding a new string
 
--   Add a unique key and your string value to the [i18n Gsheet][0]. 
+-   Add a unique key and your string value to the [i18n Gsheet][0].
 
-    -   NOTE: Make sure your string value only has plain HTML. Organization is
+    -   Organization is
         by category/page; try to prepend each string of a common category with
         the same key. For example, all teacher dashboard strings begin with 'dashboard'
         so they're easier to find.

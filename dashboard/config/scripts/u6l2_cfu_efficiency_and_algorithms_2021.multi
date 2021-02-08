@@ -1,0 +1,6 @@
+name 'U6L2 CFU Efficiency and Algorithms_2021'
+question 'Which of the following is true of two algorithms designed to solve the same problem?'
+wrong 'If two algorithms solve the same problem they must have the same efficiency'
+wrong 'If two algorithms solve the same problem they must have different efficiency'
+wrong 'For any given problem there is a single algorithm that can solve it with a single efficiency'
+right 'It is possible for two algorithms with different efficiencies to solve the same problem'

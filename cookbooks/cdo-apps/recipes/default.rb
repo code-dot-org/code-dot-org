@@ -25,11 +25,11 @@ apt_package %w(
 )
 
 # Used by lesson plan generator.
-pdftk_file = 'pdftk-java_3.0.2-2_all.deb'
+pdftk_file = 'pdftk-java_3.1.1-1_all.deb'
 pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
 remote_file pdftk_local_file do
   source "https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/#{pdftk_file}"
-  checksum "92af8960406698d2e1c4f1f0c10b397e9391729c9c63070d2c3ed472850f16a9"
+  checksum "8a28ba8b100bc0b6e9f3e91c090a9b8a83a5f8a337a91150cbaadad8accb4901"
 end
 # Dependencies of pdftk-java.
 apt_package %w(

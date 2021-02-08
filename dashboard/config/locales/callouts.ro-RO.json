@@ -309,6 +309,13 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Utilizaţi meniul derulant pentru a înlocui \"???\" cu un număr"
+        },
+        "outbreak2": {
+          "minitoolbox": "Apasă aici pentru a expanda blocul.",
+          "pointerlocation": "Trage aici un bloc de subiect."
+        },
+        "outbreak7": {
+          "costumes_callout": "Fă clic pentru a face un nou costum"
         }
       }
     }

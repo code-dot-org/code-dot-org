@@ -206,8 +206,8 @@
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/2": {
-    "short_instructions": "Loop this code using the `repeat` block to complete the square.",
-    "long_instructions": "Loop this code using the `repeat` block to complete the square."
+    "short_instructions": "Loop this code using the `repeat` block to complete the biggest square.",
+    "long_instructions": "Loop this code using the `repeat` block to complete the biggest square."
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/3": {
     "short_instructions": "This rectangular flower bed has a perimeter of 600. The long side has a length of 200. Draw the rectangle using as few blocks as possible.",

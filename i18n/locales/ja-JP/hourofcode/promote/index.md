@@ -6,9 +6,9 @@ title: みんなに広めよう
 
 # 身の回りの人たちにHour of Codeを広めよう
 
-## 1. みんなに広めよう
+## みんなに広めよう
 
-Tell your friends about the **#HourOfCode**!
+友達に**#HourOfCode**を広めよう！
 
 {{ promote/share_buttons }}
 

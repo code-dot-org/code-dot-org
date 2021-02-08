@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Connessione internet assente o lenta",
   "filterPlatformNoComputers": "Nessun computer o dispositivi",
+  "filterPlatformScreenReader": "Lettore schermo",
   "filterTopics": "Argomenti",
   "filterTopicsScience": "Scienza",
   "filterTopicsMath": "Matematica",

@@ -192,9 +192,6 @@ pt:
     mismatch_password: As duas senhas que você digitou são diferentes
     student_consent: Confirmo que tenho autorização dos meus pais ou do tutor legal
       para usar os serviços do Code.org.
-    agree_us_website: Concordo em usar um site situado nos Estados Unidos.
-    my_data_to_us: Os dados gerados pelo meu uso deste site podem ser enviados e armazenados
-      ou processados nos Estados Unidos.
     student_terms_markdown: Os endereços de email não são armazenados em um formulário
       que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails
       do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade]
@@ -557,6 +554,7 @@ pt:
       para se manter atualizado em relação ao progresso e aos projetos do(a) seu(sua)
       filho(a). Você também poderá utilizar esse e-mail para recuperar sua senha.
     parent_guardian_email_label: E-mail dos responsáveis
+    remove_parent_email_label: Excluir
     none: Nenhum
     only_one_parent_email_supported_warning: 'Observação: somente um endereço de e-mail
       do pai/responsável pode ser cadastrado para cada conta de estudante no momento.'
@@ -1255,6 +1253,7 @@ pt:
       school_country:
         canada: Canadá
         chile: Chile
+        colombia: Colômbia
         israel: Israel
         malaysia: Malásia
         mexico: México
@@ -1304,6 +1303,7 @@ pt:
         csf_express: Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)
         csd: Descobertas da Ciência da Computação
         csp: Princípios da CC
+        not_applicable: Não aplicável
       email_opt_in:
         opt_in_yes: Sim
         opt_in_no: Não
@@ -1322,6 +1322,7 @@ pt:
         você se familiariza com os currículos e as ferramentas do Code.org. Continue
         compartilhando suas perguntas e feedback conosco escrevendo para [support@code.org](%{support_email_url})
         ou postando no [fórum de professores](%{teacher_forum_url})!
+      facilitator_not_applicable: Não aplicável
     logged_out:
       heading: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional!
       body: Para começar, primeiro você precisa estar logado em sua conta do Code.org.
@@ -1346,14 +1347,6 @@ pt:
       concorda com o armazenamento de cookies em seu computador ou dispositivo.
     more_information: Consulte a Política de Privacidade do Code.org.
     accept: Aceito
-  gdpr_dialog:
-    heading: Você concorda em usar um site situado nos Estados Unidos?
-    message: Os dados gerados pelo seu uso deste site podem ser enviados e armazenados
-      ou processados nos Estados Unidos.
-    link_intro: Para obter detalhes, consulte nosso
-    privacy_policy: política de privacidade
-    logout: Sair
-    true: Sim
   page_not_found_title: Página não encontrada
   page_not_found_header: '404: Página não encontrada'
   page_not_found_description: A página que você está procurando não existe neste endereço.

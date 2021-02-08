@@ -1,0 +1,92 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-12-04T22:18:29.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Use the `repeat` loop to add waves to the water.",
+    "x": "50",
+    "y": "325",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.\",\"hint_id\":\"courseA_artist_loops7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3fb79c1b4cfe0db91bdfaaa8a045ea46/courseA_artist_loops7_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Write the code for one wave first, then repeat that to draw the other two.\",\"hint_id\":\"courseA_artist_loops7_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3403f6a2e449c34c2d197fc085e2f260/courseA_artist_loops7_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can put more than one block in a <xml><block type=\\\"controls_repeat_simplified_dropdown\\\">\\n    <title name=\\\"TIMES\\\" config=\\\"3-10\\\">???</title>\\n  </block></xml> loop.\",\"hint_id\":\"courseA_artist_loops7_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a413ec41a73909d12be4e4c52338f4b4/courseA_artist_loops7_2018.mp3\"}]",
+    "long_instructions": "Use the <xml><block type=\"controls_repeat_simplified_dropdown\" block-text=\"repeat\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop to add waves to the water.\r\n\r\n![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)",
+    "ideal": "4",
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/6502bc59737a861d230d871c92de4808-image-1477108259646.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_artist_loops7_1\",\r\n  \"callout_text\": \"This number means that only one of this kind of block can be used in the final answer.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right top\",\r\n    \"at\": \"left top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "tts_long_instructions_override": "Use the repeat loop to add waves to the water.",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 21032,
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "encrypted": "false",
+    "tts_short_instructions_override": "Use the repeat loop to add waves to the water.",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 16:30:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 19:32:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-28 17:43:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 16:04:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 17:04:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 17:05:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 15:57:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-22 18:08:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-22 21:37:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-03-27 19:23:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up_right" limit="1" id="callMe"/>
+        <block type="simple_move_down_right" limit="1"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">3</title>
+              <statement name="DO">
+                <block type="simple_move_up_right">
+                  <next>
+                    <block type="simple_move_down_right"/>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

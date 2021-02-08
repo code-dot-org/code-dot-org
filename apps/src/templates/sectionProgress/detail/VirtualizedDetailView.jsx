@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import _ from 'lodash';
 import {connect} from 'react-redux';
 import {MultiGrid} from 'react-virtualized';
 import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/detail/StudentProgressDetailCell';
@@ -7,11 +8,11 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '../../../styleConstants';
 import {
   getColumnWidthsForDetailView,
-  getLevels,
   setLessonOfInterest
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
+import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import color from '../../../util/color';
 import {
@@ -25,6 +26,7 @@ import {
 } from '@cdo/apps/templates/sectionProgress/multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from '@cdo/apps/templates/sectionProgress/SectionProgressNameCell';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const ARROW_PADDING = 60;
 // Only show arrow next to lesson numbers if column is larger than a single small bubble and it's margin.
@@ -72,13 +74,25 @@ class VirtualizedDetailView extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
+    levelProgressByStudent: PropTypes.objectOf(
+      PropTypes.objectOf(studentLevelProgressType)
+    ).isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
-    getLevels: PropTypes.func,
     onScroll: PropTypes.func,
-    stageExtrasEnabled: PropTypes.bool
+    scriptName: PropTypes.string,
+    scriptId: PropTypes.number
   };
+
+  constructor(props) {
+    super(props);
+    this.setDetailViewRef = this.setDetailViewRef.bind(this);
+    this.onClickLevel = this.onClickLevel.bind(this);
+    this.cellRenderer = this.cellRenderer.bind(this);
+    this.studentCellRenderer = this.studentCellRenderer.bind(this);
+    this.getColumnWidth = this.getColumnWidth.bind(this);
+  }
 
   state = {
     fixedColumnCount: 1,
@@ -86,20 +100,36 @@ class VirtualizedDetailView extends Component {
     scrollToColumn: 0,
     scrollToRow: 0
   };
+  detailView = null;
 
   componentWillReceiveProps(nextProps) {
     // When we replace the script, re-compute the column widths
     if (this.props.scriptData.id !== nextProps.scriptData.id) {
-      this.refs.detailView.recomputeGridSize();
-      this.refs.detailView.measureAllCells();
+      this.detailView.recomputeGridSize();
+      this.detailView.measureAllCells();
     }
   }
 
-  onClickLevel = lessonOfInterest => {
-    this.props.setLessonOfInterest(lessonOfInterest);
-  };
+  componentDidUpdate(prevProps) {
+    if (
+      !_.isEqual(
+        this.props.levelProgressByStudent,
+        prevProps.levelProgressByStudent
+      )
+    ) {
+      this.detailView.forceUpdateGrids();
+    }
+  }
 
-  cellRenderer = ({columnIndex, key, rowIndex, style}) => {
+  setDetailViewRef(ref) {
+    this.detailView = ref;
+  }
+
+  onClickLevel(lessonOfInterest) {
+    this.props.setLessonOfInterest(lessonOfInterest);
+  }
+
+  cellRenderer({columnIndex, key, rowIndex, style}) {
     const {scriptData, columnWidths} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
@@ -141,11 +171,14 @@ class VirtualizedDetailView extends Component {
               data-tip
               data-for={tooltipIdForLessonNumber(columnIndex)}
             >
-              {stageData.lockable ? (
-                <FontAwesome icon="lock" />
-              ) : (
-                stageData.relative_position
+              {stageData.lockable && (
+                <span
+                  style={{...(stageData.numberedLesson && {marginRight: 5})}}
+                >
+                  <FontAwesome icon="lock" />
+                </span>
               )}
+              {stageData.numberedLesson && stageData.relative_position}
             </div>
             {columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW && (
               <div
@@ -203,10 +236,50 @@ class VirtualizedDetailView extends Component {
         )}
       </div>
     );
-  };
+  }
 
-  studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, getLevels, stageExtrasEnabled} = this.props;
+  studentCellRenderer(studentStartIndex, stageIdIndex, key, style) {
+    const {section, levelProgressByStudent, scriptData} = this.props;
+    const student = section.students[studentStartIndex];
+    let child;
+    if (stageIdIndex < 0) {
+      child = (
+        <SectionProgressNameCell
+          name={student.name}
+          studentId={student.id}
+          sectionId={section.id}
+          scriptName={scriptData.name}
+          scriptId={scriptData.id}
+        />
+      );
+    } else {
+      // Note: this provides temporary backward compatibility until we merge
+      // a refactor of this table that uses studentLevelProgress objects
+      // instead of level.status
+      const stageLevels = scriptData.stages[stageIdIndex].levels;
+      const studentProgress = levelProgressByStudent[student.id] || {};
+      const levelsWithStatus = stageLevels.map(level => {
+        const progress = studentProgress[level.id] || {
+          status: LevelStatus.not_tried
+        };
+        const sublevels = (level.sublevels || []).map(sublevel => {
+          const subProgress = studentProgress[sublevel.id] || {
+            status: LevelStatus.not_tried
+          };
+          return {...sublevel, status: subProgress.status};
+        });
+        return {...level, sublevels: sublevels, status: progress.status};
+      });
+      child = (
+        <StudentProgressDetailCell
+          studentId={student.id}
+          sectionId={section.id}
+          stageId={stageIdIndex}
+          stageExtrasEnabled={section.stageExtras}
+          levelsWithStatus={levelsWithStatus}
+        />
+      );
+    }
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -216,33 +289,16 @@ class VirtualizedDetailView extends Component {
       };
     }
 
-    const student = section.students[studentStartIndex];
-
     return (
       <div className={progressStyles.Cell} key={key} style={style}>
-        {stageIdIndex < 0 && (
-          <SectionProgressNameCell
-            name={student.name}
-            studentId={student.id}
-            sectionId={section.id}
-          />
-        )}
-        {stageIdIndex >= 0 && (
-          <StudentProgressDetailCell
-            studentId={student.id}
-            sectionId={section.id}
-            stageId={stageIdIndex}
-            stageExtrasEnabled={stageExtrasEnabled}
-            levelsWithStatus={getLevels(student.id, stageIdIndex)}
-          />
-        )}
+        {child}
       </div>
     );
-  };
+  }
 
-  getColumnWidth = ({index}) => {
+  getColumnWidth({index}) {
     return this.props.columnWidths[index] || 0;
-  };
+  }
 
   render() {
     const {section, scriptData, lessonOfInterest, onScroll} = this.props;
@@ -273,7 +329,7 @@ class VirtualizedDetailView extends Component {
         styleTopLeftGrid={progressStyles.topLeft}
         styleTopRightGrid={progressStyles.topRight}
         width={styleConstants['content-width']}
-        ref="detailView"
+        ref={this.setDetailViewRef}
         onScroll={onScroll}
       />
     );
@@ -286,7 +342,10 @@ export default connect(
   state => ({
     columnWidths: getColumnWidthsForDetailView(state),
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
-    getLevels: (studentId, stageId) => getLevels(state, studentId, stageId)
+    levelProgressByStudent:
+      state.sectionProgress.studentLevelProgressByScript[
+        state.scriptSelection.scriptId
+      ]
   }),
   dispatch => ({
     setLessonOfInterest(lessonOfInterest) {

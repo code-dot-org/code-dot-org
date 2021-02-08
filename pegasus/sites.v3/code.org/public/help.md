@@ -9,7 +9,7 @@ style_min: true
 ## Make a generous donation
 We're working to give every student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. For every dollar you donate, one child will be introduced to computer science.
 
-[<button>Donate Now</button>](https://donate.code.org/give/172233/#!/donation/checkout)
+[<button>Donate now</button>](https://donate.code.org/give/172233/#!/donation/checkout)     [<button>Start a fundraiser</button>](https://donate.code.org/campaign/computer-science-education/c142257)
 
 ## Help us spread the word
 Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share our posts.  Or stay in touch with our [quarterly email updates](http://go.pardot.com/l/153401/2018-01-12/k555vp).

@@ -108,7 +108,7 @@ sl-SI:
         - {}
         questions:
         - text: Kateri niz blokov me bo pripeljal do pujsa?
-        title: Labirint izbirno vprašanje
+        title: 'Labirint: izbirno vprašanje'
       2-3 Relay Programming Multi 1:
         answers:
         - {}
@@ -133,7 +133,7 @@ sl-SI:
         - {}
         questions:
         - text: Kaj moraš narediti, da dokončaš krog?
-        title: Umetnik Razhroščevanje Izbirno vprašanje 1
+        title: 'Razhroščevanje z umetnikom: prvo izbirno vprašanje'
       2-3 artist functions multi 1:
         answers:
         - {}
@@ -163,7 +163,7 @@ sl-SI:
         - {}
         questions:
         - text: Katera oblika nastane s to zanko?
-        title: Umetnik zanke izbirno vprašanje
+        title: 'Zanke z umetnikom: izbirno vprašanje'
       2-3 artist loops multi 2:
         answers:
         - {}
@@ -172,7 +172,7 @@ sl-SI:
         - {}
         questions:
         - text: Katera oblika nastane s tem programom?
-        title: Umetnik zanke izbirno vprašanje
+        title: 'Zanke z umetnikom: izbirno vprašanje'
       2-3 artist match 1:
         answers:
         - {}
@@ -194,6 +194,7 @@ sl-SI:
         - {}
         questions:
         - text: Katera spodnja primerjava velja?
+        title: 'Pogoji s čebelico: prvo izbirno vprašanje'
       2-3 bee conditionals multi 3:
         answers:
         - {}
@@ -202,6 +203,7 @@ sl-SI:
         - {}
         questions:
         - text: Izberi najboljše bloke.
+        title: 'Pogoji s čebelico: drugo izbirno vprašanje'
       2-3 bee loops multi 1:
         answers:
         - {}
@@ -210,7 +212,7 @@ sl-SI:
         - {}
         questions:
         - text: S katerim blokom lahko nabereš ves nektar?
-        title: Čebelica zanke izbirno vprašanje ena
+        title: 'Zanke s čebelico: prvo izbirno vprašanje'
       2-3 maze match 1:
         answers:
         - {}
@@ -230,7 +232,7 @@ sl-SI:
         - {}
         questions:
         - text: Kateri niz blokov je pravilen odgovor?
-        title: Labirint izbirno vprašanje ena
+        title: 'Labirint: prvo izbirno vprašanje'
       4-5 Algorithms Match 1:
         answers:
         - text: "<h4>Postavi rezultat Igralca 1 na 0</h4>"
@@ -371,7 +373,7 @@ sl-SI:
         - {}
         questions:
         - text: Kateri bloki bodo ustvarili to sliko?
-        title: Umetnik zanke izbirno vprašanje
+        title: 'Zanke z umetnikom: izbirno vprašanje'
       4-5 artist multi 1:
         answers:
         - {}
@@ -447,7 +449,7 @@ sl-SI:
         - {}
         questions:
         - text: Kateri bloki rešijo uganko?
-        title: Labirint izbirno vprašanje
+        title: 'Labirint: izbirno vprašanje'
       CSD Header Size MC:
         answers:
         - {}

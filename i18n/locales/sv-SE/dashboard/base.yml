@@ -119,8 +119,10 @@ sv:
     valid_password: "Giltigt lösenord!"
     invalid_password: "Lösenordet måste vara minst 6 tecken långt"
     mismatch_password: "De två lösenord du skrev matchar inte varandra"
-    agree_us_website: "Jag samtycker till att använda en webbplats baserad i USA."
-    my_data_to_us: "När jag använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA."
+    agree_us_data_transfer_student: '**Jag godkänner att Code.org kan överföra data (inklusive personuppgifter) från min användning av denna webbplats till USA** i syfte att vara värd för och bearbeta sådan information.'
+    agree_us_data_transfer_teacher: '**Jag godkänner att Code.org kan överföra data (inklusive personuppgifter) från min användning (och mina elevers användning) av denna webbplats till USA** i syfte att vara värd för och bearbeta sådan information.'
+    data_collection_us: "Jag förstår att Code.org är en USA-baserad ideell webbplats och att lagarna som reglerar datainsamling i USA kan skilja sig från lagarna i mitt land."
+    visit_privacy: 'Besök Code.org’s [Privacy Policy](%{privacy_url}) för att veta mer.'
     additional_information: "Vi behöver  ytterligare information att fortsätta registrera dig."
     user_type_button: "Uppdatera kontotyp"
     user_type_label: "Kontotyp"
@@ -818,12 +820,6 @@ sv:
         opt_in_no: 'Nej'
   cookie_banner:
     accept: 'Jag håller med'
-  gdpr_dialog:
-    heading: 'Samtycker du till att använda en webbplats baserad i USA?'
-    message: 'När du använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA.'
-    privacy_policy: 'sekretesspolicy'
-    logout: 'Logga ut'
-    yes: 'Ja'
   copy: 'Kopiera'
   parent_email_banner:
     text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt!"

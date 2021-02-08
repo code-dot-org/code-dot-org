@@ -14,7 +14,7 @@ import LibraryPublisher from './LibraryPublisher';
 import loadLibrary from './libraryLoader';
 import LibraryClientApi from './LibraryClientApi';
 import {getStore} from '@cdo/apps/redux';
-import {findProfanity} from './util';
+import {findProfanity} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';

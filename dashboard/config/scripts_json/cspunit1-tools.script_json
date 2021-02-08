@@ -1,0 +1,81 @@
+{
+  "script": {
+    "name": "cspunit1-tools",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS Principles Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "cspunit1-tools"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspunit1-tools"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "netsim",
+      "name": "netsim",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "netsim",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-tools"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "plc csp1 intro to tools"
+        ],
+        "lesson.key": "netsim",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-tools"
+      },
+      "level_keys": [
+        "plc csp1 intro to tools"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "plc csp1 intro to tools",
+        "script_level.level_keys": [
+          "plc csp1 intro to tools"
+        ],
+        "lesson.key": "netsim",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-tools"
+      }
+    }
+  ]
+}

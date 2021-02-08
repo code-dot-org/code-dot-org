@@ -1,0 +1,7 @@
+name 'CSD web classes challenge_2021'
+display_name 'Using Classes'
+description 'Try extra challenges or learn some new code.'
+
+sublevels
+level 'CSD U2 classes music_2021'
+level 'CSD web classes freeplay_2021'

@@ -1,12 +1,18 @@
 ---
-title: Ghidul de organizare
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # Cum să predați o Oră de Programare în after-school-uri și cluburi
 
-### Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -28,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Planificați-vă necesarul de echipamente - computerele sunt opționale
 
-Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Insa **nu aveti** nevoie de un computer pentru fiecare participant, chiar puteti sa organizati Hour of Code fara niciun calculator.
+Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Testați neapărat tutorialele pe calculatoarele sau dispozitivele elevilor pentru a vă asigura că funcționează corespunzător pe browsere cu sunet și video. **Conexiune lentă la internet?** Planificați să rulați videoclipurile în fața clasei, astfel încât fiecare elev să nu mai descarce propriile videoclipuri. Sau încercaţi tutorialele unplugged / offline.
+Testați neapărat tutorialele pe calculatoarele sau dispozitivele elevilor pentru a vă asigura că funcționează corespunzător pe browsere cu sunet și video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Oferiti-le casti elevilor din clasa dvs sau spuneti-le sa isi aduca ei propriile casti daca tutorialul pe care l-ati ales merge mai bine cu sunet.
 
-**Nu aveti suficiente aparate?** Utilizaţi [ programarea in pereche](https://www.youtube.com/watch?v=vgkahOzFH2Q). Atunci când elevii au un partener, ei se ajută reciproc şi se bazează mai puţin pe profesor. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Atunci când elevii au un partener, ei se ajută reciproc şi se bazează mai puţin pe profesor. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
 
 ## 5. Începeți Ora de Programare cu un videoclip inspirațional
 

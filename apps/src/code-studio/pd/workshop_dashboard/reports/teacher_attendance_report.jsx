@@ -86,7 +86,12 @@ export class TeacherAttendanceReport extends React.Component {
   formatWorkshopId = workshop_id => {
     const href = this.context.router.createHref(`/workshops/${workshop_id}`);
     return (
-      <a href={href} target="_blank" style={styles.link}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={styles.link}
+      >
         {workshop_id}
       </a>
     );

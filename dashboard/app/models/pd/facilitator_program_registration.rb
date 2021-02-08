@@ -20,7 +20,7 @@
 # (which we will no longer hold going forward).  Associated routes and views have been removed.
 # Archival and removal of this model is tracked in https://codedotorg.atlassian.net/browse/PLC-341
 #
-class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
+class Pd::FacilitatorProgramRegistration < ApplicationRecord
   include Pd::ProgramRegistrationForm
 
   TEACHERCON_DECLINE = 'No - I\'m no longer interested'.freeze

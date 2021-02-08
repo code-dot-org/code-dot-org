@@ -1,0 +1,22 @@
+name 'CSD U3 game intro_2018_2019_pilot_2021'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Create your own game
+
+Now that you have all the skills you need, it's time to make your own game!
+
+With a partner, brainstorm some different ideas for your game.  You can think about the games you've already seen, or look at some more sample games to give you ideas.
+
+[<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+[<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+[<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+[<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+Once you have settled on a type of game with your partner, fill out the Project Guide with the backgrounds, variables, sprites, and functions that you will need to make the game.  You'll spend the next few levels creating your game.
+MARKDOWN

@@ -32,7 +32,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   ONLINE_URL = 'https://studio.code.org/my-professional-learning'
   INITIAL_PRE_SURVEY_DAYS_BEFORE = 10
 
-  after_action :save_timestamp, :check_should_send
+  after_action :save_timestamp
 
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
@@ -154,7 +154,15 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def facilitator_post_workshop(user, workshop)
     @user = user
     @workshop = workshop
-    @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
+    # TODO: After 9/5/2020 move all workshops to the new survey (9/5 is last 2020 Summer Workshop)
+    if @workshop.local_summer?
+      @survey_url = CDO.studio_url "/pd/misc_survey/facilitator_post", CDO.default_scheme
+    else
+      survey_params = "survey_data[workshop_course]=#{workshop.course}&survey_data[workshop_subject]=#{workshop.subject}"\
+                      "&survey_data[workshop_id]=#{workshop.id}"
+      @survey_url = CDO.studio_url "form/facilitator_post_survey?#{survey_params}", CDO.default_scheme
+    end
+
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
     @workshop_date = @workshop.sessions.size == 1 ?
@@ -276,17 +284,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def save_timestamp
     return unless @enrollment && @enrollment.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
-  end
-
-  # Note that this is one of (at least) three mechanisms we use to suppress
-  # email in various cases -- see Workshop.suppress_reminders? for
-  # other subject-specific suppression of reminder emails, and
-  # the Workshop serialized attribute 'suppress_email' for a third mechanism.
-  # Virtual workshops should not have any mail sent.
-  def check_should_send
-    if @workshop.subject&.include? "Virtual"
-      mail.perform_deliveries = false
-    end
   end
 
   def generate_csf_certificate

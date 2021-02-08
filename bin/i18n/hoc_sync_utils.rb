@@ -114,6 +114,7 @@ class HocSyncUtils
         # that extension unless we check both with and without.
         source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
       end
+      next unless File.exist? source_path
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
       I18nScriptUtils.sanitize_header!(header)

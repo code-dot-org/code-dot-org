@@ -88,9 +88,6 @@ fr:
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} pour toujours"
         options:
@@ -110,9 +107,6 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: changer {SPRITE} {PROPERTY} par {VAL}
         options:
@@ -190,9 +184,6 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} une fois"
         options:
@@ -222,9 +213,6 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_eval:
         text: evaluer {CODE}
       Dancelab_everyMeasuresRange:
@@ -1019,6 +1007,7 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
             '"tint"': nuance
+            '"speed"': vitesse
       gamelab_getThisSprite:
         text: "{CHOICE} lutin"
         options:
@@ -1107,6 +1096,13 @@ fr:
             '"z"': z
       gamelab_locationAt:
         text: 'emplacement x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': le Nord
+            '"East"': L’Est
+            '"South"': Le Sud
+            '"West"': L’Ouest
       gamelab_locationMouse:
         text: emplacement de la souris
       gamelab_locationOf:
@@ -1137,6 +1133,8 @@ fr:
             '"West"': L’Ouest
       gamelab_moveToward:
         text: déplacer {SPRITE} de {DISTANCE} pixels vers {TARGET}
+      gamelab_newSpritePointer:
+        text: cliqué {SPRITE}
       gamelab_objectSpritePointer:
         text: cliqué {SPRITE}
       gamelab_playSound:
@@ -1163,6 +1161,8 @@ fr:
         text: le lutin {SPRITE} arrête de {BEHAVIOR}
       gamelab_removeTint:
         text: supprimer la couleur de {THIS}
+      gamelab_repeatForever:
+        text: répéter à l'infini
       gamelab_setAnimation:
         text: Changer le costume de {THIS} en {ANIMATION}
       gamelab_setBackground:
@@ -1184,8 +1184,17 @@ fr:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sous-marin
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hiver
             undefined: aucun
+      gamelab_setBackgroundImageAs:
+        text: établir {IMG} comme arrière-plan
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': intermédiaire
+            '100': large
       gamelab_setProp:
-        text: établir [PROPERTY] de {SPRITE} [1] à {VAL}
+        text: établir {PROPERTY} de {SPRITE} à {VAL}
         options:
           PROPERTY:
             '"scale"': taille
@@ -1193,6 +1202,7 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+            '"speed"': vitesse
       gamelab_setSizes:
         text: établir {PROPERTY} de {SPRITE}  à {N} %
         options:
@@ -1285,6 +1295,8 @@ fr:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": pas de poisson
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": pas my-label
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1706,7 +1718,6 @@ fr:
             '"stoneBricks"': briques de pierre
             '"mossyStoneBricks"': briques de pierre moussues
             '"crackedStoneBricks"': briques de pierre craquelées
-            '"decorativeStoneBricks"': briques de pierre décoratives
             '"blueCoralBlock"': bloc de corail bleu
             '"pinkCoralBlock"': bloc de corail rose
             '"magentaCoralBlock"': bloc de corail magenta

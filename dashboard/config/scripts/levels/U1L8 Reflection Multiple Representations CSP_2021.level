@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Multiple Representations",
+    "long_instructions": "\"The binary pattern `01000001` represents the number 65.\"\r\n\r\nWrite a brief response explaining whether you believe this statement is always true. Explain your reasoning.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18870,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Reflection Multiple Representations",
+    "encrypted_solution": "fou2P9YjpyR6kedlom9LUvgoKbfbctQ7wWOHuHW+W0WjPCatyb/7Yv8palA7\n/BJuLWo3GIkfl1KdxPinuKJJA/n8oONd+l07VZKnPFm/PhkzHcRSx+7j2c0f\n17zMa/+0n3iQixb1zW+1qIq5wMPTtXuQ/swweQtPWE6TSp+uA46estBwCQmF\nCAaQPj9feY96FQS1Ss4rQTf7CVVWOPrO2ObQ2deSv7n4gmwsQGOqmCmxxDUJ\n0lrVkOL9L3J5UP/icKK0ZraasbFcD73pEwIVdHay3cubai2/2g3c9+r1AWNh\nQBL3Qa4F5onXD46FglHE0lwdxQIBFLjJDFnZM6Nz/W9mtrp7FuqTZpuUN9IX\ngx04WtWRzyaKKYcX4yO0V0n/uUDTgwnPrD/ok+5MORsK/RL434ZFLaocNrsr\nG+WLB5Wn50hTCvZzDeQNw3ec3Lli\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-30 19:51:43 +0000\",\"changed\":[\"name\",\"notes\",\"title\",\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-22 13:46:49 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

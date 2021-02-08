@@ -30,6 +30,7 @@ import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
+import {hasInstructions} from './utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -302,9 +303,11 @@ class TopInstructions extends Component {
       nextProps.height < nextProps.maxHeight &&
       !(
         nextProps.hidden ||
-        (!nextProps.shortInstructions &&
-          !nextProps.longInstructions &&
-          !nextProps.hasContainedLevels)
+        !hasInstructions(
+          nextProps.shortInstructions,
+          nextProps.longInstructions,
+          nextProps.hasContainedLevels
+        )
       )
     ) {
       this.props.setInstructionsRenderedHeight(
@@ -352,12 +355,19 @@ class TopInstructions extends Component {
    */
 
   adjustMaxNeededHeight = () => {
+    const {
+      hidden,
+      shortInstructions,
+      longInstructions,
+      hasContainedLevels,
+      maxHeight,
+      setInstructionsMaxHeightNeeded
+    } = this.props;
+
     // if not showing the instructions area the max needed height should be 0
     if (
-      this.props.hidden ||
-      (!this.props.shortInstructions &&
-        !this.props.longInstructions &&
-        !this.props.hasContainedLevels)
+      hidden ||
+      !hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     ) {
       return 0;
     }
@@ -382,8 +392,8 @@ class TopInstructions extends Component {
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
 
-    if (this.props.maxHeight !== maxNeededHeight) {
-      this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (maxHeight !== maxNeededHeight) {
+      setInstructionsMaxHeightNeeded(maxNeededHeight);
     }
     return maxNeededHeight;
   };
@@ -578,7 +588,7 @@ class TopInstructions extends Component {
 
     if (
       hidden ||
-      (!shortInstructions && !longInstructions && !hasContainedLevels)
+      !hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     ) {
       return <div />;
     }

@@ -35,7 +35,7 @@ module Cdo
     # Use memcached if available, with FileStore as fallback.
     def self.cache
       @@cache ||= begin
-        memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache'))
+        memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache', 'shared'))
       end
     end
   end

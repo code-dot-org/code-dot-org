@@ -51,7 +51,8 @@ const blankCertificates = {
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
   aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
-  mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png')
+  mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png'),
+  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png')
 };
 
 class Certificate extends Component {
@@ -71,7 +72,8 @@ class Certificate extends Component {
     children: PropTypes.node
   };
 
-  isMinecraft = () => /mc|minecraft|hero|aquatic|mee/.test(this.props.tutorial);
+  isMinecraft = () =>
+    /mc|minecraft|hero|aquatic|mee|mee_empathy/.test(this.props.tutorial);
   isAIOceans = () => /oceans/.test(this.props.tutorial);
 
   personalizeCertificate(session) {

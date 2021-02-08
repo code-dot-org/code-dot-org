@@ -38,7 +38,8 @@
           "draw square": {
             "parameters": {
               "height": "višina"
-            }
+            },
+            "name": "nariši kvadrat"
           },
           "jump to middle": {
             "name": "skoči na sredino"
@@ -82,6 +83,9 @@
           },
           "draw left leg": {
             "name": "nariši levo nogo"
+          },
+          "draw head": {
+            "name": "nariši glavo"
           }
         },
         "2-3 Artist Debugging 7": {
@@ -890,21 +894,33 @@
         "courseE_artist_functions8": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -934,31 +950,49 @@
         "courseE_artist_functions8b_2018": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
             "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         },
         "courseE_artist_functions9": {
@@ -1349,6 +1383,36 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "poberi"
+          }
+        },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "nariši glavo"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "nariši glavo"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "moja funkcija"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw square": {
+            "name": "nariši kvadrat"
           }
         }
       }

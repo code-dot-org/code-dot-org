@@ -2,7 +2,7 @@
 #
 # Table name: user_levels
 #
-#  id               :integer          unsigned, not null, primary key
+#  id               :bigint           unsigned, not null, primary key
 #  user_id          :integer          not null
 #  level_id         :integer          not null
 #  attempts         :integer          default(0), not null
@@ -10,7 +10,7 @@
 #  updated_at       :datetime
 #  best_result      :integer
 #  script_id        :integer
-#  level_source_id  :integer          unsigned
+#  level_source_id  :bigint           unsigned
 #  submitted        :boolean
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
@@ -25,7 +25,7 @@ require 'cdo/activity_constants'
 
 # Summary information about a User's Activity on a Level in a Script.
 # Includes number of attempts (attempts), best score and whether it was submitted
-class UserLevel < ActiveRecord::Base
+class UserLevel < ApplicationRecord
   AUTOLOCK_PERIOD = 1.day
 
   belongs_to :user
@@ -115,7 +115,7 @@ class UserLevel < ActiveRecord::Base
   end
 
   def submitted_or_resubmitted?
-    submitted_changed?(to: true) || (submitted? && level_source_id_changed?)
+    saved_change_to_submitted?(to: true) || (submitted? && saved_change_to_level_source_id?)
   end
 
   def after_submit

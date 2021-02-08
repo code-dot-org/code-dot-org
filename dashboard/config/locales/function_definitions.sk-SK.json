@@ -288,7 +288,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -296,7 +299,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -304,7 +310,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -312,7 +321,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -320,7 +332,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -328,7 +343,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -336,7 +354,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -344,7 +365,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -352,7 +376,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -360,7 +387,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -371,7 +401,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -695,13 +728,15 @@
             "name": "n-stranný tvar",
             "description": "Tvar sa mení na základe počtu strán, ktoré má. Potrebuje dva parametre, dĺžku a počet strán. Dĺžka",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a loop": {
             "name": "nakresli cyklus",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw spiral circle": {
@@ -715,7 +750,8 @@
           "draw a loop": {
             "name": "nakresli cyklus",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "n-sided shape": {
@@ -923,13 +959,15 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "do something": {
             "name": "urob niečo",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -937,7 +975,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -945,7 +984,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -953,7 +993,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -961,7 +1002,8 @@
           "draw a spiral edge": {
             "name": "nakresli kraj špirály",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -971,19 +1013,22 @@
             "parameters": {
               "points": "body",
               "length": "dĺžka"
-            }
+            },
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán"
           },
           "draw a circle": {
             "name": "nakresli kružnicu",
             "parameters": {
               "radius": "polomer"
-            }
+            },
+            "description": "nakresli kruh s daným polomerom"
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
             "parameters": {
               "length": "dĺžka",
-              "repeat": "opakuj"
+              "repeat": "opakuj",
+              "sides": "Strany"
             }
           },
           "draw a triangle": {
@@ -995,7 +1040,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a house": {
@@ -1007,7 +1053,8 @@
           "draw a square": {
             "name": "nakresli štvorec",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -1098,7 +1145,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -1108,7 +1156,8 @@
             "parameters": {
               "height": "výška",
               "actor": "postava"
-            }
+            },
+            "description": "blok s funkciou skoku s parametrami výšky a postavy"
           },
           "patrol": {
             "name": "hliadkuj",
@@ -1124,19 +1173,22 @@
             "parameters": {
               "points": "body",
               "length": "dĺžka"
-            }
+            },
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán"
           },
           "draw a circle": {
             "name": "nakresli kružnicu",
             "parameters": {
               "radius": "polomer"
-            }
+            },
+            "description": "nakresli kruh s daným polomerom"
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
             "parameters": {
               "length": "dĺžka",
-              "repeat": "opakuj"
+              "repeat": "opakuj",
+              "sides": "Strany"
             }
           },
           "draw a triangle": {
@@ -1148,7 +1200,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a house": {
@@ -1178,14 +1231,16 @@
             "parameters": {
               "height": "výška",
               "actor": "postava"
-            }
+            },
+            "description": "blok s funkciou skoku s parametrami výšky a postavy"
           },
           "patrol": {
             "name": "hliadkuj",
             "parameters": {
               "actor": "postava",
               "speed": "rýchlosť"
-            }
+            },
+            "description": "funkcia hliadky, ktorá má parameter aktéra a rýchlosti"
           }
         },
         "Robot Doodle": {
@@ -1305,7 +1360,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1313,7 +1371,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1340,7 +1401,10 @@
             }
           },
           "draw a polygon": {
-            "name": "nakresli mnohouholník"
+            "name": "nakresli mnohouholník",
+            "parameters": {
+              "sides": "Strany"
+            }
           },
           "draw a square 20": {
             "name": "nakresli štvorec 20"
@@ -1474,7 +1538,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1482,7 +1549,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1490,7 +1560,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1498,12 +1571,18 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1511,7 +1590,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1519,7 +1601,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1527,7 +1612,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1535,7 +1623,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1543,7 +1634,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1551,7 +1645,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1559,7 +1656,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1567,7 +1667,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1575,7 +1678,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1583,7 +1689,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1591,7 +1700,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1599,7 +1711,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1607,7 +1722,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1615,7 +1733,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1623,7 +1744,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1631,7 +1755,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1639,7 +1766,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1647,7 +1777,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1655,7 +1788,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1663,7 +1799,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1671,7 +1810,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1679,7 +1821,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1687,7 +1832,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1695,7 +1843,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1703,7 +1854,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1711,7 +1865,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1719,7 +1876,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1727,7 +1887,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1735,7 +1898,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1743,7 +1909,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1751,7 +1920,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1759,7 +1931,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1767,7 +1942,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1775,7 +1953,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1783,7 +1964,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1791,7 +1975,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1799,7 +1986,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1807,7 +1997,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1815,7 +2008,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1823,7 +2019,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -3092,7 +3291,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -3100,7 +3300,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -3108,7 +3309,8 @@
           "draw a spiral edge": {
             "name": "nakresli kraj špirály",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -3117,7 +3319,8 @@
             "name": "nakresli kraj špirály",
             "parameters": {
               "length": "dĺžka",
-              "min": "min"
+              "min": "min",
+              "sides": "Strany"
             }
           }
         },
@@ -3126,7 +3329,8 @@
             "name": "nakresli kraj špirály",
             "parameters": {
               "length": "dĺžka",
-              "min": "min"
+              "min": "min",
+              "sides": "Strany"
             }
           }
         },
@@ -3136,19 +3340,22 @@
             "parameters": {
               "points": "body",
               "length": "dĺžka"
-            }
+            },
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán"
           },
           "draw a circle": {
             "name": "nakresli kružnicu",
             "parameters": {
               "radius": "polomer"
-            }
+            },
+            "description": "nakresli kruh s daným polomerom"
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
             "parameters": {
               "length": "dĺžka",
-              "repeat": "opakuj"
+              "repeat": "opakuj",
+              "sides": "Strany"
             }
           },
           "draw a triangle": {
@@ -3160,7 +3367,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a house": {
@@ -3179,7 +3387,8 @@
             "name": "nakresli kraj špirály",
             "parameters": {
               "length": "dĺžka",
-              "min": "min"
+              "min": "min",
+              "sides": "Strany"
             }
           }
         },
@@ -3191,7 +3400,10 @@
             }
           },
           "draw a polygon": {
-            "name": "nakresli mnohouholník"
+            "name": "nakresli mnohouholník",
+            "parameters": {
+              "sides": "Strany"
+            }
           },
           "draw a square 20": {
             "name": "nakresli štvorec 20"

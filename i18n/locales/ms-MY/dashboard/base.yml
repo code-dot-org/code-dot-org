@@ -11,6 +11,9 @@
 #To learn more, please read the Rails Internationalization guide
 #available at http://guides.rubyonrails.org/i18n.html.
 ms:
+  errors:
+    messages:
+      not_saved: 'Sila betulkan kesilapan yang berikut:'
   activerecord:
     errors:
       messages:
@@ -370,8 +373,6 @@ ms:
         opt_in_no: 'Tidak'
   cookie_banner:
     accept: 'saya setuju'
-  gdpr_dialog:
-    yes: 'Ya'
   copy: 'Salin'
   parent_email_banner:
     text: "**Adakah anda ibubapa atau penjaga?** Sambungkan e-mel anda ke akaun ini untuk kemaskini kemajuan dan projek anak anda!"

@@ -12,12 +12,12 @@ import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
 const FAKE_LESSONS = [];
 const FAKE_LEVELS = [];
 const FAKE_LESSON_1 = {
-  group: 'jazz',
+  lessonGroup: {displayName: 'jazz'},
   lessons: FAKE_LESSONS,
   levels: FAKE_LEVELS
 };
 const FAKE_LESSON_2 = {
-  group: 'samba',
+  lessonGroup: {displayName: 'samba'},
   lessons: FAKE_LESSONS,
   levels: FAKE_LEVELS
 };
@@ -85,17 +85,17 @@ describe('ProgressTable', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <LessonGroup
-          key={FAKE_LESSON_1.group}
+          key={FAKE_LESSON_1.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          groupName={FAKE_LESSON_1.group}
+          lessonGroup={FAKE_LESSON_1.lessonGroup}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
           lessons={FAKE_LESSON_1.lessons}
           levelsByLesson={FAKE_LESSON_1.levels}
         />
         <LessonGroup
-          key={FAKE_LESSON_2.group}
+          key={FAKE_LESSON_2.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          groupName={FAKE_LESSON_2.group}
+          lessonGroup={FAKE_LESSON_2.lessonGroup}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
           lessons={FAKE_LESSON_2.lessons}
           levelsByLesson={FAKE_LESSON_2.levels}

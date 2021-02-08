@@ -79,6 +79,4 @@ en-GB:
       email_opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
-  gdpr_dialog:
-    yes: 'Yes'
   copy: 'Copy'

@@ -30,7 +30,7 @@
 #  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
-class Pd::Workshop < ActiveRecord::Base
+class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants
@@ -72,9 +72,6 @@ class Pd::Workshop < ActiveRecord::Base
     # subject-specific suppression of reminder emails. This is functionally
     # extremely similar (identical?) to the logic currently implemented
     # by this serialized attribute.
-    # See also WorkshopMailer.check_should_send, which suppresses ALL email
-    # for workshops with a virtual subject (note, this is different than the
-    # virtual serialized attribute)
     'suppress_email'
   ]
 
@@ -347,15 +344,15 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Friendly location string is determined by:
-  # 1. known variant of TBA? use TBA
-  # 2. processed location? use city, state
-  # 3. unprocessable location: use user-entered string
-  # 4. no location address at all? use blank
+  # 1. Known variant of virtual or workshop is marked as virtual: 'Virtual Workshop'
+  # 2. has processed_location: use city, state
+  # 3. known variant of TBA or no location address at all: 'Location TBA'
+  # 4. unprocessable location that is not TBA: use user-entered string
   def friendly_location
-    return 'Location TBA' if location_address_tba?
-    return 'Virtual Workshop' if location_address_virtual?
+    return 'Virtual Workshop' if location_address_virtual? || virtual?
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || ''
+    return 'Location TBA' if location_address_tba? || !location_address.presence
+    return location_address
   end
 
   # Returns date and location (only date if no location specified)
@@ -431,11 +428,9 @@ class Pd::Workshop < ActiveRecord::Base
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
-  # Note that this is one of (at least) three mechanisms we use to suppress
-  # email in various cases -- see the serialized attribute 'suppress_email' and
-  # WorkshopMailer.check_should_send, which suppresses ALL email
-  # for workshops with a virtual subject (note, this is different than the
-  # virtual serialized attribute)
+  # Note that this is one of (at least) two mechanisms we use to suppress
+  # email in various cases -- see the serialized attribute 'suppress_email'
+  # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [
@@ -802,11 +797,13 @@ class Pd::Workshop < ActiveRecord::Base
 
   # whether we will show the scholarship dropdown
   def scholarship_workshop?
-    csf? || local_summer?
+    csf? || local_summer? || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
   end
 
   def pre_survey?
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    # CSP for returning teachers does not have a pre-survey. Academic year workshops have multiple pre-survey options,
+    # so we do not show any to teachers ourselves.
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 

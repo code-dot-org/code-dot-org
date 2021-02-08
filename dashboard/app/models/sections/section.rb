@@ -32,7 +32,7 @@ require 'full-name-splitter'
 require 'cdo/code_generation'
 require 'cdo/safe_names'
 
-class Section < ActiveRecord::Base
+class Section < ApplicationRecord
   self.inheritance_column = :login_type
 
   class << self

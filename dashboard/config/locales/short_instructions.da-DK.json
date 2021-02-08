@@ -285,7 +285,7 @@
         "Standalone_Artist_1": "Velkommen til Artist! Lad os starte med at lave en enkel firkant ved at bruge \"drej til højre\"-blokken og \"flyt fremad\"-blokken. Hver side skal være 100 pixel lang.",
         "Standalone_Artist_2": "Tegn denne diamant med 120 og 60 graders vinkler og 150 pixel lange sider.",
         "Standalone_Artist_3": "Kan du tegne denne sekskant med 100 pixel lange sider og 60 graders drejninger?",
-        "Standalone_Artist_4": "Nu har du fået en ny blok at lege med, \"gentag\". Den vil gentage et sæt af kommandoer. Hvad sker der hvis du \"gentag\"-er disse kommandoer 6 gange?",
+        "Standalone_Artist_4": "Nu har du fået en ny blok at lege med, \"loop\". Den vil gentage et sæt af kommandoer. Hvad sker der hvis du \"gentag\"-er disse kommandoer 6 gange?",
         "Standalone_Artist_5": "Hvor mange gange skal du gentage denne diamant for at tegne blomsten?",
         "Standalone_Artist_5.5": "Bemærk hvordan vi forenklede diamantkoden ved at bruge en løkke eller \"gentag\"-blok. Du kan gentage hele sekvensen 12 gange for at tegne blomsten. Tip: Du skal dreje 30 grader efter din diamant-løkke, så du ikke bliver ved med at tegne oveni den samme diamant.",
         "Standalone_Artist_6": "Gentag sekskant-koden seks gang for at tegne mønsteret. Hvor mange grader skal du mon dreje hver gang? Tip: del antallet af grader i en cirkel med det antal gentagelser du udfører.",
@@ -513,7 +513,20 @@
         "frozen square iterative": "Det ser ud som om vi er halvvejs fra at have lavet en firkant (kvadrat). Lad os sætte 4 linjer sammen til en hel firkant (kvadrat).",
         "frozen square loop": "Hej, er jeg Anna af Arendelle! Lad os lave et kvadrat med \"Gentagelse\" blokken, som bruger færre blokke. Hvor mange gange skal \"Gentagelse\" blokken, gentage blokkene indeni for at lave en firkant?",
         "frozen square loop 3x": "Lad os lave tre kvadrater, og dreje efter hvert kvadrat. Sørg for at at dreje 120 grader før hvert nyt kvadrat.",
-        "frozen square snowflake": "Kan du lave et snefnug, ved at bruge \"Gentagelse\" blokken og lave en firkant 10 gange. Og ved at bruge \"Dreje\" blokken for at dreje 36 grader mellem hvert kvadrat?"
+        "frozen square snowflake": "Kan du lave et snefnug, ved at bruge \"Gentagelse\" blokken og lave en firkant 10 gange. Og ved at bruge \"Dreje\" blokken for at dreje 36 grader mellem hvert kvadrat?",
+        "scrat 16": "Agern! Agern! Agern! Brug en \"Hvis\" blok til at få mig derhen, med færrest mulige blokke.",
+        "scrat 17": "OK, lad os prøve igen for øvelsens skyld - dette er ikke meget anderledes, men pas på væggen!",
+        "scrat 18": "\"Hvis-ellers\" blokke kontrollerer en betingelse, og udfører derefter én ting eller en anden. Prøv at bruge denne nye blok for at få mig hen til agerne.",
+        "scrat 19": "En mere øvelse med \"Hvis-Ellers\" blokken, kan du løse den i første forsøg?",
+        "scrat 20": "Kan du nøjes med at tilføje 3 blokke til at hjælpe mig med at løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå en vilkårlig kurvet vej, uanset længde. Skynd dig! Isen smelter!",
+        "outbreak1": "Opret 10 sunde figure og 1 syg figur. Skift størrelse og få dem til at vandre.",
+        "outbreak2": "Skift sunde monstre til syge monstre, når de rører ved hinanden.",
+        "outbreak3": "Skift monstre til monstre med ansigtsmasker, når du klikker på dem.",
+        "outbreak4": "Skift antal og størrelse af monster figure til din simulering.",
+        "outbreak5": "Få alle de syge monstre til at begynde at komme sig, når et sundt monster rører ved et syg monster.",
+        "outbreak6": "Tilføj en procent chance for, at monstre bliver syge, når sunde monstre rører ved syge monstre. Gør dette for alle kombinationer af monstre med og uden masker.",
+        "outbreak7": "Opret et nyt kostume til monstre med immunitet over for virussen, og brug det i din simulering.",
+        "outbreak8": "Del en besked med din simulering."
       }
     }
   }

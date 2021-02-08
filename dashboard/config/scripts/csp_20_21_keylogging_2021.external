@@ -1,0 +1,28 @@
+name 'CSP 20-21 Keylogging_2021'
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<img style="float:right; width:250px" src="https://images.code.org/4fc5f4776f62ff82653ab513b33f63f7-image-1572974837187.png">
+
+
+##Vocabulary
+
+**Keylogging** is the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information.
+
+## Visuals
+
+![](https://images.code.org/b70336357f23c9e2b58f8182febff0cc-image-1573056773398.png)
+
+[Keylogging App](https://studio.code.org/projects/applab/A0gYPPIRfBsS_5fHz6VzZTZoefZe2zwzJcijd4vuGAs)
+Click run and then start typing. Click "Check" to see what has been logged since the app started running. 
+
+
+**Note:** This is an approximation of what a keylogging app does. However, it is not a true keylogger, as it only works when you are directly running the app. If you navigate to another browser tab, notice that it stops logging your keystrokes.
+
+## Articles
+
+[Keyloggers: Beware this hidden threat](https://www.pcworld.com/article/3199020/keyloggers-what-you-need-to-know-about-this-hidden-threat.html)
+
+[What is a Keylogger?](https://www.binance.vision/security/what-is-a-keylogger)
+MARKDOWN

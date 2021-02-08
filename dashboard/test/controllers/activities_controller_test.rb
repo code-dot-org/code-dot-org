@@ -56,7 +56,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       result: 'true',
       testResult: '100',
       time: '1000',
-      timeSinceLastMilestone: '2000',
+      timeSinceLastMilestone: '20000',
       app: 'test',
       program: '<hey>'
     }
@@ -85,7 +85,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_expected_response(options = {})
     {
-      total_lines: 35,
       redirect: build_script_level_path(@script_level_next),
     }.merge options
   end
@@ -161,7 +160,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "milestone updates existing user_level with time_spent" do
-    skip 'temporarily disabling while we convert time_spent from milliseconds to seconds'
     @level = create(:level, :blockly, :with_ideal_level_source)
     @script = create(:script)
     @script.update(curriculum_umbrella: 'CSF')
@@ -170,15 +168,36 @@ class ActivitiesControllerTest < ActionController::TestCase
     params = @milestone_params
     params[:script_level_id] = @script_level.id
 
-    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script, time_spent: 1000)
+    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script, time_spent: 30)
 
     assert_does_not_create(UserLevel) do
-      post :milestone, params: @milestone_params
+      post :milestone, params: params
     end
 
     assert_response :success
     user_level.reload
-    assert_equal 3000, user_level.time_spent
+    assert_equal 50, user_level.time_spent
+  end
+
+  test "milestone records a maximum time_spent of one hour" do
+    @level = create(:level, :blockly, :with_ideal_level_source)
+    @script = create(:script)
+    @script.update(curriculum_umbrella: 'CSF')
+    @script_level = create(:script_level, levels: [@level], script: @script)
+
+    params = @milestone_params.dup
+    params[:script_level_id] = @script_level.id
+    params[:timeSinceLastMilestone] = 4_000_000
+
+    user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
+
+    assert_does_not_create(UserLevel) do
+      post :milestone, params: params
+    end
+
+    assert_response :success
+    user_level.reload
+    assert_equal 3600, user_level.time_spent
   end
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
@@ -630,7 +649,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 0,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -641,7 +659,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -656,7 +673,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 10,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -664,8 +680,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "anonymous milestone not passing" do
     sign_out @user
-
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -683,9 +697,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # record activity in session
     assert_equal 0, client_state.level_progress(@script_level)
 
-    # lines in session does not change
-    assert_equal 10, client_state.lines
-
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
   end
@@ -695,7 +706,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -716,7 +726,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 10,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -727,7 +736,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -1022,8 +1030,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     existing_navigator_user_level.reload
     assert_equal 100, existing_navigator_user_level.best_result
-    # temporarily disabling while we convert time_spent from milliseconds to seconds
-    # assert_equal 2000, existing_navigator_user_level.time_spent
+    assert_equal 20, existing_navigator_user_level.time_spent
 
     assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
   end
@@ -1045,8 +1052,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     existing_driver_user_level.reload
     assert_equal 100, existing_driver_user_level.best_result
-    # temporarily disabling while we convert time_spent from milliseconds to seconds
-    # assert_equal 2000, existing_driver_user_level.time_spent
+    assert_equal 20, existing_driver_user_level.time_spent
 
     assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
   end

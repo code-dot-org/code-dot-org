@@ -987,6 +987,70 @@
           "moving west": "dul siar",
           "patrolling": "patrólú",
           "swimming left and right": "snámh anonn is anall"
+        },
+        "outbreak1": {
+          "wandering": "fánaíocht"
+        },
+        "outbreak2": {
+          "wandering": "fánaíocht"
+        },
+        "outbreak3": {
+          "wandering": "fánaíocht"
+        },
+        "outbreak4": {
+          "wandering": "fánaíocht",
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "swimming left and right": "snámh anonn is anall",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú"
+        },
+        "outbreak5": {
+          "wandering": "fánaíocht"
+        },
+        "outbreak6": {
+          "wandering": "fánaíocht"
+        },
+        "outbreak7": {
+          "wandering": "fánaíocht",
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú"
+        },
+        "outbreak8": {
+          "wandering": "fánaíocht",
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú"
+        },
+        "outbreak_freeplay": {
+          "wandering": "fánaíocht",
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú"
         }
       }
     }

@@ -88,9 +88,6 @@ sv:
             MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gör {MOVE} {DIR} för alltid"
         options:
@@ -109,9 +106,6 @@ sv:
             MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: ändra {SPRITE} {PROPERTY} via {VAL}
         options:
@@ -188,9 +182,6 @@ sv:
             MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} gör {MOVE} {DIR} en gång"
         options:
@@ -219,9 +210,6 @@ sv:
             MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'upprepa varje {N} takter efter {START} '
       Dancelab_everySeconds:
@@ -1010,6 +998,7 @@ sv:
             '"y"': y-position
             '"direction"': rörelseriktning
             '"tint"': färgton
+            '"speed"': hastighet
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1097,6 +1086,13 @@ sv:
             '"z"': z
       gamelab_locationAt:
         text: 'plats x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Norr
+            '"East"': Österut
+            '"South"': Söder
+            '"West"': Väst
       gamelab_locationMouse:
         text: mus plats
       gamelab_locationOf:
@@ -1125,6 +1121,8 @@ sv:
             '"West"': Väst
       gamelab_moveToward:
         text: Flytta {SPRITE} Pixlar {DISTANCE} Mot {TARGET}
+      gamelab_newSpritePointer:
+        text: klickade {SPRITE}
       gamelab_objectSpritePointer:
         text: klickade {SPRITE}
       gamelab_playSound:
@@ -1151,6 +1149,8 @@ sv:
         text: Sprite {SPRITE} Stannar {BEHAVIOR}
       gamelab_removeTint:
         text: ta bort färg från {THIS}
+      gamelab_repeatForever:
+        text: upprepa för evigt
       gamelab_setAnimation:
         text: Ändra {THIS} kostym till {ANIMATION}
       gamelab_setBackground:
@@ -1171,6 +1171,15 @@ sv:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': under vatten
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
             undefined: Ingen
+      gamelab_setBackgroundImageAs:
+        text: ställa in bakgrunden till {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medel
+            '100': large
       gamelab_setProp:
         text: ligger {SPRITE} {PROPERTY} Att {VAL}
         options:
@@ -1180,6 +1189,7 @@ sv:
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
+            '"speed"': hastighet
       gamelab_setSizes:
         text: ställ in {SPRITE} {PROPERTY} till {N} %
         options:
@@ -1275,6 +1285,8 @@ sv:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": inte fiska
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": min-etikett
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": inte min etikett
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1704,7 +1716,6 @@ sv:
             '"stoneBricks"': stenblock
             '"mossyStoneBricks"': mossiga stenblock
             '"crackedStoneBricks"': stenblock med sprickor
-            '"decorativeStoneBricks"': dekorativa stenblock
             '"blueCoralBlock"': blå korallblock
             '"pinkCoralBlock"': rosa korallblock
             '"magentaCoralBlock"': lila korallblock

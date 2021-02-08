@@ -461,8 +461,10 @@
   video_title_real_madrid: "Η Ώρα του Κώδικα με την Ρεάλ Μαδρίτης"
   video_title_marco_belinelli: "Η Ώρα του Κώδικα με τον Μάρκο Μπελινέλι"
   video_title_chris_bosh: "Ο Κρις Μπος για την Πληροφορική"
+  video_title_my_name_is_aracely: "Ονομάζομαι Aracely"
   video_1min: "1 λεπτό"
   video_2min: "2 λεπτά"
+  video_3min: "3 λεπτά"
   video_5min: "5 λεπτά"
   speak_another_language: "Μιλάτε άλλη γλώσσα;"
   help_translate: "Βοηθήστε μας με τη μετάφραση."
@@ -586,6 +588,8 @@
   dashboard_action_done: "Ολοκληρώθηκε"
   dashboard_assessments_view: 'Δείτε τις αξιολογήσεις σε:'
   dashboard_assessments_none: "Δεν υπάρχουν αξιολογήσεις"
+  dashboard_surveys_answers: "Έρευνες"
+  dashboard_percent: "Ποσοστό"
   dashboard_filter_by_stage: 'Φίλτρο κατά στάδιο:'
   dashboard_filter_all: "Ολα"
   dashboard_download_csv: "Κατεβάστε το CSV"
@@ -602,6 +606,7 @@
   dashboard_navigation_add_students: "Προσθήκη μαθητών"
   dashboard_navigation_manage_students: "Διαχείριση μαθητών"
   dashboard_navigation_lesson_plans_resources: "Σχέδια μαθήματος και Πόροι"
+  dashboard_navigation_view_stats: "Στατιστικά"
   dashboard_navigation_section: 'Τμήμα: %{section_name}'
   dashboard_navigation_student: 'Μαθητής: %{student_name}'
   dashboard_progress_not_started: "δεν έχει ξεκινήσει"
@@ -675,6 +680,13 @@
   dashboard_course2: 'Μάθημα 2:'
   dashboard_course3: 'Μάθημα 3:'
   dashboard_course4: 'Μάθημα 4 (beta): '
+  dashboard_coursea: 'Μάθημα A: '
+  dashboard_courseb: 'Μάθημα B: '
+  dashboard_coursec: 'Μάθημα C: '
+  dashboard_coursed: 'Μάθημα D: '
+  dashboard_coursee: 'Μάθημα E: '
+  dashboard_coursef: 'Μάθημα F: '
+  dashboard_tools: 'Εργαλεία: '
   dashboard_curriculum: "Πρόγραμμα σπουδών"
   dashboard_curriculum_overview: "Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως Ε΄ Δημοτικού"
   dashboard_overview: "Επισκόπηση"
@@ -836,6 +848,24 @@
   course2_name: "Μάθημα 2"
   course3_name: "Μάθημα 3"
   course4_name: "Μάθημα 4"
+  coursea-draft_name: Μάθημα A
+  coursea_name: "Μάθημα A"
+  courseb-draft_name: Μάθημα B
+  courseb_name: "Μάθημα B"
+  coursec-draft_name: Μάθημα C
+  coursec_name: "Μάθημα C"
+  coursed-draft_name: Μάθημα D
+  coursed_name: "Μάθημα D"
+  coursee-draft_name: Μάθημα E
+  coursee_name: "Μάθημα E"
+  coursef-draft_name: Μάθημα F
+  coursef_name: "Μάθημα F"
+  coursea-2017_name: Μάθημα A (2017)
+  courseb-2017_name: Μάθημα B (2017)
+  coursec-2017_name: Μάθημα C (2017)
+  coursed-2017_name: Μάθημα D (2017)
+  coursee-2017_name: Μάθημα E (2017)
+  coursef-2017_name: Μάθημα F (2017)
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
   20-hour_name: Επιταχυνόμενη πορεία μάθησης
   algebra_name: "Επιστήμη Υπολογιστών στην Αλγεβρα"
@@ -1245,6 +1275,7 @@
   sphero_beyond_longdescription: "Είστε είστε εκπαιδευτικός είτε γονέας, τα μαθήματα SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό εντατικό μάθημα στον προγραμματισμό των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη."
   compatibility_hide_this_warning: "Απόκρυψη αυτής της προειδοποίησης"
   flappy_shortcode: "Φτερούγισε"
+  header_home: "Αρχική"
   header_courses: "Τες"
   header_course_catalog: "Κατάλογος Μαθημάτων"
   header_project_gallery: "Έργα"
@@ -1265,16 +1296,20 @@
   header_about_faqs: "Συχνές ερωτήσεις"
   header_learn: "Εκμάθηση"
   header_teach: "Διδασκαλία"
+  header_stats: "Στατιστικά"
   header_about: "Σχετικά"
   header_teacher_community: "Κοινότητα δασκάλων"
   header_help_support: 'Βοήθεια και υποστήριξη '
   header_report_bug: "Αναφορά προβλήματος"
+  header_report_abuse: "Αναφορά κατάχρησης"
+  header_legal: "Απόρρητο & Νομικά"
   header_legal_privacy: "Πολιτική Απορρήτου"
   header_legal_tos: "Όροι"
   header_tutorials: "Οδηγοί εκμάθησης"
   header_documentation: "Τεκμηρίωση"
   user_header_label: "Γεια σου %{username}"
   user_header_team: "Ομάδα"
+  user_header_my_projects: "Τα έργα μου"
   user_header_settings: "Ο λογαριασμός μου"
   user_header_logout: "Αποσύνδεση"
   user_header_signin: "Σύνδεση"
@@ -1288,6 +1323,8 @@
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Πουλάκι"
   user_header_view_all: "Όλα τα έργα..."
+  view_section: "Προβολή ενότητας"
+  view_named_section: "Προβολή %{section_name}"
   applab_tile_title: "Εισαγωγή στο App Lab (Ηλικίες 13+)"
   applab_tile_subtitle: "Δημιουργήστε τη δική σας εφαρμογή σε Javascript με τη χρήση προγραμματισμού βασισμένου σε μπλοκ. Εναλλακτικά, αναβαθμίστε τις δεξιότητές σας μαθαίνοντας προγραμματισμό βασισμένο σε κείμενο. (Αγγλικά μόνο)"
   applab_tile_start_tutorial: "Έναρξη"
@@ -1302,7 +1339,9 @@
   hoc_overview_partner_activities_body: "Η ιστοσελίδα Ώρα του Κώδικα έχει πάνω από 100 δραστηριότητες της επιστήμης των υπολογιστών για όλες τις ηλικίες και τα επίπεδα εμπειρίας, και αναπτύχθηκε από το Code.org και συνεργάτες του."
   hoc_overview_partner_activities_link: "Προβολή Δραστηριοτήτων"
   hoc_overview_start_tutorial: "Έναρξη"
+  hoc_overview_more_resources: "Για περισσότερα υλικά που χρησιμοποιούνται στην τάξη και πηγές σχετικά με τον τρόπο με τον οποίο να κινήσετε το ενδιαφέρον της απομακρυσμένης τάξης σας, δείτε τον οδηγό μας για την φιλοξενία μιας   [εικονικής Ώρα του Κώδικα] (https://hourofcode.com/us/how-to/virtual). Για μαθητές με περιορισμένη ή καθόλου πρόσβαση στη τεχνολογία ή σε συνδεσιμότητα, μοιραστείτε αυτό το πακέτο [δραστηριοτήτων για μια εκτός διαδικτύου Ώρα του Κώδικα](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc_overview_view_teacher_guide: "Προβολή Οδηγού Εκπαιδευτικού"
+  hoc2018_creativity: "δημιουργικότητα"
   hoc2018_creativity_create: "Δημιουργία"
   hoc2018_creativity_what_will_you_create: "Τι θα δημιουργήσετε;"
   hoc2018_mc_page_title: "Μαθήματα Minecraft από την Ώρα του Κώδικα"
@@ -1332,6 +1371,7 @@
   hoc2018_mc_careers_more: "Περισσότερα <a href='%{careers_url}' target='_blank'> εμπνευσμένα βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας"
   hoc2018_mc_video_1min: "1 λεπτό"
   hoc2018_mc_video_2min: "2 λεπτά"
+  hoc2018_mc_video_3min: "3 λεπτά"
   hoc2018_mc_video_5min: "5 λεπτά"
   hoc2018_mc_video_title_steph_curry: "Η Ώρα του Κώδικα με τον Steph Curry"
   hoc2018_mc_video_title_sports: "Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει."
@@ -1342,6 +1382,7 @@
   hoc2018_mc_video_title_obama: "Ο Πρόεδρος Ομπάμα για την Πληροφορική"
   hoc2018_mc_video_title_hoc_is_here: "Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί να Μάθει"
   hoc2018_mc_video_title_anybody_can_learn: "Οποιοσδήποτε Μπορεί να Μάθει"
+  hoc2018_mc_video_title_my_name_is_aracely: "Ονομάζομαι Aracely"
   hoc2018_mc_homepage_hoc_coming: "Η Ώρα του Κώδικα πλησιάζει..."
   hoc2018_mc_homepage_what_create: "Τι θα δημιουργήσετε;"
   hoc2018_mc_homepage_join_us: "Ελάτε μαζί μας"
@@ -1350,13 +1391,16 @@
   hoc2018_mc_teacher_guide: "Προβολή Οδηγού Εκπαιδευτικού"
   hoc2018_mc_short_description_shorter: "Χρησιμοποιήστε τη δημιουργικότητά σας και τις δεξιότητες επίλυσης προβλημάτων, για να εξερευνήσετε και να χτίσετε υποβρύχιους κόσμους με κώδικα."
   hoc2018_dance_party_main_heading: "Πάρτι Χορού"
+  hoc2018_dance_party_landing_title: "Χορός"
   hoc2018_dance_party_subheading: "Βοηθήστε να μεταφράσουμε το Πάρτι Χορού"
   hoc2018_dance_create_your_own_dance_title: "Δημιουργήστε και μοιραστείτε το δικό σας Πάρτι Χορού"
   hoc2018_dance_party_box_title: "Πάρτι Χορού"
   hoc2018_dance_party_box_description: "Δημιουργήστε ένα δικό σας Πάρτι Χορού για να το μοιραστείτε με τους φίλους σας!"
+  hoc2018_dance_party_specs: "Γλώσσα | Μορφή | Ηλικία 6-106"
   hoc2018_dance_party_button: "Έναρξη"
   hoc2018_dance_keep_on_dancing_box_title: "Συνεχίστε να Χορεύετε"
   hoc2018_dance_keep_on_dancing_description: "Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ."
+  hoc2018_dance_keep_on_dancing_specs: "Γλώσσα | Μορφή | Ηλικία 13+"
   hoc2018_dance_keep_on_dancing_button: "Έναρξη δεύτερου μέρους"
   hoc2018_dance_teacher_resources_title: "Πηγές για εκπαιδευτικούς"
   hoc2018_dance_teacher_resources_tile1_description: "Σχέδια μαθήματος, πιστοποιητικά και φίλτρα μουσικής."
@@ -1371,7 +1415,15 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "Σε συνεργασία με"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Το πρόγραμμα Amazon Future Engineer* έχει σκοπό να εμπνεύσει, να μορφώσει και να εκπαιδεύσει παιδιά με χαμηλό εισόδημα ή άλλες δυσκολίες έτσι ώστε στο μέλλον να μπορέσουν να διεκδικήσουν επαγγέλματα σχετικά με την επιστήμη των υπολογιστών.  <a href='%{amazon_future_engineer_link}' target='_blank'>Μάθετε περισσότερα</a>"
   hoc2018_dance_amazon_about_future_engineer_button: "Μάθετε περισσότερα"
+  hoc2018_dance_amazon_scholarship_programs_button: "Εφαρμογή τώρα"
   hoc2018_dance_amazon_future_engineer_footer: "* Οι καλλιτέχνες των οποίων η μουσική χρησιμοποιείται σε αυτό τον οδηγό εκμάθησης δεν προωθούν την Amazon ως μέρος της άδειας χρήσης της μουσικής τους στο Code.org.\n\n"
   hoc2018_dance_measure: "Μέτρα"
   hoc2018_dance_measure_colon: 'Μέτρα:'
+  hoc2018_aquatic_video1: "Minecraft: Υδάτινο Ταξίδι - Εισαγωγή"
+  hoc2018_aquatic_video3: "Minecraft: Υδάτινο Ταξίδι - Συνθήκες"
+  hoc2018_aquatic_video4: "Minecraft: Υδάτινο Ταξίδι - Συγχαρητήρια"
+  page_not_found_title: "Η σελίδα δεν βρέθηκε"
+  page_not_found_header: '404: Η σελίδα δεν βρέθηκε'
   hoc2018_mc_with_microsoft: "Σε συνεργασία με"
+  hoc2018_mc_thank_microsoft: "Ευχαριστούμε πολύ την Microsoft για την υποστήριξη του οράματός και της αποστολής μας για εξασφάλιση της ευκαιρίας για κάθε παιδί να μαθαίνει την Επιστήμη της Πληροφορικής και να έχει τις δεξιότητες να επιτυγχάνει στον 21ο αιώνα."
+  footer_powered_by_aws: "Με την υποστήριξη των Amazon Web Services"

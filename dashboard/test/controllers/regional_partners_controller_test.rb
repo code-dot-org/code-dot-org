@@ -10,7 +10,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     @regional_partner = create :regional_partner
   end
 
-  def self.test_workshop_admin_only(method, action, params = nil)
+  def self.test_workshop_admin_only(method, action, params = {})
     %i(student teacher facilitator workshop_organizer).each do |user_type|
       test_user_gets_response_for action, user: user_type, method: method, params: params, response: :forbidden
     end
@@ -108,7 +108,10 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'replace mappings on invalid mapping fails and does not delete old mapping' do
-    regional_partner_with_mapping = create :regional_partner_with_mappings
+    regional_partner_with_mapping = create(:regional_partner)
+    regional_partner_with_mapping.mappings << Pd::RegionalPartnerMapping.new(zip_code: 98143, regional_partner: regional_partner_with_mapping)
+    regional_partner_with_mapping.save!
+
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings_invalid.csv', 'text/csv')
     post :replace_mappings, params: {id: regional_partner_with_mapping.id, regions: mapping}
@@ -122,7 +125,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'replace mappings fails on invalid non-unique zip-code mapping' do
-    create :regional_partner_with_mappings
+    build(:regional_partner_with_mappings).save(validate: false)
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
     post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
@@ -135,14 +138,15 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'replace mappings fails on invalid non-unique state mapping' do
-    create(:regional_partner_with_mappings, mappings: [
-             create(
-               :pd_regional_partner_mapping,
-               zip_code: nil,
-               state: 'WA'
-             )
-           ]
-    )
+    build(:regional_partner_with_mappings, mappings:
+          [
+            create(
+              :pd_regional_partner_mapping,
+              zip_code: nil,
+              state: 'WA'
+            )
+          ]
+    ).save(validate: false)
 
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')

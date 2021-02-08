@@ -853,18 +853,25 @@ it:
         csd_gamelab_functions: Chiamare e Definire Funzioni
         csd_applab_parameters: Funzioni con parametri
         csd_applab_loops: Loop in Sviluppo App
+        csd_problem_solving_process: Il Processo di Risoluzione dei Problemi
         CSF_Going_Places_Safely: Il mio quartiere digitale
         CSF_SpriteLab_Intro_v2: Introducendo lo Sviluppo Personaggi
         CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)
         csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
+        csp-pd-welcome: Benvenuto in Famiglia!
         CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere
           i problemi (Problem Solving)
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Video Pilota
+          - Blocco dei dati
+        u7-libraries-explanation: 'App Lab: Crea i Tuoi Blocchi - Come Usare le Librerie'
         how-to-k5-workshops: 'Code.org - Fondamenti di informatica: provato dai bambini,
           approvato dagli insegnanti'
         why-should-teach-unplugged-activities: FAQ - Perché proporre lezioni tradizionali
           (unplugged)?
+        cs-principles-intro-to-objects: 'Principi di Informatica: Introduzione agli
+          Oggetti'
         oceans_machine_learning: Cos'è l'Apprendimento Automatico (Machine Learning)
         oceans_training_data: Dati di apprendimento e distorsioni
         oceans_societal_implications: Ripercussioni sociali
@@ -873,10 +880,30 @@ it:
         hoc_dance_events_2019: Dance Party - Eventi
         hoc_dance_measures_2019: Ballando col codice - Battute
         hoc_dance_properties_2019: Dance Party - Proprietà
+        csd_what_computers_do: Cosa Fanno i Computer?
         csf_my_online_neighborhood_2020: Il mio quartiere digitale
         csf_follow_the_digital_trail: Segui le tue tracce digitali
         csf_private_and_personal_information: Cittadinanza digitale - Dati personali
           e altri dati
+        csd_what_computers_are: Cos'è un Computer?
+        codebreak_e01: 'Code Break 1.0: Algoritmi con Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototipi con Mark Cuban e Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Crittografia con Ashton Kutcher e Mia Gil
+          Epner'
+        codebreak_e04: 'Code Break 4.0: Informazione Digitale con Mike Krieger e Alice
+          Keeler'
+        codebreak_e05: 'Code Break 5.0: Simulazioni e Dati con Bill Gates'
+        csd_how_teamwork_works: Come Funziona il Lavoro di Squadra
+        csd_teamwork_and_disagreement: Lavoro di Squadra - Affrontare il Disaccordo
+        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott e Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Condizionali con Sal Khan e Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variabili con Yara Shahidi e Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Eventi con Macklemore e Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: IA con Kat Graham e Kate Park'
+        codebreak_e11: 'Code Break 11.0: Astrazione con Susan Wojcicki e China Anne
+          McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor e Paula
+          Mejia'
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

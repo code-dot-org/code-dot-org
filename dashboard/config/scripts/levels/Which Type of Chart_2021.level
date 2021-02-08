@@ -1,0 +1,18 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-12-04T22:13:47.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "instructions_important": "false",
+    "reference": "/docs/concepts/other/which-type-of-chart/",
+    "parent_level_id": 21725,
+    "encrypted": "false",
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-26 00:52:46 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-26 00:57:47 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-02-28 07:01:52 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-02-28 07:03:29 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-02-28 07:03:47 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</Map>

@@ -1,0 +1,114 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:18:26.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,4,4,4,4,0,0,0],[0,4,2,1,1,1,1,0],[0,0,1,1,4,4,1,0],[0,0,0,1,1,0,1,0],[0,0,0,0,0,0,1,0],[0,0,3,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "scrat",
+    "short_instructions": "Can you add a loop to get to the acorn?",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "true",
+    "skip_instructions_popup": "true",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "parent_level_id": 21001,
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "long_instructions": "Can you add a loop to get to the acorn?",
+    "ideal": "7",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your final code will have **three** movement blocks.\",\"hint_id\":\"courseB_iceage_loops6_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d563ad93f838569a0366996b6193b056/courseB_iceage_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to add **one** more loop!\",\"hint_id\":\"courseB_iceage_loops6_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb87ff4242967ddefde6ea39a2303d74/courseB_iceage_loops6.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your final path should look like this.\",\"hint_id\":\"courseB_iceage_loops6_c\",\"hint_type\":\"general\",\"hint_path\":\"[[2,2],[6,2],[6,6],[2,6]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9431431f8c1bbdaad122360c6292a19a/courseB_iceage_loops6.mp3\"}]",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 17:23:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-21 17:24:38 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-26 20:20:26 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-03 23:36:28 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-03 23:37:37 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-03 23:38:26 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 22:53:07 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:12:54 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:13:42 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:15:32 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:18:22 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"markdown_instructions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:20:24 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:21:12 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-04 23:27:55 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"markdown_instructions\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 15:57:17 +0000\",\"changed\":[\"notes\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 15:58:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:02:46 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:06:06 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:07:00 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:11:14 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"start_direction\",\"markdown_instructions\",\"solution_blocks\",\"ideal\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:17:25 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"markdown_instructions\",\"solution_blocks\",\"ideal\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:18:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:18:22 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:31:52 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:32:56 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"markdown_instructions\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:34:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:34:42 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:35:02 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"start_direction\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 16:48:01 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"start_direction\",\"markdown_instructions\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-05 23:24:46 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"markdown_instructions\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-06 00:10:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-06 00:11:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\",\"authored_hints\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-11 15:56:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+              <statement name="DO">
+                <block type="maze_moveEast"/>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="2-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth" limit="1"/>
+        <block type="maze_moveSouth" limit="1"/>
+        <block type="maze_moveEast" limit="1"/>
+        <block type="maze_moveWest" limit="1"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+</xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+              <statement name="DO">
+                <block type="maze_moveEast"/>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="2-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth"/>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="2-10">4</title>
+                      <statement name="DO">
+                        <block type="maze_moveWest"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

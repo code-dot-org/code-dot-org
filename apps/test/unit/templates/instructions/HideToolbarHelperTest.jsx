@@ -10,7 +10,7 @@ describe('HideToolbarHelper', function() {
 
     const instance = component.instance();
 
-    sinon.stub(instance, 'isiOS13').returns(true);
+    sinon.stub(instance, 'isCompatibleiOS').returns(true);
     sinon.stub(instance, 'isHideCookieSet').returns(false);
     sinon.stub(instance, 'isLandscape').returns(true);
     sinon.stub(instance, 'isToolbarShowing').returns(true);
@@ -25,7 +25,7 @@ describe('HideToolbarHelper', function() {
 
     const instance = component.instance();
 
-    sinon.stub(instance, 'isiOS13').returns(true);
+    sinon.stub(instance, 'isCompatibleiOS').returns(true);
     sinon.stub(instance, 'isHideCookieSet').returns(false);
     sinon.stub(instance, 'isLandscape').returns(true);
     sinon.stub(instance, 'isToolbarShowing').returns(false);
@@ -42,7 +42,7 @@ describe('HideToolbarHelper', function() {
 
     const setHideHelperCookie = sinon.stub(instance, 'setHideHelperCookie');
 
-    sinon.stub(instance, 'isiOS13').returns(true);
+    sinon.stub(instance, 'isCompatibleiOS').returns(true);
     sinon.stub(instance, 'isHideCookieSet').returns(false);
     sinon.stub(instance, 'isLandscape').returns(true);
     const isToolbarShowing = sinon

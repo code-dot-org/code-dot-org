@@ -1,4 +1,5 @@
 import * as coreLibrary from '../coreLibrary';
+import {commands as actionCommands} from './actionCommands';
 
 export const commands = {
   addBehavior(spriteArg, behavior) {
@@ -25,6 +26,37 @@ export const commands = {
       if (p5Inst.mouseWentUp()) {
         sprite.dragging = false;
       }
+    };
+  },
+
+  followingTargetsFunc(p5Inst) {
+    return spriteArg => {
+      const sprite = coreLibrary.getSpriteArray(spriteArg)[0];
+      const spritePosition = sprite.position;
+
+      if (!sprite.targetSet) {
+        return;
+      }
+
+      const targets = sprite.targetSet
+        .map(x => coreLibrary.getSpriteArray({costume: x}))
+        .flat();
+
+      if (targets.length === 0) {
+        return;
+      }
+
+      // Find closest target
+      let closestTarget;
+      let closestDistance = Infinity;
+      targets.forEach(target => {
+        const distance = spritePosition.dist(target.position);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestTarget = target;
+        }
+      });
+      actionCommands.moveToward(spriteArg, 5, closestTarget.position);
     };
   },
 

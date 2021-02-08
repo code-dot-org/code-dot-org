@@ -184,6 +184,8 @@ az:
     header:
       finished_hoc: "Kod Saatımı bitirdim"
       sign_in_to_save: 'Nəticələri itirməmək üçün daxil olun'
+      my_dashboard: "İdarəetmə panelim"
+      course_catalog: "Kurs kataloqu"
       project_gallery: "Layihə qalereyası"
       sections: "Bölmələr"
       teacher_community: "Müəllim icması"
@@ -233,6 +235,7 @@ az:
       artist: 'Rəssam'
       bounce: 'Tullan'
       calc: 'Hesablama'
+      dance: 'Rəqs şənliyi'
       eval: 'Qiymət'
       flappy: 'Flappy'
       frozen: 'Buzlu ürək'
@@ -351,6 +354,10 @@ az:
     applab:
       title: 'Proqram Labı'
       audience: '13+ yaş'
+    dance:
+      title: 'Rəqs şənliyi'
+    dance-2019:
+      title: 'Rəqs şənliyi'
     hoc:
       title: 'Ənənəvi labirint'
       body: 'İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.'
@@ -517,6 +524,4 @@ az:
       title: 'Məşğələdə iştirak'
   cookie_banner:
     accept: 'Razıyam'
-  gdpr_dialog:
-    yes: 'Bəli'
   copy: 'Köçür'

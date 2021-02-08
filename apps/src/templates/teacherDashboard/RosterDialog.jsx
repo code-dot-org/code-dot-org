@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
-import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
+import {classroomShape, loadErrorShape} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
@@ -134,7 +135,11 @@ const LoadError = ({rosterProvider, loginType}) => {
           <p>{locale.authorizeGoogleClassroomsText()}</p>
           <ReauthorizeGoogleClassroom />
           <p>
-            <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {locale.errorLoadingRosteredSectionsSupport()}
             </a>
           </p>
@@ -144,7 +149,11 @@ const LoadError = ({rosterProvider, loginType}) => {
       return (
         <p>
           {locale.errorLoadingRosteredSections({type: loginType})}{' '}
-          <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {locale.errorLoadingRosteredSectionsSupport()}
           </a>
         </p>

@@ -4,47 +4,47 @@ id:
     course:
       name:
         csp-2017:
-          assignment_family_title: Prinsip Ilmu Komputer
-          title: Prinsip Ilmu Komputer ('17-'18)
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
-          description_student: Pada musim gugur 2016, College Board meluncurkan kelas terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi serta peluang-peluang multidisipliner lainnya.
-          description_teacher: Pada musim gugur 2016, College Board meluncurkan kelas terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi serta peluang-peluang multidisipliner lainnya.
-          description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kursus AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang AP Computer Science Principles untuk menghasilkan para pemimpin di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi pokok dan peluang multidisipliner.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang AP Computer Science Principles untuk menghasilkan para pemimpin di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi pokok dan peluang multidisipliner.
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
         csd-2017:
-          assignment_family_title: Penemuan Ilmu Komputer
-          title: Penemuan Ilmu Komputer ('17-'18)
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"
-          description_student: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-          description_teacher: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-          description_short: Pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak yang otentik.
+          description_student: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya yang autentik.
         allthethingscourse:
-          title: kursussegalaahal
+          title: kursussemuabidang
           description_short: Ini adalah kursus untuk semua bidang
-          description_student: Ini adalah kursus untuk semua bidang dan memiliki penjelasan yang mudah bagi siswa
-          description_teacher: Ini adalah kursus untuk semua bidang dan memiliki penjelasan yang mudah bagi guru
+          description_student: Ini adalah kursus untuk semua bidang dan memiliki penjelasan yang lebih panjang bagi murid
+          description_teacher: Ini adalah kursus untuk semua bidang dan memiliki penjelasan yang lebih panjang bagi guru
         csd-2018:
-          assignment_family_title: Penemuan Ilmu Komputer
-          title: Penemuan Ilmu Komputer ('18-'19)
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('18-'19)
           version_title: "'18-'19"
-          description_short: Pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak yang otentik.
-          description_student: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-          description_teacher: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya yang autentik.
+          description_student: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
         csp-2018:
-          assignment_family_title: Prinsip Ilmu Komputer
-          title: Prinsip Ilmu Komputer ('18-'19)
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('18-'19)
           version_title: "'18-'19"
-          description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
-          description_student: Pada musim gugur 2016, College Board meluncurkan kelas terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi serta peluang-peluang multidisipliner lainnya.
-          description_teacher: Pada musim gugur 2016, College Board meluncurkan kelas terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi serta peluang-peluang multidisipliner lainnya.
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kursus AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang AP Computer Science Principles untuk menghasilkan para pemimpin di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi pokok dan peluang multidisipliner.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang AP Computer Science Principles untuk menghasilkan para pemimpin di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi pokok dan peluang multidisipliner.
         csp-2019:
-          title: Prinsip Ilmu Komputer ('19-'20)
+          title: Computer Science Principles ('19-'20)
           version_title: "'19-'20"
-          description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
-          description_student: Pada musim gugur 2016, College Board meluncurkan kelas terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi serta peluang-peluang multidisipliner lainnya.
-          description_teacher: Pada musim gugur 2016, College Board meluncurkan kelas terbaru dari AP®, Prinsip Ilmu Komputer dari AP. Kelas tersebut memperkenalkan kepada siswa mengenai landasan konsep dari ilmu komputer dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang kelas Prinsip Ilmu Komputer AP ini demi menghasilkan para pemimpin di bidang ilmu komputer, serta menarik dan melibatkan masyarakat yang kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi serta peluang-peluang multidisipliner lainnya.
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kursus AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang AP Computer Science Principles untuk menghasilkan para pemimpin di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi pokok dan peluang multidisipliner.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP merancang AP Computer Science Principles untuk menghasilkan para pemimpin di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi pokok dan peluang multidisipliner.
         csd-2019:
-          title: Penemuan Ilmu Komputer ('19-'20)
+          title: Computer Science Discoveries ('19-'20)
           version_title: "'19-'20"
-          description_short: Pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak yang otentik.
-          description_student: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-          description_teacher: Penemuan Ilmu Komputer (PIK) adalah pengantar kelas ilmu komputer yang akan memacu siswa Anda untuk menciptakan artefak otentik dan melibatkan mereka ke dalam ilmu komputer sebagai media berkreasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya yang autentik.
+          description_student: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.

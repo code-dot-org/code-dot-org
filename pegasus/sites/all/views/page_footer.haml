@@ -1,12 +1,12 @@
 %footer#pagefooter
   .content
     %div{:style=>"float:left"}
-      
+
       %a.whitefooterlink{:href=>"/about"} About
       .dim &nbsp; &nbsp; | &nbsp; &nbsp;
       %a.whitefooterlink{:href=>"/partners"} Partners
       .dim &nbsp; &nbsp; | &nbsp; &nbsp;
-      %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :target=>"_blank"} Blog 
+      %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :target=>"_blank"} Blog
       .dim &nbsp; &nbsp; | &nbsp; &nbsp;
       %a.whitefooterlink{:href=>"/donate"} Donate
       .dim &nbsp; &nbsp; | &nbsp; &nbsp;
@@ -17,9 +17,15 @@
       =partial("language", :host=>request.host)
     %div{:style=>"clear:both; float: left;"}
       %small.dim
-        &copy; Code.org, 2015.  Code.org&reg;, the CODE logo and Hour of Code&trade; are trademarks of Code.org.
+        = hoc_s(:footer_copyright_message).gsub(/%{current_year}/, "#{Time.now.year}")
+        = hoc_s(:footer_trademark_message)
+        %br
+        = hoc_s(:footer_built_on_github)
     %div{:style=>"float:right"}
       %small{:style=>"opacity:0.5"}
         %a.whitefooterlink{:href=>"/tos", :style=>"font-size: 12px;"} Terms
         &nbsp; &nbsp; | &nbsp; &nbsp;
         %a.whitefooterlink{:href=>"/privacy", :style=>"font-size: 12px;"} Privacy Policy
+    %div.powered-by-aws
+      %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
+        %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}

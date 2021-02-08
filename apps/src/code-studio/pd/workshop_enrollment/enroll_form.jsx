@@ -107,6 +107,7 @@ export default class EnrollForm extends React.Component {
     this.state = {
       first_name: this.props.first_name,
       email: this.props.email,
+      isSubmitting: false,
       errors: {}
     };
   }
@@ -148,6 +149,7 @@ export default class EnrollForm extends React.Component {
 
   handleClickRegister = () => {
     if (this.validateRequiredFields()) {
+      this.setState({isSubmitting: true});
       this.submit();
     }
   };
@@ -271,6 +273,7 @@ export default class EnrollForm extends React.Component {
       contentType: 'application/json',
       data: JSON.stringify(params),
       complete: result => {
+        this.setState({isSubmitting: false});
         this.props.onSubmissionComplete(result);
       }
     });
@@ -729,7 +732,11 @@ export default class EnrollForm extends React.Component {
           are contractually obliged to treat this information with the same
           level of confidentiality as Code.org.
         </p>
-        <Button id="submit" onClick={this.handleClickRegister}>
+        <Button
+          id="submit"
+          onClick={this.handleClickRegister}
+          disabled={this.state.isSubmitting}
+        >
           Register
         </Button>
         <br />

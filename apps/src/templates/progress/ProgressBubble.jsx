@@ -158,7 +158,7 @@ class ProgressBubble extends React.Component {
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled),
+      ...levelProgressStyle(level.status, level.kind, disabled),
       ...(disabled && level.bonus && styles.disabledStageExtras)
     };
 

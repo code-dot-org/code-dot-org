@@ -95,6 +95,7 @@ DSL
   test 'summarize' do
     summary = @bubble_choice.summarize
     expected_summary = {
+      id: @bubble_choice.id.to_s,
       display_name: @bubble_choice.display_name,
       description: @bubble_choice.description,
       name: @bubble_choice.name,
@@ -110,15 +111,14 @@ DSL
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     assert_nil summary[:previous_level_url]
-    assert_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
 
     @script_level.stubs(:previous_level).returns(create(:script_level))
-    @script_level.stubs(:next_level).returns(create(:script_level))
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     refute_nil summary[:previous_level_url]
-    refute_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
   end
 
@@ -127,8 +127,8 @@ DSL
     expected_summary = [
       {
         # level_id and id are used by different features so keeping both
-        level_id: @sublevel1.id,
-        id: @sublevel1.id,
+        level_id: @sublevel1.id.to_s,
+        id: @sublevel1.id.to_s,
         display_name: @sublevel1.display_name,
         description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
@@ -137,11 +137,12 @@ DSL
         name: @sublevel1.name,
         position: 1,
         letter: 'a',
-        icon: nil
+        icon: nil,
+        status: 'not_tried'
       },
       {
-        level_id: @sublevel2.id,
-        id: @sublevel2.id,
+        level_id: @sublevel2.id.to_s,
+        id: @sublevel2.id.to_s,
         display_name: @sublevel2.name,
         description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
@@ -150,7 +151,8 @@ DSL
         name: @sublevel2.name,
         position: 2,
         letter: 'b',
-        icon: nil
+        icon: nil,
+        status: 'not_tried'
       }
     ]
 
@@ -247,6 +249,7 @@ DSL
     end.once
 
     bubble_choice_copy = bubble_choice.clone_with_suffix('_copy')
+    assert_equal 'bubble choice_copy', bubble_choice_copy.name
 
     expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
     assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)

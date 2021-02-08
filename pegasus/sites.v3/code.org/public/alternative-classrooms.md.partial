@@ -9,6 +9,8 @@ social:
     "og:image:width": 850
     "og:image:height": 502
 ---
+{{ professional_learning_apply_banner }}
+
 # Resources for Teaching in Virtual and Socially-Distanced Classrooms
 
 <div class="col-40" style="padding-right: 20px">
@@ -23,9 +25,9 @@ social:
 
 <ul>
 <li><a href="https://docs.google.com/document/d/1g8loG0Lj1LLg3yAiKPIn82vXyaMTznRkIjQsIzt_LoM/edit?usp=sharing" target="_blank">Overview: Modifications for Common Teaching Practices</a></li>
-<li><a href="https://forum.code.org/t/modifications-for-virtual-and-socially-distanced-classrooms-csf/33082" target="_blank">Modifications for CSF</a></li>
-<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms-csd/33007" target="_blank">Modifications for CSD</a></li>
-<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005" target="_blank">Modifications for CSP</a></li>
+<li><a href="https://forum.code.org/t/modifications-for-virtual-and-socially-distanced-classrooms-csf/33082" target="_blank">Modifications for CS Fundamentals</a></li>
+<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms-csd/33007" target="_blank">Modifications for CS Discoveries</a></li>
+<li><a href="https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005" target="_blank">Modifications for CS Principles</a></li>
 </ul>
 
 </div>
@@ -34,11 +36,11 @@ social:
 
 <br>
 
-We also highly recommend you watch the recorded webinar for a walkthrough of the resources, especially if you teach Computer Science Principles or Computer Science Discoveries:
+We also highly recommend you watch the recorded webinar for a walkthrough of the resources, especially if you teach CS Principles or CS Discoveries:
 
 <div class="col-60">
 {{ alt_classrooms_vid }}
-<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available only for CSP, and will be released for CSD in early September. To access the full video, <a href=
+<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available for CS Principles and CS Discoveries. To access the full video, <a href=
 https://code.zoom.us/rec/play/vpN8JLivrjk3GoeTuQSDA_5_W9Toev6shyVPr6dfmByzAHMLN1v3N-MWYuG8VL58QfLYAPsIFFbnn54k?autoplay=true" target="_blank">click here</a>.</i>
 </div>
 
@@ -98,6 +100,11 @@ Click each question to expand and see the answers. Don’t see your question ans
 	<li><a href="https://code.org/curriculum/unplugged" target="_blank">Unplugged lessons in our CS Fundamentals courses</a></li>
 </ol>
 <p>Please note that some of these lessons require students to work together and may need to be modified further to work in a virtual or hybrid classroom setting. If you have suggestions for how to modify these unplugged lessons, or you want to see how other teachers have recommended modifying these lessons, please check out the Code.org forum (<a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning/33134" target="_blank">CSF</a>; <a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning-csd/33135" target="_blank">CSD</a>; <a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning-csp/33136" target="_blank">CSP</a>)</p>
+<p>NEW for CS Principles classrooms: You can now download zip files of all CSP videos. These compressed files may make it easier to distribute these videos to students learning at home.</p>
+<ol>
+	<li><a href="https://www.dropbox.com/s/jkr8z90o7kujxh0/CSP-20_21-Videos-Part1.zip?dl=0" target="_blank">CS Principles 20/21 Videos - Part 1</a></li>
+	<li><a href="https://www.dropbox.com/s/c9l78pwenwjscka/CSP-20_21-Videos-Part2.zip?dl=0" target="_blank">CS Principles 20/21 Videos - Part 2</a></li>
+</ol>
 <p>You can also check out these unplugged resources from 3rd parties:</p>
 <ul>
 	<li><a href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. (for ages 4-10)</li>
@@ -135,7 +142,7 @@ Click each question to expand and see the answers. Don’t see your question ans
 		<br>
 	</li>
 	<li>
-		<strong>Help & Tips</strong> (CSD and CSP only): The “Help & Tips” Tab (next to the Instructions area on a level) is available on many CSD and CSP levels and contains quick links to concept documentation and instructional videos.
+		<strong>Help & Tips</strong> (CS Discoveries and CS Principles only): The “Help & Tips” Tab (next to the Instructions area on a level) is available on many CS Discoveries and CS Principles levels and contains quick links to concept documentation and instructional videos.
 		<br>
 		<img src="/images/fit-351/athome/help_tips.png" alt="Help & Tips location in top navigation menu">
 		<br>
@@ -143,8 +150,8 @@ Click each question to expand and see the answers. Don’t see your question ans
 	<li>
 		<strong>Block Documentation</strong> (<a href="https://studio.code.org/docs/spritelab/" target="_blank">Sprite Lab</a>, <a href="https://studio.code.org/docs/applab/" target="_blank">App Lab</a>, <a href="https://studio.code.org/docs/gamelab/" target="_blank">Game Lab</a>, <a href="https://studio.code.org/docs/weblab/" target="_blank">Web Lab</a>): students can learn more about how to use specific coding blocks by hovering over a code block on a level, and then tapping “See examples” in the tooltip that appears.
 		<br>
-		<img src="/images/fit-567/athome/block_doc.png" alt="Example of code block documentation">	
-		<br>	
+		<img src="/images/fit-567/athome/block_doc.png" alt="Example of code block documentation">
+		<br>
 	</li>
 </ul>
 <br>
@@ -190,3 +197,8 @@ Click each question to expand and see the answers. Don’t see your question ans
 </details>
 
 <br>
+
+<hr>
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

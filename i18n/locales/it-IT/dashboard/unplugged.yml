@@ -151,6 +151,8 @@ it:
       courseF_unplugged_powerOfWords:
         title: Attività tradizionale
         desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
+      deeper learning description:
+        desc: 'traduzione mancante: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Pianta un seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
@@ -217,6 +219,10 @@ it:
       courseF_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
         desc: 'Una delle strutture più belle nell''informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all''interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all''interno di funzioni è un''utile pratica.'
+      swipeRightPassThrough:
+        title: Sessione degli Scenari di Reclutamento
+      swipeRightPassThrough-test123:
+        title: Sessione degli Scenari di Reclutamento
       courseB_unplugged_MRF_2018:
         title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
@@ -276,11 +282,23 @@ it:
       courseB_unplugged_MRF_2019:
         title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
+      BuildingAFoundation_2019:
+        title: 'traduzione mancante: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'traduzione mancante: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
         title: I miei ciclici amici robotici
       Conditionals_2019:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
+      courseF_unplugged_powerOfWords_2019:
+        title: 'traduzione mancante: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'traduzione mancante: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'traduzione mancante: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'traduzione mancante: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'traduzione mancante: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'traduzione mancante: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
@@ -295,9 +313,19 @@ it:
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
       courseE_unplugged_privateInformation_2019:
         title: Cittadinanza digitale - Dati personali e altri dati
+        desc: Sviluppata da Common Sense Education, questa lezione tratta della differenza tra informazioni sicure da condividere online e informazioni che non lo sono.
+      SongwritingParameters_2019:
+        title: 'traduzione mancante: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'traduzione mancante: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: Condivisione digitale
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
+      Internet_2019:
+        title: 'traduzione mancante: en-US.data.unplugged.Internet_2018.title'
+        desc: 'traduzione mancante: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'traduzione mancante: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'traduzione mancante: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzione di ripetizione) attraverso una danza. Gli studenti imparano una semplice coreografia da ripetere più volte.
@@ -333,8 +361,23 @@ it:
       courseB_unplugged_CnC_2019:
         title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.
+      GraphingData_2019:
+        desc: In questa lezione, gli studenti raccoglieranno i dati da un progetto del Play Lab o dello scenario globale reale e lo useranno per fare predizioni.
+      courseE_unplugged_accessAbility_2019:
+        title: Abilità di Accesso
+        desc: Impara sull'accessibilità ed il valore dell'empatia tramite il brainstorming e la progettazione di soluzioni accessibili per app ipotetiche.
+      courseE_simon_says_2019:
+        title: Simone Dice
+        desc: "Gioca ad un gioco e pensa a quali comandi sono necessari per ottenere i risultati corretti.\\r\n\\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Password Potenti
+        desc: Esplora perché le persone usano le password, impara i benefici di usarle e scopri le strategie per creare e mantenere forti e sicure le password.
       timeforcs_demo_crowdsourcing:
         title: Intelligenza collettiva
+        desc: '_Nota di Josh: in contrasto con la prima lezione, ho formattato questa come una tipica lezione tradizionale._'
       timeforcs_demo_conditionals:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
+      TheRightApp_2019:
+        title: L'App Giusta
+        desc: "* Tutti usano i computer oggigiorno, specialmente gli smartphone. \\r\n* Le applicazioni per smartphone, o \"app\", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.\\r\n* È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

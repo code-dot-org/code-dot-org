@@ -1,0 +1,241 @@
+{
+  "script": {
+    "name": "csp8-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/create-20-21/create-pt-prep/{LESSON}/",
+      "pilot_experiment": "csp-piloters",
+      "curriculum_umbrella": "CSP",
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp8-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Create PT - Review the Task",
+      "name": "Create PT - Review the Task",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    },
+    {
+      "key": "Create PT - Make a Plan",
+      "name": "Create PT - Make a Plan",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    },
+    {
+      "key": "Create PT - Complete the Task",
+      "name": "Create PT - Complete the Task",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U8L1 SFLP 20-21"
+        ],
+        "lesson.key": "Create PT - Review the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      },
+      "level_keys": [
+        "CSP U8L1 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U8L2 SFLP 20-21"
+        ],
+        "lesson.key": "Create PT - Make a Plan",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      },
+      "level_keys": [
+        "CSP U8L2 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U8L3 SFLP 20-21"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      },
+      "level_keys": [
+        "CSP U8L3 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Tech Setup and Tools for Create PT"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools_2020"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      },
+      "level_keys": [
+        "csp-pt-tech-setup-and-tools_2020"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Create PT Coding Workspace"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Create PT Workspace 2020"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      },
+      "level_keys": [
+        "Create PT Workspace 2020"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U8L1 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U8L1 SFLP 20-21"
+        ],
+        "lesson.key": "Create PT - Review the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U8L2 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U8L2 SFLP 20-21"
+        ],
+        "lesson.key": "Create PT - Make a Plan",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U8L3 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U8L3 SFLP 20-21"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-pt-tech-setup-and-tools_2020",
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools_2020"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Create PT Workspace 2020",
+        "script_level.level_keys": [
+          "Create PT Workspace 2020"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-pilot"
+      }
+    }
+  ]
+}

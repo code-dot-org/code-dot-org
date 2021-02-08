@@ -128,7 +128,8 @@
         "flappy_7": "A sad pokušaj promijeniti scenu tako da prikačiš odgovarajući blok na blok \"pri pokretanju\".",
         "flappy_8": "Promjenu grafičkih elemenata možeš napraviti bilo kad, ne samo kad igra počne. Probaj staviti NASUMIČNI ODABIR scene kad se dogodi neki drugi događaj, na primjer, kad prođe prepreku.",
         "flappy_9": "Da izmijenimo pravila: napravi da se, kad udariš u prepreku, broj bodova vrati na 0 umjesto da igra završi.",
-        "frozen line": "Zdravo! Ja sam Elsa od Arendella. Pomozi mi napraviti ravnu liniju."
+        "frozen line": "Zdravo! Ja sam Elsa od Arendella. Pomozi mi napraviti ravnu liniju.",
+        "scrat 19": "Još jedna vježba s \"ako-inače\" blokom, možeš li je riješiti iz prvog pokušaja?"
       }
     }
   }

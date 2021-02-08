@@ -46,6 +46,7 @@ cs:
         finish_sign_up_subheader_provider_markdown: Vyplňte následující informace
           pro vytvoření účtu Code.org prostřednictvím poskytovatele **%{provider}**
           pro **%{email}**.
+        reset_password_token: Odkaz na obnovení hesla, který jsi použil/a.
         error:
           future: nemůže být v budoucnosti
   beta: beta
@@ -170,10 +171,6 @@ cs:
     mismatch_password: Zadaná dvě hesla se neshodují
     student_consent: Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno
       používat Code.org.
-    agree_us_website: Souhlasím s používáním webových stránek provozovaných ve Spojených
-      státech.
-    my_data_to_us: Informace ohledně mého používání těchto stránek mohou být posílány
-      do Spojených států a tamtéž i uchovávány.
     additional_information: Potřebujeme další informace pro pokračování vaši registrace.
     user_type_button: Aktualizovat typ účtu
     user_type_label: Typ účtu
@@ -392,7 +389,7 @@ cs:
       artist: Umělec
       artist_k1: Umělec (předškolák)
       basketball: Basketbal
-      bounce: Odraz
+      bounce: Bounce
       dance: Taneční večírek
       flappy: Flappy
       frozen: Frozen
@@ -670,7 +667,7 @@ cs:
   video_coming_soon: Video již brzy!
   share_code:
     title: Klepněte na "Spustit", abyste viděli svůj program v akci
-    bounce_og_title: Zkontrolujte hru Bounce
+    bounce_og_title: Podívej se na moji hru
     flappy_og_title: Podívej se na moji hru Flappy
     studio_og_title: Zkontrolujte svůj Play Lab App
     check_out_what_i_made: Zkontrolujte, co jsem udělal
@@ -1146,12 +1143,6 @@ cs:
       souhlasíte s uložením cookies na svém počítači nebo přístroji.
     more_information: Zobrazte si zásady ochrany soukromí pro Code.org.
     accept: Souhlasím
-  gdpr_dialog:
-    heading: Souhlasíte s používáním webových stránek provozovaných ve Spojených státech?
-    message: Informace ohledně Vašeho používání těchto stránek mohou být posílány
-      do Spojených států a tamtéž i uchovávány.
-    privacy_policy: zásady ochrany osobních údajů
-    true: Ano
   page_not_found_title: Stránka nebyla nalezena
   page_not_found_header: 404 - Stránka nebyla nalezena
   page_not_found_button: Zpět domů

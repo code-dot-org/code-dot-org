@@ -1,98 +1,99 @@
 ---
-title: الدليل الإرشادي لأولياء الأمور
+title: دليل "ساعة من البرمجة" الإرشادي لأولياء الأمور
 ---
 
-# كيفية القيام بأنشطة "ساعة البرمجة" مع طفلك
+# كيفية القيام بأنشطة "ساعة البرمجة" مع طفلك 
 
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+تجربة أحد أنشطة "ساعة من البرمجة" طريقة بسيطة ومرحة لتعريف طفلك بمجال علوم الكمبيوتر، ربما للمرة الأولى في حياته. ولا تعد علوم الكمبيوتر أساسية لجميع مجالات الدراسة فحسب، بل [تُظهِر الدراسات الأخيرة](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) أن الأطفال الذين يدرسون علوم الكمبيوتر يؤدون في المواد الأخرى على نحو أفضل، ويتفوَّقون في حل المشكلات، <font color="00adbc"><b>وعلى الأرجح سيسجِّلون في الكليات بنسبة 17%</b></font>. 
 
-You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
+يمكنك أن تنضم إلى عشرات الملايين من الطلاب في جميع أنحاء العالم في هذه الفعالية العالمية. يمكننا معًا أن نشجِّع الطلاب على التعلُّم وكسر القوالب النمطية، ونساعد الأطفال في اكتشاف اهتمام جديد لهم. وأفضل ما في الأمر أن لديك كل ما ستحتاجه لإحضار أنشطة "ساعة من البرمجة" إلى منزلك!
 
 [![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
+<h3>ما الذي أحتاجه للبدء؟</h3>
 
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+نشاط "ساعة من البرمجة" يسهل إدارته - حتى للمبتدئين. لست بحاجة إلى خبرة في مجال علوم الكمبيوتر أو التدريس لتسهيل أحد الأنشطة الممتعة لأطفالك، والتي ستعلِّمهم وتضحكهم في آن واحد.
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+ويمكنك أن تجرِّب أنشطة "ساعة من البرمجة" باستخدام جهاز الكمبيوتر أو جهاز كمبيوتر لوحي أو هاتف ذكي أو من دون استخدام الكمبيوتر تمامًا! وإليك كيفية البدء. 
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>عرض الدليل بصيغة PDF </button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
-## 1) Explore activities and tutorials.
+## 1) استكشِف الأنشطة والبرامج التعليمية.
 
 [![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
+يوجد عدد لا يُحصى من [أنشطة "ساعة من البرمجة"](https://hourofcode.com/us/learn) المتوفرة لك إذا كنت تعمل على أحد أجهزة الكمبيوتر المتصلة بالإنترنت. ونشجعك على إلقاء نظرة على بعض الخيارات مسبقًا؛ حتى يمكنك أن تُساعِد في توجيه طفلك إلى التمارين التي سيستمتع بها.
 
-All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
+تدمج جميع أنشطتنا حل المشكلات والتفكير النقدي بالمرح والابتكار، ولكن إليك بعض تفضيلات الطلاب:
 
-- For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
-- For the child who loves to learn: [AI for Oceans](https://code.org/oceans) or [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
+- الطفل الذي يحب اللعب: [ماينكرافت](https://code.org/minecraft) أو [حفلة رقص](https://code.org/dance) 
+- الطفل الذي يحب ديزني: [حرب النجوم](https://code.org/starwars) أو [ملكة الثلج](https://studio.code.org/s/frozen/stage/1/puzzle/1) أو [موانا](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C) 
+- الطفل الذي يحب التعلّم: [الذكاء الاصطناعي للمحيطات](https://code.org/oceans) أو [اصنع الموسيقى بلغة سكراتش](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) 
 
-<h3>Low-tech or no-tech?</h3>
+<h3>ضعف التقنيات أو عدم توفرها؟</h3>
 
-If you’ll be using limited or no technology, you can filter [Hour of Code activities](https://hourofcode.com/us/learn) by selecting “No computers or devices” in the *Classroom technology* section.
+إذا كنت لن تستخدِم التقنية أو ستستخدِمها على نطاق محدود، فيمكنك تصفية [أنشطة "ساعة من البرمجة"](https://hourofcode.com/us/learn) عن طريق تحديد "لا تتوفر أجهزة الكمبيوتر أو الأجهزة" في قسم *"تقنية قاعة الدراسة"*. 
 
 [![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-You can also check out these [short videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) for more ideas on how to facilitate an unplugged activity at home!
+يمكنك أيضًا مراجعة [مقاطع الفيديو القصيرة](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) لمزيد من الأفكار حول كيفية تسهيل نشاط غير معتمد على الكمبيوتر في المنزل! 
 
-## 2) Prepare ahead of time
+## 2) الاستعداد مبكرًا
 
-Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
+الآن وبعد أن وضعت بعض البرامج التعليمية في حسبانك، قد يكون من المفيد لك أن تجرِّب هذه الأنشطة على جهازك قبل أن تعرِّفها لطفلك.
 
 [![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-<h3>More than one child at home?</h3>
+<h3>هل يوجد أكثر من طفل في المنزل؟</h3>
 
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+فكِّر في تزويد كل طفل من أطفالك بسمّاعات رأس إذا كانوا سيعملون على أجهزة منفصلة. وبذلك، سيتمكنون من تشغيل الأنشطة التي تحتوي على صوت من دون تشتيت انتباه بعضهم البعض. 
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. وسيدركون أيضًا أن علوم الحاسوب هي علوم اجتماعية وتعاونية.
+أما إذا كنت ستستخدِم جهازًا واحدًا، أو تريد أن تجعل نشاط "ساعة من البرمجة" أكثر تفاعلاً، فجرِّب [البرمجة الثنائية](https://www.youtube.com/watch?v=vgkahOzFH2Q). فالبرمجة الثنائية تشجِّع الأطفال على العمل سويًا. فعندما يتعاونون، سيساعدون بعضهم البعض في حل المشكلات. وسيدركون أيضًا أن علوم الحاسوب هي علوم اجتماعية وتعاونية.
 
-<h3>Get the kids excited! </h3>
+<h3>حمِّس الأطفال! </h3>
 
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+هذه فرصة عظيمة لتضيف نوعًا جديدًا من الأنشطة ليوم طفلك. ويمكنك أن تضفي مزيدًا من المرح إلى ما بعد البرنامج التعليمي، من خلال هذه الاقتراحات: 
 
-- Show them an [inspirational video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) that features one of their favorite role models
-- Inspire them with a video on one of the [many careers](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) that computer science skills can lead to
-- [Order some swag](https://store.code.org/)! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize. 
+- اعرض عليهم [مقطع فيديو مُلهمًا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) تبرِز أحد أمثلتهم المفضلة التي يُحتذى بها 
+- ألهمهم بمقطع فيديو لإحدى [الوظائف الكثيرة](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) التي يمكن أن تؤدي إليها مهارات علوم الكمبيوتر 
+- [اطلب بعض المنتجات القيِّمة](https://store.code.org/)! ويمكنك الاختيار ما بين تي شيرتات وملصقات أو حتى الوشم المؤقت. وشارِك ذلك معهم على الفور لإثارة حماسهم، أو احفظ ذلك حتى نهاية فعالية "ساعة من البرمجة" كجائزة خاصة. 
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Tips for introducing your child to CS
+## 3) نصائح لتعريف طفلك بمجال علوم الكمبيوتر
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+لا بأس إذا كنت أنت وطلابك حديثي العهد بمجال علوم الكمبيوتر. وإليك بعض الأفكار لتعريف الطلاب بنشاطك في "ساعة من البرمجة"، والتفكير أنت وطلابك في مجال علوم الكمبيوتر: 
 
-- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out [Code.org/CSforGood](https://code.org/csforgood) for suggested discussion questions.
-- Together, list everyday things that use code in order to work properly.
+- وضِّح الطرق التي تؤثر بها التقنية في حياتنا، ضاربًا أمثلة محددة قد تثير اهتمام طفلك. فعلى سبيل المثال، يمكنك أن تتحدث عن الطب، أو تواصل الناس افتراضيًا. بالإضافة إلى ذلك، يُرجى مراجعة [Code.org/CSforGood](https://code.org/csforgood) للاطلاع على أسئلة مقترحَة للمناقشة. 
+- اذكروا مع بعضكم الأمور اليومية التي تستخدمون فيها البرمجة للعمل على ما يرام.
 
 [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
+<h3>هل معك شابات في المنزل؟
+</h3>
 
-<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+<a href="https://code.org/girls">إليك توصياتنا</a> للمساعدة في إثارة اهتمامهم بمجال علوم الكمبيوتر. **نصيحة الخبراء**: يمكنك أن تبدأ اليوم وأبلغهن أنهن سيصبحن رائعات في هذا المجال! 
 
-<h3>Problem-solve together</h3>
+<h3>حلّ المشكلات سويًا</h3>
 
-Lastly, when your child comes across difficulties it's okay to respond: - “I don’t know. دعونا نكتشف ذلك معًا." - "التكنولوجيا لا تعمل دائمًا بالطريقة التي نريدها." - "تعلم البرمجة يشبه تعلم لغة جديدة، فأنت لن تتحدث بطلاقة على الفور."
+"أخيرًا، عندما يواجه الطلاب صعوبات، فليس هناك مشكلة في الرد عليهم بما يلي: - ""لا أعرف." دعونا نكتشف ذلك معًا." - "التكنولوجيا لا تعمل دائمًا بالطريقة التي نريدها." - "تعلم البرمجة يشبه تعلم لغة جديدة، فأنت لن تتحدث بطلاقة على الفور."
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+يدور مجال علوم الكمبيوتر حول تعلُّم كيفية "تصحيح" المواقف التي لم تسِر بالطريقة التي كنا نظن أنها ستسير عليها. ويمكنك أنت وطفلك التفكير في طرق مبتكرة لحلّ المشكلات! 
 
-## 4) Don’t forget to celebrate!
+## 4) لا تنس الاحتفال!
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+حملة "ساعة من البرمجة" فعالية عالمية، وتستحق أسرتك الاحتفال. وإليك بعض الطرق لتجعل فعاليتك من "ساعة من البرمجة" أكثر تميزًا: 
 
-- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
-- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- اطبع [شهادات "ساعة من البرمجة"](https://staging.code.org/certificates) التي ستمنحها لطفلك عندما يُكمِل نشاطه 
+- [اطبع الملصقات](https://staging.hourofcode.com/us/promote/resources#stickers) في المنزل أو [اشتريها عبر الإنترنت](https://store.code.org/) كمفاجأة إضافية. 
+- شارِك الصور ومقاطع الفيديو الخاصة بفعاليتك من "ساعة من البرمجة" في المنزل على مواقع التواصل الاجتماعي. واستخدِم الوسوم #ساعة_من_البرمجة ‎#HourOfCodeو@codeorg حتى يمكنك تسليط الضوء على نجاحك أيضًا! 
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
 <h2>ماذا بعد "ساعة البرمجة"؟</h2>
 
-ليس من الضروري أن تنتهي علوم الحاسوب بساعة البرمجة! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
+لا يجب أن تتوقف مسيرة علوم الكمبيوتر عند فعالية "ساعة من البرمجة"! بينما يرغب 90% من أولياء الأمور في تعليم أطفالهم علوم الكمبيوتر، فإن معظم المدارس ما تزال لا تدرِّس هذا المجال. وللمساعدة، مقررنا الدراسي معتمد على الإنترنت ومجاني الاستخدام إلى الأبد. و[تعلَّم كيفية](https://code.org/yourschool) تعريف مدرسة طفلك بعلوم الكمبيوتر اليوم. 
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>عرض الدليل بصيغة PDF </button>]({{ localized_files/hourofcode_parent_how_to }})

@@ -1,0 +1,81 @@
+{
+  "script": {
+    "name": "apps-for-good",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "apps-for-good"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "apps-for-good"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Build an App for Good",
+      "name": "Build an App for Good",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build an App for Good",
+        "lesson_group.key": "",
+        "script.name": "apps-for-good"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Explore"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "apps for good 1"
+        ],
+        "lesson.key": "Build an App for Good",
+        "lesson_group.key": "",
+        "script.name": "apps-for-good"
+      },
+      "level_keys": [
+        "apps for good 1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "apps for good 1",
+        "script_level.level_keys": [
+          "apps for good 1"
+        ],
+        "lesson.key": "Build an App for Good",
+        "lesson_group.key": "",
+        "script.name": "apps-for-good"
+      }
+    }
+  ]
+}

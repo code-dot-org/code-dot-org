@@ -30,6 +30,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
+    "validation_enabled": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",

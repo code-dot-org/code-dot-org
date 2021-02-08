@@ -75,6 +75,7 @@ export default class Attachments extends React.Component {
             href={url}
             className="uitest-attachment"
             target="_blank"
+            rel="noopener noreferrer"
           >
             {asset.filename}
           </a>

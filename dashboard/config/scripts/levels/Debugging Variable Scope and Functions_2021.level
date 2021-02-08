@@ -1,0 +1,18 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-12-04T22:03:59.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "instructions_important": "false",
+    "reference": "/docs/concepts/patterns/debugging-variable-scope-functions/",
+    "parent_level_id": 17799,
+    "encrypted": "false",
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-26 00:52:46 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-26 00:57:47 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-05 01:39:58 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-19 20:27:48 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-19 20:28:21 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-19 20:29:05 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-19 20:37:23 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</Map>

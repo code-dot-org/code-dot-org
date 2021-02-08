@@ -17,6 +17,7 @@
     "video_key": "csd_weblab_intro_2",
     "encrypted": "false",
     "mini_rubric": "true",
+    "validation_enabled": "true",
     "rubric_performance_level_1": "All texts is contained within paragraph tags.  There are at least two paragraphs created through the proper use of paragraph tags.",
     "rubric_performance_level_2": "At least some text has been separated out into a paragraph through proper use of paragraph tags.",
     "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",

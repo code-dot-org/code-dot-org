@@ -6,7 +6,8 @@ import color from '@cdo/apps/util/color';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
-  level: {
+  userLevel: {
+    id: 123,
     assessment: null,
     contained: false,
     driver: null,
@@ -26,8 +27,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           paired: true,
           driver: 'My Friend'
         }}
@@ -41,8 +42,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           paired: true,
           navigator: 'My Friend'
         }}
@@ -63,8 +64,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           passed: true,
           status: LevelStatus.perfect,
           assessment: false
@@ -80,8 +81,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           passed: true,
           kind: LevelKind.assessment,
           status: LevelStatus.completed_assessment
@@ -97,8 +98,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           status: LevelStatus.attempted
         }}
       />
@@ -112,8 +113,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           passed: true,
           status: LevelStatus.passed
         }}
@@ -128,8 +129,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           kind: LevelKind.assessment,
           status: LevelStatus.submitted,
           passed: true
@@ -146,8 +147,8 @@ describe('StudentTable', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           isConceptLevel: true
         }}
       />

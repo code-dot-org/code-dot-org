@@ -5,6 +5,7 @@ Feature: Looking at tutorial landing pages on Pegasus
 Scenario Outline: Simple page view
   When I open my eyes to test "<test_name>"
   And I am on "<url>"
+  And I dismiss the language selector
   When I rotate to landscape
   Then I see no difference for "initial load"
   And I close my eyes

@@ -110,16 +110,27 @@
         "courseB_video_Unspotted": "気づかれていないバグ",
         "courseB_video_Unspotted_2018": "気づかれていないバグ",
         "courseE_Dogger_2": "Dogger Example",
-        "courseF_artist_for1": "くり返しを使って自由にかいてみよう（初歩）",
-        "courseF_artist_for1_2018": "くり返しを使って自由にかいてみよう（初歩）",
-        "courseF_artist_for1_2019": "くり返しを使って自由にかいてみよう（初歩）",
-        "courseF_artist_for1_2020": "くり返しを使って自由にかいてみよう（初歩）",
+        "courseF_artist_for1": "くり返しを使って自由にかいてみよう (初歩)",
+        "courseF_artist_for1_2018": "くり返しを使って自由にかいてみよう (初歩)",
+        "courseF_artist_for1_2019": "くり返しを使って自由にかいてみよう (初歩)",
+        "courseF_artist_for1_2020": "くり返しを使って自由にかいてみよう (初歩)",
         "courseF_project_1": "スプライト ラボのサンプル",
         "courseF_video_csMatters": "付録",
         "courseF_video_csMatters_2018": "Video: コンピュータ科学の問題",
         "scrat_loops_C-F_video": "ループ～アイスエイジ～",
         "scrat_loops_C-F_video_2019": "ループ～アイスエイジ～",
-        "scrat_loops_C-F_video_2020": "ループ～アイスエイジ～"
+        "scrat_loops_C-F_video_2020": "ループ～アイスエイジ～",
+        "CDEF_video_SpritesInAction": "スプライトの作り方",
+        "CDEF_video_SpritesInAction_2019": "スプライトの作り方",
+        "CDEF_video_SpritesInAction_2020": "スプライトの作り方",
+        "CSD U6 arrays intro": "Introduction to Arrays",
+        "CSD U6 arrays intro_2018": "Introduction to Arrays",
+        "CourseEF_video_MakeSprite": "スプライトの作り方",
+        "CourseEF_video_MakeSprite_2019": "スプライトの作り方",
+        "CourseEF_video_MakeSprite_2020": "スプライトの作り方",
+        "OPD-K5 WhatIsCS": "コンピューター サイエンスとは？",
+        "OPD-K5 WhatIsCS_copy": "コンピューター サイエンスとは？",
+        "OPD-K5-spritelab-5-video": "スプライトの作り方"
       }
     }
   }

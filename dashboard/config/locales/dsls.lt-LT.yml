@@ -2040,3 +2040,7 @@ lt-LT:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: aprašymas čia
+      outbreak_story2:
+        content1: aprašymas čia

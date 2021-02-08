@@ -24,6 +24,8 @@ social:
 - census_announcement['school_state'] = request.params["state"] if request.params["state"]
 - census_announcement['school_zip'] = request.params["zip"] if request.params["zip"]
 - census_announcement['school_year'] = current_census_year
+- census_announcement['locale'] = request.locale
+- census_announcement['teacher_applications_active'] = DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active).to_s
 
 = inline_css 'trophy_announcement_sparkle.css'
 
@@ -51,8 +53,8 @@ social:
       Your pledge and information about your school helps expand computer science education across the United States.
       See K-12 Computer Science Access Report data in the
       = " "
-      %a{href: CDO.advocacy_url("/2019_state_of_cs.pdf"), target: "_blank"}> 2019 State of Computer Science Education
-      , published September 2019.
+      %a{href: CDO.advocacy_url("/stateofcs"), target: "_blank"}> annual State of Computer Science Education
+      , published each fall.
     %span{style: "font-family: 'Gotham 7r', sans-serif; font-size: 20px; margin: 0 25px 0 25px;"} In partnership with
     %img{src: '/images/fit-200/avatars/computer_science_teachers_association.png'}
 

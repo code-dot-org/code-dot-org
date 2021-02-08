@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:51:47.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Using Math to Figure it Out\r\n\r\nComputers use math to figure out whether two things are touching.  Look at the math on lines 17-18 of this program to see how the sprite properties are compared with their width to see whether they are touching.\r\n\r\n# Do This\r\n\r\n* Read the if statements inside the draw loop and find the different sprite properties and how they are compared.\r\n* Discuss the code with your partner.\r\n* Why does the code only use the width and x properties, and not the height and y properties?\r\n* Would you want to write this code every time you checked whether something was touching?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 23067,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-30 22:19:15 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 04:03:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</FreeResponse>

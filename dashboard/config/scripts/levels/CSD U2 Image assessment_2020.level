@@ -25,6 +25,7 @@
     "encrypted": "false",
     "rubric_key_concept": "Structure content on a web page using HTML (Add an image to a web page).  Accurately attribute others when using their work.",
     "mini_rubric": "true",
+    "validation_enabled": "true",
     "rubric_performance_level_1": "The image displays properly and an `alt` attribute gives a reasonable test description of the image.  No unnecessary code is included in the`img` tag.  There is accurate attribution and the image is named appropriately.",
     "rubric_performance_level_2": "The image displays properly and is being used according to its copyright license description.",
     "rubric_performance_level_3": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.  The image may not be available for legal use on the web page.",

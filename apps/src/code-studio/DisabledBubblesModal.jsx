@@ -37,6 +37,7 @@ export default class DisabledBubblesModal extends React.Component {
           <div style={styles.paragraph}>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://support.code.org/hc/en-us/articles/115002660852"
             >
               {i18n.learnMore()}

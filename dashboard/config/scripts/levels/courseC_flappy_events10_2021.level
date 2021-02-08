@@ -1,0 +1,160 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2020-12-04T22:23:58.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "shareable": "true",
+    "obstacles": "true",
+    "ground": "true",
+    "score": "true",
+    "free_play": "true",
+    "scale": "{\"snapRadius\":2}",
+    "short_instructions": "Create your own Flappy game! ",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "default_flap": "NORMAL",
+    "long_instructions": "Create your own Flappy game! \r\n\r\nYou can change the visuals and the rules...even the gravity! \r\nWhen you're done, click \"Finish\" to share with friends on their phones.",
+    "project_template_level_name": "courseC_flappy_events_template_2021",
+    "parent_level_id": 21269,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 02:19:37 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"shareable\",\"obstacles\",\"ground\",\"score\",\"free_play\",\"goal\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 20:24:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:06:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-07-19 18:30:27 +0000\",\"changed\":[],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 18:34:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 18:35:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 18:40:20 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 18:40:36 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="flappy_whenClick" deletable="false"/>
+        <block type="flappy_whenCollideGround" deletable="false"/>
+        <block type="flappy_whenCollideObstacle" deletable="false"/>
+        <block type="flappy_whenEnterObstacle" deletable="false"/>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="flappy_flap_height"/>
+        <block type="flappy_playSound"/>
+        <block type="flappy_incrementPlayerScore"/>
+        <block type="flappy_endGame"/>
+        <block type="flappy_setSpeed"/>
+        <block type="flappy_setBackground"/>
+        <block type="flappy_setPlayer"/>
+        <block type="flappy_setObstacle"/>
+        <block type="flappy_setGround"/>
+        <block type="flappy_setGapHeight"/>
+        <block type="flappy_setGravity"/>
+        <block type="flappy_setScore"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="flappy_setPlayer">
+              <title name="VALUE">"shark"</title>
+              <next>
+                <block type="flappy_setBackground">
+                  <title name="VALUE">"underwater"</title>
+                  <next>
+                    <block type="flappy_setObstacle">
+                      <title name="VALUE">"underwater"</title>
+                      <next>
+                        <block type="flappy_setGapHeight">
+                          <title name="VALUE">Flappy.GapHeight.VERY_LARGE</title>
+                          <next>
+                            <block type="flappy_setGravity">
+                              <title name="VALUE">Flappy.Gravity.HIGH</title>
+                              <next>
+                                <block type="flappy_setSpeed">
+                                  <title name="VALUE">Flappy.LevelSpeed.FAST</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideGround" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap_height">
+              <title name="VALUE">Flappy.FlapHeight.NORMAL</title>
+              <next>
+                <block type="flappy_playSound">
+                  <title name="VALUE">"splash"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideObstacle" deletable="false">
+          <next>
+            <block type="flappy_playSound">
+              <title name="VALUE">"crash"</title>
+              <next>
+                <block type="flappy_endGame"/>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenEnterObstacle" deletable="false">
+          <next>
+            <block type="flappy_incrementPlayerScore">
+              <next>
+                <block type="flappy_setBackground">
+                  <title name="VALUE">random</title>
+                  <next>
+                    <block type="flappy_setGround">
+                      <title name="VALUE">random</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Flappy>

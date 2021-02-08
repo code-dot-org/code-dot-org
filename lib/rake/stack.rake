@@ -17,6 +17,7 @@ namespace :stack do
       log: CDO.log,
       verbose: ENV['VERBOSE'],
       quiet: ENV['QUIET'],
+      import_resources: ENV['IMPORT_RESOURCES'],
     )
   end
 
@@ -63,6 +64,7 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
           log: CDO.log,
           verbose: ENV['VERBOSE'],
           quiet: ENV['QUIET'],
+          import_resources: ENV['IMPORT_RESOURCES'],
         )
       end
 

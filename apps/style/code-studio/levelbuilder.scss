@@ -183,6 +183,11 @@ table.checkboxes {
   label {
     padding-left: 1%;
   }
+
+  input:disabled ~ label {
+    cursor: not-allowed;
+    color: #6c757d;
+  }
 }
 .collapsed_area_header{
   font-size: 1.5em;

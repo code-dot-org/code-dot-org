@@ -19,6 +19,7 @@
     ],
     "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
     "encrypted": "false",
+    "validation_enabled": "true",
     "mini_rubric": "false"
   },
   "published": true,

@@ -32,7 +32,7 @@ module RegexpUtils
   end
 
   def self.find_potential_email(text)
-    addresses = text.scan EMAIL_REGEXP
+    addresses = text ? text.scan(EMAIL_REGEXP) : []
     return addresses.empty? ? nil : addresses.first.first
   end
 

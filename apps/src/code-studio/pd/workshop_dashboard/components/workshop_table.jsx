@@ -162,6 +162,16 @@ export default class WorkshopTable extends React.Component {
         }
       },
       {
+        property: 'virtual',
+        header: {
+          label: 'Virtual',
+          transforms: [sortable]
+        },
+        cell: {
+          formatters: [this.formatBoolean]
+        }
+      },
+      {
         property: 'enrollments',
         header: {
           label: 'Signups',
@@ -274,7 +284,7 @@ export default class WorkshopTable extends React.Component {
   formatSignupUrl = workshopId => {
     const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
     return (
-      <a href={signupUrl} target="_blank">
+      <a href={signupUrl} target="_blank" rel="noopener noreferrer">
         {signupUrl}
       </a>
     );

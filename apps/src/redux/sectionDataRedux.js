@@ -37,7 +37,7 @@ export const SET_TTS_AUTOPLAY_ENABLED = 'sectionData/SET_TTS_AUTOPLAY_ENABLED';
 export const setSection = section => {
   // Sort section.students by name.
   const sortedStudents = section.students.sort((a, b) =>
-    a.name.localeCompare(b.name)
+    a.name.localeCompare(b.name, undefined, {numeric: true})
   );
 
   // Filter data to match sectionDataPropType

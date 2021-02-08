@@ -1,0 +1,28 @@
+name 'csp-u5-exam1-list-iteration-2_2021'
+editor_experiment ''
+
+
+wrong '`[apple, dream]`'
+
+right '`[bug, car, ear]`'
+
+wrong '`[bug, car, ear, food]`'
+
+wrong '`[apple, dream, food]`'
+
+markdown <<MARKDOWN
+```
+var words = [“apple”,”bug”,”car”,”dream”,”ear”, “food”]
+var filteredWords = [];
+for(var i = 0; i < words.length; i++){
+  var word = words[i];
+  if (word.length < 4){
+    appendItem(filteredWords,word)
+  }
+}
+console.log(filteredWords);
+```
+
+If the program above is run, what will be displayed in the console?
+
+MARKDOWN

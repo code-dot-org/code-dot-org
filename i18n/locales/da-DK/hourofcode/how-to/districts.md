@@ -12,7 +12,7 @@ title: Hour of Code vejledning for kommuner (skoledistrikter)
 
 ## Få alle skoler til at deltage, alle elever til at lære!
 
-### 1. Recruit local schools
+### 1. Rekrutter lokale skoler
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

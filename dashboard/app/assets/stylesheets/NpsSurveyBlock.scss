@@ -1,0 +1,107 @@
+// Style rules associated with the NpsSurveyBlock component
+@import "color";
+$box_shadow: rgba(255, 255, 255, 0.63);
+
+.nps-survey-root {
+  margin-top: 0;
+  color: $charcoal;
+  font-size: 25px;
+}
+
+.nps-survey-q-title {
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.nps-survey-row {
+  background-color: $table_header;
+}
+
+.nps-survey-q-rating-item {
+  display: inline-block;
+  font-size: 14px;
+  width: 32px;
+  height: 32px;
+  margin-right: 24px;
+  background-color: $white;
+  border-radius: 32px;
+  text-align: center;
+  line-height: 32px;
+  border: 1px solid $border_gray;
+}
+
+.nps-survey-rating-selected {
+  background-color: $teal;
+}
+
+.nps-survey-q-rating-item .sv-visuallyhidden {
+  display: none;
+}
+
+.nps-survey-rating-min {
+  position: absolute;
+  top: 45px;
+  width: 200px;
+  text-align: left;
+  left: 20px;
+}
+
+.nps-survey-rating-max {
+  position: absolute;
+  top: 45px;
+  width: 200px;
+  text-align: right;
+  right: 220px;
+}
+
+.nps-survey-rating-root {
+  height: 80px;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+}
+
+.nps-survey-checkbox-material-decorator {
+  display: none;
+}
+
+.nps-survey-checkbox-item-control {
+  margin: 0 3px 3px 0 !important;
+}
+
+.nps-survey-top-error {
+  color: $bootstrap_error_text;
+  background-color: $bootstrap_error_background;
+  border: 1px solid $bootstrap_error_border;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.nps-survey-submit-button {
+  font-size: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $border_gray;
+  border-radius: 3px;
+  white-space: nowrap;
+  color: $white;
+  background-color: $level_current;
+  font-weight: bold;
+  box-shadow: $box_shadow 0 2px 0 0 inset;
+  height: 34px;
+  padding-left: 24px;
+  padding-right: 24px;
+  line-height: 34px;
+  &:hover {
+    color: $level_current;
+    border-color: $level_current;
+    background-color: $white;
+  };
+}
+
+.nps-survey-comment {
+  width: 500px;
+  max-width: 700px;
+}
