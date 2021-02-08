@@ -198,10 +198,11 @@ export function summarizeProgressInStage(studentProgress, levels) {
 
   filteredLevels.forEach(level => {
     const levelProgress = studentProgress[level.id];
+    statusCounts.total++;
     if (!levelProgress) {
+      statusCounts.incomplete++;
       return;
     }
-    statusCounts.total++;
     switch (levelProgress.status) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
