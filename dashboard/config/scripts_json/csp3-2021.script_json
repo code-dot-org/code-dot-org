@@ -963,7 +963,6 @@
         "description": "[slide]  **Prompt:** What are apps? How do we interact with them? What kinds of things do apps do?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n \tApps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
           }
@@ -991,7 +990,7 @@
       "key": "038425cb-a49b-4d27-a74e-e206f8128143",
       "position": 2,
       "properties": {
-        "description": "[slide] **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 2. \n\n**Levels 2-6:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
+        "description": "[slide] **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 2. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
       },
       "seeding_key": {
         "activity_section.key": "038425cb-a49b-4d27-a74e-e206f8128143",
@@ -1005,7 +1004,6 @@
         "description": "[slide]  **Prompt:** With a partner, discuss the following and note down in your journal:",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**App #1: Water Conservation Tips**\n\n* The user clicks through the different screens and makes choices about the correct ways to conserve water. When the user makes choices, images or sounds are played to indicate if a choice is the right one. \n* The purpose of the app is to teach people about ways to conserve water. \n* The target audience is young people who are interested in the topic\n\n**App #2: Bird Quiz**\n\n* The user answers trivia questions about birds. If the answer is correct, they go to the next question. If wrong, they are taken to a losing screen, and then start the quiz again. If three questions are answered correctly the user is taken to the winning screen.\n* The purpose of the app is to teach users different facts about birds\n* The target audience is anyone interested in birds\n\n**App #3: Hamilton Township**\n\n* The user clicks through a few different screens to learn about township efforts to beautify the town\n* The purpose of the app is to educate users on steps the town is taking to improve the town\n* The target audience is people who live in Hamilton Township\n\n**App #4: Four Square Instructions**\n\n* The user navigates through different screens that explain how to play four square. On one screen, the user is quizzed on how many people are needed to play four square. \n* The purpose of the app is to instruct the user on the rules of four square.\n* The target audience is people who would like to play four square.\n\n**App #5: Monarch Butterflies**\n\n* The user clicks on different screens and pictures of monarch butterflies to explore the life stages of the butterfly\n* The purpose of the app is to educate users on the life cycle of the monarch butterfly\n* The target audience is young people, most likely children or teenagers who are interested in life science and butterflies\n"
           }
@@ -1017,8 +1015,19 @@
       }
     },
     {
-      "key": "c7fb7de9-7012-4a6e-a3ea-38985adb0df5",
+      "key": "44e12046-468c-4de1-ac4d-925fcddf3e0d",
       "position": 4,
+      "properties": {
+        "progression_name": "App Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d",
+        "lesson_activity.key": "b9e3b7e4-186b-4571-8992-df088523a6b0"
+      }
+    },
+    {
+      "key": "c7fb7de9-7012-4a6e-a3ea-38985adb0df5",
+      "position": 5,
       "properties": {
         "description": "* How does the user interact with the app?\n* What is the overall purpose of this app?\n* Who is the target audience?\n\n**Share Out:** As a class, discuss student answers to the discussion questions."
       },
@@ -1029,7 +1038,7 @@
     },
     {
       "key": "28f300d8-87a3-4f99-9b83-2b5a331cbac2",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "In developing apps, which are a kind of computing innovation, it's important to understand both their purpose and function. The purpose helps the developer focus on creating an app with specific goals in mind. \n\nNow let's dig in to how the user interacts with the apps.",
         "remarks": true
@@ -1041,7 +1050,7 @@
     },
     {
       "key": "f8496c85-e709-44b6-8919-23c7d7839f51",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "[slide] **Display:** How Computers Work [r how computers work csp video]",
         "name": "Input & Output"
@@ -1053,7 +1062,7 @@
     },
     {
       "key": "d5832083-f01e-465c-859a-90a39c9cf2a8",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "The video explained *Input*, *Storage*, *Processing*, and *Output*. Today we are going to focus on input and output. An app on a phone gets input in many different ways from a user or from another program and displays (or in the case of sound: plays) output. The output of a program is usually based on inputs or the initial way the program was set up. For example, you could program an app to play a song as soon as it runs.",
         "remarks": true
@@ -1064,13 +1073,23 @@
       }
     },
     {
-      "key": "e41014d8-2c35-4ecc-8799-d5ed6b65fca1",
-      "position": 8,
+      "key": "9e28f914-c760-45c4-abd6-4b2a2764c4bc",
+      "position": 9,
       "properties": {
-        "description": "[slide]  **Levels 8-12:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
+        "progression_name": "How Computers Work"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e28f914-c760-45c4-abd6-4b2a2764c4bc",
+        "lesson_activity.key": "b9e3b7e4-186b-4571-8992-df088523a6b0"
+      }
+    },
+    {
+      "key": "e41014d8-2c35-4ecc-8799-d5ed6b65fca1",
+      "position": 10,
+      "properties": {
+        "description": "[slide]  **Levels 7-11:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "After students are finished writing in their journals, discuss as a class or collect the journals to review student answers. \n\n* An input could be a user clicking a button or tapping the screen\n* An output could be an image displayed or a sound played\n"
           }
@@ -1079,6 +1098,17 @@
       },
       "seeding_key": {
         "activity_section.key": "e41014d8-2c35-4ecc-8799-d5ed6b65fca1",
+        "lesson_activity.key": "b9e3b7e4-186b-4571-8992-df088523a6b0"
+      }
+    },
+    {
+      "key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688",
+      "position": 11,
+      "properties": {
+        "progression_name": "App Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688",
         "lesson_activity.key": "b9e3b7e4-186b-4571-8992-df088523a6b0"
       }
     },
@@ -1101,7 +1131,6 @@
         "description": "[slide]  **Prompt:** Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "After students have shared with a partner, bring the class back together and discuss a few examples. \r\n"
           }
@@ -1136,46 +1165,9 @@
       }
     },
     {
-      "key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10",
+      "key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
       "position": 1,
       "properties": {
-        "name": "App Exploration",
-        "progression_name": "App Exploration"
-      },
-      "seeding_key": {
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10",
-        "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914"
-      }
-    },
-    {
-      "key": "8962f49a-768b-425f-9cdb-9d52032055b3",
-      "position": 2,
-      "properties": {
-        "name": "How Computers Work",
-        "progression_name": "How Computers Work"
-      },
-      "seeding_key": {
-        "activity_section.key": "8962f49a-768b-425f-9cdb-9d52032055b3",
-        "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914"
-      }
-    },
-    {
-      "key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d",
-      "position": 3,
-      "properties": {
-        "name": "App Investigation",
-        "progression_name": "App Investigation"
-      },
-      "seeding_key": {
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d",
-        "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914"
-      }
-    },
-    {
-      "key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1187,7 +1179,7 @@
       "key": "3c2ed0ae-b83d-4f69-9a43-5f55dada7a69",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What is a common app that you use? Take a minute to sketch the User Interface of the main screen. Note how the user interacts with the app.",
+        "description": "[slide]  **Prompt:** What is a common app that you use? Take a minute to sketch the User Interface of the main screen. Note how the user interacts with the app.\n* Compare your sketch with a partner and discuss common elements that both of your apps share",
         "tips": [
           {
             "type": "discussionGoal",
@@ -1201,19 +1193,8 @@
       }
     },
     {
-      "key": "692b0b7b-7b98-48f4-91c3-86e60ea0c204",
-      "position": 2,
-      "properties": {
-        "description": "* Compare your sketch with a partner and discuss common elements that both of your apps share"
-      },
-      "seeding_key": {
-        "activity_section.key": "692b0b7b-7b98-48f4-91c3-86e60ea0c204",
-        "lesson_activity.key": "f414eeb9-6684-42cb-8d3f-7688bfa4d976"
-      }
-    },
-    {
       "key": "7e93b358-48d6-4d64-aa86-4099fd380736",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Yesterday we took a look at a few different apps and talked about input and output. We also discussed the User Interface. Today we are going to learn how to build the User Interface in App Lab.",
         "remarks": true
@@ -1244,7 +1225,7 @@
       "key": "4fa755d5-1ec0-4ccb-bc4a-14ffe312e4c4",
       "position": 2,
       "properties": {
-        "description": "**Level 2:** Students examine an app from the previous lesson. They should feel free to move around and change any elements they'd like. Encourage students to spend a good amount of time on this level discovering how things work. Here are a few things they should notice:\r\n\r\n* The screen can be changed by clicking the dropdown at the top of the app screen\r\n* Each element has different properties that can be changed depending on the type of element. For example, a label element has choices like \"text alignment\" and \"font family\" while an image has choices like \"fit image\". \r\n\r\n**Levels 3-7:** In these levels, students will learn how specific elements are set up and edited. Level 3 introduces the concept of themes, which control the overall \"look\" of an app. No matter what theme is chosen, students have the ability to override any element's design. \r\n\r\n**Level 8:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson."
+        "description": "**Level 1:** Students examine an app from the previous lesson. They should feel free to move around and change any elements they'd like. Encourage students to spend a good amount of time on this level discovering how things work. Here are a few things they should notice:\n\n* The screen can be changed by clicking the dropdown at the top of the app screen\n* Each element has different properties that can be changed depending on the type of element. For example, a label element has choices like \"text alignment\" and \"font family\" while an image has choices like \"fit image\". \n\n**Levels 2-6:** In these levels, students will learn how specific elements are set up and edited. Level 3 introduces the concept of themes, which control the overall \"look\" of an app. No matter what theme is chosen, students have the ability to override any element's design. \n\n**Level 7:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson."
       },
       "seeding_key": {
         "activity_section.key": "4fa755d5-1ec0-4ccb-bc4a-14ffe312e4c4",
@@ -1317,7 +1298,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why is it important for element IDs to have meaningful names?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "539b38b5-7f2e-4cdc-a0ea-53ad55592f08",
@@ -1328,10 +1310,9 @@
       "key": "5f20bf23-eb13-4af0-b61d-588821d0d451",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** People design user interfaces to meet a user's needs, but they don't always get it right.",
+        "description": "[slide]  **Prompt:** People design user interfaces to meet a user's needs, but they don't always get it right.\n* Have you ever used an app where the user interface didn't actually meet your needs?\n* What was the problem?\n* What do you think the designers didn't understand about you or your needs?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The goal here is to help students understand the importance of considering the end user when designing an app. \r\n\r\nSome points that may come up:\r\n\r\n* Some apps have too much guidance on how to use them, and others too little.\r\n* An app may be designed for a phone, but the user wants to use it on a tablet.\r\n* Apps that are designed for teenagers may make assumptions about language usage or interests that aren't accurate. \r\n"
           }
@@ -1339,17 +1320,6 @@
       },
       "seeding_key": {
         "activity_section.key": "5f20bf23-eb13-4af0-b61d-588821d0d451",
-        "lesson_activity.key": "8f2f0ed8-0281-4593-8c9a-2830b0f4f357"
-      }
-    },
-    {
-      "key": "c87135b8-3dad-4c3a-81b3-f4d6030f800d",
-      "position": 2,
-      "properties": {
-        "description": "* Have you ever used an app where the user interface didn't actually meet your needs?\r\n* What was the problem?\r\n* What do you think the designers didn't understand about you or your needs?"
-      },
-      "seeding_key": {
-        "activity_section.key": "c87135b8-3dad-4c3a-81b3-f4d6030f800d",
         "lesson_activity.key": "8f2f0ed8-0281-4593-8c9a-2830b0f4f357"
       }
     },
@@ -1403,10 +1373,9 @@
       "key": "6044387a-331f-462f-b572-5ba71d8bfe9d",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Step 4:** Design the User Interface",
+        "description": "[slide]  **Step 4:** Design the User Interface\n\n* Students use the screen templates to sketch out the design of their app, including arrows or notes to show how different elements are connected. \n\n\nSteps 5+ will be completed later on in the unit.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "After Step 4, you may want to check in with student groups to make sure their apps are doable and can be completed within the scope of the project. \r\n   "
           }
@@ -1414,17 +1383,6 @@
       },
       "seeding_key": {
         "activity_section.key": "6044387a-331f-462f-b572-5ba71d8bfe9d",
-        "lesson_activity.key": "359ea193-1806-4826-8844-966d2ccd5d2c"
-      }
-    },
-    {
-      "key": "e5dc419a-95d0-4d2b-baa0-16a6fe170961",
-      "position": 6,
-      "properties": {
-        "description": "* Student use the screen templates to sketch out the design of their app, including arrows or notes to show how different elements are connected. \r\n\r\n\r\nSteps 5+ will be completed later on in the unit."
-      },
-      "seeding_key": {
-        "activity_section.key": "e5dc419a-95d0-4d2b-baa0-16a6fe170961",
         "lesson_activity.key": "359ea193-1806-4826-8844-966d2ccd5d2c"
       }
     },
@@ -1504,7 +1462,6 @@
         "description": "[slide]  **Prompt:** Why is it important to plan out the design of an app?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "* Planning can save time so the developers don't spend time designing faulty user interfaces\n* Planning can help the developers talk through and test out ideas with the users of the app\n"
           }
@@ -1542,14 +1499,14 @@
       "key": "9224ac47-9581-419c-977c-393705bb9647",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Level 2:** On this level, students see a sample app they've looked at before along with the sketches for the screens. Students run the app and compare the screens to the original design.",
+        "description": "[slide]  **Level 1:** On this level, students see a sample app they've looked at before along with the sketches for the screens. Students run the app and compare the screens to the original design.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students should explore the app and the prototype for a few minutes, noting how different elements are represented on the prototype. \n\n**Encourage Collaboration:** Reinforce a collaborative classroom environment in which students share responsibilities for designing screens and discuss with one another the choices they're making. Students should be communicating their ideas with one another as they build.\n\n**Waiting for Programming:** Some students may be eager to start programming their apps rather than simply build screens. Let students know that they'll be able to start programming their apps in the coming lessons and that the first half of the unit focuses more heavily on design.\n"
           }
-        ]
+        ],
+        "progression_name": "Sample Prototype"
       },
       "seeding_key": {
         "activity_section.key": "9224ac47-9581-419c-977c-393705bb9647",
@@ -1560,7 +1517,7 @@
       "key": "212d94c1-f322-4fc3-a34d-4305e9ef3a74",
       "position": 4,
       "properties": {
-        "description": "After looking at this app and the prototype, you may want to make a few adjustments to your own prototypes. Take a few minutes to update your design. \n\nWhen you are finished, move on to Level 3 where you will start creating your user interfaces in App Lab!",
+        "description": "After looking at this app and the prototype, you may want to make a few adjustments to your own prototypes. Take a few minutes to update your design. \n\nWhen you are finished, move on to Level 2 where you will start creating your user interfaces in App Lab!",
         "remarks": true
       },
       "seeding_key": {
@@ -1572,10 +1529,22 @@
       "key": "56a07763-6e3b-4a2d-b71c-89517875ee26",
       "position": 5,
       "properties": {
-        "description": "[slide] **Level 3:** Here students will work on transferring their prototypes to screens in App Lab. Partners can work together sharing a computer, or they can divide the screens between themselves and work individually. After they are done, the individual screens can be shared to create a complete project (see slide for instructions)."
+        "description": "[slide] **Level 2** Here students will work on transferring their prototypes to screens in App Lab. Partners can work together sharing a computer, or they can divide the screens between themselves and work individually. After they are done, the individual screens can be shared to create a complete project (see slide for instructions).",
+        "progression_name": "Sample Prototype"
       },
       "seeding_key": {
         "activity_section.key": "56a07763-6e3b-4a2d-b71c-89517875ee26",
+        "lesson_activity.key": "4f2f24f3-399f-40eb-9645-2cad55162ff6"
+      }
+    },
+    {
+      "key": "a21990b7-7716-4f30-8bd1-7f75fbf118a5",
+      "position": 6,
+      "properties": {
+        "progression_name": "Build Your Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "a21990b7-7716-4f30-8bd1-7f75fbf118a5",
         "lesson_activity.key": "4f2f24f3-399f-40eb-9645-2cad55162ff6"
       }
     },
@@ -1586,7 +1555,6 @@
         "description": "[slide]  **Prompt:** Were there any changes you had to make to your original design once you transferred it to a screen?",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "*The Wrap-up is short today to allow students the maximum amount of time to work on their apps.*\n\nOften times students will discover that their design is too complicated on paper and simplify it when they transfer it to the screen. This is ok! Sometimes the best designs are simple designs. \n"
           }
@@ -1624,7 +1592,6 @@
       "key": "83aece13-4f10-484f-ac74-15c2e14b87f4",
       "position": 1,
       "properties": {
-        "name": "Sample Prototype",
         "progression_name": "Sample Prototype"
       },
       "seeding_key": {
@@ -1636,7 +1603,6 @@
       "key": "1eef7133-a270-40b9-98a6-6beb32dcb82d",
       "position": 2,
       "properties": {
-        "name": "Build Your Screens",
         "progression_name": "Build Your Screens"
       },
       "seeding_key": {
@@ -2621,12 +2587,9 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Exploration",
-        "level_keys": [
-          "CSP U3 Water Conservation Sample App_2021"
-        ]
+        "progression": "App Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -2637,7 +2600,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       },
       "level_keys": [
         "CSP U3 Water Conservation Sample App_2021"
@@ -2647,12 +2610,9 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Exploration",
-        "level_keys": [
-          "CSP U3 Bird Quiz App_2021"
-        ]
+        "progression": "App Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -2663,7 +2623,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       },
       "level_keys": [
         "CSP U3 Bird Quiz App_2021"
@@ -2673,12 +2633,9 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Exploration",
-        "level_keys": [
-          "CSP U3 Hamilton Township App_2021"
-        ]
+        "progression": "App Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -2689,7 +2646,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       },
       "level_keys": [
         "CSP U3 Hamilton Township App_2021"
@@ -2699,12 +2656,9 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Exploration",
-        "level_keys": [
-          "CSP U3 Four Square App_2021"
-        ]
+        "progression": "App Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -2715,7 +2669,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       },
       "level_keys": [
         "CSP U3 Four Square App_2021"
@@ -2725,12 +2679,9 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Exploration",
-        "level_keys": [
-          "CSP U3 Monarch Butterfly App_2021"
-        ]
+        "progression": "App Exploration"
       },
       "named_level": null,
       "bonus": null,
@@ -2741,7 +2692,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       },
       "level_keys": [
         "CSP U3 Monarch Butterfly App_2021"
@@ -2751,12 +2702,9 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "How Computers Work",
-        "level_keys": [
-          "How Computers Work part 1 CSP_2021"
-        ]
+        "progression": "How Computers Work"
       },
       "named_level": null,
       "bonus": null,
@@ -2767,7 +2715,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "8962f49a-768b-425f-9cdb-9d52032055b3"
+        "activity_section.key": "9e28f914-c760-45c4-abd6-4b2a2764c4bc"
       },
       "level_keys": [
         "How Computers Work part 1 CSP_2021"
@@ -2777,12 +2725,9 @@
       "chapter": 7,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Investigation",
-        "level_keys": [
-          "CSP U3 Water Conservation Sample App Investigate_2021"
-        ]
+        "progression": "App Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -2793,7 +2738,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       },
       "level_keys": [
         "CSP U3 Water Conservation Sample App Investigate_2021"
@@ -2803,12 +2748,9 @@
       "chapter": 8,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Investigation",
-        "level_keys": [
-          "CSP U3 Bird Quiz App Investigation_2021"
-        ]
+        "progression": "App Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -2819,7 +2761,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       },
       "level_keys": [
         "CSP U3 Bird Quiz App Investigation_2021"
@@ -2829,12 +2771,9 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Investigation",
-        "level_keys": [
-          "CSP U3 Hamilton Township App Investigation_2021"
-        ]
+        "progression": "App Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -2845,7 +2784,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       },
       "level_keys": [
         "CSP U3 Hamilton Township App Investigation_2021"
@@ -2855,12 +2794,9 @@
       "chapter": 10,
       "position": 10,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Investigation",
-        "level_keys": [
-          "CSP U3 Four Square App Investigation_2021"
-        ]
+        "progression": "App Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -2871,7 +2807,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       },
       "level_keys": [
         "CSP U3 Four Square App Investigation_2021"
@@ -2881,12 +2817,9 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App Investigation",
-        "level_keys": [
-          "CSP U3 Monarch Butterfly App Investigation_2021"
-        ]
+        "progression": "App Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -2897,7 +2830,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       },
       "level_keys": [
         "CSP U3 Monarch Butterfly App Investigation_2021"
@@ -3117,10 +3050,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U3L2 CSP CFU ID names_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -3131,7 +3061,7 @@
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "4540ba32-cc73-4946-b03b-3a29d424a159"
+        "activity_section.key": "539b38b5-7f2e-4cdc-a0ea-53ad55592f08"
       },
       "level_keys": [
         "U3L2 CSP CFU ID names_2021"
@@ -3141,12 +3071,9 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sample Prototype",
-        "level_keys": [
-          "CSP U3 Bird Quiz Storyboard_2021"
-        ]
+        "progression": "Sample Prototype"
       },
       "named_level": null,
       "bonus": null,
@@ -3157,7 +3084,7 @@
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "83aece13-4f10-484f-ac74-15c2e14b87f4"
+        "activity_section.key": "9224ac47-9581-419c-977c-393705bb9647"
       },
       "level_keys": [
         "CSP U3 Bird Quiz Storyboard_2021"
@@ -3167,12 +3094,9 @@
       "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Build Your Screens",
-        "level_keys": [
-          "CSP U3 L4 Design Screens_2021"
-        ]
+        "progression": "Build Your Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -3183,7 +3107,7 @@
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "1eef7133-a270-40b9-98a6-6beb32dcb82d"
+        "activity_section.key": "a21990b7-7716-4f30-8bd1-7f75fbf118a5"
       },
       "level_keys": [
         "CSP U3 L4 Design Screens_2021"
@@ -3720,7 +3644,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       }
     },
     {
@@ -3732,7 +3656,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       }
     },
     {
@@ -3744,7 +3668,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       }
     },
     {
@@ -3756,7 +3680,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       }
     },
     {
@@ -3768,7 +3692,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "9b86f87c-69ce-49e2-be46-ffb5d3891a10"
+        "activity_section.key": "44e12046-468c-4de1-ac4d-925fcddf3e0d"
       }
     },
     {
@@ -3780,7 +3704,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "8962f49a-768b-425f-9cdb-9d52032055b3"
+        "activity_section.key": "9e28f914-c760-45c4-abd6-4b2a2764c4bc"
       }
     },
     {
@@ -3792,7 +3716,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       }
     },
     {
@@ -3804,7 +3728,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       }
     },
     {
@@ -3816,7 +3740,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       }
     },
     {
@@ -3828,7 +3752,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       }
     },
     {
@@ -3840,7 +3764,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "89e7fd1f-0b41-49d9-9801-d6d0918cb47d"
+        "activity_section.key": "ba7714fb-5c66-44af-a5fa-b3c1aa39f688"
       }
     },
     {
@@ -3948,7 +3872,7 @@
         "lesson.key": "Introduction to Design Mode",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "4540ba32-cc73-4946-b03b-3a29d424a159"
+        "activity_section.key": "539b38b5-7f2e-4cdc-a0ea-53ad55592f08"
       }
     },
     {
@@ -3960,7 +3884,7 @@
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "83aece13-4f10-484f-ac74-15c2e14b87f4"
+        "activity_section.key": "9224ac47-9581-419c-977c-393705bb9647"
       }
     },
     {
@@ -3972,7 +3896,7 @@
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "1eef7133-a270-40b9-98a6-6beb32dcb82d"
+        "activity_section.key": "a21990b7-7716-4f30-8bd1-7f75fbf118a5"
       }
     },
     {
