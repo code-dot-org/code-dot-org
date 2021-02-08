@@ -11,7 +11,7 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
  * @return {string}
  */
 export const activityCssClass = result => {
-  if (!result) {
+  if (!result || result === TestResults.NO_TESTS_RUN) {
     return LevelStatus.not_tried;
   }
   if (result === TestResults.REVIEW_ACCEPTED_RESULT) {
@@ -39,6 +39,40 @@ export const activityCssClass = result => {
     return LevelStatus.passed;
   }
   return LevelStatus.attempted;
+};
+
+/**
+ * Inverse of the above function.
+ * Given a status string, returns a result value.
+ * @param {string} status
+ * @return {number}
+ */
+export const resultFromStatus = status => {
+  if (status === LevelStatus.review_accepted) {
+    return TestResults.REVIEW_ACCEPTED_RESULT;
+  }
+  if (status === LevelStatus.review_rejected) {
+    return TestResults.REVIEW_REJECTED_RESULT;
+  }
+  if (status === LevelStatus.submitted) {
+    return TestResults.SUBMITTED_RESULT;
+  }
+  if (status === LevelStatus.locked) {
+    return TestResults.LOCKED_RESULT;
+  }
+  if (status === LevelStatus.readonly) {
+    return TestResults.READONLY_SUBMISSION_RESULT;
+  }
+  if (status === LevelStatus.free_play_complete) {
+    return TestResults.FREE_PLAY;
+  }
+  if (status === LevelStatus.perfect) {
+    return TestResults.ALL_PASS;
+  }
+  if (status === LevelStatus.passed) {
+    return TestResults.MINIMUM_PASS_RESULT;
+  }
+  return TestResults.NO_TESTS_RUN;
 };
 
 /**
