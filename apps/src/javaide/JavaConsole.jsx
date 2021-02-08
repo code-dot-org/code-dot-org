@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import {appendInputLog} from './javaIdeRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
+import color from '@cdo/apps/util/color';
 
 const style = {
   consoleStyle: {
-    backgroundColor: 'black',
-    color: 'white',
+    backgroundColor: color.black,
+    color: color.white,
     height: '200px',
     overflowY: 'auto',
     border: '1px solid #e7e8ea',
@@ -37,8 +38,8 @@ const style = {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',
-    backgroundColor: 'black',
-    color: 'white',
+    backgroundColor: color.black,
+    color: color.white,
     border: 'none'
   }
 };
