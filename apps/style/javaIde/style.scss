@@ -1,14 +1,16 @@
+@import 'color';
+
 .container {
   width: 95%;
 }
 
 body {
-  background-color: #1b1c17 !important;
-  color: white;
+  background-color: #1b1c17;
+  color: $white;
 } 
 
 .main {
-  padding: 0 !important;
+  padding: 0;
 }
 
 .hover-pointer:hover {
