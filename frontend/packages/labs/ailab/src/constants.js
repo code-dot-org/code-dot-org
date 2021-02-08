@@ -231,7 +231,7 @@ export const styles = {
   previousButton: {
     position: "fixed",
     left: 20,
-    bottom: 20,
+    bottom: 60,
     fontSize: 30,
     cursor: "pointer"
   },
@@ -239,7 +239,7 @@ export const styles = {
   nextButton: {
     position: "fixed",
     right: 20,
-    bottom: 20,
+    bottom: 60,
     fontSize: 30,
     cursor: "pointer"
   },
