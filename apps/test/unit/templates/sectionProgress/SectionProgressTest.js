@@ -35,7 +35,7 @@ describe('SectionProgress', () => {
         stages: [
           {
             id: 456,
-            levels: [{id: 789}]
+            levels: [{id: '789'}]
           }
         ],
         csf: true,
@@ -44,7 +44,7 @@ describe('SectionProgress', () => {
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
-      studentTimestamps: {
+      studentLastUpdateByScript: {
         1: Date.now()
       }
     };
