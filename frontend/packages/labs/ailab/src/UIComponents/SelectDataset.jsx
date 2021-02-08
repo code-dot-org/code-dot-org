@@ -92,6 +92,8 @@ class SelectDataset extends Component {
     const specifiedDatasets = this.props.specifiedDatasets;
     const datasets = getAvailableDatasets(specifiedDatasets);
 
+    const assetPath = global.__ml_playground_asset_public_path__;
+
     return (
       <div id="select-dataset" style={styles.panel}>
         <div style={styles.largeText}>Which dataset would you like to use?</div>
@@ -108,7 +110,7 @@ class SelectDataset extends Component {
                     onClick={() => this.handleDatasetClick(dataset.id)}
                   >
                     <img
-                      src={dataset.imagePath}
+                      src={assetPath + dataset.imagePath}
                       style={{ width: 240, float: "left" }}
                     />
                     <div style={{ float: "left", paddingLeft: 20 }}>{dataset.name}</div>
