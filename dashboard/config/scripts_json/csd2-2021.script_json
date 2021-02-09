@@ -1756,7 +1756,6 @@
         "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of the discussion is to help students see web development as a form of self-expression and communication, and to set an expectation that they have something valuable to contribute.  While some students may want to share something silly, encourage students to consider that they have something valuable to say and that others can benefit from it.  This discussion should set a positive atmosphere that respects the diversity of perspectives that the group can bring.\r\n"
           }
@@ -1843,7 +1842,6 @@
         "description": "This activity guide asks students to consider why people make personal web pages and what sorts of interests can be expressed on them.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students don't need to get it \"right\" for each site, but they should demonstrate that they have considered the reasons someone might make a web page. If students struggle to identify the purpose a site serves its creator, consider asking the following prompts:\r\n\r\n* Does the website creator want the user to do something?\r\n* Does the website try to convince the user of something in particular?\r\n* Does the website serve as a form of personal expression for the creator?\r\n\r\nThe sites are intentionally simple, to help set expectations about the websites that students will be creating over the course of the unit.\r\n\r\n"
           }
@@ -1883,7 +1881,6 @@
         "description": "**Discuss:** Give students an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is to prepare students to think of themselves as potential website creators.  As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what their motivations might be.  Remind them that they will have an opportunity in this unit to create a website that will be shared with the entire world.\r\n"
           }
@@ -5915,7 +5912,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Personal Web Pages",
         "level_keys": [
@@ -6123,7 +6120,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Pair Programming",
         "level_keys": [
@@ -6149,7 +6146,7 @@
       "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6175,7 +6172,7 @@
       "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6201,7 +6198,7 @@
       "chapter": 12,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6253,7 +6250,7 @@
       "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Debugging",
         "level_keys": [
@@ -6279,7 +6276,7 @@
       "chapter": 15,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6331,7 +6328,7 @@
       "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
