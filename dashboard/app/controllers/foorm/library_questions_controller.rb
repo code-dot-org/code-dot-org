@@ -55,7 +55,7 @@ module Foorm
 
     # PUT /foorm/library_questions/:id/update
     def update
-      @library_question.question = get_question
+      @library_question.question = JSON.pretty_generate(get_question)
 
       if @library_question.save
         return render json: @library_question
@@ -67,6 +67,9 @@ module Foorm
     # GET /foorm/library_questions/:id/published_forms_appeared_in
     def published_forms_appeared_in
       published_forms = @library_question.published_forms_appeared_in
+
+      # A form "key" is of the format "surveys/pd/pre_workshop_survey.0"
+      # It combines the name and version of the form.
       data_to_return = published_forms.map(&:key)
 
       return render json: data_to_return
