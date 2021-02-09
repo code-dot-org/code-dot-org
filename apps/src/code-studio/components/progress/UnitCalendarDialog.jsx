@@ -101,10 +101,11 @@ export default class UnitCalendarDialog extends Component {
         useUpdatedStyles
         hideCloseButton
       >
-        <h2>Weekly Lesson Layout</h2>
+        <h2>{i18n.weeklyLessonLayout()}</h2>
         <div>
-          A weekly chart of a suggested schedule based on{' '}
-          {weeklyInstructionalMinutes} instructional minutes per week.
+          {i18n.weeklyLessonLayoutDescription({
+            minutes: weeklyInstructionalMinutes
+          })}
         </div>
         <UnitCalendar
           schedule={schedule}
