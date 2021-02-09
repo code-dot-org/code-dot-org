@@ -4,7 +4,10 @@ import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 import {TestResults} from '@cdo/apps/constants';
-import {activityCssClass} from '@cdo/apps/code-studio/activityUtils';
+import {
+  activityCssClass,
+  resultFromStatus
+} from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
 
 /**
@@ -113,58 +116,116 @@ export function isLevelAssessment(level) {
 }
 
 /**
- * Checks if a whole stage is assessment levels
+ * Checks if a whole lesson is assessment levels
  * @param {[]} levels An array of levels
- * @returns {bool} If all the levels in a stage are assessment levels
+ * @returns {bool} If all the levels in a lesson are assessment levels
  */
-export function stageIsAllAssessment(levels) {
+export function lessonIsAllAssessment(levels) {
   return levels.every(level => level.kind === LevelKind.assessment);
 }
 
 /**
+ * Computes progress status percentages for a set of levels.
+ * @param {{id:studentLevelProgressType}} studentLevelProgress An object keyed by
+ * level id containing objects representing the student's progress in that level
+ * @param {levelType[]} levels An array of levels
+ * @returns {studentLessonProgressType} An object representing student's progress
+ * in the lesson
+ *
+ * Note: this function will replace `summarizeProgressInStage` below once we
+ * refactor the legacy StudentProgressSummaryCell component
+ */
+export function progressForLesson(studentLevelProgress, levels) {
+  // Filter any bonus levels as they do not count toward progress.
+  const filteredLevels = levels.filter(level => !level.bonus);
+  const statuses = filteredLevels.map(level => {
+    const levelProgress = studentLevelProgress[level.id];
+    return (levelProgress && levelProgress.status) || LevelStatus.not_tried;
+  });
+
+  const completedStatuses = [
+    LevelStatus.perfect,
+    LevelStatus.submitted,
+    LevelStatus.free_play_complete,
+    LevelStatus.completed_assessment,
+    LevelStatus.readonly
+  ];
+
+  const statusCounts = statuses.reduce(
+    (counts, status) => {
+      counts.attempted += status === LevelStatus.attempted;
+      counts.imperfect += status === LevelStatus.passed;
+      counts.completed += completedStatuses.includes(status);
+      return counts;
+    },
+    {attempted: 0, imperfect: 0, completed: 0}
+  );
+  const incomplete =
+    statuses.length - statusCounts.completed - statusCounts.imperfect;
+  const isLessonStarted =
+    statusCounts.attempted + statusCounts.imperfect + statusCounts.completed >
+    0;
+
+  const getPercent = count => (100 * count) / statuses.length;
+  return {
+    isStarted: isLessonStarted,
+    imperfectPercent: getPercent(statusCounts.imperfect),
+    completedPercent: getPercent(statusCounts.completed),
+    incompletePercent: getPercent(incomplete)
+  };
+}
+
+/**
  * Summarizes stage progress data.
- * @param {[]} levelsWithStatus An array of objects each representing
- * students progress in a level
+ * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
+ * level id containing objects representing the student's progress in that level
+ * @param {levelType[]} levels An array of the levels in a stage
  * @returns {object} An object with a total count of levels in each of the
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
-export function summarizeProgressInStage(levelsWithStatus) {
+export function summarizeProgressInStage(studentProgress, levels) {
   // Filter any bonus levels as they do not count toward progress.
-  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+  const filteredLevels = levels.filter(level => !level.bonus);
 
   // Get counts of statuses
   let statusCounts = {
-    total: levelsWithStatus.length,
+    total: 0,
     completed: 0,
     imperfect: 0,
     incomplete: 0,
     attempted: 0
   };
-  for (let i = 0; i < levelsWithStatus.length; i++) {
-    const status = levelsWithStatus[i].status;
-    switch (status) {
+
+  filteredLevels.forEach(level => {
+    const levelProgress = studentProgress[level.id];
+    statusCounts.total++;
+    if (!levelProgress) {
+      statusCounts.incomplete++;
+      return;
+    }
+    switch (levelProgress.status) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
       case LevelStatus.completed_assessment:
       case LevelStatus.readonly:
-        statusCounts.completed = statusCounts.completed + 1;
+        statusCounts.completed++;
         break;
       case LevelStatus.not_tried:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
         break;
       case LevelStatus.attempted:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
-        statusCounts.attempted = statusCounts.attempted + 1;
+        statusCounts.incomplete++;
+        statusCounts.attempted++;
         break;
       case LevelStatus.passed:
-        statusCounts.imperfect = statusCounts.imperfect + 1;
+        statusCounts.imperfect++;
         break;
       // All others are assumed to be not tried
       default:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.incomplete++;
     }
-  }
+  });
   return statusCounts;
 }
 
@@ -198,7 +259,7 @@ export const processedLevel = level => {
   };
 };
 
-const getLevelResult = serverProgress => {
+export const getLevelResult = serverProgress => {
   if (serverProgress.status === LevelStatus.locked) {
     return TestResults.LOCKED_RESULT;
   }
@@ -209,7 +270,7 @@ const getLevelResult = serverProgress => {
     return TestResults.SUBMITTED_RESULT;
   }
 
-  return serverProgress.result || TestResults.NO_TESTS_RUN;
+  return serverProgress.result || resultFromStatus(serverProgress.status);
 };
 
 /**
@@ -225,6 +286,8 @@ export const levelProgressFromServer = serverProgress => {
     result: getLevelResult(serverProgress),
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent || 0,
+    // `pages` is used by multi-page assessments, and its presence
+    // (or absence) is how we distinguish those from single-page assessments
     pages:
       serverProgress.pages_completed &&
       serverProgress.pages_completed.length > 1
