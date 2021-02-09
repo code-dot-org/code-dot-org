@@ -77,6 +77,7 @@ class FoormLibrarySaveBar extends Component {
     libraryQuestion: PropTypes.object,
     libraryHasError: PropTypes.bool,
     libraryQuestionId: PropTypes.number,
+    libraryId: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setLibraryData: PropTypes.func,
@@ -85,8 +86,7 @@ class FoormLibrarySaveBar extends Component {
     addAvailableLibraryQuestion: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setLastSavedQuestion: PropTypes.func,
-    libraryId: PropTypes.number
+    setLastSavedQuestion: PropTypes.func
   };
 
   constructor(props) {
@@ -114,17 +114,11 @@ class FoormLibrarySaveBar extends Component {
       this.props.libraryQuestionId === null ||
       this.props.libraryQuestionId === undefined
     ) {
-      // if this is not an existing form, show new form save modal
+      // if this is not an existing library question, show new library question save modal
       this.setState({showNewLibraryQuestionSave: true});
       return;
     }
 
-    // updating a question like this failed, check on it tomorrow (library question ID = 338):
-    // {
-    //   "type": "html",
-    //   "name": "environment131",
-    //   "html": "<h2>{workshop_course} Academic Year test test 123 Kick-off Call</h2><p>"
-    // }
     $.ajax({
       url: `/foorm/library_questions/${
         this.props.libraryQuestionId
@@ -237,6 +231,7 @@ class FoormLibrarySaveBar extends Component {
 
         // need to set current library ID in redux to whatever is returned
         // this is handled in handleSaveSuccess in form editor
+        // need to fix this to not create duplicates
         this.props.addAvailableLibrary({
           name: library.name,
           version: library.version,
@@ -260,7 +255,8 @@ class FoormLibrarySaveBar extends Component {
     const updatedQuestion = JSON.parse(libraryQuestion.question);
     // reset code mirror with returned questions (may have added published state)
     this.props.resetCodeMirror(updatedQuestion);
-    // update store with form data.
+    // update store with library question data.
+    // need to fix this to not create duplicates
     this.props.addAvailableLibraryQuestion({
       id: libraryQuestion['id'],
       name: libraryQuestion['question_name'],

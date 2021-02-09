@@ -46,17 +46,13 @@ class FoormLibraryEditor extends React.Component {
     libraryCategories: PropTypes.array,
 
     // populated by redux
-    libraryQuestion: PropTypes.object,
-    formHasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number,
-    formId: PropTypes.number
+    libraryQuestion: PropTypes.object
   };
 
   constructor(props) {
     super(props);
 
+    // how is formKey being used??
     this.state = {
       livePreviewStatus: PREVIEW_ON,
       formKey: 0,
@@ -129,7 +125,7 @@ class FoormLibraryEditor extends React.Component {
   };
 
   // use debounce to only call once per second
-  fillFormWithLibraryItems = _.debounce(
+  updateLibraryQuestionPreview = _.debounce(
     function() {
       this.setState({
         libraryQuestionPreviewQuestion: this.props.libraryQuestion,
@@ -144,7 +140,7 @@ class FoormLibraryEditor extends React.Component {
 
   previewFoorm = () => {
     if (this.state.livePreviewStatus === PREVIEW_ON) {
-      this.fillFormWithLibraryItems();
+      this.updateLibraryQuestionPreview();
     }
   };
 
@@ -238,8 +234,6 @@ class FoormLibraryEditor extends React.Component {
     return (
       <div>
         <FoormLibraryEditorHeader
-          formName={this.props.formName}
-          formVersion={this.props.formVersion}
           livePreviewToggled={this.livePreviewToggled}
           livePreviewStatus={this.state.livePreviewStatus}
         />
@@ -305,10 +299,5 @@ class FoormLibraryEditor extends React.Component {
 }
 
 export default connect(state => ({
-  libraryQuestion: state.foorm.libraryQuestion || {},
-  isFormPublished: state.foorm.isFormPublished,
-  formHasError: state.foorm.hasError,
-  formName: state.foorm.formName,
-  formVersion: state.foorm.formVersion,
-  formId: state.foorm.formId
+  libraryQuestion: state.foorm.libraryQuestion || {}
 }))(FoormLibraryEditor);

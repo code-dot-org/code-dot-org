@@ -219,7 +219,11 @@ class FoormEntityEditor extends React.Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD:apps/src/code-studio/pd/foorm/editor/components/FoormEntityEditor.jsx
         <FoormEntityEditorHeader
+=======
+        <FoormEditorHeader
+>>>>>>> Cleanup extranous code and comments:apps/src/code-studio/pd/foorm/FoormEditor.jsx
           livePreviewToggled={this.livePreviewToggled}
           livePreviewStatus={this.state.livePreviewStatus}
           validateURL={this.props.validateURL}
