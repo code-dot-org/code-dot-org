@@ -37,10 +37,10 @@ class LessonsController < ApplicationController
     if params[:originalLessonData]
       current_lesson_data = @lesson.summarize_for_lesson_edit
       old_lesson_data = JSON.parse(params[:originalLessonData])
-      current_lesson_data[:vocabularies] = current_lesson_data[:vocabularies].map {|v| v[:id]} if current_lesson_data[:vocabularies]
-      old_lesson_data['vocabularies'] = old_lesson_data['vocabularies'].map {|v| v['id']} if old_lesson_data['vocabularies']
-      current_lesson_data[:resources] = current_lesson_data[:resources].map {|v| v[:id]} if current_lesson_data[:resources]
-      old_lesson_data['resources'] = old_lesson_data['resources'].map {|v| v['id']} if old_lesson_data['resources']
+      current_lesson_data[:vocabularies]&.map! {|v| v[:id]}
+      old_lesson_data['vocabularies']&.map! {|v| v['id']}
+      current_lesson_data[:resources]&.map! {|v| v[:id]}
+      old_lesson_data['resources']&.map! {|v| v['id']}
       if old_lesson_data.to_json != current_lesson_data.to_json
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
         raise msg
