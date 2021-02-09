@@ -982,7 +982,6 @@ class ScriptTest < ActiveSupport::TestCase
 
     script.is_migrated = false
     script.show_calendar = true
-    refute script.show_calendar
     summary = script.summarize
     refute summary[:showCalendar]
   end
