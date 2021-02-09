@@ -19,7 +19,9 @@ import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setLibraryQuestionData,
-  addAvilableForm,
+  setLibraryData,
+  addAvailableLibrary,
+  addAvailableLibraryQuestion,
   setLastSaved,
   setSaveError,
   setLastSavedQuestion
@@ -77,8 +79,10 @@ class FoormLibrarySaveBar extends Component {
     libraryQuestionId: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
+    setLibraryData: PropTypes.func,
     setLibraryQuestionData: PropTypes.func,
-    addAvilableForm: PropTypes.func,
+    addAvailableLibrary: PropTypes.func,
+    addAvailableLibraryQuestion: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setLastSavedQuestion: PropTypes.func,
@@ -94,7 +98,8 @@ class FoormLibrarySaveBar extends Component {
       showNewLibraryQuestionSave: false,
       libraryQuestionName: null,
       libraryName: null,
-      formsAppearedIn: []
+      formsAppearedIn: [],
+      libraryCategory: null
     };
   }
 
@@ -114,6 +119,12 @@ class FoormLibrarySaveBar extends Component {
       return;
     }
 
+    // updating a question like this failed, check on it tomorrow (library question ID = 338):
+    // {
+    //   "type": "html",
+    //   "name": "environment131",
+    //   "html": "<h2>{workshop_course} Academic Year test test 123 Kick-off Call</h2><p>"
+    // }
     $.ajax({
       url: `/foorm/library_questions/${
         this.props.libraryQuestionId
@@ -195,6 +206,14 @@ class FoormLibrarySaveBar extends Component {
   };
 
   saveNewLibraryQuestion = () => {
+    // Need to include library name if this is a new library (no ID)
+    let fullLibraryName = '';
+    if (!this.props.libraryId) {
+      fullLibraryName = `${this.state.libraryCategory}/${
+        this.state.libraryName
+      }`;
+    }
+
     $.ajax({
       url: `/foorm/library_questions`,
       type: 'post',
@@ -204,20 +223,26 @@ class FoormLibrarySaveBar extends Component {
         name: this.state.libraryQuestionName,
         question: this.props.libraryQuestion,
         library_id: this.props.libraryId,
-        library_name: this.state.libraryName
+        library_name: fullLibraryName
       })
     })
       .done(result => {
-        this.handleSaveSuccess(result);
+        let libraryQuestion = result.library_question;
+        let library = result.library;
+
+        this.handleSaveSuccess(libraryQuestion);
         this.setState({
           showNewLibraryQuestionSave: false
         });
-        // adds new form to form dropdown
-        // this.props.addAvilableForm({
-        //   name: result.name,
-        //   version: result.version,
-        //   id: result.id
-        // });
+
+        // need to set current library ID in redux to whatever is returned
+        // this is handled in handleSaveSuccess in form editor
+        this.props.addAvailableLibrary({
+          name: library.name,
+          version: library.version,
+          id: library.id
+        });
+        this.props.setLibraryData(library);
       })
       .fail(result => {
         this.handleSaveError(result);
@@ -227,19 +252,24 @@ class FoormLibrarySaveBar extends Component {
       });
   };
 
-  handleSaveSuccess(result) {
+  handleSaveSuccess(libraryQuestion) {
     this.setState({
       isSaving: false
     });
     this.props.setLastSaved(Date.now());
-    const updatedQuestion = JSON.parse(result.question);
+    const updatedQuestion = JSON.parse(libraryQuestion.question);
     // reset code mirror with returned questions (may have added published state)
     this.props.resetCodeMirror(updatedQuestion);
     // update store with form data.
+    this.props.addAvailableLibraryQuestion({
+      id: libraryQuestion['id'],
+      name: libraryQuestion['question_name'],
+      type: JSON.parse(libraryQuestion.question)['type']
+    });
     this.props.setLibraryQuestionData({
-      published: result.published,
-      name: result.name,
-      id: result.id,
+      published: libraryQuestion.published,
+      name: libraryQuestion.question_name,
+      id: libraryQuestion.id,
       question: updatedQuestion
     });
     this.props.setLastSavedQuestion(updatedQuestion);
@@ -258,6 +288,7 @@ class FoormLibrarySaveBar extends Component {
   }
 
   renderNewLibraryQuestionSaveModal = () => {
+    // need to fix extremely complicated disable submit button logic
     const showLibraryQuestionNameError =
       this.state.libraryQuestionName && !this.isLibraryQuestionNameValid();
     return (
@@ -338,7 +369,14 @@ class FoormLibrarySaveBar extends Component {
             bsStyle="primary"
             onClick={this.saveNewLibraryQuestion}
             disabled={
-              !this.state.libraryQuestionName || showLibraryQuestionNameError
+              (!!this.props.libraryId && !this.state.libraryQuestionName) ||
+              (!this.props.libraryId &&
+                !(
+                  this.state.libraryName &&
+                  this.state.libraryCategory &&
+                  this.state.libraryQuestionName
+                )) ||
+              showLibraryQuestionNameError
             }
           >
             Save Library Question
@@ -421,7 +459,11 @@ export default connect(
   dispatch => ({
     setLibraryQuestionData: libraryQuestionData =>
       dispatch(setLibraryQuestionData(libraryQuestionData)),
-    addAvilableForm: formMetadata => dispatch(addAvilableForm(formMetadata)),
+    setLibraryData: libraryData => dispatch(setLibraryData(libraryData)),
+    addAvailableLibrary: libraryMetadata =>
+      dispatch(addAvailableLibrary(libraryMetadata)),
+    addAvailableLibraryQuestion: libraryQuestionMetadata =>
+      dispatch(addAvailableLibraryQuestion(libraryQuestionMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLastSavedQuestion: libraryQuestion =>

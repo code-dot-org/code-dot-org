@@ -7,8 +7,6 @@ module Foorm
 
     # POST /foorm/library_questions
     def create
-      puts params
-      puts params[:library_name]
       library = Foorm::Library.find_by(id: params[:library_id])
       if library.nil?
         library = Foorm::Library.create(
@@ -22,8 +20,8 @@ module Foorm
 
       @library_question.assign_attributes(
         {
-          library_name: library.nil? ? library.name : params[:library_name],
-          library_version: library.nil? ? library.version : 0,
+          library_name: library.name,
+          library_version: library.version,
           question: JSON.pretty_generate(get_question),
           question_name: params[:name],
           published: true
@@ -31,7 +29,10 @@ module Foorm
       )
 
       if @library_question.save
-        return render json: @library_question
+        return render json: {
+          library_question: @library_question,
+          library: @library_question.library
+        }
       else
         return render status: :bad_request, json: @library_question.errors
       end

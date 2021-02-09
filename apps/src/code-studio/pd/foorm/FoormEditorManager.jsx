@@ -54,6 +54,10 @@ class FoormEditorManager extends React.Component {
     this.props.resetAvailableForms(this.props.formNamesAndVersions);
   }
 
+  // i'm not sure how I understand how this gets used...
+  // formNamesAndVersions is loaded on initialization of
+  // the page, so wouldn't get updated unless you
+  // reloaded the page?
   componentDidUpdate(prevProps) {
     if (prevProps.formNamesAndVersions !== this.props.formNamesAndVersions) {
       this.props.resetAvailableForms(this.props.formNamesAndVersions);
