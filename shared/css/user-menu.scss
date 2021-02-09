@@ -53,6 +53,8 @@
     text-align: left;
     white-space: nowrap;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 
     .display_name {
       font-family: $gotham-bold;
@@ -139,6 +141,8 @@
     width: max-content;
     z-index: 10000;
     border-bottom: 0;
+    display: flex;
+    flex-direction: column;
     a {
       font-family: 'Gotham 5r', sans-serif;
       min-width: 240px;
@@ -151,14 +155,16 @@
     img {
       height: 70px;
       width: 70px;
+      float: left;
     }
     .project_link_box {
       display: block;
     }
     .project_link {
       display: inline-block;
-      padding: 0 10px 0 4px;
-      line-height: 67px;
+      padding: 0 10px 0 8px;
+      line-height: 70px;
+      float: left;
     }
     #view_all_projects {
       height: 70px;
