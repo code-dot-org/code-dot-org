@@ -1368,7 +1368,7 @@ class Script < ApplicationRecord
       background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
-      showCalendar: show_calendar,
+      showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
       weeklyInstructionalMinutes: weekly_instructional_minutes
     }
 
