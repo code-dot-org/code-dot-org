@@ -223,8 +223,6 @@ class ScriptEditor extends React.Component {
       family_name: this.state.familyName,
       is_course: this.state.isCourse,
       show_calendar: this.state.showCalendar,
-      weekly_instructional_minutes:
-        parseInt(this.state.weeklyInstructionalMinutes) || 0,
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
@@ -263,6 +261,11 @@ class ScriptEditor extends React.Component {
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
       is_migrated: this.props.isMigrated
     };
+
+    if (this.state.weeklyInstructionalMinutes) {
+      dataToSave.weekly_instructional_minutes =
+        parseInt(this.state.weeklyInstructionalMinutes) || 0;
+    }
 
     if (this.state.hasImportedLessonDescriptions) {
       dataToSave.stage_descriptions = this.state.lessonDescriptions;
