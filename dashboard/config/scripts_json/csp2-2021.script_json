@@ -344,7 +344,6 @@
       "key": "681c07a6-e087-419b-b5b1-ba1446475c4f",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "681c07a6-e087-419b-b5b1-ba1446475c4f",
@@ -399,7 +398,6 @@
       "key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
@@ -454,7 +452,6 @@
       "key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
@@ -509,7 +506,6 @@
       "key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
@@ -564,7 +560,6 @@
       "key": "fd8399b5-e6d7-4ee3-891e-68f76c41124e",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "fd8399b5-e6d7-4ee3-891e-68f76c41124e",
@@ -619,7 +614,6 @@
       "key": "444af120-8145-4520-b69e-e0cdf453438d",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "444af120-8145-4520-b69e-e0cdf453438d",
@@ -2581,7 +2575,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2656,7 +2653,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2731,7 +2731,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2806,7 +2809,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2881,7 +2887,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 2 Exam"
+        "progression": "Unit 2 Exam",
+        "level_keys": [
+          "CSP Unit 2 MC Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
