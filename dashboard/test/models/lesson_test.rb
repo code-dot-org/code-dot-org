@@ -225,6 +225,28 @@ class LessonTest < ActiveSupport::TestCase
     assert levels_data.last[:bonus]
   end
 
+  test 'summarize uses unplugged property if the lesson is migrated' do
+    script = create :script, is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
+
+    levels_data = lesson.summarize
+    assert levels_data[:unplugged]
+  end
+
+  test 'summarize uses display_as_unplugged if the lesson is not migrated' do
+    script = create :script, is_migrated: false, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
+    activity = create :lesson_activity, lesson: lesson
+    section = create :activity_section, lesson_activity: activity
+    level1 = create :level
+    create :script_level, script: script, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level1]
+
+    levels_data = lesson.summarize
+    refute levels_data[:unplugged]
+  end
+
   test 'raises error when creating invalid lockable lessons' do
     script = create :script
     lesson_group = create :lesson_group, script: script

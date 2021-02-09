@@ -3,19 +3,11 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import UnitCalendarDialog from './UnitCalendarDialog';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 export default class UnitCalendarButton extends React.Component {
   static propTypes = {
-    lessons: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        duration: PropTypes.number.isRequired,
-        assessment: PropTypes.bool.isRequired,
-        unplugged: PropTypes.bool,
-        url: PropTypes.string
-      })
-    ).isRequired,
+    lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
     weeklyInstructionalMinutes: PropTypes.number
   };
 

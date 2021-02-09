@@ -176,7 +176,7 @@ progress.renderCourseProgress = function(scriptData) {
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
 
-  const lessonsOverview = scriptData.showCalendar
+  const calendarLessonsOverview = scriptData.showCalendar
     ? (scriptData.lessons || []).map(lesson => {
         let duration = 0;
         lesson.activities.forEach(activity => {
@@ -216,7 +216,7 @@ progress.renderCourseProgress = function(scriptData) {
         assignedSectionId={scriptData.assigned_section_id}
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
-        lessons={lessonsOverview}
+        lessons={calendarLessonsOverview}
       />
     </Provider>,
     mountPoint
