@@ -1,27 +1,26 @@
 import React from 'react';
-import {SignInCallout as Callout} from '@cdo/apps/code-studio/components/header/SignInCallout';
+import SignInCallout from '@cdo/apps/code-studio/components/header/SignInCallout';
 import {shallow} from 'enzyme';
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 
 const CalloutProps = {
   showCallout: true
 };
 const CookieProps = {
-  HideSignInCallout: true
+  showCallout: false
 };
-const wrapper = shallow(<Callout />);
+const wrapper = shallow(<SignInCallout />);
 
 describe('ViewPopup', () => {
   it('hides when dismissed', () => {
     wrapper.setProps(CalloutProps); // force a re-render
-    expect(wrapper.find('.modal-backdrop').exists()).to.be.true;
-    assert.equal(wrapper.find('.modal-backdrop').opacity, 0.5);
-    wrapper.setProps({showCallout: false});
-    expect(wrapper.find('.modal-backdrop').exists()).to.be.false;
+    expect(wrapper.find('div.modal-backdrop').exists()).to.be.true;
+    wrapper.setProps(CookieProps); // should have now switched to false
+    expect(wrapper.find('div.modal-backdrop').exists()).to.be.false;
   });
 
   it('hides when cookies are set', () => {
     wrapper.setProps(CookieProps);
-    expect(wrapper.find('.modal-backdrop').exists()).to.be.false;
+    expect(wrapper.find('div.modal-backdrop').exists()).to.be.false;
   });
 });
