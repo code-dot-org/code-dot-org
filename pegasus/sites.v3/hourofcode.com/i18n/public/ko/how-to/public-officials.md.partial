@@ -26,7 +26,7 @@ nav: how_to_nav
 
 ### 1. 소책자 읽기
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+[컴퓨터 과학 교육이 중요한 이유 ]({{ localized_files/hoc_one_pager }})와 아워오브코드를 지지함으로써 그러한 노력에 도움을 주는 방법 참조.
 
 ### 2. 지역 학교와 학군 모집
 
@@ -34,7 +34,7 @@ See [why computer science education is important]({{ localized_files/hoc_one_pag
 
 ### 3. 아워오브코드 이벤트 주최
 
-쇼 운영 샘플로 [이벤트 하우 투 가이드]({{ urls/how_to_events }}) 와[보도자료 키트]({{ promote/press_kit_url }}), 키다 이벤트 기획 자료를 참조하세요. 이벤트 주최는 아워오브코드를 홍보하고 참여를 증가시키기 위한 좋은 방법입니다.
+쇼 운영 샘플로 [이벤트 하우 투 가이드]({{ urls/how_to_events }}) 와[보도자료 키트]({{ promote/press_kit_url }}), 기타 이벤트 기획 자료를 참조하세요. 이벤트 주최는 아워오브코드를 홍보하고 참여를 증가시키기 위한 좋은 방법입니다.
 
 ### 4. 컴퓨터 과학 교육 주간 동안 이벤트에 참석 ({{ campaign_date/short }})
 
@@ -52,7 +52,7 @@ See [why computer science education is important]({{ localized_files/hoc_one_pag
 
 [아워오브코드 동영상을 페이스북 ](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) 에서 공유하고 [트위터에서 지원한다는 말을 합니다 ](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). 이벤트 사진 또는 여러분과 다른 어른들이 아워오브코드를 하는 동영상들을 공유해 주세요. **#HourOfCode** 해시 태그를 사용하여 Code.org(@code.org)가 보고 지원을 더 많이 해 줄 수 있게 해주세요. 또는 다음의 예시 트윗을 사용하세요:
 
-- *남여를 불문하고 모든 학생들은 컴퓨터 과학을 배울 기회를 가져야 합니다. 우리와 함께 #HourOfCode [https://hourofcode.com]({{ urls/home }})으로 시작하세요.*
+- *남녀를 불문하고 모든 학생들은 컴퓨터 과학을 배울 기회를 가져야 합니다. 우리와 함께 #HourOfCode [https://hourofcode.com]({{ urls/home }})으로 시작하세요.*
 - *오늘 우리는 아워오브코드 운동에 함께 참여하게 된 것이 자랑스럽습니다. 참여하시겠습니까? [https://hourofcode.com]({{ urls/home }})*
 
 ### 8. 보도자료 배포 

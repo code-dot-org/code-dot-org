@@ -53,6 +53,7 @@ hy:
               name: 'Play Lab: Create a Story'
             The Big Event:
               name: The Big Event
+          student_description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
         course2:
           title: Course 2
           description: 'Դասընթաց 2-ը այն ուսանողների համար է, ովքեր կարող են կարդալ և նախկինում ունեն ծրագրավորման փորձ: Այս դասընթացի շրջանականերում ուսանողները ծրագրեր կստեղծեն, խնդիրներ կլուծեն և ինտերակտիվ խաղեր կամ պատմություններ կզարգացնեն: Խուրհուրդ է տրվում 2-5-րդ դասարանների համար:'
@@ -96,6 +97,7 @@ hy:
               name: The Big Event
             Your Digital Footprint:
               name: Your Digital Footprint
+          student_description: 'Դասընթաց 2-ը այն ուսանողների համար է, ովքեր կարող են կարդալ և նախկինում ունեն ծրագրավորման փորձ: Այս դասընթացի շրջանականերում ուսանողները ծրագրեր կստեղծեն, խնդիրներ կլուծեն և ինտերակտիվ խաղեր կամ պատմություններ կզարգացնեն: Խուրհուրդ է տրվում 2-5-րդ դասարանների համար:'
         course3:
           title: Course 3
           description_short: Course 3 is a follow-up to Course 2.
@@ -150,6 +152,7 @@ hy:
           lessons:
             Play Lab:
               name: Play Lab
+          student_description: Create a story or make a game with Play Lab!
         artist:
           title: Արտիստ
           description: Draw cool pictures and designs with the Artist!
@@ -157,6 +160,7 @@ hy:
           lessons:
             Artist:
               name: Արտիստ
+          student_description: Draw cool pictures and designs with the Artist!
         hourofcode:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
@@ -164,6 +168,7 @@ hy:
           lessons:
             Maze:
               name: Maze
+          student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -171,6 +176,7 @@ hy:
           lessons:
             Artist:
               name: Արտիստ
+          student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
@@ -221,6 +227,7 @@ hy:
               name: 'Unplugged: Songwriting with Parameters'
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
+          student_description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
         Course4pre:
           title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -244,6 +251,7 @@ hy:
               name: 'Farmer: While Loops'
             'Maze: Sequence':
               name: 'Maze: Sequence'
+          student_description: A brief rampup of concepts for students who have not taken Course 2 and 3.
         usability:
           lessons:
             Binary:
@@ -275,6 +283,7 @@ hy:
           lessons:
             Infinity:
               name: անվերջություն
+          student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
         algebrademo:
           lessons:
             Defining Variables:
@@ -335,6 +344,7 @@ hy:
               name: The Maze
             Wrap-up:
               name: Փաթեթավորեք-up
+          student_description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
         edit-code:
           title: Խմբագրել Code
           description: Խմբագրել Code
@@ -346,6 +356,7 @@ hy:
               name: The Artist
             The Maze:
               name: The Maze
+          student_description: Խմբագրել Code
         events:
           title: Իրադարձություններ
           description: Իրադարձություններ
@@ -353,6 +364,7 @@ hy:
           lessons:
             Bounce:
               name: Ցատկում
+          student_description: Իրադարձություններ
         flappy:
           title: Flappy-ի կոդը
           description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy Code խնամակալական!'
@@ -360,6 +372,7 @@ hy:
           lessons:
             Flappy Code:
               name: Flappy-ի կոդը
+          student_description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy Code խնամակալական!'
         jigsaw:
           title: ոլորահատ սղոց
           description: Try our Jigsaw tutorial
@@ -367,6 +380,7 @@ hy:
           lessons:
             Jigsaw:
               name: ոլորահատ սղոց
+          student_description: Try our Jigsaw tutorial
         step:
           title: քայլ
           description: Step tutorial
@@ -374,6 +388,7 @@ hy:
           lessons:
             Step:
               name: քայլ
+          student_description: Step tutorial
         Hour of Code:
           title: Ժամ օրենսգրքի 2013-
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
@@ -381,6 +396,7 @@ hy:
           lessons:
             Hour of Code 2013:
               name: Ժամ օրենսգրքի 2013-
+          student_description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
         cspunit1:
           description_short: Programming
         algebraPD:
@@ -434,6 +450,7 @@ hy:
               name: Welcome!
             Wrap-Up:
               name: Wrap-Up
+          student_description: 'Phase 2 Online: Blended Summer Study'
         cspunit2:
           description_short: Programming
           lessons:
@@ -455,6 +472,7 @@ hy:
               name: Strings and Images
             The Design Recipe:
               name: The Design Recipe
+          student_description: 'Phase 2 Online: Blended Summer Study'
         allthethings:
           lessons:
             Artist:
@@ -493,6 +511,7 @@ hy:
               name: Strings and Images
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
+          student_description: 'Phase 2 Online: Blended Summer Study'
         cspfacilitator:
           lessons:
             App Lab:
@@ -515,6 +534,7 @@ hy:
               name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
+          student_description: 'Phase 2 Online: Blended Summer Study'
         algebraPD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -525,6 +545,7 @@ hy:
               name: The Design Recipe
             Welcome!:
               name: Welcome!
+          student_description: 'Phase 2 Online: Blended Summer Study'
         sciencePD2b:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -533,6 +554,7 @@ hy:
               name: Welcome!
             Wrap-Up:
               name: Wrap-Up
+          student_description: 'Phase 2 Online: Blended Summer Study'
         science-PD2:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -541,6 +563,7 @@ hy:
               name: Welcome!
             Wrap-Up:
               name: Wrap-Up
+          student_description: 'Phase 2 Online: Blended Summer Study'
         sciencePD2b-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -549,6 +572,7 @@ hy:
               name: Welcome!
             Wrap-Up:
               name: Wrap-Up
+          student_description: 'Phase 2 Online: Blended Summer Study'
         ECSPD2-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -563,6 +587,7 @@ hy:
               name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
+          student_description: 'Phase 2 Online: Blended Summer Study'
         ECSPD2-NexTech:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -577,6 +602,7 @@ hy:
               name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
+          student_description: 'Phase 2 Online: Blended Summer Study'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -614,6 +640,7 @@ hy:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
+          student_description: Create a story or make a game with Ice Age Play Lab!
         cspunit3temp:
           description_short: Programming
           lessons:
@@ -626,6 +653,7 @@ hy:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -633,6 +661,7 @@ hy:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -640,6 +669,7 @@ hy:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
@@ -647,6 +677,7 @@ hy:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
+          student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -2057,6 +2088,9 @@ hy:
               display_name: Overview
             content:
               display_name: պարունակություն
+          lessons:
+            Focus Area 1:
+              name: Curriculum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2432,6 +2466,12 @@ hy:
               name: Կուրս A
             Course B:
               name: Կուրս B
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: ներածություն
+            lessonGroup-3:
+              display_name: փոփոխականների
         csd3-2021:
           description_short: "Programming"
           lessons:
@@ -2588,9 +2628,6 @@ hy:
             csf_events:
               display_name: Իրադարձություններ
         csf-2021-pilot:
-          lessons:
-            lesson-1:
-              name: Envelope Variables
           lesson_groups:
             ramp_up:
               display_name: ներածություն

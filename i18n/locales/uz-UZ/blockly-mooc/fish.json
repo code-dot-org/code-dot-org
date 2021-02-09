@@ -60,7 +60,7 @@
     "yes": "Ha",
     "no": "yo‘q",
     "notWord": "{word} emas",
-    "run": "Yugur",
+    "run": "Ishga tushirish",
     "mostImportantParts": "Bu baliqlarning eng muhim qismlari edi:",
     "clickIndividualFish": "Ular haqida ma'lumotlarni ko‘rish uchun alohida baliqlarni bosing.",
     "mostImportantPartsDescription": "Bu baliqlar \"*{word}*\" yoki \" **{notWord}** \" ekanligini aniqlashda eng muhim baliq qismlari edi.",

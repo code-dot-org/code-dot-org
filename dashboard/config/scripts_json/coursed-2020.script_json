@@ -27,7 +27,6 @@
           "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         ]
       ],
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}",
       "version_year": "2020",
       "curriculum_umbrella": "CSF",

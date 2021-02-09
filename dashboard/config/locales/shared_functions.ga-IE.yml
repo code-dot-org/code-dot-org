@@ -1,0 +1,15 @@
+---
+ga:
+  data:
+    shared_functions:
+      growing: fás
+      jittering: crith
+      moving east: dul soir
+      moving north: dul ó thuaidh
+      moving south: dul ó dheas
+      moving west: dul siar
+      patrolling: patrólú
+      shrinking: crapadh
+      spinning right: casadh ar deiseal
+      swimming left and right: snámh anonn is anall
+      wandering: fánaíocht

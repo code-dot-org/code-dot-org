@@ -164,7 +164,8 @@ class ProjectsController < ApplicationController
       :storage_apps__project_type___project_type,
       :storage_apps__published_at___published_at,
       :featured_projects__featured_at___featured_at,
-      :featured_projects__unfeatured_at___unfeatured_at
+      :featured_projects__unfeatured_at___unfeatured_at,
+      :featured_projects__topic___topic
     ]
   end
 
@@ -185,6 +186,7 @@ class ProjectsController < ApplicationController
         projectName: project_details_value['name'],
         channel: channel,
         type: project_details[:project_type],
+        topic: project_details[:topic],
         publishedAt: project_details[:published_at],
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],

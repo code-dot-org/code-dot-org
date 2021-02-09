@@ -2003,11 +2003,11 @@
         },
         "courseA_maze_seq1_2019": {
           "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "\"يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>\""
+          "courseA_maze_seq1_b": "يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "\"يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>\""
+          "courseA_maze_seq1_b": "يجب أن يتحرك الطير غربًا 3 مرات للوصول إلى الخنزير. استخدم هذا المربع البرمجي:\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "غابت عن هذا البرنامج عدد 1 مربع برمجي. هل يمكن أن تعرف أي منها؟",

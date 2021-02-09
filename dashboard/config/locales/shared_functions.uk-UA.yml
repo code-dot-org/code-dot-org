@@ -1,0 +1,14 @@
+---
+uk:
+  data:
+    shared_functions:
+      driving with arrow keys: рух за стрілками
+      fluttering: пурхання
+      growing: ріст
+      moving east and looping: рух на схід і циклічно
+      moving west and looping: рух на захід і циклічно
+      moving with arrow keys: рух за стрілками
+      patrolling: патрулювання
+      shrinking: стиснення
+      wandering: бродіння
+      wobbling: хитання

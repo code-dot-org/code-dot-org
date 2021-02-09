@@ -28,7 +28,7 @@ Feature: BubbleChoice
     And I wait until element ".teacher-panel" is visible
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element "td:contains(Bubble Choice)" is visible
-    And I wait for 2 seconds
+    And I wait for 4 seconds
     Then I verify progress for stage 40 level 1 is "perfect"
 
     # View progress from BubbleChoice activity page
@@ -38,5 +38,5 @@ Feature: BubbleChoice
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .uitest-ProgressBubble:first .uitest-bubble" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
-    And I wait for 2 seconds
+    And I wait for 4 seconds
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .uitest-ProgressBubble:first .uitest-bubble" is "perfect"

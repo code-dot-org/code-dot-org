@@ -1006,6 +1006,7 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
+            '"speed"': kecepatan
       gamelab_getThisSprite:
         text: "[CHOICE]sprite[0]"
         options:
@@ -1133,6 +1134,8 @@ id:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} menuju {TARGET}
+      gamelab_newSpritePointer:
+        text: diklik {SPRITE}
       gamelab_objectSpritePointer:
         text: diklik {SPRITE}
       gamelab_playSound:
@@ -1183,6 +1186,13 @@ id:
             undefined: Tak satupun
       gamelab_setBackgroundImageAs:
         text: atur latar belakang ke {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': sedang
+            '100': large
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} ke {VAL}
         options:
@@ -1192,6 +1202,7 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+            '"speed"': kecepatan
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} ke {N}%
         options:

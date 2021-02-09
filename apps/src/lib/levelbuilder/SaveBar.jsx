@@ -39,7 +39,7 @@ const styles = {
 
 export default class SaveBar extends Component {
   static propTypes = {
-    lastSaved: PropTypes.string,
+    lastSaved: PropTypes.number,
     error: PropTypes.string,
     handleSave: PropTypes.func.isRequired,
     isSaving: PropTypes.bool

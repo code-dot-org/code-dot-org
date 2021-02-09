@@ -1000,6 +1000,8 @@ uk:
         text: будучи перетягуваним
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
+      gamelab_followingTargets:
+        text: наступні цілі
       gamelab_getAllSprites:
         text: всі спрайти
       gamelab_getProp:
@@ -1012,6 +1014,7 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"tint"': відтінок
+            '"speed"': швидкість
       gamelab_getThisSprite:
         text: "[CHOICE]спрайт[0]"
         options:
@@ -1153,6 +1156,8 @@ uk:
             '"West"': Захід
       gamelab_moveToward:
         text: переміститись на {SPRITE} пікселів {DISTANCE} до {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1205,6 +1210,14 @@ uk:
             undefined: немає
       gamelab_setBackgroundImageAs:
         text: встановити фон {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: встановити новий розмір спрайта за замовчуванням як [SIZE] [0]
+        options:
+          SIZE:
+            '25': дуже маленький
+            '50': маленький
+            '75': середньо
+            '100': великий
       gamelab_setPrompt:
         text: запитати користувача {QUESTION} значення змінної {VAR}
       gamelab_setPromptWithChoices:
@@ -1218,6 +1231,7 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+            '"speed"': швидкість
       gamelab_setSizes:
         text: встановити {SPRITE} властивість {PROPERTY} у {N}%
         options:
@@ -1242,6 +1256,8 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_stopCollectingData:
+        text: припинити збір даних
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_tumbling:
@@ -1275,6 +1291,8 @@ uk:
         text: коли відповідь {VAR}
       gamelab_whenRightArrow:
         text: при натисканні стрілки праворуч
+      gamelab_whenSpriteCreated:
+        text: коли {SPRITE} створили
       gamelab_whenTouching:
         text: коли {SPRITE1} торкається {SPRITE2}
       gamelab_whenUpArrow:

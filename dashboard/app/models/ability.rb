@@ -52,7 +52,10 @@ class Ability
       :update_manifest,
       :foorm_editor,
       :pd_foorm,
-      Foorm::Form
+      Foorm::Form,
+      Foorm::Library,
+      Foorm::LibraryQuestion,
+      :java_ide
     ]
     cannot :index, Level
 
@@ -238,7 +241,10 @@ class Ability
         ScriptLevel,
         Video,
         :foorm_editor,
-        Foorm::Form
+        Foorm::Form,
+        Foorm::Library,
+        Foorm::LibraryQuestion,
+        :java_ide
       ]
 
       # Only custom levels are editable.
@@ -287,7 +293,9 @@ class Ability
         UserLevel,
         UserScript,
         :pd_foorm,
-        Foorm::Form
+        Foorm::Form,
+        Foorm::Library,
+        Foorm::LibraryQuestion
       ]
     end
   end

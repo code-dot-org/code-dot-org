@@ -10,15 +10,13 @@ const shortLessonList = [
     key: 'lesson-1',
     position: 1,
     displayName: 'Lesson 1',
-    link: '/lessons/1',
-    lockable: false
+    link: '/lessons/1'
   },
   {
     key: 'lesson-2',
     position: 2,
     displayName: 'Lesson 2',
-    link: '/lessons/2',
-    lockable: false
+    link: '/lessons/2'
   }
 ];
 
@@ -28,8 +26,7 @@ for (let i = 1; i <= 15; i++) {
     key: `lesson-${i}`,
     position: i,
     displayName: `Lesson ${i}`,
-    link: `/lessons/${i}`,
-    lockable: false
+    link: `/lessons/${i}`
   });
 }
 
@@ -40,10 +37,10 @@ let lesson = {
     lessons: []
   },
   key: 'lesson-1',
-  lockable: false,
   position: 1,
   resources: {},
   objectives: [],
+  vocabularies: [],
   displayName: 'Lesson 1',
   overview: 'Lesson Overview',
   purpose: 'The purpose of the lesson is for people to learn',

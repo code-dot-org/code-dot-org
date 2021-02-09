@@ -151,6 +151,7 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"speed"': වේගය
       gamelab_getTime:
         options:
           UNIT:
@@ -196,10 +197,18 @@ si:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': දේදුන්න
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': දිය යට
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ශීත ඍතුව
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': මධ්‍යස්ත
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"speed"': වේගය
       gamelab_setSizes:
         options:
           PROPERTY:

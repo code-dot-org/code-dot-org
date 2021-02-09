@@ -3099,7 +3099,7 @@
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2020": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12e": {
           "courseE_farmer_ramp12e_b": "Řešení této úlohy bude hodně podobné předchozímu řešení, jen se farmářka musí otáčet opačným směrem."
@@ -3241,7 +3241,7 @@
           "courseD_artist_ramp12_b": "Pomocí rozbalovací nabídky na blocích `otočit` zjistíš, jaký úhel potřebuješ!"
         },
         "courseE_bee_ramp14": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "Řešení této úlohy bude hodně podobné předchozímu řešení, jen se farmářka musí otáčet opačným směrem."
@@ -3324,6 +3324,18 @@
         "outbreak7": {
           "whenclicked": "## Očkování\n\nMůžete simulovat podání očkování při kliknutí na příšerku. Uděláte to tak, že k následující události přidáte blok \"změnit kostým\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Zasekli jste se? Svůj kód můžete kdykoli resetovat – klikněte na \"Historie verzí\" a zvolte \"Začít znovu\"."
+        },
+        "courseB_collector_loops_challenge2a": {
+          "courseB_collector_loops_challenge2a_a": "Když něco nefunguje, zkus to odladit. Nevzdávej to!"
+        },
+        "courseB_collector_loops_challenge2a_2018": {
+          "courseB_collector_loops_challenge2a_a": "Když něco nefunguje, zkus to odladit. Nevzdávej to!"
+        },
+        "courseB_collector_loops_challenge2a_2019": {
+          "courseB_collector_loops_challenge2a_a": "Když něco nefunguje, zkus to odladit. Nevzdávej to!"
+        },
+        "courseB_collector_loops_challenge2a_2020": {
+          "courseB_collector_loops_challenge2a_a": "Když něco nefunguje, zkus to odladit. Nevzdávej to!"
         }
       }
     }

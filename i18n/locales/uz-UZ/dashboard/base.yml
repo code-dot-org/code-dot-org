@@ -31,20 +31,20 @@ uz:
         invalid_plural: "yaroqsiz"
     attributes:
       user:
-        name: 'Ismni ko`rsatish'
+        name: 'Ko‘rsatiladigan ism'
         name_example: 'Ko‘rsatiladigan ism (masalan, Cool Coder yoki Jeyn S.)'
         email: 'E-mail'
         parent_email: 'Ota-ona/Vasiy emaili'
-        personal_email: "Shaxsiy elektron pochta manzili <a href=\"%{url}\"> (elektron pochta manzilingiz bo'lmasa, shu yerni bosing) </a>"
-        personal_email_markdown: "Shaxsiy elektron pochta manzili [(elektron pochta manzilingiz bo'lmasa, shu yerni bosing)](%{url}) "
-        username: 'Foydalanuvchi nomi'
-        password: 'Kalit so`z'
-        password_confirmation: 'Kalitni so`zni tasdiqlash'
-        current_password: 'Joriy kalit so`z'
+        personal_email: "Shaxsiy elektron pochta manzili <a href=\"%{url}\"> (elektron pochta manzilingiz bo‘lmasa, shu yerni bosing) </a>"
+        personal_email_markdown: "Shaxsiy elektron pochta manzili [(elektron pochta manzilingiz bo‘lmasa, shu yerni bosing)](%{url}) "
+        username: 'Foydalanuvchi ismi'
+        password: 'Kalit so‘z'
+        password_confirmation: 'Kalitni so‘zni tasdiqlash'
+        current_password: 'Joriy kalit so‘z'
         locale: 'Til'
         age: 'Yoshi'
         gender: 'Jinsi'
-        edit_header: 'Foydalanuvchi ma''lumotlarini tahrir qilish'
+        edit_header: 'Foydalanuvchi ma''lumotlarini tahrirlash'
         finish_sign_up_header: 'Hisob qaydnomangizni yaratishni yakunlang'
         finish_sign_up_subheader: '<strong>%{email} </strong> uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
         finish_sign_up_subheader_markdown: '**%{email}**  uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
@@ -57,7 +57,7 @@ uz:
   hello: "Salom Dunyo"
   welcome_back: "Qayta tashrifingiz bilan, %{name}"
   your_professional_learning_plan: "Sizning kasbiy ta'lim rejangiz"
-  see_your_learning_plan: "Kasbiy ta'lim rejangizni ko'irng"
+  see_your_learning_plan: "Kasbiy ta'lim rejangizni ko‘ring"
   submit: Taqdim qilmoq
   unsubmit: Bekor qilish
   previous_page: Oldingi sahifa
@@ -205,7 +205,7 @@ uz:
     title: 'Hisobingiz bormi? Tizimga kiring'
     login: 'E-mail'
     login_username: 'Email yoki foydalanuvchi nomi'
-    password: 'Kalit so`z'
+    password: 'Kalit so‘z'
     remember: 'Meni eslab qolish'
     submit: 'Kirish'
   signin:
@@ -854,7 +854,7 @@ uz:
     embed: "Joylangan"
     advanced_share: "Kengaytirilgan variantlarni ko'rsatish"
     no_projects: "Sizda hozirda hech qanday loyiha yo'q. Loyihani boshlash uchun yuqoridagi tugmachalardan birini bosing."
-    name: "Ismi"
+    name: "Ismingiz"
     updated: "Yangilangan"
     project_type: "Loyiha turi"
     help_text: "Yangi loyihani boshlash uchun quyida <strong> Ilova yaratish </strong> yoki <strong> Nimadir chizish </strong> ni bosing! <br/> Siz istagan vaqtingizda qaytib kelib, loyihalaringizda ishlashni davom etishingiz mumkin."

@@ -994,6 +994,7 @@ ga:
             '"y"': ionad y
             '"direction"': treo gluaiseachta
             '"tint"': imir
+            '"speed"': luas
       gamelab_getThisSprite:
         options:
           CHOICE:
@@ -1140,6 +1141,13 @@ ga:
             undefined: gan chúlra
       gamelab_setBackgroundImageAs:
         text: 'socraigh an cúlra: {IMG}'
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': tamall
+            '100': large
       gamelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
@@ -1149,6 +1157,7 @@ ga:
             '"x"': ionad x
             '"y"': ionad y
             '"direction"': treo gluaiseachta
+            '"speed"': luas
       gamelab_setSizes:
         text: 'socraigh {PROPERTY} do {SPRITE}: {N}%'
         options:

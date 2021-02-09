@@ -1,7 +1,7 @@
 hidden false
 tts true
 
-lesson 'Dance Party', display_name: 'Dance Party'
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: false
 level 'Dance_2019_01'
 level 'Dance_2019_02'
 level 'Dance_2019_03'

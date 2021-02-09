@@ -40,7 +40,8 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -67,6 +68,7 @@
       "name": "Create PT - Review the Task",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -81,6 +83,7 @@
       "name": "Create PT - Make a Plan",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -95,6 +98,7 @@
       "name": "Create PT - Complete the Task",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -105,13 +109,23 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U8L1 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -130,9 +144,13 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U8L2 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -151,9 +169,13 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U8L3 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -172,9 +194,13 @@
     {
       "chapter": 4,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Tech Setup and Tools for Create PT"
+        "progression": "Tech Setup and Tools for Create PT",
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools_2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -193,9 +219,13 @@
     {
       "chapter": 5,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Create PT Coding Workspace"
+        "progression": "Create PT Coding Workspace",
+        "level_keys": [
+          "Create PT Workspace 2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -268,5 +298,20 @@
         "script.name": "csp8-2020"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
   ]
 }

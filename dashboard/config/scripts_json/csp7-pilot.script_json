@@ -6,7 +6,6 @@
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit7/{LESSON}",
       "pilot_experiment": "csp-piloters",
       "curriculum_umbrella": "CSP",

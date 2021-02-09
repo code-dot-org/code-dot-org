@@ -7,7 +7,7 @@ import * as utils from '@cdo/apps/utils';
 
 const fakeSublevels = [
   {
-    id: 1,
+    id: '1',
     display_name: 'Choice 1',
     thumbnail_url: 'some-fake.url/kittens.png',
     url: '/s/script/stage/1/puzzle/2/sublevel/1',
@@ -17,7 +17,7 @@ const fakeSublevels = [
     status: 'perfect'
   },
   {
-    id: 2,
+    id: '2',
     display_name: 'Choice 2',
     thumbnail_url: null,
     url: '/s/script/stage/1/puzzle/2/sublevel/2',
@@ -30,7 +30,7 @@ const fakeSublevels = [
 
 const DEFAULT_PROPS = {
   level: {
-    id: 123,
+    id: '123',
     display_name: 'Bubble Choice',
     description: 'Choose one or more levels!',
     sublevels: fakeSublevels,

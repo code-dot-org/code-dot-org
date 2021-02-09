@@ -22,6 +22,7 @@
 class CourseVersion < ApplicationRecord
   belongs_to :course_offering
   has_many :resources
+  has_many :vocabularies
 
   def units
     content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
@@ -77,5 +78,9 @@ class CourseVersion < ApplicationRecord
   def destroy_and_destroy_parent_if_empty
     destroy!
     course_offering.destroy if course_offering && course_offering.course_versions.empty?
+  end
+
+  def contained_lessons
+    units.map(&:lessons).flatten
   end
 end

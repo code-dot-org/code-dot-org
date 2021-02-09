@@ -271,6 +271,7 @@ it:
     invite_sent: 'Invito spedito'
     added_teacher: '%{name} è stato aggiunto come tuo insegnante'
     registered: "Ti sei iscritto alla classe %{section_name}."
+    captcha_required: 'Compila il CAPTCHA per entrare in classe.'
     error:
       signed_in: 'Per favore esci prima di procedere'
       username_not_found: 'Nome utente %{username} non trovato'
