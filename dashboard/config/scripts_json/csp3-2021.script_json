@@ -394,7 +394,6 @@
       "key": "55036830-1321-4a8e-a37e-8928c23f1914",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914",
@@ -533,7 +532,6 @@
       "key": "531a4154-23d0-41db-a60e-7b12549f41cc",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "531a4154-23d0-41db-a60e-7b12549f41cc",
@@ -588,7 +586,6 @@
       "key": "7d514ef2-df67-4a32-9c71-565301aa8fd4",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "7d514ef2-df67-4a32-9c71-565301aa8fd4",
@@ -601,8 +598,7 @@
       "key": "16f7ef75-6617-4400-84dd-de184d79e671",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "16f7ef75-6617-4400-84dd-de184d79e671",
@@ -643,7 +639,6 @@
       "key": "b13a1f67-0e0f-4f93-b09c-637a146d6474",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "b13a1f67-0e0f-4f93-b09c-637a146d6474",
@@ -698,7 +693,6 @@
       "key": "3542470a-5acc-47f6-877f-2610901d7ecd",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "3542470a-5acc-47f6-877f-2610901d7ecd",
@@ -753,7 +747,6 @@
       "key": "7ec24eef-b6f6-42a8-87ac-9ec0f678c159",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "7ec24eef-b6f6-42a8-87ac-9ec0f678c159",
@@ -805,19 +798,6 @@
       }
     },
     {
-      "key": "ef42d427-deb3-494c-b36c-6628a628e5e4",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ef42d427-deb3-494c-b36c-6628a628e5e4",
-        "lesson.key": "Project - Designing an App Part 4",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
       "key": "79cdcae1-6799-473d-abe4-1c8a3c718f56",
       "position": 1,
       "properties": {
@@ -860,24 +840,10 @@
       }
     },
     {
-      "key": "239df5bd-175b-4f7e-ab39-32f9fe68d15f",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "239df5bd-175b-4f7e-ab39-32f9fe68d15f",
-        "lesson.key": "Project - Designing an App Part 5",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
       "key": "aad3b12f-b997-4886-900e-04c0cd02e7f1",
       "position": 1,
       "properties": {
-        "name": "Lesson Modfications",
-        "duration": 0
+        "name": "Lesson Modfications"
       },
       "seeding_key": {
         "lesson_activity.key": "aad3b12f-b997-4886-900e-04c0cd02e7f1",
@@ -932,7 +898,6 @@
       "key": "dfe0d8f3-2557-48ff-9640-27d04121e52a",
       "position": 5,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "dfe0d8f3-2557-48ff-9640-27d04121e52a",
@@ -1629,7 +1594,6 @@
         "description": "[slide]  **Prompt:** Write down three different reasons you would call a set of instructions \"bad\". Be ready to share with a neighbor.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Aim to hear a few different students share reasons that instructions are \"bad\". The point here is just to get students thinking and there's no specific answer you're driving towards. Some possible ideas, however, might include:\r\n\r\n* Instructions are not clear on what to do\r\n* Instructions use confusing words\r\n* Instructions don't actually accomplish what they're supposed to\r\n"
           }
@@ -1667,14 +1631,7 @@
       "key": "b2804970-6216-43c0-8140-57bac19b8ecb",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Step 1: Design:** Give students a couple minutes to create their design. Keep this quick since the bigger focus should be on the instructions.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Make it a Gallery Walk:** Depending on your room set-up you may be able to have students run this activity in a more open-ended way. Students should leave their unconstructed blocks and instructions at their table with the target image face down. They can then make their way to a few different groups' instructions over the course of 10-15 minutes. \r\n\r\n**Mark What's Confusing:** You may optionally have students leave suggestions on instructions when they use them explaining where they were confused or wanted more detail. This is a good way to practice giving and receiving feedback. It also forces groups to think more clearly about what is causing their confusion since they'll have to leave it in writing.\r\n"
-          }
-        ]
+        "description": "[slide]  **Step 1: Design:** Give students a couple minutes to create their design. Keep this quick since the bigger focus should be on the instructions."
       },
       "seeding_key": {
         "activity_section.key": "b2804970-6216-43c0-8140-57bac19b8ecb",
@@ -1685,7 +1642,13 @@
       "key": "0c1ae976-6a66-4af9-b463-77a976b2e373",
       "position": 3,
       "properties": {
-        "description": "**Step 2: Record:** Either have students sketch their design or take a picture. Make sure the image is on a separate piece of paper or the back side of a sheet of paper.\r\n\r\n**Step 3: Write Instructions:** This is the most important step and should be given about 5 minutes. Encourage students to be as clear as possible while only using words. Encourage them to think about their brainstorm of \"bad\" instructions this morning to see if it can inspire them to make \"good\" ones.\r\n\r\n[slide] **Step 4: Trade:** Have students take apart their design, and then trade instructions with another group. Make sure they keep their recording of the design hidden.\r\n\r\n**Step 5: Build:** Give students 3 minutes to follow the instructions from another group.\r\n\r\n**Step 6: Compare:** Give students 2 minutes to compare what they built with the picture of the actual target. In their groups they should discuss what they think went wrong or anything they're surprised worked out.\r\n\r\n**Step 7: Repeat:** Depending on how much time you have, encourage students to trade with one or two other groups. Make sure to save time for the wrap up."
+        "description": "**Step 2: Record:** Either have students sketch their design or take a picture. Make sure the image is on a separate piece of paper or the back side of a sheet of paper.\r\n\r\n**Step 3: Write Instructions:** This is the most important step and should be given about 5 minutes. Encourage students to be as clear as possible while only using words. Encourage them to think about their brainstorm of \"bad\" instructions this morning to see if it can inspire them to make \"good\" ones.\r\n\r\n[slide] **Step 4: Trade:** Have students take apart their design, and then trade instructions with another group. Make sure they keep their recording of the design hidden.\r\n\r\n**Step 5: Build:** Give students 3 minutes to follow the instructions from another group.\r\n\r\n**Step 6: Compare:** Give students 2 minutes to compare what they built with the picture of the actual target. In their groups they should discuss what they think went wrong or anything they're surprised worked out.\r\n\r\n**Step 7: Repeat:** Depending on how much time you have, encourage students to trade with one or two other groups. Make sure to save time for the wrap up.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Make it a Gallery Walk:** Depending on your room set-up you may be able to have students run this activity in a more open-ended way. Students should leave their unconstructed blocks and instructions at their table with the target image face down. They can then make their way to a few different groups' instructions over the course of 10-15 minutes. \n\n**Mark What's Confusing:** You may optionally have students leave suggestions on instructions when they use them explaining where they were confused or wanted more detail. This is a good way to practice giving and receiving feedback. It also forces groups to think more clearly about what is causing their confusion since they'll have to leave it in writing.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0c1ae976-6a66-4af9-b463-77a976b2e373",
@@ -1698,7 +1661,6 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This wrap up includes two sets of prompts and should be run as back-to-back discussions. The first set helps students synthesize the challenges they encountered during the main activity. The second set prompts students to think about how they might design a new language that avoids these challenges.\r\n\r\nWhen running the first discussion ask students to share specific experiences during the lesson and prompt them to think about what went wrong. They might say things like \"if we'd just been more clear\" or \"we just need to include more detail\". This might be true, but eventually you should point out that human language is often ambiguous. In other words, it's not their fault! It's hard to do a good job with bad tools!\r\n\r\nWhen running the second discussion push students to think about what a language designed for giving instructions would look like. While specific answers aren't important, you should push them to build on their experiences in the main activity. For example, if they saw that words having two meanings was confusing in the main activity, they should suggest redesigning the language so each word has a single well-understood meaning. \r\n\r\n"
           }
@@ -1771,7 +1733,6 @@
       "key": "2ff24c3f-78f1-4f19-be89-4dc94b1bdea6",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1786,7 +1747,6 @@
         "description": "Yesterday we learned that we need to create a new kind of language, a programming language, in order to clearly communicate instructions. Today is a big day. We're going to get our first taste of what programming looks like, and we'll see different ways we can use these tools to communicate our instructions to a computer.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Get to the Activity:** There's a lot to do in this lesson. Get to the main activity as quickly as you can.\r\n\r\n**Prompt Ideas:** If you need a prompt for when students come in consider asking them to list 2-3 differences between a natural language and programming language and why those differences need to exist.\r\n"
           }
@@ -1806,7 +1766,6 @@
         "description": "[slide]  **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Prepping for this lesson:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided in the \"For Teachers Only\" tab for verified teachers.\n\n**Show code at the front:** If your room allows it, display the code at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Discuss specific lines of code:** As you run discussions, model talking about programs by specifically calling out lines of code, as in \"I can see that when the playSound block on line 2 is highlighted the sound plays....\"\n\n**Save modifications for the end:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n**OK to Break Things:** When using the widgets in Units 1 and 2 it's not really possible to \"break things\". That's a little different than how things work in App Lab where it is possible to write code that may not run at all. Encourage students that this is ok. Using blocks makes it easier to avoid errors, and if students need to they can use the version history to set the code back to its original state.\n"
           }
@@ -1821,10 +1780,21 @@
       "key": "5acd0933-5cfb-4292-b8dd-09994428b8a2",
       "position": 2,
       "properties": {
-        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 2:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.\n\n* `console.log` prints text in the Debug Console\n* `setProperty` changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* `console.log` needs one input while `setProperty` needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.\n\n* `onEvent` makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the `onEvent` run. \n* Code outside the `onEvent` runs right away. Code inside an `onEvent` will only run when the event happens.\n* Even if code is after an `onEvent`, it will run first if it's outside of any `onEvent`\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* `playSound` will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 6:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* `onEvent` takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
+        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.\n\n* `console.log` prints text in the Debug Console\n* `setProperty` changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* `console.log` needs one input while `setProperty` needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.\n\n* `onEvent` makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the `onEvent` run. \n* Code outside the `onEvent` runs right away. Code inside an `onEvent` will only run when the event happens.\n* Even if code is after an `onEvent`, it will run first if it's outside of any `onEvent`\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* `playSound` will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* `onEvent` takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
       },
       "seeding_key": {
         "activity_section.key": "5acd0933-5cfb-4292-b8dd-09994428b8a2",
+        "lesson_activity.key": "c9646a01-dac6-46ce-a321-906893945b12"
+      }
+    },
+    {
+      "key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90",
+      "position": 3,
+      "properties": {
+        "progression_name": "Code Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90",
         "lesson_activity.key": "c9646a01-dac6-46ce-a321-906893945b12"
       }
     },
@@ -1835,7 +1805,6 @@
         "description": "[slide]  **Prompt:** Think about your experiences today and in the previous lesson. How is a programming language different from natural language?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Make this a quick discussion to help connect the previous lesson to this one. Help bring out some of the following points.\r\n\r\n* Programming languages are much more precise than natural language \r\n* Programming languages have very strict rules\r\n* Programming languages may feel a little awkward at first.\r\n"
           }
@@ -1865,7 +1834,6 @@
         "description": "[slide]  **Journal:** Go through each vocabulary word (Program Statement, Program, Sequential Programming, Event Driven Programming) and give students a chance to record each piece of information.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reinforcing Vocabulary:** A lot of the vocabulary introduced here is taken straight from the AP framework. The images are designed to help connect the definitions to the experiences they had in this lesson. Help students make these connections by not only writing down definitions but talking through how it's connected to what they saw.\r\n"
           }
@@ -1912,22 +1880,9 @@
       }
     },
     {
-      "key": "667a4ec2-3e0b-467f-b512-61a6b3070444",
+      "key": "08fc8c26-bc4e-499f-9143-706a35c36502",
       "position": 1,
       "properties": {
-        "name": "Code Investigation",
-        "progression_name": "Code Investigation"
-      },
-      "seeding_key": {
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444",
-        "lesson_activity.key": "b13a1f67-0e0f-4f93-b09c-637a146d6474"
-      }
-    },
-    {
-      "key": "08fc8c26-bc4e-499f-9143-706a35c36502",
-      "position": 2,
-      "properties": {
-        "name": "Check for Understanding",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -1942,7 +1897,6 @@
         "description": "[slide]  **Prompt:** Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Optional Warmup Prompt:** This prompt is optional and included for instances where you need a warm up prompt on the board when students walk in. If your classroom is able to move directly to main activity you should feel free to skip this prompt in the interest of time.\r\n\r\n**Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \r\n"
           }
@@ -1994,10 +1948,21 @@
       "key": "a7080b78-5e86-4d9f-a54c-68b4423cc5ef",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\r\n    \r\n**Level 2:** This level requires students to recognize that strings need to go in quotes.\r\n\r\n**Level 3:** This level also requires students to recognize that strings need to go in quotes. Ideally students will get more familiar with checking for yellow warnings in this level.\r\n\r\n**Level 4:** The code in this level will run, but the wrong text and sounds have been placed in the wrong places. This shows that code may have no warnings but still is not working correctly.\r\n\r\n**Level 5:** Again this code has no warnings but in testing the app students should see that the range of values for the random numbers is too large. Iterative testing with different values should help them pick a number that keeps the smiley inside the screen.\r\n\r\n**Level 6:** In this level an entire event handler is missing. Students will need to add it to the app.\r\n\r\n**Level 7:** This level explicitly introduces the fact that event handlers (`onEvent`) should not go inside other `onEvent` blocks. This is explicitly addressed in the concluding slide show as well.\r\n\r\n**Level 8:** This app is a good chance for students to practice adding functionality of their own. While nothing starts off as \"broken\", students will need to use debugging practices as they add code to this app."
+        "description": "**Group:** Place students in pairs.\n    \n**Level 1:** This level requires students to recognize that strings need to go in quotes.\n\n**Level 2:** This level also requires students to recognize that strings need to go in quotes. Ideally students will get more familiar with checking for yellow warnings in this level.\n\n**Level 3:** The code in this level will run, but the wrong text and sounds have been placed in the wrong places. This shows that code may have no warnings but still is not working correctly.\n\n**Level 4:** Again this code has no warnings but in testing the app students should see that the range of values for the random numbers is too large. Iterative testing with different values should help them pick a number that keeps the smiley inside the screen.\n\n**Level 5:** In this level an entire event handler is missing. Students will need to add it to the app.\n\n**Level 6:** This level explicitly introduces the fact that event handlers (`onEvent`) should not go inside other `onEvent` blocks. This is explicitly addressed in the concluding slide show as well.\n\n**Level 7:** This app is a good chance for students to practice adding functionality of their own. While nothing starts off as \"broken\", students will need to use debugging practices as they add code to this app."
       },
       "seeding_key": {
         "activity_section.key": "a7080b78-5e86-4d9f-a54c-68b4423cc5ef",
+        "lesson_activity.key": "a4cc4a73-59c1-4c6f-87aa-34afb719c5a3"
+      }
+    },
+    {
+      "key": "92c99060-be29-45dd-8b2b-dad3d87f25c2",
+      "position": 4,
+      "properties": {
+        "progression_name": "Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2",
         "lesson_activity.key": "a4cc4a73-59c1-4c6f-87aa-34afb719c5a3"
       }
     },
@@ -2008,7 +1973,6 @@
         "description": "[slide]  **Prompt:** If you were using the debugging process then you should have some notes of good debugging tips. Share those with your neighbor and add any new ones you forgot to add. Be ready to share with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion should help reinforce the fact that debugging is a skill that can be learned and that it is made up of many little steps and understandings. Give the room an opportunity to share as many ideas as they can before sharing the provided slides with some recommended steps.\r\n"
           }
@@ -2089,22 +2053,9 @@
       }
     },
     {
-      "key": "6de7b314-236b-45f3-b683-c62b683f4a36",
+      "key": "964fb0e1-e9c6-4024-9c29-b19c6aec1901",
       "position": 1,
       "properties": {
-        "name": "Debugging",
-        "progression_name": "Debugging"
-      },
-      "seeding_key": {
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36",
-        "lesson_activity.key": "3542470a-5acc-47f6-877f-2610901d7ecd"
-      }
-    },
-    {
-      "key": "964fb0e1-e9c6-4024-9c29-b19c6aec1901",
-      "position": 2,
-      "properties": {
-        "name": "Check for Understanding",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -2130,7 +2081,6 @@
         "description": "[slide]  **Prompt:** What makes a good partner?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Make this a quick discussion and just aim to get a few ideas from around the room. For example, a good partner...\n\n* listens\n* contributes\n* shares the work evenly\n* and so on....\n"
           }
@@ -2158,10 +2108,9 @@
       "key": "10f13ce0-55e1-45b3-bbb6-4a36f0485893",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in pairs with their project partner",
+        "description": "**Group:** Place students in pairs with their project partner\n\n",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Taking on the Blank Screen:** This is the first time students are adding code to a blank screen. Some students may need assistance. Direct them back to their Planning Guides to help students understand the `onEvent` blocks they need to add to their project. \n\n**Supporting Pair Programming:** Your biggest role in supporting pair programming will be encouraging students to use it early on and helping enforce the switching. Run the timer in the slides and have left and right partners switch roles. You may opt to increase the time to longer periods as time goes on.\n\n![](https://images.code.org/13423c034671a6010f9124a8edc60b1a-image-1611868356240.PNG)\n\n**Debugging Practices:** Students learned a lot of debugging practices in the previous lesson. Encourage students to use these and record bugs they find as they program today. Continue to normalize and celebrate debugging as a normal and fun part of programming.\n\n\n"
           }
@@ -2200,7 +2149,8 @@
       "key": "a781b6bf-0148-4c63-8cc1-2efa8a024424",
       "position": 4,
       "properties": {
-        "description": "**Circulate:** Give students time to work on their project. As they do so circulate the room encouraging them to use debugging practices they've learned in previous lessons. Every few minutes ask left and right partners to switch being drivers and navigators."
+        "description": "**Circulate:** Give students time to work on their project. As they do so circulate the room encouraging them to use debugging practices they've learned in previous lessons. Every few minutes ask left and right partners to switch being drivers and navigators.",
+        "progression_name": "Pair Programming"
       },
       "seeding_key": {
         "activity_section.key": "a781b6bf-0148-4c63-8cc1-2efa8a024424",
@@ -2214,7 +2164,6 @@
         "description": "[slide]  **Prompt:** How does Pair Programming help when working on a project? How does it help with the debugging process in particular?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Use this prompt to reinforce not only the value of pair programming and collaboration while programming, but also to remind students of debugging practices they learned in the previous lesson. Possible answers include\r\n\r\n* Talking through my code with another person helps me figure out what to do\r\n* When I get stuck, there's someone there to help brainstorm a solution\r\n* There's more than one set of eyes to find bugs\r\n* Different partners bring different perspectives to a project\r\n"
           }
@@ -2241,7 +2190,6 @@
       "key": "6d927c4d-8362-41de-8a87-ffd137debc94",
       "position": 1,
       "properties": {
-        "name": "Pair Programming",
         "progression_name": "Pair Programming"
       },
       "seeding_key": {
@@ -2253,7 +2201,6 @@
       "key": "107fa015-fbcb-40ef-842c-51bec9241878",
       "position": 2,
       "properties": {
-        "name": "Add Code",
         "progression_name": "Add Code"
       },
       "seeding_key": {
@@ -2265,10 +2212,9 @@
       "key": "e73973b6-2a2e-45f0-bf06-482fae5e854d",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Think of times when you've received helpful feedback on school work, a hobby, or a sport.",
+        "description": "[slide]  **Prompt:** Think of times when you've received helpful feedback on school work, a hobby, or a sport.\n\n* What makes good feedback? \n* What makes bad feedback?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This is an optional prompt if your class situation requires it. If you believe your students need more time to work on their apps then move right into work time.  This prompt, however is designed to get students thinking early about the differences between useful and unhelpful feedback.  For example, students may note that...\r\n\r\n* Good feedback: \r\n\t* Specific information beyond \"it's great\". \r\n\t* Explains why something needs work\r\n* Bad Feedback: \r\n\t* Is overly negative without constructive feedback\r\n\t* Does not go into enough detail\r\n "
           }
@@ -2280,19 +2226,8 @@
       }
     },
     {
-      "key": "6140276f-0a61-4950-9bf8-e1499b9e2384",
-      "position": 2,
-      "properties": {
-        "description": "* What makes good feedback? \r\n* What makes bad feedback?"
-      },
-      "seeding_key": {
-        "activity_section.key": "6140276f-0a61-4950-9bf8-e1499b9e2384",
-        "lesson_activity.key": "79d46d7b-f132-4ace-a745-3c6a8534e5bc"
-      }
-    },
-    {
       "key": "11c826b2-ffeb-4be7-a658-325214e5d3fc",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Today we're going to keep working on our apps, but we're also going to be getting feedback from our classmates. Let's get to it!",
         "remarks": true
@@ -2320,7 +2255,6 @@
         "description": "For the next twenty five minutes, you and your partner will use Pair Programming to continue working on your app. After this is done, you will get feedback from another group.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Review Pair Programming:** You may want to reuse the slides from the previous lesson to remind students of their Pair Programming roles. \r\n\r\n**Encourage Debugging Practices:** Continue to encourage students to use the debugging practices they learned in previous lessons and normalize and celebrate debugging as a part of programming\r\n"
           }
@@ -2349,7 +2283,8 @@
       "position": 4,
       "properties": {
         "description": "[slide] **Distribute:** Direct students back to the [r csp app dev planning guide].\n\n[slide] **Step 6:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
-        "name": "Testing and Feedback - 10 mins\r"
+        "name": "Testing and Feedback - 10 mins\r",
+        "progression_name": "Add More Code"
       },
       "seeding_key": {
         "activity_section.key": "e84b5ead-1284-4ddc-84bb-020dd6ee80b1",
@@ -2375,7 +2310,6 @@
         "description": "[slide]  **Prompt:** Why is it important to get feedback from others while building your app? What is the value of getting this feedback even if you aren't finished with your app?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Use this prompt as time allows. The goal is to reinforce the importance of feedback in the development of good software. Possible answers include:\n\n* Another person may find a bug that you have been overlooking\n* Something that seems obvious to you is not obvious to the user\n* Even if the app isn't finished, feedback can help guide the next steps\n"
           }
@@ -2399,25 +2333,12 @@
       }
     },
     {
-      "key": "f23af48b-bcc7-4c42-abb5-17a0b4329759",
-      "position": 1,
-      "properties": {
-        "name": "Add More Code",
-        "progression_name": "Add More Code"
-      },
-      "seeding_key": {
-        "activity_section.key": "f23af48b-bcc7-4c42-abb5-17a0b4329759",
-        "lesson_activity.key": "ef42d427-deb3-494c-b36c-6628a628e5e4"
-      }
-    },
-    {
       "key": "8337c699-e3a8-4097-941b-5351820a8e32",
       "position": 1,
       "properties": {
         "description": "Your apps are almost done and soon will be ready to share with the world. Let's get back to work.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Get to the Project:** Quickly move the class to the activity where the bulk of their time should be spent today. \r\n   "
           }
@@ -2457,7 +2378,8 @@
       "key": "15f48dad-56da-4bda-baa2-2c527eb728a1",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Code Studio:** Direct students to continue working on their app. When they are finished, they should hit \"Submit\" to turn in their app."
+        "description": "[slide]  **Code Studio:** Direct students to continue working on their app. When they are finished, they should hit \"Submit\" to turn in their app.",
+        "progression_name": "Submit your app"
       },
       "seeding_key": {
         "activity_section.key": "15f48dad-56da-4bda-baa2-2c527eb728a1",
@@ -2480,23 +2402,12 @@
       "position": 2,
       "properties": {
         "description": "Use the rubric to assess student projects. The rubric can be found on the last page of the [r csp app dev planning guide].",
-        "name": "Assessment: Project\r"
+        "name": "Assessment: Project\r",
+        "progression_name": "Submit Your App"
       },
       "seeding_key": {
         "activity_section.key": "239b6d98-edc4-4a2c-b18d-ef16e4df533d",
         "lesson_activity.key": "7d1b9071-d913-48a7-8e53-9d96be549dff"
-      }
-    },
-    {
-      "key": "16a77829-202c-4084-a788-264dbe5fc421",
-      "position": 1,
-      "properties": {
-        "name": "Submit Your App",
-        "progression_name": "Submit Your App"
-      },
-      "seeding_key": {
-        "activity_section.key": "16a77829-202c-4084-a788-264dbe5fc421",
-        "lesson_activity.key": "239df5bd-175b-4f7e-ab39-32f9fe68d15f"
       }
     },
     {
@@ -2551,7 +2462,8 @@
       "position": 3,
       "properties": {
         "description": "If you want, your app can be shared with people beyond this classroom. Click the \"Share\" button and then grab the link or type in a phone number to share it with a friend or family member. Congratulations on making your first app!",
-        "remarks": true
+        "remarks": true,
+        "progression_name": "Unit 3 Exam"
       },
       "seeding_key": {
         "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f",
@@ -2573,7 +2485,6 @@
       "key": "fac09528-ff55-4d72-b85b-2326ccbe16f9",
       "position": 1,
       "properties": {
-        "name": "Unit 3 Exam",
         "progression_name": "Unit 3 Exam"
       },
       "seeding_key": {
@@ -2589,7 +2500,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2612,7 +2526,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Bird Quiz App_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2635,7 +2552,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Hamilton Township App_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2658,7 +2578,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Four Square App_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2681,7 +2604,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration"
+        "progression": "App Exploration",
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2704,7 +2630,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "How Computers Work"
+        "progression": "How Computers Work",
+        "level_keys": [
+          "How Computers Work part 1 CSP_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2727,7 +2656,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2750,7 +2682,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2773,7 +2708,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2796,7 +2734,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Four Square App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2819,7 +2760,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation"
+        "progression": "App Investigation",
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3050,7 +2994,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U3L2 CSP CFU ID names_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3073,7 +3020,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Prototype"
+        "progression": "Sample Prototype",
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3096,7 +3046,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Screens"
+        "progression": "Build Your Screens",
+        "level_keys": [
+          "CSP U3 L4 Design Screens_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3143,12 +3096,9 @@
       "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
-        "level_keys": [
-          "U3 Program Investigate Sequential 1_2021"
-        ]
+        "progression": "Code Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -3159,7 +3109,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       },
       "level_keys": [
         "U3 Program Investigate Sequential 1_2021"
@@ -3169,12 +3119,9 @@
       "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
-        "level_keys": [
-          "U3 Program Investigate Sequential 2_2021"
-        ]
+        "progression": "Code Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -3185,7 +3132,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       },
       "level_keys": [
         "U3 Program Investigate Sequential 2_2021"
@@ -3195,12 +3142,9 @@
       "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
-        "level_keys": [
-          "U3 Program Investigate Event-Driven 1_2021"
-        ]
+        "progression": "Code Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -3211,7 +3155,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       },
       "level_keys": [
         "U3 Program Investigate Event-Driven 1_2021"
@@ -3221,12 +3165,9 @@
       "chapter": 27,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
-        "level_keys": [
-          "U3 Program Investigate Event-Driven 2_2021"
-        ]
+        "progression": "Code Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -3237,7 +3178,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       },
       "level_keys": [
         "U3 Program Investigate Event-Driven 2_2021"
@@ -3247,12 +3188,9 @@
       "chapter": 28,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
-        "level_keys": [
-          "U3 Program Investigate Event-Driven 3_2021"
-        ]
+        "progression": "Code Investigation"
       },
       "named_level": null,
       "bonus": null,
@@ -3263,7 +3201,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       },
       "level_keys": [
         "U3 Program Investigate Event-Driven 3_2021"
@@ -3299,12 +3237,9 @@
       "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
-        "level_keys": [
-          "U3 Program Practice Pt 1_2021"
-        ]
+        "progression": "Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -3315,7 +3250,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       },
       "level_keys": [
         "U3 Program Practice Pt 1_2021"
@@ -3325,12 +3260,9 @@
       "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
-        "level_keys": [
-          "U3 Program Practice Pt 2_2021"
-        ]
+        "progression": "Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -3341,7 +3273,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       },
       "level_keys": [
         "U3 Program Practice Pt 2_2021"
@@ -3351,12 +3283,9 @@
       "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
-        "level_keys": [
-          "U3 Program Practice Pt 3_2021"
-        ]
+        "progression": "Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -3367,7 +3296,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       },
       "level_keys": [
         "U3 Program Practice Pt 3_2021"
@@ -3377,12 +3306,9 @@
       "chapter": 33,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
-        "level_keys": [
-          "U3 Program Practice Pt 4_2021"
-        ]
+        "progression": "Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -3393,7 +3319,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       },
       "level_keys": [
         "U3 Program Practice Pt 4_2021"
@@ -3403,12 +3329,9 @@
       "chapter": 34,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
-        "level_keys": [
-          "U3 Program Practice Pt 5_2021"
-        ]
+        "progression": "Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -3419,7 +3342,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       },
       "level_keys": [
         "U3 Program Practice Pt 5_2021"
@@ -3429,12 +3352,9 @@
       "chapter": 35,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
-        "level_keys": [
-          "U3 Program Practice Pt 6_2021"
-        ]
+        "progression": "Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -3445,7 +3365,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       },
       "level_keys": [
         "U3 Program Practice Pt 6_2021"
@@ -3455,12 +3375,9 @@
       "chapter": 36,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
-        "level_keys": [
-          "U3 Program Practice Pt 8_2021"
-        ]
+        "progression": "Debugging"
       },
       "named_level": null,
       "bonus": null,
@@ -3471,7 +3388,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       },
       "level_keys": [
         "U3 Program Practice Pt 8_2021"
@@ -3507,12 +3424,9 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pair Programming",
-        "level_keys": [
-          "U3 L08 Pair Programming Video_2021"
-        ]
+        "progression": "Pair Programming"
       },
       "named_level": null,
       "bonus": null,
@@ -3523,7 +3437,7 @@
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6d927c4d-8362-41de-8a87-ffd137debc94"
+        "activity_section.key": "a781b6bf-0148-4c63-8cc1-2efa8a024424"
       },
       "level_keys": [
         "U3 L08 Pair Programming Video_2021"
@@ -3533,7 +3447,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Code",
         "level_keys": [
@@ -3559,12 +3473,9 @@
       "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Add More Code",
-        "level_keys": [
-          "CSP U3 L9 Add More Code_2021"
-        ]
+        "progression": "Add More Code"
       },
       "named_level": null,
       "bonus": null,
@@ -3575,7 +3486,7 @@
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "f23af48b-bcc7-4c42-abb5-17a0b4329759"
+        "activity_section.key": "e84b5ead-1284-4ddc-84bb-020dd6ee80b1"
       },
       "level_keys": [
         "CSP U3 L9 Add More Code_2021"
@@ -3587,10 +3498,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit Your App",
-        "level_keys": [
-          "CSP U3 L10 Submit App_2021"
-        ]
+        "progression": "Submit your app"
       },
       "named_level": null,
       "bonus": null,
@@ -3601,7 +3509,7 @@
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "16a77829-202c-4084-a788-264dbe5fc421"
+        "activity_section.key": "15f48dad-56da-4bda-baa2-2c527eb728a1"
       },
       "level_keys": [
         "CSP U3 L10 Submit App_2021"
@@ -3613,10 +3521,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 3 Exam",
-        "level_keys": [
-          "CSP Unit 3 MC Assessment _2021"
-        ]
+        "progression": "Unit 3 Exam"
       },
       "named_level": null,
       "bonus": null,
@@ -3627,7 +3532,7 @@
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "fac09528-ff55-4d72-b85b-2326ccbe16f9"
+        "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f"
       },
       "level_keys": [
         "CSP Unit 3 MC Assessment _2021"
@@ -3920,7 +3825,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       }
     },
     {
@@ -3932,7 +3837,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       }
     },
     {
@@ -3944,7 +3849,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       }
     },
     {
@@ -3956,7 +3861,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       }
     },
     {
@@ -3968,7 +3873,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "667a4ec2-3e0b-467f-b512-61a6b3070444"
+        "activity_section.key": "94f9c5a1-aea9-4596-a7c0-69b2cf87bf90"
       }
     },
     {
@@ -3992,7 +3897,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       }
     },
     {
@@ -4004,7 +3909,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       }
     },
     {
@@ -4016,7 +3921,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       }
     },
     {
@@ -4028,7 +3933,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       }
     },
     {
@@ -4040,7 +3945,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       }
     },
     {
@@ -4052,7 +3957,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       }
     },
     {
@@ -4064,7 +3969,7 @@
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6de7b314-236b-45f3-b683-c62b683f4a36"
+        "activity_section.key": "92c99060-be29-45dd-8b2b-dad3d87f25c2"
       }
     },
     {
@@ -4088,7 +3993,7 @@
         "lesson.key": "Project - Designing an App Part 3",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "6d927c4d-8362-41de-8a87-ffd137debc94"
+        "activity_section.key": "a781b6bf-0148-4c63-8cc1-2efa8a024424"
       }
     },
     {
@@ -4112,7 +4017,7 @@
         "lesson.key": "Project - Designing an App Part 4",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "f23af48b-bcc7-4c42-abb5-17a0b4329759"
+        "activity_section.key": "e84b5ead-1284-4ddc-84bb-020dd6ee80b1"
       }
     },
     {
@@ -4124,7 +4029,7 @@
         "lesson.key": "Project - Designing an App Part 5",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "16a77829-202c-4084-a788-264dbe5fc421"
+        "activity_section.key": "15f48dad-56da-4bda-baa2-2c527eb728a1"
       }
     },
     {
@@ -4136,7 +4041,7 @@
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "fac09528-ff55-4d72-b85b-2326ccbe16f9"
+        "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f"
       }
     }
   ],
