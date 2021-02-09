@@ -53,6 +53,8 @@
     text-align: left;
     white-space: nowrap;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 
     .display_name {
       font-family: $gotham-bold;
