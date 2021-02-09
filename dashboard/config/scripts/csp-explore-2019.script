@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/csp-explore/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-19/csp-explore/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/csp-explore/{LESSON}'
 family_name 'csp-explore'
 version_year '2019'
@@ -13,18 +12,18 @@ project_sharing true
 curriculum_umbrella 'CSP'
 
 lesson_group 'csp_ap_2', display_name: 'Chapter 2: AP Explore Performance Task'
-lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task'
+lesson 'Explore PT Prep - Reviewing the Task', display_name: 'Explore PT Prep - Reviewing the Task', has_lesson_plan: true
 level 'CSP ExploreL01 SFLP_2019', named: true
 level 'csp-pt-tech-setup-and-tools_2018_2019', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
-lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan'
+lesson 'Explore PT - Making a Plan', display_name: 'Explore PT - Making a Plan', has_lesson_plan: true
 level 'CSP ExploreL02 SFLP_2018_2019', named: true
 
-lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task'
+lesson 'Explore PT - Complete the Task', display_name: 'Explore PT - Complete the Task', has_lesson_plan: true
 level 'CSP ExploreL03 SFLP_2019', named: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true
+lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true, has_lesson_plan: false
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true
 

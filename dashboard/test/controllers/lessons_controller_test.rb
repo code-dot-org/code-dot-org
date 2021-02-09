@@ -16,6 +16,10 @@ class LessonsControllerTest < ActionController::TestCase
       script_id: @script.id,
       lesson_group: lesson_group,
       name: 'lesson display name',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -26,7 +30,11 @@ class LessonsControllerTest < ActionController::TestCase
       :lesson,
       script_id: @script.id,
       lesson_group: lesson_group,
-      name: 'second lesson'
+      name: 'second lesson',
+      has_lesson_plan: false,
+      lockable: false,
+      absolute_position: 2,
+      relative_position: 2
     )
 
     @script_title = 'Script Display Name'
@@ -61,16 +69,23 @@ class LessonsControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
   end
 
-  # anyone can show lesson
+  # anyone can show lesson with lesson plan
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: nil, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :student, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
 
+  # no one can access a lesson without lesson plan
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :levelbuilder, response: :forbidden
+
   test 'show lesson when lesson is the only lesson in script' do
     @solo_lesson_in_script = create(
       :lesson,
       name: 'lesson display name',
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
@@ -118,7 +133,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert(@response.body.include?(@lesson.overview))
     assert(@response.body.include?(@script.link))
     assert(@response.body.include?(lesson_path(id: @lesson.id)))
-    assert(@response.body.include?(lesson_path(id: @lesson2.id)))
+    refute(@response.body.include?(lesson_path(id: @lesson2.id)))
   end
 
   test 'show lesson with activities' do
@@ -189,6 +204,63 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
   end
 
+  test 'cannot update lockable if last level is not a levelgroup and an assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: lesson.id,
+        name: lesson.name,
+        lockable: true
+      }
+    end
+
+    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup and an assessment."
+  end
+
+  test 'can update lockable if last level is levelgroup and assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      assessment: true,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:level_group, name: 'levelgroup 1')]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
+
+    assert_response :success
+  end
+
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -249,6 +321,40 @@ class LessonsControllerTest < ActionController::TestCase
     ].to_json
     put :update, params: @update_params
     assert_response :forbidden
+  end
+
+  test 'updates lesson positions on lesson update' do
+    sign_in @levelbuilder
+
+    # Make sure the last level in @lesson is an assessment and levelgroup
+    lesson_activity = create :lesson_activity, lesson: @lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: @script,
+      assessment: true,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: @lesson,
+      levels: [create(:level_group, name: 'levelgroup 1')]
+    )
+
+    assert_equal 1, @lesson.relative_position
+    assert_equal 1, @lesson.absolute_position
+    assert_equal 2, @lesson2.relative_position
+    assert_equal 2, @lesson2.absolute_position
+
+    @update_params['lockable'] = true
+    @update_params['has_lesson_plan'] = false
+
+    put :update, params: @update_params
+
+    @lesson.reload
+    @lesson2.reload
+    assert_equal 1, @lesson.relative_position
+    assert_equal 1, @lesson.absolute_position
+    assert_equal 1, @lesson2.relative_position
+    assert_equal 2, @lesson2.absolute_position
   end
 
   test 'add activity via lesson update' do
@@ -431,7 +537,9 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson with new resources' do
-    resource = create :resource
+    course_version = create :course_version
+    resource = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     sign_in @levelbuilder
     new_update_params = @update_params.merge({resources: [resource.key].to_json})
@@ -458,6 +566,25 @@ class LessonsControllerTest < ActionController::TestCase
     assert @lesson.resources.include?(resource_to_keep)
     assert @lesson.resources.include?(resource_to_add)
     refute @lesson.resources.include?(resource_to_remove)
+  end
+
+  test 'update lesson by removing and adding vocabularies' do
+    course_version = create :course_version
+    vocab_to_keep = create :vocabulary, course_version: course_version
+    vocab_to_remove = create :vocabulary, course_version: course_version
+    vocab_to_add = create :vocabulary, course_version: course_version
+    @lesson.script.course_version = course_version
+    @lesson.vocabularies = [vocab_to_keep, vocab_to_remove]
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({vocabularies: [vocab_to_keep.key, vocab_to_add.key].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 2, @lesson.vocabularies.count
+    assert @lesson.vocabularies.include?(vocab_to_keep)
+    assert @lesson.vocabularies.include?(vocab_to_add)
+    refute @lesson.vocabularies.include?(vocab_to_remove)
   end
 
   test 'lesson is not partially updated if any data is bad' do
@@ -538,6 +665,8 @@ class LessonsControllerTest < ActionController::TestCase
             id: section.id,
             name: 'section name',
             position: 1,
+            duration: 10,
+            progressionName: 'progression name',
             scriptLevels: [
               activitySectionPosition: 1,
               activeId: level_to_add.id,
@@ -565,7 +694,7 @@ class LessonsControllerTest < ActionController::TestCase
     script_level = section.script_levels.first
     assert script_level.assessment
     refute script_level.bonus
-    assert_equal 'section name', script_level.progression
+    assert_equal 'progression name', script_level.progression
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
@@ -597,7 +726,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     existing_summary = existing_script_level.summarize_for_lesson_edit
     assert_equal 1, existing_summary[:activitySectionPosition]
-    assert_equal existing_survey.id, existing_summary[:activeId]
+    assert_equal existing_survey.id.to_s, existing_summary[:activeId]
     existing_summary[:assessment] = false
 
     survey_to_add = create :level_group, name: 'survey-to-add'

@@ -153,7 +153,7 @@ class TeacherPanel extends React.Component {
               <SelectedStudentInfo
                 students={students}
                 selectedStudent={currentStudent}
-                level={currentStudentScriptLevel}
+                userLevel={currentStudentScriptLevel}
                 onSelectUser={id => this.onSelectUser(id, 'iterator')}
                 getSelectedUserId={this.props.getSelectedUserId}
               />
@@ -229,7 +229,7 @@ class TeacherPanel extends React.Component {
             )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
-              levels={currentSectionScriptLevels}
+              userLevels={currentSectionScriptLevels}
               students={students}
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}

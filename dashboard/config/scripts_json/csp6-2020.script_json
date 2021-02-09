@@ -69,6 +69,7 @@
       "name": "Algorithms Solve Problems",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -83,6 +84,7 @@
       "name": "Algorithm Efficiency",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -97,6 +99,7 @@
       "name": "Unreasonable Time",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -111,6 +114,7 @@
       "name": "The Limits of Algorithms",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -125,6 +129,7 @@
       "name": "Parallel and Distributed Algorithms",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -139,6 +144,7 @@
       "name": "Lesson 6: Assessment Day",
       "absolute_position": 6,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -162,7 +168,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U6L1 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -184,7 +193,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -206,7 +218,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U6L2 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -228,7 +243,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Ticket Generator"
+        "progression": "Widget: Ticket Generator",
+        "level_keys": [
+          "CSP U6L2 Ticket Generator"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -250,7 +268,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6L2 CFU Binary Search Steps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -272,7 +293,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6L2 CFU Efficiency and Algorithms"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -294,7 +318,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U6L3 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -316,7 +343,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Ticket Generator"
+        "progression": "Widget: Ticket Generator",
+        "level_keys": [
+          "CSP U6L2 Ticket Generator"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -338,7 +368,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -360,7 +393,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6 L03 Evaluate Reasonable or Not"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -382,7 +418,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U6L4 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -404,7 +443,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman"
+        "progression": "Widget: Traveling Salesman",
+        "level_keys": [
+          "CSP U6L4 Traveling Salesman"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -426,7 +468,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Widget: Traveling Salesman - Random Nodes"
+        "progression": "Widget: Traveling Salesman - Random Nodes",
+        "level_keys": [
+          "CSP U6L4 Random Traveling Salesman"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -448,7 +493,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6L4 CFU Reason for Heuristics"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -470,7 +518,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6 L04 Unreasonable vs Undecidable"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -492,7 +543,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U6L5 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -514,7 +568,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6L5 CFU Calculate Speedup"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -536,7 +593,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U6 L05 Speedup Forever"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -558,7 +618,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Overview"
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSP U6L6 SFLP 20-21"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -580,7 +643,10 @@
       "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "progression": "Unit 6 Exam"
+        "progression": "Unit 6 Exam",
+        "level_keys": [
+          "CSP Unit 6 AP-Style Assessment _2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -823,6 +889,12 @@
 
   ],
   "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
 
   ],
   "objectives": [

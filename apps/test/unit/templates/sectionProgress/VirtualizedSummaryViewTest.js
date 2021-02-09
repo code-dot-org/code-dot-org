@@ -13,6 +13,8 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelProgressFromStatus} from '@cdo/apps/templates/progress/progressHelpers';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -27,32 +29,34 @@ describe('VirtualizedSummaryView', () => {
     stubRedux();
     registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
-      levelsByLesson: {
+      levelProgressByStudent: {
         0: {
-          0: [{id: 789, status: 'perfect'}]
+          '789': levelProgressFromStatus(LevelStatus.perfect)
         },
         1: {
-          0: [{id: 789, status: 'perfect'}]
+          '789': levelProgressFromStatus(LevelStatus.perfect)
         },
         3: {
-          0: [{id: 789, status: 'perfect'}]
+          '789': levelProgressFromStatus(LevelStatus.perfect)
         }
       },
       lessonOfInterest: 1,
       section: {
         id: 1,
-        script: {id: 123},
+        script: {id: '123'},
         students: studentData
       },
       scriptData: {
         id: 123,
         stages: [
           {
-            id: 456,
+            id: '456',
             position: 1,
             relative_position: 2,
             lockable: true,
-            levels: [{id: 789}]
+            hasLessonPlan: false,
+            numberedLesson: false,
+            levels: [{id: '789'}]
           }
         ]
       },
@@ -92,13 +96,13 @@ describe('VirtualizedSummaryView', () => {
     expect(wrapper.find('StudentProgressSummaryCell')).to.have.length(3);
   });
 
-  it('updates the grid when the levels change', () => {
+  it('updates the grid when progress changes', () => {
     const forceUpdateGridsSpy = sinon.spy();
     const wrapper = shallow(
       <UnconnectedVirtualizedSummaryView {...defaultProps} />
     );
     wrapper.instance().summaryView = {forceUpdateGrids: forceUpdateGridsSpy};
-    wrapper.setProps({levelsByLesson: {}});
+    wrapper.setProps({levelProgressByStudent: {}});
     expect(forceUpdateGridsSpy).to.have.been.calledOnce;
   });
 });

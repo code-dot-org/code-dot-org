@@ -1,5 +1,5 @@
 {
-  "category": "Actions",
+  "category": "Sprites",
   "config": {
     "func": "changePropBy",
     "blockText": "change {SPRITE} {PROPERTY} by {VAL}",

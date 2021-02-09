@@ -19,7 +19,7 @@ module LessonImportHelper
   # }
   # @param [Lesson] lesson - Code Studio Lesson object to update.
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
-  def self.update_lesson(lesson, cb_lesson_data = {})
+  def self.update_lesson(lesson, models_to_import = [], cb_lesson_data = {})
     raise unless [:development, :adhoc, :levelbuilder].include? rack_env
     raise unless lesson.script.hidden
 
@@ -28,25 +28,39 @@ module LessonImportHelper
     raise "Script must have course version" unless course_version_id
 
     lesson_levels = lesson.script_levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
+    # Lockable lessons need to be handled as a separate case
     if cb_lesson_data.empty?
-      lesson.lesson_activities = update_lockable_lesson(lesson_levels, lesson.id)
-      lesson.script_levels = []
-    else
-      lesson.name = cb_lesson_data['title']
-      lesson.overview = cb_lesson_data['teacher_desc']
-      lesson.student_overview = cb_lesson_data['student_desc']
-      lesson.purpose = cb_lesson_data['cs_content']
-      lesson.preparation = cb_lesson_data['prep']
-      lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
-      lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
-      lesson.objectives = cb_lesson_data['objectives'].map do |o|
-        Objective.new(key: SecureRandom.uuid, description: o["name"])
+      if models_to_import.include?('Lesson')
+        lesson.lesson_activities = update_lockable_lesson(lesson_levels, lesson.id)
+        lesson.script_levels = []
       end
-      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
-      lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
-      lesson.script_levels = []
+    else
+      if models_to_import.include?('Lesson')
+        lesson.name = cb_lesson_data['title']
+        lesson.overview = cb_lesson_data['teacher_desc']
+        lesson.student_overview = cb_lesson_data['student_desc']
+        lesson.purpose = cb_lesson_data['cs_content']
+        lesson.preparation = cb_lesson_data['prep']
+        lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
+        lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
+        lesson.save!
+      end
+      if models_to_import.include?('Objective')
+        lesson.objectives = cb_lesson_data['objectives'].map do |o|
+          Objective.new(key: SecureRandom.uuid, description: o["name"])
+        end
+      end
+      if models_to_import.include?('Activity')
+        lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
+        lesson.script_levels = []
+      end
+      if models_to_import.include?('Resource')
+        lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
+      end
+      if models_to_import.include?('Vocabulary')
+        lesson.vocabularies = create_lesson_vocabularies(cb_lesson_data['vocab'], course_version_id)
+      end
     end
-    lesson.save!
   end
 
   # Lockable lessons don't need to be merged with curriculumbuilder, but we do
@@ -71,6 +85,26 @@ module LessonImportHelper
       resource.include_in_pdf = cb_resource['gd']
       resource.save! if resource.changed?
       resource
+    end
+  end
+
+  def self.create_lesson_vocabularies(cb_vocab, course_version_id)
+    return [] if cb_vocab.blank?
+    cb_vocab.map do |cb_vocabulary|
+      raise unless cb_vocabulary['word']
+      vocab = Vocabulary.find_or_initialize_by(
+        course_version_id: course_version_id,
+        key: cb_vocabulary['word']
+      )
+      vocab.word = cb_vocabulary['word']
+      vocab.definition =
+        if ['csd', 'csp'].include? CourseVersion.find(course_version_id).course_offering.key
+          cb_vocabulary['detailDef']
+        else
+          cb_vocabulary['simpleDef']
+        end
+      vocab.save! if vocab.changed?
+      vocab
     end
   end
 

@@ -15,7 +15,6 @@ class ScriptDSL < BaseDSL
     @lesson_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
-    @has_lesson_plan = false
     @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
@@ -46,7 +45,6 @@ class ScriptDSL < BaseDSL
   boolean :lesson_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
-  boolean :has_lesson_plan
   boolean :is_stable
   boolean :project_sharing
   boolean :tts
@@ -114,6 +112,7 @@ class ScriptDSL < BaseDSL
         key: key,
         name: properties[:display_name],
         lockable: properties[:lockable],
+        has_lesson_plan: properties[:has_lesson_plan],
         visible_after: determine_visible_after_time(properties[:visible_after]),
         script_levels: []
       }.compact
@@ -149,7 +148,6 @@ class ScriptDSL < BaseDSL
       teacher_resources: @teacher_resources,
       lesson_extras_available: @lesson_extras_available,
       has_verified_resources: @has_verified_resources,
-      has_lesson_plan: @has_lesson_plan,
       curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
@@ -338,7 +336,6 @@ class ScriptDSL < BaseDSL
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'lesson_extras_available true' if script.lesson_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
-    s << 'has_lesson_plan true' if script.has_lesson_plan
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
@@ -386,6 +383,7 @@ class ScriptDSL < BaseDSL
     t = "lesson '#{escape(lesson.key)}'"
     t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
+    t += ", has_lesson_plan: #{!!lesson.has_lesson_plan}"
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     s << t
     lesson.script_levels.each do |sl|

@@ -15,7 +15,7 @@ module AzureTextToSpeech
   def self.get_token
     return nil unless allowed?
 
-    Rails.cache.fetch("azure_speech_service/token", expires_in: TOKEN_CACHE_TTL) do
+    CDO.shared_cache.fetch("azure_speech_service/token", expires_in: TOKEN_CACHE_TTL) do
       token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
       token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
       token_http_request.use_ssl = true
@@ -71,7 +71,7 @@ module AzureTextToSpeech
     token = get_token
     return nil if token.nil_or_empty?
 
-    Rails.cache.fetch("azure_speech_service/voices") do
+    CDO.shared_cache.fetch("azure_speech_service/voices") do
       voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
       voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
       voice_http_request.use_ssl = true
@@ -90,10 +90,10 @@ module AzureTextToSpeech
         native_name_s = native_locale_name[0][:native_name_s]
         voice_dictionary[native_name_s] ||= {}
         voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
-        voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
+        voice_dictionary[native_name_s]["locale"] ||= voice["Locale"]
       end
 
-      # Only keep voices that contain 2+ genders and a languageCode
+      # Only keep voices that contain 2+ genders and a locale
       voice_dictionary.reject {|_, opt| opt.length < 3}
     end
   rescue => e
@@ -122,7 +122,7 @@ module AzureTextToSpeech
   end
 
   def self.get_voice_by(locale, gender)
-    voice = get_voices&.values&.find {|v| v["languageCode"] == locale}
+    voice = get_voices&.values&.find {|v| v["locale"] == locale}
     return nil unless voice.present?
     voice[gender]
   end

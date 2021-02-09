@@ -78,7 +78,8 @@ class TestController < ApplicationController
       key: 'temp-lesson',
       name: 'Temp Lesson',
       relative_position: 1,
-      absolute_position: 1
+      absolute_position: 1,
+      has_lesson_plan: false
     )
     script_level = lesson.script_levels.create(
       script: script,
@@ -108,8 +109,17 @@ class TestController < ApplicationController
       script: script,
       key: 'temp-lesson',
       name: 'Temp Lesson',
+      has_lesson_plan: true,
       relative_position: 1,
       absolute_position: 1
+    )
+    lesson_without_lesson_plan = lesson_group.lessons.create(
+      script: script,
+      key: 'temp-lesson-2',
+      name: 'Temp Lesson Without Lesson Plan',
+      has_lesson_plan: false,
+      relative_position: 1,
+      absolute_position: 2
     )
     activity = lesson.lesson_activities.create(
       position: 1,
@@ -128,7 +138,7 @@ class TestController < ApplicationController
     )
     level = Level.find_by_name('Applab test')
     script_level.levels.push(level)
-    render json: {script_name: script.name, lesson_id: lesson.id}
+    render json: {script_name: script.name, lesson_id: lesson.id, lesson_without_lesson_plan_id: lesson_without_lesson_plan.id}
   end
 
   # invalidate the specified script from the script cache, so that it will be
