@@ -1,17 +1,23 @@
 function propBars(){
   //Declare helper variables
   var spriteIds = getSpriteIdsInUse();
-  var valueMax = 360;
+  var valueMax = 1000;
 
   for (var i = 0; i < spriteIds.length; i++) {
-    //if (getProp({id: spriteIds[i]}, "costume") == "sick" || getProp({id: spriteIds[i]}, "costume") == "sick_mask") {
-      var spriteX=getProp({id: spriteIds[i]}, "x");
-      var spriteY=400-getProp({id: spriteIds[i]}, "y");
-      var spriteScale=getProp({id: spriteIds[i]}, "scale");
-      var spriteValue=getProp({id: spriteIds[i]}, "rotation")%360;
-    if(spriteValue<=0){
-      spriteValue+=valueMax;
+    var spriteX=getProp({id: spriteIds[i]}, "x");
+    var spriteY=400-getProp({id: spriteIds[i]}, "y");
+    var spriteScale=getProp({id: spriteIds[i]}, "scale");
+    if(!getProp({id: spriteIds[i]}, "energy")){
+      setProp(({id: spriteIds[i]}), "energy", valueMax/2);
+    } else
+    if(getProp({id: spriteIds[i]}, "energy")>valueMax){
+      setProp(({id: spriteIds[i]}), "energy", valueMax);
+    } else
+    if(getProp({id: spriteIds[i]}, "energy")<0){
+      setProp(({id: spriteIds[i]}), "energy", 0);
     }
+      var spriteValue=getProp({id: spriteIds[i]}, "energy")+1;
+
       if(spriteValue){
         push();
         stroke("white");
