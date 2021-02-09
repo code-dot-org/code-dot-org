@@ -13,17 +13,10 @@ import {
 import NameFailureDialog from '../NameFailureDialog';
 import NameFailureError from '../../NameFailureError';
 
-export const styles = {
+const styles = {
   buttonWrapper: {
     float: 'left',
     display: 'flex'
-  },
-  buttonSpacing: {
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 10,
-    marginRight: 0,
-    boxShadow: 'none'
   }
 };
 
@@ -36,20 +29,18 @@ class UnconnectedDisplayProjectName extends React.Component {
   render() {
     return (
       <div style={styles.buttonWrapper}>
-        <div className="project_name_wrapper header_text" tabIndex={0}>
+        <div className="project_name_wrapper header_text">
           <div className="project_name header_text">
             {this.props.projectName}
           </div>
           <ProjectUpdatedAt />
         </div>
-        <button
-          type="button"
+        <div
           className="project_edit header_button header_button_light"
-          style={styles.buttonSpacing}
           onClick={this.props.beginEdit}
         >
           {i18n.rename()}
-        </button>
+        </div>
       </div>
     );
   }
@@ -122,15 +113,13 @@ class UnconnectedEditProjectName extends React.Component {
             }}
           />
         </div>
-        <button
-          type="button"
+        <div
           className="project_save header_button header_button_light"
           onClick={this.saveNameChange}
           disabled={this.state.savingName}
-          style={styles.buttonSpacing}
         >
           {i18n.save()}
-        </button>
+        </div>
         <NameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
