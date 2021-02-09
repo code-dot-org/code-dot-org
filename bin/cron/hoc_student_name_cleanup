@@ -1,0 +1,193 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script deletes the name stored in pegasus.hoc_activity after 3 months.
+#
+# Background:
+# The name field is populated when the user personalizes the student certificate
+# after completing an HoC activity. This allows us to create the personalized
+# certificate when it is requested, e.g. when someone clicks on a link that the
+# student has shared to social media. For privacy reasons, we delete the name after
+# 3 months. If the certificate is requested after that point, we return the default
+# unpersonalized certificate.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/db'
+require 'cdo/properties'
+require 'optparse'
+
+CDO.log.info("Script started at #{Time.now}")
+
+HOC_ACTIVITY = PEGASUS_DB[:hoc_activity]
+START_ID_PROPERTY_KEY = "hoc_activity.name_cleanup.start_id"
+
+# Parse options
+options = {
+  retention_days: 90,
+  retain_after_date: nil, # calculated from retention_days
+  start_id: nil,
+  end_id: nil,
+  batch_size: 1000,
+  sleep_msecs: 200,
+  dry_run: false,
+  log_sql: false,
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script deletes names stored in the pegasus.hoc_activity table after the
+    configured retention period.
+
+    Options:
+  BANNER
+
+  opts.on('--retention=90',
+    Integer,
+    'Retention period in days. Defaults to 90 days if not specified.'
+  ) do |retention_days|
+    options[:retention_days] = retention_days
+  end
+
+  opts.on('--end-id=1000000',
+    Integer,
+    'Id of last entry to clean up (exclusive). If both this and rentention_days ' \
+    'are specified, this value takes precedence.'
+  ) do |end_id|
+    options[:end_id] = end_id
+  end
+
+  opts.on('--start-id=1',
+    Integer,
+    'Id of first entry to clean up (inclusive). If not specified, the script will ' \
+    'determine where to start based on where the last run left off.'
+  ) do |start_id|
+    options[:start_id] = start_id
+  end
+
+  opts.on('--batch-size=1000',
+    Integer,
+    'Number of entries to query and write in a single request. Defaults to 1000 if ' \
+    'not specified.'
+  ) do |batch_size|
+    options[:batch_size] = batch_size
+  end
+
+  opts.on('--sleep=200',
+    Integer,
+    'Amount of time to sleep in milliseconds to sleep between batches. Defaults to ' \
+    '200 msecs if not specified.'
+  ) do |sleep_msecs|
+    options[:sleep_msecs] = sleep_msecs
+  end
+
+  opts.on('--dry-run',
+    'Enables read-only mode where no changes are written to the database'
+  ) do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('--log-sql',
+    'Logs all sql statements sent to the database'
+  ) do |log_sql|
+    options[:log_sql] = log_sql
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Initial parsed options: #{options}"
+
+PEGASUS_DB.loggers << CDO.log if options[:log_sql]
+
+# Get the last row in the db for later use. If there is no last row (i.e. there
+# are no rows in the table), we can exit right away.
+last_row = HOC_ACTIVITY.order(:id).last
+if last_row.nil?
+  CDO.log.info "pegasus.hoc_activity table has no rows, exiting"
+  return
+end
+
+# Calculate the start of the retention window. Rows with a timestamp earlier
+# than this are candidates for cleanup.
+options[:retain_after_date] = Date.today - options[:retention_days]
+
+# If start_id was not specified, read the value from the db
+if options[:start_id].nil?
+  options[:start_id] = Properties.get(START_ID_PROPERTY_KEY) || 0
+end
+
+# If end_id was not specified, determine its value by looking for the first row
+# that is definitely inside the retention window. In the rare case where there
+# are no rows in the retention window, set end_id to 1 past the last row to
+# check all rows
+if options[:end_id].nil?
+  options[:end_id] = HOC_ACTIVITY.select(:id).
+    where {finished_at > options[:retain_after_date]}.
+    order(:finished_at, :id).
+    get(:id) || last_row[:id] + 1
+end
+
+# Options should not change from here on
+options.freeze
+CDO.log.info "Final calculated options: #{options}"
+
+# Main loop - read rows with names one batch at a time and null out entries
+# that are outside the retention window. It is important to do this in batches
+# because this table is very large (~1B rows as of early 2021). Also note that
+# the date columns are indexed but the name column is not.
+batch_start_id = options[:start_id]
+next_run_start_id = nil
+next_run_start_id_written = false
+batch_count = 0
+while batch_start_id < options[:end_id]
+  batch_end_id = [batch_start_id + options[:batch_size], options[:end_id]].min
+  ids_to_cleanup = []
+  rows_in_batch = 0
+
+  HOC_ACTIVITY.select(:id, :started_at, :finished_at, :pixel_started_at, :pixel_finished_at).
+    where(Sequel.lit('id >= ? AND id < ? AND name IS NOT NULL', batch_start_id, batch_end_id)).
+    order(:id).
+    each do |row|
+      # A row needs to be cleaned up if it has a timestamp that is earlier than the
+      # retention window. Each row has four timestamps, we choose the first non-null
+      # value using the following order: finished_at, pixel_finished_at, started_at,
+      # pixel_started_at. In the rare case where all four timestamps are null, we
+      # assume that the row _should_ be cleaned up.
+      timestamp = row[:finished_at] || row[:pixel_finished_at] || row[:started_at] || row[:pixel_started_at]
+      if timestamp.nil? || timestamp < options[:retain_after_date]
+        ids_to_cleanup << row[:id]
+      else
+        # This is a row that should be retained. If it's the first such row, this
+        # is where we should start the next time we run this script
+        next_run_start_id = row[:id] if next_run_start_id.nil?
+      end
+      rows_in_batch += 1
+    end
+
+  # Wrap the update in a transaction so we can rollback the changes on a dry run
+  DB.transaction do
+    HOC_ACTIVITY.where(id: ids_to_cleanup).update(name: nil) unless ids_to_cleanup.empty?
+
+    if next_run_start_id && !next_run_start_id_written
+      CDO.log.info("Setting start_id for next run to #{next_run_start_id}")
+      Properties.set(START_ID_PROPERTY_KEY, next_run_start_id)
+      next_run_start_id_written = true
+    end
+
+    raise Sequel::Rollback if options[:dry_run]
+  end
+
+  CDO.log.info("Processed batch #{batch_count} (id=#{batch_start_id}...#{batch_end_id}): " \
+    "rows with names=#{rows_in_batch}, rows cleaned=#{ids_to_cleanup.length}"
+  )
+
+  batch_start_id = batch_end_id
+  batch_count += 1
+  sleep(options[:sleep_msecs] / 1000.0)
+end
+
+CDO.log.info("Script completed at #{Time.now}. Next run will start at id=#{next_run_start_id}.")
