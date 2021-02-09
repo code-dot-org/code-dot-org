@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
 
 const weekWidth = 592;
@@ -98,7 +99,9 @@ export default class UnitCalendar extends React.Component {
             {weekPlans.map((week, index) => {
               return (
                 <tr key={`week-${index}`}>
-                  <td style={styles.weekColumn}>Week {index + 1}</td>
+                  <td style={styles.weekColumn}>
+                    {i18n.weekLabel({number: index + 1})}
+                  </td>
                   <td style={styles.scheduleColumn}>{week}</td>
                 </tr>
               );
@@ -119,7 +122,7 @@ export default class UnitCalendar extends React.Component {
                         ...styles.keyIcon
                       }}
                     />
-                    Instructional Lesson
+                    {i18n.instructionalLesson()}
                   </div>
                   <div>
                     <i
@@ -129,11 +132,11 @@ export default class UnitCalendar extends React.Component {
                         ...styles.keyIcon
                       }}
                     />
-                    Assessment
+                    {i18n.assessment()}
                   </div>
                   <div>
                     <i className="fa fa-scissors" style={styles.keyIcon} />
-                    Unplugged Lesson
+                    {i18n.unpluggedLesson()}
                   </div>
                 </div>
               </td>
