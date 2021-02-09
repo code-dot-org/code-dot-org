@@ -14,6 +14,7 @@ const sampleLesson = {
   isMajority: true,
   url: 'https://www.google.com/'
 };
+
 describe('UnitCalendarLessonChunk', () => {
   it('is purple border with grey text when is assessment', () => {
     const wrapper = shallow(
