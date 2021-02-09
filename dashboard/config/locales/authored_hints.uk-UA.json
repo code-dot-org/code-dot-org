@@ -2137,7 +2137,7 @@
           "courseB_collector_loops_challenge1_b": "Розпочати зацикливши команду \"рухати на південь\" та \"отримати скарб\""
         },
         "course1_maze_debugging_challenge1": {
-          "courseA_maze_seq_challenge1_a": "Деякі шляхи приведуть до вибухівки, якщо Ви зайдете занадто далеко"
+          "courseA_maze_seq_challenge1_a": "Деякі шляхи приведуть до вибухівки, якщо Ви зайдете занадто далеко."
         },
         "outbreak1": {
           "step1": "Використайте ці блоки для створення спрайтів:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n    <xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nЦей блок можна знайти у категорії **Спрайти** панелі інструментів.",

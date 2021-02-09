@@ -2,7 +2,7 @@
   "script": {
     "name": "contagion-guided-practice",
     "wrapup_video_id": null,
-    "hidden": false,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "teacher_resources": [
@@ -144,6 +144,31 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 4: Collecting Data",
+        "level_keys": [
+          "contagion_teachers2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "contagion-guided-practice"
+      },
+      "level_keys": [
+        "contagion_teachers2"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -166,31 +191,6 @@
       "level_keys": [
         "6sidedDie"
       ]
-    },
-    {
-      "chapter": 3,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Lesson 4: Collecting Data",
-        "level_keys": [
-          "contagion_teachers2"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_teachers2"
-        ],
-        "lesson.key": "modifying your simulator gp",
-        "lesson_group.key": "lesson group",
-        "script.name": "contagion-guided-practice"
-      },
-      "level_keys": [
-        "contagion_teachers2"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -207,22 +207,22 @@
     },
     {
       "seeding_key": {
-        "level.key": "6sidedDie",
+        "level.key": "contagion_teachers2",
         "script_level.level_keys": [
-          "6sidedDie"
+          "contagion_teachers2"
         ],
-        "lesson.key": "sometimes not always gp",
+        "lesson.key": "contagion simulator gp",
         "lesson_group.key": "lesson group",
         "script.name": "contagion-guided-practice"
       }
     },
     {
       "seeding_key": {
-        "level.key": "contagion_teachers2",
+        "level.key": "6sidedDie",
         "script_level.level_keys": [
-          "contagion_teachers2"
+          "6sidedDie"
         ],
-        "lesson.key": "modifying your simulator gp",
+        "lesson.key": "sometimes not always gp",
         "lesson_group.key": "lesson group",
         "script.name": "contagion-guided-practice"
       }

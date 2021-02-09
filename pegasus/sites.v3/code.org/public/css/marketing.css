@@ -27,6 +27,8 @@ banner-pt2 {width80%;}
 .col-20:nth-child(5n+2), .col-20:nth-child(5n+3), .col-20:nth-child(5n+4){ padding: 0 6px 20px 6px;}
 .col-20:nth-child(5n+0) { padding: 0 0 20px 12px;}
 
+
+
 /* callout boxes */
 
 .bp0 {background-color:#7665a0;}
@@ -96,7 +98,7 @@ h3.rounded-info-h {
   margin-bottom: 60px;
 }
 
-.bhm-banner h1, .bhm-banner h2,  .bhm-banner h3 {color:#000000; }
+.bhm-banner h1, .bhm-banner h2,  .bhm-banner h3 {color:#ffffff; }
 .bhm-banner h2 {font-size:26px;}
 
 hr.bhm-border {

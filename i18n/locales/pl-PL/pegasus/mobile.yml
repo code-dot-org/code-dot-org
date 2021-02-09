@@ -1490,6 +1490,8 @@
   header_legal_privacy: "Polityka prywatności"
   header_legal_tos: "Regulamin"
   header_tutorials: "Samouczki"
+  header_screen_reader_hamburger: "Menu"
+  header_screen_reader_help: "Pomoc Menu "
   app_lab_documentation: "Dokumentacja App Lab"
   app_lab_tutorials: "Samouczki App Lab"
   game_lab_documentation: "Dokumentacja Game Lab"

@@ -51,3 +51,10 @@ table {
     }
   }
 }
+
+
+.lessons-dropdown {
+ .Select-menu, .Select-menu-outer {
+    z-index: 3000
+  }
+}
