@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+
 const styles = {
   common: {
     margin: 5,
@@ -52,17 +54,7 @@ const styles = {
 export default class UnitCalendarLessonChunk extends Component {
   static propTypes = {
     minuteWidth: PropTypes.number.isRequired,
-    lesson: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      duration: PropTypes.number.isRequired,
-      assessment: PropTypes.bool.isRequired,
-      unplugged: PropTypes.bool,
-      isStart: PropTypes.boolean,
-      isEnd: PropTypes.boolean,
-      isMajority: PropTypes.boolean,
-      url: PropTypes.string
-    }),
+    lesson: unitCalendarLessonChunk,
     isHover: PropTypes.bool,
     handleHover: PropTypes.func.isRequired
   };
