@@ -1840,3 +1840,9 @@ az:
               display_name: Giriş
             lessonGroup-3:
               display_name: dəyişənlər
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Dərs 14
+            lesson15:
+              name: Dərs 15

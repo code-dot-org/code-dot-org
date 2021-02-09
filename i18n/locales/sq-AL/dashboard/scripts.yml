@@ -2772,3 +2772,9 @@ sq:
               display_name: Hyrja
             lessonGroup-3:
               display_name: variabla
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Lekcioni 14
+            lesson15:
+              name: Lekcioni 15

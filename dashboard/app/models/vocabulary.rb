@@ -20,6 +20,8 @@ class Vocabulary < ApplicationRecord
   has_many :lessons_vocabularies
   belongs_to :course_version
 
+  before_validation :generate_key, on: :create
+
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated
@@ -41,8 +43,23 @@ class Vocabulary < ApplicationRecord
     {key: key, word: display_word, definition: display_definition}
   end
 
+  def summarize_for_lesson_edit
+    {id: id, key: key, word: word, definition: definition}
+  end
+
   def summarize_for_edit
-    {key: key, word: word, definition: definition}
+    {
+      id: id,
+      key: key,
+      word: word,
+      definition: definition,
+      lessons: lessons.map(&:id)
+    }
+  end
+
+  def generate_key
+    return if key
+    self.key = word
   end
 
   private

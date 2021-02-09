@@ -101,6 +101,7 @@ class XhrProxyController < ApplicationController
     translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
+    worldclockapi.com
     words.bighugelabs.com
   ).freeze
 

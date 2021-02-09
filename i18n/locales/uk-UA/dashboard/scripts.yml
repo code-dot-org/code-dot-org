@@ -3,6 +3,11 @@ uk:
   data:
     script:
       category:
+        csd_category_name: Відкриття інформатики (2017-2018)
+        csd_2018_category_name: Відкриття інформатики (2018-2019)
+        csd_2019_category_name: Відкриття інформатики (2019-2020)
+        csd_2020_category_name: Відкриття інформатики (2020-2021)
+        csd_pilot_category_name: Відкриття інформатики. Пілотний курс
         csf_category_name: Основи інформатики
         csf2_draft_category_name: 'В розробці: курси А—Д'
         csp_category_name: '''15-''16 принципи інформатики'
@@ -509,6 +514,8 @@ uk:
           lessons:
             Creating Functions:
               name: Створення функцій
+            Introduction to Arrays:
+              name: Вступ до масивів
             Processing Arrays:
               name: Обробка масивів
             While Loops:
@@ -836,6 +843,10 @@ uk:
           lessons:
             Getting Started:
               name: Починаємо
+        cspunit4draft:
+          lessons:
+            Discover a Data Story:
+              name: Відкрийте історію даних
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -869,6 +880,8 @@ uk:
         cspunit3temp:
           description_short: Програмування
           lessons:
+            Introduction to Arrays:
+              name: Вступ до масивів
             Processing Arrays:
               name: Обробка масивів
             While Loops:
@@ -915,6 +928,9 @@ uk:
           description_short: Програмування
         cspunit4:
           description_short: Програмування
+          lessons:
+            Discover a Data Story:
+              name: Відкрийте історію даних
         CSPPD3-Unit4:
           lessons:
             Getting Started:
@@ -1017,6 +1033,8 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Discover a Data Story:
+              name: Відкрийте історію даних
             Text Compression:
               name: Стиснення тексту
             Post-Course Survey:
@@ -1057,6 +1075,8 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Introduction to Arrays:
+              name: Вступ до масивів
             Processing Arrays:
               name: Обробка масивів
             While Loops:
@@ -1118,6 +1138,8 @@ uk:
           lessons:
             Design Mode:
               name: Режим проектування
+            Discovering Users:
+              name: Відкриття користувачів
         CSDU2-Draft:
           lessons:
             Intellectual Property:
@@ -1142,6 +1164,9 @@ uk:
               display_name: Зміст
             practice:
               display_name: Методики викладання
+          lessons:
+            Discovery Learning:
+              name: Навчання відкриття
         kinderTest:
           lessons:
             'Bee: Conditionals':
@@ -1281,6 +1306,8 @@ uk:
               name: Спрайти
             Conditionals:
               name: Умови
+            CS Discoveries End of Semester Survey:
+              name: Опитування по закінченню курсу Відкриття інформатики
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
         grade2:
           lessons:
@@ -1333,10 +1360,18 @@ uk:
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
           lessons:
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Processing:
               name: В обробці
             Storage:
               name: Сховище
+            CS Discoveries Pre-survey:
+              name: Вступне опитування до курсу Відкриття інформатики
+            CS Discoveries Rapid Survey:
+              name: Швидке опитування курсу Відкриття інформатики
           student_description: " \\r\nБлок 1 є дуже інтерактивним і спільним вступом в галузь інформатики, як це оформлено в рамках більш широкого прагнення до вирішення проблем. Ви будете практикувати використання процесу вирішення проблем для вирішення ряду головоломок, проблем і сценаріїв реального світу. Далі ви дізнаєтеся, як комп'ютери вводити, виводити, зберігати та обробляти інформацію, щоб допомогти людям вирішити проблеми.  Пристрій завершується проектом, в якому ви розробляєте програму, яка допомагає вирішити проблему за вашим вибором.\\r\n"
         csp-online-test:
           lesson_groups:
@@ -1347,6 +1382,8 @@ uk:
             practice:
               display_name: Методики викладання
           lessons:
+            Discovery Learning:
+              name: Навчання відкриття
             Variables and Strings:
               name: Змінні та Рядки
             Conditionals and Boolean Logic:
@@ -1359,6 +1396,9 @@ uk:
               display_name: Зміст
             practice:
               display_name: Методики викладання
+          lessons:
+            Discovery Learning:
+              name: Навчання відкриття
         basketball:
           title: Обери команду та створи гру в баскетбол
           description_short: Зроби гру в баскетбол
@@ -1401,6 +1441,9 @@ uk:
               display_name: Зміст
             practice:
               display_name: Методики викладання
+          lessons:
+            Discovery Learning:
+              name: Навчання відкриття
         csd4-2017:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає потребам користувачів."
           lesson_groups:
@@ -1410,6 +1453,9 @@ uk:
               display_name: 'Глава 2: Прототипування додатків'
             csd_survey:
               display_name: Опитування після закінчення курсу
+          lessons:
+            Discovering Users:
+              name: Відкриття користувачів
         minecraft:
           title: Година коду від Майнкрафт - Розробник
           description_short: Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри.
@@ -1534,6 +1580,9 @@ uk:
               display_name: Зміст
             practice:
               display_name: Методики викладання
+          lessons:
+            Discovery Learning:
+              name: Навчання відкриття
         csp4-support:
           lesson_groups:
             required:
@@ -1542,6 +1591,9 @@ uk:
               display_name: Зміст
             practice:
               display_name: Методики викладання
+          lessons:
+            Discovery Learning:
+              name: Навчання відкриття
         sciencepd4:
           lessons:
             Welcome!:
@@ -1580,6 +1632,8 @@ uk:
               name: Змінні та Рядки
             Conditionals and Boolean Logic:
               name: Умови і Булева логіка
+            Discovery Learning:
+              name: Навчання відкриття
         csppostap-2017:
           lesson_groups:
             content:
@@ -1701,6 +1755,12 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
+        csd1-old:
+          lessons:
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
         csd2-draft:
           lessons:
             Intellectual Property:
@@ -1713,6 +1773,10 @@ uk:
               name: Списки
         csd1-draft:
           lessons:
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Processing:
               name: В обробці
             Storage:
@@ -1889,36 +1953,42 @@ uk:
             content:
               display_name: Зміст
         csd1-dlp:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd6-dlp:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd5-dlp:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd4-dlp:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd3-dlp:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd2-dlp:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
@@ -2104,6 +2174,8 @@ uk:
           lessons:
             Personal Innovations:
               name: Особисті інновації
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Simple Encryption:
               name: Просте шифрування
         hero:
@@ -2208,6 +2280,8 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
+            CS Discoveries End of Semester Survey:
+              name: Опитування по закінченню курсу Відкриття інформатики
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
         csd3-2018:
           description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
@@ -2232,6 +2306,10 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
+            CS Discoveries End of Semester Survey:
+              name: Опитування по закінченню курсу Відкриття інформатики
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
         csd2-2018:
           description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження та коментування.  До кінця пристрою у вас буде особистий веб-сайт, який можна опублікувати в Інтернеті."
@@ -2246,6 +2324,8 @@ uk:
           lessons:
             Lists:
               name: Списки
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
           student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження та коментування.  До кінця пристрою у вас буде особистий веб-сайт, який можна опублікувати в Інтернеті."
         coursea-2018:
           title: Курс А (2018)
@@ -2361,6 +2441,8 @@ uk:
               name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
         coursee-2018:
           title: Курс Е (2018)
           assignment_family_title: Курс Ґ
@@ -2441,6 +2523,12 @@ uk:
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
           lessons:
+            CS Discoveries Pre-survey:
+              name: Вступне опитування до курсу Відкриття інформатики
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Processing:
               name: В обробці
             Storage:
@@ -2455,6 +2543,9 @@ uk:
               display_name: 'Глава 2: Прототипування додатків'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
         csd5-2018:
           lesson_groups:
             csd5_1:
@@ -2463,6 +2554,9 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CS Discoveries Post-Course Survey:
+              name: Опитування після курсу Відкриття інформатики
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -2472,6 +2566,8 @@ uk:
           lessons:
             Text Compression:
               name: Стиснення тексту
+            Discover a Data Story:
+              name: Відкрийте історію даних
         csp3-2018:
           description_short: Програмування
           lesson_groups:
@@ -2518,6 +2614,8 @@ uk:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Introduction to Arrays:
+              name: Вступ до масивів
             Processing Arrays:
               name: Обробка масивів
         csppostap-2018:
@@ -2531,37 +2629,45 @@ uk:
           lessons:
             Importing and Exporting Data:
               name: Імпортування та експортування даних
+            Discover a Data Story:
+              name: Відкрийте історію даних
         csd1-dlp-18:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd2-dlp-18:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd3-dlp-18:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd4-dlp-18:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd5-dlp-18:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
         csd6-dlp-18:
+          description_short: 'Матеріали для поглибленного навчання ведучих курсу Відкриття інформатики'
           lesson_groups:
             required:
               display_name: Огляд
@@ -2614,6 +2720,7 @@ uk:
             csd_survey:
               display_name: Опитування після закінчення курсу
         csd-novice-18:
+          title: Відкриття інформатики. Роздуми початківців 2018-2019
           lesson_groups:
             required:
               display_name: Огляд
@@ -2917,6 +3024,12 @@ uk:
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
           lessons:
+            CS Discoveries Pre-survey:
+              name: Вступне опитування до курсу Відкриття інформатики
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Processing:
               name: В обробці
         andrea-test:
@@ -3044,6 +3157,8 @@ uk:
           lessons:
             Lists:
               name: Списки
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
           student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження та коментування.  До кінця пристрою у вас буде особистий веб-сайт, який можна опублікувати в Інтернеті."
         csd3-2019:
           description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
@@ -3068,6 +3183,10 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
+            CS Discoveries End of Semester Survey:
+              name: Опитування по закінченню курсу Відкриття інформатики
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
         csd4-2019:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає потребам користувачів."
@@ -3080,6 +3199,9 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
         csd5-2019:
           lesson_groups:
             csd5_1:
@@ -3088,6 +3210,9 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -3101,6 +3226,8 @@ uk:
               name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -3176,6 +3303,8 @@ uk:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Introduction to Arrays:
+              name: Вступ до масивів
             Processing Arrays:
               name: Обробка масивів
         csp-explore-2019:
@@ -3199,6 +3328,8 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Discover a Data Story:
+              name: Відкрийте історію даних
             Importing and Exporting Data:
               name: Імпортування та експортування даних
         csp1-pilot:
@@ -3220,6 +3351,9 @@ uk:
               name: Двійкові Числа
         csd-videos:
           title: CSD Відео
+          description_short: Всі відео курсу Відкриття інформатики
+          description: Всі відео курсу Відкриття інформатики
+          student_description: Всі відео курсу Відкриття інформатики
         time4csdemo:
           description_audience: 4 клас
           lesson_groups:
@@ -3374,6 +3508,10 @@ uk:
               name: День 2
             Day 4:
               name: День 4
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Що таке комп’ютер?
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -3397,6 +3535,12 @@ uk:
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
           lessons:
+            CS Discoveries Pre-survey:
+              name: Вступне опитування до курсу Відкриття інформатики
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Processing:
               name: В обробці
         csd2-pilot:
@@ -3412,6 +3556,8 @@ uk:
           lessons:
             Lists:
               name: Списки
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
             Intellectual Property:
               name: Інтелектуальна власність
             Images:
@@ -3442,6 +3588,8 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
         csp3-pilot:
           lesson_groups:
@@ -3492,18 +3640,27 @@ uk:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            CS Discoveries Deeper Learning Module 2:
+              name: Відкриття інформатики. Поглиблене навчання. Модуль 2
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            CS Discoveries Deeper Learning Module 3:
+              name: Відкриття інформатики. Поглиблене навчання. Модуль 3
         dlp19-csd-mod-w4:
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            CS Discoveries Deeper Learning Module 4:
+              name: Відкриття інформатики. Поглиблене навчання. Модуль 4
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -3533,6 +3690,8 @@ uk:
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
           lessons:
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Processing:
               name: В обробці
         csp2-pilot:
@@ -3740,6 +3899,8 @@ uk:
               name: Зображення
             CSS Classes:
               name: Класи CSS
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
           student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
         csd1-2020:
           description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення проблем."
@@ -3751,6 +3912,12 @@ uk:
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
           lessons:
+            CS Discoveries Pre-survey:
+              name: Вступне опитування до курсу Відкриття інформатики
+            The Problem Solving Process:
+              name: Процес вирішення проблем
+            What is a Computer?:
+              name: Що таке комп’ютер?
             Processing:
               name: В обробці
             0:
@@ -3767,6 +3934,9 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
         csd5-2020:
           lesson_groups:
             csd5_1:
@@ -3775,6 +3945,9 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -3788,6 +3961,8 @@ uk:
               name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
         csd3-2020:
           description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
           description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво та ігри в Game Lab."
@@ -3809,6 +3984,8 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
             Text:
               name: Текст
             Sprites:
@@ -4034,10 +4211,14 @@ uk:
               name: Зображення
             CSS Classes:
               name: Класи CSS
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
         csp5-virtual:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Introduction to Arrays:
+              name: Вступ до масивів
             Processing Arrays:
               name: Обробка масивів
             Variables:
@@ -4070,6 +4251,8 @@ uk:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Introduction to Arrays:
+              name: Вступ до масивів
             Processing Arrays:
               name: Обробка масивів
         k5-onlinepd-2020:
@@ -4120,6 +4303,8 @@ uk:
               name: Зіткнення
             Functions:
               name: Функції
+            CS Discoveries Post Course survey:
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd3_1:
               display_name: Зміст
@@ -4159,6 +4344,8 @@ uk:
               name: Курс Б
             Course E/F:
               name: Курс E/F
+            CS Discoveries:
+              name: Відкриття інформатики
           description_audience: Внутрішній
         virustest:
           title: Симулювання Спалаху
@@ -4177,6 +4364,8 @@ uk:
           student_description: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
         2021drafting:
           lessons:
+            Course F Introduction:
+              name: Представляємо Лабораторію спрайтів
             Virus Simulation for Code Bytes:
               name: Моделювання симуляції
             Sprites in Action:
@@ -4193,6 +4382,15 @@ uk:
         csd1-2021:
           description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення проблем."
           lessons:
+            CS Discoveries Pre-survey:
+              key: Вступне опитування до курсу Відкриття інформатики
+              name: Вступне опитування до курсу Відкриття інформатики
+            The Problem Solving Process:
+              key: Процес вирішення проблем
+              name: Процес вирішення проблем
+            What is a Computer?:
+              key: Що таке комп’ютер?
+              name: Що таке комп’ютер?
             Processing:
               key: В обробці
               name: В обробці
@@ -4216,6 +4414,9 @@ uk:
             CSS Classes:
               key: Класи CSS
               name: Класи CSS
+            CS Discoveries Post Course survey:
+              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -4245,6 +4446,9 @@ uk:
             Functions:
               key: Функції
               name: Функції
+            CS Discoveries Post Course survey:
+              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
@@ -4255,6 +4459,10 @@ uk:
           student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
         csd4-2021:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає потребам користувачів."
+          lessons:
+            CS Discoveries Post Course survey:
+              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd4_1:
               display_name: "Глава 1: Використуйте\nЦентрований дизайн"
@@ -4265,6 +4473,10 @@ uk:
             cspSurvey:
               display_name: Опитування
         csd5-2021:
+          lessons:
+            CS Discoveries Post Course survey:
+              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd5_1:
               display_name: 'Глава 1: Представлення інформації'
@@ -4280,6 +4492,9 @@ uk:
             Functions with Parameters:
               key: Функції з параметрами
               name: Функції з параметрами
+            CS Discoveries Post Course survey:
+              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd6_1:
               display_name: 'Глава 1: Програмування з обладнанням'
@@ -4512,6 +4727,8 @@ uk:
           lessons:
             Virus Simulation for Code Bytes:
               name: Моделювання симуляції
+            Course F Introduction:
+              name: Представляємо Лабораторію спрайтів
           lesson_groups:
             ramp_up:
               display_name: Вступ
@@ -4523,6 +4740,10 @@ uk:
               display_name: Спрайти
         csd4-preview-2021:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає потребам користувачів."
+          lessons:
+            CS Discoveries Post Course survey:
+              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd4_1:
               display_name: "Глава 1: Використуйте\nЦентрований дизайн"
@@ -4535,6 +4756,10 @@ uk:
             csdSurvey:
               display_name: Опитування
         csd5-preview-2021:
+          lessons:
+            CS Discoveries Post Course survey:
+              key: Опитування після курсу Відкриття інформатики
+              name: Опитування після курсу Відкриття інформатики
           lesson_groups:
             csd5_1:
               display_name: 'Глава 1: Представлення інформації'
@@ -4542,3 +4767,7 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             cspSurvey:
               display_name: Опитування
+        contagion-pilot:
+          description_short: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
+          description: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'
+          student_description: 'Запрограмуйте симуляцію спалаху вірусу за допомогою Sprite Lab.'

@@ -319,6 +319,8 @@ Dashboard::Application.routes.draw do
   resources :resources, only: [:create, :update]
   get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
 
+  resources :vocabularies, only: [:create, :update]
+  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
   get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
@@ -769,6 +771,8 @@ Dashboard::Application.routes.draw do
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
+  get 'java_ide', to: 'java_ide#index'
+
   namespace :foorm do
     resources :forms, only: [:create] do
       member do
@@ -778,8 +782,13 @@ Dashboard::Application.routes.draw do
       get :editor, on: :collection
     end
 
-    resources :library_questions, only: [] do
+    resources :libraries, only: [] do
+      member do
+        get :question_names
+      end
       get :editor, on: :collection
     end
+
+    resources :library_questions, only: [:show, :update]
   end
 end

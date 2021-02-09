@@ -1,0 +1,183 @@
+{
+  "nn-NO": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Handlingar",
+              "Events": "Hendingar",
+              "Loops": "Løkker",
+              "Math": "Matematikk",
+              "Logic": "Logikk",
+              "Games/Score": "Spel/Poengsum"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Verd",
+              "Dancers": "Dansarar",
+              "Properties": "Eigenskapar",
+              "Events": "Hendingar",
+              "Numbers": "Tal",
+              "Logic": "Logikk"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "teikn ei stjerne",
+                "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+                "parameters": {
+                  "points": "poeng",
+                  "length": "lengde"
+                }
+              },
+              "draw a circle": {
+                "name": "teikn ein sirkel",
+                "description": "Tegn en sirkel med det forklarte radius",
+                "parameters": {
+                  "radius": "radius"
+                }
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "sides": "Sider",
+                  "length": "lengde",
+                  "repeat": "gjenta"
+                }
+              },
+              "draw a triangle": {
+                "name": "teikn ein trekant",
+                "parameters": {
+                  "length": "lengde"
+                }
+              },
+              "draw a shape": {
+                "name": "tegn en form",
+                "parameters": {
+                  "sides": "Sider",
+                  "length": "lengde"
+                }
+              },
+              "draw a house": {
+                "name": "teikn eit hus",
+                "parameters": {
+                  "length": "lengde"
+                }
+              },
+              "draw a square": {
+                "name": "teikn eit kvadrat",
+                "parameters": {
+                  "length": "lengde"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Verd",
+              "Actions": "Handlingar",
+              "Events": "Hendingar",
+              "Behaviors": "Atferd"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Verd",
+              "Dancers": "Dansarar",
+              "Properties": "Eigenskapar",
+              "Events": "Hendingar",
+              "Numbers": "Tal",
+              "Logic": "Logikk"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Handlingar",
+              "Brushes": "Penslar",
+              "Loops": "Løkker",
+              "Math": "Matematikk",
+              "Logic": "Logikk",
+              "Functions": "Funksjonar",
+              "Variables": "Variablar"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Verd",
+              "Locations": "Stadar",
+              "Actions": "Handlingar",
+              "Events": "Hendingar",
+              "Behaviors": "Atferd",
+              "Variables": "Variablar",
+              "Math": "Matematikk",
+              "Logic": "Logikk",
+              "Functions": "Funksjonar",
+              "Text": "Tekst",
+              "Comments": "Kommentar"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Verd",
+              "Locations": "Stadar",
+              "Actions": "Handlingar",
+              "Events": "Hendingar",
+              "Behaviors": "Atferd",
+              "Variables": "Variablar",
+              "Math": "Matematikk",
+              "Logic": "Logikk",
+              "Functions": "Funksjonar",
+              "Text": "Tekst",
+              "Comments": "Kommentar"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Handlingar",
+              "Brushes": "Penslar",
+              "Loops": "Løkker",
+              "Math": "Matematikk",
+              "Logic": "Logikk",
+              "Functions": "Funksjonar",
+              "Variables": "Variablar"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Verd",
+              "Actions": "Handlingar",
+              "Events": "Hendingar",
+              "Logic": "Logikk",
+              "Math": "Matematikk"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Verd",
+              "Actions": "Handlingar",
+              "Behaviors": "Atferd",
+              "Events": "Hendingar",
+              "Locations": "Stadar",
+              "Logic": "Logikk",
+              "Loops": "Løkker",
+              "Math": "Matematikk",
+              "Variables": "Variablar",
+              "Functions": "Funksjonar",
+              "Comments": "Kommentar"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -464,22 +464,22 @@
         },
         "MC_HOC_2017_07_Cole": {
           "clear path": {
-            "name": "경로 확보하기"
+            "name": "경로 확보"
           }
         },
         "MC_HOC_2017_07_Cole_2019": {
           "clear path": {
-            "name": "경로 확보하기"
+            "name": "경로 확보"
           }
         },
         "MC_HOC_2017_07_Cole_2020": {
           "clear path": {
-            "name": "경로 확보하기"
+            "name": "경로 확보"
           }
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "긴 길 고치기"
+            "name": "긴 경로 고치기"
           },
           "fix short path": {
             "name": "짧은 길 고치기"
