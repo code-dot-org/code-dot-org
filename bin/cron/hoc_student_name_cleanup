@@ -28,8 +28,8 @@ options = {
   retain_after_date: nil, # calculated from retention_days
   start_id: nil,
   end_id: nil,
-  batch_size: 1000,
-  sleep_msecs: 200,
+  batch_limit: 100,
+  sleep_msecs: 100,
   dry_run: false,
   log_sql: false,
 }
@@ -66,18 +66,17 @@ OptionParser.new do |opts|
     options[:start_id] = start_id
   end
 
-  opts.on('--batch-size=1000',
+  opts.on('--batch-limit=100',
     Integer,
-    'Number of entries to query and write in a single request. Defaults to 1000 if ' \
-    'not specified.'
-  ) do |batch_size|
-    options[:batch_size] = batch_size
+    'Maximum number of rows to return in each batch. Defaults to 100 if not specified.'
+  ) do |batch_limit|
+    options[:batch_limit] = batch_limit
   end
 
-  opts.on('--sleep=200',
+  opts.on('--sleep=100',
     Integer,
     'Amount of time to sleep in milliseconds to sleep between batches. Defaults to ' \
-    '200 msecs if not specified.'
+    '100 msecs if not specified.'
   ) do |sleep_msecs|
     options[:sleep_msecs] = sleep_msecs
   end
@@ -136,20 +135,19 @@ options.freeze
 CDO.log.info "Final calculated options: #{options}"
 
 # Main loop - read rows with names one batch at a time and null out entries
-# that are outside the retention window. It is important to do this in batches
-# because this table is very large (~1B rows as of early 2021). Also note that
-# the date columns are indexed but the name column is not.
+# that are outside the retention window. It is important to keep the batch size
+# small because the name column is not indexed.
 batch_start_id = options[:start_id]
 first_retained_row = nil
 batch_count = 0
 while batch_start_id < options[:end_id]
-  batch_end_id = [batch_start_id + options[:batch_size], options[:end_id]].min
   ids_to_cleanup = []
-  rows_in_batch = 0
+  last_row_id = nil
 
   HOC_ACTIVITY.select(:id, :started_at, :finished_at, :pixel_started_at, :pixel_finished_at).
-    where(Sequel.lit('id >= ? AND id < ? AND name IS NOT NULL', batch_start_id, batch_end_id)).
+    where(Sequel.lit('id >= ? AND id < ? AND name IS NOT NULL', batch_start_id, options[:end_id])).
     order(:id).
+    first(options[:batch_limit]).
     each do |row|
       # A row needs to be cleaned up if it has a timestamp that is earlier than the
       # retention window. Each row has four timestamps, we choose the first non-null
@@ -167,8 +165,11 @@ while batch_start_id < options[:end_id]
           CDO.log.info("First retained row: id=#{first_retained_row}")
         end
       end
-      rows_in_batch += 1
+      last_row_id = row[:id]
     end
+
+  # If no rows were returned, exit the main loop
+  break if last_row_id.nil?
 
   # Wrap the update in a transaction so we can rollback the changes on a dry run
   DB.transaction do
@@ -176,17 +177,17 @@ while batch_start_id < options[:end_id]
 
     # The next run should start at the first retained row, or 1 past the last row
     # if no rows were retained.
-    next_run_start_id = first_retained_row || (ids_to_cleanup.last && ids_to_cleanup.last + 1)
+    next_run_start_id = first_retained_row || (last_row_id && last_row_id + 1)
     Properties.set(START_ID_PROPERTY_KEY, next_run_start_id) if next_run_start_id
 
     raise Sequel::Rollback if options[:dry_run]
   end
 
-  CDO.log.info("Processed batch #{batch_count} (id=#{batch_start_id}...#{batch_end_id}): " \
-    "rows with names=#{rows_in_batch}, rows cleaned=#{ids_to_cleanup.length}"
+  CDO.log.info("Processed batch #{batch_count} (id=#{batch_start_id}..#{last_row_id}): " \
+    "rows cleaned=#{ids_to_cleanup.length}"
   )
 
-  batch_start_id = batch_end_id
+  batch_start_id = last_row_id + 1
   batch_count += 1
   sleep(options[:sleep_msecs] / 1000.0)
 end
