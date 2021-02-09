@@ -3,7 +3,6 @@
 import React from 'react';
 import i18n from '@cdo/locale';
 import {shareProject} from '../../headerShare';
-import {styles} from './EditableProjectName';
 
 export default class ProjectShare extends React.Component {
   shareProject = () => {
@@ -12,14 +11,12 @@ export default class ProjectShare extends React.Component {
 
   render() {
     return (
-      <button
-        type="button"
+      <div
         className="project_share header_button header_button_light"
         onClick={this.shareProject}
-        style={styles.buttonSpacing}
       >
         {i18n.share()}
-      </button>
+      </div>
     );
   }
 }
