@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
+import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 const weekWidth = 592;
 const styles = {
@@ -47,21 +48,8 @@ const styles = {
 
 export default class UnitCalendar extends React.Component {
   static propTypes = {
-    schedule: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.number.isRequired,
-          title: PropTypes.string.isRequired,
-          duration: PropTypes.number.isRequired,
-          assessment: PropTypes.bool.isRequired,
-          unplugged: PropTypes.bool,
-          isStart: PropTypes.boolean,
-          isEnd: PropTypes.boolean,
-          isMajority: PropTypes.boolean,
-          url: PropTypes.string
-        })
-      )
-    ).isRequired,
+    schedule: PropTypes.arrayOf(PropTypes.arrayOf(unitCalendarLessonChunk))
+      .isRequired,
     weeklyInstructionalMinutes: PropTypes.number
   };
   constructor(props) {

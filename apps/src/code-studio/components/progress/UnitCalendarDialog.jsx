@@ -5,6 +5,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import UnitCalendar from './UnitCalendar';
 import _ from 'lodash';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 const styles = {
   dialog: {
@@ -23,16 +24,7 @@ export default class UnitCalendarDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,
-    lessons: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        duration: PropTypes.number.isRequired,
-        assessment: PropTypes.bool.isRequired,
-        unplugged: PropTypes.bool,
-        url: PropTypes.string
-      })
-    ).isRequired,
+    lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
     weeklyInstructionalMinutes: PropTypes.number.isRequired
   };
 
@@ -42,14 +34,19 @@ export default class UnitCalendarDialog extends Component {
     let allWeeks = [];
     let currWeek = [];
     let currMinutes = 0;
+
+    // splitting lessons across weeks
     lessonsCopy.forEach(lesson => {
       let lessonDuration = lesson.duration;
       while (lessonDuration > 0) {
         if (currMinutes + lessonDuration < weeklyInstructionalMinutes) {
+          // If the rest of the current lesson fits into this week, put it in the schedule.
           currMinutes = currMinutes + lessonDuration;
           currWeek.push(_.cloneDeep(lesson));
           lessonDuration = 0;
         } else if (currMinutes < weeklyInstructionalMinutes - 5) {
+          // If there's more than 5 minutes left in the week,
+          // add as much of the lesson as you can to this week.
           let partialLesson = _.cloneDeep(lesson);
           partialLesson.duration = weeklyInstructionalMinutes - currMinutes;
           currWeek.push(partialLesson);
@@ -57,6 +54,7 @@ export default class UnitCalendarDialog extends Component {
           lesson.duration = lessonDuration;
           currMinutes = weeklyInstructionalMinutes;
         } else {
+          // If there isn't enough time in this week to add this lesson, start a new week.
           allWeeks.push(currWeek);
           currWeek = [];
           currMinutes = 0;
@@ -64,6 +62,9 @@ export default class UnitCalendarDialog extends Component {
       }
     });
     allWeeks.push(currWeek);
+
+    // This is to determine where a lesson starts and ends and where the bulk of the lesson is.
+    // This is important for the styling of the lesson chunk.
     let prev = null;
     for (let week = 0; week < allWeeks.length; week++) {
       for (let lesson = 0; lesson < allWeeks[week].length; lesson++) {
@@ -72,10 +73,13 @@ export default class UnitCalendarDialog extends Component {
           thisLesson.isStart = true;
           thisLesson.isMajority = true;
         } else if (prev.title !== thisLesson.title) {
+          // We just started a new lesson and as far as we know, this is the biggest chunk.
+          // We also ended the previous lesson so we can say that is the last chunk.
           thisLesson.isStart = true;
           thisLesson.isMajority = true;
           prev.isEnd = true;
         } else {
+          // This is a continuation of the previous lesson, we need to check if this chunk is larger.
           thisLesson.isStart = false;
           prev.isEnd = false;
           if (prev.duration < thisLesson.duration) {
