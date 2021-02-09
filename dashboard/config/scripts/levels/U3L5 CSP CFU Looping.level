@@ -1,12 +1,8 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2019-10-21T13:50:23.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection: Looping and Functions",
-    "long_instructions": "When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.  \r\n\r\nThere is no hard-and-fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to writing a function versus using a loop?\r\n\r\n\r\n",
+    "long_instructions": "When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.  \r\n\r\nThere is no hard-and-fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to write a function instead of using a loop?\r\n\r\n\r\n",
     "encrypted_solution": "EHW3BYLvT0PA2bYzKKpwgFgXhekb5oEyEL6Wh6D1nKMSFtRhHQz4oOqB02W8\nmt+e8pK8NEN5xrKPRAzO4D89QThha18RaYsTaaZyxYXPbSzS9pujHz/h4rng\nhNLjoII7KJmdcTRkwSnRjuyjwaO5358wtoUlFWXvdE91pyUxZk8vasZnn9Ud\nDyHOnUuJtkQdN5EyIGZq/pafHNpT5q08u5F8oodPBRoo3FV2H8rkChO5FnT7\nXVHTIsLPzT4/uuqyirZ9NFUaGTebLiNyprwsM5VXofBfx66J5yU7l8c366Z/\ncUUHks5axYotu8PSZbfrwIPZk2kAYfQOcR9MYP6/fN9o/JxqPDmY0aeV/Ll1\nRLVRa42o4JdL4Juom/T7T5NxMaxKJISs9AtpWRD7RKqlAIpz07V5c9eB7Vkg\nZkhqq9rI9s1uRYozSXlDkhitBUOacfVmUPlRCJF3KeloaZEDLKaIaeUMh8dW\n7/vc95JC+ocrZvS2njCbCOoIOeqROI5/Y+ucOTgvigpWxftzmd7OcOGMTmA5\nGxqvsv04xjYEXnL36NWkbstbQQxlsUxBFPGK3f2a6EXVA6/rYbFjkcw54i5e\nKdGNwI6gX61eIji6b+XrKHL9bsakoUWe9ZSgDM+lAUtN3H1AbXhH5/MDEWvX\neChCQHSADBG2x2HdpJSaudqK9NHs97Tx5xwYeJ557gSDfoLnWj+CUJmljMVr\nQMPOKcRqUVeGa5SzUgZ7858wk1sMofABHtWbmSSISV45yFWGl9QFgW55t6a9\n6Thuq6gUn0nwj4FgQ9lpagz7HS3dwSuNlsmR5n/utG0I330TEb8jd45Yg7iL\n9uZmYjF5VSs/0pbjOuJZ94Djh8lXbnBKDfwof6Z5ZVqkNy4jvlitag6Eao9Z\nrDAT8xfvMrp2EzI4RNLAuz9AK7XAEk+mM1qVwUfj4daCXq+bNl+HJaryKk+N\nlHQH9t2OkmhrZWAdNlqGb/vZMfLEXG1hRgXuUfEW9WXCO2+StI83DIFQfjl9\niMUQOZViR/O6sO2Xg18/Gqt7jrCMl+UmNwuLoHI6DlaLjMZCez+42XuS4UOi\nxKrzmVcZOh1YQD7yP+xKnywRD0+SF+71Uw8jVxONM7IOFhEuS+Op0ZR+sCic\ngs5Nok7Kxhr5Nw+kAjJLAs0pYhNwBJleAg2YiN+mkZfin12y5WyU3UnLRKPX\n71cCiKaS1bZWlSHOKmzDkh/jIcOd7WsB2oHmx+yq0WwRKzVQfoaGY+8+KAcY\n6fCx7ADd1wUT5Qioh1d4\n",
     "skip_dialog": true,
     "skip_sound": true,
@@ -19,9 +15,13 @@
     "peer_reviewable": "false",
     "optional": "false"
   },
+  "game_id": 52,
   "published": true,
+  "created_at": "2019-10-21T13:50:23.000Z",
+  "level_num": "custom",
+  "user_id": 0,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-10-21 13:50:50 +0000\",\"changed\":[\"notes\",\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-10-21 13:50:50 +0000\",\"changed\":[\"notes\",\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-02-08 15:25:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

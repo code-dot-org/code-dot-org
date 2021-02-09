@@ -322,7 +322,19 @@ export const commands = {
     return validationCommands.getBehaviorsForSpriteId(spriteId);
   },
 
+  getPrintLog() {
+    return validationCommands.getPrintLog();
+  },
+
+  getPromptVars() {
+    return validationCommands.getPromptVars();
+  },
+
   getSpriteIdsInUse() {
     return validationCommands.getSpriteIdsInUse();
+  },
+
+  getTitle() {
+    return validationCommands.getTitle();
   }
 };
