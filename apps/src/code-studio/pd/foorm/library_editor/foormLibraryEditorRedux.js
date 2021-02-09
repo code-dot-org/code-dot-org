@@ -5,7 +5,11 @@ const SET_LIBRARY_QUESTION_DATA =
 const SET_LIBRARY_DATA = 'foormLibraryEditor/SET_LIBRARY_DATA';
 const RESET_AVAILABLE_LIBRARIES =
   'foormLibraryEditor/RESET_AVAILABLE_LIBRARIES';
-const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
+const RESET_AVAILABLE_LIBRARY_QUESTIONS =
+  'foormLibraryEditor/RESET_AVAILABLE_LIBRARY_QUESTIONS';
+const ADD_AVAILABLE_LIBRARY = 'foormEditor/ADD_AVAILABLE_LIBRARY';
+const ADD_AVAILABLE_LIBRARY_QUESTION =
+  'foormEditor/ADD_AVAILABLE_LIBRARY_QUESTION';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTION = 'foormLibraryEditor/SET_LAST_SAVED_QUESTION';
@@ -41,9 +45,19 @@ export const resetAvailableLibraries = librariesMetadata => ({
   librariesMetadata
 });
 
-export const addAvilableForm = formMetadata => ({
-  type: ADD_AVAILABLE_FORM,
-  formMetadata
+export const resetAvailableLibraryQuestions = libraryQuestionsMetadata => ({
+  type: RESET_AVAILABLE_LIBRARY_QUESTIONS,
+  libraryQuestionsMetadata
+});
+
+export const addAvailableLibrary = libraryMetadata => ({
+  type: ADD_AVAILABLE_LIBRARY,
+  libraryMetadata
+});
+
+export const addAvailableLibraryQuestion = libraryQuestionMetadata => ({
+  type: ADD_AVAILABLE_LIBRARY_QUESTION,
+  libraryQuestionMetadata
 });
 
 export const setLastSaved = lastSaved => ({
@@ -61,6 +75,7 @@ export const setLastSavedQuestion = libraryQuestion => ({
   libraryQuestion
 });
 
+// need to set available library questions redux state on load of library
 const initialState = {
   libraryQuestion: '',
   isFormPublished: null,
@@ -71,6 +86,7 @@ const initialState = {
   libraryId: null,
   libraryVersion: null,
   availableLibraries: [],
+  availableLibraryQuestionsForCurrentLibrary: [],
   saveError: null,
   lastSaved: null,
   lastSavedLibraryQuestion: ''
@@ -113,12 +129,31 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
       availableLibraries: action.librariesMetadata
     };
   }
-  if (action.type === ADD_AVAILABLE_FORM) {
-    let newFormList = [...state.availableForms];
-    newFormList.push(action.formMetadata);
+  if (action.type === RESET_AVAILABLE_LIBRARY_QUESTIONS) {
     return {
       ...state,
-      availableForms: newFormList
+      availableLibraryQuestionsForCurrentLibrary:
+        action.libraryQuestionsMetadata
+    };
+  }
+  // do we want to merge instead of push (in case library already exists)
+  if (action.type === ADD_AVAILABLE_LIBRARY) {
+    let newLibraryList = [...state.availableLibraries];
+    newLibraryList.push(action.libraryMetadata);
+    return {
+      ...state,
+      availableLibraries: newLibraryList
+    };
+  }
+
+  if (action.type === ADD_AVAILABLE_LIBRARY_QUESTION) {
+    let newLibraryQuestionList = [
+      ...state.availableLibraryQuestionsForCurrentLibrary
+    ];
+    newLibraryQuestionList.push(action.libraryQuestionMetadata);
+    return {
+      ...state,
+      availableLibraryQuestionsForCurrentLibrary: newLibraryQuestionList
     };
   }
   if (action.type === SET_LAST_SAVED) {
