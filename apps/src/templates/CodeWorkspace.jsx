@@ -55,7 +55,7 @@ class CodeWorkspace extends React.Component {
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
-    autogenerateML: PropTypes.func.isRequired
+    autogenerateML: PropTypes.func
   };
 
   shouldComponentUpdate(nextProps) {
