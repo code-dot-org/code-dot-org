@@ -7,7 +7,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1'
+    @script = create :script, name: 'unit-1', migrated: true, hidden: false
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
