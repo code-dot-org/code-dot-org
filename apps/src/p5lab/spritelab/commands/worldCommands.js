@@ -22,6 +22,7 @@ export const commands = {
   },
 
   printText(text) {
+    coreLibrary.printLog.push(text);
     getStore().dispatch(addConsoleMessage({text: text}));
   },
 

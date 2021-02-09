@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
 import {refreshProjectName} from '../../headerRedux';
+import {styles} from './EditableProjectName';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
@@ -46,9 +47,14 @@ class ProjectRemix extends React.Component {
       className += ' header_button_light';
     }
     return (
-      <div className={className} onClick={this.remixProject}>
+      <button
+        type="button"
+        className={className}
+        onClick={this.remixProject}
+        style={styles.buttonSpacing}
+      >
         {i18n.remix()}
-      </div>
+      </button>
     );
   }
 }
