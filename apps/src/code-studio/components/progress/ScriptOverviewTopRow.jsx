@@ -117,24 +117,23 @@ class ScriptOverviewTopRow extends React.Component {
             {assignedSectionId && <Assigned />}
           </div>
         )}
-        {(!professionalLearningCourse || showCalendar) && (
-          <div style={styles.resourcesRow}>
-            {!professionalLearningCourse &&
-              viewAs === ViewType.Teacher &&
-              resources.length > 0 && (
-                <TeacherResourcesDropdown
-                  resources={resources}
-                  unitId={scriptId}
-                />
-              )}
-            {showCalendar && (
-              <UnitCalendarButton
-                lessons={lessons}
-                weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+
+        <div style={styles.resourcesRow}>
+          {!professionalLearningCourse &&
+            viewAs === ViewType.Teacher &&
+            resources.length > 0 && (
+              <TeacherResourcesDropdown
+                resources={resources}
+                unitId={scriptId}
               />
             )}
-          </div>
-        )}
+          {showCalendar && (
+            <UnitCalendarButton
+              lessons={lessons}
+              weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+            />
+          )}
+        </div>
         {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <SectionAssigner
             sections={sectionsForDropdown}
