@@ -13,7 +13,7 @@ class ProjectsControllerTest < ActionController::TestCase
   setup do
     sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
-    stub(:azure_speech_service_options).returns({})
+    AzureTextToSpeech.stubs(:get_voices).returns({})
   end
 
   self.use_transactional_test_case = true
@@ -27,7 +27,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   teardown do
-    unstub(:azure_speech_service_options)
+    AzureTextToSpeech.unstub(:get_voices)
   end
 
   test "index" do
