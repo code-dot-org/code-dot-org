@@ -90,6 +90,7 @@ class FoormEditorHeader extends Component {
   };
 
   render() {
+    // need to get this header to show when a "new library" is selected
     return (
       <div>
         {this.props.libraryName && (

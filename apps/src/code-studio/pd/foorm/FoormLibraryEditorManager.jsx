@@ -9,6 +9,7 @@ import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormLibraryEditor from './FoormLibraryEditor';
 import {
   resetAvailableLibraries,
+  resetAvailableLibraryQuestions,
   setLastSaved,
   setSaveError,
   setLibraryQuestionData,
@@ -32,9 +33,12 @@ class FoormLibraryEditorManager extends React.Component {
     libraryCategories: PropTypes.array,
 
     // populated by redux
+    libraryId: PropTypes.number,
     formQuestions: PropTypes.object,
     availableLibraries: PropTypes.array,
     resetAvailableLibraries: PropTypes.func,
+    availableLibraryQuestionsForCurrentLibrary: PropTypes.array,
+    resetAvailableLibraryQuestions: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setLibraryQuestionData: PropTypes.func,
@@ -46,19 +50,21 @@ class FoormLibraryEditorManager extends React.Component {
   constructor(props) {
     super(props);
 
+    // is/should selectedlibraryid effectively managed by redux?
     this.state = {
       formKey: 0,
       formPreviewQuestions: null,
       showCodeMirror: false,
-      hasLoadError: false,
-      selectedLibraryId: null,
-      libraryQuestionsFromSelectedLibrary: null,
-      selectedLibraryQuestionId: null
+      hasLoadError: false
     };
 
     this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
   }
 
+  // i'm not sure how I understand how this gets used...
+  // formNamesAndVersions is loaded on initialization of
+  // the page, so wouldn't get updated unless you
+  // reloaded the page?
   componentDidUpdate(prevProps) {
     if (
       prevProps.libraryNamesAndVersions !== this.props.libraryNamesAndVersions
@@ -86,7 +92,7 @@ class FoormLibraryEditorManager extends React.Component {
   }
 
   getFormattedLibraryQuestionDropdownOptions() {
-    return this.state.libraryQuestionsFromSelectedLibrary.map(
+    return this.props.availableLibraryQuestionsForCurrentLibrary.map(
       (libraryQuestionAndType, i) => {
         const libraryQuestionName = libraryQuestionAndType['name'];
         const libraryQuestionType = libraryQuestionAndType['type'];
@@ -111,17 +117,15 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.setSaveError(null);
     this.props.setLibraryData(selectedLibraryNameAndVersion);
 
-    this.setState({selectedLibraryId: libraryId});
-
     $.ajax({
       url: `/foorm/libraries/${libraryId}/question_names`,
       type: 'get'
     })
       .done(result => {
         this.props.setHasError(false);
+        this.props.resetAvailableLibraryQuestions(result);
         this.setState({
-          hasLoadError: false,
-          libraryQuestionsFromSelectedLibrary: result
+          hasLoadError: false
         });
       })
       .fail(() => {
@@ -145,8 +149,7 @@ class FoormLibraryEditorManager extends React.Component {
         this.updateLibraryQuestionData(result);
         this.setState({
           showCodeMirror: true,
-          hasLoadError: false,
-          selectedLibraryQuestionId: libraryQuestionId
+          hasLoadError: false
         });
       })
       .fail(() => {
@@ -158,6 +161,7 @@ class FoormLibraryEditorManager extends React.Component {
           formVersion: null,
           formId: null
         });
+        // remove selectedLibraryId from here?
         this.setState({
           showCodeMirror: true,
           hasLoadError: true,
@@ -193,8 +197,8 @@ class FoormLibraryEditorManager extends React.Component {
 
   libraryQuestionOptionsAvailable = () => {
     return !!(
-      this.state.selectedLibraryId &&
-      this.state.libraryQuestionsFromSelectedLibrary
+      this.props.libraryId &&
+      this.props.availableLibraryQuestionsForCurrentLibrary
     );
   };
 
@@ -263,11 +267,16 @@ class FoormLibraryEditorManager extends React.Component {
 export default connect(
   state => ({
     libraryQuestion: state.foorm.libraryQuestion || {},
-    availableLibraries: state.foorm.availableLibraries || []
+    availableLibraries: state.foorm.availableLibraries || [],
+    availableLibraryQuestionsForCurrentLibrary:
+      state.foorm.availableLibraryQuestionsForCurrentLibrary || [],
+    libraryId: state.foorm.libraryId
   }),
   dispatch => ({
     resetAvailableLibraries: formMetadata =>
       dispatch(resetAvailableLibraries(formMetadata)),
+    resetAvailableLibraryQuestions: libraryQuestionsMetadata =>
+      dispatch(resetAvailableLibraryQuestions(libraryQuestionsMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLibraryQuestionData: libraryQuestionData =>
