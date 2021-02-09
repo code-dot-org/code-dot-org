@@ -284,7 +284,7 @@ img.video_thumbnail {
     }
   }
 
-  .user_menu, .create_menu {
+  .create_menu {
     box-shadow: none;
     // button:active in this file uses !important for a styling scheme that doesn't
     // match this button. We use !important here to override that scheme for only this
