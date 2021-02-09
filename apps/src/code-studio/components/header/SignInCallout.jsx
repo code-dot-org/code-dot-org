@@ -1,5 +1,6 @@
 import React from 'react';
 import cookies from 'js-cookie';
+import i18n from '@cdo/locale';
 
 const CALLOUT_COLOR = '#454545';
 const TRIANGLE_BASE = 30;
@@ -51,7 +52,6 @@ const styles = {
   },
   contentContainer: {
     display: 'flex',
-    flexDirection: 'row',
     padding: 20
   },
   imageContainer: {
@@ -100,16 +100,13 @@ export default class SignInCallout extends React.Component {
   getContent() {
     return (
       <div style={styles.contentContainer}>
-        <div style={styles.imageContainer}>
-          <img src="/shared/images/user-not-signed-in.png" />
-        </div>
+        <img
+          style={styles.imageContainer}
+          src="/shared/images/user-not-signed-in.png"
+        />
         <div style={styles.textContainer}>
-          <h2 style={styles.textHeader}>You are not signed in</h2>
-          <p>
-            You don't need an account to work on this lesson, but if you want to
-            save your work, remember to sign in or create an account before you
-            get started.
-          </p>
+          <h2 style={styles.textHeader}>{i18n.notSignedInHeader()}</h2>
+          <p> {i18n.notSignedInBody()}</p>
         </div>
       </div>
     );
