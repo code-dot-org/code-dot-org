@@ -127,7 +127,7 @@ class ScriptOverviewTopRow extends React.Component {
                 unitId={scriptId}
               />
             )}
-          {showCalendar && (
+          {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton
               lessons={lessons}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}

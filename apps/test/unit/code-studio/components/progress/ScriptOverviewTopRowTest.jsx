@@ -194,13 +194,14 @@ describe('ScriptOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders the unit calendar when showCalendar true', () => {
+  it('renders the unit calendar when showCalendar true for teacher', () => {
     const wrapper = shallow(
       <ScriptOverviewTopRow
         {...defaultProps}
         showCalendar
         lessons={sampleLessons}
         weeklyInstructionalMinutes={90}
+        viewAs={ViewType.Teacher}
       />
     );
     expect(
@@ -213,12 +214,33 @@ describe('ScriptOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('does not render the unit calendar when showCalendar false', () => {
+  it('does not render the unit calendar when showCalendar false for teacher', () => {
     const wrapper = shallow(
       <ScriptOverviewTopRow
         {...defaultProps}
         lessons={sampleLessons}
         weeklyInstructionalMinutes={90}
+        viewAs={ViewType.Teacher}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendarButton
+          lessons={sampleLessons}
+          weeklyInstructionalMinutes={90}
+        />
+      )
+    ).to.be.false;
+  });
+
+  it('does not render the unit calendar for student', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        showCalendar
+        lessons={sampleLessons}
+        weeklyInstructionalMinutes={90}
+        viewAs={ViewType.Student}
       />
     );
     expect(
