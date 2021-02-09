@@ -968,12 +968,20 @@ class ScriptTest < ActiveSupport::TestCase
   test 'summarize includes show_calendar' do
     script = create(:script, name: 'calendar-script')
 
+    script.is_migrated = true
     script.show_calendar = true
     assert script.show_calendar
     summary = script.summarize
     assert summary[:showCalendar]
 
+    script.is_migrated = true
     script.show_calendar = false
+    refute script.show_calendar
+    summary = script.summarize
+    refute summary[:showCalendar]
+
+    script.is_migrated = false
+    script.show_calendar = true
     refute script.show_calendar
     summary = script.summarize
     refute summary[:showCalendar]
