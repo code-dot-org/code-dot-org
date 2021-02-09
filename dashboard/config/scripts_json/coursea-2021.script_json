@@ -93,7 +93,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\r\n\r\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
+        "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
         "student_overview": "Learn how to go places safely online.",
         "purpose": "Common Sense Education created this lesson to teach students how they can go places safely online.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- (Optional) Print poem poster for classroom display.",
@@ -387,8 +387,7 @@
       "key": "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4",
@@ -608,8 +607,7 @@
       "key": "519099ff-6a78-427c-91d6-4ef9a2cba286",
       "position": 5,
       "properties": {
-        "name": "Extension Activities",
-        "duration": 0
+        "name": "Extension Activities"
       },
       "seeding_key": {
         "lesson_activity.key": "519099ff-6a78-427c-91d6-4ef9a2cba286",
@@ -971,8 +969,7 @@
       "key": "d532c41b-fba1-4122-8928-17ec3ef36315",
       "position": 4,
       "properties": {
-        "name": "Cross-Curricular Opportunity",
-        "duration": 0
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
         "lesson_activity.key": "d532c41b-fba1-4122-8928-17ec3ef36315",
@@ -1140,8 +1137,7 @@
       "key": "66dc5fd4-eacf-41f8-9d21-196b81d35d7a",
       "position": 1,
       "properties": {
-        "description": "* **online**: using a computer, phone, or tablet to visit a website or app\r\n* **website or app**: a place you can visit on the internet\r\n\r\n**Ask**: _What do you need to do to stay safe when you visit new places?_ ([Slide 3](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_54))\r\n\r\nInvite students to respond. Answers will vary, but reinforce the following safety rules:\r\n\r\n* Always go places with an adult.\r\n* Don't wander off on your own.\r\n* Talk only with people you know.\r\n\r\n**Say**: _Today we're going to talk about how visiting places on the internet is a lot like visiting places in real life. Just like there are rules to keep safe when you visit new places in the world, there are ways to keep yourself safe online._\r\n\r\n**Project** [Slide 4](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5c15fa078c_0_0) and define **online** as _using a computer, phone, or tablet to visit a website or app_.\r\n\r\n**Show** the [My Online Neighborhood](https://www.commonsense.org/education/videos/my-online-neighborhood) video on [Slide 5](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_93) and then ask: _What did Arms like about the internet? What kinds of things can he do on the internet?_\r\n\r\nInvite students to respond. Sample responses:\r\n\r\n* He likes to visit cool places.\r\n* He can talk to his family and friends. \r\n* He can learn lots of new things.\r\n* He can create things on the internet.\r\n\r\n**Ask**: _What three rules does Arms follow when he goes places online?_\r\n\r\nInvite students to respond. Project [Slide 6](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_141) and reinforce the three main rules:\r\n\r\n1. Always ask your parent (or adult you trust) first. \r\n1. Only talk to people you know.\r\n1. Stick to places that are just right for you.\r\n\r\nExplain that sticking to places that are \"just right\" means making sure it is a site or app that is appropriate for kids, and that you have permission to be there.",
-        "name": "Key Vocabulary\r"
+        "description": "###Key Vocabulary###\n\n* **online**: using a computer, phone, or tablet to visit a website or app\n* **website or app**: a place you can visit on the internet\n\n**Ask**: _What do you need to do to stay safe when you visit new places?_ ([Slide 3](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_54))\n\nInvite students to respond. Answers will vary, but reinforce the following safety rules:\n\n* Always go places with an adult.\n* Don't wander off on your own.\n* Talk only with people you know.\n\n**Say**: _Today we're going to talk about how visiting places on the internet is a lot like visiting places in real life. Just like there are rules to keep safe when you visit new places in the world, there are ways to keep yourself safe online._\n\n**Project** [Slide 4](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5c15fa078c_0_0) and define **online** as _using a computer, phone, or tablet to visit a website or app_.\n\n**Show** the [My Online Neighborhood](https://www.commonsense.org/education/videos/my-online-neighborhood) video on [Slide 5](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_93) and then ask: _What did Arms like about the internet? What kinds of things can he do on the internet?_\n\nInvite students to respond. Sample responses:\n\n* He likes to visit cool places.\n* He can talk to his family and friends. \n* He can learn lots of new things.\n* He can create things on the internet.\n\n**Ask**: _What three rules does Arms follow when he goes places online?_\n\nInvite students to respond. Project [Slide 6](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_141) and reinforce the three main rules:\n\n1. Always ask your parent (or adult you trust) first. \n1. Only talk to people you know.\n1. Stick to places that are just right for you.\n\nExplain that sticking to places that are \"just right\" means making sure it is a site or app that is appropriate for kids, and that you have permission to be there."
       },
       "seeding_key": {
         "activity_section.key": "66dc5fd4-eacf-41f8-9d21-196b81d35d7a",
@@ -1152,7 +1148,7 @@
       "key": "fc3baf69-3ed1-46de-af6c-bed50ffd6757",
       "position": 1,
       "properties": {
-        "description": "**Say**: *Now we're going to learn a short poem to help us remember the rules for staying safe online. First I'll read the poem, and then we'll read it together.*\r\n\r\n**Project** [Slide 7](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_196) and model the poem actions as you read the poem aloud. This is a call-and-response poem with different actions that correspond to each of the three safety rules.\r\n\r\n**Read** the poem aloud with your students. As the students read, they should follow along with the actions. The poem also works well to have one of the students playing the role of the teacher and having the class respond to him or her. \r\n\r\n**Safety, It Rules!  By Jenny Pritchett**\r\n\r\n*We need to be safe*\r\n\r\n*Whenever we're online*\r\n\r\n*So we follow these rules*\r\n\r\n*To have a good time!*\r\n\r\n[Hold up 1 finger] *Always ask your parents first! *\r\n\r\n[Hold up 2 fingers] *Only talk to people you know! *\r\n\r\n[Hold up 3 fingers] *Stick to sites just right for you!*\r\n\r\n*And we'll be safe *\r\n\r\n*Wherever we go!*\r\n\r\nNote: The [Poem Poster](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) is great to use for your weekly poem or as a consistent routine to kick off any computer or device time."
+        "description": "**Say**: *Now we're going to learn a short poem to help us remember the rules for staying safe online. First I'll read the poem, and then we'll read it together.*\n\n**Project** [Slide 7](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_196) and model the poem actions as you read the poem aloud. This is a call-and-response poem with different actions that correspond to each of the three safety rules.\n\n**Read** the poem aloud with your students. As the students read, they should follow along with the actions. The poem also works well to have one of the students playing the role of the teacher and having the class respond to him or her. \n\n**Safety, It Rules!  By Jenny Pritchett**\n\n*We need to be safe*\n\n*Whenever we're online*\n\n*So we follow these rules*\n\n*To have a good time!*\n\n[Hold up 1 finger] *Always ask your parents first! *\n\n[Hold up 2 fingers] *Only talk to people you know! *\n\n[Hold up 3 fingers] *Stick to sites just right for you!*\n\n*And we'll be safe*\n\n*Wherever we go!*\n\nNote: The [Poem Poster](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) is great to use for your weekly poem or as a consistent routine to kick off any computer or device time."
       },
       "seeding_key": {
         "activity_section.key": "fc3baf69-3ed1-46de-af6c-bed50ffd6757",
@@ -1163,7 +1159,7 @@
       "key": "39a4de29-4980-411c-9999-90a2bb94b72b",
       "position": 1,
       "properties": {
-        "description": "**Say**: *The computer makes it possible to you to visit faraway places without ever leaving the classroom.* \r\n\r\nDefine a **website** as *a place you can visit on the internet.* ([Slide 8](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_245)) Explain to students that on the internet, they can visit websites or apps for real places, such as zoos and museums. These places may be far from where they live, but they can visit them online.\r\n\r\n**Choose** a website to explore as a class. If you're not sure of a good one to explore, try one of the following:\r\n\r\n-   [The San Diego Zoo](http://kids.sandiegozoo.org/)\r\n-   [National Geographic Kids Explore the World](https://kids.nationalgeographic.com/explore/countries/)\r\n\r\n**Ask**: *What's the first rule before turning on a device or opening up a website or app? *\r\n\r\nInvite students to share, reminding them that they must always ask for permission from an adult before using a device or visiting a website or app.\r\n\r\n**Explore** the website you selected with your class, allowing students to choose pages and activities that are most interesting to them. As you go through the site, point out how students are following the other two safety rules for going online: only talking to people they know, and sticking to places that are just right for them.\r\n\r\nNote: If you are in the computer lab or have enough devices in your classroom, have students do the explorations individually or in pairs.\r\n\r\n**Ask** students what they learned on their internet field trip. Also ask: *How did you follow the three safety rules when you visited the site?*"
+        "description": "**Say**: *The computer makes it possible to you to visit faraway places without ever leaving the classroom.* \n\nDefine a **website** as *a place you can visit on the internet.* ([Slide 8](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_245)) Explain to students that on the internet, they can visit websites or apps for real places, such as zoos and museums. These places may be far from where they live, but they can visit them online.\n\n**Choose** a website to explore as a class. If you're not sure of a good one to explore, try one of the following:\n\n-   [The San Diego Zoo](http://kids.sandiegozoo.org/)\n-   [National Geographic Kids Explore the World](https://kids.nationalgeographic.com/explore/countries/)\n\n**Ask**: *What's the first rule before turning on a device or opening up a website or app?*\n\nInvite students to share, reminding them that they must always ask for permission from an adult before using a device or visiting a website or app.\n\n**Explore** the website you selected with your class, allowing students to choose pages and activities that are most interesting to them. As you go through the site, point out how students are following the other two safety rules for going online: only talking to people they know, and sticking to places that are just right for them.\n\nNote: If you are in the computer lab or have enough devices in your classroom, have students do the explorations individually or in pairs.\n\n**Ask** students what they learned on their internet field trip. Also ask: *How did you follow the three safety rules when you visited the site?*"
       },
       "seeding_key": {
         "activity_section.key": "39a4de29-4980-411c-9999-90a2bb94b72b",
@@ -1473,25 +1469,14 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": " - Use calm bodies in the lab\r\n - Remember not to chew gum or candy\r\n - Sanitize your hands\r\n - Sit with your partner at one computer\r\n - Make sure that the first \"driver\" can reach the mouse\r\n - When you get frustrated, don't hit or shake the computer or monitor\r\n - Follow the [r 202020] rule\r\n - How to deal with the [r wiggles] every 20-30 minutes (requires a free login on GoNoodle)\r\n - Ask your partner before you ask the teacher\r\n - Keep volume down so everyone else can hear their partners\r\n - Use your journal for keeping track of feelings and solutions\r\n\r\n"
+            "markdown": "**Some possible things to cover:**\n\n- Use calm bodies in the lab.\n - Remember not to chew gum or candy.\n - Sanitize your hands.\n - Sit with your partner at one computer.\n - Make sure that the first \"driver\" can reach the mouse.\n - When you get frustrated, don't hit or shake the computer or monitor.\n - Follow the [20/20/20 Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n - How to deal with the [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher.\n - Keep volume down so everyone else can hear their partners.\n - Use your journal for keeping track of feelings and solutions.\n\n"
           }
-        ]
+        ],
+        "description": "**Discuss:**\n\nHave a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?"
       },
       "seeding_key": {
         "activity_section.key": "fadfd6a5-099f-427c-aa1f-345ee17ca150",
-        "lesson_activity.key": "3c9570d2-fe30-4242-a735-9a2a4ee66bf0"
-      }
-    },
-    {
-      "key": "ab793f66-2ddb-4d61-9025-22e4cf76ee56",
-      "position": 3,
-      "properties": {
-        "description": "**Discuss:**\r\n\r\nHave a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\r\n\r\n - Is running in the computer lab okay?\r\n - How loudly should we walk when we are in the computer lab?\r\n - What should you do if you get stuck on a puzzle?\r\n - If you get frustrated, will it help to hit the computer?\r\n - When we're about to go to the computer lab, how should we get ready?"
-      },
-      "seeding_key": {
-        "activity_section.key": "ab793f66-2ddb-4d61-9025-22e4cf76ee56",
         "lesson_activity.key": "3c9570d2-fe30-4242-a735-9a2a4ee66bf0"
       }
     },
@@ -1510,7 +1495,7 @@
       "key": "d3d96ea6-986d-49e8-b48a-521536592847",
       "position": 2,
       "properties": {
-        "description": "Project one of the maps from the \"Happy Maps\" activity and display it for the students to see. On a projector or in front of the class, put some direction blocks from the **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** in random order and practice \"dragging and dropping\" by pressing your finger on one of the paper pieces and moving it across the screen. Explain that you can \"click\" to select this block by tapping your finger on it, or you can \"drag\" the block by pressing your finger on it and moving it. To \"drop\" the block, release your finger.\r\n\r\nAfter showing this to the class, ask for volunteers to create an algorithm for the Happy Map by \"dragging and dropping\" the necessary blocks.",
+        "description": "Project one of the maps from the \"Happy Maps\" activity and display it for the students to see. On a projector or in front of the class, put some direction blocks from the **Unplugged Blockly Blocks** in random order and practice \"dragging and dropping\" by pressing your finger on one of the paper pieces and moving it across the screen. Explain that you can \"click\" to select this block by tapping your finger on it, or you can \"drag\" the block by pressing your finger on it and moving it. To \"drop\" the block, release your finger.\n\nAfter showing this to the class, ask for volunteers to create an algorithm for the Happy Map by \"dragging and dropping\" the necessary blocks.",
         "name": "Dragging and Dropping Algorithms\r"
       },
       "seeding_key": {
@@ -1531,40 +1516,11 @@
       }
     },
     {
-      "key": "30ab6f6d-deb2-4b1c-8974-136be2f6852e",
+      "key": "d639c3c7-2708-41eb-afae-cf5a65464fd8",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch  the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "30ab6f6d-deb2-4b1c-8974-136be2f6852e",
-        "lesson_activity.key": "2a7f3c27-943a-415a-bdb1-1fbef4249074"
-      }
-    },
-    {
-      "key": "72c72a35-405e-4f86-a087-8bed0346c0c1",
-      "position": 2,
-      "properties": {
-        "description": "This will teach students how to use Code.org to complete online puzzles.\r\n\r\nWatch the **Pair Programming - Student Video** with your students, then assign them to pairs.  This should help students start off in the right direction.\r\n\r\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize pair programming whenever possible during the activity.\r\n - Encourage students with questions/challenges to start by asking their partner.\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.",
-        "name": "Online Puzzles\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "72c72a35-405e-4f86-a087-8bed0346c0c1",
-        "lesson_activity.key": "2a7f3c27-943a-415a-bdb1-1fbef4249074"
-      }
-    },
-    {
-      "key": "d639c3c7-2708-41eb-afae-cf5a65464fd8",
-      "position": 3,
-      "properties": {
-        "name": "Maze Intro: Programming with Blocks",
-        "progression_name": "Maze Intro: Programming with Blocks"
+        "name": "Video: Programming with Blocks",
+        "progression_name": "Video: Programming with Blocks"
       },
       "seeding_key": {
         "activity_section.key": "d639c3c7-2708-41eb-afae-cf5a65464fd8",
@@ -1572,8 +1528,26 @@
       }
     },
     {
+      "key": "30ab6f6d-deb2-4b1c-8974-136be2f6852e",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Show the students the right way to help classmates:**\n\n - Don’t sit in the classmate’s chair.\n - Don’t use the classmate’s keyboard.\n - Don’t touch  the classmate’s mouse.\n - Make sure the classmate can describe the solution to you out loud before you walk away.\n"
+          }
+        ],
+        "name": "Online Puzzles",
+        "description": "This will teach students how to use Code.org to complete online puzzles.\n\nWatch the **Pair Programming - Student Video** with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+      },
+      "seeding_key": {
+        "activity_section.key": "30ab6f6d-deb2-4b1c-8974-136be2f6852e",
+        "lesson_activity.key": "2a7f3c27-943a-415a-bdb1-1fbef4249074"
+      }
+    },
+    {
       "key": "88c2697f-a9ba-483a-8091-cc2a1b7bf027",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Practice",
         "progression_name": "Practice"
@@ -1587,7 +1561,7 @@
       "key": "a7d5f389-5e34-4cbf-91e8-e2d934992246",
       "position": 1,
       "properties": {
-        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day.\r\n\r\n#### Journal Prompts:\r\n\r\n - Can you draw a sequence for getting ready to go to the computer lab?\r\n - Draw a computer lab \"Do\" and a \"Don't\"\r\n - Draw one of the **Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.",
+        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day.\n\n#### Journal Prompts:\n\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n - Draw one of the **Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1599,7 +1573,7 @@
       "key": "2e0974bb-0444-4738-84dc-e49bf6f27770",
       "position": 1,
       "properties": {
-        "description": "If students complete the puzzles from this lesson early, have them spend some time trying to come up with their own puzzles in their **Think Spot Journal - Reflection Journal**."
+        "description": "If students complete the puzzles from this lesson early, have them spend some time trying to come up with their own puzzles in their **Think Spot Journal**."
       },
       "seeding_key": {
         "activity_section.key": "2e0974bb-0444-4738-84dc-e49bf6f27770",
@@ -1880,7 +1854,7 @@
       "key": "6c3b7137-b86e-4fc9-9fce-6e346df584dd",
       "position": 1,
       "properties": {
-        "description": "This lesson builds off of the Happy Maps actvity from earlier in the year.  Students might benefit from a quick refresher before you hop into the difficult stuff.\r\n\r\n**Display:**\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-13.07.53.png){: style='max-width:800px'}\r\n\r\n\r\n**Model:**  Select one of the maps that your class covered together in the last lesson.\r\n\r\nHave students look at the puzzle, then think-pair-share their solution for how they would get the Flurb to the fruit (using the symbols from last time).\r\n\r\n**Think:**  Do you remember writing programs to get the Flurbs to the fruit?  What would this program look like coded with arrows?\r\n\r\n**Pair:**  Have students discuss for about 90 seconds.\r\n\r\n**Share:** Ask a student to use their fingers to point in the direction of the arrows that they chose to solve this puzzle.",
+        "description": "This lesson builds off of the Happy Maps activity from earlier in the year.  Students might benefit from a quick refresher before you hop into the difficult stuff.\n\n**Display:**\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-13.07.53.png)\n\n**Model:**  Select one of the maps that your class covered together in the last lesson.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the Flurb to the fruit (using the symbols from last time).\n\n**Think:**  Do you remember writing programs to get the Flurbs to the fruit?  What would this program look like coded with arrows?\n\n**Pair:**  Have students discuss for about 90 seconds.\n\n**Share:** Ask a student to use their fingers to point in the direction of the arrows that they chose to solve this puzzle.",
         "name": "Happy Maps Review\r"
       },
       "seeding_key": {
@@ -1892,7 +1866,7 @@
       "key": "bed588e7-0f5d-4308-8088-167306b5af81",
       "position": 1,
       "properties": {
-        "description": "This portion of the lesson should help students see that there is an easier way to handle repetitive code than to brute force a solution with dozens of the same symbols.\r\n\r\n**Display:**  \r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-18.05.24.png){: style='max-width:600px'}\r\n\r\n**Model:** Once you are confident that your students remember Happy Maps, pull up one of the new -- and much longer -- _Happy Maps XL_. \r\n\r\nCan your students help you program these maps?  The resulting code might look something like this:\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.26.png){: style='max-width:600px'}\r\n\r\nIt's a bit longer, isn’t it?"
+        "description": "This portion of the lesson should help students see that there is an easier way to handle repetitive code than to brute force a solution with dozens of the same symbols.\n\n**Display:**  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-18.05.24.png)\n\n**Model:** Once you are confident that your students remember Happy Maps, pull up one of the new -- and much longer -- _Happy Maps XL_. \n\nCan your students help you program these maps?  The resulting code might look something like this:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.26.png)\n\nIt's a bit longer, isn’t it?"
       },
       "seeding_key": {
         "activity_section.key": "bed588e7-0f5d-4308-8088-167306b5af81",
@@ -1921,7 +1895,7 @@
       "key": "cebdc037-d1ad-4064-a828-29e7da520632",
       "position": 3,
       "properties": {
-        "description": "Give students the opportunity to brainstorm shorter ways to relay the code that they’re creating.  (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\r\n\r\nIdeally, students will land on a method that looks like this one:  \r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.38.png){: style='max-width:400px'}\r\n\r\n\r\nWhich can be reduced even further to this:  \r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.47.png){: style='max-width:400px'}\r\n\r\nEventually, students can write programs like this on the fly:  \r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.19.06.png){: style='max-width:300px'}\r\n\r\n**Define:** Once students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” will be used interchangeably in Code Studio.\r\n\r\n---"
+        "description": "Give students the opportunity to brainstorm shorter ways to relay the code that they’re creating.  (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nIdeally, students will land on a method that looks like this one:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.38.png)\n\nWhich can be reduced even further to this:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.47.png)\n\nEventually, students can write programs like this on the fly:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.19.06.png)\n\n**Define:** Once students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” will be used interchangeably in Code Studio.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "cebdc037-d1ad-4064-a828-29e7da520632",
@@ -2376,7 +2350,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
           }
@@ -2519,8 +2492,8 @@
       "key": "85143426-6671-4809-8601-8502634e2f51",
       "position": 2,
       "properties": {
-        "description": "[**Code My Drawing**](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) is an optional activity aligned to Common Core ELA standards, written by our teacher community. In pairs or groups of three, students will practice clear communication in order to code each other’s drawings in Artist.\n\n*Standards Addressed:*\n    \n   * **CCSS.ELA-Literacy.SL.K.2**: Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.\n   * **CCSS.ELA-Literacy.SL.K.3**: Ask and answer questions in order to seek help, get information, or clarify something that is not understood.\n   * **CCSS.ELA-Literacy.SL.K.6**: Speak audibly and express thoughts, feelings, and ideas clearly.",
-        "name": "![](https://curriculum.code.org/media/uploads/elaSmall.png) Code My Drawing "
+        "description": "![](https://curriculum.code.org/media/uploads/elaSmall.png) **Computer Science + English Language Arts**\n\n[**Code My Drawing**](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) is an optional activity aligned to Common Core ELA standards, written by our teacher community. In pairs or groups of three, students will practice clear communication in order to code each other’s drawings in Artist.\n\n*Standards Addressed:*\n    \n   * **CCSS.ELA-Literacy.SL.K.2**: Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.\n   * **CCSS.ELA-Literacy.SL.K.3**: Ask and answer questions in order to seek help, get information, or clarify something that is not understood.\n   * **CCSS.ELA-Literacy.SL.K.6**: Speak audibly and express thoughts, feelings, and ideas clearly.\n",
+        "name": "Code My Drawing "
       },
       "seeding_key": {
         "activity_section.key": "85143426-6671-4809-8601-8502634e2f51",
@@ -2814,10 +2787,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:1"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2840,10 +2813,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:2"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2866,10 +2839,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:3"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2892,10 +2865,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:4"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2918,10 +2891,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:5"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2944,10 +2917,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:6"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2970,10 +2943,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:7"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2996,10 +2969,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:8"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3022,10 +2995,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:9"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3048,10 +3021,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:10"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3074,10 +3047,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:11"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3100,10 +3073,10 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:12"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3151,10 +3124,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Video: Programming with Blocks",
         "level_keys": [
           "courseAB_video_NewIntro_2021"
-        ],
-        "progression": "Maze Intro: Programming with Blocks"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3177,10 +3150,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3203,10 +3176,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3229,10 +3202,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp3a_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3255,10 +3228,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp3b_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3281,10 +3254,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp4a_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3307,10 +3280,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp5a_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3333,10 +3306,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Pair Programming",
         "level_keys": [
           "elementary_video_pairProgramming_2021"
-        ],
-        "progression": "Pair Programming"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3359,10 +3332,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3385,10 +3358,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3411,10 +3384,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3437,10 +3410,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3463,10 +3436,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Debugging with the Step Button",
         "level_keys": [
           "courseAB_video_debugging_2021"
-        ],
-        "progression": "Debugging with the Step Button"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3489,10 +3462,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3515,10 +3488,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3541,11 +3514,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_maze_seq9_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3568,10 +3541,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3594,10 +3567,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3620,10 +3593,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq12_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3696,10 +3669,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Programming with Rey and BB-8",
         "level_keys": [
           "bb8_skinOverview_K-1_video_2021"
-        ],
-        "progression": "Programming with Rey and BB-8"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3722,10 +3695,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3748,10 +3721,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3774,10 +3747,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3800,10 +3773,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3826,10 +3799,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3852,10 +3825,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3878,10 +3851,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3904,11 +3877,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_starWars_prog8_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3931,10 +3904,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3957,10 +3930,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3983,10 +3956,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4034,10 +4007,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4060,10 +4033,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4086,10 +4059,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Ice Age Loops",
         "level_keys": [
           "courseB_iceage_loops_video_2021"
-        ],
-        "progression": "Ice Age Loops"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4112,10 +4085,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4138,10 +4111,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4164,10 +4137,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4190,10 +4163,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4216,10 +4189,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4242,10 +4215,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4268,11 +4241,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_iceage_loops10_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4295,10 +4268,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4321,10 +4294,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops12_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4347,10 +4320,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "The Collector",
         "level_keys": [
           "courseAB_video_collector_2021"
-        ],
-        "progression": "The Collector"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4373,10 +4346,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4399,10 +4372,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4425,10 +4398,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Using the Repeat Block",
         "level_keys": [
           "courseA_video_Loops_2021"
-        ],
-        "progression": "Using the Repeat Block"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4451,10 +4424,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4477,10 +4450,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4503,10 +4476,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4529,10 +4502,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4555,10 +4528,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4581,10 +4554,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4607,11 +4580,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_collector_loops9_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4634,10 +4607,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4660,10 +4633,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4686,10 +4659,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops12_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4762,10 +4735,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "The Artist in Code Studio",
         "level_keys": [
           "courseB_video_ArtistIntro_2021"
-        ],
-        "progression": "The Artist in Code Studio"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4788,10 +4761,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4814,10 +4787,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4840,10 +4813,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4866,10 +4839,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_video_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4892,10 +4865,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4918,10 +4891,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Repeat Blocks with the Artist",
         "level_keys": [
           "courseA_artist_loops5_2021"
-        ],
-        "progression": "Repeat Blocks with the Artist"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4944,10 +4917,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4970,10 +4943,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4996,10 +4969,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5022,11 +4995,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_artist_loops9_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5049,10 +5022,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5075,10 +5048,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5101,10 +5074,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Play",
         "level_keys": [
           "courseA_artist_loops12_2021"
-        ],
-        "progression": "Free Play"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5202,10 +5175,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Create a Story",
         "level_keys": [
           "courseA_video_events_2021"
-        ],
-        "progression": "Create a Story"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5228,10 +5201,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Play",
         "level_keys": [
           "courseA_playLab_events1_2021"
-        ],
-        "progression": "Free Play"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5254,10 +5227,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_playLab_events2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5280,10 +5253,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events3_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5306,10 +5279,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events4_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5332,10 +5305,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events5_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5358,10 +5331,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events6_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5384,10 +5357,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events7_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,

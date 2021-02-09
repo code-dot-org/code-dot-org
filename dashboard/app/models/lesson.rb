@@ -13,7 +13,7 @@
 #  properties        :text(65535)
 #  lesson_group_id   :integer
 #  key               :string(255)      not null
-#  has_lesson_plan   :boolean
+#  has_lesson_plan   :boolean          not null
 #
 # Indexes
 #
@@ -63,8 +63,10 @@ class Lesson < ApplicationRecord
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
-  # only accounts for other lessons that have the same lockable setting, so if we have two lockable lessons followed
-  # by a non-lockable lesson, the third lesson will have an absolute_position of 3 but a relative_position of 1
+  # numbers the lessons in order in two groups 1. lessons that are numbered on the script overview page (lockable false OR has_lesson_plan true)
+  # 2. lessons that are not numbered on the script overview page (lockable true AND has_lesson_plan false)
+  # if we have two lessons without lesson plans that are lockable followed by a
+  # lesson that is not lockable, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :key, scope: :script_id
@@ -87,6 +89,8 @@ class Lesson < ApplicationRecord
           l.has_lesson_plan = true # will be reset below if specified
         end
 
+      numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
+
       lesson.assign_attributes(
         name: raw_lesson[:name],
         absolute_position: (counters.lesson_position += 1),
@@ -94,7 +98,7 @@ class Lesson < ApplicationRecord
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
-        relative_position: !!raw_lesson[:lockable] ? (counters.lockable_count += 1) : (counters.non_lockable_count += 1)
+        relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
       lesson.save! if lesson.changed?
 
@@ -171,10 +175,21 @@ class Lesson < ApplicationRecord
     script_levels.first.oldest_active_level.spelling_bee?
   end
 
+  # We number lessons that either have lesson plans or are not lockable
+  def numbered_lesson?
+    !!has_lesson_plan || !lockable
+  end
+
+  def has_lesson_pdf?
+    return false if ScriptConstants.script_in_category?(:csf, script.name) || ScriptConstants.script_in_category?(:csf_2018, script.name)
+
+    !!has_lesson_plan
+  end
+
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
-    # In the case of lockable lessons, we don't want to include the Lesson 1
-    return localized_name if lockable
+    # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1
+    return localized_name unless numbered_lesson?
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
@@ -192,6 +207,8 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
+    return lesson_path(id: id) if script.is_migrated
+
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
 
@@ -233,6 +250,7 @@ class Lesson < ApplicationRecord
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         hasLessonPlan: has_lesson_plan,
+        numberedLesson: numbered_lesson?,
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
@@ -256,8 +274,7 @@ class Lesson < ApplicationRecord
         last_level_summary[:page_number] = 1
       end
 
-      # Don't want lesson plans for lockable levels
-      if !lockable && script.has_lesson_plan?
+      if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end
@@ -313,9 +330,10 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
-      vocabularies: vocabularies.map(&:summarize_for_edit),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
+      scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
       lessonPath: lesson_path(id: id)
     }
@@ -346,8 +364,7 @@ class Lesson < ApplicationRecord
       key: key,
       displayName: localized_name,
       link: lesson_path(id: id),
-      position: relative_position,
-      lockable: lockable
+      position: relative_position
     }
   end
 

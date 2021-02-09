@@ -32,7 +32,6 @@
           "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         ]
       ],
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursee/{LESSON}",
       "version_year": "2019",
       "curriculum_umbrella": "CSF",

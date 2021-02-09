@@ -1,5 +1,4 @@
 login_required true
-has_lesson_plan true
 
 lesson_group 'content', display_name: 'Content'
 lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race', has_lesson_plan: true

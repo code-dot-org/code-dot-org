@@ -4442,4 +4442,26 @@ class UserTest < ActiveSupport::TestCase
       assert migrated_teacher.reload.admin?
     end
   end
+
+  test 'display_captcha returns false for new user with uninitialized section attempts hash' do
+    user = create :user
+    assert_equal false, user.display_captcha?
+  end
+
+  test 'section attempts last reset value resets if more than 24 hours has passed' do
+    user = create :user
+    user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    # invoking display_captcha? will return false without causing section_attempts values to be reset
+    assert_equal false, user.display_captcha?
+    # now we mimic joining a section, which should reset attempts and then increment
+    user.increment_section_attempts
+    user.reload
+    assert_equal 1, user.num_section_attempts
+  end
+
+  test 'section attempts value increments if less than 24 hours has passed' do
+    user = create :user
+    user.increment_section_attempts
+    assert_equal 1, user.properties['section_attempts']
+  end
 end
