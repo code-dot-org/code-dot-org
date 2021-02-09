@@ -37,19 +37,6 @@ class LessonsControllerTest < ActionController::TestCase
       relative_position: 2
     )
 
-    @script2 = create :script, name: 'unmigrated-course'
-    lesson_group2 = create :lesson_group, script: @script2
-    @unmigrated_lesson = create(
-      :lesson,
-      script_id: @script2.id,
-      lesson_group: lesson_group2,
-      name: 'unmigrated lesson',
-      absolute_position: 1,
-      relative_position: 1,
-      has_lesson_plan: true,
-      lockable: false,
-    )
-
     @script_title = 'Script Display Name'
     @lesson_name = 'Lesson Display Name'
 
@@ -93,6 +80,27 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :levelbuilder, response: :forbidden
+
+  test 'can not show lesson when lesson is in a non-migrated script' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'unmigrated-course'
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'unmigrated lesson',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :show, params: {
+      id: unmigrated_lesson.id
+    }
+    assert_response :forbidden
+  end
 
   test 'show lesson when lesson is the only lesson in script' do
     script = create :script, name: 'one-lesson-script', is_migrated: true, hidden: true
