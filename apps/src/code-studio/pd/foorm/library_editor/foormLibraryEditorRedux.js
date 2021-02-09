@@ -14,8 +14,8 @@ const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTION = 'foormLibraryEditor/SET_LAST_SAVED_QUESTION';
 
-// formQuestions is an object in surveyJS format that represents
-// a single survey
+// libraryQuestion is an object in surveyJS format that represents
+// a single question
 export const setLibraryQuestion = libraryQuestion => ({
   type: SET_LIBRARY_QUESTION,
   libraryQuestion
@@ -106,7 +106,6 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
     };
   }
   if (action.type === SET_LIBRARY_QUESTION_DATA) {
-    // not sure if this works
     return {
       ...state,
       libraryQuestion: action.libraryQuestionData['question'],
@@ -145,7 +144,7 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
       availableLibraries: newLibraryList
     };
   }
-
+  // do we want to merge instead of push (in case library question already exists)
   if (action.type === ADD_AVAILABLE_LIBRARY_QUESTION) {
     let newLibraryQuestionList = [
       ...state.availableLibraryQuestionsForCurrentLibrary

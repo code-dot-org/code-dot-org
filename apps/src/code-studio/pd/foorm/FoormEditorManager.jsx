@@ -45,8 +45,6 @@ class FoormEditorManager extends React.Component {
     super(props);
 
     this.state = {
-      formKey: 0,
-      formPreviewQuestions: null,
       showCodeMirror: false,
       hasLoadError: false
     };

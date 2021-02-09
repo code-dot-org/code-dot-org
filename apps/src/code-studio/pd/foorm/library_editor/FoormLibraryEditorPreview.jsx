@@ -24,7 +24,7 @@ class FoormLibraryEditorPreview extends Component {
     surveyData: PropTypes.object,
 
     // Populated by Redux
-    formHasError: PropTypes.bool
+    libraryQuestionHasError: PropTypes.bool
   };
 
   wrapLibraryQuestionPreviewQuestion = () => {
@@ -37,7 +37,7 @@ class FoormLibraryEditorPreview extends Component {
     return (
       <div className="foorm-preview">
         <div style={styles.previewBox}>
-          {this.props.formHasError && (
+          {this.props.libraryQuestionHasError && (
             <div style={styles.errorMessage}>
               <FontAwesome icon="exclamation-triangle" /> There is a parsing
               error in the survey configuration. Errors are noted on the left
@@ -53,7 +53,7 @@ class FoormLibraryEditorPreview extends Component {
             </div>
           )}
           {this.props.libraryQuestionPreviewQuestion &&
-            !this.props.formHasError &&
+            !this.props.libraryQuestionHasError &&
             !this.props.libraryError && (
               // key allows us to force re-render when preview is called
               <Foorm
@@ -73,5 +73,5 @@ class FoormLibraryEditorPreview extends Component {
 }
 
 export default connect(state => ({
-  formHasError: state.foorm.hasError
+  libraryQuestionHasError: state.foorm.hasError
 }))(FoormLibraryEditorPreview);

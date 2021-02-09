@@ -1,6 +1,6 @@
-// Main page for Foorm Editor interface. Will initially show a choice
+// Main page for Foorm Library Editor interface. Will initially show a choice
 // between loading an existing configuration or an empty configuration.
-// After that choice is made, will render FoormEditor with the chosen configuration.
+// After that choice is made, will render FoormLibraryEditor with the chosen configuration.
 
 import React from 'react';
 import {connect} from 'react-redux';
@@ -34,7 +34,6 @@ class FoormLibraryEditorManager extends React.Component {
 
     // populated by redux
     libraryId: PropTypes.number,
-    formQuestions: PropTypes.object,
     availableLibraries: PropTypes.array,
     resetAvailableLibraries: PropTypes.func,
     availableLibraryQuestionsForCurrentLibrary: PropTypes.array,
@@ -50,10 +49,7 @@ class FoormLibraryEditorManager extends React.Component {
   constructor(props) {
     super(props);
 
-    // is/should selectedlibraryid effectively managed by redux?
     this.state = {
-      formKey: 0,
-      formPreviewQuestions: null,
       showCodeMirror: false,
       hasLoadError: false
     };
@@ -170,9 +166,6 @@ class FoormLibraryEditorManager extends React.Component {
       });
   }
 
-  // on select of library:
-  // load options of library questions
-  // show dropdown
   initializeEmptyCodeMirror = () => {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
@@ -202,7 +195,6 @@ class FoormLibraryEditorManager extends React.Component {
     );
   };
 
-  // update library dropdown to be disabled instead of not shown when no library question selected
   render() {
     return (
       <div>
@@ -273,8 +265,8 @@ export default connect(
     libraryId: state.foorm.libraryId
   }),
   dispatch => ({
-    resetAvailableLibraries: formMetadata =>
-      dispatch(resetAvailableLibraries(formMetadata)),
+    resetAvailableLibraries: librariesMetadata =>
+      dispatch(resetAvailableLibraries(librariesMetadata)),
     resetAvailableLibraryQuestions: libraryQuestionsMetadata =>
       dispatch(resetAvailableLibraryQuestions(libraryQuestionsMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
