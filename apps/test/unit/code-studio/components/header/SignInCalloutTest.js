@@ -15,12 +15,17 @@ describe('ViewPopup', () => {
   it('hides when dismissed', () => {
     wrapper.setProps(CalloutProps); // force a re-render
     expect(wrapper.find('div.modal-backdrop').exists()).to.be.true;
-    wrapper.setProps(CookieProps); // should have now switched to false
+    wrapper.setState({showCallout: false});
     expect(wrapper.find('div.modal-backdrop').exists()).to.be.false;
   });
 
   it('hides when cookies are set', () => {
     wrapper.setProps(CookieProps);
     expect(wrapper.find('div.modal-backdrop').exists()).to.be.false;
+  });
+
+  it('displays the correct background darkness', () => {
+    wrapper.setState({showCallout: true});
+    expect(wrapper.html().includes('opacity:0.5')).to.be.true;
   });
 });
