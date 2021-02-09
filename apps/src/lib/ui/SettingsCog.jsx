@@ -46,7 +46,7 @@ class SettingsCog extends Component {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
-    autogenerateML: PropTypes.func.isRequired
+    autogenerateML: PropTypes.func
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in

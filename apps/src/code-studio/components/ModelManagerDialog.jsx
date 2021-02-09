@@ -8,7 +8,7 @@ export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    autogenerateML: PropTypes.func.isRequired
+    autogenerateML: PropTypes.func
   };
 
   state = {
