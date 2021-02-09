@@ -192,11 +192,8 @@ class FoormLibrarySaveBar extends Component {
       });
   };
 
-  isLibraryQuestionNameValid = () => {
-    return (
-      this.state.libraryQuestionName &&
-      this.state.libraryQuestionName.match('^[a-z0-9_]+$')
-    );
+  isNameValid = name => {
+    return name && name.match('^[a-z0-9_]+$');
   };
 
   saveNewLibraryQuestion = () => {
@@ -283,10 +280,38 @@ class FoormLibrarySaveBar extends Component {
     );
   }
 
+  showNameError = () =>
+    (this.state.libraryQuestionName &&
+      !this.isNameValid(this.state.libraryQuestionName)) ||
+    (this.state.libraryName && !this.isNameValid(this.state.libraryName));
+
+  disableSaveNewLibraryQuestion = () => {
+    // disable if invalid name for library question
+    if (this.showNameError()) {
+      return true;
+    }
+
+    // for existing library, library question name is all that is required
+    if (this.props.libraryId && !this.state.libraryQuestionName) {
+      return true;
+    }
+
+    // for new library, need library name, category, and a library question name
+    if (
+      !this.props.libraryId &&
+      !(
+        this.state.libraryName &&
+        this.state.libraryCategory &&
+        this.state.libraryQuestionName
+      )
+    ) {
+      return true;
+    }
+
+    return false;
+  };
+
   renderNewLibraryQuestionSaveModal = () => {
-    // need to fix extremely complicated disable submit button logic
-    const showLibraryQuestionNameError =
-      this.state.libraryQuestionName && !this.isLibraryQuestionNameValid();
     return (
       <Modal
         show={this.state.showNewLibraryQuestionSave}
@@ -351,12 +376,12 @@ class FoormLibrarySaveBar extends Component {
               }
             />
           </FormGroup>
-          {showLibraryQuestionNameError && (
+          {this.showNameError() && (
             <div>
-              <span style={styles.warning}>Error: </span> Library question name
-              is invalid. Library question names must be all lowercase letters
-              (numbers allowed) with underscores to separate words (such as
-              example_library_question_name).
+              <span style={styles.warning}>Error: </span> Library or library
+              question name is invalid. Library and library question names must
+              be all lowercase letters (numbers allowed) with underscores to
+              separate words (such as example_library_question_name).
             </div>
           )}
         </Modal.Body>
@@ -364,16 +389,7 @@ class FoormLibrarySaveBar extends Component {
           <Button
             bsStyle="primary"
             onClick={this.saveNewLibraryQuestion}
-            disabled={
-              (!!this.props.libraryId && !this.state.libraryQuestionName) ||
-              (!this.props.libraryId &&
-                !(
-                  this.state.libraryName &&
-                  this.state.libraryCategory &&
-                  this.state.libraryQuestionName
-                )) ||
-              showLibraryQuestionNameError
-            }
+            disabled={this.disableSaveNewLibraryQuestion()}
           >
             Save Library Question
           </Button>
