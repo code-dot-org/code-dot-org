@@ -305,7 +305,7 @@ img.video_thumbnail {
   }
 
   .user_menu, .create_menu, .help_button {
-    margin-top: 6px !important;
+    margin-top: 6px;
     .create_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
