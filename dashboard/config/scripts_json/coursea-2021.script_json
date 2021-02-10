@@ -1038,7 +1038,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "10660ca3-5263-479f-a685-3e067185468a",
@@ -1051,8 +1051,6 @@
       "key": "2be23862-c873-40bc-82dc-7b665f287772",
       "position": 4,
       "properties": {
-        "name": "Assessment",
-        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "2be23862-c873-40bc-82dc-7b665f287772",
@@ -1379,7 +1377,7 @@
       "key": "e2b3e229-08fd-47a4-9f9b-6c32f6c6406c",
       "position": 1,
       "properties": {
-        "description": "###Rhyme With That - (20-30 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) **Computer Science + English Language Arts**\n\n[**Rhyme With That**](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#). Rhyme With That is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will use the computer mouse to drag and drop a letter to form CVC words, match rhyming words and count.\n\n**Standards Addressed:** \n\n- **CCSS.ELA-LITERACY.RF.K.2.A:** Recognize and produce rhyming words.\n- **CCSS.ELA-LITERACY.RF.K.2.D:** Isolate and pronounce the initial, medial vowel, and final sounds (phonemes) in three-phoneme (consonant-vowel-consonant, or CVC) words.1 (This does not include CVCs ending with /l/, /r/, or /x/.)\n- **CCSS.MATH.CONTENT.K.CC.B.5:** Count to answer \"how many?\" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects."
+        "description": "###Rhyme With That - (20-30 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png)  **Computer Science + English Language Arts + Math**\n\n[**Rhyme With That**](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#). Rhyme With That is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will use the computer mouse to drag and drop a letter to form CVC words, match rhyming words and count.\n\n**Standards Addressed:** \n\n- **CCSS.ELA-LITERACY.RF.K.2.A:** Recognize and produce rhyming words.\n- **CCSS.ELA-LITERACY.RF.K.2.D:** Isolate and pronounce the initial, medial vowel, and final sounds (phonemes) in three-phoneme (consonant-vowel-consonant, or CVC) words.1 (This does not include CVCs ending with /l/, /r/, or /x/.)\n- **CCSS.MATH.CONTENT.K.CC.B.5:** Count to answer \"how many?\" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects."
       },
       "seeding_key": {
         "activity_section.key": "e2b3e229-08fd-47a4-9f9b-6c32f6c6406c",
@@ -1605,7 +1603,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png)\r\n\r\nLet students know that they will see those letters in their online programs next to the direction arrows.  \r\n"
+            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
         ],
         "name": "The Unplugged Foundation"
@@ -1955,7 +1953,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png)\r\n\r\nLet students know that they will see those letters in their online programs next to the direction arrows.  \r\n"
+            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
         ],
         "name": "Review Unplugged Activity\r"
@@ -2158,7 +2156,7 @@
       "key": "2ad0c170-bdf8-4e67-8334-92bba6011a60",
       "position": 1,
       "properties": {
-        "description": "###Help Your Sunflower Grow (90-120 minutes)###\n![](https://curriculum.code.org/media/uploads/elaSmall.png) **Computer Science + English Language Arts**\n\n[Help Your Sunflower Grow](https://docs.google.com/document/d/1gEVKhBT8LJgQHGKrS-JwWOULvI47oibdxHQhPEAdvAg/edit#heading=h.gv7mjyc3j59j)  is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will practice sequencing using tangible cards. \n\n*Standards Addressed:*\n\n- **NGSS K.LS.1** Use observations to describe patterns of what plants and animals (including humans) need to survive.\n\n- **CCSS.MATH.CONTENT.K.CC.B.4.A** When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.\n- **CCSS.MATH.CONTENT.K.G.A.1** Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.\n\n- **CCSS.ELA-LITERACY.L.K.4.A** Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on kindergarten reading and content.\n"
+        "description": "###Help Your Sunflower Grow (90-120 minutes)###\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Help Your Sunflower Grow](https://docs.google.com/document/d/1gEVKhBT8LJgQHGKrS-JwWOULvI47oibdxHQhPEAdvAg/edit#heading=h.gv7mjyc3j59j)  is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will practice sequencing using tangible cards. \n\n*Standards Addressed:*\n\n- **NGSS K.LS.1** Use observations to describe patterns of what plants and animals (including humans) need to survive.\n\n- **CCSS.MATH.CONTENT.K.CC.B.4.A** When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.\n- **CCSS.MATH.CONTENT.K.G.A.1** Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.\n\n- **CCSS.ELA-LITERACY.L.K.4.A** Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on kindergarten reading and content.\n"
       },
       "seeding_key": {
         "activity_section.key": "2ad0c170-bdf8-4e67-8334-92bba6011a60",
@@ -2544,7 +2542,8 @@
       "position": 1,
       "properties": {
         "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- Why do we need to be able to handle events in a program?\n- What are some other kinds of events that you can think of?\n\n####Journal:####\n In their [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY), ask students to write and draw with the following questions in mind: \n\n- What was today’s lesson about?\n- Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
-        "name": "Reflection\r"
+        "name": "Reflection\r",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "40978575-9e16-4760-a200-0678f187ff4c",
@@ -2555,7 +2554,9 @@
       "key": "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5",
       "position": 1,
       "properties": {
-        "description": "**Distribute**: Hand out one **The Big Event - Assessment** to each student and allow them to complete it independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "\n**Distribute**: Hand out one **The Big Event - Assessment** to each student and allow them to complete it independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities.",
+        "name": "Assessment",
+        "duration": "5"
       },
       "seeding_key": {
         "activity_section.key": "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5",
