@@ -50,20 +50,20 @@ OptionParser.new do |opts|
     options[:retention_days] = retention_days
   end
 
-  opts.on('--end-id=1000000',
-    Integer,
-    'Id of last entry to clean up (exclusive). If both this and rentention_days ' \
-    'are specified, this value takes precedence.'
-  ) do |end_id|
-    options[:end_id] = end_id
-  end
-
-  opts.on('--start-id=1',
+  opts.on('--start-id=1234567',
     Integer,
     'Id of first entry to clean up (inclusive). If not specified, the script will ' \
     'determine where to start based on where the last run left off.'
   ) do |start_id|
     options[:start_id] = start_id
+  end
+
+  opts.on('--end-id=1234567',
+    Integer,
+    'Id of last entry to clean up (exclusive). If not specified, the script ' \
+    'will heruistically pick an end-id based on the retention period.'
+  ) do |end_id|
+    options[:end_id] = end_id
   end
 
   opts.on('--batch-limit=100',
