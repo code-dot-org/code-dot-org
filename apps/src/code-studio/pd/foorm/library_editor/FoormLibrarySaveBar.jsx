@@ -260,7 +260,6 @@ class FoormLibrarySaveBar extends Component {
       type: JSON.parse(libraryQuestion.question)['type']
     });
     this.props.setLibraryQuestionData({
-      published: libraryQuestion.published,
       name: libraryQuestion.question_name,
       id: libraryQuestion.id,
       question: updatedQuestion
