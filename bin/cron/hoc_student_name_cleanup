@@ -20,7 +20,7 @@ require 'optparse'
 CDO.log.info("Script started at #{Time.now}")
 
 HOC_ACTIVITY = PEGASUS_DB[:hoc_activity]
-START_ID_PROPERTY_KEY = "hoc_activity.name_cleanup.start_id"
+START_ID_PROPERTY_KEY = "hoc_activity.name_cleanup.start_id".freeze
 
 # Parse options
 options = {
