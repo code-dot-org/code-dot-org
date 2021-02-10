@@ -10,7 +10,7 @@ import {createStore, wrapTable} from '../sectionProgressTestHelpers';
  * due to timeout while processing so much data. Set this value to `true` to
  * enable all the stories.
  */
-const INCLUDE_LARGE_STORIES = true;
+const INCLUDE_LARGE_STORIES = false;
 
 function buildSmallStories(component) {
   return [
