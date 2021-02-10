@@ -264,9 +264,16 @@ class ScriptEditor extends React.Component {
 
     if (this.state.weeklyInstructionalMinutes) {
       dataToSave.weekly_instructional_minutes =
-        parseInt(this.state.weeklyInstructionalMinutes) || 0;
+        parseInt(this.state.weeklyInstructionalMinutes) || null;
     }
-
+    if (dataToSave.show_calendar && !dataToSave.weekly_instructional_minutes) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide instructional minutes per week in Unit Calendar Settings.'
+      });
+      return;
+    }
     if (this.state.hasImportedLessonDescriptions) {
       dataToSave.stage_descriptions = this.state.lessonDescriptions;
     }
