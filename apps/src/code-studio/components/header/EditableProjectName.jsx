@@ -44,7 +44,7 @@ class UnconnectedDisplayProjectName extends React.Component {
         </div>
         <button
           type="button"
-          className="project_edit header_button header_button_light"
+          className="project_edit header_button header_button_light no-mc"
           style={styles.buttonSpacing}
           onClick={this.props.beginEdit}
         >
@@ -124,7 +124,7 @@ class UnconnectedEditProjectName extends React.Component {
         </div>
         <button
           type="button"
-          className="project_save header_button header_button_light"
+          className="project_save header_button header_button_light no-mc"
           onClick={this.saveNameChange}
           disabled={this.state.savingName}
           style={styles.buttonSpacing}
