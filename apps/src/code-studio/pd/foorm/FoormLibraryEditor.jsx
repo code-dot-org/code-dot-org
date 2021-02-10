@@ -52,10 +52,9 @@ class FoormLibraryEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    // how is formKey being used??
     this.state = {
       livePreviewStatus: PREVIEW_ON,
-      formKey: 0,
+      libraryQuestionKey: 0,
       libraryQuestionPreviewQuestion: this.props.libraryQuestion,
       num_facilitators: 2,
       workshop_course: 'CS Principles',
@@ -129,7 +128,7 @@ class FoormLibraryEditor extends React.Component {
     function() {
       this.setState({
         libraryQuestionPreviewQuestion: this.props.libraryQuestion,
-        formKey: this.state.formKey + 1,
+        libraryQuestionKey: this.state.libraryQuestionKey + 1,
         libraryError: false,
         libraryErrorMessage: null
       });
@@ -273,7 +272,7 @@ class FoormLibraryEditor extends React.Component {
                 libraryQuestionPreviewQuestion={
                   this.state.libraryQuestionPreviewQuestion
                 }
-                formKey={this.state.formKey}
+                libraryQuestionKey={this.state.libraryQuestionKey}
                 surveyData={{
                   facilitators: this.state.facilitators,
                   num_facilitators: this.state.num_facilitators,
