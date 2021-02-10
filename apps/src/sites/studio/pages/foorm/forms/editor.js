@@ -15,7 +15,6 @@ import 'survey-react/survey.css';
 
 let codeMirror = null;
 
-// Should I rename foorm store? Or put library question store under foorm store?
 $(document).ready(function() {
   registerReducers({foorm});
   const store = getStore();
