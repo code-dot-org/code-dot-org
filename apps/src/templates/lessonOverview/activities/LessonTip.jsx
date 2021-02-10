@@ -8,12 +8,13 @@ import Radium from 'radium';
 
 const styles = {
   tab: {
+    // borders everywhere except the bottom
+    borderStyle: 'solid solid none solid',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
+    borderWidth: 1,
     padding: '5px 10px',
-    width: 200,
-    borderStyle: 'solid',
-    borderWidth: 1
+    width: 200
   },
   box: {
     borderStyle: 'solid',
