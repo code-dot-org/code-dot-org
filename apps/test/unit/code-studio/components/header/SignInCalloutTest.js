@@ -1,14 +1,14 @@
 import React from 'react';
-import SignInCalloutLogic from '@cdo/apps/code-studio/components/header/SignInCalloutLogic';
+import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 
-const wrapper = shallow(<SignInCalloutLogic />);
+const wrapper = shallow(<SignInCalloutWrapper />);
 
 describe('ViewPopup', () => {
   it('displays the correct background darkness', () => {
-    wrapper.setState({showCallout: true});
+    wrapper.setState({hideCallout: false});
     expect(wrapper.html().includes('opacity:0.5')).to.be.true;
   });
 
