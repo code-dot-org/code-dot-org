@@ -5,3 +5,4 @@ description 'Great work so far! Choose your next activity. Complete as many as y
 
 sublevels
 level 'courseF_text_choice_title'
+level 'courseF_text_choice_color'
