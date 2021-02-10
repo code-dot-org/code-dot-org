@@ -46,7 +46,6 @@ export default class ProgressTableLevelIcon extends React.Component {
     return (
       <span
         style={{
-          ...progressStyles.inlineBlock,
           width: sublevelCount * progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH
         }}
       />
@@ -57,7 +56,10 @@ export default class ProgressTableLevelIcon extends React.Component {
     return (
       <span style={styles.container}>
         {this.props.levels.map(level => (
-          <span key={`${level.id}_${level.levelNumber}`}>
+          <span
+            key={`${level.id}_${level.levelNumber}`}
+            style={progressStyles.flexBetween}
+          >
             <LevelIcon icon={getIconForLevel(level, true)} />
             {level.sublevels &&
               this.renderSublevelSpace(level.sublevels.length)}
