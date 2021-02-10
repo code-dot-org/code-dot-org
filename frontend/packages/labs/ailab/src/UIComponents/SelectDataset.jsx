@@ -97,7 +97,7 @@ class SelectDataset extends Component {
     return (
       <div id="select-dataset" style={styles.panel}>
         <div style={styles.largeText}>Which dataset would you like to use?</div>
-        <form>
+        <form style={{overflow: "scroll"}}>
           <div style={styles.subPanel}>
             <div>Select a dataset from the collection</div>
 
@@ -132,7 +132,7 @@ class SelectDataset extends Component {
           </div>
         </form>
         {!specifiedDatasets && (
-          <div style={styles.subPanel}>
+          <div style={{...styles.subPanel, marginTop: 20}}>
             <div>or import a CSV File</div>
             <input
               className="csv-input"

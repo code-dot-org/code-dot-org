@@ -115,8 +115,18 @@ class Panels extends Component {
   render() {
     const { currentPanel, saveTrainedModel } = this.props;
 
+    const panelContainer = [
+      "selectTrainer",
+      "trainModel",
+      "results",
+      "predict",
+      "saveModel"
+    ].includes(currentPanel)
+      ? styles.panelContainerFullWidth
+      : styles.panelContainer;
+
     return (
-      <div style={styles.panelContainer}>
+      <div id="panel-container" style={panelContainer}>
         {currentPanel === "selectDataset" && <SelectDataset />}
         {currentPanel === "dataDisplay" && <DataDisplay />}
         {currentPanel === "selectTrainer" && <SelectTrainer />}

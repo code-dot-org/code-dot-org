@@ -20,69 +20,81 @@ class DataCard extends Component {
     return (
       <div id="data-card">
         {dataLength !== 0 && (
-          <div style={styles.validationMessagesLight}>
+          <div style={styles.rightPanel}>
+            <span style={styles.bold}>Name:</span>
+            &nbsp;
             {name}
             {card && (
               <div>
                 <div>
-                  Description:
+                  <span style={styles.bold}>Description:</span>
+                  &nbsp;
                   {metadata.card.description}
                 </div>
                 <div>
-                  Source:
+                  <span style={styles.bold}>Source:</span>
+                  &nbsp;
                   {metadata.card.source}
                 </div>
-                Columns:
+                <br />
+                <span style={styles.bold}>Columns:</span>
                 <div style={styles.subPanel}>
                   {metadata.fields.map(field => {
                     return (
                       <div key={field.id}>
-                        {field.id}:
+                        <span style={styles.bold}>{field.id}:</span>
+                        &nbsp;
                         {field.description}
                       </div>
                     );
                   })}
                 </div>
                 <div>
-                  Rows of data:
+                  <span style={styles.bold}>Rows of data:</span>
+                  &nbsp;
                   {dataLength}
                 </div>
 
+                <div>This data has been cleaned & prepared beforehand</div>
                 <div>
-                  This data has been cleaned & prepared beforehand
-                </div>
-                <div>
-                  This Data contains columns that can be used to identify a subgroup of people (for example: by age, by race, by gender, etc):
+                  This Data contains columns that can be used to identify a
+                  subgroup of people (for example: by age, by race, by gender,
+                  etc):
                 </div>
 
                 <div>
-                  Potential uses:
+                  <span style={styles.bold}>Potential uses:</span>
+                  &nbsp;
                   {metadata.card.context.potentialUses}
                 </div>
                 <div>
-                  Potential misuses:
+                  <span style={styles.bold}>Potential misuses:</span>
+                  &nbsp;
                   {metadata.card.context.potentialMisuses}
                 </div>
                 <div>
-                  Last updated:
+                  <span style={styles.bold}>Last updated:</span>
+                  &nbsp;
                   {metadata.card.lastUpdated}
                 </div>
               </div>
             )}
             {!card && dataLength > 0 && (
               <div>
-                Columns:
+                <br />
+                <span style={styles.bold}>Columns:</span>
                 <div style={styles.subPanel}>
                   {Object.keys(data[0]).map(key => {
                     return (
                       <div key={key}>
-                        {key}
+                        <span style={styles.bold}>{key}</span>
                       </div>
                     );
                   })}
                 </div>
                 <div>
-                  Rows of data:
+                  <span style={styles.bold}>Rows of data:</span>
+                  &nbsp;
                   {dataLength}
                 </div>
               </div>

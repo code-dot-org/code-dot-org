@@ -19,7 +19,12 @@ export const TestDataLocations = {
 
 export const styles = {
   app: {
-    userSelect: "none"
+    userSelect: "none",
+    height: "100%"
+  },
+
+  bold: {
+    fontFamily: '"Gotham 5r", sans-serif',
   },
 
   error: {
@@ -34,11 +39,23 @@ export const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     position: "relative",
     float: "left",
-    width: "70%"
+    width: "70%",
+    height: "100%"
+  },
+
+  panelContainerFullWidth: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    position: "relative",
+    float: "left",
+    width: "100%",
+    height: "100%"
   },
 
   bodyContainer: {
-    marginTop: 20
+    marginTop: 10,
+    height: "100%",
+    boxSizing: "border-box",
+    paddingBottom: 100
   },
 
   largeText: {
@@ -58,11 +75,15 @@ export const styles = {
 
   panel: {
     padding: 20,
-    backgroundColor: "rgb(230,230,230)",
+    backgroundColor: "white", // rgb(230,230,230)",
     borderRadius: 5,
     xwidth: "calc(70% - 100px)",
-    border: "solid 1px black",
-    overflow: "hidden"
+    //border: "solid 1px black",
+    overflow: "hidden",
+    height: "100%",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column"
   },
 
   panelContentLeft: {
@@ -74,8 +95,9 @@ export const styles = {
     padding: 15,
     backgroundColor: "rgb(180,180,180)",
     borderRadius: 5,
-    marginTop: 20,
-    border: "solid 1px white"
+    //marginTop: 20,
+    //border: "solid 1px white",
+    overflow: "hidden"
   },
 
   scrollContents: {
@@ -97,8 +119,8 @@ export const styles = {
     marginLeft: 10,
     width: "calc(30% - 20px)",
     padding: 20,
-    backgroundColor: "rgb(230,230,230)",
-    border: "solid 1px black",
+    backgroundColor: "white", // rgb(230,230,230)",
+    //border: "solid 1px black",
     borderRadius: 5,
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
@@ -108,9 +130,25 @@ export const styles = {
     position: "relative"
   },
 
+  rightPanel: {
+    float: "left",
+    marginLeft: 10,
+    width: "calc(30% - 20px)",
+    padding: 20,
+    backgroundColor: "white", // rgb(230,230,230)",
+    //border: "solid 1px black",
+    borderRadius: 5,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 18,
+    boxSizing: "border-box",
+    overflow: "scroll",
+    position: "relative",
+    fontSize: 13
+  },
+
   datasets: {
-    maxHeight: 300,
-    overflow: "scroll"
+    //maxHeight: 300,
+    //overflow: "scroll"
   },
 
   dataDisplayTable: {
@@ -120,7 +158,7 @@ export const styles = {
   },
 
   finePrint: {
-    maxHeight: 300,
+    //maxHeight: 300,
     overflow: "scroll",
     overflowWrap: "break-word",
     fontSize: 10,
@@ -128,7 +166,7 @@ export const styles = {
     boxSizing: "border-box",
     borderRadius: 5,
     backgroundColor: "rgb(180,180,180)",
-    border: "solid 1px white"
+    //border: "solid 1px white"
   },
 
   dataDisplayHeader: {
@@ -250,7 +288,7 @@ export const styles = {
   },
 
   navButton: {
-    backgroundColor: "black",
+    backgroundColor: "rgb(254, 190, 64)",
     color: "white",
     borderRadius: 5,
     fontSize: 24,

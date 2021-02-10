@@ -98,7 +98,7 @@ class DataDisplay extends Component {
     const { data, setCurrentColumn } = this.props;
 
     return (
-      <div id="data-display">
+      <div id="data-display" style={styles.panel}>
         {this.state.showSelectFeatures && (
           <SelectFeatures
             mode={this.state.showSelectFeatures}
@@ -126,10 +126,9 @@ class DataDisplay extends Component {
           {"."}
         </div>
         <br />
-        <div style={styles.panel}>
-          <div style={styles.largeText}>Imported Data</div>
+        <div style={styles.xxpanel} style={{overflow:"scroll"}}>
           {this.state.showRawData && (
-            <div>
+            <div >
               <div style={styles.finePrint}>
                 <table style={styles.dataDisplayTable}>
                   <thead>
