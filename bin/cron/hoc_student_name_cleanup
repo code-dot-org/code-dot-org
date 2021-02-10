@@ -75,8 +75,9 @@ OptionParser.new do |opts|
 
   opts.on('--sleep=100',
     Integer,
-    'Amount of time to sleep in milliseconds to sleep between batches. Defaults to ' \
-    '100 msecs if not specified.'
+    'Amount of time in milliseconds to sleep between batches. Higher values ' \
+    'will reduce the performance impact on the datbase. Defaults to 100 msecs ' \
+    'if not specified.'
   ) do |sleep_msecs|
     options[:sleep_msecs] = sleep_msecs
   end
