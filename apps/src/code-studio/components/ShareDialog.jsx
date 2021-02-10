@@ -21,6 +21,8 @@ class ShareDialog extends Component {
       allowSignedOutShare,
       ...otherProps
     } = this.props;
+
+    console.log('this.props', this.props);
     // If we're on a project level (i.e. /projects/appname), always show signed
     // in version of the dialog
 
