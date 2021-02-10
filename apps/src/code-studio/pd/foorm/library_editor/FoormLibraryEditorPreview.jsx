@@ -20,7 +20,7 @@ class FoormLibraryEditorPreview extends Component {
     libraryError: PropTypes.bool,
     libraryErrorMessage: PropTypes.string,
     libraryQuestionPreviewQuestion: PropTypes.object,
-    formKey: PropTypes.number,
+    libraryQuestionKey: PropTypes.number,
     surveyData: PropTypes.object,
 
     // Populated by Redux
@@ -40,8 +40,8 @@ class FoormLibraryEditorPreview extends Component {
           {this.props.libraryQuestionHasError && (
             <div style={styles.errorMessage}>
               <FontAwesome icon="exclamation-triangle" /> There is a parsing
-              error in the survey configuration. Errors are noted on the left
-              side of the editor.
+              error in the library question configuration. Errors are noted on
+              the left side of the editor.
             </div>
           )}
           {this.props.libraryError && (
@@ -61,7 +61,7 @@ class FoormLibraryEditorPreview extends Component {
                 formName={'preview'}
                 formVersion={0}
                 submitApi={'/none'}
-                key={`form-${this.props.formKey}`}
+                key={`form-${this.props.libraryQuestionKey}`}
                 surveyData={this.props.surveyData}
                 inEditorMode={true}
               />

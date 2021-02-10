@@ -226,9 +226,8 @@ class FoormLibrarySaveBar extends Component {
           showNewLibraryQuestionSave: false
         });
 
-        // need to set current library ID in redux to whatever is returned
-        // this is handled in handleSaveSuccess in form editor
-        // need to fix this to not create duplicates
+        // Since library is new, add to list of options
+        // and set as currently selected library.
         this.props.addAvailableLibrary({
           name: library.name,
           version: library.version,
@@ -250,10 +249,9 @@ class FoormLibrarySaveBar extends Component {
     });
     this.props.setLastSaved(Date.now());
     const updatedQuestion = JSON.parse(libraryQuestion.question);
-    // reset code mirror with returned questions (may have added published state)
+    // reset code mirror with returned questions (may have added question name)
     this.props.resetCodeMirror(updatedQuestion);
     // update store with library question data.
-    // need to fix this to not create duplicates
     this.props.addAvailableLibraryQuestion({
       id: libraryQuestion['id'],
       name: libraryQuestion['question_name'],
