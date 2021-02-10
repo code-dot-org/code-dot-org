@@ -11,8 +11,8 @@
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
       ],
-      "peer_reviews_to_complete": 0,
-      "pilot_experiment": "contagion-pilot"
+      "pilot_experiment": "contagion-pilot",
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -249,7 +249,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Collecting Data",
+        "progression": "Model 1",
         "level_keys": [
           "contagion_data"
         ]
@@ -324,7 +324,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Recovery",
+        "progression": "Model 2: Recovery",
         "level_keys": [
           "contagion_recovery"
         ]
@@ -374,6 +374,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Model 3",
+        "level_keys": [
+          "contagion_modify_chance"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_modify_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_modify_chance"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Vaccines",
         "level_keys": [
           "contagion_vaccine"
@@ -394,7 +419,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -524,6 +549,17 @@
         "level.key": "contagion_chance",
         "script_level.level_keys": [
           "contagion_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_modify_chance",
+        "script_level.level_keys": [
+          "contagion_modify_chance"
         ],
         "lesson.key": "modifying your model",
         "lesson_group.key": "contagion",
