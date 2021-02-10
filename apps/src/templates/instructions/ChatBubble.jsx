@@ -5,6 +5,7 @@ import Radium from 'radium';
 import ChatBubbleTip from './ChatBubbleTip';
 import {shouldDisplayChatTips} from './utils';
 import InlineAudio from './InlineAudio';
+import ReadInstructionsDialog from './ReadInstructionsDialog';
 
 const styles = {
   container: {
@@ -84,6 +85,7 @@ const ChatBubble = ({
           <InlineAudio src={ttsUrl} message={ttsMessage} style={audioStyle} />
         </div>
       )}
+      <ReadInstructionsDialog />
     </div>
   );
 };
