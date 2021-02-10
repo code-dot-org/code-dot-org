@@ -18,7 +18,7 @@
   should_show_create_menu = !level || level.try(:is_project_level)
 
 - if should_show_create_menu
-  %button.header_button.create_menu
+  %button.header_button.create_menu.no-mc
     %span.create_button
       = I18n.t("#{loc_prefix}create")
     &nbsp;
