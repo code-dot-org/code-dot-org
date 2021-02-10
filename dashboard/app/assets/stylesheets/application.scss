@@ -284,8 +284,28 @@ img.video_thumbnail {
     }
   }
 
+  .user_menu, .create_menu {
+    box-shadow: none;
+    -moz-border-image: none !important;
+    -webkit-border-image: none !important;
+    -o-border-image: none !important;
+    border-image: none !important;
+    border-width: 0 !important;
+    text-shadow: none !important;
+    color: $white !important;
+    font-size: 14px !important;
+    font-family: "Gotham 4r", sans-serif !important;
+    border: 2px solid $white !important;
+    // button:active in this file uses !important for a styling scheme that doesn't
+    // match this button. We use !important here to override that scheme for only this
+    // specific button.
+    &:active {
+      border: 2px solid $white !important;
+    }
+  }
+
   .user_menu, .create_menu, .help_button {
-    margin-top: 6px;
+    margin-top: 6px !important;
     .create_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
