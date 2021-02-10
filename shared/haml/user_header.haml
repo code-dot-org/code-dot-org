@@ -18,7 +18,7 @@
   should_show_create_menu = !level || level.try(:is_project_level)
 
 - if should_show_create_menu
-  .header_button.create_menu
+  %button.header_button.create_menu.no-mc
     %span.create_button
       = I18n.t("#{loc_prefix}create")
     &nbsp;
@@ -148,12 +148,14 @@
           $('.create_options').slideDown();
           $('.create_menu_arrow_down').hide();
           $('.create_menu_arrow_up').show();
-          $(document).on('click', hideCreateOptions);
+          $(document).on('keypress click', hideCreateOptions);
           hideUserOptions()
           $("#hamburger-icon").removeClass('active');
           $("#help-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
           $('#help-button #help-contents').slideUp();
+        } else {
+          hideCreateOptions();
         }
       });
       $('.create_options').click(function (e) {
