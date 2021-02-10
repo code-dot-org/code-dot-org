@@ -21,10 +21,9 @@ export const setLibraryQuestion = libraryQuestion => ({
   libraryQuestion
 });
 
-// need to confirm shape of this object returned from controller
-// formData is an object in the format
-// {published: true/false, questions: {...questions...}}
-// where questions is a survey in surveyJS format.
+// libraryQuestionData is an object in the format
+// {name: 'a_question_name', question: {...questions...}}
+// where questions is a valid survey element in surveyJS format.
 export const setLibraryQuestionData = libraryQuestionData => ({
   type: SET_LIBRARY_QUESTION_DATA,
   libraryQuestionData
@@ -78,8 +77,6 @@ export const setLastSavedQuestion = libraryQuestion => ({
 // need to set available library questions redux state on load of library
 const initialState = {
   libraryQuestion: '',
-  isFormPublished: null,
-  hasError: false,
   libraryQuestionName: null,
   libraryQuestionId: null,
   libraryName: null,
@@ -87,6 +84,7 @@ const initialState = {
   libraryVersion: null,
   availableLibraries: [],
   availableLibraryQuestionsForCurrentLibrary: [],
+  hasError: false,
   saveError: null,
   lastSaved: null,
   lastSavedLibraryQuestion: ''
@@ -109,7 +107,6 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
     return {
       ...state,
       libraryQuestion: action.libraryQuestionData['question'],
-      isFormPublished: action.libraryQuestionData['published'],
       libraryQuestionName: action.libraryQuestionData['name'],
       libraryQuestionId: action.libraryQuestionData['id']
     };
@@ -137,22 +134,26 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
   }
   // do we want to merge instead of push (in case library already exists)
   if (action.type === ADD_AVAILABLE_LIBRARY) {
-    let newLibraryList = [...state.availableLibraries];
-    newLibraryList.push(action.libraryMetadata);
+    let updatedLibraries = mergeNewItem(
+      state.availableLibraries,
+      action.libraryMetadata
+    );
+
     return {
       ...state,
-      availableLibraries: newLibraryList
+      availableLibraries: updatedLibraries
     };
   }
   // do we want to merge instead of push (in case library question already exists)
   if (action.type === ADD_AVAILABLE_LIBRARY_QUESTION) {
-    let newLibraryQuestionList = [
-      ...state.availableLibraryQuestionsForCurrentLibrary
-    ];
-    newLibraryQuestionList.push(action.libraryQuestionMetadata);
+    let updatedLibraryQuestions = mergeNewItem(
+      state.availableLibraryQuestionsForCurrentLibrary,
+      action.libraryQuestionMetadata
+    );
+
     return {
       ...state,
-      availableLibraryQuestionsForCurrentLibrary: newLibraryQuestionList
+      availableLibraryQuestionsForCurrentLibrary: updatedLibraryQuestions
     };
   }
   if (action.type === SET_LAST_SAVED) {
@@ -175,4 +176,10 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
   }
 
   return state;
+}
+
+function mergeNewItem(oldItems, newItem) {
+  let unchangedItems = oldItems.filter(item => item['id'] !== newItem['id']);
+
+  return [...unchangedItems, newItem];
 }
