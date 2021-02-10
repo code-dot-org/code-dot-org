@@ -1,10 +1,10 @@
 import React from 'react';
-import SignInCallout from '@cdo/apps/code-studio/components/header/SignInCallout';
+import SignInCalloutLogic from '@cdo/apps/code-studio/components/header/SignInCalloutLogic';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 
-const wrapper = shallow(<SignInCallout />);
+const wrapper = shallow(<SignInCalloutLogic />);
 
 describe('ViewPopup', () => {
   it('displays the correct background darkness', () => {
@@ -12,8 +12,11 @@ describe('ViewPopup', () => {
     expect(wrapper.html().includes('opacity:0.5')).to.be.true;
   });
 
-  it('shows the correct header and body text', () => {
+  it('shows the correct header', () => {
     expect(wrapper.html().includes(i18n.notSignedInHeader())).to.be.true;
-    expect(wrapper.html().includes(i18n.notSignedInBody())).to.be.true;
+  });
+
+  it('shows the correct image', () => {
+    expect(wrapper.html().includes('user-not-signed-in.png')).to.be.true;
   });
 });

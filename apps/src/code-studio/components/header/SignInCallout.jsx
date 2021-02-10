@@ -1,14 +1,12 @@
 import React from 'react';
-import cookies from 'js-cookie';
 import i18n from '@cdo/locale';
+import PropTypes from 'prop-types';
 
 const CALLOUT_COLOR = '#454545';
 const TRIANGLE_BASE = 30;
 const TRIANGLE_HEIGHT = 15;
 const CALLOUT_Z_INDEX = 1040;
 const CALLOUT_TOP = 30;
-
-const HideSignInCallout = 'hide_signin_callout';
 
 const styles = {
   container: {
@@ -75,26 +73,14 @@ const styles = {
  * This component is injected into the page by src/code-studio/header.js.
  */
 export default class SignInCallout extends React.Component {
+  static propTypes = {
+    handleClose: PropTypes.func
+  };
+
   constructor(props) {
     super(props);
 
-    this.closeCallout = this.closeCallout.bind(this);
     this.getContent = this.getContent.bind(this);
-
-    // Using explicit strings: only show if neither says to hide
-    this.state = {
-      showCallout: !(
-        cookies.get(HideSignInCallout) === 'true' ||
-        sessionStorage.getItem(HideSignInCallout) === 'true'
-      )
-    };
-  }
-
-  closeCallout(event) {
-    this.setState({showCallout: false});
-    cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
-    sessionStorage.setItem(HideSignInCallout, 'true');
-    event.preventDefault();
   }
 
   getContent() {
@@ -113,20 +99,16 @@ export default class SignInCallout extends React.Component {
   }
 
   render() {
-    if (this.state.showCallout) {
-      return (
-        <div style={styles.container}>
-          <div
-            className="modal-backdrop"
-            style={styles.modalBackdrop}
-            onClick={this.closeCallout}
-          />
-          <div style={styles.upTriangle} />
-          <div style={styles.content}>{this.getContent()}</div>
-        </div>
-      );
-    } else {
-      return <div />;
-    }
+    return (
+      <div style={styles.container}>
+        <div
+          className="modal-backdrop"
+          style={styles.modalBackdrop}
+          onClick={this.props.handleClose}
+        />
+        <div style={styles.upTriangle} />
+        <div style={styles.content}>{this.getContent()}</div>
+      </div>
+    );
   }
 }
