@@ -224,6 +224,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Data Tracking: Model 1",
+        "level_keys": [
+          "contagion_data"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_data"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_data"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Slowing the Contagion with Masks",
         "level_keys": [
           "contagion_masks"
@@ -241,31 +266,6 @@
       },
       "level_keys": [
         "contagion_masks"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Model 1",
-        "level_keys": [
-          "contagion_data"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_data"
-        ],
-        "lesson.key": "contagion simulator setup",
-        "lesson_group.key": "contagion",
-        "script.name": "contagion-pilot"
-      },
-      "level_keys": [
-        "contagion_data"
       ]
     },
     {
@@ -491,9 +491,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "contagion_masks",
+        "level.key": "contagion_data",
         "script_level.level_keys": [
-          "contagion_masks"
+          "contagion_data"
         ],
         "lesson.key": "contagion simulator setup",
         "lesson_group.key": "contagion",
@@ -502,9 +502,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "contagion_data",
+        "level.key": "contagion_masks",
         "script_level.level_keys": [
-          "contagion_data"
+          "contagion_masks"
         ],
         "lesson.key": "contagion simulator setup",
         "lesson_group.key": "contagion",
