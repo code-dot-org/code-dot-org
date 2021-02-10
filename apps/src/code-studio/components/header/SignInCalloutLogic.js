@@ -4,6 +4,8 @@ import SignInCallout from './SignInCallout';
 
 const HideSignInCallout = 'hide_signin_callout';
 
+// The use of both session storage and cookies is to check for 1 day
+// and 1 session, and display the callout again only once BOTH have passed.
 export default class SignInCalloutLogic extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +25,9 @@ export default class SignInCalloutLogic extends React.Component {
     event.preventDefault();
   }
 
+  // For readibility: returning an empty div here explicitly if the callout is
+  // not supposed to be displayed. This avoids using a render statement that
+  // often returns *nothing.
   render() {
     if (this.state.showCallout) {
       return (
