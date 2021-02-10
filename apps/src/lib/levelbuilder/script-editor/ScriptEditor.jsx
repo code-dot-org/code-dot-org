@@ -238,8 +238,9 @@ class ScriptEditor extends React.Component {
       });
       return;
     } else if (
-      this.state.showCalendar &&
-      parseInt(this.state.weeklyInstructionalMinutes) <= 0
+      (this.state.showCalendar &&
+        parseInt(this.state.weeklyInstructionalMinutes) <= 0) ||
+      isNaN(parseInt(this.state.weeklyInstructionalMinutes))
     ) {
       this.setState({
         isSaving: false,
