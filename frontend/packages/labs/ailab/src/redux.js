@@ -385,11 +385,12 @@ export function getSelectedCategoricalFeatures(state) {
   );
   return intersection;
 }
-
+// array of continuous column names i.e Age, Fare
 export function getSelectedContinuousColumns(state) {
   let intersection = getContinuousColumns(state).filter(
     x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
+  console.log('getSelectedContinusColumns: intersection variable', intersection)
   return intersection;
 }
 
@@ -397,6 +398,7 @@ export function getSelectedContinuousFeatures(state) {
   let intersection = getContinuousColumns(state).filter(x =>
     state.selectedFeatures.includes(x)
   );
+  console.log('getSelectedContinusFeatures', intersection)
   return intersection;
 }
 
@@ -446,12 +448,16 @@ export function getUniqueOptionsByColumn(state) {
   );
   return uniqueOptionsByColumn;
 }
-
+// everytime state changes this export function updates the property values
 export function getRangesByColumn(state) {
+  console.log('getRangesByColumn w/ STATE as arg', state)
   let rangesByColumn = {};
   getSelectedContinuousColumns(state).map(
     column => (rangesByColumn[column] = getRange(state, column))
+    // {Age: {max: 80, min: 0}}
   );
+  console.log('getRangesByColumn return value', rangesByColumn)
+  // returns the new obj with the continuous columns as keys and getRange objs as values
   return rangesByColumn;
 }
 
@@ -459,9 +465,10 @@ export function getRange(state, column) {
   let range = {};
   range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
   range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
+  console.log('getRange Function, Obj Returned', range)
   return range;
 }
-
+// find first value in array where the property value equals the value passed in
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
@@ -509,8 +516,11 @@ function getSum(total, num) {
 }
 
 function getAverageDiff(state) {
+  console.log("getAverDiff argument passed in", state)
   let diffs = [];
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  console.log("accuracyCheckPredictedLabels", state.accuracyCheckPredictedLabels)
+  console.log("numPredictedLabels", numPredictedLabels)
   for (let i = 0; i < numPredictedLabels; i++) {
     diffs.push(
       Math.abs(
@@ -518,10 +528,12 @@ function getAverageDiff(state) {
       )
     );
   }
+  console.log('getAveragefDif Return value', (diffs.reduce(getSum, 0) / numPredictedLabels).toFixed(2))
   return (diffs.reduce(getSum, 0) / numPredictedLabels).toFixed(2);
 }
 
-export function getAccuracy(state) {
+export function getAccuracyClassification(state) {
+  console.log("getAccuracy state", state)
   let numCorrect = 0;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
@@ -532,7 +544,15 @@ export function getAccuracy(state) {
       numCorrect++;
     }
   }
+  console.log("Number correct", numCorrect, "NumPredictedLabels", numPredictedLabels)
+  console.log('getAccuracy return value', ((numCorrect / numPredictedLabels) * 100).toFixed(2) )
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+}
+
+export function getAccuracyRegression(state) {
+  console.log('inside getAccuracyR Function')
+  let returnValue = getRange(state, state.labelColumn)
+  return getAverageDiff(state) / (returnValue.max - returnValue.min);
 }
 
 export function getSummaryStat(state) {
@@ -540,11 +560,11 @@ export function getSummaryStat(state) {
   const mlType = getMLType(state.selectedTrainer);
   if (mlType === MLTypes.REGRESSION) {
     summaryStat.type = MLTypes.REGRESSION;
-    summaryStat.stat = getAverageDiff(state);
+    summaryStat.stat = getAccuracyRegression(state);
   }
   if (mlType === MLTypes.CLASSIFICATION) {
     summaryStat.type = MLTypes.CLASSIFICATION;
-    summaryStat.stat = getAccuracy(state);
+    summaryStat.stat = getAccuracyClassification(state);
   }
   return summaryStat;
 }
