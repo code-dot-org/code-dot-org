@@ -35,6 +35,7 @@ level 'EnvelopeVariables-Unplugged_2021', progression: 'Video: Variables in Enve
 
 lesson 'lesson-2', display_name: 'Text and Prompts', has_lesson_plan: false
 level 'courseF_variables_predict', progression: 'Prediction'
+level 'courseF_pilotVideo_prompts', progression: 'Video: Text and Prompts'
 level 'courseF_text_review', progression: 'Skill Building'
 level 'courseF_text_print', progression: 'Skill Building'
 level 'courseF_text_events', progression: 'Skill Building'

@@ -298,7 +298,7 @@ class LessonsControllerTest < ActionController::TestCase
       post :update, params: {
         id: lesson.id,
         lesson: {name: lesson.name},
-        originalLessonData: {"name": "Not the name"}
+        originalLessonData: JSON.generate({"name": "Not the name"})
       }
     end
 
@@ -327,6 +327,66 @@ class LessonsControllerTest < ActionController::TestCase
       id: lesson.id,
       lesson: {name: lesson.name},
       originalLessonData: JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    }
+
+    assert_response :success
+  end
+
+  test 'can update if vocabulary content changes' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+    vocabulary = create :vocabulary, definition: 'original definition', lessons: [lesson]
+    original_lesson_data = JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    vocabulary.definition = 'updated definition'
+
+    post :update, params: {
+      id: lesson.id,
+      lesson: {name: lesson.name},
+      originalLessonData: original_lesson_data
+    }
+
+    assert_response :success
+  end
+
+  test 'can update if resource content changes' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+    resource = create :resource, url: 'original.url', lessons: [lesson]
+    original_lesson_data = JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    resource.url = 'updated.url'
+
+    post :update, params: {
+      id: lesson.id,
+      lesson: {name: lesson.name},
+      originalLessonData: original_lesson_data
     }
 
     assert_response :success
