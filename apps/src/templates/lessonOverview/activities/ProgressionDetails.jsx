@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import LevelDetailsDialog from './LevelDetailsDialog';
 
 const styles = {
   progressionBox: {
@@ -22,6 +23,10 @@ const styles = {
 export default class ProgressionDetails extends Component {
   static propTypes = {
     section: PropTypes.object
+  };
+
+  state = {
+    previewingLevel: null
   };
 
   convertScriptLevelForProgression = scriptLevel => {
@@ -52,15 +57,21 @@ export default class ProgressionDetails extends Component {
     const {section} = this.props;
 
     return (
-      <div style={styles.progressionBox}>
-        <ProgressLevelSet
-          name={section.progressionName}
-          levels={section.scriptLevels.map(scriptLevel =>
-            this.convertScriptLevelForProgression(scriptLevel)
-          )}
-          disabled={false}
-          selectedSectionId={null}
-        />
+      <div>
+        {this.state.previewingLevel && (
+          <LevelDetailsDialog level={this.state.previewingLevel} />
+        )}
+        <div style={styles.progressionBox}>
+          <ProgressLevelSet
+            name={section.progressionName}
+            levels={section.scriptLevels.map(scriptLevel =>
+              this.convertScriptLevelForProgression(scriptLevel)
+            )}
+            disabled={false}
+            selectedSectionId={null}
+            onBubbleClick={level => this.setState({previewingLevel: level})}
+          />
+        </div>
       </div>
     );
   }

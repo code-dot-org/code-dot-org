@@ -106,7 +106,8 @@ class ProgressBubble extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool
+    hideAssessmentIcon: PropTypes.bool,
+    onClick: PropTypes.func
   };
 
   static defaultProps = {
@@ -138,7 +139,8 @@ class ProgressBubble extends React.Component {
       currentLocation,
       lessonTrophyEnabled,
       pairingIconEnabled,
-      hideAssessmentIcon
+      hideAssessmentIcon,
+      onClick
     } = this.props;
 
     const levelIsAssessment = isLevelAssessment(level);
@@ -163,7 +165,7 @@ class ProgressBubble extends React.Component {
     };
 
     let href = '';
-    if (!disabled && url) {
+    if (!disabled && url && !onClick) {
       const queryParams = queryString.parse(currentLocation.search);
 
       if (selectedSectionId) {
@@ -274,6 +276,16 @@ class ProgressBubble extends React.Component {
               ? this.recordProgressTabProgressBubbleClick
               : null
           }
+        >
+          {bubble}
+        </a>
+      );
+    } else if (onClick) {
+      bubble = (
+        <a
+          style={{textDecoration: 'none'}}
+          className="uitest-ProgressBubble"
+          onClick={() => onClick(level)}
         >
           {bubble}
         </a>
