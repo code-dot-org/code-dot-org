@@ -57,32 +57,16 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
   }
 
-  // i'm not sure how I understand how this gets used...
-  // formNamesAndVersions is loaded on initialization of
-  // the page, so wouldn't get updated unless you
-  // reloaded the page?
-  componentDidUpdate(prevProps) {
-    if (
-      prevProps.libraryNamesAndVersions !== this.props.libraryNamesAndVersions
-    ) {
-      this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
-    }
-  }
-
   // could probably dedupe this method
   getFormattedConfigurationDropdownOptions() {
     return this.props.availableLibraries.map((libraryNameAndVersion, i) => {
       const libraryName = libraryNameAndVersion['name'];
       const libraryVersion = libraryNameAndVersion['version'];
 
-      return (
-        <MenuItem
-          key={i}
-          eventKey={i}
-          onClick={() => this.loadLibraryQuestions(libraryNameAndVersion)}
-        >
-          {`${libraryName}, version ${libraryVersion}`}
-        </MenuItem>
+      return this.getMenuItem(
+        () => this.loadLibraryQuestions(libraryNameAndVersion),
+        `${libraryName}, version ${libraryVersion}`,
+        i
       );
     });
   }
@@ -93,18 +77,23 @@ class FoormLibraryEditorManager extends React.Component {
         const libraryQuestionName = libraryQuestionAndType['name'];
         const libraryQuestionType = libraryQuestionAndType['type'];
         const libraryQuestionId = libraryQuestionAndType['id'];
-        return (
-          <MenuItem
-            key={i}
-            eventKey={i}
-            onClick={() => this.loadLibraryContents(libraryQuestionId)}
-          >
-            {`${libraryQuestionName} (${libraryQuestionType})`}
-          </MenuItem>
+
+        return this.getMenuItem(
+          () => this.loadLibraryQuestionContent(libraryQuestionId),
+          `${libraryQuestionName} (${libraryQuestionType})`,
+          i
         );
       }
     );
   }
+
+  getMenuItem = (clickHandler, textToDisplay, key) => {
+    return (
+      <MenuItem key={key} eventKey={key} onClick={clickHandler}>
+        {textToDisplay}
+      </MenuItem>
+    );
+  };
 
   loadLibraryQuestions(selectedLibraryNameAndVersion) {
     let libraryId = selectedLibraryNameAndVersion['id'];
@@ -112,6 +101,11 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     this.props.setLibraryData(selectedLibraryNameAndVersion);
+    this.updateLibraryQuestionData({
+      question: {},
+      name: null,
+      id: null
+    });
 
     $.ajax({
       url: `/foorm/libraries/${libraryId}/question_names`,
@@ -125,16 +119,13 @@ class FoormLibraryEditorManager extends React.Component {
         });
       })
       .fail(() => {
-        // setHasError(true) wasn't in fail handler for loadconfiguration, look into why
-        this.props.setHasError(true);
         this.setState({
           hasLoadError: true
         });
       });
   }
 
-  // Need better name here
-  loadLibraryContents(libraryQuestionId) {
+  loadLibraryQuestionContent(libraryQuestionId) {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
@@ -149,22 +140,27 @@ class FoormLibraryEditorManager extends React.Component {
         });
       })
       .fail(() => {
-        // need to fix this
-        this.updateFormData({
-          questions: {},
-          published: null,
-          formName: null,
-          formVersion: null,
-          formId: null
+        this.updateLibraryQuestionData({
+          question: {},
+          name: null,
+          id: null
         });
-        // remove selectedLibraryId from here?
         this.setState({
           showCodeMirror: true,
-          hasLoadError: true,
-          selectedLibraryId: null
+          hasLoadError: true
         });
       });
   }
+
+  initializeNewLibrary = () => {
+    this.props.resetAvailableLibraryQuestions([]);
+    this.props.setLibraryData({
+      name: null,
+      version: null,
+      id: null
+    });
+    this.initializeEmptyCodeMirror();
+  };
 
   initializeEmptyCodeMirror = () => {
     this.props.setLastSaved(null);
@@ -219,7 +215,7 @@ class FoormLibraryEditorManager extends React.Component {
           >
             {this.getFormattedConfigurationDropdownOptions()}
           </DropdownButton>
-          <Button onClick={this.initializeEmptyCodeMirror} className="btn">
+          <Button onClick={this.initializeNewLibrary} className="btn">
             New Library
           </Button>
         </div>
@@ -242,7 +238,9 @@ class FoormLibraryEditorManager extends React.Component {
           </Button>
         </div>
         {this.state.hasLoadError && (
-          <div style={styles.loadError}>Could not load the selected form.</div>
+          <div style={styles.loadError}>
+            Could not load the selected library or library question.
+          </div>
         )}
         {this.state.showCodeMirror && (
           <FoormLibraryEditor
