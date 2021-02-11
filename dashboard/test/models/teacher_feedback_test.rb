@@ -179,4 +179,12 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
       assert_equal datetime2, feedback.student_last_visited_at
     end
   end
+
+  test 'get_script_level finds level in script' do
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.levels.first
+    feedback = create :teacher_feedback, script: script, level: level
+    assert_equal script_level, feedback.get_script_level
+  end
 end
