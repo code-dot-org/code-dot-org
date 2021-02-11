@@ -44,7 +44,17 @@ class TeacherFeedback < ApplicationRecord
   # Finds the script level associated with this object, using script id and
   # level id.
   def get_script_level
-    level.script_levels.find {|sl| sl.script_id == script_id}
+    script_level = level.script_levels.find {|sl| sl.script_id == script_id}
+    return script_level if script_level
+
+    # This will be somewhat expensive, but will only be executed for feedbacks
+    # which were are associated with a Bubble Choice sublevel.
+    bubble_choice_levels = script.levels.where(type: 'BubbleChoice').all
+    parent_level = bubble_choice_levels.find {|bc| bc.sublevels.include?(level)}
+
+    script_level = parent_level.script_levels.find {|sl| sl.script_id == script_id}
+    raise "no script level found for teacher feedback #{id}" unless script_level
+    script_level
   end
 
   def self.get_student_level_feedback(student_id, level_id, teacher_id)

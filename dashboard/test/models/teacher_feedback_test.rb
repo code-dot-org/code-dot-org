@@ -187,4 +187,28 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     feedback = create :teacher_feedback, script: script, level: level
     assert_equal script_level, feedback.get_script_level
   end
+
+  test 'get_script_level finds bubble choice parent level' do
+    parent_level = create :bubble_choice_level, :with_sublevels
+    child_level = parent_level.sublevels.first
+
+    # Create these intermediate rungs of the hierarchy, so that script_level
+    # will show up in script.script_levels.
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    script_level = create :script_level, script: script, lesson: lesson, levels: [parent_level]
+
+    # HACK: we have to supply a script_level, because it is still a required field.
+    # According to existing validations, it has to be a script level in this script.
+    # However, we don't want to pass script_level itself, because in theory
+    # get_script_level could "cheat" and just return that value. Therefore, create
+    # a new script level within the same script as a way to prevent cheating and
+    # still pass validations.
+    # TODO: remove this hack once script_level is no longer required.
+    other_script_level = create :script_level, script: script, lesson: lesson, levels: [create(:level)]
+
+    feedback = create :teacher_feedback, script: script, level: child_level, script_level: other_script_level
+    assert_equal script_level, feedback.get_script_level
+  end
 end
