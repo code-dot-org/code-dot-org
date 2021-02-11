@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 const styles = {
@@ -14,20 +15,30 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif'
   },
   assessment: {
-    border: '2px solid rgb(118, 101, 160)'
+    border: '2px solid rgb(118, 101, 160)',
+    ':hover': {
+      border: '2px solid rgb(118, 101, 160)',
+      backgroundColor: 'rgb(118, 101, 160)',
+      color: 'white'
+    }
   },
   assessmentHover: {
-    border: '2px solid rgb(118, 101, 160)',
-    backgroundColor: 'rgb(118, 101, 160)',
-    color: 'white'
+    // border: '2px solid rgb(118, 101, 160)',
+    // backgroundColor: 'rgb(118, 101, 160)',
+    // color: 'white'
   },
   instructional: {
-    border: '2px solid #00adbc'
+    border: '2px solid #00adbc',
+    ':hover': {
+      border: '2px solid #00adbc',
+      backgroundColor: '#00adbc',
+      color: 'white'
+    }
   },
   instructionalHover: {
-    border: '2px solid #00adbc',
-    backgroundColor: '#00adbc',
-    color: 'white'
+    // border: '2px solid #00adbc',
+    // backgroundColor: '#00adbc',
+    // color: 'white'
   },
   isNotStart: {
     borderLeftStyle: 'dashed'
@@ -51,7 +62,7 @@ const styles = {
   }
 };
 
-export default class UnitCalendarLessonChunk extends Component {
+class UnitCalendarLessonChunk extends Component {
   static propTypes = {
     minuteWidth: PropTypes.number.isRequired,
     lesson: unitCalendarLessonChunk,
@@ -59,13 +70,10 @@ export default class UnitCalendarLessonChunk extends Component {
     handleHover: PropTypes.func.isRequired
   };
   handleMouseEnter = () => {
-    this.props.handleHover(this.props.lesson.id);
+    //this.props.handleHover(this.props.lesson.id);
   };
   handleMouseOut = () => {
-    this.props.handleHover('');
-  };
-  ignoreChildMouseMouvement = event => {
-    event.stopPropagation();
+    //this.props.handleHover('');
   };
 
   render() {
@@ -140,3 +148,5 @@ export default class UnitCalendarLessonChunk extends Component {
     );
   }
 }
+
+export default Radium(UnitCalendarLessonChunk);
