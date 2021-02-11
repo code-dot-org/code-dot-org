@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 const styles = {
@@ -14,20 +15,30 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif'
   },
   assessment: {
-    border: '2px solid rgb(118, 101, 160)'
+    border: '2px solid rgb(118, 101, 160)',
+    ':hover': {
+      border: '2px solid rgb(118, 101, 160)',
+      backgroundColor: 'rgb(118, 101, 160)',
+      color: 'white'
+    }
   },
   assessmentHover: {
-    border: '2px solid rgb(118, 101, 160)',
-    backgroundColor: 'rgb(118, 101, 160)',
-    color: 'white'
+    // border: '2px solid rgb(118, 101, 160)',
+    // backgroundColor: 'rgb(118, 101, 160)',
+    // color: 'white'
   },
   instructional: {
-    border: '2px solid #00adbc'
+    border: '2px solid #00adbc',
+    ':hover': {
+      border: '2px solid #00adbc',
+      backgroundColor: '#00adbc',
+      color: 'white'
+    }
   },
   instructionalHover: {
-    border: '2px solid #00adbc',
-    backgroundColor: '#00adbc',
-    color: 'white'
+    // border: '2px solid #00adbc',
+    // backgroundColor: '#00adbc',
+    // color: 'white'
   },
   isNotStart: {
     borderLeftStyle: 'dashed'
@@ -48,10 +59,16 @@ const styles = {
     paddingTop: 2,
     paddingBottom: 2,
     boxSizing: 'border-box'
+  },
+  assessmentIcon: {
+    color: 'rgb(118, 101, 160)',
+    ':hover': {
+      color: 'white'
+    }
   }
 };
 
-export default class UnitCalendarLessonChunk extends Component {
+class UnitCalendarLessonChunk extends Component {
   static propTypes = {
     minuteWidth: PropTypes.number.isRequired,
     lesson: unitCalendarLessonChunk,
@@ -59,13 +76,10 @@ export default class UnitCalendarLessonChunk extends Component {
     handleHover: PropTypes.func.isRequired
   };
   handleMouseEnter = () => {
-    this.props.handleHover(this.props.lesson.id);
+    //this.props.handleHover(this.props.lesson.id);
   };
   handleMouseOut = () => {
-    this.props.handleHover('');
-  };
-  ignoreChildMouseMouvement = event => {
-    event.stopPropagation();
+    //this.props.handleHover('');
   };
 
   render() {
@@ -99,6 +113,7 @@ export default class UnitCalendarLessonChunk extends Component {
     if (!isEnd) {
       thisStyle = {...thisStyle, ...styles.isNotEnd};
     }
+    console.log(Radium.getState());
     return (
       <a
         style={thisStyle}
@@ -110,6 +125,7 @@ export default class UnitCalendarLessonChunk extends Component {
       >
         {isMajority && (
           <div
+            key={`lesson-${this.props.lesson.id}`}
             style={styles.iconSection}
             onMouseEnter={this.handleMouseEnter}
             onMouseOut={this.handleMouseOut}
@@ -117,7 +133,7 @@ export default class UnitCalendarLessonChunk extends Component {
             <i
               className="fa fa-check-circle"
               style={{
-                color: this.props.isHover ? 'white' : 'rgb(118, 101, 160)',
+                ...styles.assessmentIcon,
                 visibility: assessment ? 'visible' : 'hidden'
               }}
             />
@@ -140,3 +156,5 @@ export default class UnitCalendarLessonChunk extends Component {
     );
   }
 }
+
+export default Radium(UnitCalendarLessonChunk);
