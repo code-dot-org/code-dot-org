@@ -35,6 +35,7 @@
       "name": "my lesson",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },

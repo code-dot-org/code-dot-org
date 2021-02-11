@@ -1,0 +1,81 @@
+name 'ml-model card-template'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Model Card
+
+**Name:**
+
+**Description:**
+
+**Date:**
+
+## Label
+
+::: details [**Click to Expand**]
+| Name | Type | Description | Possible Values |
+|----------|-------------|--------------------------------------------|---------|
+| Priority | Categorical | How quickly the patient received treatment | Bullets |
+:::
+
+## Features
+
+::: details [**Click to Expand**]
+| Name | Type | Description | Possible Values |
+|----------|-------------|--------------------------------------------|---------|
+| Name | Type | Description | Possible Values |
+| Name | Type | Description | Possible Values |
+| Name | Type | Description | Possible Values |
+| Name | Type | Description | Possible Values |
+
+:::
+
+## Training Information
+
+::: details [**Click to Expand**]
+
+<br />
+
+**Model Accuracy:**
+
+**Dataset Size:**
+
+**Testing Data:**
+
+:::
+
+## Potential Uses
+
+::: details [**Click to Expand**]
+
+**What was the intended use of this model?**
+
+**What are ways this model should not be used?**
+
+:::
+
+## Model Disclaimers
+
+::: details [**Click to Expand**]
+
+**Describe the dataset used to create this model:**
+
+**Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
+  - [ ] Yes
+  - [ ] No
+  
+**(If answer above was yes) Have we ensured accurate representation of each subgroup within the data? If you are not sure, select No**
+  - [ ] Yes
+  - [ ] No
+  
+**This model could be used to inform decisions central to human life:**
+  - [ ] Yes
+  - [ ] No
+  
+**The data has been cleaned & prepared before being used to train the model:**
+  - [ ] Yes
+  - [ ] No
+  
+:::
+MARKDOWN

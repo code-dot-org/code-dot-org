@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import React from 'react';
 import memoize from 'memoize-one';
 import * as shapes from '../shapes';
+import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {PromptType, popPrompt} from './spritelabInputModule';
 import * as coreLibrary from './coreLibrary';
 
@@ -63,11 +64,17 @@ const styles = {
     overflow: 'hidden',
     whiteSpace: 'nowrap'
   },
-  choiceSprite: {
-    margin: '0px 8px',
+  choiceSpriteContainer: {
+    padding: 0,
+    background: 'transparent',
+    border: '1px solid transparent'
+  },
+  choiceSpriteImage: {
+    margin: 0,
     height: 32,
     width: 32,
-    objectFit: 'contain'
+    objectFit: 'contain',
+    opacity: 1
   }
 };
 
@@ -82,7 +89,9 @@ class SpritelabInput extends React.Component {
         choices: PropTypes.arrayOf(PropTypes.string)
       })
     ).isRequired,
-    onPromptAnswer: PropTypes.func.isRequired
+    onPromptAnswer: PropTypes.func.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    isPaused: PropTypes.bool.isRequired
   };
 
   state = {
@@ -133,6 +142,7 @@ class SpritelabInput extends React.Component {
     const icon = this.state.collapsed ? 'angle-right' : 'angle-down';
     const numPrompts = this.props.inputList.length;
     const promptText = inputInfo.promptText;
+    const disabled = this.props.isPaused || !this.props.isRunning;
 
     let inputRow;
     switch (inputInfo.promptType) {
@@ -144,11 +154,13 @@ class SpritelabInput extends React.Component {
               type="text"
               onChange={event => this.setState({userInput: event.target.value})}
               value={this.state.userInput || ''}
+              disabled={disabled}
             />
             <button
               style={styles.submitButton}
               type="button"
               onClick={this.onTextSubmit}
+              disabled={disabled}
             >
               <i className="fa fa-check" />
             </button>
@@ -161,13 +173,19 @@ class SpritelabInput extends React.Component {
           <div style={styles.inputRow}>
             {choices.map((choice, index) =>
               !!spriteMap[choice] ? (
-                <img
+                <button
                   key={choice + index}
-                  style={styles.choiceSprite}
-                  src={spriteMap[choice]}
-                  value={choice}
+                  type="button"
                   onClick={this.onMultipleChoiceSubmit}
-                />
+                  disabled={disabled}
+                  style={styles.choiceSpriteContainer}
+                >
+                  <img
+                    src={spriteMap[choice]}
+                    value={choice}
+                    style={styles.choiceSpriteImage}
+                  />
+                </button>
               ) : (
                 <button
                   key={choice + index}
@@ -175,6 +193,7 @@ class SpritelabInput extends React.Component {
                   type="button"
                   value={choice}
                   onClick={this.onMultipleChoiceSubmit}
+                  disabled={disabled}
                 >
                   {choice}
                 </button>
@@ -215,7 +234,9 @@ class SpritelabInput extends React.Component {
 export default connect(
   state => ({
     animationList: state.animationList,
-    inputList: state.spritelabInputList || []
+    inputList: state.spritelabInputList || [],
+    isRunning: selectors.isRunning(state),
+    isPaused: selectors.isPaused(state)
   }),
   dispatch => ({
     onPromptAnswer: () => dispatch(popPrompt())

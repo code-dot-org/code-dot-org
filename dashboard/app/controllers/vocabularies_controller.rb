@@ -29,7 +29,13 @@ class VocabulariesController < ApplicationController
   # PUT/PATCH /vocabularies
   def update
     vocabulary = Vocabulary.find_by_id(vocabulary_params[:id])
-    if vocabulary && vocabulary.update!(vocabulary_params)
+    unless vocabulary_params[:lesson_ids].nil?
+      vocabulary.lessons = vocabulary_params[:lesson_ids].map {|id| Lesson.find(id)}
+      vocabulary.lessons.each do |lesson|
+        lesson.script.write_script_json
+      end
+    end
+    if vocabulary && vocabulary.update!(vocabulary_params.except(:lesson_ids))
       render json: vocabulary.summarize_for_lesson_edit
     else
       render json: {status: 404, error: "Vocabulary #{vocabulary_params[:id]} not found"}
@@ -39,14 +45,15 @@ class VocabulariesController < ApplicationController
   # GET /courses/:course_name/vocab/edit
   def edit
     @course_version = find_matching_course_version
-    @vocabularies = @course_version.vocabularies.order(:word)
+    @vocabularies = @course_version.vocabularies.order(:word).map(&:summarize_for_edit)
   end
 
   private
 
   def vocabulary_params
     vp = params.transform_keys(&:underscore)
-    vp = vp.permit(:id, :key, :word, :definition, :course_version_id)
+    vp = vp.permit(:id, :key, :word, :definition, :course_version_id, :lesson_ids)
+    vp[:lesson_ids] = JSON.parse(vp[:lesson_ids]) if vp[:lesson_ids]
     vp
   end
 
