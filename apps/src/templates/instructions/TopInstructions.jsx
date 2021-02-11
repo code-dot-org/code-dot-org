@@ -387,12 +387,10 @@ class TopInstructions extends Component {
         element = this.teacherOnlyTab;
         break;
     }
-    console.log(element);
     const maxNeededHeight =
       $(ReactDOM.findDOMNode(element)).outerHeight(true) +
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
-    console.log(maxNeededHeight);
 
     if (maxHeight !== maxNeededHeight) {
       setInstructionsMaxHeightNeeded(maxNeededHeight);
