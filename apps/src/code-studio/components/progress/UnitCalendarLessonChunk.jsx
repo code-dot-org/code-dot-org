@@ -2,43 +2,35 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import color from '@cdo/apps/util/color';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
-  common: {
+  box: {
     margin: 5,
+    color: '#333',
+    textDecorationLine: 'none'
+  },
+  boxContent: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    color: '#333',
-    textDecorationLine: 'none',
     fontFamily: '"Gotham 4r", sans-serif'
   },
   assessment: {
-    border: '2px solid rgb(118, 101, 160)',
+    border: '2px solid ' + color.purple,
     ':hover': {
-      border: '2px solid rgb(118, 101, 160)',
-      backgroundColor: 'rgb(118, 101, 160)',
+      backgroundColor: color.purple,
       color: 'white'
     }
-  },
-  assessmentHover: {
-    // border: '2px solid rgb(118, 101, 160)',
-    // backgroundColor: 'rgb(118, 101, 160)',
-    // color: 'white'
   },
   instructional: {
-    border: '2px solid #00adbc',
+    border: '2px solid ' + color.teal,
     ':hover': {
-      border: '2px solid #00adbc',
-      backgroundColor: '#00adbc',
-      color: 'white'
+      backgroundColor: color.teal,
+      color: color.white
     }
-  },
-  instructionalHover: {
-    // border: '2px solid #00adbc',
-    // backgroundColor: '#00adbc',
-    // color: 'white'
   },
   isNotStart: {
     borderLeftStyle: 'dashed'
@@ -61,9 +53,9 @@ const styles = {
     boxSizing: 'border-box'
   },
   assessmentIcon: {
-    color: 'rgb(118, 101, 160)',
+    color: color.purple,
     ':hover': {
-      color: 'white'
+      color: color.white
     }
   }
 };
@@ -75,15 +67,9 @@ class UnitCalendarLessonChunk extends Component {
     isHover: PropTypes.bool,
     handleHover: PropTypes.func.isRequired
   };
-  handleMouseEnter = () => {
-    //this.props.handleHover(this.props.lesson.id);
-  };
-  handleMouseOut = () => {
-    //this.props.handleHover('');
-  };
 
   render() {
-    const {minuteWidth, isHover} = this.props;
+    const {minuteWidth} = this.props;
     const {
       title,
       duration,
@@ -94,64 +80,46 @@ class UnitCalendarLessonChunk extends Component {
       isMajority,
       url
     } = this.props.lesson;
-    let thisStyle = {
-      ...styles.common,
-      width: Math.floor(minuteWidth * duration) - 10
+
+    let chunkStyle = {
+      width: Math.floor(minuteWidth * duration) - 10,
+      ...styles.box,
+      ...(assessment ? styles.assessment : styles.instructional),
+      ...(!isStart && styles.isNotStart),
+      ...(!isEnd && styles.isNotEnd)
     };
-    if (assessment) {
-      const typeSpecific = isHover ? styles.assessmentHover : styles.assessment;
-      thisStyle = {...thisStyle, ...typeSpecific};
-    } else {
-      const typeSpecific = isHover
-        ? styles.instructionalHover
-        : styles.instructional;
-      thisStyle = {...thisStyle, ...typeSpecific};
-    }
-    if (!isStart) {
-      thisStyle = {...thisStyle, ...styles.isNotStart};
-    }
-    if (!isEnd) {
-      thisStyle = {...thisStyle, ...styles.isNotEnd};
-    }
-    console.log(Radium.getState());
+
     return (
       <a
-        style={thisStyle}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseOut={this.handleMouseOut}
+        key={this.props.lesson.id}
+        style={chunkStyle}
         target="_blank"
         rel="noopener noreferrer"
         href={url}
       >
         {isMajority && (
-          <div
-            key={`lesson-${this.props.lesson.id}`}
-            style={styles.iconSection}
-            onMouseEnter={this.handleMouseEnter}
-            onMouseOut={this.handleMouseOut}
-          >
-            <i
-              className="fa fa-check-circle"
-              style={{
-                ...styles.assessmentIcon,
-                visibility: assessment ? 'visible' : 'hidden'
-              }}
-            />
-            <i
-              className="fa fa-scissors"
-              style={{
-                visibility: unplugged ? 'visible' : 'hidden'
-              }}
-            />
+          <div style={styles.boxContent}>
+            <div
+              key={`lesson-${this.props.lesson.id}`}
+              style={styles.iconSection}
+            >
+              <FontAwesome
+                icon="check-circle"
+                style={{
+                  ...styles.assessmentIcon,
+                  visibility: assessment ? 'visible' : 'hidden'
+                }}
+              />
+              <FontAwesome
+                icon="scissors"
+                style={{
+                  visibility: unplugged ? 'visible' : 'hidden'
+                }}
+              />
+            </div>
+            <div style={styles.titleText}>{title}</div>
           </div>
         )}
-        <div
-          style={styles.titleText}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseOut={this.handleMouseOut}
-        >
-          {isMajority && title}
-        </div>
       </a>
     );
   }
