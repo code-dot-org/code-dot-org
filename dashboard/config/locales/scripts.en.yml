@@ -18656,6 +18656,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          name: vpl-csd-2020
         vpl-csp-2020:
           lessons:
             Module 1:
@@ -18794,6 +18795,8 @@ en:
               name: Appendix
             intro-categorical:
               name: Introduction to AI Lab
+            model-cards:
+              name: Model Cards Playground
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -18835,7 +18838,7 @@ en:
             lesson-1:
               name: Blank Space Variables
             lesson-2:
-              name: Storing and Retrieving Text
+              name: Text and Prompts
             lesson-3:
               name: Create a Chat-Bot
             lesson-4:
@@ -18854,6 +18857,8 @@ en:
               name: Create a Haiku Bot
             video:
               name: Sprite Lab Videos
+            blank space stories:
+              name: Blank Space Stories
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -20138,7 +20143,7 @@ en:
           name: coursed-2021
           student_description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
         coursee-2021:
-          title: Course E (2020)
+          title: Course E (2021)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: 'Ages: 8-12'
@@ -20202,19 +20207,21 @@ en:
               name: End of Course Project
           lesson_groups:
             ramp_up:
-              display_name: Ramp Up
+              display_name: Loops
             csf_sprites:
               display_name: Sprites
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
-              display_name: Nested Loops
+              display_name: Conditionals
             csf_functions:
               display_name: Functions
             csf_impacts:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Removed
           name: coursee-2021
           student_description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef-2021:
@@ -20467,7 +20474,7 @@ en:
             Course F Introduction:
               name: Introducing Sprite Lab
             lesson-1:
-              name: Blank Space Variables - coming soon!
+              name: Blank Space Stories - coming soon!
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -20481,7 +20488,7 @@ en:
             Making Sprites:
               name: Making Sprites
             Sprites in Action:
-              name: Sprites in Action - coming soon!
+              name: Sprites in Action
             variables-in-spritelab:
               name: Storing and Retrieving Text - coming soon!
             chatbot:
@@ -20809,9 +20816,9 @@ en:
             lesson7:
               name: Lesson 7
             lesson8:
-              name: Lesson 8
+              name: Using Models in App Lab
             lesson9:
-              name: Lesson 9
+              name: The Need for Model Cards
             lesson10:
               name: Lesson 10
             lesson11:
@@ -20843,3 +20850,6 @@ en:
           description_short: Pilot for AI Unit in CSD
           description: ''
           student_description: ''
+        teststandard:
+          lessons: {}
+          lesson_groups: {}

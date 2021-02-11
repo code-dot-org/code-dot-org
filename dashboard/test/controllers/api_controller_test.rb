@@ -592,9 +592,9 @@ class ApiControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     assert_equal 2, body['linesOfCode']
     script_level = script.script_levels[1]
-    level_id = script_level.level.id
-    assert_equal 'perfect', body['levels'][level_id.to_s]['status']
-    assert_equal 100, body['levels'][level_id.to_s]['result']
+    level_id = script_level.level.id.to_s
+    assert_equal 'perfect', body['progress'][level_id]['status']
+    assert_equal 100, body['progress'][level_id]['result']
   end
 
   test "should get user progress for lesson" do
@@ -837,19 +837,19 @@ class ApiControllerTest < ActionController::TestCase
     get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
     get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
 
     # third page has only one student (of 5 total)
     get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].keys.length
+    assert_equal 1, data['student_progress'].keys.length
 
     # if we request 1 per page, page 6 should still work (because page 5 gave
     # us a full page of data), but page 7 should fail
@@ -874,22 +874,22 @@ class ApiControllerTest < ActionController::TestCase
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
-    assert_equal 2, data['student_timestamps'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
+    assert_equal 2, data['student_last_updates'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
-    assert_equal 2, data['student_timestamps'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
+    assert_equal 2, data['student_last_updates'].keys.length
 
     # third page has only one student (of 5 total)
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].keys.length
-    assert_equal 1, data['student_timestamps'].keys.length
+    assert_equal 1, data['student_progress'].keys.length
+    assert_equal 1, data['student_last_updates'].keys.length
   end
 
   test "should get paired icons for paired user levels" do

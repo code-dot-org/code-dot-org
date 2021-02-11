@@ -85,7 +85,7 @@ export default class SummaryViewLegend extends Component {
                   incomplete={20}
                   imperfect={0}
                   perfect={0}
-                  stageIsAllAssessment={false}
+                  lessonIsAllAssessment={false}
                 />
               </td>
               <td style={styles.td}>
@@ -95,7 +95,7 @@ export default class SummaryViewLegend extends Component {
                   incomplete={20}
                   imperfect={0}
                   perfect={0}
-                  stageIsAllAssessment={false}
+                  lessonIsAllAssessment={false}
                 />
               </td>
               <td style={styles.td}>
@@ -106,7 +106,7 @@ export default class SummaryViewLegend extends Component {
                     incomplete={0}
                     imperfect={0}
                     perfect={20}
-                    stageIsAllAssessment={false}
+                    lessonIsAllAssessment={false}
                   />
                   <ProgressBox
                     style={styles.boxStyle}
@@ -114,7 +114,7 @@ export default class SummaryViewLegend extends Component {
                     incomplete={0}
                     imperfect={0}
                     perfect={20}
-                    stageIsAllAssessment={true}
+                    lessonIsAllAssessment={true}
                   />
                 </div>
               </td>
@@ -126,7 +126,7 @@ export default class SummaryViewLegend extends Component {
                     incomplete={0}
                     imperfect={20}
                     perfect={0}
-                    stageIsAllAssessment={false}
+                    lessonIsAllAssessment={false}
                   />
                 </td>
               )}
