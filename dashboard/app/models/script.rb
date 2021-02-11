@@ -194,6 +194,7 @@ class Script < ApplicationRecord
     is_course
     background
     show_calendar
+    weekly_instructional_minutes
     is_migrated
   )
 
@@ -1371,7 +1372,8 @@ class Script < ApplicationRecord
       background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
-      showCalendar: show_calendar
+      showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
+      weeklyInstructionalMinutes: weekly_instructional_minutes
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1556,6 +1558,7 @@ class Script < ApplicationRecord
       :editor_experiment,
       :curriculum_umbrella,
       :background,
+      :weekly_instructional_minutes,
     ]
     boolean_keys = [
       :has_verified_resources,

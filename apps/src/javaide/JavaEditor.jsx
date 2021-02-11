@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import AceEditor from 'react-ace';
 import {connect} from 'react-redux';
 import {setEditorText} from './javaIdeRedux';
@@ -25,6 +26,14 @@ class JavaEditor extends React.Component {
   onChange = newValue => {
     this.props.setEditorText(newValue);
   };
+
+  componentDidMount() {
+    let textInput = $('.ace_text-input');
+    if (textInput) {
+      let textInputElement = textInput.first();
+      textInputElement.attr('aria-label', 'java editor panel');
+    }
+  }
 
   render() {
     return (

@@ -58,6 +58,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   setup do
     client_state.reset
     Gatekeeper.clear
+    AzureTextToSpeech.stubs(:get_voices).returns({})
+  end
+
+  teardown do
+    AzureTextToSpeech.unstub(:get_voices)
   end
 
   test 'should show script level for twenty hour' do
