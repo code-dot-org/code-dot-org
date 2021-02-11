@@ -2,14 +2,32 @@ class LessonsController < ApplicationController
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
-  before_action :disallow_legacy_script_levels, only: [:edit, :update]
+  before_action :disallow_updating_legacy_script_levels, only: [:update]
+  before_action :disallow_editing_legacy_script_levels, only: [:edit]
 
   # Script levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
   # script levels to be lost. Prevent this by disallowing editing in this case.
   # This helps avoid losing data from existing scripts by accidentally editing
   # them with the new lessons editor.
-  def disallow_legacy_script_levels
+  def disallow_updating_legacy_script_levels
+    return unless @lesson.script_levels.reject(&:activity_section).any?
+    raise CanCan::AccessDenied.new(
+      "cannot edit lesson #{@lesson.id} because it contains legacy script levels"
+    )
+  end
+
+  # Script levels which are not in activity sections will not show up on the
+  # lesson edit page, in which case saving the edit page would cause those
+  # script levels to be lost. Prevent this by disallowing editing in this case.
+  # This helps avoid losing data from existing scripts by accidentally editing
+  # them with the new lessons editor.
+  def disallow_editing_legacy_script_levels
+    @script = Script.find_by(name: params[:script_id])
+    raise ActiveRecord::RecordNotFound unless @script && @script.is_migrated
+    @lesson = Lesson.find_by(script: @script, has_lesson_plan: true, relative_position: params[:id])
+    raise ActiveRecord::RecordNotFound unless @lesson
+
     return unless @lesson.script_levels.reject(&:activity_section).any?
     raise CanCan::AccessDenied.new(
       "cannot edit lesson #{@lesson.id} because it contains legacy script levels"
