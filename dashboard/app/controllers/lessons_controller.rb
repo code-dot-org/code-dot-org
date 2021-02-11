@@ -18,21 +18,21 @@ class LessonsController < ApplicationController
   end
 
   def disallow_editing_legacy_script_levels
-    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:id])
+    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:position])
 
     disallow_legacy_script_levels
   end
 
   # GET /s/script-name/lessons/1
   def show
-    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:id])
+    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:position])
 
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
   # GET /s/script-name/lessons/1/edit
   def edit
-    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:id])
+    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:position])
 
     @lesson_data = @lesson.summarize_for_lesson_edit
     # Return an empty list, because computing the list of related lessons here
