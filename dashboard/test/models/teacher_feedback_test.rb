@@ -199,6 +199,12 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    # the query count grows with the number of bubble choice levels in the script.
+    create :script_level, script: script, lesson: lesson, levels: [create(:bubble_choice_level, :with_sublevels)]
+    create :script_level, script: script, lesson: lesson, levels: [create(:bubble_choice_level, :with_sublevels)]
+    create :script_level, script: script, lesson: lesson, levels: [create(:bubble_choice_level, :with_sublevels)]
+
     script_level = create :script_level, script: script, lesson: lesson, levels: [parent_level]
 
     # HACK: we have to supply a script_level, because it is still a required field.
@@ -211,7 +217,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     other_script_level = create :script_level, script: script, lesson: lesson, levels: [create(:level)]
 
     feedback = create :teacher_feedback, script: script, level: child_level, script_level: other_script_level
-    assert_queries(4) do
+    assert_queries(7) do
       assert_equal script_level, feedback.get_script_level
     end
   end
