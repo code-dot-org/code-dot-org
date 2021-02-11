@@ -18,7 +18,7 @@
   should_show_create_menu = !level || level.try(:is_project_level)
 
 - if should_show_create_menu
-  .header_button.create_menu
+  %button.header_button.create_menu.no-mc
     %span.create_button
       = I18n.t("#{loc_prefix}create")
     &nbsp;
@@ -34,7 +34,7 @@
         .project_link#view_all_projects
           = I18n.t("#{loc_prefix}view_all")
 - if current_user
-  .header_button.header_user.user_menu
+  %button.header_button.header_user.user_menu.no-mc
     - if current_user.can_pair? && session_pairings.present?
       %i.fa.fa-users.pairing_icon
       %span.pairing_name= I18n.t("#{loc_prefix}team")
@@ -111,7 +111,7 @@
           $('.user_options').slideDown();
           $('.user_menu_arrow_down').hide();
           $('.user_menu_arrow_up').show();
-          $(document).on('click', hideUserOptions);
+          $(document).on('keypress click', hideUserOptions);
           hideCreateOptions()
           $("#hamburger-icon").removeClass('active');
           $("#help-icon").removeClass('active');
@@ -148,12 +148,14 @@
           $('.create_options').slideDown();
           $('.create_menu_arrow_down').hide();
           $('.create_menu_arrow_up').show();
-          $(document).on('click', hideCreateOptions);
+          $(document).on('keypress click', hideCreateOptions);
           hideUserOptions()
           $("#hamburger-icon").removeClass('active');
           $("#help-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
           $('#help-button #help-contents').slideUp();
+        } else {
+          hideCreateOptions();
         }
       });
       $('.create_options').click(function (e) {

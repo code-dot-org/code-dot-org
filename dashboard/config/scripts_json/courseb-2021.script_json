@@ -26,7 +26,8 @@
       ],
       "is_course": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": "courseb",
@@ -439,8 +440,8 @@
       "key": "4782266a-9011-4f00-8335-bced225a346d",
       "position": 2,
       "properties": {
-        "name": "Activity: Move It, Move It (20 minutes)",
-        "duration": 0
+        "name": "Main Activity",
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "4782266a-9011-4f00-8335-bced225a346d",
@@ -453,8 +454,8 @@
       "key": "339d5151-756f-4b66-b647-0f86a1dce7f9",
       "position": 3,
       "properties": {
-        "name": "Wrap-up (10 min)",
-        "duration": 0
+        "name": "Wrap-up",
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "339d5151-756f-4b66-b647-0f86a1dce7f9",
@@ -467,8 +468,7 @@
       "key": "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe",
@@ -481,7 +481,6 @@
       "key": "e239deaa-899b-486a-9f9f-4e16b73b9e9c",
       "position": 5,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "e239deaa-899b-486a-9f9f-4e16b73b9e9c",
@@ -1219,7 +1218,6 @@
         "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If your class has not already learned cardinal directions, it will be worth covering them before they begin Course B.  This conversion will come in handy for nearly all of the online puzzles aimed at first grade, as well as several of the unplugged activities.\n\nLet students know that they will continue to see those directions in the online programs next to the direction arrows.  \n"
           }
@@ -1249,8 +1247,7 @@
         "description": "**Discuss:** Ask the students if they could tell how you were feeling when you couldn't figure out the answer.  They might suggest that you were \"mad\" or \"sad\".  Instead of telling them \"no\", describe that you were feeling a little bit mad, a little bit sad, and a little bit confused.  When you put all of those emotions together, it makes a feeling called \"frustration\".  When you are \"frustrated\" you might think you are mad, sad, or confused -- and you might be tempted to give up -- but frustration is a natural feeling and it's a big hint that you are about to learn something!  Instead of quitting, practice persistence.  Keep trying over and over again.  After a few times, you will start to understand how to debug your problems!",
         "tips": [
           {
-            "key": "content",
-            "type": "contentCorner",
+            "type": "teachingTip",
             "markdown": "For more on persistence and frustration, try reading [Stevie and the Big Project](https://drive.google.com/open?id=0B-uvt08wYSQqTUFzaGxKSk45QkU) to your students. It will help them spot moments of frustration.  It will also help give them the tools to deal with it.\n\nIf you do not read the book, take a moment to cover tips on frustration and persistence as a class:\n\n##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
           }
         ]
@@ -1272,10 +1269,22 @@
       }
     },
     {
-      "key": "0c64d280-12f6-4d9a-9329-dac1aa620ca5",
+      "key": "b87acbf5-a0a2-4c86-a344-3fbf143431f6",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Hand each group of 2-3 students a **Move It, Move It - Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\r\n\r\n**Set-Up:** In each group, each player will get a task.\r\n\r\n- Player 1: Choose/set-up the map to play\r\n- Player 2: Programmer\r\n- Player 3: Walking Machine\r\n\r\n\r\n**Directions for Class:**\r\n\r\n\t1) Decide who will take each job.\r\n\t2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\r\n\t3) Player 3 will start by standing on the page with the compass rose.\r\n\t4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\r\n\t5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\r\n\t6) If there is time, let everyone rotate positions and go again!\r\n\r\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves."
+        "progression_name": "Unplugged Move It Move it Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "b87acbf5-a0a2-4c86-a344-3fbf143431f6",
+        "lesson_activity.key": "4782266a-9011-4f00-8335-bced225a346d"
+      }
+    },
+    {
+      "key": "0c64d280-12f6-4d9a-9329-dac1aa620ca5",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Hand each group of 2-3 students a **Move It, Move It - Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\n\n**Set-Up:** In each group, each player will get a task.\n\n- Player 1: Choose/set-up the map to play\n- Player 2: Programmer\n- Player 3: Walking Machine\n\n\n**Directions for Class:**\n1) Decide who will take each job.\n\n2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\n\n3) Player 3 will start by standing on the page with the compass rose.\n\n4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\n\n5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\n\n6) If there is time, let everyone rotate positions and go again!\n\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.",
+        "name": "Move It, Move It"
       },
       "seeding_key": {
         "activity_section.key": "0c64d280-12f6-4d9a-9329-dac1aa620ca5",
@@ -1286,7 +1295,7 @@
       "key": "93f8de74-6246-4227-8418-08d5c736633b",
       "position": 1,
       "properties": {
-        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day. You can choose one of the prompts below, or make up your own.\r\n\r\nJournal Prompts:\r\n\r\n- Draw a feeling face in the corner of your journal page\r\n- What were the four directions on the compass rose?\r\n\t- What tricks can we use to remember North, South, East and West?\r\n- Draw another way we could we have given instructions without using our arms\r\n- Draw your favorite part about that game",
+        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day. You can choose one of the prompts below, or make up your own.\n\n####Journal Prompts:\n\n- Draw a [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) in the corner of your journal page\n- What were the four directions on the compass rose?\n\t- What tricks can we use to remember North, South, East and West?\n- Draw another way we could we have given instructions without using our arms\n- Draw your favorite part about that game",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1303,16 +1312,6 @@
       "seeding_key": {
         "activity_section.key": "d8233290-3b13-4062-b13e-6bc56ccd2f7f",
         "lesson_activity.key": "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe"
-      }
-    },
-    {
-      "key": "73981dd3-34fa-4236-8c97-43c22e323238",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "73981dd3-34fa-4236-8c97-43c22e323238",
-        "lesson_activity.key": "e239deaa-899b-486a-9f9f-4e16b73b9e9c"
       }
     },
     {
@@ -2744,14 +2743,14 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "csf_digital_trails_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csf_digital_trails_2021"
@@ -2771,12 +2770,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Unplugged Move It Move it Video",
         "level_keys": [
           "MoveItMoveIt-Unplugged_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "MoveItMoveIt-Unplugged_2021"
@@ -2784,7 +2784,7 @@
         "lesson.key": "Move It, Move It",
         "lesson_group.key": "csf_sequencing",
         "script.name": "courseb-2021",
-        "activity_section.key": "73981dd3-34fa-4236-8c97-43c22e323238"
+        "activity_section.key": "b87acbf5-a0a2-4c86-a344-3fbf143431f6"
       },
       "level_keys": [
         "MoveItMoveIt-Unplugged_2021"
@@ -2794,7 +2794,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Maze Intro: Programming with Blocks",
         "level_keys": [
@@ -2802,7 +2802,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseAB_video_NewIntro_2021"
@@ -2820,7 +2820,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2828,7 +2828,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "coursea_maze_ramp1_2021"
@@ -2846,7 +2846,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2854,7 +2854,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_ramp2_2021"
@@ -2872,7 +2872,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2880,7 +2880,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_ramp3a_2021"
@@ -2898,7 +2898,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2906,7 +2906,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_ramp3b_2021"
@@ -2924,7 +2924,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2932,7 +2932,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_ramp4a_2021"
@@ -2950,7 +2950,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2958,7 +2958,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_ramp5a_2021"
@@ -2976,7 +2976,7 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pair Programming",
         "level_keys": [
@@ -2984,7 +2984,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "elementary_video_pairProgramming_2021"
@@ -3002,7 +3002,7 @@
       "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3010,7 +3010,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq1_2021"
@@ -3028,7 +3028,7 @@
       "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3036,7 +3036,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq5_2021"
@@ -3054,7 +3054,7 @@
       "chapter": 13,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3062,7 +3062,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq5a_2021"
@@ -3080,7 +3080,7 @@
       "chapter": 14,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3088,7 +3088,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq6_2021"
@@ -3106,7 +3106,7 @@
       "chapter": 15,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3114,7 +3114,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq8_2021"
@@ -3132,16 +3132,16 @@
       "chapter": 16,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_maze_seq10_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq10_2021"
@@ -3159,7 +3159,7 @@
       "chapter": 17,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3167,7 +3167,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq11_2021"
@@ -3185,7 +3185,7 @@
       "chapter": 18,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3193,7 +3193,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq12_2021"
@@ -3211,7 +3211,7 @@
       "chapter": 19,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3219,7 +3219,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq13_2021"
@@ -3237,7 +3237,7 @@
       "chapter": 20,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseA_maze_seq_challenge1_2021"
@@ -3262,7 +3262,7 @@
       "chapter": 21,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseA_maze_seq_challenge2_2021"
@@ -3287,7 +3287,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Harvester",
         "level_keys": [
@@ -3295,7 +3295,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_intro_2021"
@@ -3313,7 +3313,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3321,7 +3321,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq1_2021"
@@ -3339,7 +3339,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3347,7 +3347,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq2_2021"
@@ -3365,7 +3365,7 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3373,7 +3373,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq3_2021"
@@ -3391,7 +3391,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging with the Step Button",
         "level_keys": [
@@ -3399,7 +3399,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseAB_video_debugging_2021"
@@ -3417,7 +3417,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3425,7 +3425,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq4_2021"
@@ -3443,7 +3443,7 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3451,7 +3451,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq5_2021"
@@ -3469,7 +3469,7 @@
       "chapter": 29,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3477,7 +3477,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq6_2021"
@@ -3495,7 +3495,7 @@
       "chapter": 30,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3503,7 +3503,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq7_2021"
@@ -3521,7 +3521,7 @@
       "chapter": 31,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3529,7 +3529,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq8_2021"
@@ -3547,7 +3547,7 @@
       "chapter": 32,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3555,7 +3555,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq9_2021"
@@ -3573,16 +3573,16 @@
       "chapter": 33,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_harvester_seq10_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq10_2021"
@@ -3600,7 +3600,7 @@
       "chapter": 34,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3608,7 +3608,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq12_2021"
@@ -3626,7 +3626,7 @@
       "chapter": 35,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3634,7 +3634,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq11_2021"
@@ -3652,7 +3652,7 @@
       "chapter": 36,
       "position": 15,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3660,7 +3660,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_seq13_2021"
@@ -3678,14 +3678,14 @@
       "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "GettingLoopy-Unplugged_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "GettingLoopy-Unplugged_2021"
@@ -3703,7 +3703,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3711,7 +3711,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops1_2021"
@@ -3729,7 +3729,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3737,7 +3737,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops2_2021"
@@ -3755,7 +3755,7 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Repeat Blocks",
         "level_keys": [
@@ -3763,7 +3763,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops_video_2021"
@@ -3781,7 +3781,7 @@
       "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3789,7 +3789,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops3_2021"
@@ -3807,7 +3807,7 @@
       "chapter": 42,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3815,7 +3815,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops4_2021"
@@ -3833,7 +3833,7 @@
       "chapter": 43,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3841,7 +3841,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops5_2021"
@@ -3859,7 +3859,7 @@
       "chapter": 44,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3867,7 +3867,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops5a_2021"
@@ -3885,7 +3885,7 @@
       "chapter": 45,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3893,7 +3893,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops5b_2021"
@@ -3911,7 +3911,7 @@
       "chapter": 46,
       "position": 9,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3919,7 +3919,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops6_2021"
@@ -3937,7 +3937,7 @@
       "chapter": 47,
       "position": 10,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3945,7 +3945,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops7_2021"
@@ -3963,16 +3963,16 @@
       "chapter": 48,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_harvester_loops9_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops9_2021"
@@ -3990,7 +3990,7 @@
       "chapter": 49,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3998,7 +3998,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops10_2021"
@@ -4016,7 +4016,7 @@
       "chapter": 50,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4024,7 +4024,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_harvester_loops11_2021"
@@ -4042,7 +4042,7 @@
       "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Collector",
         "level_keys": [
@@ -4050,7 +4050,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseAB_video_collector_2021"
@@ -4068,7 +4068,7 @@
       "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4076,7 +4076,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops1_2021"
@@ -4094,7 +4094,7 @@
       "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4102,7 +4102,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops2_2021"
@@ -4120,7 +4120,7 @@
       "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the Repeat Block",
         "level_keys": [
@@ -4128,7 +4128,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_video_Loops_2021"
@@ -4146,7 +4146,7 @@
       "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4154,7 +4154,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops3_2021"
@@ -4172,7 +4172,7 @@
       "chapter": 56,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4180,7 +4180,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops4_2021"
@@ -4198,7 +4198,7 @@
       "chapter": 57,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4206,7 +4206,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops5_2021"
@@ -4224,7 +4224,7 @@
       "chapter": 58,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4232,7 +4232,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops6_2021"
@@ -4250,7 +4250,7 @@
       "chapter": 59,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4258,7 +4258,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops7_2021"
@@ -4276,16 +4276,16 @@
       "chapter": 60,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_collector_loops8_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops8_2021"
@@ -4303,7 +4303,7 @@
       "chapter": 61,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4311,7 +4311,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops9_2021"
@@ -4329,7 +4329,7 @@
       "chapter": 62,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4337,7 +4337,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops10_2021"
@@ -4355,7 +4355,7 @@
       "chapter": 63,
       "position": 13,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4363,7 +4363,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops11_2021"
@@ -4381,7 +4381,7 @@
       "chapter": 64,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseB_collector_loops_challenge1_2021"
@@ -4406,7 +4406,7 @@
       "chapter": 65,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseB_collector_loops_challenge2a_2021"
@@ -4431,7 +4431,7 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Artist in Code Studio",
         "level_keys": [
@@ -4439,7 +4439,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_video_ArtistIntro_2021"
@@ -4457,7 +4457,7 @@
       "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4465,7 +4465,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops1_2021"
@@ -4483,7 +4483,7 @@
       "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Repeat Blocks with the Artist",
         "level_keys": [
@@ -4491,7 +4491,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_video_artistLoops_2021"
@@ -4509,7 +4509,7 @@
       "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4517,7 +4517,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops2_2021"
@@ -4535,7 +4535,7 @@
       "chapter": 70,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4543,7 +4543,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops3_2021"
@@ -4561,7 +4561,7 @@
       "chapter": 71,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4569,7 +4569,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops4_2021"
@@ -4587,7 +4587,7 @@
       "chapter": 72,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4595,7 +4595,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops5_2021"
@@ -4613,7 +4613,7 @@
       "chapter": 73,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4621,7 +4621,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops6_2021"
@@ -4639,16 +4639,16 @@
       "chapter": 74,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "challenge": true,
         "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_artist_loops7_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops7_2021"
@@ -4666,7 +4666,7 @@
       "chapter": 75,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4674,7 +4674,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops8_2021"
@@ -4692,7 +4692,7 @@
       "chapter": 76,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4700,7 +4700,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops9_2021"
@@ -4718,7 +4718,7 @@
       "chapter": 77,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4726,7 +4726,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops10_2021"
@@ -4744,7 +4744,7 @@
       "chapter": 78,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseB_artist_loops_challenge1_2021"
@@ -4769,7 +4769,7 @@
       "chapter": 79,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseB_artist_loops_challenge2_2021"
@@ -4794,14 +4794,14 @@
       "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "TheRightAppMarkdownLevel_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "TheRightAppMarkdownLevel_2021"
@@ -4819,14 +4819,14 @@
       "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "BigEvent-Unplugged_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "BigEvent-Unplugged_2021"
@@ -4844,7 +4844,7 @@
       "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Create a Story",
         "level_keys": [
@@ -4852,7 +4852,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_video_events_2021"
@@ -4870,7 +4870,7 @@
       "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4878,7 +4878,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playLab_events1_2021"
@@ -4896,7 +4896,7 @@
       "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -4904,7 +4904,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playlab_events2_2021"
@@ -4922,7 +4922,7 @@
       "chapter": 85,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -4930,7 +4930,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playlab_events3_2021"
@@ -4948,7 +4948,7 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -4956,7 +4956,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playlab_events4_2021"
@@ -4974,7 +4974,7 @@
       "chapter": 87,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -4982,7 +4982,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playlab_events5_2021"
@@ -5000,7 +5000,7 @@
       "chapter": 88,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5008,7 +5008,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playlab_events6_2021"
@@ -5026,7 +5026,7 @@
       "chapter": 89,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5034,7 +5034,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playlab_events7_2021"
@@ -5052,7 +5052,7 @@
       "chapter": 90,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5060,7 +5060,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_playlab_eventsFP_2021"
@@ -5078,7 +5078,7 @@
       "chapter": 91,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseB_playlab_events_challenge1_2021"
@@ -5103,7 +5103,7 @@
       "chapter": 92,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "courseB_playlab_events_challenge2_2021"
@@ -5147,7 +5147,7 @@
         "lesson.key": "Move It, Move It",
         "lesson_group.key": "csf_sequencing",
         "script.name": "courseb-2021",
-        "activity_section.key": "73981dd3-34fa-4236-8c97-43c22e323238"
+        "activity_section.key": "b87acbf5-a0a2-4c86-a344-3fbf143431f6"
       }
     },
     {
