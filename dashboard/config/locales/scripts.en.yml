@@ -18859,6 +18859,16 @@ en:
               name: Sprite Lab Videos
             blank space stories:
               name: Blank Space Stories
+            how things spread:
+              name: How Things Spread
+            contagion simulator setup:
+              name: Contagion Simulator Setup
+            sometimes but not always:
+              name: Sometimes, but Not Always
+            modifying your model:
+              name: Modifying Your model
+            telling a data story:
+              name: Telling a Data Story
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18872,6 +18882,8 @@ en:
               display_name: Outbreak Simulation
             Loom Levels:
               display_name: Loom Levels
+            contagion:
+              display_name: Contagion
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -20125,6 +20137,8 @@ en:
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
+            lesson-6:
+              name: Looking Ahead with Minecraft
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing

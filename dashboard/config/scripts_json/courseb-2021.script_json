@@ -1283,7 +1283,7 @@
       "key": "0c64d280-12f6-4d9a-9329-dac1aa620ca5",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Hand each group of 2-3 students a **Move It, Move It - Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\r\n\r\n**Set-Up:** In each group, each player will get a task.\r\n\r\n- Player 1: Choose/set-up the map to play\r\n- Player 2: Programmer\r\n- Player 3: Walking Machine\r\n\r\n\r\n**Directions for Class:**\r\n\r\n\t1) Decide who will take each job.\r\n\t2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\r\n\t3) Player 3 will start by standing on the page with the compass rose.\r\n\t4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\r\n\t5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\r\n\t6) If there is time, let everyone rotate positions and go again!\r\n\r\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.",
+        "description": "**Distribute:** Hand each group of 2-3 students a **Move It, Move It - Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\n\n**Set-Up:** In each group, each player will get a task.\n\n- Player 1: Choose/set-up the map to play\n- Player 2: Programmer\n- Player 3: Walking Machine\n\n\n**Directions for Class:**\n1) Decide who will take each job.\n\n2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\n\n3) Player 3 will start by standing on the page with the compass rose.\n\n4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\n\n5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\n\n6) If there is time, let everyone rotate positions and go again!\n\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.",
         "name": "Move It, Move It"
       },
       "seeding_key": {
@@ -2770,7 +2770,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Unplugged Move It Move it Video"
+        "progression": "Unplugged Move It Move it Video",
+        "level_keys": [
+          "MoveItMoveIt-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,

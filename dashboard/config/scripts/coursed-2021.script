@@ -146,6 +146,8 @@ lesson_group 'csf_conditionals', display_name: 'Conditionals'
 lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true
 level 'ConditionalsWithCards-Unplugged_2021'
 
+lesson 'lesson-6', display_name: 'Looking Ahead with Minecraft', has_lesson_plan: true
+
 lesson 'Conditionals in Bee', display_name: 'If/Else with Bee', has_lesson_plan: true
 level 'courseD_bee_conditionalsVid1_2021', progression: 'Conditionals: If Statements'
 level 'courseD_bee_conditionals1_predict1_2021', progression: 'Prediction'
