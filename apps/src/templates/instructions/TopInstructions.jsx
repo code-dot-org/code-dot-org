@@ -384,13 +384,15 @@ class TopInstructions extends Component {
         element = this.refs.commentTab;
         break;
       case TabType.TEACHER_ONLY:
-        element = this.refs.teacherOnlyTab;
+        element = this.teacherOnlyTab;
         break;
     }
+    console.log(element);
     const maxNeededHeight =
       $(ReactDOM.findDOMNode(element)).outerHeight(true) +
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
+    console.log(maxNeededHeight);
 
     if (maxHeight !== maxNeededHeight) {
       setInstructionsMaxHeightNeeded(maxNeededHeight);
@@ -762,12 +764,15 @@ class TopInstructions extends Component {
                 <div>
                   {this.props.hasContainedLevels && (
                     <ContainedLevelAnswer
-                      ref="teacherOnlyTab"
+                      ref={tab => (this.teacherOnlyTab = tab)}
                       hidden={this.state.tabSelected !== TabType.TEACHER_ONLY}
                     />
                   )}
                   {this.state.tabSelected === TabType.TEACHER_ONLY && (
-                    <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+                    <TeacherOnlyMarkdown
+                      ref={tab => (this.teacherOnlyTab = tab)}
+                      content={this.props.teacherMarkdown}
+                    />
                   )}
                 </div>
               )}
