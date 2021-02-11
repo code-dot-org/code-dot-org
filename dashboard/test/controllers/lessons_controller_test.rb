@@ -70,16 +70,16 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # anyone can show lesson with lesson plan
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: nil, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :student, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :teacher, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: nil, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {
         script_id: @script.name,
-        id: @lesson2.relative_position
+        position: @lesson2.relative_position
       }
     end
   end
@@ -101,7 +101,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: script2.name,
-      id: unmigrated_lesson.relative_position
+      position: unmigrated_lesson.relative_position
     }
     assert_response :forbidden
   end
@@ -146,7 +146,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: script.name,
-      id: @solo_lesson_in_script.relative_position
+      position: @solo_lesson_in_script.relative_position
     }
     assert_response :ok
     assert(@response.body.include?(@script_title))
@@ -157,7 +157,7 @@ class LessonsControllerTest < ActionController::TestCase
   test 'show lesson when script has multiple lessons' do
     get :show, params: {
       script_id: @script.name,
-      id: @lesson.relative_position
+      position: @lesson.relative_position
     }
     assert_response :ok
     assert(@response.body.include?(@script_title))
@@ -181,7 +181,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     get :show, params: {
       script_id: @script.name,
-      id: @lesson.relative_position
+      position: @lesson.relative_position
     }
     assert_response :ok
 
@@ -190,17 +190,17 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # only levelbuilders can edit
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :student, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   test 'edit lesson' do
     sign_in @levelbuilder
 
     get :edit, params: {
       script_id: @script.name,
-      id: @lesson.relative_position
+      position: @lesson.relative_position
     }
     assert_response :ok
 
@@ -218,7 +218,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     get :edit, params: {
       script_id: @script.name,
-      id: @lesson.relative_position
+      position: @lesson.relative_position
     }
     assert_response :forbidden
   end
