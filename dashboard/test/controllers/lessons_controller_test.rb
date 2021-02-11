@@ -75,11 +75,14 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
-  # no one can access a lesson without lesson plan
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: :student, response: :forbidden
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: :levelbuilder, response: :forbidden
+  test 'can not show lesson when has_lesson_plan is false' do
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :show, params: {
+        script_id: @script.name,
+        id: @lesson2.relative_position
+      }
+    end
+  end
 
   test 'can not show lesson when lesson is in a non-migrated script' do
     sign_in @levelbuilder
@@ -96,12 +99,11 @@ class LessonsControllerTest < ActionController::TestCase
       lockable: false,
     )
 
-    assert_raises(ActiveRecord::RecordNotFound) do
-      get :show, params: {
-        script_id: script2.id,
-        id: unmigrated_lesson.relative_position
-      }
-    end
+    get :show, params: {
+      script_id: script2.name,
+      id: unmigrated_lesson.relative_position
+    }
+    assert_response :forbidden
   end
 
   test 'show lesson when lesson is the only lesson in script' do
