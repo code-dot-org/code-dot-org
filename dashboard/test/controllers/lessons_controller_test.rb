@@ -103,7 +103,7 @@ class LessonsControllerTest < ActionController::TestCase
       script_id: script2.name,
       position: unmigrated_lesson.relative_position
     }
-    assert_response :forbidden
+    assert_response 404
   end
 
   test 'show lesson when lesson is the only lesson in script' do
@@ -220,7 +220,7 @@ class LessonsControllerTest < ActionController::TestCase
       script_id: @script.name,
       position: @lesson.relative_position
     }
-    assert_response :forbidden
+    assert_response 404
   end
 
   # only levelbuilders can update
@@ -414,7 +414,7 @@ class LessonsControllerTest < ActionController::TestCase
       }
     ].to_json
     put :update, params: @update_params
-    assert_response :forbidden
+    assert_response 404
   end
 
   test 'updates lesson positions on lesson update' do
