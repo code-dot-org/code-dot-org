@@ -11,10 +11,14 @@ export default class SignInCalloutWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.closeCallout = this.closeCallout.bind(this);
-    // The use of both session storage and cookies is to check for 1 day
-    // and 1 session, and display the callout again only once BOTH have passed.
+    // Before the cookies are set, searching for them will return false, so the
+    // desired flag should logically read 'true' when set: resulting in the
+    // 'hide' name. Though this leads to a bit of a double negative in the
+    // display logic (if not hide: display), it is the clearest option for now.
     this.state = {
       hideCallout:
+        // The use of both session storage and cookies is to check for 1 day
+        // and 1 session, and display the callout again once BOTH have passed.
         cookies.get(HideSignInCallout) === 'true' ||
         sessionStorage.getItem(HideSignInCallout) === 'true'
     };
