@@ -41,10 +41,10 @@ export const testLessonSchedule = [
       duration: 87,
       assessment: true,
       unplugged: false,
+      url: 'https://www.google.com/',
       isStart: true,
       isEnd: true,
-      isMajority: true,
-      url: 'https://www.google.com/'
+      isMajority: true
     }
   ],
   [
@@ -54,10 +54,10 @@ export const testLessonSchedule = [
       duration: 40,
       assessment: false,
       unplugged: true,
+      url: 'https://www.google.com/',
       isStart: true,
       isEnd: true,
-      isMajority: true,
-      url: 'https://www.google.com/'
+      isMajority: true
     },
     {
       id: 3,
@@ -65,10 +65,10 @@ export const testLessonSchedule = [
       duration: 50,
       assessment: true,
       unplugged: true,
+      url: 'https://www.google.com/',
       isStart: true,
       isEnd: false,
-      isMajority: false,
-      url: 'https://www.google.com/'
+      isMajority: false
     }
   ],
   [
@@ -78,10 +78,10 @@ export const testLessonSchedule = [
       duration: 85,
       assessment: true,
       unplugged: true,
+      url: 'https://www.google.com/',
       isStart: false,
       isEnd: true,
-      isMajority: true,
-      url: 'https://www.google.com/'
+      isMajority: true
     }
   ],
   [
@@ -91,10 +91,10 @@ export const testLessonSchedule = [
       duration: 60,
       assessment: false,
       unplugged: false,
+      url: 'https://www.google.com/',
       isStart: true,
       isEnd: true,
-      isMajority: true,
-      url: 'https://www.google.com/'
+      isMajority: true
     }
   ]
 ];
