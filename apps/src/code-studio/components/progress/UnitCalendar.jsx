@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import i18n from '@cdo/locale';
 import _ from 'lodash';
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
@@ -134,31 +135,18 @@ export default class UnitCalendar extends React.Component {
       );
     });
   };
-  renderWeeks = schedule => {
-    const minuteWidth = weekWidth / this.props.weeklyInstructionalMinutes;
-    return schedule.map(week => {
-      return week.map((lesson, index) => {
-        return (
-          <UnitCalendarLessonChunk
-            key={`lesson-${index}`}
-            minuteWidth={minuteWidth}
-            lesson={lesson}
-            isHover={lesson.id === this.state.hovering}
-            handleHover={this.handleHover}
-          />
-        );
-      });
-    });
-  };
 
   render() {
     const schedule = this.generateSchedule();
-    //const weekPlans = this.renderWeeks(schedule);
     return (
       <div>
         <table style={styles.table}>
           <tbody>
             {schedule.map((week, index) => {
+              const rendered = this.renderWeek(week);
+              console.log(
+                Radium.getState(this.state, rendered[0].props.key, ':hover')
+              );
               return (
                 <tr key={`week-${index}`}>
                   <td style={styles.weekColumn}>
