@@ -395,7 +395,7 @@ P5Lab.prototype.init = function(config) {
     (!config.hideSource &&
       !config.level.debuggerDisabled &&
       !config.level.iframeEmbedAppAndCode);
-  var showPauseButton = experiments.isEnabled(experiments.SPRITELAB_PAUSE);
+  var showPauseButton = this.isSpritelab && !config.level.hidePauseButton;
   var showDebugConsole = config.level.editCode && !config.hideSource;
   this.debuggerEnabled =
     showDebugButtons || showPauseButton || showDebugConsole;
