@@ -169,7 +169,7 @@
         "overview": "Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.",
         "student_overview": "Create programs to help the Angry Bird move through the maze.",
         "purpose": "In this lesson, students will develop programming skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class\r\n - Locate or reprint supplies for Happy Maps\r\n - Make sure each student has a **Think Spot Journal - Reflection Journal**\r\n - Cut enough **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** of each direction (N, S, E, W) to give two sets to every pair of students (if you choose Bridging Option #1)",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class\n - Locate or reprint supplies for **Happy Maps**\n - Make sure each student has a **Think Spot Journal - Reflection Journal**\n - Cut enough **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** of each direction (N, S, E, W) to give two sets to every pair of students (if you choose Bridging Option #1)",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -549,10 +549,23 @@
       "key": "4f870e69-6c13-4513-a1d9-e6b1b8e22053",
       "position": 5,
       "properties": {
-        "name": "Extension Activities"
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "4f870e69-6c13-4513-a1d9-e6b1b8e22053",
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "courseb-2021"
+      }
+    },
+    {
+      "key": "e030be21-480d-40a2-8f97-574492b54aa2",
+      "position": 6,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e030be21-480d-40a2-8f97-574492b54aa2",
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
         "script.name": "courseb-2021"
@@ -632,8 +645,7 @@
       "key": "25e921a3-616c-4b8d-accb-c360ef37c266",
       "position": 6,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "25e921a3-616c-4b8d-accb-c360ef37c266",
@@ -744,8 +756,7 @@
       "key": "4a617b6e-9d56-472c-8a50-31052d127232",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "4a617b6e-9d56-472c-8a50-31052d127232",
@@ -1368,8 +1379,8 @@
       "key": "bca3fd9d-6986-4755-80d1-056fcf486977",
       "position": 2,
       "properties": {
-        "description": "**Model:** Select a map from **Move It, Move It - Map Activity** from the Move It, Move It unplugged lesson. Using movement pieces from the **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, show students how you would code this structure in this new way. \r\n\r\n**Pair/Think:** Next, choose another map and have the students program what blocks a \"robot\" would need to read to get to the goal.  \r\n\r\nMake sure that they understand that the blocks need to go from top to bottom and they all need to touch! \r\n\r\n**Share:** Have the students check each other's answers and resolve any questions or bugs that may come up.",
-        "name": "1) Unplugged Activity Using Paper Blocks\r"
+        "description": "**Model:** Select a map from **Move It, Move It - Map Activity** from the Move It, Move It unplugged lesson. Using movement pieces from the **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, show students how you would code this structure in this new way. \n\n**Pair/Think:** Next, choose another map and have the students program what blocks a \"robot\" would need to read to get to the goal.  \n\nMake sure that they understand that the blocks need to go from top to bottom and they all need to touch! \n\n**Share:** Have the students check each other's answers and resolve any questions or bugs that may come up.\n\n####-Or-####",
+        "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
         "activity_section.key": "bca3fd9d-6986-4755-80d1-056fcf486977",
@@ -1381,7 +1392,7 @@
       "position": 3,
       "properties": {
         "description": "**Model:** Pull a puzzle from the corresponding online levels. Show students how to get the Angry Bird to the pig using the symbols. It can be helpful to rename the arrows \"North\", \"South, \"East\", and \"West\".  Once you have a program, trace it with your finger (or a pointer) and show how the bird will travel when the program is run.\r\n\r\n**Pair/Think:** Next, move back to an easier puzzle, and have students try writing programs (using arrows) on their own.\r\n\r\n**Share:** Encourage students to share their programs with other groups and see if they came up with solutions that are the same or different.  Can anyone come up with another way of solving the puzzle?",
-        "name": "2) Online Activity Using Unplugged Arrows\r"
+        "name": "Online Activity Using Unplugged Arrows"
       },
       "seeding_key": {
         "activity_section.key": "be611371-ad73-4d3a-b3cf-7e20b4687b61",
@@ -1397,7 +1408,8 @@
             "type": "teachingTip",
             "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch  the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
           }
-        ]
+        ],
+        "name": "Sequencing with Angry Birds"
       },
       "seeding_key": {
         "activity_section.key": "07f0915c-fd00-4787-8a53-251613824cc8",
@@ -1408,8 +1420,7 @@
       "key": "4784895a-ea4f-4a2f-b4ef-c392b016f01c",
       "position": 2,
       "properties": {
-        "description": "This lesson will teach students how to use Code.org to complete online puzzles.\r\n\r\n\r\nWatch the **Pair Programming - Student Video** with your students, then assign them to pairs.  This should help students start off in the right direction.",
-        "name": "Online Puzzles\r"
+        "description": "This lesson will teach students how to use Code.org to complete online puzzles.\r\n\r\n\r\nWatch the **Pair Programming - Student Video** with your students, then assign them to pairs.  This should help students start off in the right direction."
       },
       "seeding_key": {
         "activity_section.key": "4784895a-ea4f-4a2f-b4ef-c392b016f01c",
@@ -1420,8 +1431,7 @@
       "key": "52466cb4-0b52-4d09-aeb9-7db1a558001e",
       "position": 3,
       "properties": {
-        "name": "Maze Intro: Programming with Blocks",
-        "progression_name": "Maze Intro: Programming with Blocks"
+        "progression_name": "Video - Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
         "activity_section.key": "52466cb4-0b52-4d09-aeb9-7db1a558001e",
@@ -1443,7 +1453,6 @@
       "key": "b43821ea-fcde-4389-a55f-285b77e61964",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1455,7 +1464,7 @@
       "key": "d6a58782-e0dc-4632-a239-8ca9f36113ac",
       "position": 1,
       "properties": {
-        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day.\r\n\r\nJournal prompts could include:\r\n\r\n - Draw one of the **Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.\r\n - Can you draw a sequence for getting ready to go to the computer lab?\r\n - Draw a computer lab \"Do\" and a \"Don't\"",
+        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day.\n\n####Journal prompts####\n\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1475,15 +1484,25 @@
       }
     },
     {
+      "key": "dcd637b9-bd6f-4cc8-a0bf-d4a0b8096749",
+      "position": 1,
+      "properties": {
+        "description": "###Interpreting Sticky Data (15-20 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n\n[Intrepreting Sticky Data](https://docs.google.com/document/d/1TJo-CP8G8HewzH-2SbSNlgBjbPV8qzNImOVZdwDHyYo/edit?usp=sharing) is an optional activity aligned to Common Core Math standards, written by our teacher community. Students will use paper manipulatives to organize, represent and interpret data. \n\n*Standards Addressed:*\n\n- **CCSS.MATH.CONTENT.1.MD.C.4:** Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcd637b9-bd6f-4cc8-a0bf-d4a0b8096749",
+        "lesson_activity.key": "e030be21-480d-40a2-8f97-574492b54aa2"
+      }
+    },
+    {
       "key": "7a8f2f22-1330-4e95-934e-8ab9c4441b20",
       "position": 1,
       "properties": {
         "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png)\r\n\r\nLet students know that they will see those letters in their online programs next to the direction arrows.  \r\n"
+            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
         ],
         "name": "Review Unplugged Activity\r"
@@ -1519,7 +1538,7 @@
       "key": "4d06cf45-70a0-47fb-a3ff-0d4818645b5c",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give students **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** with cardinal commands like `E →` (East) and `W ←` (West). \n\n**Display:** Choose a map from the **Move It, Move It - Map Activity** and display it for the class to see. \n\n**Model:** Beginning at the start location, use your finger to show students what each block does.  Show them how the `E →` corresponds to the right arrow and moves the the \"robot\" one step to the right.  Do the same for each of the other three.\n\n**Think:** By this point, the class should know how to reach a goal using arrows. How would you reach a goal using Blockly blocks?\n\n**Pair:** Now, have the students program from their desks using the paper Blockly blocks.  Make sure that they understand that the blocks need to go from top to bottom and they all need to be connected!\n\n**Share:** Have pairs discuss their answers with elbow partners.  Did everybody get the same thing?",
+        "description": "**Distribute:** Give students **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** with cardinal commands like `E →` (East) and `W ←` (West). \n\n**Display:** Choose a map from the **Move It, Move It - Map Activity** and display it for the class to see. \n\n**Model:** Beginning at the start location, use your finger to show students what each block does.  Show them how the `E →` corresponds to the right arrow and moves the the \"robot\" one step to the right.  Do the same for each of the other three.\n\n**Think:** By this point, the class should know how to reach a goal using arrows. How would you reach a goal using Blockly blocks?\n\n**Pair:** Now, have the students program from their desks using the paper Blockly blocks.  Make sure that they understand that the blocks need to go from top to bottom and they all need to be connected!\n\n**Share:** Have pairs discuss their answers with elbow partners.  Did everybody get the same thing?\n\n###-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -1555,7 +1574,7 @@
       "position": 1,
       "properties": {
         "description": "#### Additional Demonstration\r\n\r\nWe've included some multiple choice prediction levels that are difficult for non-readers. Alternatively, these could be used after finishing the stage as a review for the class.\r\n\r\nPrediction Levels:\r\n\r\n - [Programming in Maze #1](https://studio.code.org/levels/8730)\r\n - [Programming in Maze #2](https://studio.code.org/levels/8729)",
-        "name": "Online Puzzles\r"
+        "name": "Programming with Angry Birds"
       },
       "seeding_key": {
         "activity_section.key": "8d4c8d73-6930-4a7f-a73d-3c3312a2705b",
@@ -1566,7 +1585,6 @@
       "key": "32a0cded-433b-4111-b1a5-8513247d783b",
       "position": 2,
       "properties": {
-        "name": "Pair Programming",
         "progression_name": "Pair Programming"
       },
       "seeding_key": {
@@ -1578,7 +1596,6 @@
       "key": "a60dc5a3-0c97-439c-86a4-628f733b0916",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1590,7 +1607,6 @@
       "key": "5ca364f2-80c2-4b91-bb51-bf047aac35b5",
       "position": 4,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1602,7 +1618,6 @@
       "key": "02e3f29b-3c7a-4226-8503-1b2cc47a2028",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1614,6 +1629,7 @@
       "key": "59a20536-707e-4328-88ab-71b1c533cd37",
       "position": 6,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "59a20536-707e-4328-88ab-71b1c533cd37",
@@ -1626,7 +1642,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the *right* way to help classmates by:\r\n\r\n - Don't sit in their chair\r\n - Don't use their keyboard\r\n - Don't touch their mouse\r\n - Make sure the classmate can describe the solution before you walk away\r\n"
           }
@@ -1700,7 +1715,7 @@
       "position": 1,
       "properties": {
         "description": "At this point, students should already be familiar with the programming environment. Some new things to look out for in this lesson are confusion about the debugging process or not remembering to use the `pick corn` block when the harvester reaches corn.",
-        "name": "Online Puzzles\r"
+        "name": "Programming with Harvester"
       },
       "seeding_key": {
         "activity_section.key": "478f0185-2792-46bb-8d0d-e88788ebb722",
@@ -1708,84 +1723,11 @@
       }
     },
     {
-      "key": "0f52c6dc-5602-4905-a924-f7756676f53f",
-      "position": 2,
-      "properties": {
-        "name": "The Harvester",
-        "progression_name": "The Harvester"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f52c6dc-5602-4905-a924-f7756676f53f",
-        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
-      }
-    },
-    {
-      "key": "a54a5ab7-02a5-461d-bdc2-49c946a369d7",
-      "position": 3,
-      "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "a54a5ab7-02a5-461d-bdc2-49c946a369d7",
-        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
-      }
-    },
-    {
-      "key": "d02d999e-ab11-4eab-89cc-fc1a1360c3e5",
-      "position": 4,
-      "properties": {
-        "name": "Debugging with the Step Button",
-        "progression_name": "Debugging with the Step Button"
-      },
-      "seeding_key": {
-        "activity_section.key": "d02d999e-ab11-4eab-89cc-fc1a1360c3e5",
-        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
-      }
-    },
-    {
-      "key": "9f24e731-b41f-4339-877d-314aa5813f01",
-      "position": 5,
-      "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "9f24e731-b41f-4339-877d-314aa5813f01",
-        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
-      }
-    },
-    {
-      "key": "fcc74691-719d-415b-87ae-8bc40b436318",
-      "position": 6,
-      "properties": {
-        "name": "Challenge",
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "fcc74691-719d-415b-87ae-8bc40b436318",
-        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
-      }
-    },
-    {
-      "key": "270d2335-43e2-42a0-a4fe-4035d2e071b5",
-      "position": 7,
-      "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "270d2335-43e2-42a0-a4fe-4035d2e071b5",
-        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
-      }
-    },
-    {
       "key": "78aa2079-ec2a-438a-90cd-fc04c7fd1a89",
-      "position": 8,
+      "position": 2,
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the *right* way to help classmates by:\r\n\r\n - Don't sit in their chair\r\n - Don't use their keyboard\r\n - Don't touch their mouse\r\n - Make sure the classmate can describe the solution before you walk away\r\n"
           }
@@ -1798,7 +1740,7 @@
     },
     {
       "key": "c99faf85-9a98-4efe-8843-65d04bed20f6",
-      "position": 9,
+      "position": 3,
       "properties": {
         "description": "**Circulate:** During online activities, the role of the teacher is primarily one of encouragement and support. In addition to the ideas listed in the last lesson, some more ideas on how to do this are: \r\n\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\r\n\r\n**Transition:** Have students grab their Thinkspot Journals and take a moment to leave lessons for themselves."
       },
@@ -1808,10 +1750,76 @@
       }
     },
     {
+      "key": "0f52c6dc-5602-4905-a924-f7756676f53f",
+      "position": 4,
+      "properties": {
+        "progression_name": "The Harvester"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f52c6dc-5602-4905-a924-f7756676f53f",
+        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
+      }
+    },
+    {
+      "key": "a54a5ab7-02a5-461d-bdc2-49c946a369d7",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "a54a5ab7-02a5-461d-bdc2-49c946a369d7",
+        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
+      }
+    },
+    {
+      "key": "d02d999e-ab11-4eab-89cc-fc1a1360c3e5",
+      "position": 6,
+      "properties": {
+        "progression_name": "Debugging with the Step Button"
+      },
+      "seeding_key": {
+        "activity_section.key": "d02d999e-ab11-4eab-89cc-fc1a1360c3e5",
+        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
+      }
+    },
+    {
+      "key": "9f24e731-b41f-4339-877d-314aa5813f01",
+      "position": 7,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f24e731-b41f-4339-877d-314aa5813f01",
+        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
+      }
+    },
+    {
+      "key": "fcc74691-719d-415b-87ae-8bc40b436318",
+      "position": 8,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcc74691-719d-415b-87ae-8bc40b436318",
+        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
+      }
+    },
+    {
+      "key": "270d2335-43e2-42a0-a4fe-4035d2e071b5",
+      "position": 9,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "270d2335-43e2-42a0-a4fe-4035d2e071b5",
+        "lesson_activity.key": "1a0d4eb7-44ac-4f69-8562-7d55a8324950"
+      }
+    },
+    {
       "key": "95894838-20b0-41ae-801a-5d3326e39e0b",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the **Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw a time you found a bug in your code.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a time you found a bug in your code.",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1847,7 +1855,8 @@
       "key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",
       "position": 1,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35.png)"
+        "description": "![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35.png)",
+        "name": "Dance Party"
       },
       "seeding_key": {
         "activity_section.key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",
@@ -1859,7 +1868,6 @@
       "position": 2,
       "properties": {
         "description": "**Say:** Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the **Getting Loopy - Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
-        "name": "Dance Party",
         "tips": [
           {
             "type": "teachingTip",
@@ -1887,8 +1895,7 @@
       "key": "5d225181-2af4-4b13-a7ef-96c2af34a7b2",
       "position": 1,
       "properties": {
-        "description": "**Display:** Present the vocab for this lesson, [v loop]. Ask the class to point out the main loop that was in the dance. Why do you think we call it a loop?",
-        "name": "Vocabulary\r"
+        "description": "**Display:** Present the vocab for this lesson, <span class=\"vocab\" title=\"\" data-toggle=\"tooltip\" data-placement=\"bottom\" data-original-title=\"for loop: A typical looping construct designed to make it easy to repeat a section of code using a counter variable.  The for loop combines the creation of a variable, a boolean looping condition, and an update to the variable in one statement.\">loop</span> Ask the class to point out the main loop that was in the dance. Why do you think we call it a loop?"
       },
       "seeding_key": {
         "activity_section.key": "5d225181-2af4-4b13-a7ef-96c2af34a7b2",
@@ -2794,9 +2801,9 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Maze Intro: Programming with Blocks",
+        "progression": "Video - Maze Intro: Programming with Blocks",
         "level_keys": [
           "courseAB_video_NewIntro_2021"
         ]
@@ -2820,7 +2827,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2846,7 +2853,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2872,7 +2879,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2898,7 +2905,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2924,7 +2931,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2950,7 +2957,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -2976,7 +2983,7 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pair Programming",
         "level_keys": [
@@ -3002,7 +3009,7 @@
       "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3028,7 +3035,7 @@
       "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3054,7 +3061,7 @@
       "chapter": 13,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3080,7 +3087,7 @@
       "chapter": 14,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3106,7 +3113,7 @@
       "chapter": 15,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3132,7 +3139,7 @@
       "chapter": 16,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3159,7 +3166,7 @@
       "chapter": 17,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3185,7 +3192,7 @@
       "chapter": 18,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3211,7 +3218,7 @@
       "chapter": 19,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3237,11 +3244,12 @@
       "chapter": 20,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -3262,11 +3270,12 @@
       "chapter": 21,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -3287,7 +3296,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Harvester",
         "level_keys": [
@@ -3313,12 +3322,12 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_harvester_seq1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3339,12 +3348,12 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_harvester_seq2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3365,12 +3374,12 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_harvester_seq3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3391,7 +3400,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging with the Step Button",
         "level_keys": [
@@ -3417,7 +3426,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3443,7 +3452,7 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3469,7 +3478,7 @@
       "chapter": 29,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3495,7 +3504,7 @@
       "chapter": 30,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3521,7 +3530,7 @@
       "chapter": 31,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3547,7 +3556,7 @@
       "chapter": 32,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3573,7 +3582,7 @@
       "chapter": 33,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3600,7 +3609,7 @@
       "chapter": 34,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3626,7 +3635,7 @@
       "chapter": 35,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3652,7 +3661,7 @@
       "chapter": 36,
       "position": 15,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3678,7 +3687,7 @@
       "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "GettingLoopy-Unplugged_2021"
