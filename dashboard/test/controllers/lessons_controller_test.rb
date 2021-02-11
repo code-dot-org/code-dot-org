@@ -9,7 +9,7 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1'
+    @script = create :script, name: 'unit-1', is_migrated: true, hidden: true
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -81,10 +81,35 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :levelbuilder, response: :forbidden
 
+  test 'can not show lesson when lesson is in a non-migrated script' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'unmigrated-course'
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'unmigrated lesson',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :show, params: {
+      id: unmigrated_lesson.id
+    }
+    assert_response :forbidden
+  end
+
   test 'show lesson when lesson is the only lesson in script' do
+    script = create :script, name: 'one-lesson-script', is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
     @solo_lesson_in_script = create(
       :lesson,
       name: 'lesson display name',
+      script_id: script.id,
+      lesson_group_id: lesson_group.id,
       has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
@@ -273,7 +298,7 @@ class LessonsControllerTest < ActionController::TestCase
       post :update, params: {
         id: lesson.id,
         lesson: {name: lesson.name},
-        originalLessonData: {"name": "Not the name"}
+        originalLessonData: JSON.generate({"name": "Not the name"})
       }
     end
 
@@ -302,6 +327,66 @@ class LessonsControllerTest < ActionController::TestCase
       id: lesson.id,
       lesson: {name: lesson.name},
       originalLessonData: JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    }
+
+    assert_response :success
+  end
+
+  test 'can update if vocabulary content changes' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+    vocabulary = create :vocabulary, definition: 'original definition', lessons: [lesson]
+    original_lesson_data = JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    vocabulary.definition = 'updated definition'
+
+    post :update, params: {
+      id: lesson.id,
+      lesson: {name: lesson.name},
+      originalLessonData: original_lesson_data
+    }
+
+    assert_response :success
+  end
+
+  test 'can update if resource content changes' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+    resource = create :resource, url: 'original.url', lessons: [lesson]
+    original_lesson_data = JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    resource.url = 'updated.url'
+
+    post :update, params: {
+      id: lesson.id,
+      lesson: {name: lesson.name},
+      originalLessonData: original_lesson_data
     }
 
     assert_response :success

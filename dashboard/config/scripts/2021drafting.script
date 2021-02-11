@@ -30,11 +30,18 @@ level 'courseF_events_freeplay', progression: 'Free Play: Make an Interactive Sc
 
 lesson_group 'lessonGroup-3', display_name: 'Variables'
 lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
-lesson 'lesson-1', display_name: 'Blank Space Variables', has_lesson_plan: false
-level 'EnvelopeVariables-Unplugged_2021', progression: 'Blank Space Variables'
+lesson 'blank space stories', display_name: 'Blank Space Stories', has_lesson_plan: false
+level 'EnvelopeVariables-Unplugged_2021', progression: 'Video: Variables in Envelopes'
 
-lesson 'lesson-2', display_name: 'Storing and Retrieving Text', has_lesson_plan: false
+lesson 'lesson-2', display_name: 'Text and Prompts', has_lesson_plan: false
 level 'courseF_variables_predict', progression: 'Prediction'
+level 'courseF_text_review', progression: 'Skill Building'
+level 'courseF_text_print', progression: 'Skill Building'
+level 'courseF_text_events', progression: 'Skill Building'
+level 'courseF_text_prompts', progression: 'Skill Building'
+level 'courseF_text_answer', progression: 'Skill Building'
+level 'courseF_text_concat', progression: 'Skill Building'
+level 'courseF_text_practice'
 
 lesson 'lesson-3', display_name: 'Create a Chat-Bot', has_lesson_plan: false
 

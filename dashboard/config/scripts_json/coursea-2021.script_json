@@ -93,7 +93,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\r\n\r\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
+        "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
         "student_overview": "Learn how to go places safely online.",
         "purpose": "Common Sense Education created this lesson to teach students how they can go places safely online.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- (Optional) Print poem poster for classroom display.",
@@ -328,8 +328,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "9a0492b7-c36e-4010-bc5d-96e1a609a33f",
+      "key": "09eb0525-dfae-44f2-831f-5c1f2ffee133",
       "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09eb0525-dfae-44f2-831f-5c1f2ffee133",
+        "lesson.key": "Safety in My Online Neighborhood",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "9a0492b7-c36e-4010-bc5d-96e1a609a33f",
+      "position": 2,
       "properties": {
         "name": "Watch: My Online Neighborhood",
         "duration": 5
@@ -343,7 +356,7 @@
     },
     {
       "key": "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Read: Safety, It Rules!",
         "duration": 5
@@ -357,7 +370,7 @@
     },
     {
       "key": "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Explore: Internet Field Trip",
         "duration": 15
@@ -371,7 +384,7 @@
     },
     {
       "key": "df8b3513-c2f8-4db5-bb6b-93e60a3826d7",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Pause & Think Moment",
         "duration": 15
@@ -385,26 +398,12 @@
     },
     {
       "key": "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4",
-        "lesson.key": "Safety in My Online Neighborhood",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
-      "key": "09eb0525-dfae-44f2-831f-5c1f2ffee133",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "09eb0525-dfae-44f2-831f-5c1f2ffee133",
         "lesson.key": "Safety in My Online Neighborhood",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursea-2021"
@@ -525,24 +524,10 @@
       "key": "0915a618-f1c1-47be-b8fb-80664fa62e50",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "0915a618-f1c1-47be-b8fb-80664fa62e50",
-        "lesson.key": "Programming: Happy Maps",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
-      "key": "876c474f-6734-47b9-b36a-514254c960ea",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "876c474f-6734-47b9-b36a-514254c960ea",
         "lesson.key": "Programming: Happy Maps",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021"
@@ -621,7 +606,7 @@
       "key": "ad255314-ba48-44b7-a6b8-1f0cc1e24157",
       "position": 1,
       "properties": {
-        "name": "Warm Up: The Unplugged Foundation",
+        "name": "Warm Up",
         "duration": 3
       },
       "seeding_key": {
@@ -635,8 +620,8 @@
       "key": "774eb8ca-0c20-467c-9f25-0d454403dfc3",
       "position": 2,
       "properties": {
-        "name": "Online Foundation: Preview Programming in Maze",
-        "duration": 3
+        "name": "Main Activity",
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "774eb8ca-0c20-467c-9f25-0d454403dfc3",
@@ -649,8 +634,7 @@
       "key": "eb14dead-e5ac-4775-a357-01b110438a28",
       "position": 3,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "eb14dead-e5ac-4775-a357-01b110438a28",
@@ -677,8 +661,7 @@
       "key": "13ec08fa-c803-4a93-82b0-0a18629d2e54",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "13ec08fa-c803-4a93-82b0-0a18629d2e54",
@@ -970,8 +953,7 @@
       "key": "d532c41b-fba1-4122-8928-17ec3ef36315",
       "position": 4,
       "properties": {
-        "name": "Cross-Curricular Opportunity",
-        "duration": 0
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
         "lesson_activity.key": "d532c41b-fba1-4122-8928-17ec3ef36315",
@@ -1136,11 +1118,20 @@
   ],
   "activity_sections": [
     {
+      "key": "ef4f13d4-c5b0-4778-8ca1-359132023d82",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ef4f13d4-c5b0-4778-8ca1-359132023d82",
+        "lesson_activity.key": "09eb0525-dfae-44f2-831f-5c1f2ffee133"
+      }
+    },
+    {
       "key": "66dc5fd4-eacf-41f8-9d21-196b81d35d7a",
       "position": 1,
       "properties": {
-        "description": "* **online**: using a computer, phone, or tablet to visit a website or app\r\n* **website or app**: a place you can visit on the internet\r\n\r\n**Ask**: _What do you need to do to stay safe when you visit new places?_ ([Slide 3](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_54))\r\n\r\nInvite students to respond. Answers will vary, but reinforce the following safety rules:\r\n\r\n* Always go places with an adult.\r\n* Don't wander off on your own.\r\n* Talk only with people you know.\r\n\r\n**Say**: _Today we're going to talk about how visiting places on the internet is a lot like visiting places in real life. Just like there are rules to keep safe when you visit new places in the world, there are ways to keep yourself safe online._\r\n\r\n**Project** [Slide 4](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5c15fa078c_0_0) and define **online** as _using a computer, phone, or tablet to visit a website or app_.\r\n\r\n**Show** the [My Online Neighborhood](https://www.commonsense.org/education/videos/my-online-neighborhood) video on [Slide 5](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_93) and then ask: _What did Arms like about the internet? What kinds of things can he do on the internet?_\r\n\r\nInvite students to respond. Sample responses:\r\n\r\n* He likes to visit cool places.\r\n* He can talk to his family and friends. \r\n* He can learn lots of new things.\r\n* He can create things on the internet.\r\n\r\n**Ask**: _What three rules does Arms follow when he goes places online?_\r\n\r\nInvite students to respond. Project [Slide 6](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_141) and reinforce the three main rules:\r\n\r\n1. Always ask your parent (or adult you trust) first. \r\n1. Only talk to people you know.\r\n1. Stick to places that are just right for you.\r\n\r\nExplain that sticking to places that are \"just right\" means making sure it is a site or app that is appropriate for kids, and that you have permission to be there.",
-        "name": "Key Vocabulary\r"
+        "description": "###Key Vocabulary###\n\n* **online**: using a computer, phone, or tablet to visit a website or app\n* **website or app**: a place you can visit on the internet\n\n**Ask**: _What do you need to do to stay safe when you visit new places?_ ([Slide 3](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_54))\n\nInvite students to respond. Answers will vary, but reinforce the following safety rules:\n\n* Always go places with an adult.\n* Don't wander off on your own.\n* Talk only with people you know.\n\n**Say**: _Today we're going to talk about how visiting places on the internet is a lot like visiting places in real life. Just like there are rules to keep safe when you visit new places in the world, there are ways to keep yourself safe online._\n\n**Project** [Slide 4](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5c15fa078c_0_0) and define **online** as _using a computer, phone, or tablet to visit a website or app_.\n\n**Show** the [My Online Neighborhood](https://www.commonsense.org/education/videos/my-online-neighborhood) video on [Slide 5](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_93) and then ask: _What did Arms like about the internet? What kinds of things can he do on the internet?_\n\nInvite students to respond. Sample responses:\n\n* He likes to visit cool places.\n* He can talk to his family and friends. \n* He can learn lots of new things.\n* He can create things on the internet.\n\n**Ask**: _What three rules does Arms follow when he goes places online?_\n\nInvite students to respond. Project [Slide 6](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_141) and reinforce the three main rules:\n\n1. Always ask your parent (or adult you trust) first. \n1. Only talk to people you know.\n1. Stick to places that are just right for you.\n\nExplain that sticking to places that are \"just right\" means making sure it is a site or app that is appropriate for kids, and that you have permission to be there."
       },
       "seeding_key": {
         "activity_section.key": "66dc5fd4-eacf-41f8-9d21-196b81d35d7a",
@@ -1151,7 +1142,7 @@
       "key": "fc3baf69-3ed1-46de-af6c-bed50ffd6757",
       "position": 1,
       "properties": {
-        "description": "**Say**: *Now we're going to learn a short poem to help us remember the rules for staying safe online. First I'll read the poem, and then we'll read it together.*\r\n\r\n**Project** [Slide 7](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_196) and model the poem actions as you read the poem aloud. This is a call-and-response poem with different actions that correspond to each of the three safety rules.\r\n\r\n**Read** the poem aloud with your students. As the students read, they should follow along with the actions. The poem also works well to have one of the students playing the role of the teacher and having the class respond to him or her. \r\n\r\n**Safety, It Rules!  By Jenny Pritchett**\r\n\r\n*We need to be safe*\r\n\r\n*Whenever we're online*\r\n\r\n*So we follow these rules*\r\n\r\n*To have a good time!*\r\n\r\n[Hold up 1 finger] *Always ask your parents first! *\r\n\r\n[Hold up 2 fingers] *Only talk to people you know! *\r\n\r\n[Hold up 3 fingers] *Stick to sites just right for you!*\r\n\r\n*And we'll be safe *\r\n\r\n*Wherever we go!*\r\n\r\nNote: The [Poem Poster](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) is great to use for your weekly poem or as a consistent routine to kick off any computer or device time."
+        "description": "**Say**: *Now we're going to learn a short poem to help us remember the rules for staying safe online. First I'll read the poem, and then we'll read it together.*\n\n**Project** [Slide 7](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_196) and model the poem actions as you read the poem aloud. This is a call-and-response poem with different actions that correspond to each of the three safety rules.\n\n**Read** the poem aloud with your students. As the students read, they should follow along with the actions. The poem also works well to have one of the students playing the role of the teacher and having the class respond to him or her. \n\n**Safety, It Rules!  By Jenny Pritchett**\n\n*We need to be safe*\n\n*Whenever we're online*\n\n*So we follow these rules*\n\n*To have a good time!*\n\n[Hold up 1 finger] *Always ask your parents first! *\n\n[Hold up 2 fingers] *Only talk to people you know! *\n\n[Hold up 3 fingers] *Stick to sites just right for you!*\n\n*And we'll be safe*\n\n*Wherever we go!*\n\nNote: The [Poem Poster](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) is great to use for your weekly poem or as a consistent routine to kick off any computer or device time."
       },
       "seeding_key": {
         "activity_section.key": "fc3baf69-3ed1-46de-af6c-bed50ffd6757",
@@ -1162,7 +1153,7 @@
       "key": "39a4de29-4980-411c-9999-90a2bb94b72b",
       "position": 1,
       "properties": {
-        "description": "**Say**: *The computer makes it possible to you to visit faraway places without ever leaving the classroom.* \r\n\r\nDefine a **website** as *a place you can visit on the internet.* ([Slide 8](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_245)) Explain to students that on the internet, they can visit websites or apps for real places, such as zoos and museums. These places may be far from where they live, but they can visit them online.\r\n\r\n**Choose** a website to explore as a class. If you're not sure of a good one to explore, try one of the following:\r\n\r\n-   [The San Diego Zoo](http://kids.sandiegozoo.org/)\r\n-   [National Geographic Kids Explore the World](https://kids.nationalgeographic.com/explore/countries/)\r\n\r\n**Ask**: *What's the first rule before turning on a device or opening up a website or app? *\r\n\r\nInvite students to share, reminding them that they must always ask for permission from an adult before using a device or visiting a website or app.\r\n\r\n**Explore** the website you selected with your class, allowing students to choose pages and activities that are most interesting to them. As you go through the site, point out how students are following the other two safety rules for going online: only talking to people they know, and sticking to places that are just right for them.\r\n\r\nNote: If you are in the computer lab or have enough devices in your classroom, have students do the explorations individually or in pairs.\r\n\r\n**Ask** students what they learned on their internet field trip. Also ask: *How did you follow the three safety rules when you visited the site?*"
+        "description": "**Say**: *The computer makes it possible to you to visit faraway places without ever leaving the classroom.* \n\nDefine a **website** as *a place you can visit on the internet.* ([Slide 8](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_245)) Explain to students that on the internet, they can visit websites or apps for real places, such as zoos and museums. These places may be far from where they live, but they can visit them online.\n\n**Choose** a website to explore as a class. If you're not sure of a good one to explore, try one of the following:\n\n-   [The San Diego Zoo](http://kids.sandiegozoo.org/)\n-   [National Geographic Kids Explore the World](https://kids.nationalgeographic.com/explore/countries/)\n\n**Ask**: *What's the first rule before turning on a device or opening up a website or app?*\n\nInvite students to share, reminding them that they must always ask for permission from an adult before using a device or visiting a website or app.\n\n**Explore** the website you selected with your class, allowing students to choose pages and activities that are most interesting to them. As you go through the site, point out how students are following the other two safety rules for going online: only talking to people they know, and sticking to places that are just right for them.\n\nNote: If you are in the computer lab or have enough devices in your classroom, have students do the explorations individually or in pairs.\n\n**Ask** students what they learned on their internet field trip. Also ask: *How did you follow the three safety rules when you visited the site?*"
       },
       "seeding_key": {
         "activity_section.key": "39a4de29-4980-411c-9999-90a2bb94b72b",
@@ -1192,21 +1183,11 @@
       }
     },
     {
-      "key": "ef4f13d4-c5b0-4778-8ca1-359132023d82",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ef4f13d4-c5b0-4778-8ca1-359132023d82",
-        "lesson_activity.key": "09eb0525-dfae-44f2-831f-5c1f2ffee133"
-      }
-    },
-    {
       "key": "5cd698e0-d82e-4e9d-af4f-1923b453d12b",
       "position": 1,
       "properties": {
-        "description": "Goal: This discussion will teach students what to expect and how to behave when they enter the computer lab.",
-        "name": "Behaving in the Computer Lab\r"
+        "description": "*Goal:* This discussion will teach students what to expect and how to behave when they enter the computer lab.",
+        "name": "Behaving in the Computer Lab"
       },
       "seeding_key": {
         "activity_section.key": "5cd698e0-d82e-4e9d-af4f-1923b453d12b",
@@ -1220,7 +1201,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": " - Use calm bodies in the lab\r\n - Remember not to chew gum or candy\r\n - Sanitize your hands\r\n - Sit with your partner at one computer\r\n - Make sure that the first \"driver\" can reach the mouse\r\n - When you get frustrated, don't hit or shake the computer or monitor\r\n - Follow the [r 202020] rule\r\n - How to deal with the [r wiggles] every 20-30 minutes (requires a free login on GoNoodle)\r\n - Ask your partner before you ask the teacher\r\n - Keep volume down so everyone else can hear their partners\r\n - Use your journal for keeping track of feelings and solutions\r\n\r\n"
+            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the [20/20/20 Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n - How to deal with the [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) every 20-30 minutes (requires a free login on GoNoodle). every 20-30 minutes (requires a free login on GoNoodle)\n - Ask your partner before you ask the teacher\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n\n"
           }
         ]
       },
@@ -1233,8 +1214,7 @@
       "key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
       "position": 3,
       "properties": {
-        "description": "Have a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\r\n\r\n - Is running in the computer lab okay?\r\n - How loudly should we walk when we are in the computer lab?\r\n - What should you do if you get stuck on a puzzle?\r\n - If you get frustrated, will it help to hit the computer?\r\n - When we're about to go to the computer lab, how should we get ready?",
-        "name": "Discuss\r"
+        "description": "\n*Discuss:*\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?"
       },
       "seeding_key": {
         "activity_section.key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
@@ -1285,7 +1265,7 @@
       "key": "46a16121-b405-44e1-9bfa-6391362b12f0",
       "position": 3,
       "properties": {
-        "description": "Place kids in pairs and have them watch the pair programming video as a class or at their stations.  This should help students start off in the right direction."
+        "description": "Place kids in pairs and have them watch the [Pair Programming Video](https://www.youtube.com/watch?v=vgkahOzFH2Q) as a class or at their stations.  This should help students start off in the right direction.\n"
       },
       "seeding_key": {
         "activity_section.key": "46a16121-b405-44e1-9bfa-6391362b12f0",
@@ -1336,7 +1316,7 @@
       "key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
       "position": 1,
       "properties": {
-        "description": "Goal: Help students reflect on the things they learned in this lesson\r\n\r\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\r\n\r\nJournal prompts could include:\r\n\r\n - Draw one of the feeling faces that shows how you felt about today's lesson in the corner of your journal page.\r\n - Can you draw a sequence for getting ready to go to the computer lab?\r\n - Draw a computer lab \"Do\" and a \"Don't\"\r\n -  - Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "description": "*Goal:* Help students reflect on the things they learned in this lesson\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\nJournal prompts could include:\n\n-  Draw one of the [Feeling Faces Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1348,7 +1328,7 @@
       "key": "902cde98-a6eb-4a14-b992-43ba04b6c522",
       "position": 1,
       "properties": {
-        "description": "If students complete the puzzles early, have them spend some time trying to come up with their own puzzles in their journal."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment\n\n- If students complete the puzzles early, have them spend some time trying to come up with their own puzzles in their journal.\n\n- [Rhyme With That](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#).\n-Rhyme With That is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will use the computer mouse to drag and drop a letter to form CVC words, match rhyming words and count."
       },
       "seeding_key": {
         "activity_section.key": "902cde98-a6eb-4a14-b992-43ba04b6c522",
@@ -1374,7 +1354,6 @@
         "description": "**Say:** Well done!  You just gave me a list of steps to finish a task.  In computer science, that's called an Algorithm!\r\n[Follow up with your typical method of introducing vocabulary: word wall, repeat-after-me, etc.]",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If the class starts shouting simultaneously, explain that you can only hear one instruction at a time. Call on students individually if that helps.\r\n\r\n"
           }
@@ -1386,8 +1365,19 @@
       }
     },
     {
-      "key": "7beae8bf-6b0e-41da-9397-06b0c9fb0b52",
+      "key": "7719a51a-42d9-41f0-bc30-c5475b18af7c",
       "position": 1,
+      "properties": {
+        "progression_name": "Video: Unplugged - Happy Maps"
+      },
+      "seeding_key": {
+        "activity_section.key": "7719a51a-42d9-41f0-bc30-c5475b18af7c",
+        "lesson_activity.key": "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e"
+      }
+    },
+    {
+      "key": "7beae8bf-6b0e-41da-9397-06b0c9fb0b52",
+      "position": 2,
       "properties": {
         "description": "In this exercise, the class will get map cards that have a pre-defined start space (Flurb) and end space (fruit).  Students will need to get the Flurbs to the fruit on each card, using the arrows provided.\n\n**Model:**  Select one of the intermediate maps from the Happy Maps Cards worksheet (e.g., #3). Display it for the class and work through the puzzle together.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the Flurb to the fruit.\n\n**Think:**  This Flurb needs to take two steps to get to the fruit. Work with your elbow partner to decide what you think those two steps are.\n\n**Pair:**  Have students discuss with neighbors for about 90 seconds.\n\n**Share:** Ask a few students to describe their algorithm to the class. Move your finger along the displayed map as the students read their steps. Once you have a solution, ask if anyone else came up with a different idea that also works. \n\n\nNow, share with the students that the magic step of changing an algorithm into a \"program\" happens when the code is written down using symbols.  Do the students see any symbols on the display?\n\n**Think:** Challenge students to encode the algorithm that they came up with before into symbols, and to write those symbols down in their journals (or on a piece of paper.)\n\n**Pair:** Once students have written down their symbols, ask them to swap with a partner to see if they can follow each others' instructions.\n\n**Share:** Ask for volunteers to come draw their arrows on the board. If the original code doesn't work, spend some time debugging as a class. Students should be familiar with the idea of \"debugging\" from previous lessons, so be sure to use the vocabulary to get them comfortable with it.\n\nOnce the code has been successfully written on the board, congratulate the class on writing their first program together!",
         "name": "Happy Maps Programming"
@@ -1399,9 +1389,9 @@
     },
     {
       "key": "84f50800-a9f3-4ae6-b023-f63cc376e061",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "**Group:** If your class is comfortable, place students into small groups of 2-3.  Otherwise, you can continue solving these problems as a class and having them think-pair-share to write programs. \n\n\n**Distribute:** Pass out one of the images from the **Happy Map Cards - Worksheet** to each group as needed.  \n*(Optional)* If you start noticing that students are ready for more, use the provided **Happy Map Game Pieces - Manipulatives** and let students choose their own start and finish destinations on the blank map.\n\nEncourage the students to follow these steps:\n\n- Discuss an algorithm to get the Flurb to the fruit.\n- Encode the algorithm into arrows in their journals.\n- Try their code to see if everything works as expected.\n- Debug any issues and fix their code until it works correctly.\n\n**Share:** When the lesson is done, offer to let groups share out the most difficult maps that they solved. If you had time, ask them to share their solutions as well.",
+        "description": "**Group:** If your class is comfortable, place students into small groups of 2-3.  Otherwise, you can continue solving these problems as a class and having them think-pair-share to write programs. \n\n\n**Distribute:** Pass out one of the images from the **Happy Map Cards - Worksheet** to each group as needed.  \n*(Optional)* If you start noticing that students are ready for more, use the provided **Happy Map Game Pieces - Manipulatives** and let students choose their own start and finish destinations on the blank map.\n\nEncourage the students to follow these steps:\n\n- Discuss an algorithm to get the Flurb to the fruit.\n- Encode the algorithm into arrows in their journals.\n- Try their code to see if everything works as expected.\n- Debug any issues and fix their code until it works correctly.\n\n**Share:** When the lesson is done, offer to let groups share out the most difficult maps that they solved. If you have time, ask them to share their solutions as well.",
         "name": "Students' Turn"
       },
       "seeding_key": {
@@ -1413,7 +1403,7 @@
       "key": "a6b03761-2c05-45cd-be08-78c966e2f444",
       "position": 1,
       "properties": {
-        "description": "**Discuss:** When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (code) has been encoded in a way that can be run by a machine (or a kindergartener!)\r\n\r\n- Do you think that someone who speaks another language would be able to run your program? \r\n- Why or why not?",
+        "description": "*Discuss:* When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (code) has been encoded in a way that can be run by a machine (or a kindergartener!)\n\n- Do you think that someone who speaks another language would be able to run your program? \n- Why or why not?",
         "name": "Flash Chat\r"
       },
       "seeding_key": {
@@ -1425,7 +1415,7 @@
       "key": "07204654-abc5-4eea-a1e3-bd00f5d26644",
       "position": 2,
       "properties": {
-        "description": "Students should be encouraged to capture their thoughts in their journal after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - Draw one of the [r feeling-faces-image] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Can you draw your own Flurb map?  \r\n - What would the code be to solve your map?",
+        "description": "Students should be encouraged to capture their thoughts in their journals after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - Draw one of the [r feeling-faces-image] that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw your own Flurb map?  \n - What would the code be to solve your map?",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1442,16 +1432,6 @@
       "seeding_key": {
         "activity_section.key": "c3cfdbc4-82d5-4717-bf83-22860936a687",
         "lesson_activity.key": "0915a618-f1c1-47be-b8fb-80664fa62e50"
-      }
-    },
-    {
-      "key": "fb4d7018-ade7-4c42-86d7-28ecc6a6b0f3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "fb4d7018-ade7-4c42-86d7-28ecc6a6b0f3",
-        "lesson_activity.key": "876c474f-6734-47b9-b36a-514254c960ea"
       }
     },
     {
@@ -1587,15 +1567,14 @@
       "key": "7119f518-386e-44e7-893d-eff0fbc5a87d",
       "position": 1,
       "properties": {
-        "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.",
+        "description": "###Review Unplugged Activity\nThis lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png)\r\n\r\nLet students know that they will see those letters in their online programs next to the direction arrows.  \r\n"
           }
         ],
-        "name": "Review Unplugged Activity\r"
+        "name": "The Unplugged Foundation"
       },
       "seeding_key": {
         "activity_section.key": "7119f518-386e-44e7-893d-eff0fbc5a87d",
@@ -1606,7 +1585,7 @@
       "key": "8b694201-2213-4aea-84a2-9cf901afa9c9",
       "position": 2,
       "properties": {
-        "description": "**Display:** Show students map from the \"Happy Maps\" exercise that they completed in the lessons prior to this one. \r\n\r\n**Discuss:** Ask students to recall the symbols used in \"Happy Maps.\"    \r\n\r\n- What happens when the flurb reads the \"North\" arrow?\r\n- What happens when the flurb reads the \"East\" arrow?\r\n- What would happen if we made a mistake when programming the Flurb?  What if there was a \"bug\" in our program?  Would we throw the whole thing away and start over?\r\n\r\nEncourage students to think about the debugging tips:\r\n\r\n- Was everything right at the first step?\r\n- How about the second?\r\n- Where did it go wrong?\r\n\r\n\r\n**Transition:** Once you are satisfied that your students remember \"Happy Maps\" and \"Unspotted Bugs\", you can move into the Bridging Activity."
+        "description": "*Display:* Show students map from the \"Happy Maps\" exercise that they completed in the lessons prior to this one. \n\n*Discuss:* Ask students to recall the symbols used in \"Happy Maps.\"    \n\n- What happens when the flurb reads the \"North\" arrow?\n- What happens when the flurb reads the \"East\" arrow?\n- What would happen if we made a mistake when programming the flurb?  What if there was a \"bug\" in our program?  Would we throw the whole thing away and start over?\n\nEncourage students to think about the debugging tips:\n\n- Was everything right at the first step?\n- How about the second?\n- Where did it go wrong?\n\n\n*Transition:* Once you are satisfied that your students remember \"Happy Maps\" and \"Unspotted Bugs\", you can move into the Bridging Activity.\n\n###Online Foundation: Preview Programming in Maze (3 minutes)\nTo prepare students, preview an online puzzle (or two) as a class.\n\n*Model:* Reveal an entire online puzzle from the progression to come.  We recommend Lesson 5, Puzzle 5.  Point out the \"Play Area\" with Scrat, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that students will be using to get Scrat to the acorn.  Do they see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. \n\n*Transition:* Students should now be ready to transition to computers to complete online puzzles on their own."
       },
       "seeding_key": {
         "activity_section.key": "8b694201-2213-4aea-84a2-9cf901afa9c9",
@@ -1614,34 +1593,22 @@
       }
     },
     {
-      "key": "badeeb66-4e25-47eb-9474-f8e6de7df32c",
+      "key": "82d24278-d63c-4e22-921d-b92f4f1f8cd8",
       "position": 1,
       "properties": {
-        "description": "To prepare students, preview an online puzzle (or two) as a class.\r\n\r\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 5, Puzzle 5.  Point out the \"Play Area\" with Scrat, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that students will be using to get Scrat to the acorn.  Do they see any similarities to the exercise that they just did?  What are the big differences?\r\n\r\nWork with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. \r\n\r\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
+        "name": "Online Puzzles",
+        "description": "If you are looking for some extra puzzles to cover with your class, here are some \"prediction\" puzzles that will allow you to walk through existing code with your students to predict what Scrat will do.  It is a good idea to cover them together before letting students loose on their own machines.\n\nPrediction Levels:\n\n - [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n - [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
       },
       "seeding_key": {
-        "activity_section.key": "badeeb66-4e25-47eb-9474-f8e6de7df32c",
+        "activity_section.key": "82d24278-d63c-4e22-921d-b92f4f1f8cd8",
         "lesson_activity.key": "774eb8ca-0c20-467c-9f25-0d454403dfc3"
       }
     },
     {
-      "key": "3eb0ec67-1601-435a-bb64-fe05348cc52f",
+      "key": "97ccc4b6-92d5-4c46-94a4-3289d38f068d",
       "position": 1,
       "properties": {
-        "description": "If you are looking for some extra puzzles to cover with your class, here are some \"prediction\" puzzles that will allow you to walk through existing code with your students to predict what Scrat will do.  It is a good idea to cover them together before letting students loose on their own machines.\r\n\r\nPrediction Levels:\r\n\r\n - [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\r\n - [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)",
-        "name": "Online Puzzles\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "3eb0ec67-1601-435a-bb64-fe05348cc52f",
-        "lesson_activity.key": "eb14dead-e5ac-4775-a357-01b110438a28"
-      }
-    },
-    {
-      "key": "97ccc4b6-92d5-4c46-94a4-3289d38f068d",
-      "position": 2,
-      "properties": {
-        "name": "Pair Programming",
-        "progression_name": "Pair Programming"
+        "progression_name": "Pair Programming Video"
       },
       "seeding_key": {
         "activity_section.key": "97ccc4b6-92d5-4c46-94a4-3289d38f068d",
@@ -1650,9 +1617,8 @@
     },
     {
       "key": "487f446a-7245-403f-827c-e1e94663c256",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1662,9 +1628,8 @@
     },
     {
       "key": "82e3c83d-e33d-4c0f-8767-ed3f153162e2",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "name": "Debugging with the Step Button",
         "progression_name": "Debugging with the Step Button"
       },
       "seeding_key": {
@@ -1674,9 +1639,8 @@
     },
     {
       "key": "af0d64b6-9076-490e-96b8-b4d56d3dc5c5",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1686,9 +1650,8 @@
     },
     {
       "key": "9bf3aa93-0d30-4dd2-a78e-926066cc64f3",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1698,9 +1661,8 @@
     },
     {
       "key": "05bbe6d1-d2c9-42a7-8489-2d545058f9c5",
-      "position": 7,
+      "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1710,8 +1672,9 @@
     },
     {
       "key": "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329",
-      "position": 8,
+      "position": 7,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329",
@@ -1720,13 +1683,12 @@
     },
     {
       "key": "3719811c-4fc2-4da5-94c7-989c91ef7d1e",
-      "position": 9,
+      "position": 8,
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Show the students the *right* way to help classmates by:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
+            "markdown": "Show the students the *right* way to help classmates by reminding them:\n\n - Don’t sit in the classmate’s chair.\n - Don’t use the classmate’s keyboard.\n - Don’t touch the classmate’s mouse.\n - Make sure the classmate can describe the solution to you out loud before you walk away.\n"
           }
         ]
       },
@@ -1737,9 +1699,9 @@
     },
     {
       "key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
-      "position": 10,
+      "position": 9,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize **Pair Programming - Student Video** whenever possible\r\n - Encourage students with questions/challenges to start by asking their partner\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\r\n - Remind students to use the debugging process before you approach\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own"
+        "description": "*Circulate:* Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize **Pair Programming - Student Video** whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own"
       },
       "seeding_key": {
         "activity_section.key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
@@ -1750,7 +1712,7 @@
       "key": "5703506b-9469-4b74-bbe0-14b169229f01",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - Draw one of the **Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw Scrat and an acorn somewhere on your paper.  Can you write a program to get to get Scrat to the acorn?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw Scrat and an acorn somewhere on your paper.  Can you write a program to get Scrat to the acorn?",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1762,7 +1724,7 @@
       "key": "49b21387-4778-47bb-b51e-1a555b3f9bb3",
       "position": 1,
       "properties": {
-        "description": "In small groups, let students design their own mazes on paper and challenge other students or groups to write programs to solve them. For added fun, make life-size mazes with students as Scrat and the acorn."
+        "description": "In small groups, let students design their own mazes on paper and challenge other students or groups to write programs to solve them. For added fun, make life-size mazes with students as Scrat and the acorn.\n \n[Saving Scrat's Acorns](https://docs.google.com/document/d/1Xb7HjnkbOkOKbN56GDNzgpxL87TtLO7nygtNVP0UwX8/edit#)\nSaving Scrat's Acorns is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will help Scrat count, compare, identify, design and build a tent as he makes his way across the ice to gather his acorns. "
       },
       "seeding_key": {
         "activity_section.key": "49b21387-4778-47bb-b51e-1a555b3f9bb3",
@@ -2353,7 +2315,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
           }
@@ -2482,22 +2443,10 @@
       }
     },
     {
-      "key": "e652531d-091a-4da3-9491-c53de01bd5e5",
+      "key": "85143426-6671-4809-8601-8502634e2f51",
       "position": 1,
       "properties": {
-        "description": "#### (Optional) 30-45 minutes"
-      },
-      "seeding_key": {
-        "activity_section.key": "e652531d-091a-4da3-9491-c53de01bd5e5",
-        "lesson_activity.key": "d532c41b-fba1-4122-8928-17ec3ef36315"
-      }
-    },
-    {
-      "key": "85143426-6671-4809-8601-8502634e2f51",
-      "position": 2,
-      "properties": {
-        "description": "[**Code My Drawing**](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) is an optional activity aligned to Common Core ELA standards, written by our teacher community. In pairs or groups of three, students will practice clear communication in order to code each other’s drawings in Artist.\n\n*Standards Addressed:*\n    \n   * **CCSS.ELA-Literacy.SL.K.2**: Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.\n   * **CCSS.ELA-Literacy.SL.K.3**: Ask and answer questions in order to seek help, get information, or clarify something that is not understood.\n   * **CCSS.ELA-Literacy.SL.K.6**: Speak audibly and express thoughts, feelings, and ideas clearly.",
-        "name": "![](https://curriculum.code.org/media/uploads/elaSmall.png) Code My Drawing "
+        "description": "### Code My Drawing (30-45 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) **Computer Science + English Language Arts**\n\n[**Code My Drawing**](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) is an optional activity aligned to Common Core ELA standards, written by our teacher community. In pairs or groups of three, students will practice clear communication in order to code each other’s drawings in Artist.\n\n*Standards Addressed:*\n    \n   * **CCSS.ELA-Literacy.SL.K.2**: Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.\n   * **CCSS.ELA-Literacy.SL.K.3**: Ask and answer questions in order to seek help, get information, or clarify something that is not understood.\n   * **CCSS.ELA-Literacy.SL.K.6**: Speak audibly and express thoughts, feelings, and ideas clearly.\n"
       },
       "seeding_key": {
         "activity_section.key": "85143426-6671-4809-8601-8502634e2f51",
@@ -3103,9 +3052,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HappyMaps-Unplugged_2021"
-        ]
+        "progression": "Video: Unplugged - Happy Maps"
       },
       "named_level": null,
       "bonus": false,
@@ -3116,7 +3063,7 @@
         "lesson.key": "Programming: Happy Maps",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "fb4d7018-ade7-4c42-86d7-28ecc6a6b0f3"
+        "activity_section.key": "7719a51a-42d9-41f0-bc30-c5475b18af7c"
       },
       "level_keys": [
         "HappyMaps-Unplugged_2021"
@@ -3310,7 +3257,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pair Programming",
+        "progression": "Pair Programming Video",
         "level_keys": [
           "elementary_video_pairProgramming_2021"
         ]
@@ -3625,7 +3572,8 @@
       "properties": {
         "level_keys": [
           "courseB_maze_seq_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -3650,7 +3598,8 @@
       "properties": {
         "level_keys": [
           "courseB_maze_seq_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5598,7 +5547,7 @@
         "lesson.key": "Programming: Happy Maps",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
-        "activity_section.key": "fb4d7018-ade7-4c42-86d7-28ecc6a6b0f3"
+        "activity_section.key": "7719a51a-42d9-41f0-bc30-c5475b18af7c"
       }
     },
     {
