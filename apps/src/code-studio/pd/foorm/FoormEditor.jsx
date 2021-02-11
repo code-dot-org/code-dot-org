@@ -45,12 +45,7 @@ class FoormEditor extends React.Component {
     resetCodeMirror: PropTypes.func.isRequired,
     formCategories: PropTypes.array,
     // populated by redux
-    formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number,
-    formId: PropTypes.number
+    formQuestions: PropTypes.object
   };
 
   constructor(props) {
@@ -255,8 +250,6 @@ class FoormEditor extends React.Component {
     return (
       <div>
         <FoormEditorHeader
-          formName={this.props.formName}
-          formVersion={this.props.formVersion}
           livePreviewToggled={this.livePreviewToggled}
           livePreviewStatus={this.state.livePreviewStatus}
         />
@@ -320,10 +313,5 @@ class FoormEditor extends React.Component {
 }
 
 export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished,
-  formHasError: state.foorm.hasError,
-  formName: state.foorm.formName,
-  formVersion: state.foorm.formVersion,
-  formId: state.foorm.formId
+  formQuestions: state.foorm.formQuestions || {}
 }))(FoormEditor);

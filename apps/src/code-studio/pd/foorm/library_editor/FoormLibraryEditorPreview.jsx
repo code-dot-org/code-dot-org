@@ -15,27 +15,33 @@ const styles = {
   }
 };
 
-class FoormEditorPreview extends Component {
+class FoormLibraryEditorPreview extends Component {
   static propTypes = {
     libraryError: PropTypes.bool,
     libraryErrorMessage: PropTypes.string,
-    formPreviewQuestions: PropTypes.object,
-    formKey: PropTypes.number,
+    libraryQuestionPreviewQuestion: PropTypes.object,
+    libraryQuestionKey: PropTypes.number,
     surveyData: PropTypes.object,
 
     // Populated by Redux
-    formHasError: PropTypes.bool
+    libraryQuestionHasError: PropTypes.bool
+  };
+
+  wrapLibraryQuestionPreviewQuestion = () => {
+    return {
+      elements: [this.props.libraryQuestionPreviewQuestion]
+    };
   };
 
   render() {
     return (
       <div className="foorm-preview">
         <div style={styles.previewBox}>
-          {this.props.formHasError && (
+          {this.props.libraryQuestionHasError && (
             <div style={styles.errorMessage}>
               <FontAwesome icon="exclamation-triangle" /> There is a parsing
-              error in the survey configuration. Errors are noted on the left
-              side of the editor.
+              error in the library question configuration. Errors are noted on
+              the left side of the editor.
             </div>
           )}
           {this.props.libraryError && (
@@ -46,16 +52,16 @@ class FoormEditorPreview extends Component {
               }`}
             </div>
           )}
-          {this.props.formPreviewQuestions &&
-            !this.props.formHasError &&
+          {this.props.libraryQuestionPreviewQuestion &&
+            !this.props.libraryQuestionHasError &&
             !this.props.libraryError && (
               // key allows us to force re-render when preview is called
               <Foorm
-                formQuestions={this.props.formPreviewQuestions}
+                formQuestions={this.wrapLibraryQuestionPreviewQuestion()}
                 formName={'preview'}
                 formVersion={0}
                 submitApi={'/none'}
-                key={`form-${this.props.formKey}`}
+                key={`form-${this.props.libraryQuestionKey}`}
                 surveyData={this.props.surveyData}
                 inEditorMode={true}
               />
@@ -67,5 +73,5 @@ class FoormEditorPreview extends Component {
 }
 
 export default connect(state => ({
-  formHasError: state.foorm.hasError
-}))(FoormEditorPreview);
+  libraryQuestionHasError: state.foorm.hasError
+}))(FoormLibraryEditorPreview);

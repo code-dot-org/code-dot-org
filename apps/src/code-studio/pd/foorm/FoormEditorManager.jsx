@@ -45,19 +45,11 @@ class FoormEditorManager extends React.Component {
     super(props);
 
     this.state = {
-      formKey: 0,
-      formPreviewQuestions: null,
       showCodeMirror: false,
       hasLoadError: false
     };
 
     this.props.resetAvailableForms(this.props.formNamesAndVersions);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.formNamesAndVersions !== this.props.formNamesAndVersions) {
-      this.props.resetAvailableForms(this.props.formNamesAndVersions);
-    }
   }
 
   getFormattedConfigurationDropdownOptions() {
