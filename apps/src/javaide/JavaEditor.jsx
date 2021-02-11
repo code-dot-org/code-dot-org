@@ -24,7 +24,6 @@ class JavaEditor extends React.Component {
   };
 
   onChange = newValue => {
-    console.log(newValue);
     this.props.setEditorText(newValue);
   };
 
