@@ -18835,7 +18835,7 @@ en:
             lesson-1:
               name: Blank Space Variables
             lesson-2:
-              name: Storing and Retrieving Text
+              name: Text and Prompts
             lesson-3:
               name: Create a Chat-Bot
             lesson-4:
@@ -18854,6 +18854,8 @@ en:
               name: Create a Haiku Bot
             video:
               name: Sprite Lab Videos
+            blank space stories:
+              name: Blank Space Stories
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -20467,7 +20469,7 @@ en:
             Course F Introduction:
               name: Introducing Sprite Lab
             lesson-1:
-              name: Blank Space Variables - coming soon!
+              name: Blank Space Stories - coming soon!
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -20481,7 +20483,7 @@ en:
             Making Sprites:
               name: Making Sprites
             Sprites in Action:
-              name: Sprites in Action - coming soon!
+              name: Sprites in Action
             variables-in-spritelab:
               name: Storing and Retrieving Text - coming soon!
             chatbot:

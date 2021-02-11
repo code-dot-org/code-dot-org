@@ -16,6 +16,7 @@ import {
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   main: {
@@ -137,7 +138,9 @@ class CourseScript extends Component {
       >
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
-          <div style={styles.description}>{description}</div>
+          <div style={styles.description}>
+            <SafeMarkdown markdown={description} />
+          </div>
           <span style={styles.flex}>
             <Button
               __useDeprecatedTag

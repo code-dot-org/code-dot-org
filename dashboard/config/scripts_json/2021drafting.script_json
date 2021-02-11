@@ -130,8 +130,8 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Blank Space Variables",
+      "key": "blank space stories",
+      "name": "Blank Space Stories",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
@@ -139,14 +139,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
     },
     {
       "key": "lesson-2",
-      "name": "Storing and Retrieving Text",
+      "name": "Text and Prompts",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -793,7 +793,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Blank Space Variables",
+        "progression": "Video: Variables in Envelopes",
         "level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ]
@@ -804,7 +804,7 @@
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       },
@@ -839,6 +839,180 @@
     },
     {
       "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_review"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_review"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_print"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_print"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_events"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_events"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_prompts"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_answer"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_answer"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_concat"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_concat"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseF_text_practice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_practice"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -863,7 +1037,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -888,7 +1062,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -913,7 +1087,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -938,7 +1112,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -963,7 +1137,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -988,7 +1162,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1013,7 +1187,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1038,7 +1212,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1063,7 +1237,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1089,7 +1263,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1115,7 +1289,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 41,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1140,7 +1314,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 42,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1165,7 +1339,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1190,7 +1364,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1215,7 +1389,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1240,7 +1414,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1265,7 +1439,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1290,7 +1464,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1315,7 +1489,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1567,7 +1741,7 @@
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
@@ -1577,6 +1751,83 @@
         "level.key": "courseF_variables_predict",
         "script_level.level_keys": [
           "courseF_variables_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_review",
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_print",
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events",
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_prompts",
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_answer",
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat",
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_practice",
+        "script_level.level_keys": [
+          "courseF_text_practice"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
