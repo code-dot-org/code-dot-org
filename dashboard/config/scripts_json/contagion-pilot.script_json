@@ -249,6 +249,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "STOP!",
+        "level_keys": [
+          "contagion_stop"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_stop"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Slowing the Contagion with Masks",
         "level_keys": [
           "contagion_masks"
@@ -269,7 +294,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -294,7 +319,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -319,37 +344,12 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Model 2: Recovery",
-        "level_keys": [
-          "contagion_recovery"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_recovery"
-        ],
-        "lesson.key": "modifying your model",
-        "lesson_group.key": "contagion",
-        "script.name": "contagion-pilot"
-      },
-      "level_keys": [
-        "contagion_recovery"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Chance",
+        "progression": "Model 2",
         "level_keys": [
           "contagion_chance"
         ]
@@ -370,6 +370,31 @@
     },
     {
       "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "STOP!",
+        "level_keys": [
+          "contagion_stop"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_stop"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -394,8 +419,33 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "STOP AGAIN!",
+        "level_keys": [
+          "contagion_stop_again"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_stop_again"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_stop_again"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -419,7 +469,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -502,6 +552,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "contagion_stop",
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "contagion_masks",
         "script_level.level_keys": [
           "contagion_masks"
@@ -535,17 +596,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "contagion_recovery",
-        "script_level.level_keys": [
-          "contagion_recovery"
-        ],
-        "lesson.key": "modifying your model",
-        "lesson_group.key": "contagion",
-        "script.name": "contagion-pilot"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "contagion_chance",
         "script_level.level_keys": [
           "contagion_chance"
@@ -557,9 +607,31 @@
     },
     {
       "seeding_key": {
+        "level.key": "contagion_stop",
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "contagion_modify_chance",
         "script_level.level_keys": [
           "contagion_modify_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_stop_again",
+        "script_level.level_keys": [
+          "contagion_stop_again"
         ],
         "lesson.key": "modifying your model",
         "lesson_group.key": "contagion",

@@ -2869,7 +2869,6 @@
         "description": "**Discuss:** Have students share which parts they know and don't know",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should notice that they can get the structure and size of the text right using headings (e.g. `<h1>`) and paragraphs `<p>`. They may notice that they cannot change the color of the text. Some other styles to notice are that all the paragraphs are in italics, the speech names are underlined, and the citations are much smaller than the paragraphs.\r\n\r\n"
           }
@@ -2941,7 +2940,6 @@
       "key": "9440d9cc-5d69-417b-837e-c143b30dab47",
       "position": 4,
       "properties": {
-        "name": "Sample Website",
         "progression_name": "Sample Website"
       },
       "seeding_key": {
@@ -2953,7 +2951,6 @@
       "key": "0fb9d1d3-097c-4ce5-b276-aa71c839c82f",
       "position": 5,
       "properties": {
-        "name": "Exploration",
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -2965,8 +2962,13 @@
       "key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
       "position": 6,
       "properties": {
-        "name": "Video: Intro to CSS - Part 1",
-        "progression_name": "Video: Intro to CSS - Part 1"
+        "progression_name": "Video: Intro to CSS - Part 1",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Discussion Goals**\n\n**Key Vocabulary:**\n\n- CSS - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n- CSS Selector - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\nStudents should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
@@ -2977,8 +2979,13 @@
       "key": "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d",
       "position": 7,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Key Concepts:**\nApply formatting in a web page using CSS\n\n**Assessment Criteria:**\n- Extensive Evidence\n- Convincing Evidence\n- Limited Evidence\n- No Evidence"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d",
@@ -2989,8 +2996,13 @@
       "key": "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9",
       "position": 8,
       "properties": {
-        "name": "Video: Intro to CSS - Part 2",
-        "progression_name": "Video: Intro to CSS - Part 2"
+        "progression_name": "Video: Intro to CSS - Part 2",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Discussion Goals**\n\nMake sure all the students understand how to link to their stylesheet from each web page."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9",
@@ -3001,7 +3013,6 @@
       "key": "d9a4b1da-84da-40b3-a256-bbd4223652cd",
       "position": 9,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3013,7 +3024,6 @@
       "key": "497dd6c0-f7ae-4c32-a6b2-086a26b849b6",
       "position": 10,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3025,8 +3035,13 @@
       "key": "3d52ed72-b57b-4d05-902a-c9daceffadc6",
       "position": 11,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Key Concepts:**\n\n**Assessment Criteria:**\n\n- Extensive Evidence\n- Convincing Evidence\n- Limited Evidence\n- No Evidence"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3d52ed72-b57b-4d05-902a-c9daceffadc6",
@@ -3037,8 +3052,13 @@
       "key": "3a9a8696-72e3-4e6f-9812-59e180a16192",
       "position": 12,
       "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
+        "progression_name": "Challenges",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note on fonts and font families**\n\nFor a web browser to display font, the **font** must be available on the device the web browser is running on. There's no guarantee that any device has a particular font, so it's much safer to use font **families**, which allows for many different fonts that have the same general look at feel.\n\nIf students want to specify an exact font, they'll need to use a font from the web, so the browser can download that specific font to use when rendering the page. More information on these fonts can be found at **Google Fonts** and **W3Schools**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3a9a8696-72e3-4e6f-9812-59e180a16192",
@@ -3052,7 +3072,6 @@
         "description": "**Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Make sure students are distinguishing between how HTML indicates the structure of a document and how CSS allows students to set the styles, as well as the differences in how the languages look on the screen and where they are used.\r\n"
           }
@@ -3082,7 +3101,6 @@
         "description": "**Set Up:** Have students create a new page in their journals called CSS Properties.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\r\n"
           }
@@ -6505,7 +6523,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Website",
         "level_keys": [
@@ -6531,7 +6549,7 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration",
         "level_keys": [
@@ -6557,7 +6575,7 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Intro to CSS - Part 1",
         "level_keys": [
@@ -6583,7 +6601,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6609,7 +6627,7 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6635,7 +6653,7 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6661,7 +6679,7 @@
       "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Intro to CSS - Part 2",
         "level_keys": [
@@ -6687,7 +6705,7 @@
       "chapter": 30,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6713,7 +6731,7 @@
       "chapter": 31,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6765,7 +6783,7 @@
       "chapter": 33,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
