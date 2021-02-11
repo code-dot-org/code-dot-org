@@ -185,7 +185,9 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     script = script_level.script
     level = script_level.levels.first
     feedback = create :teacher_feedback, script: script, level: level
-    assert_equal script_level, feedback.get_script_level
+    assert_queries(1) do
+      assert_equal script_level, feedback.get_script_level
+    end
   end
 
   test 'get_script_level finds bubble choice parent level' do
@@ -209,6 +211,8 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     other_script_level = create :script_level, script: script, lesson: lesson, levels: [create(:level)]
 
     feedback = create :teacher_feedback, script: script, level: child_level, script_level: other_script_level
-    assert_equal script_level, feedback.get_script_level
+    assert_queries(4) do
+      assert_equal script_level, feedback.get_script_level
+    end
   end
 end
