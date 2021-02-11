@@ -150,7 +150,7 @@
     },
     {
       "key": "lesson8",
-      "name": "Lesson 8",
+      "name": "Using Models in App Lab",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -165,7 +165,7 @@
     },
     {
       "key": "lesson9",
-      "name": "Lesson 9",
+      "name": "The Need for Model Cards",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -632,6 +632,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Tutorial",
+        "level_keys": [
+          "ml-intro categorical-tutorial"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro categorical-tutorial"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-intro categorical-tutorial"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Dataset #1: Tacos",
         "level_keys": [
           "ml-intro categorical-tacos"
@@ -652,8 +677,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 2,
+      "chapter": 14,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -677,8 +702,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 3,
+      "chapter": 15,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -699,6 +724,156 @@
       },
       "level_keys": [
         "ml-intro categorical-pizza"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Priority App",
+        "level_keys": [
+          "ml-md placeholder"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-md placeholder"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-md placeholder"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Investigation",
+        "level_keys": [
+          "ml-model card-medical ai lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical ai lab"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-model card-medical ai lab"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-1"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-model card-medical-1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-2"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-model card-medical-2"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-3"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-3"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-model card-medical-3"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-4"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-4"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-model card-medical-4"
       ]
     }
   ],
@@ -826,6 +1001,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-intro categorical-tutorial",
+        "script_level.level_keys": [
+          "ml-intro categorical-tutorial"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-intro categorical-tacos",
         "script_level.level_keys": [
           "ml-intro categorical-tacos"
@@ -853,6 +1039,72 @@
           "ml-intro categorical-pizza"
         ],
         "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-md placeholder",
+        "script_level.level_keys": [
+          "ml-md placeholder"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical ai lab",
+        "script_level.level_keys": [
+          "ml-model card-medical ai lab"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-1",
+        "script_level.level_keys": [
+          "ml-model card-medical-1"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-2",
+        "script_level.level_keys": [
+          "ml-model card-medical-2"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-3",
+        "script_level.level_keys": [
+          "ml-model card-medical-3"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-4",
+        "script_level.level_keys": [
+          "ml-model card-medical-4"
+        ],
+        "lesson.key": "lesson9",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }

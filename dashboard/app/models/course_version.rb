@@ -79,4 +79,8 @@ class CourseVersion < ApplicationRecord
     destroy!
     course_offering.destroy if course_offering && course_offering.course_versions.empty?
   end
+
+  def contained_lessons
+    units.map(&:lessons).flatten
+  end
 end

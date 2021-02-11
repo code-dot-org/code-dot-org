@@ -129,7 +129,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\r\n\r\nThe internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.",
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.",
         "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online.",
         "purpose": "Common Sense Education created this lesson to teach students about meanness and what they should do if they encounter it online.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Bring a stuffed animal or toy to class.",
@@ -149,7 +149,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\r\n\r\nStronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.",
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nStronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.",
         "student_overview": "In this lesson, you'll learn about how passwords protect your information, and how to make a good password.",
         "purpose": "Common Sense Education created this lesson to teach students about how strong passwords can help protect their privacy.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Prepare writing paper or notebooks for students.",
@@ -543,8 +543,7 @@
       "key": "65d9fc89-0138-4c31-8501-74bdfbfd4c13",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "65d9fc89-0138-4c31-8501-74bdfbfd4c13",
@@ -626,8 +625,7 @@
       "key": "e2afc7fe-f78e-4015-a7cd-4adc2d8fce07",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "e2afc7fe-f78e-4015-a7cd-4adc2d8fce07",
@@ -1280,8 +1278,7 @@
       "key": "ef15ef29-1668-40d1-aa90-b093d4fecce1",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "ef15ef29-1668-40d1-aa90-b093d4fecce1",
