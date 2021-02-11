@@ -11,7 +11,10 @@
               "Math": "Matematika",
               "Logic": "Logika",
               "Games/Score": "Játékok/pontszám"
-            }
+            },
+            "display_name": "Készíts Star Wars játékot",
+            "short_instructions": "Készítsd el saját Star Wars játékodat!",
+            "long_instructions": "Készítsd el saját Star Wars játékodat!"
           },
           "CourseD_EOC_dance": {
             "block_categories": {
@@ -21,7 +24,10 @@
               "Events": "Események",
               "Numbers": "Számok",
               "Logic": "Logika"
-            }
+            },
+            "display_name": "Késztíts táncot",
+            "short_instructions": "Készítsd el a saját táncodat!",
+            "long_instructions": "Készítsd el a saját táncodat!"
           },
           "CourseD_EOC_artist": {
             "function_definitions": {
@@ -66,7 +72,15 @@
                   "length": "hossza"
                 }
               }
-            }
+            },
+            "display_name": "Készíts rajzot",
+            "short_instructions": "Készítsd el saját rajzodat!",
+            "long_instructions": "Készítsd el saját rajzodat!"
+          },
+          "CourseD_EOC_bounce1": {
+            "display_name": "Készíts kosárlabdás játékot",
+            "short_instructions": "Készítsd el saját kosárlabdás játékodat!",
+            "long_instructions": "Készítsd el saját kosárlabdás játékodat!"
           }
         },
         "courseE_EOC_2020": {
@@ -77,7 +91,14 @@
               "Actions": "Műveletek",
               "Events": "Események",
               "Behaviors": "Viselkedések"
-            }
+            },
+            "display_name": "Készíts egy Sprite Lab projektet"
+          },
+          "Course E: Artist Project_2020": {
+            "display_name": "Készíts egy Művész projektet"
+          },
+          "Course E: Frozen Project_2020": {
+            "display_name": "Készíts egy Jégvarázs projektet"
           }
         },
         "courseExpress_EOC_2020": {
@@ -89,7 +110,10 @@
               "Events": "Események",
               "Numbers": "Számok",
               "Logic": "Logika"
-            }
+            },
+            "display_name": "Késztíts táncot",
+            "short_instructions": "Készítsd el a saját táncodat!",
+            "long_instructions": "Készítsd el a saját táncodat!"
           },
           "Course F: Artist Project_2020": {
             "block_categories": {
@@ -100,7 +124,8 @@
               "Logic": "Logika",
               "Functions": "funkciók",
               "Variables": "változók"
-            }
+            },
+            "display_name": "Készíts egy Művész projektet"
           },
           "CourseF_Project_SpriteLab_2020": {
             "block_categories": {
@@ -116,7 +141,11 @@
               "Functions": "funkciók",
               "Text": "szöveg",
               "Comments": "Megjegyzések"
-            }
+            },
+            "display_name": "Készíts egy Sprite Lab projektet"
+          },
+          "Course E: Frozen Project_2020": {
+            "display_name": "Készíts egy Jégvarázs projektet"
           }
         },
         "courseF_EOC_2020": {
@@ -134,7 +163,8 @@
               "Functions": "funkciók",
               "Text": "szöveg",
               "Comments": "Megjegyzések"
-            }
+            },
+            "display_name": "Készíts egy Sprite Lab projektet"
           },
           "Course F: Artist Project_2020": {
             "block_categories": {
@@ -145,7 +175,8 @@
               "Logic": "Logika",
               "Functions": "funkciók",
               "Variables": "változók"
-            }
+            },
+            "display_name": "Készíts egy Művész projektet"
           }
         },
         "outbreak_freeplay_choice": {

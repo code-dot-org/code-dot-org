@@ -380,8 +380,12 @@ pl-PL:
             Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej
             Lou, moja kochana.
           correct: true
-        - {}
-        - {}
+        - text: "Lou, Lou, przeskocz do mojej Lou, \nLou, Lou, przeskocz do mojej
+            Lou, \nLou, Lou, przeskocz do mojej Lou, \nPrzeskocz do mojej Lou, moja
+            kochana. \n\nMuszka jest w maślance, \nUciekaj, muszko, uciekaj,"
+        - text: "Muszka jest w maślance, \nUciekaj, muszko, uciekaj,\nMuszka jest
+            w maślance, \nUciekaj, muszko, uciekaj,\nMuszka jest w maślance, \nUciekaj,
+            muszko, uciekaj,\nPrzeskocz do mojej Lou, moja kochana."
         questions:
         - text: Jaki jest największy kawałek tej piosenki, który możesz zdefiniować
             jako refren tak, aby refren powtarzał się za każdym razem, gdy jest wywoływany?
