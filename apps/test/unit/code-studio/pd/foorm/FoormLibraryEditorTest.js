@@ -20,10 +20,17 @@ import sinon from 'sinon';
 global.$ = require('jquery');
 
 describe('FoormEditor', () => {
-  let defaultProps, store;
+  let defaultProps, store, server;
   beforeEach(() => {
     stubRedux();
     registerReducers({foorm});
+
+    server = sinon.fakeServer.create();
+    server.respondWith(
+      'GET',
+      /foorm\/library_questions\/[0-9]+\/published_forms_appeared_in/,
+      [200, {'Content-Type': 'application/json'}, JSON.stringify([])]
+    );
 
     store = getStore();
 
@@ -76,7 +83,7 @@ describe('FoormEditor', () => {
   // };
 
   const sampleSaveData = {
-    question: {},
+    question: '{}',
     name: 'sample_library_question_name',
     id: 1
   };
@@ -87,14 +94,6 @@ describe('FoormEditor', () => {
   // gets warning when trying to save library question in published survey
 
   it('can save existing library question in existing library', () => {
-    let server = sinon.fakeServer.create();
-    // might want to move this into individual tests
-    server.respondWith(
-      'GET',
-      /foorm\/library_questions\/[0-9]+\/published_forms_appeared_in/,
-      [200, {'Content-Type': 'application/json'}, JSON.stringify([])]
-    );
-
     const wrapper = createWrapper();
 
     store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
@@ -102,17 +101,17 @@ describe('FoormEditor', () => {
     console.log(store.getState().foorm.libraryQuestionId);
     console.log(store.getState().foorm.libraryQuestion);
 
-    server.respondWith([
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(sampleSaveData)
-    ]);
-
-    // server.respondWith('PUT', '/foorm/library_questions/0', [
+    // server.respondWith([
     //   200,
     //   {'Content-Type': 'application/json'},
     //   JSON.stringify(sampleSaveData)
     // ]);
+
+    server.respondWith('PUT', '/foorm/library_questions/0', [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(sampleSaveData)
+    ]);
 
     const saveBar = wrapper.find('FoormLibrarySaveBar');
 
@@ -125,7 +124,7 @@ describe('FoormEditor', () => {
     expect(saveBar.state().isSaving).to.equal(true);
 
     server.respond();
-    console.log(saveBar.state().isSaving);
+    server.respond();
     saveBar.update();
 
     expect(saveBar.find('FontAwesome').length).to.equal(0);
