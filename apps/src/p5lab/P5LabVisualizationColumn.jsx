@@ -7,7 +7,6 @@ import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
-import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -66,9 +65,6 @@ class P5LabVisualizationColumn extends React.Component {
 
   constructor(props) {
     super(props);
-    this.spritelabPauseExperiment = experiments.isEnabled(
-      experiments.SPRITELAB_PAUSE
-    );
   }
 
   // Cache app-space mouse coordinates, which we get from the
@@ -174,10 +170,7 @@ class P5LabVisualizationColumn extends React.Component {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
     const isSpritelab = this.props.spriteLab;
-    const showPauseButton =
-      isSpritelab &&
-      this.spritelabPauseExperiment &&
-      !this.props.hidePauseButton;
+    const showPauseButton = isSpritelab && !this.props.hidePauseButton;
 
     return (
       <div style={{position: 'relative'}}>
