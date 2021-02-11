@@ -183,9 +183,9 @@ class LessonTest < ActiveSupport::TestCase
     lesson2_summary = lesson2.summarize
     lesson3_summary = lesson3.summarize
     lesson4_summary = lesson4.summarize
-    assert_equal "/lessons/#{lesson1.id}", lesson1_summary[:lesson_plan_html_url]
+    assert_equal "/s/#{script.name}/lessons/#{lesson1.relative_position}", lesson1_summary[:lesson_plan_html_url]
     assert_equal nil, lesson2_summary[:lesson_plan_html_url]
-    assert_equal "/lessons/#{lesson3.id}", lesson3_summary[:lesson_plan_html_url]
+    assert_equal "/s/#{script.name}/lessons/#{lesson3.relative_position}", lesson3_summary[:lesson_plan_html_url]
     assert_equal nil, lesson4_summary[:lesson_plan_html_url]
   end
 
@@ -222,7 +222,7 @@ class LessonTest < ActiveSupport::TestCase
 
     summary = lesson.summarize_for_lesson_dropdown
     assert_equal 'lesson-1', summary[:key]
-    assert_equal "/lessons/#{lesson.id}", summary[:link]
+    assert_equal "/s/#{script.name}/lessons/#{lesson.relative_position}", summary[:link]
     assert_equal 1, summary[:position]
   end
 
@@ -466,7 +466,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson6.id,
-      editUrl: "/lessons/#{lesson6.id}/edit"
+      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
     }
     assert_equal expected_summary, summaries[0]
 
@@ -476,7 +476,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson0.id,
-      editUrl: "/lessons/#{lesson0.id}/edit"
+      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
     }
     assert_equal expected_summary, summaries[1]
 
@@ -526,7 +526,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson4.id,
-      editUrl: "/lessons/#{lesson4.id}/edit"
+      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
     }
     assert_equal expected_summary, summaries.first
   end
@@ -590,7 +590,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson4.id,
-      editUrl: "/lessons/#{lesson4.id}/edit"
+      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
     }
     assert_equal expected_summary, summaries.first
   end
