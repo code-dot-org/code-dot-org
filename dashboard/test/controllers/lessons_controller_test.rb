@@ -70,16 +70,16 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # anyone can show lesson with lesson plan
-  test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: nil, response: :success
-  test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :student, response: :success
-  test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :teacher, response: :success
-  test_user_gets_response_for :show, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: nil, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :student, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :teacher, response: :success
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   # no one can access a lesson without lesson plan
-  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :show, params: -> {{id: @lesson2.id}}, user: :levelbuilder, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: :student, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, id: @lesson2.relative_position}}, user: :levelbuilder, response: :forbidden
 
   test 'can not show lesson when lesson is in a non-migrated script' do
     sign_in @levelbuilder
@@ -96,10 +96,12 @@ class LessonsControllerTest < ActionController::TestCase
       lockable: false,
     )
 
-    get :show, params: {
-      id: unmigrated_lesson.id
-    }
-    assert_response :forbidden
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :show, params: {
+        script_id: script2.id,
+        id: unmigrated_lesson.relative_position
+      }
+    end
   end
 
   test 'show lesson when lesson is the only lesson in script' do
@@ -141,7 +143,8 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal @script_title, @solo_lesson_in_script.localized_name
 
     get :show, params: {
-      id: @solo_lesson_in_script.id
+      script_id: script.name,
+      id: @solo_lesson_in_script.relative_position
     }
     assert_response :ok
     assert(@response.body.include?(@script_title))
@@ -151,7 +154,8 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'show lesson when script has multiple lessons' do
     get :show, params: {
-      id: @lesson.id
+      script_id: @script.name,
+      id: @lesson.relative_position
     }
     assert_response :ok
     assert(@response.body.include?(@script_title))
@@ -174,7 +178,8 @@ class LessonsControllerTest < ActionController::TestCase
     )
 
     get :show, params: {
-      id: @lesson.id
+      script_id: @script.name,
+      id: @lesson.relative_position
     }
     assert_response :ok
 
@@ -183,16 +188,17 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   # only levelbuilders can edit
-  test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{script_id: @script.name, id: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   test 'edit lesson' do
     sign_in @levelbuilder
 
     get :edit, params: {
-      id: @lesson.id
+      script_id: @script.name,
+      id: @lesson.relative_position
     }
     assert_response :ok
 
@@ -209,7 +215,8 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     get :edit, params: {
-      id: @lesson.id
+      script_id: @script.name,
+      id: @lesson.relative_position
     }
     assert_response :forbidden
   end

@@ -16,18 +16,23 @@ class LessonsController < ApplicationController
     )
   end
 
-  # GET /lessons/1
+  # GET /s/script-name/lessons/1
   def show
-    @script = Script.find_by(name: params[:script_id], is_migrated: true)
-    raise ActiveRecord::RecordNotFound unless @script
+    @script = Script.find_by(name: params[:script_id])
+    raise ActiveRecord::RecordNotFound unless @script && @script.is_migrated
     @lesson = Lesson.find_by(script: @script, has_lesson_plan: true, relative_position: params[:id])
     raise ActiveRecord::RecordNotFound unless @lesson
 
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
-  # GET /lessons/1/edit
+  # GET /s/script-name/lessons/1/edit
   def edit
+    @script = Script.find_by(name: params[:script_id])
+    raise ActiveRecord::RecordNotFound unless @script && @script.is_migrated
+    @lesson = Lesson.find_by(script: @script, has_lesson_plan: true, relative_position: params[:id])
+    raise ActiveRecord::RecordNotFound unless @lesson
+
     @lesson_data = @lesson.summarize_for_lesson_edit
     # Return an empty list, because computing the list of related lessons here
     # sometimes hits a bug and causes the lesson edit page to fail to load.
