@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import _ from 'lodash';
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
-import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 const weekWidth = 592;
 const styles = {
@@ -48,9 +49,8 @@ const styles = {
 
 export default class UnitCalendar extends React.Component {
   static propTypes = {
-    schedule: PropTypes.arrayOf(PropTypes.arrayOf(unitCalendarLessonChunk))
-      .isRequired,
-    weeklyInstructionalMinutes: PropTypes.number
+    weeklyInstructionalMinutes: PropTypes.number.isRequired,
+    lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired
   };
   constructor(props) {
     super(props);
@@ -61,9 +61,82 @@ export default class UnitCalendar extends React.Component {
   handleHover = id => {
     this.setState({hovering: id});
   };
-  renderWeeks = () => {
+  generateSchedule = () => {
+    const {lessons, weeklyInstructionalMinutes} = this.props;
+    const lessonsCopy = _.cloneDeep(lessons);
+    let allWeeks = [];
+    let currWeek = [];
+    let currMinutes = 0;
+
+    // splitting lessons across weeks
+    let prev = null;
+    lessonsCopy.forEach(lesson => {
+      lesson.isStart = false;
+      lesson.isEnd = false;
+      lesson.isMajority = false;
+      let lessonDuration = lesson.duration;
+      while (lessonDuration > 0) {
+        let thisChunk = null;
+        if (currMinutes + lessonDuration < weeklyInstructionalMinutes) {
+          // If the rest of the current lesson fits into this week, put it in the schedule.
+          currMinutes = currMinutes + lessonDuration;
+          let thisLesson = _.cloneDeep(lesson);
+          thisLesson.isEnd = true;
+          currWeek.push(thisLesson);
+          thisChunk = thisLesson;
+          lessonDuration = 0;
+        } else if (currMinutes < weeklyInstructionalMinutes - 5) {
+          // If there's more than 5 minutes left in the week,
+          // add as much of the lesson as you can to this week.
+          let partialLesson = _.cloneDeep(lesson);
+          partialLesson.duration = weeklyInstructionalMinutes - currMinutes;
+          currWeek.push(partialLesson);
+          thisChunk = partialLesson;
+          lessonDuration = lessonDuration - partialLesson.duration;
+          lesson.duration = lessonDuration;
+          currMinutes = weeklyInstructionalMinutes;
+        } else {
+          // If there isn't enough time in this week to add this lesson, start a new week.
+          allWeeks.push(currWeek);
+          currWeek = [];
+          currMinutes = 0;
+        }
+        if (thisChunk) {
+          if (!prev || prev.title !== thisChunk.title) {
+            thisChunk.isStart = true;
+            thisChunk.isMajority = true;
+          } else {
+            thisChunk.isStart = false;
+            if (prev.duration < thisChunk.duration) {
+              thisChunk.isMajority = true;
+              prev.isMajority = false;
+            }
+          }
+          prev = thisChunk;
+        }
+      }
+    });
+    allWeeks.push(currWeek);
+    return allWeeks;
+  };
+
+  renderWeek = week => {
     const minuteWidth = weekWidth / this.props.weeklyInstructionalMinutes;
-    return this.props.schedule.map(week => {
+    return week.map((lesson, index) => {
+      return (
+        <UnitCalendarLessonChunk
+          key={`lesson-${index}`}
+          minuteWidth={minuteWidth}
+          lesson={lesson}
+          isHover={lesson.id === this.state.hovering}
+          handleHover={this.handleHover}
+        />
+      );
+    });
+  };
+  renderWeeks = schedule => {
+    const minuteWidth = weekWidth / this.props.weeklyInstructionalMinutes;
+    return schedule.map(week => {
       return week.map((lesson, index) => {
         return (
           <UnitCalendarLessonChunk
@@ -79,18 +152,19 @@ export default class UnitCalendar extends React.Component {
   };
 
   render() {
-    const weekPlans = this.renderWeeks();
+    const schedule = this.generateSchedule();
+    //const weekPlans = this.renderWeeks(schedule);
     return (
       <div>
         <table style={styles.table}>
           <tbody>
-            {weekPlans.map((week, index) => {
+            {schedule.map((week, index) => {
               return (
                 <tr key={`week-${index}`}>
                   <td style={styles.weekColumn}>
                     {i18n.weekLabel({number: index + 1})}
                   </td>
-                  <td style={styles.scheduleColumn}>{week}</td>
+                  <td style={styles.scheduleColumn}>{this.renderWeek(week)}</td>
                 </tr>
               );
             })}
