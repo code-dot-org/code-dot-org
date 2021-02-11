@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import ReadInstructionsDialog from './ReadInstructionsDialog';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -105,14 +106,26 @@ class InlineAudio extends React.Component {
     error: false,
     hover: false,
     loaded: false,
-    autoplayed: false
+    autoplayed: false,
+    displayReadInstructionsDialog: false
   };
+
+  constructor(props) {
+    super(props);
+    this.closeReadInstructionsDialog = this.closeReadInstructionsDialog.bind(
+      this
+    );
+  }
 
   componentDidMount() {
     this.getAudioElement();
     if (this.props.ttsAutoplayEnabled && !this.state.autoplayed) {
-      this.setState({autoplayed: true});
-      this.playAudio();
+      // with dialog
+      this.setState({displayReadInstructionsDialog: true});
+
+      // with auto-play
+      // this.setState({autoplayed: true});
+      // this.playAudio();
     }
   }
 
@@ -139,6 +152,11 @@ class InlineAudio extends React.Component {
         error: false
       });
     }
+  }
+
+  closeReadInstructionsDialog() {
+    console.log('close dialog');
+    this.setState({displayReadInstructionsDialog: false});
   }
 
   getAudioElement() {
@@ -234,47 +252,60 @@ class InlineAudio extends React.Component {
       this.getAudioSrc()
     ) {
       return (
-        <div
-          className="inline-audio"
-          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
-          onMouseOver={this.toggleHover}
-          onMouseOut={this.toggleHover}
-          onClick={this.toggleAudio}
-        >
+        <div>
           <div
+            className="inline-audio"
             style={[
-              styles.button,
-              styles.volumeButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
+              styles.wrapper,
+              this.props.style && this.props.style.wrapper
             ]}
-            id="volume"
+            onMouseOver={this.toggleHover}
+            onMouseOut={this.toggleHover}
+            onClick={this.toggleAudio}
           >
-            <i
-              className={'fa fa-volume-up'}
+            <div
               style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
+                styles.button,
+                styles.volumeButton,
+                this.props.style && this.props.style.button,
+                this.state.hover && styles.hover
               ]}
-            />
-          </div>
-          <div
-            className="playPause"
-            style={[
-              styles.button,
-              styles.playPauseButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
-            ]}
-          >
-            <i
-              className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
+              id="volume"
+            >
+              <i
+                className={'fa fa-volume-up'}
+                style={[
+                  styles.buttonImg,
+                  this.props.style && this.props.style.buttonImg
+                ]}
+              />
+            </div>
+            <div
+              className="playPause"
               style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
+                styles.button,
+                styles.playPauseButton,
+                this.props.style && this.props.style.button,
+                this.state.hover && styles.hover
               ]}
-            />
+            >
+              <i
+                className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
+                style={[
+                  styles.buttonImg,
+                  this.props.style && this.props.style.buttonImg
+                ]}
+              />
+            </div>
           </div>
+          <ReadInstructionsDialog
+            isOpen={this.state.displayReadInstructionsDialog}
+            handleClose={this.closeReadInstructionsDialog}
+            handleReadInstructions={() => {
+              this.playAudio();
+              this.closeReadInstructionsDialog();
+            }}
+          />
         </div>
       );
     }
