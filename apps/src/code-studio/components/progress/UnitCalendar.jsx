@@ -48,7 +48,7 @@ const styles = {
   }
 };
 
-export default class UnitCalendar extends React.Component {
+class UnitCalendar extends React.Component {
   static propTypes = {
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired
@@ -59,9 +59,6 @@ export default class UnitCalendar extends React.Component {
       hovering: ''
     };
   }
-  handleHover = id => {
-    this.setState({hovering: id});
-  };
   generateSchedule = () => {
     const {lessons, weeklyInstructionalMinutes} = this.props;
     const lessonsCopy = _.cloneDeep(lessons);
@@ -143,10 +140,7 @@ export default class UnitCalendar extends React.Component {
         <table style={styles.table}>
           <tbody>
             {schedule.map((week, index) => {
-              const rendered = this.renderWeek(week);
-              console.log(
-                Radium.getState(this.state, rendered[0].props.key, ':hover')
-              );
+              console.log(Radium.getState(this.state, 'lesson-0', ':hover'));
               return (
                 <tr key={`week-${index}`}>
                   <td style={styles.weekColumn}>
@@ -197,3 +191,5 @@ export default class UnitCalendar extends React.Component {
     );
   }
 }
+
+export default Radium(UnitCalendar);

@@ -91,7 +91,6 @@ class UnitCalendarLessonChunk extends Component {
 
     return (
       <a
-        key={this.props.lesson.id}
         style={chunkStyle}
         target="_blank"
         rel="noopener noreferrer"
