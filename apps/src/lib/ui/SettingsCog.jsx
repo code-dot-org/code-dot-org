@@ -162,11 +162,13 @@ class SettingsCog extends Component {
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
         </PopUpMenu>
-        <ModelManagerDialog
-          isOpen={this.state.managingModels}
-          onClose={this.closeModelManager}
-          autogenerateML={this.props.autogenerateML}
-        />
+        {experiments.isEnabled(experiments.APPLAB_ML) && (
+          <ModelManagerDialog
+            isOpen={this.state.managingModels}
+            onClose={this.closeModelManager}
+            autogenerateML={this.props.autogenerateML}
+          />
+        )}
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}

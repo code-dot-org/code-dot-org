@@ -2233,7 +2233,7 @@ StudioApp.prototype.configureDom = function(config) {
       container.style.minHeight = vizHeight + 'px';
     }
   }
-  console.log('readonly?:', config.readonlyWorkspace);
+
   if (config.readonlyWorkspace) {
     $(codeWorkspace).addClass('readonly');
   }
