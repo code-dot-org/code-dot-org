@@ -131,7 +131,8 @@ class LessonsController < ApplicationController
 
   def get_lesson_by_position_and_script(script_name, relative_position)
     script = Script.get_from_cache(script_name)
-    raise ActiveRecord::RecordNotFound unless script && script.is_migrated
+    raise ActiveRecord::RecordNotFound unless script
+    raise CanCan::AccessDenied.new("Cannot view lesson because it does not have a lesson plan on Code Studio") unless script.is_migrated
 
     lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == relative_position.to_i
