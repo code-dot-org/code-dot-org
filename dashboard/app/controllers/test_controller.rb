@@ -88,7 +88,7 @@ class TestController < ApplicationController
     )
     level = Level.find_by_name('Applab test')
     script_level.levels.push(level)
-    render json: {script_name: script.name, lesson_id: lesson.id}
+    render json: {script_name: script.name, lesson_position: lesson.relative_position}
   end
 
   # Create a script containing a single lesson group, lesson and script level that has the is_migrated setting
@@ -138,7 +138,7 @@ class TestController < ApplicationController
     )
     level = Level.find_by_name('Applab test')
     script_level.levels.push(level)
-    render json: {script_name: script.name, lesson_id: lesson.id, lesson_without_lesson_plan_id: lesson_without_lesson_plan.id}
+    render json: {script_name: script.name, lesson_position: lesson.relative_position, lesson_without_lesson_plan_position: lesson_without_lesson_plan.relative_position}
   end
 
   # invalidate the specified script from the script cache, so that it will be
