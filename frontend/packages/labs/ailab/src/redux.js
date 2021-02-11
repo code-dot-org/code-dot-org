@@ -389,10 +389,6 @@ export function getSelectedContinuousColumns(state) {
   let intersection = getContinuousColumns(state).filter(
     (x) => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
-  console.log(
-    "getSelectedContinusColumns: intersection variable",
-    intersection
-  );
   return intersection;
 }
 
@@ -400,7 +396,6 @@ export function getSelectedContinuousFeatures(state) {
   let intersection = getContinuousColumns(state).filter((x) =>
     state.selectedFeatures.includes(x)
   );
-  console.log("getSelectedContinusFeatures", intersection);
   return intersection;
 }
 
