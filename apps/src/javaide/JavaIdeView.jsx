@@ -103,7 +103,6 @@ class JavaIdeView extends React.Component {
                 type="button"
                 style={style.singleButton}
                 onClick={this.compile}
-                className="hover-pointer"
               >
                 <FontAwesome icon="cubes" className="fa-2x" />
                 <br />
@@ -113,7 +112,6 @@ class JavaIdeView extends React.Component {
                 type="button"
                 style={style.singleButton}
                 onClick={this.run}
-                className="hover-pointer"
               >
                 <FontAwesome icon="play" className="fa-2x" />
                 <br />

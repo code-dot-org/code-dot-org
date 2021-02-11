@@ -5,6 +5,7 @@ import {appendInputLog} from './javaIdeRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
 import color from '@cdo/apps/util/color';
+import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 
 const style = {
   consoleStyle: {
@@ -12,8 +13,6 @@ const style = {
     color: color.white,
     height: '200px',
     overflowY: 'auto',
-    border: '1px solid #e7e8ea',
-    borderRadius: 15,
     padding: 5
   },
   consoleLogs: {
@@ -127,18 +126,24 @@ class JavaConsole extends React.Component {
 
   render() {
     return (
-      <div style={style.consoleStyle} ref={el => (this._consoleLogs = el)}>
-        <div style={style.consoleLogs}>{this.displayConsoleLogs()}</div>
-        <div style={style.consoleInputWrapper}>
-          <span style={style.consoleInputPrompt} onClick={this.focus}>
-            &gt;
-          </span>
-          <input
-            type="text"
-            spellCheck="false"
-            style={style.consoleInput}
-            onKeyDown={this.onInputKeyDown}
-          />
+      <div>
+        <PaneHeader hasFocus={true}>
+          <PaneSection>Console</PaneSection>
+        </PaneHeader>
+        <div style={style.consoleStyle} ref={el => (this._consoleLogs = el)}>
+          <div style={style.consoleLogs}>{this.displayConsoleLogs()}</div>
+          <div style={style.consoleInputWrapper}>
+            <span style={style.consoleInputPrompt} onClick={this.focus}>
+              &gt;
+            </span>
+            <input
+              type="text"
+              spellCheck="false"
+              style={style.consoleInput}
+              onKeyDown={this.onInputKeyDown}
+              aria-label="console input"
+            />
+          </div>
         </div>
       </div>
     );
