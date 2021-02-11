@@ -115,7 +115,6 @@ Scenario: Save Project After Signing Out
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// comment 1"
 
-@skip
 @no_mobile
 Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
@@ -142,7 +141,6 @@ Scenario: Save Script Level After Signing Out
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// turtle 1"
 
-@skip
 @as_student
 @no_mobile
 Scenario: Remix project creates and redirects to new channel

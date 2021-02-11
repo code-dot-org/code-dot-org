@@ -1675,7 +1675,6 @@ var projects = (module.exports = {
    * @returns {string} The thumbnail URL.
    */
   getThumbnailUrl() {
-    console.log('in project.js current.thumbnailUrl', current.thumbnailUrl);
     return current && current.thumbnailUrl;
   },
 

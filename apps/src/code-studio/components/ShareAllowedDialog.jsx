@@ -271,7 +271,6 @@ class ShareAllowedDialog extends React.Component {
       this.props.appType === 'applab' || this.props.appType === 'gamelab';
     const artistTwitterHandle =
       SongTitlesToArtistTwitterHandle[this.props.selectedSong];
-    console.log('this.props.thumbnailUrl', this.props.thumbnailUrl);
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail
       ? this.props.thumbnailUrl
@@ -309,9 +308,6 @@ class ShareAllowedDialog extends React.Component {
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
-    console.log('canPublish', canPublish);
-    console.log('isPublished', isPublished);
-    console.log('hasThumbnail', hasThumbnail);
     return (
       <div>
         <BaseDialog
