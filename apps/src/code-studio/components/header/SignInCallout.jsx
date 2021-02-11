@@ -74,16 +74,16 @@ const styles = {
  */
 export default class SignInCallout extends React.Component {
   static propTypes = {
-    handleClose: PropTypes.func
+    handleClose: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
-    this.getContent = this.getContent.bind(this);
+    this.renderContent = this.renderContent.bind(this);
   }
 
-  getContent() {
+  renderContent() {
     return (
       <div style={styles.contentContainer}>
         <img
@@ -107,7 +107,7 @@ export default class SignInCallout extends React.Component {
           onClick={this.props.handleClose}
         />
         <div style={styles.upTriangle} />
-        <div style={styles.content}>{this.getContent()}</div>
+        <div style={styles.content}>{this.renderContent()}</div>
       </div>
     );
   }
