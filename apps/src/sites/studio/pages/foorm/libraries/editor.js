@@ -4,11 +4,11 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormLibraryEditorManager';
+import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
 import foorm, {
-  setLibraryQuestion,
+  setFormQuestions,
   setHasError
-} from '@cdo/apps/code-studio/pd/foorm/library_editor/foormLibraryEditorRedux';
+} from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 import _ from 'lodash';
 
 import 'survey-react/survey.css';
@@ -20,7 +20,7 @@ $(document).ready(function() {
   const store = getStore();
   ReactDOM.render(
     <Provider store={store}>
-      <FoormLibraryEditorManager
+      <FoormEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}
@@ -42,17 +42,17 @@ function populateCodeMirror() {
 // Functions for keeping the code mirror content in the redux store.
 function onCodeMirrorChange(editor) {
   try {
-    const libraryQuestion = JSON.parse(editor.getValue());
-    updateLibraryQuestion(libraryQuestion);
+    const formQuestions = JSON.parse(editor.getValue());
+    updateFormQuestions(formQuestions);
   } catch (e) {
     // There is a JSON error.
-    getStore().dispatch(setLibraryQuestion({}));
+    getStore().dispatch(setFormQuestions({}));
     getStore().dispatch(setHasError(true));
   }
 }
 
-const updateLibraryQuestion = libraryQuestion => {
-  getStore().dispatch(setLibraryQuestion(libraryQuestion));
+const updateFormQuestions = formQuestions => {
+  getStore().dispatch(setFormQuestions(formQuestions));
   getStore().dispatch(setHasError(false));
 };
 
@@ -67,7 +67,7 @@ window.onbeforeunload = evt => {
   let storeState = getStore().getState().foorm;
   if (
     storeState.hasError ||
-    !_.isEqual(storeState.lastSavedLibraryQuestion, storeState.libraryQuestion)
+    !_.isEqual(storeState.lastSavedFormQuestions, storeState.formQuestions)
   ) {
     return 'Are you sure you want to exit? You may have unsaved changes.';
   }

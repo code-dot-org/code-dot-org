@@ -13,6 +13,9 @@ const styles = {
   surveyTitle: {
     marginBottom: 0
   },
+  surveyState: {
+    marginTop: 0
+  },
   validationInfo: {
     marginTop: 10,
     marginLeft: 10
@@ -45,9 +48,10 @@ class FoormEditorHeader extends Component {
     livePreviewStatus: PropTypes.string,
 
     // populated by Redux
-    libraryQuestion: PropTypes.object,
-    libraryQuestionName: PropTypes.string,
-    libraryName: PropTypes.string
+    formQuestions: PropTypes.object,
+    isFormPublished: PropTypes.bool,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number
   };
 
   constructor(props) {
@@ -63,12 +67,12 @@ class FoormEditorHeader extends Component {
   validateQuestions = () => {
     this.setState({validationStarted: true});
     $.ajax({
-      url: '/api/v1/pd/foorm/library_questions/validate_library_question',
+      url: '/api/v1/pd/foorm/forms/validate_form',
       type: 'post',
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        question: this.props.libraryQuestion
+        form_questions: this.props.formQuestions
       })
     })
       .done(result => {
@@ -90,16 +94,20 @@ class FoormEditorHeader extends Component {
   };
 
   render() {
-    // need to get this header to show when a "new library" is selected
     return (
       <div>
-        {this.props.libraryName && (
+        {this.props.formName && (
           <div>
             <h2 style={styles.surveyTitle}>
-              {`Library Name: ${this.props.libraryName}`}
-              <br />
-              {`Library Question Name: ${this.props.libraryQuestionName}`}
+              {`Form Name: ${this.props.formName}, version ${
+                this.props.formVersion
+              }`}
             </h2>
+            <h3 style={styles.surveyState}>
+              {`Form State: ${
+                this.props.isFormPublished ? 'Published' : 'Draft'
+              }`}
+            </h3>
           </div>
         )}
         <div style={styles.helperButtons}>
@@ -152,7 +160,8 @@ class FoormEditorHeader extends Component {
 }
 
 export default connect(state => ({
-  libraryQuestion: state.foorm.libraryQuestion || {},
-  libraryQuestionName: state.foorm.libraryQuestionName,
-  libraryName: state.foorm.libraryName
+  formQuestions: state.foorm.formQuestions || {},
+  isFormPublished: state.foorm.isFormPublished,
+  formName: state.foorm.formName,
+  formVersion: state.foorm.formVersion
 }))(FoormEditorHeader);

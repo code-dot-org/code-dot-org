@@ -1,37 +1,25 @@
-const SET_LIBRARY_QUESTION = 'foormLibraryEditor/SET_LIBRARY_QUESTION';
-const SET_HAS_ERROR = 'foormLibraryEditor/SET_HAS_ERROR';
-const SET_LIBRARY_QUESTION_DATA =
-  'foormLibraryEditor/SET_LIBRARY_QUESTION_DATA';
-const SET_LIBRARY_DATA = 'foormLibraryEditor/SET_LIBRARY_DATA';
-const RESET_AVAILABLE_LIBRARIES =
-  'foormLibraryEditor/RESET_AVAILABLE_LIBRARIES';
-const RESET_AVAILABLE_LIBRARY_QUESTIONS =
-  'foormLibraryEditor/RESET_AVAILABLE_LIBRARY_QUESTIONS';
-const ADD_AVAILABLE_LIBRARY = 'foormEditor/ADD_AVAILABLE_LIBRARY';
-const ADD_AVAILABLE_LIBRARY_QUESTION =
-  'foormEditor/ADD_AVAILABLE_LIBRARY_QUESTION';
+const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
+const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
+const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
+const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
+const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
-const SET_LAST_SAVED_QUESTION = 'foormLibraryEditor/SET_LAST_SAVED_QUESTION';
+const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
 
-// libraryQuestion is an object in surveyJS format that represents
-// a single question
-export const setLibraryQuestion = libraryQuestion => ({
-  type: SET_LIBRARY_QUESTION,
-  libraryQuestion
+// formQuestions is an object in surveyJS format that represents
+// a single survey
+export const setFormQuestions = formQuestions => ({
+  type: SET_FORM_QUESTIONS,
+  formQuestions
 });
 
-// libraryQuestionData is an object in the format
-// {name: 'a_question_name', question: {...questions...}}
-// where questions is a valid survey element in surveyJS format.
-export const setLibraryQuestionData = libraryQuestionData => ({
-  type: SET_LIBRARY_QUESTION_DATA,
-  libraryQuestionData
-});
-
-export const setLibraryData = libraryData => ({
-  type: SET_LIBRARY_DATA,
-  libraryData
+// formData is an object in the format
+// {published: true/false, questions: {...questions...}}
+// where questions is a survey in surveyJS format.
+export const setFormData = formData => ({
+  type: SET_FORM_DATA,
+  formData
 });
 
 export const setHasError = hasError => ({
@@ -39,24 +27,14 @@ export const setHasError = hasError => ({
   hasError
 });
 
-export const resetAvailableLibraries = librariesMetadata => ({
-  type: RESET_AVAILABLE_LIBRARIES,
-  librariesMetadata
+export const resetAvailableForms = formsMetadata => ({
+  type: RESET_AVAILABLE_FORMS,
+  formsMetadata
 });
 
-export const resetAvailableLibraryQuestions = libraryQuestionsMetadata => ({
-  type: RESET_AVAILABLE_LIBRARY_QUESTIONS,
-  libraryQuestionsMetadata
-});
-
-export const addAvailableLibrary = libraryMetadata => ({
-  type: ADD_AVAILABLE_LIBRARY,
-  libraryMetadata
-});
-
-export const addAvailableLibraryQuestion = libraryQuestionMetadata => ({
-  type: ADD_AVAILABLE_LIBRARY_QUESTION,
-  libraryQuestionMetadata
+export const addAvilableForm = formMetadata => ({
+  type: ADD_AVAILABLE_FORM,
+  formMetadata
 });
 
 export const setLastSaved = lastSaved => ({
@@ -69,32 +47,29 @@ export const setSaveError = saveError => ({
   saveError
 });
 
-export const setLastSavedQuestion = libraryQuestion => ({
-  type: SET_LAST_SAVED_QUESTION,
-  libraryQuestion
+export const setLastSavedQuestions = formQuestions => ({
+  type: SET_LAST_SAVED_QUESTIONS,
+  formQuestions
 });
 
-// need to set available library questions redux state on load of library
 const initialState = {
-  libraryQuestion: '',
-  libraryQuestionName: null,
-  libraryQuestionId: null,
-  libraryName: null,
-  libraryId: null,
-  libraryVersion: null,
-  availableLibraries: [],
-  availableLibraryQuestionsForCurrentLibrary: [],
+  formQuestions: '',
+  isFormPublished: null,
   hasError: false,
+  formName: null,
+  formVersion: null,
+  formId: null,
+  availableForms: [],
   saveError: null,
   lastSaved: null,
-  lastSavedLibraryQuestion: ''
+  lastSavedFormQuestions: ''
 };
 
-export default function foormLibraryEditorRedux(state = initialState, action) {
-  if (action.type === SET_LIBRARY_QUESTION) {
+export default function foormEditorRedux(state = initialState, action) {
+  if (action.type === SET_FORM_QUESTIONS) {
     return {
       ...state,
-      libraryQuestion: action.libraryQuestion
+      formQuestions: action.formQuestions
     };
   }
   if (action.type === SET_HAS_ERROR) {
@@ -103,57 +78,28 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
       hasError: action.hasError
     };
   }
-  if (action.type === SET_LIBRARY_QUESTION_DATA) {
+  if (action.type === SET_FORM_DATA) {
     return {
       ...state,
-      libraryQuestion: action.libraryQuestionData['question'],
-      libraryQuestionName: action.libraryQuestionData['name'],
-      libraryQuestionId: action.libraryQuestionData['id']
+      formQuestions: action.formData['questions'],
+      isFormPublished: action.formData['published'],
+      formName: action.formData['name'],
+      formVersion: action.formData['version'],
+      formId: action.formData['id']
     };
   }
-  if (action.type === SET_LIBRARY_DATA) {
+  if (action.type === RESET_AVAILABLE_FORMS) {
     return {
       ...state,
-      libraryName: action.libraryData['name'],
-      libraryVersion: action.libraryData['version'],
-      libraryId: action.libraryData['id']
+      availableForms: action.formsMetadata
     };
   }
-  if (action.type === RESET_AVAILABLE_LIBRARIES) {
+  if (action.type === ADD_AVAILABLE_FORM) {
+    let newFormList = [...state.availableForms];
+    newFormList.push(action.formMetadata);
     return {
       ...state,
-      availableLibraries: action.librariesMetadata
-    };
-  }
-  if (action.type === RESET_AVAILABLE_LIBRARY_QUESTIONS) {
-    return {
-      ...state,
-      availableLibraryQuestionsForCurrentLibrary:
-        action.libraryQuestionsMetadata
-    };
-  }
-  // do we want to merge instead of push (in case library already exists)
-  if (action.type === ADD_AVAILABLE_LIBRARY) {
-    let updatedLibraries = mergeNewItem(
-      state.availableLibraries,
-      action.libraryMetadata
-    );
-
-    return {
-      ...state,
-      availableLibraries: updatedLibraries
-    };
-  }
-  // do we want to merge instead of push (in case library question already exists)
-  if (action.type === ADD_AVAILABLE_LIBRARY_QUESTION) {
-    let updatedLibraryQuestions = mergeNewItem(
-      state.availableLibraryQuestionsForCurrentLibrary,
-      action.libraryQuestionMetadata
-    );
-
-    return {
-      ...state,
-      availableLibraryQuestionsForCurrentLibrary: updatedLibraryQuestions
+      availableForms: newFormList
     };
   }
   if (action.type === SET_LAST_SAVED) {
@@ -168,18 +114,12 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
       saveError: action.saveError
     };
   }
-  if (action.type === SET_LAST_SAVED_QUESTION) {
+  if (action.type === SET_LAST_SAVED_QUESTIONS) {
     return {
       ...state,
-      lastSavedLibraryQuestion: action.libraryQuestion
+      lastSavedFormQuestions: action.formQuestions
     };
   }
 
   return state;
-}
-
-function mergeNewItem(oldItems, newItem) {
-  let unchangedItems = oldItems.filter(item => item['id'] !== newItem['id']);
-
-  return [...unchangedItems, newItem];
 }
