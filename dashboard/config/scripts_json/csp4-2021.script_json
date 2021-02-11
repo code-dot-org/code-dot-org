@@ -677,19 +677,6 @@
       }
     },
     {
-      "key": "72bede03-d200-49e1-bb44-dcba7c2c592c",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "72bede03-d200-49e1-bb44-dcba7c2c592c",
-        "lesson.key": "Variables Make",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
       "key": "f96ab15b-debb-464d-8d56-092112fa2c9f",
       "position": 1,
       "properties": {
@@ -1277,7 +1264,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
+            "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](\thttps://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
           }
         ],
         "name": "Explore Sample Apps"
@@ -1292,7 +1279,7 @@
       "position": 2,
       "properties": {
         "name": "Sample Apps",
-        "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 2-4). Students can explore one or more depending on time.",
+        "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
         "progression_name": "Sample Apps"
       },
       "seeding_key": {
@@ -1346,7 +1333,7 @@
       "key": "ba9405e1-063f-43b8-adbf-219667cc62ba",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each pair of students",
+        "description": "**Distribute:** Give each pair of students:\n\n* A small stack of red and yellow sticky notes\n* A pen / pencil\n* 3 plastic baggies\n* A dry erase marker to share with another group",
         "tips": [
           {
             "type": "teachingTip",
@@ -1363,7 +1350,6 @@
       "key": "e5cd4610-c1a6-45ad-9d5f-b828b523743d",
       "position": 3,
       "properties": {
-        "description": "* A small stack of red and yellow sticky notes\r\n* A pen / pencil\r\n* 3 plastic baggies\r\n* A dry erase marker to share with another group"
       },
       "seeding_key": {
         "activity_section.key": "e5cd4610-c1a6-45ad-9d5f-b828b523743d",
@@ -1449,13 +1435,13 @@
       "key": "a1a44fc5-5b83-45fb-a0c6-ceefaac44f03",
       "position": 1,
       "properties": {
-        "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.",
+        "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.\n\n",
         "remarks": true,
         "name": "Preview the Lesson",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://curriculum.code.org/media/uploads/investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
+            "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://images.code.org/0f42442e0f78f7f39028ce253620efbd-investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
           }
         ]
       },
@@ -1672,7 +1658,7 @@
       "key": "55b83c45-4852-4653-9233-4f394b2d4e52",
       "position": 15,
       "properties": {
-        "description": "[slide]  **Display:** Talk through the pattern with students.",
+        "description": "[slide]  **Display:** Talk through the pattern with students.\n\n**Prompt:** Explain to a partner how the \"Variable with String Concatenation Pattern\" works.",
         "tips": [
           {
             "type": "discussionGoal",
@@ -1682,17 +1668,6 @@
       },
       "seeding_key": {
         "activity_section.key": "55b83c45-4852-4653-9233-4f394b2d4e52",
-        "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814"
-      }
-    },
-    {
-      "key": "4d322e4f-5154-44ea-83e7-6d72b8495ddf",
-      "position": 16,
-      "properties": {
-        "description": "**Prompt:** Explain to a partner how the \"Variable with String Concatenation Pattern\" works."
-      },
-      "seeding_key": {
-        "activity_section.key": "4d322e4f-5154-44ea-83e7-6d72b8495ddf",
         "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814"
       }
     },
@@ -1769,7 +1744,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Practice\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://curriculum.code.org/media/uploads/practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n\n"
+            "markdown": "This is the first official \"Practice\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://images.code.org/58afef806d6c4a8b61387df746d1291e-practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n\n"
           },
           {
             "type": "teachingTip",
@@ -1855,7 +1830,7 @@
       "key": "1adf5772-0b76-42e4-85c2-2bbff867d6b3",
       "position": 6,
       "properties": {
-        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.",
+        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.\n\n[slide] **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n[slide] **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1869,19 +1844,8 @@
       }
     },
     {
-      "key": "3fc29f48-9747-4005-b7a2-806efcf58865",
-      "position": 7,
-      "properties": {
-        "description": "[slide] **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n[slide] **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio."
-      },
-      "seeding_key": {
-        "activity_section.key": "3fc29f48-9747-4005-b7a2-806efcf58865",
-        "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a"
-      }
-    },
-    {
       "key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10",
-      "position": 8,
+      "position": 7,
       "properties": {
         "name": "Debugging Scope Issues",
         "description": "[slide] **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside `onEvent()` or `function()` blocks",
@@ -1894,7 +1858,7 @@
     },
     {
       "key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5",
-      "position": 9,
+      "position": 8,
       "properties": {
         "name": "Putting it Together",
         "description": "[slide] **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.",
@@ -1977,7 +1941,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Make\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Make Lessons:\n\n[pull-right]\n\n![](https://curriculum.code.org/media/uploads/make.png)\n\n[/pull-right]\n\n**Overview:** Students make a target app for which they are given the screen elements but little to no starter code. \n\n* Students are provided high-level steps to break down the project\n* Teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.\n\n**Goal:** Students are able to independently decide when and how to use the new concept in the context of a larger project.\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Make Lessons](https://www.youtube.com/watch?v=d5IK3kUlXW4)\n\n    "
+            "markdown": "This is the first official \"Make\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit).\n\n### Make Lessons:\n\n[pull-right]\n\n![](https://curriculum.code.org/media/uploads/make.png)\n\n[/pull-right]\n\n**Overview:** Students make a target app for which they are given the screen elements but little to no starter code. \n\n* Students are provided high-level steps to break down the project\n* Teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.\n\n**Goal:** Students are able to independently decide when and how to use the new concept in the context of a larger project.\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Make Lessons](https://www.youtube.com/watch?v=d5IK3kUlXW4)\n\n    "
           }
         ]
       },
@@ -1987,8 +1951,21 @@
       }
     },
     {
-      "key": "544fac45-c29a-4fb1-93ff-5750d9c91cb6",
+      "key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
       "position": 2,
+      "properties": {
+        "description": "For the past few days, we've learned a lot about storing and updating information in variables. Today you are going to have an opportunity to demonstrate your learning by making an app.",
+        "remarks": true,
+        "name": "Intro the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
+        "lesson_activity.key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a"
+      }
+    },
+    {
+      "key": "544fac45-c29a-4fb1-93ff-5750d9c91cb6",
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -2003,23 +1980,10 @@
       }
     },
     {
-      "key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
-      "position": 3,
-      "properties": {
-        "description": "For the past few days, we've learned a lot about storing and updating information in variables. Today you are going to have an opportunity to demonstrate your learning by making an app.",
-        "remarks": true,
-        "name": "Intro the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
-        "lesson_activity.key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a"
-      }
-    },
-    {
       "key": "186a5f67-e29f-4ec7-baf0-1b1cc95c5e04",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Photo Maker App in Level 2.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
         "name": "Build the Photo Liker\r"
       },
       "seeding_key": {
@@ -2036,7 +2000,8 @@
             "type": "discussionGoal",
             "markdown": "* What does this app do?\r\n  * It lets a user \"like\" an image and add comments to it. \r\n* What are the inputs?\r\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\r\n* What are the outputs?\r\n  * The number showing how many thumbs up the image has. \r\n* What's one piece of information that might be stored in a variable?\r\n  * The number of likes and all the comments added so far. \r\n   \r\n"
           }
-        ]
+        ],
+        "progression_name": "Try the Photo Liker app"
       },
       "seeding_key": {
         "activity_section.key": "d4efe39e-c1fe-461b-bc3d-1c4ee94e5d4c",
@@ -2086,7 +2051,8 @@
       "key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac",
       "position": 6,
       "properties": {
-        "description": "**Distribute:** Give students copies of [r variables-make-activity-guide] if you will be using it during the class.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\r\n\r\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Photo Liker app"
       },
       "seeding_key": {
         "activity_section.key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac",
@@ -2142,30 +2108,6 @@
       "seeding_key": {
         "activity_section.key": "44531fce-2225-4acf-a6ea-cb4dc1b0f245",
         "lesson_activity.key": "43b11cca-1150-45fd-96b9-8fce6090e6ec"
-      }
-    },
-    {
-      "key": "95d8b436-3f5d-4cb2-adde-3adff90248fe",
-      "position": 1,
-      "properties": {
-        "name": "Try the Photo Liker App",
-        "progression_name": "Try the Photo Liker App"
-      },
-      "seeding_key": {
-        "activity_section.key": "95d8b436-3f5d-4cb2-adde-3adff90248fe",
-        "lesson_activity.key": "72bede03-d200-49e1-bb44-dcba7c2c592c"
-      }
-    },
-    {
-      "key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2",
-      "position": 2,
-      "properties": {
-        "name": "Make the Photo Liker App",
-        "progression_name": "Make the Photo Liker App"
-      },
-      "seeding_key": {
-        "activity_section.key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2",
-        "lesson_activity.key": "72bede03-d200-49e1-bb44-dcba7c2c592c"
       }
     },
     {
@@ -4490,10 +4432,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Try the Photo Liker App",
-        "level_keys": [
-          "U4 L04 Variables Make Project_2021"
-        ]
+        "progression": "Try the Photo Liker app"
       },
       "named_level": null,
       "bonus": null,
@@ -4504,7 +4443,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "95d8b436-3f5d-4cb2-adde-3adff90248fe"
+        "activity_section.key": "d4efe39e-c1fe-461b-bc3d-1c4ee94e5d4c"
       },
       "level_keys": [
         "U4 L04 Variables Make Project_2021"
@@ -4516,10 +4455,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Photo Liker App",
-        "level_keys": [
-          "U4 L04 Variables Make Project Submit_2021"
-        ]
+        "progression": "Make the Photo Liker app"
       },
       "named_level": null,
       "bonus": null,
@@ -4530,7 +4466,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2"
+        "activity_section.key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac"
       },
       "level_keys": [
         "U4 L04 Variables Make Project Submit_2021"
@@ -4594,7 +4530,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements"
+        "progression": "If-Statements",
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4617,7 +4556,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements"
+        "progression": "If-Statements",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4640,7 +4582,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements"
+        "progression": "If-Else Statements",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4663,7 +4608,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements"
+        "progression": "If-Else Statements",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4686,7 +4634,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements"
+        "progression": "If-Else Statements",
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v2 Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4709,7 +4660,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR"
+        "progression": "Logical Operators: AND OR",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4732,7 +4686,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR"
+        "progression": "Logical Operators: AND OR",
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v3 Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6142,7 +6099,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "95d8b436-3f5d-4cb2-adde-3adff90248fe"
+        "activity_section.key": "d4efe39e-c1fe-461b-bc3d-1c4ee94e5d4c"
       }
     },
     {
@@ -6154,7 +6111,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2"
+        "activity_section.key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac"
       }
     },
     {
@@ -6800,7 +6757,6 @@
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
       "key": "EIPM One Pager",
       "properties": {
-        "type": "Resource ",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -6849,7 +6805,6 @@
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
       "key": "EIPM One Pager",
       "properties": {
-        "type": "Resource ",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -6898,7 +6853,6 @@
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
       "key": "EIPM One Pager",
       "properties": {
-        "type": "Resource ",
         "audience": "Teacher",
         "include_in_pdf": true
       },

@@ -1278,8 +1278,7 @@
       "key": "ef15ef29-1668-40d1-aa90-b093d4fecce1",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "ef15ef29-1668-40d1-aa90-b093d4fecce1",
