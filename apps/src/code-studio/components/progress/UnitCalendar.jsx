@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import i18n from '@cdo/locale';
 import _ from 'lodash';
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
@@ -47,7 +48,7 @@ const styles = {
   }
 };
 
-export default class UnitCalendar extends React.Component {
+class UnitCalendar extends React.Component {
   static propTypes = {
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired
@@ -159,6 +160,7 @@ export default class UnitCalendar extends React.Component {
         <table style={styles.table}>
           <tbody>
             {schedule.map((week, index) => {
+              console.log(Radium.getState(this.state, 'lesson-0', ':hover'));
               return (
                 <tr key={`week-${index}`}>
                   <td style={styles.weekColumn}>
@@ -209,3 +211,5 @@ export default class UnitCalendar extends React.Component {
     );
   }
 }
+
+export default Radium(UnitCalendar);
