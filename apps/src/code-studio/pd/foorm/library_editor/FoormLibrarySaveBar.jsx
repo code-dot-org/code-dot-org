@@ -18,13 +18,14 @@ import {SelectStyleProps} from '../../constants';
 import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
-  setFormData,
-  addAvilableForm,
-  setFormQuestions,
+  setLibraryQuestionData,
+  setLibraryData,
+  addAvailableLibrary,
+  addAvailableLibraryQuestion,
   setLastSaved,
   setSaveError,
-  setLastSavedQuestions
-} from './foormEditorRedux';
+  setLastSavedQuestion
+} from './foormLibraryEditorRedux';
 
 const styles = {
   saveButtonBackground: {
@@ -63,60 +64,29 @@ const styles = {
   }
 };
 
-const publishedSaveWarning = (
-  <div>
-    <span style={styles.warning}>Warning: </span>You are editing a published
-    survey. Please only make safe edits as described in the{' '}
-    <a
-      href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      How To
-    </a>
-    .
-    <br />
-    <br />
-    Are you sure you want to save your changes?
-  </div>
-);
-
-const aboutToPublishWarning = (
-  <div>
-    <span style={styles.warning}>Warning: </span>You are about to publish a new
-    survey. Once a survey is published, it may be put into active use.{' '}
-    <span style={styles.warning}>
-      A published survey cannot be returned to draft mode!
-    </span>
-    <br />
-    <br />
-    Are you sure you want to publish?
-  </div>
-);
-
 const confirmationDialogNames = {
-  save: 'save',
-  publish: 'publish'
+  save: 'save'
 };
 
-class FoormSaveBar extends Component {
+class FoormLibrarySaveBar extends Component {
   static propTypes = {
-    formCategories: PropTypes.array,
+    libraryCategories: PropTypes.array,
     resetCodeMirror: PropTypes.func,
 
     // Populated by Redux
-    formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool,
-    formId: PropTypes.number,
+    libraryQuestion: PropTypes.object,
+    libraryHasError: PropTypes.bool,
+    libraryQuestionId: PropTypes.number,
+    libraryId: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
-    setFormData: PropTypes.func,
-    addAvilableForm: PropTypes.func,
-    setFormQuestions: PropTypes.func,
+    setLibraryData: PropTypes.func,
+    setLibraryQuestionData: PropTypes.func,
+    addAvailableLibrary: PropTypes.func,
+    addAvailableLibraryQuestion: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
+    setLastSavedQuestion: PropTypes.func
   };
 
   constructor(props) {
@@ -125,47 +95,77 @@ class FoormSaveBar extends Component {
     this.state = {
       confirmationDialogBeingShownName: null,
       isSaving: false,
-      showNewFormSave: false,
-      formName: null,
-      formCategory: null
+      showNewLibraryQuestionSave: false,
+      libraryQuestionName: null,
+      libraryName: null,
+      formsAppearedIn: [],
+      libraryCategory: null
     };
   }
 
-  updateQuestionsUrl = () =>
-    `/foorm/forms/${this.props.formId}/update_questions`;
-
-  publishUrl = () => `/foorm/forms/${this.props.formId}/publish`;
+  updateQuestionUrl = () =>
+    `/foorm/library_questions/${this.props.libraryQuestionId}`;
 
   handleSave = () => {
     this.setState({isSaving: true});
     this.props.setSaveError(null);
-    if (this.props.isFormPublished) {
-      // show a warning if in published mode
-      this.setState({
-        confirmationDialogBeingShownName: confirmationDialogNames.save
-      });
-    } else if (this.props.formId === null || this.props.formId === undefined) {
-      // if this is not an existing form, show new form save modal
-      this.setState({showNewFormSave: true});
-    } else {
-      this.save(this.updateQuestionsUrl());
+
+    if (
+      this.props.libraryQuestionId === null ||
+      this.props.libraryQuestionId === undefined
+    ) {
+      // if this is not an existing library question, show new library question save modal
+      this.setState({showNewLibraryQuestionSave: true});
+      return;
     }
+
+    $.ajax({
+      url: `/foorm/library_questions/${
+        this.props.libraryQuestionId
+      }/published_forms_appeared_in`,
+      type: 'get'
+    }).done(result => {
+      if (result.length !== 0) {
+        this.setState({
+          confirmationDialogBeingShownName: confirmationDialogNames.save,
+          formsAppearedIn: result
+        });
+      } else {
+        this.save(this.updateQuestionUrl());
+      }
+    });
   };
 
-  handlePublish = () => {
-    this.setState({
-      isSaving: true,
-      confirmationDialogBeingShownName: confirmationDialogNames.publish
-    });
-    this.props.setSaveError(null);
+  publishedSaveWarning = forms => {
+    let formBullets = forms.map((form, i) => <li key={i}>{form}</li>);
+
+    return (
+      <div>
+        <span style={styles.warning}>Warning: </span>This question appears in
+        one or more published surveys, listed below:
+        <ul>{formBullets}</ul>
+        Please only make safe edits as described in the{' '}
+        <a
+          href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          How To
+        </a>
+        .
+        <br />
+        <br />
+        Are you sure you want to save your changes?
+      </div>
+    );
   };
 
   handleSaveCancel = () => {
     this.setState({confirmationDialogBeingShownName: null, isSaving: false});
   };
 
-  handleNewFormSaveCancel = () => {
-    this.setState({showNewFormSave: false, isSaving: false});
+  handleNewLibraryQuestionSaveCancel = () => {
+    this.setState({showNewLibraryQuestionSave: false, isSaving: false});
   };
 
   save = url => {
@@ -175,7 +175,7 @@ class FoormSaveBar extends Component {
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        questions: this.props.formQuestions
+        question: this.props.libraryQuestion
       })
     })
       .done(result => {
@@ -192,59 +192,77 @@ class FoormSaveBar extends Component {
       });
   };
 
-  isFormNameValid = () => {
-    return this.state.formName && this.state.formName.match('^[a-z0-9_]+$');
+  isNameValid = name => {
+    return name && name.match('^[a-z0-9_]+$');
   };
 
-  saveNewForm = () => {
-    const newFormName = `${this.state.formCategory}/${this.state.formName}`;
+  saveNewLibraryQuestion = () => {
+    // Need to include library name if this is a new library (no ID)
+    let fullLibraryName = '';
+    if (!this.props.libraryId) {
+      fullLibraryName = `${this.state.libraryCategory}/${
+        this.state.libraryName
+      }`;
+    }
+
     $.ajax({
-      url: `/foorm/forms`,
+      url: `/foorm/library_questions`,
       type: 'post',
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        name: newFormName,
-        questions: this.props.formQuestions
+        name: this.state.libraryQuestionName,
+        question: this.props.libraryQuestion,
+        library_id: this.props.libraryId,
+        library_name: fullLibraryName
       })
     })
       .done(result => {
-        this.handleSaveSuccess(result);
+        let libraryQuestion = result.library_question;
+        let library = result.library;
+
+        this.handleSaveSuccess(libraryQuestion);
         this.setState({
-          showNewFormSave: false
+          showNewLibraryQuestionSave: false
         });
-        // adds new form to form dropdown
-        this.props.addAvilableForm({
-          name: result.name,
-          version: result.version,
-          id: result.id
+
+        // Since library is new, add to list of options
+        // and set as currently selected library.
+        this.props.addAvailableLibrary({
+          name: library.name,
+          version: library.version,
+          id: library.id
         });
+        this.props.setLibraryData(library);
       })
       .fail(result => {
         this.handleSaveError(result);
         this.setState({
-          showNewFormSave: false
+          showNewLibraryQuestionSave: false
         });
       });
   };
 
-  handleSaveSuccess(result) {
+  handleSaveSuccess(libraryQuestion) {
     this.setState({
       isSaving: false
     });
     this.props.setLastSaved(Date.now());
-    const updatedQuestions = JSON.parse(result.questions);
-    // reset code mirror with returned questions (may have added published state)
-    this.props.resetCodeMirror(updatedQuestions);
-    // update store with form data.
-    this.props.setFormData({
-      published: result.published,
-      name: result.name,
-      version: result.version,
-      id: result.id,
-      questions: updatedQuestions
+    const updatedQuestion = JSON.parse(libraryQuestion.question);
+    // reset code mirror with returned questions (may have added question name)
+    this.props.resetCodeMirror(updatedQuestion);
+    // update store with library question data.
+    this.props.addAvailableLibraryQuestion({
+      id: libraryQuestion['id'],
+      name: libraryQuestion['question_name'],
+      type: JSON.parse(libraryQuestion.question)['type']
     });
-    this.props.setLastSavedQuestions(updatedQuestions);
+    this.props.setLibraryQuestionData({
+      name: libraryQuestion.question_name,
+      id: libraryQuestion.id,
+      question: updatedQuestion
+    });
+    this.props.setLastSavedQuestion(updatedQuestion);
   }
 
   handleSaveError(result) {
@@ -259,71 +277,122 @@ class FoormSaveBar extends Component {
     );
   }
 
-  renderNewFormSaveModal = () => {
-    const showFormNameError = this.state.formName && !this.isFormNameValid();
+  showNameError = () =>
+    (this.state.libraryQuestionName &&
+      !this.isNameValid(this.state.libraryQuestionName)) ||
+    (this.state.libraryName && !this.isNameValid(this.state.libraryName));
+
+  disableSaveNewLibraryQuestion = () => {
+    // disable if invalid name for library question
+    if (this.showNameError()) {
+      return true;
+    }
+
+    // for existing library, library question name is all that is required
+    if (this.props.libraryId && !this.state.libraryQuestionName) {
+      return true;
+    }
+
+    // for new library, need library name, category, and a library question name
+    if (
+      !this.props.libraryId &&
+      !(
+        this.state.libraryName &&
+        this.state.libraryCategory &&
+        this.state.libraryQuestionName
+      )
+    ) {
+      return true;
+    }
+
+    return false;
+  };
+
+  renderNewLibraryQuestionSaveModal = () => {
     return (
       <Modal
-        show={this.state.showNewFormSave}
-        onHide={this.handleNewFormSaveCancel}
+        show={this.state.showNewLibraryQuestionSave}
+        onHide={this.handleNewLibraryQuestionSaveCancel}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Save New Form</Modal.Title>
+          <Modal.Title>Save New Library Question</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <FormGroup>
+            {!this.props.libraryId && (
+              <div>
+                <ControlLabel>
+                  Choose a Category
+                  <ModalHelpTip>
+                    Select a category for the library. The library name will be
+                    prefixed with the category name.
+                  </ModalHelpTip>
+                </ControlLabel>
+                <Select
+                  id="folder"
+                  value={this.state.libraryCategory}
+                  onChange={e => this.setState({libraryCategory: e.value})}
+                  placeholder="-"
+                  options={this.props.libraryCategories.map(v => ({
+                    value: v,
+                    label: v
+                  }))}
+                  required={true}
+                  {...SelectStyleProps}
+                />
+                <ControlLabel>
+                  Library Name
+                  <ModalHelpTip>
+                    Library names must be all lowercase letters (numbers
+                    allowed) with underscores to separate words (such as
+                    example_library_name).
+                  </ModalHelpTip>
+                </ControlLabel>
+                <FormControl
+                  id="libraryName"
+                  type="text"
+                  required={true}
+                  onChange={e => this.setState({libraryName: e.target.value})}
+                />
+              </div>
+            )}
             <ControlLabel>
-              Choose a Category
+              Library Question Name
               <ModalHelpTip>
-                Select a category for the form. The form name will be prefixed
-                with the category name.
-              </ModalHelpTip>
-            </ControlLabel>
-            <Select
-              id="folder"
-              value={this.state.formCategory}
-              onChange={e => this.setState({formCategory: e.value})}
-              placeholder="-"
-              options={this.props.formCategories.map(v => ({
-                value: v,
-                label: v
-              }))}
-              required={true}
-              {...SelectStyleProps}
-            />
-            <ControlLabel>
-              Form Name
-              <ModalHelpTip>
-                Form names must be all lowercase letters (numbers allowed) with
-                underscores to separate words (such as example_form_name).
+                Library question names must be all lowercase letters (numbers
+                allowed) with underscores to separate words (such as
+                example_library_question_name).
               </ModalHelpTip>
             </ControlLabel>
             <FormControl
-              id="formName"
+              id="libraryQuestionName"
               type="text"
               required={true}
-              onChange={e => this.setState({formName: e.target.value})}
+              onChange={e =>
+                this.setState({libraryQuestionName: e.target.value})
+              }
             />
           </FormGroup>
-          {showFormNameError && (
+          {this.showNameError() && (
             <div>
-              <span style={styles.warning}>Error: </span> Form name is invalid.
-              Form names must be all lowercase letters (numbers allowed) with
-              underscores to separate words (such as example_form_name).
+              <span style={styles.warning}>Error: </span> Library or library
+              question name is invalid. Library and library question names must
+              be all lowercase letters (numbers allowed) with underscores to
+              separate words (such as example_library_question_name).
             </div>
           )}
         </Modal.Body>
         <Modal.Footer>
           <Button
             bsStyle="primary"
-            onClick={this.saveNewForm}
-            disabled={
-              !(this.state.formName && this.state.formCategory) ||
-              showFormNameError
-            }
+            onClick={this.saveNewLibraryQuestion}
+            disabled={this.disableSaveNewLibraryQuestion()}
           >
-            Save Form
+            Save Library Question
           </Button>
-          <Button onClick={this.handleNewFormSaveCancel}>Cancel</Button>
+          <Button onClick={this.handleNewLibraryQuestionSaveCancel}>
+            Cancel
+          </Button>
         </Modal.Footer>
       </Modal>
     );
@@ -335,19 +404,19 @@ class FoormSaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.formHasError && (
+            !this.props.libraryHasError && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.formHasError && (
+          {this.props.libraryHasError && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.formHasError && (
+          {this.props.saveError && !this.props.libraryHasError && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -358,53 +427,29 @@ class FoormSaveBar extends Component {
               <FontAwesome icon="spinner" className="fa-spin" />
             </div>
           )}
-          {!this.props.isFormPublished && (
-            <button
-              className="btn btn-danger"
-              type="button"
-              style={styles.button}
-              onClick={this.handlePublish}
-              disabled={this.state.isSaving || this.props.formHasError}
-            >
-              Publish
-            </button>
-          )}
           <button
             className="btn btn-primary"
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.formHasError}
+            disabled={this.state.isSaving || this.props.libraryHasError}
           >
             Save
           </button>
         </div>
-        {this.renderNewFormSaveModal()}
+        {this.renderNewLibraryQuestionSaveModal()}
         <ConfirmationDialog
           show={
             this.state.confirmationDialogBeingShownName ===
             confirmationDialogNames.save
           }
           onOk={() => {
-            this.save(this.updateQuestionsUrl());
+            this.save(this.updateQuestionUrl());
           }}
-          okText={'Yes, save the form'}
+          okText={'Yes, save the library question'}
           onCancel={this.handleSaveCancel}
-          headerText="Save Form"
-          bodyText={publishedSaveWarning}
-        />
-        <ConfirmationDialog
-          show={
-            this.state.confirmationDialogBeingShownName ===
-            confirmationDialogNames.publish
-          }
-          onOk={() => {
-            this.save(this.publishUrl());
-          }}
-          okText={'Yes, publish the form'}
-          onCancel={this.handleSaveCancel}
-          headerText="Publish Form"
-          bodyText={aboutToPublishWarning}
+          headerText="Save Library Question"
+          bodyText={this.publishedSaveWarning(this.state.formsAppearedIn)}
         />
       </div>
     );
@@ -413,21 +458,24 @@ class FoormSaveBar extends Component {
 
 export default connect(
   state => ({
-    formQuestions: state.foorm.formQuestions || {},
-    isFormPublished: state.foorm.isFormPublished,
-    formHasError: state.foorm.hasError,
-    formId: state.foorm.formId,
+    libraryQuestion: state.foorm.libraryQuestion || {},
+    libraryHasError: state.foorm.hasError,
+    libraryQuestionId: state.foorm.libraryQuestionId,
     lastSaved: state.foorm.lastSaved,
-    saveError: state.foorm.saveError
+    saveError: state.foorm.saveError,
+    libraryId: state.foorm.libraryId
   }),
   dispatch => ({
-    setFormData: formData => dispatch(setFormData(formData)),
-    addAvilableForm: formMetadata => dispatch(addAvilableForm(formMetadata)),
-    setFormQuestions: formQuestions =>
-      dispatch(setFormQuestions(formQuestions)),
+    setLibraryQuestionData: libraryQuestionData =>
+      dispatch(setLibraryQuestionData(libraryQuestionData)),
+    setLibraryData: libraryData => dispatch(setLibraryData(libraryData)),
+    addAvailableLibrary: libraryMetadata =>
+      dispatch(addAvailableLibrary(libraryMetadata)),
+    addAvailableLibraryQuestion: libraryQuestionMetadata =>
+      dispatch(addAvailableLibraryQuestion(libraryQuestionMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setLastSavedQuestions: formQuestions =>
-      dispatch(setLastSavedQuestions(formQuestions))
+    setLastSavedQuestion: libraryQuestion =>
+      dispatch(setLastSavedQuestion(libraryQuestion))
   })
-)(FoormSaveBar);
+)(FoormLibrarySaveBar);
