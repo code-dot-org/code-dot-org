@@ -24,6 +24,7 @@ import {getStore} from '../redux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -119,6 +120,13 @@ header.build = function(
       </Provider>,
       document.querySelector('.header_level')
     );
+    // Only render sign in callout if the course is CSF
+    if (scriptData.is_csf) {
+      ReactDOM.render(
+        <SignInCalloutWrapper />,
+        document.querySelector('.signin_callout_wrapper')
+      );
+    }
   });
 };
 
