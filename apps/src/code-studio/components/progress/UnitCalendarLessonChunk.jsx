@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -16,21 +15,24 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontFamily: '"Gotham 4r", sans-serif'
+    fontFamily: '"Gotham 4r", sans-serif',
+    height: '100%'
   },
   assessment: {
+    border: '2px solid ' + color.purple
+  },
+  assessmentHover: {
     border: '2px solid ' + color.purple,
-    ':hover': {
-      backgroundColor: color.purple,
-      color: 'white'
-    }
+    backgroundColor: color.purple,
+    color: 'white'
   },
   instructional: {
+    border: '2px solid ' + color.teal
+  },
+  instructionalHover: {
     border: '2px solid ' + color.teal,
-    ':hover': {
-      backgroundColor: color.teal,
-      color: color.white
-    }
+    backgroundColor: color.teal,
+    color: color.white
   },
   isNotStart: {
     borderLeftStyle: 'dashed'
@@ -51,12 +53,6 @@ const styles = {
     paddingTop: 2,
     paddingBottom: 2,
     boxSizing: 'border-box'
-  },
-  assessmentIcon: {
-    color: color.purple,
-    ':hover': {
-      color: color.white
-    }
   }
 };
 
@@ -68,8 +64,15 @@ class UnitCalendarLessonChunk extends Component {
     handleHover: PropTypes.func.isRequired
   };
 
+  handleMouseEnter = () => {
+    this.props.handleHover(this.props.lesson.id);
+  };
+  handleMouseOut = () => {
+    this.props.handleHover('');
+  };
+
   render() {
-    const {minuteWidth} = this.props;
+    const {minuteWidth, isHover} = this.props;
     const {
       title,
       duration,
@@ -84,7 +87,13 @@ class UnitCalendarLessonChunk extends Component {
     let chunkStyle = {
       width: Math.floor(minuteWidth * duration) - 10,
       ...styles.box,
-      ...(assessment ? styles.assessment : styles.instructional),
+      ...(assessment
+        ? isHover
+          ? styles.assessmentHover
+          : styles.assessment
+        : isHover
+        ? styles.instructionalHover
+        : styles.instructional),
       ...(!isStart && styles.isNotStart),
       ...(!isEnd && styles.isNotEnd)
     };
@@ -95,28 +104,46 @@ class UnitCalendarLessonChunk extends Component {
         target="_blank"
         rel="noopener noreferrer"
         href={url}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseOut={this.handleMouseOut}
       >
         {isMajority && (
-          <div style={styles.boxContent}>
+          <div
+            style={styles.boxContent}
+            onMouseEnter={this.handleMouseEnter}
+            onMouseOut={this.handleMouseOut}
+          >
             <div
               key={`lesson-${this.props.lesson.id}`}
               style={styles.iconSection}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseOut={this.handleMouseOut}
             >
               <FontAwesome
                 icon="check-circle"
                 style={{
-                  ...styles.assessmentIcon,
+                  color: isHover ? color.white : color.purple,
                   visibility: assessment ? 'visible' : 'hidden'
                 }}
+                onMouseEnter={this.handleMouseEnter}
+                onMouseOut={this.handleMouseOut}
               />
               <FontAwesome
                 icon="scissors"
                 style={{
                   visibility: unplugged ? 'visible' : 'hidden'
                 }}
+                onMouseEnter={this.handleMouseEnter}
+                onMouseOut={this.handleMouseOut}
               />
             </div>
-            <div style={styles.titleText}>{title}</div>
+            <div
+              style={styles.titleText}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseOut={this.handleMouseOut}
+            >
+              {title}
+            </div>
           </div>
         )}
       </a>
@@ -124,4 +151,4 @@ class UnitCalendarLessonChunk extends Component {
   }
 }
 
-export default Radium(UnitCalendarLessonChunk);
+export default UnitCalendarLessonChunk;

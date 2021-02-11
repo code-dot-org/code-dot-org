@@ -1,37 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import i18n from '@cdo/locale';
 import _ from 'lodash';
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
 
 const weekWidth = 592;
 const styles = {
   weekColumn: {
     minWidth: 100,
-    backgroundColor: 'rgb(118, 101, 160)',
+    backgroundColor: color.purple,
     color: 'white',
     textAlign: 'center',
-    border: '1px solid rgb(118, 101, 160)',
+    border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     fontWeight: 'bold',
     minHeight: 50
   },
   scheduleColumn: {
-    border: '1px solid rgb(118, 101, 160)',
+    border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     width: weekWidth,
     display: 'flex',
     minHeight: 50
   },
   table: {
-    border: '1px solid rgb(118, 101, 160)',
+    border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     width: '100%'
   },
   key: {
-    border: '1px solid rgb(118, 101, 160)',
+    border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     width: '100%',
     marginTop: 20
@@ -48,7 +49,7 @@ const styles = {
   }
 };
 
-class UnitCalendar extends React.Component {
+export default class UnitCalendar extends React.Component {
   static propTypes = {
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired
@@ -118,6 +119,10 @@ class UnitCalendar extends React.Component {
     return allWeeks;
   };
 
+  handleHover = id => {
+    this.setState({hovering: id});
+  };
+
   renderWeek = week => {
     const minuteWidth = weekWidth / this.props.weeklyInstructionalMinutes;
     return week.map((lesson, index) => {
@@ -140,7 +145,6 @@ class UnitCalendar extends React.Component {
         <table style={styles.table}>
           <tbody>
             {schedule.map((week, index) => {
-              console.log(Radium.getState(this.state, 'lesson-0', ':hover'));
               return (
                 <tr key={`week-${index}`}>
                   <td style={styles.weekColumn}>
@@ -159,27 +163,27 @@ class UnitCalendar extends React.Component {
               <td style={styles.scheduleColumn}>
                 <div style={styles.keySection}>
                   <div>
-                    <i
-                      className="fa fa-square-o"
+                    <FontAwesome
+                      icon="square-o"
                       style={{
-                        color: '#00adbc',
+                        color: color.teal,
                         ...styles.keyIcon
                       }}
                     />
                     {i18n.instructionalLesson()}
                   </div>
                   <div>
-                    <i
-                      className="fa fa-check-circle"
+                    <FontAwesome
+                      icon="check-circle"
                       style={{
-                        color: 'rgb(118, 101, 160)',
+                        color: color.purple,
                         ...styles.keyIcon
                       }}
                     />
                     {i18n.assessment()}
                   </div>
                   <div>
-                    <i className="fa fa-scissors" style={styles.keyIcon} />
+                    <FontAwesome icon="scissors" style={styles.keyIcon} />
                     {i18n.unpluggedLesson()}
                   </div>
                 </div>
@@ -191,5 +195,3 @@ class UnitCalendar extends React.Component {
     );
   }
 }
-
-export default Radium(UnitCalendar);
