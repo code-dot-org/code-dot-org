@@ -54,7 +54,8 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "validation_enabled": "true",
-    "widget_mode": "false"
+    "widget_mode": "false",
+    "long_instructions": "## To Do\r\n\r\nMake this the skeleton for the medical data app"
   },
   "game_id": 41,
   "published": true,
@@ -62,7 +63,7 @@
   "level_num": "custom",
   "user_id": 13,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-14 15:54:10 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2021-02-10 19:39:51 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"show_turtle_before_run\",\"autocomplete_palette_apis_only\",\"text_mode_at_start\",\"hide_design_mode\",\"beginner_mode\",\"long_instructions\",\"encrypted_examples\",\"hide_view_data_button\",\"droplet_tooltips_disabled\",\"debugger_disabled\",\"video_key\",\"execute_palette_apis_only\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2021-02-10 19:53:32 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-14 15:54:10 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2021-02-10 19:39:51 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"show_turtle_before_run\",\"autocomplete_palette_apis_only\",\"text_mode_at_start\",\"hide_design_mode\",\"beginner_mode\",\"long_instructions\",\"encrypted_examples\",\"hide_view_data_button\",\"droplet_tooltips_disabled\",\"debugger_disabled\",\"video_key\",\"execute_palette_apis_only\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2021-02-10 19:53:32 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2021-02-10 21:24:28 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
