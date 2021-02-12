@@ -10,3 +10,8 @@
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
   = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
+
+  - if @level.is_a?(GamelabJr)
+    .field
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_pause_button, description: "Don't show Pause Button"}
+
