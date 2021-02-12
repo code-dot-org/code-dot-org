@@ -6655,10 +6655,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Move to Sheep_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Move to Sheep_2021"
@@ -6678,10 +6681,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Chop Tree_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Chop Tree_2021"
@@ -6701,10 +6707,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Shear Sheep_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Shear Sheep_2021"
@@ -6724,10 +6733,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Chop Trees_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Chop Trees_2021"
@@ -6747,10 +6759,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Place Wall_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Place Wall_2021"
@@ -6770,10 +6785,13 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld House Frame Chosen_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld House Frame Chosen_2021"
@@ -6793,10 +6811,13 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Plant Crops_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Plant Crops_2021"
@@ -6816,10 +6837,13 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Avoid Monsters_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Avoid Monsters_2021"
@@ -6839,10 +6863,13 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Underground Mining Coal_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Underground Mining Coal_2021"
@@ -6862,10 +6889,13 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Underground Iron_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Underground Iron_2021"
@@ -6885,11 +6915,14 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
         "challenge": true,
-        "progression": "Challenge"
+        "level_keys": [
+          "Underground Avoiding Lava_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Underground Avoiding Lava_2021"
@@ -6909,11 +6942,14 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
         "challenge": true,
-        "progression": "Challenge"
+        "level_keys": [
+          "Underground If Statements_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Underground If Statements_2021"
@@ -6933,10 +6969,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "Overworld Free Play 20x20_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Overworld Free Play 20x20_2021"
@@ -12642,6 +12681,7 @@
     {
       "key": "f3746860-8db9-414b-bd6e-5d2503fc81b4",
       "properties": {
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
