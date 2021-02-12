@@ -609,7 +609,7 @@ class Lesson < ApplicationRecord
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,
-        editUrl: edit_lesson_path(id: id)
+        editUrl: edit_lesson_path(id: lesson.id)
       }
     end
   end

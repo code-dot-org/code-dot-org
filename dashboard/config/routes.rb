@@ -271,8 +271,6 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :lessons, only: [:update, :edit]
-
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
@@ -318,6 +316,8 @@ Dashboard::Application.routes.draw do
 
   resources :courses, param: 'course_name'
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
+
+  resources :lessons, only: [:edit, :update]
 
   resources :resources, only: [:create, :update]
   get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
