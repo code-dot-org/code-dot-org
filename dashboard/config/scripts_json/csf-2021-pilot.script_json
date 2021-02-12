@@ -104,8 +104,8 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Blank Space Stories - coming soon!",
+      "key": "blank space stories",
+      "name": "Blank Space Stories",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
@@ -113,15 +113,15 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
     },
     {
       "key": "variables-in-spritelab",
-      "name": "Storing and Retrieving Text - coming soon!",
-      "absolute_position": 5,
+      "name": "Text and Prompts - coming soon!",
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 5,
@@ -136,7 +136,7 @@
     {
       "key": "chatbot",
       "name": "Create a Chat-Bot - coming soon!",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 6,
@@ -655,6 +655,31 @@
       "level_keys": [
         "courseF_events_freeplay"
       ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Variables in Envelopes",
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "EnvelopeVariables-Unplugged_2021"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -875,6 +900,17 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "EnvelopeVariables-Unplugged_2021",
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
     }
