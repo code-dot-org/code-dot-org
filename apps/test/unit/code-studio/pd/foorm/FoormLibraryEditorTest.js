@@ -26,6 +26,8 @@ describe('FoormEditor', () => {
     stubRedux();
     registerReducers({foorm});
 
+    // Default response is that the library question being edited
+    // does not appear in any published form.
     server = sinon.fakeServer.create();
     server.respondWith(
       'GET',
@@ -63,22 +65,6 @@ describe('FoormEditor', () => {
     version: 0,
     id: 1
   };
-
-  // const samplePublishedFormData = {
-  //   questions: {},
-  //   published: true,
-  //   name: 'sample_form_name',
-  //   version: 0,
-  //   id: 1
-  // };
-  //
-  // const sampleNewFormData = {
-  //   questions: {},
-  //   published: null,
-  //   name: null,
-  //   version: null,
-  //   id: null
-  // };
 
   const sampleSaveResponseData = {
     question: '{}',
