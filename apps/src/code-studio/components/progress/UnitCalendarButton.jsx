@@ -19,6 +19,7 @@ export default class UnitCalendarButton extends React.Component {
   }
 
   openDialog = () => {
+    console.log('open!!');
     this.setState({isDialogOpen: true});
   };
 
@@ -42,7 +43,7 @@ export default class UnitCalendarButton extends React.Component {
             handleClose={this.closeDialog}
             lessons={this.props.lessons}
             weeklyInstructionalMinutes={
-              this.props.weeklyInstructionalMinutes || 90
+              this.props.weeklyInstructionalMinutes || 225
             }
           />
         )}

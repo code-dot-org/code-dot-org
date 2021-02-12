@@ -11,7 +11,8 @@ import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
-import UnitCalendarButton from './UnitCalendarButton';
+import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -62,16 +63,7 @@ class ScriptOverviewTopRow extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     showAssignButton: PropTypes.bool,
-    lessons: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        duration: PropTypes.number.isRequired,
-        assessment: PropTypes.bool.isRequired,
-        unplugged: PropTypes.bool,
-        url: PropTypes.string
-      })
-    ),
+    unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool
   };
@@ -92,7 +84,7 @@ class ScriptOverviewTopRow extends React.Component {
       showAssignButton,
       assignedSectionId,
       showCalendar,
-      lessons,
+      unitCalendarLessons,
       weeklyInstructionalMinutes
     } = this.props;
 
@@ -129,7 +121,7 @@ class ScriptOverviewTopRow extends React.Component {
             )}
           {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton
-              lessons={lessons}
+              lessons={unitCalendarLessons}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
             />
           )}

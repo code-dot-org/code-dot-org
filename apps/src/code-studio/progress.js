@@ -216,7 +216,7 @@ progress.renderCourseProgress = function(scriptData) {
         assignedSectionId={scriptData.assigned_section_id}
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
-        lessons={calendarLessonsOverview}
+        unitCalendarLessons={calendarLessonsOverview}
       />
     </Provider>,
     mountPoint

@@ -15,6 +15,7 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -27,31 +28,6 @@ const defaultProps = {
   resources: [],
   showAssignButton: true
 };
-
-const sampleLessons = [
-  {
-    id: 1,
-    title: 'Lesson 1',
-    duration: 87,
-    assessment: true,
-    unplugged: false,
-    isStart: true,
-    isEnd: true,
-    isMajority: true,
-    url: 'https://www.google.com/'
-  },
-  {
-    id: 2,
-    title: 'Lesson 2',
-    duration: 40,
-    assessment: false,
-    unplugged: true,
-    isStart: true,
-    isEnd: true,
-    isMajority: true,
-    url: 'https://www.google.com/'
-  }
-];
 
 describe('ScriptOverviewTopRow', () => {
   it('renders "Try Now" for student', () => {
@@ -199,7 +175,7 @@ describe('ScriptOverviewTopRow', () => {
       <ScriptOverviewTopRow
         {...defaultProps}
         showCalendar
-        lessons={sampleLessons}
+        lessons={testLessons}
         weeklyInstructionalMinutes={90}
         viewAs={ViewType.Teacher}
       />
@@ -207,7 +183,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendarButton
-          lessons={sampleLessons}
+          lessons={testLessons}
           weeklyInstructionalMinutes={90}
         />
       )
@@ -218,7 +194,7 @@ describe('ScriptOverviewTopRow', () => {
     const wrapper = shallow(
       <ScriptOverviewTopRow
         {...defaultProps}
-        lessons={sampleLessons}
+        lessons={testLessons}
         weeklyInstructionalMinutes={90}
         viewAs={ViewType.Teacher}
       />
@@ -226,7 +202,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendarButton
-          lessons={sampleLessons}
+          lessons={testLessons}
           weeklyInstructionalMinutes={90}
         />
       )
@@ -238,7 +214,7 @@ describe('ScriptOverviewTopRow', () => {
       <ScriptOverviewTopRow
         {...defaultProps}
         showCalendar
-        lessons={sampleLessons}
+        lessons={testLessons}
         weeklyInstructionalMinutes={90}
         viewAs={ViewType.Student}
       />
@@ -246,7 +222,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendarButton
-          lessons={sampleLessons}
+          lessons={testLessons}
           weeklyInstructionalMinutes={90}
         />
       )

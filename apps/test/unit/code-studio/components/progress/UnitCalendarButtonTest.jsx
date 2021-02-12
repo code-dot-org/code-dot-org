@@ -13,14 +13,16 @@ describe('UnitCalendarButton', () => {
         weeklyInstructionalMinutes={90}
       />
     );
-    wrapper.setState({isDialogOpen: true});
+
+    wrapper.find('Button').simulate('click');
+    expect(wrapper.state('isDialogOpen')).to.be.true;
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendarDialog
           isOpen={true}
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
-          handleClose={wrapper.closeDialog}
+          handleClose={wrapper.instance().closeDialog}
         />
       )
     ).to.be.true;

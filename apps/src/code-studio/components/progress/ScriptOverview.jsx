@@ -24,6 +24,7 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
+import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 
 /**
@@ -45,16 +46,7 @@ class ScriptOverview extends React.Component {
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
     minimal: PropTypes.bool,
-    lessons: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        duration: PropTypes.number.isRequired,
-        assessment: PropTypes.bool.isRequired,
-        unplugged: PropTypes.bool,
-        url: PropTypes.string
-      })
-    ),
+    unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
 
@@ -119,7 +111,7 @@ class ScriptOverview extends React.Component {
       minimal,
       showCalendar,
       weeklyInstructionalMinutes,
-      lessons
+      unitCalendarLessons
     } = this.props;
 
     const displayRedirectDialog =
@@ -175,7 +167,7 @@ class ScriptOverview extends React.Component {
               assignedSectionId={assignedSectionId}
               showCalendar={showCalendar}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
-              lessons={lessons}
+              unitCalendarLessons={unitCalendarLessons}
             />
           </div>
         )}

@@ -252,7 +252,7 @@ class LessonTest < ActiveSupport::TestCase
     assert levels_data[:unplugged]
   end
 
-  test 'summarize uses display_as_unplugged if the lesson is not migrated' do
+  test 'summarize does not used unplugged if the lesson is not migrated' do
     script = create :script, is_migrated: false, hidden: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
