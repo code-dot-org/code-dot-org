@@ -769,7 +769,6 @@
       "key": "bc85e544-76ba-49db-b4aa-0ec8c3311f6b",
       "position": 6,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "bc85e544-76ba-49db-b4aa-0ec8c3311f6b",
@@ -1852,8 +1851,19 @@
       }
     },
     {
-      "key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",
+      "key": "c8fd8e69-c19d-4264-90f8-44bb6909902d",
       "position": 1,
+      "properties": {
+        "progression_name": "Getting Loopy - Unplugged Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8fd8e69-c19d-4264-90f8-44bb6909902d",
+        "lesson_activity.key": "288af6d5-c632-4696-a9d4-64bdf7cefdc9"
+      }
+    },
+    {
+      "key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",
+      "position": 2,
       "properties": {
         "description": "![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35.png)",
         "name": "Dance Party"
@@ -1865,7 +1875,7 @@
     },
     {
       "key": "0d345591-6747-4a5e-aeb9-196c42f905cd",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "**Say:** Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the **Getting Loopy - Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
         "tips": [
@@ -1895,7 +1905,7 @@
       "key": "5d225181-2af4-4b13-a7ef-96c2af34a7b2",
       "position": 1,
       "properties": {
-        "description": "**Display:** Present the vocab for this lesson, <span class=\"vocab\" title=\"\" data-toggle=\"tooltip\" data-placement=\"bottom\" data-original-title=\"for loop: A typical looping construct designed to make it easy to repeat a section of code using a counter variable.  The for loop combines the creation of a variable, a boolean looping condition, and an update to the variable in one statement.\">loop</span> Ask the class to point out the main loop that was in the dance. Why do you think we call it a loop?"
+        "description": "**Display:** Present the vocab for this lesson, [v loop] Ask the class to point out the main loop that was in the dance. Why do you think we call it a loop?"
       },
       "seeding_key": {
         "activity_section.key": "5d225181-2af4-4b13-a7ef-96c2af34a7b2",
@@ -1941,8 +1951,7 @@
       "key": "98b7009b-0d2e-4b16-80bb-72decac5a3a7",
       "position": 2,
       "properties": {
-        "description": "- Give the students pictures of actions or dance moves that they can do.\r\n- Have students arrange moves and add loops to choreograph their own dance.\r\n- Share the dances with the rest of the class.",
-        "name": "So Moving\r"
+        "description": "**So Moving**\n\n- Give the students pictures of actions or dance moves that they can do.\n- Have students arrange moves and add loops to choreograph their own dance.\n- Share the dances with the rest of the class."
       },
       "seeding_key": {
         "activity_section.key": "98b7009b-0d2e-4b16-80bb-72decac5a3a7",
@@ -1953,22 +1962,11 @@
       "key": "16800831-7ae9-4206-baf3-71ceeb512506",
       "position": 3,
       "properties": {
-        "description": "- Find some YouTube videos of popular dances that repeat themselves.\r\n- Can your class find the loops?\r\n- Try the same thing with songs!",
-        "name": "Connect It Back\r"
+        "description": "**Connect It Back**\n\n- Find some YouTube videos of popular dances that repeat themselves.\n- Can your class find the loops?\n- Try the same thing with songs!"
       },
       "seeding_key": {
         "activity_section.key": "16800831-7ae9-4206-baf3-71ceeb512506",
         "lesson_activity.key": "4a617b6e-9d56-472c-8a50-31052d127232"
-      }
-    },
-    {
-      "key": "64382c02-c031-4976-a853-412380956e7e",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "64382c02-c031-4976-a853-412380956e7e",
-        "lesson_activity.key": "bc85e544-76ba-49db-b4aa-0ec8c3311f6b"
       }
     },
     {
@@ -3689,9 +3687,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "GettingLoopy-Unplugged_2021"
-        ]
+        "progression": "Getting Loopy - Unplugged Video"
       },
       "named_level": null,
       "bonus": null,
@@ -3702,7 +3698,7 @@
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "csf_loops",
         "script.name": "courseb-2021",
-        "activity_section.key": "64382c02-c031-4976-a853-412380956e7e"
+        "activity_section.key": "c8fd8e69-c19d-4264-90f8-44bb6909902d"
       },
       "level_keys": [
         "GettingLoopy-Unplugged_2021"
@@ -5576,7 +5572,7 @@
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "csf_loops",
         "script.name": "courseb-2021",
-        "activity_section.key": "64382c02-c031-4976-a853-412380956e7e"
+        "activity_section.key": "c8fd8e69-c19d-4264-90f8-44bb6909902d"
       }
     },
     {
