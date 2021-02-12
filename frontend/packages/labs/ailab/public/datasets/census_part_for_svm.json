@@ -1,0 +1,88 @@
+{
+  "fields": [
+    {
+      "type": "continuous",
+      "id": "age",
+      "description": "The person's age"
+    },
+    {
+      "type": "categorical",
+      "id": "type of employment",
+      "description": "Type of employment: government, private, self"
+    },
+    {
+      "type": "continuous",
+      "id": "estimated number of people represented",
+      "description": "The estimate for how many people in the US this person is representative of"
+    },
+    {
+      "type": "categorical",
+      "id": "education level",
+      "description": "Their education level"
+    },
+    {
+      "type": "categorical",
+      "id": "marital status",
+      "description": "Marital status (married, single, divorced)"
+    },
+    {
+      "type": "categorical",
+      "id": "occupation",
+      "description": "What they do for a living"
+    },
+    {
+      "type": "categorical",
+      "id": "relationship",
+      "description": "Relationship description of their marital status"
+    },
+    {
+      "type": "categorical",
+      "id": "race",
+      "description": "Race (uses 1994 racial categories which excludes a number of distinctions)"
+    },
+    {
+      "type": "categorical",
+      "id": "gender",
+      "description": "Gender (uses 1994 Census options, which are binary)"
+    },
+    {
+      "type": "continuous",
+      "id": "capital gains",
+      "description": "Their reported capital gains for the year (these are monetary gains from things like selling stock instead of income from a job)"
+    },
+    {
+      "type": "continuous",
+      "id": "capital losses",
+      "description": "Their reported capital losses (for example, if they sold a stock that lost them money)"
+    },
+    {
+      "type": "continuous",
+      "id": "hours of work per week",
+      "description": "Hours they work a week"
+    },
+    {
+      "type": "categorical",
+      "id": "native-country",
+      "description": "Their country of origin"
+    },
+    {
+      "type": "categorical",
+      "id": "income",
+      "description": "Their income: binary for greater than or less than $50,000 "
+    }
+  ],
+  "card": {
+    "description": "Data from the 1994 US census, with income, personal, and job data. Used to predict whether a person's income is over $50,000",
+    "source": "UCI Machine Learning (https://archive.ics.uci.edu/ml/datasets/Adult)",
+    "last_updated": "1994",
+    "context": {
+      "created_by": "Barry Becker",
+      "preparation": "Yes",
+      "confidentiality": "Yes",
+      "subgroup_identifiers": "Yes",
+	    "representative": "Yes",
+      "potential_uses": "Predict whether a person's income is over or under $50,000, based on their education level and age. Demonstrate racial and gender-based income inequality.",
+      "potential_misuses": "Using this for something like determining whether or not to give someone a loan could be deeply unfair."
+    }
+  }
+}

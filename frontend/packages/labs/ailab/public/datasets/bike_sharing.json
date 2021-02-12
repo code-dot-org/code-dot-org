@@ -1,0 +1,98 @@
+{
+  "fields": [
+    {
+      "type": "continuous",
+      "id": "index",
+      "description": "The record's unique index or key. This shouldn't be used as a feature."
+    },
+    {
+      "type": "continuous",
+      "id": "Date",
+      "description": "The date the records were taken."
+    },
+    {
+      "type": "categorical",
+      "id": "Season",
+      "description": "Season: spring, summer, winter or fall"
+    },
+    {
+      "type": "categorical",
+      "id": "Year",
+      "description": "The year (2011 or 2012),"
+    },
+    {
+      "type": "categorical",
+      "id": "Month",
+      "description": "The month: 1 (January) to 12 (December)."
+    },
+    {
+      "type": "categorical",
+      "id": "Holiday",
+      "description": "Whether or not the day is a holiday"
+    },
+    {
+      "type": "categorical",
+      "id": "Day of Week",
+      "description": "The day of the week: 0 (Sunday) to 6 (Saturday)."
+    },
+    {
+      "type": "categorical",
+      "id": "Workday",
+      "description": "Whether or not this is a work day."
+    },
+    {
+      "type": "categorical",
+      "id": "Weather Description",
+      "description": "A description of the day's weather, ranging from a few clouds to light snow or rain."
+    },
+    {
+      "type": "continuous",
+      "id": "Average Temperature (Celsius)",
+      "description": "Average temperature in Celsius, normalized to a 0 to 1 scale where 0 = -8 degrees celsius and 1 equals 39 degrees celsius."
+    },
+    {
+      "type": "continuous",
+      "id": "Average \"Feels Like\" Temperature",
+      "description": "Average \"feels like\" temperature in Celsius, normalized to a 0 to 1 scale where 0 = -16 degrees celsius and 1 equals 50 degrees celsius."
+    },
+    {
+      "type": "continuous",
+      "id": "Humidity (0 - 1)",
+      "description": "Humidity, normalized to 0 (0% humidity) to 1 (100% humidity)"
+    },
+    {
+      "type": "continuous",
+      "id": "Wind Speed",
+      "description": "Wind speed"
+    },
+    {
+      "type": "continuous",
+      "id": "Number of Casual Users",
+      "description": "Number of users without an account"
+    },
+    {
+      "type": "continuous",
+      "id": "Number of Registered Users",
+      "description": "Number of users with an account"
+    },
+    {
+      "type": "continuous",
+      "id": "Total Users",
+      "description": "Total number of users"
+    }
+  ],
+  "card": {
+    "description": "Daily rental data from Washington, D.C.'s Capital Bikeshare system from 2011 and 2012, along with weather data for those days.",
+    "source": "UCI Machine Learning (https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset)",
+    "last_updated": "1994",
+    "context": {
+      "created_by": "Hadi Fanaee, University of Porto",
+      "preparation": "Yes",
+      "confidentiality": "No",
+      "subgroup_identifiers": "No",
+	    "representative": "No",
+      "potential_uses": "Predict how many bikes will be rented based on weather conditions, or time of year.",
+      "potential_misuses": ""
+    }
+  }
+}
