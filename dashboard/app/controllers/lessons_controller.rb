@@ -17,7 +17,6 @@ class LessonsController < ApplicationController
   # GET /s/script-name/lessons/1
   def show
     script = Script.get_from_cache(params[:script_id])
-    raise ActiveRecord::RecordNotFound unless script
     return render :forbidden unless script.is_migrated
 
     @lesson = script.lessons.find do |l|
