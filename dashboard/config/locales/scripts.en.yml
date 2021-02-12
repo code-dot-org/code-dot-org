@@ -20219,6 +20219,8 @@ en:
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
+            lesson-4:
+              name: Context-Settng Lesson
           lesson_groups:
             ramp_up:
               display_name: Loops
@@ -20504,9 +20506,11 @@ en:
             Sprites in Action:
               name: Sprites in Action
             variables-in-spritelab:
-              name: Storing and Retrieving Text - coming soon!
+              name: Text and Prompts - coming soon!
             chatbot:
               name: Create a Chat-Bot - coming soon!
+            blank space stories:
+              name: Blank Space Stories
           lesson_groups:
             ramp_up:
               display_name: Introduction
