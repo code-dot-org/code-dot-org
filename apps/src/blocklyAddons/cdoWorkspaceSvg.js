@@ -66,6 +66,28 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   isReadOnly() {
     return false; // TODO
   }
+
+  /**
+   * @override
+   * Allow scroll even when a drag is in progress
+   * Don't worry about wheel to zoom (we always use wheel to scroll)
+   */
+  onMouseWheel_(e) {
+    var canWheelMove =
+      this.options.moveOptions && this.options.moveOptions.wheel;
+    if (!canWheelMove) {
+      return;
+    }
+
+    var scrollDelta = Blockly.utils.getScrollDeltaPixels(e);
+    // Scroll.
+    var x = this.scrollX - scrollDelta.x;
+    var y = this.scrollY - scrollDelta.y;
+    this.scroll(x, y);
+
+    e.preventDefault();
+  }
+
   setEnableToolbox() {} // TODO
   showTrashcan() {
     /**

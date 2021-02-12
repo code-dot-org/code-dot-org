@@ -12,6 +12,7 @@ import initializeTouch from '@cdo/apps/blocklyAddons/cdoTouch';
 import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
+import CdoBlockDragSurfaceSvg from '@cdo/apps/blocklyAddons/cdoBlockDragSurfaceSvg';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -60,6 +61,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
   blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
+  blocklyWrapper.wrapReadOnlyProperty('bindEventWithChecks_');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
@@ -137,6 +139,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.Scrollbar = CdoScrollbar;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
+  blocklyWrapper.blockly_.BlockDragSurfaceSvg = CdoBlockDragSurfaceSvg;
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
