@@ -16,7 +16,7 @@ export default class ModelManagerDialog extends React.Component {
     isImportPending: false
   };
 
-  componentDidUpdate() {
+  componentDidMount() {
     this.getModelList();
   }
 
