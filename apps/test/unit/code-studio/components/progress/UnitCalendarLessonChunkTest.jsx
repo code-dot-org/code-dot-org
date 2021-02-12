@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
 import color from '@cdo/apps/util/color';
 
-const sampleLesson = {
+const sampleLessonChunk = {
   id: 1,
   title: 'test',
   duration: 10,
@@ -21,8 +21,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           assessment: true
         }}
         isHover={false}
@@ -41,8 +41,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           assessment: true
         }}
         isHover={true}
@@ -66,8 +66,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           assessment: false
         }}
         isHover={false}
@@ -86,8 +86,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           assessment: false
         }}
         isHover={true}
@@ -111,8 +111,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           isStart: false
         }}
         isHover={false}
@@ -130,8 +130,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           isEnd: false
         }}
         isHover={false}
@@ -149,8 +149,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           isMajority: false
         }}
         isHover={false}
@@ -158,15 +158,16 @@ describe('UnitCalendarLessonChunk', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<div>{sampleLesson.title}</div>)).to
-      .be.false;
+    expect(
+      wrapper.containsMatchingElement(<div>{sampleLessonChunk.title}</div>)
+    ).to.be.false;
   });
   it('hides assessment icon if not assessment', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           assessment: false
         }}
         isHover={false}
@@ -187,8 +188,8 @@ describe('UnitCalendarLessonChunk', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
         minuteWidth={1}
-        lesson={{
-          ...sampleLesson,
+        lessonChunk={{
+          ...sampleLessonChunk,
           unplugged: false
         }}
         isHover={false}
