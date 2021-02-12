@@ -7,7 +7,7 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
-const weekWidth = 592;
+const WEEK_WIDTH = 592;
 const styles = {
   weekColumn: {
     minWidth: 100,
@@ -22,7 +22,7 @@ const styles = {
   scheduleColumn: {
     border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
-    width: weekWidth,
+    width: WEEK_WIDTH,
     display: 'flex',
     minHeight: 50
   },
@@ -72,27 +72,31 @@ export default class UnitCalendar extends React.Component {
     lessonsCopy.forEach(lesson => {
       lesson.isStart = false;
       lesson.isEnd = false;
-      lesson.isMajority = false;
-      let lessonDuration = lesson.duration;
-      while (lessonDuration > 0) {
-        let thisChunk = null;
-        if (currMinutes + lessonDuration < weeklyInstructionalMinutes) {
+      lesson.isMajority = true;
+      const originalLessonDuration = lesson.duration;
+      while (lesson.duration > 0) {
+        let lessonClone = _.cloneDeep(lesson);
+        let added = false;
+        if (currMinutes + lesson.duration <= weeklyInstructionalMinutes) {
           // If the rest of the current lesson fits into this week, put it in the schedule.
-          currMinutes = currMinutes + lessonDuration;
-          let thisLesson = _.cloneDeep(lesson);
-          thisLesson.isEnd = true;
-          currWeek.push(thisLesson);
-          thisChunk = thisLesson;
-          lessonDuration = 0;
-        } else if (currMinutes < weeklyInstructionalMinutes - 5) {
-          // If there's more than 5 minutes left in the week,
+          currMinutes = currMinutes + lesson.duration;
+          if (originalLessonDuration === lesson.duration) {
+            lessonClone.isStart = true;
+          }
+          lessonClone.isEnd = true;
+          currWeek.push(lessonClone);
+          added = true;
+          lesson.duration = 0;
+        } else if (currMinutes < weeklyInstructionalMinutes - 15) {
+          // If there's more than 15 minutes left in the week,
           // add as much of the lesson as you can to this week.
-          let partialLesson = _.cloneDeep(lesson);
-          partialLesson.duration = weeklyInstructionalMinutes - currMinutes;
-          currWeek.push(partialLesson);
-          thisChunk = partialLesson;
-          lessonDuration = lessonDuration - partialLesson.duration;
-          lesson.duration = lessonDuration;
+          if (originalLessonDuration === lesson.duration) {
+            lessonClone.isStart = true;
+          }
+          lessonClone.duration = weeklyInstructionalMinutes - currMinutes;
+          currWeek.push(lessonClone);
+          added = true;
+          lesson.duration = lesson.duration - lessonClone.duration;
           currMinutes = weeklyInstructionalMinutes;
         } else {
           // If there isn't enough time in this week to add this lesson, start a new week.
@@ -100,18 +104,15 @@ export default class UnitCalendar extends React.Component {
           currWeek = [];
           currMinutes = 0;
         }
-        if (thisChunk) {
-          if (!prev || prev.title !== thisChunk.title) {
-            thisChunk.isStart = true;
-            thisChunk.isMajority = true;
-          } else {
-            thisChunk.isStart = false;
-            if (prev.duration < thisChunk.duration) {
-              thisChunk.isMajority = true;
+        if (added) {
+          if (!lessonClone.isStart) {
+            if (prev.duration < lessonClone.duration) {
               prev.isMajority = false;
+            } else {
+              lessonClone.isMajority = false;
             }
           }
-          prev = thisChunk;
+          prev = lessonClone;
         }
       }
     });
@@ -123,19 +124,17 @@ export default class UnitCalendar extends React.Component {
     this.setState({hovering: id});
   };
 
-  renderWeek = week => {
-    const minuteWidth = weekWidth / this.props.weeklyInstructionalMinutes;
-    return week.map((lesson, index) => {
-      return (
-        <UnitCalendarLessonChunk
-          key={`lesson-${index}`}
-          minuteWidth={minuteWidth}
-          lesson={lesson}
-          isHover={lesson.id === this.state.hovering}
-          handleHover={this.handleHover}
-        />
-      );
-    });
+  renderWeek = (week, weekNumber) => {
+    const minuteWidth = WEEK_WIDTH / this.props.weeklyInstructionalMinutes;
+    return week.map((lessonChunk, index) => (
+      <UnitCalendarLessonChunk
+        key={`week-${weekNumber}-lesson-chunk-${index}`}
+        minuteWidth={minuteWidth}
+        lessonChunk={lessonChunk}
+        isHover={lessonChunk.id === this.state.hovering}
+        handleHover={this.handleHover}
+      />
+    ));
   };
 
   render() {
@@ -144,16 +143,16 @@ export default class UnitCalendar extends React.Component {
       <div>
         <table style={styles.table}>
           <tbody>
-            {schedule.map((week, index) => {
-              return (
-                <tr key={`week-${index}`}>
-                  <td style={styles.weekColumn}>
-                    {i18n.weekLabel({number: index + 1})}
-                  </td>
-                  <td style={styles.scheduleColumn}>{this.renderWeek(week)}</td>
-                </tr>
-              );
-            })}
+            {schedule.map((week, index) => (
+              <tr key={`week-${index}`}>
+                <td style={styles.weekColumn}>
+                  {i18n.weekLabel({number: index + 1})}
+                </td>
+                <td style={styles.scheduleColumn}>
+                  {this.renderWeek(week, index + 1)}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
         <table style={styles.key}>
