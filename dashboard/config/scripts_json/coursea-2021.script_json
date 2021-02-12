@@ -2494,7 +2494,7 @@
       "key": "ac847e89-ccab-4f15-8585-b06d61723c4c",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n - **Event** - Say it with me: *E-vent.* \n\nAn action that causes something to happen."
+        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n - **Event** - Say it with me: *E-vent.* \n\nAn event is an action that causes something to happen."
       },
       "seeding_key": {
         "activity_section.key": "ac847e89-ccab-4f15-8585-b06d61723c4c",
@@ -2505,7 +2505,7 @@
       "key": "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6",
       "position": 2,
       "properties": {
-        "description": "####A Series of Events####\n\n- Prep your class to answer a question:\n\t- \"I'm going to ask you a question. I want you to raise your hand if you want me to call on you for the answer.\"\n\t- Ask a simple question that most of your students should be able to answer, such as:\n\t\t- How many thumbs do I have?\n\t\t- What is bigger, a bird or a horse?\n\t- Call on a student who has their hand raised and let them give their answer.\n\t- Upon finishing that display, ask the class how you knew that the student wanted you to call on them.\n\t\t- Your class will likely mention the raising of the hand.\n\t- Explain to everyone that when students raise their hand, it is an \"event\" that causes you to know that they want to be called on. \n- Ask the class if they can think of any other events that give signals.\n\t- You may need to remind them that you're not talking about an event like a birthday party or a field trip.\n\t- If they have trouble, you can remind them that an event is an action that causes something to happen.\n\t\t- What about an alarm clock going off? What does that make happen?\n\t\t- What about pressing \"Start\" on the microwave? What does that do?\n\t\t- What about pressing the power button on your tv remote?\n- Today, we're going to create programs with events."
+        "description": "####A Series of Events####\n\nLet’s see if we can find a pattern here:\n\n- When you flip a switch, the lights turn on.\n- When you tap on a device, an app starts.\n- When the alarm goes off, you get out of bed.\n- When *(event)*, *(action)*.\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is “event”.    Normally when we hear “event” we think of:\n- Field trip\n- Competition\n- Birthday Party\n\nWe’re learning a new meaning for the word event today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.\n"
       },
       "seeding_key": {
         "activity_section.key": "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6",
@@ -2532,7 +2532,9 @@
             "type": "teachingTip",
             "markdown": "If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.\r\n"
           }
-        ]
+        ],
+        "name": "The Big Event",
+        "description": "- Do you remember helping the Flurbs find fruit?\n\t- In that exercise, you knew in advance exactly where you wanted your Flurb to end up, so you could make a program that took them from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n"
       },
       "seeding_key": {
         "activity_section.key": "6ffda847-c078-4edf-b7ca-4499b1d9249e",
@@ -2543,8 +2545,7 @@
       "key": "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd",
       "position": 3,
       "properties": {
-        "description": "- Do you remember helping the Flurbs find fruit?\n\t- In that exercise, you knew in advance exactly where you wanted your Flurb to end up, so you could make a program that took them from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\nIn earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- Project [**The Big Event (Courses A, B) - Controller Image**](https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs) onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.",
-        "name": "The Big Event\r"
+        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- Project [**The Big Event (Courses A, B) - Controller Image**](https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs) onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
       },
       "seeding_key": {
         "activity_section.key": "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd",
@@ -2555,9 +2556,15 @@
       "key": "40978575-9e16-4760-a200-0678f187ff4c",
       "position": 1,
       "properties": {
-        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- Why do we need to be able to handle events in a program?\n- What are some other kinds of events that you can think of?\n\n####Journal:####\n In their [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY), ask students to write and draw with the following questions in mind: \n\n- What was today’s lesson about?\n- Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
+        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- What did we learn?\n- What are some examples of events?\n\n####Journal:####\n In their [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY), ask students to write and draw with the following questions in mind: \n\n- What was today’s lesson about?\n- Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
         "name": "Reflection\r",
-        "duration": "10"
+        "duration": "10",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should demonstrate understanding that events are something that can cause other actions to happen. Refer back to earlier examples from the lesson or encourage students to come up with their own."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "40978575-9e16-4760-a200-0678f187ff4c",
