@@ -82,7 +82,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
 
   test 'lesson edit page contains expected data' do
     sign_in @levelbuilder
-    get edit_lesson_path(@lesson)
+    get edit_lesson_path(id: @lesson.id)
     assert_response :success
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
@@ -115,7 +115,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
 
   test 'update lesson using data from edit page' do
     sign_in @levelbuilder
-    get edit_lesson_path(@lesson)
+    get edit_lesson_path(id: @lesson.id)
     assert_response :success
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     lesson_data['name'] = 'new lesson name'

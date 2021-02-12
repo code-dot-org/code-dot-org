@@ -9,4 +9,4 @@
     %strong= @lesson.name
     %ul
       - if Rails.application.config.levelbuilder_mode
-        %li= link_to "Edit", edit_lesson_path(@lesson)
+        %li= link_to "Edit", edit_lesson_path(id: @lesson.id)
