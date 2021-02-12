@@ -271,7 +271,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :lessons, only: [:update]
+  resources :lessons, only: [:update, :edit]
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
@@ -283,7 +283,7 @@ Dashboard::Application.routes.draw do
     get 'instructions', to: 'scripts#instructions'
 
     ## TODO: Once we move levels over to /lessons as well combine the routing rules
-    resources :lessons, only: [:show, :edit], param: 'position'
+    resources :lessons, only: [:show], param: 'position'
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do

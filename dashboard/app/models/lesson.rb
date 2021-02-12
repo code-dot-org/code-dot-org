@@ -255,7 +255,7 @@ class Lesson < ApplicationRecord
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged, # TODO: Update to use unplugged property
-        lessonEditPath: edit_script_lesson_path(script, self)
+        lessonEditPath: edit_lesson_path(self)
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -609,7 +609,7 @@ class Lesson < ApplicationRecord
         lockable: lesson.lockable,
         relativePosition: lesson.relative_position,
         id: lesson.id,
-        editUrl: edit_script_lesson_path(script, self)
+        editUrl: edit_lesson_path(self)
       }
     end
   end
