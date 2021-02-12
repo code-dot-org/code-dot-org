@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
-  before_action :disallow_legacy_script_levels, only: [:update, :edit]
+  before_action :disallow_legacy_script_levels, only: [:edit, :update]
 
   # Script levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
