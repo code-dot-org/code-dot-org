@@ -1,7 +1,7 @@
 import React from 'react';
 import UnitCalendarDialog from './UnitCalendarDialog';
 
-const sampleLessons = [
+const sampleLessonList = [
   {
     id: 1,
     title: 'Lesson 1',
@@ -27,7 +27,7 @@ const sampleLessons = [
   {
     id: 3,
     title: 'Lesson 3',
-    duration: 135,
+    duration: 180,
     assessment: true,
     unplugged: true,
     isStart: false,
@@ -56,8 +56,8 @@ export default storybook =>
         <div>
           <UnitCalendarDialog
             isOpen={true}
-            handleClose={() => console.log('hello')}
-            lessons={sampleLessons}
+            handleClose={() => console.log('Unit Calendar Dialog Closed')}
+            lessons={sampleLessonList}
             weeklyInstructionalMinutes={90}
           />
         </div>

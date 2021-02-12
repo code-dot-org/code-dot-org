@@ -1,33 +1,38 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import color from '@cdo/apps/util/color';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
-  common: {
+  box: {
     margin: 5,
+    color: '#333',
+    textDecorationLine: 'none'
+  },
+  boxContent: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    color: '#333',
-    textDecorationLine: 'none',
-    fontFamily: '"Gotham 4r", sans-serif'
+    fontFamily: '"Gotham 4r", sans-serif',
+    height: '100%'
   },
   assessment: {
-    border: '2px solid rgb(118, 101, 160)'
+    border: '2px solid ' + color.purple
   },
   assessmentHover: {
-    border: '2px solid rgb(118, 101, 160)',
-    backgroundColor: 'rgb(118, 101, 160)',
+    border: '2px solid ' + color.purple,
+    backgroundColor: color.purple,
     color: 'white'
   },
   instructional: {
-    border: '2px solid #00adbc'
+    border: '2px solid ' + color.teal
   },
   instructionalHover: {
-    border: '2px solid #00adbc',
-    backgroundColor: '#00adbc',
-    color: 'white'
+    border: '2px solid ' + color.teal,
+    backgroundColor: color.teal,
+    color: color.white
   },
   isNotStart: {
     borderLeftStyle: 'dashed'
@@ -51,21 +56,19 @@ const styles = {
   }
 };
 
-export default class UnitCalendarLessonChunk extends Component {
+class UnitCalendarLessonChunk extends Component {
   static propTypes = {
     minuteWidth: PropTypes.number.isRequired,
     lesson: unitCalendarLessonChunk,
     isHover: PropTypes.bool,
     handleHover: PropTypes.func.isRequired
   };
+
   handleMouseEnter = () => {
     this.props.handleHover(this.props.lesson.id);
   };
   handleMouseOut = () => {
     this.props.handleHover('');
-  };
-  ignoreChildMouseMouvement = event => {
-    event.stopPropagation();
   };
 
   render() {
@@ -80,63 +83,72 @@ export default class UnitCalendarLessonChunk extends Component {
       isMajority,
       url
     } = this.props.lesson;
-    let thisStyle = {
-      ...styles.common,
-      width: Math.floor(minuteWidth * duration) - 10
-    };
-    if (assessment) {
-      const typeSpecific = isHover ? styles.assessmentHover : styles.assessment;
-      thisStyle = {...thisStyle, ...typeSpecific};
-    } else {
-      const typeSpecific = isHover
+
+    let chunkStyle = {
+      width: Math.floor(minuteWidth * duration) - 10,
+      ...styles.box,
+      ...(assessment
+        ? isHover
+          ? styles.assessmentHover
+          : styles.assessment
+        : isHover
         ? styles.instructionalHover
-        : styles.instructional;
-      thisStyle = {...thisStyle, ...typeSpecific};
-    }
-    if (!isStart) {
-      thisStyle = {...thisStyle, ...styles.isNotStart};
-    }
-    if (!isEnd) {
-      thisStyle = {...thisStyle, ...styles.isNotEnd};
-    }
+        : styles.instructional),
+      ...(!isStart && styles.isNotStart),
+      ...(!isEnd && styles.isNotEnd)
+    };
+
     return (
       <a
-        style={thisStyle}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseOut={this.handleMouseOut}
+        style={chunkStyle}
         target="_blank"
         rel="noopener noreferrer"
         href={url}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseOut={this.handleMouseOut}
       >
         {isMajority && (
           <div
-            style={styles.iconSection}
+            style={styles.boxContent}
             onMouseEnter={this.handleMouseEnter}
             onMouseOut={this.handleMouseOut}
           >
-            <i
-              className="fa fa-check-circle"
-              style={{
-                color: this.props.isHover ? 'white' : 'rgb(118, 101, 160)',
-                visibility: assessment ? 'visible' : 'hidden'
-              }}
-            />
-            <i
-              className="fa fa-scissors"
-              style={{
-                visibility: unplugged ? 'visible' : 'hidden'
-              }}
-            />
+            <div
+              key={`lesson-${this.props.lesson.id}`}
+              style={styles.iconSection}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseOut={this.handleMouseOut}
+            >
+              <FontAwesome
+                icon="check-circle"
+                style={{
+                  color: isHover ? color.white : color.purple,
+                  visibility: assessment ? 'visible' : 'hidden'
+                }}
+                onMouseEnter={this.handleMouseEnter}
+                onMouseOut={this.handleMouseOut}
+              />
+              <FontAwesome
+                icon="scissors"
+                style={{
+                  visibility: unplugged ? 'visible' : 'hidden'
+                }}
+                onMouseEnter={this.handleMouseEnter}
+                onMouseOut={this.handleMouseOut}
+              />
+            </div>
+            <div
+              style={styles.titleText}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseOut={this.handleMouseOut}
+            >
+              {title}
+            </div>
           </div>
         )}
-        <div
-          style={styles.titleText}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseOut={this.handleMouseOut}
-        >
-          {isMajority && title}
-        </div>
       </a>
     );
   }
 }
+
+export default UnitCalendarLessonChunk;

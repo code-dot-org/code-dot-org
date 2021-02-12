@@ -126,6 +126,10 @@ class Script < ApplicationRecord
     end
   end
 
+  def prevent_course_version_change?
+    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
+  end
+
   def self.script_directory
     SCRIPT_DIRECTORY
   end
@@ -1368,7 +1372,7 @@ class Script < ApplicationRecord
       background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
-      showCalendar: show_calendar,
+      showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
       weeklyInstructionalMinutes: weekly_instructional_minutes
     }
 
