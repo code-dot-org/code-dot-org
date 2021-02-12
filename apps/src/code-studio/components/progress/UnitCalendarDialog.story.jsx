@@ -8,9 +8,6 @@ const sampleLessonList = [
     duration: 87,
     assessment: true,
     unplugged: false,
-    isStart: true,
-    isEnd: true,
-    isMajority: true,
     url: 'https://www.google.com/'
   },
   {
@@ -19,9 +16,6 @@ const sampleLessonList = [
     duration: 40,
     assessment: false,
     unplugged: true,
-    isStart: true,
-    isEnd: true,
-    isMajority: true,
     url: 'https://www.google.com/'
   },
   {
@@ -30,20 +24,14 @@ const sampleLessonList = [
     duration: 180,
     assessment: true,
     unplugged: true,
-    isStart: false,
-    isEnd: true,
-    isMajority: true,
     url: 'https://www.google.com/'
   },
   {
     id: 4,
     title: 'Lesson 4',
-    duration: 60,
+    duration: 40,
     assessment: false,
     unplugged: false,
-    isStart: true,
-    isEnd: true,
-    isMajority: true,
     url: 'https://www.google.com/'
   }
 ];

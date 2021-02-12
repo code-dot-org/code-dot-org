@@ -59,13 +59,13 @@ const styles = {
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
     minuteWidth: PropTypes.number.isRequired,
-    lesson: unitCalendarLessonChunk,
+    lessonChunk: unitCalendarLessonChunk,
     isHover: PropTypes.bool,
     handleHover: PropTypes.func.isRequired
   };
 
   handleMouseEnter = () => {
-    this.props.handleHover(this.props.lesson.id);
+    this.props.handleHover(this.props.lessonChunk.id);
   };
   handleMouseOut = () => {
     this.props.handleHover('');
@@ -74,6 +74,7 @@ class UnitCalendarLessonChunk extends Component {
   render() {
     const {minuteWidth, isHover} = this.props;
     const {
+      id,
       title,
       duration,
       assessment,
@@ -82,7 +83,7 @@ class UnitCalendarLessonChunk extends Component {
       isEnd,
       isMajority,
       url
-    } = this.props.lesson;
+    } = this.props.lessonChunk;
 
     let chunkStyle = {
       width: Math.floor(minuteWidth * duration) - 10,
@@ -114,7 +115,7 @@ class UnitCalendarLessonChunk extends Component {
             onMouseOut={this.handleMouseOut}
           >
             <div
-              key={`lesson-${this.props.lesson.id}`}
+              key={`lesson-${id}`}
               style={styles.iconSection}
               onMouseEnter={this.handleMouseEnter}
               onMouseOut={this.handleMouseOut}
