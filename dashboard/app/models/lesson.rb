@@ -255,8 +255,7 @@ class Lesson < ApplicationRecord
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: script.is_migrated ? unplugged : display_as_unplugged, # TODO: Update to use unplugged property
-        lessonEditPath: edit_lesson_path(id: id),
-        activities: lesson_activities.map(&:summarize)
+        lessonEditPath: edit_lesson_path(id: id)
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -290,6 +289,24 @@ class Lesson < ApplicationRecord
       lesson_data
     end
     lesson_summary.freeze
+  end
+
+  def summarize_for_calendar
+    activities = lesson_activities.map(&:summarize)
+    duration = 0
+    activities.each do |activity|
+      if activity[:duration]
+        duration += activity[:duration]
+      end
+    end
+    {
+      id: id,
+      title: localized_title,
+      duration: duration,
+      assessment: !!assessment,
+      unplugged: script.is_migrated ? unplugged : display_as_unplugged, # TODO: Update to use unplugged property
+      url: lesson_path(id: id)
+    }
   end
 
   # Provides data about this lesson needed by the script edit page.

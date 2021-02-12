@@ -176,25 +176,6 @@ progress.renderCourseProgress = function(scriptData) {
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
 
-  const calendarLessonsOverview = scriptData.showCalendar
-    ? (scriptData.lessons || []).map(lesson => {
-        let duration = 0;
-        lesson.activities.forEach(activity => {
-          if (activity.duration) {
-            duration = duration + activity.duration;
-          }
-        });
-        return {
-          id: lesson.id,
-          title: lesson.title,
-          duration,
-          assessment: lesson.assessment,
-          unplugged: lesson.unplugged,
-          url: lesson.levels[0] && lesson.levels[0].url
-        };
-      })
-    : [];
-
   ReactDOM.render(
     <Provider store={store}>
       <ScriptOverview
@@ -216,7 +197,7 @@ progress.renderCourseProgress = function(scriptData) {
         assignedSectionId={scriptData.assigned_section_id}
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
-        unitCalendarLessons={calendarLessonsOverview}
+        unitCalendarLessons={scriptData.calendarLessons}
       />
     </Provider>,
     mountPoint
