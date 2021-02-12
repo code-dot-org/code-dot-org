@@ -355,6 +355,21 @@ body.modal-open .supreme-container{
   margin: 10px 5px 0 0;
 }
 
+#homepage #actions .bhmbutton {
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  margin-top: 24px
+}
+
+#homepage #actions .bhmbutton i {
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 26px;
+}
+
 #homepage #actions .herohocbutton-solid-white {
   color: black;
   background-color: white;
