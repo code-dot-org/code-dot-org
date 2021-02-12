@@ -2,8 +2,7 @@ class LessonsController < ApplicationController
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
-  before_action :disallow_legacy_script_levels, only: [:update]
-  before_action :disallow_editing_legacy_script_levels, only: [:edit]
+  before_action :disallow_legacy_script_levels, only: [:update, :edit]
 
   # Script levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
@@ -15,23 +14,22 @@ class LessonsController < ApplicationController
     return render :forbidden
   end
 
-  def disallow_editing_legacy_script_levels
-    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:position])
-
-    disallow_legacy_script_levels
-  end
-
   # GET /s/script-name/lessons/1
   def show
-    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:position])
+    script = Script.get_from_cache(params[:script_id])
+    raise ActiveRecord::RecordNotFound unless script
+    return render :forbidden unless script.is_migrated
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
 
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
-  # GET /s/script-name/lessons/1/edit
+  # GET /lessons/1/edit
   def edit
-    @lesson = get_lesson_by_position_and_script(params[:script_id], params[:position])
-
     @lesson_data = @lesson.summarize_for_lesson_edit
     # Return an empty list, because computing the list of related lessons here
     # sometimes hits a bug and causes the lesson edit page to fail to load.
@@ -125,18 +123,5 @@ class LessonsController < ApplicationController
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
     lp
-  end
-
-  def get_lesson_by_position_and_script(script_name, relative_position)
-    script = Script.get_from_cache(script_name)
-    raise ActiveRecord::RecordNotFound unless script
-    return render :forbidden unless script.is_migrated
-
-    lesson = script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == relative_position.to_i
-    end
-    raise ActiveRecord::RecordNotFound unless lesson
-
-    lesson
   end
 end

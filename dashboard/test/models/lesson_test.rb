@@ -466,7 +466,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson6.id,
-      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
+      editUrl: "/lessons/#{lesson6.id}/edit"
     }
     assert_equal expected_summary, summaries[0]
 
@@ -476,7 +476,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson0.id,
-      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
+      editUrl: "/lessons/#{lesson0.id}/edit"
     }
     assert_equal expected_summary, summaries[1]
 
@@ -526,7 +526,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson4.id,
-      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
+      editUrl: "/lessons/#{lesson4.id}/edit"
     }
     assert_equal expected_summary, summaries.first
   end
@@ -590,7 +590,7 @@ class LessonTest < ActiveSupport::TestCase
       lockable: false,
       relativePosition: 1,
       id: lesson4.id,
-      editUrl: "/s/#{script1.name}/lessons/#{lesson1.relative_position}/edit"
+      editUrl: "/lessons/#{lesson4.id}/edit"
     }
     assert_equal expected_summary, summaries.first
   end
