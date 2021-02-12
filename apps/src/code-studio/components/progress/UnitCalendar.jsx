@@ -62,6 +62,7 @@ export default class UnitCalendar extends React.Component {
   }
   generateSchedule = () => {
     const {lessons, weeklyInstructionalMinutes} = this.props;
+    console.log(lessons);
     const lessonsCopy = _.cloneDeep(lessons);
     let allWeeks = [];
     let currWeek = [];
@@ -76,7 +77,7 @@ export default class UnitCalendar extends React.Component {
       let lessonDuration = lesson.duration;
       while (lessonDuration > 0) {
         let thisChunk = null;
-        if (currMinutes + lessonDuration < weeklyInstructionalMinutes) {
+        if (currMinutes + lessonDuration <= weeklyInstructionalMinutes) {
           // If the rest of the current lesson fits into this week, put it in the schedule.
           currMinutes = currMinutes + lessonDuration;
           let thisLesson = _.cloneDeep(lesson);
@@ -84,7 +85,7 @@ export default class UnitCalendar extends React.Component {
           currWeek.push(thisLesson);
           thisChunk = thisLesson;
           lessonDuration = 0;
-        } else if (currMinutes < weeklyInstructionalMinutes - 5) {
+        } else if (currMinutes < weeklyInstructionalMinutes - 15) {
           // If there's more than 5 minutes left in the week,
           // add as much of the lesson as you can to this week.
           let partialLesson = _.cloneDeep(lesson);
@@ -116,6 +117,7 @@ export default class UnitCalendar extends React.Component {
       }
     });
     allWeeks.push(currWeek);
+    console.log(allWeeks);
     return allWeeks;
   };
 
