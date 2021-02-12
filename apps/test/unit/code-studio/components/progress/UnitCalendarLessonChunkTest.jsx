@@ -2,6 +2,7 @@ import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
+import color from '@cdo/apps/util/color';
 
 const sampleLesson = {
   id: 1,
@@ -32,7 +33,7 @@ describe('UnitCalendarLessonChunk', () => {
     assert.propertyVal(
       wrapper.find('a').prop('style'),
       'border',
-      '2px solid rgb(118, 101, 160)'
+      '2px solid ' + color.purple
     );
     assert.propertyVal(wrapper.find('a').prop('style'), 'color', '#333');
   });
@@ -52,12 +53,12 @@ describe('UnitCalendarLessonChunk', () => {
     assert.propertyVal(
       wrapper.find('a').prop('style'),
       'border',
-      '2px solid rgb(118, 101, 160)'
+      '2px solid ' + color.purple
     );
     assert.propertyVal(
       wrapper.find('a').prop('style'),
       'backgroundColor',
-      'rgb(118, 101, 160)'
+      color.purple
     );
     assert.propertyVal(wrapper.find('a').prop('style'), 'color', 'white');
   });
@@ -77,7 +78,7 @@ describe('UnitCalendarLessonChunk', () => {
     assert.propertyVal(
       wrapper.find('a').prop('style'),
       'border',
-      '2px solid #00adbc'
+      '2px solid ' + color.teal
     );
     assert.propertyVal(wrapper.find('a').prop('style'), 'color', '#333');
   });
@@ -97,14 +98,14 @@ describe('UnitCalendarLessonChunk', () => {
     assert.propertyVal(
       wrapper.find('a').prop('style'),
       'border',
-      '2px solid #00adbc'
+      '2px solid ' + color.teal
     );
     assert.propertyVal(
       wrapper.find('a').prop('style'),
       'backgroundColor',
-      '#00adbc'
+      color.teal
     );
-    assert.propertyVal(wrapper.find('a').prop('style'), 'color', 'white');
+    assert.propertyVal(wrapper.find('a').prop('style'), 'color', color.white);
   });
   it('has dashed left border when not isStart', () => {
     const wrapper = shallow(
@@ -174,7 +175,10 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     assert.propertyVal(
-      wrapper.find('.fa.fa-check-circle').prop('style'),
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .prop('style'),
       'visibility',
       'hidden'
     );
@@ -193,7 +197,10 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     assert.propertyVal(
-      wrapper.find('.fa.fa-scissors').prop('style'),
+      wrapper
+        .find('FontAwesome')
+        .at(1)
+        .prop('style'),
       'visibility',
       'hidden'
     );

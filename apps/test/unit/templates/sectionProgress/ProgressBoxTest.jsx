@@ -10,11 +10,11 @@ const DEFAULT_PROPS = {
   imperfect: 0,
   perfect: 2,
   style: {},
-  stageIsAllAssessment: false
+  lessonIsAllAssessment: false
 };
 
 describe('ProgressBox', () => {
-  it('renders progress bar as green when stageIsAllAssessment prop is false', () => {
+  it('renders progress bar as green when lessonIsAllAssessment prop is false', () => {
     const wrapper = shallow(<ProgressBox {...DEFAULT_PROPS} />);
     assert.equal(
       wrapper
@@ -25,9 +25,9 @@ describe('ProgressBox', () => {
     );
   });
 
-  it('renders progress bar as purple when stageIsAllAssessment prop is true', () => {
+  it('renders progress bar as purple when lessonIsAllAssessment prop is true', () => {
     const wrapper = shallow(
-      <ProgressBox {...DEFAULT_PROPS} stageIsAllAssessment={true} />
+      <ProgressBox {...DEFAULT_PROPS} lessonIsAllAssessment={true} />
     );
     assert.equal(
       wrapper

@@ -122,7 +122,7 @@ progress.generateStageProgress = function(
 
   store.dispatch(
     mergeProgress(
-      _.mapValues(progressData.levels, level =>
+      _.mapValues(progressData.progress, level =>
         level.submitted ? TestResults.SUBMITTED_RESULT : level.result
       )
     )

@@ -6,6 +6,7 @@ import {Transition} from 'react-transition-group';
 const lineHeight = 20;
 const margin = 3;
 const maxHeight = lineHeight * 6;
+export const AUTO_CLOSE_TIME = 4000;
 
 export const styles = {
   hide: {
@@ -76,22 +77,28 @@ export default class TextConsole extends React.Component {
 
   timeout = 0;
 
-  toggleConsole() {
-    this.state.open ? this.closeConsole() : this.openThenClose();
+  /**
+   *@param {number} autoCloseTime - optional. If specified, time at which to close
+   * the console. If not specified, console will remain open indefinitely.
+   */
+  toggleConsole(autoCloseTime) {
+    this.state.open ? this.closeConsole() : this.openConsole(autoCloseTime);
   }
 
-  openThenClose() {
+  /**
+   *@param {number} autoCloseTime - optional. If specified, time at which to close
+   * the console. If not specified, console will remain open indefinitely.
+   */
+  openConsole(autoCloseTime) {
     clearTimeout(this.timeout);
-    this.openConsole();
-    this.timeout = setTimeout(() => {
-      this.closeConsole();
-    }, 4000);
-  }
-
-  openConsole() {
     this.setState({open: true}, () => {
       this.scrollToBottom();
     });
+    if (autoCloseTime) {
+      this.timeout = setTimeout(() => {
+        this.closeConsole();
+      }, autoCloseTime);
+    }
   }
 
   closeConsole() {
@@ -99,7 +106,7 @@ export default class TextConsole extends React.Component {
   }
 
   getButtonStyle() {
-    if (this.state.open || !this.props.consoleMessages.length) {
+    if (!this.props.consoleMessages.length) {
       return styles.hide;
     } else {
       return styles.expandButton;
@@ -133,7 +140,7 @@ export default class TextConsole extends React.Component {
     if (
       this.props.consoleMessages.length !== previousProp.consoleMessages.length
     ) {
-      this.openThenClose();
+      this.openConsole(AUTO_CLOSE_TIME);
     }
   }
 
@@ -143,7 +150,7 @@ export default class TextConsole extends React.Component {
         <Transition in={this.state.open} timeout={1000}>
           {state => (
             <div
-              onClick={() => this.toggleConsole()}
+              onClick={() => this.toggleConsole(AUTO_CLOSE_TIME)}
               ref={div => {
                 this.messageList = div;
               }}
@@ -159,9 +166,9 @@ export default class TextConsole extends React.Component {
         <button
           type="button"
           style={this.getButtonStyle()}
-          onClick={() => this.openThenClose()}
+          onClick={() => this.toggleConsole()}
         >
-          +
+          {this.state.open ? '-' : '+'}
         </button>
       </div>
     );

@@ -95,6 +95,8 @@ class ScriptsController < ApplicationController
     if Rails.application.config.levelbuilder_mode
       filename = "config/scripts/#{@script.name}.script"
       File.delete(filename) if File.exist?(filename)
+      filename = "config/scripts_json/#{@script.name}.script_json"
+      File.delete(filename) if File.exist?(filename)
     end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end

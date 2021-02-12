@@ -13,7 +13,7 @@
 #  properties        :text(65535)
 #  lesson_group_id   :integer
 #  key               :string(255)      not null
-#  has_lesson_plan   :boolean
+#  has_lesson_plan   :boolean          not null
 #
 # Indexes
 #
@@ -207,6 +207,8 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
+    return lesson_path(id: id) if script.is_migrated
+
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
 
@@ -273,7 +275,6 @@ class Lesson < ApplicationRecord
         last_level_summary[:page_number] = 1
       end
 
-      # Don't want lesson plans for lockable levels
       if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
