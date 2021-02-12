@@ -869,19 +869,6 @@
       }
     },
     {
-      "key": "c73a501f-c410-4bdf-8bee-9863b5faf905",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c73a501f-c410-4bdf-8bee-9863b5faf905",
-        "lesson.key": "Conditional Make",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
       "key": "afaf7d4b-9c31-4bec-80ac-88afa413c7d4",
       "position": 1,
       "properties": {
@@ -927,7 +914,6 @@
       "key": "28e3a60c-b1e0-4e1b-9689-5957c90449af",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af",
@@ -982,7 +968,6 @@
       "key": "d6c4854d-160e-4b95-9560-4389fe7aedae",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "d6c4854d-160e-4b95-9560-4389fe7aedae",
@@ -1028,19 +1013,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c832696c-fc93-4fec-9d1e-e2499a18df80",
-        "lesson.key": "Functions Make",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "key": "abbd6ddb-e80e-4bed-83c3-93c9842f0047",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "abbd6ddb-e80e-4bed-83c3-93c9842f0047",
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021"
@@ -2688,7 +2660,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \r\n"
           }
@@ -2717,7 +2688,7 @@
       "position": 1,
       "properties": {
         "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Level 2 - Explore:** Have students explore the working Museum Ticket Generator App in Level 2. If students are not working in pairs they should still discuss the prompts with a neighbor.",
-        "name": "Build the Museum Ticket Generator\r"
+        "name": "Try the Museum Ticket Generator"
       },
       "seeding_key": {
         "activity_section.key": "ec96799e-59da-4205-8c28-5065461fba5a",
@@ -2725,27 +2696,11 @@
       }
     },
     {
-      "key": "d4828cb6-335a-48bb-b571-781c8d47a642",
+      "key": "0762e48d-f16c-4caa-b03a-8c935ee87352",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "* What does this app do?\r\n\t* Generates a ticket to a museum based on input data from the user.\r\n* What are the inputs?\r\n\t* The dropdowns for age and day of the week\r\n\t* The discount code text field\r\n\t* The button to generate the ticket\r\n* What are the outputs?\r\n\t* The ticket generated at the bottom of the screen\t\r\n* What variables do you think would be necessary for this app to work?\r\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\r\n* What kinds of conditional logic do you think are necessary to make it work?\r\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d4828cb6-335a-48bb-b571-781c8d47a642",
-        "lesson_activity.key": "5b0d405f-8fb2-4d7d-9788-f17fcedc6311"
-      }
-    },
-    {
-      "key": "0762e48d-f16c-4caa-b03a-8c935ee87352",
-      "position": 3,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** \r\n\r\n* What does this app do?\r\n* What are the inputs?\r\n* What are the outputs?\r\n* What variables do you think would be necessary for this app to work?\r\n* What kinds of conditional logic do you think are necessary to make it work?"
+        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** \n\n* What does this app do?\n\t* Generates a ticket to a museum based on input data from the user.\n* What are the inputs?\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* What are the outputs?\n\t* The ticket generated at the bottom of the screen\t\n* What variables do you think would be necessary for this app to work?\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* What kinds of conditional logic do you think are necessary to make it work?\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
+        "progression_name": "Try to the Museum Ticket Generator App"
       },
       "seeding_key": {
         "activity_section.key": "0762e48d-f16c-4caa-b03a-8c935ee87352",
@@ -2754,15 +2709,15 @@
     },
     {
       "key": "49a6abb2-7c59-41b1-bfb9-67caae9cd568",
-      "position": 4,
+      "position": 3,
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \r\n\r\n**Debugging:** Review with students steps they can use to debug if they get stuck:\r\n\r\n* Run the code on turtle mode\r\n* Add the variables to the watcher\r\n* Explain the code to a friend\r\n"
           }
-        ]
+        ],
+        "name": "Make the Museum Ticket Generator App"
       },
       "seeding_key": {
         "activity_section.key": "49a6abb2-7c59-41b1-bfb9-67caae9cd568",
@@ -2771,7 +2726,7 @@
     },
     {
       "key": "5b1c8b47-6317-4912-a5bc-9c8b852d1201",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "Now let's build the this app. The screen has been set up for you - it's your job to add the code!",
         "remarks": true
@@ -2783,9 +2738,10 @@
     },
     {
       "key": "e58c2bc4-3d07-44c0-9c63-bfdaea8cad37",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "**Distribute:** Give students copies of [r conditionals-make-activity-guide] if you will be using it during the class.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Museum Ticket Generator App"
       },
       "seeding_key": {
         "activity_section.key": "e58c2bc4-3d07-44c0-9c63-bfdaea8cad37",
@@ -2810,7 +2766,6 @@
         "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \r\n\r\n"
           }
@@ -2845,34 +2800,10 @@
       }
     },
     {
-      "key": "32544812-f64d-491f-bbeb-ed29a588a851",
-      "position": 1,
-      "properties": {
-        "name": "Try to the Museum Ticket Generator App",
-        "progression_name": "Try to the Museum Ticket Generator App"
-      },
-      "seeding_key": {
-        "activity_section.key": "32544812-f64d-491f-bbeb-ed29a588a851",
-        "lesson_activity.key": "c73a501f-c410-4bdf-8bee-9863b5faf905"
-      }
-    },
-    {
-      "key": "b5b04759-a8f8-4488-8d31-75a3fe7d1c07",
-      "position": 2,
-      "properties": {
-        "name": "Make the Museum Ticket Generator App",
-        "progression_name": "Make the Museum Ticket Generator App"
-      },
-      "seeding_key": {
-        "activity_section.key": "b5b04759-a8f8-4488-8d31-75a3fe7d1c07",
-        "lesson_activity.key": "c73a501f-c410-4bdf-8bee-9863b5faf905"
-      }
-    },
-    {
       "key": "fbdde84e-6041-4d9b-8a81-30b27ca3e3a9",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Share print copies of [r song-lyrics-functions] or project the activity guide where all can see it.",
+        "description": "**Distribute:** Share print copies of [Song Lyrics](\thttps://docs.google.com/document/d/1Kf0x84kHyOPXsEVp3LnXEYGiGybKXqqL86a4xgKHBLI/edit?usp=sharing) or project the activity guide where all can see it.",
         "name": "Explore Song Lyrics\r"
       },
       "seeding_key": {
@@ -2884,13 +2815,7 @@
       "key": "0cd588ef-22a1-4fb1-bd83-65136c8ac23c",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:**",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\r\n\r\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\r\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\r\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\r\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:**\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0cd588ef-22a1-4fb1-bd83-65136c8ac23c",
@@ -2901,7 +2826,7 @@
       "key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
       "position": 3,
       "properties": {
-        "description": "* In Style 1, what line of the song do you sing after line 09? What about in Style 2?\r\n* Style 2 uses fewer lines to write. Are there fewer lyrics to sing?\r\n* What are the benefits of writing a song in Style 2? \r\n\r\n**Discuss:** Have students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion."
+        "description": "* In Style 1, what line of the song do you sing after line 09? What about in Style 2?\n* Style 2 uses fewer lines to write. Are there fewer lyrics to sing?\n* What are the benefits of writing a song in Style 2? \n\n**Discuss:** Have students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
@@ -2924,8 +2849,9 @@
       "key": "3203cd09-f46f-4393-b7a3-0235b21f5ebd",
       "position": 1,
       "properties": {
-        "description": "**Group:** Group students in pairs.\n\n\n[slide] **Do This:** Direct students to Level 2 for the lesson on Code Studio.\n\n**Level 2 - Explore Song Lyrics:** This level is a continuation of the Explore activity in the warmup. Students should watch the code run slowly to see how the code that is running will jump down to the bottom of the program (the function declaration) when the name of the function is used (the function call).",
-        "name": "Investigate "
+        "description": "**Group:** Group students in pairs.\n\n\n[slide] **Do This:** Direct students to Level 1 for the lesson on Code Studio.\n\n**Level 1 - Explore Song Lyrics:** This level is a continuation of the Explore activity in the warmup. Students should watch the code run slowly to see how the code that is running will jump down to the bottom of the program (the function declaration) when the name of the function is used (the function call).",
+        "name": "Investigate ",
+        "progression_name": "Explore Functions"
       },
       "seeding_key": {
         "activity_section.key": "3203cd09-f46f-4393-b7a3-0235b21f5ebd",
@@ -2948,10 +2874,21 @@
       "key": "29352a16-df31-41ca-9d30-78031eb9ca48",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Level 3 - Video:** Watch the video as a class. The most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n[slide]  **Level 4 - Investigate Score Clicker**\n\n* Discuss: Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* Modify: Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n[slide]  **Level 5 - Investigate Lemon Squeeze App with Functions**\n\n* Modify: Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* Discuss: After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
+        "description": "[slide]  **Level 2 - Video:** Watch the video as a class. The most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n[slide]  **Level 3 - Investigate Score Clicker**\n\n* Discuss: Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* Modify: Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n[slide]  **Level 4 - Investigate Lemon Squeeze App with Functions**\n\n* Modify: Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* Discuss: After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
       },
       "seeding_key": {
         "activity_section.key": "29352a16-df31-41ca-9d30-78031eb9ca48",
+        "lesson_activity.key": "f0b840a5-46be-495a-9906-47e5afc0f48f"
+      }
+    },
+    {
+      "key": "1aabdef6-1131-4f25-9984-d8bb4aef796d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Declaring and Calling Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d",
         "lesson_activity.key": "f0b840a5-46be-495a-9906-47e5afc0f48f"
       }
     },
@@ -2971,13 +2908,7 @@
       "key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
       "position": 2,
       "properties": {
-        "description": "[slide]   **Prompt:** Reflecting on today's lesson about functions:",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\r\n "
-          }
-        ]
+        "description": "[slide]   **Prompt:** Reflecting on today's lesson about functions:\n\n**Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n "
       },
       "seeding_key": {
         "activity_section.key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
@@ -2985,10 +2916,22 @@
       }
     },
     {
-      "key": "2d212f5a-63cf-487c-87d2-6deaea8d2def",
+      "key": "0f747047-b335-4aaa-b94d-029b8982f819",
       "position": 3,
       "properties": {
-        "description": "* What did you learn?\r\n* What are you uncertain about?\r\n\r\n---"
+        "description": "* What did you learn?\n* What are you uncertain about?\n",
+        "progression_name": "Update Screen Pattern"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819",
+        "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982"
+      }
+    },
+    {
+      "key": "2d212f5a-63cf-487c-87d2-6deaea8d2def",
+      "position": 4,
+      "properties": {
+        "description": "\n---"
       },
       "seeding_key": {
         "activity_section.key": "2d212f5a-63cf-487c-87d2-6deaea8d2def",
@@ -2997,7 +2940,7 @@
     },
     {
       "key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** In your own words describe the benefits of creating functions in your code.",
         "name": "Assessment: Check For Understanding\r"
@@ -3011,7 +2954,6 @@
       "key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0",
       "position": 1,
       "properties": {
-        "name": "Explore Functions",
         "progression_name": "Explore Functions"
       },
       "seeding_key": {
@@ -3020,34 +2962,9 @@
       }
     },
     {
-      "key": "38cde762-8ffd-4e29-ae16-3b8383917931",
+      "key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
       "position": 2,
       "properties": {
-        "name": "Declaring and Calling Functions",
-        "progression_name": "Declaring and Calling Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931",
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af"
-      }
-    },
-    {
-      "key": "6b72e87f-1a2f-46cf-b9e2-72b735ec6ffd",
-      "position": 3,
-      "properties": {
-        "name": "Update Screen Pattern",
-        "progression_name": "Update Screen Pattern"
-      },
-      "seeding_key": {
-        "activity_section.key": "6b72e87f-1a2f-46cf-b9e2-72b735ec6ffd",
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af"
-      }
-    },
-    {
-      "key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
-      "position": 4,
-      "properties": {
-        "name": "Check Your Understanding",
         "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
@@ -3075,11 +2992,27 @@
       }
     },
     {
-      "key": "c712f72c-3683-46b8-86e0-e3c691007619",
+      "key": "68ca9220-c248-44b6-a0f1-629d0b470dfc",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussion prompts. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2",
-        "name": "Practice Time"
+        "name": "Practice Time",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "68ca9220-c248-44b6-a0f1-629d0b470dfc",
+        "lesson_activity.key": "da2d05e1-924c-4e8b-bf6c-ca5e8cef154f"
+      }
+    },
+    {
+      "key": "c712f72c-3683-46b8-86e0-e3c691007619",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussion prompts. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2"
       },
       "seeding_key": {
         "activity_section.key": "c712f72c-3683-46b8-86e0-e3c691007619",
@@ -3088,9 +3021,9 @@
     },
     {
       "key": "bec79917-faa2-4bf2-a142-cdc76b8c87cc",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "Today you're mostly going to practice what we've learned about programming with functions. I'm here to help you when you need, and you can put this cup on your computer when you need help. However, I first want to remind you of the following:\n\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck.\n* Talk to your partner! That's what they're there for!\n* Hover over blocks to read the documentation about how they work.\n* Read the resources in the Help & Tips tab \n* Talk to the group next to you. If another group asks for help make sure to take some time to talk it through with them.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussion prompts. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2\n\nToday you're mostly going to practice what we've learned about programming with functions. I'm here to help you when you need, and you can put this cup on your computer when you need help. However, I first want to remind you of the following:\n\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck.\n* Talk to your partner! That's what they're there for!\n* Hover over blocks to read the documentation about how they work.\n* Read the resources in the Help & Tips tab \n* Talk to the group next to you. If another group asks for help make sure to take some time to talk it through with them.",
         "remarks": true
       },
       "seeding_key": {
@@ -3100,9 +3033,9 @@
     },
     {
       "key": "4e319813-189a-4916-b23b-602d791359c5",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "**Levels 2 - 6 Declare and Call Functions:** In these levels students practice declaring and calling functions. At first students practice calling functions that have already been declared for them. Students can focus their energy on the syntax of calling a function and how using functions changes the order in which lines of code run. Later in the progression they practice finding repeated code and are guided through how to create a function in its place.",
+        "description": "**Levels 1 - 5 Declare and Call Functions:** In these levels students practice declaring and calling functions. At first students practice calling functions that have already been declared for them. Students can focus their energy on the syntax of calling a function and how using functions changes the order in which lines of code run. Later in the progression they practice finding repeated code and are guided through how to create a function in its place.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3116,8 +3049,19 @@
       }
     },
     {
+      "key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Declare and Call Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4",
+        "lesson_activity.key": "da2d05e1-924c-4e8b-bf6c-ca5e8cef154f"
+      }
+    },
+    {
       "key": "38385f40-eb86-4bf1-98ff-b5b3546deb27",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "[slide]  **Display:** Scope Practice video. This video is located in the slides."
       },
@@ -3128,15 +3072,15 @@
     },
     {
       "key": "a34eab70-e4bf-4879-b875-48b79b58c242",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "[slide]   **Levels 7 - 8 Function Scope:** These two levels return to a topic that was covered in the variables lessons as well: variable scope. While students do not need a deep understanding of scope at this point, they will in some instances encounter debugging challenges that arise because of it.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Level 7 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in the slides prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\n"
           }
-        ]
+        ],
+        "description": "[slide]   **Levels 6 - 7 Function Scope:** These two levels return to a topic that was covered in the variables lessons as well: variable scope. While students do not need a deep understanding of scope at this point, they will in some instances encounter debugging challenges that arise because of it."
       },
       "seeding_key": {
         "activity_section.key": "a34eab70-e4bf-4879-b875-48b79b58c242",
@@ -3144,10 +3088,21 @@
       }
     },
     {
-      "key": "b2f37dbe-e3a8-4f5b-abc0-2bf5625882e5",
-      "position": 6,
+      "key": "b8d65475-158c-4274-a4fb-804e7316c46c",
+      "position": 8,
       "properties": {
-        "description": "**Level 9 - 10 Creating Functions:** In these levels students revisit the Movie Ticket app and are challenged to think through the process of declaring a function with code that they anticipate could be repeated. Level 9 is a map level about when students should decide to create functions.",
+        "progression_name": "Function Scope"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8d65475-158c-4274-a4fb-804e7316c46c",
+        "lesson_activity.key": "da2d05e1-924c-4e8b-bf6c-ca5e8cef154f"
+      }
+    },
+    {
+      "key": "b2f37dbe-e3a8-4f5b-abc0-2bf5625882e5",
+      "position": 9,
+      "properties": {
+        "description": "**Level 8 - 9 Creating Functions:** In these levels students revisit the Movie Ticket app and are challenged to think through the process of declaring a function with code that they anticipate could be repeated. Level 9 is a map level about when students should decide to create functions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3161,16 +3116,21 @@
       }
     },
     {
+      "key": "1a26853b-44cc-49e8-8619-4dcdfe1b4ab6",
+      "position": 10,
+      "properties": {
+        "progression_name": "When to Declare Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a26853b-44cc-49e8-8619-4dcdfe1b4ab6",
+        "lesson_activity.key": "da2d05e1-924c-4e8b-bf6c-ca5e8cef154f"
+      }
+    },
+    {
       "key": "0a280b61-a5d6-4525-a042-ac90042ab129",
       "position": 1,
       "properties": {
-        "description": "[slide]   **Prompt:** What aspects of working with functions clicked today? What do you still feel like you have trouble with?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n"
-          }
-        ]
+        "description": "[slide]   **Prompt:** What aspects of working with functions clicked today? What do you still feel like you have trouble with?\n\n**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
       },
       "seeding_key": {
         "activity_section.key": "0a280b61-a5d6-4525-a042-ac90042ab129",
@@ -3201,46 +3161,9 @@
       }
     },
     {
-      "key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655",
+      "key": "bbaa250e-e395-41c8-82dd-3909077f4abd",
       "position": 1,
       "properties": {
-        "name": "Declare and Call Functions",
-        "progression_name": "Declare and Call Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655",
-        "lesson_activity.key": "d6c4854d-160e-4b95-9560-4389fe7aedae"
-      }
-    },
-    {
-      "key": "58c11469-a657-4a96-9ef5-b12a401a698c",
-      "position": 2,
-      "properties": {
-        "name": "Function Scope",
-        "progression_name": "Function Scope"
-      },
-      "seeding_key": {
-        "activity_section.key": "58c11469-a657-4a96-9ef5-b12a401a698c",
-        "lesson_activity.key": "d6c4854d-160e-4b95-9560-4389fe7aedae"
-      }
-    },
-    {
-      "key": "bf100286-051b-49cf-99f8-ec9baf6f8267",
-      "position": 3,
-      "properties": {
-        "name": "When to Declare Functions",
-        "progression_name": "When to Declare Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "bf100286-051b-49cf-99f8-ec9baf6f8267",
-        "lesson_activity.key": "d6c4854d-160e-4b95-9560-4389fe7aedae"
-      }
-    },
-    {
-      "key": "bbaa250e-e395-41c8-82dd-3909077f4abd",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding: AP Practice",
         "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
@@ -3290,26 +3213,11 @@
       }
     },
     {
-      "key": "5e5aff8a-2f0d-4b14-ada5-ed1fd02dfbaa",
+      "key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "* What does this app do?\r\n\t* Display a quote with user-defined fonts and background colors.\r\n* What are the inputs?\r\n\t* The dropdowns for background color and font family. \r\n\t* The quote text field\r\n\t* The slider to generate the font size\r\n* What are the outputs?\r\n\t* The fully designed quote displayed at the bottom of the screen\t\r\n* How could a function be used in this app?\r\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \r\n\t* A function can be used to update the screen.\r\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5e5aff8a-2f0d-4b14-ada5-ed1fd02dfbaa",
-        "lesson_activity.key": "1d1a6cd3-77cb-4e43-9621-9b3d80635845"
-      }
-    },
-    {
-      "key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be",
-      "position": 3,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\r\n\r\n* What does this app do?\r\n* What are the inputs?\r\n* What are the outputs?\r\n* How could a function be used in this app?"
+        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* What does this app do?\n\t* Display a quote with user-defined fonts and background colors.\n* What are the inputs?\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* What are the outputs?\n\t* The fully designed quote displayed at the bottom of the screen\t\n* How could a function be used in this app?\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
+        "progression_name": "Quote Maker App"
       },
       "seeding_key": {
         "activity_section.key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be",
@@ -3318,7 +3226,7 @@
     },
     {
       "key": "0c7c34f4-02bb-4134-9ca2-a0d5a8ba2ffa",
-      "position": 4,
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -3334,7 +3242,7 @@
     },
     {
       "key": "6d388f08-b588-43fc-93e3-e8064729b210",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "Now let's build the this app. The screen has been set up for you - it's your job to add the code!",
         "remarks": true
@@ -3346,9 +3254,10 @@
     },
     {
       "key": "6af09862-3230-4627-a5b9-8af30923ade8",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Quote Maker App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level two where they complete the Quote Maker App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Quote Maker App"
       },
       "seeding_key": {
         "activity_section.key": "6af09862-3230-4627-a5b9-8af30923ade8",
@@ -3404,30 +3313,6 @@
       "seeding_key": {
         "activity_section.key": "86bc51f2-109f-4f4a-8a02-4f8a5c624fd3",
         "lesson_activity.key": "c832696c-fc93-4fec-9d1e-e2499a18df80"
-      }
-    },
-    {
-      "key": "71987f28-f741-4e00-acde-8e63c0e6cb23",
-      "position": 1,
-      "properties": {
-        "name": "Quote Maker App",
-        "progression_name": "Quote Maker App"
-      },
-      "seeding_key": {
-        "activity_section.key": "71987f28-f741-4e00-acde-8e63c0e6cb23",
-        "lesson_activity.key": "abbd6ddb-e80e-4bed-83c3-93c9842f0047"
-      }
-    },
-    {
-      "key": "453b36a0-2d53-4f35-9e1a-244681a30898",
-      "position": 2,
-      "properties": {
-        "name": "Make the Quote Maker App",
-        "progression_name": "Make the Quote Maker App"
-      },
-      "seeding_key": {
-        "activity_section.key": "453b36a0-2d53-4f35-9e1a-244681a30898",
-        "lesson_activity.key": "abbd6ddb-e80e-4bed-83c3-93c9842f0047"
       }
     },
     {
@@ -5039,12 +4924,9 @@
       "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Try to the Museum Ticket Generator App",
-        "level_keys": [
-          "U4 L08 Conditionals Make Project Sample_2021"
-        ]
+        "progression": "Try to the Museum Ticket Generator App"
       },
       "named_level": null,
       "bonus": null,
@@ -5055,7 +4937,7 @@
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "32544812-f64d-491f-bbeb-ed29a588a851"
+        "activity_section.key": "0762e48d-f16c-4caa-b03a-8c935ee87352"
       },
       "level_keys": [
         "U4 L08 Conditionals Make Project Sample_2021"
@@ -5067,10 +4949,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Museum Ticket Generator App",
-        "level_keys": [
-          "U4L08 Museum Ticket Generator_2021"
-        ]
+        "progression": "Make the Museum Ticket Generator App"
       },
       "named_level": null,
       "bonus": null,
@@ -5081,7 +4960,7 @@
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "b5b04759-a8f8-4488-8d31-75a3fe7d1c07"
+        "activity_section.key": "e58c2bc4-3d07-44c0-9c63-bfdaea8cad37"
       },
       "level_keys": [
         "U4L08 Museum Ticket Generator_2021"
@@ -5093,10 +4972,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore Functions",
-        "level_keys": [
-          "U4 L09 Functions Song_2021"
-        ]
+        "progression": "Explore Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5107,7 +4983,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0"
+        "activity_section.key": "3203cd09-f46f-4393-b7a3-0235b21f5ebd"
       },
       "level_keys": [
         "U4 L09 Functions Song_2021"
@@ -5119,10 +4995,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
-        "level_keys": [
-          "U4L09 Intro to Functions Video_2021"
-        ]
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5133,7 +5006,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931"
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
       },
       "level_keys": [
         "U4L09 Intro to Functions Video_2021"
@@ -5145,10 +5018,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
-        "level_keys": [
-          "U4 L09 Score Clicker Investigate_2021"
-        ]
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5159,7 +5029,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931"
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
       },
       "level_keys": [
         "U4 L09 Score Clicker Investigate_2021"
@@ -5171,10 +5041,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
-        "level_keys": [
-          "U4 L09 Thermostat App v7_2021"
-        ]
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5185,7 +5052,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931"
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
       },
       "level_keys": [
         "U4 L09 Thermostat App v7_2021"
@@ -5197,10 +5064,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Update Screen Pattern",
-        "level_keys": [
-          "updateScreen Pattern_2021"
-        ]
+        "progression": "Update Screen Pattern"
       },
       "named_level": null,
       "bonus": null,
@@ -5211,7 +5075,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "6b72e87f-1a2f-46cf-b9e2-72b735ec6ffd"
+        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819"
       },
       "level_keys": [
         "updateScreen Pattern_2021"
@@ -5249,10 +5113,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice Calling Functions 1_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5263,7 +5124,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       },
       "level_keys": [
         "U4 L10 Functions Practice Calling Functions 1_2021"
@@ -5275,10 +5136,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice 1_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5289,7 +5147,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       },
       "level_keys": [
         "U4 L10 Functions Practice 1_2021"
@@ -5301,10 +5159,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice 2_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5315,7 +5170,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       },
       "level_keys": [
         "U4 L10 Functions Practice 2_2021"
@@ -5327,10 +5182,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Practice 3_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5341,7 +5193,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       },
       "level_keys": [
         "U4 L10 Functions Practice 3_2021"
@@ -5353,10 +5205,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
-        "level_keys": [
-          "U4 L10 Functions Build Practice 2_2021"
-        ]
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5367,7 +5216,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       },
       "level_keys": [
         "U4 L10 Functions Build Practice 2_2021"
@@ -5379,10 +5228,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Function Scope",
-        "level_keys": [
-          "Debugging Variable Scope and Functions_2021"
-        ]
+        "progression": "Function Scope"
       },
       "named_level": null,
       "bonus": null,
@@ -5393,7 +5239,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "58c11469-a657-4a96-9ef5-b12a401a698c"
+        "activity_section.key": "b8d65475-158c-4274-a4fb-804e7316c46c"
       },
       "level_keys": [
         "Debugging Variable Scope and Functions_2021"
@@ -5405,10 +5251,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Function Scope",
-        "level_keys": [
-          "U4 L10 Functions Scope Practice 1 v2_2021"
-        ]
+        "progression": "Function Scope"
       },
       "named_level": null,
       "bonus": null,
@@ -5419,7 +5262,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "58c11469-a657-4a96-9ef5-b12a401a698c"
+        "activity_section.key": "b8d65475-158c-4274-a4fb-804e7316c46c"
       },
       "level_keys": [
         "U4 L10 Functions Scope Practice 1 v2_2021"
@@ -5431,10 +5274,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "When to Declare Functions",
-        "level_keys": [
-          "When to Make Functions Map_2021"
-        ]
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5445,7 +5285,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "bf100286-051b-49cf-99f8-ec9baf6f8267"
+        "activity_section.key": "1a26853b-44cc-49e8-8619-4dcdfe1b4ab6"
       },
       "level_keys": [
         "When to Make Functions Map_2021"
@@ -5457,10 +5297,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "When to Declare Functions",
-        "level_keys": [
-          "U4 L10 Making Functions Practice_2021"
-        ]
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5471,7 +5308,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "bf100286-051b-49cf-99f8-ec9baf6f8267"
+        "activity_section.key": "1a26853b-44cc-49e8-8619-4dcdfe1b4ab6"
       },
       "level_keys": [
         "U4 L10 Making Functions Practice_2021"
@@ -5509,10 +5346,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Quote Maker App",
-        "level_keys": [
-          "U4 L11 Functions Make 1 2020_2021"
-        ]
+        "progression": "Quote Maker App"
       },
       "named_level": null,
       "bonus": null,
@@ -5523,7 +5357,7 @@
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "71987f28-f741-4e00-acde-8e63c0e6cb23"
+        "activity_section.key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be"
       },
       "level_keys": [
         "U4 L11 Functions Make 1 2020_2021"
@@ -5535,10 +5369,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Quote Maker App",
-        "level_keys": [
-          "U4 L11 Functions Make 2020_2021"
-        ]
+        "progression": "Make the Quote Maker App"
       },
       "named_level": null,
       "bonus": null,
@@ -5549,7 +5380,7 @@
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "453b36a0-2d53-4f35-9e1a-244681a30898"
+        "activity_section.key": "6af09862-3230-4627-a5b9-8af30923ade8"
       },
       "level_keys": [
         "U4 L11 Functions Make 2020_2021"
@@ -6364,7 +6195,7 @@
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "32544812-f64d-491f-bbeb-ed29a588a851"
+        "activity_section.key": "0762e48d-f16c-4caa-b03a-8c935ee87352"
       }
     },
     {
@@ -6376,7 +6207,7 @@
         "lesson.key": "Conditional Make",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "b5b04759-a8f8-4488-8d31-75a3fe7d1c07"
+        "activity_section.key": "e58c2bc4-3d07-44c0-9c63-bfdaea8cad37"
       }
     },
     {
@@ -6388,7 +6219,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0"
+        "activity_section.key": "3203cd09-f46f-4393-b7a3-0235b21f5ebd"
       }
     },
     {
@@ -6400,7 +6231,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931"
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
       }
     },
     {
@@ -6412,7 +6243,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931"
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
       }
     },
     {
@@ -6424,7 +6255,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "38cde762-8ffd-4e29-ae16-3b8383917931"
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
       }
     },
     {
@@ -6436,7 +6267,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "6b72e87f-1a2f-46cf-b9e2-72b735ec6ffd"
+        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819"
       }
     },
     {
@@ -6460,7 +6291,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       }
     },
     {
@@ -6472,7 +6303,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       }
     },
     {
@@ -6484,7 +6315,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       }
     },
     {
@@ -6496,7 +6327,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       }
     },
     {
@@ -6508,7 +6339,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "48eb35fb-e5a4-408a-ae27-1ba194b9b655"
+        "activity_section.key": "5eb6fb63-8046-4cc2-9910-44666ad5cee4"
       }
     },
     {
@@ -6520,7 +6351,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "58c11469-a657-4a96-9ef5-b12a401a698c"
+        "activity_section.key": "b8d65475-158c-4274-a4fb-804e7316c46c"
       }
     },
     {
@@ -6532,7 +6363,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "58c11469-a657-4a96-9ef5-b12a401a698c"
+        "activity_section.key": "b8d65475-158c-4274-a4fb-804e7316c46c"
       }
     },
     {
@@ -6544,7 +6375,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "bf100286-051b-49cf-99f8-ec9baf6f8267"
+        "activity_section.key": "1a26853b-44cc-49e8-8619-4dcdfe1b4ab6"
       }
     },
     {
@@ -6556,7 +6387,7 @@
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "bf100286-051b-49cf-99f8-ec9baf6f8267"
+        "activity_section.key": "1a26853b-44cc-49e8-8619-4dcdfe1b4ab6"
       }
     },
     {
@@ -6580,7 +6411,7 @@
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "71987f28-f741-4e00-acde-8e63c0e6cb23"
+        "activity_section.key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be"
       }
     },
     {
@@ -6592,7 +6423,7 @@
         "lesson.key": "Functions Make",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "453b36a0-2d53-4f35-9e1a-244681a30898"
+        "activity_section.key": "6af09862-3230-4627-a5b9-8af30923ade8"
       }
     },
     {
