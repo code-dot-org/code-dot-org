@@ -100,9 +100,8 @@ ChatBubble.propTypes = {
 
 export default connect(state => {
   return {
-    skinId: state.pageConstants.skinId,
-    isMinecraft: !!state.pageConstants.isMinecraft,
-    textToSpeechEnabled:
-      state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
+    skinId: 'collector',
+    isMinecraft: false,
+    textToSpeechEnabled: true
   };
 })(Radium(ChatBubble));

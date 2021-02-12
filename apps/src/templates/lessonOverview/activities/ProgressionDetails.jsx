@@ -49,7 +49,8 @@ export default class ProgressionDetails extends Component {
       isConceptLevel: activeLevel.isConceptLevel,
       isUnplugged: scriptLevel.display_as_unplugged,
       levelNumber: scriptLevel.levelNumber,
-      bonus: scriptLevel.bonus
+      bonus: scriptLevel.bonus,
+      level: activeLevel
     };
   };
 
@@ -59,7 +60,10 @@ export default class ProgressionDetails extends Component {
     return (
       <div>
         {this.state.previewingLevel && (
-          <LevelDetailsDialog level={this.state.previewingLevel} />
+          <LevelDetailsDialog
+            scriptLevel={this.state.previewingLevel}
+            handleClose={() => this.setState({previewingLevel: null})}
+          />
         )}
         <div style={styles.progressionBox}>
           <ProgressLevelSet

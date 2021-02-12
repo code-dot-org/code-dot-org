@@ -131,6 +131,7 @@ class InstructionsCSF extends React.Component {
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
+    isBlockly: PropTypes.bool.isRequired,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
     hideOverlay: PropTypes.func.isRequired,
@@ -531,6 +532,11 @@ class InstructionsCSF extends React.Component {
     const markdown = this.shouldDisplayShortInstructions()
       ? this.props.shortInstructions
       : this.props.longInstructions;
+    console.log(
+      this.shouldDisplayShortInstructions(),
+      this.props.longInstructions,
+      markdown
+    );
 
     const ttsUrl = this.shouldDisplayShortInstructions()
       ? this.props.ttsShortInstructionsUrl
@@ -605,6 +611,8 @@ class InstructionsCSF extends React.Component {
                 }
                 imgURL={this.props.aniGifURL}
                 inTopPane
+                puzzleTitle={'My title'}
+                isBlockly={this.props.isBlockly}
               />
               {this.props.shortInstructions2 && (
                 <div className="secondary-instructions">
@@ -660,20 +668,22 @@ class InstructionsCSF extends React.Component {
             )}
           </div>
           <div>
-            <CollapserButton
-              ref={c => {
-                this.collapser = c;
-              }}
-              style={[
-                styles.collapserButton,
-                this.props.isMinecraft && craftStyles.collapserButton,
-                !this.shouldDisplayCollapserButton() && commonStyles.hidden
-              ]}
-              collapsed={this.props.collapsed}
-              onClick={this.props.handleClickCollapser}
-              isMinecraft={this.props.isMinecraft}
-              isRtl={this.props.isRtl}
-            />
+            {this.props.handleClickCollapser && (
+              <CollapserButton
+                ref={c => {
+                  this.collapser = c;
+                }}
+                style={[
+                  styles.collapserButton,
+                  this.props.isMinecraft && craftStyles.collapserButton,
+                  !this.shouldDisplayCollapserButton() && commonStyles.hidden
+                ]}
+                collapsed={this.props.collapsed}
+                onClick={this.props.handleClickCollapser}
+                isMinecraft={this.props.isMinecraft}
+                isRtl={this.props.isRtl}
+              />
+            )}
             {!this.props.collapsed && (
               <ScrollButtons
                 style={[
@@ -706,12 +716,14 @@ class InstructionsCSF extends React.Component {
   }
 }
 
+export const UnconnectedInstructionsCSF = Radium(InstructionsCSF);
 export default connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,
       skinId: state.pageConstants.skinId,
       isMinecraft: !!state.pageConstants.isMinecraft,
+      isBlockly: !!state.pageConstants.isBlockly,
       aniGifURL: state.pageConstants.aniGifURL,
       inputOutputTable: state.pageConstants.inputOutputTable,
       isRtl: state.isRtl,

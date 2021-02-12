@@ -455,13 +455,21 @@ class ScriptLevel < ApplicationRecord
     summary = summarize
     summary[:id] = id.to_s
     summary[:levels] = levels.map do |level|
+      teacher_markdown = level.localized_teacher_markdown if can_view_teacher_markdown?
       {
         name: level.name,
         id: level.id.to_s,
         icon: level.icon,
-        isConceptLevel: level.concept_level?
+        isConceptLevel: level.concept_level?,
+        longInstructions: level.long_instructions,
+        shortInstructions: level.short_instructions,
+        videos: level.related_videos.map(&:summarize),
+        mapReference: level.map_reference,
+        referenceLinks: level.reference_links,
+        teacherMarkdown: level.teacher_markdown
       }
     end
+    puts summary.inspect
     summary
   end
 
