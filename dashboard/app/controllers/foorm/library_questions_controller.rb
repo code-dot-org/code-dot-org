@@ -8,6 +8,9 @@ module Foorm
     # POST /foorm/library_questions
     def create
       library = Foorm::Library.find_by(id: params[:library_id])
+      # This needs to be put in a transaction, or another solution.
+      # If library question save fails, we end up with a created
+      # library with no associated library question.
       if library.nil?
         library = Foorm::Library.create(
           {
