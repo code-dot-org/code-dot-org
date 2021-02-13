@@ -20,6 +20,7 @@ export const commands = {
           return resolve();
         })
         .fail((jqXhr, status) => {
+          opts.callback('Error: prediction failed');
           return reject({message: 'An error occurred'});
         });
     });

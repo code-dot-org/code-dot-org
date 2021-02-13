@@ -32,6 +32,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   def get_trained_model
     model = download_from_s3(params[:model_id])
     render json: model
+    #return render_404
   end
 
   private
