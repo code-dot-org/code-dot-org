@@ -354,9 +354,6 @@ const serializeLesson = (lesson, levelKeyList) => {
   if (lesson.visible_after) {
     t += ', visible_after: true';
   }
-  if (lesson.unplugged) {
-    t += ', unplugged: true';
-  }
   s.push(t);
   if (lesson.levels) {
     lesson.levels.forEach(level => {
