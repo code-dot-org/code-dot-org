@@ -4817,10 +4817,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseC_maze_programming7_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -5143,10 +5143,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseC_maze_debugging7_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -5444,10 +5444,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseC_collector_prog7_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -5820,10 +5820,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseC_artist_prog7_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -6171,10 +6171,10 @@
       "activity_section_position": 10,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseC_starWars_loops8_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -6872,10 +6872,10 @@
       "activity_section_position": 10,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseD_bee_nestedLoops7_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -7773,10 +7773,10 @@
       "activity_section_position": 11,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseD_bee_conditionals8_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -8124,10 +8124,10 @@
       "activity_section_position": 10,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseD_farmer_while8_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -8725,10 +8725,10 @@
       "activity_section_position": 9,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseD_maze_until9_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -8976,10 +8976,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseD_farmer_condLoops7_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -9702,10 +9702,10 @@
       "activity_section_position": 12,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseE_farmer_functions10a1_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -10003,10 +10003,10 @@
       "activity_section_position": 10,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseE_artist_functions9_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -10554,10 +10554,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseF_bee_variables_6_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -11105,10 +11105,10 @@
       "activity_section_position": 12,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
           "courseF_bee_for10_2021"
-        ]
+        ],
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,
@@ -12481,10 +12481,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Example Projects",
         "level_keys": [
           "courseExpress_project_exemplars_2021"
-        ]
+        ],
+        "progression": "Example Projects"
       },
       "named_level": null,
       "bonus": null,
@@ -12507,10 +12507,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Create your project",
         "level_keys": [
           "courseExpress_EOC_2021"
-        ]
+        ],
+        "progression": "Create your project"
       },
       "named_level": null,
       "bonus": null,
