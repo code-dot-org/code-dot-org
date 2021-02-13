@@ -271,6 +271,7 @@ class ShareAllowedDialog extends React.Component {
       this.props.appType === 'applab' || this.props.appType === 'gamelab';
     const artistTwitterHandle =
       SongTitlesToArtistTwitterHandle[this.props.selectedSong];
+
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail
       ? this.props.thumbnailUrl
