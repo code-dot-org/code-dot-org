@@ -28,6 +28,10 @@ class I18nStringUrlTracker
 
   private
 
+  # Paths where everything everything will after it will be aggregated.
+  # You can also add single pages which don't need aggregation as well e.g. /home
+  SIMPLE_PATHS = %w(home teacher_dashboard courses users).freeze
+
   # Determines if this URL should be tracked. We want to filter URLs so we don't waste resources recording data we are
   # not interested in.
   def allowed(url)
@@ -45,6 +49,11 @@ class I18nStringUrlTracker
     # Example: https://studio.code.org/s/dance-2019/stage/1/puzzle/1
     return true if parsed_url.path&.match(/\/s\/.*/)
 
+    # Allow URLs where the path starts with anything in SIMPLE_PATHS
+    # Example https://studio.code.org/home
+    SIMPLE_PATHS.each do |page|
+      return true if parsed_url.path&.match(/^\/#{page}.*/)
+    end
     # Otherwise this URL should not be recorded
     false
   end
@@ -105,6 +114,17 @@ class I18nStringUrlTracker
       # capture group m[1] is the match in the first '()' group in the regex
       parsed_url.path = m[1]
     end
+
+    # Simple aggregation for any paths which start with one of the given pages
+    # converts 'https://studio.code.org/teacher_dashboard/sections/3263468/login_info'
+    # int 'https://studio.code.org/teacher_dashboard'
+    SIMPLE_PATHS.each do |page|
+      parsed_url.path&.match(/^(\/#{page}).*/) do |m|
+        # capture group m[1] is the match in the first '()' group in the regex
+        parsed_url.path = m[1]
+      end
+    end
+
     parsed_url.to_s
   end
 end
