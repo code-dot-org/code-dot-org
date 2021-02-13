@@ -2,7 +2,6 @@ import $ from 'jquery';
 import designMode from './designMode';
 
 function generateCodeDesignElements(modelId, modelData) {
-  console.log('modelDAta', modelData);
   var x = 20;
   var y = 20;
   var SPACER_PIXELS = 20;
