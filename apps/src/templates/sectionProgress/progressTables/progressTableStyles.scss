@@ -32,14 +32,13 @@ $content-view-width: $content-width - $student-list-width;
     }
     td,
     th {
-      width: $student-list-width;
       border-right: 0px;
     }
     th {
       background-color: $table-header;
       color: $charcoal;
     }
-    tr, td {
+    tr, td, th {
       display: block;
       width: 100%;
     }
