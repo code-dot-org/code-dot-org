@@ -71,7 +71,7 @@ level 'U5 Loops Make Wallpaper App 2020_2021', progression: 'Make the Lock Scree
 lesson_group 'csp_traversals', display_name: 'Traversals'
 lesson 'Traversals Explore', display_name: 'Traversals Explore', has_lesson_plan: true
 level 'Processing Lists with Loops_2021', progression: 'Introduction to Traversal'
-level 'U5 L09 Traversals Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
+level 'U5 L09 Traversals Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Traversals Investigate', display_name: 'Traversals Investigate', has_lesson_plan: true
 level 'U5 Traversals Investigate Mile Tracker Modify_2021', progression: 'Mile Tracker Investigation'
