@@ -98,7 +98,6 @@ class Lesson < ApplicationRecord
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
-        unplugged: !!raw_lesson[:unplugged],
         relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
       lesson.save! if lesson.changed?
