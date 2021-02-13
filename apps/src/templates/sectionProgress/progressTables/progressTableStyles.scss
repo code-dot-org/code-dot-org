@@ -35,10 +35,12 @@ $content-view-width: $content-width - $student-list-width;
       border-right: 0px;
     }
     th {
+      width: $student-list-width;
       background-color: $table-header;
       color: $charcoal;
     }
-    tr, td, th {
+    tr,
+    td {
       display: block;
       width: 100%;
     }
