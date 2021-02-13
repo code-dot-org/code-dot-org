@@ -59,7 +59,8 @@ const styles = {
   inputsAndIcon: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap'
   }
 };
 
