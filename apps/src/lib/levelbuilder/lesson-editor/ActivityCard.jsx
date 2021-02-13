@@ -26,7 +26,8 @@ const styles = {
   activityHeaderComponents: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexWrap: 'wrap'
   },
   activityBody: {
     background: color.lightest_cyan,
@@ -60,7 +61,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    flex: '1 1'
   }
 };
 
