@@ -28,6 +28,7 @@ $content-view-width: $content-width - $student-list-width;
   .student-list {
     table {
       width: $student-list-width;
+      table-layout: fixed;
     }
     td,
     th {
@@ -37,6 +38,10 @@ $content-view-width: $content-width - $student-list-width;
     th {
       background-color: $table-header;
       color: $charcoal;
+    }
+    tr, td {
+      display: block;
+      width: 100%;
     }
   }
   .content-view {
