@@ -27,7 +27,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    overflow: 'hidden'
   },
   activityBody: {
     background: color.lightest_cyan,
