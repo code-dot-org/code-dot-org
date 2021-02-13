@@ -142,4 +142,35 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(:i18n, @firehose_stream)
     assert_equal(expected_record, @firehose_record)
   end
+
+  def test_log_given_home_url_should_be_logged
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(test_record, @firehose_record)
+  end
+
+  def test_log_given_teacher_dashboard_url_should_only_log_teacher_dashboard
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/teacher_dashboard/sections/3263468/login_info', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'https://studio.code.org/teacher_dashboard', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
+  def test_log_given_courses_url_should_only_log_courses
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/courses/csd-2020?section_id=3263468', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'https://studio.code.org/courses', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
+
+  def test_log_given_users_url_should_only_log_users
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/users/edit', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'https://studio.code.org/users', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
 end
