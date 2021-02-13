@@ -456,17 +456,21 @@ class ScriptLevel < ApplicationRecord
     summary[:id] = id.to_s
     summary[:levels] = levels.map do |level|
       teacher_markdown = level.localized_teacher_markdown if can_view_teacher_markdown?
+      markdown = level.properties['markdown'] if level.type == 'External'
       {
         name: level.name,
         id: level.id.to_s,
         icon: level.icon,
+        type: level.type,
         isConceptLevel: level.concept_level?,
         longInstructions: level.long_instructions,
         shortInstructions: level.short_instructions,
         videos: level.related_videos.map(&:summarize),
         mapReference: level.map_reference,
         referenceLinks: level.reference_links,
-        teacherMarkdown: level.teacher_markdown
+        teacherMarkdown: teacher_markdown,
+        markdown: markdown,
+        videoOptions: level.specified_autoplay_video&.summarize(false)
       }
     end
     puts summary.inspect
