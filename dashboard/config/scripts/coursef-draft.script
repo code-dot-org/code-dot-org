@@ -1,7 +1,7 @@
 login_required true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: true
+lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: true, unplugged: true
 level 'TangramAlgorithms'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: true
@@ -39,7 +39,7 @@ level 'iceage_warn_ice_age'
 level 'iceage_throw_hearts'
 level 'iceage_free_play'
 
-lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables'
 
 lesson 'Variables in Artist', display_name: 'Variables in Artist', has_lesson_plan: true
@@ -69,7 +69,7 @@ level 'courseF_playlab_variables5b'
 level 'courseF_playlab_variables6b'
 level 'courseF_playlab_variables7b'
 
-lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun'
 
 lesson 'For Loops in Bee', display_name: 'For Loops in Bee', has_lesson_plan: true
@@ -100,7 +100,7 @@ level 'courseF_artist_for9'
 level 'courseF_artist_for10_predict1', assessment: true
 level 'courseF_artist_for10'
 
-lesson 'Songwriting with Parameters', display_name: 'Songwriting with Parameters', has_lesson_plan: true
+lesson 'Songwriting with Parameters', display_name: 'Songwriting with Parameters', has_lesson_plan: true, unplugged: true
 level 'SongwritingWithParameters'
 
 lesson 'Conditionals and Functions in Bee', display_name: 'Conditionals and Functions in Bee', has_lesson_plan: true
