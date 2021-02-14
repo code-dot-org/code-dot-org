@@ -81,7 +81,11 @@ class Predict extends Component {
             })}
           </form>
           <br />
-          <button type="button" onClick={this.onClickPredict}>
+          <button
+            type="button"
+            style={{ width: "20%" }}
+            onClick={this.onClickPredict}
+          >
             Predict!
           </button>
           <p />
