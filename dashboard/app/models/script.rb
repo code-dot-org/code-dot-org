@@ -114,6 +114,17 @@ class Script < ApplicationRecord
 
   validate :set_is_migrated_only_for_migrated_scripts
 
+  def prevent_duplicate_levels
+    reload
+
+    unless levels.count == levels.uniq.count
+      h = {}
+      levels.map(&:key).each {|key| h[key] = (h[key] || 0) + 1}
+      duplicate_keys = h.select {|_key, count| count > 1}.keys
+      raise "duplicate levels detected: #{duplicate_keys.to_json}"
+    end
+  end
+
   include SerializedProperties
 
   after_save :generate_plc_objects

@@ -65,6 +65,8 @@ class LessonsController < ApplicationController
         msg = "The last level in a lockable lesson must be a LevelGroup and an assessment."
         raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
       end
+
+      @lesson.script.prevent_duplicate_levels
     end
 
     if Rails.application.config.levelbuilder_mode
