@@ -19,7 +19,6 @@ export default class UnitCalendarButton extends React.Component {
   }
 
   openDialog = () => {
-    console.log('open!!');
     this.setState({isDialogOpen: true});
   };
 
