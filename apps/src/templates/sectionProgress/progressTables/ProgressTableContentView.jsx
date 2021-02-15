@@ -79,6 +79,7 @@ export default class ProgressTableContentView extends React.Component {
         ref={r => (this.lessonRefs[lesson.position] = r)}
       >
         <ProgressTableLessonNumber
+          id={lesson.id}
           name={lesson.name}
           number={lesson.relative_position}
           lockable={lesson.lockable}
