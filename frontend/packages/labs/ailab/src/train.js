@@ -180,13 +180,16 @@ const prepareTrainingData = () => {
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "" && !isNaN(label));
   /*
-  Randomly select 10% (default) of examples and corresponding labels from the training set to reserve for a post-training accuracy calculation. The accuracy check examples and labels are excluded from the training set when the model is trained and saved to state separately to test the model's accuracy.
+  Select X% of examples and corresponding labels from the training set to reserve for a post-training accuracy calculation. The accuracy check examples and labels are excluded from the training set when the model is trained and saved to state separately to test the model's accuracy.
   */
   const percent = updatedState.percentDataToReserve / 100;
   const numToReserve = parseInt(trainingExamples.length * percent);
   let accuracyCheckExamples = [];
   let accuracyCheckLabels = [];
-  if (updatedState.reserveLocation === TestDataLocations.BEGINNING) {
+  if (
+    updatedState.reserveLocation === TestDataLocations.BEGINNING &&
+    percent !== 0
+  ) {
     accuracyCheckExamples = trainingExamples.slice(numToReserve);
     accuracyCheckLabels = trainingLabels.slice(numToReserve);
   }
