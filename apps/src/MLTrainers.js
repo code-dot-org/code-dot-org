@@ -1,6 +1,8 @@
 import KNN from 'ml-knn';
+import SVM from 'ml-svm';
 
 const KNNTrainers = ['knnClassify', 'knnRegress'];
+const SVMTrainers = ['binarySvm'];
 
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
@@ -35,27 +37,25 @@ modelData = {
   TODO: convert string data in testValues using the featureNumberKey
 */
 export function predict(modelData) {
-  // Determine which algorithm to use.
+  let model;
   if (KNNTrainers.includes(modelData.selectedTrainer)) {
-    // Re-instantiate the trained model.
-    const model = KNN.load(modelData.trainedModel);
-    // Prepare test data.
-    const testValues = modelData.selectedFeatures.map(feature =>
-      parseInt(modelData.testData[feature])
-    );
-    // Make a prediction.
-    const rawPrediction = model.predict(testValues);
-    // Convert prediction to human readable (if needed)
-    const prediction = Object.keys(modelData.featureNumberKey).includes(
-      modelData.labelColumn
-    )
-      ? getKeyByValue(
-          modelData.featureNumberKey[modelData.labelColumn],
-          rawPrediction
-        )
-      : parseFloat(rawPrediction);
-    return prediction;
+    model = KNN.load(modelData.trainedModel);
+  } else if (SVMTrainers.includes(modelData.selectedTrainer)) {
+    model = SVM.load(modelData.trainedModel);
   } else {
     return 'Error: unknown trainer';
   }
+  const testValues = modelData.selectedFeatures.map(feature =>
+    parseInt(modelData.testData[feature])
+  );
+  const rawPrediction = model.predict(testValues);
+  const prediction = Object.keys(modelData.featureNumberKey).includes(
+    modelData.labelColumn
+  )
+    ? getKeyByValue(
+        modelData.featureNumberKey[modelData.labelColumn],
+        rawPrediction
+      )
+    : parseFloat(rawPrediction);
+  return prediction;
 }
