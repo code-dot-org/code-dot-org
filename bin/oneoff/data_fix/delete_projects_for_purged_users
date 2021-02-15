@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+require 'cdo/delete_accounts_helper'
+
+# Delete Project S3 Objects created by Users whose accounts were purged if Project data is restored from offsite backup.
+# Student project S3 Objects are irrevocably deleted by the Account Purger (28 days after the user's account is
+# soft deleted). But, S3 Bucket Replication (used to backup project buckets to offsite account for disaster recovery)
+# intentionally does not propagate Object deletion to the backup to prevent malicious deletions from propagating to the
+# backup. In the unlikely recovery scenario that the projects system is restored from the offsite backup, use this script
+# to delete S3 Objects for projects belonging to purged users.
+
+options = {actually_delete: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-d', '--actually-delete', 'Actually perform the delete.') do
+    options[:actually_delete] = true
+  end
+  opts.on('-h', '--help', 'Add -d to perform the delete.') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Called with options: #{options}"
+
+# To speed up the queries, we limit the query to an id range that we know covers
+# all possible affected users
+START_USER_ID = 1
+END_USER_ID = 75_096_352
+
+BATCH_SIZE = 200
+
+users_purged_of_project_objects = 0
+users_with_project_purge_errors = 0
+User.
+  with_deleted.
+  where.not(purged_at: nil).
+  find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
+  user_batch.each do |user|
+    if options[:actually_delete]
+      delete_project_backed_progress(user)
+      users_purged_of_project_objects += 1
+      CDO.log.info "Deleting project S3 Objects for purged user: id=#{user.id}"
+    end
+  rescue => error
+    users_with_project_purge_errors += 1
+    CDO.log.error error
+  end
+end
+
+CDO.log.info "Script completed"
+CDO.log.info "S3 Objects deleted #{users_destroyed} users with #{destroy_user_errors} errors"
