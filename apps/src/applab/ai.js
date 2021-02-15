@@ -25,9 +25,11 @@ function generateCodeDesignElements(modelId, modelData) {
         optionElement.text = option;
         select.options.add(optionElement);
       });
+      y = y + SPACER_PIXELS;
     } else {
       var input = designMode.createElement('TEXT_INPUT');
       input.id = 'design_' + feature + '_input';
+      y = y + SPACER_PIXELS;
     }
     var addFeature = `testValues.${feature} = getText("${selectId}");`;
     designMode.onInsertEvent(addFeature);
