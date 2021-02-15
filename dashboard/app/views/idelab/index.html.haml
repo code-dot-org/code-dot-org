@@ -1,0 +1,6 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/idelab/index.js'), data: @script_data}
+  = stylesheet_link_tag 'css/idelab', media: 'all'
+
+#ide-lab-container
+  -# populated by React
