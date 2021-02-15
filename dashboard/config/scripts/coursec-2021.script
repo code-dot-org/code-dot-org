@@ -13,9 +13,6 @@ lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Putting a STOP to Online Meanness', display_name: 'Putting a STOP to Online Meanness', has_lesson_plan: true
 level 'csf_putting_a_stop_to_online_meanness_2021'
 
-lesson 'Password Power-Up', display_name: 'Password Power-Up', has_lesson_plan: true
-level 'csf_password_power-up_2021'
-
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends Jr.', has_lesson_plan: true
 level 'MyRoboticFriends-Unplugged_2021'
