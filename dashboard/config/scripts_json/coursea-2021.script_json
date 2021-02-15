@@ -275,7 +275,7 @@
       "properties": {
         "overview": "Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.",
         "student_overview": "Use loops and patterns to finish the images.",
-        "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of <code class=\"block\" style=\"background-color: #f98bd0;\"><a href=\"//studio.code.org/docs/spritelab/codestudio_repeat/\">repeat</a></code> loops.",
+        "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of  `repeat` loops.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review [CSF Lesson Recommendations](https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing).\n - Make sure each student has a [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY).",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -506,7 +506,7 @@
       "key": "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e",
       "position": 2,
       "properties": {
-        "name": "Activity",
+        "name": "Main Activity",
         "duration": 40
       },
       "seeding_key": {
@@ -561,7 +561,7 @@
       "key": "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity",
+        "name": "Bridging Activity - Choose One",
         "duration": 10
       },
       "seeding_key": {
@@ -738,7 +738,6 @@
       "key": "a0e91760-8ca0-42c5-9c06-e10fde3039bc",
       "position": 4,
       "properties": {
-        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "a0e91760-8ca0-42c5-9c06-e10fde3039bc",
@@ -832,7 +831,8 @@
       "key": "6008d4fa-44e5-48b8-9a9e-a07541b36f3a",
       "position": 2,
       "properties": {
-        "name": " Bridging Activity - Choose One"
+        "name": " Bridging Activity - Choose One",
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "6008d4fa-44e5-48b8-9a9e-a07541b36f3a",
@@ -845,7 +845,6 @@
       "key": "d1f46a61-b509-4db9-8fbf-5acb2ff0b4ca",
       "position": 3,
       "properties": {
-        "name": "Online Foundation"
       },
       "seeding_key": {
         "lesson_activity.key": "d1f46a61-b509-4db9-8fbf-5acb2ff0b4ca",
@@ -1038,7 +1037,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "10660ca3-5263-479f-a685-3e067185468a",
@@ -1051,8 +1050,6 @@
       "key": "2be23862-c873-40bc-82dc-7b665f287772",
       "position": 4,
       "properties": {
-        "name": "Assessment",
-        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "2be23862-c873-40bc-82dc-7b665f287772",
@@ -1104,7 +1101,7 @@
       "key": "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Events - Choose ONE",
+        "name": "Bridging Activity - Events - Choose One",
         "duration": 10
       },
       "seeding_key": {
@@ -1379,7 +1376,7 @@
       "key": "e2b3e229-08fd-47a4-9f9b-6c32f6c6406c",
       "position": 1,
       "properties": {
-        "description": "###Rhyme With That - (20-30 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) **Computer Science + English Language Arts**\n\n[**Rhyme With That**](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#). Rhyme With That is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will use the computer mouse to drag and drop a letter to form CVC words, match rhyming words and count.\n\n**Standards Addressed:** \n\n- **CCSS.ELA-LITERACY.RF.K.2.A:** Recognize and produce rhyming words.\n- **CCSS.ELA-LITERACY.RF.K.2.D:** Isolate and pronounce the initial, medial vowel, and final sounds (phonemes) in three-phoneme (consonant-vowel-consonant, or CVC) words.1 (This does not include CVCs ending with /l/, /r/, or /x/.)\n- **CCSS.MATH.CONTENT.K.CC.B.5:** Count to answer \"how many?\" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects."
+        "description": "###Rhyme With That - (20-30 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png)  **Computer Science + English Language Arts + Math**\n\n[**Rhyme With That**](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#). Rhyme With That is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will use the computer mouse to drag and drop a letter to form CVC words, match rhyming words and count.\n\n**Standards Addressed:** \n\n- **CCSS.ELA-LITERACY.RF.K.2.A:** Recognize and produce rhyming words.\n- **CCSS.ELA-LITERACY.RF.K.2.D:** Isolate and pronounce the initial, medial vowel, and final sounds (phonemes) in three-phoneme (consonant-vowel-consonant, or CVC) words.1 (This does not include CVCs ending with /l/, /r/, or /x/.)\n- **CCSS.MATH.CONTENT.K.CC.B.5:** Count to answer \"how many?\" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects."
       },
       "seeding_key": {
         "activity_section.key": "e2b3e229-08fd-47a4-9f9b-6c32f6c6406c",
@@ -1420,7 +1417,7 @@
       "position": 1,
       "properties": {
         "progression_name": "Video: Unplugged - Happy Maps",
-        "description": "###Happy Maps Programming"
+        "name": "Happy Maps Programming"
       },
       "seeding_key": {
         "activity_section.key": "7719a51a-42d9-41f0-bc30-c5475b18af7c",
@@ -1453,10 +1450,23 @@
       "key": "a6b03761-2c05-45cd-be08-78c966e2f444",
       "position": 1,
       "properties": {
-        "description": "###Flash Chat\n\n*Discuss:* When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (code) has been encoded in a way that can be run by a machine (or a kindergartener!)\n\n- Do you think that someone who speaks another language would be able to run your program? \n- Why or why not?\n\n###Journaling\n\nStudents should be encouraged to capture their thoughts in their journals after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)\n that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw your own flurb map?  \n - What would the code be to solve your map?"
+        "description": "\n*Discuss:* When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (code) has been encoded in a way that can be run by a machine (or a kindergartener!)\n\n- Do you think that someone who speaks another language would be able to run your program? \n- Why or why not?\n\n\n\n",
+        "name": "Flash Chat"
       },
       "seeding_key": {
         "activity_section.key": "a6b03761-2c05-45cd-be08-78c966e2f444",
+        "lesson_activity.key": "3290a55e-fedd-4672-8b81-dfac2115a13b"
+      }
+    },
+    {
+      "key": "59165939-4781-4c64-a90d-a18f29826646",
+      "position": 2,
+      "properties": {
+        "name": "Journaling",
+        "description": "Students should be encouraged to capture their thoughts in their journals after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)\n that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw your own flurb map?  \n - What would the code be to solve your map?"
+      },
+      "seeding_key": {
+        "activity_section.key": "59165939-4781-4c64-a90d-a18f29826646",
         "lesson_activity.key": "3290a55e-fedd-4672-8b81-dfac2115a13b"
       }
     },
@@ -1504,8 +1514,7 @@
       "key": "32b45f59-1f1f-4ef8-8bf9-26927003d960",
       "position": 1,
       "properties": {
-        "description": "This activity will help bring the unplugged concepts from Happy Maps into the online world that the students are moving into. Choose *one* of the following to do with your class:\r\n\r\nChoose *one* of the following to do with your class:",
-        "name": "Drag and Drop"
+        "description": "These activities will help bring the unplugged concepts from Happy Maps into the online world that the students are moving into. Choose *one* of the following to do with your class:\n\nChoose *one* of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "32b45f59-1f1f-4ef8-8bf9-26927003d960",
@@ -1516,7 +1525,8 @@
       "key": "d3d96ea6-986d-49e8-b48a-521536592847",
       "position": 2,
       "properties": {
-        "description": "#####Dragging and Dropping Algorithms\n\nProject one of the maps from the \"Happy Maps\" activity and display it for the students to see. On a projector or in front of the class, put some direction blocks from the **Unplugged Blockly Blocks** in random order and practice \"dragging and dropping\" by pressing your finger on one of the paper pieces and moving it across the screen. Explain that you can \"click\" to select this block by tapping your finger on it, or you can \"drag\" the block by pressing your finger on it and moving it. To \"drop\" the block, release your finger.\n\nAfter showing this to the class, ask for volunteers to create an algorithm for the Happy Map by \"dragging and dropping\" the necessary blocks."
+        "description": "\n\nProject one of the maps from the \"Happy Maps\" activity and display it for the students to see. On a projector or in front of the class, put some direction blocks from the **Unplugged Blockly Blocks** in random order and practice \"dragging and dropping\" by pressing your finger on one of the paper pieces and moving it across the screen. Explain that you can \"click\" to select this block by tapping your finger on it, or you can \"drag\" the block by pressing your finger on it and moving it. To \"drop\" the block, release your finger.\n\nAfter showing this to the class, ask for volunteers to create an algorithm for the Happy Map by \"dragging and dropping\" the necessary blocks.\n\n\n####-or-",
+        "name": "Dragging and Dropping Algorithms"
       },
       "seeding_key": {
         "activity_section.key": "d3d96ea6-986d-49e8-b48a-521536592847",
@@ -1527,7 +1537,8 @@
       "key": "382f7ddc-c4e7-4674-80b2-e8b7dac7dcf6",
       "position": 3,
       "properties": {
-        "description": "-or-\n\n#####Previewing Online Puzzles as a Class\n\nProject a puzzle from the lesson. Show the class how to click on a block and place it in the correct spot by dragging and dropping. Purposely make mistakes such as clicking the background or dropping the image before it's at the right spot. Ask for help from volunteers in the class when you run into these problems, and help them use the skills that they developed in the last unplugged lesson to make things right."
+        "description": "\nProject a puzzle from the lesson. Show the class how to click on a block and place it in the correct spot by dragging and dropping. Purposely make mistakes such as clicking the background or dropping the image before it's at the right spot. Ask for help from volunteers in the class when you run into these problems, and help them use the skills that they developed in the last unplugged lesson to make things right.",
+        "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
         "activity_section.key": "382f7ddc-c4e7-4674-80b2-e8b7dac7dcf6",
@@ -1605,7 +1616,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png)\r\n\r\nLet students know that they will see those letters in their online programs next to the direction arrows.  \r\n"
+            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
         ],
         "name": "The Unplugged Foundation"
@@ -1857,13 +1868,12 @@
       }
     },
     {
-      "key": "70d2f754-f72b-40c9-b35f-406cdead3cee",
+      "key": "ec54a452-8d6c-4f80-846e-cff353b037f6",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment."
       },
       "seeding_key": {
-        "activity_section.key": "70d2f754-f72b-40c9-b35f-406cdead3cee",
+        "activity_section.key": "ec54a452-8d6c-4f80-846e-cff353b037f6",
         "lesson_activity.key": "a0e91760-8ca0-42c5-9c06-e10fde3039bc"
       }
     },
@@ -1951,11 +1961,11 @@
       "key": "cb522975-96ad-44b4-942c-601fc373771c",
       "position": 1,
       "properties": {
-        "description": "This lesson relies on the concept of <code class=\"block\" style=\"background-color: #f98bd0;\"><a href=\"//studio.code.org/docs/spritelab/codestudio_repeat/\">repeat</a></code> loops that students learned in the previous unplugged activity, Happy Loops.  It is important to bring this idea from the real world into digital form so that students understand how to use Blockly blocks to repeat a task multiple times.",
+        "description": "This lesson relies on the concept of `repeat` loops that students learned in the previous unplugged activity, Happy Loops.  It is important to bring this idea from the real world into digital form so that students understand how to use Blockly blocks to repeat a task multiple times.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png)\r\n\r\nLet students know that they will see those letters in their online programs next to the direction arrows.  \r\n"
+            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
         ],
         "name": "Review Unplugged Activity\r"
@@ -1969,7 +1979,7 @@
       "key": "1557cb99-47ef-444c-bf08-6aa33be91fb2",
       "position": 2,
       "properties": {
-        "description": "**Display:** Show students map from the \"Happy Loops\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Happy Loops.\"    \n\n- What happens when \"East\" arrow is circled with the number 3? (It moves E 3 times)\n- What is it called when we circle an arrow and add a number? (A <code class=\"block\" style=\"background-color: #f98bd0;\"><a href=\"//studio.code.org/docs/spritelab/codestudio_repeat/\">repeat</a></code>  loop)\n\n**Transition:** Once you are satisfied that your students remember \"Happy Loops\", you can move into the Bridging Activity."
+        "description": "**Display:** Show students map from the \"Happy Loops\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Happy Loops.\"    \n\n- What happens when \"East\" arrow is circled with the number 3? (It moves E 3 times)\n- What is it called when we circle an arrow and add a number? `repeat`\n**Transition:** Once you are satisfied that your students remember \"Happy Loops\", you can move into the Bridging Activity."
       },
       "seeding_key": {
         "activity_section.key": "1557cb99-47ef-444c-bf08-6aa33be91fb2",
@@ -1994,7 +2004,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you predict that your students will have trouble with the idea of using <code class=\"block\" style=\"background-color: #f98bd0;\"><a href=\"//studio.code.org/docs/spritelab/codestudio_repeat/\">repeat</a></code>  loops to not only move, but also pick corn, you can introduce this idea in the Bridging Activity. This will help students understand that loops can have many different uses.\n"
+            "markdown": "If you predict that your students will have trouble with the idea of using  `repeat`  loops to not only move, but also pick corn, you can introduce this idea in the Bridging Activity. This will help students understand that loops can have many different uses.\n"
           }
         ]
       },
@@ -2007,7 +2017,8 @@
       "key": "d1bd79aa-b64e-4e66-b7e5-657d5b990a60",
       "position": 3,
       "properties": {
-        "description": "###Unplugged Activity Using Paper Blocks###\n\nSelect an empty flurb map from the **Happy Map Cards - Worksheet** and give students **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** prefilled with the `collect` command, a `repeat` loop, and the cardinal commands like `E →` (East) and `W ←` (West). Now, have the students program the Flurb from their desks using the paper Blockly blocks to get the Flurbs to collect the fruit.  Make sure that they understand that the blocks need to go from top to bottom and they all need to touch!"
+        "description": "\nSelect an empty Flurb map from the **Happy Map Cards - Worksheet** and give students **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** prefilled with the `collect` command, a `repeat` loop, and the cardinal commands like `E →` (East) and `W ←` (West). Now, have the students program the Flurb from their desks using the paper Blockly blocks to get the Flurbs to collect the fruit.  Make sure that they understand that the blocks need to go from top to bottom and they all need to touch!",
+        "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
         "activity_section.key": "d1bd79aa-b64e-4e66-b7e5-657d5b990a60",
@@ -2018,7 +2029,8 @@
       "key": "62d22669-d8bd-4e18-a767-8269aa7322f8",
       "position": 4,
       "properties": {
-        "description": "###Previewing Online Puzzles as a Class###\n\nPull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows from the **Happy Map Game Pieces - Manipulatives** and **Happy Map Game Pieces Bonus Pack - Manipulatives**, have students lay out a pattern that they think will get the Harvester to pick all the corn. Ask the students to share. See how many other students had the same answer!"
+        "description": "\n\nPull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows from the **Happy Map Game Pieces - Manipulatives** and **Happy Map Game Pieces Bonus Pack - Manipulatives**, have students lay out a pattern that they think will get the Harvester to pick all the corn. Ask the students to share. See how many other students had the same answer!",
+        "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
         "activity_section.key": "62d22669-d8bd-4e18-a767-8269aa7322f8",
@@ -2026,20 +2038,20 @@
       }
     },
     {
-      "key": "d347109e-ddb2-4659-b4cc-3b1262711c06",
+      "key": "bce76535-3424-40bc-a71b-acafda6a3b62",
       "position": 1,
       "properties": {
-        "description": "To finish the connection, preview an online puzzle (or two) as a class.\r\n\r\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 8, Puzzle 5.  Point out the \"Play Area\" with Scrat and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help Scrat get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\r\n\r\nWork with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. \r\n\r\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own.",
-        "name": "Preview Loops in Ice Age"
+        "name": "Online Foundation - Preview Loops in Ice Age",
+        "description": "\nTo finish the connection, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 8, Puzzle 5.  Point out the \"Play Area\" with Scrat and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help Scrat get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
       },
       "seeding_key": {
-        "activity_section.key": "d347109e-ddb2-4659-b4cc-3b1262711c06",
-        "lesson_activity.key": "d1f46a61-b509-4db9-8fbf-5acb2ff0b4ca"
+        "activity_section.key": "bce76535-3424-40bc-a71b-acafda6a3b62",
+        "lesson_activity.key": "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b"
       }
     },
     {
       "key": "bfc26aa9-b856-47f4-86c0-36818d4d9c87",
-      "position": 1,
+      "position": 2,
       "properties": {
         "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop.",
         "name": "Loops with Scrat"
@@ -2051,7 +2063,7 @@
     },
     {
       "key": "595fbc1f-baf6-446c-97dd-c89fa67a6baf",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2062,7 +2074,7 @@
     },
     {
       "key": "c559cd76-a16e-4361-97c0-f4f4fcdb92b6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Ice Age Loops"
       },
@@ -2073,7 +2085,7 @@
     },
     {
       "key": "c654e7af-7a96-4f1a-af67-5ee47829f1de",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2084,7 +2096,7 @@
     },
     {
       "key": "277f1b5f-abbe-4158-9507-d91cce301994",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -2095,7 +2107,7 @@
     },
     {
       "key": "483c3b98-803d-4ddf-ac49-f472bf27568b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2106,7 +2118,7 @@
     },
     {
       "key": "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c",
-      "position": 7,
+      "position": 8,
       "properties": {
         "tips": [
           {
@@ -2122,7 +2134,7 @@
     },
     {
       "key": "45ebca0d-233a-4082-8d6e-5cf11640c93e",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize **Pair Programming** whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
@@ -2158,7 +2170,7 @@
       "key": "2ad0c170-bdf8-4e67-8334-92bba6011a60",
       "position": 1,
       "properties": {
-        "description": "###Help Your Sunflower Grow (90-120 minutes)###\n![](https://curriculum.code.org/media/uploads/elaSmall.png) **Computer Science + English Language Arts**\n\n[Help Your Sunflower Grow](https://docs.google.com/document/d/1gEVKhBT8LJgQHGKrS-JwWOULvI47oibdxHQhPEAdvAg/edit#heading=h.gv7mjyc3j59j)  is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will practice sequencing using tangible cards. \n\n*Standards Addressed:*\n\n- **NGSS K.LS.1** Use observations to describe patterns of what plants and animals (including humans) need to survive.\n\n- **CCSS.MATH.CONTENT.K.CC.B.4.A** When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.\n- **CCSS.MATH.CONTENT.K.G.A.1** Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.\n\n- **CCSS.ELA-LITERACY.L.K.4.A** Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on kindergarten reading and content.\n"
+        "description": "###Help Your Sunflower Grow (90-120 minutes)###\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Help Your Sunflower Grow](https://docs.google.com/document/d/1gEVKhBT8LJgQHGKrS-JwWOULvI47oibdxHQhPEAdvAg/edit#heading=h.gv7mjyc3j59j)  is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will practice sequencing using tangible cards. \n\n*Standards Addressed:*\n\n- **NGSS K.LS.1** Use observations to describe patterns of what plants and animals (including humans) need to survive.\n\n- **CCSS.MATH.CONTENT.K.CC.B.4.A** When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.\n- **CCSS.MATH.CONTENT.K.G.A.1** Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.\n\n- **CCSS.ELA-LITERACY.L.K.4.A** Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on kindergarten reading and content.\n"
       },
       "seeding_key": {
         "activity_section.key": "2ad0c170-bdf8-4e67-8334-92bba6011a60",
@@ -2341,24 +2353,8 @@
       }
     },
     {
-      "key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online - Video](https://www.youtube.com/watch?v=rgbZAWnOWOo).\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
-        "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7"
-      }
-    },
-    {
       "key": "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "We've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\r\n\r\nPrediction Levels:\r\n\r\n - [Course A, Loops in Artist](https://studio.code.org/levels/8726)"
       },
@@ -2369,7 +2365,7 @@
     },
     {
       "key": "6d5074a8-2f60-46de-b974-532be01603c4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "The Artist in Code Studio"
       },
@@ -2380,7 +2376,7 @@
     },
     {
       "key": "d060bb00-33a3-4049-925e-56db3f7508f7",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2391,7 +2387,7 @@
     },
     {
       "key": "52392151-808b-48cd-a76b-554587d200ec",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Repeat Blocks with the Artist"
       },
@@ -2402,7 +2398,7 @@
     },
     {
       "key": "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36",
-      "position": 7,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2413,7 +2409,7 @@
     },
     {
       "key": "879f345b-620d-4541-8467-84f00e515229",
-      "position": 8,
+      "position": 7,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -2424,7 +2420,7 @@
     },
     {
       "key": "ac484bf5-608f-446f-ada6-d0506b7dc9a8",
-      "position": 9,
+      "position": 8,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2435,7 +2431,7 @@
     },
     {
       "key": "1e2c8e78-0b20-48a4-aeba-08cad3060e42",
-      "position": 10,
+      "position": 9,
       "properties": {
         "progression_name": "Free Play"
       },
@@ -2446,12 +2442,28 @@
     },
     {
       "key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
-      "position": 11,
+      "position": 10,
       "properties": {
         "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
+        "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7"
+      }
+    },
+    {
+      "key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online - Video](https://www.youtube.com/watch?v=rgbZAWnOWOo).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
         "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7"
       }
     },
@@ -2482,7 +2494,7 @@
       "key": "ac847e89-ccab-4f15-8585-b06d61723c4c",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n - **Event** - Say it with me: *E-vent.* \n\nAn action that causes something to happen."
+        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n - **Event** - Say it with me: *E-vent.* \n\nAn event is an action that causes something to happen."
       },
       "seeding_key": {
         "activity_section.key": "ac847e89-ccab-4f15-8585-b06d61723c4c",
@@ -2493,7 +2505,7 @@
       "key": "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6",
       "position": 2,
       "properties": {
-        "description": "####A Series of Events####\n\n- Prep your class to answer a question:\n\t- \"I'm going to ask you a question. I want you to raise your hand if you want me to call on you for the answer.\"\n\t- Ask a simple question that most of your students should be able to answer, such as:\n\t\t- How many thumbs do I have?\n\t\t- What is bigger, a bird or a horse?\n\t- Call on a student who has their hand raised and let them give their answer.\n\t- Upon finishing that display, ask the class how you knew that the student wanted you to call on them.\n\t\t- Your class will likely mention the raising of the hand.\n\t- Explain to everyone that when students raise their hand, it is an \"event\" that causes you to know that they want to be called on. \n- Ask the class if they can think of any other events that give signals.\n\t- You may need to remind them that you're not talking about an event like a birthday party or a field trip.\n\t- If they have trouble, you can remind them that an event is an action that causes something to happen.\n\t\t- What about an alarm clock going off? What does that make happen?\n\t\t- What about pressing \"Start\" on the microwave? What does that do?\n\t\t- What about pressing the power button on your tv remote?\n- Today, we're going to create programs with events."
+        "description": "####A Series of Events####\n\nLet’s see if we can find a pattern here:\n\n- When you flip a switch, the lights turn on.\n- When you tap on a device, an app starts.\n- When the alarm goes off, you get out of bed.\n- When *(event)*, *(action)*.\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is “event”.    Normally when we hear “event” we think of:\n- Field trip\n- Competition\n- Birthday Party\n\nWe’re learning a new meaning for the word event today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.\n"
       },
       "seeding_key": {
         "activity_section.key": "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6",
@@ -2520,7 +2532,9 @@
             "type": "teachingTip",
             "markdown": "If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.\r\n"
           }
-        ]
+        ],
+        "name": "The Big Event",
+        "description": "- Do you remember helping the Flurbs find fruit?\n\t- In that exercise, you knew in advance exactly where you wanted your Flurb to end up, so you could make a program that took them from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n"
       },
       "seeding_key": {
         "activity_section.key": "6ffda847-c078-4edf-b7ca-4499b1d9249e",
@@ -2531,8 +2545,7 @@
       "key": "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd",
       "position": 3,
       "properties": {
-        "description": "- Do you remember helping the Flurbs find fruit?\n\t- In that exercise, you knew in advance exactly where you wanted your Flurb to end up, so you could make a program that took them from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\nIn earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- Project [**The Big Event (Courses A, B) - Controller Image**](https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs) onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.",
-        "name": "The Big Event\r"
+        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- Project [**The Big Event (Courses A, B) - Controller Image**](https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs) onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
       },
       "seeding_key": {
         "activity_section.key": "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd",
@@ -2543,8 +2556,15 @@
       "key": "40978575-9e16-4760-a200-0678f187ff4c",
       "position": 1,
       "properties": {
-        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- Why do we need to be able to handle events in a program?\n- What are some other kinds of events that you can think of?\n\n####Journal:####\n In their [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY), ask students to write and draw with the following questions in mind: \n\n- What was today’s lesson about?\n- Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
-        "name": "Reflection\r"
+        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- What did we learn?\n- What are some examples of events?\n\n####Journal:####\n In their [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY), ask students to write and draw with the following questions in mind: \n\n- What was today’s lesson about?\n- Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
+        "name": "Reflection\r",
+        "duration": "10",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should demonstrate understanding that events are something that can cause other actions to happen. Refer back to earlier examples from the lesson or encourage students to come up with their own."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "40978575-9e16-4760-a200-0678f187ff4c",
@@ -2555,7 +2575,9 @@
       "key": "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5",
       "position": 1,
       "properties": {
-        "description": "**Distribute**: Hand out one **The Big Event - Assessment** to each student and allow them to complete it independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "\n**Distribute**: Hand out one **The Big Event - Assessment** to each student and allow them to complete it independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities.",
+        "name": "Assessment",
+        "duration": "5"
       },
       "seeding_key": {
         "activity_section.key": "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5",
@@ -2589,7 +2611,7 @@
       "key": "59ef2dfe-0dad-4172-8225-3e844fecb36f",
       "position": 1,
       "properties": {
-        "description": "This activity will help bring the unplugged concepts from \"The Big Event\" into the online world that the students are moving into. Choose *one* of the following to do with your class:"
+        "description": "These activities will help bring the unplugged concepts from \"The Big Event\" into the online world that the students are moving into. Choose *one* of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "59ef2dfe-0dad-4172-8225-3e844fecb36f",
@@ -2616,7 +2638,8 @@
       "key": "9126c997-86b1-4d78-9eaf-3d07e06c6355",
       "position": 3,
       "properties": {
-        "description": "####Unplugged Activity Using Paper Blocks####\n\nUsing the remote from the **The Big Event (Courses A, B) - Controller Image** and blocks from **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class \"when the teal button is pushed, what do we do?\" then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run."
+        "description": "\nUsing the remote from the **The Big Event (Courses A, B) - Controller Image** and blocks from **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class \"when the teal button is pushed, what do we do?\" then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.",
+        "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
         "activity_section.key": "9126c997-86b1-4d78-9eaf-3d07e06c6355",
@@ -2627,7 +2650,8 @@
       "key": "b4da0866-a056-4d28-bbca-119bbd17fe04",
       "position": 4,
       "properties": {
-        "description": "####Previewing Online Puzzles as a Class####\n\nPull a puzzle from the corresponding puzzles online. We recommend puzzle 7. Call on different students to make a funny noise when you click on Jorge. Explain this is an event that they are reacting to and Jorge can be coded to make noise when you click on him."
+        "description": "\nPull a puzzle from the corresponding puzzles online. We recommend puzzle 7. Call on different students to make a funny noise when you click on Jorge. Explain this is an event that they are reacting to and Jorge can be coded to make noise when you click on him.",
+        "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
         "activity_section.key": "b4da0866-a056-4d28-bbca-119bbd17fe04",
@@ -5129,7 +5153,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Big Event - Unplugged Activity"
+        "progression": "The Big Event - Unplugged Activity",
+        "level_keys": [
+          "BigEvent-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,

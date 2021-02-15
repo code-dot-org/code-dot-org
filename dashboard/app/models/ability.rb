@@ -55,7 +55,7 @@ class Ability
       Foorm::Form,
       Foorm::Library,
       Foorm::LibraryQuestion,
-      :java_ide
+      :idelab
     ]
     cannot :index, Level
 
@@ -244,7 +244,7 @@ class Ability
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,
-        :java_ide
+        :idelab
       ]
 
       # Only custom levels are editable.
