@@ -1,0 +1,7 @@
+.lever-job-tag {
+    margin-left: 10px;
+}
+  
+ul li:before {
+    content: "";
+} 
