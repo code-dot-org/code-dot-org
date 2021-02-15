@@ -833,6 +833,7 @@ class ScriptEditor extends React.Component {
               <input
                 value={this.state.weeklyInstructionalMinutes}
                 style={styles.input}
+                disabled={!this.state.showCalendar}
                 onChange={e =>
                   this.setState({
                     weeklyInstructionalMinutes: e.target.value
