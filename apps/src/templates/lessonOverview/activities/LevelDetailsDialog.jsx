@@ -15,10 +15,10 @@ export default class LevelDetailsDialog extends Component {
   };
 
   getContentComponent = level => {
+    console.log(level);
     if (level.type === 'External') {
       return <SafeMarkdown markdown={level.markdown} />;
     } else if (level.type === 'StandaloneVideo') {
-      console.log('hi!');
       return (
         <div>
           {level.long_instructions && (
@@ -28,6 +28,15 @@ export default class LevelDetailsDialog extends Component {
             id={'level-details-dialog-video'}
             ref={ref => (this.video = ref)}
           />
+        </div>
+      );
+    } else if (level.containedLevels.length > 0) {
+      console.log('hello!');
+      return (
+        <div>
+          {level.containedLevels.map(l => (
+            <div key={l.name}>{this.getContentComponent(l)}</div>
+          ))}
         </div>
       );
     } else {
@@ -66,15 +75,18 @@ export default class LevelDetailsDialog extends Component {
   }
 
   render() {
-    console.log(this.props.scriptLevel);
     const {scriptLevel} = this.props;
     const level = scriptLevel.level;
     const preview = this.getContentComponent(level);
+    const style =
+      level.type === 'StandaloneVideo'
+        ? {width: 'auto'}
+        : {width: '70%', left: '15%', marginLeft: 0};
     return (
       <BaseDialog
         isOpen={true}
         handleClose={this.props.handleClose}
-        style={{width: '70%', left: '15%', marginLeft: 0}}
+        style={style}
       >
         {preview}
 
