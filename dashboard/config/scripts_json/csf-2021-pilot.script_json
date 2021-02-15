@@ -21,6 +21,7 @@
         }
       ],
       "pilot_experiment": "csf-2021-pilot",
+      "hideable_lessons": true,
       "peer_reviews_to_complete": 0
     },
     "new_name": null,
@@ -121,7 +122,7 @@
     {
       "key": "variables-in-spritelab",
       "name": "Text and Prompts - coming soon!",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 5,
@@ -136,7 +137,7 @@
     {
       "key": "chatbot",
       "name": "Create a Chat-Bot - coming soon!",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 6,
