@@ -12,6 +12,9 @@ window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
 
+// the max size in bytes for a bramble project -- 20 megabytes == 20971520 bytes
+const MAX_PROJECT_CAPACITY = 20971520;
+
 // the main Bramble object -- used to access file system
 let bramble_ = null;
 // the Bramble proxy object -- used to access methods on the Bramble UI frame
@@ -601,12 +604,16 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load('#bramble', {
-    url: BRAMBLE_BASE_URL + '/index.html?disableExtensions=bramble-move-file',
+    url: BRAMBLE_BASE_URL + '/index.html',
     useLocationSearch: true,
     disableUIState: true,
+    capacity: MAX_PROJECT_CAPACITY,
     initialUIState: {
       theme: 'light-theme',
       readOnly: webLab_.getPageConstants().isReadOnlyWorkspace
+    },
+    extensions: {
+      disable: ['bramble-move-file']
     }
   });
 
