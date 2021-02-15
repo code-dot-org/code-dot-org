@@ -179,4 +179,46 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
       assert_equal datetime2, feedback.student_last_visited_at
     end
   end
+
+  test 'get_script_level finds level in script' do
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.levels.first
+    feedback = create :teacher_feedback, script: script, level: level
+    assert_queries(1) do
+      assert_equal script_level, feedback.get_script_level
+    end
+  end
+
+  test 'get_script_level finds bubble choice parent level' do
+    parent_level = create :bubble_choice_level, :with_sublevels
+    child_level = parent_level.sublevels.first
+
+    # Create these intermediate rungs of the hierarchy, so that script_level
+    # will show up in script.script_levels.
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    # the query count grows with the number of bubble choice levels in the script.
+    create :script_level, script: script, lesson: lesson, levels: [create(:bubble_choice_level, :with_sublevels)]
+    create :script_level, script: script, lesson: lesson, levels: [create(:bubble_choice_level, :with_sublevels)]
+    create :script_level, script: script, lesson: lesson, levels: [create(:bubble_choice_level, :with_sublevels)]
+
+    script_level = create :script_level, script: script, lesson: lesson, levels: [parent_level]
+
+    # HACK: we have to supply a script_level, because it is still a required field.
+    # According to existing validations, it has to be a script level in this script.
+    # However, we don't want to pass script_level itself, because in theory
+    # get_script_level could "cheat" and just return that value. Therefore, create
+    # a new script level within the same script as a way to prevent cheating and
+    # still pass validations.
+    # TODO: remove this hack once script_level is no longer required.
+    other_script_level = create :script_level, script: script, lesson: lesson, levels: [create(:level)]
+
+    feedback = create :teacher_feedback, script: script, level: child_level, script_level: other_script_level
+    assert_queries(7) do
+      assert_equal script_level, feedback.get_script_level
+    end
+  end
 end
