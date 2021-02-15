@@ -66,26 +66,25 @@ export default class UnitCalendar extends React.Component {
     let allWeeks = [];
     let currWeek = [];
     let currMinutes = 0;
-
     // splitting lessons across weeks
-    let prev = null;
     lessonsCopy.forEach(lesson => {
       lesson.isStart = false;
       lesson.isEnd = false;
-      lesson.isMajority = true;
+      lesson.isMajority = false;
       const originalLessonDuration = lesson.duration;
       while (lesson.duration > 0) {
         let lessonClone = _.cloneDeep(lesson);
-        let added = false;
         if (currMinutes + lesson.duration <= weeklyInstructionalMinutes) {
           // If the rest of the current lesson fits into this week, put it in the schedule.
-          currMinutes = currMinutes + lesson.duration;
           if (originalLessonDuration === lesson.duration) {
             lessonClone.isStart = true;
           }
+          if (originalLessonDuration - lesson.duration <= lesson.duration) {
+            lessonClone.isMajority = true;
+          }
           lessonClone.isEnd = true;
           currWeek.push(lessonClone);
-          added = true;
+          currMinutes = currMinutes + lesson.duration;
           lesson.duration = 0;
         } else if (currMinutes < weeklyInstructionalMinutes - 15) {
           // If there's more than 15 minutes left in the week,
@@ -94,8 +93,10 @@ export default class UnitCalendar extends React.Component {
             lessonClone.isStart = true;
           }
           lessonClone.duration = weeklyInstructionalMinutes - currMinutes;
+          if (lesson.duration - lessonClone.duration < lessonClone.duration) {
+            lessonClone.isMajority = true;
+          }
           currWeek.push(lessonClone);
-          added = true;
           lesson.duration = lesson.duration - lessonClone.duration;
           currMinutes = weeklyInstructionalMinutes;
         } else {
@@ -103,16 +104,6 @@ export default class UnitCalendar extends React.Component {
           allWeeks.push(currWeek);
           currWeek = [];
           currMinutes = 0;
-        }
-        if (added) {
-          if (!lessonClone.isStart) {
-            if (prev.duration < lessonClone.duration) {
-              prev.isMajority = false;
-            } else {
-              lessonClone.isMajority = false;
-            }
-          }
-          prev = lessonClone;
         }
       }
     });
