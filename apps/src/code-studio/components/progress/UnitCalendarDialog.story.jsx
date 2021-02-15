@@ -29,7 +29,7 @@ const sampleLessonList = [
   {
     id: 4,
     title: 'Lesson 4',
-    duration: 40,
+    duration: 110,
     assessment: false,
     unplugged: false,
     url: 'https://www.google.com/'
