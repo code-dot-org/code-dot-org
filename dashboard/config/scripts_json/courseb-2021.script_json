@@ -229,7 +229,7 @@
         "overview": "Building on the concept of repeating instructions from \"Getting Loopy,\" this stage will have students using loops to pick corn more efficiently on Code.org.",
         "student_overview": "Help the Harvester collect even more, using loops!",
         "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using _loops_ is an important skill in programming because manually repeating commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be looped.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Review **CS Fundamentals Main Activity Tips - Lesson Recommendations**.\r\n - Make sure each student has a ** Think Spot Journal - Reflection Journal**.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - (Optional) If you haven't already, print and cut out blocks from **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** to prepare for one of the bridging activities in this lesson.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review **CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Make sure each student has a **Think Spot Journal - Reflection Journal**.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - (Optional) If you haven't already, print and cut out blocks from **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** to prepare for one of the bridging activities in this lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -795,7 +795,7 @@
       "key": "06b2458e-a834-46c5-842e-385c1fc97bc8",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Loops",
+        "name": "Bridging Activity - Choose One",
         "duration": 10
       },
       "seeding_key": {
@@ -837,11 +837,23 @@
       "key": "c0501fbb-bb65-4144-bc1c-56ea50bc7485",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "c0501fbb-bb65-4144-bc1c-56ea50bc7485",
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "csf_loops",
+        "script.name": "courseb-2021"
+      }
+    },
+    {
+      "key": "3ffb2700-4b4c-4deb-a009-856be4b850da",
+      "position": 6,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ffb2700-4b4c-4deb-a009-856be4b850da",
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "csf_loops",
         "script.name": "courseb-2021"
@@ -865,8 +877,7 @@
       "key": "271b3e90-37d9-47af-8d64-d5362179007f",
       "position": 2,
       "properties": {
-        "name": "Online Foundation: Preview Loops in Collector",
-        "duration": 0
+        "name": "Online Foundation: Preview Loops in Collector"
       },
       "seeding_key": {
         "lesson_activity.key": "271b3e90-37d9-47af-8d64-d5362179007f",
@@ -898,6 +909,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9",
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "csf_loops",
+        "script.name": "courseb-2021"
+      }
+    },
+    {
+      "key": "352bcbca-fe70-41d4-8d38-7cfed390e991",
+      "position": 5,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "352bcbca-fe70-41d4-8d38-7cfed390e991",
         "lesson.key": "Loops in Collector",
         "lesson_group.key": "csf_loops",
         "script.name": "courseb-2021"
@@ -940,6 +964,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ad9b2654-4506-4741-9f53-5699cb20615d",
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "courseb-2021"
+      }
+    },
+    {
+      "key": "3ed032b9-b27d-4c86-8aff-1e60ba90a038",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ed032b9-b27d-4c86-8aff-1e60ba90a038",
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "csf_loops",
         "script.name": "courseb-2021"
@@ -1985,7 +2022,7 @@
       "key": "bd8c9fb2-0968-4f8e-8186-c54ac0fc9870",
       "position": 1,
       "properties": {
-        "description": "This activity will help bring the unplugged concepts from \"Getting Loopy\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
+        "description": "These activities will help bring the unplugged concepts from \"Getting Loopy\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "bd8c9fb2-0968-4f8e-8186-c54ac0fc9870",
@@ -1996,7 +2033,7 @@
       "key": "312282bb-1122-4f51-b143-605d761309d1",
       "position": 2,
       "properties": {
-        "description": "Revisit the dance from \"Getting Loopy.\"  This time, work with the class to \"code\" it out using **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** instead of writing the dance instructions on paper. Make sure the students know that the blocks need to go from top to bottom and they all need to touch!",
+        "description": "Revisit the dance from \"Getting Loopy.\"  This time, work with the class to \"code\" it out using **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** instead of writing the dance instructions on paper. Make sure the students know that the blocks need to go from top to bottom and they all need to touch!\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -2021,7 +2058,7 @@
       "position": 1,
       "properties": {
         "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop.",
-        "name": "Online Puzzles\r"
+        "name": "Loops with Harvester"
       },
       "seeding_key": {
         "activity_section.key": "11be2bd6-803f-4a86-9f3c-f366fbcbea4b",
@@ -2032,7 +2069,6 @@
       "key": "297c2fd4-5c7e-4e3a-961a-844203b345e4",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2044,7 +2080,6 @@
       "key": "a58a0e8a-e277-4309-92c4-990cc99c53b4",
       "position": 3,
       "properties": {
-        "name": "Repeat Blocks",
         "progression_name": "Repeat Blocks"
       },
       "seeding_key": {
@@ -2056,7 +2091,6 @@
       "key": "67ec9493-9942-4f64-b3dc-8870f4e30fdc",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2068,7 +2102,6 @@
       "key": "b07cbcb7-9e8e-4a05-a906-8621ce42cb95",
       "position": 5,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2080,7 +2113,6 @@
       "key": "cb321e7e-953a-4d73-a614-39cb86ef8b15",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2092,7 +2124,7 @@
       "key": "8342e7d2-b605-4c73-80a9-2d3d97aad783",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image] that shows how you felt about today's lesson in the corner of your journal page.\r\n - How did loops make your program easier to write?\r\n - Draw something that uses loops.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)\n that shows how you felt about today's lesson in the corner of your journal page.\n - How did loops make your program easier to write?\n - Draw something that uses loops.",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -2109,6 +2141,17 @@
       "seeding_key": {
         "activity_section.key": "edccf663-8ffc-4d68-973b-04b5dc5cdcfd",
         "lesson_activity.key": "c0501fbb-bb65-4144-bc1c-56ea50bc7485"
+      }
+    },
+    {
+      "key": "73d6d577-ed28-4b7a-948a-8c9aea13dec4",
+      "position": 1,
+      "properties": {
+        "description": "####Corn Crazy Choice Board (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Science**\n\n[Corn Crazy Choice Board](https://docs.google.com/document/d/1fFXhTfqPGrAyiyYWhh8Wfc6eRaDJh8F2iFRJqXPXxTI/edit#heading=h.oa0z8i3xy1ys) is an optional activity aligned to Common Core ELA and Next Generation Science Standards, written by our teacher community. Students will practice their speaking and listening skills as they determine which properties of Harvester’s corn can be used to solve a human problem through biomimicry.\n\n*Standards Addressed:*\n \n**CCSS.ELA-LITERACY.SL.1.1.A:** Follow agreed-upon rules for discussions (e.g., listening to others with care, speaking one at a time about the topics and texts under discussion).\n\n**CCSS.ELA-LITERACY.SL.1.1.B:** Build on others' talk in conversations by responding to the comments of others through multiple exchanges.\n\n**CCSS.ELA-LITERACY.SL.1.1.C:** Ask questions to clear up any confusion about the topics and texts under discussion.\n\n**NGSS.1-LS1-1:** Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs."
+      },
+      "seeding_key": {
+        "activity_section.key": "73d6d577-ed28-4b7a-948a-8c9aea13dec4",
+        "lesson_activity.key": "3ffb2700-4b4c-4deb-a009-856be4b850da"
       }
     },
     {
@@ -2139,7 +2182,7 @@
       "position": 1,
       "properties": {
         "description": "#### Teacher Demonstration\r\n\r\nWe've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\r\n\r\nPrediction Levels:\r\n\r\n - [Course B, Loops in Collector](https://studio.code.org/levels/8746)",
-        "name": "Online Puzzles\r"
+        "name": "Loops with Laurel"
       },
       "seeding_key": {
         "activity_section.key": "080f9c60-77da-4902-a7ba-a5b21efd9aca",
@@ -2150,7 +2193,6 @@
       "key": "fe653971-9c18-44ee-adbc-727e8978b387",
       "position": 2,
       "properties": {
-        "name": "The Collector",
         "progression_name": "The Collector"
       },
       "seeding_key": {
@@ -2162,7 +2204,6 @@
       "key": "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2174,7 +2215,6 @@
       "key": "9bffbabf-f624-49e2-b54b-52317b420600",
       "position": 4,
       "properties": {
-        "name": "Using the Repeat Block",
         "progression_name": "Using the Repeat Block"
       },
       "seeding_key": {
@@ -2186,7 +2226,6 @@
       "key": "c96009cd-a4d7-491a-9ce5-433a04f9fd08",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2198,7 +2237,6 @@
       "key": "9b293bbc-d3e3-494d-892e-f90e56347451",
       "position": 6,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2210,7 +2248,6 @@
       "key": "8c213233-f661-45be-9898-31c343bba987",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2222,6 +2259,7 @@
       "key": "eedc7420-83ed-420a-8bfe-db3e70719c14",
       "position": 8,
       "properties": {
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "eedc7420-83ed-420a-8bfe-db3e70719c14",
@@ -2243,12 +2281,23 @@
       "key": "b4e46590-0e84-4574-9230-c8fb9e768647",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the **Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw a line of treasure that Laurel could collect.\r\n - Draw something that uses loops.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a line of treasure that Laurel could collect.\n - Draw something that uses loops.",
         "name": "Journaling\r"
       },
       "seeding_key": {
         "activity_section.key": "b4e46590-0e84-4574-9230-c8fb9e768647",
         "lesson_activity.key": "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9"
+      }
+    },
+    {
+      "key": "9dca7720-b4ca-46ac-9d8a-c224721ddb12",
+      "position": 1,
+      "properties": {
+        "description": "###Treasure Tracker (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png)  ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + English Language Arts + Math**\n\n[Treasure Tracker](https://www.google.com/url?q=https://docs.google.com/document/d/1WyrORBKmFRYyAGRokCVN9TuBS5TNDvUtltlUiKSWwIo/edit&sa=D&source=editors&ust=1613260836480000&usg=AFQjCNErmCoQ1jd5s0fvi29aLJwztIwTRw)  is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will help Laurel track her treasure as she counts and categorizes her loot!\n\n*Standards Addressed:*\n \n**CCSS.ELA-LITERACY.L.1.5.A:** Sort words into categories (e.g., colors, clothing) to gain a sense of the concepts the categories represent.\n\n**CCSS.MATH.CONTENT.1.OA.A.1:** Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.\n\n**CCSS.MATH.CONTENT.1.OA.A.2:** Solve word problems that call for addition of three whole numbers whose sum is less than or equal to 20, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dca7720-b4ca-46ac-9d8a-c224721ddb12",
+        "lesson_activity.key": "352bcbca-fe70-41d4-8d38-7cfed390e991"
       }
     },
     {
@@ -2268,7 +2317,7 @@
       "position": 1,
       "properties": {
         "description": "#### Teacher Demonstration",
-        "name": "Online Puzzles\r"
+        "name": "Drawing Gardens with Loops"
       },
       "seeding_key": {
         "activity_section.key": "bda516c5-109b-4218-abf8-09040809f5fe",
@@ -2281,9 +2330,8 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online - Video](https://www.youtube.com/watch?v=rgbZAWnOWOo).\n"
           }
         ]
       },
@@ -2307,7 +2355,6 @@
       "key": "6bf24dc0-0251-49fc-b9d2-04603cbb7a06",
       "position": 4,
       "properties": {
-        "name": "The Artist in Code Studio",
         "progression_name": "The Artist in Code Studio"
       },
       "seeding_key": {
@@ -2319,7 +2366,6 @@
       "key": "c2a65792-3f2c-49f9-8cba-8b8f975f5f90",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2331,7 +2377,6 @@
       "key": "efc2a144-0a89-4201-966f-4b4287b12177",
       "position": 6,
       "properties": {
-        "name": "Repeat Blocks with the Artist",
         "progression_name": "Repeat Blocks with the Artist"
       },
       "seeding_key": {
@@ -2343,7 +2388,6 @@
       "key": "c96a7cbe-674b-41b9-b829-a62377a97e1a",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2355,7 +2399,6 @@
       "key": "000254d0-54ca-4866-b12c-f3d4c387cbbc",
       "position": 8,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2367,7 +2410,6 @@
       "key": "a7cf273e-6085-402a-bf47-e5985364e7a2",
       "position": 9,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2379,7 +2421,6 @@
       "key": "22891986-f61f-4e37-aae4-177019581071",
       "position": 10,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2391,6 +2432,7 @@
       "key": "6c661991-bf9d-4271-a318-5878b3ef438c",
       "position": 11,
       "properties": {
+        "progression_name": "Challenge Levels"
       },
       "seeding_key": {
         "activity_section.key": "6c661991-bf9d-4271-a318-5878b3ef438c",
@@ -2401,12 +2443,23 @@
       "key": "4ff7f892-7990-4917-9a54-92ad7d8c2335",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the **Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw the patterns you made with a loop.\r\n - Draw a pattern that you would like to make with a loop.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw the patterns you made with a loop.\n - Draw a pattern that you would like to make with a loop.",
         "name": "Journaling\r"
       },
       "seeding_key": {
         "activity_section.key": "4ff7f892-7990-4917-9a54-92ad7d8c2335",
         "lesson_activity.key": "ad9b2654-4506-4741-9f53-5699cb20615d"
+      }
+    },
+    {
+      "key": "bd7a8ad1-e3a1-441a-89e7-eba01f59a615",
+      "position": 1,
+      "properties": {
+        "description": "###Loopy Shapes (30-45 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png)  ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + English Language Arts + Math**\n\n[Loopy Shapes](https://docs.google.com/document/d/1bFOIBY40RMppmUFlAa7Cb0O28mej5lEw2yc7NxkNrWo/edit#heading=h.vowrbq6ykmt2) is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Working with a partner, students will use loops to program two-dimensional shape while using collaborative conversations to ask clarifying questions.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.SL.1.1:** Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.\n\n- **CCSS.ELA-LITERACY.SL.1.1.C:** Ask questions to clear up any confusion about the topics and texts under discussion.\n\n- **CCSS.ELA-LITERACY.SL.1.5:** Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.\n\n- **CCSS.MATH.CONTENT.1.G.A.2:** Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd7a8ad1-e3a1-441a-89e7-eba01f59a615",
+        "lesson_activity.key": "3ed032b9-b27d-4c86-8aff-1e60ba90a038"
       }
     },
     {
@@ -3687,7 +3740,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Getting Loopy - Unplugged Video"
+        "progression": "Getting Loopy - Unplugged Video",
+        "level_keys": [
+          "GettingLoopy-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3708,7 +3764,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3734,7 +3790,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3760,7 +3816,7 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Repeat Blocks",
         "level_keys": [
@@ -3786,7 +3842,7 @@
       "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3812,7 +3868,7 @@
       "chapter": 42,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3838,7 +3894,7 @@
       "chapter": 43,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3864,7 +3920,7 @@
       "chapter": 44,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3890,7 +3946,7 @@
       "chapter": 45,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3916,7 +3972,7 @@
       "chapter": 46,
       "position": 9,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3942,7 +3998,7 @@
       "chapter": 47,
       "position": 10,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3968,7 +4024,7 @@
       "chapter": 48,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3995,7 +4051,7 @@
       "chapter": 49,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4021,7 +4077,7 @@
       "chapter": 50,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4047,7 +4103,7 @@
       "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Collector",
         "level_keys": [
@@ -4073,7 +4129,7 @@
       "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4099,7 +4155,7 @@
       "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4125,7 +4181,7 @@
       "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the Repeat Block",
         "level_keys": [
@@ -4151,7 +4207,7 @@
       "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4177,7 +4233,7 @@
       "chapter": 56,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4203,7 +4259,7 @@
       "chapter": 57,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4229,7 +4285,7 @@
       "chapter": 58,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4255,7 +4311,7 @@
       "chapter": 59,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4281,7 +4337,7 @@
       "chapter": 60,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4308,7 +4364,7 @@
       "chapter": 61,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4334,7 +4390,7 @@
       "chapter": 62,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4360,7 +4416,7 @@
       "chapter": 63,
       "position": 13,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4386,11 +4442,12 @@
       "chapter": 64,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_collector_loops_challenge1_2021"
-        ]
+        ],
+        "progression": "Lesson Extras"
       },
       "named_level": null,
       "bonus": true,
@@ -4411,11 +4468,12 @@
       "chapter": 65,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_collector_loops_challenge2a_2021"
-        ]
+        ],
+        "progression": "Lesson Extras"
       },
       "named_level": null,
       "bonus": true,
@@ -4436,7 +4494,7 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Artist in Code Studio",
         "level_keys": [
@@ -4462,7 +4520,7 @@
       "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4488,7 +4546,7 @@
       "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Repeat Blocks with the Artist",
         "level_keys": [
@@ -4514,7 +4572,7 @@
       "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4540,7 +4598,7 @@
       "chapter": 70,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4566,7 +4624,7 @@
       "chapter": 71,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4592,7 +4650,7 @@
       "chapter": 72,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4618,7 +4676,7 @@
       "chapter": 73,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4644,7 +4702,7 @@
       "chapter": 74,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4671,7 +4729,7 @@
       "chapter": 75,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4697,7 +4755,7 @@
       "chapter": 76,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4723,7 +4781,7 @@
       "chapter": 77,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4749,11 +4807,12 @@
       "chapter": 78,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_artist_loops_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge Levels"
       },
       "named_level": null,
       "bonus": true,
@@ -4774,11 +4833,12 @@
       "chapter": 79,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_artist_loops_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge Levels"
       },
       "named_level": null,
       "bonus": true,

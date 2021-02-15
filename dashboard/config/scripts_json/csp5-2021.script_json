@@ -639,7 +639,6 @@
       "key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97",
@@ -685,19 +684,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "000523bf-2e1f-477c-b7ae-e62cfd34498e",
-        "lesson.key": "Lists Investigate",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373",
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021"
@@ -859,7 +845,6 @@
       "key": "24256e70-e392-49e8-a571-6bfb91738b6c",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "24256e70-e392-49e8-a571-6bfb91738b6c",
@@ -914,7 +899,6 @@
       "key": "14a84aad-343a-4889-9683-1903951f99b9",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9",
@@ -1520,14 +1504,7 @@
       "key": "ad81ee6a-1ae7-4fa4-a08e-6475f2e1b2d9",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students discuss with a partner and then have a few students share out their responses.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goal:** \r\n\r\n* Lists help us group together like information\r\n* We can go through a list item by item to check off things we have completed\r\n* Lists help us stay organized\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students discuss with a partner and then have a few students share out their responses.\n\n**Discussion Goal:** \n\n* Lists help us group together like information\n* We can go through a list item by item to check off things we have completed\n* Lists help us stay organized\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ad81ee6a-1ae7-4fa4-a08e-6475f2e1b2d9",
@@ -1547,20 +1524,20 @@
       }
     },
     {
-      "key": "ee21799f-e0f9-4836-98de-42e56c50b129",
-      "position": 1,
+      "key": "720a36aa-7b69-4a65-b9ac-daa7401eb3e7",
+      "position": 2,
       "properties": {
-        "description": "[slide] \r\n **Video:** As a class watch both videos on lists. \r\n\r\n\r\n[slide] \r\n**Do This:** Review Key Takeaways and have students add to their journals: lists, element, and index.\r\n\r\n---",
-        "name": "Video and Vocabulary\r"
+        "name": "Video and Vocabulary\r",
+        "description": "[slide] \r\n **Video:** As a class watch both videos on lists. \r\n\r\n\r\n[slide] \r\n**Do This:** Review Key Takeaways and have students add to their journals: lists, element, and index.\r\n\r\n---"
       },
       "seeding_key": {
-        "activity_section.key": "ee21799f-e0f9-4836-98de-42e56c50b129",
-        "lesson_activity.key": "86b6aeb8-b8db-4c5e-8562-7428898febbf"
+        "activity_section.key": "720a36aa-7b69-4a65-b9ac-daa7401eb3e7",
+        "lesson_activity.key": "98e2cec8-7aaf-44b9-a7a3-7b68b9db1981"
       }
     },
     {
       "key": "f1fb9fbc-9d59-4944-9c97-1c7900bee919",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match the index with the value. `var myNumbers = [32, 64, 33, 0, 15, 26, 3]`",
         "name": "Assessment: Check For Understanding\r"
@@ -1574,7 +1551,6 @@
       "key": "45e799b2-8b70-49e3-8e7a-f8ee7d130c42",
       "position": 1,
       "properties": {
-        "name": "Introduction to Lists",
         "progression_name": "Introduction to Lists"
       },
       "seeding_key": {
@@ -1586,7 +1562,6 @@
       "key": "8fee2296-7332-439a-931d-cbb357a0bb76",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1598,13 +1573,7 @@
       "key": "22844107-66ce-4b99-b711-0844a7a2f9d3",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** What are some similarities and differences between variables and lists? How does a list manage complexity in a program?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goal:** Students may bring up the following points:\r\n\r\n* Both are used to store information\r\n* Lists store multiple items, but variables only store one\r\n* When written in Javascript, both start with the keyword var\r\n* Lists are written with square brackets around them \r\n* Lists can store many different types of data\r\n\r\nManaging complexity:\r\n\r\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\r\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide] \n **Prompt:** What are some similarities and differences between variables and lists? How does a list manage complexity in a program?\n\n**Discussion Goal:** Students may bring up the following points:\n\n* Both are used to store information\n* Lists store multiple items, but variables only store one\n* When written in Javascript, both start with the keyword var\n* Lists are written with square brackets around them \n* Lists can store many different types of data\n\nManaging complexity:\n\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "22844107-66ce-4b99-b711-0844a7a2f9d3",
@@ -1612,11 +1581,11 @@
       }
     },
     {
-      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
+      "key": "a2686ced-42c1-4d9d-aab6-d15f823407a7",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n**Level 2 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n**Group:** Place students in pairs.\r\n\r\n[slide] \r\n **Levels 3 - 4: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\r\n\r\n\r\n[slide] \r\n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.",
-        "name": "Accessing Lists - 20 mins\r",
+        "name": "Accessing Lists",
+        "duration": "20",
         "tips": [
           {
             "type": "teachingTip",
@@ -1625,15 +1594,37 @@
         ]
       },
       "seeding_key": {
+        "activity_section.key": "a2686ced-42c1-4d9d-aab6-d15f823407a7",
+        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
+      }
+    },
+    {
+      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
+      "position": 2,
+      "properties": {
+        "description": "[slide] \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n[slide] \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n[slide] \n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room."
+      },
+      "seeding_key": {
         "activity_section.key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
         "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
       }
     },
     {
-      "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
-      "position": 2,
+      "key": "f5bbc83d-7b11-4ec2-a767-4835b7842920",
+      "position": 3,
       "properties": {
-        "description": "[slide] \r\n **Level 5 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n\r\n[slide] \r\n **Levels 6 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\r\n\r\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.",
+        "progression_name": "Accessing Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920",
+        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
+      }
+    },
+    {
+      "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
+      "position": 4,
+      "properties": {
+        "description": "[slide] \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n[slide] \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.",
         "name": "Changing Lists\r"
       },
       "seeding_key": {
@@ -1642,8 +1633,19 @@
       }
     },
     {
+      "key": "3a855513-f086-4945-8d20-3e097a32f4cb",
+      "position": 5,
+      "properties": {
+        "progression_name": "Changing Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb",
+        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
+      }
+    },
+    {
       "key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "If there is time remaining, have pairs return to one or more of the apps and make the suggested modifications.",
         "name": "Modify Apps\r"
@@ -1657,7 +1659,7 @@
       "key": "830879c3-3038-4920-992e-185f705b5a11",
       "position": 1,
       "properties": {
-        "description": "**Levels 7-8:** Review the patterns in these levels as a class.\r\n\r\n* Have students add any relevant notes about the patterns to their journals.\r\n* Discuss which of the three apps you think were using which pattern.",
+        "description": "**Levels 6-7:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which of the three apps you think were using which pattern.",
         "name": "Patterns Review\r"
       },
       "seeding_key": {
@@ -1666,16 +1668,21 @@
       }
     },
     {
-      "key": "352086b2-e0d2-4ef8-a188-410cbaa1c5fb",
+      "key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49",
       "position": 2,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\r\n\r\n"
-          }
-        ],
+        "progression_name": "List Patterns"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49",
+        "lesson_activity.key": "000523bf-2e1f-477c-b7ae-e62cfd34498e"
+      }
+    },
+    {
+      "key": "352086b2-e0d2-4ef8-a188-410cbaa1c5fb",
+      "position": 3,
+      "properties": {
+        "description": "[slide] \n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?\n\n**Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\n\n",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -1685,49 +1692,13 @@
     },
     {
       "key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Discuss:** Have students write in their journals, then share with a neighbor, then finally discuss as a class."
       },
       "seeding_key": {
         "activity_section.key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
         "lesson_activity.key": "000523bf-2e1f-477c-b7ae-e62cfd34498e"
-      }
-    },
-    {
-      "key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1",
-      "position": 1,
-      "properties": {
-        "name": "Accessing Lists",
-        "progression_name": "Accessing Lists"
-      },
-      "seeding_key": {
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1",
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373"
-      }
-    },
-    {
-      "key": "36252583-6c0a-4461-83c5-4514685b17cd",
-      "position": 2,
-      "properties": {
-        "name": "Changing Lists",
-        "progression_name": "Changing Lists"
-      },
-      "seeding_key": {
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd",
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373"
-      }
-    },
-    {
-      "key": "cc12032e-46ff-4ced-b428-7780d258e212",
-      "position": 3,
-      "properties": {
-        "name": "List Patterns",
-        "progression_name": "List Patterns"
-      },
-      "seeding_key": {
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212",
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373"
       }
     },
     {
@@ -2149,18 +2120,27 @@
       }
     },
     {
-      "key": "6f01eeac-b8d9-4934-9d6c-6f502f16ccee",
+      "key": "dc931c66-1eab-4f26-9fe5-2dfe4bd7f46d",
       "position": 1,
       "properties": {
-        "description": "[slide]   **Distribute:** The activity today involves a lot of moving pieces. Take this time at the beginning of class to pass out supplies and pair students.",
+        "name": "Set-up",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Supplies Substitutions:** \r\n\r\n* The game pieces can be replaced with knick-knacks, tokens, markers, paperclips, or scraps of paper.\r\n* The \"robot\" can be any small item that is clearly facing a direction. It could be as simple as a scrap of paper shaped like a triangle or a paperclip with googly eyes. \r\n\r\n"
+            "markdown": "**Supplies Substitutions:** \n\n* The game pieces can be replaced with knick-knacks, tokens, markers, paperclips, or scraps of paper.\n* The \"robot\" can be any small item that is clearly facing a direction. It could be as simple as a scrap of paper shaped like a triangle or a paperclip with googly eyes. \n\n"
           }
-        ],
-        "name": "Set-up\r"
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc931c66-1eab-4f26-9fe5-2dfe4bd7f46d",
+        "lesson_activity.key": "0c3a2eb5-b1ca-4f7f-a9d7-860e397a713d"
+      }
+    },
+    {
+      "key": "6f01eeac-b8d9-4934-9d6c-6f502f16ccee",
+      "position": 2,
+      "properties": {
+        "description": "[slide]   **Distribute:** The activity today involves a lot of moving pieces. Take this time at the beginning of class to pass out supplies and pair students."
       },
       "seeding_key": {
         "activity_section.key": "6f01eeac-b8d9-4934-9d6c-6f502f16ccee",
@@ -2169,7 +2149,7 @@
     },
     {
       "key": "9321d86c-69a9-48ad-97b2-1e8c644b266c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "Per pair of students:\r\n\r\n* 1 game board\r\n* 1 \"robot\"\r\n* Game pieces, markers, or tokens that can be used to represent barriers\r\n\r\n**Group:** Put students in groups of two."
       },
@@ -2179,31 +2159,30 @@
       }
     },
     {
-      "key": "0955ca3f-4dce-4124-a915-53a3ede87355",
+      "key": "51069f57-c172-4467-ab6d-8b722d13a545",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \r\n\r\n\r\n\r\n\r\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: `moveForward()`. <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command `turnRight()` <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command `turnLeft()`  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |",
-        "name": "Loops  \r"
-      },
-      "seeding_key": {
-        "activity_section.key": "0955ca3f-4dce-4124-a915-53a3ede87355",
-        "lesson_activity.key": "c4b3f93b-e745-48ca-9484-e1db79ae86f3"
-      }
-    },
-    {
-      "key": "cbb76f11-afc3-465b-80c6-dfe82aa7d0d1",
-      "position": 2,
-      "properties": {
+        "name": "Loops  ",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\r\n\r\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \r\n\r\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\r\n\r\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\r\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\r\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\r\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
+            "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\n\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \n\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\n\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "cbb76f11-afc3-465b-80c6-dfe82aa7d0d1",
+        "activity_section.key": "51069f57-c172-4467-ab6d-8b722d13a545",
+        "lesson_activity.key": "c4b3f93b-e745-48ca-9484-e1db79ae86f3"
+      }
+    },
+    {
+      "key": "0955ca3f-4dce-4124-a915-53a3ede87355",
+      "position": 2,
+      "properties": {
+        "description": "[slide] \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \r\n\r\n\r\n\r\n\r\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: `moveForward()`. <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command `turnRight()` <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command `turnLeft()`  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |"
+      },
+      "seeding_key": {
+        "activity_section.key": "0955ca3f-4dce-4124-a915-53a3ede87355",
         "lesson_activity.key": "c4b3f93b-e745-48ca-9484-e1db79ae86f3"
       }
     },
@@ -2234,7 +2213,6 @@
       "key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e",
       "position": 1,
       "properties": {
-        "name": "Introduction to Loops",
         "progression_name": "Introduction to Loops"
       },
       "seeding_key": {
@@ -2246,7 +2224,6 @@
       "key": "b1dab762-59b7-44b1-a615-4197a822c677",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -2269,14 +2246,7 @@
       "key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Compare your algorithms with a partner and then discuss as a class.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\r\n\r\n* Repeat 20 times:\r\n\t* Stand at the entry doors to the school.\r\n\t* Start the timer.\r\n\t* Walk at a steady pace to the end of the hallway. \r\n\t* Turn off the timer.\r\n\t* Record the time in a notebook.\r\n\t* Walk back to the entry doors.\r\n\r\n* Add all times together.\r\n* Divide by 20 to find the average.\r\n\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Compare your algorithms with a partner and then discuss as a class.\n\n**Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\n\n* Repeat 20 times:\n\t* Stand at the entry doors to the school.\n\t* Start the timer.\n\t* Walk at a steady pace to the end of the hallway. \n\t* Turn off the timer.\n\t* Record the time in a notebook.\n\t* Walk back to the entry doors.\n\n* Add all times together.\n* Divide by 20 to find the average.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
@@ -2301,7 +2271,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "For this lesson, there are two separate investigations of two different apps. Lead the class through discussions, and circulate around the classroom as students work. \n\nAs time allows, encourage students to do the Modify tasks for each level. This will give students extra practice.\n"
           }
@@ -2316,14 +2285,7 @@
       "key": "b5c73127-81e0-4658-9e0e-440a67548712",
       "position": 2,
       "properties": {
-        "description": "[slide]\n**Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
-          }
-        ]
+        "description": "[slide]\n**Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?\n\n**Goal:** Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b5c73127-81e0-4658-9e0e-440a67548712",
@@ -2346,7 +2308,7 @@
       "key": "839ce746-43d9-403c-b12a-35b4a5beddee",
       "position": 4,
       "properties": {
-        "description": "[slide] \n **Group:** Place students in pairs and have them navigate to the lesson on Code Studio. \n\n\n[slide] \n **Level 2 - Coin Flipper App:** This code investigation includes a number of steps to help students get familiar with a new app. Students run the app and discuss the following:\n\n* What information does the user input?\n* How does the app process that information?\n\t* What is being repeated?\n\t* Where is there an opportunity to use a loop?\n* What information does the app output?\n\n\n\n[slide] \n **Level 3 - Coin Flipper App:** Students navigate to Level 3, run the program, watch the code run, and carefully read each individual part of the program before discussing the following:\n  \n\n[slide] \n Run the program for 10 coin flips, 100 coin flips, and 10,000 coin flips. When do you notice it taking longer?\n* On what lines of code is the program using a loop?\n* Which lines of code decide how many times to flip the coin?\n* What does the `++` command seem to do?"
+        "description": "[slide] \n **Group:** Place students in pairs and have them navigate to the lesson on Code Studio. \n\n\n[slide] \n **Level 1 - Coin Flipper App:** This code investigation includes a number of steps to help students get familiar with a new app. Students run the app and discuss the following:\n\n* What information does the user input?\n* How does the app process that information?\n\t* What is being repeated?\n\t* Where is there an opportunity to use a loop?\n* What information does the app output?\n\n\n\n[slide] \n **Level 2 - Coin Flipper App:** Students navigate to Level 3, run the program, watch the code run, and carefully read each individual part of the program before discussing the following:\n  \n\n[slide] \n Run the program for 10 coin flips, 100 coin flips, and 10,000 coin flips. When do you notice it taking longer?\n* On what lines of code is the program using a loop?\n* Which lines of code decide how many times to flip the coin?\n* What does the `++` command seem to do?"
       },
       "seeding_key": {
         "activity_section.key": "839ce746-43d9-403c-b12a-35b4a5beddee",
@@ -2354,17 +2316,21 @@
       }
     },
     {
-      "key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
+      "key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9",
       "position": 5,
       "properties": {
-        "description": "[slide] \n **Prompt:** How does a loop help when running similar simulations?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
-          }
-        ]
+        "progression_name": "Coin Flipper App"
+      },
+      "seeding_key": {
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9",
+        "lesson_activity.key": "786b1b6e-0ae9-4a64-a7cc-c974ba017716"
+      }
+    },
+    {
+      "key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
+      "position": 6,
+      "properties": {
+        "description": "[slide] \n **Prompt:** How does a loop help when running similar simulations?\n\n**Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
@@ -2373,7 +2339,7 @@
     },
     {
       "key": "78f562b5-b41e-4efe-86ef-0fee66b3ab09",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "Now let's investigate an app that uses loops in a different way. This time loops are used to update elements on the screen.",
         "remarks": true
@@ -2384,10 +2350,22 @@
       }
     },
     {
-      "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
-      "position": 7,
+      "key": "152bfd79-ab84-4edd-b002-2997fd4a40b2",
+      "position": 8,
       "properties": {
-        "description": "[slide] \n **Level 4 - Font Tester App:** Students navigate to Level 4 and run the app before discussing the following:  \n\n\n[slide] \n**Prompt:** Find the four different for loops in the program. What do they each do?\n \n[slide] **Prompt:** Take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
+        "description": "[slide] \n **Level 3 - Font Tester App:** Students navigate to Level 3 and run the app before discussing the following:  ",
+        "progression_name": "Font Tester App"
+      },
+      "seeding_key": {
+        "activity_section.key": "152bfd79-ab84-4edd-b002-2997fd4a40b2",
+        "lesson_activity.key": "786b1b6e-0ae9-4a64-a7cc-c974ba017716"
+      }
+    },
+    {
+      "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
+      "position": 9,
+      "properties": {
+        "description": "[slide] \n**Prompt:** Find the four different for loops in the program. What do they each do?\n \n[slide] **Prompt:** Take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
       },
       "seeding_key": {
         "activity_section.key": "c862e5d9-df4a-4504-94b6-dd974574b589",
@@ -2410,14 +2388,7 @@
       "key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
       "position": 2,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
-          }
-        ]
+        "description": "[slide] \n **Prompt:** What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
@@ -2471,34 +2442,9 @@
       }
     },
     {
-      "key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c",
+      "key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
       "position": 1,
       "properties": {
-        "name": "Coin Flipper App",
-        "progression_name": "Coin Flipper App"
-      },
-      "seeding_key": {
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c",
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9"
-      }
-    },
-    {
-      "key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f",
-      "position": 2,
-      "properties": {
-        "name": "Font Tester App",
-        "progression_name": "Font Tester App"
-      },
-      "seeding_key": {
-        "activity_section.key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f",
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9"
-      }
-    },
-    {
-      "key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -3973,7 +3919,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -3999,7 +3945,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -4053,10 +3999,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Accessing Lists",
-        "level_keys": [
-          "Introduction to Lists - Part 4_2021"
-        ]
+        "progression": "Accessing Lists"
       },
       "named_level": null,
       "bonus": false,
@@ -4067,7 +4010,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       },
       "level_keys": [
         "Introduction to Lists - Part 4_2021"
@@ -4079,10 +4022,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Accessing Lists",
-        "level_keys": [
-          "U5 Lists Investigate Outfitly Code_2021"
-        ]
+        "progression": "Accessing Lists"
       },
       "named_level": null,
       "bonus": false,
@@ -4093,7 +4033,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       },
       "level_keys": [
         "U5 Lists Investigate Outfitly Code_2021"
@@ -4105,10 +4045,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Accessing Lists",
-        "level_keys": [
-          "U5 Lists Investigate Bandly Code_2021"
-        ]
+        "progression": "Accessing Lists"
       },
       "named_level": null,
       "bonus": false,
@@ -4119,7 +4056,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       },
       "level_keys": [
         "U5 Lists Investigate Bandly Code_2021"
@@ -4131,10 +4068,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Changing Lists",
-        "level_keys": [
-          "Introduction to Lists - Part 3_2021"
-        ]
+        "progression": "Changing Lists"
       },
       "named_level": null,
       "bonus": false,
@@ -4145,7 +4079,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       },
       "level_keys": [
         "Introduction to Lists - Part 3_2021"
@@ -4157,10 +4091,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Changing Lists",
-        "level_keys": [
-          "U5 Lists Investigate Partnersly Code_2021"
-        ]
+        "progression": "Changing Lists"
       },
       "named_level": null,
       "bonus": false,
@@ -4171,7 +4102,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       },
       "level_keys": [
         "U5 Lists Investigate Partnersly Code_2021"
@@ -4183,10 +4114,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "List Patterns",
-        "level_keys": [
-          "Random List Access Pattern_2021"
-        ]
+        "progression": "List Patterns"
       },
       "named_level": null,
       "bonus": false,
@@ -4197,7 +4125,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       },
       "level_keys": [
         "Random List Access Pattern_2021"
@@ -4209,10 +4137,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "List Patterns",
-        "level_keys": [
-          "List Scrolling Pattern_2021"
-        ]
+        "progression": "List Patterns"
       },
       "named_level": null,
       "bonus": false,
@@ -4223,7 +4148,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       },
       "level_keys": [
         "List Scrolling Pattern_2021"
@@ -4623,7 +4548,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Loops",
         "level_keys": [
@@ -4675,12 +4600,9 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Coin Flipper App",
-        "level_keys": [
-          "U5 Loops Investigate Coin Flipper Predict_2021"
-        ]
+        "progression": "Coin Flipper App"
       },
       "named_level": null,
       "bonus": null,
@@ -4691,7 +4613,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       },
       "level_keys": [
         "U5 Loops Investigate Coin Flipper Predict_2021"
@@ -4701,12 +4623,9 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Coin Flipper App",
-        "level_keys": [
-          "U5 Loops Investigate Coin Flipper_2021"
-        ]
+        "progression": "Coin Flipper App"
       },
       "named_level": null,
       "bonus": null,
@@ -4717,7 +4636,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       },
       "level_keys": [
         "U5 Loops Investigate Coin Flipper_2021"
@@ -4727,12 +4646,9 @@
       "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Font Tester App",
-        "level_keys": [
-          "U5 Loops Investigate Font Tester_2021"
-        ]
+        "progression": "Font Tester App"
       },
       "named_level": null,
       "bonus": null,
@@ -4743,7 +4659,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f"
+        "activity_section.key": "152bfd79-ab84-4edd-b002-2997fd4a40b2"
       },
       "level_keys": [
         "U5 Loops Investigate Font Tester_2021"
@@ -5732,7 +5648,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       }
     },
     {
@@ -5744,7 +5660,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       }
     },
     {
@@ -5756,7 +5672,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       }
     },
     {
@@ -5768,7 +5684,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       }
     },
     {
@@ -5780,7 +5696,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       }
     },
     {
@@ -5792,7 +5708,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       }
     },
     {
@@ -5804,7 +5720,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       }
     },
     {
@@ -6020,7 +5936,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       }
     },
     {
@@ -6032,7 +5948,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       }
     },
     {
@@ -6044,7 +5960,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f"
+        "activity_section.key": "152bfd79-ab84-4edd-b002-2997fd4a40b2"
       }
     },
     {
