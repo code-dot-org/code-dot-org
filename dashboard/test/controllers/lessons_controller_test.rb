@@ -726,50 +726,22 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'add script level via lesson update' do
     sign_in @levelbuilder
-
-    activity = @lesson.lesson_activities.create(
-      name: 'activity name',
-      position: 1,
-      key: 'activity-key'
-    )
-    section = activity.activity_sections.create(
-      name: 'section name',
-      position: 1,
-      key: 'section-key'
-    )
-
+    activity = create :lesson_activity, lesson: @lesson
+    section = create :activity_section, lesson_activity: activity
     level_to_add = create :maze, name: 'level-to-add'
 
-    @update_params['activities'] = [
-      {
-        id: activity.id,
-        name: 'activity name',
-        position: 1,
-        activitySections: [
-          {
-            id: section.id,
-            name: 'section name',
-            position: 1,
-            duration: 10,
-            progressionName: 'progression name',
-            scriptLevels: [
-              activitySectionPosition: 1,
-              activeId: level_to_add.id,
-              assessment: true,
-              levels: [
-                {
-                  id: level_to_add.id,
-                  name: level_to_add.name
-                }
-              ]
-            ]
-          }
-        ]
-      }
-    ].to_json
+    @lesson.reload
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    activities_data.first[:activitySections].first[:scriptLevels].push(
+      activitySectionPosition: 1,
+      activeId: level_to_add.id,
+      assessment: true,
+      levels: [{id: level_to_add.id, name: level_to_add.name}]
+    )
 
+    @update_params['activities'] = activities_data.to_json
     put :update, params: @update_params
-
+    assert_response :success
     @lesson.reload
 
     assert_equal activity, @lesson.lesson_activities.first
@@ -779,7 +751,6 @@ class LessonsControllerTest < ActionController::TestCase
     script_level = section.script_levels.first
     assert script_level.assessment
     refute script_level.bonus
-    assert_equal 'progression name', script_level.progression
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
