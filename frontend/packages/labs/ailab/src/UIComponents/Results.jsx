@@ -69,8 +69,8 @@ class Results extends Component {
                     {this.props.selectedFeatures.map((feature, index) => {
                       return <th key={index}>{feature}</th>;
                     })}
-                    <th>Expected Label</th>
-                    <th>Predicted Label</th>
+                    <th>Expected Label: {this.props.labelColumn}</th>
+                    <th>Predicted Label: {this.props.labelColumn}</th>
                   </tr>
                 </thead>
                 <tbody>
