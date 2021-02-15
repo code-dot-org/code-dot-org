@@ -175,7 +175,7 @@ describe('ScriptOverviewTopRow', () => {
       <ScriptOverviewTopRow
         {...defaultProps}
         showCalendar
-        lessons={testLessons}
+        unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
         viewAs={ViewType.Teacher}
       />
@@ -194,7 +194,7 @@ describe('ScriptOverviewTopRow', () => {
     const wrapper = shallow(
       <ScriptOverviewTopRow
         {...defaultProps}
-        lessons={testLessons}
+        unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
         viewAs={ViewType.Teacher}
       />
@@ -214,7 +214,7 @@ describe('ScriptOverviewTopRow', () => {
       <ScriptOverviewTopRow
         {...defaultProps}
         showCalendar
-        lessons={testLessons}
+        unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
         viewAs={ViewType.Student}
       />

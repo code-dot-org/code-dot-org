@@ -292,17 +292,10 @@ class Lesson < ApplicationRecord
   end
 
   def summarize_for_calendar
-    activities = lesson_activities.map(&:summarize)
-    duration = 0
-    activities.each do |activity|
-      if activity[:duration]
-        duration += activity[:duration]
-      end
-    end
     {
       id: id,
       title: localized_title,
-      duration: duration,
+      duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
       assessment: !!assessment,
       unplugged: script.is_migrated ? unplugged : display_as_unplugged, # TODO: Update to use unplugged property
       url: lesson_path(id: id)
