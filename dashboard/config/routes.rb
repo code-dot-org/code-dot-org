@@ -280,6 +280,9 @@ Dashboard::Application.routes.draw do
 
     get 'instructions', to: 'scripts#instructions'
 
+    ## TODO: Once we move levels over to /lessons as well combine the routing rules
+    resources :lessons, only: [:show], param: 'position'
+
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
       get 'extras', to: 'script_levels#stage_extras', format: false
@@ -314,7 +317,7 @@ Dashboard::Application.routes.draw do
   resources :courses, param: 'course_name'
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
-  resources :lessons, only: [:show, :edit, :update]
+  resources :lessons, only: [:edit, :update]
 
   resources :resources, only: [:create, :update]
   get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
@@ -771,7 +774,7 @@ Dashboard::Application.routes.draw do
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
-  get 'java_ide', to: 'java_ide#index'
+  get 'idelab', to: 'idelab#index'
 
   namespace :foorm do
     resources :forms, only: [:create] do
