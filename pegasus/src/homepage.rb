@@ -202,7 +202,10 @@ class Homepage
       }
 
       bhm_action = {
-        type: "celebrate_bhm",
+        type: "cta_link_white",
+        icon_class: "fa-arrow-circle-o-right",
+        href: "/blackhistorymonth",
+        plain_text: "Celebrate Black History Month with us!"
       }
 
       actions.push(I18n.locale == :"en-US" ? bhm_action : code_video_action)
