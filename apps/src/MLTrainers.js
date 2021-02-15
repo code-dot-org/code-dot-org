@@ -32,7 +32,10 @@ modelData = {
 */
 
 function convertTestValue(featureNumberKey, feature, value) {
-  return parseInt(featureNumberKey[feature][value]);
+  const convertedValue = Object.keys(featureNumberKey).includes(feature)
+    ? featureNumberKey[feature][value]
+    : value;
+  return parseInt(convertedValue);
 }
 
 export function predict(modelData) {
