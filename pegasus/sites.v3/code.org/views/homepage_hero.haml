@@ -97,6 +97,10 @@
         %div
           %a{onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
             %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px"}
+      - elsif entry[:type] == "cta_link_white"
+        %a.herohocbutton.herolink-white{href: entry[:href]}
+          %i.fa{class: entry[:icon_class]}
+          %span= entry[:plain_text]
 
   .clear{style: "clear: both"}
 
