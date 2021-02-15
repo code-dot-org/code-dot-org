@@ -18,6 +18,12 @@ var toTranspileWithinNodeModules = [
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
   path.resolve(__dirname, 'node_modules', 'vmsg'),
+  path.resolve(__dirname, 'node_modules', 'ml-knn'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-max'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-min'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-rescale'),
+  path.resolve(__dirname, 'node_modules', 'ml-distance-euclidean'),
+
   path.resolve(
     __dirname,
     'node_modules',
