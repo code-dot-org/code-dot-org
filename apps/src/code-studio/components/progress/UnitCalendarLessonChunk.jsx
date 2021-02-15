@@ -8,7 +8,8 @@ const styles = {
   box: {
     margin: 5,
     color: '#333',
-    textDecorationLine: 'none'
+    textDecorationLine: 'none',
+    boxSizing: 'border-box'
   },
   boxContent: {
     display: 'flex',
@@ -41,8 +42,7 @@ const styles = {
     borderRightStyle: 'dashed'
   },
   titleText: {
-    width: '100%',
-    paddingRight: 15
+    width: '100%'
   },
   iconSection: {
     display: 'flex',
@@ -114,30 +114,32 @@ class UnitCalendarLessonChunk extends Component {
             onMouseEnter={this.handleMouseEnter}
             onMouseOut={this.handleMouseOut}
           >
-            <div
-              key={`lesson-${id}`}
-              style={styles.iconSection}
-              onMouseEnter={this.handleMouseEnter}
-              onMouseOut={this.handleMouseOut}
-            >
-              <FontAwesome
-                icon="check-circle"
-                style={{
-                  color: isHover ? color.white : color.purple,
-                  visibility: assessment ? 'visible' : 'hidden'
-                }}
+            {(assessment || unplugged) && (
+              <div
+                key={`lesson-${id}`}
+                style={styles.iconSection}
                 onMouseEnter={this.handleMouseEnter}
                 onMouseOut={this.handleMouseOut}
-              />
-              <FontAwesome
-                icon="scissors"
-                style={{
-                  visibility: unplugged ? 'visible' : 'hidden'
-                }}
-                onMouseEnter={this.handleMouseEnter}
-                onMouseOut={this.handleMouseOut}
-              />
-            </div>
+              >
+                <FontAwesome
+                  icon="check-circle"
+                  style={{
+                    color: isHover ? color.white : color.purple,
+                    visibility: assessment ? 'visible' : 'hidden'
+                  }}
+                  onMouseEnter={this.handleMouseEnter}
+                  onMouseOut={this.handleMouseOut}
+                />
+                <FontAwesome
+                  icon="scissors"
+                  style={{
+                    visibility: unplugged ? 'visible' : 'hidden'
+                  }}
+                  onMouseEnter={this.handleMouseEnter}
+                  onMouseOut={this.handleMouseOut}
+                />
+              </div>
+            )}
             <div
               style={styles.titleText}
               onMouseEnter={this.handleMouseEnter}
