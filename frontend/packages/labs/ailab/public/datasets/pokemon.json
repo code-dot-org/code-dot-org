@@ -1,0 +1,83 @@
+{
+  "fields": [
+    {
+      "type": "continuous",
+      "id": "#",
+      "description": "ID for each pokemon"
+    },
+    {
+      "type": "categorical",
+      "id": "Name",
+      "description": "Name of each pokemon"
+    },
+    {
+      "type": "categorical",
+      "id": "Type 1",
+      "description": "Each pokemon has a type, this determines weakness/resistance to attacks"
+    },
+    {
+      "type": "categorical",
+      "id": "Type 2",
+      "description": "Some pokemon are dual type and have 2"
+    },
+    {
+      "type": "continuous",
+      "id": "Total",
+      "description": "sum of all stats that come after this, a general guide to how strong a pokemon is"
+    },
+    {
+      "type": "continuous",
+      "id": "HP",
+      "description": "hit points, or health, defines how much damage a pokemon can withstand before fainting"
+    },
+    {
+      "type": "continuous",
+      "id": "Attack",
+      "description": "the base modifier for normal attacks (eg. Scratch, Punch)"
+    },
+    {
+      "type": "continuous",
+      "id": "Defense",
+      "description": "the base damage resistance against normal attacks"
+    },
+    {
+      "type": "continuous",
+      "id": "Sp. Atk",
+      "description": "special attack, the base modifier for special attacks (e.g. fire blast, bubble beam)"
+    },
+    {
+      "type": "continuous",
+      "id": "Sp. Def",
+      "description": "the base damage resistance against special attacks"
+    },
+    {
+      "type": "continuous",
+      "id": "Speed",
+      "description": "determines which pokemon attacks first each round"
+    },
+    {
+      "type": "categorical",
+      "id": "Generation",
+      "description": "Which generation the Pokemon is from"
+    },
+    {
+      "type": "categorical",
+      "id": "Legendary",
+      "description": "Whether or not the Pokemon is legendary"
+    }
+  ],
+  "card": {
+    "description": "This data set includes 721 Pokemon, including their number, name, first and second type, and basic stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed.",
+    "source": "https://www.kaggle.com/abcsds/pokemon",
+    "last_updated": "Unknown",
+    "context": {
+      "created_by": "Unknown",
+      "preparation": "Yes",
+      "confidentiality": "No",
+      "subgroup_identifiers": "No",
+      "representative": "No",
+      "potential_uses": "",
+      "potential_misuses": ""
+    }
+  }
+}
