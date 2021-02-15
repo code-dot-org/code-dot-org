@@ -7,7 +7,6 @@ import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
-import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -46,6 +45,10 @@ const styles = {
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
+    pauseHandler: PropTypes.func.isRequired,
+    hidePauseButton: PropTypes.bool.isRequired,
+
+    // From redux
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isProjectLevel: PropTypes.bool.isRequired,
@@ -57,15 +60,11 @@ class P5LabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    consoleMessages: PropTypes.array.isRequired,
-    pauseHandler: PropTypes.func.isRequired
+    consoleMessages: PropTypes.array.isRequired
   };
 
   constructor(props) {
     super(props);
-    this.spritelabPauseExperiment = experiments.isEnabled(
-      experiments.SPRITELAB_PAUSE
-    );
   }
 
   // Cache app-space mouse coordinates, which we get from the
@@ -170,7 +169,8 @@ class P5LabVisualizationColumn extends React.Component {
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
-    const spriteLab = this.props.spriteLab;
+    const isSpritelab = this.props.spriteLab;
+    const showPauseButton = isSpritelab && !this.props.hidePauseButton;
 
     return (
       <div style={{position: 'relative'}}>
@@ -190,25 +190,25 @@ class P5LabVisualizationColumn extends React.Component {
               onMouseMove={this.onMouseMove}
             >
               <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-              <CrosshairOverlay flip={spriteLab} />
-              <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
+              <CrosshairOverlay flip={isSpritelab} />
+              <TooltipOverlay providers={[coordinatesProvider(isSpritelab)]} />
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {spriteLab && <SpritelabInput />}
+          {isSpritelab && <SpritelabInput />}
         </div>
 
         <GameButtons>
-          {spriteLab && this.spritelabPauseExperiment && (
+          {showPauseButton && (
             <PauseButton pauseHandler={this.props.pauseHandler} />
           )}
           <ArrowButtons />
 
           <CompletionButton />
 
-          {!spriteLab && !isShareView && this.renderGridCheckbox()}
+          {!isSpritelab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {!spriteLab && this.renderAppSpaceCoordinates()}
+        {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}
           className={classNames({responsive: isResponsive})}

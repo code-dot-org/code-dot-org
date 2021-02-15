@@ -351,7 +351,8 @@ describe('entry tests', () => {
           [
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss'
-          ]
+          ],
+          ['build/package/css/javaIde.css', 'style/javaIde/style.scss']
         ].concat(
           appsToBuild.map(function(app) {
             return [

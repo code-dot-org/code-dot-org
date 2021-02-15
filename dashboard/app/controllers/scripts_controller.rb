@@ -201,6 +201,7 @@ class ScriptsController < ApplicationController
       :is_stable,
       :is_course,
       :show_calendar,
+      :weekly_instructional_minutes,
       :is_migrated,
       :announcements,
       :pilot_experiment,

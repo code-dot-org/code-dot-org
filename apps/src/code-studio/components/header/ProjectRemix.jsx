@@ -42,7 +42,7 @@ class ProjectRemix extends React.Component {
   };
 
   render() {
-    let className = 'project_remix header_button';
+    let className = 'project_remix header_button no-mc';
     if (this.props.lightStyle) {
       className += ' header_button_light';
     }

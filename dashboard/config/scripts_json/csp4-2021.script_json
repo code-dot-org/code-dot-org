@@ -677,19 +677,6 @@
       }
     },
     {
-      "key": "72bede03-d200-49e1-bb44-dcba7c2c592c",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "72bede03-d200-49e1-bb44-dcba7c2c592c",
-        "lesson.key": "Variables Make",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
       "key": "f96ab15b-debb-464d-8d56-092112fa2c9f",
       "position": 1,
       "properties": {
@@ -777,7 +764,6 @@
       "key": "3dc4ee80-049b-4737-94a6-216b1ccc4d59",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "3dc4ee80-049b-4737-94a6-216b1ccc4d59",
@@ -832,7 +818,6 @@
       "key": "246cb5ee-dff8-4dea-9f24-c76a33c9a282",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "246cb5ee-dff8-4dea-9f24-c76a33c9a282",
@@ -1277,7 +1262,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
+            "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](\thttps://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
           }
         ],
         "name": "Explore Sample Apps"
@@ -1292,7 +1277,7 @@
       "position": 2,
       "properties": {
         "name": "Sample Apps",
-        "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 2-4). Students can explore one or more depending on time.",
+        "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
         "progression_name": "Sample Apps"
       },
       "seeding_key": {
@@ -1346,7 +1331,7 @@
       "key": "ba9405e1-063f-43b8-adbf-219667cc62ba",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each pair of students",
+        "description": "**Distribute:** Give each pair of students:\n\n* A small stack of red and yellow sticky notes\n* A pen / pencil\n* 3 plastic baggies\n* A dry erase marker to share with another group",
         "tips": [
           {
             "type": "teachingTip",
@@ -1363,7 +1348,6 @@
       "key": "e5cd4610-c1a6-45ad-9d5f-b828b523743d",
       "position": 3,
       "properties": {
-        "description": "* A small stack of red and yellow sticky notes\r\n* A pen / pencil\r\n* 3 plastic baggies\r\n* A dry erase marker to share with another group"
       },
       "seeding_key": {
         "activity_section.key": "e5cd4610-c1a6-45ad-9d5f-b828b523743d",
@@ -1449,13 +1433,13 @@
       "key": "a1a44fc5-5b83-45fb-a0c6-ceefaac44f03",
       "position": 1,
       "properties": {
-        "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.",
+        "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.\n\n",
         "remarks": true,
         "name": "Preview the Lesson",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://curriculum.code.org/media/uploads/investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
+            "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://images.code.org/0f42442e0f78f7f39028ce253620efbd-investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
           }
         ]
       },
@@ -1672,7 +1656,7 @@
       "key": "55b83c45-4852-4653-9233-4f394b2d4e52",
       "position": 15,
       "properties": {
-        "description": "[slide]  **Display:** Talk through the pattern with students.",
+        "description": "[slide]  **Display:** Talk through the pattern with students.\n\n**Prompt:** Explain to a partner how the \"Variable with String Concatenation Pattern\" works.",
         "tips": [
           {
             "type": "discussionGoal",
@@ -1682,17 +1666,6 @@
       },
       "seeding_key": {
         "activity_section.key": "55b83c45-4852-4653-9233-4f394b2d4e52",
-        "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814"
-      }
-    },
-    {
-      "key": "4d322e4f-5154-44ea-83e7-6d72b8495ddf",
-      "position": 16,
-      "properties": {
-        "description": "**Prompt:** Explain to a partner how the \"Variable with String Concatenation Pattern\" works."
-      },
-      "seeding_key": {
-        "activity_section.key": "4d322e4f-5154-44ea-83e7-6d72b8495ddf",
         "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814"
       }
     },
@@ -1769,7 +1742,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Practice\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://curriculum.code.org/media/uploads/practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n\n"
+            "markdown": "This is the first official \"Practice\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://images.code.org/58afef806d6c4a8b61387df746d1291e-practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n\n"
           },
           {
             "type": "teachingTip",
@@ -1855,7 +1828,7 @@
       "key": "1adf5772-0b76-42e4-85c2-2bbff867d6b3",
       "position": 6,
       "properties": {
-        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.",
+        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.\n\n[slide] **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n[slide] **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1869,19 +1842,8 @@
       }
     },
     {
-      "key": "3fc29f48-9747-4005-b7a2-806efcf58865",
-      "position": 7,
-      "properties": {
-        "description": "[slide] **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n[slide] **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio."
-      },
-      "seeding_key": {
-        "activity_section.key": "3fc29f48-9747-4005-b7a2-806efcf58865",
-        "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a"
-      }
-    },
-    {
       "key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10",
-      "position": 8,
+      "position": 7,
       "properties": {
         "name": "Debugging Scope Issues",
         "description": "[slide] **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside `onEvent()` or `function()` blocks",
@@ -1894,7 +1856,7 @@
     },
     {
       "key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5",
-      "position": 9,
+      "position": 8,
       "properties": {
         "name": "Putting it Together",
         "description": "[slide] **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.",
@@ -1977,7 +1939,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is the first official \"Make\" lesson in the EIPM model. Review the EIPM model in the [r EIPM One Pager].\n\n### Make Lessons:\n\n[pull-right]\n\n![](https://curriculum.code.org/media/uploads/make.png)\n\n[/pull-right]\n\n**Overview:** Students make a target app for which they are given the screen elements but little to no starter code. \n\n* Students are provided high-level steps to break down the project\n* Teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.\n\n**Goal:** Students are able to independently decide when and how to use the new concept in the context of a larger project.\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Make Lessons](https://www.youtube.com/watch?v=d5IK3kUlXW4)\n\n    "
+            "markdown": "This is the first official \"Make\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit).\n\n### Make Lessons:\n\n[pull-right]\n\n![](https://curriculum.code.org/media/uploads/make.png)\n\n[/pull-right]\n\n**Overview:** Students make a target app for which they are given the screen elements but little to no starter code. \n\n* Students are provided high-level steps to break down the project\n* Teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.\n\n**Goal:** Students are able to independently decide when and how to use the new concept in the context of a larger project.\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Make Lessons](https://www.youtube.com/watch?v=d5IK3kUlXW4)\n\n    "
           }
         ]
       },
@@ -1987,8 +1949,21 @@
       }
     },
     {
-      "key": "544fac45-c29a-4fb1-93ff-5750d9c91cb6",
+      "key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
       "position": 2,
+      "properties": {
+        "description": "For the past few days, we've learned a lot about storing and updating information in variables. Today you are going to have an opportunity to demonstrate your learning by making an app.",
+        "remarks": true,
+        "name": "Intro the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
+        "lesson_activity.key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a"
+      }
+    },
+    {
+      "key": "544fac45-c29a-4fb1-93ff-5750d9c91cb6",
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -2003,23 +1978,10 @@
       }
     },
     {
-      "key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
-      "position": 3,
-      "properties": {
-        "description": "For the past few days, we've learned a lot about storing and updating information in variables. Today you are going to have an opportunity to demonstrate your learning by making an app.",
-        "remarks": true,
-        "name": "Intro the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
-        "lesson_activity.key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a"
-      }
-    },
-    {
       "key": "186a5f67-e29f-4ec7-baf0-1b1cc95c5e04",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Photo Maker App in Level 2.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
         "name": "Build the Photo Liker\r"
       },
       "seeding_key": {
@@ -2031,12 +1993,7 @@
       "key": "d4efe39e-c1fe-461b-bc3d-1c4ee94e5d4c",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "* What does this app do?\r\n  * It lets a user \"like\" an image and add comments to it. \r\n* What are the inputs?\r\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\r\n* What are the outputs?\r\n  * The number showing how many thumbs up the image has. \r\n* What's one piece of information that might be stored in a variable?\r\n  * The number of likes and all the comments added so far. \r\n   \r\n"
-          }
-        ]
+        "progression_name": "Try the Photo Liker app"
       },
       "seeding_key": {
         "activity_section.key": "d4efe39e-c1fe-461b-bc3d-1c4ee94e5d4c",
@@ -2047,7 +2004,7 @@
       "key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
       "position": 3,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\r\n\r\n* What does this app do?\r\n* What are the inputs?\r\n* What are the outputs?\r\n* What's one piece of information that might be stored in a variable?"
+        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* What does this app do?\n  * It lets a user \"like\" an image and add comments to it. \n* What are the inputs?\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* What are the outputs?\n  * The number showing how many thumbs up the image has. \n* What's one piece of information that might be stored in a variable?\n  * The number of likes and all the comments added so far. "
       },
       "seeding_key": {
         "activity_section.key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
@@ -2086,7 +2043,8 @@
       "key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac",
       "position": 6,
       "properties": {
-        "description": "**Distribute:** Give students copies of [r variables-make-activity-guide] if you will be using it during the class.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\r\n\r\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Photo Liker app"
       },
       "seeding_key": {
         "activity_section.key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac",
@@ -2145,30 +2103,6 @@
       }
     },
     {
-      "key": "95d8b436-3f5d-4cb2-adde-3adff90248fe",
-      "position": 1,
-      "properties": {
-        "name": "Try the Photo Liker App",
-        "progression_name": "Try the Photo Liker App"
-      },
-      "seeding_key": {
-        "activity_section.key": "95d8b436-3f5d-4cb2-adde-3adff90248fe",
-        "lesson_activity.key": "72bede03-d200-49e1-bb44-dcba7c2c592c"
-      }
-    },
-    {
-      "key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2",
-      "position": 2,
-      "properties": {
-        "name": "Make the Photo Liker App",
-        "progression_name": "Make the Photo Liker App"
-      },
-      "seeding_key": {
-        "activity_section.key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2",
-        "lesson_activity.key": "72bede03-d200-49e1-bb44-dcba7c2c592c"
-      }
-    },
-    {
       "key": "36a7c7a0-5fac-40d7-8fb7-839dddddfd07",
       "position": 1,
       "properties": {
@@ -2196,7 +2130,7 @@
       "key": "51c60c87-090c-42b0-a2a9-cb40664250e2",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each pair of students:",
+        "description": "**Distribute:** Give each pair of students:\n\n* A small stack of red, yellow, and blue sticky notes\n* A pen/pencil\n* 3 plastic baggies\n* A dry erase marker to share with another group",
         "tips": [
           {
             "type": "teachingTip",
@@ -2210,19 +2144,8 @@
       }
     },
     {
-      "key": "4287e78b-24fc-4a86-bea3-4a8899edb5fc",
-      "position": 3,
-      "properties": {
-        "description": "* A small stack of red, yellow, and blue sticky notes\n* A pen/pencil\n* 3 plastic baggies\n* A dry erase marker to share with another group"
-      },
-      "seeding_key": {
-        "activity_section.key": "4287e78b-24fc-4a86-bea3-4a8899edb5fc",
-        "lesson_activity.key": "e1fa1356-bad3-46ed-9d43-d8b02875654d"
-      }
-    },
-    {
       "key": "877e5e85-7456-49d4-91ab-70b5b54f8239",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals.",
         "tips": [
@@ -2239,7 +2162,7 @@
     },
     {
       "key": "cb34d587-4b26-41be-8f4e-cbab88c3e575",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functionsconditionals1.svg) | **Say:** Today we are going to explore Conditionals. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions1.svg) | **Say:** Previously, we learned that information can be stored as numbers or strings in variables. These are two different types of data. Numbers and strings can be combined together using operators to make expressions. Expressions are evaluated before storing in variables. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions2.svg) | **Say:** Boolean values are another type of data. They can store the values “true” or “false”. Why would we want that information? Booleans are used to make decisions. If something is true, do this. If something is false, do that. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** You only need two blue sticky notes today. Write down “true” on one and “false” on the other. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions3.svg) | **Say:** Let’s look at this expression. Take a guess as to what Boolean value this evaluates to. <br><br> **Do This:** Hold up the sticky note with the correct value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** The expression evaluates to true, because 3 is less than 8. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** The less than symbol is a comparison operator. When we see a comparison operator, we need to stop and evaluate for a Boolean value. There are six different comparison operators - you may be familiar with some of them from math class. Notice the double equal signs for \"equal to\". Here we are distinguishing from a single equal sign that is used to assign value to a variable. We read a single equal sign as “gets the value”. A double equal sign can be read as \"equal to”. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions4.svg) | **Say:** Both sides of the relational operator should be reduced to a single value before we can compare. Think of it in terms of sticky notes. You should have only one sticky note on each side. <br><br> **Do This:** What does 3 + 6 equate to? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Right: 9! Now we can compare 9 and 8 using the relational operator: less than. <br><br> **Do This:** Does this evaluate to true or false? Hold up the correct sticky note. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-5.svg) | **Say:** Let’s evaluate these expressions line by line. It may be helpful to use your sticky notes here. <br><br> **Do This:** Reduce each side of the relational operator to one sticky note. Then evaluate for a Boolean value. Compare your answers with a partner. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** When the class is finished, click through to view the answers. The third line may be a little tricky. Remind students to evaluate the information in the parenthesis first. In the fourth line, draw attention to the double equal signs and remind the class double equal signs are a signal to compare if both sides are the same. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-6.svg) | **Say:** The expressions that we evaluate can also contain variables. Remember, variables store information. This information can be different data types like numbers, strings, or even Boolean values themselves. For now, we are going to stick with numbers. <br><br> **Do This:** With a partner, reduce both sides of the relational operator. Then evaluate for a Boolean value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** When the class is finished, click through for the answer. Draw attention to the note: any expression that can be evaluated for true or false is known as a Boolean Expression. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions7.svg) | **Say:** At the beginning of class, we talked about how Booleans are used to make decisions. Let’s see that in action. Consider the following question: Can I go to the movies? I’m allowed to if it’s before 8 o’clock. This may seem like a simple decision! But let’s think about this like a computer. <br><br> **Do This:** What information would the computer need to know in order to answer the question. Create a  baggie variable to store the information. Give it a name. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions8.svg) | **Say:** This is a flowchart. It’s an organized way to make a decision or come to a conclusion. Creating a flowchart helps us think like a computer. At the top, we are listing the variables that are needed. Your variable might be called time or clock or really anything. It doesn’t matter as long as you use the same name every time you refer to the variable. For this example, I’m naming my variable “time”. Let’s step through the flowchart with an example to see how it works. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions9.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Say:** It’s 9 o’clock. Can I go to the movies? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** First I assign 9 to the variable time, then I move on to the diamond section. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I see a comparison operator, which let’s me know that we need to stop and evaluate the Boolean expression. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** First reduce both sides to a single value. Then evaluate for a Boolean value. In this case, The Boolean expression evaluates to false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Follow the “false” path, and we arrive at the result: “I can’t go to the movies.” <br><br> **Note:** If students are confused, return back to the previous slide and try running some examples together as a class. Students can hold up true or false when evaluating the Boolean expression. Once students get the hang of using a flowchart, continue on to the next slide. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions10.svg) | **Say:** Here’s another decision that needs to be made. I’m not sure if I have won the game I’m playing. I have won it if my score * (times) my lives is greater than 10. <br><br> **Do This:** Direct students to create baggie variables for the information that needs to be stored and write down the Boolean expression on a spare sticky note or scrap paper. Groups then compare their Boolean expressions. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions11.svg) | **Say:** Take a look at the Boolean expression in the decision section of the flowchart. Is this similar to what you and your partner wrote? Are there other ways we could construct this? (score and lives might have different names, score and lives might be in opposite order, you could write it as 10 < score * lives). <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** With a partner, try following the flowchart with a few different inputs. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions12.svg) | **Say:** Here's a new decision we need to make. <br><br> **Do This:** With a partner walk through the steps on the screen. Think about what the Boolean expression will look like. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions13.svg) | **Say:** Here's a flowchart for the question we just considered. <br><br> **Do This:** With your partner, step through the flowchart with a few different inputs. <br><br> **Note:** After students have practice on their own, call on one group to give input values for `dogAge` and `myAge` and step through the flowchart as a class.|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions14.svg) | **Say:** What happens if my decision requires several steps? I want to adopt a cat, but I have to have both 40 dollars and be over 14 years old. <br><br> **Note:** Emphasize precise language here. The Boolean is checking if I *have* 40 dollars - that's exactly 40, not one cent more! In the Conditional Practice lesson, students will return to this flowchart and edit it to account for having more than 40 dollars. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions15.svg) | **Say:** Let's get setup for stepping through the decision making process for this question. <br><br> **Do This:** Set up your baggies, and discuss with a partner how the flowchart might be set up. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions16.svg) | **Say:** This flowchart looks a little different from the previous one. There are two stopping points where a Boolean expression is evaluated. Let’s try this out with an example. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through, one step at a time with the class. When you get to a decision point, before clicking to the next animation have students evaluate the expression and hold up a blue sticky note. <br><br> **Say:** Notice in question box, I’ve stated that I can adopt the cat if I have 40 dollars AND (emphasize) I am over 14 years old. I am checking two things. Let’s look at a way to simplify that process. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions17.svg) | **Say:** In the previous example, we had two Boolean expressions to evaluate. We can use logical operators to compare the results of those Boolean expressions. The logical operators we will look at are && (AND), || (OR), and ! (NOT). When we see a Logical Operator, it’s another clue that we need to stop and evaluate for a Boolean value. Here, two expressions have already been evalauted to Boolean values. If something is true and false, it evaluates to false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Think back to the cat example. It was true that I was old enough to adopt the cat, but false that I had enough money. Therefore, I followed the false path to the output that stated I could not adopt a cat. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions18.svg) | **Say:** Now we're going to take a look at something called a Truth Table. We are going to change the color of the sticky notes a little bit. Boolean values will still be on blue stickies, but *true* will be a dark blue, and *false* a light blue. <br><br> **Note:** there is no need to supply two different colors of blue sticky notes for these slides. Students can follow along. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions19.svg) | **Say:** This is a Truth Table. It demonstrates all the possible combinations of true and false and what they would evaluate to if combined with the logical operator && (AND). The first one seems obvious to us - if something is true and another thing is true, then the whole thing is true!. Read through each row, and consider what is being stated. In rows 2 and 3, if one value is false, the whole thing evaluates to false. This is what happened with the cat example. On the final line, if both values are false, the final evaluation is false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** What's the takeway? In evaluating two Boolean expressions with the AND operator, both must be true in order for the whole expression to evaluate as true. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions20.svg) | **Say:** Now let's consider a Truth Table for OR. <br><br> **Do This:** With a partner, evaluate each row. For example, if the first sticky is *True* or the second sticky is *True* what do you think the whole expression will evaluate to: true or false? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop line by line and allow time for groups to make their predictions. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** For the OR Truth Table, if either sticky note is *True* the expression evaluates to true. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions21.svg) | **Say:** The ! NOT table is simple because it reverses the value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** As a class quickly state what the opposite values are and click through the animations. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions22.svg) | **Say:** Let’s return to the cat example. How can we write a single expression that accounts for all the information that needs to be checked? <br><br> **Do This:** With a partner, create the expression using logical operators. <br><br> **Note:** It’s ok if students struggle with this activity. After a few minutes, move on to the next slide and reveal the answer. This will help students make the connection. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions23.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through the animation step by step and follow along as a class. Allow time to predict at decision points. When the truth table (yellow box) appears on the screen, take a moment to remind students what this is and what it demonstrates. If a value is true and another value is true, it evaluates to true. It’s not expected that students will memorize the truth tables, but they should be familiar with how they work. <br><br> **Note:** If you have extra time, try running this flowchart with other inputs. Try changing the conditions and then running the flowchart (i.e. I can adopt the cat if I have 40 dollars OR I am over 14 years old) <br><br> **Say:** Today we used flowcharts to demonstrate how computers make decisions. In the next class, we will investigate how decisions are made in code. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions24.svg) | **Do This:** Give students a few minutes to craft their own flowcharts and test on each other following the instructions on the screen. <br><br> **Note:** Simple flowcharts are fine, or students can build more complex models. Students are ready to move on when the majority of the class has made and tested a flowchart. \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions25.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Review the key takeaways on the screen with students. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-26.svg) |<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Review the key takeaways with students.  |"
       },
@@ -2252,8 +2175,7 @@
       "key": "87a276e9-7f77-4cac-99cf-6d3f71dde6eb",
       "position": 1,
       "properties": {
-        "name": "Conditionals: Boolean Expressions",
-        "description": "[slide]  **Video:** [r cs-principles-conditionals-part-1-boolean-expressions]\tAs a class watch the video on Boolean expressions. \n\n",
+        "description": "[slide]  **Video:** [CS Principles: Conditionals - Part 1 Boolean Expressions - Video](https://www.youtube.com/watch?v=y3rCKJNOwpA&t=6s)\tAs a class watch the video on Boolean expressions. \n\n",
         "progression_name": "Conditionals: Boolean Expressions"
       },
       "seeding_key": {
@@ -2277,7 +2199,6 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
-        "name": "Assessment: Check For Understanding\r",
         "progression_name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
@@ -2338,8 +2259,26 @@
       }
     },
     {
-      "key": "3a3fe7fd-c0cf-4816-a366-0d3a729efa1c",
+      "key": "7224965f-caf3-4d6a-bd67-d0b03548a815",
       "position": 2,
+      "properties": {
+        "name": "Investigation 1: If-Statements",
+        "duration": "15",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Running the First Investigation:** This first investigation is supposed to get students moving around the room while also motivating them to carefully read a new program. As you circulate the room encourage them to read carefully, ask good questions, and be comfortable asking where they don't understand something.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7224965f-caf3-4d6a-bd67-d0b03548a815",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "3a3fe7fd-c0cf-4816-a366-0d3a729efa1c",
+      "position": 3,
       "properties": {
         "description": "[slide]  **Level 1 - Video - Conditionals: If Statements** As a class watch the video on if-statements.",
         "tips": [
@@ -2348,8 +2287,6 @@
             "markdown": "**Show the Video at the Front:** In order to better keep the group together we recommend you show the videos at the front of the room.\r\n\r\n**Reinforce When vs. If:** As you make your way through these examples model using \"when\" and \"if\" as described in the warm up. For example, \"when\" the buttons are clicked the app is deciding \"if\" the temperature can change.\r\n\r\n"
           }
         ],
-        "name": "Investigation 1: If-Statements",
-        "duration": "15",
         "progression_name": "Condi"
       },
       "seeding_key": {
@@ -2359,15 +2296,9 @@
     },
     {
       "key": "f2c55ec1-7adb-49b3-a878-e93045d8ed20",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "[slide]  **Level 2 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Running the First Investigation:** This first investigation is supposed to get students moving around the room while also motivating them to carefully read a new program. As you circulate the room encourage them to read carefully, ask good questions, and be comfortable asking where they don't understand something.\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Level 2 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app."
       },
       "seeding_key": {
         "activity_section.key": "f2c55ec1-7adb-49b3-a878-e93045d8ed20",
@@ -2376,7 +2307,7 @@
     },
     {
       "key": "8f5b07e2-c4d1-4a0d-9f85-3b9be3dcb5e3",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n  * **The goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
       },
@@ -2387,7 +2318,7 @@
     },
     {
       "key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "If-Statements"
       },
@@ -2398,7 +2329,7 @@
     },
     {
       "key": "9415d212-f84e-4244-b3ff-040ec66aeaa1",
-      "position": 6,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -2408,9 +2339,9 @@
     },
     {
       "key": "e344df9b-29ac-4652-ad59-3729140048c0",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "[slide] **Level 4 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \r\n\r\n\r\n[slide] **Level 5 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.",
+        "description": "[slide] **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n\n[slide] **Level 4 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n[slide]  **Level 5 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
         "name": "Investigation 2: If-Else Statements",
         "duration": "10",
         "tips": [
@@ -2422,17 +2353,6 @@
       },
       "seeding_key": {
         "activity_section.key": "e344df9b-29ac-4652-ad59-3729140048c0",
-        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
-      }
-    },
-    {
-      "key": "ea54e054-1ffb-4a75-9528-5576e9bca121",
-      "position": 8,
-      "properties": {
-        "description": "[slide]  **Level 6 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to"
-      },
-      "seeding_key": {
-        "activity_section.key": "ea54e054-1ffb-4a75-9528-5576e9bca121",
         "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
       }
     },
@@ -2531,7 +2451,8 @@
       "key": "3df72f6e-9562-4fdc-a3d4-f586602597b2",
       "position": 2,
       "properties": {
-        "description": "[slide] **Review Patterns:** Have students read the pattern introduced in Level 9. This pattern appears frequently with if-else-if statements. Students' understanding of this pattern is assessed in the Check Your Understanding Question.\r\n\r\n---"
+        "description": "[slide] **Review Patterns:** Have students read the pattern introduced in Level 9. This pattern appears frequently with if-else-if statements. Students' understanding of this pattern is assessed in the Check Your Understanding Question.\r\n\r\n---",
+        "progression_name": "Patterns: If-else-if"
       },
       "seeding_key": {
         "activity_section.key": "3df72f6e-9562-4fdc-a3d4-f586602597b2",
@@ -2554,7 +2475,6 @@
       "key": "fec92834-073e-40ab-bd98-8872eb33b605",
       "position": 1,
       "properties": {
-        "name": "Patterns: If-else-if",
         "progression_name": "Patterns: If-else-if"
       },
       "seeding_key": {
@@ -2566,7 +2486,6 @@
       "key": "339ad923-2469-4391-8745-daa5572ef898",
       "position": 2,
       "properties": {
-        "name": "Check Your Understanding",
         "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
@@ -2621,7 +2540,7 @@
       "key": "16a5b3f0-d429-4ea4-b26b-b7c6a2c886c7",
       "position": 3,
       "properties": {
-        "description": "**Levels 2-4:** These levels only use the `console.log()` command which prints commands in the debug console. Here are a few things to keep an eye out for",
+        "description": "**Levels 1-3:** These levels only use the `console.log()` command which prints commands in the debug console. Here are a few things to keep an eye out for\n\n* Levels 1-2 ask students to write Boolean expressions using comparison operators. Students may need to quickly review the comparison operators `<`, `>`, `<=`, `>=`, `==`, `!=`\n* Level 3 asks students to write Boolean expressions with logical operators `&&`, `||`, `!`\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2635,13 +2554,68 @@
       }
     },
     {
-      "key": "4e185d29-baf7-4623-923a-c3a3277af161",
+      "key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585",
       "position": 4,
       "properties": {
-        "description": "* Levels 2-3 ask students to write Boolean expressions using comparison operators. Students may need to quickly review the comparison operators `<`, `>`, `<=`, `>=`, `==`, `!=`\n* Level 4 asks students to write Boolean expressions with logical operators `&&`, `||`, `!`\n\n**Levels 5-9:** These levels practice if-statements while working with a star color-changing app. \n\n* Levels 5-6 involve setting up an if-statement that becomes an if-else statement. \n* In Level 7 students follow a pattern to create a lengthy if-else-if statement.\n* For Level 8, make sure students slow down the running of the code to understand what's happening. It's suggested that students use the slider to slow down the code.\n* Level 9 demonstrates that Boolean expressions can be written as conditional statements, and vice versa \n\n**Levels 10-11:** The levels return to the \"Can I Adopt a Cat?\" flowchart from the Conditionals Explore activity. Students will use the flowchart to work out the logic of the if-statements in a their program. \n\n* A new block appears in these levels: `getNumber()` . This is different than `getText()`. `getNumber()` gets a number from a user input that can be used mathematically. \n* Level 11 can be completed many different ways. There are different combinations of Boolean expressions using `&&` and `||`. Students should regularly test their apps to see if their Boolean expressions are working properly.\n\n**Extension Opportunities:**\n\n* Level 4: Students can add more variables and create complex Boolean expressions. One challenge might be to assign a String to a variable and compare that string to another. \n* Level 10: There are multiple solutions. If students build their if-statement using only `&&` encourage them to figure out how to build it using only `||`. They may need to switch the content of the if and else branches. \n* Level 11: Create another input (i.e. How many cats do you already own?). Students use this information to craft more complex if-statements."
+        "progression_name": "Boolean expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585",
+        "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
+      }
+    },
+    {
+      "key": "f16d7af3-fdb1-4ee9-b0f0-16d952bdcb67",
+      "position": 5,
+      "properties": {
+        "description": "\n**Levels 4-8:** These levels practice if-statements while working with a star color-changing app. \n\n* Levels 4-5 involve setting up an if-statement that becomes an if-else statement. \n* In Level 6 students follow a pattern to create a lengthy if-else-if statement.\n* For Level 7, make sure students slow down the running of the code to understand what's happening. It's suggested that students use the slider to slow down the code.\n* Level 8 demonstrates that Boolean expressions can be written as conditional statements, and vice versa "
+      },
+      "seeding_key": {
+        "activity_section.key": "f16d7af3-fdb1-4ee9-b0f0-16d952bdcb67",
+        "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
+      }
+    },
+    {
+      "key": "3756dbe6-18db-4a5e-88d6-4ace93459934",
+      "position": 6,
+      "properties": {
+        "progression_name": "If-Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934",
+        "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
+      }
+    },
+    {
+      "key": "4e185d29-baf7-4623-923a-c3a3277af161",
+      "position": 7,
+      "properties": {
+        "description": "\n\n\n**Levels 9-10:** The levels return to the \"Can I Adopt a Cat?\" flowchart from the Conditionals Explore activity. Students will use the flowchart to work out the logic of the if-statements in a their program. \n\n* A new block appears in these levels: `getNumber()` . This is different than `getText()`. `getNumber()` gets a number from a user input that can be used mathematically. \n* Level 10 can be completed many different ways. There are different combinations of Boolean expressions using `&&` and `||`. Students should regularly test their apps to see if their Boolean expressions are working properly.\n"
       },
       "seeding_key": {
         "activity_section.key": "4e185d29-baf7-4623-923a-c3a3277af161",
+        "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
+      }
+    },
+    {
+      "key": "3c465c18-0d35-4fe7-8d48-b86e44a1186f",
+      "position": 8,
+      "properties": {
+        "progression_name": "Logical Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c465c18-0d35-4fe7-8d48-b86e44a1186f",
+        "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
+      }
+    },
+    {
+      "key": "762801f0-e7bb-4f82-8dc0-62212048a567",
+      "position": 9,
+      "properties": {
+        "description": "**Extension Opportunities:**\n\n* Level 3: Students can add more variables and create complex Boolean expressions. One challenge might be to assign a String to a variable and compare that string to another. \n* Level 9: There are multiple solutions. If students build their if-statement using only `&&` encourage them to figure out how to build it using only `||`. They may need to switch the content of the if and else branches. \n* Level 10: Create another input (i.e. How many cats do you already own?). Students use this information to craft more complex if-statements."
+      },
+      "seeding_key": {
+        "activity_section.key": "762801f0-e7bb-4f82-8dc0-62212048a567",
         "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
       }
     },
@@ -2698,46 +2672,9 @@
       }
     },
     {
-      "key": "2fb2aa68-08a5-4b1e-838c-b00e33899184",
+      "key": "58e36705-b18a-46da-8db4-1045e5f3e98c",
       "position": 1,
       "properties": {
-        "name": "Boolean expressions",
-        "progression_name": "Boolean expressions"
-      },
-      "seeding_key": {
-        "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184",
-        "lesson_activity.key": "246cb5ee-dff8-4dea-9f24-c76a33c9a282"
-      }
-    },
-    {
-      "key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a",
-      "position": 2,
-      "properties": {
-        "name": "If-Statements",
-        "progression_name": "If-Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a",
-        "lesson_activity.key": "246cb5ee-dff8-4dea-9f24-c76a33c9a282"
-      }
-    },
-    {
-      "key": "1bed51ee-a430-43c0-9123-d0cea915b0df",
-      "position": 3,
-      "properties": {
-        "name": "Logical Operators",
-        "progression_name": "Logical Operators"
-      },
-      "seeding_key": {
-        "activity_section.key": "1bed51ee-a430-43c0-9123-d0cea915b0df",
-        "lesson_activity.key": "246cb5ee-dff8-4dea-9f24-c76a33c9a282"
-      }
-    },
-    {
-      "key": "58e36705-b18a-46da-8db4-1045e5f3e98c",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding: AP Practice",
         "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
@@ -4490,7 +4427,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Try the Photo Liker App",
+        "progression": "Try the Photo Liker app",
         "level_keys": [
           "U4 L04 Variables Make Project_2021"
         ]
@@ -4504,7 +4441,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "95d8b436-3f5d-4cb2-adde-3adff90248fe"
+        "activity_section.key": "d4efe39e-c1fe-461b-bc3d-1c4ee94e5d4c"
       },
       "level_keys": [
         "U4 L04 Variables Make Project_2021"
@@ -4516,7 +4453,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Photo Liker App",
+        "progression": "Make the Photo Liker app",
         "level_keys": [
           "U4 L04 Variables Make Project Submit_2021"
         ]
@@ -4530,7 +4467,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2"
+        "activity_section.key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac"
       },
       "level_keys": [
         "U4 L04 Variables Make Project Submit_2021"
@@ -4594,7 +4531,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements"
+        "progression": "If-Statements",
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4617,7 +4557,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements"
+        "progression": "If-Statements",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4640,7 +4583,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements"
+        "progression": "If-Else Statements",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4663,7 +4609,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements"
+        "progression": "If-Else Statements",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4686,7 +4635,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "If-Else Statements"
+        "progression": "If-Else Statements",
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v2 Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4709,7 +4661,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR"
+        "progression": "Logical Operators: AND OR",
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4732,7 +4687,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR"
+        "progression": "Logical Operators: AND OR",
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v3 Code_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4753,44 +4711,38 @@
       "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Patterns: If-else-if",
-        "level_keys": [
-          "Checking Multiple Conditions with If-elseif_2021"
-        ]
+        "progression": "Patterns: If-else-if"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "Checking Multiple Conditions with If-elseif_2021"
+          "U4 L06 CYU Exit Ticket_2021"
         ],
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "fec92834-073e-40ab-bd98-8872eb33b605"
+        "activity_section.key": "3df72f6e-9562-4fdc-a3d4-f586602597b2"
       },
       "level_keys": [
-        "Checking Multiple Conditions with If-elseif_2021"
+        "U4 L06 CYU Exit Ticket_2021"
       ]
     },
     {
       "chapter": 35,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "Check Your Understanding",
-        "level_keys": [
-          "U4 L06 CYU Exit Ticket_2021"
-        ]
+        "progression": "Check Your Understanding"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L06 CYU Exit Ticket_2021"
+          "Checking Multiple Conditions with If-elseif_2021"
         ],
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
@@ -4798,7 +4750,7 @@
         "activity_section.key": "339ad923-2469-4391-8745-daa5572ef898"
       },
       "level_keys": [
-        "U4 L06 CYU Exit Ticket_2021"
+        "Checking Multiple Conditions with If-elseif_2021"
       ]
     },
     {
@@ -4807,10 +4759,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 1_2021"
-        ]
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4821,7 +4770,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184"
+        "activity_section.key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 1_2021"
@@ -4833,10 +4782,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 2_2021"
-        ]
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4847,7 +4793,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184"
+        "activity_section.key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 2_2021"
@@ -4859,10 +4805,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 3_2021"
-        ]
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4873,7 +4816,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184"
+        "activity_section.key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 3_2021"
@@ -4885,10 +4828,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 10_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4899,7 +4839,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 10_2021"
@@ -4911,10 +4851,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 4_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4925,7 +4862,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 4_2021"
@@ -4937,10 +4874,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 5_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4951,7 +4885,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 5_2021"
@@ -4963,10 +4897,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 6_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4977,7 +4908,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 6_2021"
@@ -4989,10 +4920,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "If-Statements",
-        "level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2021"
-        ]
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -5003,7 +4931,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice equivalent expressions_2021"
@@ -5015,10 +4943,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 7_2021"
-        ]
+        "progression": "Logical Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -5029,7 +4954,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "1bed51ee-a430-43c0-9123-d0cea915b0df"
+        "activity_section.key": "3c465c18-0d35-4fe7-8d48-b86e44a1186f"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 7_2021"
@@ -5041,10 +4966,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Logical Operators",
-        "level_keys": [
-          "U4 L07 Conditionals Practice 8_2021"
-        ]
+        "progression": "Logical Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -5055,7 +4977,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "1bed51ee-a430-43c0-9123-d0cea915b0df"
+        "activity_section.key": "3c465c18-0d35-4fe7-8d48-b86e44a1186f"
       },
       "level_keys": [
         "U4 L07 Conditionals Practice 8_2021"
@@ -6142,7 +6064,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "95d8b436-3f5d-4cb2-adde-3adff90248fe"
+        "activity_section.key": "d4efe39e-c1fe-461b-bc3d-1c4ee94e5d4c"
       }
     },
     {
@@ -6154,7 +6076,7 @@
         "lesson.key": "Variables Make",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021",
-        "activity_section.key": "4822c625-7738-41d5-83a5-a21aaa9fb5a2"
+        "activity_section.key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac"
       }
     },
     {
@@ -6267,21 +6189,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "Checking Multiple Conditions with If-elseif_2021",
+        "level.key": "U4 L06 CYU Exit Ticket_2021",
         "script_level.level_keys": [
-          "Checking Multiple Conditions with If-elseif_2021"
+          "U4 L06 CYU Exit Ticket_2021"
         ],
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "fec92834-073e-40ab-bd98-8872eb33b605"
+        "activity_section.key": "3df72f6e-9562-4fdc-a3d4-f586602597b2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U4 L06 CYU Exit Ticket_2021",
+        "level.key": "Checking Multiple Conditions with If-elseif_2021",
         "script_level.level_keys": [
-          "U4 L06 CYU Exit Ticket_2021"
+          "Checking Multiple Conditions with If-elseif_2021"
         ],
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
@@ -6298,7 +6220,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184"
+        "activity_section.key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585"
       }
     },
     {
@@ -6310,7 +6232,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184"
+        "activity_section.key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585"
       }
     },
     {
@@ -6322,7 +6244,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "2fb2aa68-08a5-4b1e-838c-b00e33899184"
+        "activity_section.key": "d7ef6672-b54b-47ed-a39e-e8cb5f2e2585"
       }
     },
     {
@@ -6334,7 +6256,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       }
     },
     {
@@ -6346,7 +6268,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       }
     },
     {
@@ -6358,7 +6280,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       }
     },
     {
@@ -6370,7 +6292,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       }
     },
     {
@@ -6382,7 +6304,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "ac2631c4-e57f-48ba-98f7-cbb3177d7e9a"
+        "activity_section.key": "3756dbe6-18db-4a5e-88d6-4ace93459934"
       }
     },
     {
@@ -6394,7 +6316,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "1bed51ee-a430-43c0-9123-d0cea915b0df"
+        "activity_section.key": "3c465c18-0d35-4fe7-8d48-b86e44a1186f"
       }
     },
     {
@@ -6406,7 +6328,7 @@
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "1bed51ee-a430-43c0-9123-d0cea915b0df"
+        "activity_section.key": "3c465c18-0d35-4fe7-8d48-b86e44a1186f"
       }
     },
     {
@@ -6800,7 +6722,6 @@
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
       "key": "EIPM One Pager",
       "properties": {
-        "type": "Resource ",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -6849,7 +6770,6 @@
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
       "key": "EIPM One Pager",
       "properties": {
-        "type": "Resource ",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -6898,7 +6818,6 @@
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
       "key": "EIPM One Pager",
       "properties": {
-        "type": "Resource ",
         "audience": "Teacher",
         "include_in_pdf": true
       },
