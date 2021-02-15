@@ -13,6 +13,8 @@ import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
+import experiments from '@cdo/apps/util/experiments';
+import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 
 const style = {
   iconContainer: {
@@ -43,7 +45,8 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
+    autogenerateML: PropTypes.func
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -55,7 +58,8 @@ class SettingsCog extends Component {
     open: false,
     canOpen: true,
     confirmingEnableMaker: false,
-    managingLibraries: false
+    managingLibraries: false,
+    managingModels: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -75,6 +79,11 @@ class SettingsCog extends Component {
   manageLibraries = () => {
     this.close();
     this.setState({managingLibraries: true});
+  };
+
+  manageModels = () => {
+    this.close();
+    this.setState({managingModels: true});
   };
 
   toggleMakerToolkit = () => {
@@ -97,6 +106,7 @@ class SettingsCog extends Component {
   showConfirmation = () => this.setState({confirmingEnableMaker: true});
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
   closeLibraryManager = () => this.setState({managingLibraries: false});
+  closeModelManager = () => this.setState({managingModels: false});
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -145,10 +155,20 @@ class SettingsCog extends Component {
           {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
+          {experiments.isEnabled(experiments.APPLAB_ML) && (
+            <ManageModels onClick={this.manageModels} />
+          )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
         </PopUpMenu>
+        {experiments.isEnabled(experiments.APPLAB_ML) && (
+          <ModelManagerDialog
+            isOpen={this.state.managingModels}
+            onClose={this.closeModelManager}
+            autogenerateML={this.props.autogenerateML}
+          />
+        )}
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}
@@ -172,6 +192,10 @@ ManageAssets.propTypes = {
   first: PropTypes.bool,
   last: PropTypes.bool
 };
+
+export function ManageModels(props) {
+  return <PopUpMenu.Item {...props}>{'Manage Models'}</PopUpMenu.Item>;
+}
 
 export function ManageLibraries(props) {
   return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;
