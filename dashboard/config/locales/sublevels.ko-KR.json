@@ -1,0 +1,243 @@
+{
+  "ko-KR": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "동작",
+              "Events": "이벤트",
+              "Loops": "반복",
+              "Math": "계산",
+              "Logic": "논리",
+              "Games/Score": "게임/점수"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "세계",
+              "Dancers": "댄서",
+              "Properties": "등록 정보",
+              "Events": "이벤트",
+              "Numbers": "숫자",
+              "Logic": "논리"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "별 그리기",
+                "parameters": {
+                  "points": "점수",
+                  "length": "length"
+                }
+              },
+              "draw a circle": {
+                "name": "원 그리기"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "length",
+                  "repeat": "반복"
+                }
+              },
+              "draw a triangle": {
+                "name": "삼각형 그리기",
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a house": {
+                "name": "집 그리기",
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a square": {
+                "name": "사각형 그리기",
+                "parameters": {
+                  "length": "length"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "세계",
+              "Actions": "동작",
+              "Events": "이벤트",
+              "Behaviors": "행동"
+            },
+            "behavior_names": {
+              "wandering": "배회",
+              "moving east": "동쪽으로 이동",
+              "spinning left": "왼쪽으로 회전",
+              "spinning right": "오른쪽으로 회전",
+              "shrinking": "감소",
+              "growing": "성장",
+              "moving south": "남쪽으로 이동",
+              "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
+              "moving north": "북쪽으로 이동",
+              "jittering": "지터링",
+              "moving west": "서쪽으로 이동",
+              "patrolling": "순찰"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "세계",
+              "Dancers": "댄서",
+              "Properties": "등록 정보",
+              "Events": "이벤트",
+              "Numbers": "숫자",
+              "Logic": "논리"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "동작",
+              "Brushes": "브러쉬",
+              "Loops": "반복",
+              "Math": "계산",
+              "Logic": "논리",
+              "Functions": "함수",
+              "Variables": "변수"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "세계",
+              "Locations": "위치",
+              "Actions": "동작",
+              "Events": "이벤트",
+              "Behaviors": "행동",
+              "Variables": "변수",
+              "Math": "계산",
+              "Logic": "논리",
+              "Functions": "함수",
+              "Text": "문장",
+              "Comments": "의견"
+            },
+            "behavior_names": {
+              "moving east": "동쪽으로 이동",
+              "spinning left": "왼쪽으로 회전",
+              "spinning right": "오른쪽으로 회전",
+              "shrinking": "감소",
+              "growing": "성장",
+              "moving south": "남쪽으로 이동",
+              "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
+              "moving north": "북쪽으로 이동",
+              "jittering": "지터링",
+              "moving west": "서쪽으로 이동",
+              "patrolling": "순찰",
+              "wandering": "배회"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "세계",
+              "Locations": "위치",
+              "Actions": "동작",
+              "Events": "이벤트",
+              "Behaviors": "행동",
+              "Variables": "변수",
+              "Math": "계산",
+              "Logic": "논리",
+              "Functions": "함수",
+              "Text": "문장",
+              "Comments": "의견"
+            },
+            "behavior_names": {
+              "moving east": "동쪽으로 이동",
+              "spinning left": "왼쪽으로 회전",
+              "spinning right": "오른쪽으로 회전",
+              "shrinking": "감소",
+              "growing": "성장",
+              "moving south": "남쪽으로 이동",
+              "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
+              "moving north": "북쪽으로 이동",
+              "jittering": "지터링",
+              "moving west": "서쪽으로 이동",
+              "patrolling": "순찰",
+              "wandering": "배회"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "동작",
+              "Brushes": "브러쉬",
+              "Loops": "반복",
+              "Math": "계산",
+              "Logic": "논리",
+              "Functions": "함수",
+              "Variables": "변수"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "세계",
+              "Actions": "동작",
+              "Events": "이벤트",
+              "Logic": "논리",
+              "Math": "계산"
+            },
+            "behavior_names": {
+              "wandering": "배회",
+              "moving east": "동쪽으로 이동",
+              "spinning left": "왼쪽으로 회전",
+              "spinning right": "오른쪽으로 회전",
+              "shrinking": "감소",
+              "growing": "성장",
+              "moving south": "남쪽으로 이동",
+              "moving north": "북쪽으로 이동",
+              "jittering": "지터링",
+              "moving west": "서쪽으로 이동",
+              "patrolling": "순찰"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "세계",
+              "Actions": "동작",
+              "Behaviors": "행동",
+              "Events": "이벤트",
+              "Locations": "위치",
+              "Logic": "논리",
+              "Loops": "반복",
+              "Math": "계산",
+              "Variables": "변수",
+              "Functions": "함수",
+              "Comments": "의견"
+            },
+            "behavior_names": {
+              "wandering": "배회",
+              "moving east": "동쪽으로 이동",
+              "spinning left": "왼쪽으로 회전",
+              "spinning right": "오른쪽으로 회전",
+              "shrinking": "감소",
+              "growing": "성장",
+              "moving south": "남쪽으로 이동",
+              "moving north": "북쪽으로 이동",
+              "jittering": "지터링",
+              "moving west": "서쪽으로 이동",
+              "patrolling": "순찰"
+            }
+          }
+        }
+      }
+    }
+  }
+}

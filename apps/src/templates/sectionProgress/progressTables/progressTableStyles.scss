@@ -15,7 +15,7 @@ $content-view-width: $content-width - $student-list-width;
     background-color: $table-header;
     border-width: 0px 1px 2px 0px;
     border-color: $border-gray;
-    height: 100%;
+    height: inherit;
   }
   th,
   td {
@@ -28,15 +28,21 @@ $content-view-width: $content-width - $student-list-width;
   .student-list {
     table {
       width: $student-list-width;
+      table-layout: fixed;
     }
     td,
     th {
-      width: $student-list-width;
       border-right: 0px;
     }
     th {
+      width: $student-list-width;
       background-color: $table-header;
       color: $charcoal;
+    }
+    tr,
+    td {
+      display: block;
+      width: 100%;
     }
   }
   .content-view {

@@ -10,7 +10,6 @@
         "playlab",
         "artist"
       ],
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/express/{LESSON}",
       "version_year": "2019",
       "curriculum_umbrella": "CSF",

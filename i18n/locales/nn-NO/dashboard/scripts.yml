@@ -4383,3 +4383,9 @@ nn:
               display_name: 'Kapittel 2: Problemløsing med data'
             cspSurvey:
               display_name: Undersøking
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Leksjon 14
+            lesson15:
+              name: Leksjon 15

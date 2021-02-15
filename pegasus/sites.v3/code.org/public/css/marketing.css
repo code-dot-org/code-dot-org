@@ -1,0 +1,143 @@
+/* banner */
+.banner-pt1, .banner-pt2 {
+padding: 0 20px; 
+ 
+}
+
+banner-pt1 {width20%;} 
+banner-pt2 {width80%;}
+
+/* columns */
+.column-container{
+  margin: 20px 0;
+}
+
+.col-50:nth-child(2n+1) { padding: 0 10px 20px 0; }
+.col-50:nth-child(2n+0) { padding: 0 0 20px 10px; }
+
+.col-33:nth-child(3n+1) { padding: 0 14px 20px 0;}
+.col-33:nth-child(3n+2) { padding: 0 7px 20px 7px;}
+.col-33:nth-child(3n+0) { padding: 0 0 20px 14px;}
+
+.col-25:nth-child(4n+1) { padding: 0 12px 20px 0;}
+.col-25:nth-child(4n+2), .col-25:nth-child(4n+3) { padding: 0 6px 20px 6px;}
+.col-25:nth-child(4n+0) { padding: 0 0 20px 12px;}
+
+.col-20:nth-child(5n+1) { padding: 0 12px 20px 0;}
+.col-20:nth-child(5n+2), .col-20:nth-child(5n+3), .col-20:nth-child(5n+4){ padding: 0 6px 20px 6px;}
+.col-20:nth-child(5n+0) { padding: 0 0 20px 12px;}
+
+
+
+/* callout boxes */
+
+.bp0 {background-color:#7665a0;}
+.bp1 {background-color:#a69bc1;}
+.bp2 {background-color:#cfc9de;}
+.bp3 {background-color:#ebe8f1;}
+
+.color-block
+{
+padding: 20px;;
+}
+
+.rounded-box
+{
+margin: 40px 0;
+padding: 10px 40px 0px 40px; 
+border-radius:15px;
+}
+
+.rounded-box h2 {
+margin:20px 0;
+}
+
+/* tiles */
+.rounded-tile, .tile {
+  padding:0;
+}
+
+.rounded-tile-img {
+  width: 100%;
+  border: 1px solid #949ca2; 
+  border-radius: 15px 15px 0 0
+}
+
+.rounded-info {
+  border: 1px solid #949ca2;
+  height: 218px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;*/
+  style="background-color: #ffffff;  
+  border-top: none; 
+  border-radius: 0 0 15px 15px; 
+  padding: 15px 25px 25px 25px;
+}
+
+h3.rounded-info-h {
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+/* img styling */
+.bordered-circle {width:90%; border-radius:50%; border: 7px solid #a69bc1}
+.embedvid {padding-bottom: 40px}
+.embedvid .video_caption_link {padding-top:6px; font-weight:bold; font-size:1.1em}
+
+/*BHM campaign*/
+.bhm-banner {
+  background-image: url('../images/bhm/bhm-banner-bg2.png'); 
+  background-position: bottom right -655px; 
+  background-color:#685c91; 
+  background-repeat:no-repeat; 
+  background-size: 100%
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px 60px; 
+  margin-bottom: 60px;
+}
+
+.bhm-banner h1, .bhm-banner h2,  .bhm-banner h3 {color:#ffffff; }
+.bhm-banner h2 {font-size:26px;}
+
+hr.bhm-border {
+  border:none;
+  height:5px;
+  background-image: url('../images/bhm/panafbars5.png'); 
+  background-repeat: repeat-x;
+}
+
+.bhm-heading {color:#7665a0; }
+
+.blackstudentdata img {width:100%;}
+.blackstudentdata p {margin: 1em;}
+.blackstudentdata h3 {font-weight:bold; margin-bottom: .75em; text-align: center;}
+
+/* RESPONSIVE */
+@media screen and (max-width: 600px) and (min-width: 0px) {
+.container_responsive h1 {font-size: 26px;}
+ .bhm-banner h2 {font-size:23px;}
+}
+   
+@media only screen and (max-width: 960px) {
+.col-50:nth-child(n), .col-33:nth-child(n), .col-25:nth-child(n) {
+  padding: 20px 10px;
+}
+ .col-20:nth-child(n) {
+  padding: 15px 10px;
+}
+.rounded-info {
+  height: auto;
+}
+.bhm-banner {
+  padding-bottom:135px;
+  background-position: center bottom;
+}
+.bhm-banner h1, .bhm-banner h2{text-align: center; color:#000000}
+
+.banner-pt1, .banner-pt2 {
+  text-align:center;
+  padding: 15px;
+}
+}

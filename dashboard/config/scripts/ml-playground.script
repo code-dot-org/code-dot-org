@@ -1,5 +1,14 @@
 login_required true
 
+lesson 'model-cards', display_name: 'Model Cards Playground', has_lesson_plan: false
+level 'ml-model card-template', progression: 'Model Card Template'
+level 'ml-model card-medical-1', progression: 'Medical Dataset Model Cards'
+level 'ml-model card-medical-2', progression: 'Medical Dataset Model Cards'
+level 'ml-model card-medical-3', progression: 'Medical Dataset Model Cards'
+level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
+
+lesson 'intro-categorical', display_name: 'Introduction to AI Lab', has_lesson_plan: false
+
 lesson 'oceans', display_name: 'Machine Learning with AI for Oceans', has_lesson_plan: false
 
 lesson 'intro', display_name: 'Introduction to Machine Learning', has_lesson_plan: false

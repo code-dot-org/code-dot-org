@@ -28,11 +28,42 @@
   ],
   "lessons": [
     {
-      "key": "oceans",
-      "name": "Machine Learning with AI for Oceans",
+      "key": "model-cards",
+      "name": "Model Cards Playground",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "intro-categorical",
+      "name": "Introduction to AI Lab",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "intro-categorical",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "oceans",
+      "name": "Machine Learning with AI for Oceans",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -44,9 +75,10 @@
     {
       "key": "intro",
       "name": "Introduction to Machine Learning",
-      "absolute_position": 2,
+      "absolute_position": 4,
       "lockable": false,
-      "relative_position": 2,
+      "has_lesson_plan": false,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -58,9 +90,10 @@
     {
       "key": "KNN",
       "name": "Feature Selection with Continuous Labels",
-      "absolute_position": 3,
+      "absolute_position": 5,
       "lockable": false,
-      "relative_position": 3,
+      "has_lesson_plan": false,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -72,9 +105,10 @@
     {
       "key": "SVM",
       "name": "Data Investigations with Categorical Labels",
-      "absolute_position": 4,
+      "absolute_position": 6,
       "lockable": false,
-      "relative_position": 4,
+      "has_lesson_plan": false,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -86,9 +120,10 @@
     {
       "key": "App",
       "name": "Using Models in the Real-World",
-      "absolute_position": 5,
+      "absolute_position": 7,
       "lockable": false,
-      "relative_position": 5,
+      "has_lesson_plan": false,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -100,9 +135,10 @@
     {
       "key": "ethics",
       "name": "Using ML Ethically",
-      "absolute_position": 6,
+      "absolute_position": 8,
       "lockable": false,
-      "relative_position": 6,
+      "has_lesson_plan": false,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -114,9 +150,10 @@
     {
       "key": "project",
       "name": "Final project",
-      "absolute_position": 7,
+      "absolute_position": 9,
       "lockable": false,
-      "relative_position": 7,
+      "has_lesson_plan": false,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -128,9 +165,10 @@
     {
       "key": "appendix",
       "name": "Appendix",
-      "absolute_position": 8,
+      "absolute_position": 10,
       "lockable": false,
-      "relative_position": 8,
+      "has_lesson_plan": false,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -142,9 +180,10 @@
     {
       "key": "dog",
       "name": "Does Code.org Like Your Dog?",
-      "absolute_position": 9,
+      "absolute_position": 11,
       "lockable": false,
-      "relative_position": 9,
+      "has_lesson_plan": false,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -156,9 +195,10 @@
     {
       "key": "USE Programs",
       "name": "USE Programs (AppLab Only)",
-      "absolute_position": 10,
+      "absolute_position": 12,
       "lockable": false,
-      "relative_position": 10,
+      "has_lesson_plan": false,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -170,9 +210,10 @@
     {
       "key": "MODIFY Programs",
       "name": "MODIFY Programs (AppLab -> Widget -> AppLab)",
-      "absolute_position": 11,
+      "absolute_position": 13,
       "lockable": false,
-      "relative_position": 11,
+      "has_lesson_plan": false,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -182,13 +223,148 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to Machine Learning"
+        "progression": "Model Card Template",
+        "level_keys": [
+          "ml-model card-template"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-template"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-model card-template"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-1"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-model card-medical-1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-2"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-model card-medical-2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-3"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-3"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-model card-medical-3"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-4"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-4"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-model card-medical-4"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Introduction to Machine Learning",
+        "level_keys": [
+          "ml-intro"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -205,11 +381,15 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 7,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Machine Learning & Societal Impact"
+        "progression": "Machine Learning & Societal Impact",
+        "level_keys": [
+          "ml-society"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -226,11 +406,15 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 8,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Using Models in Apps"
+        "progression": "Using Models in Apps",
+        "level_keys": [
+          "ml-decisions"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -247,11 +431,15 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 9,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Visualizing Data"
+        "progression": "Visualizing Data",
+        "level_keys": [
+          "ml-visualizing"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -268,11 +456,15 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 10,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "AI-Lab: Train a model with continuous labels"
+        "progression": "AI-Lab: Train a model with continuous labels",
+        "level_keys": [
+          "ml-knn-train"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -289,11 +481,15 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 11,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Act Out an ML Model: KNN"
+        "progression": "Act Out an ML Model: KNN",
+        "level_keys": [
+          "ml-knn-act"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -310,11 +506,15 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 12,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare: Your Recommendation App"
+        "progression": "Prepare: Your Recommendation App",
+        "level_keys": [
+          "ml-knn-ailab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -331,11 +531,15 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 13,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Make: Your Recommendation App"
+        "progression": "Make: Your Recommendation App",
+        "level_keys": [
+          "ml-knn-applab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -352,11 +556,15 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 14,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "AI-Lab: Train a model with categorical labels"
+        "progression": "AI-Lab: Train a model with categorical labels",
+        "level_keys": [
+          "ml-svm-train"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -373,11 +581,15 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 15,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Act Out an ML Model: SVM"
+        "progression": "Act Out an ML Model: SVM",
+        "level_keys": [
+          "ml-svm-act"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -394,11 +606,15 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 16,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare: Your Category App"
+        "progression": "Prepare: Your Category App",
+        "level_keys": [
+          "ml-svm-ailab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -415,11 +631,15 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 17,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Make: Your Category App"
+        "progression": "Make: Your Category App",
+        "level_keys": [
+          "ml-svm-applab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -436,11 +656,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 18,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "AI-Lab: Using Data to Make Predictions"
+        "progression": "AI-Lab: Using Data to Make Predictions",
+        "level_keys": [
+          "ml-data"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -457,11 +681,15 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 19,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Documenting Decisions with Model Cards"
+        "progression": "Documenting Decisions with Model Cards",
+        "level_keys": [
+          "ml-model card-unplugged"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -478,11 +706,15 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Mini-Project: Prepare: Your Crystal Ball App"
+        "progression": "Mini-Project: Prepare: Your Crystal Ball App",
+        "level_keys": [
+          "ml-mini-project-ailab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -499,11 +731,15 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Mini-Project: Make: Your Crystal Ball App"
+        "progression": "Mini-Project: Make: Your Crystal Ball App",
+        "level_keys": [
+          "ml-mini-project-applab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -520,11 +756,15 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Mis-education of the Machine"
+        "progression": "Mis-education of the Machine",
+        "level_keys": [
+          "ml-miseducation"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -541,11 +781,15 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 23,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "AI Code of Ethics (HOC 2020)"
+        "progression": "AI Code of Ethics (HOC 2020)",
+        "level_keys": [
+          "ml-ethics-hoc2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -562,11 +806,15 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 24,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "The Goldilocks Principles: Training Data Just Right"
+        "progression": "The Goldilocks Principles: Training Data Just Right",
+        "level_keys": [
+          "ml-goldilocks-ailab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -583,11 +831,15 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 25,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare: App Ethics Challenge"
+        "progression": "Prepare: App Ethics Challenge",
+        "level_keys": [
+          "ml-ethics-ailab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -604,11 +856,15 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 26,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Make: App Ethics Challenge"
+        "progression": "Make: App Ethics Challenge",
+        "level_keys": [
+          "ml-ethics-applab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -625,11 +881,15 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 27,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Planning Your App"
+        "progression": "Planning Your App",
+        "level_keys": [
+          "ml-hypothesis"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -646,11 +906,15 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 28,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare: Collecting Your Own Data"
+        "progression": "Prepare: Collecting Your Own Data",
+        "level_keys": [
+          "ml-collection-ailab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -667,11 +931,15 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 29,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Make: Collecting Your Own Data"
+        "progression": "Make: Collecting Your Own Data",
+        "level_keys": [
+          "ml-collection-applab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -688,11 +956,15 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 30,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare: Project"
+        "progression": "Prepare: Project",
+        "level_keys": [
+          "ml-final-project-ailab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -709,11 +981,15 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 31,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Make: Project"
+        "progression": "Make: Project",
+        "level_keys": [
+          "ml-final-project-applab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -730,10 +1006,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 32,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "ml-code dog-1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -750,10 +1030,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 33,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AIlab-test-1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -770,10 +1054,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 34,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "ml-code dog-export"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -790,11 +1078,15 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 35,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations (AppLab Only)"
+        "progression": "Movie Recommendations (AppLab Only)",
+        "level_keys": [
+          "ml-netflix use-1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -811,11 +1103,15 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations (AppLab Only)"
+        "progression": "Movie Recommendations (AppLab Only)",
+        "level_keys": [
+          "ml-netflix use-2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -832,11 +1128,15 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 37,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations (AppLab Only)"
+        "progression": "Movie Recommendations (AppLab Only)",
+        "level_keys": [
+          "ml-netflix use-3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -853,11 +1153,15 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 38,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations (AppLab Only)"
+        "progression": "Movie Recommendations (AppLab Only)",
+        "level_keys": [
+          "ml-netflix use-4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -874,11 +1178,15 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 39,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Movie Recommendations (AppLab Only)"
+        "progression": "Movie Recommendations (AppLab Only)",
+        "level_keys": [
+          "ml-netflix use-5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -895,11 +1203,15 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 40,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance (AppLab Only)"
+        "progression": "School Acceptance (AppLab Only)",
+        "level_keys": [
+          "ml-school accept use-1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -916,11 +1228,15 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 41,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance (AppLab Only)"
+        "progression": "School Acceptance (AppLab Only)",
+        "level_keys": [
+          "ml-school accept use-2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -937,11 +1253,15 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 42,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance (AppLab Only)"
+        "progression": "School Acceptance (AppLab Only)",
+        "level_keys": [
+          "ml-school accept use-3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -958,11 +1278,15 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 43,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance (AppLab Only)"
+        "progression": "School Acceptance (AppLab Only)",
+        "level_keys": [
+          "ml-school accept use-4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -979,11 +1303,15 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 44,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "School Acceptance (AppLab Only)"
+        "progression": "School Acceptance (AppLab Only)",
+        "level_keys": [
+          "ml-school accept use-5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1000,11 +1328,15 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 45,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dog Predictor"
+        "progression": "Dog Predictor",
+        "level_keys": [
+          "ml-dog modify-1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1021,11 +1353,15 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 46,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dog Predictor"
+        "progression": "Dog Predictor",
+        "level_keys": [
+          "ml-dog modify-2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1042,11 +1378,15 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 47,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dog Predictor"
+        "progression": "Dog Predictor",
+        "level_keys": [
+          "ml-dog modify-3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1063,11 +1403,15 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 48,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dog Predictor"
+        "progression": "Dog Predictor",
+        "level_keys": [
+          "ml-dog modify-4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1084,11 +1428,15 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 49,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dog Predictor"
+        "progression": "Dog Predictor",
+        "level_keys": [
+          "ml-dog modify-5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1105,11 +1453,15 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 50,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dog Predictor"
+        "progression": "Dog Predictor",
+        "level_keys": [
+          "ml-dog modify-6"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1126,11 +1478,15 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 51,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dog Predictor"
+        "progression": "Dog Predictor",
+        "level_keys": [
+          "ml-dog modify-7"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1147,11 +1503,15 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 52,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Candy Predictor"
+        "progression": "Candy Predictor",
+        "level_keys": [
+          "ml-candy modify-1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1168,11 +1528,15 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 53,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Candy Predictor"
+        "progression": "Candy Predictor",
+        "level_keys": [
+          "ml-candy modify-2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1189,11 +1553,15 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 54,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Candy Predictor"
+        "progression": "Candy Predictor",
+        "level_keys": [
+          "ml-candy modify-3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1210,11 +1578,15 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 55,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Candy Predictor"
+        "progression": "Candy Predictor",
+        "level_keys": [
+          "ml-candy modify-4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1231,11 +1603,15 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 56,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Candy Predictor"
+        "progression": "Candy Predictor",
+        "level_keys": [
+          "ml-candy modify-5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1252,11 +1628,15 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 57,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Candy Predictor"
+        "progression": "Candy Predictor",
+        "level_keys": [
+          "ml-candy modify-6"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1274,6 +1654,61 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-template",
+        "script_level.level_keys": [
+          "ml-model card-template"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-1",
+        "script_level.level_keys": [
+          "ml-model card-medical-1"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-2",
+        "script_level.level_keys": [
+          "ml-model card-medical-2"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-3",
+        "script_level.level_keys": [
+          "ml-model card-medical-3"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-4",
+        "script_level.level_keys": [
+          "ml-model card-medical-4"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "ml-intro",
@@ -1846,5 +2281,20 @@
         "script.name": "ml-playground"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
   ]
 }

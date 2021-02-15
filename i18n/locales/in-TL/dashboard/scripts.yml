@@ -15777,6 +15777,7 @@ in:
             'Lesson 15: Assessment Day':
               name: 'crwdns2433454:0crwdne2433454:0'
           student_description: crwdns2478288:0crwdne2478288:0
+          name: crwdns2480824:0crwdne2480824:0
         csp5-2020:
           title: crwdns2351439:0crwdne2351439:0
           description_audience: 'crwdns2351441:0crwdne2351441:0'
@@ -15833,6 +15834,7 @@ in:
             Unit 5 TEACHER Survey:
               name: crwdns2446540:0crwdne2446540:0
           student_description: crwdns2478290:0crwdne2478290:0
+          name: crwdns2480826:0crwdne2480826:0
         csp7-2020:
           title: crwdns2351475:0crwdne2351475:0
           description_audience: 'crwdns2351477:0crwdne2351477:0'
@@ -17456,6 +17458,7 @@ in:
             CS Principles Pre-survey:
               name: crwdns2448406:0crwdne2448406:0
           student_description: crwdns2478326:0crwdne2478326:0
+          name: crwdns2480828:0crwdne2480828:0
         csp2-2020:
           title: crwdns2363950:0crwdne2363950:0
           description_audience: 'crwdns2363952:0crwdne2363952:0'
@@ -17486,6 +17489,7 @@ in:
             'Lesson 9: Assessment Day':
               name: 'crwdns2434098:0crwdne2434098:0'
           student_description: crwdns2478328:0crwdne2478328:0
+          name: crwdns2480830:0crwdne2480830:0
         csp3-2020:
           title: crwdns2363982:0crwdne2363982:0
           description_audience: 'crwdns2363984:0crwdne2363984:0'
@@ -17562,6 +17566,7 @@ in:
             Create PT - Complete the Task:
               name: crwdns2435104:0crwdne2435104:0
           student_description: "crwdns2478338:0crwdne2478338:0"
+          name: crwdns2480832:0crwdne2480832:0
         csp9-2020:
           title: crwdns2364048:0crwdne2364048:0
           description_audience: 'crwdns2364050:0crwdne2364050:0'
@@ -17592,6 +17597,7 @@ in:
             'Lesson 9: Assessment Day':
               name: 'crwdns2434150:0crwdne2434150:0'
           student_description: 'crwdns2478340:0crwdne2478340:0'
+          name: crwdns2480834:0crwdne2480834:0
         csp10-2020:
           title: crwdns2364092:0crwdne2364092:0
           description_audience: 'crwdns2364094:0crwdne2364094:0'
@@ -17638,6 +17644,7 @@ in:
             'Lesson 14: Unit Assessment Day':
               name: 'crwdns2434178:0crwdne2434178:0'
           student_description: "crwdns2478342:0crwdne2478342:0"
+          name: crwdns2480836:0crwdne2480836:0
         csp-march-virtual:
           title: crwdns2364114:0crwdne2364114:0
           description_audience: crwdns2364116:0crwdne2364116:0
@@ -18609,6 +18616,8 @@ in:
               name: crwdns2465574:0crwdne2465574:0
             CS Discoveries:
               name: crwdns2471168:0crwdne2471168:0
+            contagions:
+              name: 'crwdns2481328:0crwdne2481328:0'
           lesson_groups:
             lesson group:
               display_name: crwdns2465576:0crwdne2465576:0
@@ -18617,6 +18626,7 @@ in:
           description_short: 'crwdns2465582:0crwdne2465582:0'
           description: 'crwdns2465584:0crwdne2465584:0'
           student_description: 'crwdns2478378:0crwdne2478378:0'
+          name: crwdns2481330:0crwdne2481330:0
         virustest:
           lessons:
             Virus Simulation for Code Bytes:
@@ -18707,6 +18717,8 @@ in:
               name: crwdns2474788:0crwdne2474788:0
             appendix:
               name: crwdns2474790:0crwdne2474790:0
+            intro-categorical:
+              name: crwdns2481332:0crwdne2481332:0
           lesson_groups: { }
           title: crwdns2471290:0crwdne2471290:0
           description_audience: 'crwdns2471292:0crwdne2471292:0'
@@ -18763,6 +18775,10 @@ in:
               name: crwdns2478406:0crwdne2478406:0
             Sprites in Action:
               name: crwdns2478408:0crwdne2478408:0
+            lesson-3-ci:
+              name: crwdns2481324:0crwdne2481324:0
+            video:
+              name: crwdns2481334:0crwdne2481334:0
           lesson_groups:
             Toolbox Levels:
               display_name: crwdns2471978:0crwdne2471978:0
@@ -18774,6 +18790,8 @@ in:
               description: crwdns2478416:0crwdne2478416:0
             outbreak:
               display_name: crwdns2478418:0crwdne2478418:0
+            Loom Levels:
+              display_name: crwdns2481336:0crwdne2481336:0
           title: crwdns2471980:0crwdne2471980:0
           description_audience: crwdns2471982:0crwdne2471982:0
           description_short: crwdns2471984:0crwdne2471984:0
@@ -20623,3 +20641,104 @@ in:
         testtess:
           lessons: { }
           lesson_groups: { }
+        contagion-pilot:
+          lessons:
+            new lesson:
+              name: crwdns2479272:0crwdne2479272:0
+            how things spread:
+              name: crwdns2479274:0crwdne2479274:0
+            contagion simulator setup:
+              name: crwdns2479276:0crwdne2479276:0
+            sometimes but not always:
+              name: crwdns2479278:0crwdne2479278:0
+            modifying your model:
+              name: crwdns2479280:0crwdne2479280:0
+            telling a data story:
+              name: crwdns2479282:0crwdne2479282:0
+          lesson_groups:
+            lesson group:
+              display_name: crwdns2479284:0crwdne2479284:0
+            contagion:
+              display_name: crwdns2479286:0crwdne2479286:0
+          name: crwdns2479288:0crwdne2479288:0
+          title: 'crwdns2479290:0crwdne2479290:0'
+          description_audience: crwdns2479292:0crwdne2479292:0
+          description_short: 'crwdns2479294:0crwdne2479294:0'
+          description: 'crwdns2479296:0crwdne2479296:0'
+          student_description: 'crwdns2479298:0crwdne2479298:0'
+        contagion-guided-practice:
+          lessons:
+            how things spread gp:
+              name: crwdns2480838:0crwdne2480838:0
+            contagion simulator gp:
+              name: crwdns2481338:0crwdne2481338:0
+            sometimes not always gp:
+              name: crwdns2481340:0crwdne2481340:0
+            modifying your simulator gp:
+              name: crwdns2481342:0crwdne2481342:0
+            collecting data gp:
+              name: crwdns2481344:0crwdne2481344:0
+          lesson_groups:
+            lesson group:
+              display_name: crwdns2480840:0crwdne2480840:0
+          name: crwdns2480842:0crwdne2480842:0
+          title: crwdns2480844:0crwdne2480844:0
+          description_audience: crwdns2480846:0crwdne2480846:0
+          description_short: crwdns2480848:0crwdne2480848:0
+          description: crwdns2480850:0crwdne2480850:0
+          student_description: 'crwdns2480852:0crwdne2480852:0'
+        ai-unit-pilot:
+          lessons:
+            new lesson:
+              name: crwdns2480854:0crwdne2480854:0
+            intro:
+              name: crwdns2480856:0crwdne2480856:0
+            lesson1:
+              name: 'crwdns2480858:0crwdne2480858:0'
+            lesson2:
+              name: crwdns2480860:0crwdne2480860:0
+            lesson3:
+              name: crwdns2480862:0crwdne2480862:0
+            lesson4:
+              name: crwdns2480864:0crwdne2480864:0
+            lesson5:
+              name: crwdns2480866:0crwdne2480866:0
+            lesson6:
+              name: crwdns2480868:0crwdne2480868:0
+            lesson7:
+              name: crwdns2480870:0crwdne2480870:0
+            lesson8:
+              name: crwdns2480872:0crwdne2480872:0
+            lesson9:
+              name: crwdns2480874:0crwdne2480874:0
+            lesson10:
+              name: crwdns2480876:0crwdne2480876:0
+            lesson11:
+              name: crwdns2480878:0crwdne2480878:0
+            lesson12:
+              name: crwdns2480880:0crwdne2480880:0
+            lesson13:
+              name: crwdns2480882:0crwdne2480882:0
+            lesson14:
+              name: crwdns2480884:0crwdne2480884:0
+            lesson15:
+              name: crwdns2480886:0crwdne2480886:0
+            lesson16:
+              name: crwdns2480888:0crwdne2480888:0
+            lesson17:
+              name: crwdns2480890:0crwdne2480890:0
+            lesson18:
+              name: crwdns2480892:0crwdne2480892:0
+            lesson19:
+              name: crwdns2480894:0crwdne2480894:0
+            lesson20:
+              name: crwdns2480896:0crwdne2480896:0
+          lesson_groups:
+            lesson group:
+              display_name: crwdns2480898:0crwdne2480898:0
+          name: crwdns2480900:0crwdne2480900:0
+          title: crwdns2480902:0crwdne2480902:0
+          description_audience: 'crwdns2480904:0crwdne2480904:0'
+          description_short: crwdns2480906:0crwdne2480906:0
+          description: 'crwdns2480908:0crwdne2480908:0'
+          student_description: 'crwdns2480910:0crwdne2480910:0'

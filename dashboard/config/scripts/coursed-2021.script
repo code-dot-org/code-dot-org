@@ -1,7 +1,6 @@
 hideable_lessons true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csf"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
-has_lesson_plan true
 family_name 'coursed'
 version_year '2021'
 curriculum_umbrella 'CSF'
@@ -146,6 +145,21 @@ bonus 'courseD_collector_nested_loops_challenge2_2021'
 lesson_group 'csf_conditionals', display_name: 'Conditionals'
 lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true
 level 'ConditionalsWithCards-Unplugged_2021'
+
+lesson 'lesson-6', display_name: 'Looking Ahead with Minecraft', has_lesson_plan: true
+level 'Overworld Move to Sheep_2021', progression: 'Practice'
+level 'Overworld Chop Tree_2021', progression: 'Practice'
+level 'Overworld Shear Sheep_2021', progression: 'Practice'
+level 'Overworld Chop Trees_2021', progression: 'Practice'
+level 'Overworld Place Wall_2021', progression: 'Practice'
+level 'Overworld House Frame Chosen_2021', progression: 'Practice'
+level 'Overworld Plant Crops_2021', progression: 'Practice'
+level 'Overworld Avoid Monsters_2021', progression: 'Practice'
+level 'Underground Mining Coal_2021', progression: 'Practice'
+level 'Underground Iron_2021', progression: 'Practice'
+level 'Underground Avoiding Lava_2021', progression: 'Challenge', challenge: true
+level 'Underground If Statements_2021', progression: 'Challenge', challenge: true
+level 'Overworld Free Play 20x20_2021', progression: 'Free Play'
 
 lesson 'Conditionals in Bee', display_name: 'If/Else with Bee', has_lesson_plan: true
 level 'courseD_bee_conditionalsVid1_2021', progression: 'Conditionals: If Statements'

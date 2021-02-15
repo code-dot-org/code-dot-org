@@ -6668,7 +6668,7 @@ de:
   tutorial_meeempathy_language: Deutsch
   tutorial_dance2019_string_detail_grades: Ab der 2. Klasse
   tutorial_danceparty_string_detail_grades: Ab der 2. Klasse
-  tutorial_chibitronics_string_detail_grades: 2. - 5. Klasse
+  tutorial_chibitronics_string_detail_grades: K-5
   tutorial_athlete_string_detail_grades: Ab der 2. Klasse
   tutorial_moana_string_detail_grades: Ab der 2. Klasse
   tutorial_star-wars_string_detail_grades: Ab der 2. Klasse
@@ -6718,7 +6718,7 @@ de:
   tutorial_tynkerpup_string_detail_grades: K-5
   tutorial_livecode_string_detail_grades: Ab Klasse 9
   tutorial_cocomgame_string_detail_grades: Ab der 2. Klasse
-  tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
+  tutorial_tynkerspin_string_detail_grades: K-5
   tutorial_code-avengers_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_tynkercq_string_detail_grades: K-5
   tutorial_cmgame_string_detail_grades: Klasse 6+ (11 und höher)
@@ -6803,7 +6803,7 @@ de:
   tutorial_baubles_string_detail_grades: 2. - 8. Klasse
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Ab der 2. Klasse
-  tutorial_fufafit_string_detail_grades: 2. - 5. Klasse
+  tutorial_fufafit_string_detail_grades: K-5
   tutorial_ozodance_string_detail_grades: All ages
   tutorial_codingrobotics_string_detail_grades: K-5
   tutorial_box_string_detail_grades: do-not-show
@@ -6828,13 +6828,13 @@ de:
   tutorial_besttech_string_detail_grades: Ab Klasse 9
   tutorial_tlcbrain_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_hopquiz_string_detail_grades: 6. - 8. Klasse
-  tutorial_unfortunate_string_detail_grades: 2. - 5. Klasse
+  tutorial_unfortunate_string_detail_grades: K-5
   tutorial_cha_string_detail_grades: 6. - 8. Klasse
   tutorial_elaseq_string_detail_grades: K-5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: 2. - 8. Klasse
   tutorial_arduino_string_detail_grades: 6. - 8. Klasse
-  tutorial_introrobo_string_detail_grades: 2. - 5. Klasse
+  tutorial_introrobo_string_detail_grades: K-5
   tutorial_tlcinvis_string_detail_grades: Ab der 2. Klasse
   tutorial_tlcjflap_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
@@ -6843,7 +6843,7 @@ de:
   tutorial_ticklel_string_detail_grades: Ab der 2. Klasse
   tutorial_spiralsdash_string_detail_grades: 2. - 8. Klasse
   tutorial_ghdebug_string_detail_grades: 2. - 8. Klasse
-  tutorial_tlckk_string_detail_grades: 2. - 5. Klasse
+  tutorial_tlckk_string_detail_grades: K-5
   tutorial_firstcomp_string_detail_grades: 1. Klasse (ohne Lesekompetenzen)
   tutorial_mazefinch_string_detail_grades: K-5
   tutorial_tlccc_string_detail_grades: 2. - 8. Klasse
@@ -6868,14 +6868,14 @@ de:
   tutorial_grokflags_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_robomind_string_detail_grades: 2. - 8. Klasse
   tutorial_scratchanimwork_string_detail_grades: 2. - 8. Klasse
-  tutorial_adventureq_string_detail_grades: 2. - 5. Klasse
+  tutorial_adventureq_string_detail_grades: K-5
   tutorial_khan-es_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_kpt_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_kpl_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_khe_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_kfr_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_app-inventor_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_bits_string_detail_grades: 2. - 5. Klasse
+  tutorial_bits_string_detail_grades: K-5
   tutorial_blockly_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
@@ -6884,13 +6884,13 @@ de:
   tutorial_spellcraft_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_pirates_string_detail_grades: 2. - 8. Klasse
   tutorial_csfirst_string_detail_grades: Ab der 2. Klasse
-  tutorial_loopedy_string_detail_grades: 2. - 5. Klasse
+  tutorial_loopedy_string_detail_grades: K-5
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
   tutorial_ssw_string_detail_grades: do-not-show
   tutorial_sswb_string_detail_grades: do-not-show
   tutorial_kodable-unplugged_string_detail_grades: 2. - 8. Klasse
-  tutorial_scratch_string_detail_grades: 2. - 5. Klasse
+  tutorial_scratch_string_detail_grades: K-5
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: Klasse 6+ (11 und höher)
@@ -6900,7 +6900,7 @@ de:
   tutorial_rmc_string_detail_grades: do-not-show
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
-  tutorial_thinkersmith-es_string_detail_grades: 2. - 5. Klasse
+  tutorial_thinkersmith-es_string_detail_grades: K-5
   tutorial_pixie_string_detail_grades: Ab der 2. Klasse
   tutorial_play_string_detail_grades: do-not-show
   tutorial_robomind-nl_string_detail_grades: 2. - 8. Klasse
@@ -6944,7 +6944,7 @@ de:
   tutorial_computeit_string_detail_grades: Ab der 2. Klasse
   tutorial_codesterssj_string_detail_grades: 2. - 8. Klasse
   tutorial_cmchat_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_tynkerdb_string_detail_grades: 2. - 5. Klasse
+  tutorial_tynkerdb_string_detail_grades: K-5
   tutorial_cmbuild_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_robotrattle_string_detail_grades: 2. - 8. Klasse
   tutorial_codestersh_string_detail_grades: 2. - 8. Klasse
@@ -6956,7 +6956,7 @@ de:
   tutorial_kodmaze_string_detail_grades: K-5
   tutorial_codestersa_string_detail_grades: 2. - 8. Klasse
   tutorial_cmdodo_string_detail_grades: 2. - 5. Klasse
-  tutorial_tynkerspace_string_detail_grades: 2. - 5. Klasse
+  tutorial_tynkerspace_string_detail_grades: K-5
   tutorial_gfbloons_string_detail_grades: Ab Klasse 9
   tutorial_raspipong_string_detail_grades: Ab Klasse 9
   tutorial_codehsvr_string_detail_grades: Klasse 6+ (11 und höher)
@@ -6971,7 +6971,7 @@ de:
   tutorial_codehsjsgraph_string_detail_grades: Ab Klasse 9
   tutorial_thunkable_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_hopcrossyroad_string_detail_grades: 2. - 8. Klasse
-  tutorial_switchglitch_string_detail_grades: 2. - 5. Klasse
+  tutorial_switchglitch_string_detail_grades: K-5
   tutorial_codecar_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_codesterscp_string_detail_grades: 6. - 8. Klasse
   tutorial_grokpetblock_string_detail_grades: 6. - 8. Klasse
@@ -6980,7 +6980,7 @@ de:
   tutorial_codesterscr_string_detail_grades: 2. - 8. Klasse
   tutorial_grokdisease_string_detail_grades: Ab Klasse 9
   tutorial_techec_string_detail_grades: University
-  tutorial_rgbegin_string_detail_grades: 2. - 5. Klasse
+  tutorial_rgbegin_string_detail_grades: K-5
   tutorial_myradream_string_detail_grades: 2. - 8. Klasse
   tutorial_thinkfun_string_detail_grades: 2. - 8. Klasse
   tutorial_hopfireworks_string_detail_grades: 2. - 8. Klasse
@@ -6988,7 +6988,7 @@ de:
   tutorial_codehspython_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_codehsjava_string_detail_grades: Ab Klasse 9
   tutorial_techioda_string_detail_grades: University
-  tutorial_grokmonster_string_detail_grades: 2. - 5. Klasse
+  tutorial_grokmonster_string_detail_grades: K-5
   tutorial_techmjs_string_detail_grades: University
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
@@ -6996,19 +6996,19 @@ de:
   tutorial_groktunnel_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_stemcod_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_techikb_string_detail_grades: University
-  tutorial_kanostreet_string_detail_grades: 2. - 5. Klasse
-  tutorial_nyblebot_string_detail_grades: 2. - 5. Klasse
-  tutorial_codemojijs_string_detail_grades: 2. - 5. Klasse
+  tutorial_kanostreet_string_detail_grades: K-5
+  tutorial_nyblebot_string_detail_grades: K-5
+  tutorial_codemojijs_string_detail_grades: K-5
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
   tutorial_gpbcatapult_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_quorumastro_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_alicewonder_string_detail_grades: 2. - 5. Klasse
+  tutorial_alicewonder_string_detail_grades: K-5
   tutorial_rginter_string_detail_grades: 6. - 8. Klasse
   tutorial_cssgrid_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_jshero_string_detail_grades: Ab Klasse 9
-  tutorial_codemojipy_string_detail_grades: 2. - 5. Klasse
+  tutorial_codemojipy_string_detail_grades: K-5
   tutorial_nclabdrone_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_gpbcircle_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_gpbpaint_string_detail_grades: Klasse 6+ (11 und höher)
@@ -7040,11 +7040,11 @@ de:
   tutorial_isavesanta_string_detail_grades: 2. - 8. Klasse
   tutorial_iorder_string_detail_grades: 2. - 8. Klasse
   tutorial_ianimate_string_detail_grades: 2. - 8. Klasse
-  tutorial_iloveada_string_detail_grades: 2. - 5. Klasse
+  tutorial_iloveada_string_detail_grades: K-5
   tutorial_kodflash_string_detail_grades: K-5
-  tutorial_kodchoose_string_detail_grades: 2. - 5. Klasse
+  tutorial_kodchoose_string_detail_grades: K-5
   tutorial_kodpizzapre_string_detail_grades: 1. Klasse (ohne Lesekompetenzen)
-  tutorial_kodpizza_string_detail_grades: 2. - 5. Klasse
+  tutorial_kodpizza_string_detail_grades: K-5
   tutorial_kodwomen_string_detail_grades: 2. - 8. Klasse
   tutorial_tfunplug_string_detail_grades: 6. - 8. Klasse
   tutorial_lbvariables_string_detail_grades: 2. - 8. Klasse
@@ -7056,9 +7056,9 @@ de:
   tutorial_lbpotato_string_detail_grades: Ab der 2. Klasse
   tutorial_lbguitar_string_detail_grades: Ab der 2. Klasse
   tutorial_lbio_string_detail_grades: 2. - 8. Klasse
-  tutorial_wonpuppy_string_detail_grades: 2. - 5. Klasse
+  tutorial_wonpuppy_string_detail_grades: K-5
   tutorial_woncue_string_detail_grades: Ab der 2. Klasse
-  tutorial_wonzoo_string_detail_grades: 2. - 5. Klasse
+  tutorial_wonzoo_string_detail_grades: K-5
   tutorial_wontrip_string_detail_grades: 2. - 8. Klasse
   tutorial_woncollect_string_detail_grades: K-5
   tutorial_wonsecret_string_detail_grades: Klasse 6+ (11 und höher)
@@ -7099,10 +7099,10 @@ de:
   tutorial_3dbearmars_string_detail_grades: 2. - 8. Klasse
   tutorial_alexaskill_string_detail_grades: 2. - 8. Klasse
   tutorial_bitsboxyak_string_detail_grades: 2. - 8. Klasse
-  tutorial_blockscadbargraphs_string_detail_grades: 2. - 5. Klasse
-  tutorial_blockscadbirdhouses_string_detail_grades: 2. - 5. Klasse
+  tutorial_blockscadbargraphs_string_detail_grades: K-5
+  tutorial_blockscadbirdhouses_string_detail_grades: K-5
   tutorial_blockscadclock_string_detail_grades: Ab Klasse 9
-  tutorial_blockscaddinner_string_detail_grades: 2. - 5. Klasse
+  tutorial_blockscaddinner_string_detail_grades: K-5
   tutorial_blockscadicecream_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_blockscadpizza_string_detail_grades: 6. - 8. Klasse
   tutorial_blockscadsugar_string_detail_grades: 6. - 8. Klasse
@@ -7113,20 +7113,20 @@ de:
   tutorial_bpenglishvid_string_detail_grades: 2. - 8. Klasse
   tutorial_bphealthscratch_string_detail_grades: Ab der 2. Klasse
   tutorial_bphealthvid_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_bpmathscratch_string_detail_grades: 2. - 5. Klasse
+  tutorial_bpmathscratch_string_detail_grades: K-5
   tutorial_bpmathvid_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_bpmlkscratch_string_detail_grades: 2. - 8. Klasse
   tutorial_bpmlkvid_string_detail_grades: 6. - 8. Klasse
-  tutorial_bpsafetyscratch_string_detail_grades: 2. - 5. Klasse
+  tutorial_bpsafetyscratch_string_detail_grades: K-5
   tutorial_bpsafetyvid_string_detail_grades: 6. - 8. Klasse
-  tutorial_bpsciencescratch_string_detail_grades: 2. - 5. Klasse
+  tutorial_bpsciencescratch_string_detail_grades: K-5
   tutorial_bpsciencevid_string_detail_grades: 6. - 8. Klasse
   tutorial_bptechscratch_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_bptechvid_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_caflags_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_matariki_string_detail_grades: 2. - 5. Klasse
+  tutorial_matariki_string_detail_grades: K-5
   tutorial_carestaurant_string_detail_grades: Ab der 2. Klasse
-  tutorial_casea_string_detail_grades: 2. - 5. Klasse
+  tutorial_casea_string_detail_grades: K-5
   tutorial_cashield_string_detail_grades: 2. - 8. Klasse
   tutorial_ccwslimer_string_detail_grades: 2. - 8. Klasse
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
@@ -7165,8 +7165,8 @@ de:
   tutorial_groklearningpython_string_detail_grades: Ab Klasse 9
   tutorial_htmltimetravel_string_detail_grades: Ab Klasse 9
   tutorial_hp_flappy_string_detail_grades: Ab Klasse 9
-  tutorial_appytappin_string_detail_grades: 2. - 5. Klasse
-  tutorial_icipher_string_detail_grades: 2. - 5. Klasse
+  tutorial_appytappin_string_detail_grades: K-5
+  tutorial_icipher_string_detail_grades: K-5
   tutorial_iguess_string_detail_grades: K-5
   tutorial_imake_string_detail_grades: 1. Klasse (ohne Lesekompetenzen)
   tutorial_imorse_string_detail_grades: 2. - 8. Klasse
@@ -7175,7 +7175,7 @@ de:
   tutorial_kibobowl_string_detail_grades: K-5
   tutorial_kibodance_string_detail_grades: K-5
   tutorial_buildcharacters_string_detail_grades: K-5
-  tutorial_designgames_string_detail_grades: 2. - 5. Klasse
+  tutorial_designgames_string_detail_grades: K-5
   tutorial_makelevels_string_detail_grades: K-5
   tutorial_wizard_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_mbscratchcards_string_detail_grades: Ab der 2. Klasse
@@ -7191,19 +7191,19 @@ de:
   tutorial_ozotroll_string_detail_grades: 6. - 8. Klasse
   tutorial_peblioart_string_detail_grades: Ab Klasse 9
   tutorial_astropi_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_rgart_string_detail_grades: 2. - 5. Klasse
-  tutorial_rgengineer_string_detail_grades: 2. - 5. Klasse
-  tutorial_rgmath_string_detail_grades: 2. - 5. Klasse
-  tutorial_rgscience_string_detail_grades: 2. - 5. Klasse
-  tutorial_rgtech_string_detail_grades: 2. - 5. Klasse
+  tutorial_rgart_string_detail_grades: K-5
+  tutorial_rgengineer_string_detail_grades: K-5
+  tutorial_rgmath_string_detail_grades: K-5
+  tutorial_rgscience_string_detail_grades: K-5
+  tutorial_rgtech_string_detail_grades: K-5
   tutorial_robotmagic3d_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_robotmagicflappy_string_detail_grades: Ab Klasse 9
   tutorial_scratchadventure_string_detail_grades: Ab der 2. Klasse
   tutorial_scratchtalk_string_detail_grades: Ab der 2. Klasse
-  tutorial_scratchjrstory_string_detail_grades: 2. - 5. Klasse
+  tutorial_scratchjrstory_string_detail_grades: K-5
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: 2. - 8. Klasse
-  tutorial_spherocommunity_string_detail_grades: 2. - 5. Klasse
+  tutorial_spherocommunity_string_detail_grades: K-5
   tutorial_spherofunctions_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_spheroinfrared_string_detail_grades: 6. - 8. Klasse
   tutorial_spherolightsensor_string_detail_grades: 2. - 8. Klasse
@@ -7228,15 +7228,15 @@ de:
   tutorial_gcvariables_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_beanything_string_detail_grades: K-5
   tutorial_change_string_detail_grades: 2. - 8. Klasse
-  tutorial_cooking_string_detail_grades: 2. - 5. Klasse
+  tutorial_cooking_string_detail_grades: K-5
   tutorial_crystal_string_detail_grades: Ab der 2. Klasse
   tutorial_landscape_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_pets_string_detail_grades: 2. - 5. Klasse
+  tutorial_pets_string_detail_grades: K-5
   tutorial_petvet_string_detail_grades: K-5
   tutorial_superhero_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_vidcodeplastic_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_vidcodetypeface_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_washustorm_string_detail_grades: 2. - 5. Klasse
+  tutorial_washustorm_string_detail_grades: K-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
   tutorial_googlerookie_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_tommyturtle_string_detail_grades: K-5
@@ -7328,7 +7328,7 @@ de:
   tutorial_ozobotcolor1_string_detail_grades: Ab der 2. Klasse
   tutorial_scigirlspixels_string_detail_grades: Ab der 2. Klasse
   tutorial_kcjheroines_string_detail_grades: 2. - 8. Klasse
-  tutorial_ozobotvalue_string_detail_grades: 2. - 5. Klasse
+  tutorial_ozobotvalue_string_detail_grades: K-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
   tutorial_clfashion2_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_ai4all_string_detail_grades: Klasse 6+ (11 und höher)
@@ -7339,7 +7339,7 @@ de:
   tutorial_kiboprogram_string_detail_grades: K-5
   tutorial_hellorubycsin60_string_detail_grades: K-5
   tutorial_clfashion1_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_irobottraffic_string_detail_grades: 2. - 5. Klasse
+  tutorial_irobottraffic_string_detail_grades: K-5
   tutorial_edisonmystery_string_detail_grades: 6. - 8. Klasse
   tutorial_microbitseaturtles_string_detail_grades: 6. - 8. Klasse
   tutorial_ozobotknow_string_detail_grades: Ab der 2. Klasse
@@ -7348,7 +7348,7 @@ de:
   tutorial_irobotkind_string_detail_grades: K-5
   tutorial_firiavirtual_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_irobotguesscode_string_detail_grades: 2. - 8. Klasse
-  tutorial_ozobotnouns_string_detail_grades: 2. - 5. Klasse
+  tutorial_ozobotnouns_string_detail_grades: K-5
   tutorial_nasa3d_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_blupants_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_legodance_string_detail_grades: 6. - 8. Klasse
@@ -10271,15 +10271,15 @@ de:
   tutorial_codehstriangle_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_ttwhitehouse_string_detail_grades: Ab der 2. Klasse
   tutorial_modulo_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_codingtown_string_detail_grades: 2. - 5. Klasse
-  tutorial_kanoart_string_detail_grades: 2. - 5. Klasse
+  tutorial_codingtown_string_detail_grades: K-5
+  tutorial_kanoart_string_detail_grades: K-5
   tutorial_dragonscript_string_detail_grades: Ab Klasse 9
   tutorial_uwcloud_string_detail_grades: Ab der 2. Klasse
   tutorial_htmlmuffin_string_detail_grades: 6. - 8. Klasse
   tutorial_microsoftpizza_string_detail_grades: 6. - 8. Klasse
   tutorial_stemc_blckhole_string_detail_grades: Ab Klasse 9
   tutorial_careconfigure_string_detail_grades: Klasse 6+ (11 und höher)
-  tutorial_rpiscratch_string_detail_grades: 2. - 5. Klasse
+  tutorial_rpiscratch_string_detail_grades: K-5
   tutorial_ozaria_string_detail_grades: Ab der 2. Klasse
   tutorial_ttovum_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_ttpassage_string_detail_grades: 2. - 8. Klasse
@@ -10327,7 +10327,7 @@ de:
   tutorial_modvariables_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_codestersmicro_string_detail_grades: 6. - 8. Klasse
   tutorial_codestersdata_string_detail_grades: 6. - 8. Klasse
-  tutorial_ikodexmas_string_detail_grades: 2. - 5. Klasse
+  tutorial_ikodexmas_string_detail_grades: K-5
   tutorial_rpisensehat_string_detail_grades: Klasse 6+ (11 und höher)
   tutorial_modtraits_string_detail_grades: Ab der 2. Klasse
   tutorial_mee_string_detail_grades: Ab der 2. Klasse

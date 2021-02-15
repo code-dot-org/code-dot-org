@@ -2730,3 +2730,9 @@ lt:
               display_name: Įvadas
             lessonGroup-3:
               display_name: Kintamieji
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: 14 pamoka
+            lesson15:
+              name: 15 pamoka

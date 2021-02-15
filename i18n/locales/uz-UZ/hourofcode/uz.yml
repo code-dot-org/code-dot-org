@@ -7205,7 +7205,7 @@ uz:
   tutorial_meeempathy_language: Ingliz
   tutorial_dance2019_string_detail_grades: 2+ sinf
   tutorial_danceparty_string_detail_grades: 2+ sinf
-  tutorial_chibitronics_string_detail_grades: 2-5-sinflar
+  tutorial_chibitronics_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_athlete_string_detail_grades: 2+ sinf
   tutorial_moana_string_detail_grades: 2+ sinf
   tutorial_star-wars_string_detail_grades: 2+ sinf
@@ -7255,7 +7255,7 @@ uz:
   tutorial_tynkerpup_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_livecode_string_detail_grades: 9+ sinflar
   tutorial_cocomgame_string_detail_grades: 2+ sinf
-  tutorial_tynkerspin_string_detail_grades: Maktabgacha yoshdan 8-sinfgacha
+  tutorial_tynkerspin_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_code-avengers_string_detail_grades: 6+ sinflar
   tutorial_tynkercq_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_cmgame_string_detail_grades: 6+ sinflar
@@ -7340,7 +7340,7 @@ uz:
   tutorial_baubles_string_detail_grades: 2-8-sinflar
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: 2+ sinf
-  tutorial_fufafit_string_detail_grades: 2-5-sinflar
+  tutorial_fufafit_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_ozodance_string_detail_grades: Barcha yoshdagilar uchun
   tutorial_codingrobotics_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_box_string_detail_grades: do-not-show
@@ -7365,13 +7365,13 @@ uz:
   tutorial_besttech_string_detail_grades: 9+ sinflar
   tutorial_tlcbrain_string_detail_grades: 6+ sinflar
   tutorial_hopquiz_string_detail_grades: 6-8-sinflar
-  tutorial_unfortunate_string_detail_grades: 2-5-sinflar
+  tutorial_unfortunate_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_cha_string_detail_grades: 6-8-sinflar
   tutorial_elaseq_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: 2-8-sinflar
   tutorial_arduino_string_detail_grades: 6-8-sinflar
-  tutorial_introrobo_string_detail_grades: 2-5-sinflar
+  tutorial_introrobo_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_tlcinvis_string_detail_grades: 2+ sinf
   tutorial_tlcjflap_string_detail_grades: 6+ sinflar
   tutorial_procolor_string_detail_grades: Maktabgacha yoshdan 8-sinfgacha
@@ -7380,7 +7380,7 @@ uz:
   tutorial_ticklel_string_detail_grades: 2+ sinf
   tutorial_spiralsdash_string_detail_grades: 2-8-sinflar
   tutorial_ghdebug_string_detail_grades: 2-8-sinflar
-  tutorial_tlckk_string_detail_grades: 2-5-sinflar
+  tutorial_tlckk_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_firstcomp_string_detail_grades: Maktabgacha yoshdan 1-sinfgacha
   tutorial_mazefinch_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_tlccc_string_detail_grades: 2-8-sinflar
@@ -7405,14 +7405,14 @@ uz:
   tutorial_grokflags_string_detail_grades: 6+ sinflar
   tutorial_robomind_string_detail_grades: 2-8-sinflar
   tutorial_scratchanimwork_string_detail_grades: 2-8-sinflar
-  tutorial_adventureq_string_detail_grades: 2-5-sinflar
+  tutorial_adventureq_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_khan-es_string_detail_grades: 6+ sinflar
   tutorial_kpt_string_detail_grades: 6+ sinflar
   tutorial_kpl_string_detail_grades: 6+ sinflar
   tutorial_khe_string_detail_grades: 6+ sinflar
   tutorial_kfr_string_detail_grades: 6+ sinflar
   tutorial_app-inventor_string_detail_grades: 6+ sinflar
-  tutorial_bits_string_detail_grades: 2-5-sinflar
+  tutorial_bits_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_blockly_string_detail_grades: 6+ sinflar
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: Barcha yoshdagilar uchun
@@ -7421,13 +7421,13 @@ uz:
   tutorial_spellcraft_string_detail_grades: 6+ sinflar
   tutorial_pirates_string_detail_grades: 2-8-sinflar
   tutorial_csfirst_string_detail_grades: 2+ sinf
-  tutorial_loopedy_string_detail_grades: 2-5-sinflar
+  tutorial_loopedy_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
   tutorial_ssw_string_detail_grades: do-not-show
   tutorial_sswb_string_detail_grades: do-not-show
   tutorial_kodable-unplugged_string_detail_grades: 2-8-sinflar
-  tutorial_scratch_string_detail_grades: 2-5-sinflar
+  tutorial_scratch_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_bayes_string_detail_grades: Barcha yoshdagilar uchun
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: 6+ sinflar
@@ -7437,7 +7437,7 @@ uz:
   tutorial_rmc_string_detail_grades: do-not-show
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
-  tutorial_thinkersmith-es_string_detail_grades: 2-5-sinflar
+  tutorial_thinkersmith-es_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_pixie_string_detail_grades: 2+ sinf
   tutorial_play_string_detail_grades: do-not-show
   tutorial_robomind-nl_string_detail_grades: 2-8-sinflar
@@ -7481,7 +7481,7 @@ uz:
   tutorial_computeit_string_detail_grades: 2+ sinf
   tutorial_codesterssj_string_detail_grades: 2-8-sinflar
   tutorial_cmchat_string_detail_grades: 6+ sinflar
-  tutorial_tynkerdb_string_detail_grades: 2-5-sinflar
+  tutorial_tynkerdb_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_cmbuild_string_detail_grades: 6+ sinflar
   tutorial_robotrattle_string_detail_grades: 2-8-sinflar
   tutorial_codestersh_string_detail_grades: 2-8-sinflar
@@ -7493,7 +7493,7 @@ uz:
   tutorial_kodmaze_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_codestersa_string_detail_grades: 2-8-sinflar
   tutorial_cmdodo_string_detail_grades: 3-5-sinflar
-  tutorial_tynkerspace_string_detail_grades: 2-5-sinflar
+  tutorial_tynkerspace_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_gfbloons_string_detail_grades: 9+ sinflar
   tutorial_raspipong_string_detail_grades: 9+ sinflar
   tutorial_codehsvr_string_detail_grades: 6+ sinflar
@@ -7508,7 +7508,7 @@ uz:
   tutorial_codehsjsgraph_string_detail_grades: 9+ sinflar
   tutorial_thunkable_string_detail_grades: 6+ sinflar
   tutorial_hopcrossyroad_string_detail_grades: 2-8-sinflar
-  tutorial_switchglitch_string_detail_grades: 2-5-sinflar
+  tutorial_switchglitch_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_codecar_string_detail_grades: 6+ sinflar
   tutorial_codesterscp_string_detail_grades: 6-8-sinflar
   tutorial_grokpetblock_string_detail_grades: 6-8-sinflar
@@ -7517,7 +7517,7 @@ uz:
   tutorial_codesterscr_string_detail_grades: 2-8-sinflar
   tutorial_grokdisease_string_detail_grades: 9+ sinflar
   tutorial_techec_string_detail_grades: Universitet
-  tutorial_rgbegin_string_detail_grades: 2-5-sinflar
+  tutorial_rgbegin_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_myradream_string_detail_grades: 2-8-sinflar
   tutorial_thinkfun_string_detail_grades: 2-8-sinflar
   tutorial_hopfireworks_string_detail_grades: 2-8-sinflar
@@ -7525,7 +7525,7 @@ uz:
   tutorial_codehspython_string_detail_grades: 6+ sinflar
   tutorial_codehsjava_string_detail_grades: 9+ sinflar
   tutorial_techioda_string_detail_grades: Universitet
-  tutorial_grokmonster_string_detail_grades: 2-5-sinflar
+  tutorial_grokmonster_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_techmjs_string_detail_grades: Universitet
   tutorial_techga_string_detail_grades: Universitet
   tutorial_techioan_string_detail_grades: Universitet
@@ -7533,19 +7533,19 @@ uz:
   tutorial_groktunnel_string_detail_grades: 6+ sinflar
   tutorial_stemcod_string_detail_grades: 6+ sinflar
   tutorial_techikb_string_detail_grades: Universitet
-  tutorial_kanostreet_string_detail_grades: 2-5-sinflar
-  tutorial_nyblebot_string_detail_grades: 2-5-sinflar
-  tutorial_codemojijs_string_detail_grades: 2-5-sinflar
+  tutorial_kanostreet_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_nyblebot_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_codemojijs_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_techapf_string_detail_grades: Universitet
   tutorial_techfpjs_string_detail_grades: Universitet
   tutorial_techlinq_string_detail_grades: Universitet
   tutorial_gpbcatapult_string_detail_grades: 6+ sinflar
   tutorial_quorumastro_string_detail_grades: 6+ sinflar
-  tutorial_alicewonder_string_detail_grades: 2-5-sinflar
+  tutorial_alicewonder_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_rginter_string_detail_grades: 6-8-sinflar
   tutorial_cssgrid_string_detail_grades: 6+ sinflar
   tutorial_jshero_string_detail_grades: 9+ sinflar
-  tutorial_codemojipy_string_detail_grades: 2-5-sinflar
+  tutorial_codemojipy_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_nclabdrone_string_detail_grades: 6+ sinflar
   tutorial_gpbcircle_string_detail_grades: 6+ sinflar
   tutorial_gpbpaint_string_detail_grades: 6+ sinflar
@@ -7577,11 +7577,11 @@ uz:
   tutorial_isavesanta_string_detail_grades: 2-8-sinflar
   tutorial_iorder_string_detail_grades: 2-8-sinflar
   tutorial_ianimate_string_detail_grades: 2-8-sinflar
-  tutorial_iloveada_string_detail_grades: 2-5-sinflar
+  tutorial_iloveada_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_kodflash_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
-  tutorial_kodchoose_string_detail_grades: 2-5-sinflar
+  tutorial_kodchoose_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_kodpizzapre_string_detail_grades: Maktabgacha yoshdan 1-sinfgacha
-  tutorial_kodpizza_string_detail_grades: 2-5-sinflar
+  tutorial_kodpizza_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_kodwomen_string_detail_grades: 2-8-sinflar
   tutorial_tfunplug_string_detail_grades: 6-8-sinflar
   tutorial_lbvariables_string_detail_grades: 2-8-sinflar
@@ -7593,9 +7593,9 @@ uz:
   tutorial_lbpotato_string_detail_grades: 2+ sinf
   tutorial_lbguitar_string_detail_grades: 2+ sinf
   tutorial_lbio_string_detail_grades: 2-8-sinflar
-  tutorial_wonpuppy_string_detail_grades: 2-5-sinflar
+  tutorial_wonpuppy_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_woncue_string_detail_grades: 2+ sinf
-  tutorial_wonzoo_string_detail_grades: 2-5-sinflar
+  tutorial_wonzoo_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_wontrip_string_detail_grades: 2-8-sinflar
   tutorial_woncollect_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_wonsecret_string_detail_grades: 6+ sinflar
@@ -7636,10 +7636,10 @@ uz:
   tutorial_3dbearmars_string_detail_grades: 2-8-sinflar
   tutorial_alexaskill_string_detail_grades: 2-8-sinflar
   tutorial_bitsboxyak_string_detail_grades: 2-8-sinflar
-  tutorial_blockscadbargraphs_string_detail_grades: 2-5-sinflar
-  tutorial_blockscadbirdhouses_string_detail_grades: 2-5-sinflar
+  tutorial_blockscadbargraphs_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_blockscadbirdhouses_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_blockscadclock_string_detail_grades: 9+ sinflar
-  tutorial_blockscaddinner_string_detail_grades: 2-5-sinflar
+  tutorial_blockscaddinner_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_blockscadicecream_string_detail_grades: 6+ sinflar
   tutorial_blockscadpizza_string_detail_grades: 6-8-sinflar
   tutorial_blockscadsugar_string_detail_grades: 6-8-sinflar
@@ -7650,20 +7650,20 @@ uz:
   tutorial_bpenglishvid_string_detail_grades: 2-8-sinflar
   tutorial_bphealthscratch_string_detail_grades: 2+ sinf
   tutorial_bphealthvid_string_detail_grades: 6+ sinflar
-  tutorial_bpmathscratch_string_detail_grades: 2-5-sinflar
+  tutorial_bpmathscratch_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_bpmathvid_string_detail_grades: 6+ sinflar
   tutorial_bpmlkscratch_string_detail_grades: 2-8-sinflar
   tutorial_bpmlkvid_string_detail_grades: 6-8-sinflar
-  tutorial_bpsafetyscratch_string_detail_grades: 2-5-sinflar
+  tutorial_bpsafetyscratch_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_bpsafetyvid_string_detail_grades: 6-8-sinflar
-  tutorial_bpsciencescratch_string_detail_grades: 2-5-sinflar
+  tutorial_bpsciencescratch_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_bpsciencevid_string_detail_grades: 6-8-sinflar
   tutorial_bptechscratch_string_detail_grades: 6+ sinflar
   tutorial_bptechvid_string_detail_grades: 6+ sinflar
   tutorial_caflags_string_detail_grades: 6+ sinflar
-  tutorial_matariki_string_detail_grades: 2-5-sinflar
+  tutorial_matariki_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_carestaurant_string_detail_grades: 2+ sinf
-  tutorial_casea_string_detail_grades: 2-5-sinflar
+  tutorial_casea_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_cashield_string_detail_grades: 2-8-sinflar
   tutorial_ccwslimer_string_detail_grades: 2-8-sinflar
   tutorial_codinggalaxy_string_detail_grades: Maktabgacha yoshdan 8-sinfgacha
@@ -7702,8 +7702,8 @@ uz:
   tutorial_groklearningpython_string_detail_grades: 9+ sinflar
   tutorial_htmltimetravel_string_detail_grades: 9+ sinflar
   tutorial_hp_flappy_string_detail_grades: 9+ sinflar
-  tutorial_appytappin_string_detail_grades: 2-5-sinflar
-  tutorial_icipher_string_detail_grades: 2-5-sinflar
+  tutorial_appytappin_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_icipher_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_iguess_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_imake_string_detail_grades: Maktabgacha yoshdan 1-sinfgacha
   tutorial_imorse_string_detail_grades: 2-8-sinflar
@@ -7712,7 +7712,7 @@ uz:
   tutorial_kibobowl_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_kibodance_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_buildcharacters_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
-  tutorial_designgames_string_detail_grades: 2-5-sinflar
+  tutorial_designgames_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_makelevels_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_wizard_string_detail_grades: 6+ sinflar
   tutorial_mbscratchcards_string_detail_grades: 2+ sinf
@@ -7728,19 +7728,19 @@ uz:
   tutorial_ozotroll_string_detail_grades: 6-8-sinflar
   tutorial_peblioart_string_detail_grades: 9+ sinflar
   tutorial_astropi_string_detail_grades: 6+ sinflar
-  tutorial_rgart_string_detail_grades: 2-5-sinflar
-  tutorial_rgengineer_string_detail_grades: 2-5-sinflar
-  tutorial_rgmath_string_detail_grades: 2-5-sinflar
-  tutorial_rgscience_string_detail_grades: 2-5-sinflar
-  tutorial_rgtech_string_detail_grades: 2-5-sinflar
+  tutorial_rgart_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_rgengineer_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_rgmath_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_rgscience_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_rgtech_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_robotmagic3d_string_detail_grades: 6+ sinflar
   tutorial_robotmagicflappy_string_detail_grades: 9+ sinflar
   tutorial_scratchadventure_string_detail_grades: 2+ sinf
   tutorial_scratchtalk_string_detail_grades: 2+ sinf
-  tutorial_scratchjrstory_string_detail_grades: 2-5-sinflar
+  tutorial_scratchjrstory_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_scratchjrtwinkle_string_detail_grades: Maktabgacha yoshdagi o‘quvchilarga
   tutorial_spherocomm_string_detail_grades: 2-8-sinflar
-  tutorial_spherocommunity_string_detail_grades: 2-5-sinflar
+  tutorial_spherocommunity_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_spherofunctions_string_detail_grades: 6+ sinflar
   tutorial_spheroinfrared_string_detail_grades: 6-8-sinflar
   tutorial_spherolightsensor_string_detail_grades: 2-8-sinflar
@@ -7765,15 +7765,15 @@ uz:
   tutorial_gcvariables_string_detail_grades: 6+ sinflar
   tutorial_beanything_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_change_string_detail_grades: 2-8-sinflar
-  tutorial_cooking_string_detail_grades: 2-5-sinflar
+  tutorial_cooking_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_crystal_string_detail_grades: 2+ sinf
   tutorial_landscape_string_detail_grades: 6+ sinflar
-  tutorial_pets_string_detail_grades: 2-5-sinflar
+  tutorial_pets_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_petvet_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_superhero_string_detail_grades: 6+ sinflar
   tutorial_vidcodeplastic_string_detail_grades: 6+ sinflar
   tutorial_vidcodetypeface_string_detail_grades: 6+ sinflar
-  tutorial_washustorm_string_detail_grades: 2-5-sinflar
+  tutorial_washustorm_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_activitypackets_string_detail_grades: Maktabgacha yoshdan 8-sinfgacha
   tutorial_googlerookie_string_detail_grades: 6+ sinflar
   tutorial_tommyturtle_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
@@ -7865,7 +7865,7 @@ uz:
   tutorial_ozobotcolor1_string_detail_grades: 2+ sinf
   tutorial_scigirlspixels_string_detail_grades: 2+ sinf
   tutorial_kcjheroines_string_detail_grades: 2-8-sinflar
-  tutorial_ozobotvalue_string_detail_grades: 2-5-sinflar
+  tutorial_ozobotvalue_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_icodebytes_string_detail_grades: Maktabgacha yoshdagi o‘quvchilarga
   tutorial_clfashion2_string_detail_grades: 6+ sinflar
   tutorial_ai4all_string_detail_grades: 6+ sinflar
@@ -7876,7 +7876,7 @@ uz:
   tutorial_kiboprogram_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_hellorubycsin60_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_clfashion1_string_detail_grades: 6+ sinflar
-  tutorial_irobottraffic_string_detail_grades: 2-5-sinflar
+  tutorial_irobottraffic_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_edisonmystery_string_detail_grades: 6-8-sinflar
   tutorial_microbitseaturtles_string_detail_grades: 6-8-sinflar
   tutorial_ozobotknow_string_detail_grades: 2+ sinf
@@ -7885,7 +7885,7 @@ uz:
   tutorial_irobotkind_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_firiavirtual_string_detail_grades: 6+ sinflar
   tutorial_irobotguesscode_string_detail_grades: 2-8-sinflar
-  tutorial_ozobotnouns_string_detail_grades: 2-5-sinflar
+  tutorial_ozobotnouns_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_nasa3d_string_detail_grades: 6+ sinflar
   tutorial_blupants_string_detail_grades: 6+ sinflar
   tutorial_legodance_string_detail_grades: 6-8-sinflar
@@ -10998,15 +10998,15 @@ uz:
   tutorial_codehstriangle_string_detail_grades: 6+ sinflar
   tutorial_ttwhitehouse_string_detail_grades: 2+ sinf
   tutorial_modulo_string_detail_grades: 6+ sinflar
-  tutorial_codingtown_string_detail_grades: 2-5-sinflar
-  tutorial_kanoart_string_detail_grades: 2-5-sinflar
+  tutorial_codingtown_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
+  tutorial_kanoart_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_dragonscript_string_detail_grades: 9+ sinflar
   tutorial_uwcloud_string_detail_grades: 2+ sinf
   tutorial_htmlmuffin_string_detail_grades: 6-8-sinflar
   tutorial_microsoftpizza_string_detail_grades: 6-8-sinflar
   tutorial_stemc_blckhole_string_detail_grades: 9+ sinflar
   tutorial_careconfigure_string_detail_grades: 6+ sinflar
-  tutorial_rpiscratch_string_detail_grades: 2-5-sinflar
+  tutorial_rpiscratch_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_ozaria_string_detail_grades: 2+ sinf
   tutorial_ttovum_string_detail_grades: 6+ sinflar
   tutorial_ttpassage_string_detail_grades: 2-8-sinflar
@@ -11054,7 +11054,7 @@ uz:
   tutorial_modvariables_string_detail_grades: 6+ sinflar
   tutorial_codestersmicro_string_detail_grades: 6-8-sinflar
   tutorial_codestersdata_string_detail_grades: 6-8-sinflar
-  tutorial_ikodexmas_string_detail_grades: 2-5-sinflar
+  tutorial_ikodexmas_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_rpisensehat_string_detail_grades: 6+ sinflar
   tutorial_modtraits_string_detail_grades: 2+ sinf
   tutorial_mee_string_detail_grades: 2+ sinf
