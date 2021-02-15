@@ -370,6 +370,10 @@ body.modal-open .supreme-container{
   font-size: 26px;
 }
 
+#homepage #actions .herolink-white span {
+  vertical-align: middle;
+}
+
 #homepage #actions .herohocbutton-solid-white {
   color: black;
   background-color: white;
