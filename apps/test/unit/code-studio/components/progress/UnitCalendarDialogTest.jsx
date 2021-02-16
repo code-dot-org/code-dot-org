@@ -21,4 +21,50 @@ describe('UnitCalendarDialog', () => {
       )
     ).to.be.true;
   });
+  it('sets the provided weeklyInstructionalMinutes as default if it is already in the option list', () => {
+    const wrapper = shallow(
+      <UnitCalendarDialog
+        isOpen
+        handleClose={() => console.log('hello')}
+        lessons={testLessons}
+        weeklyInstructionalMinutes={45}
+      />
+    );
+    expect(wrapper.find('option').length).to.equal(5);
+    expect(
+      wrapper.containsMatchingElement(
+        <option value={45} key={`minutes-45`}>
+          45 minutes
+        </option>
+      )
+    ).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={45} />
+      )
+    ).to.be.true;
+  });
+  it('adds the provided weeklyInstructionalMinutes to the dropdown and sets it as default', () => {
+    const wrapper = shallow(
+      <UnitCalendarDialog
+        isOpen
+        handleClose={() => console.log('hello')}
+        lessons={testLessons}
+        weeklyInstructionalMinutes={20}
+      />
+    );
+    expect(wrapper.find('option').length).to.equal(6);
+    expect(
+      wrapper.containsMatchingElement(
+        <option value={20} key={`minutes-20`}>
+          20 minutes
+        </option>
+      )
+    ).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={20} />
+      )
+    ).to.be.true;
+  });
 });
