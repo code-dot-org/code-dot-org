@@ -57,9 +57,37 @@ class WebLabView extends React.Component {
     return Math.round(bytes * B_TO_MB_COEFFICIENT);
   };
 
-  render() {
+  renderProjectCapacityMeter = () => {
     const {maxProjectCapacity, projectSize} = this.props;
+    if (maxProjectCapacity <= 0 || projectSize <= 0) {
+      return null;
+    }
 
+    const id = 'weblab-project-capacity';
+    const sizeContainerStyles = {
+      float: 'left',
+      display: 'flex',
+      height: styleConstants['workspace-headers-height'],
+      alignItems: 'center'
+    };
+    const percentUsed = Math.round((projectSize / maxProjectCapacity) * 100);
+
+    return (
+      <div style={sizeContainerStyles}>
+        <label htmlFor={id} style={{margin: '0 10px'}}>
+          {weblabMsg.currentProjectCapacity({
+            currentMegabytes: this.bytesToMegabytes(projectSize),
+            totalMegabytes: this.bytesToMegabytes(maxProjectCapacity)
+          })}
+        </label>
+        <meter id={id} max={maxProjectCapacity} value={projectSize}>
+          ({percentUsed}%)
+        </meter>
+      </div>
+    );
+  };
+
+  render() {
     let headersHeight = styleConstants['workspace-headers-height'];
     let iframeHeightOffset =
       headersHeight + (this.props.isProjectLevel ? 0 : 70);
@@ -67,12 +95,6 @@ class WebLabView extends React.Component {
       position: 'absolute',
       width: '100%',
       height: `calc(100% - ${iframeHeightOffset}px)`
-    };
-    const sizeContainerStyles = {
-      float: 'left',
-      display: 'flex',
-      height: headersHeight,
-      alignItems: 'center'
     };
 
     return (
@@ -138,34 +160,7 @@ class WebLabView extends React.Component {
                         isRtl={false}
                         label={msg.showVersionsHeader()}
                       />
-                      {projectSize > 0 && maxProjectCapacity > 0 && (
-                        <div style={sizeContainerStyles}>
-                          <label
-                            htmlFor="weblab-project-capacity"
-                            style={{margin: '0 10px'}}
-                          >
-                            {weblabMsg.currentProjectCapacity({
-                              currentMegabytes: this.bytesToMegabytes(
-                                projectSize
-                              ),
-                              totalMegabytes: this.bytesToMegabytes(
-                                maxProjectCapacity
-                              )
-                            })}
-                          </label>
-                          <meter
-                            id="weblab-project-capacity"
-                            max={maxProjectCapacity}
-                            value={projectSize}
-                          >
-                            (
-                            {Math.round(
-                              (projectSize / maxProjectCapacity) * 100
-                            )}
-                            %)
-                          </meter>
-                        </div>
-                      )}
+                      {this.renderProjectCapacityMeter()}
                       <PaneButton
                         iconClass="fa fa-repeat"
                         leftJustified={false}
