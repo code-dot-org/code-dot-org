@@ -86,6 +86,7 @@ import {setExportGeneratedProperties} from '../code-studio/components/exportDial
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 /**
  * Create a namespace for the application.
@@ -973,7 +974,8 @@ Applab.render = function() {
     isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
-    handleVersionHistory: Applab.handleVersionHistory
+    handleVersionHistory: Applab.handleVersionHistory,
+    autogenerateML: autogenerateML
   });
   ReactDOM.render(
     <Provider store={getStore()}>

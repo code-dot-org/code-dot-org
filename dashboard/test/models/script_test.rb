@@ -233,7 +233,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file_all_properties])
     script = Script.find_by!(name: script_names.first)
 
-    assert_equal 21, script.properties.keys.length
+    assert_equal 20, script.properties.keys.length
     script.properties.values.each {|v| assert v}
 
     # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
@@ -873,12 +873,27 @@ class ScriptTest < ActiveSupport::TestCase
       script: script,
       name: 'Lesson 1',
       key: 'lesson-1',
+      has_lesson_plan: true,
+      lockable: false,
       relative_position: 1,
       absolute_position: 1
+    )
+    create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 2',
+      key: 'lesson-2',
+      has_lesson_plan: false,
+      lockable: false,
+      relative_position: 2,
+      absolute_position: 2
     )
 
     summary = script.summarize_for_lesson_show
     assert_equal '/s/my-script', summary[:link]
+    # only includes lessons with lesson plans
+    assert_equal 1, summary[:lessons].count
     assert_equal 'lesson-1', summary[:lessons][0][:key]
   end
 
@@ -953,13 +968,20 @@ class ScriptTest < ActiveSupport::TestCase
   test 'summarize includes show_calendar' do
     script = create(:script, name: 'calendar-script')
 
+    script.is_migrated = true
     script.show_calendar = true
     assert script.show_calendar
     summary = script.summarize
     assert summary[:showCalendar]
 
+    script.is_migrated = true
     script.show_calendar = false
     refute script.show_calendar
+    summary = script.summarize
+    refute summary[:showCalendar]
+
+    script.is_migrated = false
+    script.show_calendar = true
     summary = script.summarize
     refute summary[:showCalendar]
   end
@@ -976,20 +998,6 @@ class ScriptTest < ActiveSupport::TestCase
     refute script.has_verified_resources
     summary = script.summarize
     refute summary[:has_verified_resources]
-  end
-
-  test 'summarize includes has_lesson_plan' do
-    script = create(:script, name: 'resources-script')
-
-    script.has_lesson_plan = true
-    assert script.has_lesson_plan
-    summary = script.summarize
-    assert summary[:has_lesson_plan]
-
-    script.has_lesson_plan = false
-    refute script.has_lesson_plan
-    summary = script.summarize
-    refute summary[:has_lesson_plan]
   end
 
   test 'summarize includes show_course_unit_version_warning' do
@@ -1608,11 +1616,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can set custom curriculum path' do
     l = create :level
     dsl = <<-SCRIPT
-      has_lesson_plan true
       curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
-      lesson 'Lesson1', display_name: 'Lesson1'
+      lesson 'Lesson1', display_name: 'Lesson1', has_lesson_plan: true
       level '#{l.name}'
-      lesson 'Lesson2', display_name: 'Lesson2'
+      lesson 'Lesson2', display_name: 'Lesson2', has_lesson_plan: true
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(dsl, 'a filename')
@@ -1699,7 +1706,6 @@ class ScriptTest < ActiveSupport::TestCase
 
     # some properties that should not change
     assert script.curriculum_path
-    assert script.has_lesson_plan
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
@@ -1713,7 +1719,6 @@ class ScriptTest < ActiveSupport::TestCase
 
     # some properties that should not change
     assert script_copy.curriculum_path
-    assert script_copy.has_lesson_plan
   end
 
   test 'clone versioned script with suffix' do
@@ -2736,6 +2741,20 @@ class ScriptTest < ActiveSupport::TestCase
     end
     assert error.message.include? 'Duplicate entry'
     assert error.message.include? "for key 'index_script_levels_on_seed_key'"
+  end
+
+  test 'can add unplugged for lesson' do
+    dsl = <<-SCRIPT
+      lesson_group 'lg-1', display_name: 'Lesson Group'
+      lesson 'Lesson1', display_name: 'Lesson 1', unplugged: true
+    SCRIPT
+
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+    )
+
+    assert_equal true, script.lessons[0].unplugged
   end
 
   test 'seeding_key' do

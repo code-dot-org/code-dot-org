@@ -125,7 +125,7 @@ class LessonEditor extends Component {
         if (shouldCloseAfterSave) {
           if (data.hasLessonPlan) {
             navigateToHref(
-              `/lessons/${this.state.originalLessonData.id}${
+              `${this.state.originalLessonData.lessonPath}${
                 window.location.search
               }`
             );
@@ -207,15 +207,20 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={lockable}
+              disabled={this.props.initialLessonData.scriptIsVisible}
               style={styles.checkbox}
               onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
-              <p>
-                Check this box if this lesson should be locked for students. If
-                checked, teachers will be able to unlock the lesson for their
-                students.
-              </p>
+              {this.props.initialLessonData.scriptIsVisible ? (
+                <p>Can't update lockable for visible script.</p>
+              ) : (
+                <p>
+                  Check this box if this lesson should be locked for students.
+                  If checked, teachers will be able to unlock the lesson for
+                  their students.
+                </p>
+              )}
             </HelpTip>
           </label>
           <label>
@@ -223,14 +228,19 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={hasLessonPlan}
+              disabled={this.props.initialLessonData.scriptIsVisible}
               style={styles.checkbox}
               onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
             />
             <HelpTip>
-              <p>
-                Check this box if this lesson should have a lesson plan for
-                teachers associated with it.
-              </p>
+              {this.props.initialLessonData.scriptIsVisible ? (
+                <p>Can't update has lesson plan for visible script.</p>
+              ) : (
+                <p>
+                  Check this box if this lesson should have a lesson plan for
+                  teachers associated with it.
+                </p>
+              )}
             </HelpTip>
           </label>
           <label>

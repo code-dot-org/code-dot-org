@@ -20,7 +20,6 @@ class ScriptDslTest < ActiveSupport::TestCase
     teacher_resources: [],
     lesson_extras_available: false,
     has_verified_resources: false,
-    has_lesson_plan: false,
     curriculum_path: nil,
     project_widget_visible: false,
     project_widget_types: [],
@@ -261,6 +260,44 @@ endvariants
     assert_equal expected, output
   end
 
+  test 'test Script DSL property unplugged as property hash' do
+    input_dsl = <<~DSL
+      lesson 'Lesson1', display_name: 'Lesson1',
+        unplugged: true
+      level 'Level 1'
+      lesson 'Lesson2', display_name: 'Lesson2'
+      level 'Level 2'
+    DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        lesson_groups: [
+          key: nil,
+          display_name: nil,
+          lessons: [
+            {
+              key: "Lesson1",
+              name: "Lesson1",
+              unplugged: true,
+              script_levels: [
+                {levels: [{name: "Level 1"}]},
+              ]
+            },
+            {
+              key: "Lesson2",
+              name: "Lesson2",
+              script_levels: [
+                {levels: [{name: "Level 2"}]},
+              ]
+            }
+          ]
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
   test 'test Script DSL property has_lesson_plan as property hash' do
     input_dsl = <<~DSL
       lesson 'Lesson1', display_name: 'Lesson1',
@@ -338,19 +375,6 @@ endvariants
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:has_verified_resources]
-  end
-
-  test 'can set has_lesson_plan' do
-    input_dsl = <<~DSL
-      has_lesson_plan 'true'
-
-      lesson 'Lesson1', display_name: 'Lesson1'
-      level 'Level 1'
-      lesson 'Lesson2', display_name: 'Lesson2'
-      level 'Level 2'
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal true, output[:has_lesson_plan]
   end
 
   test 'can set tts' do
@@ -879,6 +903,19 @@ level 'Level 3'
     expected = <<~SCRIPT
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
       level 'maze 1', named: true
+
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
+  test 'serialize unplugged lesson' do
+    script = create :script, hidden: true
+    lesson_group = create :lesson_group, key: "", script: script, user_facing: false
+    create :lesson, name: 'Lesson 1', key: 'Lesson 1', script: script, lesson_group: lesson_group, has_lesson_plan: true, unplugged: true
+
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<~SCRIPT
+      lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true, unplugged: true
 
     SCRIPT
     assert_equal expected, script_text

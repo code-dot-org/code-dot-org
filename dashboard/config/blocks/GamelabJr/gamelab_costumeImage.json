@@ -1,5 +1,5 @@
 {
-  "category": "Logic",
+  "category": "World",
   "config": {
     "name": "costumeImage",
     "expression": "'image_' + VALUE",

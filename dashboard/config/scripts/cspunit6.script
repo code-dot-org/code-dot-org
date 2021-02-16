@@ -1,5 +1,4 @@
 login_required true
-has_lesson_plan true
 
 lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects', has_lesson_plan: true
 level 'U4L02 Student Lesson Introduction Video'

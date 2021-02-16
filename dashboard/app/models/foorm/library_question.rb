@@ -19,13 +19,20 @@
 class Foorm::LibraryQuestion < ApplicationRecord
   include Seeded
 
-  belongs_to :library, primary_key: [:library_name, :library_version], foreign_key: [:library_name, :library_version]
+  belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], required: true
 
   validate :validate_library_question
+
+  after_save :write_to_file
 
   def validate_library_question
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
   rescue StandardError => e
     errors.add(:question, e.message)
+  end
+
+  def write_to_file
+    return true unless saved_changes?
+    library.write_library_to_file
   end
 end
