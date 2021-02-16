@@ -7,11 +7,11 @@ project_widget_types ["playlab_k1", "artist_k1"]
 curriculum_umbrella 'CSF'
 tts true
 
-lesson 'Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true
+lesson 'Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true, unplugged: true
 level 'UnplugHappyMaps'
 level 'K-1 Happy Maps Multi 1'
 
-lesson 'Move it, Move it', display_name: 'Move it, Move it', has_lesson_plan: true
+lesson 'Move it, Move it', display_name: 'Move it, Move it', has_lesson_plan: true, unplugged: true
 level 'MoveIt'
 level 'K-1 Move It Multi 1'
 
@@ -88,7 +88,7 @@ level 'K-1 Maze Debugging Multi 1'
 bonus 'course1_maze_debugging_challenge1'
 bonus 'course1_maze_debugging_challenge2'
 
-lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed', has_lesson_plan: true
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed', has_lesson_plan: true, unplugged: true
 level 'PlantASeed'
 level 'K-1 Plant a Seed Multi 1'
 level 'K-1 Plant a Seed Multi 2'
@@ -126,7 +126,7 @@ level 'K-1 Artist 1 Multi 2'
 bonus 'course1_artist_loops_challenge1'
 bonus 'course1_artist_loops_challenge2'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 level 'K-1 Building a Foundation Assessment'
 
@@ -177,7 +177,7 @@ level 'blockly:CustomMaze:wordsearch_k_20'
 level 'K-1 Word Search Multi 1'
 level 'K-1 Word Search Multi 3'
 
-lesson 'Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true
+lesson 'Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy'
 level 'K-1 Getting Loopy Multi 1'
 
@@ -216,7 +216,7 @@ level 'K-1 Bee Loops Match 1'
 bonus 'course1_collector_loops_challenge3'
 bonus 'course1_collector_loops_challenge4'
 
-lesson 'The Big Event', display_name: 'The Big Event', has_lesson_plan: true
+lesson 'The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 level 'K-1 Big Event Match 1'
 
@@ -243,7 +243,7 @@ level 'blockly:Studio:k1_6'
 bonus 'course1_playlab_events_challenge1'
 bonus 'course1_playlab_events_challenge2'
 
-lesson 'Going Places Safely', display_name: 'Going Places Safely', has_lesson_plan: true
+lesson 'Going Places Safely', display_name: 'Going Places Safely', has_lesson_plan: true, unplugged: true
 level 'GoingPlacesSafely'
 level 'K-1 Keep it Private Multi 1'
 
