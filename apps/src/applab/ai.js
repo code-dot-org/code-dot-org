@@ -6,6 +6,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var y = 20;
   var SPACER_PIXELS = 20;
   designMode.onInsertEvent(`var testValues = {};`);
+  var inputFields = [];
   modelData.selectedFeatures.forEach(feature => {
     y = y + SPACER_PIXELS;
     var label = designMode.createElement('LABEL', x, y);
@@ -34,7 +35,7 @@ function generateCodeDesignElements(modelId, modelData) {
       y = y + SPACER_PIXELS;
     }
     var addFeature = `testValues.${alphaNumFeature} = getText("${selectId}");`;
-    designMode.onInsertEvent(addFeature);
+    inputFields.push(addFeature);
   });
   y = y + 2 * SPACER_PIXELS;
   var label = designMode.createElement('LABEL', x, y);
@@ -52,6 +53,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var predictButtonId = alphaNumModelName + '_predict';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
+    ${inputFields.toString()}
     getPrediction("${
       modelData.name
     }", "${modelId}", testValues, function(value) {
