@@ -254,7 +254,7 @@ class Lesson < ApplicationRecord
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
-        unplugged: script.is_migrated ? unplugged : display_as_unplugged, # TODO: Update to use unplugged property
+        unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
 
@@ -297,7 +297,7 @@ class Lesson < ApplicationRecord
       title: localized_title,
       duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
       assessment: !!assessment,
-      unplugged: script.is_migrated ? unplugged : display_as_unplugged, # TODO: Update to use unplugged property
+      unplugged: unplugged,
       url: lesson_path(id: id)
     }
   end
