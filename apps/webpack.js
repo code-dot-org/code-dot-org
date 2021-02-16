@@ -24,6 +24,8 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'ml-array-rescale'),
   path.resolve(__dirname, 'node_modules', 'ml-distance-euclidean'),
   path.resolve(__dirname, 'node_modules', 'ml-svm'),
+  path.resolve(__dirname, 'node_modules', 'ml-kernal'),
+  path.resolve(__dirname, 'node_modules', 'ml-stat'),
 
   path.resolve(
     __dirname,
