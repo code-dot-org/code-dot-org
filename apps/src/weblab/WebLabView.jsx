@@ -14,7 +14,7 @@ import {changeShowError} from './actions';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {getStore} from '../redux';
-import color from '@cdo/apps/util/color';
+import Meter from '@cdo/apps/templates/Meter';
 
 // Coefficient for converting bytes to megabytes.
 const B_TO_MB_COEFFICIENT = 0.000000954;
@@ -58,51 +58,9 @@ class WebLabView extends React.Component {
     return Math.round(bytes * B_TO_MB_COEFFICIENT);
   };
 
-  renderProjectCapacityMeter = () => {
-    const {maxProjectCapacity, projectSize} = this.props;
-    if (maxProjectCapacity <= 0 || projectSize <= 0) {
-      return null;
-    }
-
-    const id = 'weblab-project-capacity';
-    const percentUsed = Math.round((projectSize / maxProjectCapacity) * 100);
-    const styles = {
-      container: {
-        float: 'left',
-        display: 'flex',
-        height: styleConstants['workspace-headers-height'],
-        alignItems: 'center'
-      },
-      meterContainer: {
-        width: 100,
-        height: 10,
-        borderRadius: 8,
-        backgroundColor: 'white',
-        overflow: 'hidden'
-      },
-      meter: {
-        width: `${percentUsed}%`,
-        height: '100%',
-        backgroundColor: color.light_teal
-      }
-    };
-
-    return (
-      <div style={styles.container}>
-        <label htmlFor={id} style={{margin: '0 10px'}}>
-          {weblabMsg.currentProjectCapacity({
-            currentMegabytes: this.bytesToMegabytes(projectSize),
-            totalMegabytes: this.bytesToMegabytes(maxProjectCapacity)
-          })}
-        </label>
-        <div id={id} style={styles.meterContainer}>
-          <div style={styles.meter} />
-        </div>
-      </div>
-    );
-  };
-
   render() {
+    const {maxProjectCapacity, projectSize} = this.props;
+
     let headersHeight = styleConstants['workspace-headers-height'];
     let iframeHeightOffset =
       headersHeight + (this.props.isProjectLevel ? 0 : 70);
@@ -111,6 +69,10 @@ class WebLabView extends React.Component {
       width: '100%',
       height: `calc(100% - ${iframeHeightOffset}px)`
     };
+    const projectCapacityLabel = weblabMsg.currentProjectCapacity({
+      currentMegabytes: this.bytesToMegabytes(projectSize),
+      totalMegabytes: this.bytesToMegabytes(maxProjectCapacity)
+    });
 
     return (
       <StudioAppWrapper>
@@ -175,7 +137,18 @@ class WebLabView extends React.Component {
                         isRtl={false}
                         label={msg.showVersionsHeader()}
                       />
-                      {this.renderProjectCapacityMeter()}
+                      {maxProjectCapacity > 0 && projectSize > 0 && (
+                        <Meter
+                          id="weblab-project-capacity"
+                          label={projectCapacityLabel}
+                          value={projectSize}
+                          max={maxProjectCapacity}
+                          containerStyle={{
+                            float: 'left',
+                            height: styleConstants['workspace-headers-height']
+                          }}
+                        />
+                      )}
                       <PaneButton
                         iconClass="fa fa-repeat"
                         leftJustified={false}
