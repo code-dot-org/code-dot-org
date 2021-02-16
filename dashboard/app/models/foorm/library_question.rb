@@ -22,6 +22,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
   belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], required: true
 
   validate :validate_library_question
+  validates :question_name, :question, presence: true
 
   after_commit :write_to_file
 

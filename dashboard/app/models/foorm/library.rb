@@ -17,6 +17,7 @@ class Foorm::Library < ApplicationRecord
   include Seeded
 
   has_many :library_questions, primary_key: [:name, :version], foreign_key: [:library_name, :library_version]
+  validates :name, :version, presence: true
 
   after_commit :write_library_to_file
 
