@@ -1,5 +1,5 @@
-const APPEND_CONSOLE_LOG = 'javaIde/APPEND_CONSOLE_LOG';
-const SET_EDITOR_TEXT = 'javaIde/SET_EDITOR_TEXT';
+const APPEND_CONSOLE_LOG = 'idelab/APPEND_CONSOLE_LOG';
+const SET_EDITOR_TEXT = 'idelab/SET_EDITOR_TEXT';
 
 const initialState = {
   consoleLogs: [],

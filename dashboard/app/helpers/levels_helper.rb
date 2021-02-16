@@ -310,7 +310,7 @@ module LevelsHelper
     use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_blockly = !use_droplet && !use_netsim && !use_weblab && !(@level.game == Game.idelab)
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
     use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]

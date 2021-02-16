@@ -39,7 +39,6 @@ Idelab.prototype.injectStudioApp = function(studioApp) {
  * Initialize this Idelab instance.  Called on page load.
  */
 Idelab.prototype.init = function(config) {
-  console.log('in init');
   if (!this.studioApp_) {
     throw new Error('Idelab requires a StudioApp');
   }
@@ -63,15 +62,15 @@ Idelab.prototype.init = function(config) {
 
   config.pinWorkspaceToBottom = true;
 
+  config.getCode = this.getCode.bind(this);
+
   const onMount = () => {
-    console.log('in on Mount');
-    // NOTE: Most other apps call studioApp.init().  Like WebLab and Fish, we don't.
+    // NOTE: Most other apps call studioApp.init().  Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
     const container = document.getElementById(config.containerId);
-    console.log(`container id is ${config.containerId}`);
     const bodyElement = document.body;
     bodyElement.style.overflow = 'hidden';
     bodyElement.className = bodyElement.className + ' pin_bottom';
@@ -121,6 +120,10 @@ Idelab.prototype.onContinue = function() {
       onReportComplete(result);
     }
   });
+};
+
+Idelab.prototype.getCode = function() {
+  return '';
 };
 
 export default Idelab;

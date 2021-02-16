@@ -30,7 +30,6 @@ class Idelab < Level
     hide_share_and_remix
     is_project_level
     submittable
-    mode
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -67,14 +66,5 @@ class Idelab < Level
       level_prop.reject! {|_, value| value.nil?}
     end
     options.freeze
-  end
-
-  # Attributes that are stored as JSON strings but should be passed through to the app as
-  # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
-  # returns camelCase properties because of where it's used in the pipeline.
-  def self.json_object_attrs
-    %w(
-      mode
-    ).map {|x| x.camelize(:lower)}
   end
 end
