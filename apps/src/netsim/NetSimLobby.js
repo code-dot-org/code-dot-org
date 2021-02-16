@@ -9,6 +9,7 @@ import $ from 'jquery';
 var utils = require('../utils');
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
+import {getStore} from '../redux';
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimAlert = require('./NetSimAlert');
@@ -579,9 +580,17 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     });
   }
 
-  // If there's only one possible shard, select it by default
+  // selected section in the teacher panel
+  const teacherSelectedSectionId = getStore().getState().teacherSections
+    .selectedSectionId;
+
   if (this.shardChoices_.length === 1 && !this.selectedShardID_) {
     this.setShardID(this.shardChoices_[0].shardID);
+  } else if (teacherSelectedSectionId && !this.selectedShardID_) {
+    const selectedSectionShardId = this.makeShardIDFromSeed_(
+      teacherSelectedSectionId
+    );
+    this.setShardID(selectedSectionShardId);
   }
 };
 
