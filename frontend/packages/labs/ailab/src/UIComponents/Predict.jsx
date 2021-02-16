@@ -37,7 +37,7 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict">
-        <div style={styles.panel}>
+        <div style={styles.rightPanel}>
           <div style={styles.largeText}>Test the Model</div>
           <form>
             {this.props.selectedContinuousFeatures.map((feature, index) => {
@@ -45,6 +45,7 @@ class Predict extends Component {
                 <div key={index}>
                   <label>
                     {feature}:
+                    &nbsp;
                     <input
                       type="text"
                       onChange={event => this.handleChange(event, feature)}
@@ -61,6 +62,7 @@ class Predict extends Component {
                 <span key={index}>
                   <label>
                     {feature}:
+                    &nbsp;
                     <select
                       onChange={event => this.handleChange(event, feature)}
                     >
@@ -76,6 +78,9 @@ class Predict extends Component {
                         })}
                     </select>
                   </label>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
                 </span>
               );
             })}
@@ -91,7 +96,7 @@ class Predict extends Component {
           <p />
           {this.props.predictedLabel && (
             <div>
-              <div> The Machine Learning model predicts... </div>
+              <div>The Machine Learning model predicts:</div>
               <div style={styles.subPanel}>
                 {this.props.labelColumn}: {this.props.predictedLabel}
                 {this.props.confidence && (

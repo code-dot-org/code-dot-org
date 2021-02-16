@@ -993,12 +993,9 @@ export function getPanelButtons(state) {
     }
   } else if (state.currentPanel === "results") {
     prev = { panel: "dataDisplay", text: "Data" };
-    next = { panel: "predict", text: "Predict" };
-  } else if (state.currentPanel === "predict") {
-    prev = { panel: "results", text: "Results" };
     next = { panel: "saveModel", text: "Save" };
   } else if (state.currentPanel === "saveModel") {
-    prev = { panel: "predict", text: "Predict" };
+    prev = { panel: "results", text: "Results" };
     next = null;
   }
 

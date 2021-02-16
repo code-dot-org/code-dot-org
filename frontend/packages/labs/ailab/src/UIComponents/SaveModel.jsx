@@ -71,8 +71,9 @@ class SaveModel extends Component {
 
   render() {
     return (
-      <div>
-        <div style={{ ...styles.subPanel, overflow: "hidden" }}>
+      <div style={styles.panel}>
+        <div style={styles.largeText}>Save the Trained Model</div>
+        <div style={{ ...styles.subPanel, ...styles.scrollContents }}>
           {this.getFields().map(field => {
             return (
               <div
@@ -106,11 +107,10 @@ class SaveModel extends Component {
               </div>
             );
           })}
+          <button type="button" onClick={this.onClickSave}>
+            Save Trained Model
+          </button>
         </div>
-
-        <button type="button" onClick={this.onClickSave}>
-          Save Trained Model
-        </button>
       </div>
     );
   }

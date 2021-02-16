@@ -118,8 +118,6 @@ class Panels extends Component {
     const panelContainer = [
       "selectTrainer",
       "trainModel",
-      "results",
-      "predict",
       "saveModel"
     ].includes(currentPanel)
       ? styles.panelContainerFullWidth
@@ -132,7 +130,6 @@ class Panels extends Component {
         {currentPanel === "selectTrainer" && <SelectTrainer />}
         {currentPanel === "trainModel" && <TrainModel />}
         {currentPanel === "results" && <Results />}
-        {currentPanel === "predict" && <Predict />}
         {currentPanel === "saveModel" && (
           <SaveModel saveTrainedModel={saveTrainedModel} />
         )}
@@ -215,6 +212,7 @@ class App extends Component {
           {currentPanel === "dataDisplay" && <ColumnInspector />}
           {currentPanel === "dataDisplay" && <CrossTab />}
           {currentPanel === "selectDataset" && <DataCard />}
+          {currentPanel === "results" && <Predict />}
           <PanelButtons
             panels={panels}
             panelButtons={panelButtons}
