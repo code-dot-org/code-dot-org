@@ -14,7 +14,7 @@ curriculum_umbrella 'CSF'
 tts true
 is_course true
 
-lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true
+lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming_2018'
 
 lesson 'Programming in Maze', display_name: 'Coding with Angry Birds', has_lesson_plan: true
@@ -32,7 +32,7 @@ level 'courseC_maze_programming9_2018'
 bonus 'courseC_maze_programming_challenge1_2018'
 bonus 'courseC_maze_programming_challenge2_2018'
 
-lesson 'Relay Programming', display_name: 'Relay Programming', has_lesson_plan: true
+lesson 'Relay Programming', display_name: 'Relay Programming', has_lesson_plan: true, unplugged: true
 level 'RelayProgramming_2018'
 
 lesson 'Debugging in Maze', display_name: 'Debugging with Scrat', has_lesson_plan: true
@@ -80,7 +80,7 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true
+lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy_2018'
 
 lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8', has_lesson_plan: true
@@ -115,7 +115,7 @@ level 'courseC_artist_loops6a_2018'
 level 'courseC_artist_loops7a_2018'
 level 'courseC_artist_loops8a_2018'
 
-lesson 'Copyright and Creativity', display_name: 'Copyright and Creativity', has_lesson_plan: true
+lesson 'Copyright and Creativity', display_name: 'Copyright and Creativity', has_lesson_plan: true, unplugged: true
 level 'courseE_unplugged_CnC_2018'
 
 lesson 'Concept Practice with Minecraft ', display_name: 'Looking Ahead with Minecraft', has_lesson_plan: true
@@ -188,7 +188,7 @@ level 'courseD_maze_until9_2018', challenge: true
 level 'courseD_maze_until10_2018'
 level 'courseD_maze_until10_predict2_2018'
 
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'Conditionals_2018'
 
 lesson 'Conditionals in Bee', display_name: 'If/Else with Bee', has_lesson_plan: true
@@ -223,7 +223,7 @@ level 'courseD_farmer_condLoops9_predict1_2018'
 bonus 'courseD_farmer_condLoops_challenge1_2018'
 bonus 'courseD_farmer_condLoops_challenge2_2018'
 
-lesson 'Functions: Songwriting', display_name: 'Songwriting', has_lesson_plan: true
+lesson 'Functions: Songwriting', display_name: 'Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters_2018'
 
 lesson 'Functions in Minecraft', display_name: 'Functions with Minecraft', has_lesson_plan: true
@@ -273,7 +273,7 @@ level 'courseE_artist_functionsProj_2018'
 bonus 'courseE_artist_functions_challenge1_2018'
 bonus 'courseE_artist_functions_challenge2_2018'
 
-lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean', has_lesson_plan: true
+lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean', has_lesson_plan: true, unplugged: true
 level 'courseC_Unplugged_ScreenOutTheMean_2018'
 
 lesson 'Determine the Concept', display_name: 'Determine the Concept', has_lesson_plan: true
@@ -290,7 +290,7 @@ level 'courseE_artist_concept4_2018'
 bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
 
-lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent_2018'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
@@ -306,10 +306,10 @@ level 'courseC_flappy_events8_2018'
 level 'courseC_flappy_events9_2018'
 level 'courseC_flappy_events10_2018'
 
-lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true
+lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
 level 'courseF_unplugged_powerOfWords_2018'
 
-lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables_2018'
 
 lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist', has_lesson_plan: true
@@ -345,7 +345,7 @@ level 'courseF_markdown_variables_end'
 bonus 'courseF_artist_variables_challenge1_2018'
 bonus 'courseF_artist_variables_challenge2_2018'
 
-lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun_2018'
 
 lesson 'For Loops in Bee', display_name: 'For Loops with Bee', has_lesson_plan: true
@@ -431,10 +431,10 @@ level 'CourseF_Project_Revise_SpriteLab', named: true
 lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: true
 level 'Prepare for your presentation_2018', named: true
 
-lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets_2018'
 
-lesson 'Unplugged: Binary', display_name: 'Binary Images', has_lesson_plan: true
+lesson 'Unplugged: Binary', display_name: 'Binary Images', has_lesson_plan: true, unplugged: true
 level 'BinaryImages_2018'
 
 lesson 'Artist Binary', display_name: 'Binary Images with Artist', has_lesson_plan: true
@@ -452,9 +452,9 @@ level 'courseD_artist_binaryFP_2018'
 bonus 'courseD_artist_binary_challenge1_2018'
 bonus 'courseD_artist_binary_challenge2_2018'
 
-lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true
+lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet_2018'
 
-lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'Crowdsourcing_2018'
 
