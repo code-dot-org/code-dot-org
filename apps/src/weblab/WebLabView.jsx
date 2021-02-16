@@ -14,6 +14,7 @@ import {changeShowError} from './actions';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {getStore} from '../redux';
+import color from '@cdo/apps/util/color';
 
 // Coefficient for converting bytes to megabytes.
 const B_TO_MB_COEFFICIENT = 0.000000954;
@@ -64,25 +65,39 @@ class WebLabView extends React.Component {
     }
 
     const id = 'weblab-project-capacity';
-    const sizeContainerStyles = {
-      float: 'left',
-      display: 'flex',
-      height: styleConstants['workspace-headers-height'],
-      alignItems: 'center'
-    };
     const percentUsed = Math.round((projectSize / maxProjectCapacity) * 100);
+    const styles = {
+      container: {
+        float: 'left',
+        display: 'flex',
+        height: styleConstants['workspace-headers-height'],
+        alignItems: 'center'
+      },
+      meterContainer: {
+        width: 100,
+        height: 10,
+        borderRadius: 8,
+        backgroundColor: 'white',
+        overflow: 'hidden'
+      },
+      meter: {
+        width: `${percentUsed}%`,
+        height: '100%',
+        backgroundColor: color.light_teal
+      }
+    };
 
     return (
-      <div style={sizeContainerStyles}>
+      <div style={styles.container}>
         <label htmlFor={id} style={{margin: '0 10px'}}>
           {weblabMsg.currentProjectCapacity({
             currentMegabytes: this.bytesToMegabytes(projectSize),
             totalMegabytes: this.bytesToMegabytes(maxProjectCapacity)
           })}
         </label>
-        <meter id={id} max={maxProjectCapacity} value={projectSize}>
-          ({percentUsed}%)
-        </meter>
+        <div id={id} style={styles.meterContainer}>
+          <div style={styles.meter} />
+        </div>
       </div>
     );
   };

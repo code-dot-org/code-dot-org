@@ -698,7 +698,12 @@ function load(Bramble) {
     bramble.on('fileRename', handleFileRename);
     bramble.on('folderRename', handleFolderRename);
     bramble.on('projectSizeChange', (bytes, percentage) => {
-      webLab_.setProjectSize(bytes);
+      // When an image is uploaded, the project tree refreshes and bytes will be 0
+      // for a short time. This causes the project size meter to flash, so
+      // ignore this event if bytes === 0.
+      if (bytes !== 0) {
+        webLab_.setProjectSize(bytes);
+      }
     });
 
     brambleProxy_ = bramble;
