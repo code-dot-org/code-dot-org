@@ -20139,6 +20139,8 @@ en:
               name: End of Course Project
             lesson-6:
               name: Looking Ahead with Minecraft
+            lesson-5:
+              name: Password Power-Up
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing

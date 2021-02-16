@@ -43,7 +43,8 @@ const styles = {
   },
   activitySectionCardHeader: {
     color: '#5b6770',
-    marginBottom: 15
+    marginBottom: 15,
+    overflow: 'hidden'
   },
   labelAndCheckbox: {
     fontSize: 13,
