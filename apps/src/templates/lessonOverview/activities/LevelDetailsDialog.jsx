@@ -18,15 +18,8 @@ export default class LevelDetailsDialog extends Component {
     scriptLevel: PropTypes.object.isRequired,
     handleClose: PropTypes.func.isRequired
   };
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedLevel: props.scriptLevel.level
-    };
-  }
 
   getContentComponent = level => {
-    console.log(level);
     if (level.type === 'External') {
       return <SafeMarkdown markdown={level.markdown} />;
     } else if (level.type === 'StandaloneVideo') {
@@ -63,7 +56,7 @@ export default class LevelDetailsDialog extends Component {
 
   render() {
     const {scriptLevel} = this.props;
-    const level = this.state.selectedLevel;
+    const level = scriptLevel.level;
     const preview = this.getContentComponent(level);
     return (
       <BaseDialog
@@ -78,9 +71,13 @@ export default class LevelDetailsDialog extends Component {
       >
         {preview}
         <DialogFooter rightAlign>
-          <Button href={scriptLevel.url} text={i18n.dismiss()} color={'gray'} />
           <Button
             onClick={this.props.handleClose}
+            text={i18n.dismiss()}
+            color={'gray'}
+          />
+          <Button
+            href={scriptLevel.url}
             text={i18n.seeFullLevel()}
             color={'orange'}
           />
