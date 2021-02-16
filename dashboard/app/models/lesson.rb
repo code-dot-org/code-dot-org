@@ -226,7 +226,22 @@ class Lesson < ApplicationRecord
   end
 
   def lesson_plan_pdf_url
-    "#{lesson_plan_base_url}/Teacher.pdf"
+    if script.is_migrated && has_lesson_plan
+      "https://cdo-lesson-plans.s3.amazonaws.com/#{lesson_plan_pdf_pathname}" if lesson_plan_pdf_pathname.present?
+    else
+      "#{lesson_plan_base_url}/Teacher.pdf"
+    end
+  end
+
+  def lesson_plan_pdf_pathname
+    version_number =
+      begin
+        Time.parse(script.seeded_at).to_s(:number)
+      rescue ArgumentError, TypeError
+        return nil
+      end
+    filename = ActiveStorage::Filename.new(key + ".pdf").sanitized
+    return Pathname.new(File.join(script.name, version_number, filename))
   end
 
   def lesson_plan_base_url
@@ -356,7 +371,8 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
-      assessmentOpportunities: assessment_opportunities
+      assessmentOpportunities: assessment_opportunities,
+      lessonPlanPdfUrl: lesson_plan_pdf_url
     }
   end
 
