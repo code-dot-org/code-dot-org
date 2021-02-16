@@ -6,7 +6,9 @@ import * as utils from '../utils';
 export const ActionType = utils.makeEnum(
   'CHANGE_FULL_SCREEN_PREVIEW_ON',
   'CHANGE_INSPECTOR_ON',
-  'CHANGE_SHOW_ERROR'
+  'CHANGE_SHOW_ERROR',
+  'CHANGE_MAX_PROJECT_CAPACITY',
+  'CHANGE_PROJECT_SIZE'
 );
 
 /**
@@ -42,5 +44,28 @@ export function changeShowError(showError) {
   return {
     type: ActionType.CHANGE_SHOW_ERROR,
     showError
+  };
+}
+
+/**
+ * Set the maximum project size in bytes.
+ * @param {number} bytes
+ * @returns {{type: ActionType, bytes: number}}
+ */
+export function changeMaxProjectCapacity(bytes) {
+  return {
+    type: ActionType.CHANGE_MAX_PROJECT_CAPACITY,
+    bytes
+  };
+}
+
+/**
+ * Set the current project size in bytes.
+ * @param {number} bytes
+ */
+export function changeProjectSize(bytes) {
+  return {
+    type: ActionType.CHANGE_PROJECT_SIZE,
+    bytes
   };
 }
