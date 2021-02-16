@@ -1033,7 +1033,6 @@
       "key": "65305f03-396b-4e36-bb4f-1ac90cbc313d",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "65305f03-396b-4e36-bb4f-1ac90cbc313d",
@@ -1143,7 +1142,7 @@
       "key": "8e77b151-07f6-4404-98ec-473f310fc8b1",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Events",
+        "name": "Bridging Activity - Choose One",
         "duration": 10
       },
       "seeding_key": {
@@ -1185,8 +1184,7 @@
       "key": "2672684d-adc1-4050-9d44-d42d9e1a2e0c",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "2672684d-adc1-4050-9d44-d42d9e1a2e0c",
@@ -2502,8 +2500,19 @@
       }
     },
     {
-      "key": "1fc19afb-445f-4df3-90c9-379c7a7ff7b2",
+      "key": "8c2a2318-b39e-4940-b04a-eb0319ed0d45",
       "position": 1,
+      "properties": {
+        "progression_name": "The Right App - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c2a2318-b39e-4940-b04a-eb0319ed0d45",
+        "lesson_activity.key": "f2c0f599-1a28-40b2-8782-e20d66e889e9"
+      }
+    },
+    {
+      "key": "1fc19afb-445f-4df3-90c9-379c7a7ff7b2",
+      "position": 2,
       "properties": {
         "description": "**Display**: Display each scenario from **The Right App Scenarios - Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below, or the notes beneath each slide in the deck). After each scenario, ask students to vote on which app they would choose for their friend, then discuss their reasons why. \r\n\r\n\r\n\r\n[slides]\r\n\r\n#### The Right App Scenarios\r\n\r\n##### Scenario 1: Daisy the Dragon\r\n\r\n**Slide 1:** Help! Daisy the Dragon wants to play with her penguin classmates. However, when Daisy talks, her hot breath warms up anyone she is near, and penguins don’t enjoy that AT ALL. So Daisy wants an app that can help her with this problem. \r\n\r\n**Slide 2:** Which is the right app for Daisy?\r\n\r\n* *Dance Master*: an app that teaches you cool dance moves.\r\n* *Am I Too Close?!*: an app that shouts “too close!” if you are too close to someone.\r\n\r\n**Slide 3:** Daisy decides to use “Am I Too Close?!”, which makes it easier for her to play with her penguin friends! When they get too close, the app warns her with a friendly shout, “Too close!” Daisy and the penguins are happy! “Am I Too Close?!” is the right app for Daisy!\r\n\r\n---\r\n\r\n##### Scenario 2: Sam the Bat\r\n\r\n**Slide 4:** Help! Sam the Bat wants to listen to his favorite music on his phone while he flies through the night sky. He’s considering two different music apps, but he doesn’t know which one is best for him. As a bat, Sam has poor eyesight but excellent hearing. He also happens to sing very well!\r\n\r\n**Slide 5:** Which is the right app for Sam? \r\n\r\n* *Eyes ‘n Ears*: a music app that has a lot of tiny buttons.\r\n* *Sing ‘n Play*: a music app that lets you press a BIG green button to record your voice. You sing a part of any song you want to hear, and it’ll play it for you.\r\n\r\n**Slide 6:** Sam decides to use “Sing ‘n Play”. He simply presses the BIG green button, sings the first part of a song he likes, then the app plays the entire song for him! It’s that easy! And that’s why “Sing ‘n Play” is the right app for Sam!\r\n\r\n---\r\n\r\n##### Scenario 3: Codella the Witch\r\n\r\n**Slide 7:** Help! Codella the Witch is a serious gamer, and she’s looking for a new game to play. Codella has many different kinds of computers, including a desktop, a laptop, a tablet, and a smartphone. Her favorite games are those she can play on all of her computers, including her smartphone.\r\n\r\n**Slide 8:** Which is the right app for Codella? \r\n\r\n* *Sort Knight*: a game where you play as a knight who travels around sorting everything. Also has cool dance moves. You can play it on many different kinds of computers!\r\n* *Mobo-Robo*: a game that lets you build cool robots and make them do whatever you want. You can only play it on smartphones and tablets, though.\r\n\r\n**Slide 9:** Codella decides to play “Sort Knight”. At first she’s not sure if she’ll like it (she doesn’t really like sorting things), but she loves that she can play it on any of her computers, and that’s really important to her as a serious gamer. The more Codella plays “Sort Knight”, the more she loves it. “Sort Knight” is the right app for her!\r\n\r\n[/slides]",
         "name": "\"The Right App\" Scenarios (15 min)\r"
@@ -2515,7 +2524,7 @@
     },
     {
       "key": "4b2349b9-95c8-4e3c-80b6-13527d557f89",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "The final scenario allows students to sketch their own app design. \r\n\r\n[slides]\r\n\r\n#### The Right App Design\r\n\r\n##### Scenario 4: Anton the Alien\r\n\r\n**Slide 10:** Help! Anton the Alien has crash-landed on Earth and is waiting for his fellow aliens to come rescue him. Until then, he has nothing to do, so he heads to a local library to find a book to read (Anton LOVES reading books). Unfortunately, all the books at the library are written in Earthling languages like English, Chinese, Spanish, and many others. So Anton is out of luck! Or is he?\r\n\r\n**Slide 11:** As an alien, Anton is very good with technology! He immediately opens his super-powered smartphone to look for an app that can help him solve his problem at the library, but he can’t find anything he likes! So let’s each design our own app for Anton! \r\n\r\n[/slides]\r\n\r\n**Distribute**: Pass out crayons/pencils/etc to each student as they open their **Thinkspot Journals**. In their Thinkspot Journals, students design the home screen of the app they believe best suits Anton’s needs. They can refer to the previous activity for inspiration.  \r\n\r\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design is \"right\" for Anton, given his situation.",
         "name": "App Design Activity (20 min)\r"
@@ -2534,16 +2543,6 @@
       "seeding_key": {
         "activity_section.key": "804a67da-450d-4514-8c2e-2c9ed196e7c1",
         "lesson_activity.key": "736970ba-195f-4800-b755-e89e87e58590"
-      }
-    },
-    {
-      "key": "a0e30522-9ca1-4002-97c9-767589d73ee8",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a0e30522-9ca1-4002-97c9-767589d73ee8",
-        "lesson_activity.key": "65305f03-396b-4e36-bb4f-1ac90cbc313d"
       }
     },
     {
@@ -2659,7 +2658,7 @@
       "key": "fb42b64a-9f49-441b-95d8-2bdb596c93a9",
       "position": 1,
       "properties": {
-        "description": "This activity will help bring the unplugged concepts from \"The Big Event\" into the online world that the students are moving into. Choose *one* of the following to do with your class:"
+        "description": "These activities will help bring the unplugged concepts from \"The Big Event\" into the online world that the students are moving into. Choose *one* of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "fb42b64a-9f49-441b-95d8-2bdb596c93a9",
@@ -2672,7 +2671,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!\n\nRemind the students to only share their work with their close friends or family. For more information watch or show the class **Pause and Think Online - Video**.\n\n"
           }
@@ -2687,7 +2685,7 @@
       "key": "a1d91fb3-f7e1-49e4-a901-9316fa8a8327",
       "position": 3,
       "properties": {
-        "description": "Using the remote from the ** The Big Event (Courses A, B) - Worksheet** and **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class \"when the teal button is pushed, what do we do?\" then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.",
+        "description": "Using the remote from the ** The Big Event (Courses A, B) - Worksheet** and **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class \"when the teal button is pushed, what do we do?\" then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n### -Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -2712,7 +2710,7 @@
       "position": 1,
       "properties": {
         "description": "This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.",
-        "name": "Online Puzzles and Free Play\r"
+        "name": "A Royal Battle with Events"
       },
       "seeding_key": {
         "activity_section.key": "707682de-e28a-4f30-8033-e5568bc30572",
@@ -2723,7 +2721,6 @@
       "key": "dd9fba95-8daa-47d3-8c05-3429f3f25b77",
       "position": 2,
       "properties": {
-        "name": "Create a Story",
         "progression_name": "Create a Story"
       },
       "seeding_key": {
@@ -2735,7 +2732,6 @@
       "key": "40e7d1f1-3b7e-4a2f-abd8-43d076a34702",
       "position": 3,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2747,7 +2743,6 @@
       "key": "31c0685f-1407-4c10-9077-b081c1843c07",
       "position": 4,
       "properties": {
-        "name": "Mini-Project: Royal Battle",
         "progression_name": "Mini-Project: Royal Battle"
       },
       "seeding_key": {
@@ -2759,7 +2754,6 @@
       "key": "afc1b191-5ed3-4f1e-9457-8499c5445f54",
       "position": 5,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2771,6 +2765,7 @@
       "key": "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a",
       "position": 6,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a",
@@ -2781,7 +2776,7 @@
       "key": "f7fafab8-5c1c-473a-901b-893eb23c491b",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the **Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw an event you used in your program today.\r\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -4864,11 +4859,9 @@
       "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "TheRightAppMarkdownLevel_2021"
-        ]
+        "progression": "The Right App - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -4879,7 +4872,7 @@
         "lesson.key": "The Right App",
         "lesson_group.key": "csf_impacts",
         "script.name": "courseb-2021",
-        "activity_section.key": "a0e30522-9ca1-4002-97c9-767589d73ee8"
+        "activity_section.key": "8c2a2318-b39e-4940-b04a-eb0319ed0d45"
       },
       "level_keys": [
         "TheRightAppMarkdownLevel_2021"
@@ -4914,7 +4907,7 @@
       "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_video_events_2021"
@@ -4940,7 +4933,7 @@
       "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playLab_events1_2021"
@@ -4966,7 +4959,7 @@
       "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events2_2021"
@@ -4992,7 +4985,7 @@
       "chapter": 85,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events3_2021"
@@ -5018,7 +5011,7 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events4_2021"
@@ -5044,7 +5037,7 @@
       "chapter": 87,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events5_2021"
@@ -5070,7 +5063,7 @@
       "chapter": 88,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events6_2021"
@@ -5096,7 +5089,7 @@
       "chapter": 89,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events7_2021"
@@ -5122,7 +5115,7 @@
       "chapter": 90,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_eventsFP_2021"
@@ -5148,11 +5141,12 @@
       "chapter": 91,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5173,11 +5167,12 @@
       "chapter": 92,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_playlab_events_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -6153,7 +6148,7 @@
         "lesson.key": "The Right App",
         "lesson_group.key": "csf_impacts",
         "script.name": "courseb-2021",
-        "activity_section.key": "a0e30522-9ca1-4002-97c9-767589d73ee8"
+        "activity_section.key": "8c2a2318-b39e-4940-b04a-eb0319ed0d45"
       }
     },
     {
