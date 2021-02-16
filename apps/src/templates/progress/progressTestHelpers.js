@@ -94,9 +94,12 @@ const randomNumberUpTo100 = () => {
   return Math.floor(Math.random() * 100);
 };
 
+let lessonId = 1;
+
 export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
   const position = overrideFields.position || randomNumberUpTo100();
   return {
+    id: lessonId++,
     name: `Lesson - ${position}`,
     lockable: false,
     relative_position: position,
