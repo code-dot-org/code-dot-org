@@ -95,6 +95,7 @@ class ScriptEditor extends React.Component {
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
+    includeStudentFacingLessonPlans: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -153,7 +154,9 @@ class ScriptEditor extends React.Component {
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources,
       hasImportedLessonDescriptions: false,
-      oldScriptText: this.props.initialLessonLevelData
+      oldScriptText: this.props.initialLessonLevelData,
+      includeStudentFacingLessonPlans:
+        this.props.includeStudentFacingLessonPlans || false
     };
   }
 
@@ -294,7 +297,9 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      is_migrated: this.props.isMigrated
+      is_migrated: this.props.isMigrated,
+      include_student_facing_lesson_plans: this.state
+        .includeStudentFacingLessonPlans
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -765,6 +770,26 @@ class ScriptEditor extends React.Component {
               }
             />
           )}
+          <label>
+            Include student-facing lesson plans
+            <input
+              type="checkbox"
+              checked={this.state.includeStudentFacingLessonPlans}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  includeStudentFacingLessonPlans: !this.state
+                    .includeStudentFacingLessonPlans
+                })
+              }
+            />
+            <HelpTip>
+              <p>
+                Checking this will automatically generate student-facing lesson
+                plans for any lesson that is marked as “Has Lesson Plan”
+              </p>
+            </HelpTip>
+          </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources Settings">
