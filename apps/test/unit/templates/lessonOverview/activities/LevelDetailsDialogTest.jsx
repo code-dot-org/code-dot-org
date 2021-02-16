@@ -46,4 +46,22 @@ describe('LevelDetailsDialogTest', () => {
     );
     expect(wrapper.contains('This is some text.')).to.be.true;
   });
+
+  it('tries to load a video on a standalone video level', () => {
+    const loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
+    const wrapper = mount(
+      <LevelDetailsDialog
+        handleClose={handleCloseSpy}
+        scriptLevel={{
+          url: 'level.url',
+          level: {
+            type: 'StandaloneVideo',
+            longInstructions: 'Some things to think about.'
+          }
+        }}
+      />
+    );
+    expect(loadVideoSpy.calledOnce).to.be.true;
+    expect(wrapper.contains('Some things to think about.')).to.be.true;
+  });
 });
