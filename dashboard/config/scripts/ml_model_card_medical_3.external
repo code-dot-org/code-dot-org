@@ -57,12 +57,8 @@ markdown <<MARKDOWN
 **Uses for this model that should be avoided:** This model shouldn't be used in a way that could reduce the care for people entering an emergency room.
 
 **Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
-  - [x] Yes
-  - [ ] No
-
-**Have we ensured accurate representation of each subgroup within the data?**
-  - [x] Yes
-  - [] No
+  - [ ] Yes
+  - [x] No
 
 **This model could be used to inform decisions central to human life:**
   - [x] Yes

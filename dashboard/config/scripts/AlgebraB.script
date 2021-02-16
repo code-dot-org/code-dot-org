@@ -3,7 +3,7 @@ login_required true
 hideable_lessons true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}'
 
-lesson 'Unplugged: Video Games and Coordinate Planes', display_name: 'Unplugged: Video Games and Coordinate Planes', has_lesson_plan: true
+lesson 'Unplugged: Video Games and Coordinate Planes', display_name: 'Unplugged: Video Games and Coordinate Planes', has_lesson_plan: true, unplugged: true
 level 'VideoGamesCoordinatePlanes'
 level 'Ninjacat Demo B'
 level 'Coordinates Multi 1'
@@ -20,7 +20,7 @@ level 'Big Game Animation 2'
 level 'Big Game Animation 3'
 level 'Big Game Animation 4'
 
-lesson 'Unplugged: Booleans', display_name: 'Unplugged: Booleans', has_lesson_plan: true
+lesson 'Unplugged: Booleans', display_name: 'Unplugged: Booleans', has_lesson_plan: true, unplugged: true
 level 'Booleans'
 
 lesson 'Eval: Boolean Operators', display_name: 'Eval: Boolean Operators', has_lesson_plan: true
@@ -49,7 +49,7 @@ level 'Big Game Booleans 2'
 level 'Big Game Booleans 3'
 level 'Big Game Booleans 5'
 
-lesson 'Unplugged: Conditionals and Piecewise Functions', display_name: 'Unplugged: Conditionals and Piecewise Functions', has_lesson_plan: true
+lesson 'Unplugged: Conditionals and Piecewise Functions', display_name: 'Unplugged: Conditionals and Piecewise Functions', has_lesson_plan: true, unplugged: true
 level 'ConditionalsPiecewiseFunctions'
 
 lesson 'Eval: Conditionals', display_name: 'Eval: Conditionals', has_lesson_plan: true
@@ -62,7 +62,7 @@ level 'Eval Cond 5'
 level 'Big Game Player 1'
 level 'Big Game Player 2'
 
-lesson 'Unplugged: Collision Detection and the Distance Formula', display_name: 'Unplugged: Collision Detection and the Distance Formula', has_lesson_plan: true
+lesson 'Unplugged: Collision Detection and the Distance Formula', display_name: 'Unplugged: Collision Detection and the Distance Formula', has_lesson_plan: true, unplugged: true
 level 'CollisionDetection'
 
 lesson 'Play Lab: Collision Detection (Big Game)', display_name: 'Play Lab: Collision Detection (Big Game)', has_lesson_plan: true

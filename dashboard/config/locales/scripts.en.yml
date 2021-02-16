@@ -19998,7 +19998,7 @@ en:
           name: courseb-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec-2021:
-          title: Course C (2020)
+          title: Course C (2021)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
@@ -20075,7 +20075,7 @@ en:
           name: coursec-2021
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed-2021:
-          title: Course D (2020)
+          title: Course D (2021)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
@@ -20139,6 +20139,8 @@ en:
               name: End of Course Project
             lesson-6:
               name: Looking Ahead with Minecraft
+            lesson-5:
+              name: Password Power-Up
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -20219,6 +20221,8 @@ en:
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
+            lesson-4:
+              name: Context-Settng Lesson
           lesson_groups:
             ramp_up:
               display_name: Loops
@@ -20319,7 +20323,7 @@ en:
           name: coursef-2021
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         express-2021:
-          title: Express Course (2020)
+          title: Express Course (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
@@ -20430,7 +20434,7 @@ en:
           name: express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
         pre-express-2021:
-          title: Pre-reader Express (2020)
+          title: Pre-reader Express (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
@@ -20504,9 +20508,11 @@ en:
             Sprites in Action:
               name: Sprites in Action
             variables-in-spritelab:
-              name: Storing and Retrieving Text - coming soon!
+              name: Text and Prompts - coming soon!
             chatbot:
               name: Create a Chat-Bot - coming soon!
+            blank space stories:
+              name: Blank Space Stories
           lesson_groups:
             ramp_up:
               display_name: Introduction

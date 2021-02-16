@@ -79,6 +79,9 @@ class ProgressTableContainer extends React.Component {
     this.contentView.header.scrollLeft = e.target.scrollLeft;
   }
 
+  // the student gutter is needed when there is a scroll bar at the bottom of the
+  // content section of the table so that the student list and content section
+  // are the same height vertically
   needsStudentGutter() {
     return (
       this.props.getTableWidth(this.props.scriptData.stages) >
