@@ -1005,6 +1005,7 @@ th:
             '"y"': อยู่ที่แกน Y
             '"direction"': ทิศทางการเคลื่อนไหว
             '"tint"': ระดับอ่อนสี
+            '"speed"': ความเร็ว
       gamelab_getThisSprite:
         text: "{CHOICE} สไปรท์"
         options:
@@ -1129,6 +1130,8 @@ th:
             '"West"': เวสต์
       gamelab_moveToward:
         text: ย้าย {SPRITE} พิก เซล {DISTANCE} ไป ยัง {TARGET}
+      gamelab_newSpritePointer:
+        text: "[SPRITE]คลิก[0]"
       gamelab_objectSpritePointer:
         text: "[SPRITE]คลิก[0]"
       gamelab_playSound:
@@ -1179,6 +1182,13 @@ th:
             undefined: ไม่เลย
       gamelab_setBackgroundImageAs:
         text: ตั้งค่าพื้นหลังเป็น {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': ปานกลาง
+            '100': large
       gamelab_setProp:
         text: ตั้ง ค่า {SPRITE} {PROPERTY} ถึง {VAL}
         options:
@@ -1188,6 +1198,7 @@ th:
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
             '"direction"': ทิศทางการเคลื่อนไหว
+            '"speed"': ความเร็ว
       gamelab_setSizes:
         text: ตั้งค่า {SPRITE} {PROPERTY} เป็น {N}%
         options:
@@ -1284,6 +1295,8 @@ th:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ไม่ใช่ปลา
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ป้ายกำกับของ
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ไม่ใช่ป้ายกำกับของฉลาก
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:

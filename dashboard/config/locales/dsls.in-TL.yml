@@ -1,0 +1,4204 @@
+---
+in-TL:
+  data:
+    dsls:
+      2-3 Algorithms Multi 1:
+        answers:
+        - text: crwdns2040166:0crwdne2040166:0
+          correct: true
+        - text: crwdns2040170:0crwdne2040170:0
+          correct: true
+        - text: crwdns2040174:0crwdne2040174:0
+          correct: true
+        - text: crwdns2040178:0crwdne2040178:0
+          correct: true
+        content1: crwdns2040162:0crwdne2040162:0
+        questions:
+        - text: crwdns2040164:0crwdne2040164:0
+        title: crwdns2040160:0crwdne2040160:0
+      2-3 Algorithms Multi 2:
+        answers:
+        - text: crwdns2040188:0crwdne2040188:0
+          correct: true
+        - text: crwdns2040192:0crwdne2040192:0
+          correct: true
+        - text: crwdns2040196:0crwdne2040196:0
+          correct: true
+        - text: crwdns2040200:0crwdne2040200:0
+          correct: true
+        content1: crwdns2040184:0crwdne2040184:0
+        questions:
+        - text: crwdns2040186:0crwdne2040186:0
+        title: crwdns2040182:0crwdne2040182:0
+      2-3 Big Event Match 1:
+        answers:
+        - text: crwdns2040566:0crwdne2040566:0
+        - text: crwdns2040568:0crwdne2040568:0
+        - text: crwdns2040570:0crwdne2040570:0
+        - text: crwdns2040572:0crwdne2040572:0
+        content1: crwdns2040554:0crwdne2040554:0
+        content2: crwdns2040556:0crwdne2040556:0
+        questions:
+        - text: crwdns2040558:0crwdne2040558:0
+        - text: crwdns2040560:0crwdne2040560:0
+        - text: crwdns2040562:0crwdne2040562:0
+        - text: crwdns2040564:0crwdne2040564:0
+        title: crwdns2040552:0crwdne2040552:0
+      2-3 Binary Match 1:
+        answers:
+        - text: crwdns2040544:0crwdne2040544:0
+        - text: crwdns2040546:0crwdne2040546:0
+        - text: crwdns2040548:0crwdne2040548:0
+        - text: crwdns2040550:0crwdne2040550:0
+        content1: crwdns2040532:0crwdne2040532:0
+        content2: crwdns2040534:0crwdne2040534:0
+        questions:
+        - text: crwdns2040536:0crwdne2040536:0
+        - text: crwdns2040538:0crwdne2040538:0
+        - text: crwdns2040540:0crwdne2040540:0
+        - text: crwdns2040542:0crwdne2040542:0
+        title: crwdns2040530:0crwdne2040530:0
+      2-3 Conditionals Multi 1:
+        answers:
+        - text: crwdns2040472:0crwdne2040472:0
+          correct: true
+        - text: crwdns2040476:0crwdne2040476:0
+          correct: true
+        - text: crwdns2040480:0crwdne2040480:0
+          correct: true
+        - text: crwdns2040484:0crwdne2040484:0
+          correct: true
+        content1: crwdns2040468:0crwdne2040468:0
+        questions:
+        - text: crwdns2040470:0crwdne2040470:0
+        teacher_markdown: crwdns2370338:0crwdne2370338:0
+        title: crwdns2040466:0crwdne2040466:0
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - text: crwdns2040270:0crwdne2040270:0
+          correct: true
+        - text: crwdns2040274:0crwdne2040274:0
+          correct: true
+        - text: crwdns2040278:0crwdne2040278:0
+          correct: true
+        - text: crwdns2040282:0crwdne2040282:0
+          correct: true
+        content1: crwdns2040266:0crwdne2040266:0
+        questions:
+        - text: crwdns2040268:0crwdne2040268:0
+        title: crwdns2040264:0crwdne2040264:0
+      2-3 Graph Paper Match 1:
+        answers:
+        - text: crwdns2040154:0crwdne2040154:0
+        - text: crwdns2040156:0crwdne2040156:0
+        - text: crwdns2040158:0crwdne2040158:0
+        content1: crwdns2040146:0crwdne2040146:0
+        questions:
+        - text: crwdns2040148:0crwdne2040148:0
+        - text: crwdns2040150:0crwdne2040150:0
+        - text: crwdns2040152:0crwdne2040152:0
+        title: crwdns2040144:0crwdne2040144:0
+      2-3 Graph Paper Multi 1:
+        answers:
+        - text: crwdns2040132:0crwdne2040132:0
+          correct: true
+        - text: crwdns2040136:0crwdne2040136:0
+          correct: true
+        - text: crwdns2040140:0crwdne2040140:0
+          correct: true
+        content1: crwdns2040128:0crwdne2040128:0
+        questions:
+        - text: crwdns2040130:0crwdne2040130:0
+        title: crwdns2040126:0crwdne2040126:0
+      2-3 Maze Match 2:
+        answers:
+        - text: crwdns2040238:0crwdne2040238:0
+        - text: crwdns2040240:0crwdne2040240:0
+        - text: crwdns2040242:0crwdne2040242:0
+        content1: crwdns2040228:0crwdne2040228:0
+        questions:
+        - text: crwdns2040232:0crwdne2040232:0
+        - text: crwdns2040234:0crwdne2040234:0
+        - text: crwdns2040236:0crwdne2040236:0
+        title: crwdns2040226:0crwdne2040226:0
+      2-3 Maze Multi 2:
+        answers:
+        - text: crwdns2040210:0crwdne2040210:0
+          correct: true
+        - text: crwdns2040214:0crwdne2040214:0
+          correct: true
+        - text: crwdns2040218:0crwdne2040218:0
+          correct: true
+        - text: crwdns2040222:0crwdne2040222:0
+          correct: true
+        content1: crwdns2040206:0crwdne2040206:0
+        questions:
+        - text: crwdns2040208:0crwdne2040208:0
+        title: crwdns2040204:0crwdne2040204:0
+      2-3 Relay Programming Multi 1:
+        answers:
+        - text: crwdns2040416:0crwdne2040416:0
+          correct: true
+        - text: crwdns2040420:0crwdne2040420:0
+          correct: true
+        - text: crwdns2040424:0crwdne2040424:0
+          correct: true
+        content1: crwdns2040412:0crwdne2040412:0
+        questions:
+        - text: crwdns2040414:0crwdne2040414:0
+        title: crwdns2040410:0crwdne2040410:0
+      2-3 Relay Programming Multi 2:
+        answers:
+        - text: crwdns2040432:0crwdne2040432:0
+          correct: true
+        - text: crwdns2040436:0crwdne2040436:0
+          correct: true
+        - text: crwdns2040440:0crwdne2040440:0
+          correct: true
+        questions:
+        - text: crwdns2040430:0crwdne2040430:0
+        title: crwdns2040428:0crwdne2040428:0
+      2-3 artist debug multi 1:
+        answers:
+        - text: crwdns2040450:0crwdne2040450:0
+          correct: true
+        - text: crwdns2040454:0crwdne2040454:0
+          correct: true
+        - text: crwdns2040458:0crwdne2040458:0
+          correct: true
+        - text: crwdns2040462:0crwdne2040462:0
+          correct: true
+        content1: crwdns2040446:0crwdne2040446:0
+        questions:
+        - text: crwdns2040448:0crwdne2040448:0
+        title: crwdns2040444:0crwdne2040444:0
+      2-3 artist functions multi 1:
+        answers:
+        - text: crwdns2040760:0crwdne2040760:0
+          correct: true
+        - text: crwdns2040764:0crwdne2040764:0
+          correct: true
+        - text: crwdns2040768:0crwdne2040768:0
+          correct: true
+        content1: crwdns2040756:0crwdne2040756:0
+        questions:
+        - text: crwdns2040758:0crwdne2040758:0
+        title: crwdns2040754:0crwdne2040754:0
+      2-3 artist loops match 1:
+        answers:
+        - text: crwdns2040336:0crwdne2040336:0
+        - text: crwdns2040338:0crwdne2040338:0
+        - text: crwdns2040340:0crwdne2040340:0
+        - text: crwdns2040342:0crwdne2040342:0
+        content2: crwdns2040326:0crwdne2040326:0
+        questions:
+        - text: crwdns2040328:0crwdne2040328:0
+        - text: crwdns2040330:0crwdne2040330:0
+        - text: crwdns2040332:0crwdne2040332:0
+        - text: crwdns2040334:0crwdne2040334:0
+        title: crwdns2040324:0crwdne2040324:0
+      2-3 artist loops multi 1:
+        answers:
+        - text: crwdns2040372:0crwdne2040372:0
+          correct: true
+        - text: crwdns2040376:0crwdne2040376:0
+          correct: true
+        - text: crwdns2040380:0crwdne2040380:0
+          correct: true
+        - text: crwdns2040384:0crwdne2040384:0
+          correct: true
+        content1: crwdns2040368:0crwdne2040368:0
+        questions:
+        - text: crwdns2040370:0crwdne2040370:0
+        title: crwdns2040366:0crwdne2040366:0
+      2-3 artist loops multi 2:
+        answers:
+        - text: crwdns2040350:0crwdne2040350:0
+          correct: true
+        - text: crwdns2040354:0crwdne2040354:0
+          correct: true
+        - text: crwdns2040358:0crwdne2040358:0
+          correct: true
+        - text: crwdns2040362:0crwdne2040362:0
+          correct: true
+        content1: crwdns2040346:0crwdne2040346:0
+        questions:
+        - text: crwdns2040348:0crwdne2040348:0
+        title: crwdns2040344:0crwdne2040344:0
+      2-3 artist match 1:
+        answers:
+        - text: crwdns2040256:0crwdne2040256:0
+        - text: crwdns2040258:0crwdne2040258:0
+        - text: crwdns2040260:0crwdne2040260:0
+        - text: crwdns2040262:0crwdne2040262:0
+        content1: crwdns2040246:0crwdne2040246:0
+        questions:
+        - text: crwdns2040248:0crwdne2040248:0
+        - text: crwdns2040250:0crwdne2040250:0
+        - text: crwdns2040252:0crwdne2040252:0
+        - text: crwdns2040254:0crwdne2040254:0
+        title: crwdns2040244:0crwdne2040244:0
+      2-3 bee conditionals multi 1:
+        answers:
+        - text: crwdns2040492:0crwdne2040492:0
+          correct: true
+        - text: crwdns2040496:0crwdne2040496:0
+          correct: true
+        - text: crwdns2040500:0crwdne2040500:0
+          correct: true
+        - text: crwdns2040504:0crwdne2040504:0
+          correct: true
+        questions:
+        - text: crwdns2040490:0crwdne2040490:0
+        title: crwdns2040488:0crwdne2040488:0
+      2-3 bee conditionals multi 3:
+        answers:
+        - text: crwdns2040514:0crwdne2040514:0
+          correct: true
+        - text: crwdns2040518:0crwdne2040518:0
+          correct: true
+        - text: crwdns2040522:0crwdne2040522:0
+          correct: true
+        - text: crwdns2040526:0crwdne2040526:0
+          correct: true
+        content1: crwdns2040510:0crwdne2040510:0
+        questions:
+        - text: crwdns2040512:0crwdne2040512:0
+        title: crwdns2040508:0crwdne2040508:0
+      2-3 bee loops multi 1:
+        answers:
+        - text: crwdns2040394:0crwdne2040394:0
+          correct: true
+        - text: crwdns2040398:0crwdne2040398:0
+          correct: true
+        - text: crwdns2040402:0crwdne2040402:0
+          correct: true
+        - text: crwdns2040406:0crwdne2040406:0
+          correct: true
+        content1: crwdns2040390:0crwdne2040390:0
+        questions:
+        - text: crwdns2040392:0crwdne2040392:0
+        title: crwdns2040388:0crwdne2040388:0
+      2-3 maze match 1:
+        answers:
+        - text: crwdns2040318:0crwdne2040318:0
+        - text: crwdns2040320:0crwdne2040320:0
+        - text: crwdns2040322:0crwdne2040322:0
+        content1: crwdns2040310:0crwdne2040310:0
+        questions:
+        - text: crwdns2040312:0crwdne2040312:0
+        - text: crwdns2040314:0crwdne2040314:0
+        - text: crwdns2040316:0crwdne2040316:0
+        title: crwdns2040308:0crwdne2040308:0
+      2-3 maze multi 1:
+        answers:
+        - text: crwdns2040292:0crwdne2040292:0
+          correct: true
+        - text: crwdns2040296:0crwdne2040296:0
+          correct: true
+        - text: crwdns2040300:0crwdne2040300:0
+          correct: true
+        - text: crwdns2040304:0crwdne2040304:0
+          correct: true
+        content1: crwdns2040288:0crwdne2040288:0
+        questions:
+        - text: crwdns2040290:0crwdne2040290:0
+        title: crwdns2040286:0crwdne2040286:0
+      4-5 Algorithms Match 1:
+        answers:
+        - text: crwdns2040852:0crwdne2040852:0
+        - text: crwdns2040854:0crwdne2040854:0
+        - text: crwdns2040856:0crwdne2040856:0
+        - text: crwdns2040858:0crwdne2040858:0
+        content1: crwdns2040842:0crwdne2040842:0
+        questions:
+        - text: crwdns2040844:0crwdne2040844:0
+        - text: crwdns2040846:0crwdne2040846:0
+        - text: crwdns2040848:0crwdne2040848:0
+        - text: crwdns2040850:0crwdne2040850:0
+        title: crwdns2040840:0crwdne2040840:0
+      4-5 Algorithms Multi 1:
+        answers:
+        - text: crwdns2040864:0crwdne2040864:0
+          correct: true
+        - text: crwdns2040868:0crwdne2040868:0
+          correct: true
+        - text: crwdns2040872:0crwdne2040872:0
+          correct: true
+        - text: crwdns2040876:0crwdne2040876:0
+          correct: true
+        questions:
+        - text: crwdns2040862:0crwdne2040862:0
+        title: crwdns2040860:0crwdne2040860:0
+      4-5 Computational Thinking Match 1:
+        answers:
+        - text: crwdns2040626:0crwdne2040626:0
+        - text: crwdns2040628:0crwdne2040628:0
+        - text: crwdns2040630:0crwdne2040630:0
+        - text: crwdns2040632:0crwdne2040632:0
+        content1: crwdns2040616:0crwdne2040616:0
+        questions:
+        - text: crwdns2040618:0crwdne2040618:0
+        - text: crwdns2040620:0crwdne2040620:0
+        - text: crwdns2040622:0crwdne2040622:0
+        - text: crwdns2040624:0crwdne2040624:0
+        title: crwdns2040614:0crwdne2040614:0
+      4-5 Computational Thinking Multi 1:
+        answers:
+        - text: crwdns2040598:0_____crwdnd2040598:0_____crwdnd2040598:0_____crwdne2040598:0
+          correct: true
+        - text: crwdns2040602:0_____crwdnd2040602:0_____crwdne2040602:0
+          correct: true
+        - text: crwdns2040606:0_____crwdnd2040606:0_____crwdnd2040606:0_____crwdne2040606:0
+          correct: true
+        - text: crwdns2040610:0_____crwdne2040610:0
+          correct: true
+        content1: crwdns2040594:0crwdne2040594:0
+        questions:
+        - text: crwdns2040596:0crwdne2040596:0
+        title: crwdns2040592:0crwdne2040592:0
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - text: crwdns2040996:0crwdne2040996:0
+          correct: true
+        - text: crwdns2041000:0crwdne2041000:0
+          correct: true
+        questions:
+        - text: crwdns2040994:0crwdne2040994:0
+        title: crwdns2040992:0crwdne2040992:0
+      4-5 Crowdsourcing Multi 2:
+        answers:
+        - text: crwdns2041008:0crwdne2041008:0
+          correct: true
+        - text: crwdns2041012:0crwdne2041012:0
+          correct: true
+        - text: crwdns2041016:0crwdne2041016:0
+          correct: true
+        - text: crwdns2041020:0crwdne2041020:0
+          correct: true
+        questions:
+        - text: crwdns2041006:0crwdne2041006:0
+        title: crwdns2041004:0crwdne2041004:0
+      4-5 Digital Footprint Multi 1:
+        answers:
+        - text: crwdns2041028:0crwdne2041028:0
+          correct: true
+        - text: crwdns2041032:0crwdne2041032:0
+          correct: true
+        - text: crwdns2041036:0crwdne2041036:0
+          correct: true
+        - text: crwdns2041040:0crwdne2041040:0
+          correct: true
+        questions:
+        - text: crwdns2041026:0crwdne2041026:0
+        title: crwdns2041024:0crwdne2041024:0
+      4-5 Internet Multi 1:
+        answers:
+        - text: crwdns2040954:0crwdne2040954:0
+          correct: true
+        - text: crwdns2040958:0crwdne2040958:0
+          correct: true
+        - text: crwdns2040962:0crwdne2040962:0
+          correct: true
+        - text: crwdns2040966:0crwdne2040966:0
+          correct: true
+        content1: crwdns2040950:0crwdne2040950:0
+        questions:
+        - text: crwdns2040952:0crwdne2040952:0
+        title: crwdns2040948:0crwdne2040948:0
+      4-5 Internet Multi 2:
+        answers:
+        - text: crwdns2040976:0crwdne2040976:0
+          correct: true
+        - text: crwdns2040980:0crwdne2040980:0
+          correct: true
+        - text: crwdns2040984:0crwdne2040984:0
+          correct: true
+        - text: crwdns2040988:0crwdne2040988:0
+          correct: true
+        content1: crwdns2040972:0crwdne2040972:0
+        questions:
+        - text: crwdns2040974:0crwdne2040974:0
+        title: crwdns2040970:0crwdne2040970:0
+      4-5 Songwriting Multi 1:
+        answers:
+        - text: crwdns2040824:0crwdne2040824:0
+          correct: true
+        - text: crwdns2040828:0crwdne2040828:0
+          correct: true
+        - text: crwdns2040832:0crwdne2040832:0
+          correct: true
+        - text: crwdns2040836:0crwdne2040836:0
+          correct: true
+        content1: crwdns2040820:0crwdne2040820:0
+        questions:
+        - text: crwdns2040822:0crwdne2040822:0
+        title: crwdns2040818:0crwdne2040818:0
+      4-5 Suncatchers Match 1:
+        answers:
+        - text: crwdns2040746:0crwdne2040746:0
+        - text: crwdns2040748:0crwdne2040748:0
+        - text: crwdns2040750:0crwdne2040750:0
+        - text: crwdns2040752:0crwdne2040752:0
+        content1: crwdns2040734:0crwdne2040734:0
+        content2: crwdns2040736:0crwdne2040736:0
+        questions:
+        - text: crwdns2040738:0crwdne2040738:0
+        - text: crwdns2040740:0crwdne2040740:0
+        - text: crwdns2040742:0crwdne2040742:0
+        - text: crwdns2040744:0crwdne2040744:0
+        title: crwdns2040732:0crwdne2040732:0
+      4-5 Suncatchers Multi 1:
+        answers:
+        - text: crwdns2040720:0crwdne2040720:0
+          correct: true
+        - text: crwdns2040724:0crwdne2040724:0
+          correct: true
+        - text: crwdns2040728:0crwdne2040728:0
+          correct: true
+        content1: crwdns2040716:0crwdne2040716:0
+        questions:
+        - text: crwdns2040718:0crwdne2040718:0
+        title: crwdns2040714:0crwdne2040714:0
+      4-5 artist loops multi 1:
+        answers:
+        - text: crwdns2040886:0crwdne2040886:0
+          correct: true
+        - text: crwdns2040890:0crwdne2040890:0
+          correct: true
+        - text: crwdns2040894:0crwdne2040894:0
+          correct: true
+        - text: crwdns2040898:0crwdne2040898:0
+          correct: true
+        content1: crwdns2040882:0crwdne2040882:0
+        questions:
+        - text: crwdns2040884:0crwdne2040884:0
+        title: crwdns2040880:0crwdne2040880:0
+      4-5 artist multi 1:
+        answers:
+        - text: crwdns2040678:0crwdne2040678:0
+          correct: true
+        - text: crwdns2040682:0crwdne2040682:0
+          correct: true
+        - text: crwdns2040686:0crwdne2040686:0
+          correct: true
+        - text: crwdns2040690:0crwdne2040690:0
+          correct: true
+        questions:
+        - text: crwdns2040676:0crwdne2040676:0
+        title: crwdns2040674:0crwdne2040674:0
+      4-5 artist multi 2:
+        answers:
+        - text: crwdns2040698:0crwdne2040698:0
+          correct: true
+        - text: crwdns2040702:0crwdne2040702:0
+          correct: true
+        - text: crwdns2040706:0crwdne2040706:0
+          correct: true
+        - text: crwdns2040710:0crwdne2040710:0
+          correct: true
+        questions:
+        - text: crwdns2040696:0crwdne2040696:0
+        title: crwdns2040694:0crwdne2040694:0
+      4-5 bee conditionals multi 1:
+        answers:
+        - text: crwdns2040780:0crwdne2040780:0
+          correct: true
+        - text: crwdns2040784:0crwdne2040784:0
+          correct: true
+        - text: crwdns2040788:0crwdne2040788:0
+          correct: true
+        - text: crwdns2040792:0crwdne2040792:0
+          correct: true
+        content1: crwdns2040774:0crwdne2040774:0
+        content2: crwdns2040776:0crwdne2040776:0
+        questions:
+        - text: crwdns2040778:0crwdne2040778:0
+        title: crwdns2040772:0crwdne2040772:0
+      4-5 bee debug multi 1:
+        answers:
+        - text: crwdns2040932:0crwdne2040932:0
+          correct: true
+        - text: crwdns2040936:0crwdne2040936:0
+          correct: true
+        - text: crwdns2040940:0crwdne2040940:0
+          correct: true
+        - text: crwdns2040944:0crwdne2040944:0
+          correct: true
+        content1: crwdns2040926:0crwdne2040926:0
+        content2: crwdns2040928:0crwdne2040928:0
+        questions:
+        - text: crwdns2040930:0crwdne2040930:0
+        title: crwdns2040924:0crwdne2040924:0
+      4-5 bee loops multi 1:
+        answers:
+        - text: crwdns2040908:0crwdne2040908:0
+          correct: true
+        - text: crwdns2040912:0crwdne2040912:0
+          correct: true
+        - text: crwdns2040916:0crwdne2040916:0
+          correct: true
+        - text: crwdns2040920:0crwdne2040920:0
+          correct: true
+        content1: crwdns2040904:0crwdne2040904:0
+        questions:
+        - text: crwdns2040906:0crwdne2040906:0
+        title: crwdns2040902:0crwdne2040902:0
+      4-5 maze conditionals multi 1:
+        answers:
+        - text: crwdns2040802:0crwdne2040802:0
+          correct: true
+        - text: crwdns2040806:0crwdne2040806:0
+          correct: true
+        - text: crwdns2040810:0crwdne2040810:0
+          correct: true
+        - text: crwdns2040814:0crwdne2040814:0
+          correct: true
+        content1: crwdns2040798:0crwdne2040798:0
+        questions:
+        - text: crwdns2040800:0crwdne2040800:0
+        title: crwdns2040796:0crwdne2040796:0
+      4-5 maze match 1:
+        answers:
+        - text: crwdns2040646:0crwdne2040646:0
+        - text: crwdns2040648:0crwdne2040648:0
+        - text: crwdns2040650:0crwdne2040650:0
+        content1: crwdns2040636:0crwdne2040636:0
+        questions:
+        - text: crwdns2040640:0crwdne2040640:0
+        - text: crwdns2040642:0crwdne2040642:0
+        - text: crwdns2040644:0crwdne2040644:0
+        title: crwdns2040634:0crwdne2040634:0
+      4-5 maze multi 1:
+        answers:
+        - text: crwdns2040658:0crwdne2040658:0
+          correct: true
+        - text: crwdns2040662:0crwdne2040662:0
+          correct: true
+        - text: crwdns2040666:0crwdne2040666:0
+          correct: true
+        - text: crwdns2040670:0crwdne2040670:0
+          correct: true
+        content1: crwdns2040654:0crwdne2040654:0
+        questions:
+        - text: crwdns2040656:0crwdne2040656:0
+        title: crwdns2040652:0crwdne2040652:0
+      Begin planning your project:
+        content1: crwdns2036004:0crwdne2036004:0
+        markdown: crwdns2041790:0crwdne2041790:0
+      Begin planning your project_2018:
+        content1: crwdns2036732:0crwdne2036732:0
+        markdown: crwdns2041412:0crwdne2041412:0
+      Begin planning your project_2018_2019:
+        content1: crwdns2038094:0crwdne2038094:0
+        markdown: crwdns2041572:0crwdne2041572:0
+      Begin planning your project_2018_2019_2020:
+        content1: crwdns2457594:0crwdne2457594:0
+        markdown: crwdns2457596:0crwdne2457596:0
+      BigEvent-Unplugged:
+        markdown: crwdns2041568:0crwdne2041568:0
+      BigEvent-Unplugged_2020:
+        markdown: crwdns2459946:0crwdne2459946:0
+      BinaryBracelets-Unplugged:
+        markdown: crwdns2041564:0crwdne2041564:0
+      BinaryBracelets-Unplugged_2020:
+        markdown: crwdns2456928:0crwdne2456928:0
+      BinaryImages-Unplugged:
+        markdown: crwdns2041502:0crwdne2041502:0
+      BinaryImages-Unplugged_2020:
+        markdown: crwdns2456258:0crwdne2456258:0
+      Building a UI with Design Mode:
+        markdown: crwdns2041164:0crwdne2041164:0
+        teacher_markdown: crwdns2370320:0crwdne2370320:0
+      CSD - Getters and Setters:
+        markdown: crwdns2041172:0crwdne2041172:0
+      CSD Header Size MC:
+        answers:
+        - text: crwdns2035270:0crwdne2035270:0
+          correct: true
+        - text: crwdns2035274:0crwdne2035274:0
+          correct: true
+        - text: crwdns2035278:0crwdne2035278:0
+          correct: true
+        - text: crwdns2035282:0crwdne2035282:0
+          correct: true
+        content1: crwdns2035268:0crwdne2035268:0
+        markdown: crwdns2069108:0crwdne2069108:0
+        teacher_markdown: crwdns2370610:0crwdne2370610:0
+        title: crwdns2035266:0crwdne2035266:0
+      CSD Header Size MC_2018:
+        answers:
+        - text: crwdns2037012:0crwdne2037012:0
+          correct: true
+        - text: crwdns2037016:0crwdne2037016:0
+          correct: true
+        - text: crwdns2037020:0crwdne2037020:0
+          correct: true
+        - text: crwdns2037024:0crwdne2037024:0
+          correct: true
+        content1: crwdns2037010:0crwdne2037010:0
+        markdown: crwdns2069020:0crwdne2069020:0
+        teacher_markdown: crwdns2370492:0crwdne2370492:0
+        title: crwdns2037008:0crwdne2037008:0
+      CSD Header Size MC_2018_2019:
+        answers:
+        - text: crwdns2038734:0crwdne2038734:0
+          correct: true
+        - text: crwdns2038738:0crwdne2038738:0
+          correct: true
+        - text: crwdns2038742:0crwdne2038742:0
+          correct: true
+        - text: crwdns2038746:0crwdne2038746:0
+          correct: true
+        content1: crwdns2038732:0crwdne2038732:0
+        markdown: crwdns2069046:0crwdne2069046:0
+        teacher_markdown: crwdns2370542:0crwdne2370542:0
+        title: crwdns2038730:0crwdne2038730:0
+      CSD Interactive Animations and Games Post-Project Test:
+        title: crwdns2290929:0crwdne2290929:0
+      CSD Physical Computing Post-Project Test:
+        title: crwdns2290963:0crwdne2290963:0
+      CSD U1 Lesson 5 Overview:
+        markdown: crwdns2041702:0crwdne2041702:0
+        teacher_markdown: crwdns2370680:0[PDF]crwdnd2370680:0[DOCX]crwdne2370680:0
+      CSD U1 Lesson 6 Overview:
+        markdown: crwdns2041704:0crwdne2041704:0
+        teacher_markdown: crwdns2370682:0[PDF]crwdnd2370682:0[DOCX]crwdne2370682:0
+      CSD U1 Lesson 7 Overview:
+        markdown: crwdns2041706:0crwdne2041706:0
+        teacher_markdown: crwdns2370684:0[PDF]crwdnd2370684:0[DOCX]crwdne2370684:0
+      CSD U1 Lesson 8 Overview:
+        markdown: crwdns2041708:0crwdne2041708:0
+        teacher_markdown: crwdns2370686:0[PDF]crwdnd2370686:0[DOCX]crwdne2370686:0
+      CSD U1 Lesson 9 Overview:
+        markdown: crwdns2041710:0crwdne2041710:0
+        teacher_markdown: crwdns2370688:0[PDF]crwdnd2370688:0[DOCX]crwdnd2370688:0[PDF]crwdnd2370688:0[DOCX]crwdne2370688:0
+      CSD U1 Test:
+        title: crwdns2291003:0crwdne2291003:0
+      CSD U2 Design Project:
+        content1: crwdns2035288:0crwdne2035288:0
+        markdown: crwdns2041660:0crwdne2041660:0
+        teacher_markdown: crwdns2370614:0crwdne2370614:0
+      CSD U2 Design Project_2018:
+        content1: crwdns2037030:0crwdne2037030:0
+        markdown: crwdns2041422:0crwdne2041422:0
+        teacher_markdown: crwdns2370496:0crwdne2370496:0
+      CSD U2 Design Project_2018_2019:
+        content1: crwdns2038752:0crwdne2038752:0
+        markdown: crwdns2041550:0crwdne2041550:0
+        teacher_markdown: crwdns2370546:0crwdne2370546:0
+      CSD U2 Expression Exemplars:
+        markdown: crwdns2041652:0crwdne2041652:0
+      CSD U2 Expression Exemplars_2018:
+        markdown: crwdns2041418:0crwdne2041418:0
+      CSD U2 Expression Exemplars_2018_2019:
+        markdown: crwdns2291009:0crwdne2291009:0
+      CSD U2 L1 Overview:
+        content1: crwdns2291039:0crwdne2291039:0
+        markdown: crwdns2041646:0crwdne2041646:0
+        teacher_markdown: crwdns2370606:0[PDF]crwdnd2370606:0[DOCX]crwdne2370606:0
+      CSD U2 L12 Overview:
+        markdown: crwdns2041682:0crwdne2041682:0
+        teacher_markdown: crwdns2370626:0[PDF]crwdnd2370626:0[DOCX]crwdne2370626:0
+      CSD U2 L2 Overview:
+        content1: crwdns2035256:0crwdne2035256:0
+        markdown: crwdns2041650:0crwdne2041650:0
+        teacher_markdown: crwdns2370608:0[PDF]crwdnd2370608:0[DOCX]crwdne2370608:0
+      CSD U2 L3 Overview:
+        content1: crwdns2035260:0crwdne2035260:0
+        markdown: crwdns2041654:0[HTML]crwdnd2041654:0[Doctype]crwdnd2041654:0[Paragraph]crwdnd2041654:0[Body]crwdnd2041654:0[Head]crwdne2041654:0
+      CSD U2 L4 Overview:
+        content1: crwdns2035264:0crwdne2035264:0
+        markdown: crwdns2041656:0[Heading]crwdne2041656:0
+      CSD U2 L5 Overview:
+        content1: crwdns2035292:0crwdne2035292:0
+        markdown: crwdns2041662:0crwdne2041662:0
+        teacher_markdown: crwdns2370616:0[PDF]crwdnd2370616:0[DOCX]crwdnd2370616:0[PDF]crwdnd2370616:0[DOCX]crwdne2370616:0
+      CSD U2 L6 Overview:
+        content1: crwdns2035296:0crwdne2035296:0
+        markdown: crwdns2041666:0crwdne2041666:0
+      CSD U2 L7 Overview:
+        markdown: crwdns2041670:0[Image]crwdne2041670:0
+        teacher_markdown: crwdns2370620:0crwdne2370620:0
+      CSD U2 Lesson 6 Overview:
+        content1: crwdns2035326:0crwdne2035326:0
+        markdown: crwdns2041672:0[Comment]crwdne2041672:0
+      CSD U2 Lesson 9 Overview:
+        markdown: crwdns2041674:0[Hyperlink]crwdne2041674:0
+        teacher_markdown: crwdns2370622:0[PDF]crwdnd2370622:0[DOCX]crwdnd2370622:0[PDF]crwdnd2370622:0[DOCX]crwdne2370622:0
+      CSD U2 PSP Programming:
+        markdown: crwdns2041658:0crwdne2041658:0
+        teacher_markdown: crwdns2370612:0crwdne2370612:0
+      CSD U2 PSP Programming_2018:
+        markdown: crwdns2041420:0crwdne2041420:0
+        teacher_markdown: crwdns2370494:0crwdne2370494:0
+      CSD U2 PSP Programming_2018_2019:
+        markdown: crwdns2041548:0crwdne2041548:0
+        teacher_markdown: crwdns2370544:0crwdne2370544:0
+      CSD U2 Top Websites:
+        markdown: crwdns2041648:0crwdne2041648:0
+      CSD U2 Top Websites_2018:
+        markdown: crwdns2041416:0crwdne2041416:0
+      CSD U2 Top Websites_2018_2019:
+        markdown: crwdns2041544:0crwdne2041544:0
+      CSD U2 expand project:
+        content1: crwdns2035324:0crwdne2035324:0
+        markdown: crwdns2041668:0crwdne2041668:0
+        teacher_markdown: crwdns2370618:0crwdne2370618:0
+      CSD U2 expand project_2018:
+        content1: crwdns2037058:0crwdne2037058:0
+        markdown: crwdns2041426:0crwdne2041426:0
+        teacher_markdown: crwdns2370498:0crwdne2370498:0
+      CSD U2 expand project_2018_2019:
+        content1: crwdns2038780:0crwdne2038780:0
+        markdown: crwdns2041554:0crwdne2041554:0
+        teacher_markdown: crwdns2370550:0crwdne2370550:0
+      CSD U2 image debug match:
+        answers:
+        - text: crwdns2038794:0crwdne2038794:0
+        - text: crwdns2038796:0crwdne2038796:0
+        - text: crwdns2038798:0crwdne2038798:0
+        - text: crwdns2038800:0crwdne2038800:0
+        - text: crwdns2038802:0crwdne2038802:0
+        content1: crwdns2038782:0crwdne2038782:0
+        questions:
+        - text: crwdns2038784:0crwdne2038784:0
+        - text: crwdns2038786:0crwdne2038786:0
+        - text: crwdns2038788:0crwdne2038788:0
+        - text: crwdns2038790:0crwdne2038790:0
+        - text: crwdns2038792:0crwdne2038792:0
+        teacher_markdown: crwdns2370552:0crwdne2370552:0
+      CSD U2 lists match:
+        answers:
+        - text: crwdns2035312:0crwdne2035312:0
+        - text: crwdns2035314:0crwdne2035314:0
+        - text: crwdns2035316:0crwdne2035316:0
+        - text: crwdns2035318:0crwdne2035318:0
+        - text: crwdns2035320:0crwdne2035320:0
+        content1: crwdns2035300:0crwdne2035300:0
+        markdown: crwdns2069110:0crwdne2069110:0
+        questions:
+        - text: crwdns2035302:0crwdne2035302:0
+        - text: crwdns2035304:0crwdne2035304:0
+        - text: crwdns2035306:0crwdne2035306:0
+        - text: crwdns2035308:0crwdne2035308:0
+        - text: crwdns2035310:0crwdne2035310:0
+        title: crwdns2035298:0crwdne2035298:0
+      CSD U2 lists match_2018:
+        answers:
+        - text: crwdns2037046:0crwdne2037046:0
+        - text: crwdns2037048:0crwdne2037048:0
+        - text: crwdns2037050:0crwdne2037050:0
+        - text: crwdns2037052:0crwdne2037052:0
+        - text: crwdns2037054:0crwdne2037054:0
+        content1: crwdns2037034:0crwdne2037034:0
+        markdown: crwdns2069022:0crwdne2069022:0
+        questions:
+        - text: crwdns2037036:0crwdne2037036:0
+        - text: crwdns2037038:0crwdne2037038:0
+        - text: crwdns2037040:0crwdne2037040:0
+        - text: crwdns2037042:0crwdne2037042:0
+        - text: crwdns2037044:0crwdne2037044:0
+        title: crwdns2037032:0crwdne2037032:0
+      CSD U2 lists match_2018_2019:
+        answers:
+        - text: crwdns2038768:0crwdne2038768:0
+        - text: crwdns2038770:0crwdne2038770:0
+        - text: crwdns2038772:0crwdne2038772:0
+        - text: crwdns2038774:0crwdne2038774:0
+        - text: crwdns2038776:0crwdne2038776:0
+        content1: crwdns2038756:0crwdne2038756:0
+        markdown: crwdns2069048:0crwdne2069048:0
+        questions:
+        - text: crwdns2038758:0crwdne2038758:0
+        - text: crwdns2038760:0crwdne2038760:0
+        - text: crwdns2038762:0crwdne2038762:0
+        - text: crwdns2038764:0crwdne2038764:0
+        - text: crwdns2038766:0crwdne2038766:0
+        title: crwdns2038754:0crwdne2038754:0
+      CSD U2 project guide:
+        content1: crwdns2035330:0crwdne2035330:0
+        markdown: crwdns2041676:0crwdne2041676:0
+        teacher_markdown: crwdns2370624:0crwdne2370624:0
+      CSD U2 project guide_2018:
+        content1: crwdns2037062:0crwdne2037062:0
+        markdown: crwdns2041428:0crwdne2041428:0
+        teacher_markdown: crwdns2370500:0crwdne2370500:0
+      CSD U2 project guide_2018_2019:
+        content1: crwdns2038806:0crwdne2038806:0
+        markdown: crwdns2041556:0crwdne2041556:0
+        teacher_markdown: crwdns2370554:0crwdne2370554:0
+      CSD U3 - conditionals - Matching:
+        answers:
+        - text: crwdns2035402:0crwdne2035402:0
+        - text: crwdns2035404:0crwdne2035404:0
+        - text: crwdns2035406:0crwdne2035406:0
+        - text: crwdns2035408:0crwdne2035408:0
+        - text: crwdns2035410:0crwdne2035410:0
+        content1: crwdns2035390:0crwdne2035390:0
+        questions:
+        - text: crwdns2035392:0crwdne2035392:0
+        - text: crwdns2035394:0crwdne2035394:0
+        - text: crwdns2035396:0crwdne2035396:0
+        - text: crwdns2035398:0crwdne2035398:0
+        - text: crwdns2035400:0crwdne2035400:0
+        title: crwdns2035388:0crwdne2035388:0
+      CSD U3 - conditionals - Matching_2018:
+        answers:
+        - text: crwdns2037154:0crwdne2037154:0
+        - text: crwdns2037156:0crwdne2037156:0
+        - text: crwdns2037158:0crwdne2037158:0
+        - text: crwdns2037160:0crwdne2037160:0
+        - text: crwdns2037162:0crwdne2037162:0
+        content1: crwdns2037142:0crwdne2037142:0
+        questions:
+        - text: crwdns2037144:0crwdne2037144:0
+        - text: crwdns2037146:0crwdne2037146:0
+        - text: crwdns2037148:0crwdne2037148:0
+        - text: crwdns2037150:0crwdne2037150:0
+        - text: crwdns2037152:0crwdne2037152:0
+        title: crwdns2037140:0crwdne2037140:0
+      CSD U3 - conditionals - Matching_2018_2019:
+        answers:
+        - text: crwdns2038898:0crwdne2038898:0
+        - text: crwdns2038900:0crwdne2038900:0
+        - text: crwdns2038902:0crwdne2038902:0
+        - text: crwdns2038904:0crwdne2038904:0
+        - text: crwdns2038906:0crwdne2038906:0
+        content1: crwdns2038886:0crwdne2038886:0
+        questions:
+        - text: crwdns2038888:0crwdne2038888:0
+        - text: crwdns2038890:0crwdne2038890:0
+        - text: crwdns2038892:0crwdne2038892:0
+        - text: crwdns2038894:0crwdne2038894:0
+        - text: crwdns2038896:0crwdne2038896:0
+        title: crwdns2038884:0crwdne2038884:0
+      CSD U3 AnimationsMulti STOP project guide:
+        markdown: crwdns2041622:0crwdne2041622:0
+      CSD U3 AnimationsMulti STOP project guide_2018:
+        markdown: crwdns2041298:0crwdne2041298:0
+      CSD U3 AnimationsMulti STOP project guide_2018_2019:
+        markdown: crwdns2041438:0crwdne2041438:0
+      CSD U3 Boolean MC:
+        answers:
+        - text: crwdns2035372:0crwdne2035372:0
+          correct: true
+        - text: crwdns2035376:0crwdne2035376:0
+          correct: true
+        - text: crwdns2035380:0crwdne2035380:0
+          correct: true
+        - text: crwdns2035384:0crwdne2035384:0
+          correct: true
+        markdown: crwdns2069102:0crwdne2069102:0
+        questions:
+        - text: crwdns2035370:0crwdne2035370:0
+        title: crwdns2035368:0crwdne2035368:0
+      CSD U3 Boolean MC_2018:
+        answers:
+        - text: crwdns2037124:0crwdne2037124:0
+          correct: true
+        - text: crwdns2037128:0crwdne2037128:0
+          correct: true
+        - text: crwdns2037132:0crwdne2037132:0
+          correct: true
+        - text: crwdns2037136:0crwdne2037136:0
+          correct: true
+        markdown: crwdns2068996:0crwdne2068996:0
+        questions:
+        - text: crwdns2037122:0crwdne2037122:0
+        title: crwdns2037120:0crwdne2037120:0
+      CSD U3 Boolean MC_2018_2019:
+        answers:
+        - text: crwdns2038868:0crwdne2038868:0
+          correct: true
+        - text: crwdns2038872:0crwdne2038872:0
+          correct: true
+        - text: crwdns2038876:0crwdne2038876:0
+          correct: true
+        - text: crwdns2038880:0crwdne2038880:0
+          correct: true
+        markdown: crwdns2069024:0crwdne2069024:0
+        questions:
+        - text: crwdns2038866:0crwdne2038866:0
+        title: crwdns2038864:0crwdne2038864:0
+      CSD U3 Card Examples_2018:
+        content1: crwdns2037182:0crwdne2037182:0
+        markdown: crwdns2041296:0crwdne2041296:0
+      CSD U3 Card Examples_2018_2019:
+        content1: crwdns2038926:0crwdne2038926:0
+        markdown: crwdns2041436:0crwdne2041436:0
+      CSD U3 Collisions SFLP:
+        markdown: crwdns2041616:0[sprite.bounciness]crwdne2041616:0
+      CSD U3 Defender SFLP:
+        markdown: crwdns2041620:0crwdne2041620:0
+      CSD U3 Entertainment:
+        markdown: crwdns2041580:0crwdne2041580:0
+        teacher_markdown: crwdns2370584:0[insidethemagic.net]crwdnd2370584:0[musicthinktank.com]crwdnd2370584:0[creativecodingpodcast.com]crwdne2370584:0
+      CSD U3 Entertainment_2018_2019:
+        markdown: crwdns2041432:0crwdne2041432:0
+        teacher_markdown: crwdns2370528:0[key]crwdnd2370528:0[insidethemagic.net]crwdnd2370528:0[musicthinktank.com]crwdnd2370528:0[creativecodingpodcast.com]crwdnd2370528:0[/key]crwdne2370528:0
+      CSD U3 Functions Prediction define first:
+        answers:
+        - text: crwdns2035428:0crwdne2035428:0
+          correct: true
+          feedback: crwdns2035432:0crwdne2035432:0
+        - text: crwdns2035434:0crwdne2035434:0
+          correct: true
+          feedback: crwdns2035438:0crwdne2035438:0
+        - text: crwdns2035440:0crwdne2035440:0
+          correct: true
+          feedback: crwdns2035444:0crwdne2035444:0
+        - text: crwdns2035446:0crwdne2035446:0
+          correct: true
+          feedback: crwdns2035450:0crwdne2035450:0
+        markdown: crwdns2069104:0crwdne2069104:0
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - text: crwdns2037184:0crwdne2037184:0
+          correct: true
+          feedback: crwdns2037188:0crwdne2037188:0
+        - text: crwdns2037190:0crwdne2037190:0
+          correct: true
+          feedback: crwdns2037194:0crwdne2037194:0
+        - text: crwdns2037196:0crwdne2037196:0
+          correct: true
+          feedback: crwdns2037200:0crwdne2037200:0
+        - text: crwdns2037202:0crwdne2037202:0
+          correct: true
+          feedback: crwdns2037206:0crwdne2037206:0
+        markdown: crwdns2068998:0crwdne2068998:0
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - text: crwdns2038928:0crwdne2038928:0
+          correct: true
+          feedback: crwdns2038932:0crwdne2038932:0
+        - text: crwdns2038934:0crwdne2038934:0
+          correct: true
+          feedback: crwdns2038938:0crwdne2038938:0
+        - text: crwdns2038940:0crwdne2038940:0
+          correct: true
+          feedback: crwdns2038944:0crwdne2038944:0
+        - text: crwdns2038946:0crwdne2038946:0
+          correct: true
+          feedback: crwdns2038950:0crwdne2038950:0
+        markdown: crwdns2069026:0crwdne2069026:0
+      CSD U3 Functions SFLP:
+        markdown: crwdns2041618:0crwdne2041618:0
+      CSD U3 Keypress Matching:
+        answers:
+        - text: crwdns2035422:0crwdne2035422:0
+        - text: crwdns2035424:0crwdne2035424:0
+        - text: crwdns2035426:0crwdne2035426:0
+        content1: crwdns2035414:0crwdne2035414:0
+        questions:
+        - text: crwdns2035416:0crwdne2035416:0
+        - text: crwdns2035418:0crwdne2035418:0
+        - text: crwdns2035420:0crwdne2035420:0
+        title: crwdns2035412:0crwdne2035412:0
+      CSD U3 Keypress Matching_2018:
+        answers:
+        - text: crwdns2037174:0crwdne2037174:0
+        - text: crwdns2037176:0crwdne2037176:0
+        - text: crwdns2037178:0crwdne2037178:0
+        content1: crwdns2037166:0crwdne2037166:0
+        questions:
+        - text: crwdns2037168:0crwdne2037168:0
+        - text: crwdns2037170:0crwdne2037170:0
+        - text: crwdns2037172:0crwdne2037172:0
+        title: crwdns2037164:0crwdne2037164:0
+      CSD U3 Keypress Matching_2018_2019:
+        answers:
+        - text: crwdns2038918:0crwdne2038918:0
+        - text: crwdns2038920:0crwdne2038920:0
+        - text: crwdns2038922:0crwdne2038922:0
+        content1: crwdns2038910:0crwdne2038910:0
+        questions:
+        - text: crwdns2038912:0crwdne2038912:0
+        - text: crwdns2038914:0crwdne2038914:0
+        - text: crwdns2038916:0crwdne2038916:0
+        title: crwdns2038908:0crwdne2038908:0
+      CSD U3 Lesson Overview 1:
+        markdown: crwdns2291021:0crwdne2291021:0
+        teacher_markdown: crwdns2370582:0[PDF]crwdnd2370582:0[DOCX]crwdne2370582:0
+      CSD U3 Lesson Overview 10:
+        markdown: crwdns2041600:0crwdne2041600:0
+      CSD U3 Lesson Overview 11:
+        markdown: crwdns2041602:0crwdne2041602:0
+      CSD U3 Lesson Overview 12:
+        markdown: crwdns2041604:0[download]crwdne2041604:0
+      CSD U3 Lesson Overview 13:
+        markdown: crwdns2041606:0[sprite.visible]crwdne2041606:0
+      CSD U3 Lesson Overview 14:
+        markdown: crwdns2041608:0crwdne2041608:0
+        teacher_markdown: crwdns2370592:0[PDF]crwdnd2370592:0[DOCX]crwdnd2370592:0[PDF]crwdnd2370592:0[DOCX]crwdne2370592:0
+      CSD U3 Lesson Overview 2:
+        markdown: crwdns2041582:0crwdne2041582:0
+        teacher_markdown: crwdns2370586:0[key]crwdnd2370586:0[PDF]crwdnd2370586:0[DOCX]crwdnd2370586:0[/key]crwdne2370586:0
+      CSD U3 Lesson Overview 3:
+        markdown: crwdns2041584:0crwdne2041584:0
+      CSD U3 Lesson Overview 4:
+        markdown: crwdns2041586:0crwdne2041586:0
+      CSD U3 Lesson Overview 5:
+        markdown: crwdns2041588:0[download]crwdne2041588:0
+      CSD U3 Lesson Overview 6:
+        markdown: crwdns2041590:0[sprite.scale]crwdne2041590:0
+        teacher_markdown: crwdns2370588:0[PDF]crwdnd2370588:0[DOCX]crwdne2370588:0
+      CSD U3 Lesson Overview 7:
+        markdown: crwdns2041592:0[World.frameRate]crwdne2041592:0
+      CSD U3 Lesson Overview 8:
+        markdown: crwdns2041594:0crwdne2041594:0
+        teacher_markdown: crwdns2370590:0[PDF]crwdnd2370590:0[DOCX]crwdne2370590:0
+      CSD U3 Lesson Overview 9:
+        markdown: crwdns2041596:0crwdne2041596:0
+      CSD U3 Movement Challenges:
+        markdown: crwdns2041598:0crwdne2041598:0
+      CSD U3 Project Build a Game SFLP:
+        markdown: crwdns2041628:0crwdne2041628:0
+        teacher_markdown: crwdns2370596:0[PDF]crwdnd2370596:0[DOCX]crwdnd2370596:0[PDF]crwdnd2370596:0[DOCX]crwdne2370596:0
+      CSD U3 SFLP Velocity:
+        markdown: crwdns2041610:0[sprite.velocityY]crwdnd2041610:0[sprite.velocityX]crwdnd2041610:0[sprite.rotationSpeed]crwdne2041610:0
+      CSD U3 Sprite Movement Predict Multi:
+        answers:
+        - text: crwdns2035352:0crwdne2035352:0
+          correct: true
+        - text: crwdns2035356:0crwdne2035356:0
+          correct: true
+        - text: crwdns2035360:0crwdne2035360:0
+          correct: true
+        - text: crwdns2035364:0crwdne2035364:0
+          correct: true
+        questions:
+        - text: crwdns2035350:0crwdne2035350:0
+      CSD U3 Sprite Movement Predict Multi_2018:
+        answers:
+        - text: crwdns2037104:0crwdne2037104:0
+          correct: true
+        - text: crwdns2037108:0crwdne2037108:0
+          correct: true
+        - text: crwdns2037112:0crwdne2037112:0
+          correct: true
+        - text: crwdns2037116:0crwdne2037116:0
+          correct: true
+        questions:
+        - text: crwdns2037102:0crwdne2037102:0
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        answers:
+        - text: crwdns2038848:0crwdne2038848:0
+          correct: true
+        - text: crwdns2038852:0crwdne2038852:0
+          correct: true
+        - text: crwdns2038856:0crwdne2038856:0
+          correct: true
+        - text: crwdns2038860:0crwdne2038860:0
+          correct: true
+        questions:
+        - text: crwdns2038846:0crwdne2038846:0
+      CSD U3 Sprites intro predict multi:
+        answers:
+        - text: crwdns2035334:0crwdne2035334:0
+          correct: true
+        - text: crwdns2035338:0crwdne2035338:0
+          correct: true
+        - text: crwdns2035342:0crwdne2035342:0
+          correct: true
+        - text: crwdns2035346:0crwdne2035346:0
+          correct: true
+        questions:
+        - text: crwdns2035332:0crwdne2035332:0
+      CSD U3 Sprites intro predict multi_2018:
+        answers:
+        - text: crwdns2037066:0crwdne2037066:0
+          correct: true
+        - text: crwdns2037070:0crwdne2037070:0
+          correct: true
+        - text: crwdns2037074:0crwdne2037074:0
+          correct: true
+        - text: crwdns2037078:0crwdne2037078:0
+          correct: true
+        questions:
+        - text: crwdns2037064:0crwdne2037064:0
+      CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+        - text: crwdns2038810:0crwdne2038810:0
+          correct: true
+        - text: crwdns2038814:0crwdne2038814:0
+          correct: true
+        - text: crwdns2038818:0crwdne2038818:0
+          correct: true
+        - text: crwdns2038822:0crwdne2038822:0
+          correct: true
+        questions:
+        - text: crwdns2038808:0crwdne2038808:0
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: crwdns2041624:0crwdne2041624:0
+        teacher_markdown: crwdns2370594:0[PDF]crwdnd2370594:0[DOCX]crwdne2370594:0
+      CSD U3 combining rep:
+        content1: crwdns2035470:0crwdne2035470:0
+        markdown: crwdns2041730:0crwdne2041730:0
+      CSD U3 combining rep_2018:
+        content1: crwdns2037226:0crwdne2037226:0
+        markdown: crwdns2041324:0crwdne2041324:0
+      CSD U3 combining rep_2018_2019:
+        content1: crwdns2038970:0crwdne2038970:0
+        markdown: crwdns2041488:0crwdne2041488:0
+      CSD U3 drawSprites placement match:
+        answers:
+        - text: crwdns2037094:0crwdne2037094:0
+        - text: crwdns2037096:0crwdne2037096:0
+        - text: crwdns2037098:0crwdne2037098:0
+        - text: crwdns2037100:0crwdne2037100:0
+        content1: crwdns2037084:0crwdne2037084:0
+        questions:
+        - text: crwdns2037086:0crwdne2037086:0
+        - text: crwdns2037088:0crwdne2037088:0
+        - text: crwdns2037090:0crwdne2037090:0
+        - text: crwdns2037092:0crwdne2037092:0
+        title: crwdns2037082:0crwdne2037082:0
+      CSD U3 drawSprites placement match_2019:
+        answers:
+        - text: crwdns2038838:0crwdne2038838:0
+        - text: crwdns2038840:0crwdne2038840:0
+        - text: crwdns2038842:0crwdne2038842:0
+        - text: crwdns2038844:0crwdne2038844:0
+        content1: crwdns2038828:0crwdne2038828:0
+        questions:
+        - text: crwdns2038830:0crwdne2038830:0
+        - text: crwdns2038832:0crwdne2038832:0
+        - text: crwdns2038834:0crwdne2038834:0
+        - text: crwdns2038836:0crwdne2038836:0
+        title: crwdns2038826:0crwdne2038826:0
+      CSD U3 game intro:
+        content1: crwdns2035458:0crwdne2035458:0
+        markdown: crwdns2041630:0crwdne2041630:0
+      CSD U3 game intro_2018:
+        content1: crwdns2037214:0crwdne2037214:0
+        markdown: crwdns2041302:0crwdne2041302:0
+      CSD U3 game intro_2018_2019:
+        content1: crwdns2038958:0crwdne2038958:0
+        markdown: crwdns2041442:0crwdne2041442:0
+      CSD U3 platform intro:
+        content1: crwdns2035454:0crwdne2035454:0
+        markdown: crwdns2041626:0crwdne2041626:0
+      CSD U3 platform intro_2018:
+        content1: crwdns2037210:0crwdne2037210:0
+        markdown: crwdns2041300:0crwdne2041300:0
+      CSD U3 platform intro_2018_2019:
+        content1: crwdns2038954:0crwdne2038954:0
+        markdown: crwdns2041440:0crwdne2041440:0
+      CSD U4L01 SFLP:
+        markdown: crwdns2041756:0crwdne2041756:0
+      CSD U4L02 SFLP:
+        markdown: crwdns2041758:0crwdne2041758:0
+      CSD U4L03 SFLP:
+        markdown: crwdns2041760:0crwdne2041760:0
+      CSD U4L04 SFLP:
+        markdown: crwdns2041762:0crwdne2041762:0
+      CSD U4L05 SFLP:
+        markdown: crwdns2041764:0crwdne2041764:0
+      CSD U4L06 SFLP:
+        markdown: crwdns2041766:0crwdne2041766:0
+      CSD U4L07 SFLP:
+        markdown: crwdns2041768:0crwdne2041768:0
+      CSD U4L08 SFLP:
+        markdown: crwdns2041770:0crwdne2041770:0
+      CSD U4L09 SFLP:
+        markdown: crwdns2041772:0crwdne2041772:0
+      CSD U4L10 SFLP:
+        markdown: crwdns2041774:0crwdne2041774:0
+      CSD U4L11 SFLP:
+        markdown: crwdns2041776:0crwdne2041776:0
+      CSD U4L12 SFLP:
+        markdown: crwdns2041778:0crwdne2041778:0
+      CSD U4L13 SFLP:
+        markdown: crwdns2041780:0[onEvent]crwdnd2041780:0[setScreen]crwdne2041780:0
+      CSD U4L15 SFLP:
+        markdown: crwdns2041782:0crwdne2041782:0
+      CSD U4L16 SFLP:
+        markdown: crwdns2041784:0crwdne2041784:0
+      CSD U4L17 SFLP:
+        markdown: crwdns2041786:0crwdne2041786:0
+      CSD U5 Encryption 1:
+        content1: crwdns2035466:0crwdne2035466:0
+        markdown: crwdns2041726:0crwdne2041726:0
+        teacher_markdown: crwdns2370700:0crwdne2370700:0
+      CSD U5 Encryption 1_2018:
+        content1: crwdns2037222:0crwdne2037222:0
+        markdown: crwdns2041322:0crwdne2041322:0
+        teacher_markdown: crwdns2370408:0crwdne2370408:0
+      CSD U5 Encryption 1_2018_2019:
+        content1: crwdns2038966:0crwdne2038966:0
+        markdown: crwdns2041486:0crwdne2041486:0
+        teacher_markdown: crwdns2370538:0crwdne2370538:0
+      CSD U5 Encryption 2:
+        content1: crwdns2035462:0crwdne2035462:0
+        markdown: crwdns2041724:0crwdne2041724:0
+      CSD U5 Encryption 2_2018:
+        content1: crwdns2037218:0crwdne2037218:0
+        markdown: crwdns2041320:0crwdne2041320:0
+      CSD U5 Encryption 2_2018_2019:
+        content1: crwdns2038962:0crwdne2038962:0
+        markdown: crwdns2041484:0crwdne2041484:0
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: crwdns2035482:0crwdne2035482:0
+        markdown: crwdns2041746:0crwdne2041746:0
+        teacher_markdown: crwdns2370714:0[PDF]crwdne2370714:0
+      CSD U5 crosstab warmup:
+        content1: crwdns2035486:0crwdne2035486:0
+        markdown: crwdns2041748:0crwdne2041748:0
+      CSD U5 crosstab warmup_2018:
+        content1: crwdns2037238:0crwdne2037238:0
+        markdown: crwdns2041330:0crwdne2041330:0
+      CSD U5 crosstab warmup_2018_2019:
+        content1: crwdns2038982:0crwdne2038982:0
+        markdown: crwdns2041494:0crwdne2041494:0
+      CSD U5 data visualization:
+        content1: crwdns2035478:0crwdne2035478:0
+        markdown: crwdns2041742:0crwdne2041742:0
+      CSD U5 data visualization_2018:
+        content1: crwdns2037234:0crwdne2037234:0
+        markdown: crwdns2041328:0crwdne2041328:0
+      CSD U5 data visualization_2018_2019:
+        content1: crwdns2038978:0crwdne2038978:0
+        markdown: crwdns2041492:0crwdne2041492:0
+      CSD U5 student record:
+        content1: crwdns2035474:0crwdne2035474:0
+        markdown: crwdns2041732:0crwdne2041732:0
+        teacher_markdown: crwdns2370704:0[key]crwdnd2370704:0[/key]crwdne2370704:0
+      CSD U5 student record_2018:
+        content1: crwdns2037230:0crwdne2037230:0
+        markdown: crwdns2041326:0crwdne2041326:0
+        teacher_markdown: crwdns2370410:0[key]crwdnd2370410:0[/key]crwdne2370410:0
+      CSD U5 student record_2018_2019:
+        content1: crwdns2038974:0crwdne2038974:0
+        markdown: crwdns2041490:0crwdne2041490:0
+        teacher_markdown: crwdns2370540:0[key]crwdnd2370540:0[/key]crwdne2370540:0
+      CSD U5 test:
+        title: crwdns2290991:0crwdne2290991:0
+      CSD U6 LED create intro:
+        content1: crwdns2035510:0crwdne2035510:0
+        markdown: crwdns2041636:0crwdne2041636:0
+      CSD U6 LED create intro_2018:
+        content1: crwdns2037262:0crwdne2037262:0
+        markdown: crwdns2041308:0crwdne2041308:0
+      CSD U6 LED create intro_2018_2019:
+        content1: crwdns2038986:0crwdne2038986:0
+        markdown: crwdns2041448:0crwdne2041448:0
+      CSD U6 array multi:
+        answers:
+        - text: crwdns2035516:0crwdne2035516:0
+          correct: true
+        - text: crwdns2035520:0crwdne2035520:0
+          correct: true
+        - text: crwdns2035524:0crwdne2035524:0
+          correct: true
+        - text: crwdns2035528:0crwdne2035528:0
+          correct: true
+        markdown: crwdns2069106:0crwdne2069106:0
+        questions:
+        - text: crwdns2035514:0crwdne2035514:0
+        title: crwdns2035512:0crwdne2035512:0
+      CSD U6 array multi_2018:
+        answers:
+        - text: crwdns2037268:0crwdne2037268:0
+          correct: true
+        - text: crwdns2037272:0crwdne2037272:0
+          correct: true
+        - text: crwdns2037276:0crwdne2037276:0
+          correct: true
+        - text: crwdns2037280:0crwdne2037280:0
+          correct: true
+        markdown: crwdns2069000:0crwdne2069000:0
+        questions:
+        - text: crwdns2037266:0crwdne2037266:0
+        title: crwdns2037264:0crwdne2037264:0
+      CSD U6 array multi_2018_2019:
+        answers:
+        - text: crwdns2038992:0crwdne2038992:0
+          correct: true
+        - text: crwdns2038996:0crwdne2038996:0
+          correct: true
+        - text: crwdns2039000:0crwdne2039000:0
+          correct: true
+        - text: crwdns2039004:0crwdne2039004:0
+          correct: true
+        markdown: crwdns2069028:0crwdne2069028:0
+        questions:
+        - text: crwdns2038990:0crwdne2038990:0
+        title: crwdns2038988:0crwdne2038988:0
+      CSD U6 circuit smart bike blinker build:
+        markdown: crwdns2041642:0crwdne2041642:0
+      CSD U6 circuit smart bike blinker build_2018:
+        markdown: crwdns2041314:0crwdne2041314:0
+      CSD U6 circuit smart bike blinker build_2018_2019:
+        markdown: crwdns2041454:0crwdne2041454:0
+      CSD U6 final intro:
+        content1: crwdns2035532:0crwdne2035532:0
+        markdown: crwdns2041644:0crwdne2041644:0
+      CSD U6 final intro_2018:
+        content1: crwdns2037284:0crwdne2037284:0
+        markdown: crwdns2041316:0crwdne2041316:0
+      CSD U6 final intro_2018_2019:
+        content1: crwdns2039008:0crwdne2039008:0
+        markdown: crwdns2041456:0crwdne2041456:0
+      CSD U6 game project stop:
+        markdown: crwdns2041640:0crwdne2041640:0
+      CSD U6 game project stop_2018:
+        markdown: crwdns2041312:0crwdne2041312:0
+      CSD U6 game project stop_2018_2019:
+        markdown: crwdns2041452:0crwdne2041452:0
+      CSD U6 setProperty predict multi:
+        answers:
+        - text: crwdns2035492:0crwdne2035492:0
+          correct: true
+        - text: crwdns2035496:0crwdne2035496:0
+          correct: true
+        - text: crwdns2035500:0crwdne2035500:0
+          correct: true
+        - text: crwdns2035504:0crwdne2035504:0
+          correct: true
+        questions:
+        - text: crwdns2035490:0crwdne2035490:0
+        teacher_markdown: crwdns2370602:0crwdne2370602:0
+        title: crwdns2035488:0crwdne2035488:0
+      CSD U6 setProperty predict multi_2018:
+        answers:
+        - text: crwdns2037244:0crwdne2037244:0
+          correct: true
+        - text: crwdns2037248:0crwdne2037248:0
+          correct: true
+        - text: crwdns2037252:0crwdne2037252:0
+          correct: true
+        - text: crwdns2037256:0crwdne2037256:0
+          correct: true
+        questions:
+        - text: crwdns2037242:0crwdne2037242:0
+        teacher_markdown: crwdns2370404:0crwdne2370404:0
+        title: crwdns2037240:0crwdne2037240:0
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - text: crwdns2290939:0crwdne2290939:0
+          correct: true
+        - text: crwdns2290943:0crwdne2290943:0
+          correct: true
+        - text: crwdns2290947:0crwdne2290947:0
+          correct: true
+        - text: crwdns2290951:0crwdne2290951:0
+          correct: true
+        questions:
+        - text: crwdns2290955:0crwdne2290955:0
+        teacher_markdown: crwdns2370532:0crwdne2370532:0
+        title: crwdns2290957:0crwdne2290957:0
+      CSD U6 tugowar stop:
+        markdown: crwdns2041638:0crwdne2041638:0
+      CSD U6 tugowar stop_2018:
+        markdown: crwdns2041310:0crwdne2041310:0
+      CSD U6 tugowar stop_2018_2019:
+        markdown: crwdns2041450:0crwdne2041450:0
+      CSD User Centered Design Post-Project Test:
+        title: crwdns2290977:0crwdne2290977:0
+      CSD Web Development Post-Project Test:
+        title: crwdns2291015:0crwdne2291015:0
+      CSD-U5-SFLP ASCII and Binary Representation:
+        markdown: crwdns2041716:0crwdne2041716:0
+        teacher_markdown: crwdns2370694:0[ASCII]crwdnd2370694:0[PDF]crwdnd2370694:0[DOCX]crwdne2370694:0
+      CSD-U5-SFLP Automating Data Decisions:
+        markdown: crwdns2041750:0crwdne2041750:0
+        teacher_markdown: crwdns2370716:0[PDF]crwdne2370716:0
+      CSD-U5-SFLP Combining Representations:
+        markdown: crwdns2041728:0crwdne2041728:0
+        teacher_markdown: crwdns2370702:0[PDF]crwdne2370702:0
+      CSD-U5-SFLP Create a Representation:
+        markdown: crwdns2041734:0crwdne2041734:0
+        teacher_markdown: crwdns2370706:0[PDF]crwdne2370706:0
+      CSD-U5-SFLP Interpreting Data:
+        markdown: crwdns2041740:0crwdne2041740:0
+        teacher_markdown: crwdns2370710:0[PDF]crwdne2370710:0
+      CSD-U5-SFLP Making Decisions with Data:
+        markdown: crwdns2041744:0crwdne2041744:0
+        teacher_markdown: crwdns2370712:0[PDF]crwdnd2370712:0[DOCX]crwdne2370712:0
+      CSD-U5-SFLP Patterns and Representation:
+        markdown: crwdns2041714:0crwdne2041714:0
+        teacher_markdown: crwdns2370692:0[PDF]crwdnd2370692:0[PDF]crwdne2370692:0
+      CSD-U5-SFLP Problem Solving and Data:
+        markdown: crwdns2041736:0crwdne2041736:0
+        teacher_markdown: crwdns2370708:0[PDF]crwdne2370708:0
+      CSD-U5-SFLP Problem Solving with Big Data:
+        markdown: crwdns2041738:0crwdne2041738:0
+      CSD-U5-SFLP Representation Matters:
+        markdown: crwdns2041712:0crwdne2041712:0
+        teacher_markdown: crwdns2370690:0[key]crwdnd2370690:0[PDF]crwdnd2370690:0[DOCX]crwdnd2370690:0[PDF]crwdnd2370690:0[DOCX]crwdnd2370690:0[/key]crwdne2370690:0
+      CSD-U5-SFLP Representing Images:
+        markdown: crwdns2041718:0crwdne2041718:0
+      CSD-U5-SFLP Representing Numbers Part 1:
+        markdown: crwdns2041720:0crwdne2041720:0
+        teacher_markdown: crwdns2370696:0[key]crwdnd2370696:0[PDF]crwdnd2370696:0[/key]crwdne2370696:0
+      CSD-U5-SFLP Representing Numbers Part 2:
+        markdown: crwdns2041722:0crwdne2041722:0
+        teacher_markdown: crwdns2370698:0[PDF]crwdne2370698:0
+      CSD-U5-SFLP Solve a Data Problem:
+        markdown: crwdns2041752:0crwdne2041752:0
+        teacher_markdown: crwdns2370718:0[PDF]crwdnd2370718:0[PDF]crwdne2370718:0
+      'CSD: getText vs getNumber':
+        markdown: crwdns2041174:0crwdne2041174:0
+      'CSD: setProperty':
+        markdown: crwdns2041176:0crwdne2041176:0
+      CSDU6 Innovation:
+        markdown: crwdns2041634:0crwdne2041634:0
+        teacher_markdown: crwdns2370600:0[Warable.com]crwdnd2370600:0[Medstartr]crwdnd2370600:0[ArtFab]crwdnd2370600:0[Instructables]crwdnd2370600:0[CNet]crwdne2370600:0
+      CSDU6 Innovation_2018:
+        markdown: crwdns2041306:0crwdne2041306:0
+        teacher_markdown: crwdns2370402:0[Warable.com]crwdnd2370402:0[Medstartr]crwdnd2370402:0[ArtFab]crwdnd2370402:0[Instructables]crwdnd2370402:0[CNet]crwdne2370402:0
+      CSDU6 Innovation_2018_2019:
+        markdown: crwdns2041444:0crwdne2041444:0
+        teacher_markdown: crwdns2370530:0[Warable.com]crwdnd2370530:0[Medstartr]crwdnd2370530:0[ArtFab]crwdnd2370530:0[Instructables]crwdnd2370530:0[CNet]crwdne2370530:0
+      Choosing Good IDs:
+        markdown: crwdns2041166:0crwdne2041166:0
+        teacher_markdown: crwdns2370322:0crwdne2370322:0
+      ConditionalsWithCards-Unplugged:
+        markdown: crwdns2041500:0crwdne2041500:0
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: crwdns2455744:0crwdne2455744:0
+      Crowdsourcing-Unplugged:
+        markdown: crwdns2041516:0crwdne2041516:0
+      Dance_Party_extras_intro:
+        markdown: crwdns2041156:0crwdne2041156:0
+      Dance_Party_extras_intro_2019:
+        markdown: crwdns2068878:0crwdne2068878:0
+      Design a Screen for your App_2018:
+        markdown: crwdns2041372:0crwdne2041372:0
+        teacher_markdown: crwdns2370440:0crwdne2370440:0
+      Design a Screen for your App_2018_2019:
+        markdown: crwdns2041462:0crwdne2041462:0
+        teacher_markdown: crwdns2370536:0crwdne2370536:0
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: crwdns2041526:0crwdne2041526:0
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: crwdns2459410:0crwdne2459410:0
+      DigitalCitizenship-Unplugged:
+        markdown: crwdns2041506:0crwdne2041506:0
+      DigitalFootprint-Unplugged:
+        markdown: crwdns2041472:0crwdne2041472:0
+      DigitalSharing-Unplugged:
+        markdown: crwdns2041518:0crwdne2041518:0
+      DigitalSharing-Unplugged_2020:
+        markdown: crwdns2458436:0crwdne2458436:0
+      EnvelopeVariables-Unplugged:
+        markdown: crwdns2041508:0crwdne2041508:0
+      EnvelopeVariables-Unplugged_2020:
+        markdown: crwdns2460760:0crwdne2460760:0
+      Example App Types_2018:
+        markdown: crwdns2041370:0crwdne2041370:0
+        teacher_markdown: crwdns2370438:0crwdne2370438:0
+      Example App Types_2018_2019:
+        markdown: crwdns2041460:0crwdne2041460:0
+        teacher_markdown: crwdns2370534:0crwdne2370534:0
+      ForLoopFun-Unplugged:
+        markdown: crwdns2041510:0crwdne2041510:0
+      ForLoopFun-Unplugged_2020:
+        markdown: crwdns2460986:0crwdne2460986:0
+      GettingLoopy-Unplugged:
+        markdown: crwdns2041476:0crwdne2041476:0
+      GettingLoopy-Unplugged_2020:
+        markdown: crwdns2454756:0crwdne2454756:0
+      GoingPlacesSafely-unplugged:
+        markdown: crwdns2041464:0crwdne2041464:0
+      GraphPaperProgramming-Unplugged:
+        markdown: crwdns2041496:0crwdne2041496:0
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: crwdns2455152:0crwdne2455152:0
+      HappyLoops-Unplugged:
+        markdown: crwdns2041468:0crwdne2041468:0
+      HappyLoops-Unplugged_2020:
+        markdown: crwdns2459652:0crwdne2459652:0
+      HappyMaps-Unplugged:
+        markdown: crwdns2041466:0crwdne2041466:0
+      HappyMaps-Unplugged_2020:
+        markdown: crwdns2459422:0crwdne2459422:0
+      Internet Simulator Setup:
+        content1: crwdns2041074:0crwdne2041074:0
+        markdown: crwdns2041274:0[FAQ]crwdne2041274:0
+      Internet Simulator Setup 2:
+        content1: crwdns2041078:0crwdne2041078:0
+        markdown: crwdns2041276:0[sections]crwdne2041276:0
+      Internet Simulator Setup 3:
+        content1: crwdns2041082:0crwdne2041082:0
+        markdown: crwdns2041278:0[here]crwdne2041278:0
+      Internet-Unplugged:
+        markdown: crwdns2041512:0crwdne2041512:0
+      Internet-Unplugged_2020:
+        markdown: crwdns2460984:0crwdne2460984:0
+      K-1 Artist 1 Multi 1:
+        answers:
+        - text: crwdns2039924:0crwdne2039924:0
+          correct: true
+        - text: crwdns2039928:0crwdne2039928:0
+          correct: true
+        - text: crwdns2039932:0crwdne2039932:0
+          correct: true
+        - text: crwdns2039936:0crwdne2039936:0
+          correct: true
+        content1: crwdns2039920:0crwdne2039920:0
+        questions:
+        - text: crwdns2039922:0crwdne2039922:0
+        title: crwdns2039918:0crwdne2039918:0
+      K-1 Artist 1 Multi 2:
+        answers:
+        - text: crwdns2039946:0crwdne2039946:0
+          correct: true
+        - text: crwdns2039950:0crwdne2039950:0
+          correct: true
+        - text: crwdns2039954:0crwdne2039954:0
+          correct: true
+        - text: crwdns2039958:0crwdne2039958:0
+          correct: true
+        content1: crwdns2039942:0crwdne2039942:0
+        questions:
+        - text: crwdns2039944:0crwdne2039944:0
+        title: crwdns2039940:0crwdne2039940:0
+      K-1 Artist 2 Match 2:
+        answers:
+        - text: crwdns2039974:0crwdne2039974:0
+        - text: crwdns2039976:0crwdne2039976:0
+        - text: crwdns2039978:0crwdne2039978:0
+        - text: crwdns2039980:0crwdne2039980:0
+        content2: crwdns2039964:0crwdne2039964:0
+        questions:
+        - text: crwdns2039966:0crwdne2039966:0
+        - text: crwdns2039968:0crwdne2039968:0
+        - text: crwdns2039970:0crwdne2039970:0
+        - text: crwdns2039972:0crwdne2039972:0
+        title: crwdns2039962:0crwdne2039962:0
+      K-1 Bee 1 Multi 1:
+        answers:
+        - text: crwdns2039880:0crwdne2039880:0
+          correct: true
+        - text: crwdns2039884:0crwdne2039884:0
+          correct: true
+        - text: crwdns2039888:0crwdne2039888:0
+          correct: true
+        - text: crwdns2039892:0crwdne2039892:0
+          correct: true
+        content1: crwdns2039876:0crwdne2039876:0
+        questions:
+        - text: crwdns2039878:0crwdne2039878:0
+        title: crwdns2039874:0crwdne2039874:0
+      K-1 Bee 1 Multi 2:
+        answers:
+        - text: crwdns2039902:0crwdne2039902:0
+          correct: true
+        - text: crwdns2039906:0crwdne2039906:0
+          correct: true
+        - text: crwdns2039910:0crwdne2039910:0
+          correct: true
+        - text: crwdns2039914:0crwdne2039914:0
+          correct: true
+        content1: crwdns2039898:0crwdne2039898:0
+        questions:
+        - text: crwdns2039900:0crwdne2039900:0
+        title: crwdns2039896:0crwdne2039896:0
+      K-1 Bee Loops Match 1:
+        answers:
+        - text: crwdns2040084:0crwdne2040084:0
+        - text: crwdns2040086:0crwdne2040086:0
+        - text: crwdns2040088:0crwdne2040088:0
+        - text: crwdns2040090:0crwdne2040090:0
+        content2: crwdns2040074:0crwdne2040074:0
+        questions:
+        - text: crwdns2040076:0crwdne2040076:0
+        - text: crwdns2040078:0crwdne2040078:0
+        - text: crwdns2040080:0crwdne2040080:0
+        - text: crwdns2040082:0crwdne2040082:0
+        title: crwdns2040072:0crwdne2040072:0
+      K-1 Big Event Match 1:
+        answers:
+        - text: crwdns2040104:0crwdne2040104:0
+        - text: crwdns2040106:0crwdne2040106:0
+        - text: crwdns2040108:0crwdne2040108:0
+        content1: crwdns2040094:0crwdne2040094:0
+        content2: crwdns2040096:0crwdne2040096:0
+        questions:
+        - text: crwdns2040098:0crwdne2040098:0
+        - text: crwdns2040100:0crwdne2040100:0
+        - text: crwdns2040102:0crwdne2040102:0
+        title: crwdns2040092:0crwdne2040092:0
+      K-1 Digital Footprint Multi 1:
+        answers:
+        - text: crwdns2040580:0crwdne2040580:0
+          correct: true
+        - text: crwdns2040584:0crwdne2040584:0
+          correct: true
+        - text: crwdns2040588:0crwdne2040588:0
+          correct: true
+        content1: crwdns2040576:0crwdne2040576:0
+        questions:
+        - text: crwdns2040578:0crwdne2040578:0
+        title: crwdns2040574:0crwdne2040574:0
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - text: crwdns2040024:0crwdne2040024:0
+          correct: true
+        - text: crwdns2040028:0crwdne2040028:0
+          correct: true
+        - text: crwdns2040032:0crwdne2040032:0
+          correct: true
+        content1: crwdns2040020:0crwdne2040020:0
+        questions:
+        - text: crwdns2040022:0crwdne2040022:0
+        title: crwdns2040018:0crwdne2040018:0
+      K-1 Happy Maps Multi 1:
+        answers:
+        - text: crwdns2039734:0crwdne2039734:0
+          correct: true
+        - text: crwdns2039738:0crwdne2039738:0
+          correct: true
+        - text: crwdns2039742:0crwdne2039742:0
+          correct: true
+        - text: crwdns2039746:0crwdne2039746:0
+          correct: true
+        content1: crwdns2039730:0crwdne2039730:0
+        questions:
+        - text: crwdns2039732:0crwdne2039732:0
+        title: crwdns2039728:0crwdne2039728:0
+      K-1 Keep it Private Multi 1:
+        answers:
+        - text: crwdns2040114:0crwdne2040114:0
+          correct: true
+        - text: crwdns2040118:0crwdne2040118:0
+          correct: true
+        - text: crwdns2040122:0crwdne2040122:0
+          correct: true
+        questions:
+        - text: crwdns2040112:0crwdne2040112:0
+        title: crwdns2040110:0crwdne2040110:0
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - text: crwdns2039822:0crwdne2039822:0
+          correct: true
+        - text: crwdns2039826:0crwdne2039826:0
+          correct: true
+        - text: crwdns2039830:0crwdne2039830:0
+          correct: true
+        - text: crwdns2039834:0crwdne2039834:0
+          correct: true
+        content1: crwdns2039818:0crwdne2039818:0
+        questions:
+        - text: crwdns2039820:0crwdne2039820:0
+        title: crwdns2039816:0crwdne2039816:0
+      K-1 Maze Loops Multi 1:
+        answers:
+        - text: crwdns2040042:0crwdne2040042:0
+          correct: true
+        - text: crwdns2040046:0crwdne2040046:0
+          correct: true
+        - text: crwdns2040050:0crwdne2040050:0
+          correct: true
+        content1: crwdns2040038:0crwdne2040038:0
+        questions:
+        - text: crwdns2040040:0crwdne2040040:0
+        title: crwdns2040036:0crwdne2040036:0
+      K-1 Maze Loops Multi 2:
+        answers:
+        - text: crwdns2040060:0crwdne2040060:0
+          correct: true
+        - text: crwdns2040064:0crwdne2040064:0
+          correct: true
+        - text: crwdns2040068:0crwdne2040068:0
+          correct: true
+        content1: crwdns2040056:0crwdne2040056:0
+        questions:
+        - text: crwdns2040058:0crwdne2040058:0
+        title: crwdns2040054:0crwdne2040054:0
+      K-1 Maze Match 1:
+        answers:
+        - text: crwdns2039808:0crwdne2039808:0
+        - text: crwdns2039810:0crwdne2039810:0
+        - text: crwdns2039812:0crwdne2039812:0
+        - text: crwdns2039814:0crwdne2039814:0
+        content2: crwdns2039796:0crwdne2039796:0
+        questions:
+        - text: crwdns2039800:0crwdne2039800:0
+        - text: crwdns2039802:0crwdne2039802:0
+        - text: crwdns2039804:0crwdne2039804:0
+        - text: crwdns2039806:0crwdne2039806:0
+        title: crwdns2039794:0crwdne2039794:0
+      K-1 Maze Multiple Choice 2:
+        answers:
+        - text: crwdns2039778:0crwdne2039778:0
+          correct: true
+        - text: crwdns2039782:0crwdne2039782:0
+          correct: true
+        - text: crwdns2039786:0crwdne2039786:0
+          correct: true
+        - text: crwdns2039790:0crwdne2039790:0
+          correct: true
+        content1: crwdns2039774:0crwdne2039774:0
+        questions:
+        - text: crwdns2039776:0crwdne2039776:0
+        title: crwdns2039772:0crwdne2039772:0
+      K-1 Move It Multi 1:
+        answers:
+        - text: crwdns2039756:0crwdne2039756:0
+          correct: true
+        - text: crwdns2039760:0crwdne2039760:0
+          correct: true
+        - text: crwdns2039764:0crwdne2039764:0
+          correct: true
+        - text: crwdns2039768:0crwdne2039768:0
+          correct: true
+        content1: crwdns2039752:0crwdne2039752:0
+        questions:
+        - text: crwdns2039754:0crwdne2039754:0
+        title: crwdns2039750:0crwdne2039750:0
+      K-1 Plant a Seed Multi 1:
+        answers:
+        - text: crwdns2039844:0crwdne2039844:0
+          correct: true
+        - text: crwdns2039848:0crwdne2039848:0
+          correct: true
+        - text: crwdns2039852:0crwdne2039852:0
+          correct: true
+        content1: crwdns2039840:0crwdne2039840:0
+        questions:
+        - text: crwdns2039842:0crwdne2039842:0
+        title: crwdns2039838:0crwdne2039838:0
+      K-1 Plant a Seed Multi 2:
+        answers:
+        - text: crwdns2039862:0crwdne2039862:0
+          correct: true
+        - text: crwdns2039866:0crwdne2039866:0
+          correct: true
+        - text: crwdns2039870:0crwdne2039870:0
+          correct: true
+        content1: crwdns2039858:0crwdne2039858:0
+        questions:
+        - text: crwdns2039860:0crwdne2039860:0
+        title: crwdns2039856:0crwdne2039856:0
+      K-1 Word Search Multi 1:
+        answers:
+        - text: crwdns2039988:0crwdne2039988:0
+          correct: true
+        - text: crwdns2039992:0crwdne2039992:0
+          correct: true
+        - text: crwdns2039996:0crwdne2039996:0
+          correct: true
+        content1: crwdns2039984:0crwdne2039984:0
+        questions:
+        - text: crwdns2039986:0crwdne2039986:0
+        title: crwdns2039982:0crwdne2039982:0
+      K-1 Word Search Multi 3:
+        answers:
+        - text: crwdns2040006:0crwdne2040006:0
+          correct: true
+        - text: crwdns2040010:0crwdne2040010:0
+          correct: true
+        - text: crwdns2040014:0crwdne2040014:0
+          correct: true
+        content1: crwdns2040002:0crwdne2040002:0
+        questions:
+        - text: crwdns2040004:0crwdne2040004:0
+        title: crwdns2040000:0crwdne2040000:0
+      MoveItMoveIt-Unplugged:
+        markdown: crwdns2041474:0crwdne2041474:0
+      MoveItMoveIt-Unplugged_2020:
+        markdown: crwdns2454540:0crwdne2454540:0
+      Multi-Screen Apps:
+        content1: crwdns2039726:0crwdne2039726:0
+        markdown: crwdns2041170:0crwdne2041170:0
+        teacher_markdown: crwdns2370326:0crwdne2370326:0
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: crwdns2041566:0crwdne2041566:0
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: crwdns2456930:0crwdne2456930:0
+      MyRoboticFriends-Unplugged:
+        markdown: crwdns2041562:0crwdne2041562:0
+      MyRoboticFriends-Unplugged_2020:
+        markdown: crwdns2456452:0crwdne2456452:0
+      New Challenge Introduction:
+        content1: crwdns2039662:0crwdne2039662:0
+        markdown: crwdns2041160:0crwdne2041160:0
+      OPD-K5 About:
+        markdown: crwdns2041182:0[Middle]crwdne2041182:0
+      OPD-K5 About_copy:
+        markdown: crwdns2373112:0crwdne2373112:0
+      OPD-K5 Assessment:
+        markdown: crwdns2041260:0[support.code.org]crwdne2041260:0
+      OPD-K5 Assessment_copy:
+        markdown: crwdns2373942:0crwdne2373942:0
+      OPD-K5 CS Courses:
+        markdown: crwdns2041256:0crwdne2041256:0
+      OPD-K5 CS Courses_copy:
+        markdown: crwdns2373940:0crwdne2373940:0
+      OPD-K5 CS Tips:
+        markdown: crwdns2041190:0__stages__crwdnd2041190:0__puzzles__crwdne2041190:0
+      OPD-K5 CS Tips_copy:
+        markdown: crwdns2373122:0crwdne2373122:0
+      OPD-K5 Celebrate:
+        markdown: crwdns2041272:0%20Ccrwdnd2041272:0%20Scrwdnd2041272:0%20Fcrwdne2041272:0
+      OPD-K5 Congrats:
+        markdown: crwdns2041240:0crwdne2041240:0
+      OPD-K5 CongratsFinal:
+        markdown: crwdns2041242:0crwdne2041242:0
+      OPD-K5 Connect:
+        markdown: crwdns2041270:0crwdne2041270:0
+      OPD-K5 Connect_copy:
+        markdown: crwdns2373946:0%20Ccrwdnd2373946:0%20Scrwdnd2373946:0%20Fcrwdne2373946:0
+      OPD-K5 Culture:
+        markdown: crwdns2041246:0crwdne2041246:0
+      OPD-K5 Outline:
+        markdown: crwdns2041184:0crwdne2041184:0
+      OPD-K5 Outline_copy:
+        markdown: crwdns2373120:0[Optional]crwdne2373120:0
+      OPD-K5 Pair:
+        markdown: crwdns2041248:0crwdne2041248:0
+      OPD-K5 Pair_copy:
+        markdown: crwdns2373274:0crwdne2373274:0
+      OPD-K5 Participation:
+        markdown: crwdns2041186:0[support.code.org]crwdnd2041186:0[Twitter]crwdnd2041186:0[Facebook]crwdne2041186:0
+      OPD-K5 Participation_copy:
+        markdown: crwdns2373124:0crwdne2373124:0
+      OPD-K5 PostSurvey:
+        markdown: crwdns2041268:0crwdne2041268:0
+      OPD-K5 PreSurvey:
+        markdown: crwdns2041178:0crwdne2041178:0
+      OPD-K5 Puzzles:
+        markdown: crwdns2041206:0crwdne2041206:0
+      OPD-K5 Reviewing Reflections:
+        content1: crwdns2373932:0crwdne2373932:0
+        markdown: crwdns2373934:0crwdne2373934:0
+      OPD-K5 Stage10Start:
+        markdown: crwdns2041266:0crwdne2041266:0
+      OPD-K5 Stage10Start_copy:
+        markdown: crwdns2373936:0crwdne2373936:0
+      OPD-K5 Stage1Go:
+        markdown: crwdns2041192:0crwdne2041192:0
+      OPD-K5 Stage2Go:
+        markdown: crwdns2041202:0crwdne2041202:0
+      OPD-K5 Stage2Go_copy:
+        markdown: crwdns2373150:0crwdne2373150:0
+      OPD-K5 Stage2Overview:
+        markdown: crwdns2041194:0crwdne2041194:0
+      OPD-K5 Stage3Go:
+        markdown: crwdns2041216:0crwdne2041216:0
+      OPD-K5 Stage3Start:
+        markdown: crwdns2041212:0crwdne2041212:0
+      OPD-K5 Stage3Start_copy:
+        markdown: crwdns2373152:0crwdne2373152:0
+      OPD-K5 Stage3aGo:
+        content1: crwdns2039670:0crwdne2039670:0
+        markdown: crwdns2041214:0crwdne2041214:0
+      OPD-K5 Stage3aGo_copy:
+        content1: crwdns2373158:0crwdne2373158:0
+        markdown: crwdns2373160:0crwdne2373160:0
+      OPD-K5 Stage4Go:
+        markdown: crwdns2041220:0crwdne2041220:0
+      OPD-K5 Stage4Go_copy:
+        markdown: crwdns2373218:0crwdne2373218:0
+      OPD-K5 Stage4Review:
+        markdown: crwdns2041222:0crwdne2041222:0
+      OPD-K5 Stage4Start:
+        markdown: crwdns2041218:0crwdne2041218:0
+      OPD-K5 Stage4Start_copy:
+        markdown: crwdns2373212:0crwdne2373212:0
+      OPD-K5 Stage5Go:
+        markdown: crwdns2041226:0crwdne2041226:0
+      OPD-K5 Stage5Go_copy:
+        markdown: crwdns2373330:0crwdne2373330:0
+      OPD-K5 Stage5Review:
+        markdown: crwdns2041228:0crwdne2041228:0
+      OPD-K5 Stage5Start:
+        markdown: crwdns2041224:0crwdne2041224:0
+      OPD-K5 Stage5Start_copy:
+        markdown: crwdns2373324:0crwdne2373324:0
+      OPD-K5 Stage6Go:
+        markdown: crwdns2041232:0crwdne2041232:0
+      OPD-K5 Stage6Go_copy:
+        markdown: crwdns2373496:0crwdne2373496:0
+      OPD-K5 Stage6Review:
+        markdown: crwdns2041234:0crwdne2041234:0
+      OPD-K5 Stage6Start:
+        markdown: crwdns2041230:0crwdne2041230:0
+      OPD-K5 Stage6Start_copy:
+        markdown: crwdns2373490:0crwdne2373490:0
+      OPD-K5 Stage7Go:
+        markdown: crwdns2041238:0crwdne2041238:0
+      OPD-K5 Stage7Go_copy:
+        markdown: crwdns2373284:0crwdne2373284:0
+      OPD-K5 Stage7Start:
+        markdown: crwdns2041236:0crwdne2041236:0
+      OPD-K5 Stage7Start_copy:
+        markdown: crwdns2373278:0crwdne2373278:0
+      OPD-K5 Stage8Go:
+        markdown: crwdns2041252:0crwdne2041252:0
+      OPD-K5 Stage8Start:
+        markdown: crwdns2041244:0crwdne2041244:0
+      OPD-K5 Stage9Go:
+        markdown: crwdns2041264:0crwdne2041264:0
+      OPD-K5 Stage9Start:
+        markdown: crwdns2041254:0crwdne2041254:0
+      OPD-K5 Stage9Start_copy:
+        markdown: crwdns2373938:0crwdne2373938:0
+      OPD-K5 Using CS:
+        markdown: crwdns2041258:0crwdne2041258:0
+      OPD-K5 Vocabulary:
+        markdown: crwdns2041200:0crwdne2041200:0
+      OPD-K5 Welcome 2:
+        markdown: crwdns2041180:0crwdne2041180:0
+      OPD-K5 Welcome 2_copy:
+        markdown: crwdns2373132:0crwdne2373132:0
+      OPD-K5 What is Mastery:
+        markdown: crwdns2041210:0crwdne2041210:0
+      OPD-K5 What is Mastery_copy:
+        markdown: crwdns2373148:0crwdne2373148:0
+      OPD-K5 Why teach CS:
+        markdown: crwdns2041196:0crwdne2041196:0
+      OPD-K5 Why teach CS_copy:
+        markdown: crwdns2373118:0crwdne2373118:0
+      OPD-K5 Younger Grades:
+        markdown: crwdns2041198:0[Facebook]crwdnd2041198:0[Instagram]crwdne2041198:0
+      OPD-K5 Your Plan:
+        markdown: crwdns2041262:0crwdne2041262:0
+      OPD-K5 Your Plan_copy:
+        markdown: crwdns2373944:0crwdne2373944:0
+      OPD-K5 conditionals introduced:
+        content1: crwdns2373326:0crwdne2373326:0
+        markdown: crwdns2373328:0crwdne2373328:0
+      OPD-K5 debugging:
+        content1: crwdns2373318:0crwdne2373318:0
+        markdown: crwdns2373320:0crwdne2373320:0
+      OPD-K5 diving deeper intro:
+        content1: crwdns2373486:0crwdne2373486:0
+        markdown: crwdns2373488:0crwdne2373488:0
+      OPD-K5 events introduced:
+        content1: crwdns2373280:0crwdne2373280:0
+        markdown: crwdns2373282:0crwdne2373282:0
+      OPD-K5 for loops:
+        content1: crwdns2373690:0crwdne2373690:0
+        markdown: crwdns2373692:0crwdne2373692:0
+      OPD-K5 for loops intro:
+        content1: crwdns2373682:0crwdne2373682:0
+        markdown: crwdns2373684:0crwdne2373684:0
+      OPD-K5 for loops introduction:
+        content1: crwdns2373686:0crwdne2373686:0
+        markdown: crwdns2373688:0crwdne2373688:0
+      OPD-K5 functions introduced:
+        content1: crwdns2373492:0crwdne2373492:0
+        markdown: crwdns2373494:0crwdne2373494:0
+      OPD-K5 journaling:
+        content1: crwdns2373422:0crwdne2373422:0
+        markdown: crwdns2373424:0crwdne2373424:0
+      OPD-K5 lesson implementation planning:
+        content1: crwdns2373206:0crwdne2373206:0
+        markdown: crwdns2373208:0crwdne2373208:0
+      OPD-K5 lesson plans:
+        content1: crwdns2373142:0crwdne2373142:0
+        markdown: crwdns2373144:0crwdne2373144:0
+      OPD-K5 loops introduced:
+        content1: crwdns2373214:0crwdne2373214:0
+        markdown: crwdns2373216:0crwdne2373216:0
+      OPD-K5 project:
+        content1: crwdns2373428:0crwdne2373428:0
+        markdown: crwdns2373430:0crwdne2373430:0
+      OPD-K5 projects introduction:
+        content1: crwdns2373432:0crwdne2373432:0
+        markdown: crwdns2373434:0crwdne2373434:0
+      OPD-K5 role_of_teacher:
+        content1: crwdns2373134:0crwdne2373134:0
+        markdown: crwdns2373136:0crwdne2373136:0
+      OPD-K5 sequencing introduced:
+        content1: crwdns2373154:0crwdne2373154:0
+        markdown: crwdns2373156:0crwdne2373156:0
+      OPD-K5 sprite lab:
+        content1: crwdns2373768:0crwdne2373768:0
+        markdown: crwdns2373770:0crwdne2373770:0
+      OPD-K5 sprite lab introduction:
+        content1: crwdns2373772:0crwdne2373772:0
+        markdown: crwdns2373774:0crwdne2373774:0
+      OPD-K5 sprite lab unplugged:
+        content1: crwdns2373776:0crwdne2373776:0
+        markdown: crwdns2373778:0crwdne2373778:0
+      OPD-K5 sprite lab video:
+        content1: crwdns2373780:0crwdne2373780:0
+        markdown: crwdns2373782:0crwdne2373782:0
+      OPD-K5 types of lessons:
+        content1: crwdns2373138:0crwdne2373138:0
+        markdown: crwdns2373140:0crwdne2373140:0
+      OPD-K5 using lesson plans:
+        content1: crwdns2373202:0crwdne2373202:0
+        markdown: crwdns2373204:0crwdne2373204:0
+      OPD-K5 variables:
+        content1: crwdns2373594:0crwdne2373594:0
+        markdown: crwdns2373596:0crwdne2373596:0
+      OPD-K5 variables introduction:
+        content1: crwdns2373598:0crwdne2373598:0
+        markdown: crwdns2373600:0crwdne2373600:0
+      OPD-K5 variables unplugged:
+        content1: crwdns2373602:0crwdne2373602:0
+        markdown: crwdns2373604:0crwdne2373604:0
+      OPD-K5 where to next:
+        content1: crwdns2373482:0crwdne2373482:0
+        markdown: crwdns2373484:0crwdne2373484:0
+      OPD-K5-projects-1:
+        content1: crwdns2373436:0crwdne2373436:0
+        markdown: crwdns2373438:0crwdne2373438:0
+      OPD-Stage3Start:
+        markdown: crwdns2041204:0crwdne2041204:0
+      'Overview: Design Mode':
+        markdown: crwdns2041280:0crwdne2041280:0
+      'Overview: If Statements':
+        markdown: crwdns2041288:0crwdne2041288:0
+      'Overview: Images':
+        markdown: crwdns2041282:0crwdne2041282:0
+      'Overview: onEvent':
+        markdown: crwdns2041284:0crwdne2041284:0
+      'Overview: setPosition':
+        markdown: crwdns2041286:0crwdne2041286:0
+      PicturingData-Unplugged:
+        markdown: crwdns2041570:0crwdne2041570:0
+      PicturingData-Unplugged_2020:
+        markdown: crwdns2457586:0crwdne2457586:0
+      PowerOfWords-Unplugged:
+        markdown: crwdns2041514:0crwdne2041514:0
+      PowerOfWords-Unplugged_2020:
+        markdown: crwdns2460758:0crwdne2460758:0
+      PowerfulPasswords-Unplugged:
+        markdown: crwdns2041560:0crwdne2041560:0
+      Prepare for your presentation:
+        content1: crwdns2036008:0crwdne2036008:0
+        markdown: crwdns2041792:0crwdne2041792:0
+      Prepare for your presentation_2018:
+        markdown: crwdns2041414:0crwdne2041414:0
+      PrivatePersonalInformation-Unplugged:
+        markdown: crwdns2041524:0crwdne2041524:0
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: crwdns2458288:0crwdne2458288:0
+      RelayProgramming-Unplugged:
+        markdown: crwdns2041498:0crwdne2041498:0
+      RelayProgramming-Unplugged_2020:
+        markdown: crwdns2455236:0crwdne2455236:0
+      Responding to User Input:
+        markdown: crwdns2041168:0crwdne2041168:0
+        teacher_markdown: crwdns2370324:0crwdne2370324:0
+      ScreenOutTheMean-Unplugged:
+        markdown: crwdns2041558:0crwdne2041558:0
+      SimonSays-Unplugged:
+        markdown: crwdns2041522:0crwdne2041522:0
+      SimonSays-Unplugged_2020:
+        markdown: crwdns2457940:0crwdne2457940:0
+      Social Sleuth_2018_2019:
+        markdown: crwdns2041552:0crwdne2041552:0
+        teacher_markdown: crwdns2370548:0crwdne2370548:0
+      Songwriting-Unplugged:
+        markdown: crwdns2041528:0crwdne2041528:0
+      Songwriting-Unplugged_2020:
+        markdown: crwdns2458832:0crwdne2458832:0
+      'Technique: Frequency Analysis':
+        content1: crwdns2039666:0crwdne2039666:0
+        markdown: crwdns2041162:0[wikipedia]crwdne2041162:0
+      Terminology Recap:
+        content1: crwdns2039658:0crwdne2039658:0
+        markdown: crwdns2041158:0crwdne2041158:0
+      TheRightAppMarkdownLevel_2019:
+        markdown: crwdns2041478:0crwdne2041478:0
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: crwdns2455058:0crwdne2455058:0
+      Unit 1 Lesson 1 Overview:
+        markdown: crwdns2041694:0crwdne2041694:0
+        teacher_markdown: crwdns2370672:0[key]crwdnd2370672:0[PDF]crwdnd2370672:0[DOCX]crwdnd2370672:0[/key]crwdne2370672:0
+      Unit 1 Lesson 2 Overview:
+        markdown: crwdns2041696:0crwdne2041696:0
+        teacher_markdown: crwdns2370674:0[PDF]crwdnd2370674:0[DOCX]crwdne2370674:0
+      Unit 1 Lesson 3 Overview:
+        markdown: crwdns2041698:0crwdne2041698:0
+        teacher_markdown: crwdns2370676:0[PDF]crwdnd2370676:0[DOCX]crwdne2370676:0
+      Unit 1 Lesson 4 Overview:
+        markdown: crwdns2041700:0crwdne2041700:0
+        teacher_markdown: crwdns2370678:0[PDF]crwdnd2370678:0[DOCX]crwdne2370678:0
+      Unit 2 Lesson 10 Overview:
+        markdown: crwdns2041684:0crwdne2041684:0
+        teacher_markdown: crwdns2370628:0[PDF]crwdnd2370628:0[DOCX]crwdne2370628:0
+      Unit 2 Lesson 16 Overview:
+        markdown: crwdns2041686:0crwdne2041686:0
+        teacher_markdown: crwdns2370630:0[key]crwdnd2370630:0[PDF]crwdnd2370630:0[DOCX]crwdnd2370630:0[PDF]crwdnd2370630:0[DOCX]crwdnd2370630:0[/key]crwdne2370630:0
+      Unit 2 Lesson 7 Overview:
+        markdown: crwdns2041678:0[Color]crwdne2041678:0
+      Unit 2 Lesson 8 Overview:
+        markdown: crwdns2041680:0[Float]crwdnd2041680:0[Margin]crwdnd2041680:0[Width]crwdnd2041680:0[Height]crwdne2041680:0
+      behaviors 1 predict:
+        answers:
+        - text: crwdns2039602:0crwdne2039602:0
+          correct: true
+          feedback: crwdns2039606:0crwdne2039606:0
+        - text: crwdns2039608:0crwdne2039608:0
+          correct: true
+          feedback: crwdns2039612:0crwdne2039612:0
+        - text: crwdns2039614:0crwdne2039614:0
+          correct: true
+          feedback: crwdns2039618:0crwdne2039618:0
+        - text: crwdns2039620:0crwdne2039620:0
+          correct: true
+          feedback: crwdns2039624:0crwdne2039624:0
+        questions:
+        - text: crwdns2039600:0crwdne2039600:0
+      behaviors 1 predict_2020:
+        answers:
+        - text: crwdns2461304:0crwdne2461304:0
+          correct: true
+          feedback: crwdns2461308:0crwdne2461308:0
+        - text: crwdns2461310:0crwdne2461310:0
+          correct: true
+          feedback: crwdns2461314:0crwdne2461314:0
+        - text: crwdns2461316:0crwdne2461316:0
+          correct: true
+          feedback: crwdns2461320:0crwdne2461320:0
+        - text: crwdns2461322:0crwdne2461322:0
+          correct: true
+          feedback: crwdns2461326:0crwdne2461326:0
+        questions:
+        - text: crwdns2461328:0crwdne2461328:0
+      behaviors 4 predict:
+        answers:
+        - text: crwdns2039628:0crwdne2039628:0
+          correct: true
+          feedback: crwdns2039632:0crwdne2039632:0
+        - text: crwdns2039634:0crwdne2039634:0
+          correct: true
+          feedback: crwdns2039638:0crwdne2039638:0
+        - text: crwdns2039640:0crwdne2039640:0
+          correct: true
+          feedback: crwdns2039644:0crwdne2039644:0
+        - text: crwdns2039646:0crwdne2039646:0
+          correct: true
+          feedback: crwdns2039650:0crwdne2039650:0
+        questions:
+        - text: crwdns2039626:0crwdne2039626:0
+      behaviors 4 predict_2020:
+        answers:
+        - text: crwdns2461472:0crwdne2461472:0
+          correct: true
+          feedback: crwdns2461476:0crwdne2461476:0
+        - text: crwdns2461478:0crwdne2461478:0
+          correct: true
+          feedback: crwdns2461482:0crwdne2461482:0
+        - text: crwdns2461484:0crwdne2461484:0
+          correct: true
+          feedback: crwdns2461488:0crwdne2461488:0
+        - text: crwdns2461490:0crwdne2461490:0
+          correct: true
+          feedback: crwdns2461494:0crwdne2461494:0
+        questions:
+        - text: crwdns2461496:0crwdne2461496:0
+      courseC_multi_artist_prog6_predict1:
+        answers:
+        - text: crwdns2034172:0crwdne2034172:0
+          correct: true
+          feedback: crwdns2034176:0crwdne2034176:0
+        - text: crwdns2034178:0crwdne2034178:0
+          correct: true
+          feedback: crwdns2034182:0crwdne2034182:0
+        - text: crwdns2034184:0crwdne2034184:0
+          correct: true
+          feedback: crwdns2034188:0crwdne2034188:0
+        - text: crwdns2034190:0crwdne2034190:0
+          correct: true
+          feedback: crwdns2034194:0crwdne2034194:0
+        questions:
+        - text: crwdns2034170:0crwdne2034170:0
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+        - text: crwdns2036092:0crwdne2036092:0
+          correct: true
+          feedback: crwdns2036096:0crwdne2036096:0
+        - text: crwdns2036098:0crwdne2036098:0
+          correct: true
+          feedback: crwdns2036102:0crwdne2036102:0
+        - text: crwdns2036104:0crwdne2036104:0
+          correct: true
+          feedback: crwdns2036108:0crwdne2036108:0
+        - text: crwdns2036110:0crwdne2036110:0
+          correct: true
+          feedback: crwdns2036114:0crwdne2036114:0
+        questions:
+        - text: crwdns2036090:0crwdne2036090:0
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - text: crwdns2037990:0crwdne2037990:0
+          correct: true
+          feedback: crwdns2037994:0crwdne2037994:0
+        - text: crwdns2037996:0crwdne2037996:0
+          correct: true
+          feedback: crwdns2038000:0crwdne2038000:0
+        - text: crwdns2038002:0crwdne2038002:0
+          correct: true
+          feedback: crwdns2038006:0crwdne2038006:0
+        - text: crwdns2038008:0crwdne2038008:0
+          correct: true
+          feedback: crwdns2038012:0crwdne2038012:0
+        questions:
+        - text: crwdns2037988:0crwdne2037988:0
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456888:0crwdne2456888:0
+          correct: true
+          feedback: crwdns2456892:0crwdne2456892:0
+        - text: crwdns2456894:0crwdne2456894:0
+          correct: true
+          feedback: crwdns2456898:0crwdne2456898:0
+        - text: crwdns2456900:0crwdne2456900:0
+          correct: true
+          feedback: crwdns2456904:0crwdne2456904:0
+        - text: crwdns2456906:0crwdne2456906:0
+          correct: true
+          feedback: crwdns2456910:0crwdne2456910:0
+        questions:
+        - text: crwdns2456912:0crwdne2456912:0
+      courseC_multi_harvester_loops11_predict1:
+        answers:
+        - text: crwdns2034250:0crwdne2034250:0
+          correct: true
+          feedback: crwdns2034254:0crwdne2034254:0
+        - text: crwdns2034256:0crwdne2034256:0
+          correct: true
+          feedback: crwdns2034260:0crwdne2034260:0
+        - text: crwdns2034262:0crwdne2034262:0
+          correct: true
+          feedback: crwdns2034266:0crwdne2034266:0
+        - text: crwdns2034268:0crwdne2034268:0
+          correct: true
+          feedback: crwdns2034272:0crwdne2034272:0
+        questions:
+        - text: crwdns2034248:0crwdne2034248:0
+      courseC_multi_harvester_loops11_predict1_2018:
+        answers:
+        - text: crwdns2036170:0crwdne2036170:0
+          correct: true
+          feedback: crwdns2036174:0crwdne2036174:0
+        - text: crwdns2036176:0crwdne2036176:0
+          correct: true
+          feedback: crwdns2036180:0crwdne2036180:0
+        - text: crwdns2036182:0crwdne2036182:0
+          correct: true
+          feedback: crwdns2036186:0crwdne2036186:0
+        - text: crwdns2036188:0crwdne2036188:0
+          correct: true
+          feedback: crwdns2036192:0crwdne2036192:0
+        questions:
+        - text: crwdns2036168:0crwdne2036168:0
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: crwdns2038068:0crwdne2038068:0
+          correct: true
+          feedback: crwdns2038072:0crwdne2038072:0
+        - text: crwdns2038074:0crwdne2038074:0
+          correct: true
+          feedback: crwdns2038078:0crwdne2038078:0
+        - text: crwdns2038080:0crwdne2038080:0
+          correct: true
+          feedback: crwdns2038084:0crwdne2038084:0
+        - text: crwdns2038086:0crwdne2038086:0
+          correct: true
+          feedback: crwdns2038090:0crwdne2038090:0
+        questions:
+        - text: crwdns2038066:0crwdne2038066:0
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2457166:0crwdne2457166:0
+          correct: true
+          feedback: crwdns2457170:0crwdne2457170:0
+        - text: crwdns2457172:0crwdne2457172:0
+          correct: true
+          feedback: crwdns2457176:0crwdne2457176:0
+        - text: crwdns2457178:0crwdne2457178:0
+          correct: true
+          feedback: crwdns2457182:0crwdne2457182:0
+        - text: crwdns2457184:0crwdne2457184:0
+          correct: true
+          feedback: crwdns2457188:0crwdne2457188:0
+        questions:
+        - text: crwdns2457190:0crwdne2457190:0
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+        - text: crwdns2041946:0crwdne2041946:0
+          correct: true
+          feedback: crwdns2041950:0crwdne2041950:0
+        - text: crwdns2041952:0crwdne2041952:0
+          correct: true
+          feedback: crwdns2041956:0crwdne2041956:0
+        - text: crwdns2041958:0crwdne2041958:0
+          correct: true
+          feedback: crwdns2041962:0crwdne2041962:0
+        - text: crwdns2041964:0crwdne2041964:0
+          correct: true
+          feedback: crwdns2041968:0crwdne2041968:0
+        questions:
+        - text: crwdns2041944:0crwdne2041944:0
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+        - text: crwdns2036040:0crwdne2036040:0
+          correct: true
+          feedback: crwdns2036044:0crwdne2036044:0
+        - text: crwdns2036046:0crwdne2036046:0
+          correct: true
+          feedback: crwdns2036050:0crwdne2036050:0
+        - text: crwdns2036052:0crwdne2036052:0
+          correct: true
+          feedback: crwdns2036056:0crwdne2036056:0
+        - text: crwdns2036058:0crwdne2036058:0
+          correct: true
+          feedback: crwdns2036062:0crwdne2036062:0
+        questions:
+        - text: crwdns2036038:0crwdne2036038:0
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - text: crwdns2037938:0crwdne2037938:0
+          correct: true
+          feedback: crwdns2037942:0crwdne2037942:0
+        - text: crwdns2037944:0crwdne2037944:0
+          correct: true
+          feedback: crwdns2037948:0crwdne2037948:0
+        - text: crwdns2037950:0crwdne2037950:0
+          correct: true
+          feedback: crwdns2037954:0crwdne2037954:0
+        - text: crwdns2037956:0crwdne2037956:0
+          correct: true
+          feedback: crwdns2037960:0crwdne2037960:0
+        questions:
+        - text: crwdns2037936:0crwdne2037936:0
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456640:0crwdne2456640:0
+          correct: true
+          feedback: crwdns2456644:0crwdne2456644:0
+        - text: crwdns2456646:0crwdne2456646:0
+          correct: true
+          feedback: crwdns2456650:0crwdne2456650:0
+        - text: crwdns2456652:0crwdne2456652:0
+          correct: true
+          feedback: crwdns2456656:0crwdne2456656:0
+        - text: crwdns2456658:0crwdne2456658:0
+          correct: true
+          feedback: crwdns2456662:0crwdne2456662:0
+        questions:
+        - text: crwdns2456664:0crwdne2456664:0
+      courseC_multi_maze_programming8_predict1:
+        answers:
+        - text: crwdns2034094:0crwdne2034094:0
+          correct: true
+          feedback: crwdns2034098:0crwdne2034098:0
+        - text: crwdns2034100:0crwdne2034100:0
+          correct: true
+          feedback: crwdns2034104:0crwdne2034104:0
+        - text: crwdns2034106:0crwdne2034106:0
+          correct: true
+          feedback: crwdns2034110:0crwdne2034110:0
+        - text: crwdns2034112:0crwdne2034112:0
+          correct: true
+          feedback: crwdns2034116:0crwdne2034116:0
+        questions:
+        - text: crwdns2034092:0crwdne2034092:0
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+        - text: crwdns2036014:0crwdne2036014:0
+          correct: true
+          feedback: crwdns2036018:0crwdne2036018:0
+        - text: crwdns2036020:0crwdne2036020:0
+          correct: true
+          feedback: crwdns2036024:0crwdne2036024:0
+        - text: crwdns2036026:0crwdne2036026:0
+          correct: true
+          feedback: crwdns2036030:0crwdne2036030:0
+        - text: crwdns2036032:0crwdne2036032:0
+          correct: true
+          feedback: crwdns2036036:0crwdne2036036:0
+        questions:
+        - text: crwdns2036012:0crwdne2036012:0
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - text: crwdns2037912:0crwdne2037912:0
+          correct: true
+          feedback: crwdns2037916:0crwdne2037916:0
+        - text: crwdns2037918:0crwdne2037918:0
+          correct: true
+          feedback: crwdns2037922:0crwdne2037922:0
+        - text: crwdns2037924:0crwdne2037924:0
+          correct: true
+          feedback: crwdns2037928:0crwdne2037928:0
+        - text: crwdns2037930:0crwdne2037930:0
+          correct: true
+          feedback: crwdns2037934:0crwdne2037934:0
+        questions:
+        - text: crwdns2037910:0crwdne2037910:0
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456542:0crwdne2456542:0
+          correct: true
+          feedback: crwdns2456546:0crwdne2456546:0
+        - text: crwdns2456548:0crwdne2456548:0
+          correct: true
+          feedback: crwdns2456552:0crwdne2456552:0
+        - text: crwdns2456554:0crwdne2456554:0
+          correct: true
+          feedback: crwdns2456558:0crwdne2456558:0
+        - text: crwdns2456560:0crwdne2456560:0
+          correct: true
+          feedback: crwdns2456564:0crwdne2456564:0
+        questions:
+        - text: crwdns2456566:0crwdne2456566:0
+      courseC_multi_starWars_predict1:
+        answers:
+        - text: crwdns2034198:0crwdne2034198:0
+          correct: true
+          feedback: crwdns2034202:0crwdne2034202:0
+        - text: crwdns2034204:0crwdne2034204:0
+          correct: true
+          feedback: crwdns2034208:0crwdne2034208:0
+        - text: crwdns2034210:0crwdne2034210:0
+          correct: true
+          feedback: crwdns2034214:0crwdne2034214:0
+        - text: crwdns2034216:0crwdne2034216:0
+          correct: true
+          feedback: crwdns2034220:0crwdne2034220:0
+        questions:
+        - text: crwdns2034196:0crwdne2034196:0
+      courseC_multi_starWars_predict1_2018:
+        answers:
+        - text: crwdns2036118:0crwdne2036118:0
+          correct: true
+          feedback: crwdns2036122:0crwdne2036122:0
+        - text: crwdns2036124:0crwdne2036124:0
+          correct: true
+          feedback: crwdns2036128:0crwdne2036128:0
+        - text: crwdns2036130:0crwdne2036130:0
+          correct: true
+          feedback: crwdns2036134:0crwdne2036134:0
+        - text: crwdns2036136:0crwdne2036136:0
+          correct: true
+          feedback: crwdns2036140:0crwdne2036140:0
+        questions:
+        - text: crwdns2036116:0crwdne2036116:0
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - text: crwdns2038016:0crwdne2038016:0
+          correct: true
+          feedback: crwdns2038020:0crwdne2038020:0
+        - text: crwdns2038022:0crwdne2038022:0
+          correct: true
+          feedback: crwdns2038026:0crwdne2038026:0
+        - text: crwdns2038028:0crwdne2038028:0
+          correct: true
+          feedback: crwdns2038032:0crwdne2038032:0
+        - text: crwdns2038034:0crwdne2038034:0
+          correct: true
+          feedback: crwdns2038038:0crwdne2038038:0
+        questions:
+        - text: crwdns2038014:0crwdne2038014:0
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456944:0crwdne2456944:0
+          correct: true
+          feedback: crwdns2456948:0crwdne2456948:0
+        - text: crwdns2456950:0crwdne2456950:0
+          correct: true
+          feedback: crwdns2456954:0crwdne2456954:0
+        - text: crwdns2456956:0crwdne2456956:0
+          correct: true
+          feedback: crwdns2456960:0crwdne2456960:0
+        - text: crwdns2456962:0crwdne2456962:0
+          correct: true
+          feedback: crwdns2456966:0crwdne2456966:0
+        questions:
+        - text: crwdns2456968:0crwdne2456968:0
+      courseC_multi_starWars_predict2:
+        answers:
+        - text: crwdns2034224:0crwdne2034224:0
+          correct: true
+          feedback: crwdns2034228:0crwdne2034228:0
+        - text: crwdns2034230:0crwdne2034230:0
+          correct: true
+          feedback: crwdns2034234:0crwdne2034234:0
+        - text: crwdns2034236:0crwdne2034236:0
+          correct: true
+          feedback: crwdns2034240:0crwdne2034240:0
+        - text: crwdns2034242:0crwdne2034242:0
+          correct: true
+          feedback: crwdns2034246:0crwdne2034246:0
+        questions:
+        - text: crwdns2034222:0crwdne2034222:0
+      courseC_multi_starWars_predict2_2018:
+        answers:
+        - text: crwdns2036144:0crwdne2036144:0
+          correct: true
+          feedback: crwdns2036148:0crwdne2036148:0
+        - text: crwdns2036150:0crwdne2036150:0
+          correct: true
+          feedback: crwdns2036154:0crwdne2036154:0
+        - text: crwdns2036156:0crwdne2036156:0
+          correct: true
+          feedback: crwdns2036160:0crwdne2036160:0
+        - text: crwdns2036162:0crwdne2036162:0
+          correct: true
+          feedback: crwdns2036166:0crwdne2036166:0
+        questions:
+        - text: crwdns2036142:0crwdne2036142:0
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - text: crwdns2038042:0crwdne2038042:0
+          correct: true
+          feedback: crwdns2038046:0crwdne2038046:0
+        - text: crwdns2038048:0crwdne2038048:0
+          correct: true
+          feedback: crwdns2038052:0crwdne2038052:0
+        - text: crwdns2038054:0crwdne2038054:0
+          correct: true
+          feedback: crwdns2038058:0crwdne2038058:0
+        - text: crwdns2038060:0crwdne2038060:0
+          correct: true
+          feedback: crwdns2038064:0crwdne2038064:0
+        questions:
+        - text: crwdns2038040:0crwdne2038040:0
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: crwdns2457040:0crwdne2457040:0
+          correct: true
+          feedback: crwdns2457044:0crwdne2457044:0
+        - text: crwdns2457046:0crwdne2457046:0
+          correct: true
+          feedback: crwdns2457050:0crwdne2457050:0
+        - text: crwdns2457052:0crwdne2457052:0
+          correct: true
+          feedback: crwdns2457056:0crwdne2457056:0
+        - text: crwdns2457058:0crwdne2457058:0
+          correct: true
+          feedback: crwdns2457062:0crwdne2457062:0
+        questions:
+        - text: crwdns2457064:0crwdne2457064:0
+      courseD_EOC_2020:
+        description: crwdns2456440:0crwdne2456440:0
+        display_name: crwdns2456442:0crwdne2456442:0
+      courseD_external_binary1:
+        markdown: crwdns2041754:0crwdne2041754:0
+      courseD_external_binary1_2018:
+        markdown: crwdns2041390:0crwdne2041390:0
+      courseD_external_binary1_2018_2019:
+        markdown: crwdns2041504:0crwdne2041504:0
+      courseD_external_binary1_2018_2019_2020:
+        markdown: crwdns2456260:0crwdne2456260:0
+      courseD_multi_artist_binary8_predict1:
+        answers:
+        - text: crwdns2034590:0crwdne2034590:0
+          correct: true
+          feedback: crwdns2034594:0crwdne2034594:0
+        - text: crwdns2034596:0crwdne2034596:0
+          correct: true
+          feedback: crwdns2034600:0crwdne2034600:0
+        - text: crwdns2034602:0crwdne2034602:0
+          correct: true
+          feedback: crwdns2034606:0crwdne2034606:0
+        - text: crwdns2034608:0crwdne2034608:0
+          correct: true
+          feedback: crwdns2034612:0crwdne2034612:0
+        markdown: crwdns2069118:0crwdne2069118:0
+        questions:
+        - text: crwdns2034588:0crwdne2034588:0
+      courseD_multi_artist_binary8_predict1_2018:
+        answers:
+        - text: crwdns2037886:0crwdne2037886:0
+          correct: true
+          feedback: crwdns2037890:0crwdne2037890:0
+        - text: crwdns2037892:0crwdne2037892:0
+          correct: true
+          feedback: crwdns2037896:0crwdne2037896:0
+        - text: crwdns2037898:0crwdne2037898:0
+          correct: true
+          feedback: crwdns2037902:0crwdne2037902:0
+        - text: crwdns2037904:0crwdne2037904:0
+          correct: true
+          feedback: crwdns2037908:0crwdne2037908:0
+        markdown: crwdns2069018:0crwdne2069018:0
+        questions:
+        - text: crwdns2037884:0crwdne2037884:0
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: crwdns2038334:0crwdne2038334:0
+          correct: true
+          feedback: crwdns2038338:0crwdne2038338:0
+        - text: crwdns2038340:0crwdne2038340:0
+          correct: true
+          feedback: crwdns2038344:0crwdne2038344:0
+        - text: crwdns2038346:0crwdne2038346:0
+          correct: true
+          feedback: crwdns2038350:0crwdne2038350:0
+        - text: crwdns2038352:0crwdne2038352:0
+          correct: true
+          feedback: crwdns2038356:0crwdne2038356:0
+        markdown: crwdns2069032:0crwdne2069032:0
+        questions:
+        - text: crwdns2038332:0crwdne2038332:0
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456374:0crwdne2456374:0
+          correct: true
+          feedback: crwdns2456378:0crwdne2456378:0
+        - text: crwdns2456380:0crwdne2456380:0
+          correct: true
+          feedback: crwdns2456384:0crwdne2456384:0
+        - text: crwdns2456386:0crwdne2456386:0
+          correct: true
+          feedback: crwdns2456390:0crwdne2456390:0
+        - text: crwdns2456392:0crwdne2456392:0
+          correct: true
+          feedback: crwdns2456396:0crwdne2456396:0
+        markdown: crwdns2456398:0crwdne2456398:0
+        questions:
+        - text: crwdns2456400:0crwdne2456400:0
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: crwdns2034354:0crwdne2034354:0
+          correct: true
+          feedback: crwdns2034358:0crwdne2034358:0
+        - text: crwdns2034360:0crwdne2034360:0
+          correct: true
+          feedback: crwdns2034364:0crwdne2034364:0
+        - text: crwdns2034366:0crwdne2034366:0
+          correct: true
+          feedback: crwdns2034370:0crwdne2034370:0
+        - text: crwdns2034372:0crwdne2034372:0
+          correct: true
+          feedback: crwdns2034376:0crwdne2034376:0
+        markdown: crwdns2069114:0crwdne2069114:0
+        questions:
+        - text: crwdns2034352:0crwdne2034352:0
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        answers:
+        - text: crwdns2036248:0crwdne2036248:0
+          correct: true
+          feedback: crwdns2036252:0crwdne2036252:0
+        - text: crwdns2036254:0crwdne2036254:0
+          correct: true
+          feedback: crwdns2036258:0crwdne2036258:0
+        - text: crwdns2036260:0crwdne2036260:0
+          correct: true
+          feedback: crwdns2036264:0crwdne2036264:0
+        - text: crwdns2036266:0crwdne2036266:0
+          correct: true
+          feedback: crwdns2036270:0crwdne2036270:0
+        markdown: crwdns2069002:0crwdne2069002:0
+        questions:
+        - text: crwdns2036246:0crwdne2036246:0
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: crwdns2038438:0crwdne2038438:0
+          correct: true
+          feedback: crwdns2038442:0crwdne2038442:0
+        - text: crwdns2038444:0crwdne2038444:0
+          correct: true
+          feedback: crwdns2038448:0crwdne2038448:0
+        - text: crwdns2038450:0crwdne2038450:0
+          correct: true
+          feedback: crwdns2038454:0crwdne2038454:0
+        - text: crwdns2038456:0crwdne2038456:0
+          correct: true
+          feedback: crwdns2038460:0crwdne2038460:0
+        markdown: crwdns2069038:0crwdne2069038:0
+        questions:
+        - text: crwdns2038436:0crwdne2038436:0
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2458692:0crwdne2458692:0
+          correct: true
+          feedback: crwdns2458696:0crwdne2458696:0
+        - text: crwdns2458698:0crwdne2458698:0
+          correct: true
+          feedback: crwdns2458702:0crwdne2458702:0
+        - text: crwdns2458704:0crwdne2458704:0
+          correct: true
+          feedback: crwdns2458708:0crwdne2458708:0
+        - text: crwdns2458710:0crwdne2458710:0
+          correct: true
+          feedback: crwdns2458714:0crwdne2458714:0
+        markdown: crwdns2458716:0crwdne2458716:0
+        questions:
+        - text: crwdns2458718:0crwdne2458718:0
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+        - text: crwdns2034458:0crwdne2034458:0
+          correct: true
+          feedback: crwdns2034462:0crwdne2034462:0
+        - text: crwdns2034464:0crwdne2034464:0
+          correct: true
+          feedback: crwdns2034468:0crwdne2034468:0
+        - text: crwdns2034470:0crwdne2034470:0
+          correct: true
+          feedback: crwdns2034474:0crwdne2034474:0
+        - text: crwdns2034476:0crwdne2034476:0
+          correct: true
+          feedback: crwdns2034480:0crwdne2034480:0
+        questions:
+        - text: crwdns2034456:0crwdne2034456:0
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+        - text: crwdns2037600:0crwdne2037600:0
+          correct: true
+          feedback: crwdns2037604:0crwdne2037604:0
+        - text: crwdns2037606:0crwdne2037606:0
+          correct: true
+          feedback: crwdns2037610:0crwdne2037610:0
+        - text: crwdns2037612:0crwdne2037612:0
+          correct: true
+          feedback: crwdns2037616:0crwdne2037616:0
+        - text: crwdns2037618:0crwdne2037618:0
+          correct: true
+          feedback: crwdns2037622:0crwdne2037622:0
+        questions:
+        - text: crwdns2037598:0crwdne2037598:0
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - text: crwdns2039220:0crwdne2039220:0
+          correct: true
+          feedback: crwdns2039224:0crwdne2039224:0
+        - text: crwdns2039226:0crwdne2039226:0
+          correct: true
+          feedback: crwdns2039230:0crwdne2039230:0
+        - text: crwdns2039232:0crwdne2039232:0
+          correct: true
+          feedback: crwdns2039236:0crwdne2039236:0
+        - text: crwdns2039238:0crwdne2039238:0
+          correct: true
+          feedback: crwdns2039242:0crwdne2039242:0
+        questions:
+        - text: crwdns2039218:0crwdne2039218:0
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2455752:0crwdne2455752:0
+          correct: true
+          feedback: crwdns2455756:0crwdne2455756:0
+        - text: crwdns2455758:0crwdne2455758:0
+          correct: true
+          feedback: crwdns2455762:0crwdne2455762:0
+        - text: crwdns2455764:0crwdne2455764:0
+          correct: true
+          feedback: crwdns2455768:0crwdne2455768:0
+        - text: crwdns2455770:0crwdne2455770:0
+          correct: true
+          feedback: crwdns2455774:0crwdne2455774:0
+        questions:
+        - text: crwdns2455776:0crwdne2455776:0
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: crwdns2373338:0crwdne2373338:0
+          correct: true
+          feedback: crwdns2373342:0crwdne2373342:0
+        - text: crwdns2373344:0crwdne2373344:0
+          correct: true
+          feedback: crwdns2373348:0crwdne2373348:0
+        - text: crwdns2373350:0crwdne2373350:0
+          correct: true
+          feedback: crwdns2373354:0crwdne2373354:0
+        - text: crwdns2373356:0crwdne2373356:0
+          correct: true
+          feedback: crwdns2373360:0crwdne2373360:0
+        questions:
+        - text: crwdns2373362:0crwdne2373362:0
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+        - text: crwdns2034484:0crwdne2034484:0
+          correct: true
+          feedback: crwdns2034488:0crwdne2034488:0
+        - text: crwdns2034490:0crwdne2034490:0
+          correct: true
+          feedback: crwdns2034494:0crwdne2034494:0
+        - text: crwdns2034496:0crwdne2034496:0
+          correct: true
+          feedback: crwdns2034500:0crwdne2034500:0
+        - text: crwdns2034502:0crwdne2034502:0
+          correct: true
+          feedback: crwdns2034506:0crwdne2034506:0
+        questions:
+        - text: crwdns2034482:0crwdne2034482:0
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+        - text: crwdns2037626:0crwdne2037626:0
+          correct: true
+          feedback: crwdns2037630:0crwdne2037630:0
+        - text: crwdns2037632:0crwdne2037632:0
+          correct: true
+          feedback: crwdns2037636:0crwdne2037636:0
+        - text: crwdns2037638:0crwdne2037638:0
+          correct: true
+          feedback: crwdns2037642:0crwdne2037642:0
+        - text: crwdns2037644:0crwdne2037644:0
+          correct: true
+          feedback: crwdns2037648:0crwdne2037648:0
+        questions:
+        - text: crwdns2037624:0crwdne2037624:0
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - text: crwdns2039246:0crwdne2039246:0
+          correct: true
+          feedback: crwdns2039250:0crwdne2039250:0
+        - text: crwdns2039252:0crwdne2039252:0
+          correct: true
+          feedback: crwdns2039256:0crwdne2039256:0
+        - text: crwdns2039258:0crwdne2039258:0
+          correct: true
+          feedback: crwdns2039262:0crwdne2039262:0
+        - text: crwdns2039264:0crwdne2039264:0
+          correct: true
+          feedback: crwdns2039268:0crwdne2039268:0
+        questions:
+        - text: crwdns2039244:0crwdne2039244:0
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - text: crwdns2455834:0crwdne2455834:0
+          correct: true
+          feedback: crwdns2455838:0crwdne2455838:0
+        - text: crwdns2455840:0crwdne2455840:0
+          correct: true
+          feedback: crwdns2455844:0crwdne2455844:0
+        - text: crwdns2455846:0crwdne2455846:0
+          correct: true
+          feedback: crwdns2455850:0crwdne2455850:0
+        - text: crwdns2455852:0crwdne2455852:0
+          correct: true
+          feedback: crwdns2455856:0crwdne2455856:0
+        questions:
+        - text: crwdns2455858:0crwdne2455858:0
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+        - text: crwdns2035614:0crwdne2035614:0
+          correct: true
+          feedback: crwdns2035618:0crwdne2035618:0
+        - text: crwdns2035620:0crwdne2035620:0
+          correct: true
+          feedback: crwdns2035624:0crwdne2035624:0
+        - text: crwdns2035626:0crwdne2035626:0
+          correct: true
+          feedback: crwdns2035630:0crwdne2035630:0
+        - text: crwdns2035632:0crwdne2035632:0
+          correct: true
+          feedback: crwdns2035636:0crwdne2035636:0
+        questions:
+        - text: crwdns2035612:0crwdne2035612:0
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+        - text: crwdns2036564:0crwdne2036564:0
+          correct: true
+          feedback: crwdns2036568:0crwdne2036568:0
+        - text: crwdns2036570:0crwdne2036570:0
+          correct: true
+          feedback: crwdns2036574:0crwdne2036574:0
+        - text: crwdns2036576:0crwdne2036576:0
+          correct: true
+          feedback: crwdns2036580:0crwdne2036580:0
+        - text: crwdns2036582:0crwdne2036582:0
+          correct: true
+          feedback: crwdns2036586:0crwdne2036586:0
+        questions:
+        - text: crwdns2036562:0crwdne2036562:0
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - text: crwdns2039168:0crwdne2039168:0
+          correct: true
+          feedback: crwdns2039172:0crwdne2039172:0
+        - text: crwdns2039174:0crwdne2039174:0
+          correct: true
+          feedback: crwdns2039178:0crwdne2039178:0
+        - text: crwdns2039180:0crwdne2039180:0
+          correct: true
+          feedback: crwdns2039184:0crwdne2039184:0
+        - text: crwdns2039186:0crwdne2039186:0
+          correct: true
+          feedback: crwdns2039190:0crwdne2039190:0
+        questions:
+        - text: crwdns2039166:0crwdne2039166:0
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2460638:0crwdne2460638:0
+          correct: true
+          feedback: crwdns2460642:0crwdne2460642:0
+        - text: crwdns2460644:0crwdne2460644:0
+          correct: true
+          feedback: crwdns2460648:0crwdne2460648:0
+        - text: crwdns2460650:0crwdne2460650:0
+          correct: true
+          feedback: crwdns2460654:0crwdne2460654:0
+        - text: crwdns2460656:0crwdne2460656:0
+          correct: true
+          feedback: crwdns2460660:0crwdne2460660:0
+        questions:
+        - text: crwdns2460662:0crwdne2460662:0
+      courseD_multi_bee_nestedLoops9_predict2:
+        answers:
+        - text: crwdns2035640:0crwdne2035640:0
+          correct: true
+          feedback: crwdns2035644:0crwdne2035644:0
+        - text: crwdns2035646:0crwdne2035646:0
+          correct: true
+          feedback: crwdns2035650:0crwdne2035650:0
+        - text: crwdns2035652:0crwdne2035652:0
+          correct: true
+          feedback: crwdns2035656:0crwdne2035656:0
+        - text: crwdns2035658:0crwdne2035658:0
+          correct: true
+          feedback: crwdns2035662:0crwdne2035662:0
+        questions:
+        - text: crwdns2035638:0crwdne2035638:0
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        answers:
+        - text: crwdns2036590:0crwdne2036590:0
+          correct: true
+          feedback: crwdns2036594:0crwdne2036594:0
+        - text: crwdns2036596:0crwdne2036596:0
+          correct: true
+          feedback: crwdns2036600:0crwdne2036600:0
+        - text: crwdns2036602:0crwdne2036602:0
+          correct: true
+          feedback: crwdns2036606:0crwdne2036606:0
+        - text: crwdns2036608:0crwdne2036608:0
+          correct: true
+          feedback: crwdns2036612:0crwdne2036612:0
+        questions:
+        - text: crwdns2036588:0crwdne2036588:0
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: crwdns2039194:0crwdne2039194:0
+          correct: true
+          feedback: crwdns2039198:0crwdne2039198:0
+        - text: crwdns2039200:0crwdne2039200:0
+          correct: true
+          feedback: crwdns2039204:0crwdne2039204:0
+        - text: crwdns2039206:0crwdne2039206:0
+          correct: true
+          feedback: crwdns2039210:0crwdne2039210:0
+        - text: crwdns2039212:0crwdne2039212:0
+          correct: true
+          feedback: crwdns2039216:0crwdne2039216:0
+        questions:
+        - text: crwdns2039192:0crwdne2039192:0
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: crwdns2460732:0crwdne2460732:0
+          correct: true
+          feedback: crwdns2460736:0crwdne2460736:0
+        - text: crwdns2460738:0crwdne2460738:0
+          correct: true
+          feedback: crwdns2460742:0crwdne2460742:0
+        - text: crwdns2460744:0crwdne2460744:0
+          correct: true
+          feedback: crwdns2460748:0crwdne2460748:0
+        - text: crwdns2460750:0crwdne2460750:0
+          correct: true
+          feedback: crwdns2460754:0crwdne2460754:0
+        questions:
+        - text: crwdns2460756:0crwdne2460756:0
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+        - text: crwdns2034380:0crwdne2034380:0
+          correct: true
+          feedback: crwdns2034384:0crwdne2034384:0
+        - text: crwdns2034386:0crwdne2034386:0
+          correct: true
+          feedback: crwdns2034390:0crwdne2034390:0
+        - text: crwdns2034392:0crwdne2034392:0
+          correct: true
+          feedback: crwdns2034396:0crwdne2034396:0
+        - text: crwdns2034398:0crwdne2034398:0
+          correct: true
+          feedback: crwdns2034402:0crwdne2034402:0
+        questions:
+        - text: crwdns2034378:0crwdne2034378:0
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+        - text: crwdns2035770:0crwdne2035770:0
+          correct: true
+          feedback: crwdns2035774:0crwdne2035774:0
+        - text: crwdns2035776:0crwdne2035776:0
+          correct: true
+          feedback: crwdns2035780:0crwdne2035780:0
+        - text: crwdns2035782:0crwdne2035782:0
+          correct: true
+          feedback: crwdns2035786:0crwdne2035786:0
+        - text: crwdns2035788:0crwdne2035788:0
+          correct: true
+          feedback: crwdns2035792:0crwdne2035792:0
+        markdown: crwdns2069120:0crwdne2069120:0
+        questions:
+        - text: crwdns2035768:0crwdne2035768:0
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+        - text: crwdns2037652:0crwdne2037652:0
+          correct: true
+          feedback: crwdns2037656:0crwdne2037656:0
+        - text: crwdns2037658:0crwdne2037658:0
+          correct: true
+          feedback: crwdns2037662:0crwdne2037662:0
+        - text: crwdns2037664:0crwdne2037664:0
+          correct: true
+          feedback: crwdns2037668:0crwdne2037668:0
+        - text: crwdns2037670:0crwdne2037670:0
+          correct: true
+          feedback: crwdns2037674:0crwdne2037674:0
+        markdown: crwdns2069012:0crwdne2069012:0
+        questions:
+        - text: crwdns2037650:0crwdne2037650:0
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+        - text: crwdns2039376:0crwdne2039376:0
+          correct: true
+          feedback: crwdns2039380:0crwdne2039380:0
+        - text: crwdns2039382:0crwdne2039382:0
+          correct: true
+          feedback: crwdns2039386:0crwdne2039386:0
+        - text: crwdns2039388:0crwdne2039388:0
+          correct: true
+          feedback: crwdns2039392:0crwdne2039392:0
+        - text: crwdns2039394:0crwdne2039394:0
+          correct: true
+          feedback: crwdns2039398:0crwdne2039398:0
+        markdown: crwdns2069040:0crwdne2069040:0
+        questions:
+        - text: crwdns2039374:0crwdne2039374:0
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456216:0crwdne2456216:0
+          correct: true
+          feedback: crwdns2456220:0crwdne2456220:0
+        - text: crwdns2456222:0crwdne2456222:0
+          correct: true
+          feedback: crwdns2456226:0crwdne2456226:0
+        - text: crwdns2456228:0crwdne2456228:0
+          correct: true
+          feedback: crwdns2456232:0crwdne2456232:0
+        - text: crwdns2456234:0crwdne2456234:0
+          correct: true
+          feedback: crwdns2456238:0crwdne2456238:0
+        markdown: crwdns2456240:0crwdne2456240:0
+        questions:
+        - text: crwdns2456242:0crwdne2456242:0
+      courseD_multi_farmer_ramp13:
+        answers:
+        - text: crwdns2034276:0crwdne2034276:0
+          correct: true
+          feedback: crwdns2034280:0crwdne2034280:0
+        - text: crwdns2034282:0crwdne2034282:0
+          correct: true
+          feedback: crwdns2034286:0crwdne2034286:0
+        - text: crwdns2034288:0crwdne2034288:0
+          correct: true
+          feedback: crwdns2034292:0crwdne2034292:0
+        - text: crwdns2034294:0crwdne2034294:0
+          correct: true
+          feedback: crwdns2034298:0crwdne2034298:0
+        markdown: crwdns2069112:0crwdne2069112:0
+        questions:
+        - text: crwdns2034274:0crwdne2034274:0
+      courseD_multi_farmer_while10_predict2:
+        answers:
+        - text: crwdns2035692:0crwdne2035692:0
+          correct: true
+          feedback: crwdns2035696:0crwdne2035696:0
+        - text: crwdns2035698:0crwdne2035698:0
+          correct: true
+          feedback: crwdns2035702:0crwdne2035702:0
+        - text: crwdns2035704:0crwdne2035704:0
+          correct: true
+          feedback: crwdns2035708:0crwdne2035708:0
+        - text: crwdns2035710:0crwdne2035710:0
+          correct: true
+          feedback: crwdns2035714:0crwdne2035714:0
+        questions:
+        - text: crwdns2035690:0crwdne2035690:0
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+        - text: crwdns2037522:0crwdne2037522:0
+          correct: true
+          feedback: crwdns2037526:0crwdne2037526:0
+        - text: crwdns2037528:0crwdne2037528:0
+          correct: true
+          feedback: crwdns2037532:0crwdne2037532:0
+        - text: crwdns2037534:0crwdne2037534:0
+          correct: true
+          feedback: crwdns2037538:0crwdne2037538:0
+        - text: crwdns2037540:0crwdne2037540:0
+          correct: true
+          feedback: crwdns2037544:0crwdne2037544:0
+        questions:
+        - text: crwdns2037520:0crwdne2037520:0
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - text: crwdns2039298:0crwdne2039298:0
+          correct: true
+          feedback: crwdns2039302:0crwdne2039302:0
+        - text: crwdns2039304:0crwdne2039304:0
+          correct: true
+          feedback: crwdns2039308:0crwdne2039308:0
+        - text: crwdns2039310:0crwdne2039310:0
+          correct: true
+          feedback: crwdns2039314:0crwdne2039314:0
+        - text: crwdns2039316:0crwdne2039316:0
+          correct: true
+          feedback: crwdns2039320:0crwdne2039320:0
+        questions:
+        - text: crwdns2039296:0crwdne2039296:0
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: crwdns2455996:0crwdne2455996:0
+          correct: true
+          feedback: crwdns2456000:0crwdne2456000:0
+        - text: crwdns2456002:0crwdne2456002:0
+          correct: true
+          feedback: crwdns2456006:0crwdne2456006:0
+        - text: crwdns2456008:0crwdne2456008:0
+          correct: true
+          feedback: crwdns2456012:0crwdne2456012:0
+        - text: crwdns2456014:0crwdne2456014:0
+          correct: true
+          feedback: crwdns2456018:0crwdne2456018:0
+        questions:
+        - text: crwdns2456020:0crwdne2456020:0
+      courseD_multi_farmer_while4_predict1:
+        answers:
+        - text: crwdns2035666:0crwdne2035666:0
+          correct: true
+          feedback: crwdns2035670:0crwdne2035670:0
+        - text: crwdns2035672:0crwdne2035672:0
+          correct: true
+          feedback: crwdns2035676:0crwdne2035676:0
+        - text: crwdns2035678:0crwdne2035678:0
+          correct: true
+          feedback: crwdns2035682:0crwdne2035682:0
+        - text: crwdns2035684:0crwdne2035684:0
+          correct: true
+          feedback: crwdns2035688:0crwdne2035688:0
+        questions:
+        - text: crwdns2035664:0crwdne2035664:0
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+        - text: crwdns2036624:0crwdne2036624:0
+          correct: true
+          feedback: crwdns2036628:0crwdne2036628:0
+        - text: crwdns2036630:0crwdne2036630:0
+          correct: true
+          feedback: crwdns2036634:0crwdne2036634:0
+        - text: crwdns2036636:0crwdne2036636:0
+          correct: true
+          feedback: crwdns2036640:0crwdne2036640:0
+        - text: crwdns2036642:0crwdne2036642:0
+          correct: true
+          feedback: crwdns2036646:0crwdne2036646:0
+        questions:
+        - text: crwdns2036622:0crwdne2036622:0
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - text: crwdns2039272:0crwdne2039272:0
+          correct: true
+          feedback: crwdns2039276:0crwdne2039276:0
+        - text: crwdns2039278:0crwdne2039278:0
+          correct: true
+          feedback: crwdns2039282:0crwdne2039282:0
+        - text: crwdns2039284:0crwdne2039284:0
+          correct: true
+          feedback: crwdns2039288:0crwdne2039288:0
+        - text: crwdns2039290:0crwdne2039290:0
+          correct: true
+          feedback: crwdns2039294:0crwdne2039294:0
+        questions:
+        - text: crwdns2039270:0crwdne2039270:0
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2457860:0crwdne2457860:0
+          correct: true
+          feedback: crwdns2457864:0crwdne2457864:0
+        - text: crwdns2457866:0crwdne2457866:0
+          correct: true
+          feedback: crwdns2457870:0crwdne2457870:0
+        - text: crwdns2457872:0crwdne2457872:0
+          correct: true
+          feedback: crwdns2457876:0crwdne2457876:0
+        - text: crwdns2457878:0crwdne2457878:0
+          correct: true
+          feedback: crwdns2457882:0crwdne2457882:0
+        questions:
+        - text: crwdns2457884:0crwdne2457884:0
+      courseD_multi_maze_until10_predict2:
+        answers:
+        - text: crwdns2035744:0crwdne2035744:0
+          correct: true
+          feedback: crwdns2035748:0crwdne2035748:0
+        - text: crwdns2035750:0crwdne2035750:0
+          correct: true
+          feedback: crwdns2035754:0crwdne2035754:0
+        - text: crwdns2035756:0crwdne2035756:0
+          correct: true
+          feedback: crwdns2035760:0crwdne2035760:0
+        - text: crwdns2035762:0crwdne2035762:0
+          correct: true
+          feedback: crwdns2035766:0crwdne2035766:0
+        questions:
+        - text: crwdns2035742:0crwdne2035742:0
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+        - text: crwdns2037574:0crwdne2037574:0
+          correct: true
+          feedback: crwdns2037578:0crwdne2037578:0
+        - text: crwdns2037580:0crwdne2037580:0
+          correct: true
+          feedback: crwdns2037584:0crwdne2037584:0
+        - text: crwdns2037586:0crwdne2037586:0
+          correct: true
+          feedback: crwdns2037590:0crwdne2037590:0
+        - text: crwdns2037592:0crwdne2037592:0
+          correct: true
+          feedback: crwdns2037596:0crwdne2037596:0
+        questions:
+        - text: crwdns2037572:0crwdne2037572:0
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - text: crwdns2039350:0crwdne2039350:0
+          correct: true
+          feedback: crwdns2039354:0crwdne2039354:0
+        - text: crwdns2039356:0crwdne2039356:0
+          correct: true
+          feedback: crwdns2039360:0crwdne2039360:0
+        - text: crwdns2039362:0crwdne2039362:0
+          correct: true
+          feedback: crwdns2039366:0crwdne2039366:0
+        - text: crwdns2039368:0crwdne2039368:0
+          correct: true
+          feedback: crwdns2039372:0crwdne2039372:0
+        questions:
+        - text: crwdns2039348:0crwdne2039348:0
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - text: crwdns2456118:0crwdne2456118:0
+          correct: true
+          feedback: crwdns2456122:0crwdne2456122:0
+        - text: crwdns2456124:0crwdne2456124:0
+          correct: true
+          feedback: crwdns2456128:0crwdne2456128:0
+        - text: crwdns2456130:0crwdne2456130:0
+          correct: true
+          feedback: crwdns2456134:0crwdne2456134:0
+        - text: crwdns2456136:0crwdne2456136:0
+          correct: true
+          feedback: crwdns2456140:0crwdne2456140:0
+        questions:
+        - text: crwdns2456142:0crwdne2456142:0
+      courseD_multi_maze_until2_predict1:
+        answers:
+        - text: crwdns2035718:0crwdne2035718:0
+          correct: true
+          feedback: crwdns2035722:0crwdne2035722:0
+        - text: crwdns2035724:0crwdne2035724:0
+          correct: true
+          feedback: crwdns2035728:0crwdne2035728:0
+        - text: crwdns2035730:0crwdne2035730:0
+          correct: true
+          feedback: crwdns2035734:0crwdne2035734:0
+        - text: crwdns2035736:0crwdne2035736:0
+          correct: true
+          feedback: crwdns2035740:0crwdne2035740:0
+        questions:
+        - text: crwdns2035716:0crwdne2035716:0
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+        - text: crwdns2037548:0crwdne2037548:0
+          correct: true
+          feedback: crwdns2037552:0crwdne2037552:0
+        - text: crwdns2037554:0crwdne2037554:0
+          correct: true
+          feedback: crwdns2037558:0crwdne2037558:0
+        - text: crwdns2037560:0crwdne2037560:0
+          correct: true
+          feedback: crwdns2037564:0crwdne2037564:0
+        - text: crwdns2037566:0crwdne2037566:0
+          correct: true
+          feedback: crwdns2037570:0crwdne2037570:0
+        questions:
+        - text: crwdns2037546:0crwdne2037546:0
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - text: crwdns2039324:0crwdne2039324:0
+          correct: true
+          feedback: crwdns2039328:0crwdne2039328:0
+        - text: crwdns2039330:0crwdne2039330:0
+          correct: true
+          feedback: crwdns2039334:0crwdne2039334:0
+        - text: crwdns2039336:0crwdne2039336:0
+          correct: true
+          feedback: crwdns2039340:0crwdne2039340:0
+        - text: crwdns2039342:0crwdne2039342:0
+          correct: true
+          feedback: crwdns2039346:0crwdne2039346:0
+        questions:
+        - text: crwdns2039322:0crwdne2039322:0
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456038:0crwdne2456038:0
+          correct: true
+          feedback: crwdns2456042:0crwdne2456042:0
+        - text: crwdns2456044:0crwdne2456044:0
+          correct: true
+          feedback: crwdns2456048:0crwdne2456048:0
+        - text: crwdns2456050:0crwdne2456050:0
+          correct: true
+          feedback: crwdns2456054:0crwdne2456054:0
+        - text: crwdns2456056:0crwdne2456056:0
+          correct: true
+          feedback: crwdns2456060:0crwdne2456060:0
+        questions:
+        - text: crwdns2456062:0crwdne2456062:0
+      courseD_multi_scrat_predict1:
+        answers:
+        - text: crwdns2035536:0crwdne2035536:0
+          correct: true
+          feedback: crwdns2035540:0crwdne2035540:0
+        - text: crwdns2035542:0crwdne2035542:0
+          correct: true
+          feedback: crwdns2035546:0crwdne2035546:0
+        - text: crwdns2041838:0crwdne2041838:0
+          correct: true
+          feedback: crwdns2035552:0crwdne2035552:0
+        - text: crwdns2035554:0crwdne2035554:0
+          correct: true
+          feedback: crwdns2035558:0crwdne2035558:0
+        questions:
+        - text: crwdns2035534:0crwdne2035534:0
+      courseD_project_exemplars_2020_2021:
+        content1: crwdns2456436:0crwdne2456436:0
+        markdown: crwdns2456438:0crwdne2456438:0
+      courseE_EOC_2020:
+        description: crwdns2459416:0crwdne2459416:0
+        display_name: crwdns2459418:0crwdne2459418:0
+      courseE_multi_bee_functions_predict1:
+        answers:
+        - text: crwdns2034850:0crwdne2034850:0
+          correct: true
+          feedback: crwdns2034854:0crwdne2034854:0
+        - text: crwdns2034856:0crwdne2034856:0
+          correct: true
+          feedback: crwdns2034860:0crwdne2034860:0
+        - text: crwdns2034862:0crwdne2034862:0
+          correct: true
+          feedback: crwdns2034866:0crwdne2034866:0
+        - text: crwdns2034868:0crwdne2034868:0
+          correct: true
+          feedback: crwdns2034872:0crwdne2034872:0
+        questions:
+        - text: crwdns2034848:0crwdne2034848:0
+      courseE_multi_farmer_functions11_predict:
+        answers:
+        - text: crwdns2034876:0crwdne2034876:0
+          correct: true
+          feedback: crwdns2034880:0crwdne2034880:0
+        - text: crwdns2034882:0crwdne2034882:0
+          correct: true
+          feedback: crwdns2034886:0crwdne2034886:0
+        - text: crwdns2034888:0crwdne2034888:0
+          correct: true
+          feedback: crwdns2034892:0crwdne2034892:0
+        - text: crwdns2034894:0crwdne2034894:0
+          correct: true
+          feedback: crwdns2034898:0crwdne2034898:0
+        questions:
+        - text: crwdns2034874:0crwdne2034874:0
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+        - text: crwdns2036654:0crwdne2036654:0
+          correct: true
+          feedback: crwdns2036658:0crwdne2036658:0
+        - text: crwdns2036660:0crwdne2036660:0
+          correct: true
+          feedback: crwdns2036664:0crwdne2036664:0
+        - text: crwdns2036666:0crwdne2036666:0
+          correct: true
+          feedback: crwdns2036670:0crwdne2036670:0
+        - text: crwdns2036672:0crwdne2036672:0
+          correct: true
+          feedback: crwdns2036676:0crwdne2036676:0
+        questions:
+        - text: crwdns2036652:0crwdne2036652:0
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+        - text: crwdns2039402:0crwdne2039402:0
+          correct: true
+          feedback: crwdns2039406:0crwdne2039406:0
+        - text: crwdns2039408:0crwdne2039408:0
+          correct: true
+          feedback: crwdns2039412:0crwdne2039412:0
+        - text: crwdns2039414:0crwdne2039414:0
+          correct: true
+          feedback: crwdns2039418:0crwdne2039418:0
+        - text: crwdns2039420:0crwdne2039420:0
+          correct: true
+          feedback: crwdns2039424:0crwdne2039424:0
+        questions:
+        - text: crwdns2039400:0crwdne2039400:0
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: crwdns2459128:0crwdne2459128:0
+          correct: true
+          feedback: crwdns2459132:0crwdne2459132:0
+        - text: crwdns2459134:0crwdne2459134:0
+          correct: true
+          feedback: crwdns2459138:0crwdne2459138:0
+        - text: crwdns2459140:0crwdne2459140:0
+          correct: true
+          feedback: crwdns2459144:0crwdne2459144:0
+        - text: crwdns2459146:0crwdne2459146:0
+          correct: true
+          feedback: crwdns2459150:0crwdne2459150:0
+        questions:
+        - text: crwdns2459152:0crwdne2459152:0
+      courseE_prediction_artistFunction1:
+        answers:
+        - text: crwdns2034798:0crwdne2034798:0
+          correct: true
+          feedback: crwdns2034802:0crwdne2034802:0
+        - text: crwdns2034804:0crwdne2034804:0
+          correct: true
+          feedback: crwdns2034808:0crwdne2034808:0
+        - text: crwdns2034810:0crwdne2034810:0
+          correct: true
+          feedback: crwdns2034814:0crwdne2034814:0
+        - text: crwdns2034816:0crwdne2034816:0
+          correct: true
+          feedback: crwdns2034820:0crwdne2034820:0
+        questions:
+        - text: crwdns2034796:0crwdne2034796:0
+      courseE_prediction_artistFunction1_2018:
+        answers:
+        - text: crwdns2036680:0crwdne2036680:0
+          correct: true
+          feedback: crwdns2036684:0crwdne2036684:0
+        - text: crwdns2036686:0crwdne2036686:0
+          correct: true
+          feedback: crwdns2036690:0crwdne2036690:0
+        - text: crwdns2036692:0crwdne2036692:0
+          correct: true
+          feedback: crwdns2036696:0crwdne2036696:0
+        - text: crwdns2036698:0crwdne2036698:0
+          correct: true
+          feedback: crwdns2036702:0crwdne2036702:0
+        questions:
+        - text: crwdns2036678:0crwdne2036678:0
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: crwdns2039428:0crwdne2039428:0
+          correct: true
+          feedback: crwdns2039432:0crwdne2039432:0
+        - text: crwdns2039434:0crwdne2039434:0
+          correct: true
+          feedback: crwdns2039438:0crwdne2039438:0
+        - text: crwdns2039440:0crwdne2039440:0
+          correct: true
+          feedback: crwdns2039444:0crwdne2039444:0
+        - text: crwdns2039446:0crwdne2039446:0
+          correct: true
+          feedback: crwdns2039450:0crwdne2039450:0
+        questions:
+        - text: crwdns2039426:0crwdne2039426:0
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: crwdns2459160:0crwdne2459160:0
+          correct: true
+          feedback: crwdns2459164:0crwdne2459164:0
+        - text: crwdns2459166:0crwdne2459166:0
+          correct: true
+          feedback: crwdns2459170:0crwdne2459170:0
+        - text: crwdns2459172:0crwdne2459172:0
+          correct: true
+          feedback: crwdns2459176:0crwdne2459176:0
+        - text: crwdns2459178:0crwdne2459178:0
+          correct: true
+          feedback: crwdns2459182:0crwdne2459182:0
+        questions:
+        - text: crwdns2459184:0crwdne2459184:0
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: crwdns2373518:0crwdne2373518:0
+          correct: true
+          feedback: crwdns2373522:0crwdne2373522:0
+        - text: crwdns2373524:0crwdne2373524:0
+          correct: true
+          feedback: crwdns2373528:0crwdne2373528:0
+        - text: crwdns2373530:0crwdne2373530:0
+          correct: true
+          feedback: crwdns2373534:0crwdne2373534:0
+        - text: crwdns2373536:0crwdne2373536:0
+          correct: true
+          feedback: crwdns2373540:0crwdne2373540:0
+        questions:
+        - text: crwdns2373542:0crwdne2373542:0
+      courseE_project_exemplars_2019:
+        content1: crwdns2038542:0crwdne2038542:0
+        markdown: crwdns2041530:0crwdne2041530:0
+      courseE_project_exemplars_2019_2020:
+        content1: crwdns2459412:0crwdne2459412:0
+        markdown: crwdns2459414:0crwdne2459414:0
+      courseExpress_EOC_2020:
+        description: crwdns2454534:0crwdne2454534:0
+        display_name: crwdns2454536:0crwdne2454536:0
+      courseExpress_project_exemplars_2019_2020:
+        content1: crwdns2454530:0crwdne2454530:0
+        markdown: crwdns2454532:0crwdne2454532:0
+      courseF_EOC_2020:
+        description: crwdns2461748:0crwdne2461748:0
+        display_name: crwdns2461750:0crwdne2461750:0
+      courseF_bee_variables_8a_2018:
+        answers:
+        - text: crwdns2037788:0crwdne2037788:0
+          correct: true
+          feedback: crwdns2037792:0crwdne2037792:0
+        - text: crwdns2037794:0crwdne2037794:0
+          correct: true
+          feedback: crwdns2037798:0crwdne2037798:0
+        - text: crwdns2037800:0crwdne2037800:0
+          correct: true
+          feedback: crwdns2037804:0crwdne2037804:0
+        - text: crwdns2037806:0crwdne2037806:0
+          correct: true
+          feedback: crwdns2037810:0crwdne2037810:0
+        questions:
+        - text: crwdns2037786:0crwdne2037786:0
+        title: crwdns2037784:0crwdne2037784:0
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+        - text: crwdns2039512:0crwdne2039512:0
+          correct: true
+          feedback: crwdns2039516:0crwdne2039516:0
+        - text: crwdns2039518:0crwdne2039518:0
+          correct: true
+          feedback: crwdns2039522:0crwdne2039522:0
+        - text: crwdns2039524:0crwdne2039524:0
+          correct: true
+          feedback: crwdns2039528:0crwdne2039528:0
+        - text: crwdns2039530:0crwdne2039530:0
+          correct: true
+          feedback: crwdns2039534:0crwdne2039534:0
+        questions:
+        - text: crwdns2039510:0crwdne2039510:0
+        title: crwdns2039508:0crwdne2039508:0
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - text: crwdns2453320:0crwdne2453320:0
+          correct: true
+          feedback: crwdns2453324:0crwdne2453324:0
+        - text: crwdns2453326:0crwdne2453326:0
+          correct: true
+          feedback: crwdns2453330:0crwdne2453330:0
+        - text: crwdns2453332:0crwdne2453332:0
+          correct: true
+          feedback: crwdns2453336:0crwdne2453336:0
+        - text: crwdns2453338:0crwdne2453338:0
+          correct: true
+          feedback: crwdns2453342:0crwdne2453342:0
+        questions:
+        - text: crwdns2453344:0crwdne2453344:0
+        title: crwdns2453346:0crwdne2453346:0
+      courseF_external_variableConstant:
+        markdown: crwdns2041788:0crwdne2041788:0
+      courseF_external_variableConstant_2018:
+        markdown: crwdns2041378:0crwdne2041378:0
+      courseF_external_variableConstant_2018_2019:
+        markdown: crwdns2041534:0crwdne2041534:0
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: crwdns2453274:0crwdne2453274:0
+      courseF_markdown_algorithms_end:
+        content1: crwdns2036488:0crwdne2036488:0
+        markdown: crwdns2041394:0crwdne2041394:0
+      courseF_markdown_algorithms_intro:
+        content1: crwdns2036484:0crwdne2036484:0
+        markdown: crwdns2041392:0crwdne2041392:0
+      courseF_markdown_conditionals_end:
+        content1: crwdns2036650:0crwdne2036650:0
+        markdown: crwdns2041410:0crwdne2041410:0
+      courseF_markdown_conditionals_intro:
+        content1: crwdns2036620:0crwdne2036620:0
+        markdown: crwdns2041408:0crwdne2041408:0
+      courseF_markdown_debugging_end:
+        content1: crwdns2036522:0crwdne2036522:0
+        markdown: crwdns2041398:0crwdne2041398:0
+      courseF_markdown_debugging_intro:
+        content1: crwdns2036492:0crwdne2036492:0
+        markdown: crwdns2041396:0crwdne2041396:0
+      courseF_markdown_forloops_end:
+        content1: crwdns2037848:0crwdne2037848:0
+        markdown: crwdns2041384:0crwdne2041384:0
+      courseF_markdown_forloops_end_2019:
+        content1: crwdns2039572:0crwdne2039572:0
+        markdown: crwdns2041540:0crwdne2041540:0
+      courseF_markdown_forloops_end_2019_2020:
+        content1: crwdns2453544:0crwdne2453544:0
+        markdown: crwdns2453546:0crwdne2453546:0
+      courseF_markdown_forloops_intro:
+        content1: crwdns2037818:0crwdne2037818:0
+        markdown: crwdns2041382:0crwdne2041382:0
+      courseF_markdown_forloops_intro_2019:
+        content1: crwdns2039542:0crwdne2039542:0
+        markdown: crwdns2041538:0crwdne2041538:0
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: crwdns2453434:0crwdne2453434:0
+        markdown: crwdns2453436:0crwdne2453436:0
+      courseF_markdown_loops_end:
+        content1: crwdns2036556:0crwdne2036556:0
+        markdown: crwdns2041402:0crwdne2041402:0
+      courseF_markdown_loops_intro:
+        content1: crwdns2036552:0crwdne2036552:0
+        markdown: crwdns2041400:0crwdne2041400:0
+      courseF_markdown_nestedloops_end:
+        content1: crwdns2036616:0crwdne2036616:0
+        markdown: crwdns2041406:0crwdne2041406:0
+      courseF_markdown_nestedloops_intro:
+        content1: crwdns2036560:0crwdne2036560:0
+        markdown: crwdns2041404:0crwdne2041404:0
+      courseF_markdown_variables_end:
+        content1: crwdns2037814:0crwdne2037814:0
+        markdown: crwdns2041380:0crwdne2041380:0
+      courseF_markdown_variables_end_2019:
+        content1: crwdns2039538:0crwdne2039538:0
+        markdown: crwdns2041536:0crwdne2041536:0
+      courseF_markdown_variables_end_2019_2020:
+        content1: crwdns2453392:0crwdne2453392:0
+        markdown: crwdns2453394:0crwdne2453394:0
+      courseF_markdown_variables_intro:
+        content1: crwdns2037756:0crwdne2037756:0
+        markdown: crwdns2041376:0crwdne2041376:0
+      courseF_markdown_variables_intro_2019:
+        content1: crwdns2039480:0crwdne2039480:0
+        markdown: crwdns2041532:0crwdne2041532:0
+      courseF_markdown_variables_intro_2019_2020:
+        content1: crwdns2453190:0crwdne2453190:0
+        markdown: crwdns2453192:0crwdne2453192:0
+      courseF_multi_artist_for10_predict1:
+        answers:
+        - text: crwdns2035874:0crwdne2035874:0
+          correct: true
+          feedback: crwdns2035878:0crwdne2035878:0
+        - text: crwdns2035880:0crwdne2035880:0
+          correct: true
+          feedback: crwdns2035884:0crwdne2035884:0
+        - text: crwdns2035886:0crwdne2035886:0
+          correct: true
+          feedback: crwdns2035890:0crwdne2035890:0
+        - text: crwdns2035892:0crwdne2035892:0
+          correct: true
+          feedback: crwdns2035896:0crwdne2035896:0
+        markdown: crwdns2069126:0crwdne2069126:0
+        questions:
+        - text: crwdns2035872:0crwdne2035872:0
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+        - text: crwdns2037852:0crwdne2037852:0
+          correct: true
+          feedback: crwdns2037856:0crwdne2037856:0
+        - text: crwdns2037858:0crwdne2037858:0
+          correct: true
+          feedback: crwdns2037862:0crwdne2037862:0
+        - text: crwdns2037864:0crwdne2037864:0
+          correct: true
+          feedback: crwdns2037868:0crwdne2037868:0
+        - text: crwdns2037870:0crwdne2037870:0
+          correct: true
+          feedback: crwdns2037874:0crwdne2037874:0
+        markdown: crwdns2069016:0crwdne2069016:0
+        questions:
+        - text: crwdns2037850:0crwdne2037850:0
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - text: crwdns2039576:0crwdne2039576:0
+          correct: true
+          feedback: crwdns2039580:0crwdne2039580:0
+        - text: crwdns2039582:0crwdne2039582:0
+          correct: true
+          feedback: crwdns2039586:0crwdne2039586:0
+        - text: crwdns2039588:0crwdne2039588:0
+          correct: true
+          feedback: crwdns2039592:0crwdne2039592:0
+        - text: crwdns2039594:0crwdne2039594:0
+          correct: true
+          feedback: crwdns2039598:0crwdne2039598:0
+        markdown: crwdns2069044:0crwdne2069044:0
+        questions:
+        - text: crwdns2039574:0crwdne2039574:0
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2461206:0crwdne2461206:0
+          correct: true
+          feedback: crwdns2461210:0crwdne2461210:0
+        - text: crwdns2461212:0crwdne2461212:0
+          correct: true
+          feedback: crwdns2461216:0crwdne2461216:0
+        - text: crwdns2461218:0crwdne2461218:0
+          correct: true
+          feedback: crwdns2461222:0crwdne2461222:0
+        - text: crwdns2461224:0crwdne2461224:0
+          correct: true
+          feedback: crwdns2461228:0crwdne2461228:0
+        markdown: crwdns2461230:0crwdne2461230:0
+        questions:
+        - text: crwdns2461232:0crwdne2461232:0
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+        - text: crwdns2035952:0crwdne2035952:0
+          correct: true
+          feedback: crwdns2035956:0crwdne2035956:0
+        - text: crwdns2035958:0crwdne2035958:0
+          correct: true
+          feedback: crwdns2035962:0crwdne2035962:0
+        - text: crwdns2035964:0crwdne2035964:0
+          correct: true
+          feedback: crwdns2035968:0crwdne2035968:0
+        - text: crwdns2035970:0crwdne2035970:0
+          correct: true
+          feedback: crwdns2035974:0crwdne2035974:0
+        markdown: crwdns2069132:0crwdne2069132:0
+        questions:
+        - text: crwdns2035950:0crwdne2035950:0
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+        - text: crwdns2035796:0crwdne2035796:0
+          correct: true
+          feedback: crwdns2035800:0crwdne2035800:0
+        - text: crwdns2035802:0crwdne2035802:0
+          correct: true
+          feedback: crwdns2035806:0crwdne2035806:0
+        - text: crwdns2035808:0crwdne2035808:0
+          correct: true
+          feedback: crwdns2035812:0crwdne2035812:0
+        - text: crwdns2035814:0crwdne2035814:0
+          correct: true
+          feedback: crwdns2035818:0crwdne2035818:0
+        questions:
+        - text: crwdns2035794:0crwdne2035794:0
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+        - text: crwdns2037760:0crwdne2037760:0
+          correct: true
+          feedback: crwdns2037764:0crwdne2037764:0
+        - text: crwdns2037766:0crwdne2037766:0
+          correct: true
+          feedback: crwdns2037770:0crwdne2037770:0
+        - text: crwdns2037772:0crwdne2037772:0
+          correct: true
+          feedback: crwdns2037776:0crwdne2037776:0
+        - text: crwdns2037778:0crwdne2037778:0
+          correct: true
+          feedback: crwdns2037782:0crwdne2037782:0
+        questions:
+        - text: crwdns2037758:0crwdne2037758:0
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - text: crwdns2039484:0crwdne2039484:0
+          correct: true
+          feedback: crwdns2039488:0crwdne2039488:0
+        - text: crwdns2039490:0crwdne2039490:0
+          correct: true
+          feedback: crwdns2039494:0crwdne2039494:0
+        - text: crwdns2039496:0crwdne2039496:0
+          correct: true
+          feedback: crwdns2039500:0crwdne2039500:0
+        - text: crwdns2039502:0crwdne2039502:0
+          correct: true
+          feedback: crwdns2039506:0crwdne2039506:0
+        questions:
+        - text: crwdns2039482:0crwdne2039482:0
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2460780:0crwdne2460780:0
+          correct: true
+          feedback: crwdns2460784:0crwdne2460784:0
+        - text: crwdns2460786:0crwdne2460786:0
+          correct: true
+          feedback: crwdns2460790:0crwdne2460790:0
+        - text: crwdns2460792:0crwdne2460792:0
+          correct: true
+          feedback: crwdns2460796:0crwdne2460796:0
+        - text: crwdns2460798:0crwdne2460798:0
+          correct: true
+          feedback: crwdns2460802:0crwdne2460802:0
+        questions:
+        - text: crwdns2460804:0crwdne2460804:0
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+        - text: crwdns2035900:0crwdne2035900:0
+          correct: true
+          feedback: crwdns2035904:0crwdne2035904:0
+        - text: crwdns2035906:0crwdne2035906:0
+          correct: true
+          feedback: crwdns2035910:0crwdne2035910:0
+        - text: crwdns2035912:0crwdne2035912:0
+          correct: true
+          feedback: crwdns2035916:0crwdne2035916:0
+        - text: crwdns2035918:0crwdne2035918:0
+          correct: true
+          feedback: crwdns2035922:0crwdne2035922:0
+        markdown: crwdns2069128:0crwdne2069128:0
+        questions:
+        - text: crwdns2035898:0crwdne2035898:0
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+        - text: crwdns2035926:0crwdne2035926:0
+          correct: true
+          feedback: crwdns2035930:0crwdne2035930:0
+        - text: crwdns2035932:0crwdne2035932:0
+          correct: true
+          feedback: crwdns2035936:0crwdne2035936:0
+        - text: crwdns2035938:0crwdne2035938:0
+          correct: true
+          feedback: crwdns2035942:0crwdne2035942:0
+        - text: crwdns2035944:0crwdne2035944:0
+          correct: true
+          feedback: crwdns2035948:0crwdne2035948:0
+        markdown: crwdns2069130:0crwdne2069130:0
+        questions:
+        - text: crwdns2035924:0crwdne2035924:0
+      courseF_multi_bee_for3_predict1:
+        answers:
+        - text: crwdns2035848:0crwdne2035848:0
+          correct: true
+          feedback: crwdns2035852:0crwdne2035852:0
+        - text: crwdns2035854:0crwdne2035854:0
+          correct: true
+          feedback: crwdns2035858:0crwdne2035858:0
+        - text: crwdns2035860:0crwdne2035860:0
+          correct: true
+          feedback: crwdns2035864:0crwdne2035864:0
+        - text: crwdns2035866:0crwdne2035866:0
+          correct: true
+          feedback: crwdns2035870:0crwdne2035870:0
+        markdown: crwdns2069124:0crwdne2069124:0
+        questions:
+        - text: crwdns2035846:0crwdne2035846:0
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+        - text: crwdns2037822:0crwdne2037822:0
+          correct: true
+          feedback: crwdns2037826:0crwdne2037826:0
+        - text: crwdns2037828:0crwdne2037828:0
+          correct: true
+          feedback: crwdns2037832:0crwdne2037832:0
+        - text: crwdns2037834:0crwdne2037834:0
+          correct: true
+          feedback: crwdns2037838:0crwdne2037838:0
+        - text: crwdns2037840:0crwdne2037840:0
+          correct: true
+          feedback: crwdns2037844:0crwdne2037844:0
+        markdown: crwdns2069014:0crwdne2069014:0
+        questions:
+        - text: crwdns2037820:0crwdne2037820:0
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+        - text: crwdns2039546:0crwdne2039546:0
+          correct: true
+          feedback: crwdns2039550:0crwdne2039550:0
+        - text: crwdns2039552:0crwdne2039552:0
+          correct: true
+          feedback: crwdns2039556:0crwdne2039556:0
+        - text: crwdns2039558:0crwdne2039558:0
+          correct: true
+          feedback: crwdns2039562:0crwdne2039562:0
+        - text: crwdns2039564:0crwdne2039564:0
+          correct: true
+          feedback: crwdns2039568:0crwdne2039568:0
+        markdown: crwdns2069042:0crwdne2069042:0
+        questions:
+        - text: crwdns2039544:0crwdne2039544:0
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2461002:0crwdne2461002:0
+          correct: true
+          feedback: crwdns2461006:0crwdne2461006:0
+        - text: crwdns2461008:0crwdne2461008:0
+          correct: true
+          feedback: crwdns2461012:0crwdne2461012:0
+        - text: crwdns2461014:0crwdne2461014:0
+          correct: true
+          feedback: crwdns2461018:0crwdne2461018:0
+        - text: crwdns2461020:0crwdne2461020:0
+          correct: true
+          feedback: crwdns2461024:0crwdne2461024:0
+        markdown: crwdns2461026:0crwdne2461026:0
+        questions:
+        - text: crwdns2461028:0crwdne2461028:0
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+        - text: crwdns2035978:0crwdne2035978:0
+          correct: true
+          feedback: crwdns2035982:0crwdne2035982:0
+        - text: crwdns2035984:0crwdne2035984:0
+          correct: true
+          feedback: crwdns2035988:0crwdne2035988:0
+        - text: crwdns2035990:0crwdne2035990:0
+          correct: true
+          feedback: crwdns2035994:0crwdne2035994:0
+        - text: crwdns2035996:0crwdne2035996:0
+          correct: true
+          feedback: crwdns2036000:0crwdne2036000:0
+        markdown: crwdns2069134:0crwdne2069134:0
+        questions:
+        - text: crwdns2035976:0crwdne2035976:0
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+        - text: crwdns2035822:0crwdne2035822:0
+          correct: true
+          feedback: crwdns2035826:0crwdne2035826:0
+        - text: crwdns2035828:0crwdne2035828:0
+          correct: true
+          feedback: crwdns2035832:0crwdne2035832:0
+        - text: crwdns2035834:0crwdne2035834:0
+          correct: true
+          feedback: crwdns2035838:0crwdne2035838:0
+        - text: crwdns2035840:0crwdne2035840:0
+          correct: true
+          feedback: crwdns2035844:0crwdne2035844:0
+        markdown: crwdns2069122:0crwdne2069122:0
+        questions:
+        - text: crwdns2035820:0crwdne2035820:0
+      courseF_project_exemplars_2019:
+        content1: crwdns2039654:0crwdne2039654:0
+        markdown: crwdns2041542:0crwdne2041542:0
+      courseF_project_exemplars_2019_2020:
+        content1: crwdns2461744:0crwdne2461744:0
+        markdown: crwdns2461746:0crwdne2461746:0
+      coursee_prediction_artistfunction2:
+        answers:
+        - text: crwdns2034824:0crwdne2034824:0
+          correct: true
+          feedback: crwdns2034828:0crwdne2034828:0
+        - text: crwdns2034830:0crwdne2034830:0
+          correct: true
+          feedback: crwdns2034834:0crwdne2034834:0
+        - text: crwdns2034836:0crwdne2034836:0
+          correct: true
+          feedback: crwdns2034840:0crwdne2034840:0
+        - text: crwdns2034842:0crwdne2034842:0
+          correct: true
+          feedback: crwdns2034846:0crwdne2034846:0
+        questions:
+        - text: crwdns2034822:0crwdne2034822:0
+      coursee_prediction_artistfunction2_2018:
+        answers:
+        - text: crwdns2036706:0crwdne2036706:0
+          correct: true
+          feedback: crwdns2036710:0crwdne2036710:0
+        - text: crwdns2036712:0crwdne2036712:0
+          correct: true
+          feedback: crwdns2036716:0crwdne2036716:0
+        - text: crwdns2036718:0crwdne2036718:0
+          correct: true
+          feedback: crwdns2036722:0crwdne2036722:0
+        - text: crwdns2036724:0crwdne2036724:0
+          correct: true
+          feedback: crwdns2036728:0crwdne2036728:0
+        questions:
+        - text: crwdns2036704:0crwdne2036704:0
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - text: crwdns2039454:0crwdne2039454:0
+          correct: true
+          feedback: crwdns2039458:0crwdne2039458:0
+        - text: crwdns2039460:0crwdne2039460:0
+          correct: true
+          feedback: crwdns2039464:0crwdne2039464:0
+        - text: crwdns2039466:0crwdne2039466:0
+          correct: true
+          feedback: crwdns2039470:0crwdne2039470:0
+        - text: crwdns2039472:0crwdne2039472:0
+          correct: true
+          feedback: crwdns2039476:0crwdne2039476:0
+        questions:
+        - text: crwdns2039452:0crwdne2039452:0
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: crwdns2459340:0crwdne2459340:0
+          correct: true
+          feedback: crwdns2459344:0crwdne2459344:0
+        - text: crwdns2459346:0crwdne2459346:0
+          correct: true
+          feedback: crwdns2459350:0crwdne2459350:0
+        - text: crwdns2459352:0crwdne2459352:0
+          correct: true
+          feedback: crwdns2459356:0crwdne2459356:0
+        - text: crwdns2459358:0crwdne2459358:0
+          correct: true
+          feedback: crwdns2459362:0crwdne2459362:0
+        questions:
+        - text: crwdns2459364:0crwdne2459364:0
+      csd-post-survey-2017-levelgroup:
+        title: crwdns2291027:0crwdne2291027:0
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: crwdns2290885:0crwdne2290885:0
+      csd-post-survey-2017-levelgroup_2018:
+        title: crwdns2290895:0crwdne2290895:0
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: crwdns2291061:0crwdne2291061:0
+        teacher_markdown: crwdns2370742:0crwdne2370742:0
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        markdown: crwdns2041430:0crwdne2041430:0
+        teacher_markdown: crwdns2370502:0[pdf]crwdne2370502:0
+      csd-post-survey-intro-2019:
+        markdown: crwdns2291017:0crwdne2291017:0
+      csd-post-survey-levelgroup-2018:
+        title: crwdns2290887:0crwdne2290887:0
+      csd-post-survey-levelgroup_2019:
+        title: crwdns2291019:0crwdne2291019:0
+      csd-pre-survey-2017-levelgroup:
+        title: crwdns2291047:0crwdne2291047:0
+      csd-pre-survey-2017-levelgroup_2018:
+        title: crwdns2290913:0crwdne2290913:0
+      csd-pre-survey-levelgroup_2019:
+        title: crwdns2290997:0crwdne2290997:0
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: crwdns2291049:0crwdne2291049:0
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: crwdns2290915:0crwdne2290915:0
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: crwdns2291001:0crwdne2291001:0
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: crwdns2291041:0crwdne2291041:0
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: crwdns2290909:0crwdne2290909:0
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: crwdns2291011:0crwdne2291011:0
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: crwdns2291043:0crwdne2291043:0
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: crwdns2290911:0crwdne2290911:0
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: crwdns2291013:0crwdne2291013:0
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: crwdns2291023:0crwdne2291023:0
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: crwdns2290891:0crwdne2290891:0
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: crwdns2290925:0crwdne2290925:0
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: crwdns2291025:0crwdne2291025:0
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: crwdns2290893:0crwdne2290893:0
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: crwdns2290927:0crwdne2290927:0
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: crwdns2291057:0crwdne2291057:0
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: crwdns2290905:0crwdne2290905:0
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: crwdns2290973:0crwdne2290973:0
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: crwdns2291059:0crwdne2291059:0
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: crwdns2290907:0crwdne2290907:0
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: crwdns2290975:0crwdne2290975:0
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: crwdns2291051:0crwdne2291051:0
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: crwdns2290901:0crwdne2290901:0
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: crwdns2290987:0crwdne2290987:0
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: crwdns2291053:0crwdne2291053:0
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: crwdns2290903:0crwdne2290903:0
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: crwdns2290989:0crwdne2290989:0
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: crwdns2291033:0crwdne2291033:0
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: crwdns2290897:0crwdne2290897:0
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: crwdns2290959:0crwdne2290959:0
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: crwdns2291035:0crwdne2291035:0
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: crwdns2290899:0crwdne2290899:0
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: crwdns2290961:0crwdne2290961:0
+      csf_be_a_super_digital_citizen:
+        content1: crwdns2456432:0crwdne2456432:0
+        markdown: crwdns2456434:0crwdne2456434:0
+      csf_digital_trails:
+        markdown: crwdns2454538:0crwdne2454538:0
+      csf_password_power-up:
+        content1: crwdns2456448:0crwdne2456448:0
+        markdown: crwdns2456450:0crwdne2456450:0
+      csf_putting_a_stop_to_online_meanness:
+        content1: crwdns2456444:0crwdne2456444:0
+        markdown: crwdns2456446:0crwdne2456446:0
+      csf_safety_in_my_online_neighborhood:
+        markdown: crwdns2459420:0crwdne2459420:0
+      grade2_multi_collector_A_predict1:
+        answers:
+        - text: crwdns2034146:0crwdne2034146:0
+          correct: true
+          feedback: crwdns2034150:0crwdne2034150:0
+        - text: crwdns2034152:0crwdne2034152:0
+          correct: true
+          feedback: crwdns2034156:0crwdne2034156:0
+        - text: crwdns2034158:0crwdne2034158:0
+          correct: true
+          feedback: crwdns2034162:0crwdne2034162:0
+        - text: crwdns2034164:0crwdne2034164:0
+          correct: true
+          feedback: crwdns2034168:0crwdne2034168:0
+        questions:
+        - text: crwdns2034144:0crwdne2034144:0
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+        - text: crwdns2036066:0crwdne2036066:0
+          correct: true
+          feedback: crwdns2036070:0crwdne2036070:0
+        - text: crwdns2036072:0crwdne2036072:0
+          correct: true
+          feedback: crwdns2036076:0crwdne2036076:0
+        - text: crwdns2036078:0crwdne2036078:0
+          correct: true
+          feedback: crwdns2036082:0crwdne2036082:0
+        - text: crwdns2036084:0crwdne2036084:0
+          correct: true
+          feedback: crwdns2036088:0crwdne2036088:0
+        questions:
+        - text: crwdns2036064:0crwdne2036064:0
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - text: crwdns2037964:0crwdne2037964:0
+          correct: true
+          feedback: crwdns2037968:0crwdne2037968:0
+        - text: crwdns2037970:0crwdne2037970:0
+          correct: true
+          feedback: crwdns2037974:0crwdne2037974:0
+        - text: crwdns2037976:0crwdne2037976:0
+          correct: true
+          feedback: crwdns2037980:0crwdne2037980:0
+        - text: crwdns2037982:0crwdne2037982:0
+          correct: true
+          feedback: crwdns2037986:0crwdne2037986:0
+        questions:
+        - text: crwdns2037962:0crwdne2037962:0
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - text: crwdns2456768:0crwdne2456768:0
+          correct: true
+          feedback: crwdns2456772:0crwdne2456772:0
+        - text: crwdns2456774:0crwdne2456774:0
+          correct: true
+          feedback: crwdns2456778:0crwdne2456778:0
+        - text: crwdns2456780:0crwdne2456780:0
+          correct: true
+          feedback: crwdns2456784:0crwdne2456784:0
+        - text: crwdns2456786:0crwdne2456786:0
+          correct: true
+          feedback: crwdns2456790:0crwdne2456790:0
+        questions:
+        - text: crwdns2456792:0crwdne2456792:0
+      gradek1_activity_beNice:
+        markdown: crwdns2041688:0crwdne2041688:0
+      outbreak_freeplay_choice:
+        description: crwdns2475318:0crwdne2475318:0
+        display_name: crwdns2475320:0crwdne2475320:0
+      outbreak_story:
+        content1: crwdns2472024:0crwdne2472024:0
+        markdown: crwdns2472026:0crwdne2472026:0
+      outbreak_story2:
+        content1: crwdns2472074:0crwdne2472074:0
+        markdown: crwdns2472076:0crwdne2472076:0

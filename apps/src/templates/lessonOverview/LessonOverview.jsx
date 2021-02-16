@@ -113,14 +113,16 @@ class LessonOverview extends Component {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
       <div>
-        <div style={styles.header}>
-          <a
-            href={this.linkWithQueryParams(lesson.unit.link)}
-            style={styles.navLink}
-          >
-            {`< ${lesson.unit.displayName}`}
-          </a>
-          <LessonNavigationDropdown lesson={lesson} />
+        <div className="lesson-overview-header">
+          <div style={styles.header}>
+            <a
+              href={this.linkWithQueryParams(lesson.unit.link)}
+              style={styles.navLink}
+            >
+              {`< ${lesson.unit.displayName}`}
+            </a>
+            <LessonNavigationDropdown lesson={lesson} />
+          </div>
         </div>
         {isSignedIn && (
           <Announcements
@@ -130,12 +132,10 @@ class LessonOverview extends Component {
           />
         )}
         <h1>
-          {lesson.lockable
-            ? lesson.displayName
-            : i18n.lessonNumbered({
-                lessonNumber: lesson.position,
-                lessonName: lesson.displayName
-              })}
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.displayName
+          })}
         </h1>
 
         <div style={styles.frontPage}>

@@ -1,18 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+
 import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
-};
+import LessonEditorDialog from './LessonEditorDialog';
 
 export default class FindVocabularyDialog extends Component {
   static propTypes = {
@@ -36,11 +29,9 @@ export default class FindVocabularyDialog extends Component {
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <h2>Add Vocabulary</h2>
         <label>
@@ -66,7 +57,7 @@ export default class FindVocabularyDialog extends Component {
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }

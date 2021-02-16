@@ -1,0 +1,192 @@
+{
+  "hi-IN": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "क्रियाएँ",
+              "Events": "घटनाएँ",
+              "Loops": "फंदे",
+              "Math": "गणित",
+              "Logic": "तर्क",
+              "Games/Score": "खेल/स्कोर"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "विश्व",
+              "Dancers": "नर्तकों",
+              "Properties": "गुण",
+              "Events": "घटनाएँ",
+              "Numbers": "नंबर",
+              "Logic": "तर्क"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "एक सितारा खींचे",
+                "parameters": {
+                  "points": "अंक",
+                  "length": "लंबाई"
+                }
+              },
+              "draw a circle": {
+                "name": "एक चक्र बनाएं"
+              },
+              "draw a pinwheel": {
+                "name": "चकरी चित्रित करें",
+                "parameters": {
+                  "length": "लंबाई",
+                  "repeat": "दोहराएँ"
+                }
+              },
+              "draw a triangle": {
+                "name": "एक त्रिकोण खींचें",
+                "parameters": {
+                  "length": "लंबाई"
+                }
+              },
+              "draw a shape": {
+                "name": "आकृति खींचें",
+                "parameters": {
+                  "length": "लंबाई"
+                }
+              },
+              "draw a house": {
+                "name": "एक घर खींचे",
+                "parameters": {
+                  "length": "लंबाई"
+                }
+              },
+              "draw a square": {
+                "name": "एक वर्ग खींचें",
+                "parameters": {
+                  "length": "लंबाई"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "विश्व",
+              "Sprites": "स्प्राइट्स",
+              "Actions": "क्रियाएँ",
+              "Events": "घटनाएँ",
+              "Behaviors": "व्यवहार"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "विश्व",
+              "Dancers": "नर्तकों",
+              "Properties": "गुण",
+              "Events": "घटनाएँ",
+              "Numbers": "नंबर",
+              "Logic": "तर्क"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "क्रियाएँ",
+              "Brushes": "ब्रश",
+              "Loops": "फंदे",
+              "Math": "गणित",
+              "Logic": "तर्क",
+              "Functions": "कार्य",
+              "Variables": "चर"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "विश्व",
+              "Sprites": "स्प्राइट्स",
+              "Locations": "स्थान",
+              "Actions": "क्रियाएँ",
+              "Events": "घटनाएँ",
+              "Behaviors": "व्यवहार",
+              "Variables": "चर",
+              "Math": "गणित",
+              "Logic": "तर्क",
+              "Functions": "कार्य",
+              "Text": "पाठ",
+              "Comments": "टिप्पणियां"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "विश्व",
+              "Sprites": "स्प्राइट्स",
+              "Locations": "स्थान",
+              "Actions": "क्रियाएँ",
+              "Events": "घटनाएँ",
+              "Behaviors": "व्यवहार",
+              "Variables": "चर",
+              "Math": "गणित",
+              "Logic": "तर्क",
+              "Functions": "कार्य",
+              "Text": "पाठ",
+              "Comments": "टिप्पणियां"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "क्रियाएँ",
+              "Brushes": "ब्रश",
+              "Loops": "फंदे",
+              "Math": "गणित",
+              "Logic": "तर्क",
+              "Functions": "कार्य",
+              "Variables": "चर"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "विश्व",
+              "Sprites": "स्प्राइट्स",
+              "Actions": "क्रियाएँ",
+              "Events": "घटनाएँ",
+              "Logic": "तर्क",
+              "Math": "गणित"
+            },
+            "behavior_names": {
+              "recovering": "रिकवरिंग",
+              "moving left and right": "बाएं और दाएं मूव करना",
+              "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "विश्व",
+              "Sprites": "स्प्राइट्स",
+              "Actions": "क्रियाएँ",
+              "Behaviors": "व्यवहार",
+              "Events": "घटनाएँ",
+              "Locations": "स्थान",
+              "Logic": "तर्क",
+              "Loops": "फंदे",
+              "Math": "गणित",
+              "Variables": "चर",
+              "Functions": "कार्य",
+              "Comments": "टिप्पणियां"
+            },
+            "behavior_names": {
+              "recovering": "रिकवरिंग",
+              "moving left and right": "बाएं और दाएं मूव करना",
+              "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+            }
+          }
+        }
+      }
+    }
+  }
+}

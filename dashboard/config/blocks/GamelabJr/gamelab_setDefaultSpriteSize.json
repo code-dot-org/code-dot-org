@@ -1,5 +1,5 @@
 {
-  "category": "Actions",
+  "category": "Sprites",
   "config": {
     "func": "setDefaultSpriteSize",
     "blockText": "set new sprite default size to {SIZE}",

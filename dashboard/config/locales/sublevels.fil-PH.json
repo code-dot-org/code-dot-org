@@ -1,0 +1,190 @@
+{
+  "fil-PH": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Mga aksyon",
+              "Events": "Mga event",
+              "Loops": "Mga loop",
+              "Math": "Math",
+              "Logic": "Lohika",
+              "Games/Score": "Laro/score"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundo",
+              "Dancers": "Mananayaw",
+              "Properties": "Mga katangian",
+              "Events": "Mga event",
+              "Numbers": "Mga numero",
+              "Logic": "Lohika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "gumuhit ng bituin",
+                "parameters": {
+                  "points": "mga puntos",
+                  "length": "haba"
+                }
+              },
+              "draw a circle": {
+                "name": "gumuhit ng bilog"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "haba",
+                  "repeat": "ulitin"
+                }
+              },
+              "draw a triangle": {
+                "name": "gumuhit ng tatsulok",
+                "parameters": {
+                  "length": "haba"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "haba"
+                }
+              },
+              "draw a house": {
+                "name": "gumuhit ng bahay",
+                "parameters": {
+                  "length": "haba"
+                }
+              },
+              "draw a square": {
+                "name": "gumuhit ng parisukat",
+                "parameters": {
+                  "length": "haba"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Mga Sprites",
+              "Actions": "Mga aksyon",
+              "Events": "Mga event",
+              "Behaviors": "Pag-uugali"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundo",
+              "Dancers": "Mananayaw",
+              "Properties": "Mga katangian",
+              "Events": "Mga event",
+              "Numbers": "Mga numero",
+              "Logic": "Lohika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Mga aksyon",
+              "Brushes": "Brushes",
+              "Loops": "Mga loop",
+              "Math": "Math",
+              "Logic": "Lohika",
+              "Functions": "Mga function",
+              "Variables": "Mga variable"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Mga Sprites",
+              "Locations": "Lugar",
+              "Actions": "Mga aksyon",
+              "Events": "Mga event",
+              "Behaviors": "Pag-uugali",
+              "Variables": "Mga variable",
+              "Math": "Math",
+              "Logic": "Lohika",
+              "Functions": "Mga function",
+              "Text": "Text",
+              "Comments": "Komento"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Mga Sprites",
+              "Locations": "Lugar",
+              "Actions": "Mga aksyon",
+              "Events": "Mga event",
+              "Behaviors": "Pag-uugali",
+              "Variables": "Mga variable",
+              "Math": "Math",
+              "Logic": "Lohika",
+              "Functions": "Mga function",
+              "Text": "Text",
+              "Comments": "Komento"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Mga aksyon",
+              "Brushes": "Brushes",
+              "Loops": "Mga loop",
+              "Math": "Math",
+              "Logic": "Lohika",
+              "Functions": "Mga function",
+              "Variables": "Mga variable"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Mga Sprites",
+              "Actions": "Mga aksyon",
+              "Events": "Mga event",
+              "Logic": "Lohika",
+              "Math": "Math"
+            },
+            "behavior_names": {
+              "recovering": "nagpapagaling",
+              "moving left and right": "paggalaw sa kaliwa at kanan",
+              "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Mundo",
+              "Sprites": "Mga Sprites",
+              "Actions": "Mga aksyon",
+              "Behaviors": "Pag-uugali",
+              "Events": "Mga event",
+              "Locations": "Lugar",
+              "Logic": "Lohika",
+              "Loops": "Mga loop",
+              "Math": "Math",
+              "Variables": "Mga variable",
+              "Functions": "Mga function",
+              "Comments": "Komento"
+            },
+            "behavior_names": {
+              "recovering": "nagpapagaling",
+              "moving left and right": "paggalaw sa kaliwa at kanan",
+              "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+            }
+          }
+        }
+      }
+    }
+  }
+}

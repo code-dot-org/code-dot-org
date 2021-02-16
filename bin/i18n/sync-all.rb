@@ -152,8 +152,10 @@ class I18nSync
       # so error out.
       raise "Tried to return to staging branch from unknown branch #{GitUtils.current_branch.inspect}"
     end
-
     `git checkout staging` if should_i "switch to staging branch"
+  rescue => e
+    puts "return_to_staging_branch failed from the error: #{e}"
+    raise e
   end
 end
 

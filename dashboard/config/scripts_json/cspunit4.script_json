@@ -4,9 +4,7 @@
     "wrapup_video_id": null,
     "hidden": true,
     "login_required": true,
-    "properties": {
-      "has_lesson_plan": true
-    },
+    "properties": {},
     "new_name": null,
     "family_name": null,
     "seeding_key": {

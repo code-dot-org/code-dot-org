@@ -6,7 +6,6 @@
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-preview/unit4/{LESSON}",
       "curriculum_umbrella": "CSP",
       "pilot_experiment": "csp-preview",

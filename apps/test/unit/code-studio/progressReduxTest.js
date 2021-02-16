@@ -4,6 +4,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import reducer, {
   initProgress,
   isPerfect,
@@ -24,7 +25,6 @@ import reducer, {
   setCurrentStageId,
   lessonExtrasUrl,
   setStageExtrasEnabled,
-  getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -1160,35 +1160,35 @@ describe('progressReduxTest', () => {
       assert.strictEqual(processed[1].hidden, undefined);
     });
 
-    it('adds stageNumber to non-lockable stages, not to lockable stages', () => {
+    it('adds stageNumber to numbered lessons', () => {
       const stages = [
         {
-          name: 'locked1',
+          name: 'lesson1',
           id: 123,
-          lockable: true
+          numberedLesson: true
         },
         {
-          name: 'non-locked1',
+          name: 'lesson2',
           id: 124,
-          lockable: false
+          numberedLesson: true
         },
         {
-          name: 'locked2',
+          name: 'survey1',
           id: 125,
-          lockable: true
+          numberedLesson: false
         },
         {
-          name: 'non-locked2',
+          name: 'lesson3',
           id: 126,
-          lockable: false
+          numberedLesson: true
         }
       ];
 
       const processed = processedStages(stages);
-      assert.strictEqual(processed[0].stageNumber, undefined);
-      assert.strictEqual(processed[1].stageNumber, 1);
+      assert.strictEqual(processed[0].stageNumber, 1);
+      assert.strictEqual(processed[1].stageNumber, 2);
       assert.strictEqual(processed[2].stageNumber, undefined);
-      assert.strictEqual(processed[3].stageNumber, 2);
+      assert.strictEqual(processed[3].stageNumber, 3);
     });
   });
 
@@ -1454,7 +1454,7 @@ describe('progressReduxTest', () => {
         focusAreaStageIds: [1, 2],
         lockableAuthorized: true,
         completed: true,
-        levels: {},
+        progress: {},
         peerReviewsPerformed: true,
         current_stage: 1
       };

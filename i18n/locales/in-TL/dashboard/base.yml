@@ -265,6 +265,7 @@ in:
     invite_sent: 'crwdns2574:0crwdne2574:0'
     added_teacher: 'crwdns2575:0%{name}crwdne2575:0'
     registered: "crwdns4077:0%{section_name}crwdne4077:0"
+    captcha_required: 'crwdns2481326:0crwdne2481326:0'
     error:
       signed_in: 'crwdns2577:0crwdne2577:0'
       username_not_found: 'crwdns2578:0%{username}crwdne2578:0'
@@ -1147,3 +1148,4 @@ in:
   behaviors:
     this_sprite: "crwdns2465554:0crwdne2465554:0"
   unit_prefix: "crwdns2465940:0%{n}crwdne2465940:0"
+  code_org_logo_alt: "crwdns2481346:0crwdne2481346:0"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_021131) do
+ActiveRecord::Schema.define(version: 2021_02_14_211422) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1538,7 +1538,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_021131) do
     t.text "properties"
     t.integer "lesson_group_id"
     t.string "key", null: false
-    t.boolean "has_lesson_plan"
+    t.boolean "has_lesson_plan", null: false
     t.index ["lesson_group_id", "key"], name: "index_stages_on_lesson_group_id_and_key", unique: true
     t.index ["script_id", "key"], name: "index_stages_on_script_id_and_key", unique: true
   end
@@ -1622,7 +1622,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_021131) do
     t.datetime "student_last_visited_at"
     t.integer "script_level_id", null: false
     t.datetime "seen_on_feedback_page_at"
-    t.integer "script_id"
+    t.integer "script_id", null: false
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
@@ -1698,6 +1698,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_021131) do
     t.datetime "purged_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "metadata"
     t.index ["model_id"], name: "index_user_ml_models_on_model_id"
     t.index ["user_id"], name: "index_user_ml_models_on_user_id"
   end

@@ -13,6 +13,10 @@ mk:
           lessons:
             Infinity:
               name: Бесконечно
+        allthehiddenthings:
+          lessons:
+            Game Lab:
+              name: Работилница за апликации
         gradeKinder:
           lessons:
             Loops:
@@ -99,6 +103,8 @@ mk:
           lesson_groups:
             csf_loops:
               display_name: Лупови
+        gamelab:
+          title: Работилница за апликации
         coursea-2019:
           lesson_groups:
             csf_loops:

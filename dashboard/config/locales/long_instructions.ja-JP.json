@@ -646,8 +646,8 @@
         "courseA_harvester_loops3_2019": "うごくブロックを **1つ** だけ つかって、トウモロコシを すべて しゅうかく できるかな？",
         "courseA_harvester_loops3_2020": "うごくブロックを **1つ** だけ つかって、トウモロコシを すべて しゅうかく できるかな？",
         "courseA_harvester_loops4": "_\"どこが まちがっているか みつけるを てつだって！\"_\n\nまちがいを なおすことが できるかな？",
-        "courseA_harvester_loops4_2019": "_\"どこが まちがっているか みつけるを てつだって！\"_\n\nバグを なおすことが できるかな？",
-        "courseA_harvester_loops4_2020": "_\"どこが まちがっているか みつけるを てつだって！\"_\n\nバグを なおすことが できるかな？",
+        "courseA_harvester_loops4_2019": "_\"どこが まちがっているか みつけるを てつだって！\"_\n\nまちがいを なおすことが できるかな？",
+        "courseA_harvester_loops4_2020": "_\"どこが まちがっているか みつけるを てつだって！\"_\n\nまちがいを なおすことが できるかな？",
         "courseA_harvester_loops5": "じぶんで やってみよう！さいごの トウモロコシも しゅうかく できるかな？",
         "courseA_harvester_loops5_2019": "じぶんで やってみよう！さいごの トウモロコシも しゅうかく できるかな？",
         "courseA_harvester_loops5_2020": "じぶんで やってみよう！さいごの トウモロコシも しゅうかく できるかな？",
@@ -773,7 +773,7 @@
         "courseA_playLab_events2_2020": "いぬのジョージは \"Hi there.\" と いおうとしています。てつだうことが できますか？",
         "courseA_playLab_events3": "<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> のしたに <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> をつけて 犬をうごかせるようにしよう。\n犬を はたまで うごかせばクリアです。",
         "courseA_playLab_events3_2018": "<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> のしたに <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> をつけて 犬をうごかせるようにしよう。\n犬を はたまで うごかせばクリアです。",
-        "courseA_playLab_events3_2019": " <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>  ブロックの下に <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml>  ブロックを ひっつけて、いぬのジョージを うごかしましょう。\n\nやじるしキーをおして、ジョージを はたまで いかせればクリアです！",
+        "courseA_playLab_events3_2019": "<xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>  ブロックの下に <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml>  ブロックを ひっつけて、いぬのジョージを うごかしましょう。\n\nやじるしキーをおして、ジョージを はたまで いかせればクリアです！",
         "courseA_playLab_events4": "右やじるしキーがおされたとき、犬が右にうごくようにしてみよう。",
         "courseA_playLab_events4_2018": "みぎ やじるし ボタンが おされたとき、ジョージが みぎに うごくようにしよう。",
         "courseA_playLab_events4_2019": "右やじるしをクリックしたら、ジョージが右にいくように、もうひとつイベントブロックをおいてください。やじるしキーをおして、ジョージが、はたを２つとれば、クリアです。",
@@ -909,13 +909,13 @@
         "courseB_iceage_loops7_2019": "ドングリがほしい！！！ ",
         "courseB_iceage_loops7_2020": "ドングリがほしい！！！ ",
         "courseB_iceage_loops8": "まちがいを なおせる？ ",
-        "courseB_iceage_loops8_2019": "バグを なおせる？ ",
-        "courseB_iceage_loops8_2020": "バグを なおせる？ ",
+        "courseB_iceage_loops8_2019": "まちがいを なおせる？ ",
+        "courseB_iceage_loops8_2020": "まちがいを なおせる？ ",
         "courseB_iceage_loops9": "どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって ドングリのところへ いけるかな？",
         "courseB_iceage_loops9_2019": "どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって ドングリのところへ いけるかな？",
         "courseB_iceage_loops9_2020": "どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって ドングリのところへ いけるかな？",
-        "courseB_maze_seq10_2019": "バグをなおそう。",
-        "courseB_maze_seq10_2020": "バグをなおそう。",
+        "courseB_maze_seq10_2019": "まちがいをなおそう。",
+        "courseB_maze_seq10_2020": "まちがいをなおそう。",
         "courseB_maze_seq11_2019": "がんばって！スクラットを ドングリの ところへ つれていこう。",
         "courseB_maze_seq11_2020": "がんばって！スクラットを ドングリの ところへ つれていこう。",
         "courseB_maze_seq12_2019": "ドングリのところまで いってみよう。",
@@ -2325,7 +2325,9 @@
         "courseD_video_nestedLoopsArtist": "こんどは、三角形をかいてみよう。\n\n* * *\n\n##### １つの辺の長さは100ピクセルで、曲がる角度は120度だよ。",
         "courseE_bee_ramp14": "庭のあちらこちらにレタスがなっています。\\\n**までを くりかえします** を使ってレタスのところへ行って、**以下の間** を使ってレタスを しゅうかく しよう。  ",
         "courseE_farmer_predict1": "レタスを すべて しゅうかく します。`くりかえし` の中に`以下の間 レタスがあります`を入れて、レタスを すべて しゅうかく しよう！",
-        "courseE_farmer_predict2": "庭のあちらこちらにレタスがなっています。\\\n**までを くりかえします** を使ってレタスのところへ行って、**以下の間** を使ってレタスを しゅうかく しよう。  "
+        "courseE_farmer_predict2": "庭のあちらこちらにレタスがなっています。\\\n**までを くりかえします** を使ってレタスのところへ行って、**以下の間** を使ってレタスを しゅうかく しよう。  ",
+        "courseA_maze_ramp3b_2019": "いらないブロックが 1つ あります！\n\nいらないブロックを ドラックして、ツールボックスに もどしましょう。",
+        "courseA_maze_ramp3b_2020": "いらないブロックが 1つ あります！\n\nいらないブロックを ドラックして、ツールボックスに もどしましょう。"
       }
     }
   }

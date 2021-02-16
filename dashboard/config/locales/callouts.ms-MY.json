@@ -92,6 +92,9 @@
         },
         "outbreak7": {
           "costumes_callout": "Klik untuk mencipta kostum baru"
+        },
+        "frozen line": {
+          "run": "\nTekan \"Run\" untuk mencuba program anda!"
         }
       }
     }

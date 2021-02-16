@@ -6956,3 +6956,9 @@ is:
             cspSurvey:
               display_name: Könnun
           student_description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Kennslustund 14
+            lesson15:
+              name: Kennslustund 15
