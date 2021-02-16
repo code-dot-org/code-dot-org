@@ -742,8 +742,7 @@
       "key": "756542f6-213e-4c07-9442-d1cf97e1ff26",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "756542f6-213e-4c07-9442-d1cf97e1ff26",
@@ -770,7 +769,7 @@
       "key": "7085e9b6-059c-4118-8970-e38a5d4f5d01",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Programming",
+        "name": "Bridging Activity ",
         "duration": 10
       },
       "seeding_key": {
@@ -854,11 +853,23 @@
       "key": "27034f13-f0bf-41c0-a198-385c740be6ab",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "27034f13-f0bf-41c0-a198-385c740be6ab",
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "c6ddc263-f624-4d04-a67d-87cf4a90a03e",
+      "position": 5,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6ddc263-f624-4d04-a67d-87cf4a90a03e",
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2021"
@@ -879,11 +890,23 @@
       }
     },
     {
-      "key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1",
+      "key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
+        "name": "Main Activity ",
         "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1",
@@ -894,7 +917,7 @@
     },
     {
       "key": "e7277b3e-9177-451e-bef9-1e53d41b6131",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -908,7 +931,7 @@
     },
     {
       "key": "8667da08-85cd-4d60-a4f1-ff2608e4d240",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Assessment",
         "duration": 15
@@ -922,26 +945,12 @@
     },
     {
       "key": "af629d31-87ab-476d-a2d3-6da008802f3c",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "af629d31-87ab-476d-a2d3-6da008802f3c",
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "csf_binary",
         "script.name": "coursec-2021"
@@ -1956,8 +1965,7 @@
       "key": "7e3e24b8-f0bf-4e20-891a-c39951719f1d",
       "position": 2,
       "properties": {
-        "description": "This lesson has three new and important vocabulary words:\n\n - ***Bug*** - Say it with me - Buhh-g.\nSomething that is going wrong. An error.\n\n - ***Debugging*** - Say it with me: Dee-bug-ing.\nTo find and fix errors.\n\n - ***Persistence*** - Say it with me: Purr-siss-tense.\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n#### Say:\n\nDebugging is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, Scrat from Ice Age. If students aren't familiar with Scrat, show some video clips of the quirky squirrel running into trouble.",
-        "name": "Vocabulary"
+        "description": "####Vocabulary\nThis lesson has three new and important vocabulary words:\n\n - ***Bug*** - Say it with me - Buhh-g.\nSomething that is going wrong. An error.\n\n - ***Debugging*** - Say it with me: Dee-bug-ing.\nTo find and fix errors.\n\n - ***Persistence*** - Say it with me: Purr-siss-tense.\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n**Say:** *Debugging is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!*\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, Scrat from Ice Age. If students aren't familiar with Scrat, show some video clips of the quirky squirrel running into trouble."
       },
       "seeding_key": {
         "activity_section.key": "7e3e24b8-f0bf-4e20-891a-c39951719f1d",
@@ -1969,7 +1977,7 @@
       "position": 1,
       "properties": {
         "description": "Before letting the students start on the computer, remind them of the advantages of pair programming and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher.",
-        "name": "Online Puzzles\r"
+        "name": "Debugging in Maze"
       },
       "seeding_key": {
         "activity_section.key": "7b8e1781-6014-4299-b635-4dfc5639acb7",
@@ -1980,7 +1988,6 @@
       "key": "572ba4a8-86d4-4aca-9398-b1d9c44ae669",
       "position": 2,
       "properties": {
-        "name": "Debugging with the Step Button",
         "progression_name": "Debugging with the Step Button"
       },
       "seeding_key": {
@@ -1992,7 +1999,6 @@
       "key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2004,7 +2010,6 @@
       "key": "a7458755-70c4-4b60-b6ad-729468af507f",
       "position": 4,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2016,7 +2021,6 @@
       "key": "fa8dd0db-5da9-43b3-8150-d3618c14ac77",
       "position": 5,
       "properties": {
-        "name": "Predict",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2028,7 +2032,6 @@
       "key": "cc8916f2-7e82-4c1b-9e24-a5ce8ed5c3af",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2040,6 +2043,7 @@
       "key": "12488a0c-dc91-4ea4-bdc7-28e27145f721",
       "position": 7,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "12488a0c-dc91-4ea4-bdc7-28e27145f721",
@@ -2108,7 +2112,8 @@
       "key": "e2aaa332-2426-4380-b14b-cd681477be54",
       "position": 1,
       "properties": {
-        "description": "Laurel the Adventurer is looking to collect as much treasure as she can. Instruct the students to traverse the puzzle to collect whatever they can. Some levels will require you to only pick up one piece of treasure, but others will require you to pick up every piece of treasure. Pay attention to the instructions to know what to do!"
+        "description": "Laurel the Adventurer is looking to collect as much treasure as she can. Instruct the students to traverse the puzzle to collect whatever they can. Some levels will require you to only pick up one piece of treasure, but others will require you to pick up every piece of treasure. Pay attention to the instructions to know what to do!",
+        "name": "Collecting Treasure with Laurel"
       },
       "seeding_key": {
         "activity_section.key": "e2aaa332-2426-4380-b14b-cd681477be54",
@@ -2119,7 +2124,6 @@
       "key": "1cecd624-a69a-4e47-9a4b-066f9b8ff31d",
       "position": 2,
       "properties": {
-        "name": "The Collector",
         "progression_name": "The Collector"
       },
       "seeding_key": {
@@ -2131,7 +2135,6 @@
       "key": "e79bc3de-623c-4238-bdd7-6a6128f79ff8",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2143,7 +2146,6 @@
       "key": "e7869029-e0e5-4e0d-a6a8-b73fc0b01246",
       "position": 4,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2155,7 +2157,6 @@
       "key": "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2167,7 +2168,6 @@
       "key": "711fc36a-64ca-4fcc-b528-bbf00ed53da1",
       "position": 6,
       "properties": {
-        "name": "Predict",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2179,7 +2179,6 @@
       "key": "f56c1539-ed6d-4fcc-8ed4-1da5bf04d648",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2191,8 +2190,7 @@
       "key": "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1",
       "position": 8,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Lesson Extras"
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1",
@@ -2215,7 +2213,7 @@
       "key": "5ba69a56-1f3b-42fa-9be4-9463ae109962",
       "position": 1,
       "properties": {
-        "description": "Show the students one or both of the following videos as an introduction to angles:\r\n\r\n**Artist Introduction - Student Video** (1.5 minutes long)\r\n\r\n**Turns & Angles - Student Video** (2 minutes long)\r\n\r\nUse **Turns & Angles - Student Handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\r\n\r\n#### Ask:\r\n\r\nDiscuss the square and triangle shapes from the document.\r\n\r\n - How would you code a computer to draw that shape?\r\n - What order do the instructions need to be in?\r\n\r\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
+        "description": "Show the students one or both of the following videos as an introduction to angles:\n\n**Artist Introduction - Student Video** (1.5 minutes long)\n\n**Turns & Angles - Student Video** (2 minutes long)\n\nUse **Turns & Angles - Student Handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n*Discuss* the square and triangle shapes from the document.\n\n - How would you code a computer to draw that shape?\n - What order do the instructions need to be in?\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2227,8 +2225,8 @@
       "key": "3861a12f-7e0f-43bf-8d29-1d526a2c90b2",
       "position": 1,
       "properties": {
-        "description": "In this set of puzzles, the artist will no longer be constrained to 90 degree angles. Having physical protractors available can be help students better visualize the angles they need. Otherwise, the stage provides images of the angles as the student selects which angle to use. (Please note: Angle choices are limited to two inside of the dropdown menu, reducing the number of options students have to work through.)\r\n\r\nBefore sending the students to the computers to work on the puzzles, it might be beneficial to give a brief presentation of how to use the tools in this level. We recommend puzzle 5 as a good puzzle to show how to use the protractor online.",
-        "name": "Online Puzzles\r"
+        "description": "In this set of puzzles, the artist will no longer be constrained to 90 degree angles. Having physical protractors available can help students better visualize the angles they need. Otherwise, the stage provides images of the angles as the student selects which angle to use. (Please note: Angle choices are limited to two inside of the dropdown menu, reducing the number of options students have to work through.)\n\nBefore sending the students to the computers to work on the puzzles, it might be beneficial to give a brief presentation of how to use the tools in this level. We recommend puzzle 5 as a good puzzle to show how to use the protractor online.",
+        "name": "Creating Art with Code"
       },
       "seeding_key": {
         "activity_section.key": "3861a12f-7e0f-43bf-8d29-1d526a2c90b2",
@@ -2239,7 +2237,6 @@
       "key": "e054a7d9-9c28-49d4-886f-e9fd771d378e",
       "position": 2,
       "properties": {
-        "name": "Artist Intro with JR Hildebrand",
         "progression_name": "Artist Intro with JR Hildebrand"
       },
       "seeding_key": {
@@ -2251,7 +2248,6 @@
       "key": "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2263,8 +2259,13 @@
       "key": "16e320f6-0c67-4992-87a4-0ae6396a1080",
       "position": 4,
       "properties": {
-        "name": "Challenge",
-        "progression_name": "Challenge"
+        "progression_name": "Challenge",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The eighth puzzle asks the students to draw a 6 sided polygon. This might be challenging for some students. We recommend getting the students to try a few times, ask a peer, then ask the teacher for help. Below is an image that might be helpful for the students.\n\n![](https://curriculum.code.org/media/uploads/hexagon2018.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "16e320f6-0c67-4992-87a4-0ae6396a1080",
@@ -2275,7 +2276,6 @@
       "key": "2809e1fd-ca35-479d-b5d0-a183be995d73",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2287,7 +2287,6 @@
       "key": "a8b57be6-571d-451e-a6d2-5733d5b67bb4",
       "position": 6,
       "properties": {
-        "name": "Predict",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2299,6 +2298,7 @@
       "key": "8d556f84-689c-4046-bd40-a955e56ef116",
       "position": 7,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "8d556f84-689c-4046-bd40-a955e56ef116",
@@ -2309,7 +2309,6 @@
       "key": "6f25f1c7-8d45-430b-8b68-4bc2e44e3d98",
       "position": 8,
       "properties": {
-        "description": "The eighth puzzle asks the students to draw a 6 sided polygon. This might be challenging for some students. We recommend getting the students to try a few times, ask a peer, then ask the teacher for help. Below is an image that might be helpful for the students.\r\n\r\n![](https://curriculum.code.org/media/uploads/hexagon2018.png)"
       },
       "seeding_key": {
         "activity_section.key": "6f25f1c7-8d45-430b-8b68-4bc2e44e3d98",
@@ -2332,7 +2331,7 @@
       "key": "c288cda6-869c-440d-ae75-9b42d561ba84",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**The Copy Machine**\r\n\r\n- Give students two pieces of paper\r\n- On one sheet draw a simple image, using straight lines only.\r\n- On the second sheet draw instructions for recreating that image commands to move straight and turn at various angles.\r\n- Trade instruction sheets and attempt to recreate the image using only the provided instructions."
+        "description": "Use this activity to enhance student learning. It can be used as an outside of class activity or other enrichment.\n\n**The Copy Machine**\n\n- Give students two pieces of paper\n- On one sheet draw a simple image, using straight lines only.\n- On the second sheet draw instructions for recreating that image commands to move straight and turn at various angles.\n- Trade instruction sheets and attempt to recreate the image using only the provided instructions."
       },
       "seeding_key": {
         "activity_section.key": "c288cda6-869c-440d-ae75-9b42d561ba84",
@@ -2340,11 +2339,21 @@
       }
     },
     {
+      "key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
+      "position": 1,
+      "properties": {
+        "description": "###Shapes & Landscapes (45-60 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.8:** Recall information from experiences or gather information from provided sources to answer a question.\n\n- **CCSS.MATH.CONTENT.2.MD.A.3:** Estimate lengths using units of inches, feet, centimeters, and meters.\n- **NGSS.2-ESS2-1:** Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.\n\n[Shapes & Landscapes](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students are asked to design a dam to prevent future flooding. Using code, you will create a blueprint to show the local town council how your dam will look."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
+        "lesson_activity.key": "c6ddc263-f624-4d04-a67d-87cf4a90a03e"
+      }
+    },
+    {
       "key": "e55d7d37-4ddc-467f-9a9d-f02a31886572",
       "position": 1,
       "properties": {
-        "description": "This lesson has one new and important word:\r\n\r\nBinary - Say it with me: Bye-nair-ee \r\n\r\nA way of representing information using only two options",
-        "name": "Vocabulary\r"
+        "description": "####Vocabulary\n\nThis lesson has one new and important word:\n\nBinary - Say it with me: Bye-nair-ee \n\nA way of representing information using only two options"
       },
       "seeding_key": {
         "activity_section.key": "e55d7d37-4ddc-467f-9a9d-f02a31886572",
@@ -2364,12 +2373,23 @@
       }
     },
     {
+      "key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
+      "position": 1,
+      "properties": {
+        "name": "Binary Bracelets",
+        "progression_name": "Binary Bracelets - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
+        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e"
+      }
+    },
+    {
       "key": "9ef02596-61a9-4eee-b8b5-db290a9721d0",
       "position": 1,
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "You know your classroom best. As the teacher, decide if students should do this individually or if students should work in pairs or small groups.\r\n"
           }
@@ -2384,8 +2404,7 @@
       "key": "b312d8ee-86f9-478f-9a9d-539be3e6dd50",
       "position": 2,
       "properties": {
-        "description": "You do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\r\n\r\nDirections:\r\n\r\n- Find the first letter of your first name on the activity sheet.\r\n- Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected.\r\n- Cut the bracelet out.\r\n- Tape the bracelet around your wrist to wear it!\r\n- Share your bracelet with your classmates to see if they can figure out your letter.\r\n\r\n![](https://code.org/curriculum/course2/14/key.png)",
-        "name": "Binary Bracelets - Worksheet\r"
+        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\nDirections:\n\n- Find the first letter of your first name on the activity sheet.\n- Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected.\n- Cut the bracelet out.\n- Tape the bracelet around your wrist to wear it!\n- Share your bracelet with your classmates to see if they can figure out your letter.\n\n![](https://code.org/curriculum/course2/14/key.png)"
       },
       "seeding_key": {
         "activity_section.key": "b312d8ee-86f9-478f-9a9d-539be3e6dd50",
@@ -2398,7 +2417,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If your class has extra budget for materials, try doing this exercise using thread (or pipe cleaners) and beads to create the binary bracelets instead of pen and paper. You can provide any combination of two colors in beads to the students, but black and white tend to be easiest, given the way that the key is done.\r\n"
           }
@@ -2424,8 +2442,7 @@
       "key": "02945b11-d2db-485d-9002-9aff256a4ed4",
       "position": 1,
       "properties": {
-        "description": "- What else do you think is represented as binary inside of a computer?\r\n- How else might you represent binary instead of boxes that are filled or not filled?\r\n- What was your favorite part about that activity?",
-        "name": "Flash Chat: What did we learn?\r"
+        "description": "####Flash Chat: What did we learn?\n\n- What else do you think is represented as binary inside of a computer?\n- How else might you represent binary instead of boxes that are filled or not filled?\n- What was your favorite part about that activity?"
       },
       "seeding_key": {
         "activity_section.key": "02945b11-d2db-485d-9002-9aff256a4ed4",
@@ -2464,16 +2481,6 @@
       "seeding_key": {
         "activity_section.key": "3b646703-3875-4421-bdd8-865e9c2ace35",
         "lesson_activity.key": "af629d31-87ab-476d-a2d3-6da008802f3c"
-      }
-    },
-    {
-      "key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
-        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e"
       }
     },
     {
@@ -3663,7 +3670,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "My Robotic Friends - Unplugged Activity"
+        "progression": "My Robotic Friends - Unplugged Activity",
+        "level_keys": [
+          "MyRoboticFriends-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4023,7 +4033,7 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging with the Step Button",
         "level_keys": [
@@ -4049,7 +4059,7 @@
       "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4075,7 +4085,7 @@
       "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4101,7 +4111,7 @@
       "chapter": 19,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4127,7 +4137,7 @@
       "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4153,7 +4163,7 @@
       "chapter": 21,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4179,7 +4189,7 @@
       "chapter": 22,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4205,7 +4215,7 @@
       "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4232,7 +4242,7 @@
       "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -4258,7 +4268,7 @@
       "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4284,11 +4294,12 @@
       "chapter": 26,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_maze_debugging_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4309,11 +4320,12 @@
       "chapter": 27,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_maze_debugging_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4334,7 +4346,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Collector",
         "level_keys": [
@@ -4360,7 +4372,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4386,7 +4398,7 @@
       "chapter": 30,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4412,7 +4424,7 @@
       "chapter": 31,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4438,7 +4450,7 @@
       "chapter": 32,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4464,7 +4476,7 @@
       "chapter": 33,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4490,7 +4502,7 @@
       "chapter": 34,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4516,7 +4528,7 @@
       "chapter": 35,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4543,7 +4555,7 @@
       "chapter": 36,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4569,7 +4581,7 @@
       "chapter": 37,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4595,7 +4607,7 @@
       "chapter": 38,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4621,7 +4633,7 @@
       "chapter": 39,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -4647,7 +4659,7 @@
       "chapter": 40,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4673,9 +4685,9 @@
       "chapter": 41,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Extras",
+        "progression": "Challenge",
         "level_keys": [
           "courseC_collector_prog_challenge1_2021"
         ]
@@ -4699,9 +4711,9 @@
       "chapter": 42,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Extras",
+        "progression": "Challenge",
         "level_keys": [
           "courseC_collector_prog_challenge2_2021"
         ]
@@ -4725,7 +4737,7 @@
       "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Artist Intro with JR Hildebrand",
         "level_keys": [
@@ -4751,7 +4763,7 @@
       "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4777,7 +4789,7 @@
       "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4803,7 +4815,7 @@
       "chapter": 46,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4829,7 +4841,7 @@
       "chapter": 47,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4855,7 +4867,7 @@
       "chapter": 48,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4881,7 +4893,7 @@
       "chapter": 49,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4907,7 +4919,7 @@
       "chapter": 50,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4934,7 +4946,7 @@
       "chapter": 51,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4960,7 +4972,7 @@
       "chapter": 52,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -4986,11 +4998,12 @@
       "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5011,11 +5024,12 @@
       "chapter": 54,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge2a_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5036,11 +5050,12 @@
       "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "BinaryBracelets-Unplugged_2021"
-        ]
+        ],
+        "progression": "Binary Bracelets - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
