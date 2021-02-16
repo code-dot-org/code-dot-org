@@ -15,6 +15,9 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {getStore} from '../redux';
 
+// Coefficient for converting bytes to megabytes.
+const B_TO_MB_COEFFICIENT = 0.000000954;
+
 /**
  * Top-level React wrapper for WebLab
  */
@@ -37,7 +40,9 @@ class WebLabView extends React.Component {
     isInspectorOn: PropTypes.bool.isRequired,
     isFullScreenPreviewOn: PropTypes.bool.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-    shouldShowError: PropTypes.bool.isRequired
+    shouldShowError: PropTypes.bool.isRequired,
+    maxProjectCapacity: PropTypes.number.isRequired,
+    projectSize: PropTypes.number.isRequired
   };
 
   componentDidMount() {
@@ -48,7 +53,13 @@ class WebLabView extends React.Component {
     getStore().dispatch(changeShowError(false));
   }
 
+  bytesToMegabytes = bytes => {
+    return Math.round(bytes * B_TO_MB_COEFFICIENT);
+  };
+
   render() {
+    const {maxProjectCapacity, projectSize} = this.props;
+
     let headersHeight = styleConstants['workspace-headers-height'];
     let iframeHeightOffset =
       headersHeight + (this.props.isProjectLevel ? 0 : 70);
@@ -56,6 +67,12 @@ class WebLabView extends React.Component {
       position: 'absolute',
       width: '100%',
       height: `calc(100% - ${iframeHeightOffset}px)`
+    };
+    const sizeContainerStyles = {
+      float: 'left',
+      display: 'flex',
+      height: headersHeight,
+      alignItems: 'center'
     };
 
     return (
@@ -121,6 +138,34 @@ class WebLabView extends React.Component {
                         isRtl={false}
                         label={msg.showVersionsHeader()}
                       />
+                      {projectSize > 0 && maxProjectCapacity > 0 && (
+                        <div style={sizeContainerStyles}>
+                          <label
+                            htmlFor="weblab-project-capacity"
+                            style={{margin: '0 10px'}}
+                          >
+                            {weblabMsg.currentProjectCapacity({
+                              currentMegabytes: this.bytesToMegabytes(
+                                projectSize
+                              ),
+                              totalMegabytes: this.bytesToMegabytes(
+                                maxProjectCapacity
+                              )
+                            })}
+                          </label>
+                          <meter
+                            id="weblab-project-capacity"
+                            max={maxProjectCapacity}
+                            value={projectSize}
+                          >
+                            (
+                            {Math.round(
+                              (projectSize / maxProjectCapacity) * 100
+                            )}
+                            %)
+                          </meter>
+                        </div>
+                      )}
                       <PaneButton
                         iconClass="fa fa-repeat"
                         leftJustified={false}
@@ -201,5 +246,7 @@ export default connect(state => ({
   isInspectorOn: state.inspectorOn,
   isFullScreenPreviewOn: state.fullScreenPreviewOn,
   showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon
+    .showProjectTemplateWorkspaceIcon,
+  maxProjectCapacity: state.maxProjectCapacity,
+  projectSize: state.projectSize
 }))(WebLabView);
