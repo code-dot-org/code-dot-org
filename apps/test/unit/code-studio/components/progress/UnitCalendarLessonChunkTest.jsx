@@ -37,6 +37,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
     assert.propertyVal(wrapper.find('a').prop('style'), 'color', '#333');
   });
+
   it('is purple background with white text when is assessment and being hovered', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
@@ -62,6 +63,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
     assert.propertyVal(wrapper.find('a').prop('style'), 'color', 'white');
   });
+
   it('is teal border with grey text when is assessment', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
@@ -82,6 +84,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
     assert.propertyVal(wrapper.find('a').prop('style'), 'color', '#333');
   });
+
   it('is teal background with white text when is assessment and being hovered', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
@@ -107,6 +110,7 @@ describe('UnitCalendarLessonChunk', () => {
     );
     assert.propertyVal(wrapper.find('a').prop('style'), 'color', color.white);
   });
+
   it('has dashed left border when not isStart', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
@@ -126,6 +130,7 @@ describe('UnitCalendarLessonChunk', () => {
       'dashed'
     );
   });
+
   it('has dashed right border when not isEnd', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
@@ -145,6 +150,7 @@ describe('UnitCalendarLessonChunk', () => {
       'dashed'
     );
   });
+
   it('does not show title if isMajority false', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
@@ -162,6 +168,7 @@ describe('UnitCalendarLessonChunk', () => {
       wrapper.containsMatchingElement(<div>{sampleLessonChunk.title}</div>)
     ).to.be.false;
   });
+
   it('hides assessment icon if not assessment', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
@@ -184,6 +191,7 @@ describe('UnitCalendarLessonChunk', () => {
       'hidden'
     );
   });
+
   it('hides unplugged icon if not unplugged', () => {
     const wrapper = shallow(
       <UnitCalendarLessonChunk
