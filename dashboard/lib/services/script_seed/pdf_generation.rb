@@ -1,4 +1,5 @@
 require 'cdo/chat_client'
+require 'dynamic_config/dcdo'
 require 'pdf/conversion'
 
 module Services
@@ -7,6 +8,7 @@ module Services
     # as part of the Script seeding process.
     module PdfGeneration
       DEBUG = true
+      S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
 
       # standard generic boilerplate code for prepending class methods
       def self.prepended(base)
@@ -51,20 +53,29 @@ module Services
         #    indiscriminate, and will happily re-seed content even without
         #    changes. This is fine for database upserts, but we want to be more
         #    cautious with the more-expensive PDFs generation process.
+        #
+        # In addition, we support manually disabling this feature with DCDO
         def generate_pdfs?(script_data)
-          return false unless DEBUG || rack_env?(:staging)
+          return true if DEBUG
+
+          return false unless rack_env?(:staging)
           return false unless script_data['properties'].fetch('is_migrated', false)
+          return false if DCDO.get('disable_lesson_plan_pdf_generation', false)
+
           new_version = script_data['serialized_at']
           existing_version = Script.find_by(name: script_data['name']).seeded_at
-          return true if DEBUG
           new_version != existing_version
         end
 
         def generate_pdfs(script)
           ChatClient.log "Generating PDFs for #{script.name}"
 
+          pdf_dir = Dir.mktmpdir("pdf_generation")
+
           # Individual Lesson PDFs
-          script.lessons.select(&:has_lesson_plan).each(&method(:generate_lesson_pdf))
+          script.lessons.select(&:has_lesson_plan).each do |lesson|
+            generate_lesson_pdf(lesson, pdf_dir)
+          end
 
           # TODO: Script Overview PDFs
           #
@@ -79,16 +90,33 @@ module Services
           # content from CurriculumBuilder nor built views for displaying that
           # content. Once we do, we will be better prepared to figure out what
           # kind of PDF to construct here.
+          upload_generated_pdfs_to_s3(pdf_dir)
+
+          FileUtils.remove_entry_secure(pdf_dir) unless DEBUG
         end
 
-        def generate_lesson_pdf(lesson)
-          url = Rails.application.routes.url_helpers.lesson_url(id: lesson.id)
-          version_number = Time.parse(lesson.script.seeded_at).to_s(:number)
-          filename = "#{lesson.script.name}.#{version_number}.#{lesson.key}.pdf"
-          sanitized_filename = ActiveStorage::Filename.new(filename).sanitized
+        def generate_lesson_pdf(lesson, directory="/tmp/")
+          url = Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
 
-          ChatClient.log "Generating #{sanitized_filename.inspect} from #{url.inspect}"
-          PDF.generate_from_url(url, sanitized_filename)
+          version_number = Time.parse(lesson.script.seeded_at).to_s(:number)
+          subdirectory = File.join(lesson.script.name, version_number)
+          filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
+          FileUtils.mkdir_p(File.join(directory, subdirectory))
+
+          ChatClient.log "Generating #{File.join(subdirectory, filename).inspect} from #{url.inspect}"
+          PDF.generate_from_url(url, File.join(directory, subdirectory, filename))
+        end
+
+        def upload_generated_pdfs_to_s3(directory)
+          ChatClient.log "Uploading all generated PDFs to S3"
+          ChatClient.log "from local temporary directory #{directory.inspect}" if DEBUG
+          Dir.glob(File.join(directory, '**/*.pdf')).each do |filepath|
+            # Note that this "filename" includes subdirectories; this is fine
+            # only because we're uploading to S3.
+            data = File.read(filepath)
+            filename = filepath.delete_prefix(directory).delete_prefix('/')
+            AWS::S3.upload_to_bucket(S3_BUCKET, filename, data, no_random: true)
+          end
         end
       end
     end
