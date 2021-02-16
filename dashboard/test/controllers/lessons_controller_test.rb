@@ -754,6 +754,33 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
+  test 'cannot add duplicate level via lesson update' do
+    sign_in @levelbuilder
+    activity = create :lesson_activity, lesson: @lesson
+    create :activity_section, lesson_activity: activity
+
+    activity2 = create :lesson_activity, lesson: @lesson2
+    section2 = create :activity_section, lesson_activity: activity2
+    existing_level = create :maze, name: 'existing-level'
+    create :script_level, activity_section: section2, activity_section_position: 1, lesson: @lesson2, script: @script, levels: [existing_level]
+
+    @lesson.reload
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    activities_data.first[:activitySections].first[:scriptLevels].push(
+      activitySectionPosition: 1,
+      activeId: existing_level.id,
+      assessment: true,
+      levels: [{id: existing_level.id, name: existing_level.name}]
+    )
+
+    @update_params['activities'] = activities_data.to_json
+
+    error = assert_raises do
+      put :update, params: @update_params
+    end
+    assert_includes error.message, 'duplicate levels detected'
+  end
+
   test 'add anonymous survey level via lesson update' do
     sign_in @levelbuilder
 
