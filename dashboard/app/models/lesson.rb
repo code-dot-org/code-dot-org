@@ -208,7 +208,7 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
-    return lesson_path(id: id) if script.is_migrated
+    return script_lesson_path(script, self) if script.is_migrated
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -336,7 +336,7 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
-      lessonPath: lesson_path(id: id)
+      lessonPath: script_lesson_path(script, self)
     }
   end
 
@@ -364,7 +364,7 @@ class Lesson < ApplicationRecord
     {
       key: key,
       displayName: localized_name,
-      link: lesson_path(id: id),
+      link: script_lesson_path(script, self),
       position: relative_position
     }
   end
