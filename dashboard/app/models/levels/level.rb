@@ -809,7 +809,10 @@ class Level < ApplicationRecord
       teacherMarkdown: teacher_markdown,
       markdown: markdown,
       videoOptions: specified_autoplay_video&.summarize(false),
-      containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
+      containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
+      sublevels: try(:sublevels)&.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
+      status: SharedConstants::LEVEL_STATUS.not_tried,
+      thumbnailUrl: thumbnail_url
     }
   end
 

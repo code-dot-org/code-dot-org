@@ -29,6 +29,10 @@ export default class ProgressionDetails extends Component {
     previewingLevel: null
   };
 
+  handleBubbleClick = level => {
+    this.setState({previewingLevel: level});
+  };
+
   convertScriptLevelForProgression = scriptLevel => {
     const activeLevel =
       scriptLevel.levels.length > 1
@@ -36,7 +40,6 @@ export default class ProgressionDetails extends Component {
             return level.id === scriptLevel.activeId;
           })[0]
         : scriptLevel.levels[0];
-
     return {
       id: activeLevel.id,
       status: LevelStatus.not_tried,
@@ -50,7 +53,8 @@ export default class ProgressionDetails extends Component {
       isUnplugged: scriptLevel.display_as_unplugged,
       levelNumber: scriptLevel.levelNumber,
       bonus: scriptLevel.bonus,
-      level: activeLevel
+      level: activeLevel,
+      sublevels: scriptLevel.sublevels
     };
   };
 
@@ -73,7 +77,7 @@ export default class ProgressionDetails extends Component {
             )}
             disabled={false}
             selectedSectionId={null}
-            onBubbleClick={level => this.setState({previewingLevel: level})}
+            onBubbleClick={this.handleBubbleClick}
           />
         </div>
       </div>
