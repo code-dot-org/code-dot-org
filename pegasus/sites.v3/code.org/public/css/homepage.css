@@ -355,6 +355,25 @@ body.modal-open .supreme-container{
   margin: 10px 5px 0 0;
 }
 
+#homepage #actions .herolink-white {
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  margin-top: 24px
+}
+
+#homepage #actions .herolink-white i {
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 26px;
+}
+
+#homepage #actions .herolink-white span {
+  vertical-align: middle;
+}
+
 #homepage #actions .herohocbutton-solid-white {
   color: black;
   background-color: white;
