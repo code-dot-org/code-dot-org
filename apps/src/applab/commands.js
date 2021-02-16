@@ -19,6 +19,7 @@ import {
 } from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
@@ -2291,4 +2292,5 @@ function stopLoadingSpinnerFor(elementId) {
 // Include playSound, stopSound, etc.
 Object.assign(applabCommands, audioCommands);
 Object.assign(applabCommands, timeoutCommands);
+Object.assign(applabCommands, mlCommands);
 Object.assign(applabCommands, makerCommands);
