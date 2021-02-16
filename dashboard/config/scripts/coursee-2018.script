@@ -14,7 +14,7 @@ tts true
 is_course true
 
 lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
-lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends', has_lesson_plan: true
+lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF_2018'
 
 lesson 'Sequence in Maze', display_name: 'Coding with Comments', has_lesson_plan: true
@@ -32,7 +32,7 @@ level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
 level 'courseF_markdown_algorithms_end'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation_2018'
 
 lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: true
@@ -63,7 +63,7 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends', has_lesson_plan: true
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF_2018'
 
 lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops', has_lesson_plan: true
@@ -109,7 +109,7 @@ level 'courseD_artist_project2a_2018'
 level 'courseD_artist_project3a_2018'
 level 'courseD_artist_project4a_2018'
 
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'Conditionals_2018'
 
 lesson 'Conditionals', display_name: 'Conditionals with the Farmer', has_lesson_plan: true
@@ -130,7 +130,7 @@ level 'courseE_farmer_ramp12g_2018'
 level 'courseF_markdown_conditionals_end'
 
 lesson_group 'csf_e_2', display_name: 'Course E Content'
-lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: true
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: true, unplugged: true
 level 'courseE_unplugged_privateInformation_2018'
 
 lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game', has_lesson_plan: true
@@ -163,7 +163,7 @@ video_key_for_next_level 'starwars_blocks_congrats'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-lesson 'Functions: Songwriting', display_name: 'Songwriting', has_lesson_plan: true
+lesson 'Functions: Songwriting', display_name: 'Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters_2018'
 
 lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: true
@@ -196,7 +196,7 @@ level 'courseE_farmer_functions10a1_2018', challenge: true
 level 'courseE_farmer_functions13_2018'
 level 'courseE_farmer_functions11_predict_2018'
 
-lesson 'Copyright and Creativity', display_name: 'Digital Sharing', has_lesson_plan: true
+lesson 'Copyright and Creativity', display_name: 'Digital Sharing', has_lesson_plan: true, unplugged: true
 level 'courseE_unplugged_CnC_2018'
 
 lesson 'Functions in Artist', display_name: 'Functions with Artist', has_lesson_plan: true
@@ -280,9 +280,9 @@ lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_
 level 'Prepare for your presentation_2018', named: true
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
-lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true
+lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet_2018'
 
-lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'Crowdsourcing_2018'
 
