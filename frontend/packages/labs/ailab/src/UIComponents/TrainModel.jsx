@@ -7,6 +7,8 @@ import { readyToTrain } from "../redux";
 import { styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
+import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
 
 class TrainModel extends Component {
   static propTypes = {
@@ -50,6 +52,16 @@ class TrainModel extends Component {
             {this.props.modelSize && (
               <p>The trained model is {this.props.modelSize} KB big.</p>
             )}
+            <div style={styles.trainBot}>
+              <img
+                src={aiBotHead}
+                style={{
+                  ...styles.trainBotHead,
+                  ...false && styles.trainBotOpen
+                }}
+              />
+              <img src={aiBotBody} style={styles.trainBotBody} />
+            </div>
           </div>
         )}
       </div>

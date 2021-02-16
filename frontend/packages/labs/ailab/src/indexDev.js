@@ -1,5 +1,5 @@
-import { initAll } from "./index";
 import "./assetPath";
+import { initAll } from "./index";
 import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.

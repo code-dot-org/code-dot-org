@@ -17,6 +17,11 @@ export const TestDataLocations = {
   RANDOM: "random"
 };
 
+const labelColor = "rgb(254, 96, 3)"; // was 186
+const labelColorSemi = "rgba(254, 96, 3, 0.4)";
+const featureColor = "rgb(75, 155, 213)";
+const featureColorSemi = "rgba(75, 155, 213, 04)";
+
 export const styles = {
   app: {
     userSelect: "none",
@@ -93,7 +98,7 @@ export const styles = {
 
   subPanel: {
     padding: 15,
-    backgroundColor: "rgb(180,180,180)",
+    backgroundColor: "rgb(206, 206, 206)",
     borderRadius: 5,
     //marginTop: 20,
     //border: "solid 1px white",
@@ -165,7 +170,7 @@ export const styles = {
     padding: 10,
     boxSizing: "border-box",
     borderRadius: 5,
-    backgroundColor: "rgb(180,180,180)",
+    backgroundColor: "rgb(206, 206, 206)",
     //border: "solid 1px white"
   },
 
@@ -174,11 +179,11 @@ export const styles = {
     textAlign: "right"
   },
   dataDisplayHeaderLabelSelected: {
-    backgroundColor: "rgba(186, 168, 70)",
+    backgroundColor: labelColor,
     color: "yellow"
   },
   dataDisplayHeaderFeatureSelected: {
-    backgroundColor: "rgb(70, 186, 168)",
+    backgroundColor: featureColor,
     color: "yellow"
   },
   dataDisplayHeaderSelected: {
@@ -186,11 +191,11 @@ export const styles = {
     backgroundColor: "black"
   },
   dataDisplayHeaderLabelUnselected: {
-    backgroundColor: "rgba(186, 168, 70)",
+    backgroundColor: labelColor,
     color: "white"
   },
   dataDisplayHeaderFeatureUnselected: {
-    backgroundColor: "rgb(70, 186, 168)",
+    backgroundColor: featureColor,
     color: "white"
   },
   dataDisplayHeaderUnselected: {
@@ -203,11 +208,11 @@ export const styles = {
     textAlign: "right"
   },
   dataDisplayCellLabelSelected: {
-    backgroundColor: "rgba(186, 168, 70, 0.4)",
+    backgroundColor: labelColorSemi,
     color: "yellow"
   },
   dataDisplayCellFeatureSelected: {
-    backgroundColor: "rgb(70, 186, 168)",
+    backgroundColor: featureColor,
     color: "yellow"
   },
   dataDisplayCellSelected: {
@@ -215,10 +220,10 @@ export const styles = {
     backgroundColor: "grey"
   },
   dataDisplayCellLabelUnselected: {
-    backgroundColor: "rgba(186, 168, 70, 0.4)"
+    backgroundColor: labelColorSemi
   },
   dataDisplayCellFeatureUnselected: {
-    backgroundColor: "rgb(70, 186, 168)"
+    backgroundColor: featureColor
   },
   dataDisplayCellUnselected: {},
 
@@ -298,16 +303,16 @@ export const styles = {
   },
 
   predictButton: {
-    backgroundColor: "rgb(186, 168, 70)"
+    backgroundColor: labelColor
   },
   predictBasedButton: {
-    backgroundColor: "rgb(70, 186, 168)"
+    backgroundColor: featureColor
   },
   dontPredictButton: {
-    backgroundColor: "rgb(186, 168, 70)"
+    backgroundColor: labelColor
   },
   dontPredictBasedButton: {
-    backgroundColor: "rgb(70, 186, 168)"
+    backgroundColor: featureColor
   },
 
   statement: {
@@ -315,7 +320,7 @@ export const styles = {
   },
 
   statementLabel: {
-    color: "rgb(186, 168, 70)",
+    color: labelColor,
     border: "dotted 1px grey",
     paddingLeft: 4,
     paddingRight: 4,
@@ -323,7 +328,7 @@ export const styles = {
   },
 
   statementFeature: {
-    color: "rgb(70, 186, 168)",
+    color: featureColor,
     border: "dotted 1px grey",
     paddingLeft: 4,
     paddingRight: 4,
@@ -347,10 +352,33 @@ export const styles = {
   },
 
   selectLabelText: {
-    color: "rgb(186, 168, 70)"
+    color: labelColor
   },
 
   selectFeaturesText: {
-    color: "rgb(70, 186, 168)"
-  }
+    color: featureColor
+  },
+
+  trainBot: {
+    position: 'relative',
+    width: '20%'
+  },
+  trainBotHead: {
+    transition: 'transform 500ms',
+    left: '3%',
+    width: '43%',
+    top: '0%',
+    position: 'absolute',
+    direction: 'ltr'
+  },
+  trainBotOpen: {
+    transform: 'rotate(90deg)',
+    transformOrigin: 'bottom right',
+    direction: 'ltr'
+  },
+  trainBotBody: {
+    width: '49%',
+    marginTop: '30%',
+    direction: 'ltr'
+  },
 };

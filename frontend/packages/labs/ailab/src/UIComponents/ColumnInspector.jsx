@@ -79,7 +79,7 @@ class ColumnInspector extends Component {
     return (
       <div id="column-inspector">
         {currentColumnData && (
-          <div style={styles.validationMessagesLight}>
+          <div style={styles.rightPanel}>
             <div onClick={this.onClose} style={styles.popupClose}>
               <FontAwesomeIcon icon={faTimes} />
             </div>
