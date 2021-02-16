@@ -4,7 +4,7 @@ hideable_lessons true
 supported_locales ["de-DE"]
 curriculum_umbrella 'CSF'
 
-lesson 'Introduction to Computer Science', display_name: 'Introduction to Computer Science', has_lesson_plan: false
+lesson 'Introduction to Computer Science', display_name: 'Introduction to Computer Science', has_lesson_plan: false, unplugged: true
 concepts 'sequence'
 level 'blockly:Unplug1:u_1_1'
 
@@ -93,13 +93,13 @@ concepts 'if_else', 'loop_until'
 level_concept_difficulty '{"sequencing":5,"repeat_until_while":4,"conditionals":5}'
 level 'blockly:Maze:2_19'
 
-lesson 'Computational Thinking', display_name: 'Computational Thinking', has_lesson_plan: false
+lesson 'Computational Thinking', display_name: 'Computational Thinking', has_lesson_plan: false, unplugged: true
 skin 'pvz'
 concepts 'sequence'
 level_concept_difficulty '{"sequencing":5,"repeat_until_while":4,"conditionals":5}'
 level 'blockly:Unplug2:u_2_1'
 
-lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: false
+lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: false, unplugged: true
 skin 'pvz'
 concepts 'sequence', 'function', 'parameters'
 level_concept_difficulty '{"sequencing":5,"repeat_until_while":4,"conditionals":5}'
@@ -147,7 +147,7 @@ concepts 'sequence'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1}'
 level 'blockly:Artist:1_10'
 
-lesson 'Algorithms', display_name: 'Algorithms', has_lesson_plan: false
+lesson 'Algorithms', display_name: 'Algorithms', has_lesson_plan: false, unplugged: true
 skin 'artist'
 concepts 'sequence'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1}'
@@ -199,7 +199,7 @@ concepts 'sequence', 'loop_times'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1}'
 level 'blockly:Artist2:4_11'
 
-lesson 'Functions', display_name: 'Functions', has_lesson_plan: false
+lesson 'Functions', display_name: 'Functions', has_lesson_plan: false, unplugged: true
 skin 'artist'
 concepts 'function'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1}'
@@ -251,7 +251,7 @@ concepts 'if', 'loop_while'
 level_concept_difficulty '{"sequencing":4,"repeat_until_while":4,"conditionals":3}'
 level 'blockly:Farmer:karel_1_11'
 
-lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false, unplugged: true
 skin 'farmer_night'
 concepts 'if'
 level_concept_difficulty '{"sequencing":4,"repeat_until_while":4,"conditionals":3}'
@@ -303,7 +303,7 @@ concepts 'sequence'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1,"for_loops":1,"variables":1,"functions":1}'
 level 'blockly:Artist3:2_10'
 
-lesson 'Song Writing', display_name: 'Song Writing', has_lesson_plan: false
+lesson 'Song Writing', display_name: 'Song Writing', has_lesson_plan: false, unplugged: true
 skin 'artist_zombie'
 concepts 'function'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1,"for_loops":1,"variables":1,"functions":1}'
@@ -351,7 +351,7 @@ concepts 'if', 'function', 'loop_while'
 level_concept_difficulty '{"sequencing":3,"repeat_loops":3,"functions":1,"conditionals":5}'
 level 'blockly:Farmer2:karel_2_10'
 
-lesson 'Abstraction', display_name: 'Abstraction', has_lesson_plan: false
+lesson 'Abstraction', display_name: 'Abstraction', has_lesson_plan: false, unplugged: true
 skin 'farmer_night'
 concepts 'sequence'
 level_concept_difficulty '{"sequencing":3,"repeat_loops":3,"functions":1,"conditionals":5}'
@@ -399,7 +399,7 @@ concepts 'sequence'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1,"for_loops":1,"variables":1,"functions":1,"functions_with_params":1}'
 level 'blockly:Artist4:3_10'
 
-lesson 'Relay Programming', display_name: 'Relay Programming', has_lesson_plan: false
+lesson 'Relay Programming', display_name: 'Relay Programming', has_lesson_plan: false, unplugged: true
 skin 'artist_zombie'
 concepts 'sequence'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1,"for_loops":1,"variables":1,"functions":1,"functions_with_params":1}'
@@ -443,7 +443,7 @@ concepts 'parameters'
 level_concept_difficulty '{"sequencing":5,"debugging":4,"for_loops":4,"functions":3}'
 level 'blockly:Farmer3:karel_debug_function_3'
 
-lesson 'The Internet', display_name: 'The Internet', has_lesson_plan: false
+lesson 'The Internet', display_name: 'The Internet', has_lesson_plan: false, unplugged: true
 skin 'farmer'
 concepts 'sequence'
 level_concept_difficulty '{"sequencing":5,"debugging":4,"for_loops":4,"functions":3}'
@@ -475,7 +475,7 @@ concepts 'sequence'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1,"for_loops":1,"variables":1,"functions":1,"conditionals":1}'
 level 'blockly:Artist5:5_6'
 
-lesson 'Wrap-up', display_name: 'Wrap-up', has_lesson_plan: false
+lesson 'Wrap-up', display_name: 'Wrap-up', has_lesson_plan: false, unplugged: true
 skin 'artist_zombie'
 concepts 'sequence'
 level_concept_difficulty '{"sequencing":1,"repeat_loops":1,"for_loops":1,"variables":1,"functions":1,"conditionals":1}'
