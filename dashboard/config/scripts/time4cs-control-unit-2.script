@@ -4,11 +4,11 @@ lesson_extras_available true
 editor_experiment 'broward'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: false
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: false, unplugged: true
 level 'Crowdsourcing-Unplugged'
 
 lesson_group 'csf_conditionals', display_name: 'Conditionals'
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: false
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: false, unplugged: true
 level 'ConditionalsWithCards-Unplugged'
 
 lesson_group 'csf_nested_loops', display_name: 'Nested Loops'
@@ -58,7 +58,7 @@ level 'courseD_artist_project3a_2019', progression: 'Mini-Project: Snowflake #2'
 level 'courseD_artist_project4a_2019', progression: 'Mini-Project: Snowflake #2'
 
 lesson_group 'csf_functions', display_name: 'Functions'
-lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: false
+lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: false, unplugged: true
 level 'Songwriting-Unplugged'
 
 lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: false

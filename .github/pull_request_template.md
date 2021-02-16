@@ -1,49 +1,56 @@
 <!--
-  Your description goes here: A summary of the change, including any relevant motivation and context.
-
-  If relevant, include a description both of the existing behavior and of the new behavior.
+  A summary of the change, including any relevant background, motivation, and context.
+  If relevant, include a description, screenshots, and/or video of the existing and new behavior.
 -->
-
-<!--
-  Other aspects to consider. uncomment and add detail for any that seem necessary:
--->
-
-<!-- ### Background -->
-<!-- ### Privacy -->
-<!--
-1.	Does the Project involve the collection, use or sharing of new Personal Data?
-
-2.	Does the Project involve a new or changed use or sharing of existing Personal Data?
--->
-<!-- ### Security -->
-<!--
-Link to Jira Task where sensitive security issues are discussed privately.
--->
-<!-- ### Caching -->
-<!-- ### Deployment strategy -->
-<!-- ### Future work -->
 
 ## Links
 
 <!--
-  Any relevant links to external resources; ie, specification documents, jira
-  items, related PRs, honeybadger errors, etc
+  Links to relevant external resources; ie, specification documents, Jira tickets, related PRs, Honeybadger errors, etc.
 -->
 
-- [spec]()
-- [jira]()
+<!--
+- spec: []()
+- jira ticket: []()
+-->
 
 ## Testing story
 
 <!--
   Does your change include appropriate tests?
-
-  If so, please describe how the tests included in this PR are sufficient
-
+  If so, please describe how the tests included in this PR are sufficient.
   If not, please explain why this change does not need to be tested.
 -->
 
-# Reviewer Checklist:
+<!-- Other aspects to consider. Delete any sections that are not relevant to your change. -->
+
+## Deployment strategy
+
+## Follow-up work
+
+<!--
+  List (ideally with Jira links) any clean-up or technical debt that will be addressed in future work.
+-->
+
+## Privacy
+
+<!--
+  1.	Does this change involve the collection, use, or sharing of new Personal Data?
+  2.	Does this change involve a new or changed use or sharing of existing Personal Data?
+-->
+
+## Security
+
+<!-- Link to Jira task(s) where sensitive security issues are discussed privately. -->
+
+## Caching
+
+## PR Checklist:
+
+<!--
+  The final step! Before you create your PR, double-check that everything is in order.
+  Change [ ] to [X] during creation to check boxes.
+-->
 
 - [ ] Tests provide adequate coverage
 - [ ] Privacy and Security impacts have been assessed
