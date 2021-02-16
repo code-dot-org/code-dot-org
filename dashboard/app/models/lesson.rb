@@ -299,7 +299,7 @@ class Lesson < ApplicationRecord
       duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
       assessment: !!assessment,
       unplugged: unplugged,
-      url: lesson_path(id: id)
+      url: script_lesson_path(script, self)
     }
   end
 
