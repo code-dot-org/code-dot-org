@@ -52,6 +52,8 @@ lesson 'Digital Sharing', display_name: 'Digital Sharing', has_lesson_plan: true
 level 'DigitalSharing-Unplugged_2021'
 
 lesson_group 'ramp_up', display_name: 'Loops'
+lesson 'lesson-4', display_name: 'Context-Settng Lesson', has_lesson_plan: true
+
 lesson 'Programming and Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2021', progression: 'Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_2021', progression: 'Practice'

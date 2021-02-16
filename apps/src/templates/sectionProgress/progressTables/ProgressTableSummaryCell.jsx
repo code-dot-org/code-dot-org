@@ -55,7 +55,11 @@ export default class ProgressTableSummaryCell extends React.Component {
     };
 
     return (
-      <div style={boxStyle} onClick={this.props.onSelectDetailView}>
+      <div
+        style={boxStyle}
+        onClick={this.props.onSelectDetailView}
+        className="uitest-summary-cell"
+      >
         <div style={incompleteStyle} />
         <div style={imperfectStyle} />
         <div style={completedStyle} />

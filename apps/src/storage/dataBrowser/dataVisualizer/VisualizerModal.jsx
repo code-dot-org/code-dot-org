@@ -118,9 +118,14 @@ class VisualizerModal extends React.Component {
     return columns.filter(column => isColumnNumeric(records, column));
   });
 
-  getValuesForFilterColumn = memoize((records, column) => {
+  getValuesForFilterColumn = memoize((records, column, isNumeric) => {
     let values = [];
     values = Array.from(new Set(records.map(record => record[column])));
+    if (isNumeric) {
+      values.sort((a, b) => a - b); // Sort numerically
+    } else {
+      values.sort(); // Sort alphabetically
+    }
     values = values.map(x => (typeof x === 'string' ? `"${x}"` : `${x}`));
 
     return values;
@@ -252,7 +257,7 @@ class VisualizerModal extends React.Component {
       ChartType.SCATTER_PLOT,
       ChartType.CROSS_TAB
     ].includes(this.state.chartType);
-    const displayNumericFilters = numericColumns.includes(
+    const isFilterColumnNumeric = numericColumns.includes(
       this.state.filterColumn
     );
     return (
@@ -400,7 +405,7 @@ class VisualizerModal extends React.Component {
                 }
                 inlineLabel
               />
-              {displayNumericFilters && (
+              {isFilterColumnNumeric && (
                 <DropdownField
                   displayName={msg.by()}
                   options={[
@@ -422,10 +427,11 @@ class VisualizerModal extends React.Component {
                 />
               )}
               <DropdownField
-                displayName={displayNumericFilters ? '' : msg.by()}
+                displayName={isFilterColumnNumeric ? '' : msg.by()}
                 options={this.getValuesForFilterColumn(
                   parsedRecords,
-                  this.state.filterColumn
+                  this.state.filterColumn,
+                  isFilterColumnNumeric
                 )}
                 disabledOptions={[]}
                 value={this.state.filterValue}
