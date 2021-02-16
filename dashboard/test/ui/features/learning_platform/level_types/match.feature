@@ -2,6 +2,7 @@ Feature: Playing match levels
 
 Background:
   Given I am on "http://studio.code.org/s/course1/stage/14/puzzle/13?noautoplay=true"
+  And I dismiss the login reminder
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
