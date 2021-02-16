@@ -291,6 +291,7 @@ namespace :seed do
   # Seeds Standards
   timed_task standards: :environment do
     Framework.seed_all
+    StandardCategory.seed_all
     Standard.seed
   end
 
