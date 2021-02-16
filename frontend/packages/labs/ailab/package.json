@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-playground",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
