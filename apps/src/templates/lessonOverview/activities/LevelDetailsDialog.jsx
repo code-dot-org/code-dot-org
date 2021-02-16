@@ -39,18 +39,22 @@ export default class LevelDetailsDialog extends Component {
     }
   };
 
+  loadVideo() {
+    const {scriptLevel} = this.props;
+    const level = scriptLevel.level;
+    createVideoWithFallback(
+      $(ReactDOM.findDOMNode(this.video)),
+      level.videoOptions,
+      VIDEO_WIDTH,
+      VIDEO_HEIGHT,
+      false,
+      false
+    );
+  }
+
   componentDidMount() {
     if (this.video) {
-      const {scriptLevel} = this.props;
-      const level = scriptLevel.level;
-      createVideoWithFallback(
-        $(ReactDOM.findDOMNode(this.video)),
-        level.videoOptions,
-        VIDEO_WIDTH,
-        VIDEO_HEIGHT,
-        false,
-        false
-      );
+      this.loadVideo();
     }
   }
 
