@@ -5,6 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
+    "is_project_level": "true"
   },
   "published": true,
   "notes": ""
