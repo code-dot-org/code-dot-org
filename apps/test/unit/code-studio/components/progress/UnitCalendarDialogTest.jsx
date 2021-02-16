@@ -21,6 +21,7 @@ describe('UnitCalendarDialog', () => {
       )
     ).to.be.true;
   });
+
   it('sets the provided weeklyInstructionalMinutes as default if it is already in the option list', () => {
     const wrapper = shallow(
       <UnitCalendarDialog
@@ -44,6 +45,7 @@ describe('UnitCalendarDialog', () => {
       )
     ).to.be.true;
   });
+
   it('adds the provided weeklyInstructionalMinutes to the dropdown and sets it as default', () => {
     const wrapper = shallow(
       <UnitCalendarDialog
@@ -64,6 +66,25 @@ describe('UnitCalendarDialog', () => {
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={20} />
+      )
+    ).to.be.true;
+  });
+
+  it('changes weeklyInstructionalMinutes when the dropdown value changes', () => {
+    const wrapper = shallow(
+      <UnitCalendarDialog
+        isOpen
+        handleClose={() => console.log('hello')}
+        lessons={testLessons}
+        weeklyInstructionalMinutes={45}
+      />
+    );
+    expect(wrapper.state('instructionalMinutes')).to.equal(45);
+    wrapper.find('select').simulate('change', {target: {value: 90}});
+    expect(wrapper.state('instructionalMinutes')).to.equal(90);
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={90} />
       )
     ).to.be.true;
   });
