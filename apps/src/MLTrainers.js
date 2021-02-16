@@ -31,11 +31,15 @@ modelData = {
     feature3: value
   }
 }
-
-  value in testData is the converted algorithm-ready number, not the string
-
-  TODO: convert string data in testValues using the featureNumberKey
 */
+
+function convertTestValue(featureNumberKey, feature, value) {
+  const convertedValue = Object.keys(featureNumberKey).includes(feature)
+    ? featureNumberKey[feature][value]
+    : value;
+  return parseInt(convertedValue);
+}
+
 export function predict(modelData) {
   let model;
   if (KNNTrainers.includes(modelData.selectedTrainer)) {
@@ -46,7 +50,11 @@ export function predict(modelData) {
     return 'Error: unknown trainer';
   }
   const testValues = modelData.selectedFeatures.map(feature =>
-    parseInt(modelData.testData[feature])
+    convertTestValue(
+      modelData.featureNumberKey,
+      feature,
+      modelData.testData[feature]
+    )
   );
   const rawPrediction = model.predict(testValues);
   const prediction = Object.keys(modelData.featureNumberKey).includes(
