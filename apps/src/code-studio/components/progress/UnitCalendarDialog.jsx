@@ -75,7 +75,7 @@ export default class UnitCalendarDialog extends Component {
         <h2>{i18n.weeklyLessonLayout()}</h2>
         <div style={styles.minutesPerWeekWrapper}>
           <div style={styles.minutesPerWeekDescription}>
-            {i18n.weeklyLessonLayoutDescription()}
+            {i18n.instructionalMinutesPerWeek()}
           </div>
           <select
             onChange={e =>
