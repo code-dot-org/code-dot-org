@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_001501) do
+ActiveRecord::Schema.define(version: 2021_02_16_011526) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1559,6 +1559,18 @@ ActiveRecord::Schema.define(version: 2021_02_12_001501) do
     t.datetime "updated_at", null: false
     t.index ["stage_id"], name: "index_stages_standards_on_stage_id"
     t.index ["standard_id"], name: "index_stages_standards_on_standard_id"
+  end
+
+  create_table "standard_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "shortcode", null: false
+    t.integer "framework_id", null: false
+    t.integer "parent_category_id"
+    t.string "category_type", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["framework_id", "shortcode"], name: "index_standard_categories_on_framework_id_and_shortcode", unique: true
+    t.index ["parent_category_id"], name: "index_standard_categories_on_parent_category_id"
   end
 
   create_table "standards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
