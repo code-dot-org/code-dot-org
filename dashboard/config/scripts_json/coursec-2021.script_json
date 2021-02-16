@@ -134,7 +134,8 @@
         "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online.",
         "purpose": "Common Sense Education created this lesson to teach students about meanness and what they should do if they encounter it online.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Bring a stuffed animal or toy to class.",
-        "creative_commons_license": "Creative Commons BY-NC-ND"
+        "creative_commons_license": "Creative Commons BY-NC-ND",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Putting a STOP to Online Meanness",
@@ -154,7 +155,8 @@
         "student_overview": "In this lesson, you'll learn about how passwords protect your information, and how to make a good password.",
         "purpose": "Common Sense Education created this lesson to teach students about how strong passwords can help protect their privacy.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Prepare writing paper or notebooks for students.",
-        "creative_commons_license": "Creative Commons BY-NC-ND"
+        "creative_commons_license": "Creative Commons BY-NC-ND",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Password Power-Up",
@@ -174,7 +176,8 @@
         "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.",
         "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the programming that students will do throughout the course as they learn the importance of defining a clearly communicated algorithm.",
         "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\r\n - Display the symbols from **My Robotic Friends - Symbol Key** where students can reference throughout the lesson.\r\n - (Optional) Print out one **My Robotic Friends - Cup Stacking Ideas** per group of 2-3 students.\r\n - Make sure each student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Programming: My Robotic Friends",
@@ -274,7 +277,8 @@
         "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
         "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning _binary_, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
         "preparation": "- (Optional) Watch the \"Lesson in Action\" video.\r\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\r\n- Print one **Binary Bracelets - Worksheet** and one **Binary Bracelets - Assessment** per student.\r\n- Make sure every student has a journal.\r\n- (Optional) Write a short message on the board in binary.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Binary Bracelets",
@@ -294,7 +298,8 @@
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
         "preparation": " - Make sure each student has a journal.\r\n - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 4 students.\r\n - Display the symbols where students can reference throughout the lesson.\r\n - (Optional) Print out one image pack per group of 4 students.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Loops: My Loopy Robotic Friends",
@@ -394,7 +399,8 @@
         "student_overview": "Play a fun game to learn about events. ",
         "purpose": "Today, students will learn to distinguish events and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this _event_, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
         "preparation": "- Print or display the Event Controller.\r\n- Print one assessment for each student.\r\n- Make sure every student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
@@ -454,7 +460,8 @@
         "student_overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
         "purpose": "Computers were created to help process data. There is an increasing amount of data in the world, so being able to read and analyze it is important.  This lesson is here to make sure students have the basic experience of collecting, visualizing, and analyzing a simple set of data.",
         "preparation": "* Print out one **Graphing Data from Play Lab** worksheet for each student.\r\n* Try today's lesson on Code Studio. This is meant to be used as a tool for today's activity. Be prepared to project it to the class, or otherwise allow students to visit it on their own computers.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Picturing Data",
@@ -3881,10 +3888,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Maze Intro: Programming with Blocks",
         "level_keys": [
           "courseC_video_maze_2021"
-        ]
+        ],
+        "progression": "Maze Intro: Programming with Blocks"
       },
       "named_level": null,
       "bonus": null,
@@ -3907,10 +3914,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3933,10 +3940,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3959,10 +3966,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3985,10 +3992,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4011,10 +4018,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4037,10 +4044,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4063,11 +4070,11 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "courseC_maze_programming7_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -4090,10 +4097,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming8_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4116,10 +4123,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
         "level_keys": [
           "courseC_maze_programming8_predict1_2021"
-        ]
+        ],
+        "progression": "Predict"
       },
       "named_level": null,
       "bonus": null,
@@ -4142,10 +4149,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4218,10 +4225,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Debugging with the Step Button",
         "level_keys": [
           "courseC_video_debugging_2021"
-        ]
+        ],
+        "progression": "Debugging with the Step Button"
       },
       "named_level": null,
       "bonus": null,
@@ -4244,10 +4251,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4270,10 +4277,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4296,10 +4303,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4322,10 +4329,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4348,10 +4355,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4374,10 +4381,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4400,11 +4407,11 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "courseC_maze_debugging7_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -4427,10 +4434,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
         "level_keys": [
           "courseC_maze_debugging8_predict1_2021"
-        ]
+        ],
+        "progression": "Predict"
       },
       "named_level": null,
       "bonus": null,
@@ -4453,10 +4460,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4529,10 +4536,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "The Collector",
         "level_keys": [
           "courseC_video_collector_2021"
-        ]
+        ],
+        "progression": "The Collector"
       },
       "named_level": null,
       "bonus": null,
@@ -4555,10 +4562,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4581,10 +4588,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4607,10 +4614,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4633,10 +4640,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4659,10 +4666,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4685,10 +4692,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4711,11 +4718,11 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "courseC_collector_prog7_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -4738,10 +4745,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog8_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4764,10 +4771,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4790,10 +4797,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "grade2_collector_A_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4816,10 +4823,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
         "level_keys": [
           "grade2_collector_A_predict1_2021"
-        ]
+        ],
+        "progression": "Predict"
       },
       "named_level": null,
       "bonus": null,
@@ -4842,10 +4849,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "grade2_collector_10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4868,10 +4875,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Extras",
         "level_keys": [
           "courseC_collector_prog_challenge1_2021"
-        ]
+        ],
+        "progression": "Lesson Extras"
       },
       "named_level": null,
       "bonus": true,
@@ -4894,10 +4901,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Extras",
         "level_keys": [
           "courseC_collector_prog_challenge2_2021"
-        ]
+        ],
+        "progression": "Lesson Extras"
       },
       "named_level": null,
       "bonus": true,
@@ -4920,10 +4927,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Artist Intro with JR Hildebrand",
         "level_keys": [
           "courseC_video_artist_2021"
-        ]
+        ],
+        "progression": "Artist Intro with JR Hildebrand"
       },
       "named_level": null,
       "bonus": null,
@@ -4946,10 +4953,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4972,10 +4979,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4998,10 +5005,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5024,10 +5031,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5050,10 +5057,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5076,10 +5083,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5102,11 +5109,11 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "courseC_artist_prog7_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -5129,10 +5136,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog8_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5155,10 +5162,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
         "level_keys": [
           "courseC_artist_prog6_predict1_2021"
-        ]
+        ],
+        "progression": "Predict"
       },
       "named_level": null,
       "bonus": null,
@@ -5281,10 +5288,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Programming with Rey and BB-8",
         "level_keys": [
           "bb8_skinOverview_C-F_video_2021"
-        ]
+        ],
+        "progression": "Programming with Rey and BB-8"
       },
       "named_level": null,
       "bonus": null,
@@ -5307,10 +5314,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5333,10 +5340,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
         "level_keys": [
           "courseC_starWars_loops1_predict1_2021"
-        ]
+        ],
+        "progression": "Predict"
       },
       "named_level": null,
       "bonus": null,
@@ -5359,10 +5366,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Repeat Blocks with BB-8",
         "level_keys": [
           "bb8_loops_C-F_video_2021"
-        ]
+        ],
+        "progression": "Repeat Blocks with BB-8"
       },
       "named_level": null,
       "bonus": null,
@@ -5385,10 +5392,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5411,10 +5418,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5437,10 +5444,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5463,10 +5470,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5489,10 +5496,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops7_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5515,11 +5522,11 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "courseC_starWars_loops8_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -5542,10 +5549,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5568,10 +5575,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5594,10 +5601,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
         "level_keys": [
           "courseC_starWars_loops10_predict2_2021"
-        ]
+        ],
+        "progression": "Predict"
       },
       "named_level": null,
       "bonus": null,
@@ -5620,10 +5627,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5696,10 +5703,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "The Harvester",
         "level_keys": [
           "harvester_skinOverview_video_2021"
-        ]
+        ],
+        "progression": "The Harvester"
       },
       "named_level": null,
       "bonus": null,
@@ -5722,10 +5729,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5748,10 +5755,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5774,10 +5781,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5800,10 +5807,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5826,10 +5833,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops6_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5852,10 +5859,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops7_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5878,10 +5885,10 @@
       "activity_section_position": 7,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5904,11 +5911,11 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "courseC_harvester_loops8_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -5931,10 +5938,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5957,10 +5964,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5983,10 +5990,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6009,10 +6016,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
         "level_keys": [
           "courseC_harvester_loops11_predict1_2021"
-        ]
+        ],
+        "progression": "Predict"
       },
       "named_level": null,
       "bonus": null,
@@ -6085,10 +6092,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Move to Sheep_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6111,10 +6118,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Chop Tree_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6137,10 +6144,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Shear Sheep_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6163,10 +6170,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Chop Trees_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6189,10 +6196,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Place Wall_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6215,10 +6222,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld House Frame Chosen_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6241,10 +6248,10 @@
       "activity_section_position": 7,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Plant Crops_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6267,10 +6274,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Avoid Monsters_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6293,10 +6300,10 @@
       "activity_section_position": 9,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Underground Mining Coal_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6319,10 +6326,10 @@
       "activity_section_position": 10,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Underground Iron_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6345,11 +6352,11 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "Underground Avoiding Lava_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -6372,11 +6379,11 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
         "level_keys": [
           "Underground If Statements_2021"
-        ]
+        ],
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -6399,10 +6406,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Overworld Powered Minecart_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6425,10 +6432,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "Overworld Free Play 20x20_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -6451,10 +6458,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops1a_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6477,10 +6484,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops1b_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6503,10 +6510,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops2a_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6529,10 +6536,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops3a_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6555,10 +6562,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops4a_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6581,10 +6588,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops5b_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6607,10 +6614,10 @@
       "activity_section_position": 7,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops6a_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6633,10 +6640,10 @@
       "activity_section_position": 8,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops7a_2021"
-        ]
+        ],
+        "progression": "Mini-project: Sticker Design"
       },
       "named_level": null,
       "bonus": null,
@@ -6659,10 +6666,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseC_artist_loops8a_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -6685,10 +6692,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Big Event - Unplugged Activity",
         "level_keys": [
           "BigEvent-Unplugged_2021"
-        ]
+        ],
+        "progression": "The Big Event - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -6711,10 +6718,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Code Your Own Flappy Game",
         "level_keys": [
           "courseC_video_flappyIntro_2021"
-        ]
+        ],
+        "progression": "Code Your Own Flappy Game"
       },
       "named_level": null,
       "bonus": null,
@@ -6737,10 +6744,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6763,10 +6770,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6789,10 +6796,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6815,10 +6822,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6841,10 +6848,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events5_2021"
-        ]
+        ],
+        "progression": "Mini-project: Flappy Game"
       },
       "named_level": null,
       "bonus": null,
@@ -6867,10 +6874,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events6_2021"
-        ]
+        ],
+        "progression": "Mini-project: Flappy Game"
       },
       "named_level": null,
       "bonus": null,
@@ -6893,10 +6900,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events7_2021"
-        ]
+        ],
+        "progression": "Mini-project: Flappy Game"
       },
       "named_level": null,
       "bonus": null,
@@ -6919,10 +6926,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events8_2021"
-        ]
+        ],
+        "progression": "Mini-project: Flappy Game"
       },
       "named_level": null,
       "bonus": null,
@@ -6945,10 +6952,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events9_2021"
-        ]
+        ],
+        "progression": "Mini-project: Flappy Game"
       },
       "named_level": null,
       "bonus": null,
@@ -6971,10 +6978,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events10_2021"
-        ]
+        ],
+        "progression": "Mini-project: Flappy Game"
       },
       "named_level": null,
       "bonus": null,
@@ -6997,10 +7004,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7023,10 +7030,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7049,10 +7056,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events3_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7075,10 +7082,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events4_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7101,10 +7108,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events5_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7127,10 +7134,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_eventsA_embed_2021"
-        ]
+        ],
+        "progression": "Mini-project: Chase Game"
       },
       "named_level": null,
       "bonus": null,
@@ -7153,10 +7160,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events6_2021"
-        ]
+        ],
+        "progression": "Mini-project: Chase Game"
       },
       "named_level": null,
       "bonus": null,
@@ -7179,10 +7186,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events7_2021"
-        ]
+        ],
+        "progression": "Mini-project: Chase Game"
       },
       "named_level": null,
       "bonus": null,
@@ -7205,10 +7212,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events8_2021"
-        ]
+        ],
+        "progression": "Mini-project: Chase Game"
       },
       "named_level": null,
       "bonus": null,
@@ -7231,10 +7238,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events9_2021"
-        ]
+        ],
+        "progression": "Mini-project: Chase Game"
       },
       "named_level": null,
       "bonus": null,
@@ -7257,10 +7264,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_eventsA_2021"
-        ]
+        ],
+        "progression": "Mini-project: Chase Game"
       },
       "named_level": null,
       "bonus": null,
@@ -7283,10 +7290,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseC_PlayLab_eventsFP_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -7384,10 +7391,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "Begin planning your project_2021"
-        ]
+        ],
+        "progression": "Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7410,10 +7417,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC1_2021"
-        ]
+        ],
+        "progression": "Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7436,10 +7443,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC2_2021"
-        ]
+        ],
+        "progression": "Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7462,10 +7469,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC3_2021"
-        ]
+        ],
+        "progression": "Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7488,10 +7495,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC4_2021"
-        ]
+        ],
+        "progression": "Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7514,10 +7521,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC5_2021"
-        ]
+        ],
+        "progression": "Project"
       },
       "named_level": null,
       "bonus": null,
@@ -7540,10 +7547,10 @@
       "activity_section_position": 7,
       "assessment": null,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC6_2021"
-        ]
+        ],
+        "progression": "Project"
       },
       "named_level": null,
       "bonus": null,
