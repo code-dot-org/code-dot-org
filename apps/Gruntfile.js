@@ -77,6 +77,7 @@ describe('entry tests', () => {
     'eval',
     'fish',
     'flappy',
+    'idelab',
     'gamelab',
     'spritelab',
     'jigsaw',
@@ -351,8 +352,7 @@ describe('entry tests', () => {
           [
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss'
-          ],
-          ['build/package/css/idelab.css', 'style/idelab/style.scss']
+          ]
         ].concat(
           appsToBuild.map(function(app) {
             return [
