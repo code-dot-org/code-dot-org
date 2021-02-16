@@ -152,7 +152,7 @@ level 'courseC_artist_loops8a_2021', progression: 'Free Play'
 
 lesson_group 'csf_events', display_name: 'Events'
 lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true
-level 'BigEvent-Unplugged_2021'
+level 'BigEvent-Unplugged_2021', progression: 'The Big Event - Unplugged Activity'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
 level 'courseC_video_flappyIntro_2021', progression: 'Code Your Own Flappy Game'
