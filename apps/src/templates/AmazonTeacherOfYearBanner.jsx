@@ -32,7 +32,7 @@ function AmazonTeacherOfYearBanner({handleCloseBanner}) {
 }
 
 AmazonTeacherOfYearBanner.propTypes = {
-  handleCloseBanner: PropTypes.funct.isRequired
+  handleCloseBanner: PropTypes.func.isRequired
 };
 
 export default AmazonTeacherOfYearBanner;

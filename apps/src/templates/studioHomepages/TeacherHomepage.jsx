@@ -20,6 +20,7 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import AmazonTeacherOfYearBanner from '@cdo/apps/templates/AmazonTeacherOfYearBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const styles = {
   clear: {
@@ -64,7 +65,7 @@ export class UnconnectedTeacherHomepage extends Component {
   state = {
     showCensusBanner: this.props.showCensusBanner,
     hideTeacherOfTheYearBanner:
-      localStorage.getItem(hideTeacherOfYearBannerKey) === 'true'
+      tryGetLocalStorage(hideTeacherOfYearBannerKey, 'false') === 'true'
   };
 
   bindCensusBanner = banner => {
@@ -143,7 +144,7 @@ export class UnconnectedTeacherHomepage extends Component {
   };
 
   hideTeacherOfTheYearBanner() {
-    localStorage.setItem(hideTeacherOfYearBannerKey, true);
+    trySetLocalStorage(hideTeacherOfYearBannerKey, true);
     this.setState({hideTeacherOfTheYearBanner: true});
   }
 

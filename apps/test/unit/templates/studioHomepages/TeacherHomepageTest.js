@@ -1,10 +1,13 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert} from 'chai';
+import {assert, expect} from 'chai';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
+import AmazonTeacherOfYearBanner from '@cdo/apps/templates/AmazonTeacherOfYearBanner';
+import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {courses, topCourse} from './homepagesTestData';
+import * as utils from '@cdo/apps/utils';
 
 describe('TeacherHomepage', () => {
   const TEST_PROPS = {
@@ -70,5 +73,49 @@ describe('TeacherHomepage', () => {
   it('shows ProjectWidgetWithData component', () => {
     const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
     assert(wrapper.find('ProjectWidgetWithData').exists());
+  });
+
+  describe('when teacher school is in NCES list (has donor)', () => {
+    const TEST_PROPS_DONOR = {
+      ...TEST_PROPS,
+      schoolHasDonor: true,
+      donorBannerName: 'some donor' // this is null when teacher has dismissed banner previously
+    };
+
+    afterEach(() => {
+      if (utils.tryGetLocalStorage.restore) {
+        utils.tryGetLocalStorage.restore();
+      }
+    });
+
+    it('displays AmazonTeacherOfYearBanner when local storage does not have hide2021TeacherOfYearBanner set', () => {
+      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+      assert(wrapper.find(AmazonTeacherOfYearBanner).exists());
+    });
+
+    it('hides DonorTeacherBanner when AmazonTeacherOfYearBanner is present', () => {
+      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+      expect(wrapper.find(DonorTeacherBanner).exists()).to.be.false;
+    });
+
+    it('hides AmazonTeacherOfYearBanner when local storage hide2021TeacherOfYearBanner is true', () => {
+      sinon.stub(utils, 'tryGetLocalStorage').returns('true'); // mock getting local storage value for hide2021TeacherOfYearBanner
+      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+      expect(wrapper.find(AmazonTeacherOfYearBanner).exists()).to.be.false;
+    });
+
+    it('displays DonorTeacherBanner when donorBannerName is present and AmazonTeacherOfYearBanner is hidden', () => {
+      sinon.stub(utils, 'tryGetLocalStorage').returns('true'); // mock getting local storage value for hide2021TeacherOfYearBanner
+      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+      assert(wrapper.find(DonorTeacherBanner).exists());
+    });
+
+    it('hides both banners when hide2021TeacherOfYearBanner is true and donorBannerName is not present', () => {
+      sinon.stub(utils, 'tryGetLocalStorage').returns('true'); // mock getting local storage value for hide2021TeacherOfYearBanner
+      const props = {...TEST_PROPS, schoolHasDonor: true};
+      const wrapper = shallow(<TeacherHomepage {...props} />);
+      expect(wrapper.find(AmazonTeacherOfYearBanner).exists()).to.be.false;
+      expect(wrapper.find(DonorTeacherBanner).exists()).to.be.false;
+    });
   });
 });
