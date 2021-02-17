@@ -12,6 +12,11 @@ Parameters:
   ServiceSubnetIds:
     Type: List<AWS::EC2::Subnet::Id>
     Description: Comma separated list of existing VPC Subnet Ids where ECS EC2 Instances hosting Drone Service & Drone Autoscaler Service containers will be provisioned.
+  AutoscalerCapacityCheckInterval:
+    Type: String
+    # https://autoscale.drone.io/reference/drone-interval/
+    Description: The interval at which the Autoscaler capacity check algorithm is run to determine whether to provision new or terminate existing Drone Runner EC2 Instances.
+    Default: 1m
   WorkerPoolMinimum:
     Type: Number
     Description: Minimum number of physical servers that the autoscaler must keep alive.
@@ -326,6 +331,9 @@ Resources:
             -
               Name: DRONE_SERVER_TOKEN
               Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_SERVER_TOKEN}}'
+            -
+              Name: DRONE_INTERVAL
+              Value: !Ref AutoscalerCapacityCheckInterval
             -
               Name: DRONE_POOL_MIN
               Value: !Ref WorkerPoolMinimum
