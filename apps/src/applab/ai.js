@@ -53,7 +53,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var predictButtonId = alphaNumModelName + '_predict';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
-    ${inputFields.toString()}
+    ${inputFields.join('\n\t\t')}
     getPrediction("${
       modelData.name
     }", "${modelId}", testValues, function(value) {
