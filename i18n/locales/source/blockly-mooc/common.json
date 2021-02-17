@@ -1224,6 +1224,8 @@
   "notApplicable": "N/A",
   "notCompleted": "Not completed",
   "notSaved": "Not saved",
+  "notSignedInHeader": "You are not signed in",
+  "notSignedInBody": "You don't need an account to work on this lesson, but if you want to save your work, remember to sign in or create an account before you get started.",
   "notStarted": "Not started",
   "nPoints": "{numPoints, plural, one {1 point} other {# points}}",
   "numMatchCorrect": "# match correct",
