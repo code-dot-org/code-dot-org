@@ -4,6 +4,7 @@ class CreateProgrammingExpressions < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.string :category
       t.text :properties
+      t.integer :programming_environment_id, null: false
 
       t.timestamps
     end
