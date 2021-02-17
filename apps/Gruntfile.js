@@ -568,7 +568,7 @@ describe('entry tests', () => {
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
     'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-    'idelab/index': './src/sites/studio/pages/idelab/index.js'
+    'javalab/index': './src/sites/studio/pages/javalab/index.js'
   };
 
   var internalEntries = {
