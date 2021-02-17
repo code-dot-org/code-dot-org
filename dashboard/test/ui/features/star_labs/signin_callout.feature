@@ -15,7 +15,7 @@ Scenario: Should not see callout on farmer lesson if logged in
 
 @as_student
 Scenario: Should not see callout on CSF courseD lesson if logged in
-  Given I am on "http://studio.code.org/s/coursed-2020/stage/2/puzzle/2"
+  Given I am on "http://studio.code.org/s/coursed-2020/stage/2/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".modal-backdrop" is not visible
@@ -47,7 +47,7 @@ Scenario: After I dismiss the callout, it should not reappear upon refresh
   Then element ".modal-backdrop" is not visible
 
 Scenario: Nested callouts should work as expected
-  Given I am on "http://studio.code.org/s/coursec-2020/stage/4/puzzle/2"
+  Given I am on "http://studio.code.org/s/coursec-2020/stage/4/puzzle/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".modal-backdrop" is visible
