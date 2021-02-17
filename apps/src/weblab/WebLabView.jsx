@@ -16,8 +16,10 @@ import Button from '@cdo/apps/templates/Button';
 import {getStore} from '../redux';
 import Meter from '@cdo/apps/templates/Meter';
 
-// Coefficient for converting bytes to megabytes.
-const B_TO_MB_COEFFICIENT = 0.000000954;
+// Helper for converting bytes to megabytes.
+const bytesToMegabytes = bytes => {
+  return bytes * 0.000000954;
+};
 
 /**
  * Top-level React wrapper for WebLab
@@ -54,15 +56,11 @@ class WebLabView extends React.Component {
     getStore().dispatch(changeShowError(false));
   }
 
-  bytesToMegabytes = bytes => {
-    return bytes * B_TO_MB_COEFFICIENT;
-  };
-
   projectCapacityLabel = () => {
     let totalMegabytes = Math.round(
-      this.bytesToMegabytes(this.props.maxProjectCapacity)
+      bytesToMegabytes(this.props.maxProjectCapacity)
     );
-    let currentMegabytes = this.bytesToMegabytes(this.props.projectSize);
+    let currentMegabytes = bytesToMegabytes(this.props.projectSize);
     // If using 75%+ capacity, display a decimal with 2 digits.
     // Otherwise, round the capacity.
     currentMegabytes =
