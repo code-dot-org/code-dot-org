@@ -4,9 +4,14 @@ class CreateProgrammingExpressions < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.string :category
       t.text :properties
-      t.integer :programming_environment_id, null: false
+      t.references :programming_environment, null: false
 
       t.timestamps
+    end
+    reversible do |dir|
+      dir.up do
+        execute "ALTER TABLE programming_expressions CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci"
+      end
     end
   end
 end
