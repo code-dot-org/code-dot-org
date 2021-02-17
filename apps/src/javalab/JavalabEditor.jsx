@@ -2,7 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import AceEditor from 'react-ace';
 import {connect} from 'react-redux';
-import {setEditorText} from './javaIdeRedux';
+import {setEditorText} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import 'ace-builds/src-noconflict/mode-java';
@@ -15,7 +15,7 @@ const style = {
   }
 };
 
-class JavaEditor extends React.Component {
+class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     // populated by redux
@@ -56,9 +56,9 @@ class JavaEditor extends React.Component {
 
 export default connect(
   state => ({
-    editorText: state.javaIde.editorText
+    editorText: state.javalab.editorText
   }),
   dispatch => ({
     setEditorText: editorText => dispatch(setEditorText(editorText))
   })
-)(JavaEditor);
+)(JavalabEditor);
