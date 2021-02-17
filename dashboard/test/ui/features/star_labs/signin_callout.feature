@@ -45,3 +45,11 @@ Scenario: After I dismiss the callout, it should not reappear upon refresh
   And I dismiss the login reminder
   Then I reload the page
   Then element ".modal-backdrop" is not visible
+
+Scenario: Nested callouts should work as expected
+  Given I am on "http://studio.code.org/s/coursec-2020/stage/4/puzzle/2"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And element ".modal-backdrop" is visible
+  And I dismiss the login reminder
+  And I wait until element ".csf-top-instructions p" is visible
