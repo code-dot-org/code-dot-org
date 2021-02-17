@@ -6,7 +6,7 @@ module Services
   # Contains all code related to the generation, storage, and
   # retrieval of Lesson Plan PDFs
   module LessonPlanPdfs
-    DEBUG = true
+    DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
 
     # Module which should be prepended to the ScriptSeed Service Object to add
