@@ -110,8 +110,7 @@
       "key": "4c929c15-de18-4488-b022-0d8418fd9704",
       "position": 1,
       "properties": {
-        "name": "Lessom Modifications",
-        "duration": 0
+        "name": "Lessom Modifications"
       },
       "seeding_key": {
         "lesson_activity.key": "4c929c15-de18-4488-b022-0d8418fd9704",
@@ -315,14 +314,7 @@
       "key": "8c069083-ba86-4109-adf2-5a1e44520714",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Read and then discuss with a partner the Scoring Guidelines and Task Instructions. For the Scoring Guidelines you can focus on only the first 3 columns for now: \"Reporting Category\", \"Task\", \"Scoring Criteria\". We'll dive into the decision rules later. Just get familiar with these documents.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\r\n\r\nStudents should leave this discussion knowing they will submit:\r\n\r\n* video of their code running\r\n* written responses\r\n* PDF of program code\r\n\r\nThey should also know the Scoring Guidelines:\r\n\r\n* contains 6 rows, each worth 1 point\r\n* sometimes several rows apply to one written response to pick out specific aspects\r\n\r\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** Read and then discuss with a partner the Scoring Guidelines and Task Instructions. For the Scoring Guidelines you can focus on only the first 3 columns for now: \"Reporting Category\", \"Task\", \"Scoring Criteria\". We'll dive into the decision rules later. Just get familiar with these documents.\n\n**Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* video of their code running\n* written responses\n* PDF of program code\n\nThey should also know the Scoring Guidelines:\n\n* contains 6 rows, each worth 1 point\n* sometimes several rows apply to one written response to pick out specific aspects\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
       },
       "seeding_key": {
         "activity_section.key": "8c069083-ba86-4109-adf2-5a1e44520714",
@@ -356,7 +348,7 @@
       "key": "cf38f057-93c5-48c5-b47e-95379e05dd69",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** As a class, watch the video for Create PT Sample 1. \r\n\r\n[slide] **Distribute:** Provide pairs of students copies of Create PT Sample 1 (links available on student page for this lesson).  \r\n\r\n[slide] **Prompt:** This is a Written Response for the Create PT. Read it to yourself first. Then with your partner spend a few minutes reviewing it. Be ready to share out the following answers.\r\n\r\n* Did anything surprise you in looking at this sample?\r\n* Do you think this scored well based on what you know about the scoring guidelines?\r\n\r\n**Discuss:** Ask partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class quickly share the results of their discussion.",
+        "description": "[slide] **Display:** As a class, watch the video for Create PT Sample 1. \n\n[slide] **Distribute:** Provide pairs of students copies of Create PT Sample 1 (links available on student page for this lesson).  \n\n[slide] **Prompt:** This is a Written Response for the Create PT. Read it to yourself first. Then with your partner spend a few minutes reviewing it. Be ready to share out the following answers.\n\n* Did anything surprise you in looking at this sample?\n* Do you think this scored well based on what you know about the scoring guidelines?\n\n**Discuss:** Ask partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class quickly share the results of their discussion.\n\n",
         "name": "Create PT Sample 1\r"
       },
       "seeding_key": {
@@ -368,14 +360,7 @@
       "key": "993c8a8a-e4e0-4366-a1d5-944aa547a899",
       "position": 2,
       "properties": {
-        "description": "Sample C actually received a 6/6 score. Let's look at the student response side-by-side with the scoring guidelines *and* the annotated notes to see why.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should understand from this example that the Scoring Guidelines are in many ways as important as the task description. The responses in this sample not only match the task description but address the particular \"gotchas\" of the scoring guidelines.\r\n\r\nStudents may still have questions about the individual prompts or scoring guidelines. Encourage them that you'll look at more examples which may help clarify.\r\n\r\n    "
-          }
-        ],
+        "description": "Sample C actually received a 6/6 score. Let's look at the student response side-by-side with the scoring guidelines *and* the annotated notes to see why.\n\n",
         "remarks": true,
         "name": "Create PT Annotated Sample 1 (score: 6/6)\r"
       },
@@ -388,7 +373,7 @@
       "key": "d953a165-9fcb-47a1-8600-89d1001fb007",
       "position": 3,
       "properties": {
-        "description": "[slide] **Distribute:** The CSP Create PT Code.org Annotated Sample 1.\r\n\r\n[slide] **Prompt:** With your partner look over this annotated version of the sample to see how each row of the scoring guidelines was applied. You should be reading specifically to answer any of the questions you had about the task earlier. After looking it over we will discuss:\r\n\r\n* What characteristics of this response made it score well?\r\n* What parts confused you?\r\n* What questions do you still have about the Scoring Guidelines or Task description?\r\n    \r\n**Discuss:** Ask partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class share the results of their discussion."
+        "description": "[slide] **Distribute:** The CSP Create PT Code.org Annotated Sample 1.\n\n[slide] **Prompt:** With your partner look over this annotated version of the sample to see how each row of the scoring guidelines was applied. You should be reading specifically to answer any of the questions you had about the task earlier. After looking it over we will discuss:\n\n* What characteristics of this response made it score well?\n* What parts confused you?\n* What questions do you still have about the Scoring Guidelines or Task description?\n    \n**Discuss:** Ask partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class share the results of their discussion.\n\n**Goal:** Students should understand from this example that the Scoring Guidelines are in many ways as important as the task description. The responses in this sample not only match the task description but address the particular \"gotchas\" of the scoring guidelines.\n\nStudents may still have questions about the individual prompts or scoring guidelines. Encourage them that you'll look at more examples which may help clarify.\n\n    "
       },
       "seeding_key": {
         "activity_section.key": "d953a165-9fcb-47a1-8600-89d1001fb007",
@@ -435,14 +420,7 @@
       "key": "1eaa315e-6c86-492a-9885-3511be5cecb4",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students back to Create PT Annotated Sample 2. With a partner, ask students to discuss how they could rewrite 3b in order to earn the point.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Encourage students to use specific programming language in their responses (i.e. variables, conditionals, loops, etc.).\r\n\r\nSample 3b response: The answers list manages complexity because without it, each element would need to be stored in its own variable which would increase the length of the code and opportunities for error. The variables would need to be carefully named to indicate if they are positive, neutral, or negative as this is how the program determines what icons to display. For example, one variable might be called positive0 and store the value \"Yes, absolutely\".\r\n"
-          }
-        ]
+        "description": "[slide]  **Do This:** Direct students back to Create PT Annotated Sample 2. With a partner, ask students to discuss how they could rewrite 3b in order to earn the point.\n\n**Goal:** Encourage students to use specific programming language in their responses (i.e. variables, conditionals, loops, etc.).\n\nSample 3b response: The answers list manages complexity because without it, each element would need to be stored in its own variable which would increase the length of the code and opportunities for error. The variables would need to be carefully named to indicate if they are positive, neutral, or negative as this is how the program determines what icons to display. For example, one variable might be called positive0 and store the value \"Yes, absolutely\".\n"
       },
       "seeding_key": {
         "activity_section.key": "1eaa315e-6c86-492a-9885-3511be5cecb4",
@@ -453,14 +431,7 @@
       "key": "907a0384-0c76-4cac-bc96-dd528f989c58",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Based on the examples that you saw today write down on separate post-its / scratch piece of paper",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The next lesson is designed to address these three specific prompts. Students will have time to dive deep on what counts as a computing innovation and how to choose one wisely. They will be provided a checklist of \"gotchas\" next to each part of the task to use while they complete. There is also time set aside to answer remaining questions. In other words, don't feel the need to respond to all of these prompts here. Use this conversation to synthesize what they saw and remind students that tomorrow you'll investigate all these questions more deeply.\r\n"
-          }
-        ],
+        "description": "[slide]  **Prompt:** Based on the examples that you saw today write down on separate post-its / scratch piece of paper\n\n**Goal:** The next lesson is designed to address these three specific prompts. Students will have time to dive deep on what counts as a computing innovation and how to choose one wisely. They will be provided a checklist of \"gotchas\" next to each part of the task to use while they complete. There is also time set aside to answer remaining questions. In other words, don't feel the need to respond to all of these prompts here. Use this conversation to synthesize what they saw and remind students that tomorrow you'll investigate all these questions more deeply.\n",
         "name": "Create PT: Advice, Gotchas, Questions\r"
       },
       "seeding_key": {
