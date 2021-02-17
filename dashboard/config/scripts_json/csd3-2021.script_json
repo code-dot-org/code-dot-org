@@ -464,7 +464,7 @@
         "student_overview": "**Question of the Day:  How can programs react to changes as they are running?**\r\n\r\nThis lesson introduces students to booleans and conditionals, which allow a program to run differently depending on whether a condition is true. The class starts by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates boolean expressions, and how they can be used to structure a program.",
         "purpose": "This lesson follows closely the booleans model that students first experienced in the Booleans Unplugged lesson. As before, we start with using booleans directly before using booleans to trigger _if_ statements. In the following lesson we will introduce some boolean producing blocks, such as `keyDown()`, which can be used in place of simple boolean comparisons to write programs that respond to user input.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use conditionals to react to changes in variables and sprite properties**\r\n\r\n\tSee Level 10 in Code Studio.",
+        "assessment_opportunities": "1. **Use conditionals to react to changes in variables and sprite properties**\n\n\tSee Level 9 in Code Studio.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -493,7 +493,7 @@
         "student_overview": "**Question of the Day: How can our programs react to user input?**\r\n\r\nFollowing the introduction to booleans and if statements in the previous lesson, students are introduced to a new block called keyDown(), which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson they will have written programs that take keyboard input from the user to control sprites on the screen.\r\n",
         "purpose": "One common way conditionals are used is to check for different types of user input, especially key presses. Having a way for a user to interact with a program makes it more interesting and dynamic. Without interaction from the user it is very difficult to create a game. Therefore the introduction of conditionals and user inputs for decision making is a critical step toward creating games.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use conditionals to react to keyboard input**\r\n\r\n\tSee Level 7 in Code Studio.\r\n\r\n2. **Move sprites in response to keyboard input**\r\n\r\n\tSee Level 7 in Code Studio.",
+        "assessment_opportunities": "1. **Use conditionals to react to keyboard input**\n\n\tSee Level 6 in Code Studio.\n\n2. **Move sprites in response to keyboard input**\n\n\tSee Level 6 in Code Studio.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -522,7 +522,7 @@
         "student_overview": "**Question of the Day: What are more ways that the computer can react to user input?**\r\n\r\nThe class continues to explore ways to use conditional statements to take user input. In addition to the keyboard commands learned yesterday, they learn about several ways to take mouse input. They also expand their understanding of conditionals to include else, which allows for the computer to run a certain section of code when a condition is true, and a different section of code when it is not.",
         "purpose": "Students have learned how to make simple decisions with conditionals. Sometimes, however, we want to make decisions based on whether the condition we asked about originally was false. That's where else statements come in. Else statements are a second statement which is attached to an if statement. Else statements execute when the conditions they are attached to are false.\r\n\r\nThis concept is introduced alongside several new mouse input commands, allowing students to gradually build up programs that use input in different ways.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use an if-else statement to control the flow of a program.**\r\n\r\n\tSee Level 9 in Code Studio.\r\n\r\n2. **Respond to a variety of types of user input.**\r\n\r\n\tUse the wrap up discussion to check students' understanding of the different types of user input.  You may also informally check their ability to use them as they progress through the Code Studio lesson.\r\n\r\n\t",
+        "assessment_opportunities": "1. **Use an if-else statement to control the flow of a program.**\n\n\tSee Level 8 in Code Studio.\n\n2. **Respond to a variety of types of user input.**\n\n\tUse the wrap up discussion to check students' understanding of the different types of user input.  You may also informally check their ability to use them as they progress through the Code Studio lesson.\n\n\t",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -581,7 +581,7 @@
         "student_overview": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\r\n\r\nAfter a brief review of how the counter pattern is used to move sprites, the class is introduced to the idea of hiding those patterns in a single block, in order to help manage the complexity of programs. They then head to Code Studio to try out new blocks that set a sprite's velocity directly, and look at the various ways that they are able to code more complex behaviors in their sprites.\r\n",
         "purpose": "This lesson launches a major theme of the chapter: that complex behavior can be represented in simpler ways to make it easier to write and reason about code. \r\n\r\nIn this lesson students are taught to use the velocity blocks to simplify the code for moving a sprite across the screen. This marks a shift in how new blocks are introduced. Whereas previously blocks were presented as enabling completely new behaviors, they are now presented as simplifying code students could have written with the blocks previously available. Over the next several lessons, students will see how this method of managing complexity allows them to produce more interesting sprite behaviors.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use the velocity and rotationSpeed blocks to create and change sprite movements**\r\n\r\n\tSee Level 10 in Code Studio. (Level 6 can be used to check rotationSpeed.)\r\n\r\n2. **Describe the advantages of simplifying code by using higher level blocks**\r\n\r\n\tIn the wrap up, check students' descriptions of the blocks that they would create and why they would want to create them.",
+        "assessment_opportunities": "1. **Use the velocity and rotationSpeed blocks to create and change sprite movements**\n\n\tSee Level 9 in Code Studio. (Level 5 can be used to check rotationSpeed.)\n\n2. **Describe the advantages of simplifying code by using higher level blocks**\n\n\tIn the wrap up, check students' descriptions of the blocks that they would create and why they would want to create them.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -668,7 +668,7 @@
         "student_overview": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**\r\n\r\nThe class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. After reviewing the two concepts, they explore various scenarios in which velocity is used in the counter pattern, and observe the different types of movement that result. In particular, students learn how to simulate gravity. They then reflect on how they were able to get new behaviors by combining blocks and patterns that they already knew.\r\n",
         "purpose": "This lesson does not introduce any new blocks and in fact only uses patterns students have seen in Chapter 1. Instead, it demonstrates how combining these tools, in particular the abstractions students learned in the previous two lessons, allows them to build new behaviors for their sprites. This highlights the broader point that abstractions not only simplify code, but also can themselves be used as building blocks of even more complex behavior.  ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use sprite velocity with the counter pattern to create different types of sprite movement**\r\n\r\n\tSee Level 7 in Code Studio.\r\n\r\n2. **Explain how individual programming constructs can be combined to create more complex behavior**\r\n\r\n\tIn the wrap up discussions, check that students can explain how they are creating new types of movement without new blocks.",
+        "assessment_opportunities": "1. **Use sprite velocity with the counter pattern to create different types of sprite movement**\n\n\tSee Level 6 in Code Studio.\n\n2. **Explain how individual programming constructs can be combined to create more complex behavior**\n\n\tIn the wrap up discussions, check that students can explain how they are creating new types of movement without new blocks.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -697,7 +697,7 @@
         "student_overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lesson, the class programs their sprites to interact in new ways. After a brief review of how they used the isTouching block, students brainstorm other ways that two sprites could interact. They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).\r\n",
         "purpose": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. While students could theoretically have written their own displace, collide, or bounce commands, the ability to ignore the details of this code allows them to focus their attention on the high level structure of the games they want to build.\r\n\r\nThis lesson is also intended to give students more practice using the new commands they have learned in the second chapter. This the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Model different types of interactions between sprites.**\r\n\r\n\tSee Level 8 in Code Studio.\r\n\r\n2. **Describe how abstractions can be built upon to develop even further abstractions**\r\n\r\n\tIn the wrap up, make sure students understand that blocks such as `isTouching` hide the complexity or details of the code inside, allowing them to tackle more complex problems.",
+        "assessment_opportunities": "1. **Model different types of interactions between sprites.**\n\n\tSee Level 7 in Code Studio.\n\n2. **Describe how abstractions can be built upon to develop even further abstractions**\n\n\tIn the wrap up, make sure students understand that blocks such as `isTouching` hide the complexity or details of the code inside, allowing them to tackle more complex problems.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -754,7 +754,7 @@
         "student_overview": "**Question of the Day: How can programmers use functions to create their own abstractions?**\r\n\r\nThis lesson covers functions as a way for students to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.\r\n",
         "purpose": "In previous lessons students have learned to use a number of abstractions in their programs, including the velocity properties, isTouching, and collisions. These abstractions have allowed them to build much more complex programs while ignoring the details of how that behavior is created. In this lesson students learn to build abstractions of their own by creating functions.\r\n\r\n\r\nStudents will primarily use functions to break code into logical chunks that are easier to reason about. This foreshadows the chapter's transition from building technical skill to the organizational processes used to develop software.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Create and use functions for blocks of code that perform a single high-level task within a program**\r\n\r\n\tSee Level 10 in Code Studio.\r\n\r\n2. **Explain the advantages of using functions in a program.**\r\n\r\n\tIn the wrap up discussion, make sure students understand that functions can increase both the readability and organization of code.\r\n\r\n3. **Explain how functions allow programmers to reason about a program at a higher level**\r\n\r\n\tIn the wrap up, students should make the connection between functions and abstraction, that functions allow a programmer to name a bit of code so that they can think about it at that higher level, rather than worry about all the details.\r\n\r\n\t",
+        "assessment_opportunities": "1. **Create and use functions for blocks of code that perform a single high-level task within a program**\n\n\tSee Level 9 in Code Studio.\n\n2. **Explain the advantages of using functions in a program.**\n\n\tIn the wrap up discussion, make sure students understand that functions can increase both the readability and organization of code.\n\n3. **Explain how functions allow programmers to reason about a program at a higher level**\n\n\tIn the wrap up, students should make the connection between functions and abstraction, that functions allow a programmer to name a bit of code so that they can think about it at that higher level, rather than worry about all the details.\n\n\t",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -1471,7 +1471,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "f664c4cd-edcd-4afe-b5e6-5e2902ae866f",
@@ -1513,7 +1513,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "d7b339c7-1053-4301-bba3-6c5befbc61fe",
@@ -1555,7 +1555,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "06f944ce-4a81-48b5-a87d-96072d1bfa7b",
@@ -1583,7 +1583,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "b73c5968-42c4-4b4c-ac51-a6694f99c29b",
@@ -1597,7 +1597,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 2
+        "duration": 70
       },
       "seeding_key": {
         "lesson_activity.key": "ee232401-7aef-488e-b0f1-4b169a7a854e",
@@ -1607,27 +1607,27 @@
       }
     },
     {
-      "key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1",
+      "key": "37cb8d36-7a69-48f3-94ff-91e532fea427",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1",
+        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427",
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021"
       }
     },
     {
-      "key": "37cb8d36-7a69-48f3-94ff-91e532fea427",
+      "key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427",
+        "lesson_activity.key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1",
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021"
@@ -1652,7 +1652,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "c56d186e-9346-4a55-b871-3547db946cb0",
@@ -1680,7 +1680,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "bd0c46dd-1416-4ca4-9882-cc070c732bcb",
@@ -1694,7 +1694,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "22daa03a-31f9-4048-98d6-180a94b49a68",
@@ -1764,7 +1764,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "91e4043a-b85e-4965-bb48-7dba5ae5b20d",
@@ -1778,7 +1778,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "ec2b845c-4b81-4798-848a-37dd04f0ab69",
@@ -1792,7 +1792,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "1b7d7bd8-edb9-4d7e-b267-fb05ddf8073b",
@@ -1820,7 +1820,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "ac036a2c-ddfd-4afa-8990-2c0488a6cac5",
@@ -1834,7 +1834,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "125cb229-4471-49d1-b3a4-c331c9307b78",
@@ -1904,7 +1904,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "e44e0ad1-b586-42a4-9be2-75e0eee0cccc",
@@ -1918,7 +1918,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "e7c14a3d-ad5f-429b-9ad3-a851e1247e58",
@@ -1932,7 +1932,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 15
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "5057296f-03f5-4ac1-b9b7-4b1e170c1224",
@@ -1974,7 +1974,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "69970ef2-e960-449e-8650-84b53151315d",
@@ -2030,7 +2030,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 100
+        "duration": 140
       },
       "seeding_key": {
         "lesson_activity.key": "064fad66-35a6-480e-ad60-dff751b5230c",
@@ -2040,11 +2040,24 @@
       }
     },
     {
-      "key": "06f4dccb-71cc-4afb-907e-2ee69be55359",
+      "key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a",
       "position": 3,
       "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "06f4dccb-71cc-4afb-907e-2ee69be55359",
+      "position": 4,
+      "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "06f4dccb-71cc-4afb-907e-2ee69be55359",
@@ -2055,26 +2068,12 @@
     },
     {
       "key": "163efba3-af62-4989-8fab-c173dfbc4ed6",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "name": "Post-Project Test",
-        "duration": 0
+        "name": "Post-Project Test"
       },
       "seeding_key": {
         "lesson_activity.key": "163efba3-af62-4989-8fab-c173dfbc4ed6",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "csd3_2",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a",
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021"
@@ -4342,7 +4341,6 @@
         "description": "**Share:** Allow students to share out what they remember as a group review.",
         "tips": [
           {
-            "key": "1",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is to review the different types of movement and animations that students have learned. As students talk about the different methods, make sure that they are mentioning why that type of movement would be useful.  Press them to be specific about what they might animate using the various methods.\r\n"
           }
@@ -4391,7 +4389,6 @@
       "key": "d77db66e-6e3a-4e3a-82df-2499a5ad0efd",
       "position": 2,
       "properties": {
-        "name": "Example Animated Scene",
         "progression_name": "Example Animated Scene"
       },
       "seeding_key": {
@@ -4403,7 +4400,6 @@
       "key": "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2",
       "position": 3,
       "properties": {
-        "name": "Plan Your Scene",
         "progression_name": "Plan Your Scene"
       },
       "seeding_key": {
@@ -4415,7 +4411,6 @@
       "key": "2e883502-c179-45a9-a313-6ec995831ed2",
       "position": 4,
       "properties": {
-        "name": "Draw a Background",
         "progression_name": "Draw a Background"
       },
       "seeding_key": {
@@ -4427,7 +4422,6 @@
       "key": "68f06aee-a50d-4b3e-9323-16f4812eb23a",
       "position": 5,
       "properties": {
-        "name": "Add Sprites",
         "progression_name": "Add Sprites"
       },
       "seeding_key": {
@@ -4439,7 +4433,6 @@
       "key": "6e3a6230-12e7-4b7f-90a7-ec8574647b3b",
       "position": 6,
       "properties": {
-        "name": "Add Text",
         "progression_name": "Add Text"
       },
       "seeding_key": {
@@ -4451,7 +4444,6 @@
       "key": "08bedf45-b2d1-4147-8479-22a9c5f20d51",
       "position": 7,
       "properties": {
-        "name": "Add Movement",
         "progression_name": "Add Movement"
       },
       "seeding_key": {
@@ -4463,7 +4455,6 @@
       "key": "7de39108-1c8b-4602-9afe-cfde5d7f3ed4",
       "position": 8,
       "properties": {
-        "name": "Review Your Animated Scene",
         "progression_name": "Review Your Animated Scene"
       },
       "seeding_key": {
@@ -4478,7 +4469,6 @@
         "description": "Allow students to walk around the room and see the pictures that each of their classmates has coded.  Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "tips": [
           {
-            "key": "2",
             "type": "teachingTip",
             "markdown": "You may choose to formalize this process by having each student write down one positive quality of each project, or having students \"draw names\" to comment on one particular classmate's work.\r\n\r\n"
           }
@@ -4509,7 +4499,6 @@
         "description": "**Share:** Have students share out what they appreciated about their classmates' projects. You may want to do this \"popcorn\" style, with each student who responds choosing the next person to share.",
         "tips": [
           {
-            "key": "3",
             "type": "discussionGoal",
             "markdown": "This discussion should serve as a celebration of what the students have accomplished.  As students share out what they have seen, encourage them to learn from each other and ask questions if they were not sure how to do something. Highlight how students were able to do very different things with the same tool.\r\n"
           }
@@ -4527,7 +4516,6 @@
         "description": "**Display:** Display the following questions on the board and ask students to answer them.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "The last two prompts ask students to react to information that may change as they are answering the questions. In order to drive this point home, consider moving from the front of the room and back, as well as alternately tapping and not tapping a pencil, so that students realize that their answers may change according to when they are answering each question.\r\n"
           }
@@ -4568,7 +4556,6 @@
         "description": "**Think-Pair-Share:** After students have had a chance to write down their answers, allow them to talk to a partner before sharing out as a class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion should prepare students to investigate programs that react to changing conditions.  Students should realize that there is no \"one way\" that these questions will be answered, and that the answers will change according to changing conditions.\r\n"
           }
@@ -4608,7 +4595,6 @@
       "properties": {
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Though seemingly simple, understanding how a boolean statement will evaluate can be difficult given that different programming languages have differing opinions on 'truthiness' and 'falsiness'. In fact, JavaScript (the language used in this course) has two different operators to test boolean equality `==` and `===`.\r\n\r\nThe double equals operator (`==`) is pretty generous in determining truthiness. For example, each of the following is considered `true` in JavaScript when using the `==` operator, but would be `false` using the `===` operator:\r\n\r\n    1 == true;\r\n    \"1\" == true;\r\n    5 == \"5\";\r\n    null == undefined;\r\n    \"\" == false;\r\n\r\nWe use the `==` operator in this course because it's more forgiving, but it's important to be aware that it can sometimes report back truth when you really didn't intend it to (in which case you might want to use the more strict `===` operator)\r\n"
           }
@@ -4635,7 +4621,6 @@
       "key": "970064bc-3023-4f10-9359-91868ff9c77d",
       "position": 3,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -4647,8 +4632,13 @@
       "key": "230cf2d8-bf75-4b73-aa29-4e468f203e78",
       "position": 4,
       "properties": {
-        "name": "Video: Booleans",
-        "progression_name": "Video: Booleans"
+        "progression_name": "Video: Booleans",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goals:**\n\n**Key Vocabulary:**\n\n- **Boolean Expression** - in programming, an expression that evaluates to True or False.\n\nStudents should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n\nSome examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n\nSome examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "230cf2d8-bf75-4b73-aa29-4e468f203e78",
@@ -4659,7 +4649,6 @@
       "key": "6eac26fe-a47a-4dbc-b225-c006efd6c418",
       "position": 5,
       "properties": {
-        "name": "Quick Check",
         "progression_name": "Quick Check"
       },
       "seeding_key": {
@@ -4671,7 +4660,6 @@
       "key": "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5",
       "position": 6,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -4683,8 +4671,13 @@
       "key": "030bb18c-bfaf-4c13-8ca7-9b251c26c162",
       "position": 7,
       "properties": {
-        "name": "Video: Conditional Statements",
-        "progression_name": "Video: Conditional Statements"
+        "progression_name": "Video: Conditional Statements",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goals:**\n\nThe broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "030bb18c-bfaf-4c13-8ca7-9b251c26c162",
@@ -4695,8 +4688,13 @@
       "key": "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a",
       "position": 8,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a",
@@ -4707,7 +4705,6 @@
       "key": "a9e1809e-78f0-42a5-b9b3-f680e95c5d15",
       "position": 9,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -4719,8 +4716,13 @@
       "key": "461492e7-43b9-4c58-9ee4-b63b716dbded",
       "position": 10,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "461492e7-43b9-4c58-9ee4-b63b716dbded",
@@ -4731,7 +4733,6 @@
       "key": "30bb6b07-5257-4a19-89a0-02be767443b5",
       "position": 11,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -4758,7 +4759,6 @@
         "description": "**Discuss:** Have students share responses.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion should get students thinking about how conditionals are used in games they have already seen, and help them connect those ideas to how they might want to use conditionals in their own programs.  Student responses might include:\r\n\r\n* If my username and password are correct, log me into Facebook\r\n* If Pacman has collected all the balls, start the next level\r\n* If my keyboard or mouse hasn't moved in 10 minutes, turn on the screensaver\r\n"
           }
@@ -4776,7 +4776,6 @@
         "description": "**Discuss:** So far all of the programs you've written run without any input from the user. How might adding user interaction make your programs more useful, effective, or entertaining? How might a user provide input into your program?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal here isn't to get into the technical specifics of how programs can take input (students will get to that in the online portion of the lesson), but rather to get students thinking about how user input could change the programs they've made. Encourage students to think back to Unit 1 and the various computer inputs and outputs they explored then. Which inputs would be most useful for the types of programs they've been making?\r\n"
           }
@@ -4815,7 +4814,6 @@
       "key": "1cc6a39c-ad40-4484-941a-cfedaee5e669",
       "position": 2,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -4827,7 +4825,6 @@
       "key": "7f5ec4ec-e8ef-46fb-98db-48db8f4510d2",
       "position": 3,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -4839,7 +4836,6 @@
       "key": "21c5c04b-1e3d-4de7-9694-083ed04efc2b",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -4851,8 +4847,13 @@
       "key": "9345c305-ff75-4d36-a595-b0b7a69c094f",
       "position": 5,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9345c305-ff75-4d36-a595-b0b7a69c094f",
@@ -4863,7 +4864,6 @@
       "key": "d489f6eb-e7e8-45ba-ac13-a12a78c22a08",
       "position": 6,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -4902,7 +4902,6 @@
         "description": "**Share:** Allow students to share out their responses.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students may come up with many different specific scenarios, but make sure that they are differentiating between conditionals that respond to user input and those that respond to other changes in the program, such as a score increase, the location of a sprite, or player lives lost.  Major things to remember may include putting the conditionals in the draw loop or paying attention to how the blocks are nested.\r\n\r\n"
           }
@@ -4952,7 +4951,6 @@
       "key": "04c8e14b-6000-4ac2-9f56-6dd8b660b460",
       "position": 2,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -4964,8 +4962,13 @@
       "key": "48c9aa57-b904-4660-b629-e49bf606fad7",
       "position": 3,
       "properties": {
-        "name": "Video: If/Else Statements",
-        "progression_name": "Video: If/Else Statements"
+        "progression_name": "Video: If/Else Statements",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:**\n\nMake sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an `if` block, and when an `ifelse` block is necessary."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "48c9aa57-b904-4660-b629-e49bf606fad7",
@@ -4976,8 +4979,13 @@
       "key": "991be916-6a79-484c-95a2-0e6f753d9ac8",
       "position": 4,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Level 4:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n\n**Level 5:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "991be916-6a79-484c-95a2-0e6f753d9ac8",
@@ -4988,7 +4996,6 @@
       "key": "a24db1f0-f6cf-4e74-91e7-5b4ba3746db2",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -5000,8 +5007,13 @@
       "key": "fb40596d-a877-43f3-87b7-325a2fd79c37",
       "position": 6,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fb40596d-a877-43f3-87b7-325a2fd79c37",
@@ -5012,7 +5024,6 @@
       "key": "8615ab59-fb2e-47e1-8f04-ab9d578fbc79",
       "position": 7,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -5039,7 +5050,6 @@
         "description": "**Prompt:** You now have many different ways to detect user input. With a partner, choose three different user input commands and think of an example of when you might use them. Be ready to share with the class!",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "This discussion serves as a brief review and assessment of the new user input commands.  As students share out, press them to explain why their choice is better than other, similar choices (mouseDown / mouseWentDown / mouseWentUp). If any commands are missing after all the groups have shared out, elicit the missing ones from the group before moving on.\r\n"
           }
@@ -5069,7 +5079,6 @@
         "description": "**Share:** Have students share out their ideas.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion introduces the chapter project: creating an interactive card. This is a good chance to tie in the 'card' concept to the problem-solving process, by defining the \"problem\" as cheering someone up, or letting them know that we are thinking about them. \r\n\r\n"
           }
@@ -5108,7 +5117,7 @@
       "position": 1,
       "properties": {
         "description": "**Goal:** Students see an example of a final project and discuss the different elements that went into making it.\r\n\r\n**Display:** Show students the sample program.",
-        "name": "Demo Project Exemplars (Level 2)\r"
+        "name": "Demo Project Exemplars (Level 1)"
       },
       "seeding_key": {
         "activity_section.key": "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6",
@@ -5142,8 +5151,8 @@
       "key": "9ba73a20-ba7f-42ae-9360-0b5607bd0498",
       "position": 4,
       "properties": {
-        "description": "&fa-desktop; **Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.",
-        "name": " Levels: Implementing Interactive Card (Level 3 - 7)\r"
+        "description": "**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.",
+        "name": " Levels: Implementing Interactive Card (Level 2 - 7)"
       },
       "seeding_key": {
         "activity_section.key": "9ba73a20-ba7f-42ae-9360-0b5607bd0498",
@@ -5178,12 +5187,56 @@
       "key": "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e",
       "position": 7,
       "properties": {
-        "description": "Using the rubric, students should assess their own project before submitting it.\n\n&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "Using the rubric, students should assess their own project before submitting it.\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r"
       },
       "seeding_key": {
         "activity_section.key": "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e",
         "lesson_activity.key": "ee232401-7aef-488e-b0f1-4b169a7a854e"
+      }
+    },
+    {
+      "key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3",
+      "position": 1,
+      "properties": {
+        "progression_name": "interactive Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3",
+        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
+      }
+    },
+    {
+      "key": "f0b22fea-67e0-4630-915c-d56f72746679",
+      "position": 2,
+      "properties": {
+        "progression_name": "Make an Interactive Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0b22fea-67e0-4630-915c-d56f72746679",
+        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
+      }
+    },
+    {
+      "key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89",
+      "position": 3,
+      "properties": {
+        "progression_name": "Project Work"
+      },
+      "seeding_key": {
+        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89",
+        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
+      }
+    },
+    {
+      "key": "10338eab-6d00-4e10-bf46-713201014f70",
+      "position": 4,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "10338eab-6d00-4e10-bf46-713201014f70",
+        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
       }
     },
     {
@@ -5196,54 +5249,6 @@
       "seeding_key": {
         "activity_section.key": "360d3353-5639-4dfb-a66d-784a152e1794",
         "lesson_activity.key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1"
-      }
-    },
-    {
-      "key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3",
-      "position": 1,
-      "properties": {
-        "name": "interactive Card",
-        "progression_name": "interactive Card"
-      },
-      "seeding_key": {
-        "activity_section.key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
-      }
-    },
-    {
-      "key": "f0b22fea-67e0-4630-915c-d56f72746679",
-      "position": 2,
-      "properties": {
-        "name": "Make an Interactive Card",
-        "progression_name": "Make an Interactive Card"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0b22fea-67e0-4630-915c-d56f72746679",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
-      }
-    },
-    {
-      "key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89",
-      "position": 3,
-      "properties": {
-        "name": "Project Work",
-        "progression_name": "Project Work"
-      },
-      "seeding_key": {
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
-      }
-    },
-    {
-      "key": "10338eab-6d00-4e10-bf46-713201014f70",
-      "position": 4,
-      "properties": {
-        "name": "Reflection",
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "10338eab-6d00-4e10-bf46-713201014f70",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
       }
     },
     {
@@ -5264,7 +5269,6 @@
         "description": "**Discuss:** Give students a minute to write down thoughts before inviting them to share with a neighbor. Then have the class share their thoughts. You may wish to write their ideas on the board.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The earlier demonstration should have reinforced the fact that repeatedly giving the same instruction is something you would never do in real life. You would instead come up with a way to capture that the instruction should be repeated, like \"keep moving forward by 1.\"\r\n"
           }
@@ -5325,7 +5329,6 @@
       "key": "498b10a2-a029-449b-a37d-0b85141e917b",
       "position": 3,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -5337,8 +5340,13 @@
       "key": "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560",
       "position": 4,
       "properties": {
-        "name": "Video: Velocity",
-        "progression_name": "Video: Velocity"
+        "progression_name": "Video: Velocity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Discussion Goals**\n\nIt may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n\nAs students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560",
@@ -5349,8 +5357,13 @@
       "key": "e8b8a1b0-89e9-4b09-978f-11db835db760",
       "position": 5,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Inside versus outside the draw loop**\n\nThis is a good time to remind students that code outside the draw loop is used to set up the program. It is for how you want your program to start. Code inside the draw loop is for things that are changing as the program is running, user interaction.\n\nThere may be some confusion that the new blocks are animation (changing position) and yet have gone outside the draw loop up until this point. That is because up until this point, the velocity has been set at the beginning of the program and not changed. When students want the velocity to change during the program, it will need to go inside the draw loop."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e8b8a1b0-89e9-4b09-978f-11db835db760",
@@ -5361,7 +5374,6 @@
       "key": "b61a7b78-619b-46fd-a7f4-e5e3f9e2a976",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -5373,8 +5385,13 @@
       "key": "a0ba31d0-91f2-4271-aacb-bf5c614aabc3",
       "position": 7,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a0ba31d0-91f2-4271-aacb-bf5c614aabc3",
@@ -5385,7 +5402,6 @@
       "key": "c7ff9236-7fd7-41ce-968f-0261551fd3b5",
       "position": 8,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -5400,7 +5416,6 @@
         "description": "**Prompt:** You learned a few new blocks today. At first glance, these blocks did the same sorts of things we'd already done with the counter pattern, but made it simpler for us to do them. As you went through the puzzles, though, you started doing some interesting movements that we hadn't been able to do before.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "As students describe the blocks that they would make, ensure that they are relating the specific code that a block would use to the higher-level concept of what it would do. For example, a \"velocity\" block would move a sprite across the screen, and it would include blocks that use the counter pattern on a position property. \r\n\r\nStudents should describe the advantages of having these blocks, such as not needing to re-write the code all the time, or making it easier to read what the program is doing.\r\n\r\n"
           }
@@ -5442,7 +5457,6 @@
         "description": "**Display:** On a projector or a computer screen, demonstrate the game that appears in the first level in Code Studio for this lesson.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Showing the Game:** Avoid signing students into Code Studio at this point to play the game themselves. They have a fairly significant unplugged activity immediately afterwards and it will likely lead to difficulties in transitioning.\r\n"
           }
@@ -5471,7 +5485,6 @@
         "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion.\r\n"
           }
@@ -5568,7 +5581,6 @@
       "key": "da7336ee-33fe-4542-970c-9cf2e888859e",
       "position": 6,
       "properties": {
-        "name": "Sample Game",
         "progression_name": "Sample Game"
       },
       "seeding_key": {
@@ -5580,8 +5592,13 @@
       "key": "49cfe240-7090-4fbd-9e61-ef725f8bddb1",
       "position": 7,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Level 2:**\nThe code in this level is overwhelming. The point is not that students understand every line, but that they see that it's possible to check whether sprites are touching just by using their positions. They should understand that the `isTouching` block used in the next level automatically runs the complicated code that they see here, but that it's hidden inside the block to make programming easier.\n\nThis code does not include the y and height properties because the two sprites are interacting on the same horizontal line. If the bunny could move diagonally, then the code would be even more complicated.\n\n**Level 5:** This level does not ask students to fix the bug in the program, which must be done in the animation tab. In order to make the collision work properly, students will need to crop the empty space around the visible part of the picture. The easiest way to do this is to click once on the \"crop\" icon in the animation tab, which will tightly crop to the smallest rectangle around the visible parts of the picture. Students may also use the rectangular select tool to specify what should be cropped away."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "49cfe240-7090-4fbd-9e61-ef725f8bddb1",
@@ -5592,7 +5609,6 @@
       "key": "9f5f2c6e-0979-4ada-bfbb-8be2fb0e7642",
       "position": 8,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -5604,8 +5620,13 @@
       "key": "ef8e8137-1524-4b5d-9e2a-6c6d535cda60",
       "position": 9,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ef8e8137-1524-4b5d-9e2a-6c6d535cda60",
@@ -5616,7 +5637,6 @@
       "key": "db772045-97b4-4f93-8e9d-8b9d015190a2",
       "position": 10,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -5642,7 +5662,6 @@
         "description": "**Prompt:** At the beginning of the lesson, you saw that it's possible to do everything that the `isTouching` block does without using the block at all.  What makes this block useful?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students should note that even though they could program the code to detect whether sprites are touching each time, it is error-prone and would take up more time and energy than having a block that performs the same code automatically. The new block helps them to take on more difficult challenges by reducing the risk of errors and freeing them to think about the bigger picture.\r\n\r\n"
           }
@@ -5725,7 +5744,6 @@
       "key": "0525516c-cd72-4700-9c7b-36644137ab93",
       "position": 2,
       "properties": {
-        "name": "Intro to Side Scrollers",
         "progression_name": "Intro to Side Scrollers"
       },
       "seeding_key": {
@@ -5737,7 +5755,6 @@
       "key": "c62c9fee-1e51-4d9d-b221-915d73af2cd2",
       "position": 3,
       "properties": {
-        "name": "Draw Your Background",
         "progression_name": "Draw Your Background"
       },
       "seeding_key": {
@@ -5749,7 +5766,6 @@
       "key": "ef36eaf3-2930-44dd-a939-e0e614755352",
       "position": 4,
       "properties": {
-        "name": "Create Your Sprites",
         "progression_name": "Create Your Sprites"
       },
       "seeding_key": {
@@ -5761,7 +5777,6 @@
       "key": "c8d03646-3696-4a48-9ae9-b54fce33300e",
       "position": 5,
       "properties": {
-        "name": "Player Controls",
         "progression_name": "Player Controls"
       },
       "seeding_key": {
@@ -5773,7 +5788,6 @@
       "key": "b763e8fd-b51e-4a15-b9be-7d675958d51c",
       "position": 6,
       "properties": {
-        "name": "Looping",
         "progression_name": "Looping"
       },
       "seeding_key": {
@@ -5785,7 +5799,6 @@
       "key": "3d9ddc58-7bda-43a0-8944-fd8c622b3d70",
       "position": 7,
       "properties": {
-        "name": "Sprite Interactions",
         "progression_name": "Sprite Interactions"
       },
       "seeding_key": {
@@ -5797,7 +5810,6 @@
       "key": "1ffc10cf-5883-4d6d-915c-2eb055ce8f84",
       "position": 8,
       "properties": {
-        "name": "Scoring & Scoreboard",
         "progression_name": "Scoring & Scoreboard"
       },
       "seeding_key": {
@@ -5809,7 +5821,6 @@
       "key": "8cdb45e9-b767-4246-b5bc-12648197665d",
       "position": 9,
       "properties": {
-        "name": "Review Your Game",
         "progression_name": "Review Your Game"
       },
       "seeding_key": {
@@ -5857,7 +5868,6 @@
         "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\r\n"
           }
@@ -5906,8 +5916,13 @@
       "key": "c87f7c08-8f60-4810-9e6f-10ae69319288",
       "position": 2,
       "properties": {
-        "name": "Prediction",
-        "progression_name": "Prediction"
+        "progression_name": "Prediction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c87f7c08-8f60-4810-9e6f-10ae69319288",
@@ -5918,7 +5933,6 @@
       "key": "e327d5f5-1886-4b6a-ba54-7eb091abc739",
       "position": 3,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -5930,7 +5944,6 @@
       "key": "1697fdd9-29f2-46d5-8091-5b5028ffc925",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -5942,8 +5955,13 @@
       "key": "96cef9d3-a478-4852-9dff-061a5fa5dc79",
       "position": 5,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "96cef9d3-a478-4852-9dff-061a5fa5dc79",
@@ -5954,7 +5972,6 @@
       "key": "077d6880-3d7a-4c59-a63c-06ab77e3e0d8",
       "position": 6,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -5980,7 +5997,6 @@
         "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks, but being creative about combining the tools you already know how to use.\r\n"
           }
@@ -6020,7 +6036,6 @@
         "description": "**Discuss:** Lead a quick follow-up to your initial discussion about this point.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": " Check that students can explain the new programming structures and algorithms that they were able to use to get the new behaviors in the program.\r\n"
           }
@@ -6061,7 +6076,6 @@
         "description": "**Share:** Allow students to share out their ideas.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus, because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned.\r\n"
           }
@@ -6090,7 +6104,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students have seen this vocabulary before, but given its importance to the chapter, it is introduced again here.\r\n\r\n"
           }
@@ -6119,7 +6132,6 @@
         "description": "**Prompt**: This was a challenging problem, but we were able to solve it.  What helped us to solve this problem?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Make sure students talk about the importance of higher-level blocks, such as isTouching, and that while these blocks don't provide new functionality, hiding the complexity of the code inside of a single block allows them to tackle more complex problems.  \r\n\r\nThis is also a good time to call out how far the students have progressed in their skills since the beginning of the unit.  This problem would have seemed almost impossible at the beginning of the year. Some things that made the problem easier to solve were:\r\n\r\n* Preparation: The students brainstormed and thought about solutions before trying out their code.\r\n* Cooperation: Students worked as a group to come up with a solution\r\n* Abstraction: Students were able to use the `isTouching` and `velocityY` blocks to hide part of the solution's complexity.\r\n\r\n  \r\n"
           }
@@ -6146,7 +6158,6 @@
       "key": "9d27bfd2-9f65-4725-bbbc-3c193ea210c3",
       "position": 3,
       "properties": {
-        "name": "Code Prediction",
         "progression_name": "Code Prediction"
       },
       "seeding_key": {
@@ -6158,7 +6169,6 @@
       "key": "c6e363e6-23a1-466a-9589-a4b871989618",
       "position": 4,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -6170,7 +6180,6 @@
       "key": "97db6b61-4e7a-4ce8-8b03-698a3b983f8c",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -6182,8 +6191,13 @@
       "key": "6b47f10d-a466-436e-ad48-25f2404ae07a",
       "position": 6,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6b47f10d-a466-436e-ad48-25f2404ae07a",
@@ -6194,7 +6208,6 @@
       "key": "e0a4583c-3ca6-4235-a457-774d3696a07d",
       "position": 7,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -6220,7 +6233,6 @@
         "description": "**Prompt:** How did having the `isTouching` block and the `velocityX` block make it easier to solve the problem of one sprite pushing another?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students should understand that these two blocks represent partial solutions to the problem of one sprite pushing the other, and that by hiding the details of those partial solutions, they can more easily focus on how to fit those partial solutions together to solve larger and more complex problems. \r\n\r\n"
           }
@@ -6280,7 +6292,6 @@
       "key": "05331f50-c576-42e0-91ce-00561faee05c",
       "position": 2,
       "properties": {
-        "name": "Intro to Flyer Game",
         "progression_name": "Intro to Flyer Game"
       },
       "seeding_key": {
@@ -6292,7 +6303,6 @@
       "key": "b67bbd2c-2139-48e4-8002-a7f3f048052a",
       "position": 3,
       "properties": {
-        "name": "Make Your Sprites",
         "progression_name": "Make Your Sprites"
       },
       "seeding_key": {
@@ -6304,7 +6314,6 @@
       "key": "91ab7cf4-19a7-4424-b59e-c806057dbb65",
       "position": 4,
       "properties": {
-        "name": "Player Controls",
         "progression_name": "Player Controls"
       },
       "seeding_key": {
@@ -6316,7 +6325,6 @@
       "key": "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2",
       "position": 5,
       "properties": {
-        "name": "Sprite Movement",
         "progression_name": "Sprite Movement"
       },
       "seeding_key": {
@@ -6328,7 +6336,6 @@
       "key": "93c86b2f-aeb2-48d2-b34d-8213761ae09c",
       "position": 6,
       "properties": {
-        "name": "Sprite Interactions",
         "progression_name": "Sprite Interactions"
       },
       "seeding_key": {
@@ -6340,7 +6347,6 @@
       "key": "a9203a76-f8c9-4a77-9c8e-0d329d1f9099",
       "position": 7,
       "properties": {
-        "name": "Review Your Game",
         "progression_name": "Review Your Game"
       },
       "seeding_key": {
@@ -6379,7 +6385,6 @@
         "description": "**Think-Pair-Share:** Allow students to explain their blocks to a partner before sharing out their ideas.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "As students share their ideas, make sure they have a clear idea of the code that they would use to make the block, reminding them that all of the blocks they have learned this chapter (e.g. velocity, collisions) have been built from blocks that they already knew.\r\n"
           }
@@ -6428,8 +6433,13 @@
       "key": "52d53651-705c-47ec-a68f-d014f3499a99",
       "position": 2,
       "properties": {
-        "name": "Video: Functions",
-        "progression_name": "Video: Functions"
+        "progression_name": "Video: Functions",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:**\n\n**Key Vocabulary:**\n- **Function** - a named bit of programming instructions\n\nMake sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program that the student wants that block of code to run."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "52d53651-705c-47ec-a68f-d014f3499a99",
@@ -6440,8 +6450,13 @@
       "key": "085e06bd-a991-42ec-b8e2-2e27712cf7dd",
       "position": 3,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Introducing Functions**\n\nIn these first several lessons students are just being shown the syntax of functions and are not asked to write or create their own. It can be useful to explain creating a function as basically “creating a new block” just like another programmer created the “isTouching” or “velocity” blocks that they’ve seen actually contain other more complex code."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "085e06bd-a991-42ec-b8e2-2e27712cf7dd",
@@ -6452,7 +6467,6 @@
       "key": "4aa5af6f-34ee-4311-a7fb-c895f6154dd2",
       "position": 4,
       "properties": {
-        "name": "Predict",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -6464,8 +6478,13 @@
       "key": "e4283f2d-5933-4812-80df-341067426cc8",
       "position": 5,
       "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Why Use Functions**\n\nThis (Level 6b) and the next two levels introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e4283f2d-5933-4812-80df-341067426cc8",
@@ -6476,7 +6495,6 @@
       "key": "46206978-44fa-44f3-a4b3-746a30a86dce",
       "position": 6,
       "properties": {
-        "name": "Quick Check",
         "progression_name": "Quick Check"
       },
       "seeding_key": {
@@ -6488,8 +6506,13 @@
       "key": "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5",
       "position": 7,
       "properties": {
-        "name": "Collector Game",
-        "progression_name": "Collector Game"
+        "progression_name": "Collector Game",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Level 7: Functions in Context**\n\nIn this and the next two lessons, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5",
@@ -6500,7 +6523,6 @@
       "key": "c3302e9a-4da1-4c1b-96ca-232b7026ea9c",
       "position": 8,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -6526,7 +6548,6 @@
         "description": "**Discuss:** Have students discuss at their table before talking as a class.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "**Goal:** Use this first prompt to review what students learned today. When they create a function they are creating their own block that they can call or use whenever they like. They saw at least two primary motivations for creating functions today including:\r\n\r\n* Simplifying code by breaking it into logically named chunks\r\n* Allowing a programmer to think at a higher level by hiding the details or a particular bit of programming instructions\r\n* Avoiding repeated code by making one block you can use multiple times\r\n\r\nStudents should review the definition of abstraction as \"a simple way of representing something complex\". Note that a function is an abstraction because it allows you to create one simple name for a more complex block of code.\r\n\r\n\r\n"
           }
@@ -6564,7 +6585,7 @@
       "key": "558eccfc-5a53-4d89-a0d1-ba9f57e5fe0e",
       "position": 1,
       "properties": {
-        "description": "&fa-desktop;\r\n**Transition:** This lesson begins immediately in Code Studio. On the first level, students will find a game but will not be able to see the code. They should play the game and follow the instructions which ask them to list the variables, sprites, and functions they think are necessary to create this game.",
+        "description": "**Transition:** This lesson begins immediately in Code Studio. On the first level, students will find a game but will not be able to see the code. They should play the game and follow the instructions which ask them to list the variables, sprites, and functions they think are necessary to create this game.",
         "name": "Play Cake Defender\r"
       },
       "seeding_key": {
@@ -6579,7 +6600,6 @@
         "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Running the Conversation:** You can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\r\n\r\n"
           }
@@ -6621,7 +6641,6 @@
         "description": "**Distribute:** Give each student or pair of students a copy of the project guide.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Project Guide:** The project guide is intentionally filled out for students so that they can experience using it as a reference when programming. This should give them more context when filling out their own project guide in the next two lessons. \r\n\r\nYou can give each student their own copy for reference, but you might also choose to print one copy per pair, share digital copies, or just display the guide on the projector. So long as it is available for reference, any approach will work fine.\r\n\r\n"
           }
@@ -6659,7 +6678,6 @@
       "key": "655acab5-5605-4833-b201-7d4776773bb5",
       "position": 4,
       "properties": {
-        "name": "Same Game",
         "progression_name": "Same Game"
       },
       "seeding_key": {
@@ -6671,7 +6689,6 @@
       "key": "f2e6c88e-bc52-4073-b67d-69a0dda590a7",
       "position": 5,
       "properties": {
-        "name": "Plan Your Project",
         "progression_name": "Plan Your Project"
       },
       "seeding_key": {
@@ -6683,7 +6700,6 @@
       "key": "4a1fbbc7-9baa-4d49-bad8-71ea306857af",
       "position": 6,
       "properties": {
-        "name": "Set Up Sprites",
         "progression_name": "Set Up Sprites"
       },
       "seeding_key": {
@@ -6695,7 +6711,6 @@
       "key": "f860c052-f4a5-4925-bed9-78bf6c24605b",
       "position": 7,
       "properties": {
-        "name": "Control Your Player",
         "progression_name": "Control Your Player"
       },
       "seeding_key": {
@@ -6707,7 +6722,6 @@
       "key": "b38b9687-9ab2-490a-8306-5e0655d51863",
       "position": 8,
       "properties": {
-        "name": "Sprite Interactions",
         "progression_name": "Sprite Interactions"
       },
       "seeding_key": {
@@ -6719,8 +6733,13 @@
       "key": "d0d85465-a081-4c09-ae83-8b454e76c2ff",
       "position": 9,
       "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
+        "progression_name": "Challenges",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This last level encourages students to make the game their own. If students have made their way to this point they have all the skills they need to progress through the curriculum, so there is no pressure to complete any of the modifications suggested in this level. If you have time, however, getting practice planning and implementing new features will be a useful skill. Even just modifying the animations of the game is an easy way students can make the game their own."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d0d85465-a081-4c09-ae83-8b454e76c2ff",
@@ -6734,7 +6753,6 @@
         "description": "**Prompt:** Today, you used a filled-out project guide as you completed your program.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "As students answer the questions, make sure that they understand that the project guide is there to help them organize their work, so that they can look at smaller parts of the problem rather than thinking about it all at one time. They can use it to focus on one part of their program at a time as they code.  \r\n\r\nIn the next lesson, as they fill out their own project guides, they will need to think carefully about the different parts of their program before they start coding. You may want to remind then of the \"Prepare\" part of the Problem Solving Process, and to think about how they might need to go back and tweak the project guide even after they have started coding.\r\n"
           }
@@ -6775,7 +6793,6 @@
         "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterwards, lead a share out discussion. You can record ideas on the board.  Possible parts of each step include:",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided. This discussion will motivate the use of the project guide for building a game later in the lesson.\r\n"
           }
@@ -6862,7 +6879,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Making the game will take at least two class periods. If there's not enough time for all students to finish the lesson, groups of students can work to code different aspects, then share their code with each other. For example, one group could work on the platforms, one on the stars, and another on the player. Students who have finished early can choose more challenges from the later levels.\r\n"
           }
@@ -6877,7 +6893,6 @@
       "key": "dd4b1c89-f148-47f2-956f-8fe786a2accb",
       "position": 5,
       "properties": {
-        "name": "Sample Platform Jumper Game",
         "progression_name": "Sample Platform Jumper Game"
       },
       "seeding_key": {
@@ -6889,7 +6904,6 @@
       "key": "96fe06b7-2d5b-434f-bb02-bc5e4bb74eaf",
       "position": 6,
       "properties": {
-        "name": "Build a Platform Jumper",
         "progression_name": "Build a Platform Jumper"
       },
       "seeding_key": {
@@ -6901,7 +6915,6 @@
       "key": "b51fe24a-e404-4c6e-9fe1-8916f81f0e85",
       "position": 7,
       "properties": {
-        "name": "Platform Jumper - Background and Variables",
         "progression_name": "Platform Jumper - Background and Variables"
       },
       "seeding_key": {
@@ -6913,7 +6926,6 @@
       "key": "acfd2ab2-c569-4af6-b8c4-95bcf48e5f87",
       "position": 8,
       "properties": {
-        "name": "Platform Jumper - Platforms",
         "progression_name": "Platform Jumper - Platforms"
       },
       "seeding_key": {
@@ -6925,7 +6937,6 @@
       "key": "c8f33ef3-d45e-4cdc-9b94-b621dab81076",
       "position": 9,
       "properties": {
-        "name": "Platform Jumper - Items",
         "progression_name": "Platform Jumper - Items"
       },
       "seeding_key": {
@@ -6937,7 +6948,6 @@
       "key": "e41b90a3-20b1-45d9-9e3d-490c083587ea",
       "position": 10,
       "properties": {
-        "name": "Platform Jumper - Player",
         "progression_name": "Platform Jumper - Player"
       },
       "seeding_key": {
@@ -6949,8 +6959,13 @@
       "key": "b29f40dd-4e28-4c22-8aa8-9e387819622c",
       "position": 11,
       "properties": {
-        "name": "Platform Jumper Review",
-        "progression_name": "Platform Jumper Review"
+        "progression_name": "Platform Jumper Review",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b29f40dd-4e28-4c22-8aa8-9e387819622c",
@@ -6961,7 +6976,6 @@
       "key": "3732107f-02cf-4117-941b-725824574e50",
       "position": 12,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -7011,7 +7025,6 @@
         "description": "**Share:** Allow students to share out their ideas.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\r\n"
           }
@@ -7085,7 +7098,7 @@
       "key": "686b638e-1a29-49cc-8711-191165d251b9",
       "position": 4,
       "properties": {
-        "description": "&fa-desktop;\r\n**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
+        "description": "**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
         "name": "Try - Write Code\r"
       },
       "seeding_key": {
@@ -7130,6 +7143,61 @@
       }
     },
     {
+      "key": "8e332974-cdac-4d0c-92f8-63c1aae898ed",
+      "position": 1,
+      "properties": {
+        "progression_name": "Design Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e332974-cdac-4d0c-92f8-63c1aae898ed",
+        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
+      }
+    },
+    {
+      "key": "42560001-6426-479c-bec1-6fa233955cf4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project - Background and Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4",
+        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
+      }
+    },
+    {
+      "key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Project - Sprites and Interactions"
+      },
+      "seeding_key": {
+        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d",
+        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
+      }
+    },
+    {
+      "key": "e536e2cd-fbc8-4f10-823f-d1a01176b511",
+      "position": 4,
+      "properties": {
+        "progression_name": "Review Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "e536e2cd-fbc8-4f10-823f-d1a01176b511",
+        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
+      }
+    },
+    {
+      "key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b",
+        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
+      }
+    },
+    {
       "key": "a151ee83-294e-43ad-83ec-6047931fc83d",
       "position": 1,
       "properties": {
@@ -7145,7 +7213,7 @@
       "key": "2d58346e-e123-4477-8995-fefc448b3fe3",
       "position": 2,
       "properties": {
-        "description": "&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r"
       },
       "seeding_key": {
@@ -7162,66 +7230,6 @@
       "seeding_key": {
         "activity_section.key": "deb11fcf-de60-4df8-8c44-d2fd3ac33baa",
         "lesson_activity.key": "163efba3-af62-4989-8fab-c173dfbc4ed6"
-      }
-    },
-    {
-      "key": "8e332974-cdac-4d0c-92f8-63c1aae898ed",
-      "position": 1,
-      "properties": {
-        "name": "Design Your Game",
-        "progression_name": "Design Your Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e332974-cdac-4d0c-92f8-63c1aae898ed",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "42560001-6426-479c-bec1-6fa233955cf4",
-      "position": 2,
-      "properties": {
-        "name": "Project - Background and Variables",
-        "progression_name": "Project - Background and Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d",
-      "position": 3,
-      "properties": {
-        "name": "Project - Sprites and Interactions",
-        "progression_name": "Project - Sprites and Interactions"
-      },
-      "seeding_key": {
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "e536e2cd-fbc8-4f10-823f-d1a01176b511",
-      "position": 4,
-      "properties": {
-        "name": "Review Your Game",
-        "progression_name": "Review Your Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "e536e2cd-fbc8-4f10-823f-d1a01176b511",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b",
-      "position": 5,
-      "properties": {
-        "name": "Reflection",
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
       }
     },
     {
@@ -9642,7 +9650,7 @@
       "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -9668,7 +9676,7 @@
       "chapter": 94,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Booleans",
         "level_keys": [
@@ -9694,7 +9702,7 @@
       "chapter": 95,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Quick Check",
         "level_keys": [
@@ -9720,7 +9728,7 @@
       "chapter": 96,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9746,7 +9754,7 @@
       "chapter": 97,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9772,7 +9780,7 @@
       "chapter": 98,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Conditional Statements",
         "level_keys": [
@@ -9798,7 +9806,7 @@
       "chapter": 99,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9824,7 +9832,7 @@
       "chapter": 100,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -9876,7 +9884,7 @@
       "chapter": 102,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -9902,7 +9910,7 @@
       "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -9928,7 +9936,7 @@
       "chapter": 104,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9954,7 +9962,7 @@
       "chapter": 105,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9980,7 +9988,7 @@
       "chapter": 106,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10006,7 +10014,7 @@
       "chapter": 107,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10058,7 +10066,7 @@
       "chapter": 109,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -10084,7 +10092,7 @@
       "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -10110,7 +10118,7 @@
       "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: If/Else Statements",
         "level_keys": [
@@ -10136,7 +10144,7 @@
       "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10162,7 +10170,7 @@
       "chapter": 113,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10188,7 +10196,7 @@
       "chapter": 114,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10214,7 +10222,7 @@
       "chapter": 115,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10240,7 +10248,7 @@
       "chapter": 116,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10292,7 +10300,7 @@
       "chapter": 118,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -10318,7 +10326,7 @@
       "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "interactive Card",
         "level_keys": [
@@ -10344,7 +10352,7 @@
       "chapter": 120,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Make an Interactive Card",
         "level_keys": [
@@ -10370,7 +10378,7 @@
       "chapter": 121,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10396,7 +10404,7 @@
       "chapter": 122,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10422,7 +10430,7 @@
       "chapter": 123,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10448,7 +10456,7 @@
       "chapter": 124,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10474,7 +10482,7 @@
       "chapter": 125,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10526,7 +10534,7 @@
       "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10552,7 +10560,7 @@
       "chapter": 128,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Velocity",
         "level_keys": [
@@ -10578,7 +10586,7 @@
       "chapter": 129,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10604,7 +10612,7 @@
       "chapter": 130,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10630,7 +10638,7 @@
       "chapter": 131,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10656,7 +10664,7 @@
       "chapter": 132,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10682,7 +10690,7 @@
       "chapter": 133,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10708,7 +10716,7 @@
       "chapter": 134,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10760,7 +10768,7 @@
       "chapter": 136,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -10786,7 +10794,7 @@
       "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Game",
         "level_keys": [
@@ -10812,7 +10820,7 @@
       "chapter": 138,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10838,7 +10846,7 @@
       "chapter": 139,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10864,7 +10872,7 @@
       "chapter": 140,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10890,7 +10898,7 @@
       "chapter": 141,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10916,7 +10924,7 @@
       "chapter": 142,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10968,7 +10976,7 @@
       "chapter": 144,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -11202,7 +11210,7 @@
       "chapter": 153,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -11228,7 +11236,7 @@
       "chapter": 154,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11254,7 +11262,7 @@
       "chapter": 155,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11280,7 +11288,7 @@
       "chapter": 156,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11306,7 +11314,7 @@
       "chapter": 157,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -11358,7 +11366,7 @@
       "chapter": 159,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -11384,7 +11392,7 @@
       "chapter": 160,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Prediction",
         "level_keys": [
@@ -11410,7 +11418,7 @@
       "chapter": 161,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11436,7 +11444,7 @@
       "chapter": 162,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11462,7 +11470,7 @@
       "chapter": 163,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11488,7 +11496,7 @@
       "chapter": 164,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11514,7 +11522,7 @@
       "chapter": 165,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -11566,7 +11574,7 @@
       "chapter": 167,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -11592,7 +11600,7 @@
       "chapter": 168,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Intro to Flyer Game",
         "level_keys": [
@@ -11618,7 +11626,7 @@
       "chapter": 169,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Make Your Sprites",
         "level_keys": [
@@ -11644,7 +11652,7 @@
       "chapter": 170,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Player Controls",
         "level_keys": [
@@ -11670,7 +11678,7 @@
       "chapter": 171,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Player Controls",
         "level_keys": [
@@ -11696,7 +11704,7 @@
       "chapter": 172,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Player Controls",
         "level_keys": [
@@ -11722,7 +11730,7 @@
       "chapter": 173,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Movement",
         "level_keys": [
@@ -11748,7 +11756,7 @@
       "chapter": 174,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -11774,7 +11782,7 @@
       "chapter": 175,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Game",
         "level_keys": [
@@ -11800,7 +11808,7 @@
       "chapter": 176,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Functions",
         "level_keys": [
@@ -11826,7 +11834,7 @@
       "chapter": 177,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11852,7 +11860,7 @@
       "chapter": 178,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11878,7 +11886,7 @@
       "chapter": 179,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -11904,7 +11912,7 @@
       "chapter": 180,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -11956,7 +11964,7 @@
       "chapter": 182,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Collector Game",
         "level_keys": [
@@ -11982,7 +11990,7 @@
       "chapter": 183,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Collector Game",
         "level_keys": [
@@ -12034,7 +12042,7 @@
       "chapter": 185,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12060,7 +12068,7 @@
       "chapter": 186,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Same Game",
         "level_keys": [
@@ -12086,7 +12094,7 @@
       "chapter": 187,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Plan Your Project",
         "level_keys": [
@@ -12112,7 +12120,7 @@
       "chapter": 188,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Set Up Sprites",
         "level_keys": [
@@ -12138,7 +12146,7 @@
       "chapter": 189,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Set Up Sprites",
         "level_keys": [
@@ -12164,7 +12172,7 @@
       "chapter": 190,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Control Your Player",
         "level_keys": [
@@ -12190,7 +12198,7 @@
       "chapter": 191,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Control Your Player",
         "level_keys": [
@@ -12216,7 +12224,7 @@
       "chapter": 192,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Control Your Player",
         "level_keys": [
@@ -12242,7 +12250,7 @@
       "chapter": 193,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12268,7 +12276,7 @@
       "chapter": 194,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12294,7 +12302,7 @@
       "chapter": 195,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12320,7 +12328,7 @@
       "chapter": 196,
       "position": 11,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12346,7 +12354,7 @@
       "chapter": 197,
       "position": 12,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12372,7 +12380,7 @@
       "chapter": 198,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12398,7 +12406,7 @@
       "chapter": 199,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Platform Jumper Game",
         "level_keys": [
@@ -12424,7 +12432,7 @@
       "chapter": 200,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Build a Platform Jumper",
         "level_keys": [
@@ -12450,7 +12458,7 @@
       "chapter": 201,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12476,7 +12484,7 @@
       "chapter": 202,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12502,7 +12510,7 @@
       "chapter": 203,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12528,7 +12536,7 @@
       "chapter": 204,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12554,7 +12562,7 @@
       "chapter": 205,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Platforms",
         "level_keys": [
@@ -12580,7 +12588,7 @@
       "chapter": 206,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Platforms",
         "level_keys": [
@@ -12606,7 +12614,7 @@
       "chapter": 207,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Platforms",
         "level_keys": [
@@ -12632,7 +12640,7 @@
       "chapter": 208,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Items",
         "level_keys": [
@@ -12658,7 +12666,7 @@
       "chapter": 209,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Items",
         "level_keys": [
@@ -12684,7 +12692,7 @@
       "chapter": 210,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Items",
         "level_keys": [
@@ -12710,7 +12718,7 @@
       "chapter": 211,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12736,7 +12744,7 @@
       "chapter": 212,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12762,7 +12770,7 @@
       "chapter": 213,
       "position": 15,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12788,7 +12796,7 @@
       "chapter": 214,
       "position": 16,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12840,7 +12848,7 @@
       "chapter": 216,
       "position": 18,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12866,7 +12874,7 @@
       "chapter": 217,
       "position": 19,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12892,7 +12900,7 @@
       "chapter": 218,
       "position": 20,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12918,7 +12926,7 @@
       "chapter": 219,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Your Game",
         "level_keys": [
@@ -12944,7 +12952,7 @@
       "chapter": 220,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -12970,7 +12978,7 @@
       "chapter": 221,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -12996,7 +13004,7 @@
       "chapter": 222,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -13022,7 +13030,7 @@
       "chapter": 223,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -13048,7 +13056,7 @@
       "chapter": 224,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13074,7 +13082,7 @@
       "chapter": 225,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13100,7 +13108,7 @@
       "chapter": 226,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13126,7 +13134,7 @@
       "chapter": 227,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13152,7 +13160,7 @@
       "chapter": 228,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13178,7 +13186,7 @@
       "chapter": 229,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Game",
         "level_keys": [
