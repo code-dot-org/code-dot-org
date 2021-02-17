@@ -161,15 +161,6 @@ class Lesson < ApplicationRecord
     script_levels.first.oldest_active_level.unplugged?
   end
 
-  # This is currently only relevant to CSF levels, which use the Unplugged
-  # level type. As an alternative to the Unplugged level type, Levelbuilders
-  # can select if External/Markdown levels should display as unplugged.
-  def display_as_unplugged
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged_lesson?
-  end
-
   def spelling_bee?
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
@@ -259,7 +250,7 @@ class Lesson < ApplicationRecord
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
-        unplugged: display_as_unplugged, # TODO: Update to use unplugged property
+        unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
 
