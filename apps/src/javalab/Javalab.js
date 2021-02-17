@@ -8,11 +8,7 @@ import {TestResults} from '@cdo/apps/constants';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
- * image telling the user to rotate their device to landscape mode.  Because
- * the ailab app is able to render at a minimum width of 480px, we set this
- * width to be somewhat larger.  We will use this width to set the viewport
- * on the mobile device, and correspondingly to scale up the overlay image to
- * properly fit on the mobile device for that viewport.
+ * image telling the user to rotate their device to landscape mode.
  */
 const MOBILE_PORTRAIT_WIDTH = 600;
 
