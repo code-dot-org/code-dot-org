@@ -13,11 +13,11 @@ tts true
 is_course true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Digital Trails', display_name: 'Digital Trails', has_lesson_plan: true
+lesson 'Digital Trails', display_name: 'Digital Trails', has_lesson_plan: true, unplugged: true
 level 'csf_digital_trails'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
-lesson 'Move It, Move It', display_name: 'Move It, Move It', has_lesson_plan: true
+lesson 'Move It, Move It', display_name: 'Move It, Move It', has_lesson_plan: true, unplugged: true
 level 'MoveItMoveIt-Unplugged_2020'
 
 lesson 'Sequencing in Maze', display_name: 'Sequencing with Angry Birds', has_lesson_plan: true
@@ -61,7 +61,7 @@ level 'courseA_harvester_seq11_2020', progression: 'Practice'
 level 'courseA_harvester_seq13_2020', progression: 'Practice'
 
 lesson_group 'csf_loops', display_name: 'Loops'
-lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true
+lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy-Unplugged_2020'
 
 lesson 'Loops in Harvester', display_name: 'Loops with Harvester', has_lesson_plan: true
@@ -113,11 +113,11 @@ bonus 'courseB_artist_loops_challenge1_2020'
 bonus 'courseB_artist_loops_challenge2_2020'
 
 lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
-lesson 'The Right App', display_name: 'The Right App', has_lesson_plan: true
+lesson 'The Right App', display_name: 'The Right App', has_lesson_plan: true, unplugged: true
 level 'TheRightAppMarkdownLevel_2019_2020'
 
 lesson_group 'csf_events', display_name: 'Events'
-lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true, unplugged: true
 level 'BigEvent-Unplugged_2020'
 
 lesson 'Events in Play Lab', display_name: 'A Royal Battle with Events', has_lesson_plan: true
