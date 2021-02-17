@@ -98,9 +98,10 @@ module Services
 
     def self.get_base_url
       # Right now, this is obviously just using the raw S3 subdomain as the
-      # base url. This should work just fine, but if we wanted to be fancier,
-      # we could set the bucket up to be served from something like
-      # `lesson-plans.code.org` like we do for the cdo-tts bucket.
+      # base url. This should work fine for now, but ideally we'd like to set
+      # the bucket up to be served from a code.org subdomain so we can have a
+      # button which downloads the asset (the HTML download attribute only
+      # works with same-origin urls).
       "https://#{S3_BUCKET}.s3.amazonaws.com"
     end
 
