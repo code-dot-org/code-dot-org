@@ -174,24 +174,30 @@ describe('Button', () => {
     assert.equal(icon.props().icon, 'lock');
   });
 
-  it('supports the download attribute, but only for anchors', () => {
-    let wrapper = shallow(
+  it('supports the download property/attribute', () => {
+    // The download attribute can be used with or without a value (see
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-download),
+    // so make sure to test both.
+    const wrapper = shallow(
       <Button __useDeprecatedTag download href="/foo/bar" text="Click me" />
     );
     assert.equal(wrapper.find('a').prop('download'), true);
-
-    wrapper = shallow(
-      <Button
-        __useDeprecatedTag
-        download="baz"
-        href="/foo/bar"
-        text="Click me"
-      />
-    );
+    wrapper.setProps({download: 'baz'});
     assert.equal(wrapper.find('a').prop('download'), 'baz');
+  });
+
+  it('does not support the download property/attribute for non-anchor tags', () => {
+    // <button> and <div> elements do not have a download attribute, so we
+    // proactively prevent our component from attempting to use the download
+    // property when the underlying element would be one of them.
+    assert.throws(() => {
+      // button case
+      shallow(<Button download text="Click me" />);
+    });
 
     assert.throws(() => {
-      shallow(<Button download href="/foo/bar" text="Click me" />);
+      // div case
+      shallow(<Button __useDeprecatedTag download text="Click me" />);
     });
   });
 });
