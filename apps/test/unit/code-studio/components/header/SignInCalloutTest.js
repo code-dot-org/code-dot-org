@@ -32,6 +32,20 @@ describe('Check popup does not appear when flag is set', () => {
 });
 
 describe('Check cookies and session storage appear on click', () => {
+  let server;
+  beforeEach(() => {
+    server = sinon.fakeServer.create();
+  });
+  afterEach(() => {
+    server.restore();
+    if (cookies.get('hide_signin_callout').restore) {
+      cookies.get('hide_signin_callout').restore();
+    }
+    if (sessionStorage.getItem('hide_signin_callout').restore) {
+      sessionStorage.getItem('hide_signin_callout').restore();
+    }
+  });
+
   it('cookies appear when clicked, and callout disappears', () => {
     parentWrapper.setState({hideCallout: false});
     expect(parentWrapper.html().includes('uitest-signincallout')).to.be.true;
@@ -61,5 +75,12 @@ describe('The click to dismiss correctly updates the flag', () => {
     expect(parentWrapper.html().includes('uitest-signincallout')).to.be.true;
     parentWrapper.find('.modal-backdrop').simulate('click');
     expect(parentWrapper.html() === null).to.be.true;
+
+    if (cookies.get('hide_signin_callout').restore) {
+      cookies.get('hide_signin_callout').restore();
+    }
+    if (sessionStorage.getItem('hide_signin_callout').restore) {
+      sessionStorage.getItem('hide_signin_callout').restore();
+    }
   });
 });
