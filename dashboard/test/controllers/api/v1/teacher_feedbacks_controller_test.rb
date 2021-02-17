@@ -303,8 +303,8 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   # Sign in as teacher and leave feedback for student on level.
   # Assert that the feedback request was successful
   # Note that the section that a piece of teacher feedback is explicitly associated with via section ID
-  # is not currently used in our application (we're only logging section ID for analytics purposes for now),
-  # so the default section is used in all tests.
+  # is not (as of Feb. 2021) used in our application (we're only logging section ID for analytics purposes for now),
+  # so the default section created during setup_all is provided unless otherwise overwritten.
   def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, section=@section)
     sign_in teacher
     params = {
