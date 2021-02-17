@@ -84,7 +84,7 @@ class TeacherFeedback < ApplicationRecord
   def self.latest_per_teacher
     # :student_sections is a superset of the :section association,
     # so this method should continue to work even now that newer instances of TeacherFeedback
-    # are stored with the section ID that the associated the teacher and student when the feedback was provided.
+    # are stored with the section ID that associated the teacher and student when the feedback was provided.
 
     # Only select feedback from teachers who lead sections in which the student is still enrolled
     find(
