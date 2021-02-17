@@ -173,4 +173,25 @@ describe('Button', () => {
     assert(icon);
     assert.equal(icon.props().icon, 'lock');
   });
+
+  it('supports the download attribute, but only for anchors', () => {
+    let wrapper = shallow(
+      <Button __useDeprecatedTag download href="/foo/bar" text="Click me" />
+    );
+    assert.equal(wrapper.find('a').prop('download'), true);
+
+    wrapper = shallow(
+      <Button
+        __useDeprecatedTag
+        download="baz"
+        href="/foo/bar"
+        text="Click me"
+      />
+    );
+    assert.equal(wrapper.find('a').prop('download'), 'baz');
+
+    assert.throws(() => {
+      shallow(<Button download href="/foo/bar" text="Click me" />);
+    });
+  });
 });
