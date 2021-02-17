@@ -27,6 +27,20 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
+  # GET /s/script-name/lessons/1/student
+  def show_student_lesson_plan
+    script = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless script.is_migrated
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
+    render 'lessons/student_lesson_plan'
+  end
+
   # GET /lessons/1/edit
   def edit
     @lesson_data = @lesson.summarize_for_lesson_edit
