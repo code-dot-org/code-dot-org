@@ -19,7 +19,7 @@ export default class LevelDetailsDialog extends Component {
     handleClose: PropTypes.func.isRequired
   };
 
-  getContentComponent = level => {
+  getComponentContent = level => {
     if (level.type === 'External') {
       return <SafeMarkdown markdown={level.markdown} />;
     } else if (level.type === 'StandaloneVideo') {
@@ -67,7 +67,7 @@ export default class LevelDetailsDialog extends Component {
   render() {
     const {scriptLevel} = this.props;
     const level = scriptLevel.level;
-    const preview = this.getContentComponent(level);
+    const preview = this.getComponentContent(level);
     return (
       <BaseDialog
         isOpen={true}
