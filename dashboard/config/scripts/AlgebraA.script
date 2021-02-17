@@ -34,7 +34,7 @@ level 'Eval Strings Images 8'
 level 'Multi Strings Images 1'
 level 'Eval Strings Images Free Play'
 
-lesson 'Unplugged: Contracts', display_name: 'Unplugged: Contracts', has_lesson_plan: true
+lesson 'Unplugged: Contracts', display_name: 'Unplugged: Contracts', has_lesson_plan: true, unplugged: true
 level 'Contracts'
 
 lesson 'Eval: Writing Contracts', display_name: 'Eval: Writing Contracts', has_lesson_plan: true
@@ -64,7 +64,7 @@ level 'msm variables multi 4'
 level 'msm variables multi 5'
 level 'msm variables multi 6'
 
-lesson 'Unplugged: Fast Functions', display_name: 'Unplugged: Fast Functions', has_lesson_plan: true
+lesson 'Unplugged: Fast Functions', display_name: 'Unplugged: Fast Functions', has_lesson_plan: true, unplugged: true
 level 'DesignRecipe'
 
 lesson 'Eval: Defining Functions', display_name: 'Eval: Defining Functions', has_lesson_plan: true
@@ -84,7 +84,7 @@ level 'msm variables multi 10'
 level 'msm variables multi 11'
 level 'msm variables multi 13'
 
-lesson 'Unplugged: The Design Recipe', display_name: 'Unplugged: The Design Recipe', has_lesson_plan: true
+lesson 'Unplugged: The Design Recipe', display_name: 'Unplugged: The Design Recipe', has_lesson_plan: true, unplugged: true
 level 'DesignRecipe'
 
 lesson 'Eval: Functions', display_name: 'Eval: Functions', has_lesson_plan: true
