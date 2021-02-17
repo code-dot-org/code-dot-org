@@ -27,6 +27,7 @@ class CrossTab extends Component {
       <div id="cross-tab">
         {!currentColumn && crossTabData && (
           <div style={styles.rightPanel}>
+            <div style={styles.largeText}>Correlation Information</div>
             <div style={styles.subPanel}>
               <div style={styles.scrollContents}>
                 <table>
