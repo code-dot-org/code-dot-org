@@ -1,4 +1,5 @@
 import KNN from 'ml-knn';
+import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 
 const KNNTrainers = ['knnClassify', 'knnRegress'];
 
@@ -48,7 +49,7 @@ export function predict(modelData) {
       convertTestValue(
         modelData.featureNumberKey,
         feature,
-        modelData.testData[feature.replace(/\W/g, '')]
+        modelData.testData[stripSpaceAndSpecial(feature)]
       )
     );
     // Make a prediction.
