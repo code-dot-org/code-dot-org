@@ -101,6 +101,17 @@ export default class ProgressTableContentView extends React.Component {
     );
   }
 
+  /**
+   * `columnWidths` is an optional prop. When it's provided, we explicitly
+   * constrain column widths to the provided values. When it's absent, the
+   * columns will size themselves based on their content.
+   *
+   * Note: Due to the nuances of reactabular's implementation, header cells
+   * are unable to base their width on the content of body cells, nor
+   * vice versa. Consequently, for headers to properly align with their body
+   * columns when explicit column widths are not provided, the max content
+   * width of header cells must match the max content width of body cells.
+   */
   columnWidthStyle(index) {
     const {columnWidths} = this.props;
     return columnWidths
