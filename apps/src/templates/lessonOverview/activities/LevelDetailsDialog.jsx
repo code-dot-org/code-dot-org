@@ -34,6 +34,12 @@ export default class LevelDetailsDialog extends Component {
           />
         </div>
       );
+    } else if (level.type === 'LevelGroup') {
+      return (
+        <div>
+          {i18n.levelGroupDetailsDialogText({buttonText: i18n.seeFullLevel()})}
+        </div>
+      );
     } else {
       return <div>Not implemented yet</div>;
     }
