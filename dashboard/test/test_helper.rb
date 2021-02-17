@@ -84,7 +84,14 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
-    CDO.shared_cache.clear
+    # Prevent state leakage and test flakiness by clearing the shared cache.
+    # Once https://codedotorg.atlassian.net/browse/FND-1411 is complete, we can update this to
+    # CDO.shared_cache.clear.
+    [
+      ProfanityHelper::PROFANITY_PREFIX,
+      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
+      AzureTextToSpeech::AZURE_TTS_PREFIX
+    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
