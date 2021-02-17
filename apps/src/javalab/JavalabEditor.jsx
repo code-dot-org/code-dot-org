@@ -1,12 +1,9 @@
 import React from 'react';
 import $ from 'jquery';
-import AceEditor from 'react-ace';
 import {connect} from 'react-redux';
 import {setEditorText} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import 'ace-builds/src-noconflict/mode-java';
-import 'ace-builds/src-noconflict/theme-monokai';
 import {EditorState, EditorView, basicSetup} from '@codemirror/basic-setup';
 import {java} from '@codemirror/lang-java';
 import {oneDarkTheme, oneDarkHighlightStyle} from '@codemirror/theme-one-dark';
@@ -51,13 +48,6 @@ class JavalabEditor extends React.Component {
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <div ref={el => (this._codeMirror = el)} style={style.editor} />
-        <AceEditor
-          mode="java"
-          onChange={this.onChange}
-          name="java-lab-editor"
-          editorProps={{$blockScrolling: true}}
-          style={style.editor}
-        />
       </div>
     );
   }
