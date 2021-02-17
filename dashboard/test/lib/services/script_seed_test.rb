@@ -580,7 +580,7 @@ module Services
       # Make sure the scripts and their associations are already in memory,
       # because fetching data from the DB could lead to false positive matches.
       assert_queries(0) do
-        assert_attributes_equal s1, s2
+        assert_scripts_equal s1, s2
         assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
         assert_lessons_equal s1.lessons, s2.lessons
         assert_lesson_activities_equal(
@@ -608,6 +608,11 @@ module Services
           s2.lessons.map(&:objectives).flatten
         )
       end
+    end
+
+    def assert_scripts_equal(script1, script2)
+      assert_attributes_equal(script1, script2, ['properties'])
+      assert_equal script1.properties.except('seeded_at'), script2.properties.except('seeded_at')
     end
 
     def assert_lesson_groups_equal(lesson_groups1, lesson_groups2)
