@@ -1,8 +1,10 @@
 @import 'color';
 @import 'style-constants';
 
+$scrollbar-height: 15px;
 $row-height: 42px;
-$max-height: 680px;
+$max-rows: 14;
+$max-height: $max-rows * $row-height + $scrollbar-height;
 $student-list-width: 170px;
 $content-view-width: $content-width - $student-list-width;
 
