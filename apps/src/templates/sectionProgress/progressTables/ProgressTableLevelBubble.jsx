@@ -36,17 +36,13 @@ const styles = {
     margin: '6px 0px'
   },
   smallCircle: {
-    ...progressStyles.inlineBlock,
+    ...progressStyles.flex,
     width: progressStyles.LETTER_BUBBLE_SIZE,
     height: progressStyles.LETTER_BUBBLE_SIZE,
     borderRadius: progressStyles.LETTER_BUBBLE_SIZE,
     lineHeight: '12px',
     fontSize: 12,
-    margin: progressStyles.LETTER_BUBBLE_MARGIN,
-    paddingRight: progressStyles.LETTER_BUBBLE_PAD,
-    paddingBottom: progressStyles.LETTER_BUBBLE_PAD,
-    textAlign: 'center',
-    verticalAlign: 'middle'
+    margin: progressStyles.LETTER_BUBBLE_MARGIN
   },
   contents: {
     whiteSpace: 'nowrap',
@@ -117,10 +113,8 @@ function UnpluggedBubble(props) {
 
 function SmallCircle(props) {
   return (
-    <div>
-      <div style={{...mainStyle(props), ...styles.smallCircle}}>
-        <Content {...props} />
-      </div>
+    <div style={{...mainStyle(props), ...styles.smallCircle}}>
+      <Content {...props} />
     </div>
   );
 }

@@ -30,11 +30,12 @@ level 'courseF_events_freeplay', progression: 'Free Play: Make an Interactive Sc
 
 lesson_group 'lessonGroup-3', display_name: 'Variables'
 lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
-lesson 'blank space stories', display_name: 'Blank Space Stories', has_lesson_plan: false
+lesson 'blank space stories', display_name: 'Blank Space Stories', has_lesson_plan: false, unplugged: true
 level 'EnvelopeVariables-Unplugged_2021', progression: 'Video: Variables in Envelopes'
 
 lesson 'lesson-2', display_name: 'Text and Prompts', has_lesson_plan: false
 level 'courseF_variables_predict', progression: 'Prediction'
+level 'courseF_pilotVideo_prompts', progression: 'Video: Text and Prompts'
 level 'courseF_text_review', progression: 'Skill Building'
 level 'courseF_text_print', progression: 'Skill Building'
 level 'courseF_text_events', progression: 'Skill Building'
@@ -81,4 +82,30 @@ lesson_group 'Loom Levels', display_name: 'Loom Levels'
 lesson 'video', display_name: 'Sprite Lab Videos', has_lesson_plan: false
 level 'courseF_events_loom_sandbox', progression: 'Events'
 level 'courseF_variables_loom_sandbox', progression: 'Variables'
+
+lesson_group 'contagion', display_name: 'Contagion'
+lesson 'how things spread', display_name: 'How Things Spread', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'How Things Spread'
+
+lesson 'contagion simulator setup', display_name: 'Contagion Simulator Setup', has_lesson_plan: false
+level 'contagion_story', progression: 'Welcome to Monster Town'
+level 'contagion_setup', progression: 'Creating a Simulation'
+level 'contagion_events', progression: 'Programming Our Rules'
+level 'contagion_data', progression: 'Data Tracking: Model 1'
+level 'contagion_stop', progression: 'STOP!'
+level 'contagion_masks', progression: 'Slowing the Contagion with Masks'
+
+lesson 'sometimes but not always', display_name: 'Sometimes, but Not Always', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'Sometimes, but Not Always'
+
+lesson 'modifying your model', display_name: 'Modifying Your model', has_lesson_plan: false
+level 'contagion_scientist', progression: 'Thinking Like a Scientist'
+level 'contagion_chance', progression: 'Model 2'
+level 'contagion_stop', progression: 'STOP!'
+level 'contagion_modify_chance', progression: 'Model 3'
+level 'contagion_stop_again', progression: 'STOP AGAIN!'
+level 'contagion_vaccine', progression: 'Vaccines'
+
+lesson 'telling a data story', display_name: 'Telling a Data Story', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'Telling a Data Story'
 
