@@ -1477,8 +1477,7 @@
       "key": "cf4ad357-07b4-48e1-bd8f-108301e7aa0a",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "cf4ad357-07b4-48e1-bd8f-108301e7aa0a",
@@ -1502,11 +1501,23 @@
       }
     },
     {
-      "key": "b6189a3a-e704-4d46-9526-e465660d27af",
+      "key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
       "position": 2,
       "properties": {
-        "name": "Activity",
+        "name": "Main Activity",
         "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
+        "lesson.key": "Picturing Data",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "b6189a3a-e704-4d46-9526-e465660d27af",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "b6189a3a-e704-4d46-9526-e465660d27af",
@@ -1517,26 +1528,13 @@
     },
     {
       "key": "81828841-d023-4593-896d-b4ce1481da6f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "81828841-d023-4593-896d-b4ce1481da6f",
-        "lesson.key": "Picturing Data",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
         "lesson.key": "Picturing Data",
         "lesson_group.key": "csf_data",
         "script.name": "coursec-2021"
@@ -3392,11 +3390,11 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!\r\n   \r\nRemind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
+            "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!\n   \nRemind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) - Video.\n"
           }
-        ]
+        ],
+        "name": "Chase Game with Events"
       },
       "seeding_key": {
         "activity_section.key": "4b0c023d-7e3f-4186-83ea-e8136c32de1a",
@@ -3407,8 +3405,7 @@
       "key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
       "position": 2,
       "properties": {
-        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.",
-        "name": "Online Puzzles and Free Play\r"
+        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options."
       },
       "seeding_key": {
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
@@ -3419,7 +3416,6 @@
       "key": "55ade85d-fedf-4c9d-9046-4d1e6d813638",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3431,7 +3427,6 @@
       "key": "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d",
       "position": 4,
       "properties": {
-        "name": "Mini-project: Chase Game",
         "progression_name": "Mini-project: Chase Game"
       },
       "seeding_key": {
@@ -3443,7 +3438,6 @@
       "key": "a7a8c0ca-7507-4a7a-84da-2763a0e562a7",
       "position": 5,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3455,6 +3449,7 @@
       "key": "9f2441ae-b524-455b-b43b-8c01d9458d0d",
       "position": 6,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "9f2441ae-b524-455b-b43b-8c01d9458d0d",
@@ -3501,7 +3496,7 @@
       "key": "63144b5e-ca21-4844-ac12-3dd7567c9c3f",
       "position": 2,
       "properties": {
-        "description": "*Students should all answer at once.*\r\n\r\n**Discuss**: Can we tell which season most of the class likes? How can we be sure? Encourage students to justify why they believe in their response.\r\n\r\n\r\n**Prompt**: What could we do to be more certain that we know which season most people like? Take ideas from the class, but lead them towards writing the data down using tally marks on a board or chart paper."
+        "description": "Students should all answer at once.\n\n**Discuss**: *Can we tell which season most of the class likes? How can we be sure?* Encourage students to justify why they believe in their response.\n\n\n**Prompt**: *What could we do to be more certain that we know which season most people like?* \n\nTake ideas from the class, but lead them towards writing the data down using tally marks on a board or chart paper."
       },
       "seeding_key": {
         "activity_section.key": "63144b5e-ca21-4844-ac12-3dd7567c9c3f",
@@ -3521,18 +3516,28 @@
       }
     },
     {
+      "key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
+      "position": 1,
+      "properties": {
+        "name": "Picturing Data",
+        "progression_name": "Picturing Data - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
+        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894"
+      }
+    },
+    {
       "key": "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647",
       "position": 1,
       "properties": {
         "description": "**Distribute**: Pass out the Graphing Data worksheet along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This program generates a random assortment of pets each time it is run. If you are projecting the program for the whole class to use, consider running it multiple times and asking different groups of students to track the numbers each time so that there will be variety in their responses for later discussion.\r\n"
           }
-        ],
-        "name": "Graphing Data\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647",
@@ -3554,14 +3559,7 @@
       "key": "183cb29b-8912-48e6-9589-333f1aec1837",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Ask the class to discuss some of the following questions:",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to get students thinking about the usefulness of data in identifying or answer questions, and to start them thinking about why they might want to use different kinds of visualizations (graphs in this case).\r\n"
-          }
-        ]
+        "description": "**Discuss**: Ask the class to discuss some of the following questions:"
       },
       "seeding_key": {
         "activity_section.key": "183cb29b-8912-48e6-9589-333f1aec1837",
@@ -3572,7 +3570,7 @@
       "key": "cba35313-3a99-4833-94fb-aafc7ddfba1b",
       "position": 4,
       "properties": {
-        "description": "* Which graph shows you the most useful information? Why?\r\n* Which pets did you see the most? Is that true for everyone?\r\n* What do you think would happen if this program run for 100 animals? 1000?\r\n* What questions could you answer with your data?\r\n* What questions would you like to be able to answer?"
+        "description": "* Which graph shows you the most useful information? Why?\n* Which pets did you see the most? Is that true for everyone?\n* What do you think would happen if this program run for 100 animals? 1000?\n* What questions could you answer with your data?\n* What questions would you like to be able to answer?\n\nThe goal of this discussion is to get students thinking about the usefulness of data in identifying or answer questions, and to start them thinking about why they might want to use different kinds of visualizations (graphs in this case)."
       },
       "seeding_key": {
         "activity_section.key": "cba35313-3a99-4833-94fb-aafc7ddfba1b",
@@ -3583,21 +3581,12 @@
       "key": "49ce681a-9731-4e09-8d4a-e6d4d8895a9a",
       "position": 1,
       "properties": {
-        "description": "**Journal**: Collecting and graphing data can help us ask and answer interesting questions. In your journal, write down one question that you would like to answer and what data you might want to collect. For example, if you play soccer, you might want to know if goals are more often scored from the left, the right, or center - what data would you want to collect to answer that question? How would you show it?"
+        "description": "**Journal**: Collecting and graphing data can help us ask and answer interesting questions. In your journal, write down one question that you would like to answer and what data you might want to collect. For example, if you play soccer, you might want to know if goals are more often scored from the left, the right, or center - what data would you want to collect to answer that question? How would you show it?",
+        "name": "Journaling"
       },
       "seeding_key": {
         "activity_section.key": "49ce681a-9731-4e09-8d4a-e6d4d8895a9a",
         "lesson_activity.key": "81828841-d023-4593-896d-b4ce1481da6f"
-      }
-    },
-    {
-      "key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
-        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894"
       }
     },
     {
@@ -3616,7 +3605,7 @@
       "key": "bbd8c847-74fe-42a2-9276-23a5c6aaafa0",
       "position": 2,
       "properties": {
-        "description": "We have already had a chance to build a project in Play Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software. So, before we jump onto computers, we will spend some time planning the projects we want to build.",
+        "description": "We have already had a chance to build a project in Play Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software. So, before we jump onto the computers, we will spend some time planning the projects we want to build.",
         "remarks": true
       },
       "seeding_key": {
@@ -3631,7 +3620,6 @@
         "description": "**Distribute**: Distribute one **Play Lab Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If students are pair programming for this assignment, this warm up is a great opportunity for them to practice sharing and respecting others' ideas. Ensure students are following group work norms you already have in place in your classroom. Otherwise, spend a brief moment going over your expectations.\r\n"
           }
@@ -3649,12 +3637,11 @@
         "description": "Equipped with their completed planning guides, students are now ready to bring their projects to life. These levels correspond to the structure of the planning guide, and help navigate students through the process of transforming their ideas into code.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students will experience plenty of trial and error while coding. Their projects are likely to become truncated versions of their original scope. Remind students that this kind of compromise is common in software design. It's okay if they don't get to build in every feature they planned!\r\n"
           }
         ],
-        "name": "Coding\r"
+        "name": "Coding Project"
       },
       "seeding_key": {
         "activity_section.key": "43edf2e1-94e2-4ea0-866c-83bd18bfc87f",
@@ -3665,7 +3652,6 @@
       "key": "8bc8bad1-8150-46ce-bf97-0d368dafd6ef",
       "position": 2,
       "properties": {
-        "name": "Project",
         "progression_name": "Project"
       },
       "seeding_key": {
@@ -6870,7 +6856,7 @@
       "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6896,7 +6882,7 @@
       "chapter": 124,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6922,7 +6908,7 @@
       "chapter": 125,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6948,7 +6934,7 @@
       "chapter": 126,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6974,7 +6960,7 @@
       "chapter": 127,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7000,7 +6986,7 @@
       "chapter": 128,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7026,7 +7012,7 @@
       "chapter": 129,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7052,7 +7038,7 @@
       "chapter": 130,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7078,7 +7064,7 @@
       "chapter": 131,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7104,7 +7090,7 @@
       "chapter": 132,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7130,7 +7116,7 @@
       "chapter": 133,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7156,7 +7142,7 @@
       "chapter": 134,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7182,11 +7168,12 @@
       "chapter": 135,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_PlayLab_events_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7207,11 +7194,12 @@
       "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "PicturingData-Unplugged_2021"
-        ]
+        ],
+        "progression": "Picturing Data - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -7232,11 +7220,12 @@
       "chapter": 137,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_data wizard_2021"
-        ]
+        ],
+        "progression": "Picturing Data - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -7257,7 +7246,7 @@
       "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7283,7 +7272,7 @@
       "chapter": 139,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7309,7 +7298,7 @@
       "chapter": 140,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7335,7 +7324,7 @@
       "chapter": 141,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7361,7 +7350,7 @@
       "chapter": 142,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7387,7 +7376,7 @@
       "chapter": 143,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7413,7 +7402,7 @@
       "chapter": 144,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
