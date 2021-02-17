@@ -53,7 +53,7 @@ const SILENCED = [
   'fish',
   'flappy',
   'gamelab',
-  'idelab',
+  'javalab',
   'jigsaw',
   'maze',
   'netsim',

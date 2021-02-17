@@ -32,7 +32,7 @@ export const PROJECT_TYPE_MAP = {
   calc: i18n.projectTypeCalc(),
   dance: i18n.projectTypeDance(),
   spritelab: i18n.projectTypeSpriteLab(),
-  idelab: i18n.projectTypeIdelab()
+  javalab: i18n.projectTypeJavalab()
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {

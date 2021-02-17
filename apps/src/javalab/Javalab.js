@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '../redux';
-import IdelabView from './IdelabView';
-import idelab from './idelabRedux';
+import JavalabView from './JavalabView';
+import javalab from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 
 /**
@@ -17,10 +17,10 @@ import {TestResults} from '@cdo/apps/constants';
 const MOBILE_PORTRAIT_WIDTH = 600;
 
 /**
- * An instantiable Idelab class
+ * An instantiable Javalab class
  */
 
-const Idelab = function() {
+const Javalab = function() {
   this.skin = null;
   this.level = null;
 
@@ -31,16 +31,16 @@ const Idelab = function() {
 /**
  * Inject the studioApp singleton.
  */
-Idelab.prototype.injectStudioApp = function(studioApp) {
+Javalab.prototype.injectStudioApp = function(studioApp) {
   this.studioApp_ = studioApp;
 };
 
 /**
- * Initialize this Idelab instance.  Called on page load.
+ * Initialize this Javalab instance.  Called on page load.
  */
-Idelab.prototype.init = function(config) {
+Javalab.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error('Idelab requires a StudioApp');
+    throw new Error('Javalab requires a StudioApp');
   }
 
   this.skin = config.skin;
@@ -94,24 +94,24 @@ Idelab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel
   });
 
-  registerReducers({idelab});
+  registerReducers({javalab});
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <IdelabView onMount={onMount} />
+      <JavalabView onMount={onMount} />
     </Provider>,
     document.getElementById(config.containerId)
   );
 };
 
-// Called by the Idelab app when it wants to go to the next level.
-Idelab.prototype.onContinue = function() {
+// Called by the Javalab app when it wants to go to the next level.
+Javalab.prototype.onContinue = function() {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
 
   this.studioApp_.report({
-    app: 'idelab',
+    app: 'javalab',
     level: this.level.id,
     result: true,
     testResult: TestResults.ALL_PASS,
@@ -122,8 +122,8 @@ Idelab.prototype.onContinue = function() {
   });
 };
 
-Idelab.prototype.getCode = function() {
+Javalab.prototype.getCode = function() {
   return '';
 };
 
-export default Idelab;
+export default Javalab;

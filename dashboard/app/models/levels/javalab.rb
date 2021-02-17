@@ -23,7 +23,7 @@
 #  index_levels_on_name     (name)
 #
 
-class Idelab < Level
+class Javalab < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
@@ -36,7 +36,7 @@ class Idelab < Level
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.idelab,
+        game: Game.javalab,
         level_num: 'custom',
         properties: {}
       )
