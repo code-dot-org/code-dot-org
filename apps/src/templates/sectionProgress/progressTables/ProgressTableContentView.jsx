@@ -33,7 +33,7 @@ export default class ProgressTableContentView extends React.Component {
       PropTypes.objectOf(studentLevelProgressType)
     ).isRequired,
     onClickLesson: PropTypes.func.isRequired,
-    columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
+    columnWidths: PropTypes.arrayOf(PropTypes.number),
     lessonCellFormatter: PropTypes.func.isRequired,
     extraHeaderFormatters: PropTypes.arrayOf(PropTypes.func),
     needsGutter: PropTypes.bool.isRequired,
@@ -103,9 +103,11 @@ export default class ProgressTableContentView extends React.Component {
 
   columnWidthStyle(index) {
     const {columnWidths} = this.props;
-    return {
-      style: {minWidth: columnWidths[index], maxWidth: columnWidths[index]}
-    };
+    return columnWidths
+      ? {
+          style: {minWidth: columnWidths[index], maxWidth: columnWidths[index]}
+        }
+      : {};
   }
 
   render() {
@@ -166,7 +168,8 @@ export default class ProgressTableContentView extends React.Component {
           rowKey={'id'}
           onScroll={this.props.onScroll}
           style={{
-            overflow: 'auto',
+            overflowX: 'scroll',
+            overflowY: 'auto',
             maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
           }}
           ref={r => {
