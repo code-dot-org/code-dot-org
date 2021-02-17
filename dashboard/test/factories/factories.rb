@@ -823,6 +823,15 @@ FactoryGirl.define do
     definition 'definition'
   end
 
+  factory :programming_environment do
+    sequence(:name) {|n| "programming-environment-#{n}"}
+  end
+
+  factory :programming_expression do
+    association :programming_environment
+    sequence(:name) {|n| "programming-expression-#{n}"}
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
