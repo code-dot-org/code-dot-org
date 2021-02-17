@@ -217,6 +217,7 @@ class LessonOverview extends Component {
               <Button
                 __useDeprecatedTag
                 color={Button.ButtonColor.orange}
+                download
                 href={lesson.lessonPlanPdfUrl}
                 text={i18n.printLessonPlan()}
               />
