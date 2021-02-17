@@ -28,7 +28,7 @@ class LessonsController < ApplicationController
   end
 
   # GET /s/script-name/lessons/1/student
-  def show_student_lesson_plan
+  def student_lesson_plan
     script = Script.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
 
