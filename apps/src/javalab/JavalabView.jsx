@@ -1,9 +1,9 @@
 import React from 'react';
-import IdelabConsole from './IdelabConsole';
+import JavalabConsole from './JavalabConsole';
 import {connect} from 'react-redux';
-import IdelabEditor from './IdelabEditor';
+import JavalabEditor from './JavalabEditor';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {appendOutputLog} from './idelabRedux';
+import {appendOutputLog} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -29,7 +29,7 @@ const style = {
     backgroundColor: color.light_gray,
     height: '200px'
   },
-  idelab: {
+  javalab: {
     display: 'flex',
     margin: 15
   },
@@ -60,7 +60,7 @@ const style = {
   }
 };
 
-class Idelab extends React.Component {
+class JavalabView extends React.Component {
   static propTypes = {
     // populated by redux
     appendOutputLog: PropTypes.func
@@ -78,7 +78,7 @@ class Idelab extends React.Component {
 
   render() {
     return (
-      <div style={style.idelab}>
+      <div style={style.javalab}>
         <div style={style.instructionsAndPreview}>
           <div style={style.instructions}>
             <PaneHeader hasFocus={true}>
@@ -96,7 +96,7 @@ class Idelab extends React.Component {
           </div>
         </div>
         <div style={style.editorAndConsole}>
-          <IdelabEditor />
+          <JavalabEditor />
           <div style={style.consoleAndButtons}>
             <div style={style.buttons}>
               <button
@@ -119,7 +119,7 @@ class Idelab extends React.Component {
               </button>
             </div>
             <div style={style.consoleStyle}>
-              <IdelabConsole />
+              <JavalabConsole />
             </div>
           </div>
         </div>
@@ -133,4 +133,4 @@ export default connect(
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log))
   })
-)(Idelab);
+)(JavalabView);
