@@ -28,8 +28,14 @@ class Results extends Component {
           {this.props.percentDataToReserve}% of the training data was reserved
           to test the accuracy of the newly trained model.
         </p>
+        {isNaN(this.props.summaryStat.stat) && (
+          <p>
+            An accuracy score was not calculated because no training data was
+            reserved for testing.
+          </p>
+        )}
         <div>
-          {this.props.summaryStat.type === MLTypes.REGRESSION && (
+          {this.props.summaryStat.type === MLTypes.REGRESSION && !isNaN(this.props.summaryStat.stat) && (
             <div>
               <div>
                 The average difference between expected and predicted labels
@@ -38,7 +44,7 @@ class Results extends Component {
               <div style={styles.subPanel}>{this.props.summaryStat.stat}</div>
             </div>
           )}
-          {this.props.summaryStat.type === MLTypes.CLASSIFICATION && (
+          {this.props.summaryStat.type === MLTypes.CLASSIFICATION && !isNaN(this.props.summaryStat.stat) && (
             <div>
               <div style={styles.mediumText}>
                 The calculated accuracy of this model is:
@@ -51,36 +57,38 @@ class Results extends Component {
           <br />
           <br />
         </div>
-        <div style={{...styles.subPanel, ...styles.scrollContents}}>
-          <table>
-            <thead>
-              <tr>
-                {this.props.selectedFeatures.map((feature, index) => {
-                  return <th key={index}>{feature}</th>;
+        {!isNaN(this.props.summaryStat.stat) && (
+          <div style={{...styles.subPanel, ...styles.scrollContents}}>
+            <table>
+              <thead>
+                <tr>
+                  {this.props.selectedFeatures.map((feature, index) => {
+                    return <th key={index}>{feature}</th>;
+                  })}
+                  <th>Expected Label: {this.props.labelColumn}</th>
+                  <th>Predicted Label: {this.props.labelColumn}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.props.accuracyCheckExamples.map((examples, index) => {
+                  return (
+                    <tr key={index}>
+                      {examples.map((example, i) => {
+                        return <td key={i}>{example}</td>;
+                      })}
+                      <td>{this.props.accuracyCheckLabels[index]}</td>
+                      <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
+                      {this.props.accuracyCheckLabels[index] ===
+                        this.props.accuracyCheckPredictedLabels[index] && (
+                        <td style={styles.ready}>&#x2713;</td>
+                      )}
+                    </tr>
+                  );
                 })}
-                <th>Expected Label</th>
-                <th>Predicted Label</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.accuracyCheckExamples.map((examples, index) => {
-                return (
-                  <tr key={index}>
-                    {examples.map((example, i) => {
-                      return <td key={i}>{example}</td>;
-                    })}
-                    <td>{this.props.accuracyCheckLabels[index]}</td>
-                    <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
-                    {this.props.accuracyCheckLabels[index] ===
-                      this.props.accuracyCheckPredictedLabels[index] && (
-                      <td style={styles.ready}>&#x2713;</td>
-                    )}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     );
   }

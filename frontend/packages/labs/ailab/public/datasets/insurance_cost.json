@@ -1,0 +1,58 @@
+{
+  "fields": [
+    {
+      "type": "continuous",
+      "id": "age",
+      "description": "age of primary beneficiary"
+    },
+    {
+      "type": "categorical",
+      "id": "sex",
+      "description": "insurance contractor gender, female, male"
+    },
+    {
+      "type": "continuous",
+      "id": "bmi",
+      "description": "Body mass index"
+    },
+    {
+      "type": "continuous",
+      "id": "children",
+      "description": "Number of children covered by health insurance"
+    },
+    {
+      "type": "categorical",
+      "id": "smoker",
+      "description": "Whether the person smokes or not"
+    },
+    {
+      "type": "categorical",
+      "id": "region",
+      "description": "the beneficiary's residential area in the US, northeast, southeast, southwest, northwest."
+    },
+    {
+      "type": "continuous",
+      "id": "charges",
+      "description": "Individual medical costs billed by health insurance"
+    }
+  ],
+  "card": {
+    "description": "Insurance costs along with factors like number of children, location, smoker/nonsmoker status, age, sex, BMI",
+    "source": "https://www.kaggle.com/mirichoi0218/insurance",
+    "last_updated": "Unknown",
+    "context": {
+      "created_by": "Unknown",
+      "preparation": "Yes",
+      "confidentiality": "No",
+      "subgroup_identifiers": "Yes",
+      "representative": "No",
+      "potential_uses": "",
+      "potential_misuses": ""
+    }
+  },
+  "recommended_features": [
+    "bmi",
+    "charges"
+  ],
+  "recommended_label": "smoker"
+}

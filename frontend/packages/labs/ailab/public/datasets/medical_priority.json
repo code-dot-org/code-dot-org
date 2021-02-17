@@ -1,0 +1,65 @@
+{
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "age",
+      "description": "Age ranges of the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "gender",
+      "description": "Gender of the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "race",
+      "description": "Racial information about the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "bleeding",
+      "description": "Whether or not the patient was bleeding"
+    },
+    {
+      "type": "categorical",
+      "id": "shortness_of_breath",
+      "description": "Whether or not the patient had shortness of breath"
+    },
+    {
+      "type": "categorical",
+      "id": "weight",
+      "description": "Weight ranges for the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "area_of_pain",
+      "description": "Where the pain was located"
+    },
+    {
+      "type": "categorical",
+      "id": "decision",
+      "description": "How quickly the patient received treatment"
+    }
+  ],
+  "card": {
+    "description": "Data collected by a hospital on all patients who entered an emergency room over the course of one month",
+    "source": "Code.org Generated Dataset",
+    "last_updated": "2020",
+    "context": {
+      "created_by": "Code.org",
+      "preparation": "Yes",
+      "confidentiality": "No",
+      "subgroup_identifiers": "Yes",
+      "representative": "No",
+      "potential_uses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
+      "potential_misuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
+    }
+  },
+  "recommended_features": [
+    "bleeding",
+    "shortness_of_breath",
+    "weight",
+    "area_of_pain"
+  ],
+  "recommended_label": "decision"
+}

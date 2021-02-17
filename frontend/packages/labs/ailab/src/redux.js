@@ -498,7 +498,6 @@ function isColumnReadOnly(state, column) {
     state.metadata.fields.find(field => {
       return field.id === column;
     }).type;
-
   return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
 }
 
@@ -720,7 +719,7 @@ function getAverageDiff(state) {
   return (diffs.reduce(getSum, 0) / numPredictedLabels).toFixed(2);
 }
 
-export function getAccuracy(state) {
+export function getAccuracyClassification(state) {
   let numCorrect = 0;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
@@ -734,16 +733,21 @@ export function getAccuracy(state) {
   return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
 
+export function getAccuracyRegression(state) {
+  let range = getRange(state, state.labelColumn);
+  return getAverageDiff(state) / (range.max - range.min);
+}
+
 export function getSummaryStat(state) {
   let summaryStat = {};
   const mlType = getMLType(state.selectedTrainer);
   if (mlType === MLTypes.REGRESSION) {
     summaryStat.type = MLTypes.REGRESSION;
-    summaryStat.stat = getAverageDiff(state);
+    summaryStat.stat = getAccuracyRegression(state);
   }
   if (mlType === MLTypes.CLASSIFICATION) {
     summaryStat.type = MLTypes.CLASSIFICATION;
-    summaryStat.stat = getAccuracy(state);
+    summaryStat.stat = getAccuracyClassification(state);
   }
   return summaryStat;
 }
