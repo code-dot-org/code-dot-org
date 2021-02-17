@@ -9,4 +9,5 @@
 #  updated_at :datetime         not null
 #
 class ProgrammingEnvironment < ApplicationRecord
+  has_many :programming_expressions
 end
