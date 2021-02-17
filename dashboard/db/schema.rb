@@ -1269,9 +1269,10 @@ ActiveRecord::Schema.define(version: 2021_02_17_024416) do
     t.string "name", null: false
     t.string "category"
     t.text "properties"
-    t.integer "programming_environment_id", null: false
+    t.bigint "programming_environment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
