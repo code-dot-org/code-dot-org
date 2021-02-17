@@ -44,9 +44,11 @@ export default class Meter extends Component {
 
     return (
       <div style={{...styles.container, ...containerStyle}}>
-        <label htmlFor={id} style={styles.label}>
-          {label}
-        </label>
+        {label && (
+          <label htmlFor={id} style={styles.label}>
+            {label}
+          </label>
+        )}
         <div id={id} style={styles.meter}>
           <div
             style={{
