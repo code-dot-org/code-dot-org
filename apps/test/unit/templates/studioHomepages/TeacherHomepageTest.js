@@ -76,11 +76,7 @@ describe('TeacherHomepage', () => {
   });
 
   describe('when teacher school is in NCES list (has donor)', () => {
-    const TEST_PROPS_DONOR = {
-      ...TEST_PROPS,
-      schoolHasDonor: true,
-      donorBannerName: 'some donor' // this is null when teacher has dismissed banner previously
-    };
+    const bannerLocalStorageKey = 'hideAmazonTeacherOfYearBanner';
 
     afterEach(() => {
       if (utils.tryGetLocalStorage.restore) {
@@ -88,31 +84,54 @@ describe('TeacherHomepage', () => {
       }
     });
 
-    it('displays AmazonTeacherOfYearBanner when local storage does not have hide2021TeacherOfYearBanner set', () => {
-      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+    it('displays AmazonTeacherOfYearBanner when local storage does not have hideAmazonTeacherOfYearBanner set and donorName is Amazon', () => {
+      const props = {...TEST_PROPS, donorName: 'Amazon'};
+      const wrapper = shallow(<TeacherHomepage {...props} />);
       assert(wrapper.find(AmazonTeacherOfYearBanner).exists());
     });
 
+    it('hides AmazonTeacherOfYearBanner when local storage does not have hideAmazonTeacherOfYearBanner set and donorName is not Amazon', () => {
+      const props = {...TEST_PROPS, donorName: 'some other donor'};
+      const wrapper = shallow(<TeacherHomepage {...props} />);
+      expect(wrapper.find(AmazonTeacherOfYearBanner).exists()).to.be.false;
+    });
+
     it('hides DonorTeacherBanner when AmazonTeacherOfYearBanner is present', () => {
-      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+      const props = {...TEST_PROPS, donorName: 'Amazon'};
+      const wrapper = shallow(<TeacherHomepage {...props} />);
       expect(wrapper.find(DonorTeacherBanner).exists()).to.be.false;
     });
 
-    it('hides AmazonTeacherOfYearBanner when local storage hide2021TeacherOfYearBanner is true', () => {
-      sinon.stub(utils, 'tryGetLocalStorage').returns('true'); // mock getting local storage value for hide2021TeacherOfYearBanner
-      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+    it('hides AmazonTeacherOfYearBanner when local storage hideAmazonTeacherOfYearBanner is true', () => {
+      const props = {...TEST_PROPS, donorName: 'Amazon'};
+      sinon
+        .stub(utils, 'tryGetLocalStorage')
+        .withArgs(bannerLocalStorageKey, 'false')
+        .returns('true'); // mock getting local storage value for hideAmazonTeacherOfYearBanner
+      const wrapper = shallow(<TeacherHomepage {...props} />);
       expect(wrapper.find(AmazonTeacherOfYearBanner).exists()).to.be.false;
     });
 
     it('displays DonorTeacherBanner when donorBannerName is present and AmazonTeacherOfYearBanner is hidden', () => {
-      sinon.stub(utils, 'tryGetLocalStorage').returns('true'); // mock getting local storage value for hide2021TeacherOfYearBanner
-      const wrapper = shallow(<TeacherHomepage {...TEST_PROPS_DONOR} />);
+      const props = {
+        ...TEST_PROPS,
+        donorName: 'Amazon',
+        donorBannerName: 'Amazon'
+      };
+      sinon
+        .stub(utils, 'tryGetLocalStorage')
+        .withArgs(bannerLocalStorageKey, 'false')
+        .returns('true'); // mock getting local storage value for hideAmazonTeacherOfYearBanner
+      const wrapper = shallow(<TeacherHomepage {...props} />);
       assert(wrapper.find(DonorTeacherBanner).exists());
     });
 
-    it('hides both banners when hide2021TeacherOfYearBanner is true and donorBannerName is not present', () => {
-      sinon.stub(utils, 'tryGetLocalStorage').returns('true'); // mock getting local storage value for hide2021TeacherOfYearBanner
-      const props = {...TEST_PROPS, schoolHasDonor: true};
+    it('hides both banners when hideAmazonTeacherOfYearBanner is true and donorBannerName is not present', () => {
+      const props = {...TEST_PROPS, donorName: 'Amazon', donorBannerName: null};
+      sinon
+        .stub(utils, 'tryGetLocalStorage')
+        .withArgs(bannerLocalStorageKey, 'false')
+        .returns('true'); // mock getting local storage value for hideAmazonTeacherOfYearBanner
       const wrapper = shallow(<TeacherHomepage {...props} />);
       expect(wrapper.find(AmazonTeacherOfYearBanner).exists()).to.be.false;
       expect(wrapper.find(DonorTeacherBanner).exists()).to.be.false;

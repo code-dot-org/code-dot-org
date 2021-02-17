@@ -29,7 +29,7 @@ const styles = {
   }
 };
 
-const hideTeacherOfYearBannerKey = 'hide2021TeacherOfYearBanner';
+const hideAmazonTeacherOfYearBannerKey = 'hideAmazonTeacherOfYearBanner';
 
 export class UnconnectedTeacherHomepage extends Component {
   static propTypes = {
@@ -52,20 +52,20 @@ export class UnconnectedTeacherHomepage extends Component {
     schoolYear: PropTypes.number,
     specialAnnouncement: shapes.specialAnnouncement,
     beginGoogleImportRosterFlow: PropTypes.func,
-    schoolHasDonor: PropTypes.bool
+    donorName: PropTypes.string
   };
 
   constructor(props) {
     super(props);
-    this.hideTeacherOfTheYearBanner = this.hideTeacherOfTheYearBanner.bind(
+    this.hideAmazonTeacherOfYearBanner = this.hideAmazonTeacherOfYearBanner.bind(
       this
     );
   }
 
   state = {
     showCensusBanner: this.props.showCensusBanner,
-    hideTeacherOfTheYearBanner:
-      tryGetLocalStorage(hideTeacherOfYearBannerKey, 'false') === 'true'
+    hideAmazonTeacherOfYearBanner:
+      tryGetLocalStorage(hideAmazonTeacherOfYearBannerKey, 'false') === 'true'
   };
 
   bindCensusBanner = banner => {
@@ -143,9 +143,9 @@ export class UnconnectedTeacherHomepage extends Component {
     this.hideCensusBanner();
   };
 
-  hideTeacherOfTheYearBanner() {
-    trySetLocalStorage(hideTeacherOfYearBannerKey, true);
-    this.setState({hideTeacherOfTheYearBanner: true});
+  hideAmazonTeacherOfYearBanner() {
+    trySetLocalStorage(hideAmazonTeacherOfYearBannerKey, true);
+    this.setState({hideAmazonTeacherOfYearBanner: true});
   }
 
   postponeCensusBanner() {
@@ -196,7 +196,7 @@ export class UnconnectedTeacherHomepage extends Component {
       isEnglish,
       specialAnnouncement,
       donorBannerName,
-      schoolHasDonor
+      donorName
     } = this.props;
 
     // Whether we show the regular announcement/notification
@@ -211,10 +211,12 @@ export class UnconnectedTeacherHomepage extends Component {
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
     const showDonorBanner =
-      isEnglish && donorBannerName && this.state.hideTeacherOfTheYearBanner;
+      isEnglish && donorBannerName && this.state.hideAmazonTeacherOfYearBanner;
 
-    const showTeacherOfYearBanner =
-      isEnglish && !this.state.hideTeacherOfTheYearBanner && schoolHasDonor;
+    const showAmazonTeacherOfYearBanner =
+      isEnglish &&
+      !this.state.hideAmazonTeacherOfYearBanner &&
+      donorName === 'Amazon';
 
     return (
       <div>
@@ -293,10 +295,10 @@ export class UnconnectedTeacherHomepage extends Component {
               <div style={styles.clear} />
             </div>
           )}
-          {showTeacherOfYearBanner && (
+          {showAmazonTeacherOfYearBanner && (
             <div>
               <AmazonTeacherOfYearBanner
-                handleCloseBanner={this.hideTeacherOfTheYearBanner}
+                handleCloseBanner={this.hideAmazonTeacherOfYearBanner}
               />
               <div style={styles.clear} />
             </div>
