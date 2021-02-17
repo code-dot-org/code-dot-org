@@ -990,6 +990,7 @@
   "level": "Level,",
   "levels": "Levels",
   "levelDetails": "Level Details",
+  "levelGroupDetailsDialogText": "This level is an assessment or survey with multiple questions. To view this level click \"{buttonText}\".",
   "levelHeader": "Level",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "levelN": "LEVEL {levelNumber}",

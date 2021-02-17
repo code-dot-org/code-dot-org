@@ -35,6 +35,13 @@ const externalMarkdownScriptLevel = {
   }
 };
 
+const levelGroupScriptLevel = {
+  url: '/s/csd6-2020/stage/16/puzzle/9/page/1',
+  level: {
+    type: 'LevelGroup'
+  }
+};
+
 export default storybook => {
   storybook.storiesOf('LevelDetailsDialog', module).addStoryTable([
     {
@@ -52,6 +59,15 @@ export default storybook => {
         <LevelDetailsDialog
           {...defaultProps}
           scriptLevel={externalMarkdownScriptLevel}
+        />
+      )
+    },
+    {
+      name: 'LevelGroup',
+      story: () => (
+        <LevelDetailsDialog
+          {...defaultProps}
+          scriptLevel={levelGroupScriptLevel}
         />
       )
     }

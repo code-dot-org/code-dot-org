@@ -44,7 +44,29 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
+    console.log(wrapper.debug());
     expect(wrapper.contains('This is some text.')).to.be.true;
+  });
+
+  it('can display a LevelGroup', () => {
+    const wrapper = mount(
+      <LevelDetailsDialog
+        handleClose={handleCloseSpy}
+        scriptLevel={{
+          url: 'level.url',
+          level: {type: 'LevelGroup'}
+        }}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          {
+            'This level is an assessment or survey with multiple questions. To view this level click "See Full Level".'
+          }
+        </div>
+      )
+    ).to.be.true;
   });
 
   it('tries to load a video on a standalone video level', () => {
