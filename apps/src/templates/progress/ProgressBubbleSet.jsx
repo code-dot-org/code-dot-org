@@ -109,7 +109,8 @@ class ProgressBubbleSet extends React.Component {
             isSublevel && styles.backgroundSublevel,
             level.isUnplugged && styles.backgroundPill,
             !isSublevel && index === 0 && styles.backgroundFirst,
-            !level.sublevels &&
+            !isSublevel &&
+              !level.sublevels &&
               index === levels.length - 1 &&
               styles.backgroundLast
           ]}

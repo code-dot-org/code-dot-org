@@ -10,10 +10,18 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
+import _ from 'lodash';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
 const VIDEO_MODAL_WIDTH = 700;
+
+const styles = {
+  sublevelCards: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  }
+};
 
 export default class LevelDetailsDialog extends Component {
   static propTypes = {
@@ -23,8 +31,12 @@ export default class LevelDetailsDialog extends Component {
 
   constructor(props) {
     super(props);
+    const scriptLevel = _.cloneDeep(props.scriptLevel);
+    const selectedLevel = scriptLevel.level;
+    scriptLevel.highlighted = true;
     this.state = {
-      selectedLevel: props.scriptLevel.level
+      selectedLevel,
+      scriptLevel
     };
   }
 
@@ -59,7 +71,7 @@ export default class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'BubbleChoice') {
       return (
-        <div>
+        <div style={styles.sublevelCards}>
           {this.props.scriptLevel.sublevels.map(sublevel => (
             <SublevelCard
               isLessonExtra={false}
@@ -93,6 +105,66 @@ export default class LevelDetailsDialog extends Component {
     }
   }
 
+  onBubbleChoiceBubbleClick = level => {
+    const previousSelected = this.state.selectedLevel;
+    const clonedScriptLevel = _.cloneDeep(this.state.scriptLevel);
+    // const clonedPreviousSelected =
+    //   previousSelected.name === clonedScriptLevel.level.name
+    //     ? clonedScriptLevel.level
+    //     : clonedScriptLevel.sublevels.find(
+    //         sublevel => sublevel.name === previousSelected.name
+    //       );
+    // clonedPreviousSelected.highlighted = false;
+    //const newSelected = level.level ? level.level : level;
+    //const clonedNewSelected =
+    //  newSelected.name === clonedScriptLevel.level.name
+    //    ? clonedScriptLevel.level
+    //    : clonedScriptLevel.sublevels.find(
+    //        sublevel => sublevel.name === newSelected.name
+    //      );
+    //clonedNewSelected.highlighted = true;
+    //console.log(clonedNewSelected);
+    if (previousSelected.name === clonedScriptLevel.level.name) {
+      clonedScriptLevel.highlighted = false;
+    } else {
+      const clonedPreviousSelected = clonedScriptLevel.sublevels.find(
+        sublevel => sublevel.name === previousSelected.name
+      );
+      clonedPreviousSelected.highlighted = false;
+    }
+    if (level.level) {
+      clonedScriptLevel.highlighted = true;
+      this.setState({
+        selectedLevel: level.level,
+        scriptLevel: clonedScriptLevel
+      });
+    } else {
+      const clonedNewSelected = clonedScriptLevel.sublevels.find(
+        sublevel => sublevel.name === level.name
+      );
+      clonedNewSelected.highlighted = true;
+      this.setState({
+        selectedLevel: clonedNewSelected,
+        scriptLevel: clonedScriptLevel
+      });
+    }
+  };
+
+  renderBubbleChoiceBubbles = () => {
+    const {scriptLevel} = this.state;
+    if (scriptLevel.level.type !== 'BubbleChoice') {
+      return null;
+    }
+    return (
+      <ProgressBubbleSet
+        levels={[scriptLevel]}
+        disabled={false}
+        onBubbleClick={this.onBubbleChoiceBubbleClick}
+        showSublevels={true}
+      />
+    );
+  };
+
   render() {
     const {scriptLevel} = this.props;
     const level = this.state.selectedLevel;
@@ -108,20 +180,7 @@ export default class LevelDetailsDialog extends Component {
             : {}
         }
       >
-        {scriptLevel.level.type === 'BubbleChoice' && (
-          <ProgressBubbleSet
-            levels={[this.props.scriptLevel]}
-            disabled={false}
-            onBubbleClick={level => {
-              if (level.level) {
-                this.setState({selectedLevel: level.level});
-              } else {
-                this.setState({selectedLevel: level});
-              }
-            }}
-            showSublevels={true}
-          />
-        )}
+        {this.renderBubbleChoiceBubbles()}
         {preview}
         <DialogFooter rightAlign>
           <Button
