@@ -44,7 +44,6 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    console.log(wrapper.debug());
     expect(wrapper.contains('This is some text.')).to.be.true;
   });
 
