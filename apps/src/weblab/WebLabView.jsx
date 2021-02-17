@@ -55,7 +55,25 @@ class WebLabView extends React.Component {
   }
 
   bytesToMegabytes = bytes => {
-    return Math.round(bytes * B_TO_MB_COEFFICIENT);
+    return bytes * B_TO_MB_COEFFICIENT;
+  };
+
+  projectCapacityLabel = () => {
+    let totalMegabytes = Math.round(
+      this.bytesToMegabytes(this.props.maxProjectCapacity)
+    );
+    let currentMegabytes = this.bytesToMegabytes(this.props.projectSize);
+    // If using 75%+ capacity, display a decimal with 2 digits.
+    // Otherwise, round the capacity.
+    currentMegabytes =
+      currentMegabytes / totalMegabytes >= 0.75
+        ? currentMegabytes.toFixed(2)
+        : Math.round(currentMegabytes);
+
+    return weblabMsg.currentProjectCapacity({
+      currentMegabytes,
+      totalMegabytes
+    });
   };
 
   render() {
@@ -69,10 +87,6 @@ class WebLabView extends React.Component {
       width: '100%',
       height: `calc(100% - ${iframeHeightOffset}px)`
     };
-    const projectCapacityLabel = weblabMsg.currentProjectCapacity({
-      currentMegabytes: this.bytesToMegabytes(projectSize),
-      totalMegabytes: this.bytesToMegabytes(maxProjectCapacity)
-    });
 
     return (
       <StudioAppWrapper>
@@ -140,7 +154,7 @@ class WebLabView extends React.Component {
                       {maxProjectCapacity > 0 && projectSize > 0 && (
                         <Meter
                           id="weblab-project-capacity"
-                          label={projectCapacityLabel}
+                          label={this.projectCapacityLabel()}
                           value={projectSize}
                           max={maxProjectCapacity}
                           containerStyle={{
