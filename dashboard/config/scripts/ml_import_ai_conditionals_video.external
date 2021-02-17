@@ -1,0 +1,11 @@
+name 'ml-import ai-conditionals-video'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+Delete this level later
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Game Lab Connections:** If you've taught Unit 3, your students may already be familiar with conditionals and if-statements. You can leverage this prior experience to help make the code seem more familiar.
+MARKDOWN
