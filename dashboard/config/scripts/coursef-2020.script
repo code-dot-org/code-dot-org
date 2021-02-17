@@ -2,7 +2,6 @@ hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursef/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
@@ -82,11 +81,11 @@ level 'courseD_bee_nestedLoops9_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true
+lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
 level 'PowerOfWords-Unplugged_2020'
 
 lesson_group 'csf_variables', display_name: 'Variables'
-lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables-Unplugged_2020'
 
 lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist', has_lesson_plan: true
@@ -134,11 +133,11 @@ level 'CourseF_Oceans_Short'
 level 'CourseF_Oceans_Video_Societal_Implications'
 level 'CourseF_Oceans_Long'
 
-lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true
+lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet-Unplugged_2020'
 
 lesson_group 'csf_for_loops', display_name: 'For Loops'
-lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun-Unplugged_2020'
 
 lesson 'For Loops in Bee', display_name: 'For Loops with Bee', has_lesson_plan: true

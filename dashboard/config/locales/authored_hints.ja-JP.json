@@ -586,7 +586,7 @@
         },
         "Dance_Party_04": {
           "validation": "**どうしたらこのレベルをクリアできますか？**\n\n\\*7小節目のどこかで、背景エフェクトを変更する必要があります。\n\n_このレベルは10小節で終わります。_",
-          "challenges": "\\*\\* 自由選択のチャレンジ \\*\\*\n\n<xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"小節\"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。"
+          "challenges": "\\*\\* 自由選択のチャレンジ \\*\\*\n\n<xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。"
         },
         "Dance_Party_05": {
           "validation": "**このレベルをクリアするにはどうすればよいですか？**\n\n\\-ダンサーは、レベルが終了する前に少なくとも4つの異なるダンスの動きを繰り返す必要があります。 \n\n_このレベルは12小節後に終了します。_"
@@ -1856,11 +1856,11 @@
         },
         "courseA_harvester_seq4_2019": {
           "courseA_harvester_seq4_a": "トウモロコシまで なんブロック？ワークスペースにあるブロックは いくつ？",
-          "courseA_harvester_seq4_b": "`東` が 5つ と `ピック トウモロコシ`を 1つ つかいます。\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_b": "`東` を 5つ と `ピック トウモロコシ`を 1つ つかいます。\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq4_2020": {
           "courseA_harvester_seq4_a": "トウモロコシまで なんブロック？ワークスペースにあるブロックは いくつ？",
-          "courseA_harvester_seq4_b": "`東` が 5つ と `ピック トウモロコシ`を 1つ つかいます。\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_b": "`東` を 5つ と `ピック トウモロコシ`を 1つ つかいます。\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5": {
           "courseA_harvester_seq5_a": "どのブロックが まちがっているのかな？",
@@ -2273,12 +2273,12 @@
         },
         "courseA_playlab_events_challenge2_2019": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "courseA_playlab_events_challenge2_2020": {
           "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
-          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
+          "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
         "courseB_Scrat_ramp1_2018": {
@@ -2728,12 +2728,12 @@
         "courseB_iceage_loops10_2019": {
           "courseB_iceage_loops10_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
           "courseB_iceage_loops10_b": "ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？",
-          "courseB_iceage_loops10_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops10_c": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops10_2020": {
           "courseB_iceage_loops10_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
           "courseB_iceage_loops10_b": "ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？",
-          "courseB_iceage_loops10_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops10_c": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops1_2019": {
           "courseB_iceage_loops1_a": "こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。",
@@ -2751,12 +2751,12 @@
         "courseB_iceage_loops2_2019": {
           "courseB_iceage_loops2_a": "かどを まがる まえ と まがった あとに わけて かんがえよう。",
           "courseB_iceage_loops2_b": "わからないときは、どうやって いけばいいのか こえに出して いってみよう。",
-          "courseB_iceage_loops2_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops2_c": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops2_2020": {
           "courseB_iceage_loops2_a": "かどを まがる まえ と まがった あとに わけて かんがえよう。",
           "courseB_iceage_loops2_b": "わからないときは、どうやって いけばいいのか こえに出して いってみよう。",
-          "courseB_iceage_loops2_c": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops2_c": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops3": {
           "courseB_iceage_loops3_a": "あたらしいブロックを つかってみよう！ <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
@@ -2806,11 +2806,11 @@
         },
         "courseB_iceage_loops7_2019": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
-          "courseB_iceage_loops7_b": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops7_b": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops7_2020": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
-          "courseB_iceage_loops7_b": "赤いせんのとおりに いってみよう。"
+          "courseB_iceage_loops7_b": "あかいせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops8": {
           "courseB_iceage_loops8_a": "うごく ほうこうは あってる？ほかに かえるところは ない？",

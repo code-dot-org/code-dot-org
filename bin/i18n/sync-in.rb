@@ -16,6 +16,7 @@ require_relative 'redact_restore_utils'
 require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
+  puts "Sync in starting"
   HocSyncUtils.sync_in
   localize_level_content
   localize_project_content
@@ -27,6 +28,10 @@ def sync_in
   redact_level_content
   redact_block_content
   localize_markdown_content
+  puts "Sync in completed successfully"
+rescue => e
+  puts "Sync in failed from the error: #{e}"
+  raise e
 end
 
 def get_i18n_strings(level)
@@ -101,18 +106,11 @@ def get_i18n_strings(level)
         i18n_strings['behavior_names'][name.content] = name.content if name
       end
 
-      text_blocks = blocks.xpath("//block[@type=\"text\"]")
-      i18n_strings['placeholder_texts'] = Hash.new unless text_blocks.empty?
-      text_blocks.each do |text_block|
-        text_title = text_block.at_xpath('./title[@name="TEXT"]')
-        # Skip empty or untranslatable string.
-        # A translatable string must have at least 3 consecutive alphabetic characters.
-        next unless text_title&.content =~ /[a-zA-Z]{3,}/
-
-        # Use only alphanumeric characters in lower cases as string key
-        text_key = Digest::MD5.hexdigest text_title.content
-        i18n_strings['placeholder_texts'][text_key] = text_title.content
-      end
+      ## Placeholder texts
+      i18n_strings['placeholder_texts'] = Hash.new
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
     end
   end
 
@@ -128,6 +126,25 @@ def get_i18n_strings(level)
   end
 
   i18n_strings.delete_if {|_, value| value.blank?}
+end
+
+def get_placeholder_texts(blocks, block_type, title_names)
+  results = {}
+  blocks.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+    title_names.each do |title_name|
+      title = block.at_xpath("./title[@name=\"#{title_name}\"]")
+
+      # Skip empty or untranslatable string.
+      # A translatable string must have at least 3 consecutive alphabetic characters.
+      next unless title&.content =~ /[a-zA-Z]{3,}/
+
+      # Use only alphanumeric characters in lower cases as string key
+      text_key = Digest::MD5.hexdigest title.content
+      results[text_key] = title.content
+    end
+  end
+
+  results
 end
 
 def localize_project_content

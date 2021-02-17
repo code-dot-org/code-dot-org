@@ -4,7 +4,6 @@ hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
 has_verified_resources true
-has_lesson_plan true
 new_name 'csp2-2017'
 family_name 'csp2'
 version_year '2017'

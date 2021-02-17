@@ -3,7 +3,6 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit'
 new_name 'csppostap-2017'
 family_name 'csppostap'

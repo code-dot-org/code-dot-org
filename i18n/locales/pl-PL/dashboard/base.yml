@@ -270,6 +270,7 @@ pl:
     invite_sent: 'Zaproszenie wysłane'
     added_teacher: '%{name} dodany jako Twój nauczyciel'
     registered: "Zarejestrowałeś się do %{section_name}."
+    captcha_required: 'Wypełnij CAPTCHA, aby dołączyć do sesji.'
     error:
       signed_in: 'Wyloguj się, zanim będziesz kontynuować'
       username_not_found: 'Nie znaleziono nazwy użytkownika %{username}'
@@ -814,7 +815,7 @@ pl:
     save: "Zapisz"
   race_interstitial:
     title: "Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności w informatyce"
-    message: "Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)"
+    message: "Podaj nam swoją rasę lub pochodzenie etniczne (zaznacz wszystkie pasujące odpowiedzi) "
     races:
       white: "Biały"
       black: "Murzyn lub Afroamerykanin"

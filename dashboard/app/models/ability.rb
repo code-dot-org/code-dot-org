@@ -53,7 +53,9 @@ class Ability
       :foorm_editor,
       :pd_foorm,
       Foorm::Form,
-      Foorm::LibraryQuestion
+      Foorm::Library,
+      Foorm::LibraryQuestion,
+      :javalab
     ]
     cannot :index, Level
 
@@ -240,7 +242,9 @@ class Ability
         Video,
         :foorm_editor,
         Foorm::Form,
-        Foorm::LibraryQuestion
+        Foorm::Library,
+        Foorm::LibraryQuestion,
+        :javalab
       ]
 
       # Only custom levels are editable.
@@ -290,6 +294,7 @@ class Ability
         UserScript,
         :pd_foorm,
         Foorm::Form,
+        Foorm::Library,
         Foorm::LibraryQuestion
       ]
     end

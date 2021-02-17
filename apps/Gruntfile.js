@@ -333,6 +333,7 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          ['build/package/css/lessons.css', 'style/lessons.scss'],
           [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
@@ -350,7 +351,8 @@ describe('entry tests', () => {
           [
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss'
-          ]
+          ],
+          ['build/package/css/javalab.css', 'style/javalab/style.scss']
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -564,7 +566,9 @@ describe('entry tests', () => {
     'teacher_dashboard/parent_letter':
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
-      './src/sites/studio/pages/teacher_feedbacks/index.js'
+      './src/sites/studio/pages/teacher_feedbacks/index.js',
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
+    'javalab/index': './src/sites/studio/pages/javalab/index.js'
   };
 
   var internalEntries = {

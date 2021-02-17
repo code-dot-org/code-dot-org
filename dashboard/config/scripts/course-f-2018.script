@@ -1,5 +1,5 @@
 lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
-lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: false
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_MRF_2018'
 
 lesson 'Sequence in Maze', display_name: 'Sequence in Maze', has_lesson_plan: false
@@ -15,7 +15,7 @@ level 'courseD_maze_ramp5b_2018', challenge: true
 level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false, unplugged: true
 level 'BuildingAFoundation_2018'
 
 lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: false
@@ -44,7 +44,7 @@ level 'courseC_artist_prog6_predict1_2018', assessment: true
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: false
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_loopyMRF_2018'
 
 lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: false
@@ -87,7 +87,7 @@ level 'courseD_artist_project3a_2018'
 level 'courseD_artist_project4a_2018'
 
 lesson_group 'csf_f_2', display_name: 'Course F Content'
-lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: false
+lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: false, unplugged: true
 level 'TangramAlgorithms'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
@@ -107,7 +107,7 @@ level 'courseE_artist_ramp8_2018'
 level 'courseC_video_angles2_2018'
 level 'courseE_artist_ramp9_2018'
 
-lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: false
+lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: false, unplugged: true
 level 'courseF_unplugged_powerOfWords_2018'
 
 lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab', has_lesson_plan: false
@@ -139,7 +139,7 @@ level 'Underground If Statements_2018'
 level 'Overworld Powered Minecart_2018'
 level 'Overworld Free Play 20x20_2018'
 
-lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: false
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: false, unplugged: true
 level 'EnvelopeVariables_2018'
 
 lesson 'Variables in Artist', display_name: 'Variables in Artist', has_lesson_plan: false
@@ -175,7 +175,7 @@ level 'courseF_playlab_variables7b_2018'
 bonus 'courseF_playlab_variables_challenge1_2018'
 bonus 'courseF_playlab_variables_challenge2_2018'
 
-lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: false
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: false, unplugged: true
 level 'ForLoopFun_2018'
 
 lesson 'For Loops in Bee', display_name: 'For Loops in Bee', has_lesson_plan: false
@@ -210,7 +210,7 @@ level 'courseF_artist_for10_2018'
 bonus 'courseF_artist_for_challenge1_2018'
 bonus 'courseF_artist_for_challenge2_2018'
 
-lesson 'Songwriting with Parameters', display_name: 'Songwriting with Parameters', has_lesson_plan: false
+lesson 'Songwriting with Parameters', display_name: 'Songwriting with Parameters', has_lesson_plan: false, unplugged: true
 level 'SongwritingWithParameters'
 
 lesson 'Functions in Bee', display_name: 'Functions in Bee', has_lesson_plan: false

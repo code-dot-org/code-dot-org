@@ -50,8 +50,7 @@ export const activitySectionShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
-  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
-    .isRequired,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])]),
   remarks: PropTypes.bool,
   progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
@@ -77,13 +76,11 @@ export const lessonShape = PropTypes.shape({
         key: PropTypes.string.isRequired,
         position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        lockable: PropTypes.bool.isRequired
+        link: PropTypes.string.isRequired
       })
     ).isRequired
   }).isRequired,
   position: PropTypes.number.isRequired,
-  lockable: PropTypes.bool.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,

@@ -5,6 +5,7 @@
     "hidden": true,
     "login_required": false,
     "properties": {
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -32,6 +33,7 @@
       "name": "Course A",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -46,6 +48,7 @@
       "name": "Course B",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -60,6 +63,7 @@
       "name": "Course E/F",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -74,6 +78,7 @@
       "name": "CS Discoveries",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -82,14 +87,39 @@
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
+    },
+    {
+      "key": "contagions",
+      "name": "Content Integration: Contagions",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
     }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq10_predict1_2018"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -108,8 +138,12 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq1_predict1_2018"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -128,8 +162,12 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops3_predict1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -148,8 +186,12 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops11_predict2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -168,8 +210,12 @@
     {
       "chapter": 5,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops11_predict2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -188,8 +234,12 @@
     {
       "chapter": 6,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq2_predict1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -208,8 +258,12 @@
     {
       "chapter": 7,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq12_predict2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -228,8 +282,12 @@
     {
       "chapter": 8,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseB_collector_loops3_predict1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -248,8 +306,12 @@
     {
       "chapter": 9,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops8_predict1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -268,8 +330,12 @@
     {
       "chapter": 10,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "teacherSandboxFish"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -288,8 +354,12 @@
     {
       "chapter": 11,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Swimming Fish Teacher Sandbox"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -308,8 +378,12 @@
     {
       "chapter": 12,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP word search big"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -328,8 +402,12 @@
     {
       "chapter": 13,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP seating big"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -343,6 +421,81 @@
       },
       "level_keys": [
         "csd digital unplugged PSP seating big"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 2: Bridging Activity",
+        "level_keys": [
+          "contagion_teachers"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "contagion_teachers"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 3: Dice Roll",
+        "level_keys": [
+          "6sidedDie"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "6sidedDie"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 4: Collecting Data",
+        "level_keys": [
+          "contagion_teachers2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "contagion_teachers2"
       ]
     }
   ],
@@ -489,6 +642,54 @@
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers",
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "6sidedDie",
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers2",
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
   ]
 }

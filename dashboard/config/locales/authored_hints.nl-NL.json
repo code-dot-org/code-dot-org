@@ -3693,6 +3693,12 @@
         "courseC_maze_loops_challenge1a_2020": {
           "courseC_maze_loops_challenge1_a": "Beschouw dit pad als twee opeenvolgende routes, Elke route heeft een patroon dat je kunt herhalen.",
           "courseC_maze_loops_challenge1_b": "Weet je nog hoe je lussen kon gebruiken om een trap-patroon te herhalen?"
+        },
+        "courseA_harvester_loops6_2019": {
+          "courseA_harvester_loops6_a": "Als je vast loopt, schrijf dan eens de stappen uit op een stuk papier en kijk of je er een herhalend patroon in ziet."
+        },
+        "courseA_harvester_loops6_2020": {
+          "courseA_harvester_loops6_a": "Als je vast loopt, schrijf dan eens de stappen uit op een stuk papier en kijk of je er een herhalend patroon in ziet."
         }
       }
     }

@@ -1744,7 +1744,7 @@ it:
           description_short: Programmazione
           lessons:
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Functions:
@@ -2072,7 +2072,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Variables:
@@ -2621,7 +2621,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd5-2017:
@@ -2639,7 +2639,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd1-old:
@@ -2671,7 +2671,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             'Chapter 1: Images and Animation':
@@ -3922,7 +3922,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd3-2018:
@@ -3946,7 +3946,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd2-2018:
@@ -5726,7 +5726,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -6299,15 +6299,15 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
               name: Test finale
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
         csp3-pilot:
           lesson_groups:
             content:
@@ -6805,17 +6805,17 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Variables:
               name: Variabili
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -7423,7 +7423,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         code-break:
@@ -7502,11 +7502,11 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Variables:
               name: Variabili
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
             Sprites:
               name: Personaggi
             Text:
@@ -7516,7 +7516,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -7571,6 +7571,8 @@ it:
           lessons:
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
+            intro-categorical:
+              name: Lezione 6
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -7632,14 +7634,14 @@ it:
               key: Disegnare in Sviluppo Giochi
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              key: Forme e Parametri
-              name: Forme e Parametri
+              key: Shapes and Parameters
+              name: Shapes and Parameters
             Variables:
               key: Variabili
               name: Variabili
             Random Numbers:
-              key: Numeri Casuali
-              name: Numeri Casuali
+              key: Random Numbers
+              name: Random Numbers
             Sprites:
               key: Personaggi
               name: Personaggi
@@ -7653,8 +7655,8 @@ it:
               key: Velocità
               name: Velocità
             Collision Detection:
-              key: Rilevamento delle Collisioni
-              name: Rilevamento delle Collisioni
+              key: Collision Detection
+              name: Collision Detection
             Functions:
               key: Funzioni
               name: Funzioni
@@ -8303,3 +8305,51 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+        contagion-pilot:
+          description_short: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
+          description: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
+          student_description: 'Usa Sprite Lab per programmare la simulazione di un''epidemia di virus.'
+        ai-unit-pilot:
+          lessons:
+            intro:
+              name: Lezione 1
+            lesson1:
+              name: 'Lezione 1'
+            lesson2:
+              name: Lezione 2
+            lesson3:
+              name: Lezione 3
+            lesson4:
+              name: Lezione 4
+            lesson5:
+              name: Lezione 5
+            lesson6:
+              name: Lezione 6
+            lesson7:
+              name: Lezione 7
+            lesson8:
+              name: Lezione 8
+            lesson9:
+              name: Lezione 9
+            lesson10:
+              name: Lezione 10
+            lesson11:
+              name: Lezione 11
+            lesson12:
+              name: Lezione 12
+            lesson13:
+              name: Lezione 13
+            lesson14:
+              name: Lezione 14
+            lesson15:
+              name: Lezione 15
+            lesson16:
+              name: Lezione 16
+            lesson17:
+              name: Lezione 17
+            lesson18:
+              name: Lezione 18
+            lesson19:
+              name: Lezione 19
+            lesson20:
+              name: Lezione 20

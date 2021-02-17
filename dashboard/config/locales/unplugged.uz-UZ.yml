@@ -87,12 +87,12 @@ uz:
           keyingi qadamlarni ko'rsatadi.
       UnplugHappyMaps:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish
-          uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       MoveIt:
         title: Move It, Move It (Harakatlan)
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish
-          uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       PlantASeed:
         title: 'Hayotiy algoritmlar: Urug‘ ekish'
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi,
@@ -211,7 +211,7 @@ uz:
           beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni
           o'rganamiz.
       SongwritingWithParameters:
-        title: Parametrlar bilan qo'shiq yozish
+        title: Parametrlar bilan qo‘shiq yozish
         desc: Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar
           (ba'zida protsedura deb ham yuritiladi) - bu kichik dastur bo'lib, undan
           kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars
@@ -299,8 +299,8 @@ uz:
           qaratadi.
       courseA_unplugged_happyMaps:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish
-          uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       courseA_unplugged_goingPlacesSafely:
         title: Joylarga xavfsiz borish
         desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir.
@@ -351,6 +351,7 @@ uz:
           Ular bir vaqtning o'zida bitta ko'rsatma yozishlari mumkin va agar biror
           joyda xato bo'lsa, hamma narsani shu nuqtagacha o'chirib tashlashlari kerak.
       courseD_unplugged_conditionalsCards:
+        title: Conditionals with Cards
         desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta
           o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar
           men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
@@ -368,7 +369,7 @@ uz:
           qiladi. Buning bir qismi sifatida talabalar zarlar poygasi o'yinining algoritmini
           aniqlaydilar va yozadilar.
       courseE_unplugged_songwritingParameters:
-        title: Parametrlar bilan qo'shiq yozish
+        title: Parametrlar bilan qo‘shiq yozish
         desc: Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish
           uchun qo'shiqdagi xor tushunchasidan foydalanadilar.
       courseE_unplugged_internet:
@@ -403,7 +404,7 @@ uz:
           beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni
           o'rganamiz.
       courseF_unplugged_songwritingParameters:
-        title: Parametrlar bilan qo'shiq yozish
+        title: Parametrlar bilan qo‘shiq yozish
         desc: Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar
           (ba'zida protsedura deb ham yuritiladi) - bu kichik dastur bo'lib, undan
           kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars
@@ -447,6 +448,7 @@ uz:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
+        title: My Robotic Friends
         desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       PlantASeed_2018:
         title: 'Hayotiy algoritmlar: Urug‘ ekish'
@@ -456,8 +458,8 @@ uz:
           qaratadi.
       UnplugHappyMaps_2018:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish
-          uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       GoingPlacesSafely_2018:
         title: Joylarga xavfsiz borish
         desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir.
@@ -542,6 +544,7 @@ uz:
           ko'rsatma yozish uchun birgalikda harakat qilishlari bilan tezda soat poygasiga
           o'tishadi.
       courseB_unplugged_MRF_2019:
+        title: My Robotic Friends
         desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       BuildingAFoundation_2019:
         title: 'tarjima qilinmagan: en-US.data.unplugged.BuildingAFoundation_2018.title'
@@ -658,8 +661,8 @@ uz:
           qaratadi.
       UnplugHappyMaps_2019:
         title: Xursand Xaritalar
-        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o'tkazish
-          uchun oddiy algoritmlarni (ko'rsatmalar to'plamini) yaratadilar.
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
       GoingPlacesSafely_2019:
         title: Joylarga xavfsiz borish
         desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir.

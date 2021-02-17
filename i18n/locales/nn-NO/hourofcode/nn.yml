@@ -1650,7 +1650,7 @@ nn:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Et Minecraft-eventyr om to landsbyer
   tutorial_danceparty_shortdescription: Programmer ein dansefest du kan dele med venene
     dine. Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
   tutorial_chibitronics_shortdescription: Programmer ein papirkrets til å lyse opp
@@ -5707,11 +5707,11 @@ nn:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: I århundrer har landsbyboerne og ondsbyboerne
+    levd i samme område, men de samhandler sjelden med hverandre. Nå kan du bruke
+    kode til å bringe de to landsbyene sammen. Spillere vil oppleve empati og medfølelse
+    for sine naboer, lære samarbeid og inkludering, og omfavne mangfoldet som gjør
+    oss alle unike og spesielle.
   tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
     Malay, Polish, Portuguese, and 10 more!
@@ -6519,7 +6519,7 @@ nn:
   tutorial_meeempathy_language: Norsk Nynorsk
   tutorial_dance2019_string_detail_grades: Frå 2. klasse
   tutorial_danceparty_string_detail_grades: Frå 2. klasse
-  tutorial_chibitronics_string_detail_grades: Grades 2-5
+  tutorial_chibitronics_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_athlete_string_detail_grades: Frå 2. klasse
   tutorial_moana_string_detail_grades: Frå 2. klasse
   tutorial_star-wars_string_detail_grades: Frå 2. klasse
@@ -6569,7 +6569,7 @@ nn:
   tutorial_tynkerpup_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_livecode_string_detail_grades: Frå 8. klasse
   tutorial_cocomgame_string_detail_grades: Frå 2. klasse
-  tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
+  tutorial_tynkerspin_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_code-avengers_string_detail_grades: Frå 6. klasse
   tutorial_tynkercq_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_cmgame_string_detail_grades: Frå 6. klasse
@@ -6605,7 +6605,7 @@ nn:
   tutorial_tynkerright_string_detail_grades: Frå 2. - 8. klasse
   tutorial_touchdevelop_string_detail_grades: do-not-show
   tutorial_tynkercc_string_detail_grades: Frå 6. klasse
-  tutorial_bamboo_string_detail_grades: Grades 2-5
+  tutorial_bamboo_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_robojav_string_detail_grades: Frå 6. klasse
   tutorial_roboba_string_detail_grades: Frå 6. klasse
   tutorial_knodsnake_string_detail_grades: Frå 6.-8. klasse
@@ -6679,13 +6679,13 @@ nn:
   tutorial_besttech_string_detail_grades: Frå 8. klasse
   tutorial_tlcbrain_string_detail_grades: Frå 6. klasse
   tutorial_hopquiz_string_detail_grades: Frå 6.-8. klasse
-  tutorial_unfortunate_string_detail_grades: Grades 2-5
+  tutorial_unfortunate_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_cha_string_detail_grades: Frå 6.-8. klasse
   tutorial_elaseq_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: Frå 2. - 8. klasse
   tutorial_arduino_string_detail_grades: Frå 6.-8. klasse
-  tutorial_introrobo_string_detail_grades: Grades 2-5
+  tutorial_introrobo_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_tlcinvis_string_detail_grades: Frå 2. klasse
   tutorial_tlcjflap_string_detail_grades: Frå 6. klasse
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
@@ -6694,7 +6694,7 @@ nn:
   tutorial_ticklel_string_detail_grades: Frå 2. klasse
   tutorial_spiralsdash_string_detail_grades: Frå 2. - 8. klasse
   tutorial_ghdebug_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_tlckk_string_detail_grades: Grades 2-5
+  tutorial_tlckk_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_firstcomp_string_detail_grades: Pre-reader - Grade 1
   tutorial_mazefinch_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_tlccc_string_detail_grades: Frå 2. - 8. klasse
@@ -6719,14 +6719,14 @@ nn:
   tutorial_grokflags_string_detail_grades: Frå 6. klasse
   tutorial_robomind_string_detail_grades: Frå 2. - 8. klasse
   tutorial_scratchanimwork_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_adventureq_string_detail_grades: Grades 2-5
+  tutorial_adventureq_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_khan-es_string_detail_grades: Frå 6. klasse
   tutorial_kpt_string_detail_grades: Frå 6. klasse
   tutorial_kpl_string_detail_grades: Frå 6. klasse
   tutorial_khe_string_detail_grades: Frå 6. klasse
   tutorial_kfr_string_detail_grades: Frå 6. klasse
   tutorial_app-inventor_string_detail_grades: Frå 6. klasse
-  tutorial_bits_string_detail_grades: Grades 2-5
+  tutorial_bits_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_blockly_string_detail_grades: Frå 6. klasse
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
@@ -6735,13 +6735,13 @@ nn:
   tutorial_spellcraft_string_detail_grades: Frå 6. klasse
   tutorial_pirates_string_detail_grades: Frå 2. - 8. klasse
   tutorial_csfirst_string_detail_grades: Frå 2. klasse
-  tutorial_loopedy_string_detail_grades: Grades 2-5
+  tutorial_loopedy_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
   tutorial_ssw_string_detail_grades: do-not-show
   tutorial_sswb_string_detail_grades: do-not-show
   tutorial_kodable-unplugged_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_scratch_string_detail_grades: Grades 2-5
+  tutorial_scratch_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: Frå 6. klasse
@@ -6751,7 +6751,7 @@ nn:
   tutorial_rmc_string_detail_grades: do-not-show
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
-  tutorial_thinkersmith-es_string_detail_grades: Grades 2-5
+  tutorial_thinkersmith-es_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_pixie_string_detail_grades: Frå 2. klasse
   tutorial_play_string_detail_grades: do-not-show
   tutorial_robomind-nl_string_detail_grades: Frå 2. - 8. klasse
@@ -6795,7 +6795,7 @@ nn:
   tutorial_computeit_string_detail_grades: Frå 2. klasse
   tutorial_codesterssj_string_detail_grades: Frå 2. - 8. klasse
   tutorial_cmchat_string_detail_grades: Frå 6. klasse
-  tutorial_tynkerdb_string_detail_grades: Grades 2-5
+  tutorial_tynkerdb_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_cmbuild_string_detail_grades: Frå 6. klasse
   tutorial_robotrattle_string_detail_grades: Frå 2. - 8. klasse
   tutorial_codestersh_string_detail_grades: Frå 2. - 8. klasse
@@ -6807,7 +6807,7 @@ nn:
   tutorial_kodmaze_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_codestersa_string_detail_grades: Frå 2. - 8. klasse
   tutorial_cmdodo_string_detail_grades: Grades 3-5
-  tutorial_tynkerspace_string_detail_grades: Grades 2-5
+  tutorial_tynkerspace_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_gfbloons_string_detail_grades: Frå 8. klasse
   tutorial_raspipong_string_detail_grades: Frå 8. klasse
   tutorial_codehsvr_string_detail_grades: Frå 6. klasse
@@ -6822,7 +6822,7 @@ nn:
   tutorial_codehsjsgraph_string_detail_grades: Frå 8. klasse
   tutorial_thunkable_string_detail_grades: Frå 6. klasse
   tutorial_hopcrossyroad_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_switchglitch_string_detail_grades: Grades 2-5
+  tutorial_switchglitch_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_codecar_string_detail_grades: Frå 6. klasse
   tutorial_codesterscp_string_detail_grades: Frå 6.-8. klasse
   tutorial_grokpetblock_string_detail_grades: Frå 6.-8. klasse
@@ -6831,7 +6831,7 @@ nn:
   tutorial_codesterscr_string_detail_grades: Frå 2. - 8. klasse
   tutorial_grokdisease_string_detail_grades: Frå 8. klasse
   tutorial_techec_string_detail_grades: University
-  tutorial_rgbegin_string_detail_grades: Grades 2-5
+  tutorial_rgbegin_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_myradream_string_detail_grades: Frå 2. - 8. klasse
   tutorial_thinkfun_string_detail_grades: Frå 2. - 8. klasse
   tutorial_hopfireworks_string_detail_grades: Frå 2. - 8. klasse
@@ -6839,7 +6839,7 @@ nn:
   tutorial_codehspython_string_detail_grades: Frå 6. klasse
   tutorial_codehsjava_string_detail_grades: Frå 8. klasse
   tutorial_techioda_string_detail_grades: University
-  tutorial_grokmonster_string_detail_grades: Grades 2-5
+  tutorial_grokmonster_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_techmjs_string_detail_grades: University
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
@@ -6847,19 +6847,19 @@ nn:
   tutorial_groktunnel_string_detail_grades: Frå 6. klasse
   tutorial_stemcod_string_detail_grades: Frå 6. klasse
   tutorial_techikb_string_detail_grades: University
-  tutorial_kanostreet_string_detail_grades: Grades 2-5
-  tutorial_nyblebot_string_detail_grades: Grades 2-5
-  tutorial_codemojijs_string_detail_grades: Grades 2-5
+  tutorial_kanostreet_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_nyblebot_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_codemojijs_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
   tutorial_gpbcatapult_string_detail_grades: Frå 6. klasse
   tutorial_quorumastro_string_detail_grades: Frå 6. klasse
-  tutorial_alicewonder_string_detail_grades: Grades 2-5
+  tutorial_alicewonder_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_rginter_string_detail_grades: Frå 6.-8. klasse
   tutorial_cssgrid_string_detail_grades: Frå 6. klasse
   tutorial_jshero_string_detail_grades: Frå 8. klasse
-  tutorial_codemojipy_string_detail_grades: Grades 2-5
+  tutorial_codemojipy_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_nclabdrone_string_detail_grades: Frå 6. klasse
   tutorial_gpbcircle_string_detail_grades: Frå 6. klasse
   tutorial_gpbpaint_string_detail_grades: Frå 6. klasse
@@ -6891,11 +6891,11 @@ nn:
   tutorial_isavesanta_string_detail_grades: Frå 2. - 8. klasse
   tutorial_iorder_string_detail_grades: Frå 2. - 8. klasse
   tutorial_ianimate_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_iloveada_string_detail_grades: Grades 2-5
+  tutorial_iloveada_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_kodflash_string_detail_grades: Frå ikkje-lesar til 5. klasse
-  tutorial_kodchoose_string_detail_grades: Grades 2-5
+  tutorial_kodchoose_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_kodpizzapre_string_detail_grades: Pre-reader - Grade 1
-  tutorial_kodpizza_string_detail_grades: Grades 2-5
+  tutorial_kodpizza_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_kodwomen_string_detail_grades: Frå 2. - 8. klasse
   tutorial_tfunplug_string_detail_grades: Frå 6.-8. klasse
   tutorial_lbvariables_string_detail_grades: Frå 2. - 8. klasse
@@ -6907,9 +6907,9 @@ nn:
   tutorial_lbpotato_string_detail_grades: Frå 2. klasse
   tutorial_lbguitar_string_detail_grades: Frå 2. klasse
   tutorial_lbio_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_wonpuppy_string_detail_grades: Grades 2-5
+  tutorial_wonpuppy_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_woncue_string_detail_grades: Frå 2. klasse
-  tutorial_wonzoo_string_detail_grades: Grades 2-5
+  tutorial_wonzoo_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_wontrip_string_detail_grades: Frå 2. - 8. klasse
   tutorial_woncollect_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_wonsecret_string_detail_grades: Frå 6. klasse
@@ -6950,10 +6950,10 @@ nn:
   tutorial_3dbearmars_string_detail_grades: Frå 2. - 8. klasse
   tutorial_alexaskill_string_detail_grades: Frå 2. - 8. klasse
   tutorial_bitsboxyak_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_blockscadbargraphs_string_detail_grades: Grades 2-5
-  tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
+  tutorial_blockscadbargraphs_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_blockscadbirdhouses_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_blockscadclock_string_detail_grades: Frå 8. klasse
-  tutorial_blockscaddinner_string_detail_grades: Grades 2-5
+  tutorial_blockscaddinner_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_blockscadicecream_string_detail_grades: Frå 6. klasse
   tutorial_blockscadpizza_string_detail_grades: Frå 6.-8. klasse
   tutorial_blockscadsugar_string_detail_grades: Frå 6.-8. klasse
@@ -6964,20 +6964,20 @@ nn:
   tutorial_bpenglishvid_string_detail_grades: Frå 2. - 8. klasse
   tutorial_bphealthscratch_string_detail_grades: Frå 2. klasse
   tutorial_bphealthvid_string_detail_grades: Frå 6. klasse
-  tutorial_bpmathscratch_string_detail_grades: Grades 2-5
+  tutorial_bpmathscratch_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_bpmathvid_string_detail_grades: Frå 6. klasse
   tutorial_bpmlkscratch_string_detail_grades: Frå 2. - 8. klasse
   tutorial_bpmlkvid_string_detail_grades: Frå 6.-8. klasse
-  tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
+  tutorial_bpsafetyscratch_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_bpsafetyvid_string_detail_grades: Frå 6.-8. klasse
-  tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
+  tutorial_bpsciencescratch_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_bpsciencevid_string_detail_grades: Frå 6.-8. klasse
   tutorial_bptechscratch_string_detail_grades: Frå 6. klasse
   tutorial_bptechvid_string_detail_grades: Frå 6. klasse
   tutorial_caflags_string_detail_grades: Frå 6. klasse
-  tutorial_matariki_string_detail_grades: Grades 2-5
+  tutorial_matariki_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_carestaurant_string_detail_grades: Frå 2. klasse
-  tutorial_casea_string_detail_grades: Grades 2-5
+  tutorial_casea_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_cashield_string_detail_grades: Frå 2. - 8. klasse
   tutorial_ccwslimer_string_detail_grades: Frå 2. - 8. klasse
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
@@ -7016,8 +7016,8 @@ nn:
   tutorial_groklearningpython_string_detail_grades: Frå 8. klasse
   tutorial_htmltimetravel_string_detail_grades: Frå 8. klasse
   tutorial_hp_flappy_string_detail_grades: Frå 8. klasse
-  tutorial_appytappin_string_detail_grades: Grades 2-5
-  tutorial_icipher_string_detail_grades: Grades 2-5
+  tutorial_appytappin_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_icipher_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_iguess_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Frå 2. - 8. klasse
@@ -7026,7 +7026,7 @@ nn:
   tutorial_kibobowl_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_kibodance_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_buildcharacters_string_detail_grades: Frå ikkje-lesar til 5. klasse
-  tutorial_designgames_string_detail_grades: Grades 2-5
+  tutorial_designgames_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_makelevels_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_wizard_string_detail_grades: Frå 6. klasse
   tutorial_mbscratchcards_string_detail_grades: Frå 2. klasse
@@ -7042,19 +7042,19 @@ nn:
   tutorial_ozotroll_string_detail_grades: Frå 6.-8. klasse
   tutorial_peblioart_string_detail_grades: Frå 8. klasse
   tutorial_astropi_string_detail_grades: Frå 6. klasse
-  tutorial_rgart_string_detail_grades: Grades 2-5
-  tutorial_rgengineer_string_detail_grades: Grades 2-5
-  tutorial_rgmath_string_detail_grades: Grades 2-5
-  tutorial_rgscience_string_detail_grades: Grades 2-5
-  tutorial_rgtech_string_detail_grades: Grades 2-5
+  tutorial_rgart_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_rgengineer_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_rgmath_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_rgscience_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_rgtech_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_robotmagic3d_string_detail_grades: Frå 6. klasse
   tutorial_robotmagicflappy_string_detail_grades: Frå 8. klasse
   tutorial_scratchadventure_string_detail_grades: Frå 2. klasse
   tutorial_scratchtalk_string_detail_grades: Frå 2. klasse
-  tutorial_scratchjrstory_string_detail_grades: Grades 2-5
+  tutorial_scratchjrstory_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_spherocommunity_string_detail_grades: Grades 2-5
+  tutorial_spherocommunity_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_spherofunctions_string_detail_grades: Frå 6. klasse
   tutorial_spheroinfrared_string_detail_grades: Frå 6.-8. klasse
   tutorial_spherolightsensor_string_detail_grades: Frå 2. - 8. klasse
@@ -7079,15 +7079,15 @@ nn:
   tutorial_gcvariables_string_detail_grades: Frå 6. klasse
   tutorial_beanything_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_change_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_cooking_string_detail_grades: Grades 2-5
+  tutorial_cooking_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_crystal_string_detail_grades: Frå 2. klasse
   tutorial_landscape_string_detail_grades: Frå 6. klasse
-  tutorial_pets_string_detail_grades: Grades 2-5
+  tutorial_pets_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_petvet_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_superhero_string_detail_grades: Frå 6. klasse
   tutorial_vidcodeplastic_string_detail_grades: Frå 6. klasse
   tutorial_vidcodetypeface_string_detail_grades: Frå 6. klasse
-  tutorial_washustorm_string_detail_grades: Grades 2-5
+  tutorial_washustorm_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
   tutorial_googlerookie_string_detail_grades: Frå 6. klasse
   tutorial_tommyturtle_string_detail_grades: Frå ikkje-lesar til 5. klasse
@@ -7179,7 +7179,7 @@ nn:
   tutorial_ozobotcolor1_string_detail_grades: Frå 2. klasse
   tutorial_scigirlspixels_string_detail_grades: Frå 2. klasse
   tutorial_kcjheroines_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_ozobotvalue_string_detail_grades: Grades 2-5
+  tutorial_ozobotvalue_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_icodebytes_string_detail_grades: Pre-reader
   tutorial_clfashion2_string_detail_grades: Frå 6. klasse
   tutorial_ai4all_string_detail_grades: Frå 6. klasse
@@ -7190,7 +7190,7 @@ nn:
   tutorial_kiboprogram_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_hellorubycsin60_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_clfashion1_string_detail_grades: Frå 6. klasse
-  tutorial_irobottraffic_string_detail_grades: Grades 2-5
+  tutorial_irobottraffic_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_edisonmystery_string_detail_grades: Frå 6.-8. klasse
   tutorial_microbitseaturtles_string_detail_grades: Frå 6.-8. klasse
   tutorial_ozobotknow_string_detail_grades: Frå 2. klasse
@@ -7199,7 +7199,7 @@ nn:
   tutorial_irobotkind_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_firiavirtual_string_detail_grades: Frå 6. klasse
   tutorial_irobotguesscode_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_ozobotnouns_string_detail_grades: Grades 2-5
+  tutorial_ozobotnouns_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_nasa3d_string_detail_grades: Frå 6. klasse
   tutorial_blupants_string_detail_grades: Frå 6. klasse
   tutorial_legodance_string_detail_grades: Frå 6.-8. klasse
@@ -7214,10 +7214,12 @@ nn:
   tutorial_meeempathy_string_detail_grades: Frå 2. klasse
   tutorial_dance2019_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
-  tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_danceparty_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
-  tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_moana_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_gumadventure_string_platforms: All modern browsers
@@ -7245,7 +7247,8 @@ nn:
   tutorial_tynkerana_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_vidcard_string_platforms: Chrome
-  tutorial_spritebox_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_spritebox_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkerch_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_lightbot_string_platforms: All modern browsers, Android tablet, iPad, Android
@@ -7263,7 +7266,8 @@ nn:
   tutorial_tynkersol_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_itchg_string_platforms: Chrome, Firefox, Android Tablet
-  tutorial_como_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_como_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_processfound_string_platforms: Chrome, Firefox, Safari
   tutorial_tynkerhomo_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
@@ -7326,7 +7330,8 @@ nn:
   tutorial_zulama_string_platforms: Internet Explorer 11, Chrome, Firefox, Safari
   tutorial_capost_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
-  tutorial_marco_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_marco_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codestersflappybike_string_platforms: All modern browsers
   tutorial_kanopong_string_platforms: All modern browsers
   tutorial_tynkerright_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
@@ -7336,7 +7341,8 @@ nn:
     Firefox, Safari
   tutorial_bamboo_string_platforms: Chrome
   tutorial_robojav_string_platforms: All modern browsers
-  tutorial_roboba_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_roboba_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_knodsnake_string_platforms: All modern browsers
   tutorial_soccharater_string_platforms: All modern browsers
   tutorial_silent_string_platforms: All modern browsers
@@ -7349,10 +7355,14 @@ nn:
   tutorial_codesterstransform_string_platforms: All modern browsers
   tutorial_flexfrog_string_platforms: All modern browsers
   tutorial_codemoji_string_platforms: do-not-show
-  tutorial_robobii_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_robobm_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codingrobots_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_robob_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_robobii_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_robobm_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_codingrobots_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_robob_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_coders_string_platforms: All modern browsers
   tutorial_tynkerhw_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7451,9 +7461,12 @@ nn:
   tutorial_scratchanim_string_platforms: All modern browsers
   tutorial_scratchfly_string_platforms: All modern browsers
   tutorial_tynkerarc_string_platforms: All modern browsers
-  tutorial_grokffpython_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_grokffblock_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_grokeliza_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_grokffpython_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_grokffblock_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_grokeliza_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkercan_string_platforms: All modern browsers
   tutorial_grokflags_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)
@@ -7555,9 +7568,11 @@ nn:
   tutorial_codesterssj_string_platforms: All modern browsers
   tutorial_cmchat_string_platforms: All modern browsers
   tutorial_tynkerdb_string_platforms: All modern browsers, iPad
-  tutorial_cmbuild_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_cmbuild_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_robotrattle_string_platforms: Chrome, Firefox, Android tablet, iPad
-  tutorial_codestersh_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codestersh_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codehsdigipixel_string_platforms: Chrome, Firefox, Safari
   tutorial_ccbinary_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome
   tutorial_codehsturtle_string_platforms: Chrome, Firefox, Safari
@@ -7565,16 +7580,20 @@ nn:
   tutorial_grokem_string_platforms: All modern browsers
   tutorial_kodmaze_string_platforms: All modern browsers, iPad
   tutorial_codestersa_string_platforms: All modern browsers
-  tutorial_cmdodo_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_cmdodo_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkerspace_string_platforms: All modern browsers, iPad, Unplugged
   tutorial_gfbloons_string_platforms: All modern browsers
   tutorial_raspipong_string_platforms: Chrome
   tutorial_codehsvr_string_platforms: Chrome, Firefox, Safari
-  tutorial_codesterstp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codesterstp_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codestersbb_string_platforms: All modern browsers
   tutorial_gfcrossyroad_string_platforms: All modern browsers
-  tutorial_googleww_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codehsjsapp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_googleww_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_codehsjsapp_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_gfmihi_string_platforms: All modern browsers
   tutorial_hopdropphone_string_platforms: iPad, iPhone
   tutorial_techfaa_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -7585,7 +7604,8 @@ nn:
   tutorial_switchglitch_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_codecar_string_platforms: Chrome, Firefox
-  tutorial_codesterscp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codesterscp_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_grokpetblock_string_platforms: All modern browsers
   tutorial_techbim_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
@@ -7727,7 +7747,8 @@ nn:
   tutorial_cajump_string_platforms: Chrome, Firefox, Safari
   tutorial_carest_string_platforms: Chrome, Firefox, Safari
   tutorial_accai_string_platforms: All modern browsers
-  tutorial_vceclipse_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vceclipse_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_pmzero_string_platforms: All modern browsers
   tutorial_hsela_string_platforms: iPad, iPhone
   tutorial_ticklear_string_platforms: iPad, iPhone
@@ -7793,7 +7814,8 @@ nn:
     Screen reader
   tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
-  tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_caflags_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_matariki_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
   tutorial_carestaurant_string_platforms: Alle moderne nettlesarar, Android nettbrett,
@@ -7884,8 +7906,8 @@ nn:
     Android phone, iPhone
   tutorial_robotmagic3d_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Android tablet, iPad
-  tutorial_robotmagicflappy_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_robotmagicflappy_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_scratchadventure_string_platforms: Chrome, Safari, Android tablet, iPad
   tutorial_scratchtalk_string_platforms: Chrome, Safari, Android tablet, iPad
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
@@ -7946,27 +7968,32 @@ nn:
   tutorial_tommyturtle_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_mazyad_string_platforms: Unplugged
   tutorial_gamemaker_string_platforms: All modern browsers, iPad
-  tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_duckrace_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
   tutorial_microsoftarcade_string_platforms: All modern browsers, Screen reader
   tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
   tutorial_toxicodepython_string_platforms: All modern browsers
   tutorial_codecombatozaria_string_platforms: All modern browsers
-  tutorial_vidcodedate_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodedate_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codemonkeyspace_string_platforms: All modern browsers
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
-  tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_grokimage_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_icomputelearn_string_platforms: All modern browsers
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
-  tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_vidcodeanimoji_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_vidcodeanimojies_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
-  tutorial_scigirlsquest_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scigirlsquest_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codespeakbreathe_string_platforms: Chrome, Firefox
   tutorial_vidcodeface_string_platforms: Chrome, Firefox
   tutorial_educodemaze_string_platforms: All modern browsers
@@ -7976,13 +8003,14 @@ nn:
     Windows phone
   tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
   tutorial_educodekingdom_string_platforms: All modern browsers
-  tutorial_codehsdata_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codehsdata_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_educodecake_string_platforms: All modern browsers
   tutorial_ttsecond_string_platforms: Chrome
   tutorial_bsdtrivia_string_platforms: Chrome
   tutorial_csfirstdialogue_string_platforms: All modern browsers
-  tutorial_codemonkeybeaver_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_codemonkeybeaver_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codestersdistance_string_platforms: All modern browsers, Screen reader
   tutorial_itchspace_string_platforms: All modern browsers
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
@@ -7993,21 +8021,24 @@ nn:
   tutorial_itchfish_string_platforms: All modern browsers
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_itchwebcam_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_itchball_string_platforms: All modern browsers
   tutorial_ttrace_string_platforms: Chrome
-  tutorial_plethora_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_plethora_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_educodesecret_string_platforms: All modern browsers
   tutorial_itchshapes_string_platforms: All modern browsers
-  tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codeguppytext_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: All modern browsers
   tutorial_educodebasics_string_platforms: All modern browsers
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
   tutorial_htmlacademyphp_string_platforms: All modern browsers, Screen reader
-  tutorial_gamefrootdistance_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_gamefrootdistance_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codesterscovid_string_platforms: All modern browsers, Screen reader
   tutorial_ttbunker_string_platforms: Chrome
   tutorial_cuttle_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -8034,7 +8065,8 @@ nn:
   tutorial_ttfreestyle_string_platforms: Chrome
   tutorial_ozobotcolor2_string_platforms: All modern browsers
   tutorial_ozobotcolor3_string_platforms: All modern browsers
-  tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_clcarbon_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_kodablebasics_string_platforms: Unplugged
   tutorial_scigirlscc_string_platforms: Unplugged
   tutorial_irobotpicture_string_platforms: Unplugged
@@ -8050,13 +8082,15 @@ nn:
   tutorial_ai4all_string_platforms: All modern browsers
   tutorial_cldata_string_platforms: All modern browsers
   tutorial_spheroinputs_string_platforms: Unplugged
-  tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_edisoncount_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_spheroloops_string_platforms: Unplugged
   tutorial_kiboprogram_string_platforms: Unplugged
   tutorial_hellorubycsin60_string_platforms: Unplugged
   tutorial_clfashion1_string_platforms: All modern browsers
   tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
-  tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_edisonmystery_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_microbitseaturtles_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
   tutorial_ozobotknow_string_platforms: All modern browsers
@@ -8078,7 +8112,8 @@ nn:
   tutorial_irobotphone_string_platforms: All modern browsers
   tutorial_codeguppydraw_string_platforms: All modern browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -10115,15 +10150,15 @@ nn:
   tutorial_codehstriangle_string_detail_grades: Frå 6. klasse
   tutorial_ttwhitehouse_string_detail_grades: Frå 2. klasse
   tutorial_modulo_string_detail_grades: Frå 6. klasse
-  tutorial_codingtown_string_detail_grades: Grades 2-5
-  tutorial_kanoart_string_detail_grades: Grades 2-5
+  tutorial_codingtown_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_kanoart_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_dragonscript_string_detail_grades: Frå 8. klasse
   tutorial_uwcloud_string_detail_grades: Frå 2. klasse
   tutorial_htmlmuffin_string_detail_grades: Frå 6.-8. klasse
   tutorial_microsoftpizza_string_detail_grades: Frå 6.-8. klasse
   tutorial_stemc_blckhole_string_detail_grades: Frå 8. klasse
   tutorial_careconfigure_string_detail_grades: Frå 6. klasse
-  tutorial_rpiscratch_string_detail_grades: Grades 2-5
+  tutorial_rpiscratch_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_ozaria_string_detail_grades: Frå 2. klasse
   tutorial_ttovum_string_detail_grades: Frå 6. klasse
   tutorial_ttpassage_string_detail_grades: Frå 2. - 8. klasse
@@ -10171,21 +10206,27 @@ nn:
   tutorial_modvariables_string_detail_grades: Frå 6. klasse
   tutorial_codestersmicro_string_detail_grades: Frå 6.-8. klasse
   tutorial_codestersdata_string_detail_grades: Frå 6.-8. klasse
-  tutorial_ikodexmas_string_detail_grades: Grades 2-5
+  tutorial_ikodexmas_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_rpisensehat_string_detail_grades: Frå 6. klasse
   tutorial_modtraits_string_detail_grades: Frå 2. klasse
   tutorial_mee_string_detail_grades: Frå 2. klasse
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_ai-oceans_string_detail_grades: Grades 3+
-  tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scratchimagine_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_codesterspsa_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_googlehero_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_codestersbball_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_scratchcartoon_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
-  tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scratchtales_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
   tutorial_cacolor_string_platforms: All modern browsers
   tutorial_kodablebeach_string_platforms: All modern browsers, iPad, iPhone
@@ -10197,19 +10238,22 @@ nn:
   tutorial_nclabdata_string_platforms: All modern browsers
   tutorial_grasshopperphoto_string_platforms: All modern browsers
   tutorial_tynkerpyland_string_platforms: 'All modern browsers '
-  tutorial_codeitimages_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codeitimages_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_hyperpadenemy_string_platforms: iPad
   tutorial_tynkerpro_string_platforms: All modern browsers, iPad
   tutorial_trashtag_string_platforms: All modern browsers
   tutorial_casiege_string_platforms: All modern browsers
   tutorial_thunkableyeet_string_platforms: All modern browsers
-  tutorial_vidcodedeal_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodedeal_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codehsgeno_string_platforms: All modern browsers
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone, Screen reader
-  tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpimosquito_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_vidcodemap_string_platforms: All modern browsers
@@ -10221,12 +10265,14 @@ nn:
   tutorial_codingtown_string_platforms: All modern browsers
   tutorial_kanoart_string_platforms: Microsoft Edge, Chrome, Android tablet, iPad
   tutorial_dragonscript_string_platforms: Chrome
-  tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_uwcloud_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
   tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
-  tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpiscratch_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_ozaria_string_platforms: All modern browsers
   tutorial_ttovum_string_platforms: Chrome, Firefox
   tutorial_ttpassage_string_platforms: Chrome, Firefox

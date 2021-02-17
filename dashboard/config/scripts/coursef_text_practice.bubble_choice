@@ -1,0 +1,10 @@
+name 'courseF_text_practice'
+editor_experiment ''
+display_name 'Text and Prompts Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with text and prompts!'
+
+sublevels
+level 'courseF_text_choice_conversation'
+level 'courseF_text_choice_interview'
+level 'courseF_text_choice_title'
+level 'courseF_text_choice_color'

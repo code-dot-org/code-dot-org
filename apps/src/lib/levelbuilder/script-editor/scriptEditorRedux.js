@@ -267,6 +267,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
           assessment: lesson.assessment,
           unplugged: lesson.unplugged,
           hasLessonPlan: lesson.hasLessonPlan,
+          lessonEditPath: lesson.lessonEditPath,
           name: lesson.name,
           /*
            * NOTE: The Script Edit GUI no longer includes the editing of levels
@@ -352,6 +353,9 @@ const serializeLesson = (lesson, levelKeyList) => {
   t += `, has_lesson_plan: ${lesson.hasLessonPlan}`;
   if (lesson.visible_after) {
     t += ', visible_after: true';
+  }
+  if (lesson.unplugged) {
+    t += ', unplugged: true';
   }
   s.push(t);
   if (lesson.levels) {

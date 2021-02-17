@@ -95,6 +95,8 @@ class ScriptsController < ApplicationController
     if Rails.application.config.levelbuilder_mode
       filename = "config/scripts/#{@script.name}.script"
       File.delete(filename) if File.exist?(filename)
+      filename = "config/scripts_json/#{@script.name}.script_json"
+      File.delete(filename) if File.exist?(filename)
     end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end
@@ -129,7 +131,7 @@ class ScriptsController < ApplicationController
       @script.reload
       render json: @script.summarize_for_script_edit
     else
-      render json: @script.errors
+      render(status: :not_acceptable, json: @script.errors)
     end
   end
 
@@ -195,11 +197,11 @@ class ScriptsController < ApplicationController
       :project_widget_visible,
       :lesson_extras_available,
       :has_verified_resources,
-      :has_lesson_plan,
       :tts,
       :is_stable,
       :is_course,
       :show_calendar,
+      :weekly_instructional_minutes,
       :is_migrated,
       :announcements,
       :pilot_experiment,
@@ -210,7 +212,7 @@ class ScriptsController < ApplicationController
       project_widget_types: [],
       supported_locales: [],
     ).to_h
-    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
+    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:hidden] = !h[:visible_to_teachers]
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
     h.delete(:visible_to_teachers)

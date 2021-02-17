@@ -1650,17 +1650,17 @@ tr-TR:
           - Ders 6: Star Wars Oyunu Yap
       OPD-K5 for loops:
         content1: açıklama buraya
-        markdown: "# Bağlantısız Ders: İçin Döngüsü Eğlencesi\n\n> Bir **için döngüsü**,
+        markdown: "# Bağlantısız Ders: For Döngüsü Eğlencesi\n\n> Bir **for döngüsü**,
           önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip bir
           döngüdür..\n*** \n## **1. Kurs F'den \"<a href=\"https://curriculum.code.org/csf-19/coursef/11/\"
-          target=\"blank\">İçin Döngüsü Eğlencesi</a>\" Ders Planını gözden geçirin.**\n<br/>\nKurs
+          target=\"blank\">For Döngüsü Eğlencesi</a>\" Ders Planını gözden geçirin.**\n<br/>\nKurs
           F, 5. Sınıftaki öğrenciler içindir. Bu, için döngülerinin Kurslar A-F'de
           ortaya çıktığı tek yerdir.\n<br/><br/>\n\n## **2. Öğrenci videosu izleyin:
-          İçin Döngüsü Eğlencesi (ders planında bulunur)**\n<br/>\n Bu, döngüler kavramını
+          For Döngüsü Eğlencesi (ders planında bulunur)**\n<br/>\n Bu, döngüler kavramını
           tanıtmak ve bağlantısız derse başlamaya yardım etmek için öğrencilerinize
           gösterebileceğiniz bir videodur.\n\n***\n\n<a href=\"https://curriculum.code.org/csf-19/coursef/11/\"
           target=\"blank\">![](https://images.code.org/73c0b6e95f2136d6ebcc03cbddee1be7-image-1573148733514.45.16
-          AM.png)</a>"
+          AM.png)</a>şununla say döngüsü"
       OPD-K5 for loops intro:
         content1: açıklama buraya
         markdown: |-
@@ -1679,7 +1679,7 @@ tr-TR:
           ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank">Kurs F</a>
           - Ders 11 (Bağlantısız): İçin Döngüsü Eğlencesi
           - Ders 12: Arı ile İçin Döngüleri
-          - Ders 13: Oyuncu ile İçin Döngüleri
+          - Ders 13: Sanatçı ile İçin Döngüleri
       OPD-K5 functions introduced:
         content1: açıklama buraya
         markdown: |
@@ -1691,7 +1691,7 @@ tr-TR:
           - Ders 14 (Bağlantısız): Şarkı yazma
           - Ders 15: Minecraft'ta Fonksiyonlar
           - Ders 16: Hasatçı ile Fonksiyonlar
-          - Ders 17: Oyuncu ile Fonksiyonlar
+          - Ders 17: Sanatçı ile Fonksiyonlar
 
           ## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank">Kurs F</a>
           - Ders 1: Minecraft'ta Fonksiyonlar
@@ -2180,15 +2180,15 @@ tr-TR:
         - text: Bir tahminde bulunun! Uydu galaksiye hangi yöne doğru hareket edecek?
       courseC_multi_artist_prog6_predict1:
         answers:
-        - text: Sanatçı, üç eşit kenara sahip bir üçgen çizecek.
-          feedback: Yanlış. Sanatçı bir kare çiziyor.
-        - text: Sanatçı tek bir çizgi çizecek.
-          feedback: Yanlış. Sanatçı bir kare çiziyor.
-        - text: Sanatçı bir kare çiziyor.
+        - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist tek bir çizgi çizecek.
+          feedback: Yanlış. Artist bir kare çiziyor.
+        - text: Artist bir kare çiziyor.
           correct: true
           feedback: Doğru!
         - text: Bilmiyorum.
-          feedback: Sanatçı bir kare çiziyor.
+          feedback: Artist bir kare çiziyor.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_artist_prog6_predict1_2018:
@@ -2367,6 +2367,7 @@ tr-TR:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: Kuş, domuza bir adım kala duracak.
+          correct: true
           feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         - text: Kuş, domuza ulaşmayı başaracak.
           correct: true
@@ -5099,7 +5100,7 @@ tr-TR:
           Her bölüm, farklı konuları ve fikirleri temsil eden **derslerden** oluşur.
 
           ## Seviyeler (baloncuklar)
-          Her kademe, baloncuklara benzeyen seviyelerden oluşur. **Elmaslar**, tek tek videoları, okuma parçalarını veya soruları bulunduran bunun gibi seviyeleri temsil eder. Bazı **daireler**, kavramları kodlama pratiğini tamamlayacağınız çevrimiçi bulmacalardır. Diğer **daireler**, bir cevabı ileteceğiniz ve daha sonra tekrar bakacağınız serbest yanıtlı sorulardır. Baloncuğun renkleri, ilerlemenize bağlı olarak değişecektir. Bu çevrimiçi profesyonel gelişim kursunda aşağıdaki türlerde baloncukları göreceksiniz:
+          Her kademe, baloncuklara benzeyen seviyelerden oluşur. **Elmaslar**, tek tek videoları, okuma parçalarını veya soruları bulunduran bunun gibi seviyeleri temsil eder. Bazı **daireler**, kodlama kavramları pratiğini tamamlayacağınız çevrimiçi bulmacalardır. Diğer **daireler**, bir cevabı ileteceğiniz ve daha sonra tekrar bakacağınız serbest yanıtlı sorulardır. Baloncuğun renkleri, ilerlemenize bağlı olarak değişecektir. Bu çevrimiçi profesyonel gelişim kursunda aşağıdaki türlerde baloncukları göreceksiniz:
           <br/>
 
           <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
@@ -5262,16 +5263,16 @@ tr-TR:
         markdown: "# Genel Bakış: Sonraki Adımlar\n\n<img src=\"https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG\"
           class=\"level-image\">\n\n## Şimdiye kadar neler yaptınız\n\n - Computer
           Science Fundamentals müfredatının yapısını ve içeriğini öğrendiniz\n - Kodlama
-          temellerinin uygulamasını yaptınız\n - Öğretme pratikleri ve bunları sınıfınızda
+          temellerinin pratiğini yaptınız\n - Öğretme pratikleri ve bunları sınıfınızda
           nasıl kullanabileceğiniz hakkında düşündünüz\n\n \n## Bu kavram parçasında
           ne var\n \nBu son kavram parçasını tamamlayarak:\n\n - Öğretmen kaynaklarını
-          keşfedeceksiniz\n - bir sınıf şubesinin nasıl oluşturulacağını öğreneceksiniz\n
-          - Computer Science Fundamentals'ı sınıfınıza nasıl getireceğinize dair bir
-          plan geliştireceksiniz\n - Öğreniminize devam etmeniz için atabileceğiniz
+          keşfedeceksiniz\n - Code.org'da bir sınıf şubesinin nasıl oluşturulacağını
+          öğreneceksiniz\n - Computer Science Fundamentals'ı sınıfınıza nasıl getireceğinize
+          dair bir plan geliştireceksiniz\n - Öğreniminize devam etmeniz için atabileceğiniz
           sonraki adımları planlayacaksınız\n - Bilgisayar bilimi eğitimine ilgili
-          meslektaş eğitimcilerin küresel bir topluluğu ile bağlantı kuracaksınız\n
-          - Anketi sonrası aracılığıyla bir geri bildirim sunacaksınız\n - Bir tamamlama
-          belgesi yazdıracaksınız\n\n"
+          meslektaş eğitimcilerden oluşan küresel bir topluluk ile bağlantı kuracaksınız\n
+          - Sonrasında yapılacak anket aracılığıyla bir geri bildirim sunacaksınız\n
+          - Bir bitirme belgesi yazdıracaksınız\n\n"
       OPD-K5 Stage2Go_copy:
         markdown: "# Yansıtma\n\n<img src=\"https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg\"
           class=\"level-image\">\n\n## Dur ve yansıt\nŞimdiye kadar bu kursun; bilgisayar
