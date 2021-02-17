@@ -709,6 +709,13 @@ FactoryGirl.define do
         csp_script.save
       end
     end
+
+    factory :csa_script do
+      after(:create) do |csa_script|
+        csa_script.curriculum_umbrella = 'CSA'
+        csa_script.save
+      end
+    end
   end
 
   factory :featured_project do
