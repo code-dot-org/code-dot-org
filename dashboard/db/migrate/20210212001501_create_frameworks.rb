@@ -8,5 +8,10 @@ class CreateFrameworks < ActiveRecord::Migration[5.2]
 
       t.index :shortcode, unique: true
     end
+    reversible do |dir|
+      dir.up do
+        execute "ALTER TABLE frameworks CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci"
+      end
+    end
   end
 end

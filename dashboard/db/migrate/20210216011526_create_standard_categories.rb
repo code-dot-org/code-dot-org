@@ -9,5 +9,10 @@ class CreateStandardCategories < ActiveRecord::Migration[5.2]
       t.timestamps
       t.index [:framework_id, :shortcode], unique: true
     end
+    reversible do |dir|
+      dir.up do
+        execute "ALTER TABLE standard_categories CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci"
+      end
+    end
   end
 end
