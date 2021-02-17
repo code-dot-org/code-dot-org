@@ -351,8 +351,7 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
-      assessmentOpportunities: assessment_opportunities,
-      lessonPlanPdfUrl: lesson_plan_pdf_url
+      assessmentOpportunities: assessment_opportunities
     }
   end
 
