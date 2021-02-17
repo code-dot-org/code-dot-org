@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
-import javalab from '@cdo/apps/idelab/idelabRedux';
+import javalab from '@cdo/apps/javalab/javalabRedux';
 import {registerReducers} from '@cdo/apps/redux';
 import JavalabView from '../../../../javalab/JavalabView';
 
