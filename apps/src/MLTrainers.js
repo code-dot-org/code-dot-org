@@ -48,7 +48,7 @@ export function predict(modelData) {
       convertTestValue(
         modelData.featureNumberKey,
         feature,
-        modelData.testData[feature]
+        modelData.testData[feature.replace(/\W/g, '')]
       )
     );
     // Make a prediction.
