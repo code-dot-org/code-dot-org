@@ -78,8 +78,8 @@ export default function initPage(scriptEditorData) {
           scriptData.weeklyInstructionalMinutes
         }
         isMigrated={scriptData.is_migrated}
-        includeStudentFacingLessonPlans={
-          scriptData.includeStudentFacingLessonPlans
+        initialIncludeStudentLessonPlans={
+          scriptData.includeStudentLessonPlans || false
         }
       />
     </Provider>,

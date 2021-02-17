@@ -95,7 +95,7 @@ class ScriptEditor extends React.Component {
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
-    includeStudentFacingLessonPlans: PropTypes.bool,
+    initialIncludeStudentLessonPlans: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -155,8 +155,7 @@ class ScriptEditor extends React.Component {
       teacherResources: resources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
-      includeStudentFacingLessonPlans:
-        this.props.includeStudentFacingLessonPlans || false
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
     };
   }
 
@@ -298,8 +297,7 @@ class ScriptEditor extends React.Component {
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
       is_migrated: this.props.isMigrated,
-      include_student_facing_lesson_plans: this.state
-        .includeStudentFacingLessonPlans
+      include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -775,12 +773,12 @@ class ScriptEditor extends React.Component {
               Include student-facing lesson plans
               <input
                 type="checkbox"
-                checked={this.state.includeStudentFacingLessonPlans}
+                checked={this.state.includeStudentLessonPlans}
                 style={styles.checkbox}
                 onChange={() =>
                   this.setState({
-                    includeStudentFacingLessonPlans: !this.state
-                      .includeStudentFacingLessonPlans
+                    includeStudentLessonPlans: !this.state
+                      .includeStudentLessonPlans
                   })
                 }
               />
