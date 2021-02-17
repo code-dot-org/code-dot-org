@@ -770,26 +770,29 @@ class ScriptEditor extends React.Component {
               }
             />
           )}
-          <label>
-            Include student-facing lesson plans
-            <input
-              type="checkbox"
-              checked={this.state.includeStudentFacingLessonPlans}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({
-                  includeStudentFacingLessonPlans: !this.state
-                    .includeStudentFacingLessonPlans
-                })
-              }
-            />
-            <HelpTip>
-              <p>
-                Checking this will automatically generate student-facing lesson
-                plans for any lesson that is marked as “Has Lesson Plan”
-              </p>
-            </HelpTip>
-          </label>
+          {this.props.isMigrated && (
+            <label>
+              Include student-facing lesson plans
+              <input
+                type="checkbox"
+                checked={this.state.includeStudentFacingLessonPlans}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    includeStudentFacingLessonPlans: !this.state
+                      .includeStudentFacingLessonPlans
+                  })
+                }
+              />
+              <HelpTip>
+                <p>
+                  Checking this will automatically generate student-facing
+                  lesson plans for any lesson that is marked as “Has Lesson
+                  Plan”
+                </p>
+              </HelpTip>
+            </label>
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources Settings">
