@@ -29,27 +29,29 @@ describe('Check popup does not appear when flag is set', () => {
     wrapper.setState({hideCallout: true});
     expect(wrapper.html() === null).to.be.true;
   });
+});
 
+describe('Check cookies and session storage appear on click', () => {
   it('cookies appear when clicked, and callout disappears', () => {
     parentWrapper.setState({hideCallout: false});
     expect(parentWrapper.html().includes('uitest-signincallout')).to.be.true;
+    var callback = sinon.stub(cookies, 'get').withArgs('hide_signin_callout');
+    callback.returns(null);
     parentWrapper.find('.modal-backdrop').simulate('click');
-    sinon
-      .stub(cookies, 'get')
-      .withArgs('hide_signin_callout')
-      .returns('true');
     expect(parentWrapper.html() === null).to.be.true;
+    callback.returns('true');
   });
 
   it('session storage appears when clicked, and callout disappears', () => {
     parentWrapper.setState({hideCallout: false});
     expect(parentWrapper.html().includes('uitest-signincallout')).to.be.true;
-    parentWrapper.find('.modal-backdrop').simulate('click');
-    sinon
+    var callback = sinon
       .stub(sessionStorage, 'getItem')
-      .withArgs('hide_signin_callout')
-      .returns('true');
+      .withArgs('hide_signin_callout');
+    callback.returns(null);
+    parentWrapper.find('.modal-backdrop').simulate('click');
     expect(parentWrapper.html() === null).to.be.true;
+    callback.returns('true');
   });
 });
 
