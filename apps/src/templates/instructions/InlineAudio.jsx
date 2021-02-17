@@ -121,11 +121,11 @@ class InlineAudio extends React.Component {
     this.getAudioElement();
     if (this.props.ttsAutoplayEnabled && !this.state.autoplayed) {
       // with dialog
-      this.setState({displayReadInstructionsDialog: true});
+      // this.setState({displayReadInstructionsDialog: true});
 
       // with auto-play
-      // this.setState({autoplayed: true});
-      // this.playAudio();
+      this.setState({autoplayed: true});
+      this.playAudio();
     }
   }
 
