@@ -232,6 +232,7 @@ export class UnconnectedTeacherHomepage extends Component {
           {isEnglish && specialAnnouncement && (
             <SpecialAnnouncementActionBlock
               announcement={specialAnnouncement}
+              marginBottom="30px"
             />
           )}
           {announcement && showAnnouncement && (
