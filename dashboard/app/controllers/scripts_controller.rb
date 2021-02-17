@@ -201,6 +201,7 @@ class ScriptsController < ApplicationController
       :is_stable,
       :is_course,
       :show_calendar,
+      :weekly_instructional_minutes,
       :is_migrated,
       :announcements,
       :pilot_experiment,
@@ -211,7 +212,7 @@ class ScriptsController < ApplicationController
       project_widget_types: [],
       supported_locales: [],
     ).to_h
-    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
+    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:hidden] = !h[:visible_to_teachers]
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
     h.delete(:visible_to_teachers)

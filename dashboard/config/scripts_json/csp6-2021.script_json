@@ -258,7 +258,6 @@
       "key": "8b328d0f-5443-4037-9d6a-1d772a87fa48",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "8b328d0f-5443-4037-9d6a-1d772a87fa48",
@@ -534,14 +533,7 @@
       "key": "88a741b7-9186-48b2-abcc-d316064077a4",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is an optional prompt. If you are able to move directly to the main activity you should do so. This prompt should get students thinking about the themes of the lesson. \r\n\r\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\r\n   \r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?\n\n**Goal:** This is an optional prompt. If you are able to move directly to the main activity you should do so. This prompt should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
       },
       "seeding_key": {
         "activity_section.key": "88a741b7-9186-48b2-abcc-d316064077a4",
@@ -598,14 +590,7 @@
       "key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Prompt:** Which problems did you need to do something similar in order to solve them?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** Which problems did you need to do something similar in order to solve them?\n\n**Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
       },
       "seeding_key": {
         "activity_section.key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
@@ -652,14 +637,7 @@
       "key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** Which of these algorithms are “the same” as one another?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** Which of these algorithms are “the same” as one another?\n\n**Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
       },
       "seeding_key": {
         "activity_section.key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
@@ -692,14 +670,7 @@
       "key": "801fdc6f-bf0a-44f0-9e29-4ac82691a89b",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** How did today’s activities change the way you think about algorithms and problems?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this discussion to reinforce vocabulary introduced in the slides and check in on whether students have begun the transition towards thinking on a higher level about algorithms and problems. \r\n"
-          }
-        ]
+        "description": "**Prompt:** How did today’s activities change the way you think about algorithms and problems?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "801fdc6f-bf0a-44f0-9e29-4ac82691a89b",
@@ -710,7 +681,7 @@
       "key": "4e8774b8-a0ca-425a-9648-a3b0626ceee5",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+        "description": "**Discuss:** Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Goal:** Use this discussion to reinforce vocabulary introduced in the slides and check in on whether students have begun the transition towards thinking on a higher level about algorithms and problems. \n"
       },
       "seeding_key": {
         "activity_section.key": "4e8774b8-a0ca-425a-9648-a3b0626ceee5",
@@ -745,7 +716,6 @@
       "key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1918,10 +1888,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L01 Algorithms vs Problems_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1944,10 +1914,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Widget: Ticket Generator",
         "level_keys": [
           "CSP U6L2 Ticket Generator_2021"
-        ],
-        "progression": "Widget: Ticket Generator"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1970,10 +1940,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6L2 CFU Binary Search Steps_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1996,10 +1966,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6L2 CFU Efficiency and Algorithms_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2022,10 +1992,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6L3 CFU Reasonable vs Unreasonable_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2048,10 +2018,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L03 Evaluate Reasonable or Not_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2074,10 +2044,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Widget: Traveling Salesman",
         "level_keys": [
           "CSP U6L4 Traveling Salesman_2021"
-        ],
-        "progression": "Widget: Traveling Salesman"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2100,10 +2070,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [
           "CSP U6L4 Random Traveling Salesman_2021"
-        ],
-        "progression": "Widget: Traveling Salesman - Random Nodes"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2126,10 +2096,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6L4 CFU Reason for Heuristics_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2152,10 +2122,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L04 Unreasonable vs Undecidable_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2178,10 +2148,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6L5 CFU Calculate Speedup_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2204,10 +2174,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U6 L05 Speedup Forever_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2230,10 +2200,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Unit 6 Exam",
         "level_keys": [
           "CSP Unit 6 AP-Style Assessment _2021"
-        ],
-        "progression": "Unit 6 Exam"
+        ]
       },
       "named_level": null,
       "bonus": null,
