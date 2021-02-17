@@ -344,7 +344,6 @@
       "key": "681c07a6-e087-419b-b5b1-ba1446475c4f",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "681c07a6-e087-419b-b5b1-ba1446475c4f",
@@ -399,7 +398,6 @@
       "key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
@@ -454,7 +452,6 @@
       "key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
@@ -509,7 +506,6 @@
       "key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
@@ -564,7 +560,6 @@
       "key": "fd8399b5-e6d7-4ee3-891e-68f76c41124e",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "fd8399b5-e6d7-4ee3-891e-68f76c41124e",
@@ -619,7 +614,6 @@
       "key": "444af120-8145-4520-b69e-e0cdf453438d",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "444af120-8145-4520-b69e-e0cdf453438d",
@@ -1064,11 +1058,11 @@
       "key": "be3ec1b7-dd95-4440-bb2e-0735a0dd747d",
       "position": 4,
       "properties": {
-        "description": "1. [slide] **Read:** As a class, read through the guidelines for all challenges. \n\n2. [slide] **Challenge #1 (3 mins):** As a group, create a network where everyone can speak directly to everyone else.\n\n3. [slide] **Read:** Guideline #1: Strings cost money, so try to use the least number of strings possible\n\n4. [slide] **Challenge #2 (3 mins):** As a group, create a network that uses the least number of strings.\n\n5. [slide] **Read:** Guideline #2: Strings can be cut, which might disconnect people from the network\n\n6. [slide] **Challenge #3 (8 mins):** As a group, create a network that keeps everyone connected even if any line is cut.\n\n7. [slide] **Read:** Guidelines #3: Direct connections are faster  than long paths with indirect connections\n\n8. [slide] **Challenge #4 (10 mins):** As a group, create a network that you feel balances all 3 guidelines. There are many possible answers to this as long as you have a reason for why you created the network that you did.\n\n",
+        "description": "1. [slide] **Read:** As a class, read through the guidelines for all challenges. \n\n2. [slide] **Challenge #1 (3 mins):** As a group, create a network where everyone can speak directly to everyone else.\n\n3. [slide] **Read:** Guideline #1: Strings cost money, so try to use the least number of strings possible\n\n4. [slide] **Challenge #2 (3 mins):** As a group, create a network that uses the least number of strings.\n\n5. [slide] **Read:** Guideline #2: Strings can be cut, which might disconnect people from the network\n\n6. [slide] **Challenge #3 (8 mins):** As a group, create a network that keeps everyone connected even if any line is cut.\n\n7. [slide] **Read:** Guidelines #3: Direct connections are faster  than long paths with indirect connections\n\n8. [slide] **Challenge #4 (10 mins):** As a group, create a network that you feel balances all 3 guidelines. There are many possible answers to this as long as you have a reason for why you created the network that you did.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The first 3 challenges have very direct solutions with most networks in the class looking nearly identical:\n\n![](https://images.code.org/5188abf00c224b8777b6121eb109f34f-challenges.png)"
+            "markdown": "The first 3 challenges have very direct solutions with most networks in the class looking nearly identical:\n\n![](https://images.code.org/65ef124a58e0bad5dc219a928a8d816d-challenges 1.png)"
           }
         ]
       },
@@ -1161,7 +1155,7 @@
       "key": "4652a86f-e996-47c5-a03e-86572416869d",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Describe two different paths that a message could take from Person A to Person D:\n\n\n![](https://images.code.org/2263e9e726230245de31df5beaa1f010-network.png)\n\n",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Describe two different paths that a message could take from Person A to Person D:\n\n\n\n\n\n\n![](https://images.code.org/a15d79d6c9cdb1a0f295a0b6e180f955-network.png)",
         "name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
@@ -2581,7 +2575,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2656,7 +2653,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2731,7 +2731,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2806,7 +2809,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator"
+        "progression": "Internet Simulator",
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2881,7 +2887,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 2 Exam"
+        "progression": "Unit 2 Exam",
+        "level_keys": [
+          "CSP Unit 2 MC Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": null,

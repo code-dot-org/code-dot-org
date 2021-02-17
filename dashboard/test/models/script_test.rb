@@ -968,13 +968,20 @@ class ScriptTest < ActiveSupport::TestCase
   test 'summarize includes show_calendar' do
     script = create(:script, name: 'calendar-script')
 
+    script.is_migrated = true
     script.show_calendar = true
     assert script.show_calendar
     summary = script.summarize
     assert summary[:showCalendar]
 
+    script.is_migrated = true
     script.show_calendar = false
     refute script.show_calendar
+    summary = script.summarize
+    refute summary[:showCalendar]
+
+    script.is_migrated = false
+    script.show_calendar = true
     summary = script.summarize
     refute summary[:showCalendar]
   end
@@ -2734,6 +2741,20 @@ class ScriptTest < ActiveSupport::TestCase
     end
     assert error.message.include? 'Duplicate entry'
     assert error.message.include? "for key 'index_script_levels_on_seed_key'"
+  end
+
+  test 'can add unplugged for lesson' do
+    dsl = <<-SCRIPT
+      lesson_group 'lg-1', display_name: 'Lesson Group'
+      lesson 'Lesson1', display_name: 'Lesson 1', unplugged: true
+    SCRIPT
+
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
+    )
+
+    assert_equal true, script.lessons[0].unplugged
   end
 
   test 'seeding_key' do

@@ -14,7 +14,7 @@ tts true
 is_course true
 
 lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
-lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF'
 
 lesson 'Sequence in Maze', display_name: 'Sequence in Maze', has_lesson_plan: true
@@ -29,7 +29,7 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 
 lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: true
@@ -58,7 +58,7 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
 lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
@@ -101,7 +101,7 @@ level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
 lesson_group 'csf_e_2', display_name: 'Course E Content'
-lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race', has_lesson_plan: true
+lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race', has_lesson_plan: true, unplugged: true
 level 'DiceRace'
 
 lesson 'Introduction', display_name: 'Introduction to Online Puzzles', has_lesson_plan: true
@@ -186,7 +186,7 @@ variants
 endvariants
 level 'courseE_farmer_ramp12g'
 
-lesson 'Private and Personal Information', display_name: 'Digital Citizenship: Private and Personal Information', has_lesson_plan: true
+lesson 'Private and Personal Information', display_name: 'Digital Citizenship: Private and Personal Information', has_lesson_plan: true, unplugged: true
 level 'courseE_unplugged_privateInformation'
 
 lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game', has_lesson_plan: true
@@ -218,7 +218,7 @@ video_key_for_next_level 'starwars_blocks_congrats'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true
+lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters'
 
 lesson 'Functions in Artist', display_name: 'Functions in Artist', has_lesson_plan: true
@@ -313,9 +313,9 @@ lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_
 level 'Prepare for your presentation', named: true
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
-lesson 'Internet', display_name: 'Beyond Programming: The Internet', has_lesson_plan: true
+lesson 'Internet', display_name: 'Beyond Programming: The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet'
 
-lesson 'Crowdsourcing', display_name: 'Beyond Programming: Crowdsourcing', has_lesson_plan: true
+lesson 'Crowdsourcing', display_name: 'Beyond Programming: Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'Crowdsourcing'
 
