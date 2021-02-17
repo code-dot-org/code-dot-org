@@ -1,5 +1,4 @@
-
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 
 lesson 'Programming in Maze', display_name: 'Programming in Maze', has_lesson_plan: true
@@ -31,7 +30,7 @@ level 'courseC_maze_debugging9'
 bonus 'courseC_maze_debugging_challenge1', challenge: true
 bonus 'courseC_maze_debugging_challenge2', challenge: true
 
-lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true
+lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true, unplugged: true
 level 'PaperPlanes'
 
 lesson 'Programming in Collector', display_name: 'Programming in Collector', has_lesson_plan: true
@@ -64,7 +63,7 @@ level 'courseC_artist_prog8'
 level 'courseC_artist_prog6_predict1', assessment: true
 bonus 'courseC_artist_prog_challenge2', challenge: true
 
-lesson 'Loops: Getting Loopy', display_name: 'Loops: Getting Loopy', has_lesson_plan: true
+lesson 'Loops: Getting Loopy', display_name: 'Loops: Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy'
 
 lesson 'Loops in Maze', display_name: 'Loops in Maze', has_lesson_plan: true
@@ -100,7 +99,7 @@ level 'courseC_harvester_loops11_predict1', assessment: true
 bonus 'courseC_harvester_loops_challenge1'
 bonus 'courseC_harvester_loops_challenge2'
 
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
@@ -131,6 +130,6 @@ level 'courseC_PlayLab_eventsFP'
 lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean', has_lesson_plan: true
 level 'courseC_screenoutthemean'
 
-lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets'
 

@@ -1,4 +1,4 @@
-lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: false
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: false, unplugged: true
 level 'GraphPaperProgramming'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
@@ -13,7 +13,7 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false, unplugged: true
 level 'BuildingAFoundation'
 
 lesson 'Debugging in Collector', display_name: 'Debugging in Collector', has_lesson_plan: false
@@ -139,7 +139,7 @@ level 'courseD_farmer_while10_predict2', assessment: true
 bonus 'courseD_farmer_while_challenge1'
 bonus 'courseD_farmer_while_challenge2'
 
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: false
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: false, unplugged: true
 level 'Conditionals'
 
 lesson 'Conditionals in Bee', display_name: 'Conditionals in Bee', has_lesson_plan: false
@@ -190,7 +190,7 @@ level 'courseD_farmer_condLoops9_predict1', assessment: true
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
-lesson 'Digital Citizenship', display_name: 'Digital Citizenship', has_lesson_plan: false
+lesson 'Digital Citizenship', display_name: 'Digital Citizenship', has_lesson_plan: false, unplugged: true
 level 'courseD_unplugged_digitalCitizenship'
 
 lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game', has_lesson_plan: false
@@ -204,7 +204,7 @@ level 'courseD_playLab_cond6'
 level 'courseD_playLab_cond6a'
 level 'courseD_playLab_condFP'
 
-lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary', has_lesson_plan: false
+lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary', has_lesson_plan: false, unplugged: true
 level 'BinaryImages'
 
 lesson 'Artist Binary', display_name: 'Artist Binary', has_lesson_plan: false

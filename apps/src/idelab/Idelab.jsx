@@ -1,9 +1,9 @@
 import React from 'react';
-import JavaConsole from './JavaConsole';
+import IdelabConsole from './IdelabConsole';
 import {connect} from 'react-redux';
-import JavaEditor from './JavaEditor';
+import IdelabEditor from './IdelabEditor';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {appendOutputLog} from './javaIdeRedux';
+import {appendOutputLog} from './idelabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -29,7 +29,7 @@ const style = {
     backgroundColor: color.light_gray,
     height: '200px'
   },
-  javaIde: {
+  idelab: {
     display: 'flex',
     margin: 15
   },
@@ -60,7 +60,7 @@ const style = {
   }
 };
 
-class JavaIdeView extends React.Component {
+class Idelab extends React.Component {
   static propTypes = {
     // populated by redux
     appendOutputLog: PropTypes.func
@@ -78,7 +78,7 @@ class JavaIdeView extends React.Component {
 
   render() {
     return (
-      <div style={style.javaIde}>
+      <div style={style.idelab}>
         <div style={style.instructionsAndPreview}>
           <div style={style.instructions}>
             <PaneHeader hasFocus={true}>
@@ -96,14 +96,13 @@ class JavaIdeView extends React.Component {
           </div>
         </div>
         <div style={style.editorAndConsole}>
-          <JavaEditor />
+          <IdelabEditor />
           <div style={style.consoleAndButtons}>
             <div style={style.buttons}>
               <button
                 type="button"
                 style={style.singleButton}
                 onClick={this.compile}
-                className="hover-pointer"
               >
                 <FontAwesome icon="cubes" className="fa-2x" />
                 <br />
@@ -113,7 +112,6 @@ class JavaIdeView extends React.Component {
                 type="button"
                 style={style.singleButton}
                 onClick={this.run}
-                className="hover-pointer"
               >
                 <FontAwesome icon="play" className="fa-2x" />
                 <br />
@@ -121,7 +119,7 @@ class JavaIdeView extends React.Component {
               </button>
             </div>
             <div style={style.consoleStyle}>
-              <JavaConsole />
+              <IdelabConsole />
             </div>
           </div>
         </div>
@@ -135,4 +133,4 @@ export default connect(
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log))
   })
-)(JavaIdeView);
+)(Idelab);

@@ -708,9 +708,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     script.reload
 
-    # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
-    expected = {"peer_reviews_to_complete" => 0}
-    assert_equal expected, script.properties
+    assert_equal({}, script.properties)
   end
 
   test 'add lesson to script' do
