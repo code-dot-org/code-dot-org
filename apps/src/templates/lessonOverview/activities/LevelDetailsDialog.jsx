@@ -8,6 +8,8 @@ import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import $ from 'jquery';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
+import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
@@ -18,6 +20,13 @@ export default class LevelDetailsDialog extends Component {
     scriptLevel: PropTypes.object.isRequired,
     handleClose: PropTypes.func.isRequired
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedLevel: props.scriptLevel.level
+    };
+  }
 
   getContentComponent = level => {
     if (level.type === 'External') {
@@ -38,6 +47,26 @@ export default class LevelDetailsDialog extends Component {
       return (
         <div>
           {i18n.levelGroupDetailsDialogText({buttonText: i18n.seeFullLevel()})}
+        </div>
+      );
+    } else if (level.containedLevels && level.containedLevels.length > 0) {
+      return (
+        <div>
+          {level.containedLevels.map(l => (
+            <div key={l.name}>{this.getContentComponent(l)}</div>
+          ))}
+        </div>
+      );
+    } else if (level.type === 'BubbleChoice') {
+      return (
+        <div>
+          {this.props.scriptLevel.sublevels.map(sublevel => (
+            <SublevelCard
+              isLessonExtra={false}
+              sublevel={sublevel}
+              key={sublevel.id}
+            />
+          ))}
         </div>
       );
     } else {
@@ -66,7 +95,7 @@ export default class LevelDetailsDialog extends Component {
 
   render() {
     const {scriptLevel} = this.props;
-    const level = scriptLevel.level;
+    const level = this.state.selectedLevel;
     const preview = this.getContentComponent(level);
     return (
       <BaseDialog
@@ -79,6 +108,20 @@ export default class LevelDetailsDialog extends Component {
             : {}
         }
       >
+        {scriptLevel.level.type === 'BubbleChoice' && (
+          <ProgressBubbleSet
+            levels={[this.props.scriptLevel]}
+            disabled={false}
+            onBubbleClick={level => {
+              if (level.level) {
+                this.setState({selectedLevel: level.level});
+              } else {
+                this.setState({selectedLevel: level});
+              }
+            }}
+            showSublevels={true}
+          />
+        )}
         {preview}
         <DialogFooter rightAlign>
           <Button
