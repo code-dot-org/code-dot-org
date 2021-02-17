@@ -28,6 +28,14 @@ module Services
       assert_equal File.read(filename), ScriptSeed.serialize_seeding_json(script)
     end
 
+    test 'seeded_at property is not serialized' do
+      script = create(:script)
+      script.seeded_at = Time.now
+      result = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json
+      assert result.key? :properties
+      refute result[:properties].key? 'seeded_at'
+    end
+
     test 'seed new script' do
       script = create_script_tree
       script.freeze

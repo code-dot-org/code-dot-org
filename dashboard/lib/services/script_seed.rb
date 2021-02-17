@@ -502,6 +502,12 @@ module Services
         :seeding_key
       )
 
+      # The "seeded_at" property is set by the seeding process; we don't need
+      # to include it in the serialization.
+      attribute :properties do
+        object.properties.except("seeded_at")
+      end
+
       # A simple field to track when the script was most recently serialized.
       # This will be set by levelbuilder whenever the script is saved, and then
       # read by the seeding process on other environments and persisted to the
