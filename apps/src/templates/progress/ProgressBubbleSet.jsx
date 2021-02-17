@@ -77,7 +77,8 @@ class ProgressBubbleSet extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
     hideAssessmentIcon: PropTypes.bool,
-    showSublevels: PropTypes.bool
+    showSublevels: PropTypes.bool,
+    onBubbleClick: PropTypes.func
   };
 
   bubbleDisabled = level => {
@@ -129,6 +130,7 @@ class ProgressBubbleSet extends React.Component {
             hideToolTips={this.props.hideToolTips}
             pairingIconEnabled={this.props.pairingIconEnabled}
             hideAssessmentIcon={hideAssessmentIcon}
+            onClick={this.props.onBubbleClick}
           />
         </div>
       </div>
