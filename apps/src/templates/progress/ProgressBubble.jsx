@@ -82,6 +82,11 @@ const styles = {
   disabledStageExtras: {
     backgroundColor: color.lighter_gray,
     color: color.white
+  },
+  highlighted: {
+    color: color.white,
+    backgroundColor: color.orange,
+    borderColor: color.orange
   }
 };
 
@@ -161,8 +166,10 @@ class ProgressBubble extends React.Component {
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
       ...levelProgressStyle(level.status, level.kind, disabled),
-      ...(disabled && level.bonus && styles.disabledStageExtras)
+      ...(disabled && level.bonus && styles.disabledStageExtras),
+      ...(level.highlighted && styles.highlighted)
     };
+    console.log(style);
 
     let href = '';
     if (!disabled && url && !onClick) {
@@ -236,7 +243,7 @@ class ProgressBubble extends React.Component {
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
             >
-              {level.letter && (
+              {level.letter && !smallBubble && (
                 <span id="test-bubble-letter"> {level.letter} </span>
               )}
               {levelIcon === 'lock' && <FontAwesome icon="lock" />}
