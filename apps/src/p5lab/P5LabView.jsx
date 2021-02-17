@@ -27,6 +27,8 @@ class P5LabView extends React.Component {
     // Provided manually
     showFinishButton: PropTypes.bool.isRequired,
     onMount: PropTypes.func.isRequired,
+    pauseHandler: PropTypes.func.isRequired,
+    hidePauseButton: PropTypes.bool.isRequired,
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
@@ -40,8 +42,7 @@ class P5LabView extends React.Component {
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
-    isBackground: PropTypes.bool,
-    pauseHandler: PropTypes.func.isRequired
+    isBackground: PropTypes.bool
   };
 
   state = {
@@ -114,6 +115,7 @@ class P5LabView extends React.Component {
           <P5LabVisualizationColumn
             finishButton={showFinishButton}
             pauseHandler={this.props.pauseHandler}
+            hidePauseButton={this.props.hidePauseButton}
           />
           {this.getChannelId() && (
             <AnimationPicker

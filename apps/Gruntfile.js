@@ -351,7 +351,8 @@ describe('entry tests', () => {
           [
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss'
-          ]
+          ],
+          ['build/package/css/idelab.css', 'style/idelab/style.scss']
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -567,7 +568,7 @@ describe('entry tests', () => {
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
     'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-    'java_ide/index': './src/sites/studio/pages/java_ide/index.js'
+    'idelab/index': './src/sites/studio/pages/idelab/index.js'
   };
 
   var internalEntries = {

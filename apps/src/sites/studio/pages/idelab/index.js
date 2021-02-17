@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import JavaIdeView from '@cdo/apps/javaide/JavaIdeView';
+import Idelab from '@cdo/apps/idelab/Idelab';
 import {getStore} from '@cdo/apps/code-studio/redux';
+import idelab from '@cdo/apps/idelab/idelabRedux';
+import {registerReducers} from '@cdo/apps/redux';
 
 $(document).ready(function() {
+  registerReducers({idelab});
   ReactDOM.render(
     <Provider store={getStore()}>
-      <JavaIdeView />
+      <Idelab />
     </Provider>,
-    document.getElementById('java-ide-container')
+    document.getElementById('ide-lab-container')
   );
 });
