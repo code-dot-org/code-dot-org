@@ -1620,7 +1620,7 @@ ActiveRecord::Schema.define(version: 2021_02_14_211422) do
     t.integer "student_visit_count"
     t.datetime "student_first_visited_at"
     t.datetime "student_last_visited_at"
-    t.integer "script_level_id", null: false
+    t.integer "script_level_id"
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
