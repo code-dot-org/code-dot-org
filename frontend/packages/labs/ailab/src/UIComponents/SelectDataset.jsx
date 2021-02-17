@@ -26,7 +26,8 @@ class SelectDataset extends Component {
     csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     resetState: PropTypes.func.isRequired,
-    specifiedDatasets: PropTypes.arrayOf(PropTypes.string)
+    specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
+    name: PropTypes.string
   };
 
   constructor(props) {
@@ -97,7 +98,7 @@ class SelectDataset extends Component {
     return (
       <div id="select-dataset" style={styles.panel}>
         <div style={styles.largeText}>Which dataset would you like to use?</div>
-        <form style={{overflow: "scroll"}}>
+        <form style={{ overflow: "scroll" }}>
           <div style={styles.subPanel}>
             <div>Select a dataset from the collection</div>
 
@@ -105,15 +106,26 @@ class SelectDataset extends Component {
               {datasets.map(dataset => {
                 return (
                   <div
-                    style={{ width: "100%", padding: 20, clear: "both" }}
+                    style={{
+                      width: "30%",
+                      padding: 20,
+                      float: "left",
+                      boxSizing: "border-box",
+                      border:
+                        this.props.name === dataset.name
+                          ? "solid 4px white"
+                          : "solid 4px rgba(0,0,0,0)",
+                      borderRadius: 10,
+                      height: 240
+                    }}
                     key={dataset.id}
                     onClick={() => this.handleDatasetClick(dataset.id)}
                   >
                     <img
                       src={assetPath + dataset.imagePath}
-                      style={{ width: 240, float: "left" }}
+                      style={{ width: "100%" }}
                     />
-                    <div style={{ float: "left", paddingLeft: 20 }}>{dataset.name}</div>
+                    <div>{dataset.name}</div>
                   </div>
                 );
               })}
@@ -132,7 +144,7 @@ class SelectDataset extends Component {
           </div>
         </form>
         {!specifiedDatasets && (
-          <div style={{...styles.subPanel, marginTop: 20}}>
+          <div style={{ ...styles.subPanel, marginTop: 20 }}>
             <div>or import a CSV File</div>
             <input
               className="csv-input"
@@ -160,7 +172,8 @@ export default connect(
   state => ({
     csvfile: state.csvfile,
     jsonfile: state.jsonfile,
-    specifiedDatasets: getSpecifiedDatasets(state)
+    specifiedDatasets: getSpecifiedDatasets(state),
+    name: state.name
   }),
   dispatch => ({
     resetState() {
