@@ -2,7 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import AceEditor from 'react-ace';
 import {connect} from 'react-redux';
-import {setEditorText} from './idelabRedux';
+import {setEditorText} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import 'ace-builds/src-noconflict/mode-java';
@@ -15,7 +15,7 @@ const style = {
   }
 };
 
-class IdelabEditor extends React.Component {
+class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     // populated by redux
@@ -45,7 +45,7 @@ class IdelabEditor extends React.Component {
           mode="java"
           theme="monokai"
           onChange={this.onChange}
-          name="ide-lab-editor"
+          name="java-lab-editor"
           editorProps={{$blockScrolling: true}}
           style={style.editor}
         />
@@ -56,9 +56,9 @@ class IdelabEditor extends React.Component {
 
 export default connect(
   state => ({
-    editorText: state.idelab.editorText
+    editorText: state.javalab.editorText
   }),
   dispatch => ({
     setEditorText: editorText => dispatch(setEditorText(editorText))
   })
-)(IdelabEditor);
+)(JavalabEditor);
