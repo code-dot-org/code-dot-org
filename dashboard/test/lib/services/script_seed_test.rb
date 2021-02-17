@@ -25,7 +25,17 @@ module Services
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
       # File.write(filename, ScriptSeed.serialize_seeding_json(script))
-      assert_equal File.read(filename), ScriptSeed.serialize_seeding_json(script)
+
+      expected = JSON.parse(File.read(filename))
+      actual = JSON.parse(ScriptSeed.serialize_seeding_json(script))
+
+      # Serialization includes a timestamp, which obviously doesn't play nicely
+      # with the concept of a fixture. So, test that manually and exclude it
+      # from the "full" test.
+      assert actual['script'].key?('serialized_at')
+      actual['script'].delete('serialized_at')
+
+      assert_equal expected, actual
     end
 
     test 'seeded_at property is not serialized' do
@@ -553,6 +563,21 @@ module Services
         ['Updated Description', 'fake description', 'New Description'],
         lesson.objectives.map(&:description)
       )
+    end
+
+    test 'import_script sets seeded_at from serialized_at' do
+      script = create(:script, is_migrated: true, hidden: true)
+      assert script.seeded_at.nil?
+
+      serialized = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json.stringify_keys
+      assert serialized['serialized_at'].present?
+
+      ScriptSeed.import_script(serialized)
+      script.reload
+      assert script.seeded_at.present?
+      # minitest is a bit weird about Time equality, so normalize both values
+      # to integers for easy comparison
+      assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_at).to_i
     end
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
