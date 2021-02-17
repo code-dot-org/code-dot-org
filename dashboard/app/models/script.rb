@@ -195,7 +195,7 @@ class Script < ApplicationRecord
     background
     show_calendar
     weekly_instructional_minutes
-    include_student_facing_lesson_plans
+    include_student_lesson_plans
     is_migrated
   )
 
@@ -1375,7 +1375,7 @@ class Script < ApplicationRecord
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
-      includeStudentFacingLessonPlans: is_migrated ? include_student_facing_lesson_plans : false
+      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1570,7 +1570,7 @@ class Script < ApplicationRecord
       :is_course,
       :show_calendar,
       :is_migrated,
-      :include_student_facing_lesson_plans
+      :include_student_lesson_plans
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
