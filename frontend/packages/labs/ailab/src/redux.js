@@ -436,20 +436,42 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_CURRENT_PANEL) {
     return {
       ...state,
-      currentPanel: action.currentPanel
+      currentPanel: action.currentPanel,
+      currentColumn: undefined
     };
   }
   if (action.type === SET_CURRENT_COLUMN) {
-    if (state.currentColumn === action.currentColumn) {
-      return {
-        ...state,
-        currentColumn: undefined
-      };
-    } else {
-      return {
-        ...state,
-        currentColumn: action.currentColumn
-      };
+    if (state.currentPanel === "dataDisplayLabel") {
+      if (action.currentColumn === state.labelColumn) {
+        return state;
+        /*return {
+          ...state,
+          labelColumn: undefined,
+          currentColumn: undefined
+        };*/
+      } else {
+        return {
+          ...state,
+          labelColumn: action.currentColumn,
+          currentColumn: action.currentColumn
+        };
+      }
+    } else if (state.currentPanel === "dataDisplayFeatures") {
+      if (state.selectedFeatures.includes(action.currentColumn)) {
+        return {
+          ...state,
+          selectedFeatures: state.selectedFeatures.filter(
+            item => item !== action.currentColumn
+          ),
+          //currentColumn: undefined
+        };
+      } else {
+        return {
+          ...state,
+          selectedFeatures: [...state.selectedFeatures, action.currentColumn],
+          //currentColumn: action.currentColumn
+        };
+      }
     }
   }
   return state;
@@ -840,8 +862,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
   dataToSave.identifySubgroup = !!state.trainedModelDetails.identifySubgroup;
-  dataToSave.representSubgroup = !!state.trainedModelDetails
-    .representSubgroup;
+  dataToSave.representSubgroup = !!state.trainedModelDetails.representSubgroup;
   dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
   dataToSave.selectedTrainer = state.selectedTrainer;
@@ -871,7 +892,8 @@ export function getShowChooseReserve(state) {
 
 const panelList = [
   { id: "selectDataset", label: "Import" },
-  { id: "dataDisplay", label: "Data" },
+  { id: "dataDisplayLabel", label: "Label" },
+  { id: "dataDisplayFeatures", label: "Features" },
   { id: "selectTrainer", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
@@ -903,8 +925,14 @@ function isPanelVisible(state, panelId) {
 }
 
 function isPanelEnabled(state, panelId) {
-  if (panelId === "dataDisplay") {
+  if (panelId === "dataDisplayLabel") {
     if (state.data.length === 0) {
+      return false;
+    }
+  }
+
+  if (panelId === "dataDisplayFeatures") {
+    if (!state.labelColumn) {
       return false;
     }
   }
@@ -962,16 +990,23 @@ export function getPanelButtons(state) {
   if (state.currentPanel === "selectDataset") {
     prev = null;
     next =
-      isPanelVisible(state, "dataDisplay") &&
-      isPanelEnabled(state, "dataDisplay")
-        ? { panel: "dataDisplay", text: "Data" }
+      isPanelVisible(state, "dataDisplayLabel") &&
+      isPanelEnabled(state, "dataDisplayLabel")
+        ? { panel: "dataDisplayLabel", text: "Label" }
         : null;
-  } else if (state.currentPanel === "dataDisplay") {
+  } else if (state.currentPanel === "dataDisplayLabel") {
     prev =
       isPanelVisible(state, "selectDataset") &&
       isPanelEnabled(state, "selectDataset")
         ? { panel: "selectDataset", text: "Import" }
         : null;
+    next =
+      isPanelVisible(state, "dataDisplayFeatures") &&
+      isPanelEnabled(state, "dataDisplayFeatures")
+        ? { panel: "dataDisplayFeatures", text: "Features" }
+        : null;
+  } else if (state.currentPanel === "dataDisplayFeatures") {
+    prev = { panel: "dataDisplayLabel", text: "Label" };
     next =
       isPanelVisible(state, "selectTrainer") &&
       isPanelEnabled(state, "selectTrainer")
@@ -981,7 +1016,7 @@ export function getPanelButtons(state) {
         ? { panel: "trainModel", text: "Train" }
         : null;
   } else if (state.currentPanel === "selectTrainer") {
-    prev = { panel: "dataDisplay", text: "Data" };
+    prev = { panel: "dataDisplayFeatures", text: "Data" };
     next =
       isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
         ? { panel: "trainModel", text: "Train" }
@@ -992,7 +1027,7 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Results" };
     }
   } else if (state.currentPanel === "results") {
-    prev = { panel: "dataDisplay", text: "Data" };
+    prev = { panel: "dataDisplayFeatures", text: "Data" };
     next = { panel: "saveModel", text: "Save" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Results" };

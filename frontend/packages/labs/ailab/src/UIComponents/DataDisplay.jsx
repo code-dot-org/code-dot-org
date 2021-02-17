@@ -13,7 +13,8 @@ class DataDisplay extends Component {
     selectedFeatures: PropTypes.array,
     emptyCellDetails: PropTypes.array,
     setCurrentColumn: PropTypes.func,
-    currentColumn: PropTypes.string
+    currentColumn: PropTypes.string,
+    currentPanel: PropTypes.string
   };
 
   constructor(props) {
@@ -95,7 +96,7 @@ class DataDisplay extends Component {
   };
 
   render() {
-    const { data, setCurrentColumn } = this.props;
+    const { data, setCurrentColumn, currentPanel } = this.props;
 
     return (
       <div id="data-display" style={styles.panel}>
@@ -113,17 +114,22 @@ class DataDisplay extends Component {
             onClick={() => this.showSelectFeatures("label")}
           >
             {this.props.labelColumn || "..."}
-          </span>{" "}
-          based on{" "}
-          <span
-            style={styles.statementFeature}
-            onClick={() => this.showSelectFeatures("features")}
-          >
-            {this.props.selectedFeatures.length > 0
-              ? this.props.selectedFeatures.join(", ")
-              : ".."}
           </span>
-          {"."}
+          {currentPanel === "dataDisplayFeatures" && (
+            <span>
+              {" "}
+              based on{" "}
+              <span
+                style={styles.statementFeature}
+                onClick={() => this.showSelectFeatures("features")}
+              >
+                {this.props.selectedFeatures.length > 0
+                  ? this.props.selectedFeatures.join(", ")
+                  : ".."}
+              </span>
+              {"."}
+            </span>
+          )}
         </div>
         <br />
         <div style={styles.xxpanel} style={{overflow:"scroll"}}>
@@ -212,7 +218,8 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     emptyCellDetails: getEmptyCellDetails(state),
-    currentColumn: state.currentColumn
+    currentColumn: state.currentColumn,
+    currentPanel: state.currentPanel
   }),
   dispatch => ({
     setCurrentColumn(column) {

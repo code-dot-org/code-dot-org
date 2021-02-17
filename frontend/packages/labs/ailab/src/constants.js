@@ -170,7 +170,7 @@ export const styles = {
     padding: 10,
     boxSizing: "border-box",
     borderRadius: 5,
-    backgroundColor: "rgb(206, 206, 206)",
+    backgroundColor: "white" // rgb(206, 206, 206)",
     //border: "solid 1px white"
   },
 
@@ -381,4 +381,9 @@ export const styles = {
     marginTop: '30%',
     direction: 'ltr'
   },
+
+  cardRow: {
+    marginTop: 5,
+    marginBottom: 5
+  }
 };

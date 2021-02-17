@@ -46,7 +46,7 @@ class ColumnInspector extends Component {
 
   removeLabel = () => {
     this.props.setLabelColumn(null);
-  }
+  };
 
   removeFeature = () => {
     this.props.removeSelectedFeature(this.props.currentColumnData.id);
@@ -54,7 +54,7 @@ class ColumnInspector extends Component {
 
   onClose = () => {
     this.props.setCurrentColumn(undefined);
-  }
+  };
 
   render() {
     const {
@@ -80,6 +80,7 @@ class ColumnInspector extends Component {
       <div id="column-inspector">
         {currentColumnData && (
           <div style={styles.rightPanel}>
+            <div style={styles.largeText}>Column Information</div>
             <div onClick={this.onClose} style={styles.popupClose}>
               <FontAwesomeIcon icon={faTimes} />
             </div>
@@ -90,20 +91,21 @@ class ColumnInspector extends Component {
                   Describe the data in each of your selected columns
                 </div>
                 <div style={styles.smallText}>
-                  Categorical columns contain a fixed number of possible values that
-                  indicate a group. For example, the column "Size" might contain
-                  categorical data such as "small", "medium" and "large".{" "}
+                  Categorical columns contain a fixed number of possible values
+                  that indicate a group. For example, the column "Size" might
+                  contain categorical data such as "small", "medium" and
+                  "large".{" "}
                 </div>
                 <div style={styles.smallText}>
-                  Continuous columns contain a range of possible numerical values
-                  that could fall anywhere on a continuum. For example, the column
-                  "Height in inches" might contain continuous data such as "12",
-                  "11.25" and "9.07".{" "}
+                  Continuous columns contain a range of possible numerical
+                  values that could fall anywhere on a continuum. For example,
+                  the column "Height in inches" might contain continuous data
+                  such as "12", "11.25" and "9.07".{" "}
                 </div>
                 <div style={styles.smallText}>
                   If the column contains anything other than categorical or
-                  continuous data, it's not going to work for training this type of
-                  machine learning model.
+                  continuous data, it's not going to work for training this type
+                  of machine learning model.
                 </div>
               </div>
             )}
@@ -119,10 +121,8 @@ class ColumnInspector extends Component {
 
                   {currentColumnData.description && (
                     <div>
-                      <br/>
-                      <div>
-                        {currentColumnData.description}
-                      </div>
+                      <br />
+                      <div>{currentColumnData.description}</div>
                     </div>
                   )}
 
@@ -147,18 +147,19 @@ class ColumnInspector extends Component {
                   )}
                 </label>
 
-                {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                  <div>
-                    <br />
-                    <Histogram
-                      xLabels={labels}
-                      yValues={data}
-                      width="300"
-                      height="150"
-                      options={options}
-                    />
-                  </div>
-                )}
+                {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
+                  labels.length < 5 && (
+                    <div>
+                      <br />
+                      <Histogram
+                        xLabels={labels}
+                        yValues={data}
+                        width="300"
+                        height="150"
+                        options={options}
+                      />
+                    </div>
+                  )}
 
                 {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                   <div>
@@ -185,7 +186,7 @@ class ColumnInspector extends Component {
               </div>
             </form>
 
-            {currentColumnData.dataType !== ColumnTypes.OTHER && (
+            {/*currentColumnData.dataType !== ColumnTypes.OTHER && (
               <div>
                 {!currentColumnIsSelectedLabel && !currentColumnIsSelectedFeature && (
                   <div>
@@ -228,7 +229,7 @@ class ColumnInspector extends Component {
                   </button>
                 )}
               </div>
-            )}
+            )*/}
           </div>
         )}
       </div>

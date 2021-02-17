@@ -48,7 +48,7 @@ const processMode = mode => {
       // Also retrieve model metadata and set column data types.
       parseJSON(assetPath + item.metadataPath);
 
-      store.dispatch(setCurrentPanel("dataDisplay"));
+      store.dispatch(setCurrentPanel("dataDisplayLabel"));
     }
 
     // Select a trainer immediately.

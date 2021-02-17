@@ -126,7 +126,8 @@ class Panels extends Component {
     return (
       <div id="panel-container" style={panelContainer}>
         {currentPanel === "selectDataset" && <SelectDataset />}
-        {currentPanel === "dataDisplay" && <DataDisplay />}
+        {currentPanel === "dataDisplayLabel" && <DataDisplay />}
+        {currentPanel === "dataDisplayFeatures" && <DataDisplay />}
         {currentPanel === "selectTrainer" && <SelectTrainer />}
         {currentPanel === "trainModel" && <TrainModel />}
         {currentPanel === "results" && <Results />}
@@ -209,8 +210,8 @@ class App extends Component {
             currentPanel={currentPanel}
             saveTrainedModel={saveTrainedModel}
           />
-          {currentPanel === "dataDisplay" && <ColumnInspector />}
-          {currentPanel === "dataDisplay" && <CrossTab />}
+          {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && <ColumnInspector />}
+          {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) &&  <CrossTab />}
           {currentPanel === "selectDataset" && <DataCard />}
           {currentPanel === "results" && <Predict />}
           <PanelButtons
