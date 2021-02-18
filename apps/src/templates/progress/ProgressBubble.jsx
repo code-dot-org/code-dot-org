@@ -169,7 +169,6 @@ class ProgressBubble extends React.Component {
       ...(disabled && level.bonus && styles.disabledStageExtras),
       ...(level.highlighted && styles.highlighted)
     };
-    console.log(style);
 
     let href = '';
     if (!disabled && url && !onClick) {
