@@ -77,7 +77,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: @lockable_level_group_sl.position
     }
 
-    assert_redirected_to '/s/csp1-2020/lockable/2/puzzle/1/page/1'
+    assert_redirected_to '/s/csp1-2020/stage/14/puzzle/1/page/1'
   end
 
   test 'should show script level for csp2-2020 lockable lesson with lesson plan' do
@@ -92,7 +92,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: @lockable_level_group_sl.position
     }
 
-    assert_redirected_to '/s/csp2-2020/lockable/1/puzzle/1/page/1'
+    assert_redirected_to '/s/csp2-2020/stage/9/puzzle/1/page/1'
   end
 
   test 'should show script level for twenty hour' do
