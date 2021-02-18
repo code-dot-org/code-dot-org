@@ -20,13 +20,28 @@ class SaveModel extends Component {
     columnDescriptions: PropTypes.array
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      saveMessage: null
+    };
+  }
+
   handleChange = (event, field, isColumn) => {
     this.props.setTrainedModelDetail(field, event.target.value, isColumn);
   };
 
+  catchResponse = response => {
+    this.setState({ saveMessage: response.message });
+  };
+
   onClickSave = () => {
-    if (this.props.trainedModelDetails.name !== undefined) {
-      this.props.saveTrainedModel(this.props.dataToSave);
+    this.setState({ saveMessage: null });
+    if (this.props.trainedModelDetails.name === undefined) {
+      this.setState({ saveMessage: "Please name your model." });
+    } else {
+      this.props.saveTrainedModel(this.props.dataToSave, this.catchResponse);
     }
   };
 
@@ -111,6 +126,9 @@ class SaveModel extends Component {
         <button type="button" onClick={this.onClickSave}>
           Save Trained Model
         </button>
+        {this.state.saveMessage && <div>{this.state.saveMessage}</div>}
+        {/* This is a temporary hack to prevent the predict button from hiding  the save button. */}
+        <div style={{ height: 200 }} />
       </div>
     );
   }
