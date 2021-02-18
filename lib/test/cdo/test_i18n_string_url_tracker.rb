@@ -206,4 +206,13 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(:i18n, @firehose_stream)
     assert_equal(test_record, @firehose_record)
   end
+
+  def test_log_given_too_much_data_should_not_be_buffered
+    unstub_firehose
+    FirehoseClient.instance.expects(:put_record).never
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
+    I18nStringUrlTracker.instance.set_buffer_size_max(0)
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    I18nStringUrlTracker.instance.flush
+  end
 end
