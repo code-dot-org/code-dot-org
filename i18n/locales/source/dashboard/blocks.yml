@@ -1348,7 +1348,7 @@ en:
       gamelab_whenLeftArrow:
         text: when left arrow pressed
       gamelab_whenPromptAnswered:
-        text: when [VAR][0] is answered
+        text: when [VAR][0] answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
       gamelab_whenSpriteCreated:

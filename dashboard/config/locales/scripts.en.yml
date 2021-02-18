@@ -18797,6 +18797,8 @@ en:
               name: Introduction to AI Lab
             model-cards:
               name: Model Cards Playground
+            bug-bash:
+              name: Bug Bash Playground
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -20834,7 +20836,7 @@ en:
             lesson6:
               name: Introduction to AI Lab
             lesson7:
-              name: Importing Models to App Lab
+              name: Classification on Planet Vapnik
             lesson8:
               name: Using Models in App Lab
             lesson9:
@@ -20873,3 +20875,86 @@ en:
         teststandard:
           lessons: {}
           lesson_groups: {}
+        csa1-pilot:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+          lesson_groups: {}
+          name: csa1-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa2-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa3-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa3-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa4-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa4-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa5-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa6-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa6-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa7-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa7-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa8-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa8-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa9-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa9-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
