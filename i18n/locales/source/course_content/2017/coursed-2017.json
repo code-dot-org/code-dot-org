@@ -1393,6 +1393,10 @@
     "short_instructions": "Now, build your own game to show off to your friends!",
     "callouts": {
       "courseD_playLab_condFP_1": "we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/16/puzzle/1": {
