@@ -38,6 +38,7 @@ class Lesson < ApplicationRecord
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
   has_and_belongs_to_many :vocabularies, join_table: :lessons_vocabularies
+  has_and_belongs_to_many :programming_expressions, join_table: :lessons_programming_expressions
   has_many :objectives, dependent: :destroy
 
   # join tables needed for seeding logic

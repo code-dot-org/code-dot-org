@@ -1,16 +1,17 @@
 import $ from 'jquery';
 import designMode from './designMode';
+import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 
 function generateCodeDesignElements(modelId, modelData) {
   var x = 20;
   var y = 20;
   var SPACER_PIXELS = 20;
   designMode.onInsertEvent(`var testValues = {};`);
+  var inputFields = [];
   modelData.selectedFeatures.forEach(feature => {
     y = y + SPACER_PIXELS;
     var label = designMode.createElement('LABEL', x, y);
-    // Strip whitespace and special characters.
-    var alphaNumFeature = feature.replace(/\W/g, '');
+    var alphaNumFeature = stripSpaceAndSpecial(feature);
     label.textContent = feature + ':';
     label.id = 'design_' + alphaNumFeature + '_label';
     label.style.width = '300px';
@@ -34,12 +35,12 @@ function generateCodeDesignElements(modelId, modelData) {
       y = y + SPACER_PIXELS;
     }
     var addFeature = `testValues.${alphaNumFeature} = getText("${selectId}");`;
-    designMode.onInsertEvent(addFeature);
+    inputFields.push(addFeature);
   });
   y = y + 2 * SPACER_PIXELS;
   var label = designMode.createElement('LABEL', x, y);
   label.textContent = modelData.labelColumn;
-  var alphaNumModelName = modelData.name.replace(/\W/g, '');
+  var alphaNumModelName = stripSpaceAndSpecial(modelData.name);
   label.id = 'design_' + alphaNumModelName + '_label';
   label.style.width = '300px';
   y = y + SPACER_PIXELS;
@@ -52,6 +53,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var predictButtonId = alphaNumModelName + '_predict';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
+    ${inputFields.join('\n\t\t')}
     getPrediction("${
       modelData.name
     }", "${modelId}", testValues, function(value) {
