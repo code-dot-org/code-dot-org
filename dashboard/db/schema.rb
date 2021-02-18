@@ -504,6 +504,15 @@ ActiveRecord::Schema.define(version: 2021_02_17_024416) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "frameworks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "shortcode", null: false
+    t.string "name", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shortcode"], name: "index_frameworks_on_shortcode", unique: true
+  end
+
   create_table "games", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at"
@@ -1576,11 +1585,28 @@ ActiveRecord::Schema.define(version: 2021_02_17_024416) do
     t.index ["standard_id"], name: "index_stages_standards_on_standard_id"
   end
 
+  create_table "standard_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "shortcode", null: false
+    t.integer "framework_id", null: false
+    t.integer "parent_category_id"
+    t.string "category_type", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["framework_id", "shortcode"], name: "index_standard_categories_on_framework_id_and_shortcode", unique: true
+    t.index ["parent_category_id"], name: "index_standard_categories_on_parent_category_id"
+  end
+
   create_table "standards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "organization", null: false
     t.string "organization_id", null: false
     t.text "description"
     t.text "concept"
+    t.bigint "category_id"
+    t.integer "framework_id"
+    t.string "shortcode"
+    t.index ["category_id"], name: "index_standards_on_category_id"
+    t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
     t.index ["organization", "organization_id"], name: "index_standards_on_organization_and_organization_id", unique: true
   end
 
