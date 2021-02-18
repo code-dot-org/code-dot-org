@@ -14,7 +14,7 @@ const styles = {
     width: 100,
     height: 10,
     borderRadius: 8,
-    backgroundColor: 'white',
+    backgroundColor: color.white,
     overflow: 'hidden'
   },
   meterValue: {
