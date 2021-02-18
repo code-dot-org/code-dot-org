@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import {connect} from 'react-redux';
 import {setEditorText} from './javalabRedux';
 import PropTypes from 'prop-types';
@@ -24,23 +23,27 @@ class JavalabEditor extends React.Component {
     setEditorText: PropTypes.func
   };
 
-  onChange = newValue => {
-    this.props.setEditorText(newValue);
-  };
-
   componentDidMount() {
-    let textInput = $('.ace_text-input');
-    if (textInput) {
-      let textInputElement = textInput.first();
-      textInputElement.attr('aria-label', 'java editor panel');
-    }
     this.editor = new EditorView({
       state: EditorState.create({
         extensions: [basicSetup, java(), oneDarkTheme, oneDarkHighlightStyle]
       }),
-      parent: this._codeMirror
+      parent: this._codeMirror,
+      dispatch: this.dispatchEditorChange()
     });
   }
+
+  dispatchEditorChange = () => {
+    return tr => {
+      // we are overloading the default dispatch method for codemirror
+      // so we need to manually call the update method.
+      this.editor.update([tr]);
+      // if there are changes to the editor, update the state.
+      if (!tr.changes.empty && tr.newDoc) {
+        this.props.setEditorText(tr.newDoc.toString());
+      }
+    };
+  };
 
   render() {
     return (
