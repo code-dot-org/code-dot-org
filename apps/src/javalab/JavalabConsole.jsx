@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {appendInputLog} from './javaIdeRedux';
+import {appendInputLog} from './javalabRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
 import color from '@cdo/apps/util/color';
@@ -63,7 +63,7 @@ function moveCaretToEndOfDiv(element) {
   selection.addRange(range);
 }
 
-class JavaConsole extends React.Component {
+class JavalabConsole extends React.Component {
   static propTypes = {
     // populated by redux
     consoleLogs: PropTypes.array,
@@ -152,9 +152,9 @@ class JavaConsole extends React.Component {
 
 export default connect(
   state => ({
-    consoleLogs: state.javaIde.consoleLogs
+    consoleLogs: state.javalab.consoleLogs
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log))
   })
-)(JavaConsole);
+)(JavalabConsole);

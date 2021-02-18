@@ -88,3 +88,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        csa-pilot:
+          title: CSA Pilot
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
