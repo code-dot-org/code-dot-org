@@ -98,6 +98,7 @@ class Lesson < ApplicationRecord
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
+        unplugged: !!raw_lesson[:unplugged],
         relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
       lesson.save! if lesson.changed?
@@ -207,7 +208,7 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
-    return lesson_path(id: id) if script.is_migrated
+    return script_lesson_path(script, self) if script.is_migrated
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -335,7 +336,7 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
-      lessonPath: lesson_path(id: id)
+      lessonPath: script_lesson_path(script, self)
     }
   end
 
@@ -363,7 +364,7 @@ class Lesson < ApplicationRecord
     {
       key: key,
       displayName: localized_name,
-      link: lesson_path(id: id),
+      link: script_lesson_path(script, self),
       position: relative_position
     }
   end

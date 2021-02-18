@@ -193,6 +193,7 @@ module SharedConstants
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
+      "getPrediction": null,
 
       // Turtle
       "moveForward": null,
