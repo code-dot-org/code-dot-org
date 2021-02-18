@@ -105,7 +105,7 @@ export default class LevelDetailsDialog extends Component {
     }
   }
 
-  onBubbleChoiceBubbleClick = level => {
+  handleBubbleChoiceBubbleClick = level => {
     const previousSelected = this.state.selectedLevel;
     const clonedScriptLevel = _.cloneDeep(this.state.scriptLevel);
     // const clonedPreviousSelected =
@@ -159,7 +159,7 @@ export default class LevelDetailsDialog extends Component {
       <ProgressBubbleSet
         levels={[scriptLevel]}
         disabled={false}
-        onBubbleClick={this.onBubbleChoiceBubbleClick}
+        onBubbleClick={this.handleBubbleChoiceBubbleClick}
         showSublevels={true}
       />
     );
