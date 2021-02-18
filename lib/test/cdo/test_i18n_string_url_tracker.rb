@@ -1,5 +1,6 @@
 require_relative '../test_helper'
 require 'cdo/i18n_string_url_tracker'
+require 'active_support/core_ext/numeric/time'
 
 class TestI18nStringUrlTracker < Minitest::Test
   # We don't want to make actual calls to the AWS Firehose apis, so stub it and verify we are trying to send the right
