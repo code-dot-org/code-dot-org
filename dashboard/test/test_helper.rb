@@ -84,8 +84,6 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
-    CDO.shared_cache.clear
-
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
 

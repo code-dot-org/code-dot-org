@@ -139,8 +139,6 @@
     width: max-content;
     z-index: 10000;
     border-bottom: 0;
-    display: flex;
-    flex-direction: column;
     a {
       font-family: 'Gotham 5r', sans-serif;
       min-width: 240px;
@@ -153,16 +151,14 @@
     img {
       height: 70px;
       width: 70px;
-      float: left;
     }
     .project_link_box {
       display: block;
     }
     .project_link {
       display: inline-block;
-      padding: 0 10px 0 8px;
-      line-height: 70px;
-      float: left;
+      padding: 0 10px 0 4px;
+      line-height: 67px;
     }
     #view_all_projects {
       height: 70px;
