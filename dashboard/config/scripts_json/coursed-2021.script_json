@@ -1375,7 +1375,7 @@
       "key": "a8fd3a34-dc4d-4cb8-be41-46c448405c0d",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Conditionals",
+        "name": "Bridging Activity = Choose One",
         "duration": 15
       },
       "seeding_key": {
@@ -1417,8 +1417,7 @@
       "key": "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de",
@@ -1445,7 +1444,7 @@
       "key": "46244a66-45d6-4628-9fee-390b6a66fb27",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity",
+        "name": "Bridging Activity - Choose One",
         "duration": 15
       },
       "seeding_key": {
@@ -3441,7 +3440,7 @@
       "key": "e11af7aa-44d8-4cff-8c00-b83f57637592",
       "position": 2,
       "properties": {
-        "description": "Print and cut out 2-3 `if / else` and blank action blocks from **Unplugged Blocks (Courses C-F) - Manipulatives** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" When the conditionals have been decided on as a class, fill in the blank part of the `if` block with the various card values that the kids came up with. Examples include \"King of Hearts\", \"Even Numbered\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly under the `if` or `else` block. Click on the thumbnail below to see an example.\n\n![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.10-Lesson-hint.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it.",
+        "description": "Print and cut out 2-3 `if / else` and blank action blocks from **Unplugged Blocks (Courses C-F) - Manipulatives** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" When the conditionals have been decided on as a class, fill in the blank part of the `if` block with the various card values that the kids came up with. Examples include \"King of Hearts\", \"Even Numbered\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly under the `if` or `else` block. Click on the thumbnail below to see an example.\n\n![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.10-Lesson-hint.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -3466,7 +3465,7 @@
       "position": 1,
       "properties": {
         "description": "These puzzles might sprout some questions, so have the students work in pairs or implement the \"Ask three before you ask me\" rule (have the students ask three other peers for help before they go to the teacher.) This will spark discussions that will develop each student's understanding.",
-        "name": "Online Puzzles\r"
+        "name": "If/Else with Bee"
       },
       "seeding_key": {
         "activity_section.key": "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41",
@@ -3477,7 +3476,6 @@
       "key": "ca607451-3bb5-4aea-bca0-efd3fed0c6be",
       "position": 2,
       "properties": {
-        "name": "Conditionals: If Statements",
         "progression_name": "Conditionals: If Statements"
       },
       "seeding_key": {
@@ -3489,7 +3487,6 @@
       "key": "f1f109b3-a855-40c1-b062-66f433dee5e8",
       "position": 3,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3501,7 +3498,6 @@
       "key": "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3513,7 +3509,6 @@
       "key": "e50811f9-8d07-4737-841d-ae3ebf402649",
       "position": 5,
       "properties": {
-        "name": "Conditionals: If and If/Else Statements",
         "progression_name": "Conditionals: If and If/Else Statements"
       },
       "seeding_key": {
@@ -3525,7 +3520,6 @@
       "key": "3f6678b5-e568-42f2-a629-56defb6374fe",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3537,7 +3531,6 @@
       "key": "27ad7403-2d40-4d31-9f89-bc6680589bdb",
       "position": 7,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3549,7 +3542,6 @@
       "key": "8a1d519d-3579-40dd-8c62-77a2d4abc8ea",
       "position": 8,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3561,7 +3553,6 @@
       "key": "33778df3-8e79-4a40-814d-86eccf45c531",
       "position": 9,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3573,6 +3564,7 @@
       "key": "9326c58a-39b6-4f40-a2ba-5c19267c2a3f",
       "position": 10,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "9326c58a-39b6-4f40-a2ba-5c19267c2a3f",
@@ -3618,7 +3610,7 @@
       "key": "9643bc6c-294c-4800-92f0-553f196dc543",
       "position": 1,
       "properties": {
-        "description": "This activity will help bring the unplugged concepts from \"Conditionals With Cards\" into the online world that the students are moving into. It will also help bridge the concept of conditionals to a new type of loop- `while` loops. Choose one of the following to do with your class:"
+        "description": "These activities will help bring the unplugged concepts from \"Conditionals With Cards\" into the online world that the students are moving into. It will also help bridge the concept of conditionals to a new type of loop- `while` loops. Choose one of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "9643bc6c-294c-4800-92f0-553f196dc543",
@@ -3629,7 +3621,7 @@
       "key": "0266eaa6-e5a9-4d9a-8c7f-3e73f4b704b3",
       "position": 2,
       "properties": {
-        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from **Unplugged Blocks (Courses C-F) - Manipulatives** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a `while` loop. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the `while` block with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the `while` block. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/express17.png\" style=\"width: 40%;\">\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this `while` loop experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a `while` loop, you continue moving forward and do not return to the previous loop just because the conditions match again.",
+        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from **Unplugged Blocks (Courses C-F) - Manipulatives** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a `while` loop. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the `while` block with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the `while` block. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/express17.png\" style=\"width: 30%;\">\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this `while` loop experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a `while` loop, you continue moving forward and do not return to the previous loop just because the conditions match again.",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -3654,7 +3646,7 @@
       "position": 1,
       "properties": {
         "description": "`While` loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas of each other before implementing the code. Pair programming works to increase confidence and understanding with topics like `while` loops.",
-        "name": "Online Puzzles\r"
+        "name": "While Loops in Farmer"
       },
       "seeding_key": {
         "activity_section.key": "0a565c10-633a-486e-9d62-f62933373bf7",
@@ -3665,7 +3657,6 @@
       "key": "05e52524-87c5-4ce3-92ce-5d351618bc3f",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3677,7 +3668,6 @@
       "key": "5b71ce88-2e79-4478-888a-796bed9dacb9",
       "position": 3,
       "properties": {
-        "name": "While Loops with the Farmer",
         "progression_name": "While Loops with the Farmer"
       },
       "seeding_key": {
@@ -3689,7 +3679,6 @@
       "key": "87c83177-38ac-4fc9-b6a7-ef90a1a4d321",
       "position": 4,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3701,7 +3690,6 @@
       "key": "60c8c247-570f-4f82-92a1-dddff86de3eb",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3713,7 +3701,6 @@
       "key": "b25165f7-abe4-4c2b-a4f2-2a8838986caa",
       "position": 6,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3725,7 +3712,6 @@
       "key": "5ae9d162-1094-49a9-b0fb-bb22a9e6f3b4",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3737,7 +3723,6 @@
       "key": "969457fe-404b-4596-8b1f-8cb4afec83f8",
       "position": 8,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3749,6 +3734,7 @@
       "key": "738e5c3b-30c5-4b5c-8c50-295bd44328b7",
       "position": 9,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "738e5c3b-30c5-4b5c-8c50-295bd44328b7",
@@ -3783,8 +3769,7 @@
       "key": "21ce5499-3d29-40b9-8d79-184696838f2e",
       "position": 2,
       "properties": {
-        "description": "Pull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \r\n\r\n - Ask the class what the bird should repeat to get to the pig.\r\n    - The bird should repeat `move forward`, `turn right`, `move forward`, and then `turn left`.\r\n - Ask the class what they can use to repeat this code. \r\n    - The bird should repeat this pattern *until* it reaches the pig. \r\n\r\nFill in the rest of the code using the `repeat until` loop and press `Run`. Discuss with the class why this worked.",
-        "name": "Preview of Online Puzzles \r"
+        "description": "\n####Preview of Online Puzzles \n\nPull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \n\n - Ask the class what the bird should repeat to get to the pig.\n    - The bird should repeat `move forward`, `turn right`, `move forward`, and then `turn left`.\n - Ask the class what they can use to repeat this code. \n    - The bird should repeat this pattern *until* it reaches the pig. \n\nFill in the rest of the code using the `repeat until` loop and press `Run`. Discuss with the class why this worked."
       },
       "seeding_key": {
         "activity_section.key": "21ce5499-3d29-40b9-8d79-184696838f2e",
@@ -3795,7 +3780,7 @@
       "key": "743e2b7a-0738-44b2-afb4-44a8f1e3edab",
       "position": 1,
       "properties": {
-        "name": "Practice",
+        "name": "Until Loops in Maze",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3807,7 +3792,6 @@
       "key": "b7917167-64a0-4090-b00a-1159a7235352",
       "position": 2,
       "properties": {
-        "name": "Repeat Until Statements",
         "progression_name": "Repeat Until Statements"
       },
       "seeding_key": {
@@ -3819,7 +3803,6 @@
       "key": "6ba7d996-6da1-49e6-a73a-924609f4e472",
       "position": 3,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3831,7 +3814,6 @@
       "key": "35caf44d-4c1f-4dd0-942d-27132dd2c2ee",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3843,7 +3825,6 @@
       "key": "31e87218-76f2-4e0c-9689-9203f3f2bc83",
       "position": 5,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3855,7 +3836,6 @@
       "key": "132b1ee7-77db-4d54-bf1f-e3efc761aa3a",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3867,7 +3847,6 @@
       "key": "6051c838-42fa-4792-be76-e752d35434dd",
       "position": 7,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3879,8 +3858,7 @@
       "key": "97c5a8f2-f9e3-4ddf-bbb3-c90d4f18a327",
       "position": 8,
       "properties": {
-        "description": "Bringing together concepts is not easy, but this set of lessons is meant to help students  see the endless possibilities of coding when using conditions. If students struggle at all with understanding the similarities or differences between `while` loops and `until` loops, have them try to think of how they would use similar statements in their real lives.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nBringing together concepts is not easy, but this set of lessons is meant to help students  see the endless possibilities of coding when using conditions. If students struggle at all with understanding the similarities or differences between `while` loops and `until` loops, have them try to think of how they would use similar statements in their real lives."
       },
       "seeding_key": {
         "activity_section.key": "97c5a8f2-f9e3-4ddf-bbb3-c90d4f18a327",
@@ -4276,7 +4254,6 @@
         "description": "**Distribute**: Distribute one **CSF Course D End of Course Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If students are pair programming for this assignment, this warm up is a great opportunity for them to practice sharing and respecting others' ideas. Ensure students are following group work norms you already have in place in your classroom. Otherwise, spend a brief moment going over your expectations.\n"
           }
@@ -4294,12 +4271,11 @@
         "description": "Equipped with their completed planning guides, students are now ready to bring their projects to life. These levels correspond to the structure of the planning guide, and help navigate students through the process of transforming their ideas into code.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students will experience plenty of trial and error while coding. Their projects are likely to become truncated versions of their original scope. Remind students that this kind of compromise is common in software design. It's okay if they don't get to build in every feature they planned!\r\n"
           }
         ],
-        "name": "Coding\r"
+        "name": "End of Course Project"
       },
       "seeding_key": {
         "activity_section.key": "64a65e3a-6b86-4cc4-93fa-d0b4b9104781",
@@ -4310,7 +4286,6 @@
       "key": "44ff9770-a1eb-4ec3-922d-013bcadaef08",
       "position": 2,
       "properties": {
-        "name": "Example projects",
         "progression_name": "Example projects"
       },
       "seeding_key": {
@@ -4322,7 +4297,6 @@
       "key": "cc80e93e-054f-4dfb-acf9-75c0fa999f10",
       "position": 3,
       "properties": {
-        "name": "Create your project",
         "progression_name": "Create your project"
       },
       "seeding_key": {
@@ -4334,7 +4308,7 @@
       "key": "bfb31158-7c6c-4e30-9e86-141b77445111",
       "position": 1,
       "properties": {
-        "description": "To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\r\n\r\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement. \r\n* **Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting. \r\n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and playtest the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "description": "To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement. \n* **Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
         "name": "Showcase\r"
       },
       "seeding_key": {
@@ -7188,7 +7162,7 @@
       "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals: If Statements",
         "level_keys": [
@@ -7214,7 +7188,7 @@
       "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7240,7 +7214,7 @@
       "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7266,7 +7240,7 @@
       "chapter": 113,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7292,7 +7266,7 @@
       "chapter": 114,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7318,7 +7292,7 @@
       "chapter": 115,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7344,7 +7318,7 @@
       "chapter": 116,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7370,7 +7344,7 @@
       "chapter": 117,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals: If and If/Else Statements",
         "level_keys": [
@@ -7396,7 +7370,7 @@
       "chapter": 118,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7422,7 +7396,7 @@
       "chapter": 119,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7448,7 +7422,7 @@
       "chapter": 120,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7475,7 +7449,7 @@
       "chapter": 121,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7501,7 +7475,7 @@
       "chapter": 122,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7527,11 +7501,12 @@
       "chapter": 123,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_bee_conditionals_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7552,11 +7527,12 @@
       "chapter": 124,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_bee_conditionals_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7577,7 +7553,7 @@
       "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7603,7 +7579,7 @@
       "chapter": 126,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7629,7 +7605,7 @@
       "chapter": 127,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7655,7 +7631,7 @@
       "chapter": 128,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loops with the Farmer",
         "level_keys": [
@@ -7681,7 +7657,7 @@
       "chapter": 129,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7707,7 +7683,7 @@
       "chapter": 130,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7733,7 +7709,7 @@
       "chapter": 131,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7759,7 +7735,7 @@
       "chapter": 132,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7785,7 +7761,7 @@
       "chapter": 133,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7811,7 +7787,7 @@
       "chapter": 134,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7838,7 +7814,7 @@
       "chapter": 135,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7864,7 +7840,7 @@
       "chapter": 136,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7890,7 +7866,7 @@
       "chapter": 137,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7916,11 +7892,12 @@
       "chapter": 138,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_farmer_while_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7941,7 +7918,7 @@
       "chapter": 139,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7967,7 +7944,7 @@
       "chapter": 140,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Repeat Until Statements",
         "level_keys": [
@@ -7993,7 +7970,7 @@
       "chapter": 141,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -8019,7 +7996,7 @@
       "chapter": 142,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8045,7 +8022,7 @@
       "chapter": 143,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8071,7 +8048,7 @@
       "chapter": 144,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8097,7 +8074,7 @@
       "chapter": 145,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8123,7 +8100,7 @@
       "chapter": 146,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8149,7 +8126,7 @@
       "chapter": 147,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -8176,7 +8153,7 @@
       "chapter": 148,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8202,7 +8179,7 @@
       "chapter": 149,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -8951,7 +8928,7 @@
       "chapter": 178,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example projects",
         "level_keys": [
@@ -8977,7 +8954,7 @@
       "chapter": 179,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
