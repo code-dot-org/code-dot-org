@@ -2,6 +2,8 @@ require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
+require 'active_support/core_ext/numeric/bytes'
+require 'active_support/number_helper'
 
 # We want to know what strings we are using on the site and where they are being used. To get this data, this class was
 # created to log the association of string-keys and URLs to a database (through the AWS service Firehose).
@@ -15,6 +17,8 @@ class I18nStringUrlTracker
 
   # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
   FLUSH_INTERVAL = 1.hour
+
+  MAX_BUFFER_SIZE = 250.megabytes
 
   def initialize
     super
@@ -42,6 +46,9 @@ class I18nStringUrlTracker
     # There is a lot of duplicate data, so this will result in a considerable cost savings.
     @buffer = {}
     @buffer.extend(MonitorMixin) # Adds synchronization
+    # Roughly tracks the size of the buffer in bytes. This should never exceed @buffer_size_max
+    @buffer_size = 0
+    @buffer_size_max = MAX_BUFFER_SIZE
 
     # Flushes the buffer in a loop which executes at the given interval
     @task = Concurrent::TimerTask.execute(execution_interval: FLUSH_INTERVAL) {flush}
@@ -72,6 +79,7 @@ class I18nStringUrlTracker
       buffer = @buffer
       @buffer = {}
       @buffer.extend(MonitorMixin) # Adds synchronization
+      @buffer_size = 0
     end
 
     # log every <string_key>:<url>:<source> combination to Firehose
@@ -92,6 +100,8 @@ class I18nStringUrlTracker
   # This should only be used by unit tests.
   def shutdown
     @buffer = {}
+    @buffer_size = 0
+    @buffer_size_max = MAX_BUFFER_SIZE
     @buffer.extend(MonitorMixin) # Adds synchronization
     @task.shutdown
   end
@@ -105,13 +115,30 @@ class I18nStringUrlTracker
     @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
   end
 
+  # Sets the max size (bytes) of the buffer.
+  # This should only be used by unit tests.
+  def set_buffer_size_max(max)
+    @buffer_size_max = max
+  end
+
   private
 
   # Records the log data to a buffer which will eventually be flushed
   def add_to_buffer(string_key, url, source)
     data = {url => {string_key => Set[source]}}
     @buffer.synchronize do # make sure this is the only thread modifying @buffer
+      # update the buffer size if we are adding any new data to it
+      # duplicate data will not increase the buffer size
+      size = 0
+      size += url.bytesize unless @buffer.dig(url)
+      size += string_key.bytesize unless @buffer.dig(url, string_key)
+      size += source.bytesize unless @buffer.dig(url, string_key)&.include?(source)
+      # Stop adding data to the buffer if the max size has been reached.
+      return if size > @buffer_size_max - @buffer_size
+
+      # add the new data to the buffer
       @buffer.deep_merge!(data)
+      @buffer_size += size
     end
   end
 
