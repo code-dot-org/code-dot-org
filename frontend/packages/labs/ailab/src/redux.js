@@ -54,6 +54,7 @@ const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
+const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 
 // Action creators
 export function setMode(mode) {
@@ -193,6 +194,10 @@ export function setCurrentColumn(currentColumn) {
   return { type: SET_CURRENT_COLUMN, currentColumn };
 }
 
+export function setResultsPhase(phase) {
+  return { type: SET_RESULTS_PHASE, phase };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -218,7 +223,8 @@ const initialState = {
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: "selectDataset",
-  currentColumn: undefined
+  currentColumn: undefined,
+  resultsPhase: undefined
 };
 
 // Reducer
@@ -472,6 +478,12 @@ export default function rootReducer(state = initialState, action) {
           //currentColumn: action.currentColumn
         };
       }
+    }
+  }
+  if (action.type === SET_RESULTS_PHASE) {
+    return {
+      ...state,
+      resultsPhase: action.phase
     }
   }
   return state;
@@ -996,45 +1008,45 @@ export function getPanelButtons(state) {
     next =
       isPanelVisible(state, "dataDisplayLabel") &&
       isPanelEnabled(state, "dataDisplayLabel")
-        ? { panel: "dataDisplayLabel", text: "Label" }
+        ? { panel: "dataDisplayLabel", text: "Continue" }
         : null;
   } else if (state.currentPanel === "dataDisplayLabel") {
     prev =
       isPanelVisible(state, "selectDataset") &&
       isPanelEnabled(state, "selectDataset")
-        ? { panel: "selectDataset", text: "Import" }
+        ? { panel: "selectDataset", text: "Back" }
         : null;
     next =
       isPanelVisible(state, "dataDisplayFeatures") &&
       isPanelEnabled(state, "dataDisplayFeatures")
-        ? { panel: "dataDisplayFeatures", text: "Features" }
+        ? { panel: "dataDisplayFeatures", text: "Continue" }
         : null;
   } else if (state.currentPanel === "dataDisplayFeatures") {
-    prev = { panel: "dataDisplayLabel", text: "Label" };
+    prev = { panel: "dataDisplayLabel", text: "Back" };
     next =
       isPanelVisible(state, "selectTrainer") &&
       isPanelEnabled(state, "selectTrainer")
-        ? { panel: "selectTrainer", text: "Trainer" }
+        ? { panel: "selectTrainer", text: "Continue" }
         : isPanelVisible(state, "trainModel") &&
           isPanelEnabled(state, "trainModel")
-        ? { panel: "trainModel", text: "Train" }
+        ? { panel: "trainModel", text: "Continue" }
         : null;
   } else if (state.currentPanel === "selectTrainer") {
-    prev = { panel: "dataDisplayFeatures", text: "Data" };
+    prev = { panel: "dataDisplayFeatures", text: "Back" };
     next =
       isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
-        ? { panel: "trainModel", text: "Train" }
+        ? { panel: "trainModel", text: "Continue" }
         : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
       prev = null;
-      next = { panel: "results", text: "Results" };
+      next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = { panel: "dataDisplayFeatures", text: "Data" };
-    next = { panel: "saveModel", text: "Save" };
+    prev = { panel: "dataDisplayFeatures", text: "Back" };
+    next = { panel: "saveModel", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
-    prev = { panel: "results", text: "Results" };
+    prev = { panel: "results", text: "Back" };
     next = null;
   }
 

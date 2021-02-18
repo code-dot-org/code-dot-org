@@ -59,7 +59,7 @@ class Predict extends Component {
           <form>
             {this.props.selectedCategoricalFeatures.map((feature, index) => {
               return (
-                <span key={index}>
+                <div style={{marginBottom: 10}} key={index}>
                   <label>
                     {feature}:
                     &nbsp;
@@ -78,10 +78,7 @@ class Predict extends Component {
                         })}
                     </select>
                   </label>
-                  &nbsp;
-                  &nbsp;
-                  &nbsp;
-                </span>
+                </div>
               );
             })}
           </form>

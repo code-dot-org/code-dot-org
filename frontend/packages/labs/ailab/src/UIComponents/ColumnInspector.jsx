@@ -81,9 +81,9 @@ class ColumnInspector extends Component {
         {currentColumnData && (
           <div style={styles.rightPanel}>
             <div style={styles.largeText}>Column Information</div>
-            <div onClick={this.onClose} style={styles.popupClose}>
+            {/*<div onClick={this.onClose} style={styles.popupClose}>
               <FontAwesomeIcon icon={faTimes} />
-            </div>
+            </div>*/}
 
             {currentColumnData.dataType === ColumnTypes.OTHER && (
               <div>

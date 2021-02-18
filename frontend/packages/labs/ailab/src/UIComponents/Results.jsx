@@ -5,9 +5,12 @@ import { connect } from "react-redux";
 import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
-  getSummaryStat
+  getSummaryStat,
+  setResultsPhase
 } from "../redux";
 import { styles, MLTypes } from "../constants";
+import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
+import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
 
 class Results extends Component {
   static propTypes = {
@@ -17,48 +20,44 @@ class Results extends Component {
     summaryStat: PropTypes.object,
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
-    accuracyCheckPredictedLabels: PropTypes.array
+    accuracyCheckPredictedLabels: PropTypes.array,
+    resultsPhase: PropTypes.number,
+    setResultsPhase: PropTypes.func
   };
+
+  componentDidMount() {
+    this.props.setResultsPhase(0);
+    setTimeout(() => {
+      this.props.setResultsPhase(1);
+    }, 3000);
+    setTimeout(() => {
+      this.props.setResultsPhase(2);
+    }, 6000);
+    setTimeout(() => {
+      this.props.setResultsPhase(3);
+    }, 9000);
+  }
 
   render() {
     return (
       <div id="results" style={styles.panel}>
         <div style={styles.largeText}>Results</div>
-        <p>
-          {this.props.percentDataToReserve}% of the training data was reserved
-          to test the accuracy of the newly trained model.
-        </p>
-        {isNaN(this.props.summaryStat.stat) && (
-          <p>
-            An accuracy score was not calculated because no training data was
-            reserved for testing.
-          </p>
+
+        {this.props.resultsPhase === 0 && (
+          <div style={styles.trainBot}>
+            <img
+              src={aiBotHead}
+              style={{
+                ...styles.trainBotHead,
+                ...false && styles.trainBotOpen
+              }}
+            />
+            <img src={aiBotBody} style={styles.trainBotBody} />
+          </div>
         )}
-        <div>
-          {this.props.summaryStat.type === MLTypes.REGRESSION && !isNaN(this.props.summaryStat.stat) && (
-            <div>
-              <div>
-                The average difference between expected and predicted labels
-                is:
-              </div>
-              <div style={styles.subPanel}>{this.props.summaryStat.stat}</div>
-            </div>
-          )}
-          {this.props.summaryStat.type === MLTypes.CLASSIFICATION && !isNaN(this.props.summaryStat.stat) && (
-            <div>
-              <div style={styles.mediumText}>
-                The calculated accuracy of this model is:
-              </div>
-              <div style={styles.subPanel}>
-                {this.props.summaryStat.stat}%
-              </div>
-            </div>
-          )}
-          <br />
-          <br />
-        </div>
-        {!isNaN(this.props.summaryStat.stat) && (
-          <div style={{...styles.subPanel, ...styles.scrollContents}}>
+
+        {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
+          <div style={{ ...styles.subPanel, ...styles.scrollContents }}>
             <table>
               <thead>
                 <tr>
@@ -89,20 +88,67 @@ class Results extends Component {
             </table>
           </div>
         )}
+
+        <div style={{opacity: this.props.resultsPhase >= 2 ? 1 : 0}}>
+          <p>
+            {this.props.percentDataToReserve}% of the training data was reserved
+            to test the accuracy of the newly trained model.
+          </p>
+
+          {isNaN(this.props.summaryStat.stat) && (
+            <p>
+              An accuracy score was not calculated because no training data was
+              reserved for testing.
+            </p>
+          )}
+          <div>
+            {this.props.summaryStat.type === MLTypes.REGRESSION &&
+              !isNaN(this.props.summaryStat.stat) && (
+                <div>
+                  <div>
+                    The average difference between expected and predicted labels
+                    is:
+                  </div>
+                  <div style={styles.subPanel}>{this.props.summaryStat.stat}</div>
+                </div>
+              )}
+            {this.props.summaryStat.type === MLTypes.CLASSIFICATION &&
+              !isNaN(this.props.summaryStat.stat) && (
+                <div>
+                  <div style={styles.mediumText}>
+                    The calculated accuracy of this model is:
+                  </div>
+                  <div style={styles.subPanel}>
+                    {this.props.summaryStat.stat}%
+                  </div>
+                </div>
+              )}
+            <br />
+            <br />
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-export default connect(state => ({
-  selectedFeatures: state.selectedFeatures,
-  labelColumn: state.labelColumn,
-  summaryStat: getSummaryStat(state),
-  accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
-  accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
-  accuracyCheckPredictedLabels: getConvertedLabels(
-    state,
-    state.accuracyCheckPredictedLabels
-  ),
-  percentDataToReserve: state.percentDataToReserve
-}))(Results);
+export default connect(
+  state => ({
+    selectedFeatures: state.selectedFeatures,
+    labelColumn: state.labelColumn,
+    summaryStat: getSummaryStat(state),
+    accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
+    accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
+    accuracyCheckPredictedLabels: getConvertedLabels(
+      state,
+      state.accuracyCheckPredictedLabels
+    ),
+    percentDataToReserve: state.percentDataToReserve,
+    resultsPhase: state.resultsPhase
+  }),
+  dispatch => ({
+    setResultsPhase(phase) {
+      dispatch(setResultsPhase(phase));
+    }
+  })
+)(Results);

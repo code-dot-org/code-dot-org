@@ -321,28 +321,14 @@ export const styles = {
 
   statementLabel: {
     color: labelColor,
-    border: "dotted 1px grey",
     paddingLeft: 4,
-    paddingRight: 4,
-    cursor: "pointer"
+    paddingRight: 4
   },
 
   statementFeature: {
     color: featureColor,
-    border: "dotted 1px grey",
     paddingLeft: 4,
-    paddingRight: 4,
-    cursor: "pointer"
-  },
-
-  selectLabelPopup: {
-    position: "absolute",
-    marginLeft: 160
-  },
-
-  selectFeaturesPopup: {
-    position: "absolute",
-    marginLeft: 440
+    paddingRight: 4
   },
 
   popupClose: {

@@ -186,7 +186,8 @@ class App extends Component {
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
-    saveTrainedModel: PropTypes.func
+    saveTrainedModel: PropTypes.func,
+    resultsPhase: PropTypes.number
   };
 
   render() {
@@ -195,7 +196,8 @@ class App extends Component {
       panelButtons,
       currentPanel,
       setCurrentPanel,
-      saveTrainedModel
+      saveTrainedModel,
+      resultsPhase
     } = this.props;
 
     return (
@@ -210,10 +212,14 @@ class App extends Component {
             currentPanel={currentPanel}
             saveTrainedModel={saveTrainedModel}
           />
-          {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && <ColumnInspector />}
-          {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) &&  <CrossTab />}
+          {["dataDisplayLabel", "dataDisplayFeatures"].includes(
+            currentPanel
+          ) && <ColumnInspector />}
+          {["dataDisplayLabel", "dataDisplayFeatures"].includes(
+            currentPanel
+          ) && <CrossTab />}
           {currentPanel === "selectDataset" && <DataCard />}
-          {currentPanel === "results" && <Predict />}
+          {currentPanel === "results" && resultsPhase === 3 && <Predict />}
           <PanelButtons
             panels={panels}
             panelButtons={panelButtons}
@@ -231,7 +237,8 @@ export default connect(
     panels: getPanels(state),
     panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
-    validationMessages: validationMessages(state)
+    validationMessages: validationMessages(state),
+    resultsPhase: state.resultsPhase
   }),
   dispatch => ({
     setCurrentPanel(panel) {

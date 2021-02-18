@@ -13,7 +13,9 @@ const sampleModes = {
   },
 
   "preload-metadata": {
-    hideSpecifyColumns: true
+    hideSpecifyColumns: true,
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true,
   },
 
   "load-foods": { datasets: ["foods"] },

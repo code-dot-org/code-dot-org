@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getEmptyCellDetails, setCurrentColumn } from "../redux";
 import { styles } from "../constants";
-import SelectFeatures from "./SelectFeatures";
 
 class DataDisplay extends Component {
   static propTypes = {
@@ -22,8 +21,7 @@ class DataDisplay extends Component {
 
     this.state = {
       showRawData: true,
-      showEmptyCellDetails: false,
-      showSelectFeatures: null
+      showEmptyCellDetails: false
     };
   }
 
@@ -87,31 +85,15 @@ class DataDisplay extends Component {
     return {...style, ...styles.dataDisplayCell};
   };
 
-  showSelectFeatures = mode => {
-    this.setState({ showSelectFeatures: mode });
-  };
-
-  onSelectFeaturesClose = () => {
-    this.setState({ showSelectFeatures: null });
-  };
-
   render() {
     const { data, setCurrentColumn, currentPanel } = this.props;
 
     return (
       <div id="data-display" style={styles.panel}>
-        {this.state.showSelectFeatures && (
-          <SelectFeatures
-            mode={this.state.showSelectFeatures}
-            onClose={this.onSelectFeaturesClose}
-          />
-        )}
-
         <div style={styles.statement}>
           Predict{" "}
           <span
             style={styles.statementLabel}
-            onClick={() => this.showSelectFeatures("label")}
           >
             {this.props.labelColumn || "..."}
           </span>
@@ -121,7 +103,6 @@ class DataDisplay extends Component {
               based on{" "}
               <span
                 style={styles.statementFeature}
-                onClick={() => this.showSelectFeatures("features")}
               >
                 {this.props.selectedFeatures.length > 0
                   ? this.props.selectedFeatures.join(", ")
