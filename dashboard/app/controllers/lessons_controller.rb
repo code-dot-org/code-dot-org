@@ -11,14 +11,19 @@ class LessonsController < ApplicationController
   # them with the new lessons editor.
   def disallow_legacy_script_levels
     return unless @lesson.script_levels.reject(&:activity_section).any?
-    raise CanCan::AccessDenied.new(
-      "cannot edit lesson #{@lesson.id} because it contains legacy script levels"
-    )
+    return render :forbidden
   end
 
-  # GET /lessons/1
+  # GET /s/script-name/lessons/1
   def show
-    raise CanCan::AccessDenied.new("cannot view lesson #{@lesson.id} because it does not have a lesson plan on Code Studio") unless @lesson.has_lesson_plan && @lesson.script.is_migrated
+    script = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless script.is_migrated
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
