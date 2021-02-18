@@ -35,10 +35,10 @@ class JavalabEditor extends React.Component {
 
   dispatchEditorChange = () => {
     return tr => {
-      // we are overloading the default dispatch method for codemirror
+      // we are overwriting the default dispatch method for codemirror,
       // so we need to manually call the update method.
       this.editor.update([tr]);
-      // if there are changes to the editor, update the state.
+      // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
         this.props.setEditorText(tr.newDoc.toString());
       }
