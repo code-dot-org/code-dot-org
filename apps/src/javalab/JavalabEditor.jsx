@@ -11,7 +11,8 @@ import {oneDarkTheme, oneDarkHighlightStyle} from '@codemirror/theme-one-dark';
 const style = {
   editor: {
     width: '100%',
-    height: 600
+    height: 600,
+    backgroundColor: '#282c34'
   }
 };
 
