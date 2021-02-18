@@ -1,0 +1,76 @@
+{
+  "tr-TR": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "İşlemler",
+          "Brushes": "Fırçalar",
+          "Loops": "Döngüler",
+          "Math": "Matematik",
+          "Logic": "Mantık",
+          "Functions": "Fonksiyonlar",
+          "Variables": "Değişkenler"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Dünya",
+          "Dancers": "Dansçılar",
+          "Properties": "Özellikleri",
+          "Events": "Olaylar",
+          "Numbers": "Sayılar",
+          "Logic": "Mantık"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "İşlemler",
+          "Events": "Olaylar",
+          "Loops": "Döngüler",
+          "Math": "Matematik",
+          "Logic": "Mantık",
+          "Games/Score": "Oyunlar/skor"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Dünya",
+          "Sprites": "Hareketli Nesneler",
+          "Actions": "İşlemler",
+          "Events": "Olaylar",
+          "Behaviors": "Davranışlar"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Dünya",
+          "Sprites": "Hareketli Nesneler",
+          "Locations": "Konumlar",
+          "Actions": "İşlemler",
+          "Events": "Olaylar",
+          "Behaviors": "Davranışlar",
+          "Variables": "Değişkenler",
+          "Math": "Matematik",
+          "Logic": "Mantık",
+          "Functions": "Fonksiyonlar",
+          "Text": "yazı",
+          "Comments": "Yorumlar"
+        },
+        "outbreak_freeplay": {
+          "World": "Dünya",
+          "Sprites": "Hareketli Nesneler",
+          "Actions": "İşlemler",
+          "Behaviors": "Davranışlar",
+          "Events": "Olaylar",
+          "Locations": "Konumlar",
+          "Logic": "Mantık",
+          "Loops": "Döngüler",
+          "Math": "Matematik",
+          "Variables": "Değişkenler",
+          "Functions": "Fonksiyonlar",
+          "Comments": "Yorumlar"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Dünya",
+          "Sprites": "Hareketli Nesneler",
+          "Actions": "İşlemler",
+          "Events": "Olaylar",
+          "Logic": "Mantık",
+          "Math": "Matematik"
+        }
+      }
+    }
+  }
+}
