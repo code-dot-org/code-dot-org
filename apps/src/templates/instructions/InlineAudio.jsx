@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import ReadInstructionsDialog from './ReadInstructionsDialog';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -83,6 +82,20 @@ const styles = {
   }
 };
 
+// pulled from the example here https://developers.google.com/web/updates/2018/11/web-audio-autoplay
+const AUDIO_ENABLING_DOM_EVENTS = [
+  'click',
+  'contextmenu',
+  'auxclick',
+  'dblclick',
+  'mousedown',
+  'mouseup',
+  'pointerup',
+  'touchend',
+  'keydown',
+  'keyup'
+];
+
 class InlineAudio extends React.Component {
   static propTypes = {
     assetUrl: PropTypes.func.isRequired,
@@ -106,25 +119,17 @@ class InlineAudio extends React.Component {
     error: false,
     hover: false,
     loaded: false,
-    autoplayed: false,
-    displayReadInstructionsDialog: false
+    autoplayed: false
   };
 
   constructor(props) {
     super(props);
-    this.closeReadInstructionsDialog = this.closeReadInstructionsDialog.bind(
-      this
-    );
+    this.triggerAudio = this.triggerAudio.bind(this);
   }
 
   componentDidMount() {
     this.getAudioElement();
     if (this.props.ttsAutoplayEnabled && !this.state.autoplayed) {
-      // with dialog
-      // this.setState({displayReadInstructionsDialog: true});
-
-      // with auto-play
-      this.setState({autoplayed: true});
       this.playAudio();
     }
   }
@@ -154,11 +159,6 @@ class InlineAudio extends React.Component {
     }
   }
 
-  closeReadInstructionsDialog() {
-    console.log('close dialog');
-    this.setState({displayReadInstructionsDialog: false});
-  }
-
   getAudioElement() {
     if (this.state.audio) {
       return this.state.audio;
@@ -176,7 +176,8 @@ class InlineAudio extends React.Component {
 
     audio.addEventListener('ended', e => {
       this.setState({
-        playing: false
+        playing: false,
+        autoplayed: this.props.ttsAutoplayEnabled
       });
     });
 
@@ -217,9 +218,7 @@ class InlineAudio extends React.Component {
     this.state.playing ? this.pauseAudio() : this.playAudio();
   };
 
-  playAudio() {
-    this.getAudioElement().play();
-    this.setState({playing: true});
+  recordPlayEvent() {
     firehoseClient.putRecord({
       study: 'tts-play',
       study_group: 'v1',
@@ -232,6 +231,41 @@ class InlineAudio extends React.Component {
         csfStyleInstructions: this.props.isOnCSFPuzzle
       })
     });
+  }
+
+  // adds/removes event listeners from the dom which trigger audio
+  // when a significant enough user has happened
+  domEventTriggersAudio(shouldTrigger) {
+    AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
+      const codeWorkspace = document.getElementById('codeApp');
+      shouldTrigger
+        ? codeWorkspace.addEventListener(event, this.triggerAudio)
+        : codeWorkspace.removeEventListener(event, this.triggerAudio);
+    });
+  }
+
+  playAudio() {
+    return this.getAudioElement()
+      .play()
+      .then(() => {
+        this.setState({playing: true});
+        this.recordPlayEvent();
+      })
+      .catch(err => {
+        // there wasn't significant enough user interaction to play audio automatically
+        // for more information about this issue on Chrome, see https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+        const shouldAutoPlay =
+          this.props.ttsAutoplayEnabled && !this.state.autoplayed;
+        if (err instanceof DOMException && shouldAutoPlay) {
+          this.domEventTriggersAudio(true);
+        } else {
+          throw err;
+        }
+      });
+  }
+
+  triggerAudio() {
+    this.playAudio().then(() => this.domEventTriggersAudio(false));
   }
 
   pauseAudio() {
@@ -298,14 +332,6 @@ class InlineAudio extends React.Component {
               />
             </div>
           </div>
-          <ReadInstructionsDialog
-            isOpen={this.state.displayReadInstructionsDialog}
-            handleClose={this.closeReadInstructionsDialog}
-            handleReadInstructions={() => {
-              this.playAudio();
-              this.closeReadInstructionsDialog();
-            }}
-          />
         </div>
       );
     }
