@@ -30,6 +30,7 @@ class UnitGroup < ApplicationRecord
   FAMILY_NAMES = [
     CSD = 'csd'.freeze,
     CSP = 'csp'.freeze,
+    CSA = 'csa'.freeze,
     TEST = 'ui-test-course'.freeze
   ].freeze
 
