@@ -1,6 +1,7 @@
 require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 require 'uri'
+require 'active_support/core_ext/numeric/time'
 
 # We want to know what strings we are using on the site and where they are being used. To get this data, this class was
 # created to log the association of string-keys and URLs to a database (through the AWS service Firehose).
