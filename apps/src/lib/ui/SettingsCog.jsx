@@ -126,6 +126,11 @@ class SettingsCog extends Component {
     return pageConstants && pageConstants.librariesEnabled;
   }
 
+  areAIToolsEnabled() {
+    let pageConstants = getStore().getState().pageConstants;
+    return pageConstants && pageConstants.aiEnabled;
+  }
+
   render() {
     const {isRunning, runModeIndicators} = this.props;
 
@@ -155,20 +160,22 @@ class SettingsCog extends Component {
           {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
-          {experiments.isEnabled(experiments.APPLAB_ML) && (
-            <ManageModels onClick={this.manageModels} />
-          )}
+          {experiments.isEnabled(experiments.APPLAB_ML) &&
+            this.areAIToolsEnabled() && (
+              <ManageModels onClick={this.manageModels} />
+            )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
         </PopUpMenu>
-        {experiments.isEnabled(experiments.APPLAB_ML) && (
-          <ModelManagerDialog
-            isOpen={this.state.managingModels}
-            onClose={this.closeModelManager}
-            autogenerateML={this.props.autogenerateML}
-          />
-        )}
+        {experiments.isEnabled(experiments.APPLAB_ML) &&
+          this.areAIToolsEnabled() && (
+            <ModelManagerDialog
+              isOpen={this.state.managingModels}
+              onClose={this.closeModelManager}
+              autogenerateML={this.props.autogenerateML}
+            />
+          )}
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}

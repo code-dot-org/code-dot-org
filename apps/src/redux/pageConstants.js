@@ -73,7 +73,8 @@ var ALLOWED_KEYS = new Set([
   'allowExportExpo',
   'widgetMode',
   'librariesEnabled',
-  'validationEnabled'
+  'validationEnabled',
+  'aiEnabled'
 ]);
 
 const initialState = {
