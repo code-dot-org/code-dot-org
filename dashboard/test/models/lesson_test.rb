@@ -615,6 +615,24 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 1, lesson.resources_for_lesson_plan(false)['Teacher'].count
   end
 
+  test 'lesson_plan_pdf_url supports new lesson plan PDFs' do
+    old_lesson = create :lesson
+    assert_equal(
+      old_lesson.lesson_plan_pdf_url,
+      "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf"
+    )
+
+    script = create :script, is_migrated: true, hidden: true
+    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    assert_nil(new_lesson.lesson_plan_pdf_url)
+
+    script.seeded_at = Time.now.to_s
+    assert_equal(
+      new_lesson.lesson_plan_pdf_url,
+      "https://cdo-lesson-plans.s3.amazonaws.com/#{script.name}/#{Time.parse(script.seeded_at).to_s(:number)}/Some Verbose Lesson Name.pdf"
+    )
+  end
+
   def create_swapped_lockable_lesson
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true

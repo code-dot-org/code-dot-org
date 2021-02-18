@@ -178,14 +178,12 @@ class LessonOverview extends Component {
                 </ul>
               </div>
             )}
-
             {lesson.preparation && (
               <div>
                 <h2>{i18n.preparation()}</h2>
                 <SafeMarkdown markdown={lesson.preparation} />
               </div>
             )}
-
             {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
                 <h2>{i18n.links()}</h2>
