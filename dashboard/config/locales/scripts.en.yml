@@ -20958,3 +20958,85 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        k5-onlinepd-2021:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_audience: ''
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Welcome to "Teaching Computer Science Fundamentals"
+              name: Welcome to "Teaching Computer Science Fundamentals"
+              description_student: ''
+              description_teacher: ''
+            Understanding the Computer Science Fundamentals Courses:
+              key: Understanding the Computer Science Fundamentals Courses
+              name: Understanding the Computer Science Fundamentals Courses
+              description_student: ''
+              description_teacher: ''
+            Sequencing:
+              key: Sequencing
+              name: Sequencing
+              description_student: ''
+              description_teacher: ''
+            Loops:
+              key: Loops
+              name: Loops
+              description_student: ''
+              description_teacher: ''
+            Events:
+              key: Events
+              name: Events
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+            End of Course projects:
+              key: End of Course projects
+              name: End of Course projects
+              description_student: ''
+              description_teacher: ''
+            Functions:
+              key: Functions
+              name: Functions
+              description_student: ''
+              description_teacher: ''
+            Variables:
+              key: Variables
+              name: Variables
+              description_student: ''
+              description_teacher: ''
+            For Loops:
+              key: For Loops
+              name: For Loops
+              description_student: ''
+              description_teacher: ''
+            Sprite Lab:
+              key: Sprite Lab
+              name: Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Reviewing your reflections:
+              key: Reviewing your reflections
+              name: Reviewing your reflections
+              description_student: ''
+              description_teacher: ''
+            Next steps:
+              key: Next steps
+              name: Next steps
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Getting Started
+            k5_basic_concepts_1:
+              display_name: Basic Coding Concepts and Teaching Practices
+            k5_diving_deeper_1:
+              display_name: 'Diving Deeper: Courses E and F'
+            k5_next_steps_1:
+              display_name: Next Steps
+          name: k5-onlinepd-2021
