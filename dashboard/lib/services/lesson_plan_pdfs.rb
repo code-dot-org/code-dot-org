@@ -41,6 +41,16 @@ module Services
       end
     end
 
+    # Simple helper for comparing serialized_at and seeded_at values. Because
+    # these values sometimes come from json and sometimes come from the
+    # database, we want to do some normalization to make our inequality
+    # comparison more consistent.
+    def self.timestamps_equal(left, right)
+      left = Time.parse(left) if left.is_a? String
+      right = Time.parse(right) if right.is_a? String
+      return left.to_i == right.to_i
+    end
+
     # Whether or not we should generate PDFs. Specifically, this
     # encapsulates three concerns:
     #
@@ -63,9 +73,9 @@ module Services
       return false unless script_data['properties'].fetch('is_migrated', false)
       return false if DCDO.get('disable_lesson_plan_pdf_generation', false)
 
-      new_version = script_data['serialized_at']
-      existing_version = Script.find_by(name: script_data['name']).seeded_at
-      new_version != existing_version
+      new_timestamp = script_data['serialized_at']
+      existing_timestamp = Script.find_by(name: script_data['name']).seeded_at
+      !timestamps_equal(new_timestamp, existing_timestamp)
     end
 
     def self.generate_pdfs(script)
