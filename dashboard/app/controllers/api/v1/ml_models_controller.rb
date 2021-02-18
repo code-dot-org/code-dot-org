@@ -11,15 +11,18 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   def save
     model_id = generate_id
     metadata = params["ml_model"].except(:trainedModel, :featureNumberKey)
-    UserMlModel.create!(
+    @user_ml_model = UserMlModel.create!(
       user_id: current_user.id,
       model_id: model_id,
       name: params["ml_model"]["name"],
       metadata: metadata.to_json
     )
-    upload_to_s3(model_id, params["ml_model"].to_json)
-
-    render json: {id: model_id}
+    if @user_ml_model.persisted?
+      upload_to_s3(model_id, params["ml_model"].to_json)
+      render json: {id: model_id, message: "The model successfully saved!"}
+    else
+      render json: {message: "Unable to save the model."}
+    end
   end
 
   # GET api/v1/ml_models/names
