@@ -100,22 +100,6 @@ export default class LevelDetailsDialog extends Component {
   handleBubbleChoiceBubbleClick = level => {
     const previousSelected = this.state.selectedLevel;
     const clonedScriptLevel = _.cloneDeep(this.state.scriptLevel);
-    // const clonedPreviousSelected =
-    //   previousSelected.name === clonedScriptLevel.level.name
-    //     ? clonedScriptLevel.level
-    //     : clonedScriptLevel.sublevels.find(
-    //         sublevel => sublevel.name === previousSelected.name
-    //       );
-    // clonedPreviousSelected.highlighted = false;
-    //const newSelected = level.level ? level.level : level;
-    //const clonedNewSelected =
-    //  newSelected.name === clonedScriptLevel.level.name
-    //    ? clonedScriptLevel.level
-    //    : clonedScriptLevel.sublevels.find(
-    //        sublevel => sublevel.name === newSelected.name
-    //      );
-    //clonedNewSelected.highlighted = true;
-    //console.log(clonedNewSelected);
     if (previousSelected.name === clonedScriptLevel.level.name) {
       clonedScriptLevel.highlighted = false;
     } else {
