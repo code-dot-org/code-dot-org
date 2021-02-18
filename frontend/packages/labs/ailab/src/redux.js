@@ -208,7 +208,7 @@ const initialState = {
   trainingExamples: [],
   trainingLabels: [],
   percentDataToReserve: 10,
-  reserveLocation: TestDataLocations.BEGINNING,
+  reserveLocation: TestDataLocations.END,
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
@@ -844,8 +844,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
   dataToSave.identifySubgroup = !!state.trainedModelDetails.identifySubgroup;
-  dataToSave.representSubgroup = !!state.trainedModelDetails
-    .representSubgroup;
+  dataToSave.representSubgroup = !!state.trainedModelDetails.representSubgroup;
   dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
   dataToSave.selectedTrainer = state.selectedTrainer;
