@@ -54,15 +54,16 @@ class ProgressTableDetailView extends React.Component {
 
   render() {
     return (
-      <ProgressTableContainer
-        onClickLesson={this.props.onClickLesson}
-        lessonCellFormatter={this.detailCellFormatter}
-        includeHeaderArrows={true}
-        extraHeaderFormatters={[this.levelIconHeaderFormatter]}
-        extraHeaderLabels={[i18n.levelType()]}
-      >
+      <div>
+        <ProgressTableContainer
+          onClickLesson={this.props.onClickLesson}
+          lessonCellFormatter={this.detailCellFormatter}
+          includeHeaderArrows={true}
+          extraHeaderFormatters={[this.levelIconHeaderFormatter]}
+          extraHeaderLabels={[i18n.levelType()]}
+        />
         <ProgressLegend excludeCsfColumn={!this.props.scriptData.csf} />
-      </ProgressTableContainer>
+      </div>
     );
   }
 }
