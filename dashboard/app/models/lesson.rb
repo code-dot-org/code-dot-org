@@ -352,7 +352,7 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_student_lesson_plan(user)
+  def summarize_for_student_lesson_plan
     {
       unit: script.summarize_for_lesson_show(true),
       position: relative_position,
