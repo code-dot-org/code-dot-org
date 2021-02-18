@@ -23476,6 +23476,8 @@ mn:
             Artist Binary:
               key: Зураачийн хоёрт
               name: Зураачтай хамтарсан хоёртын зураг
+            lesson-6:
+              name: Minecraft-тай урагш харах
           lesson_groups:
             csf_sequencing:
               display_name: Дараалуулах
@@ -23564,7 +23566,7 @@ mn:
             csf_digcit:
               display_name: Дижитал иргэншил
             csf_nested_loops:
-              display_name: Сараалжсан гогцоо
+              display_name: Нөхцлүүд
             csf_functions:
               display_name: Функцүүд
             csf_impacts:
@@ -23813,6 +23815,8 @@ mn:
               name: Шидтэний лабтай хамтарсан сэлж буй загас
             Course F Introduction:
               name: Шидтэний лабораторийг танилцуулах
+            Sprites in Action:
+              name: Шидтэн ажиллаж байна
           lesson_groups:
             ramp_up:
               display_name: Танилцуулга
