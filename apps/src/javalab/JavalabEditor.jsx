@@ -3,9 +3,11 @@ import {connect} from 'react-redux';
 import {setEditorText} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {EditorState, EditorView, basicSetup} from '@codemirror/basic-setup';
+import {EditorState, basicSetup} from '@codemirror/basic-setup';
 import {java} from '@codemirror/lang-java';
 import {oneDarkTheme, oneDarkHighlightStyle} from '@codemirror/theme-one-dark';
+import {EditorView, keymap} from '@codemirror/view';
+import {defaultTabBinding} from '@codemirror/commands';
 
 const style = {
   editor: {
@@ -26,7 +28,13 @@ class JavalabEditor extends React.Component {
   componentDidMount() {
     this.editor = new EditorView({
       state: EditorState.create({
-        extensions: [basicSetup, java(), oneDarkTheme, oneDarkHighlightStyle]
+        extensions: [
+          basicSetup,
+          java(),
+          keymap.of([defaultTabBinding]),
+          oneDarkTheme,
+          oneDarkHighlightStyle
+        ]
       }),
       parent: this._codeMirror,
       dispatch: this.dispatchEditorChange()
