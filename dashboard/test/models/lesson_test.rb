@@ -215,6 +215,30 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal script.summarize_for_lesson_show, summary[:unit]
   end
 
+  test 'can summarize lesson for student lesson plan' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1,
+      properties: {
+        student_overview: 'lesson overview',
+        purpose: 'learning',
+        preparation: 'do things'
+      }
+    )
+
+    summary = lesson.summarize_for_student_lesson_plan
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal 'lesson overview', summary[:overview]
+    assert_equal script.summarize_for_lesson_show(true), summary[:unit]
+  end
+
   test 'can summarize lesson for lesson plan dropdown' do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -223,6 +247,17 @@ class LessonTest < ActiveSupport::TestCase
     summary = lesson.summarize_for_lesson_dropdown
     assert_equal 'lesson-1', summary[:key]
     assert_equal "/s/#{script.name}/lessons/#{lesson.relative_position}", summary[:link]
+    assert_equal 1, summary[:position]
+  end
+
+  test 'can summarize lesson for student lesson plan dropdown' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
+
+    summary = lesson.summarize_for_lesson_dropdown(true)
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal "/s/#{script.name}/lessons/#{lesson.relative_position}/student", summary[:link]
     assert_equal 1, summary[:position]
   end
 
