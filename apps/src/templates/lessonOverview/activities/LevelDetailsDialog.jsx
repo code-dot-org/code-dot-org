@@ -61,14 +61,6 @@ export default class LevelDetailsDialog extends Component {
           {i18n.levelGroupDetailsDialogText({buttonText: i18n.seeFullLevel()})}
         </div>
       );
-    } else if (level.containedLevels && level.containedLevels.length > 0) {
-      return (
-        <div>
-          {level.containedLevels.map(l => (
-            <div key={l.name}>{this.getContentComponent(l)}</div>
-          ))}
-        </div>
-      );
     } else if (level.type === 'BubbleChoice') {
       return (
         <div style={styles.sublevelCards}>
