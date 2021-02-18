@@ -37,7 +37,6 @@ class ProgressTableContainer extends React.Component {
     lessonCellFormatter: PropTypes.func.isRequired,
     extraHeaderFormatters: PropTypes.arrayOf(PropTypes.func),
     extraHeaderLabels: PropTypes.arrayOf(PropTypes.string),
-    children: PropTypes.node.isRequired,
 
     // redux
     section: sectionDataPropType.isRequired,
@@ -107,7 +106,6 @@ class ProgressTableContainer extends React.Component {
             {...this.props}
           />
         </div>
-        {this.props.children}
       </div>
     );
   }

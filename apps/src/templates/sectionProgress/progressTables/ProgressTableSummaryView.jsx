@@ -51,15 +51,16 @@ class ProgressTableSummaryView extends React.Component {
 
   render() {
     return (
-      <ProgressTableContainer
-        onClickLesson={this.props.onClickLesson}
-        columnWidths={new Array(this.props.scriptData.stages.length).fill(
-          COLUMN_WIDTH
-        )}
-        lessonCellFormatter={this.summaryCellFormatter}
-      >
+      <div>
+        <ProgressTableContainer
+          onClickLesson={this.props.onClickLesson}
+          columnWidths={new Array(this.props.scriptData.stages.length).fill(
+            COLUMN_WIDTH
+          )}
+          lessonCellFormatter={this.summaryCellFormatter}
+        />
         <SummaryViewLegend showCSFProgressBox={this.props.scriptData.csf} />
-      </ProgressTableContainer>
+      </div>
     );
   }
 }

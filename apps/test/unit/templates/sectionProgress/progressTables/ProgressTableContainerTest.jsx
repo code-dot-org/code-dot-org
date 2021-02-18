@@ -77,10 +77,4 @@ describe('ProgressTableContainer', () => {
       wrapper.find(ProgressTableStudentList).props().extraHeaderLabels
     ).to.equal(extraHeaderLabels);
   });
-
-  it('renders props.children', () => {
-    const children = <div id="child-div">This is the child</div>;
-    const wrapper = setUp({children});
-    expect(wrapper.find('#child-div')).to.have.length(1);
-  });
 });
