@@ -215,4 +215,14 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.flush
   end
+
+  def test_log_given_duplicate_data_should_only_log_once
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
+    FirehoseClient.instance.expects(:put_record).once
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    I18nStringUrlTracker.instance.flush
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(test_record, @firehose_record)
+  end
 end
