@@ -1,0 +1,76 @@
+{
+  "ga-IE": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Gníomhartha",
+          "Brushes": "Scuaba",
+          "Loops": "Lúba",
+          "Math": "Matamaitic",
+          "Logic": "Loighic",
+          "Functions": "Feidhmeanna",
+          "Variables": "Athróga"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Domhan",
+          "Dancers": "Damhsóirí",
+          "Properties": "Airíonna",
+          "Events": "Teagmhais",
+          "Numbers": "Uimhreacha",
+          "Logic": "Loighic"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Gníomhartha",
+          "Events": "Teagmhais",
+          "Loops": "Lúba",
+          "Math": "Matamaitic",
+          "Logic": "Loighic",
+          "Games/Score": "Cluichí/Scór"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Domhan",
+          "Sprites": "Sprideanna",
+          "Actions": "Gníomhartha",
+          "Events": "Teagmhais",
+          "Behaviors": "Iompar"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Domhan",
+          "Sprites": "Sprideanna",
+          "Locations": "Áiteanna",
+          "Actions": "Gníomhartha",
+          "Events": "Teagmhais",
+          "Behaviors": "Iompar",
+          "Variables": "Athróga",
+          "Math": "Matamaitic",
+          "Logic": "Loighic",
+          "Functions": "Feidhmeanna",
+          "Text": "Téacs",
+          "Comments": "Nótaí"
+        },
+        "outbreak_freeplay": {
+          "World": "Domhan",
+          "Sprites": "Sprideanna",
+          "Actions": "Gníomhartha",
+          "Behaviors": "Iompar",
+          "Events": "Teagmhais",
+          "Locations": "Áiteanna",
+          "Logic": "Loighic",
+          "Loops": "Lúba",
+          "Math": "Matamaitic",
+          "Variables": "Athróga",
+          "Functions": "Feidhmeanna",
+          "Comments": "Nótaí"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Domhan",
+          "Sprites": "Sprideanna",
+          "Actions": "Gníomhartha",
+          "Events": "Teagmhais",
+          "Logic": "Loighic",
+          "Math": "Matamaitic"
+        }
+      }
+    }
+  }
+}

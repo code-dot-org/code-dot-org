@@ -1051,6 +1051,44 @@
           "jittering": "crith",
           "moving west": "dul siar",
           "patrolling": "patrólú"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "fánaíocht",
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "swimming left and right": "snámh anonn is anall",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "swimming left and right": "snámh anonn is anall",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú",
+          "wandering": "fánaíocht"
+        },
+        "outbreak_freeplay_basic": {
+          "wandering": "fánaíocht",
+          "moving east": "dul soir",
+          "spinning right": "casadh ar deiseal",
+          "shrinking": "crapadh",
+          "growing": "fás",
+          "moving south": "dul ó dheas",
+          "moving north": "dul ó thuaidh",
+          "jittering": "crith",
+          "moving west": "dul siar",
+          "patrolling": "patrólú"
         }
       }
     }
