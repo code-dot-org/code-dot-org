@@ -1,0 +1,40 @@
+{
+  "zu-ZA": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Izenzo",
+          "Math": "Izibalo",
+          "Logic": "Ngokulandelana"
+        },
+        "CourseD_EOC_dance": {
+          "Logic": "Ngokulandelana"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Izenzo",
+          "Math": "Izibalo",
+          "Logic": "Ngokulandelana"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Izenzo"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Izenzo",
+          "Math": "Izibalo",
+          "Logic": "Ngokulandelana",
+          "Text": "Umbhalo"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Izenzo",
+          "Logic": "Ngokulandelana",
+          "Math": "Izibalo"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Izenzo",
+          "Logic": "Ngokulandelana",
+          "Math": "Izibalo"
+        }
+      }
+    }
+  }
+}
