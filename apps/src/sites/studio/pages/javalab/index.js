@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import JavaIdeView from '@cdo/apps/javaide/JavaIdeView';
+import JavalabView from '@cdo/apps/javalab/JavalabView';
 import {getStore} from '@cdo/apps/code-studio/redux';
-import javaIde from '@cdo/apps/javaide/javaIdeRedux';
+import javalab from '@cdo/apps/javalab/javalabRedux';
 import {registerReducers} from '@cdo/apps/redux';
 
 $(document).ready(function() {
-  registerReducers({javaIde});
+  registerReducers({javalab});
   ReactDOM.render(
     <Provider store={getStore()}>
-      <JavaIdeView />
+      <JavalabView />
     </Provider>,
-    document.getElementById('java-ide-container')
+    document.getElementById('java-lab-container')
   );
 });
