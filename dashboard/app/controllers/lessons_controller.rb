@@ -37,7 +37,7 @@ class LessonsController < ApplicationController
     end
     raise ActiveRecord::RecordNotFound unless @lesson
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
+    @lesson_data = @lesson.summarize_for_student_lesson_plan(@current_user)
     render 'lessons/student_lesson_plan'
   end
 
