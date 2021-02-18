@@ -3,6 +3,7 @@ import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 
 const styles = {
   wrapper: {
@@ -49,6 +50,29 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     handleMarkdownChange: PropTypes.func.isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      uploadImageOpen: false
+    };
+  }
+
+  handleOpenUploadImage = () => {
+    this.setState({uploadImageOpen: true});
+  };
+
+  handleCloseUploadImage = () => {
+    this.setState({uploadImageOpen: false});
+  };
+
+  handleUploadImage = url => {
+    let e = {};
+    e.target.value = this.props.markdown + `\n\n![](${url})`;
+    console.log(e);
+    this.props.handleMarkdownChange(e);
+  };
+
   render() {
     return (
       <label>
@@ -68,6 +92,15 @@ export default class TextareaWithMarkdownPreview extends React.Component {
               style={styles.input}
               onChange={this.props.handleMarkdownChange}
             />
+            <button
+              onMouseDown={this.handleOpenUploadImage}
+              className="btn"
+              style={styles.addButton}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Image
+            </button>
           </div>
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Preview:</div>
@@ -79,6 +112,11 @@ export default class TextareaWithMarkdownPreview extends React.Component {
             </div>
           </div>
         </div>
+        <UploadImageDialog
+          isOpen={this.state.uploadImageOpen}
+          handleClose={this.handleCloseUploadImage}
+          uploadImage={this.handleUploadImage}
+        />
       </label>
     );
   }
