@@ -23,7 +23,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csf_script = create :csf_script, name: 'csf1'
     @csd_script = create :csd_script, name: 'csd1'
     @csp_script = create :csp_script, name: 'csp1'
-    @csa_script = create :csp_script, name: 'csa1'
+    @csa_script = create :csa_script, name: 'csa1'
 
     @csf_script_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
