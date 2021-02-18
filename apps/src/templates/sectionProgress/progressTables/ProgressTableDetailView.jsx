@@ -32,12 +32,6 @@ class ProgressTableDetailView extends React.Component {
     this.detailCellFormatter = this.detailCellFormatter.bind(this);
   }
 
-  getTableWidth(lessons) {
-    return lessons.reduce((totalWidth, lesson) => {
-      return totalWidth + ProgressTableDetailCell.widthForLevels(lesson.levels);
-    }, 0);
-  }
-
   levelIconHeaderFormatter(_, {columnIndex}) {
     return (
       <ProgressTableLevelIcon
@@ -59,14 +53,9 @@ class ProgressTableDetailView extends React.Component {
   }
 
   render() {
-    const columnWidths = this.props.scriptData.stages.map(lesson =>
-      ProgressTableDetailCell.widthForLevels(lesson.levels)
-    );
     return (
       <ProgressTableContainer
         onClickLesson={this.props.onClickLesson}
-        getTableWidth={lessons => this.getTableWidth(lessons)}
-        columnWidths={columnWidths}
         lessonCellFormatter={this.detailCellFormatter}
         includeHeaderArrows={true}
         extraHeaderFormatters={[this.levelIconHeaderFormatter]}
