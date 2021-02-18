@@ -6,7 +6,7 @@ module Services
   # Contains all code related to the generation, storage, and
   # retrieval of Lesson Plan PDFs
   module LessonPlanPdfs
-    DEBUG = true
+    DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
 
     # Module which should be prepended to the ScriptSeed Service Object to add
@@ -25,7 +25,7 @@ module Services
         # We specifically _wrap_ the method rather than simply extending it;
         # this is because we need to examine the state of the data prior to
         # seeding to determine whether or not we're going to want to generate a
-        # pdf, but of course the generation itself should happen after seeding.
+        # PDF, but of course the generation itself should happen after seeding.
         #
         # We also are wrapping this specific method rather than one of the
         # more-specific ones like import_script or import_lessons because all
@@ -39,6 +39,16 @@ module Services
           result
         end
       end
+    end
+
+    # Simple helper for comparing serialized_at and seeded_at values. Because
+    # these values sometimes come from json and sometimes come from the
+    # database, we want to do some normalization to make our inequality
+    # comparison more consistent.
+    def self.timestamps_equal(left, right)
+      left = Time.parse(left) if left.is_a? String
+      right = Time.parse(right) if right.is_a? String
+      return left.to_i == right.to_i
     end
 
     # Whether or not we should generate PDFs. Specifically, this
@@ -63,9 +73,9 @@ module Services
       return false unless script_data['properties'].fetch('is_migrated', false)
       return false if DCDO.get('disable_lesson_plan_pdf_generation', false)
 
-      new_version = script_data['serialized_at']
-      existing_version = Script.find_by(name: script_data['name']).seeded_at
-      new_version != existing_version
+      new_timestamp = script_data['serialized_at']
+      existing_timestamp = Script.find_by(name: script_data['name']).seeded_at
+      !timestamps_equal(new_timestamp, existing_timestamp)
     end
 
     def self.generate_pdfs(script)
@@ -98,13 +108,14 @@ module Services
 
     def self.get_base_url
       # Right now, this is obviously just using the raw S3 subdomain as the
-      # base url. This should work just fine, but if we wanted to be fancier,
-      # we could set the bucket up to be served from something like
-      # `lesson-plans.code.org` like we do for the cdo-tts bucket.
+      # base url. This should work fine for now, but ideally we'd like to set
+      # the bucket up to be served from a code.org subdomain so we can have a
+      # button which downloads the asset (the HTML download attribute only
+      # works with same-origin urls).
       "https://#{S3_BUCKET}.s3.amazonaws.com"
     end
 
-    # Build the full path of the lesson plan pdf for the given lesson. This
+    # Build the full path of the lesson plan PDF for the given lesson. This
     # will be based on not only the lesson's script but also the current
     # version of the script in the environment.
     #
