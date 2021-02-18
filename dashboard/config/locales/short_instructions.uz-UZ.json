@@ -22,7 +22,7 @@
         "Standalone_Artist_8": "Bu erda biz olti burchakni chizish uchun dasturlashtirilgan \"Shaklni chizish\" funksiyasi. Kodni ishga tushiring, nima qilayotganini ko'ring va keyin nima bo'lishini ko'rish uchun funktsiya bilan tajriba o'tkazing. Siz uni kvadratchalar, uchburchaklar yoki sakkizburchaklardan chizib bera olasizmi?",
         "Standalone_Artist_9": "Endi davom eting va xohlagan rasmingizni yarating! Sizda hattoki bo'sh vazifa mavjud, siz xohlagan narsani qilishingiz mumkin!",
         "Widget: Text Compression": "Matnda takrorlanishlarni (takrorlangan so'zlar yoki iboralarni) izlang. O'ngdagi lug'atga o'zingiz ko'rayotgan takrorlanishlaringizni kiriting. Siz lug'atga yozuvlarni kiritganingizda, yozuvning belgisi naqsh o'rniga matnga kiritiladi.",
-        "scrat 19": "“Agar-aks holda” blogi uchun yana bitta mashq. Bir urinishdayoq bajara olasanmi?",
+        "scrat 19": "“Agar-aks holda” bloki uchun yana bitta mashq. Bir urinishdayoq bajara olasanmi?",
         "Choose Your Own Adventure": "Siz o‘yin laboratoriyasida xohlagan narsani qilishingiz mumkin! Mana bu o‘yin laboratoriyasida o‘zingizning sarguzasht hikoyangizni tanlashga misol.",
         "Course 4 Artist Binary 3": "Siz ushbu naqshni faqat uchta ikkilik raqamlarni (0s va 1s) aylantirib chizishingiz mumkinmi?",
         "Course 4 Artist Binary 5": "11 marta takrorlangan qaysi 6 xonali ikkilik qator bu rasmni chizadi?",
@@ -2417,7 +2417,20 @@
         "courseA_collector_preLoops3": "Dasturning pastki qismiga ikkita \"E ->\" blokini va bitta `get treasure` \"xazina olish\" blokini biriktiring, so'ng \"Ishga tushirish\" tugmasini bosing.",
         "courseA_collector_preLoops4": "Ushbu jumboqni qanday yechishni aniqlay olasizmi?",
         "courseA_collector_preLoops5": "Ushbu jumboqni yechish uchun ushbu 2 qimmatbaho toshdan bittasini oling.",
-        "courseA_collector_preLoops6": "Ushbu jumboqni yechish uchun ikkala xazinani oling."
+        "courseA_collector_preLoops6": "Ushbu jumboqni yechish uchun ikkala xazinani oling.",
+        "bounce_10_sports": "Endi tepada gol bor! \"Darvozada to'p bo'lganda\" va \"To'p qo'ldan boy berilganda\" bloklariga \"hisob balli\" va \"raqib ballini to'plash\" bloklarini biriktiring. O'yinni o'tkazish uchun bloklar. Raqibingiz ikki barobar ball to'plashidan oldin qancha ball to'plashingizni ko'ring! ",
+        "bounce_11_sports": "Endi bloklarni \"ishga tushirilganda\" blokiga qo'shishingiz mumkin. Yangi \"yangi to'p otish\" blokini bir nechta joyga biriktirishingiz kerak. Shuningdek, sahnani yoki qo'l va to'p tezligini o'zgartirishga harakat qiling hamda raqib ikki barobar ball to'plashidan oldin qancha ball to'plashingizni ko'ring! ",
+        "bounce_12_sports": "O'zingizning o'yiningizni yarating! Bu yerda siz mas'ulsiz: barcha qoidalarni o'zgartirishingiz, sport turlarini aralashtirishingiz va ijod qilishingiz mumkin! Ishingiz tugagach, . do'stlaringiz o'yiningizni telefonlarida sinab ko'ra olishi uchun tugatish tugmachasini bosing.",
+        "bounce_1_sports": "Bayroqqa boring! Blokni \"chap o'q bosilganda\" blokiga biriktiring va o'yinchini bayroqqa yurdirish uchun \"Run\" tugmachasini bosing.",
+        "bounce_2_sports": "Hozir ikkita bayroq bor! O'yinchingizni ikki tomonga siljitish uchun blokni \"chap o'q bosilganda\" va \"o'ng o'q bosilganda\" bloklariga biriktiring.",
+        "bounce_5_sports": "Xokkey shaybasi o'yinchi tomon uchib ketmoqda! Bayroqqa urish uchun blokni \"to'p o'yinchiga urilganda\" blokiga biriktiring.",
+        "bounce_6_sports": "Endi bayroq tepada. Ushbu jumboqni yechish uchun bloklarni ikkala \"to'p urilganda\" bloklariga biriktirish kerak.",
+        "bounce_7_sports": "Bloklarning har biriga \"when\" - \"qachonki\" blokiga biriktiring. To'pni bayroqqa urilguncha sakrating.",
+        "frozen line": "Salom! Men Arendellik Elzaman. Menga bitta qator yaratishda yordam bering.",
+        "scrat 16": "Chochqayong'oq! Chochqayong'oq!Chochqayong'oq! Menga eng kam sonda blok ishlatib u yerga yetib borishim uchun \"if\" blokidan foydalaning.",
+        "scrat 17": "Xo'sh, amaliyot uchun buni yana takrorlaylik - bu avvalgidan unchalik farq qilmaydi, lekin devorga e'tibor bering!",
+        "scrat 18": "\"If-else\" bloklari shartni tekshiradi, so'ng u yoki bu amallarni bajaradi. Meni cho'chqayong'oqqa yetkazish uchun ushbu yangi blokdan foydalanishga harakat qiling.",
+        "scrat 20": "Menga murakkab labirintni yechishda yordam berish uchun atigi 3 ta blok qo'sha olasizmi? Agar siz buni to'g'ri qilsangiz, men uzunligimdan qat'iy nazar har qanday egri yo'ldan yurishim mumkin bo'ladi. Shoshiling! Muzlar eriyapti!"
       }
     }
   }
