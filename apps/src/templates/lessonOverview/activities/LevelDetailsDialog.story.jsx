@@ -46,6 +46,8 @@ const bubbleChoiceScriptLevel = {
   url: '/s/csd6-2020/stage/16/puzzle/9/page/1',
   levelNumber: 2,
   icon: 'fa-sitemap',
+  id: 'scriptlevel',
+  status: 'not_tried',
   level: {
     type: 'BubbleChoice',
     name: 'parentLevel'
@@ -60,7 +62,9 @@ const bubbleChoiceScriptLevel = {
       long_instructions:
         '## Best Class Pet \n### Here are three different ways to show the results of a vote for best class pet.',
       letter: 'a',
-      name: 'sublevel1'
+      name: 'sublevel1',
+      id: 'sublevel1',
+      status: 'not_tried'
     },
     {
       type: 'External',
@@ -71,7 +75,9 @@ const bubbleChoiceScriptLevel = {
       long_instructions:
         '## Best Class Pet \n### Here are three different ways to show the results of a vote for best class pet.',
       letter: 'b',
-      name: 'sublevel2'
+      name: 'sublevel2',
+      id: 'sublevel2',
+      status: 'not_tried'
     }
   ]
 };
