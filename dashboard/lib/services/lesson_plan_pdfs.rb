@@ -25,7 +25,7 @@ module Services
         # We specifically _wrap_ the method rather than simply extending it;
         # this is because we need to examine the state of the data prior to
         # seeding to determine whether or not we're going to want to generate a
-        # pdf, but of course the generation itself should happen after seeding.
+        # PDF, but of course the generation itself should happen after seeding.
         #
         # We also are wrapping this specific method rather than one of the
         # more-specific ones like import_script or import_lessons because all
@@ -105,7 +105,7 @@ module Services
       "https://#{S3_BUCKET}.s3.amazonaws.com"
     end
 
-    # Build the full path of the lesson plan pdf for the given lesson. This
+    # Build the full path of the lesson plan PDF for the given lesson. This
     # will be based on not only the lesson's script but also the current
     # version of the script in the environment.
     #
