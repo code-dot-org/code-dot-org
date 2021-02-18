@@ -10,6 +10,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
+import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 
 $(document).ready(function() {
   displayLessonOverview();
@@ -40,7 +41,9 @@ function displayLessonOverview() {
   }
 
   ReactDOM.render(
-    <Provider store={store}>{/* Put component here*/}</Provider>,
+    <Provider store={store}>
+      <StudentLessonOverview lesson={lessonData} />
+    </Provider>,
     document.getElementById('show-container')
   );
 }
