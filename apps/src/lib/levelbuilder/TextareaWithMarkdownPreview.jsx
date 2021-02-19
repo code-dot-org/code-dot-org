@@ -47,7 +47,8 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     name: PropTypes.string,
     inputRows: PropTypes.number,
     helpTip: PropTypes.string,
-    handleMarkdownChange: PropTypes.func.isRequired
+    handleMarkdownChange: PropTypes.func.isRequired,
+    hidePreview: PropTypes.bool
   };
 
   constructor(props) {
@@ -100,15 +101,17 @@ export default class TextareaWithMarkdownPreview extends React.Component {
               Image
             </button>
           </div>
-          <div style={styles.container}>
-            <div style={{marginBottom: 5}}>Preview:</div>
-            <div style={styles.preview}>
-              <SafeMarkdown
-                openExternalLinksInNewTab={true}
-                markdown={this.props.markdown}
-              />
+          {!this.props.hidePreview && (
+            <div style={styles.container}>
+              <div style={{marginBottom: 5}}>Preview:</div>
+              <div style={styles.preview}>
+                <SafeMarkdown
+                  openExternalLinksInNewTab={true}
+                  markdown={this.props.markdown}
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <UploadImageDialog
           isOpen={this.state.uploadImageOpen}
