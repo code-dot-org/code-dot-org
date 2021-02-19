@@ -780,9 +780,7 @@ FactoryGirl.define do
 
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
-    display_name do |lesson_group|
-      "#{lesson_group.key} Display Name"
-    end
+    display_name(&:key)
     script
 
     position do |lesson_group|
