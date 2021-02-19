@@ -9491,7 +9491,7 @@ columns:
     collation: 
     comment: 
   - &1070 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: autoplay_enabled
+    name: tts_autoplay_enabled
     table_name: sections
     sql_type_metadata: *24
     'null': false
@@ -13808,7 +13808,7 @@ columns_hash:
     pairing_allowed: *1067
     sharing_disabled: *1068
     hidden: *1069
-    autoplay_enabled: *1070
+    tts_autoplay_enabled: *1070
   seeded_s3_objects:
     id: *1071
     bucket: *1072
@@ -14504,4 +14504,4 @@ data_sources:
   users_view: true
   videos: true
   vocabularies: true
-version: 20210217024416
+version: 20210218164121
