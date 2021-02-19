@@ -20182,7 +20182,7 @@ en:
               name: Conditionals with the Farmer
             Simon Says:
               key: Simon Says
-              name: Simon Says
+              name: Follow the Algorithm
             Learning Sprites with Sprite Lab:
               key: Learning Sprites with Sprite Lab
               name: Swimming Fish with Sprite Lab
@@ -20889,8 +20889,12 @@ en:
           description: ''
           student_description: ''
         csa2-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
           name: csa2-pilot
           title: ''
           description_audience: ''

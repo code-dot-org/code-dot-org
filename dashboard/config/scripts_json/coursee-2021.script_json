@@ -203,7 +203,7 @@
     },
     {
       "key": "Simon Says",
-      "name": "Simon Says",
+      "name": "Follow the Algorithm",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -733,11 +733,23 @@
       }
     },
     {
-      "key": "28e23d2e-82bb-45b6-b116-0351dc438ab9",
+      "key": "f0a9525c-5225-44d5-9a87-99a70c73b197",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0a9525c-5225-44d5-9a87-99a70c73b197",
+        "lesson.key": "Simon Says",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "28e23d2e-82bb-45b6-b116-0351dc438ab9",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "28e23d2e-82bb-45b6-b116-0351dc438ab9",
@@ -748,26 +760,13 @@
     },
     {
       "key": "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780",
-        "lesson.key": "Simon Says",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "f0a9525c-5225-44d5-9a87-99a70c73b197",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f0a9525c-5225-44d5-9a87-99a70c73b197",
         "lesson.key": "Simon Says",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2021"
@@ -791,8 +790,7 @@
       "key": "23175482-f558-4d04-aec7-69a02820317e",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity",
-        "duration": 0
+        "name": "Bridging Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "23175482-f558-4d04-aec7-69a02820317e",
@@ -996,6 +994,19 @@
       }
     },
     {
+      "key": "54992eb5-cb3f-40b5-9f19-07eeda83e000",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54992eb5-cb3f-40b5-9f19-07eeda83e000",
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
       "key": "077242ad-8c8a-4b24-a139-a5e198abd405",
       "position": 1,
       "properties": {
@@ -1010,11 +1021,23 @@
       }
     },
     {
-      "key": "cbc7e090-b7ac-4fe6-8c32-9decc507e713",
+      "key": "7ccdedb5-15bf-4d75-9efb-e65349644266",
       "position": 2,
       "properties": {
-        "name": "Ethical Sharing",
+        "name": "Main Activity",
         "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ccdedb5-15bf-4d75-9efb-e65349644266",
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "cbc7e090-b7ac-4fe6-8c32-9decc507e713",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "cbc7e090-b7ac-4fe6-8c32-9decc507e713",
@@ -1025,7 +1048,7 @@
     },
     {
       "key": "d41159ef-433a-4547-a067-2695e41120ae",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap-Up",
         "duration": 10
@@ -1039,25 +1062,12 @@
     },
     {
       "key": "27b493bd-61be-4305-b021-8b40d59ee55a",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "27b493bd-61be-4305-b021-8b40d59ee55a",
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "7ccdedb5-15bf-4d75-9efb-e65349644266",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7ccdedb5-15bf-4d75-9efb-e65349644266",
         "lesson.key": "Digital Sharing",
         "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2021"
@@ -2062,12 +2072,6 @@
       "position": 1,
       "properties": {
         "description": "**Think-Pair-Share:** Think of hobby, sport, or activity that you know how to do well. What does it take to do it well? Are there times when you need think about multiple things or perform different actions at the same time?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Help students think about times when they must keep track of multiple tasks or instructions simultaneously. The main activity will get students performing silly actions, either in sequence or simultaneously. This will eventually lead to connections about a new way to write programs, but you don't need to get the discussion there yet.\r\n"
-          }
-        ],
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2079,7 +2083,7 @@
       "key": "9e06ffd5-03ee-42b2-a6aa-0c555dc3c9aa",
       "position": 2,
       "properties": {
-        "description": "* What parts of your body are you using? Does this change at different points?\r\n* Are there times when you need to stop one action before you can begin another? (For example, you must stop dribbling the basketball before you can shoot.)"
+        "description": "* What parts of your body are you using? Does this change at different points?\n* Are there times when you need to stop one action before you can begin another? (For example, you must stop dribbling the basketball before you can shoot.)\n\n**Goal:** Help students think about times when they must keep track of multiple tasks or instructions simultaneously. The main activity will get students performing silly actions, either in sequence or simultaneously. This will eventually lead to connections about a new way to write programs, but you don't need to get the discussion there yet.\n"
       },
       "seeding_key": {
         "activity_section.key": "9e06ffd5-03ee-42b2-a6aa-0c555dc3c9aa",
@@ -2099,12 +2103,23 @@
       }
     },
     {
+      "key": "9a413780-6d7b-4341-9041-e8a1e3f540b6",
+      "position": 1,
+      "properties": {
+        "name": "Follow the Algorithm",
+        "progression_name": "Follow the Algorithm - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a413780-6d7b-4341-9041-e8a1e3f540b6",
+        "lesson_activity.key": "f0a9525c-5225-44d5-9a87-99a70c73b197"
+      }
+    },
+    {
       "key": "97580972-40cc-4ec3-ba65-8d32c2751d86",
       "position": 1,
       "properties": {
         "description": "In the game Simon Says, one player takes the roll of “Simon” or the leader who gives command to other players. Players must follow the leader’s commands if and only if they are prefaced with the phrase “Simon Says”. The point of the game is to think quickly and to distinguish between real and fake commands. In this version of the game, the rules are a little different.",
-        "remarks": true,
-        "name": "Simon Says\r"
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "97580972-40cc-4ec3-ba65-8d32c2751d86",
@@ -2115,7 +2130,7 @@
       "key": "0a66d8ca-05c2-4614-8349-39caa7d993db",
       "position": 2,
       "properties": {
-        "description": "#### Rules\r\n\r\n*All commands should be prefaced with either “begin” or “stop”.*\r\n\r\nWhen players are told to “begin” a behavior, they should continue it until told to “stop”. For example, players should not told be told to clap once, but might be told to “begin clapping”. Their clapping should continue until they are told to “stop clapping” even if they are given other new behaviors in between. \r\n\r\n*The leader can also call for the players to “stop everything”.* \r\n\r\nThis should result in everyone just standing at rest regardless of all previous commands.\r\n\r\nYou as the teacher should take on the role of the leader. You can try make up your own sequences, but here are some you can try. Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion.\r\n\r\n#### Basic:\r\n* Begin marching in place.\r\n* Stop marching in place.\r\n* Begin clapping.\r\n* Stop clapping.\r\n* Begin marching in place.\r\n* Begin clapping.\r\n* Stop everything.\r\n\r\n**Debrief:** What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?\r\n\r\n#### Intermediate:\r\n* Begin waving your arms in the air.\r\n* Begin bobbing your head.\r\n* Stop waving your arms in the air.\r\n* Stop bobbing your head.\r\n* Begin shaking your knees.\r\n* Begin flapping your arms like a bird.\r\n* Stop shaking your knees.\r\n* Begin bobbing your head.\r\n* Begin marching in place.\r\n* Stop flapping your arms like a bird.\r\n* Stop everything.\r\n\r\n**Debrief:**\r\n\r\nWhat kinds of instructions caused people to make mistakes?\r\n\r\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\r\n\r\nWhy is it important to keep track of each behavior separately?\r\n\r\n#### Challenging\r\n\r\n* Begin crouching.\r\n* Begin tapping your head.\r\n* Stop crouching.\r\n* Stop tapping your head.\r\n* Begin jumping up and down.\r\n* Begin tapping your head.\r\n* Stop everything.\r\n* Begin clapping.\r\n* Begin flapping your arms like a bird.\r\n* Stop everything.\r\n* Begin crouching.\r\n* Begin jumping up and down.\r\n* Stop everything.\r\n* Begin tapping your knees.\r\n* Begin tapping your head.\r\n* Stop everything.\r\n* Begin spinning to the left.\r\n* Begin spinning to the right.\r\n* Stop spinning to the left.\r\n* Stop spinning to the right.\r\n\r\n**Debrief:** What happens if two behaviors seem to conflict with each other?\r\n\r\nWhat should you do when told to clap your hands and flap your arms at the same time?\r\n\r\nHow can you jump up and down while crouching?\r\n\r\nWhat happens if you need to tap your knees and your head at the same time?\r\n\r\nWhen you were told to spin in two opposite directions what did you see people do? What would happen if you were told to spin left and right at the exact same time?"
+        "description": "#### Rules\n\n*All commands should be prefaced with either “begin” or “stop”.*\n\nWhen players are told to “begin” a behavior, they should continue it until told to “stop”. For example, players should not told be told to clap once, but might be told to “begin clapping”. Their clapping should continue until they are told to “stop clapping” even if they are given other new behaviors in between. \n\n*The leader can also call for the players to “stop everything”.* \n\nThis should result in everyone just standing at rest regardless of all previous commands.\n\nYou as the teacher should take on the role of the leader. You can try make up your own sequences, but here are some you can try. Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion.\n\n#### Basic:\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n**Debrief:** What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?\n\n#### Intermediate:\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n**Debrief:**\n\nWhat kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?\n\n#### Challenging\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n**Debrief:** What happens if two behaviors seem to conflict with each other?\nWhat should you do when told to clap your hands and flap your arms at the same time?\nHow can you jump up and down while crouching?\nWhat happens if you need to tap your knees and your head at the same time?\nWhen you were told to spin in two opposite directions what did you see people do? What would happen if you were told to spin left and right at the exact same time?"
       },
       "seeding_key": {
         "activity_section.key": "0a66d8ca-05c2-4614-8349-39caa7d993db",
@@ -2126,8 +2141,7 @@
       "key": "9751f5fd-eb6c-48bc-b3fc-6b61cc318a68",
       "position": 3,
       "properties": {
-        "description": "If you want to make things even more complicated, you can consider changing the rules so that only some players follow some commands. For example, you could try commands like “All girls begin spinning to the left”, “All boys begin clapping your hands”, or “Everyone stop everything.”",
-        "name": "Extension\r"
+        "description": "\n####Extension\n\nIf you want to make things even more complicated, you can consider changing the rules so that only some players follow some commands. For example, you could try commands like “All girls begin spinning to the left”, “All boys begin clapping your hands”, or “Everyone stop everything.”"
       },
       "seeding_key": {
         "activity_section.key": "9751f5fd-eb6c-48bc-b3fc-6b61cc318a68",
@@ -2138,22 +2152,12 @@
       "key": "51b3125a-1efe-4f25-a05e-3e5250ceff18",
       "position": 1,
       "properties": {
-        "description": "**Journal:** Think back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
-        "name": "Reflection\r"
+        "description": "Think back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
+        "name": "Journaling"
       },
       "seeding_key": {
         "activity_section.key": "51b3125a-1efe-4f25-a05e-3e5250ceff18",
         "lesson_activity.key": "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780"
-      }
-    },
-    {
-      "key": "9a413780-6d7b-4341-9041-e8a1e3f540b6",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "9a413780-6d7b-4341-9041-e8a1e3f540b6",
-        "lesson_activity.key": "f0a9525c-5225-44d5-9a87-99a70c73b197"
       }
     },
     {
@@ -2172,7 +2176,7 @@
       "key": "f97e8c9b-cbce-4b38-a2ff-1e1356a6ab54",
       "position": 1,
       "properties": {
-        "description": "This demostration and discussion can help students make the connection from the previous unplugged lesson \"Simon Says\" into the new Sprite Lab environment."
+        "description": "This demonstration and discussion can help students make the connection from the previous unplugged lesson \"Follow the Algorithm\" into the new Sprite Lab environment."
       },
       "seeding_key": {
         "activity_section.key": "f97e8c9b-cbce-4b38-a2ff-1e1356a6ab54",
@@ -2183,15 +2187,13 @@
       "key": "28c00081-75fd-4379-8855-6546c064c4a6",
       "position": 2,
       "properties": {
-        "description": "Using a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
+        "description": "\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a sprite to begin and start the same behavior won't result in any observable effect because there is no time between each action. \r\n\r\nIf students bring up time, such as making a behavior happen for a set duration, it can be helpful to reframe things by asking \"**When** should the behavior stop?\" Programs like this will rely on events to make things start and stop as desired.\r\n"
           }
-        ],
-        "name": "[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "28c00081-75fd-4379-8855-6546c064c4a6",
@@ -2214,7 +2216,7 @@
       "position": 1,
       "properties": {
         "description": "**Goal:** Today, students will be programming their own Fish Tank. They’ll begin by learning how to put some sprites on the screen, then they will make them move. Finally, they’ll customize their fish tank to add whatever creatures and objects they want.",
-        "name": "Online Puzzles\r"
+        "name": "Swimming Fish with Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "e83fa08f-d3bb-4e23-b749-ecb175cbce13",
@@ -2225,10 +2227,9 @@
       "key": "65fd5465-cd74-4e68-a4de-c174e2cbd8f6",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
+        "description": "**Transition:** Move students to their computers. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n"
           }
@@ -2243,7 +2244,6 @@
       "key": "331e6451-5472-4491-bf96-d630d7f902a4",
       "position": 3,
       "properties": {
-        "name": "Introducing Sprite Lab",
         "progression_name": "Introducing Sprite Lab"
       },
       "seeding_key": {
@@ -2255,7 +2255,6 @@
       "key": "75de5d52-becb-4805-82d8-5be30d0dca7d",
       "position": 4,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2267,7 +2266,6 @@
       "key": "56aebeea-5b5c-4acd-838c-2906fbf5700d",
       "position": 5,
       "properties": {
-        "name": "Mini-Project: Swimming Fish",
         "progression_name": "Mini-Project: Swimming Fish"
       },
       "seeding_key": {
@@ -2279,7 +2277,6 @@
       "key": "d344a21b-2267-48e7-9b27-b3fe923209e9",
       "position": 6,
       "properties": {
-        "name": "How to Make a Sprite",
         "progression_name": "How to Make a Sprite"
       },
       "seeding_key": {
@@ -2291,7 +2288,6 @@
       "key": "30997374-8929-4152-b55b-94e459e3ee58",
       "position": 7,
       "properties": {
-        "name": "Mini-Project: Swimming Fish (continued)",
         "progression_name": "Mini-Project: Swimming Fish (continued)"
       },
       "seeding_key": {
@@ -2303,7 +2299,6 @@
       "key": "83778d93-2959-4776-94d0-e82985346914",
       "position": 8,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2315,6 +2310,7 @@
       "key": "4a6ce720-3271-41a8-8f69-23473046c28a",
       "position": 9,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "4a6ce720-3271-41a8-8f69-23473046c28a",
@@ -2352,12 +2348,11 @@
         "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an event is initiated.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n"
           }
         ],
-        "name": "Online Puzzles\r"
+        "name": "Alien Dance Party with Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "9f5b1627-f04c-42a1-8955-17c994ad2b18",
@@ -2379,7 +2374,6 @@
       "key": "96bbba0e-e5f3-443f-b2c6-f228953a7b98",
       "position": 3,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2391,8 +2385,7 @@
       "key": "1620d22b-10cf-4c91-bb52-cda64a75b666",
       "position": 4,
       "properties": {
-        "name": "Video",
-        "progression_name": "Video"
+        "progression_name": "Sprites in Action"
       },
       "seeding_key": {
         "activity_section.key": "1620d22b-10cf-4c91-bb52-cda64a75b666",
@@ -2403,7 +2396,6 @@
       "key": "5661328f-256c-4f27-988b-ea102fde1cbd",
       "position": 5,
       "properties": {
-        "name": "Mini-Project: Alien Dance Moves",
         "progression_name": "Mini-Project: Alien Dance Moves"
       },
       "seeding_key": {
@@ -2415,7 +2407,6 @@
       "key": "dc08f2e2-dab1-43b0-8349-9ce3161eec83",
       "position": 6,
       "properties": {
-        "name": "Mini-Project: Alien Dance Party",
         "progression_name": "Mini-Project: Alien Dance Party"
       },
       "seeding_key": {
@@ -2517,8 +2508,7 @@
       "key": "b796d56d-673e-4011-ad44-54ddb101224b",
       "position": 2,
       "properties": {
-        "description": "Remind students of information that is safe to share online and information that is strictly private.\r\n\r\n| SAFE - Personal Information  | UNSAFE - Private Information  |\r\n| ------------- | ------------- |\r\n| Your favorite food<br/>Your opinion <br/><i>(though it shoud be done respectfully)</i><br/>First name <br/><i>(with permission)</i>  | Mother's maiden name<br/>Social Security number<br/>Your date of birth<br/>Parents' credit card information<br/>Phone number  |\r\n\r\n<br/>\r\n\r\nDiscuss other examples of the two categories above.",
-        "name": "Review of \"Personal and Private Information\"\r"
+        "description": "\n###Review of \"Personal and Private Information\"\n\nRemind students of information that is safe to share online and information that is strictly private.\n\n| SAFE - Personal Information  | UNSAFE - Private Information  |\n| ------------- | ------------- |\n| Your favorite food<br/>Your opinion <br/><i>(though it shoud be done respectfully)</i><br/>First name <br/><i>(with permission)</i>  | Mother's maiden name<br/>Social Security number<br/>Your date of birth<br/>Parents' credit card information<br/>Phone number  |\n\n<br/>\n\nDiscuss other examples of the two categories above."
       },
       "seeding_key": {
         "activity_section.key": "b796d56d-673e-4011-ad44-54ddb101224b",
@@ -2532,7 +2522,6 @@
         "description": "**Goal:** Today, students will be creating their own interactive posters with SpriteLab! They'll begin by working through a few examples centered on \"Rikki\", a fictional girl who needs their help deciding what information she should share on her poster. Then, after a quick introduction on creating custom sprite costumes, students will be free to create their posters to their liking.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Before beginning, be sure to review your classroom's policy on appropriate language and behavior. Students will be creating custom text and images for this lesson. This means they should be mindful of concepts covered in the personal and private information lesson, as well as general classroom etiquette. As students work, be sure to verify that their posters do not violate your classroom policies.\r\n"
           }
@@ -2559,7 +2548,6 @@
       "key": "0b71a326-8b01-4631-8781-efedc2cd6d07",
       "position": 3,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2571,7 +2559,6 @@
       "key": "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d",
       "position": 4,
       "properties": {
-        "name": "Mini-project: Interactive Poster",
         "progression_name": "Mini-project: Interactive Poster"
       },
       "seeding_key": {
@@ -2592,10 +2579,21 @@
       }
     },
     {
+      "key": "91af6c49-cd4c-461d-bf1d-885991eb2b60",
+      "position": 1,
+      "properties": {
+        "description": "###Expressive Behaviors (90-120 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + English Language Arts + Math**\n\n[Expressive Behaviors](https://docs.google.com/document/d/1Fi_gK0SS35_uQH5rcC3DMn_dCfUDnmnxmabXMyYeUpc/edit#heading=h.vowrbq6ykmt2) is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community.  By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web. Students will further explore the CS concept of events as they provide feedback to a peer.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.4.2.D:** Use precise language and domain-specific vocabulary to inform about or explain the topic.\n\n- **CCSS.ELA-LITERACY.SL.4.4:** Report on a topic or text, tell a story, or recount an experience in an organized manner, using appropriate facts and relevant, descriptive details to support main ideas or themes; speak clearly at an understandable pace.\n\n- **CCSS.MATH.CONTENT.4.MD.C.5.A:** An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a \"one-degree angle,\" and can be used to measure angles.\n\n- **CCSS.MATH.CONTENT.4.MD.C.5.B:** An angle that turns through n one-degree angles is said to have an angle measure of n degrees.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "91af6c49-cd4c-461d-bf1d-885991eb2b60",
+        "lesson_activity.key": "54992eb5-cb3f-40b5-9f19-07eeda83e000"
+      }
+    },
+    {
       "key": "9f56b739-e482-4c76-8b68-e903bfe95e65",
       "position": 1,
       "properties": {
-        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \r\n\r\n**Watch:** Have students watch the one-minute [r digital-sharing-video].\r\n*You may need to play it two or three times.*"
+        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://youtu.be/o_oDsBeBxko) video.\n*You may need to play it two or three times.*"
       },
       "seeding_key": {
         "activity_section.key": "9f56b739-e482-4c76-8b68-e903bfe95e65",
@@ -2615,10 +2613,22 @@
       }
     },
     {
+      "key": "bba24018-1d90-4a18-b596-eaab2e50567e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Digital Sharing - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "bba24018-1d90-4a18-b596-eaab2e50567e",
+        "lesson_activity.key": "7ccdedb5-15bf-4d75-9efb-e65349644266"
+      }
+    },
+    {
       "key": "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169",
       "position": 1,
       "properties": {
-        "description": "**Activity:** Have all of your students stand up. Begin reading the list of ways to create content below. Instruct students to sit down as soon as they can answer “Yes” to one of the prompts.\r\n\r\n- Have you ever made a video (on a camera, phone, iPad, or computer) and sent it to a family member or posted it online?\r\n- Have you taken a photo and sent to a family member or posted it online?\r\n- Have you created a piece of art to share with your family and friends?\r\n- Have you made up a song to make your friends laugh? Or a sad song to make them cry?\r\n- Have you written a poem for your mom or dad on their birthday?\r\n\r\n*Keep asking similar questions until the entire class is seated.*\r\n\r\n**Discuss:** \r\n\r\n- How did it feel to produce something creative?\r\n- How did you feel when you were able to share your creation with others?\r\n- How do you feel when you view or listen to other people’s creations?\r\n\r\n*Encourage all responses.*\r\n\r\nHelp students feel the joy of creating something. Creating can be a lot of hard work, but it is one of the most rewarding things we do. Sharing what we create is fun, and it can encourage more creativity and art. As we get older, we have more and more opportunities to share our work and explore media and art that other people have created. We want to make sure we are always fair when using others’ art and creative work.\r\n\r\n**Say:** Remember, copyright protects all kinds of creative work so that artists/creators can get paid for their eﬀort. This includes, original writing (stories), art, photographs, audio, images, music, song lyrics, even the doodle you drew on your napkin at lunch. It doesn't matter if it was created by a famous artist or by you. When you make an original work, you get to decide who can: \r\n\r\n- make copies \r\n- distribute copies\r\n- display or perform the work in public\r\n- make spin‐oﬀs; we call these derivatives (for example, like a book being made into a movie) \r\n\r\nThese rights are given to artists and creators to encourage them to make even more creative work.\r\n\r\n**Think:** Have students think back to the art creation prompt where they first sat down. Inform them that they created an original work with legal protection. Congratulations! \r\n\r\n**Pair:**  \r\n\r\n- How might you know if something is copyrighted? \r\n  - *[The circle © indicates copyright, but copyright protection exists even without the symbol. Creators have ownership over their work, unless they sell it to someone else.]* \r\n- Where have you seen the copyright symbol? \r\n  - [At the front of books, in movies, on images, posters, etc.] \r\n\r\n**Share:** Encourage students to share their answers with the class.\r\n \r\n**Demonstrate:** Show students how to draw a copyright symbol and write the year next to it. When you make something creative like this, it’s automatically protected by copyright, even without the copyright symbol. \r\n\r\n**Discuss:** \r\n\r\n- How does it feel when you share your things with someone else? \r\n- What does it feel like when someone takes your things and shares them without your permission?\r\n\r\nThe same principles of respect and fairness apply when we share our work or someone else’s work online."
+        "description": "**Activity:** Have all of your students stand up. Begin reading the list of ways to create content below. Instruct students to sit down as soon as they can answer “Yes” to one of the prompts.\r\n\r\n- Have you ever made a video (on a camera, phone, iPad, or computer) and sent it to a family member or posted it online?\r\n- Have you taken a photo and sent to a family member or posted it online?\r\n- Have you created a piece of art to share with your family and friends?\r\n- Have you made up a song to make your friends laugh? Or a sad song to make them cry?\r\n- Have you written a poem for your mom or dad on their birthday?\r\n\r\n*Keep asking similar questions until the entire class is seated.*\r\n\r\n**Discuss:** \r\n\r\n- How did it feel to produce something creative?\r\n- How did you feel when you were able to share your creation with others?\r\n- How do you feel when you view or listen to other people’s creations?\r\n\r\n*Encourage all responses.*\r\n\r\nHelp students feel the joy of creating something. Creating can be a lot of hard work, but it is one of the most rewarding things we do. Sharing what we create is fun, and it can encourage more creativity and art. As we get older, we have more and more opportunities to share our work and explore media and art that other people have created. We want to make sure we are always fair when using others’ art and creative work.\r\n\r\n**Say:** Remember, copyright protects all kinds of creative work so that artists/creators can get paid for their eﬀort. This includes, original writing (stories), art, photographs, audio, images, music, song lyrics, even the doodle you drew on your napkin at lunch. It doesn't matter if it was created by a famous artist or by you. When you make an original work, you get to decide who can: \r\n\r\n- make copies \r\n- distribute copies\r\n- display or perform the work in public\r\n- make spin‐oﬀs; we call these derivatives (for example, like a book being made into a movie) \r\n\r\nThese rights are given to artists and creators to encourage them to make even more creative work.\r\n\r\n**Think:** Have students think back to the art creation prompt where they first sat down. Inform them that they created an original work with legal protection. Congratulations! \r\n\r\n**Pair:**  \r\n\r\n- How might you know if something is copyrighted? \r\n  - *[The circle © indicates copyright, but copyright protection exists even without the symbol. Creators have ownership over their work, unless they sell it to someone else.]* \r\n- Where have you seen the copyright symbol? \r\n  - [At the front of books, in movies, on images, posters, etc.] \r\n\r\n**Share:** Encourage students to share their answers with the class.\r\n \r\n**Demonstrate:** Show students how to draw a copyright symbol and write the year next to it. When you make something creative like this, it’s automatically protected by copyright, even without the copyright symbol. \r\n\r\n**Discuss:** \r\n\r\n- How does it feel when you share your things with someone else? \r\n- What does it feel like when someone takes your things and shares them without your permission?\r\n\r\nThe same principles of respect and fairness apply when we share our work or someone else’s work online.",
+        "name": "Ethical Sharing"
       },
       "seeding_key": {
         "activity_section.key": "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169",
@@ -2629,8 +2639,7 @@
       "key": "2bab17fa-7a64-4ae1-a9c3-30d942674dd1",
       "position": 2,
       "properties": {
-        "description": "**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.",
-        "name": "To Share or Not to Share?\r"
+        "description": "\n####To Share or Not to Share?\n\n**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.\n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://youtu.be/o_oDsBeBxko) video.\n*You may need to play it two or three times.*\n\n**Discussion Goal:** \n###Not Okay to Share\n- Have you ever transferred songs to your friend’s MP3 player? Is that OK? \n    - [If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.]\n- What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie? \n    - [No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.]\n    -  How else could you get an authorized (legal) copy of the movie for your phone? \n        -  [iTunes or Amazon sell movies legally.]\n\n### Okay to Share\n\n- I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair? \n     - [Yes, this is OK to share because I made it — I own the copyright.]\n- What about a song I wrote? Can I share that? . . . Who gets to decide? \n     - [“That’s right, I do.”] \n- What will happen when I share it? \n     - [Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”]\n- Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical? \n     - [Yes.] \n     - Why is this share OK? \n         - [Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” ]\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2bab17fa-7a64-4ae1-a9c3-30d942674dd1",
@@ -2638,41 +2647,8 @@
       }
     },
     {
-      "key": "e4386d50-a088-40f7-a4b6-5f8e2032de40",
-      "position": 3,
-      "properties": {
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "### Not Okay to Share\r\n\r\n- Have you ever transferred songs to your friend’s MP3 player? Is that OK? \r\n    - [If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.]\r\n- What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie? \r\n    - [No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.]\r\n    -  How else could you get an authorized (legal) copy of the movie for your phone? \r\n        -  [iTunes or Amazon sell movies legally.]\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e4386d50-a088-40f7-a4b6-5f8e2032de40",
-        "lesson_activity.key": "cbc7e090-b7ac-4fe6-8c32-9decc507e713"
-      }
-    },
-    {
-      "key": "88abaa5c-ebf7-4218-b8ed-f268bc51533e",
-      "position": 4,
-      "properties": {
-        "description": "discussion!!!discussion-0<!-- place where you'd like the icon --> **Watch:** Have students watch the one-minute [r digital-sharing-video].\r\n*You may need to play it two or three times.*",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "### Okay to Share\r\n\r\n- I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair? \r\n     - [Yes, this is OK to share because I made it — I own the copyright.]\r\n- What about a song I wrote? Can I share that? . . . Who gets to decide? \r\n     - [“That’s right, I do.”] \r\n- What will happen when I share it? \r\n     - [Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”]\r\n- Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical? \r\n     - [Yes.] \r\n     - Why is this share OK? \r\n         - [Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” ]\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "88abaa5c-ebf7-4218-b8ed-f268bc51533e",
-        "lesson_activity.key": "cbc7e090-b7ac-4fe6-8c32-9decc507e713"
-      }
-    },
-    {
       "key": "767262c7-b5ce-4ce9-beda-05e7dc425875",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "As we watch the video, decide if the music is OK to share or not.\r\n\r\n**Discuss:** What did you think of that? How do you think you would feel if you wrote a song and people shared it without asking for your permission? When we share digital ﬁles by:\r\n\r\n- sending pictures or songs through email\r\n- copying songs from our MP3 player to our friend’s computer\r\n- copying a movie from a DVD to all our friends’ computers"
       },
@@ -2683,7 +2659,7 @@
     },
     {
       "key": "7d8c55c5-c431-4f24-8823-f9c8e13bc085",
-      "position": 6,
+      "position": 4,
       "properties": {
         "description": "That's not just sharing, it's making new copies!",
         "tips": [
@@ -2700,7 +2676,7 @@
     },
     {
       "key": "ba6837a2-c937-44f6-bc40-996abb3e6ec8",
-      "position": 7,
+      "position": 5,
       "properties": {
         "description": "**Discuss:** If you were one of these characters in the video, what could you do to share fairly? What about other sharing situations? What other ethical considerations are there?\n\n(Some acceptable responses:)\n\n- Send your friend a link to the artist’s YouTube channel where she can listen to the song.\n- Help your friend buy the song from an online store that you can trust because it’s used by a large online community, like iTunes or Amazon.  \n \nAsk yourself: Who owns this? Do I have permission to share? Do I have a right to make a copy? Am I being fair to everyone involved?"
       },
@@ -2741,16 +2717,6 @@
       "seeding_key": {
         "activity_section.key": "12028f3b-0333-4a2a-9059-74c7ea960ebd",
         "lesson_activity.key": "27b493bd-61be-4305-b021-8b40d59ee55a"
-      }
-    },
-    {
-      "key": "bba24018-1d90-4a18-b596-eaab2e50567e",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bba24018-1d90-4a18-b596-eaab2e50567e",
-        "lesson_activity.key": "7ccdedb5-15bf-4d75-9efb-e65349644266"
       }
     },
     {
@@ -5214,7 +5180,8 @@
       "properties": {
         "level_keys": [
           "SimonSays-Unplugged_2021"
-        ]
+        ],
+        "progression": "Follow the Algorithm - Unplugged Activity"
       },
       "named_level": null,
       "bonus": false,
@@ -5473,7 +5440,8 @@
       "properties": {
         "level_keys": [
           "spritelab_extras_repeat_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5522,7 +5490,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video",
+        "progression": "Sprites in Action",
         "level_keys": [
           "CDEF_video_SpritesInAction_2021"
         ]
@@ -5913,7 +5881,8 @@
       "properties": {
         "level_keys": [
           "DigitalSharing-Unplugged_2021"
-        ]
+        ],
+        "progression": "Digital Sharing - Unplugged Activity"
       },
       "named_level": null,
       "bonus": false,
@@ -11030,6 +10999,16 @@
       "seeding_key": {
         "lesson.key": "Conditionals",
         "objective.key": "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc"
+      }
+    },
+    {
+      "key": "a937dee9-2cd3-4978-8f88-09f8af577395",
+      "properties": {
+        "description": "begin to make connections about a new way to write programs"
+      },
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "objective.key": "a937dee9-2cd3-4978-8f88-09f8af577395"
       }
     },
     {
