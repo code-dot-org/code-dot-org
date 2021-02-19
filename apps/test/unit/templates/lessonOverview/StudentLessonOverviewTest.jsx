@@ -1,0 +1,116 @@
+import React from 'react';
+import {shallow} from 'enzyme';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {UnconnectedStudentLessonOverview as StudentLessonOverview} from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
+import {
+  fakeStudentAnnouncement,
+  fakeTeacherAndStudentAnnouncement
+} from '../../code-studio/components/progress/FakeAnnouncementsTestData';
+
+describe('StudentLessonOverview', () => {
+  let defaultProps;
+  beforeEach(() => {
+    defaultProps = {
+      lesson: {
+        unit: {
+          displayName: 'Unit 1',
+          link: '/s/unit-1',
+          lessons: [
+            {
+              key: 'lesson-1',
+              position: 1,
+              displayName: 'Lesson 1',
+              link: '/lessons/1',
+              lockable: false
+            },
+            {
+              key: 'lesson-2',
+              position: 2,
+              displayName: 'Lesson 2',
+              link: '/lessons/2',
+              lockable: false
+            }
+          ]
+        },
+        key: 'lesson-1',
+        position: 1,
+        displayName: 'Lesson 1',
+        overview: 'Lesson Overview',
+        resources: {
+          Teacher: [
+            {
+              key: 'teacher-resource',
+              name: 'Teacher Resource',
+              url: 'fake.url',
+              type: 'Slides'
+            }
+          ],
+          Student: [
+            {
+              key: 'student-resource',
+              name: 'Student Resource',
+              url: 'fake.url',
+              download_url: 'download.fake.url',
+              type: 'Activity Guide'
+            }
+          ]
+        },
+        vocabularies: [
+          {
+            key: 'Algorithm',
+            word: 'Algorithm',
+            definition: 'A list of steps to finish a task.'
+          }
+        ]
+      },
+      activities: [],
+      announcements: [],
+      isSignedIn: true
+    };
+  });
+
+  it('renders default props', () => {
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
+    const navLink = wrapper.find('a').at(0);
+    expect(navLink.props().href).to.contain('/s/unit-1');
+    expect(navLink.contains('< Unit 1')).to.be.true;
+
+    expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
+
+    expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+
+    const safeMarkdowns = wrapper.find('SafeMarkdown');
+    expect(safeMarkdowns.at(0).props().markdown).to.contain('Lesson Overview');
+
+    const inlineMarkdowns = wrapper.find('InlineMarkdown');
+
+    // The first contains the vocabulary
+    expect(inlineMarkdowns.at(0).props().markdown).to.contain(
+      '**Algorithm** - A list of steps to finish a task.'
+    );
+  });
+
+  it('has no announcements if none provided', () => {
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
+  });
+
+  it('has student announcements', () => {
+    const wrapper = shallow(
+      <StudentLessonOverview
+        {...defaultProps}
+        announcements={[
+          fakeStudentAnnouncement,
+          fakeTeacherAndStudentAnnouncement
+        ]}
+      />
+    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+  });
+
+  it('displays the student resources', () => {
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
+    const resourceSection = wrapper.find('#resource-section');
+    assert.equal(resourceSection.find('ul').length, 1);
+  });
+});
