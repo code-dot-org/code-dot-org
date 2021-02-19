@@ -35,6 +35,8 @@ else
 fi
 
 if [ -n "$DRONE" ]; then
+  echo "codecov env"
+  env | grep CODECOV
   CODECOV=/tmp/codecov.sh
   curl -s https://codecov.io/bash > ${CODECOV}
   chmod +x ${CODECOV}
