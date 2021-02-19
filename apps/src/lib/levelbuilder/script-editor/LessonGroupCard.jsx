@@ -17,7 +17,7 @@ import {
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import TextareaWithImageUpload from '@cdo/apps/lib/levelbuilder/TextareaWithImageUpload';
 
 const styles = {
   checkbox: {
@@ -290,21 +290,19 @@ class LessonGroupCard extends Component {
               />
             </div>
             <div>
-              <TextareaWithMarkdownPreview
+              <TextareaWithImageUpload
                 markdown={this.props.lessonGroup.description}
                 label={'Description'}
                 name={'description'}
                 inputRows={1}
                 handleMarkdownChange={this.handleChangeDescription}
-                hidePreview={true}
               />
-              <TextareaWithMarkdownPreview
+              <TextareaWithImageUpload
                 markdown={this.props.lessonGroup.bigQuestions}
                 label={'Big Questions'}
                 name={'big_questions'}
                 inputRows={1}
                 handleMarkdownChange={this.handleChangeBigQuestions}
-                hidePreview={true}
               />
             </div>
           </div>
