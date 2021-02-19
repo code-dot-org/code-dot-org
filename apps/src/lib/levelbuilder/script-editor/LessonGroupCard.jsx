@@ -17,6 +17,7 @@ import {
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const styles = {
   checkbox: {
@@ -289,32 +290,20 @@ class LessonGroupCard extends Component {
               />
             </div>
             <div>
-              <label>
-                Description
-                <textarea
-                  value={this.props.lessonGroup.description}
-                  rows={Math.max(
-                    this.props.lessonGroup.description.split(/\r\n|\r|\n/)
-                      .length + 1,
-                    2
-                  )}
-                  style={styles.input}
-                  onChange={this.handleChangeDescription}
-                />
-              </label>
-              <label>
-                Big Questions
-                <textarea
-                  value={this.props.lessonGroup.bigQuestions}
-                  rows={Math.max(
-                    this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
-                      .length + 1,
-                    2
-                  )}
-                  style={styles.input}
-                  onChange={this.handleChangeBigQuestions}
-                />
-              </label>
+              <TextareaWithMarkdownPreview
+                markdown={this.props.lessonGroup.description}
+                label={'Description'}
+                name={'description'}
+                inputRows={1}
+                handleMarkdownChange={this.handleChangeDescription}
+              />
+              <TextareaWithMarkdownPreview
+                markdown={this.props.lessonGroup.bigQuestions}
+                label={'Big Questions'}
+                name={'big_questions'}
+                inputRows={1}
+                handleMarkdownChange={this.handleChangeBigQuestions}
+              />
             </div>
           </div>
         )}
