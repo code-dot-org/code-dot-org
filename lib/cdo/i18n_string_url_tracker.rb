@@ -151,7 +151,6 @@ class I18nStringUrlTracker
           buffer_size_max: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size_max).to_s
         }
       )
-      # return without adding the data to the buffer
       flush
     end
   end
