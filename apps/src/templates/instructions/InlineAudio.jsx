@@ -286,51 +286,46 @@ class InlineAudio extends React.Component {
       this.getAudioSrc()
     ) {
       return (
-        <div>
+        <div
+          className="inline-audio"
+          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
+          onMouseOver={this.toggleHover}
+          onMouseOut={this.toggleHover}
+          onClick={this.toggleAudio}
+        >
           <div
-            className="inline-audio"
             style={[
-              styles.wrapper,
-              this.props.style && this.props.style.wrapper
+              styles.button,
+              styles.volumeButton,
+              this.props.style && this.props.style.button,
+              this.state.hover && styles.hover
             ]}
-            onMouseOver={this.toggleHover}
-            onMouseOut={this.toggleHover}
-            onClick={this.toggleAudio}
+            id="volume"
           >
-            <div
+            <i
+              className={'fa fa-volume-up'}
               style={[
-                styles.button,
-                styles.volumeButton,
-                this.props.style && this.props.style.button,
-                this.state.hover && styles.hover
+                styles.buttonImg,
+                this.props.style && this.props.style.buttonImg
               ]}
-              id="volume"
-            >
-              <i
-                className={'fa fa-volume-up'}
-                style={[
-                  styles.buttonImg,
-                  this.props.style && this.props.style.buttonImg
-                ]}
-              />
-            </div>
-            <div
-              className="playPause"
+            />
+          </div>
+          <div
+            className="playPause"
+            style={[
+              styles.button,
+              styles.playPauseButton,
+              this.props.style && this.props.style.button,
+              this.state.hover && styles.hover
+            ]}
+          >
+            <i
+              className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
               style={[
-                styles.button,
-                styles.playPauseButton,
-                this.props.style && this.props.style.button,
-                this.state.hover && styles.hover
+                styles.buttonImg,
+                this.props.style && this.props.style.buttonImg
               ]}
-            >
-              <i
-                className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
-                style={[
-                  styles.buttonImg,
-                  this.props.style && this.props.style.buttonImg
-                ]}
-              />
-            </div>
+            />
           </div>
         </div>
       );
