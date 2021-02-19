@@ -339,7 +339,11 @@ class FilesApi < Sinatra::Base
 
     # Block libraries with PII/profanity from being published.
     if endpoint == 'libraries'
-      share_failure = ShareFiltering.find_failure(body, request.locale)
+      begin
+        share_failure = ShareFiltering.find_failure(body, request.locale)
+      rescue OpenURI::HTTPError => e
+        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+      end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361

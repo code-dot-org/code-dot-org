@@ -54,12 +54,14 @@ export default class UnitCalendar extends React.Component {
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired
   };
+
   constructor(props) {
     super(props);
     this.state = {
       hovering: ''
     };
   }
+
   generateSchedule = () => {
     const {lessons, weeklyInstructionalMinutes} = this.props;
     const lessonsCopy = _.cloneDeep(lessons);
