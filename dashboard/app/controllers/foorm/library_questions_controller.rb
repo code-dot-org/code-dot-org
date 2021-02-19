@@ -3,6 +3,7 @@ module Foorm
   class LibraryQuestionsController < ApplicationController
     before_action :require_levelbuilder_mode_or_test_env
     before_action :authenticate_user!
+    before_action :require_question, only: [:create, :update]
     load_and_authorize_resource
 
     # POST /foorm/library_questions
@@ -25,7 +26,7 @@ module Foorm
         {
           library_name: library.name,
           library_version: library.version,
-          question: JSON.pretty_generate(get_question),
+          question: JSON.pretty_generate(params[:question].as_json),
           question_name: params[:name],
           published: true
         }
@@ -58,7 +59,8 @@ module Foorm
 
     # PUT /foorm/library_questions/:id/update
     def update
-      @library_question.question = JSON.pretty_generate(get_question)
+      @library_question.question = JSON.pretty_generate(params[:question].as_json)
+      puts @library_question.question
 
       if @library_question.save
         return render json: @library_question
@@ -78,12 +80,8 @@ module Foorm
       return render json: data_to_return
     end
 
-    def get_question
-      question_json = params[:question].as_json
-      unless question_json
-        return render(status: :bad_request, plain: "no question provided")
-      end
-      question_json
+    def require_question
+      render(status: :bad_request, plain: "no question provided") unless params[:question]
     end
   end
 end
