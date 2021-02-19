@@ -296,6 +296,7 @@ class LessonGroupCard extends Component {
                 name={'description'}
                 inputRows={1}
                 handleMarkdownChange={this.handleChangeDescription}
+                hidePreview={true}
               />
               <TextareaWithMarkdownPreview
                 markdown={this.props.lessonGroup.bigQuestions}
@@ -303,6 +304,7 @@ class LessonGroupCard extends Component {
                 name={'big_questions'}
                 inputRows={1}
                 handleMarkdownChange={this.handleChangeBigQuestions}
+                hidePreview={true}
               />
             </div>
           </div>

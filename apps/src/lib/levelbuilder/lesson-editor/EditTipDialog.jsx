@@ -12,6 +12,7 @@ import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
 import LessonEditorDialog from './LessonEditorDialog';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 const styles = {
   dialogContent: {
@@ -93,11 +94,13 @@ export default class EditTipDialog extends Component {
               );
             })}
           </select>
-          <textarea
-            defaultValue={this.state.tip.markdown}
-            onChange={this.handleTextChange}
-            style={styles.textArea}
-            rows={5}
+          <TextareaWithMarkdownPreview
+            markdown={this.state.tip.markdown}
+            label={'Callout'}
+            name={'callout'}
+            inputRows={5}
+            handleMarkdownChange={this.handleTextChange}
+            hidePreview={true}
           />
           <LessonTip tip={this.state.tip} />
         </div>
