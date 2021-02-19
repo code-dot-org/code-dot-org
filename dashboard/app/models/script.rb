@@ -1040,7 +1040,8 @@ class Script < ApplicationRecord
 
   def prevent_legacy_script_levels_in_migrated_scripts
     if is_migrated && script_levels.reject(&:activity_section).any?
-      raise "legacy script levels are not allowed in migrated scripts"
+      lesson_names = lessons.all.select {|l| l.script_levels.reject(&:activity_section).any?}.map(&:name)
+      raise "Legacy script levels are not allowed in migrated scripts. Problem lessons: #{lesson_names.to_json}"
     end
   end
 
