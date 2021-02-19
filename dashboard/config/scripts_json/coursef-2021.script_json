@@ -1568,8 +1568,7 @@
       "key": "8a1b676d-0f69-46f1-aa22-2339c547a828",
       "position": 2,
       "properties": {
-        "description": "Pull up a puzzle 9 of this lesson. \r\nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. Why can you not just use a loop?\r\n\r\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\r\n\r\nOpen up a discussion with the class on why functions could be useful in programming.",
-        "name": "Preview of Online Puzzles \r"
+        "description": "\n####Preview of Online Puzzles \n\nPull up a puzzle 9 of this lesson. \nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. Why can you not just use a loop?\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming."
       },
       "seeding_key": {
         "activity_section.key": "8a1b676d-0f69-46f1-aa22-2339c547a828",
@@ -1580,7 +1579,7 @@
       "key": "7a22e35d-b801-4f3d-95f9-f3e1047caff1",
       "position": 1,
       "properties": {
-        "name": "Practice",
+        "name": "Functions in Minecraft",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1592,7 +1591,6 @@
       "key": "9efa9917-fedb-4c74-9cbc-7baab67800cc",
       "position": 2,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1604,8 +1602,7 @@
       "key": "f14f0616-1cb4-4739-9071-da2f3326ed98",
       "position": 3,
       "properties": {
-        "description": "We recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nWe recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles."
       },
       "seeding_key": {
         "activity_section.key": "f14f0616-1cb4-4739-9071-da2f3326ed98",
@@ -1616,7 +1613,7 @@
       "key": "19044f48-ffd3-4937-960c-3101a524f829",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What did your functions do in the programs you wrote today? How did that help you?\r\n - When should you use a function instead of a loop?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -1669,7 +1666,6 @@
       "key": "79eee99b-b83b-437e-bd7f-b0ae4dfcdb26",
       "position": 3,
       "properties": {
-        "name": "Introducing Sprite Lab",
         "progression_name": "Introducing Sprite Lab"
       },
       "seeding_key": {
@@ -1681,7 +1677,6 @@
       "key": "691b1ffc-a2a0-429e-99ea-8dfbd644d25c",
       "position": 4,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -1693,7 +1688,6 @@
       "key": "3e9559a9-2a5e-4a20-b10d-6a2170502aa1",
       "position": 5,
       "properties": {
-        "name": "Mini-Project: Swimming Fish",
         "progression_name": "Mini-Project: Swimming Fish"
       },
       "seeding_key": {
@@ -1705,7 +1699,6 @@
       "key": "9a3c303f-59ee-4a13-a1ff-c933b925b88f",
       "position": 6,
       "properties": {
-        "name": "How to Make a Sprite",
         "progression_name": "How to Make a Sprite"
       },
       "seeding_key": {
@@ -1717,7 +1710,6 @@
       "key": "107af98b-75a4-4486-8985-da9fdac83b45",
       "position": 7,
       "properties": {
-        "name": "Mini-Project: Swimming Fish (continued)",
         "progression_name": "Mini-Project: Swimming Fish (continued)"
       },
       "seeding_key": {
@@ -1729,7 +1721,6 @@
       "key": "4151bce3-4836-4272-b5db-e01e552d5560",
       "position": 8,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1741,6 +1732,7 @@
       "key": "c84a5d43-70bd-4c74-b936-0a502ced9853",
       "position": 9,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "c84a5d43-70bd-4c74-b936-0a502ced9853",
@@ -1778,12 +1770,11 @@
         "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an event is initiated.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n"
           }
         ],
-        "name": "Online Puzzles\r"
+        "name": "Alien Dance Party with Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "0a26c35a-8f26-4297-a00a-4a56ec2086a8",
@@ -1805,7 +1796,6 @@
       "key": "7e314174-db10-4056-8a88-7ce020034b4f",
       "position": 3,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -1817,8 +1807,7 @@
       "key": "84d08adb-6bd3-438e-9402-4725dc48823a",
       "position": 4,
       "properties": {
-        "name": "Video",
-        "progression_name": "Video"
+        "progression_name": "Video-Sprites in Action"
       },
       "seeding_key": {
         "activity_section.key": "84d08adb-6bd3-438e-9402-4725dc48823a",
@@ -1829,7 +1818,6 @@
       "key": "5c2a62ad-b538-4b4f-9a37-ab4cc5407f22",
       "position": 5,
       "properties": {
-        "name": "Mini-Project: Alien Dance Moves",
         "progression_name": "Mini-Project: Alien Dance Moves"
       },
       "seeding_key": {
@@ -1841,7 +1829,6 @@
       "key": "153c20b7-7b83-4e35-a90b-86a226892f13",
       "position": 6,
       "properties": {
-        "name": "Mini-Project: Alien Dance Party",
         "progression_name": "Mini-Project: Alien Dance Party"
       },
       "seeding_key": {
@@ -1878,7 +1865,7 @@
       "position": 1,
       "properties": {
         "description": "Some students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)",
-        "name": "Online Puzzles\r"
+        "name": "Drawing with Loops"
       },
       "seeding_key": {
         "activity_section.key": "1744b867-c4fe-43e6-9707-050abe0791c5",
@@ -1889,7 +1876,6 @@
       "key": "0b7773fb-83ae-4dce-abc3-5cf15ae03aeb",
       "position": 2,
       "properties": {
-        "name": "Artist Intro with JR Hildebrande",
         "progression_name": "Artist Intro with JR Hildebrande"
       },
       "seeding_key": {
@@ -1901,7 +1887,6 @@
       "key": "ef504f91-6fca-4859-a960-7e792de6223e",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1913,7 +1898,6 @@
       "key": "4754f929-7c05-4e91-a7e8-39c23f4a7449",
       "position": 4,
       "properties": {
-        "name": "Loops with the Artist",
         "progression_name": "Loops with the Artist"
       },
       "seeding_key": {
@@ -1925,7 +1909,6 @@
       "key": "411a2b66-714e-40fe-9636-a184b62c44bf",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1937,7 +1920,6 @@
       "key": "08a8ba95-17db-446d-9a47-2ed7927d1957",
       "position": 6,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1949,7 +1931,6 @@
       "key": "03d34a4c-9586-4eeb-a8c6-54be8e58f008",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1961,7 +1942,6 @@
       "key": "7e28f49a-b3f7-4f46-876f-55030d2f60f2",
       "position": 8,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1973,6 +1953,7 @@
       "key": "83fd9685-f513-4a98-9aae-21b403944f0a",
       "position": 9,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "83fd9685-f513-4a98-9aae-21b403944f0a",
@@ -2007,8 +1988,8 @@
       "key": "3f6c9b0e-3d5e-4a26-932f-5df310c1c8b6",
       "position": 1,
       "properties": {
-        "description": "We highly recommend [r pair-programming-vid] in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\r\n\r\nAlso, have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks you can use, so if students like to write out the long answer to find the repeats, paper can be useful.",
-        "name": "Online Puzzles\r"
+        "description": "We highly recommend [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nAlso, have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks you can use, so if students like to write out the long answer to find the repeats, paper can be useful.",
+        "name": "Nested Loops in Maze"
       },
       "seeding_key": {
         "activity_section.key": "3f6c9b0e-3d5e-4a26-932f-5df310c1c8b6",
@@ -2019,7 +2000,6 @@
       "key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2031,7 +2011,6 @@
       "key": "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6",
       "position": 3,
       "properties": {
-        "name": "Nested Loops with the Bee",
         "progression_name": "Nested Loops with the Bee"
       },
       "seeding_key": {
@@ -2043,7 +2022,6 @@
       "key": "92fe0950-9345-449a-abfd-7ef182e98281",
       "position": 4,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2055,7 +2033,6 @@
       "key": "66c65659-e870-45aa-a864-61b501ef121b",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2067,7 +2044,6 @@
       "key": "885785a2-f698-44f7-b00a-1529e3d3b0ce",
       "position": 6,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2079,7 +2055,6 @@
       "key": "6f07e6a9-7d36-43e2-88a9-c7c977d7a5cb",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2091,7 +2066,6 @@
       "key": "2b14df0c-9eb2-43fa-9e00-706a523c4631",
       "position": 8,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2322,7 +2296,7 @@
       "position": 1,
       "properties": {
         "description": "Notice that this stage first covers the idea of a variable as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.\r\n\r\nWatch out for puzzle #6. It is the first time that students will be expected to set a variable on their own.  This can be tricky if they don't have a true grasp on the concept. If they're having trouble, send them back to the prediction level (#5) and have them explain to their partners why the answer ended up what it was.  Once both partners are convinced, let them continue back to puzzle #6.",
-        "name": "Online Puzzles\r"
+        "name": "Variables with Artist"
       },
       "seeding_key": {
         "activity_section.key": "e03b685b-6b94-46ff-9eac-e914f21ccfa4",
@@ -2333,7 +2307,6 @@
       "key": "8a751758-8357-49b5-b8fb-08e58a8e2536",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2345,8 +2318,7 @@
       "key": "ed5f9002-e811-4221-9509-62f99ed638b6",
       "position": 3,
       "properties": {
-        "name": "Artist: Variables",
-        "progression_name": "Artist: Variables"
+        "progression_name": "Artist: Variables Video"
       },
       "seeding_key": {
         "activity_section.key": "ed5f9002-e811-4221-9509-62f99ed638b6",
@@ -2357,7 +2329,6 @@
       "key": "c1ee971f-13db-4af4-bf08-61957812ee6e",
       "position": 4,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2369,7 +2340,6 @@
       "key": "5b6dce02-38b6-4869-98bf-49abd3c51ee6",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -4451,7 +4421,8 @@
       "properties": {
         "level_keys": [
           "spritelab_extras_repeat_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4500,7 +4471,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video",
+        "progression": "Video-Sprites in Action",
         "level_keys": [
           "CDEF_video_SpritesInAction_2021"
         ]
@@ -4999,7 +4970,8 @@
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5024,7 +4996,8 @@
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge2a_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5488,7 +5461,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Artist: Variables",
+        "progression": "Artist: Variables Video",
         "level_keys": [
           "courseF_video_artistVariables_2021"
         ]
