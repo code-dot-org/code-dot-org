@@ -28,7 +28,7 @@ describe('Check popup does not appear when flag is set', () => {
   it('does not obscure the current view', () => {
     const wrapper = shallow(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: true});
-    expect(wrapper.html() === null).to.be.true;
+    expect(wrapper.html()).to.be.null;
   });
 });
 
@@ -77,7 +77,7 @@ describe('Check cookies and session storage appear on click', () => {
       .stub(cookies, 'get')
       .withArgs('hide_signin_callout')
       .returns('true');
-    expect(wrapper.html() === null).to.be.true;
+    expect(wrapper.html()).to.be.null;
   });
 
   it('if session storage flag is set, callout does not appear', () => {
@@ -86,7 +86,7 @@ describe('Check cookies and session storage appear on click', () => {
       .stub(sessionStorage, 'getItem')
       .withArgs('hide_signin_callout')
       .returns('true');
-    expect(wrapper.html() === null).to.be.true;
+    expect(wrapper.html()).to.be.null;
   });
 
   it('shows prior to click, and dismisses after', () => {
@@ -94,6 +94,6 @@ describe('Check cookies and session storage appear on click', () => {
     wrapper.setState({hideCallout: false});
     expect(wrapper.html().includes('uitest-signincallout')).to.be.true;
     wrapper.find('.login-callout').simulate('click');
-    expect(wrapper.html() === null).to.be.true;
+    expect(wrapper.html()).to.be.null;
   });
 });
