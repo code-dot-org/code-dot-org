@@ -38,6 +38,7 @@ class Lesson < ApplicationRecord
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
   has_and_belongs_to_many :vocabularies, join_table: :lessons_vocabularies
+  has_and_belongs_to_many :programming_expressions, join_table: :lessons_programming_expressions
   has_many :objectives, dependent: :destroy
 
   # join tables needed for seeding logic
@@ -159,15 +160,6 @@ class Lesson < ApplicationRecord
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
     script_levels.first.oldest_active_level.unplugged?
-  end
-
-  # This is currently only relevant to CSF levels, which use the Unplugged
-  # level type. As an alternative to the Unplugged level type, Levelbuilders
-  # can select if External/Markdown levels should display as unplugged.
-  def display_as_unplugged
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged_lesson?
   end
 
   def spelling_bee?
