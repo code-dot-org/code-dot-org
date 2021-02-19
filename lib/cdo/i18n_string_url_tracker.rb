@@ -16,6 +16,7 @@ class I18nStringUrlTracker
   I18N_STRING_TRACKING_DCDO_KEY = 'i18n_string_tracking'.freeze
 
   # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
+  # TODO: increase this interval to 12.hours once we verify everything is working.
   FLUSH_INTERVAL = 1.hour
 
   MAX_BUFFER_SIZE = 250.megabytes
@@ -126,19 +127,32 @@ class I18nStringUrlTracker
   # Records the log data to a buffer which will eventually be flushed
   def add_to_buffer(string_key, url, source)
     data = {url => {string_key => Set[source]}}
-    @buffer.synchronize do # make sure this is the only thread modifying @buffer
+    # make sure this is the only thread modifying @buffer
+    @buffer.synchronize do
       # update the buffer size if we are adding any new data to it
       # duplicate data will not increase the buffer size
       size = 0
       size += url.bytesize unless @buffer.dig(url)
       size += string_key.bytesize unless @buffer.dig(url, string_key)
       size += source.bytesize unless @buffer.dig(url, string_key)&.include?(source)
-      # Stop adding data to the buffer if the max size has been reached.
-      return if size > @buffer_size_max - @buffer_size
-
+      @buffer_size += size
       # add the new data to the buffer
       @buffer.deep_merge!(data)
-      @buffer_size += size
+    end
+
+    # if the buffer is too large, trigger an early flush
+    if @buffer_size > @buffer_size_max
+      message = "The I18n string usage tracker is has reached its memory limit so data will be flushed early. Investigate whether there is an issue or if the limit should be increased."
+      Honeybadger.notify(
+        name: 'I18n Usage Tracker buffer reached max memory limits.',
+        message: message,
+        context: {
+          current_buffer_size: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size).to_s,
+          buffer_size_max: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size_max).to_s
+        }
+      )
+      # return without adding the data to the buffer
+      flush
     end
   end
 
