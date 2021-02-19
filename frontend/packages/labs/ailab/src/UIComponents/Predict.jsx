@@ -93,7 +93,7 @@ class Predict extends Component {
           <p />
           {this.props.predictedLabel && (
             <div>
-              <div>The Machine Learning model predicts:</div>
+              <div>A.I. predicts:</div>
               <div style={styles.subPanel}>
                 {this.props.labelColumn}: {this.props.predictedLabel}
                 {this.props.confidence && (

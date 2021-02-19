@@ -49,10 +49,10 @@ class TrainModel extends Component {
             {!this.props.modelSize && (
               <FontAwesomeIcon icon={faSpinner} />
             )}
-            {this.props.modelSize && (
+            {/*this.props.modelSize && (
               <p>The trained model is {this.props.modelSize} KB big.</p>
-            )}
-            <div style={styles.trainBot}>
+            )*/}
+            <div style={{...styles.trainBot, margin: '0 auto'}}>
               <img
                 src={aiBotHead}
                 style={{
