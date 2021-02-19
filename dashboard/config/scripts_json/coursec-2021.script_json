@@ -134,8 +134,7 @@
         "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online.",
         "purpose": "Common Sense Education created this lesson to teach students about meanness and what they should do if they encounter it online.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Bring a stuffed animal or toy to class.",
-        "creative_commons_license": "Creative Commons BY-NC-ND",
-        "unplugged": true
+        "creative_commons_license": "Creative Commons BY-NC-ND"
       },
       "seeding_key": {
         "lesson.key": "Putting a STOP to Online Meanness",
@@ -155,8 +154,7 @@
         "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.",
         "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the programming that students will do throughout the course as they learn the importance of defining a clearly communicated algorithm.",
         "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\r\n - Display the symbols from **My Robotic Friends - Symbol Key** where students can reference throughout the lesson.\r\n - (Optional) Print out one **My Robotic Friends - Cup Stacking Ideas** per group of 2-3 students.\r\n - Make sure each student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "unplugged": true
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Programming: My Robotic Friends",
@@ -256,8 +254,7 @@
         "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
         "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning _binary_, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
         "preparation": "- (Optional) Watch the \"Lesson in Action\" video.\r\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\r\n- Print one **Binary Bracelets - Worksheet** and one **Binary Bracelets - Assessment** per student.\r\n- Make sure every student has a journal.\r\n- (Optional) Write a short message on the board in binary.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "unplugged": true
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Binary Bracelets",
@@ -277,8 +274,7 @@
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
         "preparation": " - Make sure each student has a journal.\r\n - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 4 students.\r\n - Display the symbols where students can reference throughout the lesson.\r\n - (Optional) Print out one image pack per group of 4 students.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "unplugged": true
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Loops: My Loopy Robotic Friends",
@@ -378,8 +374,7 @@
         "student_overview": "Play a fun game to learn about events. ",
         "purpose": "Today, students will learn to distinguish events and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this _event_, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
         "preparation": "- Print or display the Event Controller.\r\n- Print one assessment for each student.\r\n- Make sure every student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "unplugged": true
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
@@ -439,8 +434,7 @@
         "student_overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
         "purpose": "Computers were created to help process data. There is an increasing amount of data in the world, so being able to read and analyze it is important.  This lesson is here to make sure students have the basic experience of collecting, visualizing, and analyzing a simple set of data.",
         "preparation": "* Print out one **Graphing Data from Play Lab** worksheet for each student.\r\n* Try today's lesson on Code Studio. This is meant to be used as a tool for today's activity. Be prepared to project it to the class, or otherwise allow students to visit it on their own computers.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "unplugged": true
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Picturing Data",
@@ -977,11 +971,23 @@
       }
     },
     {
-      "key": "bb31384c-3fe3-4c9b-ad74-8a83c1cd2d7e",
+      "key": "d0c658b7-0ee9-4498-b93c-5bf082cc068e",
       "position": 2,
       "properties": {
         "name": "Activity",
         "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0c658b7-0ee9-4498-b93c-5bf082cc068e",
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "bb31384c-3fe3-4c9b-ad74-8a83c1cd2d7e",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "bb31384c-3fe3-4c9b-ad74-8a83c1cd2d7e",
@@ -992,7 +998,7 @@
     },
     {
       "key": "899be5b5-0668-4472-909d-46a1e44e98e2",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -1006,26 +1012,12 @@
     },
     {
       "key": "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "name": "Extension Activities",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9",
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "d0c658b7-0ee9-4498-b93c-5bf082cc068e",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d0c658b7-0ee9-4498-b93c-5bf082cc068e",
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2021"
@@ -1049,7 +1041,7 @@
       "key": "8df58520-6127-4563-b145-8d7d81635bde",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Loops",
+        "name": "Bridging Activity - Choose One",
         "duration": 10
       },
       "seeding_key": {
@@ -1091,8 +1083,7 @@
       "key": "d905457a-3a72-4927-a3a6-910b2fba3a53",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "d905457a-3a72-4927-a3a6-910b2fba3a53",
@@ -1147,11 +1138,23 @@
       "key": "00bc0557-ae64-4fe1-a1d1-09b4bb890c42",
       "position": 4,
       "properties": {
-        "name": "Extended Activity",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "00bc0557-ae64-4fe1-a1d1-09b4bb890c42",
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "c1cb23a9-85d1-4f19-ae36-9388baa9566c",
+      "position": 5,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c1cb23a9-85d1-4f19-ae36-9388baa9566c",
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2021"
@@ -1255,6 +1258,19 @@
       }
     },
     {
+      "key": "d96c9108-8707-4345-9f1a-5e69928ca31f",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d96c9108-8707-4345-9f1a-5e69928ca31f",
+        "lesson.key": "Sticker Art with Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
       "key": "8d10f0a0-909f-482c-a17f-3477280c7375",
       "position": 1,
       "properties": {
@@ -1351,7 +1367,7 @@
       "key": "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Events",
+        "name": "Bridging Activity - Choose One",
         "duration": 10
       },
       "seeding_key": {
@@ -1393,11 +1409,23 @@
       "key": "7c0129f4-ba20-475d-b304-a85ddd87507e",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "7c0129f4-ba20-475d-b304-a85ddd87507e",
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "d7041d0f-5170-4379-9d84-a93a44dbb51e",
+      "position": 6,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7041d0f-5170-4379-9d84-a93a44dbb51e",
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "csf_events",
         "script.name": "coursec-2021"
@@ -1449,8 +1477,7 @@
       "key": "cf4ad357-07b4-48e1-bd8f-108301e7aa0a",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "cf4ad357-07b4-48e1-bd8f-108301e7aa0a",
@@ -1474,11 +1501,23 @@
       }
     },
     {
-      "key": "b6189a3a-e704-4d46-9526-e465660d27af",
+      "key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
       "position": 2,
       "properties": {
-        "name": "Activity",
+        "name": "Main Activity",
         "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
+        "lesson.key": "Picturing Data",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "b6189a3a-e704-4d46-9526-e465660d27af",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "b6189a3a-e704-4d46-9526-e465660d27af",
@@ -1489,26 +1528,13 @@
     },
     {
       "key": "81828841-d023-4593-896d-b4ce1481da6f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "81828841-d023-4593-896d-b4ce1481da6f",
-        "lesson.key": "Picturing Data",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894",
         "lesson.key": "Picturing Data",
         "lesson_group.key": "csf_data",
         "script.name": "coursec-2021"
@@ -1914,7 +1940,7 @@
       "key": "b36f792a-6557-4c68-9065-3a87966f2cf6",
       "position": 9,
       "properties": {
-        "description": "####Online Puzzles\n\n**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - Did anyone feel frustrated during any of the puzzles?\n - Did anyone notice the need to be persistent?\n\n**Transition:** Have students grab their Thinkspot Journals and take a moment to leave lessons for themselves."
+        "description": "\n**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - Did anyone feel frustrated during any of the puzzles?\n - Did anyone notice the need to be persistent?\n\n**Transition:** Have students grab their Thinkspot Journals and take a moment to leave lessons for themselves."
       },
       "seeding_key": {
         "activity_section.key": "b36f792a-6557-4c68-9065-3a87966f2cf6",
@@ -2348,7 +2374,7 @@
       "key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
       "position": 1,
       "properties": {
-        "description": "###Shapes & Landscapes (45-60 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.8:** Recall information from experiences or gather information from provided sources to answer a question.\n\n- **CCSS.MATH.CONTENT.2.MD.A.3:** Estimate lengths using units of inches, feet, centimeters, and meters.\n- **NGSS.2-ESS2-1:** Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.\n\n[Shapes & Landscapes](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students are asked to design a dam to prevent future flooding. Using code, you will create a blueprint to show the local town council how your dam will look."
+        "description": "###Shapes & Landscapes (45-60 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n\n[Shapes & Landscapes](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students are asked to design a dam to prevent future flooding. Using code, you will create a blueprint to show the local town council how your dam will look.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.8:** Recall information from experiences or gather information from provided sources to answer a question.\n\n- **CCSS.MATH.CONTENT.2.MD.A.3:** Estimate lengths using units of inches, feet, centimeters, and meters.\n- **NGSS.2-ESS2-1:** Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.\n"
       },
       "seeding_key": {
         "activity_section.key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
@@ -2493,7 +2519,7 @@
       "key": "359899f5-314a-401a-a75f-1b0cd32829d8",
       "position": 1,
       "properties": {
-        "description": "<img alt=\"Robot Symbols\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"float: left; max-width: 200px; margin: 10px;\">\n\n**Goal:** This review will refresh the students’ minds about how quickly programs for the \"My Robotic Friends\" activity can get intense. \n\n**Display:** Show the **My Robotic Friends - Symbol Key** that we used in My Robotic Friends. For each of the four symbols, ask students to show you what it looks like for a robot to follow that instruction.\n\n**Model:** With the class together as a group, pull an easy puzzle from the \"My Robotic Friends\" Cup Stack Pack and program with each other as a reminder of rules and terminology.\n\nNext, pull a puzzle that’s slightly harder, but also requires a lot of steps like the one below.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Volunteer:** Ask a volunteer (or a group of volunteers) to come forward to help program this one on the board.  If you make them stick strictly to the “no symbols other than those on the key” rule, it will probably take a while!\n\n**Display:** Now, bring up this image:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nWhat is the reaction of the class?\n\n**Prompt:** Give students the opportunity to brainstorm shorter ways to relay the code that they’re about to create. (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nOnce students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” are often used interchangeably.",
+        "description": "\n\n**Goal:** This review will refresh the students’ minds about how quickly programs for the \"My Robotic Friends\" activity can get intense. \n\n**Display:** Show the **My Robotic Friends - Symbol Key** that we used in My Robotic Friends. For each of the four symbols, ask students to show you what it looks like for a robot to follow that instruction.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Model:** With the class together as a group, pull an easy puzzle from the \"My Robotic Friends\" Cup Stack Pack and program with each other as a reminder of rules and terminology.\n\nNext, pull a puzzle that’s slightly harder, but also requires a lot of steps like the one below.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Volunteer:** Ask a volunteer (or a group of volunteers) to come forward to help program this one on the board.  If you make them stick strictly to the “no symbols other than those on the key” rule, it will probably take a while!\n\n**Display:** Now, bring up this image:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nWhat is the reaction of the class?\n\n**Prompt:** Give students the opportunity to brainstorm shorter ways to relay the code that they’re about to create. (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nOnce students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” are often used interchangeably.",
         "name": "My Robotic Friends Review"
       },
       "seeding_key": {
@@ -2502,11 +2528,22 @@
       }
     },
     {
+      "key": "8896c62b-c73c-43f8-89c3-3def6c89d7bf",
+      "position": 1,
+      "properties": {
+        "name": "My Loopy Robotic Friends",
+        "progression_name": "My Loopy Robotic Friends - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "8896c62b-c73c-43f8-89c3-3def6c89d7bf",
+        "lesson_activity.key": "d0c658b7-0ee9-4498-b93c-5bf082cc068e"
+      }
+    },
+    {
       "key": "76533bba-6245-4429-b8ef-a406d2dd250b",
       "position": 1,
       "properties": {
-        "description": "**Set Up:** Have stacks of cups or cut paper trapezoids available for groups.\r\n\r\n\r\n**Display:** Take the program from one of your previous cup stacks and display it for the class, or use the one below.\r\n\r\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\r\n\r\n**Think:** Ask students to think quietly about where in this program they can find a pattern of instructions that repeat uninterrupted (one repetition after another).\r\n\r\n**Pair:** Turn to a neighbor and share one of the repeating patterns you found.\r\n\r\n**Share:** Ask a few students to share out the patterns they identified. Try to pull out different approaches to grouping patterns. For each pattern, ask students to identify how many times the pattern repeats.\r\n\r\n**Model:** Using one of the repeating patterns that the class identified, model how Circle the instruction or pattern that repeats, write the number of loops near that circle, then cross out the rest of the arrows.\r\n\r\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\r\n\r\n\r\nRepeat this until the entire program has been shortened, then re-write the program in a way where students can see how much more simple the resulting instructions are.",
-        "name": "Introduction and Modeling\r"
+        "description": "####Introduction and Modeling\n\n**Set Up:** Have stacks of cups or cut paper trapezoids available for groups.\n\n\n**Display:** Take the program from one of your previous cup stacks and display it for the class, or use the one below.\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\n\n**Think:** Ask students to think quietly about where in this program they can find a pattern of instructions that repeat uninterrupted (one repetition after another).\n\n**Pair:** Turn to a neighbor and share one of the repeating patterns you found.\n\n**Share:** Ask a few students to share out the patterns they identified. Try to pull out different approaches to grouping patterns. For each pattern, ask students to identify how many times the pattern repeats.\n\n**Model:** Using one of the repeating patterns that the class identified, model how Circle the instruction or pattern that repeats, write the number of loops near that circle, then cross out the rest of the arrows.\n\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\n\nRepeat this until the entire program has been shortened, then re-write the program in a way where students can see how much more simple the resulting instructions are."
       },
       "seeding_key": {
         "activity_section.key": "76533bba-6245-4429-b8ef-a406d2dd250b",
@@ -2517,8 +2554,7 @@
       "key": "30f90b0d-b307-4fe8-b89a-c2e07583227e",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own program \"run\" on the other pair.\r\n\r\n**Distribute:** Give each group one stack of cups or paper cutouts.\r\n\r\n**Display:** Show **My Robotic Friends - Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which stack they would like their robot to do. Encourage pairs to select a more complicated pattern this time around.",
-        "name": "Looping Your Robots\r"
+        "description": "####Looping Your Robots\n\n**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own program \"run\" on the other pair.\n\n**Distribute:** Give each group one stack of cups or paper cutouts.\n\n**Display:** Show **My Robotic Friends - Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which stack they would like their robot to do. Encourage pairs to select a more complicated pattern this time around."
       },
       "seeding_key": {
         "activity_section.key": "30f90b0d-b307-4fe8-b89a-c2e07583227e",
@@ -2532,7 +2568,6 @@
         "description": "**Discuss:** Let each group discuss how the stack should be built, then instruct each group to translate the algorithm into symbols. Make sure each group writes down the symbol algorithm somewhere for the \"robot\" to read later. As students are working on their programs, remind them to be on the lookout for opportunities to replace a repeating pattern with a loop.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Looking for Loops:** Be sure to keep your eyes open for students using loops. Try to avoid correcting their overall algorithms or prescribing a solution, but feel free to direct students towards patterns that could be shortened by using a repeat circle. \r\n\r\nWatch students as they run through the code. Are there any bugs?  Use the debugging questions to help them find a solution.\r\n\r\n - What does it do?\r\n - What is it supposed to do?\r\n - What does that tell you?\r\n - Does it work at the first step?\r\n - Does it work at the second step?\r\n - Where does it stop working?\r\n  "
           }
@@ -2558,7 +2593,8 @@
       "key": "dba044f7-494f-4657-a69b-ae2c7cf29ea0",
       "position": 1,
       "properties": {
-        "description": "#### Journal Prompts:\r\n\r\n - Draw one of the \"Feeling FaceS\" that shows how you felt about today's lesson in the corner of your journal page.\r\n - Have the students write or draw something in their journal that will remind them later what loops are.  This can come from a prompt like:\r\n    - What does \"repeat\" mean to you?\r\n    - Draw a picture of you repeating something."
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Have the students write or draw something in their journal that will remind them later what loops are.  This can come from a prompt like:\n    - What does \"repeat\" mean to you?\n    - Draw a picture of you repeating something.",
+        "name": "Journaling"
       },
       "seeding_key": {
         "activity_section.key": "dba044f7-494f-4657-a69b-ae2c7cf29ea0",
@@ -2569,21 +2605,11 @@
       "key": "a8df4441-613f-45cb-9305-592af4d64fb8",
       "position": 1,
       "properties": {
-        "description": "- Have students draw their own cup stacking creations for someone else to code.\r\n - Provide students with algorithms that utilize repeats, then have them expand the program back out to a full step-by-step version."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n- Have students draw their own cup stacking creations for someone else to code.\n - Provide students with algorithms that utilize repeats, then have them expand the program back out to a full step-by-step version."
       },
       "seeding_key": {
         "activity_section.key": "a8df4441-613f-45cb-9305-592af4d64fb8",
         "lesson_activity.key": "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9"
-      }
-    },
-    {
-      "key": "8896c62b-c73c-43f8-89c3-3def6c89d7bf",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8896c62b-c73c-43f8-89c3-3def6c89d7bf",
-        "lesson_activity.key": "d0c658b7-0ee9-4498-b93c-5bf082cc068e"
       }
     },
     {
@@ -2637,7 +2663,7 @@
       "key": "16139473-0792-46d6-b8f8-77c79ceead5c",
       "position": 1,
       "properties": {
-        "name": "Programming with Rey and BB-8",
+        "name": "Loops with Rey and BB-8",
         "progression_name": "Programming with Rey and BB-8"
       },
       "seeding_key": {
@@ -2649,7 +2675,6 @@
       "key": "aadcbed9-b15e-4fcb-b277-fd1c8156270e",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2661,7 +2686,6 @@
       "key": "cc9ef036-2cca-4863-b922-284a995c38b7",
       "position": 3,
       "properties": {
-        "name": "Predict",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2673,7 +2697,6 @@
       "key": "adc69f16-8ed9-4265-b368-4a8e99c56aa5",
       "position": 4,
       "properties": {
-        "name": "Repeat Blocks with BB-8",
         "progression_name": "Repeat Blocks with BB-8"
       },
       "seeding_key": {
@@ -2685,7 +2708,6 @@
       "key": "6fed6081-6c4a-4a1a-8db9-69ab9fd41513",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2697,7 +2719,6 @@
       "key": "922cabb8-e8e7-4f94-a72a-c173f9084db9",
       "position": 6,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2709,7 +2730,6 @@
       "key": "069243e5-22ac-469d-afdd-0908f118d8fc",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2721,7 +2741,6 @@
       "key": "b47fba65-ebc7-463d-af20-207aafbaac11",
       "position": 8,
       "properties": {
-        "name": "Predict",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2733,7 +2752,6 @@
       "key": "5bf6ad3e-3f64-4131-9604-04de80516931",
       "position": 9,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2745,6 +2763,7 @@
       "key": "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6",
       "position": 10,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6",
@@ -2755,8 +2774,7 @@
       "key": "351f97fd-0d87-49c1-90ee-f4243884adf9",
       "position": 11,
       "properties": {
-        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. not using a loop. **Pair Programming - Student Video** works really well with this set of puzzles because there are a few ways to fill the loops. Push for friendly discussion between pairs in instances of disagreement on how to solve the puzzle. Have the students ask each other questions like:\r\n \r\n - How did you come up with that solution?\r\n - What are some benefits of solving the puzzle that way?\r\n\r\nWe also recommend having paper on hand for students to write out their code and find any repetition to use in loops.",
-        "name": "Online Puzzles\r"
+        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. not using a loop. **Pair Programming - Student Video** works really well with this set of puzzles because there are a few ways to fill the loops. Push for friendly discussion between pairs in instances of disagreement on how to solve the puzzle. Have the students ask each other questions like:\n \n - *How did you come up with that solution?*\n - *What are some benefits of solving the puzzle that way?*\n\nWe also recommend having paper on hand for students to write out their code and find any repetition to use in loops."
       },
       "seeding_key": {
         "activity_section.key": "351f97fd-0d87-49c1-90ee-f4243884adf9",
@@ -2802,7 +2820,7 @@
       "key": "61416522-3272-4f4f-9fa9-6ab21de140ad",
       "position": 1,
       "properties": {
-        "name": "The Harvester",
+        "name": "Harvesting Crops with Loops",
         "progression_name": "The Harvester"
       },
       "seeding_key": {
@@ -2814,7 +2832,6 @@
       "key": "2f87a826-1460-4d5c-9db3-47911c77a56a",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2826,7 +2843,6 @@
       "key": "d65f83fb-25b6-45bb-8ca8-1b230b146b66",
       "position": 3,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2838,7 +2854,6 @@
       "key": "c80e175c-a3f8-4155-9900-0c6ab5829a4e",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2850,7 +2865,6 @@
       "key": "d54c4a19-6f07-4206-aeee-fc496fcda2f8",
       "position": 5,
       "properties": {
-        "name": "Predict",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2862,6 +2876,7 @@
       "key": "f5cc9272-be27-471b-9cdd-f56920c56a34",
       "position": 6,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "f5cc9272-be27-471b-9cdd-f56920c56a34",
@@ -2872,8 +2887,7 @@
       "key": "969640d0-6e0a-4984-be94-023f096b2b55",
       "position": 7,
       "properties": {
-        "description": "When students are using loops to repeat an action (such as harvesting pumpkins), encourage them to think about the movements before and after that action. Could those actions be brought into the loop as well?",
-        "name": "Online Puzzles\r"
+        "description": "When students are using loops to repeat an action (such as harvesting pumpkins), encourage them to think about the movements before and after that action. Could those actions be brought into the loop as well?"
       },
       "seeding_key": {
         "activity_section.key": "969640d0-6e0a-4984-be94-023f096b2b55",
@@ -2904,6 +2918,17 @@
       }
     },
     {
+      "key": "4f77bfdb-350b-4792-aa46-c2667c56e48b",
+      "position": 1,
+      "properties": {
+        "description": "###Harvester's Farm (60-75 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[**Harvester's Farm**](https://docs.google.com/document/d/1EgX8toSxV0gB-n2XTQVckeNhnYzsP7iYiO1H0vNGMKM/edit#heading=h.oa0z8i3xy1ys)  is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will use the provided graphic organizers to classify and describe items on Harvester's Farm. The graphic organizers will serve as a pre-writing component as students then write an informative/explanatory text to inform readers about what the Harvester does on her farm. \n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.2:** Write informative/explanatory texts in which they introduce a topic, use facts and definitions to develop points, and provide a concluding statement or section.\n\n- **CCSS.ELA-LITERACY.W.2.5:** With guidance and support from adults and peers, focus on a topic and strengthen writing as needed by revising and editing.\n\n- **CCSS.MATH.CONTENT.2.OA.B.2:** Fluently add and subtract within 20 using mental strategies.\n\n- **NGSS.2-PS1-1:** Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f77bfdb-350b-4792-aa46-c2667c56e48b",
+        "lesson_activity.key": "c1cb23a9-85d1-4f19-ae36-9388baa9566c"
+      }
+    },
+    {
       "key": "e30365ff-a958-448b-bf72-f5862dede57b",
       "position": 1,
       "properties": {
@@ -2919,7 +2944,7 @@
       "key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf",
       "position": 1,
       "properties": {
-        "name": "Practice",
+        "name": "Looking Ahead with Minecraft",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2931,7 +2956,6 @@
       "key": "05fb6b2e-8946-4909-a662-a74aaa704845",
       "position": 2,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2943,7 +2967,6 @@
       "key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2955,7 +2978,6 @@
       "key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba",
       "position": 4,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2967,8 +2989,7 @@
       "key": "927f6676-69e5-479e-b467-f1d9b7635888",
       "position": 5,
       "properties": {
-        "description": "Students are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\r\n\r\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\r\n\r\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
       "seeding_key": {
         "activity_section.key": "927f6676-69e5-479e-b467-f1d9b7635888",
@@ -2991,7 +3012,7 @@
       "key": "839db598-cb23-4dc3-881d-e2bd447b6fa1",
       "position": 1,
       "properties": {
-        "description": "#### More Minecraft\r\n\r\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
       },
       "seeding_key": {
         "activity_section.key": "839db598-cb23-4dc3-881d-e2bd447b6fa1",
@@ -3017,12 +3038,11 @@
         "description": "Encourage creativity during this activity! The instructions give examples but it is okay for students to experiment with different stickers or types of designs. Even the example solutions we provide are not the *only* solutions!",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This lesson may feel very different from what has come earlier in the course. These levels have some new characteristics you may want to explore before starting. The code your students write in one level will automatically transfer over to the others. This allows them to build gradually and iterate on their ideas as they learn. Note that these levels are not checked for correctness to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task.\r\n"
           }
         ],
-        "name": "Application - Sticker Art\r"
+        "name": "Sticker Art with Loops"
       },
       "seeding_key": {
         "activity_section.key": "8966320f-572a-4c6c-afc5-6b3e8240e250",
@@ -3033,8 +3053,8 @@
       "key": "0e769463-817e-4432-be93-87047256d015",
       "position": 2,
       "properties": {
-        "name": "Mini-project: Sticker Design",
-        "progression_name": "Mini-project: Sticker Design"
+        "progression_name": "Mini-project: Sticker Design",
+        "description": "####Mini-project: Sticker Design"
       },
       "seeding_key": {
         "activity_section.key": "0e769463-817e-4432-be93-87047256d015",
@@ -3045,7 +3065,6 @@
       "key": "9af30f82-82cd-4807-9609-900519e17c43",
       "position": 3,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3074,6 +3093,17 @@
       "seeding_key": {
         "activity_section.key": "44ad4fa6-3b97-4af4-ae1e-f9b9f3988a66",
         "lesson_activity.key": "533abcef-ea93-4b33-902c-7b70e22ffe31"
+      }
+    },
+    {
+      "key": "757cf64e-7e90-497f-b26c-1fe874540d52",
+      "position": 1,
+      "properties": {
+        "description": "### Loopy Forms & Their Functions (45-60  minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png)  **Computer Science + English Language Arts + Math + Science**\n\n[**Loopy Forms & Their Functions**](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community.  Artist needs to help his friends design their house by drawing blueprints. It is important that students understands basic shapes and how each shape serves different functions in the house blueprints. They will then write opinion pieces, supply reasons and use linking words to justify their design choices.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.1:** Write opinion pieces in which they introduce the topic or book they are writing about, state an opinion, supply reasons that support the opinion, use linking words (e.g., because, and, also) to connect opinion and reasons, and provide a concluding statement or section.\n\n- **CCSS.MATH.CONTENT.2.G.A.1:** Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.1 Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.\n\n - **NGSS.K-2-ETS1-2:** Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "757cf64e-7e90-497f-b26c-1fe874540d52",
+        "lesson_activity.key": "d96c9108-8707-4345-9f1a-5e69928ca31f"
       }
     },
     {
@@ -3186,7 +3216,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Monitor and collect all of the links to the projects and keep them on your class website for all to see!\r\n"
           }
@@ -3248,7 +3277,7 @@
       "key": "64988ef3-1287-4486-9d41-cd475637575b",
       "position": 1,
       "properties": {
-        "name": "Code Your Own Flappy Game",
+        "name": "Build a Flappy Game",
         "progression_name": "Code Your Own Flappy Game"
       },
       "seeding_key": {
@@ -3260,7 +3289,6 @@
       "key": "3344bb9f-6bfa-40f1-b21a-26a077f975a5",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3272,7 +3300,6 @@
       "key": "b6624ca7-5ffe-462e-ad60-5580ffb87066",
       "position": 3,
       "properties": {
-        "name": "Mini-project: Flappy Game",
         "progression_name": "Mini-project: Flappy Game"
       },
       "seeding_key": {
@@ -3286,9 +3313,8 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) - Video\n.\n"
           }
         ]
       },
@@ -3301,8 +3327,7 @@
       "key": "73480b49-b018-4aed-80b2-f05ce6217025",
       "position": 5,
       "properties": {
-        "description": "This entire lesson builds towards students creating their own Flappy game, but the second half of the levels are all linked. This mean students will see their own code as they move between bubbles 6-10, allowing for more personal customization that will carry all the way to the final product.\r\n\r\nIn the final stage of this lesson students are able to tweak their game to make it unique - encourage them to see how different they can make each game within the constraints provided. If the class doesn't use pair programming, then tell students to go around and look at other student's games. Otherwise, have students discuss and try out different ways to set up their game with their partner.",
-        "name": "Online Puzzles and Free Play\r"
+        "description": "####Online Puzzles and Free Play\n\nThis entire lesson builds towards students creating their own Flappy game, but the second half of the levels are all linked. This mean students will see their own code as they move between bubbles 6-10, allowing for more personal customization that will carry all the way to the final product.\n\nIn the final stage of this lesson students are able to tweak their game to make it unique - encourage them to see how different they can make each game within the constraints provided. If the class doesn't use pair programming, then tell students to go around and look at other student's games. Otherwise, have students discuss and try out different ways to set up their game with their partner."
       },
       "seeding_key": {
         "activity_section.key": "73480b49-b018-4aed-80b2-f05ce6217025",
@@ -3333,6 +3358,17 @@
       }
     },
     {
+      "key": "736fbe77-a681-409c-b263-2de52938dd92",
+      "position": 1,
+      "properties": {
+        "description": "###Become a Game Designer (45-135 minutes)\n![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + Math + Science**\n\n[**Become a Game Designer**](https://docs.google.com/document/d/1ixA6YaNmP_bhBZWEHazDuuc4PTJjWGgTtvI-3W2Gkj4/edit?usp=sharing) is an optional activity aligned to Common Core Math and Next Generation Science Standards, written by our teacher community. Students will become Game Designers as they create create and test a game. Students will also record scores, make observations, create a bar graph, analyze the results and justify the changes they would make to their game.\n\n*Standards Addressed:*\n\n- **2.MD.D.10:**  Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. \n\n- **K-2 ETS1-1:** Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.\n\n- **K-2 ETS1-3:** Analyze data from tests of an object or tool to determine if it works as intended to compare the strengths and weaknesses of how each performs.\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "736fbe77-a681-409c-b263-2de52938dd92",
+        "lesson_activity.key": "d7041d0f-5170-4379-9d84-a93a44dbb51e"
+      }
+    },
+    {
       "key": "782d1991-785a-406b-963c-687abb77e247",
       "position": 1,
       "properties": {
@@ -3350,11 +3386,11 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!\r\n   \r\nRemind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think].\r\n"
+            "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!\n   \nRemind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) - Video.\n"
           }
-        ]
+        ],
+        "name": "Chase Game with Events"
       },
       "seeding_key": {
         "activity_section.key": "4b0c023d-7e3f-4186-83ea-e8136c32de1a",
@@ -3365,8 +3401,7 @@
       "key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
       "position": 2,
       "properties": {
-        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.",
-        "name": "Online Puzzles and Free Play\r"
+        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options."
       },
       "seeding_key": {
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
@@ -3377,7 +3412,6 @@
       "key": "55ade85d-fedf-4c9d-9046-4d1e6d813638",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3389,7 +3423,6 @@
       "key": "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d",
       "position": 4,
       "properties": {
-        "name": "Mini-project: Chase Game",
         "progression_name": "Mini-project: Chase Game"
       },
       "seeding_key": {
@@ -3401,7 +3434,6 @@
       "key": "a7a8c0ca-7507-4a7a-84da-2763a0e562a7",
       "position": 5,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3413,6 +3445,7 @@
       "key": "9f2441ae-b524-455b-b43b-8c01d9458d0d",
       "position": 6,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "9f2441ae-b524-455b-b43b-8c01d9458d0d",
@@ -3459,7 +3492,7 @@
       "key": "63144b5e-ca21-4844-ac12-3dd7567c9c3f",
       "position": 2,
       "properties": {
-        "description": "*Students should all answer at once.*\r\n\r\n**Discuss**: Can we tell which season most of the class likes? How can we be sure? Encourage students to justify why they believe in their response.\r\n\r\n\r\n**Prompt**: What could we do to be more certain that we know which season most people like? Take ideas from the class, but lead them towards writing the data down using tally marks on a board or chart paper."
+        "description": "Students should all answer at once.\n\n**Discuss**: *Can we tell which season most of the class likes? How can we be sure?* Encourage students to justify why they believe in their response.\n\n\n**Prompt**: *What could we do to be more certain that we know which season most people like?* \n\nTake ideas from the class, but lead them towards writing the data down using tally marks on a board or chart paper."
       },
       "seeding_key": {
         "activity_section.key": "63144b5e-ca21-4844-ac12-3dd7567c9c3f",
@@ -3479,18 +3512,28 @@
       }
     },
     {
+      "key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
+      "position": 1,
+      "properties": {
+        "name": "Picturing Data",
+        "progression_name": "Picturing Data - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
+        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894"
+      }
+    },
+    {
       "key": "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647",
       "position": 1,
       "properties": {
         "description": "**Distribute**: Pass out the Graphing Data worksheet along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This program generates a random assortment of pets each time it is run. If you are projecting the program for the whole class to use, consider running it multiple times and asking different groups of students to track the numbers each time so that there will be variety in their responses for later discussion.\r\n"
           }
-        ],
-        "name": "Graphing Data\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647",
@@ -3512,14 +3555,7 @@
       "key": "183cb29b-8912-48e6-9589-333f1aec1837",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Ask the class to discuss some of the following questions:",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to get students thinking about the usefulness of data in identifying or answer questions, and to start them thinking about why they might want to use different kinds of visualizations (graphs in this case).\r\n"
-          }
-        ]
+        "description": "**Discuss**: Ask the class to discuss some of the following questions:"
       },
       "seeding_key": {
         "activity_section.key": "183cb29b-8912-48e6-9589-333f1aec1837",
@@ -3530,7 +3566,7 @@
       "key": "cba35313-3a99-4833-94fb-aafc7ddfba1b",
       "position": 4,
       "properties": {
-        "description": "* Which graph shows you the most useful information? Why?\r\n* Which pets did you see the most? Is that true for everyone?\r\n* What do you think would happen if this program run for 100 animals? 1000?\r\n* What questions could you answer with your data?\r\n* What questions would you like to be able to answer?"
+        "description": "* Which graph shows you the most useful information? Why?\n* Which pets did you see the most? Is that true for everyone?\n* What do you think would happen if this program run for 100 animals? 1000?\n* What questions could you answer with your data?\n* What questions would you like to be able to answer?\n\nThe goal of this discussion is to get students thinking about the usefulness of data in identifying or answer questions, and to start them thinking about why they might want to use different kinds of visualizations (graphs in this case)."
       },
       "seeding_key": {
         "activity_section.key": "cba35313-3a99-4833-94fb-aafc7ddfba1b",
@@ -3541,21 +3577,12 @@
       "key": "49ce681a-9731-4e09-8d4a-e6d4d8895a9a",
       "position": 1,
       "properties": {
-        "description": "**Journal**: Collecting and graphing data can help us ask and answer interesting questions. In your journal, write down one question that you would like to answer and what data you might want to collect. For example, if you play soccer, you might want to know if goals are more often scored from the left, the right, or center - what data would you want to collect to answer that question? How would you show it?"
+        "description": "**Journal**: Collecting and graphing data can help us ask and answer interesting questions. In your journal, write down one question that you would like to answer and what data you might want to collect. For example, if you play soccer, you might want to know if goals are more often scored from the left, the right, or center - what data would you want to collect to answer that question? How would you show it?",
+        "name": "Journaling"
       },
       "seeding_key": {
         "activity_section.key": "49ce681a-9731-4e09-8d4a-e6d4d8895a9a",
         "lesson_activity.key": "81828841-d023-4593-896d-b4ce1481da6f"
-      }
-    },
-    {
-      "key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
-        "lesson_activity.key": "e0ae16fd-eea3-47f4-8fa4-3355e57f9894"
       }
     },
     {
@@ -3574,7 +3601,7 @@
       "key": "bbd8c847-74fe-42a2-9276-23a5c6aaafa0",
       "position": 2,
       "properties": {
-        "description": "We have already had a chance to build a project in Play Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software. So, before we jump onto computers, we will spend some time planning the projects we want to build.",
+        "description": "We have already had a chance to build a project in Play Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software. So, before we jump onto the computers, we will spend some time planning the projects we want to build.",
         "remarks": true
       },
       "seeding_key": {
@@ -3589,7 +3616,6 @@
         "description": "**Distribute**: Distribute one **Play Lab Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If students are pair programming for this assignment, this warm up is a great opportunity for them to practice sharing and respecting others' ideas. Ensure students are following group work norms you already have in place in your classroom. Otherwise, spend a brief moment going over your expectations.\r\n"
           }
@@ -3607,12 +3633,11 @@
         "description": "Equipped with their completed planning guides, students are now ready to bring their projects to life. These levels correspond to the structure of the planning guide, and help navigate students through the process of transforming their ideas into code.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students will experience plenty of trial and error while coding. Their projects are likely to become truncated versions of their original scope. Remind students that this kind of compromise is common in software design. It's okay if they don't get to build in every feature they planned!\r\n"
           }
         ],
-        "name": "Coding\r"
+        "name": "Coding Project"
       },
       "seeding_key": {
         "activity_section.key": "43edf2e1-94e2-4ea0-866c-83bd18bfc87f",
@@ -3623,7 +3648,6 @@
       "key": "8bc8bad1-8150-46ce-bf97-0d368dafd6ef",
       "position": 2,
       "properties": {
-        "name": "Project",
         "progression_name": "Project"
       },
       "seeding_key": {
@@ -3705,8 +3729,7 @@
         "progression": "Maze Intro: Programming with Blocks Video",
         "level_keys": [
           "courseC_video_maze_2021"
-        ],
-        "progression": "Maze Intro: Programming with Blocks"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3729,10 +3752,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3755,10 +3778,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3781,10 +3804,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3807,10 +3830,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3833,10 +3856,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3859,10 +3882,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3885,11 +3908,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseC_maze_programming7_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3912,10 +3935,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3938,10 +3961,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict",
         "level_keys": [
           "courseC_maze_programming8_predict1_2021"
-        ],
-        "progression": "Predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3964,10 +3987,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_programming9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4042,10 +4065,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Debugging with the Step Button",
         "level_keys": [
           "courseC_video_debugging_2021"
-        ],
-        "progression": "Debugging with the Step Button"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4068,10 +4091,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4094,10 +4117,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4120,10 +4143,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4146,10 +4169,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4172,10 +4195,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4198,10 +4221,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4224,11 +4247,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseC_maze_debugging7_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4251,10 +4274,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict",
         "level_keys": [
           "courseC_maze_debugging8_predict1_2021"
-        ],
-        "progression": "Predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4277,10 +4300,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_maze_debugging9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4355,10 +4378,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "The Collector",
         "level_keys": [
           "courseC_video_collector_2021"
-        ],
-        "progression": "The Collector"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4381,10 +4404,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4407,10 +4430,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4433,10 +4456,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4459,10 +4482,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4485,10 +4508,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4511,10 +4534,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4537,11 +4560,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseC_collector_prog7_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4564,10 +4587,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4590,10 +4613,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_collector_prog9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4616,10 +4639,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "grade2_collector_A_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4642,10 +4665,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict",
         "level_keys": [
           "grade2_collector_A_predict1_2021"
-        ],
-        "progression": "Predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4668,10 +4691,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "grade2_collector_10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4697,8 +4720,7 @@
         "progression": "Challenge",
         "level_keys": [
           "courseC_collector_prog_challenge1_2021"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4724,8 +4746,7 @@
         "progression": "Challenge",
         "level_keys": [
           "courseC_collector_prog_challenge2_2021"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4748,10 +4769,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Artist Intro with JR Hildebrand",
         "level_keys": [
           "courseC_video_artist_2021"
-        ],
-        "progression": "Artist Intro with JR Hildebrand"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4774,10 +4795,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4800,10 +4821,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4826,10 +4847,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4852,10 +4873,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4878,10 +4899,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4904,10 +4925,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4930,11 +4951,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseC_artist_prog7_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4957,10 +4978,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4983,10 +5004,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict",
         "level_keys": [
           "courseC_artist_prog6_predict1_2021"
-        ],
-        "progression": "Predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5085,11 +5106,12 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "MyLoopyRoboticFriends-Unplugged_2021"
-        ]
+        ],
+        "progression": "My Loopy Robotic Friends - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -5110,12 +5132,12 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Programming with Rey and BB-8",
         "level_keys": [
           "bb8_skinOverview_C-F_video_2021"
-        ],
-        "progression": "Programming with Rey and BB-8"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5136,12 +5158,12 @@
       "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5162,12 +5184,12 @@
       "chapter": 59,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Predict",
         "level_keys": [
           "courseC_starWars_loops1_predict1_2021"
-        ],
-        "progression": "Predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5188,12 +5210,12 @@
       "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Repeat Blocks with BB-8",
         "level_keys": [
           "bb8_loops_C-F_video_2021"
-        ],
-        "progression": "Repeat Blocks with BB-8"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5214,12 +5236,12 @@
       "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5240,12 +5262,12 @@
       "chapter": 62,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5266,12 +5288,12 @@
       "chapter": 63,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5292,12 +5314,12 @@
       "chapter": 64,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5318,12 +5340,12 @@
       "chapter": 65,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5344,13 +5366,13 @@
       "chapter": 66,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseC_starWars_loops8_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5371,12 +5393,12 @@
       "chapter": 67,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5397,12 +5419,12 @@
       "chapter": 68,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5423,12 +5445,12 @@
       "chapter": 69,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Predict",
         "level_keys": [
           "courseC_starWars_loops10_predict2_2021"
-        ],
-        "progression": "Predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5449,12 +5471,12 @@
       "chapter": 70,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_starWars_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5475,11 +5497,12 @@
       "chapter": 71,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_maze_loops_challenge1a_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5500,11 +5523,12 @@
       "chapter": 72,
       "position": 16,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_collector_loops_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5525,12 +5549,12 @@
       "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "The Harvester",
         "level_keys": [
           "harvester_skinOverview_video_2021"
-        ],
-        "progression": "The Harvester"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5551,12 +5575,12 @@
       "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5577,12 +5601,12 @@
       "chapter": 75,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5603,12 +5627,12 @@
       "chapter": 76,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5629,12 +5653,12 @@
       "chapter": 77,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5655,12 +5679,12 @@
       "chapter": 78,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5681,12 +5705,12 @@
       "chapter": 79,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5707,12 +5731,12 @@
       "chapter": 80,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5733,13 +5757,13 @@
       "chapter": 81,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseC_harvester_loops8_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5760,12 +5784,12 @@
       "chapter": 82,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5786,12 +5810,12 @@
       "chapter": 83,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5812,12 +5836,12 @@
       "chapter": 84,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_harvester_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5838,12 +5862,12 @@
       "chapter": 85,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Predict",
         "level_keys": [
           "courseC_harvester_loops11_predict1_2021"
-        ],
-        "progression": "Predict"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5864,11 +5888,12 @@
       "chapter": 86,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_harvester_loops_challenge1a_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5889,11 +5914,12 @@
       "chapter": 87,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_harvester_loops_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5914,12 +5940,12 @@
       "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Move to Sheep_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5940,12 +5966,12 @@
       "chapter": 89,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Chop Tree_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5966,12 +5992,12 @@
       "chapter": 90,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Shear Sheep_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5992,12 +6018,12 @@
       "chapter": 91,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Chop Trees_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6018,12 +6044,12 @@
       "chapter": 92,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Place Wall_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6044,12 +6070,12 @@
       "chapter": 93,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld House Frame Chosen_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6070,12 +6096,12 @@
       "chapter": 94,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Plant Crops_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6096,12 +6122,12 @@
       "chapter": 95,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Avoid Monsters_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6122,12 +6148,12 @@
       "chapter": 96,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Underground Mining Coal_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6148,12 +6174,12 @@
       "chapter": 97,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Underground Iron_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6174,13 +6200,13 @@
       "chapter": 98,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "Underground Avoiding Lava_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6201,13 +6227,13 @@
       "chapter": 99,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "Underground If Statements_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6228,12 +6254,12 @@
       "chapter": 100,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "Overworld Powered Minecart_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6254,12 +6280,12 @@
       "chapter": 101,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Free Play",
         "level_keys": [
           "Overworld Free Play 20x20_2021"
-        ],
-        "progression": "Free Play"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6280,12 +6306,12 @@
       "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops1a_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6306,12 +6332,12 @@
       "chapter": 103,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops1b_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6332,12 +6358,12 @@
       "chapter": 104,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops2a_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6358,12 +6384,12 @@
       "chapter": 105,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops3a_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6384,12 +6410,12 @@
       "chapter": 106,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops4a_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6410,12 +6436,12 @@
       "chapter": 107,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops5b_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6436,12 +6462,12 @@
       "chapter": 108,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops6a_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6462,12 +6488,12 @@
       "chapter": 109,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Sticker Design",
         "level_keys": [
           "courseC_artist_loops7a_2021"
-        ],
-        "progression": "Mini-project: Sticker Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6488,12 +6514,12 @@
       "chapter": 110,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Free Play",
         "level_keys": [
           "courseC_artist_loops8a_2021"
-        ],
-        "progression": "Free Play"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6516,10 +6542,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "The Big Event - Unplugged Activity",
         "level_keys": [
           "BigEvent-Unplugged_2021"
-        ],
-        "progression": "The Big Event - Unplugged Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6540,12 +6566,12 @@
       "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Code Your Own Flappy Game",
         "level_keys": [
           "courseC_video_flappyIntro_2021"
-        ],
-        "progression": "Code Your Own Flappy Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6566,12 +6592,12 @@
       "chapter": 113,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6592,12 +6618,12 @@
       "chapter": 114,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6618,12 +6644,12 @@
       "chapter": 115,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6644,12 +6670,12 @@
       "chapter": 116,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_flappy_events4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6670,12 +6696,12 @@
       "chapter": 117,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events5_2021"
-        ],
-        "progression": "Mini-project: Flappy Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6696,12 +6722,12 @@
       "chapter": 118,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events6_2021"
-        ],
-        "progression": "Mini-project: Flappy Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6722,12 +6748,12 @@
       "chapter": 119,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events7_2021"
-        ],
-        "progression": "Mini-project: Flappy Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6748,12 +6774,12 @@
       "chapter": 120,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events8_2021"
-        ],
-        "progression": "Mini-project: Flappy Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6774,12 +6800,12 @@
       "chapter": 121,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events9_2021"
-        ],
-        "progression": "Mini-project: Flappy Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6800,12 +6826,12 @@
       "chapter": 122,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Flappy Game",
         "level_keys": [
           "courseC_flappy_events10_2021"
-        ],
-        "progression": "Mini-project: Flappy Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6826,12 +6852,12 @@
       "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6852,12 +6878,12 @@
       "chapter": 124,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6878,12 +6904,12 @@
       "chapter": 125,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6904,12 +6930,12 @@
       "chapter": 126,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6930,12 +6956,12 @@
       "chapter": 127,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseC_PlayLab_events5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6956,12 +6982,12 @@
       "chapter": 128,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_eventsA_embed_2021"
-        ],
-        "progression": "Mini-project: Chase Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6982,12 +7008,12 @@
       "chapter": 129,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events6_2021"
-        ],
-        "progression": "Mini-project: Chase Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7008,12 +7034,12 @@
       "chapter": 130,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events7_2021"
-        ],
-        "progression": "Mini-project: Chase Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7034,12 +7060,12 @@
       "chapter": 131,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events8_2021"
-        ],
-        "progression": "Mini-project: Chase Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7060,12 +7086,12 @@
       "chapter": 132,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_events9_2021"
-        ],
-        "progression": "Mini-project: Chase Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7086,12 +7112,12 @@
       "chapter": 133,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Mini-project: Chase Game",
         "level_keys": [
           "courseC_PlayLab_eventsA_2021"
-        ],
-        "progression": "Mini-project: Chase Game"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7112,12 +7138,12 @@
       "chapter": 134,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Free Play",
         "level_keys": [
           "courseC_PlayLab_eventsFP_2021"
-        ],
-        "progression": "Free Play"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7138,11 +7164,12 @@
       "chapter": 135,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_PlayLab_events_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7163,11 +7190,12 @@
       "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "PicturingData-Unplugged_2021"
-        ]
+        ],
+        "progression": "Picturing Data - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -7188,11 +7216,12 @@
       "chapter": 137,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_data wizard_2021"
-        ]
+        ],
+        "progression": "Picturing Data - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -7213,12 +7242,12 @@
       "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Project",
         "level_keys": [
           "Begin planning your project_2021"
-        ],
-        "progression": "Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7239,12 +7268,12 @@
       "chapter": 139,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC1_2021"
-        ],
-        "progression": "Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7265,12 +7294,12 @@
       "chapter": 140,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC2_2021"
-        ],
-        "progression": "Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7291,12 +7320,12 @@
       "chapter": 141,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC3_2021"
-        ],
-        "progression": "Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7317,12 +7346,12 @@
       "chapter": 142,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC4_2021"
-        ],
-        "progression": "Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7343,12 +7372,12 @@
       "chapter": 143,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC5_2021"
-        ],
-        "progression": "Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7369,12 +7398,12 @@
       "chapter": 144,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC6_2021"
-        ],
-        "progression": "Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
