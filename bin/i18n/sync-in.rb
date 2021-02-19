@@ -106,6 +106,22 @@ def get_i18n_strings(level)
         i18n_strings['behavior_names'][name.content] = name.content if name
       end
 
+      ## Variable Names
+      variables = blocks.xpath("//block[@type=\"variables_get\"]")
+      i18n_strings['variable_names'] = Hash.new unless variables.empty?
+      variables.each do |variable|
+        name = variable.at_xpath('./title[@name="VAR"]')
+        i18n_strings['variable_names'][name.content] = name.content if name
+      end
+
+      ## Parameter Names
+      parameters = blocks.xpath("//block[@type=\"parameters_get\"]")
+      i18n_strings['parameter_names'] = Hash.new unless parameters.empty?
+      parameters.each do |parameter|
+        name = parameter.at_xpath('./title[@name="VAR"]')
+        i18n_strings['parameter_names'][name.content] = name.content if name
+      end
+
       ## Placeholder texts
       i18n_strings['placeholder_texts'] = Hash.new
       i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
