@@ -56,7 +56,6 @@ class Game < ApplicationRecord
   SPRITELAB = 'spritelab'.freeze
   FISH = 'fish'.freeze
   AILAB = 'ailab'.freeze
-  JAVALAB = 'javalab'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -170,10 +169,6 @@ class Game < ApplicationRecord
     @@game_ailab ||= find_by_name('Ailab')
   end
 
-  def self.javalab
-    @@game_javalab ||= find_by_name('Javalab')
-  end
-
   def unplugged?
     app == UNPLUG
   end
@@ -219,7 +214,7 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB].include? app
   end
 
   # True if the app takes responsibility for showing footer info
@@ -315,7 +310,6 @@ class Game < ApplicationRecord
     BubbleChoice:bubble_choice
     Fish:fish
     Ailab:ailab
-    Javalab:javalab
   )
 
   def self.setup
