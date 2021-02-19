@@ -554,7 +554,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     script = create :script, name: 'migrated', is_migrated: true, hidden: true
     lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'problem lesson'
 
     # A legacy script level is one without an activity section.
     create(
@@ -574,7 +574,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
 
     assert_response :not_acceptable
-    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"Bogus Lesson 1\"]'
+    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"problem lesson\"]'
     assert_includes response.body, msg
     assert script.is_migrated
     assert script.script_levels.any?
