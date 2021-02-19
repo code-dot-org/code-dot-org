@@ -51,7 +51,7 @@ const styles = {
   }
 };
 
-class LessonOverview extends Component {
+class StudentLessonOverview extends Component {
   static propTypes = {
     lesson: reducedLessonShape.isRequired,
 
@@ -172,9 +172,9 @@ class LessonOverview extends Component {
   }
 }
 
-export const UnconnectedLessonOverview = LessonOverview;
+export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 
 export default connect(state => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn
-}))(LessonOverview);
+}))(StudentLessonOverview);
