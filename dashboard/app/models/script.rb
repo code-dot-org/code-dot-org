@@ -1004,6 +1004,7 @@ class Script < ApplicationRecord
       script.reload
       script.lesson_groups = temp_lgs
       script.save!
+      script.prevent_legacy_script_levels_in_migrated_scripts
 
       script.generate_plc_objects
 
