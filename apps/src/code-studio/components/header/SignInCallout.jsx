@@ -102,7 +102,7 @@ export default class SignInCallout extends React.Component {
     return (
       <div style={styles.container}>
         <div
-          className="modal-backdrop"
+          className="login-callout"
           style={styles.modalBackdrop}
           onClick={this.props.handleClose}
         />

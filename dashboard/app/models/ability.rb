@@ -54,7 +54,8 @@ class Ability
       :pd_foorm,
       Foorm::Form,
       Foorm::Library,
-      Foorm::LibraryQuestion
+      Foorm::LibraryQuestion,
+      :javalab
     ]
     cannot :index, Level
 
@@ -242,7 +243,8 @@ class Ability
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
-        Foorm::LibraryQuestion
+        Foorm::LibraryQuestion,
+        :javalab
       ]
 
       # Only custom levels are editable.
