@@ -18,7 +18,8 @@ $(document).ready(function() {
 });
 
 /**
- *
+ * Collect and preprocess all data students should see for the lesson, and
+ * render the React component which displays them.
  */
 function displayLessonOverview() {
   const lessonData = getScriptData('lesson');
