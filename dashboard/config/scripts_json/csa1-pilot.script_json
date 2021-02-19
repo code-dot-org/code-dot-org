@@ -5,7 +5,8 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "curriculum_umbrella": "CSA"
     },
     "new_name": null,
     "family_name": null,
