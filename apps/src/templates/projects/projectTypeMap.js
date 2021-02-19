@@ -31,8 +31,7 @@ export const PROJECT_TYPE_MAP = {
   eval: i18n.projectTypeEval(),
   calc: i18n.projectTypeCalc(),
   dance: i18n.projectTypeDance(),
-  spritelab: i18n.projectTypeSpriteLab(),
-  javalab: i18n.projectTypeJavalab()
+  spritelab: i18n.projectTypeSpriteLab()
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
