@@ -19436,10 +19436,7 @@ en:
           student_description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
         csp1-2021:
           title: CSP Unit 1 - Digital Information ('21-'22)
-          description: |-
-            This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
-
-            ![](https://images.code.org/c8b3414e617dbe37574014d0636389cf-IMG_2518.jpeg)
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
           lessons:
@@ -19488,15 +19485,11 @@ en:
             'Lesson 14: Assessment Day':
               key: 'Lesson 14: Assessment Day'
               name: Assessment Day
-            new lesson:
-              name: lesson display name
           lesson_groups:
             cspSurvey:
               display_name: Survey
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
-            lesson group:
-              display_name: lesson group display name
           name: csp1-2021
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
         csp2-2021:
