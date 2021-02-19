@@ -504,6 +504,15 @@ ActiveRecord::Schema.define(version: 2021_02_17_164121) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "frameworks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "shortcode", null: false
+    t.string "name", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shortcode"], name: "index_frameworks_on_shortcode", unique: true
+  end
+
   create_table "games", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at"
@@ -563,6 +572,13 @@ ActiveRecord::Schema.define(version: 2021_02_17_164121) do
     t.integer "position"
     t.text "properties"
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
+  end
+
+  create_table "lessons_programming_expressions", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "lesson_id", null: false
+    t.bigint "programming_expression_id", null: false
+    t.index ["lesson_id", "programming_expression_id"], name: "lesson_programming_expression", unique: true
+    t.index ["programming_expression_id", "lesson_id"], name: "programming_expression_lesson"
   end
 
   create_table "lessons_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1251,6 +1267,23 @@ ActiveRecord::Schema.define(version: 2021_02_17_164121) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
+  create_table "programming_environments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "programming_expressions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "category"
+    t.text "properties"
+    t.bigint "programming_environment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
+  end
+
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "script_id"
@@ -1552,11 +1585,28 @@ ActiveRecord::Schema.define(version: 2021_02_17_164121) do
     t.index ["standard_id"], name: "index_stages_standards_on_standard_id"
   end
 
+  create_table "standard_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "shortcode", null: false
+    t.integer "framework_id", null: false
+    t.integer "parent_category_id"
+    t.string "category_type", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["framework_id", "shortcode"], name: "index_standard_categories_on_framework_id_and_shortcode", unique: true
+    t.index ["parent_category_id"], name: "index_standard_categories_on_parent_category_id"
+  end
+
   create_table "standards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "organization", null: false
     t.string "organization_id", null: false
     t.text "description"
     t.text "concept"
+    t.bigint "category_id"
+    t.integer "framework_id"
+    t.string "shortcode"
+    t.index ["category_id"], name: "index_standards_on_category_id"
+    t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
     t.index ["organization", "organization_id"], name: "index_standards_on_organization_and_organization_id", unique: true
   end
 

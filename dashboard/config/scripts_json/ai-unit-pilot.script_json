@@ -20,8 +20,7 @@
         ]
       ],
       "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
-      "has_lesson_plan": true,
-      "peer_reviews_to_complete": 0
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
@@ -135,7 +134,7 @@
     },
     {
       "key": "lesson7",
-      "name": "Importing Models to App Lab",
+      "name": "Classification on Planet Vapnik",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -734,21 +733,21 @@
       "properties": {
         "progression": "Which Pixar Character Are You?",
         "level_keys": [
-          "ml-md placeholder"
+          "ml-import ai-pixar placeholder"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-md placeholder"
+          "ml-import ai-pixar placeholder"
         ],
-        "lesson.key": "lesson7",
+        "lesson.key": "lesson8",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       },
       "level_keys": [
-        "ml-md placeholder"
+        "ml-import ai-pixar placeholder"
       ]
     },
     {
@@ -757,7 +756,32 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Importing Models to App Lab",
+        "progression": "Video: Importing Models to App Lab",
+        "level_keys": [
+          "ml-import ai-import video"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-import ai-import video"
+        ],
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-import ai-import video"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Import Your Model",
         "level_keys": [
           "ml-models in applab-import 1"
         ]
@@ -768,7 +792,7 @@
         "script_level.level_keys": [
           "ml-models in applab-import 1"
         ],
-        "lesson.key": "lesson7",
+        "lesson.key": "lesson8",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       },
@@ -777,7 +801,57 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Conditionals Video (Dan: delete later)",
+        "level_keys": [
+          "ml-import ai-conditionals-video2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-import ai-conditionals-video2"
+        ],
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-import ai-conditionals-video2"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Changing Screens",
+        "level_keys": [
+          "ml-models in applab-screens-1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-screens-1"
+        ],
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models in applab-screens-1"
+      ]
+    },
+    {
+      "chapter": 21,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -802,7 +876,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -827,7 +901,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -852,7 +926,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -877,7 +951,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -902,7 +976,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1095,11 +1169,22 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-md placeholder",
+        "level.key": "ml-import ai-pixar placeholder",
         "script_level.level_keys": [
-          "ml-md placeholder"
+          "ml-import ai-pixar placeholder"
         ],
-        "lesson.key": "lesson7",
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-import ai-import video",
+        "script_level.level_keys": [
+          "ml-import ai-import video"
+        ],
+        "lesson.key": "lesson8",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
@@ -1110,7 +1195,29 @@
         "script_level.level_keys": [
           "ml-models in applab-import 1"
         ],
-        "lesson.key": "lesson7",
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-import ai-conditionals-video2",
+        "script_level.level_keys": [
+          "ml-import ai-conditionals-video2"
+        ],
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models in applab-screens-1",
+        "script_level.level_keys": [
+          "ml-models in applab-screens-1"
+        ],
+        "lesson.key": "lesson8",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
