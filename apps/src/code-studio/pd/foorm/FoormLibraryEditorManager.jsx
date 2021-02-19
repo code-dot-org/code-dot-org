@@ -57,13 +57,12 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
   }
 
-  // could probably dedupe this method
-  getFormattedConfigurationDropdownOptions() {
+  getFormattedLibraryDropdownOptions() {
     return this.props.availableLibraries.map((libraryNameAndVersion, i) => {
       const libraryName = libraryNameAndVersion['name'];
       const libraryVersion = libraryNameAndVersion['version'];
 
-      return this.getMenuItem(
+      return this.renderMenuItem(
         () => this.loadLibraryQuestions(libraryNameAndVersion),
         `${libraryName}, version ${libraryVersion}`,
         i
@@ -78,7 +77,7 @@ class FoormLibraryEditorManager extends React.Component {
         const libraryQuestionType = libraryQuestionAndType['type'];
         const libraryQuestionId = libraryQuestionAndType['id'];
 
-        return this.getMenuItem(
+        return this.renderMenuItem(
           () => this.loadLibraryQuestionContent(libraryQuestionId),
           `${libraryQuestionName} (${libraryQuestionType})`,
           i
@@ -87,7 +86,7 @@ class FoormLibraryEditorManager extends React.Component {
     );
   }
 
-  getMenuItem = (clickHandler, textToDisplay, key) => {
+  renderMenuItem = (clickHandler, textToDisplay, key) => {
     return (
       <MenuItem key={key} eventKey={key} onClick={clickHandler}>
         {textToDisplay}
@@ -96,23 +95,16 @@ class FoormLibraryEditorManager extends React.Component {
   };
 
   loadLibraryQuestions(selectedLibraryNameAndVersion) {
-    let libraryId = selectedLibraryNameAndVersion['id'];
+    const libraryId = selectedLibraryNameAndVersion['id'];
 
-    this.props.setLastSaved(null);
-    this.props.setSaveError(null);
     this.props.setLibraryData(selectedLibraryNameAndVersion);
-    this.updateLibraryQuestionData({
-      question: {},
-      name: null,
-      id: null
-    });
+    this.initializeLibraryQuestion(false);
 
     $.ajax({
       url: `/foorm/libraries/${libraryId}/question_names`,
       type: 'get'
     })
       .done(result => {
-        this.props.setHasError(false);
         this.props.resetAvailableLibraryQuestions(result);
         this.setState({
           hasLoadError: false
@@ -126,8 +118,7 @@ class FoormLibraryEditorManager extends React.Component {
   }
 
   loadLibraryQuestionContent(libraryQuestionId) {
-    this.props.setLastSaved(null);
-    this.props.setSaveError(null);
+    this.resetSaveStatus();
     $.ajax({
       url: `/foorm/library_questions/${libraryQuestionId}`,
       type: 'get'
@@ -159,22 +150,26 @@ class FoormLibraryEditorManager extends React.Component {
       version: null,
       id: null
     });
-    this.initializeEmptyCodeMirror();
+    this.initializeLibraryQuestion(true);
   };
 
-  initializeEmptyCodeMirror = () => {
-    this.props.setLastSaved(null);
-    this.props.setSaveError(null);
-
+  initializeLibraryQuestion = showCodeMirror => {
     this.updateLibraryQuestionData({
       question: {},
-      libraryQuestionName: null,
-      libraryQuestionId: null
+      name: null,
+      id: null
     });
+
+    this.resetSaveStatus();
     this.setState({
-      showCodeMirror: true,
-      hasLoadError: false
+      hasLoadError: false,
+      showCodeMirror: showCodeMirror
     });
+  };
+
+  resetSaveStatus = () => {
+    this.props.setLastSaved(null);
+    this.props.setSaveError(null);
   };
 
   updateLibraryQuestionData = libraryQuestionData => {
@@ -184,7 +179,7 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.resetCodeMirror(libraryQuestionData['question']);
   };
 
-  libraryQuestionOptionsAvailable = () => {
+  areLibraryQuestionOptionsAvailable = () => {
     return !!(
       this.props.libraryId &&
       this.props.availableLibraryQuestionsForCurrentLibrary
@@ -213,7 +208,7 @@ class FoormLibraryEditorManager extends React.Component {
             title="Load Library..."
             className="btn"
           >
-            {this.getFormattedConfigurationDropdownOptions()}
+            {this.getFormattedLibraryDropdownOptions()}
           </DropdownButton>
           <Button onClick={this.initializeNewLibrary} className="btn">
             New Library
@@ -224,15 +219,14 @@ class FoormLibraryEditorManager extends React.Component {
             id="load_config"
             title="Load Library Question..."
             className="btn"
-            disabled={!this.libraryQuestionOptionsAvailable()}
+            disabled={!this.areLibraryQuestionOptionsAvailable()}
           >
-            {this.libraryQuestionOptionsAvailable() &&
-              this.getFormattedLibraryQuestionDropdownOptions()}
+            {this.getFormattedLibraryQuestionDropdownOptions()}
           </DropdownButton>
           <Button
-            onClick={this.initializeEmptyCodeMirror}
+            onClick={() => this.initializeLibraryQuestion(true)}
             className="btn"
-            disabled={!this.libraryQuestionOptionsAvailable()}
+            disabled={!this.areLibraryQuestionOptionsAvailable()}
           >
             New Library Question
           </Button>
