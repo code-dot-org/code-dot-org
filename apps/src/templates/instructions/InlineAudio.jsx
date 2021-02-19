@@ -106,6 +106,10 @@ class InlineAudio extends React.Component {
     style: PropTypes.object,
     ttsAutoplayEnabled: PropTypes.bool,
 
+    // when we need to wait for DOM event to trigger audio autoplay
+    // this is the element ID that we'll be listening to
+    autoplayTriggerElementId: PropTypes.string,
+
     // Provided by redux
     // To Log TTS usage
     puzzleNumber: PropTypes.number,
@@ -233,14 +237,26 @@ class InlineAudio extends React.Component {
     });
   }
 
-  // adds/removes event listeners from the dom which trigger audio
+  getAutoplayTriggerElement() {
+    const {autoplayTriggerElementId} = this.props;
+    return autoplayTriggerElementId
+      ? document.getElementById(autoplayTriggerElementId)
+      : document;
+  }
+
+  // adds event listeners from the dom which trigger audio
   // when a significant enough user has happened
-  domEventTriggersAudio(shouldTrigger) {
+  addAudioAutoplayTrigger() {
     AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
-      const codeWorkspace = document.getElementById('codeApp');
-      shouldTrigger
-        ? codeWorkspace.addEventListener(event, this.triggerAudio)
-        : codeWorkspace.removeEventListener(event, this.triggerAudio);
+      const listeningElement = this.getAutoplayTriggerElement();
+      listeningElement.addEventListener(event, this.triggerAudio);
+    });
+  }
+
+  removeAudioAutoplayTrigger() {
+    AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
+      const listeningElement = this.getAutoplayTriggerElement();
+      listeningElement.removeEventListener(event, this.triggerAudio);
     });
   }
 
@@ -252,12 +268,14 @@ class InlineAudio extends React.Component {
         this.recordPlayEvent();
       })
       .catch(err => {
-        // there wasn't significant enough user interaction to play audio automatically
-        // for more information about this issue on Chrome, see https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
         const shouldAutoPlay =
           this.props.ttsAutoplayEnabled && !this.state.autoplayed;
+
+        // there wasn't significant enough user interaction to play audio automatically
+        // for more information about this issue on Chrome, see
+        // https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
         if (err instanceof DOMException && shouldAutoPlay) {
-          this.domEventTriggersAudio(true);
+          this.addAudioAutoplayTrigger();
         } else {
           throw err;
         }
@@ -265,7 +283,7 @@ class InlineAudio extends React.Component {
   }
 
   triggerAudio() {
-    this.playAudio().then(() => this.domEventTriggersAudio(false));
+    this.playAudio().then(() => this.removeAudioAutoplayTrigger());
   }
 
   pauseAudio() {
