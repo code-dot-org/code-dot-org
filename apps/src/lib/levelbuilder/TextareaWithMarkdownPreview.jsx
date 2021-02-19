@@ -67,9 +67,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
   };
 
   handleUploadImage = url => {
-    let e = {};
-    e.target.value = this.props.markdown + `\n\n![](${url})`;
-    console.log(e);
+    let e = {target: {value: this.props.markdown + `\n\n![](${url})`}};
     this.props.handleMarkdownChange(e);
   };
 
