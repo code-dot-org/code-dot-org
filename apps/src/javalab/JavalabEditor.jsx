@@ -42,6 +42,8 @@ class JavalabEditor extends React.Component {
   }
 
   dispatchEditorChange = () => {
+    // tr is a code mirror transaction
+    // see https://codemirror.net/6/docs/ref/#state.Transaction
     return tr => {
       // we are overwriting the default dispatch method for codemirror,
       // so we need to manually call the update method.
