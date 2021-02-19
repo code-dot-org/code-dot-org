@@ -352,7 +352,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.",
+        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.",
         "student_overview": "More nested loops! This time, you get to make some AMAZING drawing with nested loops.",
         "purpose": "In this online activity, students will create designs in Artist that they can proudly share with their loved ones.  \r\n\r\nThe purpose of this activity is to utilize nested loops as a way to inspire students with artistic minds to see coding as another creative outlet. This set of puzzles was built to develop critical thinking skills, an understanding of elementary geometry, and creativity -- all within the scope of nested loops!",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.\r\n - Consider what supports your students might need with turns and angles. ",
@@ -455,8 +455,8 @@
       "properties": {
         "overview": "Students will be introduced to using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.",
         "student_overview": "Make complex drawings more easily with functions!",
-        "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident with themselves and proud of their hard work.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure ever student has a journal.",
+        "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident and proud of their hard work.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -607,6 +607,19 @@
       }
     },
     {
+      "key": "dbad5d87-5c18-4c2a-a15a-6567124b4864",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dbad5d87-5c18-4c2a-a15a-6567124b4864",
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
       "key": "da87c8ba-9486-43e4-9dde-e6eac223396e",
       "position": 1,
       "properties": {
@@ -652,8 +665,7 @@
       "key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf",
@@ -708,8 +720,7 @@
       "key": "8026f93e-6bc5-4824-9f7a-d21fa69476ed",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "8026f93e-6bc5-4824-9f7a-d21fa69476ed",
@@ -1161,8 +1172,7 @@
       "key": "6354e763-cca6-4b98-b56e-16609de67f85",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "6354e763-cca6-4b98-b56e-16609de67f85",
@@ -1208,6 +1218,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3c16545b-4916-4493-b8ad-6e73aa6ac515",
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "csf_nested_loops",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "388b4557-7534-453f-a760-847055923bc0",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "388b4557-7534-453f-a760-847055923bc0",
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2021"
@@ -1313,7 +1336,7 @@
       "key": "a80b5d47-5fb8-4557-9fb2-233074caad47",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Functions",
+        "name": "Bridging Activity - Choose One",
         "duration": 15
       },
       "seeding_key": {
@@ -1439,8 +1462,7 @@
       "key": "1a3eff43-27c8-476a-9d18-2e277fa416b9",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "1a3eff43-27c8-476a-9d18-2e277fa416b9",
@@ -1751,7 +1773,7 @@
       "key": "c0191294-55c5-47ec-a80d-76f9023bd84e",
       "position": 1,
       "properties": {
-        "name": "Artist Intro with JR Hildebrande",
+        "name": "Drawing with Loops",
         "progression_name": "Artist Intro with JR Hildebrande"
       },
       "seeding_key": {
@@ -1763,7 +1785,6 @@
       "key": "257e3a1f-5cc5-444e-94e3-ee18c5d7169e",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1775,7 +1796,6 @@
       "key": "feae9d15-9fcd-46f6-a25e-7cb50d4a776c",
       "position": 3,
       "properties": {
-        "name": "Loops with the Artist",
         "progression_name": "Loops with the Artist"
       },
       "seeding_key": {
@@ -1787,7 +1807,6 @@
       "key": "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1799,7 +1818,6 @@
       "key": "f6df66e2-bc97-403d-a4e1-c015294d94ac",
       "position": 5,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1811,7 +1829,6 @@
       "key": "9982dc06-ec1f-4b15-b4e8-16cc5663bf8c",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1823,7 +1840,6 @@
       "key": "9a64a3f8-16de-4001-82e3-01d9184a0650",
       "position": 7,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1835,6 +1851,7 @@
       "key": "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47",
       "position": 8,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47",
@@ -1845,8 +1862,7 @@
       "key": "35650821-c57b-4b3b-93eb-b58c2bf94678",
       "position": 9,
       "properties": {
-        "description": "Some students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencil beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
       },
       "seeding_key": {
         "activity_section.key": "35650821-c57b-4b3b-93eb-b58c2bf94678",
@@ -1866,6 +1882,17 @@
       }
     },
     {
+      "key": "0993a02e-0b2d-491f-9f50-7feb1183d562",
+      "position": 1,
+      "properties": {
+        "description": "###Land of Geometry (90-120 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + English Language Arts + Math**\n\n[Land of Geometry](https://docs.google.com/document/d/1AtQQyiYcvrJ-G2BLV4ZzIjB_c_M_vIjv4NZsfAwbFIA/edit?usp=sharing) is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Using Artist, students will create their “Land of Geometry” made up of various shapes, angles and lines. Once their land is complete, students will write an opinion piece to support the idea that their “Land of Geometry” is the BEST place for the Artist to live.\n\n*Standards Addressed:*\n\n- **CCSS.MATH.CONTENT.4.G.A.1:** Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures.\n\n- **CCSS.MATH.CONTENT.4.G.A.2:** Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles.\n\n- **CCSS.ELA-LITERACY.W.4.1:** Write opinion pieces on topics or texts, supporting a point of view with reasons and information.\n\n- **CCSS.ELA-LITERACY.W.4.1.A:** Introduce a topic or text clearly, state an opinion, and create an organizational structure in which related ideas are grouped to support the writer's purpose.\n\n- **CCSS.ELA-LITERACY.W.4.1.B:** Provide reasons that are supported by facts and details.\n\n- **CCSS.ELA-LITERACY.W.4.1.C:** Link opinion and reasons using words and phrases (e.g., for instance, in order to, in addition).\n\n- **CCSS.ELA-LITERACY.W.4.1.D:** Provide a concluding statement or section related to the opinion presented.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0993a02e-0b2d-491f-9f50-7feb1183d562",
+        "lesson_activity.key": "dbad5d87-5c18-4c2a-a15a-6567124b4864"
+      }
+    },
+    {
       "key": "26475297-6a91-4f8c-a64d-ded841ff0cb9",
       "position": 1,
       "properties": {
@@ -1881,23 +1908,12 @@
       "key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
       "position": 1,
       "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
+        "name": "Conditionals in Minecraft: Voyage Aquatic",
+        "progression_name": "Practice",
+        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to apick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
       "seeding_key": {
         "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
-        "lesson_activity.key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9"
-      }
-    },
-    {
-      "key": "e1f5355c-994f-429f-a865-f9c0884e8d28",
-      "position": 2,
-      "properties": {
-        "description": "Students are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\r\n\r\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to apick up items, and explore in a world made up of cubes of things.\r\n\r\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming.",
-        "name": "Online Puzzles\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "e1f5355c-994f-429f-a865-f9c0884e8d28",
         "lesson_activity.key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9"
       }
     },
@@ -1917,7 +1933,7 @@
       "key": "b080aea3-3609-4c59-bafa-176865508638",
       "position": 1,
       "properties": {
-        "description": "#### More Minecraft\r\n\r\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
       },
       "seeding_key": {
         "activity_section.key": "b080aea3-3609-4c59-bafa-176865508638",
@@ -1940,8 +1956,9 @@
       "key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
       "position": 1,
       "properties": {
-        "name": "While Loops with the Farmer",
-        "progression_name": "While Loops with the Farmer"
+        "name": "Conditionals with the Farmer",
+        "progression_name": "While Loops with the Farmer",
+        "description": "\n####Online Puzzles\n\nThe patterns in these puzzles may not be obvious to every student. We recommend that you play through these levels beforehand to best understand any problem areas for your class. Also, watching and using the techniques from [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video may be helpful for your class."
       },
       "seeding_key": {
         "activity_section.key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
@@ -1952,7 +1969,6 @@
       "key": "22826fb5-5cdf-4918-970d-680d9ba82f88",
       "position": 2,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -1964,7 +1980,6 @@
       "key": "af239dc4-fc39-4765-a761-8d1979ef5e11",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1976,8 +1991,7 @@
       "key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
       "position": 4,
       "properties": {
-        "name": "Repeat Unit Statements",
-        "progression_name": "Repeat Unit Statements"
+        "progression_name": "Repeat Until Statements"
       },
       "seeding_key": {
         "activity_section.key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
@@ -1988,7 +2002,6 @@
       "key": "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2000,7 +2013,6 @@
       "key": "37929d1a-a0f2-4700-96e9-7d207a70dc1e",
       "position": 6,
       "properties": {
-        "name": "\"If/Else\" with the Bee",
         "progression_name": "\"If/Else\" with the Bee"
       },
       "seeding_key": {
@@ -2012,7 +2024,6 @@
       "key": "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17",
       "position": 7,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2024,7 +2035,6 @@
       "key": "c6d24990-be45-4b52-b095-48004fcaca4a",
       "position": 8,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2036,8 +2046,6 @@
       "key": "47ed862d-1562-4505-a98c-8c852ba6d936",
       "position": 9,
       "properties": {
-        "description": "The patterns in these puzzles may not be obvious to every student. We recommend that you play through these levels beforehand to best understand any problem areas for your class. Also, watching and using the techniques from [r pair-programming-vid] may be helpful for your class.",
-        "name": "Online Puzzles\r"
       },
       "seeding_key": {
         "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936",
@@ -2060,7 +2068,7 @@
       "key": "edc8cb65-ae89-4d76-8f05-e2c5f35535d2",
       "position": 1,
       "properties": {
-        "description": "#### While We Play\r\n\r\nGather the class for some fun outside or in a gym with a ball! This could be done in a circle or as a team in a court\r\n\r\n***Rules:***\r\n\r\n - _While_ the ball is in play, we must all be ready to hit it\r\n - _If_ the ball is hit to you, you must keep it in the air\r\n - _If_ you hit the ball once, you cannot hit it again (only one touch per person per turn, no double hitting)\r\n - _If_ the ball goes out of bound, every student must fall to the ground dramatically. The last kid to fall has to retrieve the ball.\r\n\r\nAt the end of the first round, ask the students if they can identify the conditionals in the game. Can they come up with others they might want in the game?"
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n#### While We Play\n\nGather the class for some fun outside or in a gym with a ball! This could be done in a circle or as a team in a court\n\n***Rules:***\n\n - _While_ the ball is in play, we must all be ready to hit it\n - _If_ the ball is hit to you, you must keep it in the air\n - _If_ you hit the ball once, you cannot hit it again (only one touch per person per turn, no double hitting)\n - _If_ the ball goes out of bound, every student must fall to the ground dramatically. The last kid to fall has to retrieve the ball.\n\nAt the end of the first round, ask the students if they can identify the conditionals in the game. Can they come up with others they might want in the game?"
       },
       "seeding_key": {
         "activity_section.key": "edc8cb65-ae89-4d76-8f05-e2c5f35535d2",
@@ -2593,7 +2601,7 @@
       "key": "9f56b739-e482-4c76-8b68-e903bfe95e65",
       "position": 1,
       "properties": {
-        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://youtu.be/o_oDsBeBxko) video.\n*You may need to play it two or three times.*"
+        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://www.youtube.com/watch?v=o_oDsBeBxko) video.\n*You may need to play it two or three times.*"
       },
       "seeding_key": {
         "activity_section.key": "9f56b739-e482-4c76-8b68-e903bfe95e65",
@@ -2639,7 +2647,7 @@
       "key": "2bab17fa-7a64-4ae1-a9c3-30d942674dd1",
       "position": 2,
       "properties": {
-        "description": "\n####To Share or Not to Share?\n\n**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.\n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://youtu.be/o_oDsBeBxko) video.\n*You may need to play it two or three times.*\n\n**Discussion Goal:** \n###Not Okay to Share\n- Have you ever transferred songs to your friend’s MP3 player? Is that OK? \n    - [If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.]\n- What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie? \n    - [No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.]\n    -  How else could you get an authorized (legal) copy of the movie for your phone? \n        -  [iTunes or Amazon sell movies legally.]\n\n### Okay to Share\n\n- I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair? \n     - [Yes, this is OK to share because I made it — I own the copyright.]\n- What about a song I wrote? Can I share that? . . . Who gets to decide? \n     - [“That’s right, I do.”] \n- What will happen when I share it? \n     - [Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”]\n- Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical? \n     - [Yes.] \n     - Why is this share OK? \n         - [Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” ]\n\n"
+        "description": "\n####To Share or Not to Share?\n\n**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.\n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://www.youtube.com/watch?v=o_oDsBeBxko) video.\n*You may need to play it two or three times.*\n\n**Discussion Goal:** \n###Not Okay to Share\n- Have you ever transferred songs to your friend’s MP3 player? Is that OK? \n    - [If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.]\n- What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie? \n    - [No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.]\n    -  How else could you get an authorized (legal) copy of the movie for your phone? \n        -  [iTunes or Amazon sell movies legally.]\n\n### Okay to Share\n\n- I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair? \n     - [Yes, this is OK to share because I made it — I own the copyright.]\n- What about a song I wrote? Can I share that? . . . Who gets to decide? \n     - [“That’s right, I do.”] \n- What will happen when I share it? \n     - [Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”]\n- Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical? \n     - [Yes.] \n     - Why is this share OK? \n         - [Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” ]\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2bab17fa-7a64-4ae1-a9c3-30d942674dd1",
@@ -2867,11 +2875,11 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Students will have the opportunity to share their own work at the end of this stage. These pieces of artwork can be shared virtually or printed out. We recommend printing out the class's work and displaying it for the students' loved ones to see.\r\n"
+            "markdown": "Students will have the opportunity to share their own work at the end of this stage. These pieces of artwork can be shared virtually or printed out. We recommend printing out the class' work and displaying it for the students' loved ones to see.\n"
           }
-        ]
+        ],
+        "name": "Fancy Shapes using Nested Loops"
       },
       "seeding_key": {
         "activity_section.key": "20367f69-608a-45ad-b6fc-7a17613a071f",
@@ -2882,8 +2890,7 @@
       "key": "2fb800b1-0368-40c0-b46e-99159f10fd02",
       "position": 2,
       "properties": {
-        "description": "Students might benefit from having a puzzle done as a class. If you believe your class could benefit from that, we recommend puzzle 2 of stage 5.\r\n\r\nWe highly recommend [r pair-programming-vid] in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\r\n\r\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nStudents might benefit from having a puzzle done as a class. If you believe your class could benefit from that, we recommend puzzle 2 of stage 5.\n\nWe highly recommend [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns."
       },
       "seeding_key": {
         "activity_section.key": "2fb800b1-0368-40c0-b46e-99159f10fd02",
@@ -2894,7 +2901,6 @@
       "key": "35342825-ca7b-4305-b02a-365e6095e8f6",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2906,8 +2912,7 @@
       "key": "1768d4b3-853f-4f6a-ba24-6a174b345dbf",
       "position": 4,
       "properties": {
-        "name": "Video",
-        "progression_name": "Video"
+        "progression_name": "Nested Loops"
       },
       "seeding_key": {
         "activity_section.key": "1768d4b3-853f-4f6a-ba24-6a174b345dbf",
@@ -2918,7 +2923,6 @@
       "key": "7f4ec132-6df2-4a23-abe3-853efe35701d",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2930,7 +2934,6 @@
       "key": "70a7d0e6-caa1-439a-a18c-41e5af3daf6f",
       "position": 6,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2942,7 +2945,6 @@
       "key": "b74deff4-5709-42c9-bd89-609b29df9368",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2954,7 +2956,6 @@
       "key": "dbdfa13e-a251-458a-b549-4143f4e77cde",
       "position": 8,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2966,7 +2967,6 @@
       "key": "a2a794ce-1af9-4258-84ad-352ee9f9f187",
       "position": 9,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2978,6 +2978,7 @@
       "key": "0c0b60c9-9aee-43f0-9018-6f1d770ae014",
       "position": 10,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "0c0b60c9-9aee-43f0-9018-6f1d770ae014",
@@ -2988,8 +2989,7 @@
       "key": "9ad07175-6454-4905-9366-61b189a9ab7e",
       "position": 1,
       "properties": {
-        "description": "Get the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
-        "name": "Flash Chat: What did you make today?\r"
+        "description": "\n###Flash Chat: What did you make today?\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop."
       },
       "seeding_key": {
         "activity_section.key": "9ad07175-6454-4905-9366-61b189a9ab7e",
@@ -3012,7 +3012,7 @@
       "key": "d0c1cb56-b676-4766-8452-407699d36c2f",
       "position": 1,
       "properties": {
-        "description": "#### Together We Draw\r\n\r\nHave the students pair up with two pieces of paper. Partners should individually draw a shape or simple pattern. Once the simple pattern has been drawn, have the partners switch papers. Now each partner must repeat that pattern how ever many times they want. For example, if one partner draws a square, the other partner can make a rectangle made up of squares! If one partner draws a staircase pattern, the other student can fill the page with staircases! Each pair will have a set of unique drawings. If there's time, have students discuss how they might code their drawings.\r\n\r\nHere are some examples:\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.5-Examples.jpg)"
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n#### Together We Draw\nHave the students pair up with two pieces of paper. Partners should individually draw a shape or simple pattern. Once the simple pattern has been drawn, have the partners switch papers. Now each partner must repeat that pattern how ever many times they want. For example, if one partner draws a square, the other partner can make a rectangle made up of squares! If one partner draws a staircase pattern, the other student can fill the page with staircases! Each pair will have a set of unique drawings. If there's time, have students discuss how they might code their drawings.\n\nHere are some examples:\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.5-Examples.jpg)"
       },
       "seeding_key": {
         "activity_section.key": "d0c1cb56-b676-4766-8452-407699d36c2f",
@@ -3023,7 +3023,7 @@
       "key": "3fd1ff7f-942a-4316-9559-3d910ab63fc4",
       "position": 1,
       "properties": {
-        "description": "Ask the class to discuss the last set of puzzles.\r\n\r\n - What did they like/dislike?\r\n - Which puzzles were hard? Why?\r\n - Which puzzles were easy? Why?\r\n - If you were to teach nested loops to a friend, what would you say to help them understand?\r\n\r\nIf there's time, give an introduction to the main characters of today's puzzles, Anna and Elsa from Frozen. Give the class the sister's back story if the class doesn't already know. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with Anna and Elsa's ice skates!",
+        "description": "Ask the class to discuss the last set of puzzles.\n\n - What did they like/dislike?\n - Which puzzles were hard? Why?\n - Which puzzles were easy? Why?\n - If you were to teach nested loops to a friend, what would you say to help them understand?\n\nIf there's time, give an introduction to the main characters of today's puzzles, Anna and Elsa from Frozen. Give the class the sisters' back story if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with Anna and Elsa's ice skates!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3035,7 +3035,7 @@
       "key": "5d0e32d6-0d8a-4783-92f2-1e20fb8e5ea9",
       "position": 1,
       "properties": {
-        "name": "Mini-Project: Snowflake #1",
+        "name": "Nested Loops with Frozen",
         "progression_name": "Mini-Project: Snowflake #1"
       },
       "seeding_key": {
@@ -3047,7 +3047,6 @@
       "key": "f508c803-c84b-4de9-8d54-88da404dbb4f",
       "position": 2,
       "properties": {
-        "name": "Mini-Project: Snowflake #2",
         "progression_name": "Mini-Project: Snowflake #2"
       },
       "seeding_key": {
@@ -3059,8 +3058,7 @@
       "key": "cb90508f-f052-4582-a37e-88b6abf0b729",
       "position": 3,
       "properties": {
-        "description": "This set of puzzles is set up as a progression. This means every puzzle builds a foundation for the next puzzle. Students will enjoy making more and more interesting designs by making small and simple changes to code they have already written.",
-        "name": "Code Studio\r"
+        "description": "\n####Online Puzzles\n\nThis set of puzzles is set up as a progression. This means every puzzle builds a foundation for the next puzzle. Students will enjoy making more and more interesting designs by making small and simple changes to code they have already written."
       },
       "seeding_key": {
         "activity_section.key": "cb90508f-f052-4582-a37e-88b6abf0b729",
@@ -3077,6 +3075,17 @@
       "seeding_key": {
         "activity_section.key": "47f46b59-d887-4bc5-8f39-c72cd925587a",
         "lesson_activity.key": "3c16545b-4916-4493-b8ad-6e73aa6ac515"
+      }
+    },
+    {
+      "key": "356bbb59-cd38-4774-9589-32d04cb07661",
+      "position": 1,
+      "properties": {
+        "description": "###Snow Day Fun! (45-75 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + English Language Arts + Math**\n\n[Snow Day Fun!](https://docs.google.com/document/d/1KJwBGWiaUkpKQwCTsXw5eC7sL0f9mlxfOORJiMUIZgU/edit#heading=h.vowrbq6ykmt2) is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will help Elsa explore her winter wonderland as they create a snowflake using nested loops and lines of symmetry.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.4.7:** Conduct short research projects that build knowledge through investigation of different aspects of a topic.\n\n- **CCSS.MATH.CONTENT.4.G.A.3:** Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into matching parts. Identify line-symmetric figures and draw lines of symmetry.\n\n- **CCSS.MATH.CONTENT.4.MD.C.5.B:** An angle that turns through *n* one-degree angles is said to have an angle measure of *n* degrees.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "356bbb59-cd38-4774-9589-32d04cb07661",
+        "lesson_activity.key": "388b4557-7534-453f-a760-847055923bc0"
       }
     },
     {
@@ -3299,11 +3308,12 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Function blocks:\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/E.7-lesson-hint.png)\r\n\r\nThe block to the left is a function declaration, a block that students will name and use to fill in the function. The block to the right is a function call, a block that makes the function code run. Students will need multiple of the function call blocks.\r\n"
           }
-        ]
+        ],
+        "name": "Unplugged Activity Using Some Blockly",
+        "description": "Pick a song to play that the students enjoy and print out the lyrics. You can use the same song from \"Functions Unplugged: Songwriting.\" Break your class into groups or pairs. Pass out the printed out lyrics (including the repeated chorus) and the basic function blocks from [Unplugged Blocks](\thttps://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit) to each group or pair of students. See lesson tip for details.\n\nAsk the students to cross out any part of the song that can be made into a function (the chorus is a good example) and put it into the function blocks provided. Students should fill in the function declaration with a function name and the words of the repeated lyrics. Once the function declaration is done, ask the students to fill in the function calls and place them on top of the crossed out lyrics.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "1df9bd87-1d7e-4073-8ba6-e098abe93672",
@@ -3311,23 +3321,10 @@
       }
     },
     {
-      "key": "945af774-758a-4141-b762-c80ba653dad8",
+      "key": "9a7c045f-0a23-4523-91b7-b3d40bbb9852",
       "position": 3,
       "properties": {
-        "description": "Pick a song to play that the students enjoy and print out the lyrics. You can use the same song from \"Functions Unplugged: Songwriting.\" Break your class into groups or pairs. Pass out the printed out lyrics (including the repeated chorus) and the basic function blocks from [r course-cf-blockly-blocks] to each group or pair of students. See lesson tip for details.\r\n\r\nAsk the students to cross out any part of the song that can be made into a function (the chorus is a good example) and put it into the function blocks provided. Students should fill in the function declaration with a function name and the words of the repeated lyrics. Once the function declaration is done, ask the students to fill in the function calls and place them on top of the crossed out lyrics.\r\n\r\nOnce every group or pair is done, ask the class where they put their functions and why. Did everyone make the same function? How often is the function repeated?",
-        "name": "Unplugged Activity Using Some Blockly\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "945af774-758a-4141-b762-c80ba653dad8",
-        "lesson_activity.key": "a80b5d47-5fb8-4557-9fb2-233074caad47"
-      }
-    },
-    {
-      "key": "9a7c045f-0a23-4523-91b7-b3d40bbb9852",
-      "position": 4,
-      "properties": {
-        "description": "Pull up a puzzle from the lesson. We recommend puzzle 9. \r\nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. Why can you not just use a loop?\r\n\r\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\r\n\r\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops.",
-        "name": "Preview of Online Puzzles \r"
+        "description": "Once every group or pair is done, ask the class where they put their functions and why. Did everyone make the same function? How often is the function repeated?\n\n####-Or-\n"
       },
       "seeding_key": {
         "activity_section.key": "9a7c045f-0a23-4523-91b7-b3d40bbb9852",
@@ -3335,10 +3332,22 @@
       }
     },
     {
+      "key": "b249be1c-ef47-4ad8-87dd-2bcfb8d17530",
+      "position": 4,
+      "properties": {
+        "name": "Preview of Online Puzzles ",
+        "description": "\nPull up a puzzle from the lesson. We recommend puzzle 9. \nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. Why can you not just use a loop?\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops."
+      },
+      "seeding_key": {
+        "activity_section.key": "b249be1c-ef47-4ad8-87dd-2bcfb8d17530",
+        "lesson_activity.key": "a80b5d47-5fb8-4557-9fb2-233074caad47"
+      }
+    },
+    {
       "key": "4130a39a-0232-45ed-b6c7-1f2badada9ee",
       "position": 1,
       "properties": {
-        "name": "Practice",
+        "name": "Functions in Minecraft",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3350,7 +3359,6 @@
       "key": "faa2f676-cf14-4bd7-b277-8e0a30245c0d",
       "position": 2,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3362,8 +3370,7 @@
       "key": "9e696711-1000-4f2b-a0c5-b279065d0d19",
       "position": 3,
       "properties": {
-        "description": "We recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nWe recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles."
       },
       "seeding_key": {
         "activity_section.key": "9e696711-1000-4f2b-a0c5-b279065d0d19",
@@ -3374,7 +3381,7 @@
       "key": "9639ed09-b00f-4186-a5e8-0a1020965a44",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What did your functions do in the programs you wrote today? How did that help you?\r\n - When should you use a function instead of a loop?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
         "name": "Journaling\r"
       },
       "seeding_key": {
@@ -3386,7 +3393,7 @@
       "key": "990891b6-d051-4117-8dd5-fc3346d69dc5",
       "position": 1,
       "properties": {
-        "description": "At this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair share or discuss as a class. Try using examples of hard or easy puzzles in either Artist or Bee.\r\n\r\nAsk the class:\r\n\r\n - When would you use a function?\r\n - Why does a function help to simplify your program?\r\n - Do you think functions make programming easier or harder? Why?",
+        "description": "At this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either Artist or Bee.\n\nAsk the class:\n\n - When would you use a function?\n - Why does a function help to simplify your program?\n - Do you think functions make programming easier or harder? Why?",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3398,8 +3405,9 @@
       "key": "24e49944-567b-4a1a-8f14-8e60585cb81f",
       "position": 1,
       "properties": {
-        "name": "The Harvester",
-        "progression_name": "The Harvester"
+        "name": "Functions with Harvester",
+        "progression_name": "The Harvester",
+        "description": "\n####Online Puzzles\n\nSome puzzles will have a function pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a function first, then determine where a function would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use functions, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions."
       },
       "seeding_key": {
         "activity_section.key": "24e49944-567b-4a1a-8f14-8e60585cb81f",
@@ -3410,7 +3418,6 @@
       "key": "6da14073-1ba0-4603-989b-5b9c9758c047",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3422,7 +3429,6 @@
       "key": "4380ffcc-d9bb-4d3a-a63c-799bbef83e6f",
       "position": 3,
       "properties": {
-        "name": "How to Create a Simple Function",
         "progression_name": "How to Create a Simple Function"
       },
       "seeding_key": {
@@ -3434,7 +3440,6 @@
       "key": "f7a673eb-5123-4e14-933b-892d39e91db4",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3446,7 +3451,6 @@
       "key": "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5",
       "position": 5,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3458,7 +3462,6 @@
       "key": "1fedc5de-50c7-478d-8173-e2d8ffd4d97a",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3470,23 +3473,10 @@
       "key": "5d48d1a1-9a64-4085-871f-663991bdc117",
       "position": 7,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "5d48d1a1-9a64-4085-871f-663991bdc117",
-        "lesson_activity.key": "0d2d5e5c-1742-4883-a2d8-73284a6cd40e"
-      }
-    },
-    {
-      "key": "49043b18-5e78-4e77-97ea-ced60082a334",
-      "position": 8,
-      "properties": {
-        "description": "Some puzzles will have a function pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a function first, then determine where a function would be useful in the program.\r\n\r\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use functions, set up teams of expert students within your class to go around and answer questions.\r\n\r\nDon't forget to provide pencils and paper to help students sketch out possible solutions.",
-        "name": "Online Puzzles\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "49043b18-5e78-4e77-97ea-ced60082a334",
         "lesson_activity.key": "0d2d5e5c-1742-4883-a2d8-73284a6cd40e"
       }
     },
@@ -3518,7 +3508,7 @@
       "key": "d1826ee5-4403-41a2-a804-3112c9da4cb1",
       "position": 1,
       "properties": {
-        "name": "Prediction",
+        "name": "Functions with Artist",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3530,7 +3520,6 @@
       "key": "c8b7ed1a-7b68-48e5-bf78-c411d209179a",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3542,7 +3531,6 @@
       "key": "2be1256a-b8a6-4ec6-a54d-c1db662af71e",
       "position": 3,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3554,7 +3542,6 @@
       "key": "c29e178e-6a22-48e2-9df0-06269e2000b2",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3566,7 +3553,6 @@
       "key": "dd21a594-70a8-4577-9509-652bef04d3f7",
       "position": 5,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3578,7 +3564,6 @@
       "key": "91444fab-14f5-48ec-993e-40f876eaff1d",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3590,6 +3575,7 @@
       "key": "761169d4-a60f-4c9d-b011-2e79adcf8b31",
       "position": 7,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "761169d4-a60f-4c9d-b011-2e79adcf8b31",
@@ -3600,8 +3586,7 @@
       "key": "03c1b9a3-3308-4c66-a0f4-8528ef2ad11f",
       "position": 8,
       "properties": {
-        "description": "Students may benefit from writing code without functions then creating functions from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nStudents may benefit from writing code without functions then creating functions from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas."
       },
       "seeding_key": {
         "activity_section.key": "03c1b9a3-3308-4c66-a0f4-8528ef2ad11f",
@@ -3624,7 +3609,7 @@
       "key": "32cfd519-6691-4e68-82de-f080fc4c2c6a",
       "position": 1,
       "properties": {
-        "description": "#### Draw by Functions\r\n\r\nBreak the class into groups of 2-3 students. Have each group write a function that draws some kind of shape and a program that uses that function. Depending on the creativity or focus the groups, students might need to be assigned a shape to create. Once every group is done, have the groups switch programs. On a separate piece of paper, each group should draw what the program creates. The groups should then return the programs and drawings to the original group.\r\n\r\nDid every group get the drawing they expected? If not, what went wrong? Have the class go through the debugging process and try again."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n#### Draw by Functions\n\nBreak the class into groups of 2-3 students. Have each group write a function that draws some kind of shape and a program that uses that function. Depending on the creativity or focus the groups, students might need to be assigned a shape to create. Once every group is done, have the groups switch programs. On a separate piece of paper, each group should draw what the program creates. The groups should then return the programs and drawings to the original group.\n\nDid every group get the drawing they expected? If not, what went wrong? Have the class go through the debugging process and try again."
       },
       "seeding_key": {
         "activity_section.key": "32cfd519-6691-4e68-82de-f080fc4c2c6a",
@@ -4505,7 +4490,8 @@
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4530,7 +4516,8 @@
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge2a_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4998,7 +4985,7 @@
         "level_keys": [
           "courseD_video_repeatUntil_2021"
         ],
-        "progression": "Repeat Unit Statements"
+        "progression": "Repeat Until Statements"
       },
       "named_level": null,
       "bonus": false,
@@ -6349,7 +6336,7 @@
         "level_keys": [
           "courseD_video_nestedLoopsArtist_2021"
         ],
-        "progression": "Video"
+        "progression": "Nested Loops"
       },
       "named_level": null,
       "bonus": false,
@@ -6635,7 +6622,8 @@
       "properties": {
         "level_keys": [
           "courseD_artist_nestedLoops_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -6660,7 +6648,8 @@
       "properties": {
         "level_keys": [
           "courseD_artist_nestedLoops_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7960,7 +7949,8 @@
       "properties": {
         "level_keys": [
           "courseE_artist_functions_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7985,7 +7975,8 @@
       "properties": {
         "level_keys": [
           "courseE_artist_functions_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -10151,7 +10142,7 @@
     },
     {
       "name": "Digital Sharing Ethics (Video)",
-      "url": "https://www.youtube.com/watch?v=6RFY5YnA8iY",
+      "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
       "key": "digital-sharing-video",
       "properties": {
         "type": "Video",
