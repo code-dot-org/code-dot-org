@@ -24,6 +24,9 @@ export default class SignInCalloutWrapper extends React.Component {
     };
   }
 
+  // Upon close, set both cookies and session storage, and prevent the click
+  // event from being bubbled up to any other components. The path '/' allows
+  // the data to be seen one directory higher.
   closeCallout(event) {
     this.setState({hideCallout: true});
     cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
@@ -31,9 +34,7 @@ export default class SignInCalloutWrapper extends React.Component {
     event.preventDefault();
   }
 
-  // For readibility: returning an empty div here explicitly if the callout is
-  // not supposed to be displayed. This avoids using a render statement that
-  // often returns *nothing.
+  // After the first dismissal, this returns null
   render() {
     if (this.state.hideCallout) {
       return null;

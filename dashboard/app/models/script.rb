@@ -1430,7 +1430,8 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
-      age_13_required: logged_out_age_13_required?
+      age_13_required: logged_out_age_13_required?,
+      is_csf: csf?
     }
   end
 
