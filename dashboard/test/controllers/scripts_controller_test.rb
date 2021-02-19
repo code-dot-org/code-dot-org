@@ -532,7 +532,7 @@ class ScriptsControllerTest < ActionController::TestCase
       lesson: lesson,
       activity_section: section,
       activity_section_position: 1,
-      levels: [create(:maze)]
+      levels: [create(:applab)]
     )
 
     stub_file_writes(script.name)
@@ -561,7 +561,7 @@ class ScriptsControllerTest < ActionController::TestCase
       :script_level,
       script: script,
       lesson: lesson,
-      levels: [create(:maze)]
+      levels: [create(:applab)]
     )
 
     stub_file_writes(script.name)
