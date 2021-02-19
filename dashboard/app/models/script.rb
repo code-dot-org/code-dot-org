@@ -1037,6 +1037,12 @@ class Script < ApplicationRecord
     end
   end
 
+  def prevent_legacy_script_levels_in_migrated_scripts
+    if is_migrated && script_levels.reject(&:activity_section).any?
+      raise "legacy script levels are not allowed in migrated scripts"
+    end
+  end
+
   # Script levels unfortunately have 3 position values:
   # 1. chapter: position within the Script
   # 2. position: position within the Lesson
@@ -1045,9 +1051,8 @@ class Script < ApplicationRecord
   # values of position and chapter on all script levels in the script.
   def fix_script_level_positions
     reload
-    if script_levels.reject(&:activity_section).any?
-      raise "cannot fix position of legacy script levels"
-    end
+    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
+    prevent_legacy_script_levels_in_migrated_scripts
 
     chapter = 0
     lessons.each do |lesson|
