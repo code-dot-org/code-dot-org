@@ -39,14 +39,8 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     height: Button.ButtonHeight.default
   };
 
-  /*
-   * The button doesn't render immediately, so we use its resize event to
-   * detect when it's rendered and wait to display the label until then.
-   */
   constructor(props) {
     super(props);
-    this.onButtonResize = this.onButtonResize.bind(this);
-    this.resizeObserver = new ResizeObserver(this.onButtonResize);
 
     this.onShareStart = this.onShareStart.bind(this);
     this.onShareComplete = this.onShareComplete.bind(this);
@@ -67,7 +61,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
 
   componentDidMount() {
     this.renderButton();
-    this.resizeObserver.observe(this.buttonRef);
+    this.setState({buttonRendered: true});
 
     // Use unique callback names since we're adding to the global namespace
     window[this.onShareStartName()] = this.onShareStart;
@@ -85,11 +79,6 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     if (!_.isEqual(this.props, prevProps)) {
       this.renderButton();
     }
-  }
-
-  onButtonResize() {
-    this.setState({buttonRendered: true});
-    this.resizeObserver.disconnect();
   }
 
   onShareStartName() {
