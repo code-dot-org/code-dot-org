@@ -1530,7 +1530,7 @@
       "key": "49051b73-a04d-4a2b-b99e-9b5fe43d235b",
       "position": 1,
       "properties": {
-        "name": "Day 1 - Explore Project Ideas",
+        "name": "End of Course Project",
         "duration": 45
       },
       "seeding_key": {
@@ -1586,8 +1586,7 @@
       "key": "070a6c7f-86b0-4bd2-b220-99469d1f1169",
       "position": 5,
       "properties": {
-        "name": "Extension Activity",
-        "duration": 0
+        "name": "Extension Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "070a6c7f-86b0-4bd2-b220-99469d1f1169",
@@ -3509,7 +3508,8 @@
       "position": 1,
       "properties": {
         "name": "Functions with Artist",
-        "progression_name": "Prediction"
+        "progression_name": "Prediction",
+        "description": "####Online Puzzles\n\nStudents may benefit from writing code without functions then creating functions from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas."
       },
       "seeding_key": {
         "activity_section.key": "d1826ee5-4403-41a2-a804-3112c9da4cb1",
@@ -3579,17 +3579,6 @@
       },
       "seeding_key": {
         "activity_section.key": "761169d4-a60f-4c9d-b011-2e79adcf8b31",
-        "lesson_activity.key": "3f3d661f-eb79-4d76-a889-dad31cd540f2"
-      }
-    },
-    {
-      "key": "03c1b9a3-3308-4c66-a0f4-8528ef2ad11f",
-      "position": 8,
-      "properties": {
-        "description": "\n####Online Puzzles\n\nStudents may benefit from writing code without functions then creating functions from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas."
-      },
-      "seeding_key": {
-        "activity_section.key": "03c1b9a3-3308-4c66-a0f4-8528ef2ad11f",
         "lesson_activity.key": "3f3d661f-eb79-4d76-a889-dad31cd540f2"
       }
     },
@@ -3678,7 +3667,7 @@
       "position": 1,
       "properties": {
         "description": "Goal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\r\n\r\nGive students a day to play with and remix the example projects found in the lesson. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\r\n\r\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\r\n\r\nMake sure your class understands that they will be working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.",
-        "name": "Example Projects\r"
+        "name": "Day 1 - Explore Project Ideas"
       },
       "seeding_key": {
         "activity_section.key": "66272c77-39c2-4816-9cef-6d3fa0468581",
@@ -3727,7 +3716,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Save 5 minutes or so at the end of the day to have students trade their project guide to look at each other’s work.  This will help make sure that nothing is omitted or overlooked.\r\n"
           }
@@ -3779,7 +3767,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If you are looking for a section of this series to assign as homework, this is it!  Projects do not have to be presented in electronic form, so this is a great offline option. Other ways to present projects (both online and offline) include:\r\n\r\n - Report\r\n - Blog post\r\n - Online\r\n - In front of the class with a poster\r\n"
           }
@@ -3819,7 +3806,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Teachers should avoid assigning the final bit of project work as homework unless they are certain that students both live within a close proximity to one another **and** have internet access at home.\r\n"
           }
