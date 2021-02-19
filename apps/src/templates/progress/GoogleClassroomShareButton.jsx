@@ -56,12 +56,12 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
   buttonRef = null;
   iframeMouseOver = false;
   state = {
-    buttonRendered: false
+    buttonMounted: false
   };
 
   componentDidMount() {
     this.renderButton();
-    this.setState({buttonRendered: true});
+    this.setState({buttonMounted: true});
 
     // Use unique callback names since we're adding to the global namespace
     window[this.onShareStartName()] = this.onShareStart;
@@ -146,7 +146,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}
         />
-        {this.state.buttonRendered && (
+        {this.state.buttonMounted && (
           <span style={styles.label}>{i18n.shareToGoogleClassroom()}</span>
         )}
       </span>
