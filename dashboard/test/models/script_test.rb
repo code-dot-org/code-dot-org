@@ -23,6 +23,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csf_script = create :csf_script, name: 'csf1'
     @csd_script = create :csd_script, name: 'csd1'
     @csp_script = create :csp_script, name: 'csp1'
+    @csa_script = create :csa_script, name: 'csa1'
 
     @csf_script_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -952,6 +953,7 @@ class ScriptTest < ActiveSupport::TestCase
       isHocScript: false,
       student_detail_progress_view: false,
       age_13_required: false,
+      is_csf: false,
     }
     assert_equal expected, script.summarize_header
   end
@@ -2166,6 +2168,10 @@ class ScriptTest < ActiveSupport::TestCase
       [@csp_script.name],
       Script.script_names_by_curriculum_umbrella('CSP')
     )
+    assert_equal(
+      [@csa_script.name],
+      Script.script_names_by_curriculum_umbrella('CSA')
+    )
   end
 
   test "under_curriculum_umbrella and helpers" do
@@ -2175,6 +2181,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csd_script.csd?
     assert @csp_script.under_curriculum_umbrella?('CSP')
     assert @csp_script.csp?
+    assert @csa_script.under_curriculum_umbrella?('CSA')
+    assert @csa_script.csa?
   end
 
   test "scripts_with_standards" do

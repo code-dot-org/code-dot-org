@@ -775,7 +775,7 @@
         "OPD-K5-spritelab-7": "Añade un comportamiento al nuevo amigo del pescado.",
         "OPD-K5-variables-2": "Ahora dibuja tres de esos triángulos, uno al lado del otro.   ",
         "OPD-K5-variables-5": "Mueve la longitud de 50 a una variable, para que podamos usarla en los próximos desafíos.",
-        "OPD-K5-variables-6": "Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.",
+        "OPD-K5-variables-6": "Ahora usa la variable `longitud` para hacer que el artista salte hacia adelante y hacia abajo en `longitud` de los pixeles entre los triángulos.",
         "OPD-K5-variables-7": "Agrega otro grupo de loops al final de tu código para agregar tres triángulos más. ¡Esta vez, para moverse hacia adelante y hacia arriba!",
         "Overworld Avoid Monsters": "Ir contra un Creeper no es buena idea. Evítalos con cuidado y llega a casa para estar a salvo.",
         "Overworld Avoid Monsters_2019": "Ir contra un Creeper no es buena idea. Evítalos con cuidado y llega a casa para estar a salvo.",
@@ -2802,10 +2802,10 @@
         "courseF_artist_variables3_2018": "Mueve la longitud de 50 a una variable, para que podamos usarla en los próximos desafíos.",
         "courseF_artist_variables3_2019": "Mueve la longitud de 50 a una variable, para que podamos usarla en los próximos desafíos.",
         "courseF_artist_variables3_2020": "Mueve la longitud de 50 a una variable, para que podamos usarla en los próximos desafíos.",
-        "courseF_artist_variables4": "Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.",
-        "courseF_artist_variables4_2018": "Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.",
-        "courseF_artist_variables4_2019": "Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.",
-        "courseF_artist_variables4_2020": "Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.",
+        "courseF_artist_variables4": "Ahora usa la variable `longitud` para hacer que el artista salte hacia adelante y hacia abajo en `longitud` de los pixeles entre los triángulos.",
+        "courseF_artist_variables4_2018": "Ahora usa la variable `longitud` para hacer que el artista salte hacia adelante y hacia abajo en `longitud` de los pixeles entre los triángulos.",
+        "courseF_artist_variables4_2019": "Ahora usa la variable `longitud` para hacer que el artista salte hacia adelante y hacia abajo en `longitud` de los pixeles entre los triángulos.",
+        "courseF_artist_variables4_2020": "Ahora usa la variable `longitud` para hacer que el artista salte hacia adelante y hacia abajo en `longitud` de los pixeles entre los triángulos.",
         "courseF_artist_variables5": "Agrega otro grupo de loops al final de tu código para agregar tres triángulos más. ¡Esta vez, para moverse hacia adelante y hacia arriba!",
         "courseF_artist_variables5_2018": "Agrega otro grupo de loops al final de tu código para agregar tres triángulos más. ¡Esta vez, para moverse hacia adelante y hacia arriba!",
         "courseF_artist_variables5_2019": "Agrega otro grupo de loops al final de tu código para agregar tres triángulos más. ¡Esta vez, para moverse hacia adelante y hacia arriba!",
@@ -3074,8 +3074,7 @@
         "outbreak5": "Crea un nuevo disfraz para monstruos con inmunidad al virus y úsalo en tu simulación.",
         "outbreak6": "Agrega un porcentaje de probabilidad de que los monstruos se enfermen cada vez que monstruos sanos toquen monstruos enfermos. Haz esto para todas las combinaciones de monstruos con y sin máscaras.",
         "outbreak7": "Haz que los monstruos enfermos comiencen a recuperarse cuando empiece la simulación y cuando un monstruo sano toque a un monstruo enfermo.",
-        "outbreak8": "Comparte un mensaje con tu simulación.",
-        "outbreak_freeplay": "Realiza los cambios o mejoras que desee en tu proyecto. "
+        "outbreak8": "Comparte un mensaje con tu simulación."
       }
     }
   }
