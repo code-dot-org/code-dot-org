@@ -70,58 +70,6 @@ class I18nStringUrlTracker
     add_to_buffer(string_key, url, source)
   end
 
-  # Sends the buffered i18n string usage data to Firehose.
-  # This should only be called by this class or a unit test.
-  def flush
-    buffer = nil
-
-    # Capture the current data and start a new buffer
-    @buffer.synchronize do # make sure this is the only thread modifying @buffer
-      buffer = @buffer
-      @buffer = {}
-      @buffer.extend(MonitorMixin) # Adds synchronization
-      @buffer_size = 0
-    end
-
-    # log every <string_key>:<url>:<source> combination to Firehose
-    buffer&.each_key do |url|
-      buffer[url].each_key do |string_key|
-        buffer[url][string_key].each do |source|
-          # record the string : url association.
-          FirehoseClient.instance.put_record(
-            :i18n,
-            {url: url, string_key: string_key, source: source}
-          )
-        end
-      end
-    end
-  end
-
-  # Clear the buffer and stop the periodic upload of i18n usage data.
-  # This should only be used by unit tests.
-  def shutdown
-    @buffer = {}
-    @buffer_size = 0
-    @buffer_size_max = MAX_BUFFER_SIZE
-    @buffer.extend(MonitorMixin) # Adds synchronization
-    @task.shutdown
-  end
-
-  # Sets the interval at which data should be flushed.
-  # This should only be used by unit tests.
-  def set_flush_interval(interval)
-    # stop the existing TimerTask if one is currently running
-    @task.shutdown
-    # Start a new flush interval
-    @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
-  end
-
-  # Sets the max size (bytes) of the buffer.
-  # This should only be used by unit tests.
-  def set_buffer_size_max(max)
-    @buffer_size_max = max
-  end
-
   private
 
   # Records the log data to a buffer which will eventually be flushed
@@ -152,6 +100,33 @@ class I18nStringUrlTracker
         }
       )
       flush
+    end
+  end
+
+  # Sends the buffered i18n string usage data to Firehose.
+  def flush
+    buffer = nil
+
+    # Capture the current data and start a new buffer
+    # Use .synchronize to make sure this is the only thread modifying @buffer
+    @buffer.synchronize do
+      buffer = @buffer
+      @buffer = {}
+      @buffer.extend(MonitorMixin) # Adds synchronization
+      @buffer_size = 0
+    end
+
+    # log every <string_key>:<url>:<source> combination to Firehose
+    buffer&.each_key do |url|
+      buffer[url].each_key do |string_key|
+        buffer[url][string_key].each do |source|
+          # record the string : url association.
+          FirehoseClient.instance.put_record(
+            :i18n,
+            {url: url, string_key: string_key, source: source}
+          )
+        end
+      end
     end
   end
 
@@ -253,5 +228,30 @@ class I18nStringUrlTracker
     end
 
     parsed_url.to_s
+  end
+
+  # Clear the buffer and stop the periodic upload of i18n usage data.
+  # This should only be used by unit tests.
+  def shutdown
+    @buffer = {}
+    @buffer_size = 0
+    @buffer_size_max = MAX_BUFFER_SIZE
+    @buffer.extend(MonitorMixin) # Adds synchronization
+    @task.shutdown
+  end
+
+  # Sets the interval at which data should be flushed.
+  # This should only be used by unit tests.
+  def set_flush_interval(interval)
+    # stop the existing TimerTask if one is currently running
+    @task.shutdown
+    # Start a new flush interval
+    @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
+  end
+
+  # Sets the max size (bytes) of the buffer.
+  # This should only be used by unit tests.
+  def set_buffer_size_max(max)
+    @buffer_size_max = max
   end
 end
