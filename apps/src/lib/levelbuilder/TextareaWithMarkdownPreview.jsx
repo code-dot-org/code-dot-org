@@ -3,8 +3,18 @@ import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import TextareaWithImageUpload from '@cdo/apps/lib/levelbuilder/TextareaWithImageUpload';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
+  wrapper: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 5,
+    display: 'flex',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap'
+  },
   container: {
     flex: '1 1 500px',
     maxWidth: 970,
@@ -33,25 +43,34 @@ export default class TextareaWithMarkdownPreview extends React.Component {
 
   render() {
     return (
-      <div>
-        <TextareaWithImageUpload
-          markdown={this.props.markdown}
-          label={this.props.label}
-          name={this.props.name}
-          inputRows={this.props.inputRows}
-          helpTip={this.props.helpTip}
-          handleMarkdownChange={this.props.handleMarkdownChange}
-        />
-        <div style={styles.container}>
-          <div style={{marginBottom: 5}}>Preview:</div>
-          <div style={styles.preview}>
-            <SafeMarkdown
-              openExternalLinksInNewTab={true}
+      <label>
+        {this.props.label}
+        {this.props.helpTip && (
+          <HelpTip>
+            <p>{this.props.helpTip}</p>
+          </HelpTip>
+        )}
+        <div style={styles.wrapper}>
+          <div style={styles.container}>
+            <div style={{marginBottom: 5}}>Markdown:</div>
+            <TextareaWithImageUpload
               markdown={this.props.markdown}
+              name={this.props.name}
+              inputRows={this.props.inputRows}
+              handleMarkdownChange={this.props.handleMarkdownChange}
             />
           </div>
+          <div style={styles.container}>
+            <div style={{marginBottom: 5}}>Preview:</div>
+            <div style={styles.preview}>
+              <SafeMarkdown
+                openExternalLinksInNewTab={true}
+                markdown={this.props.markdown}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </label>
     );
   }
 }

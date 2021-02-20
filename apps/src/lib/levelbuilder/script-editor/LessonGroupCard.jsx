@@ -290,20 +290,24 @@ class LessonGroupCard extends Component {
               />
             </div>
             <div>
-              <TextareaWithImageUpload
-                markdown={this.props.lessonGroup.description}
-                label={'Description'}
-                name={'description'}
-                inputRows={1}
-                handleMarkdownChange={this.handleChangeDescription}
-              />
-              <TextareaWithImageUpload
-                markdown={this.props.lessonGroup.bigQuestions}
-                label={'Big Questions'}
-                name={'big_questions'}
-                inputRows={1}
-                handleMarkdownChange={this.handleChangeBigQuestions}
-              />
+              <label>
+                Description
+                <TextareaWithImageUpload
+                  markdown={this.props.lessonGroup.description}
+                  name={'description'}
+                  inputRows={1}
+                  handleMarkdownChange={this.handleChangeDescription}
+                />
+              </label>
+              <label>
+                Big Questions
+                <TextareaWithImageUpload
+                  markdown={this.props.lessonGroup.bigQuestions}
+                  name={'big_questions'}
+                  inputRows={1}
+                  handleMarkdownChange={this.handleChangeBigQuestions}
+                />
+              </label>
             </div>
           </div>
         )}

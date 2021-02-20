@@ -1,19 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 
 const styles = {
-  wrapper: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 5,
-    display: 'flex',
-    alignItems: 'flex-start',
-    flexWrap: 'wrap'
-  },
   container: {
     flex: '1 1 500px',
     maxWidth: 970,
@@ -36,10 +25,8 @@ const styles = {
 export default class TextareaWithImageUpload extends React.Component {
   static propTypes = {
     markdown: PropTypes.string,
-    label: PropTypes.string.isRequired,
     name: PropTypes.string,
     inputRows: PropTypes.number,
-    helpTip: PropTypes.string,
     handleMarkdownChange: PropTypes.func.isRequired
   };
 
@@ -66,39 +53,30 @@ export default class TextareaWithImageUpload extends React.Component {
 
   render() {
     return (
-      <label>
-        {this.props.label}
-        {this.props.helpTip && (
-          <HelpTip>
-            <p>{this.props.helpTip}</p>
-          </HelpTip>
-        )}
-        <div style={styles.wrapper}>
-          <div style={styles.container}>
-            <div style={{marginBottom: 5}}>Markdown:</div>
-            <textarea
-              name={this.props.name}
-              value={this.props.markdown}
-              rows={this.props.inputRows || 5}
-              style={styles.input}
-              onChange={this.props.handleMarkdownChange}
-            />
-            <button
-              onMouseDown={this.handleOpenUploadImage}
-              className="btn"
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Image
-            </button>
-          </div>
+      <div>
+        <div style={{margin: 5}}>
+          <textarea
+            name={this.props.name}
+            value={this.props.markdown}
+            rows={this.props.inputRows || 5}
+            style={styles.input}
+            onChange={this.props.handleMarkdownChange}
+          />
+          <button
+            onMouseDown={this.handleOpenUploadImage}
+            className="btn"
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Image
+          </button>
         </div>
         <UploadImageDialog
           isOpen={this.state.uploadImageOpen}
           handleClose={this.handleCloseUploadImage}
           uploadImage={this.handleUploadImage}
         />
-      </label>
+      </div>
     );
   }
 }
