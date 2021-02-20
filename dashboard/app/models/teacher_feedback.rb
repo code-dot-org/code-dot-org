@@ -29,15 +29,10 @@ class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
   validates_presence_of :student_id, :script_id, :level_id, :teacher_id, :script_level_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
-
-  # despite newer teacher feedbacks being explicitly associated with a section,
-  # this association is necessary because we did not record section associations for older teacher feedbacks
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
-
   belongs_to :script
   belongs_to :level
   belongs_to :script_level
-  belongs_to :section
   belongs_to :teacher, class_name: 'User'
   validate :validate_script_and_script_level, on: :create
 
@@ -82,10 +77,6 @@ class TeacherFeedback < ApplicationRecord
   end
 
   def self.latest_per_teacher
-    # :student_sections is a superset of the :section association,
-    # so this method should continue to work even now that newer instances of TeacherFeedback
-    # are stored with the section ID that associated the teacher and student when the feedback was provided.
-
     # Only select feedback from teachers who lead sections in which the student is still enrolled
     find(
       joins(:student_sections).
