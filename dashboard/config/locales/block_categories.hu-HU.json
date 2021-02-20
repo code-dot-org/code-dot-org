@@ -1,0 +1,76 @@
+{
+  "hu-HU": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Műveletek",
+          "Brushes": "Ecsetek",
+          "Loops": "hurkok",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "funkciók",
+          "Variables": "változók"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Világ",
+          "Dancers": "Táncosok",
+          "Properties": "Tulajdonságok",
+          "Events": "Események",
+          "Numbers": "Számok",
+          "Logic": "Logika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Műveletek",
+          "Events": "Események",
+          "Loops": "hurkok",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Games/Score": "Játékok/pontszám"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Világ",
+          "Sprites": "manók",
+          "Actions": "Műveletek",
+          "Events": "Események",
+          "Behaviors": "Viselkedések"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Világ",
+          "Sprites": "manók",
+          "Locations": "Helyek",
+          "Actions": "Műveletek",
+          "Events": "Események",
+          "Behaviors": "Viselkedések",
+          "Variables": "változók",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "funkciók",
+          "Text": "szöveg",
+          "Comments": "Megjegyzések"
+        },
+        "outbreak_freeplay": {
+          "World": "Világ",
+          "Sprites": "manók",
+          "Actions": "Műveletek",
+          "Behaviors": "Viselkedések",
+          "Events": "Események",
+          "Locations": "Helyek",
+          "Logic": "Logika",
+          "Loops": "hurkok",
+          "Math": "Matematika",
+          "Variables": "változók",
+          "Functions": "funkciók",
+          "Comments": "Megjegyzések"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Világ",
+          "Sprites": "manók",
+          "Actions": "Műveletek",
+          "Events": "Események",
+          "Logic": "Logika",
+          "Math": "Matematika"
+        }
+      }
+    }
+  }
+}

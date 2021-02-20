@@ -3491,10 +3491,12 @@
             'Functions: Songwriting':
               name: Låtskriving
           lesson_groups:
+            ramp_up:
+              display_name: Løkker
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
-              display_name: Løkker i løkker
+              display_name: Betingelser
             csf_functions:
               display_name: Funksjoner
         coursef-2021:

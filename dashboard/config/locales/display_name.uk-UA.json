@@ -499,7 +499,7 @@
         "csd-pre-survey-levelgroup_2019": "Огляд уроку",
         "CSD U1L01 TFMD_2018": "Огляд уроку",
         "CSD U1L01 TFMD_2019": "Огляд уроку",
-        "outbreak_freeplay": "Вільна гра",
+        "outbreak_freeplay": "Розширений набір інструментів",
         "outbreak1": "Моделювання поширення вірусу",
         "outbreak2": "Моделювання поширення вірусу",
         "outbreak3": "Моделювання поширення вірусу",
@@ -512,7 +512,13 @@
         "CSD U6 arrays intro": "Вступ до масивів",
         "CSD U6 arrays intro_2018": "Вступ до масивів",
         "OPD-K5 WhatIsCS": "Що таке інформатика?",
-        "OPD-K5 WhatIsCS_copy": "Що таке інформатика?"
+        "OPD-K5 WhatIsCS_copy": "Що таке інформатика?",
+        "AB_Debug_Artist1": "Художник - Відлагодження  #1 (AB)",
+        "CSD Problem Solving Process Video": "Відео: Процес вирішення проблем",
+        "CourseD_EOC_artist": "Створіть малюнок",
+        "CourseD_EOC_bounce1": "Зроби гру в баскетбол",
+        "CourseD_EOC_starwars": "Створіть гру Зоряні війни",
+        "outbreak_freeplay_basic": "Стандартний набір інструментів"
       }
     }
   }

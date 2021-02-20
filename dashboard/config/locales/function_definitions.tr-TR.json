@@ -3186,6 +3186,48 @@
           "draw ear stems": {
             "name": "kulak köklerini çizin"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "bir yıldız çiz",
+            "parameters": {
+              "points": "Puanlar",
+              "length": "uzunluk"
+            }
+          },
+          "draw a circle": {
+            "name": "bir çember çiz"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "uzunluk",
+              "repeat": "bu işlemleri"
+            }
+          },
+          "draw a triangle": {
+            "name": "bir üçgen çiz",
+            "parameters": {
+              "length": "uzunluk"
+            }
+          },
+          "draw a shape": {
+            "name": "bir şekil çiz",
+            "parameters": {
+              "length": "uzunluk"
+            }
+          },
+          "draw a house": {
+            "name": "bir ev çiz",
+            "parameters": {
+              "length": "uzunluk"
+            }
+          },
+          "draw a square": {
+            "name": "bir kare çiz",
+            "parameters": {
+              "length": "uzunluk"
+            }
+          }
         }
       }
     }
