@@ -29,7 +29,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal @student.id, teacher_feedback.student_id
     assert_equal @level.id, teacher_feedback.level_id
     assert_equal @teacher.id, teacher_feedback.teacher_id
-    assert_equal @section.id, teacher_feedback.section_id
+    assert_equal @section.id, teacher_feedback.analytics_section_id
   end
 
   test 'retrieves no content when no feedback is available' do
@@ -304,7 +304,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   # Assert that the feedback request was successful
   # Note that the section that a piece of teacher feedback is explicitly associated with via section ID
   # is not (as of Feb. 2021) used in our application (we're only logging section ID for analytics purposes for now),
-  # so the default section created during setup_all is provided unless otherwise overwritten.
+  # so the section created during setup_all is provided as a default.
   def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, section=@section)
     sign_in teacher
     params = {
@@ -314,7 +314,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
       script_level_id: script_level.id,
       comment: comment,
       performance: performance,
-      section_id: section.id
+      analytics_section_id: section.id
     }
 
     assert_creates(TeacherFeedback) do

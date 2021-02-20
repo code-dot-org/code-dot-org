@@ -178,7 +178,7 @@ export class TeacherFeedback extends Component {
       script_level_id: this.props.serverScriptLevelId,
       teacher_id: this.props.teacher,
       performance: this.state.performance,
-      section_id: this.props.selectedSectionId
+      analytics_section_id: this.props.selectedSectionId
     };
 
     $.ajax({
