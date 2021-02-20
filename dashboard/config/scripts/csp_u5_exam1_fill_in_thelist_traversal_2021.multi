@@ -16,12 +16,12 @@ for(var i = 0; <INSERT CODE>; i++){
 }
 ```
 
-Which of the following will NOT result in an error if placed where the program reads `<INSERT CODE>` and the program is run?
+Which of the following will result in ONLY all the items in `list` being printed to the console if placed where the program reads `<INSERT CODE>` and the program is run?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
 
-**Explanation:** All choices except `i < list.length` will result in an error when the program looks for an element in the list that does not exist. A will look for `list[3]`, C will look for `list[10]`, and D will look for `list[5]`.
+**Explanation:** All choices except `i < list.length` will result in something other than the just the list of elements in `list` being printed.. A will print nothing because `list[3]` is undefined and therefore the code inside the for loop will not execute. C and D will print all the items in `list` followed by some number of `undefined` elements since the variable i increases in value beyond the last index of `list`. 
 
 Students practice writing for-loops in [Lesson 7 - Loops Practice](https://curriculum.code.org/csp-20/unit5/7/)  
 
