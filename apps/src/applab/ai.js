@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import designMode from './designMode';
+import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 
 function generateCodeDesignElements(modelId, modelData) {
   var x = 20;
@@ -10,16 +11,16 @@ function generateCodeDesignElements(modelId, modelData) {
   modelData.selectedFeatures.forEach(feature => {
     y = y + SPACER_PIXELS;
     var label = designMode.createElement('LABEL', x, y);
-    // Strip whitespace and special characters.
-    var alphaNumFeature = feature.replace(/\W/g, '');
+    var alphaNumFeature = stripSpaceAndSpecial(feature);
+    let fieldId;
     label.textContent = feature + ':';
     label.id = 'design_' + alphaNumFeature + '_label';
     label.style.width = '300px';
     y = y + SPACER_PIXELS;
     if (Object.keys(modelData.featureNumberKey).includes(feature)) {
-      var selectId = alphaNumFeature + '_dropdown';
+      fieldId = alphaNumFeature + '_dropdown';
       var select = designMode.createElement('DROPDOWN', x, y);
-      select.id = 'design_' + selectId;
+      select.id = 'design_' + fieldId;
       // App Lab automatically addss "option 1" and "option 2", remove them.
       select.options.remove(0);
       select.options.remove(0);
@@ -30,17 +31,18 @@ function generateCodeDesignElements(modelId, modelData) {
       });
       y = y + SPACER_PIXELS;
     } else {
-      var input = designMode.createElement('TEXT_INPUT');
-      input.id = 'design_' + alphaNumFeature + '_input';
+      var input = designMode.createElement('TEXT_INPUT', x, y);
+      fieldId = alphaNumFeature + '_input';
+      input.id = 'design_' + fieldId;
       y = y + SPACER_PIXELS;
     }
-    var addFeature = `testValues.${alphaNumFeature} = getText("${selectId}");`;
+    var addFeature = `testValues.${alphaNumFeature} = getText("${fieldId}");`;
     inputFields.push(addFeature);
   });
   y = y + 2 * SPACER_PIXELS;
   var label = designMode.createElement('LABEL', x, y);
   label.textContent = modelData.labelColumn;
-  var alphaNumModelName = modelData.name.replace(/\W/g, '');
+  var alphaNumModelName = stripSpaceAndSpecial(modelData.name);
   label.id = 'design_' + alphaNumModelName + '_label';
   label.style.width = '300px';
   y = y + SPACER_PIXELS;
