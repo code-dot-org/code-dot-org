@@ -31,7 +31,8 @@
             "parameters": {
               "width": "ширина",
               "height": "висота"
-            }
+            },
+            "name": "draw_rect"
           }
         },
         "2-3 Artist Debugging 10": {
@@ -193,20 +194,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "щось зробити"
+          },
+          "patrol": {
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "персонаж"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "персонаж"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -214,7 +220,8 @@
             "parameters": {
               "actor": "персонаж",
               "speed": "швидкість"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -222,7 +229,8 @@
             "parameters": {
               "actor": "персонаж",
               "speed": "швидкість"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -713,13 +721,15 @@
             "parameters": {
               "height": "висота",
               "actor": "персонаж"
-            }
+            },
+            "description": "блок функції \"стрибок\" з параметрами висоти та персонажа"
           },
           "patrol": {
             "parameters": {
               "actor": "персонаж",
               "speed": "швидкість"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "New Artist Project": {
@@ -1322,6 +1332,9 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "щось зробити"
+          },
+          "get pumpkin": {
+            "name": "отримати гарбуз"
           }
         },
         "courseE_farmer_concept3": {
@@ -1748,6 +1761,223 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "моя функція"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": "отримати гарбуз"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": "садова площа"
           }
         }
       }

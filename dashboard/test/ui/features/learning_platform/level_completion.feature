@@ -25,6 +25,7 @@ Scenario:
   And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   And I see no difference for "initial load"
   And I press "runButton"
   And I press "finishButton"

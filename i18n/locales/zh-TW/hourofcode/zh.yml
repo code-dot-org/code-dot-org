@@ -99,11 +99,17 @@ zh:
     Code.org，在新的旅程中邁出第一步，透過我們的課程教授更多關於 AI 的知識。  "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: 加入我們
+  hoc_live_learn_more: 進一步學習
   hoc_overview_oceans_tutorial_header: "  保護海洋的人工智慧 (AI for Oceans)  "
   hoc_overview_oceans_tutorial_desc: "  瞭解人工智慧 (AI)、機器學習、訓練資料和偏見，同時探索倫理問題以及如何利用 AI
     來解決世界問題。  "

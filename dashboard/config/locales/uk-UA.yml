@@ -225,6 +225,7 @@ uk:
     error: Виникла помилка.
     email_preference_question: Чи можемо ми сповіщати вас про оновлення курсів, локальних
       можливості та інші новини з області інформатики за допомогою електронної пошти?
+    email_preference_privacy: "(Дивіться нашу політику конфіденційності)"
     email_preference_yes: Так
     email_preference_no: Ні
     email_preference_required: Необхідно вказати перевагу електронній пошті.
@@ -453,6 +454,7 @@ uk:
       starwars: Зоряні війни
       starwarsblocks: Зоряні війни (блоки)
       starwarsblocks_hour: Зоряні війни (блоки)
+      view_all: Переглянути всі проекти...
     popup:
       progress_for_user: Прогрес %{name}
       progress: Ваш прогрес
@@ -615,6 +617,8 @@ uk:
     no_primary_course: Спробуйте курс Code Studio
     choose_next_course: Спробуйте курс Студії коду, обравши один з варіантів
     print_certificate: Друкувати сертифікат
+  certificate_sponsor_message: "%{sponsor_name} зробив щедрий подарунок, щоб спонсорувати
+    ваше навчання. "
   move_students:
     new_section_dne: Вибачте, але групи %{new_section_code} не існує. Вкажіть інший
       код групи.
@@ -1296,14 +1300,33 @@ uk:
         csf_express: Основи інформатики (Вступ до прискорених та Прискорені)
         csd: Відкриття інформатики
         csp: "'16-'17 принципи інформатики"
+        not_applicable: Не застосовується
       email_opt_in:
         opt_in_yes: Так
         opt_in_no: Ні
+    international_opt_in:
+      title: 'Семінар відвідування '
+      facilitator_not_listed: Мій ведучий відсутній у списку
+      facilitator_not_applicable: Не застосовується
+      organizer_not_listed: Мій організатор відсутній у списку
+  courses_category: Всі курси
   cookie_banner:
+    more_information: Переглянути політику конфіденційності в Code.org.
     accept: Погоджуюся
   page_not_found_title: Сторінка не знайдена
   page_not_found_header: '404: Сторінка не знайдена'
   copy: Скопіювати
+  confirm: Підтвердити
+  maker:
+    google_oauth:
+      login_with_google: Увійдіть до Maker App за допомогою Google
+      enter_code: 'Будь ласка, введіть код, отриманий під час входу за допомогою облікового
+        запису Google у браузері за замовчуванням. '
+      error_token_expired: Термін дії маркера закінчився. Будь ласка, увійдіть ще
+        раз, щоб отримати новий маркер.
+      error_no_code: Будь ласка, введіть свій логін.
+      confirm_login: Виберіть "Підтвердити", щоб увійти за допомогою свого облікового
+        записа Google.
   parent_email_banner:
     text: "**Ви один з батьків або опікун? **Прив’яжіть до цього облікового запису
       свою електронну пошту, щоб бути в курсі успіхів і проектів вашої дитини!"

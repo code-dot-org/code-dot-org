@@ -1486,6 +1486,9 @@
         },
         "courseA_collector_preLoops1": {
           "courseA_collector_preLoops1_1": "Kliknij tutaj, aby zobaczyć jak działa kod!"
+        },
+        "CSDU4 - Design Mode - 3": {
+          "": "Wykorzystaj blok ustawTekst, aby zmienić tekst elementu titleLabel (opis tytułu)"
         }
       }
     }
