@@ -96,7 +96,6 @@ export default class EditTipDialog extends Component {
           </select>
           <TextareaWithImageUpload
             markdown={this.state.tip.markdown}
-            label={'Callout'}
             name={'callout'}
             inputRows={5}
             handleMarkdownChange={this.handleTextChange}
