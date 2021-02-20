@@ -114,6 +114,16 @@ class Script < ApplicationRecord
 
   validate :set_is_migrated_only_for_migrated_scripts
 
+  def prevent_duplicate_levels
+    reload
+
+    unless levels.count == levels.uniq.count
+      levels_by_key = levels.map(&:key).group_by {|key| key}
+      duplicate_keys = levels_by_key.select {|_key, values| values.count > 1}.keys
+      raise "duplicate levels detected: #{duplicate_keys.to_json}"
+    end
+  end
+
   include SerializedProperties
 
   after_save :generate_plc_objects
@@ -792,6 +802,10 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSP')
   end
 
+  def csa?
+    under_curriculum_umbrella?('CSA')
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end
@@ -1416,7 +1430,8 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
-      age_13_required: logged_out_age_13_required?
+      age_13_required: logged_out_age_13_required?,
+      is_csf: csf?
     }
   end
 
