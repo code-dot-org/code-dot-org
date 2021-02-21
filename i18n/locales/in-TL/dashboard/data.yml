@@ -610,6 +610,7 @@ in:
         codebreak_e11: 'crwdns2435118:0crwdne2435118:0'
         codebreak_e12: 'crwdns2435290:0crwdne2435290:0'
         csf21pilot_events: 'crwdns2478938:0crwdne2478938:0'
+        csf21pilot_prompts: 'crwdns2481438:0crwdne2481438:0'
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

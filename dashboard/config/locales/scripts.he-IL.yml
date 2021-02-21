@@ -6416,6 +6416,8 @@ he:
               display_name: העלה רמה
             csf_sprites:
               display_name: דמויות
+            csf_nested_loops:
+              display_name: תנאים
             csf_functions:
               display_name: פונקציות
         coursef-2021:

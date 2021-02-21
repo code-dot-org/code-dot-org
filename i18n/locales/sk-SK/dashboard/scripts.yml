@@ -592,6 +592,8 @@ sk:
               name: Vlákna a obrázky
             Your Game - Animation:
               name: Tvoja hra - Animácie
+            Your Game - Booleans:
+              name: Tvoja hra - Logické výrazy
             Your Game - Collision Detection:
               name: Tvoja hra - detekcia kolízií
             Your Game - Player Movement:
@@ -603,6 +605,8 @@ sk:
               name: Kompresia textu
         CSPPD:
           lessons:
+            Exploring CSP Instructional Materials:
+              name: Skúmanie inštruktážnych materiálov pre princípy Informatiky
             Growth Mindset:
               name: Nastavenie na rast
             Impact of Computer Science:
@@ -637,24 +641,54 @@ sk:
               name: Čo je to ECS?
         sciencePD:
           lessons:
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Výpočtové myslenie a rámec pre vedecké vzdelávanie K-12
             Dispositions and Classroom Culture:
               name: Dispozície a kultúra v triede
+            Introduction to Complex Adaptive Systems:
+              name: Úvod do komplexných adaptívnych systémov
+            Introduction to Computational Science:
+              name: Úvod do výpočtovej vedy
             Introduction to PD:
               name: Úvod do PD
+            Introduction to StarLogo Nova:
+              name: Úvod do programu StarLogo Nova
+            Post-Survey:
+              name: Po prieskume
             The Tutorial:
               name: Návod
+            Using Computer Models in Science:
+              name: Využitie počítačových modelov vo vede
+            Using Models in the Classroom:
+              name: Používanie modelov v treide
             What to Expect:
               name: Čo očakávať
         rbo-reference:
           lessons:
             reference:
               name: referencie
+        Test Wednesday:
+          lessons:
+            PDK5 Intro:
+              name: Úvod do PDK5
         cspunit3:
           lessons:
+            APIs and Function Parameters:
+              name: API a funkčné parametre
+            Canvas and Arrays in Apps:
+              name: Plátno a polia v aplikáciách
+            Compound Conditional Logic:
+              name: Zložená podmienená logika
+            Controlling Memory with Variables:
+              name: Ovládanie pamäte pomocou premenných
             Creating Functions:
               name: Tvorba funkcií
+            Creating functions with Parameters:
+              name: Vytváranie funkcií s parametrami
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Event-Driven Programming and Debugging:
+              name: Programovanie a debugging (hľadanie a odstraňovanie chýb) na základe udalostí
             Introducing Design Mode:
               name: Predstavenie dizajnového módu
             Introduction to Arrays:
@@ -665,6 +699,8 @@ sk:
               name: Viacobrazovkové aplikácie
             While Loops:
               name: Cykly "pokiaľ"
+            Creating Functions with Parameters:
+              name: Vytváranie funkcií s parametrami
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -739,22 +775,50 @@ sk:
               name: Prečo informatika patrí k matematike
         sciencePD-NexTech:
           lessons:
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Výpočtové myslenie a rámec pre vedecké vzdelávanie K-12
             Dispositions and Classroom Culture:
               name: Dispozície a kultúra v triede
+            Introduction to Complex Adaptive Systems:
+              name: Úvod do komplexných adaptívnych systémov
+            Introduction to Computational Science:
+              name: Úvod do výpočtovej vedy
             Introduction to PD:
               name: Úvod do PD
+            Introduction to StarLogo Nova:
+              name: Úvod do programu StarLogo Nova
+            Post-Survey:
+              name: Po prieskume
             The Tutorial:
               name: Návod
+            Using Computer Models in Science:
+              name: Využitie počítačových modelov vo vede
+            Using Models in the Classroom:
+              name: Používanie modelov v treide
             What to Expect:
               name: Čo očakávať
         sciencePD-iZone:
           lessons:
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Výpočtové myslenie a rámec pre vedecké vzdelávanie K-12
             Dispositions and Classroom Culture:
               name: Dispozície a kultúra v triede
+            Introduction to Complex Adaptive Systems:
+              name: Úvod do komplexných adaptívnych systémov
+            Introduction to Computational Science:
+              name: Úvod do výpočtovej vedy
             Introduction to PD:
               name: Úvod do PD
+            Introduction to StarLogo Nova:
+              name: Úvod do programu StarLogo Nova
+            Post-Survey:
+              name: Po prieskume
             The Tutorial:
               name: Návod
+            Using Computer Models in Science:
+              name: Využitie počítačových modelov vo vede
+            Using Models in the Classroom:
+              name: Používanie modelov v treide
             What to Expect:
               name: Čo očakávať
         sciencePD2:
@@ -1055,6 +1119,8 @@ sk:
               name: Lekcia 3 - Prehľad
         cspunit3temp:
           lessons:
+            Canvas and Arrays in Apps:
+              name: Plátno a polia v aplikáciách
             Introduction to Arrays:
               name: Úvod do zoskupení
             While Loops:
@@ -1215,8 +1281,12 @@ sk:
             cspSurvey:
               display_name: Dotazník
           lessons:
+            APIs and Function Parameters:
+              name: API a funkčné parametre
             Creating Functions:
               name: Tvorba funkcií
+            Creating Functions with Parameters:
+              name: Vytváranie funkcií s parametrami
             Post-Course Survey:
               name: Hodnotenie kurzu
         csp4-2017:
@@ -1243,8 +1313,16 @@ sk:
             cspSurvey:
               display_name: Dotazník
           lessons:
+            Canvas and Arrays in Apps:
+              name: Plátno a polia v aplikáciách
+            Compound Conditional Logic:
+              name: Zložená podmienená logika
+            Controlling Memory with Variables:
+              name: Ovládanie pamäte pomocou premenných
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Event-Driven Programming and Debugging:
+              name: Programovanie a debugging (hľadanie a odstraňovanie chýb) na základe udalostí
             Introducing Design Mode:
               name: Predstavenie dizajnového módu
             Introduction to Arrays:
@@ -1287,12 +1365,26 @@ sk:
               name: Využitie procesu na tvorbu hry
         2016_sciencePD_phase1:
           lessons:
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Výpočtové myslenie a rámec pre vedecké vzdelávanie K-12
             Dispositions and Classroom Culture:
               name: Dispozície a kultúra v triede
+            Introduction to Complex Adaptive Systems:
+              name: Úvod do komplexných adaptívnych systémov
+            Introduction to Computational Science:
+              name: Úvod do výpočtovej vedy
             Introduction to PD:
               name: Úvod do PD
+            Introduction to StarLogo Nova:
+              name: Úvod do programu StarLogo Nova
+            Post-Survey:
+              name: Po prieskume
             The Tutorial:
               name: Návod
+            Using Computer Models in Science:
+              name: Využitie počítačových modelov vo vede
+            Using Models in the Classroom:
+              name: Používanie modelov v treide
             What to Expect:
               name: Čo očakávať
         TEMP CSD Unit 3:
@@ -1317,12 +1409,26 @@ sk:
               name: Prečo informatika patrí k matematike
         sciencePD1:
           lessons:
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Výpočtové myslenie a rámec pre vedecké vzdelávanie K-12
             Dispositions and Classroom Culture:
               name: Dispozície a kultúra v triede
+            Introduction to Complex Adaptive Systems:
+              name: Úvod do komplexných adaptívnych systémov
+            Introduction to Computational Science:
+              name: Úvod do výpočtovej vedy
             Introduction to PD:
               name: Úvod do PD
+            Introduction to StarLogo Nova:
+              name: Úvod do programu StarLogo Nova
+            Post-Survey:
+              name: Po prieskume
             The Tutorial:
               name: Návod
+            Using Computer Models in Science:
+              name: Využitie počítačových modelov vo vede
+            Using Models in the Classroom:
+              name: Používanie modelov v treide
             What to Expect:
               name: Čo očakávať
         cspunit1-support:
@@ -1590,6 +1696,7 @@ sk:
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
+              description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
               description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
@@ -1776,6 +1883,10 @@ sk:
             Bounce:
               name: Bounce
           student_description: Vyber si tím a priprav basketbalový zápas
+        sample-csp5:
+          lessons:
+            Controlling Memory with Variables:
+              name: Ovládanie pamäte pomocou premenných
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -3039,6 +3150,8 @@ sk:
           student_description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: iné
             Thanks:
               name: Vďaka
         csp3-research-mxghyt:
@@ -3052,6 +3165,8 @@ sk:
           lessons:
             Creating Functions:
               name: Tvorba funkcií
+            APIs and Function Parameters:
+              name: API a funkčné parametre
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -3396,6 +3511,8 @@ sk:
           lessons:
             Creating Functions:
               name: Tvorba funkcií
+            APIs and Function Parameters:
+              name: API a funkčné parametre
         pwc:
           lessons:
             Personal Innovations:
@@ -3720,6 +3837,7 @@ sk:
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
+              description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
               description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
@@ -4423,6 +4541,10 @@ sk:
           lessons:
             Creating Functions:
               name: Tvorba funkcií
+            APIs and Function Parameters:
+              name: API a funkčné parametre
+            Creating Functions with Parameters:
+              name: Vytváranie funkcií s parametrami
         csp-explore-2018:
           lesson_groups:
             csp_ap_2:
@@ -4457,6 +4579,8 @@ sk:
           lessons:
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
+            Controlling Memory with Variables:
+              name: Ovládanie pamäte pomocou premenných
             While Loops:
               name: Cykly "pokiaľ"
             Introduction to Arrays:
@@ -5633,6 +5757,7 @@ sk:
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
+              description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
               description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
@@ -5749,6 +5874,8 @@ sk:
           lessons:
             Creating Functions:
               name: Tvorba funkcií
+            APIs and Function Parameters:
+              name: API a funkčné parametre
         csp4-2019:
           lesson_groups:
             csp4_1_2018:
@@ -5771,6 +5898,8 @@ sk:
           lessons:
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
+            Controlling Memory with Variables:
+              name: Ovládanie pamäte pomocou premenných
             While Loops:
               name: Cykly "pokiaľ"
             Introduction to Arrays:
@@ -6157,6 +6286,7 @@ sk:
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
+              description_teacher: Táto lekcia zoznamuje študentov s postupom, ktorý použijú pri navrhovaní hier pre zvyšok jednotky. Tento postup je zameraný na sprievodcu projektom, ktorý žiada študentov aby definovali svoje objekty, premenné a funkcie skôr, ako začnú programovať svoju hru. Študenti v tejto lekcii začnú hraním hry v Game Labe, kde sa skrýva kód. Diskutujú o tom, ktoré objekty, premenné a funkcie sú potrebné na vytvorenie hry. Potom dostanú kompletného sprievodcu projektom, ktorý ukazuje jeden zo spôsobov implementácie hry. Študenti si tento postup následne vyskúšajú v rámci niekoľkých levelov. Taktiež sa v Game Labe naučia používať viacrámcové animácie. Na konci lekcie môžu študenti pridať rôzne vylepšenia, čím vznikne ich vlastná hra.
             Using the Game Design Process:
               name: Využitie procesu na tvorbu hry
               description_student: V tejto viacdennej lekcii využijeme proces riešenia problémov na vytvorenie vlastnej plošinovej skákacej hry. Začneme prezretím ukážkových hier. Následne definujeme, ako by mala naša hra vyzerať a na jej vytvorenie použijeme štruktúrovaný proces . Na konci prediskutujeme, ako by sme naše hry mohli vylepšiť a tieto zmeny aj zapracujeme.
@@ -7336,6 +7466,8 @@ sk:
           lessons:
             Creating Functions:
               name: Tvorba funkcií
+            APIs and Function Parameters:
+              name: API a funkčné parametre
         jess-test-script:
           lessons:
             Tools:
@@ -7361,6 +7493,8 @@ sk:
           lessons:
             Multi-screen Apps:
               name: Viacobrazovkové aplikácie
+            Controlling Memory with Variables:
+              name: Ovládanie pamäte pomocou premenných
             While Loops:
               name: Cykly "pokiaľ"
             Introduction to Arrays:
@@ -8028,6 +8162,8 @@ sk:
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
+            lesson-6:
+              name: Pohľad do budúcnosti s Minecraftom
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -8109,7 +8245,7 @@ sk:
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_nested_loops:
-              display_name: Vnorené cykly
+              display_name: Podmienky
             csf_functions:
               display_name: Funkcie
             csf_impacts:
@@ -8343,6 +8479,8 @@ sk:
               name: Kódovanie nákazy
             Course F Introduction:
               name: Predstavenie Sprite Labu
+            Sprites in Action:
+              name: Postavy v akcii
           lesson_groups:
             ramp_up:
               display_name: Úvod

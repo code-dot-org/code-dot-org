@@ -355,20 +355,22 @@ pl-PL:
         title: Test wielokrotnego wyboru
       4-5 Internet Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
         questions:
         - text: Logując się na stronę code.org, na który adres IP najprawdopodobniej
             przeniesie Cię DNS?
         title: Test wielokrotnego wyboru
       4-5 Internet Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
         questions:
         - text: Jeśli DNS zabrał Cię na stronę o adresie IP 100.42.50.110, to jak
             nazywa ta strona?
@@ -655,6 +657,9 @@ pl-PL:
           ## Zasoby
 
           * [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: "[Wejście i Wyjście - Wzór](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - Poradnik Aktywności ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))\n\n"
       CSD U1 Lesson 6 Overview:
         markdown: "#Podsumowanie\n\nNa tej lekcji dowiesz się, jak ludzie i komputery
           przekształcają dane wejściowe w wyjściowe. \n\n##Słowniczek\n\n* **Algorytm**
@@ -672,10 +677,16 @@ pl-PL:
           ## Zasoby
 
           * [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Pamięć i Przetwarzanie - Wzór](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Poradnik Aktywności ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))\n"
       CSD U1 Lesson 8 Overview:
         markdown: "# Podsumowanie\n\nNa tej lekcji poznasz różne sposoby przetwarzania
           informacji przez aplikacje, w celu rozwiązania problemu. \n\n## Zasoby\n\n*
           [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)\n"
+        teacher_markdown: "* [Eksploracja Aplikacji KLUCZ](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Poradnik Aktywności ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)\n"
       CSD U1 Lesson 9 Overview:
         markdown: |
           # Podsumowanie
@@ -687,6 +698,11 @@ pl-PL:
           * [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+        teacher_markdown: |+
+          * [Aplikacje i Rozwiązywanie Problemów](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Poradnik Projektu Wzór ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Aplikacje i Rozwiązywanie Problemów](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Wzajemna recenzja Wzór ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+
+
       CSD U2 Design Project:
         content1: opis tutaj
       CSD U2 Design Project_2018:
@@ -1243,6 +1259,29 @@ pl-PL:
           #### Rozwijanie dobrych nawyków programistycznych
 
           Przestrzeganie jasnych i spójnych zwyczajów nazewnictwa jest ważnym nawykiem, ale korzyści rzadko są od razu oczywiste dla uczniów. W dłuższej perspektywie naprawdę opłaca się konsekwentnie nazywać ID, szczególnie dlatego, że okaże się pomocne, gdy przyjdzie czas na czytanie programów Twoich uczniów, ale uprości również proces łączenia ekranów uczniów w pełną aplikację zespołu.
+        markdown: "# Wybieranie dobrego ID\n\n**Dobre ID** są **znaczące i opisowe**.\n\nTak
+          samo jak dbasz o dobre nazwy dla swoich funkcji, tak samo powinieneś dbać
+          o to, by ID opisywały zamierzony cel danego elementu.\n\nPrzykładowo, jeżeli
+          masz w swoim programie wiele przycisków, to możesz chcieć nadać każdemu
+          ID, które będzie opisywało co dany przycisk robi.\n\nZatem, zamiast używać:
+          \n * `przycisk1` and `przycisk2`\n\nMożesz utworzyć ID, które powie nie
+          tylko że jest to przycisk, ale również w jakim celu może być wykorzystany,
+          np:\n\n * `przyciskStronaGłówna` and `przyciskZapisz` lub\n * `stronaGłównaPrzycisk`
+          and `zapiszPrzycisk` lub\n * decyzja należy do Ciebie!\n\n<img src=\"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
+          style=\"display: block; margin: auto;\">\n\n# Zasady wybierania ID\nAby
+          stworzyć opisowe i znaczące ID warto znać **kilka podstawowych zasad odnośnie
+          ID**. ID...\n\n* są wrażliwe na wielkość liter.\n* nie mogą zawierać spacji.\n*
+          *muszą* zaczynać się od litery (A-Z or a-z), za którą mogą pojawić się dowolne
+          cyfry czy litery.\n* może zawierać myślniki (\"-\"), podkreślenia (\"_\"),
+          dwukropki (\":\"), czy kropki (\".\").\n\n**Wrażliwe na wielkość liter?**\n\nOznacza
+          to, że jest różnica pomiędzy `PrzyciskZapisz` i `przyciskZapisz` (zauważ,
+          że w pierwszym przypadku mamy wielką literę P na początku).\n\nTe różnice
+          mogą się wydawać denerwujące na początku, jednak kiedy już do nich przywykniesz,
+          zaczniesz doceniać fakt, że komputer wymaga takiej precyzji. \n\nIstnieje
+          kilka zwyczajowych konwencji tworzenia ID złożonych z kilku słów:\n\n* **\"Camelcase\"**
+          -- `nazwaZapisanaWCamelcaseMożeWyglądaćTak`\n* **Podkreślenia** -- `Niektórzy_ludzie_lubią_używać_podkreśleń_do_oddzielania_słów`\n*
+          **myślniki** -- `Inni-wolą-używać-myślników`\n\nMożesz wybrać cokolwiek
+          Ci się podoba. To Twój styl. Pamiętaj tylko żeby trzymać się swojego stylu."
       Dance_Party_extras_intro:
         markdown: |
           # Nie przestawaj tańczyć!
@@ -1667,6 +1706,96 @@ pl-PL:
           Użyj mapy i wydawaj polecenia, aby osiągnąć cel.
       Multi-Screen Apps:
         content1: opis tutaj
+        markdown: |
+          # Tworzenie wielu ekranów
+
+          Możesz sobie wyobrazić, że typowy program składa się z wielu "ekranów" lub widoków, między którymi użytkownik się przełącza podczas korzystania z programu. Poniżej znajduje się przykład typowego ekranu powitalnego, ekranu z grą oraz ekranu końca gry.
+
+          <img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
+
+          ## Czym tak naprawdę jest ekran?
+
+          Ekran jest elementem interface'u użytkownika jak wszystko inne w trybie projektowania. Ale ma kilka wyróżniających go właściwości:
+
+          1. Ekran jest elementem interface'u użytkownika, który zawiera inne elementy interface'u.
+          2. Tylko jeden ekran może być widoczny w danej chwili.
+          3. Jedynie elementu zawarte w ekranie będą widoczne podczas jego wyświetlania.
+          4. **Wiele ekranów, ale tylko jedna przestrzeń robocza do kodowania**
+            * Nawet jeżeli *elementy projektu* są rozdzielone pomiędzy poszczególnymi ekranami, kod nie jest w ten sposób dzielony.
+            * Jest tylko jedna przestrzeń robocza do kodowania, która zawiera cały kod programu.
+
+          ## Jak utworzyć nowy ekran
+
+          <div style="float: left; width: 33%">
+          Są dwa sposoby na dodanie ekrany do Twojego programu.  Wpierw upewnij się, że jesteś w <em>trybie projektowania</em>.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Wybierz <em>Nowy ekran...</em> z listy rozwijanej na górze obszaru wyświetlania. <strong>Uwaga:</strong> możesz użyć tej listy także do przełączania się między ekranami w trybie projektowania.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Przeciągnij element Interface'u Ekran z przybornika. <strong>Uwaga:</strong> Kiedy tylko upuścisz element ekranu, program pokaże <strong>nowy pusty ekran</strong>. Możesz wrócić do pozostałych ekranów przy pomocy listy rozwijanej na górze obszaru wyświetlania.
+
+          </div>
+
+          ![](https://images.code.org/ed8f45d70a65329597c1623ddd756249-image-1477165123570.png)
+
+          ## Ustawianie właściwości ekranu
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Użyj tej listy rozwijanej, aby wybrać ekran, na którym będziesz pracować. Lista zawiera identyfikatory wszystkich utworzonych ekranów.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Kliknij pustą przestrzeń tła, aby wybrać ekran i ustawić jego właściwości.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Ekrany również mają identyfikatory. Jak pozostałym elementy interface'u, <em>warto nazwać je sensownie</em>. Dzięki temu pisanie kodu będzie łatwiejsze.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Jeżeli ekran jest wypełniony elementami interface'u użytkownika i nie ma pustego miejsca, które można kliknąć, skorzystaj z tej listy rozwijanej. Zawiera ona wszystkie elementy interface'u użytkownika, które są częścią tego ekranu, łącznie z samym ekranem.</p>
+          </div>
+
+          <img src="https://images.code.org/5f8934e6ae0fc2d9dfde8c9a0d93eec2-image-1477249243769.png" style="display: block; margin: auto;">
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 50%; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Kliknij ten przycisk, aby uczynić dany ekran "defaultowym", czyli takim, który zostanie wyświetlony po uruchomieniu programu.</p>
+
+
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>
+          Ekrany nie mają wielu właściwości, ale możesz wybrać kolor lub obraz tła ekranu. Obrazy zostaną rozciągnięte lub ściśnięte do rozmiarów ekranu.</p>
+
+          </div>
+          <div style="clear: both">&nbsp;</div>
+
+          ## Uzywanie polecenia *setScreen* do zmiany ekranu w kodzie
+
+          Komenda `setScreen` zmienia ekran na ten, który wybierzemy. Wystarczy podać jego identyfikator.
+
+          <img src="https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png" style="display: block; margin: auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Znajdź <em>setScreen</em> w przyborniku z kontrolkami intereface'u użytkownika i przeciągnij go na przestrzeń roboczą do kodowania.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Zazwyczaj ekran jest zmieniany w odpowiedzi na zdarzenie wywołane przez użytkownika. W tym przypadku dodamy funkcję <em>setScreen</em> do obsługi zdarzenia "kliknięcia" obrazu z identyfikatorem <em>smileyFace</em>.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Wybierz identyfikator ekranu, na który chcesz przejść. W tym przypadku, kiedy zostanie kliknięty uśmieszek, który mówi "cześć", chcemy zmienić ekran na taki, na którym mówi "żegnaj".</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          <strong>Kluczowa idea: wiele ekranów, jedna przestrzeń robocza do kodowania.</strong> To kod obsługujący zdarzenie "kliknięcia" <em>obrazu, który znajduje się na innym ekranie</em> - <em>goodbyeScreen</em>. Nie możesz go jeszcze zobaczyć, ani samego ekranu, ponieważ nie jest jeszcze wyświetlany. Kod jest jednak cały czas obecny.</p>
+
+          </div>
+        teacher_markdown: |-
+          #### Karty na Ekrany
+
+          Dla uproszczenia procesy prototypowania, zespoły mogą przyjąć, że każda z kart stworzonych w Papierowym Prototypowaniu jest pojedynczym ekranem w App Lab. W rzeczywistości, podobne do siebie ekrany często są kodowane jako pojedynczy ekran z zawartością zmieniającą się w zależności od zachowania użytkownika. W kolejnej lekcji uczniowie zobaczą kilka przykładów tego jak może to dzialać, ale nie jest wymagane, by zaimplementowali takie podejście w tym projekcie.
       New Challenge Introduction:
         content1: opis tutaj
         markdown: "### Nowe wyzwanie: Złam losowy szyfr podstawieniowy ... przy pomocy
@@ -1881,6 +2010,9 @@ pl-PL:
         markdown: "#Podsumowanie\nNa tej lekcji zastosujesz proces rozwiązywania problemu
           do gamy problemów, aby poznać, jak każdy krok pomaga Ci rozwijać i ulepszać
           rozwiązania problemów. \n\n##Zasoby\n* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n"
+        teacher_markdown: "[Rozwiązywanie problemów KLUCZ](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Poradnik Aktywności ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
       Unit 1 Lesson 4 Overview:
         markdown: |
           #Podsumowanie
@@ -1889,6 +2021,10 @@ pl-PL:
           ##Zasoby
 
           * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: |+
+          [Co to jest komputer - Wzór](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Poradnik Aktywności ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
+
+
       behaviors 1 predict:
         answers:
         - text: Duszek się zakręci.
@@ -3906,7 +4042,7 @@ pl-PL:
           Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
-        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+        title: 'Ankieta uczniowska przed kursem CS Discoveries '
       csf_be_a_super_digital_citizen:
         content1: opis tutaj
         markdown: |
@@ -4318,11 +4454,11 @@ pl-PL:
 
           Za chwilę rozpoczniesz pracę nad końcowym projektem. Zanim jednak to zrobisz, poświeć trochę czasu na przejrzenie przykładowych projektów.
 
-          ## Pracownia sprite'ów
+          ## Sprite Lab
 
-          | Potworny taniec (Pracownia sprite'ów) | Ciasteczkowa gra (Pracownia sprite'ów) |
+          | Taniec potworów (Sprite Lab) | Gra babeczek (Sprite Lab) |
           |---|---|
-          | [![Potworny taniec (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Potworny taniec (Pracownia sprite'ów")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Ciasteczkowa gra (Pracownia sprite'ów)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Ciasteczkowa gra (Pracownia sprite'ów")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | [![Taniec potworów (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Taniec potworów (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Gra babeczek(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Gra babeczek (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
           | Dodaj opis lub punktację do tej gry! | Dodaj opis lub punktację do tej gry! |
 
           ## Artysta
@@ -4707,10 +4843,16 @@ pl-PL:
           Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: |-
+          [key]
+
+          * [Łódki Aluminiowe - Wzór](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Poradnik Aktywności ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
       csd-pre-survey-2017-levelgroup_2018:
-        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+        title: 'Ankieta uczniowska przed kursem CS Discoveries '
       csd-pre-survey-levelgroup_2019:
-        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+        title: 'Ankieta uczniowska przed kursem CS Discoveries '
       outbreak_story:
         content1: opis tutaj
         markdown: |-
@@ -4908,3 +5050,200 @@ pl-PL:
           w swoim projekcie. Możesz kontynuować pracę z tymi samymi blokami lub wypróbować
           rozszerzony przybornik.
         display_name: Czas na zabawę
+      Building a UI with Design Mode:
+        markdown: "# Witaj w Trybie Projektowania App Lab\n\nW \"Trybie Projektowania\"
+          App Lab możesz tworzyć aplikację poprzez przeciąganie i upuszczanie elementów
+          aplikacji w edytorze.\n\n### Słowniczek\n**User Interface (UI)** - \"User
+          Interface\" nazywany też  **UI** aplikacji określa w jaki sposób osoba (użytkownik)
+          komunikuje się z komputerem czy aplikacją. Istnieje kilka konwencji związanych
+          z UI, które najprawdopodobniej już znasz ze swojego doświadczenia:\n\n*
+          **Elementy UI ** czy też obiekty, takie jak przyciski, obrazki, pola tekstowe,
+          rozwijane menu, ekrany, itp.\n* **Zdarzenia UI (UI Events)** czy też kontrolki,
+          takie jak *klikanie*, *przewijanie*, *ruch myszką*, *pisanie na klawiaturze*,
+          itp \n\nApp Lab pozwala Ci w prosty sposób dodawać elementy UI do Twojej
+          aplikacji, a następnie dodawać kod, który będzie reagował na interakcje
+          użytkowników z tymi elementami. To dwuetapowy proces, ale powiemy o tym
+          więcej w dalszej części tego kursu.\n\nNa początek, przyjrzyj się Trybowi
+          Projektowania i dodaj pojedynczy element UI (np przycisk) do aplikacji.
+          Kod dodamy nieco później.\n\n<div style=\"column-count: 4; column-gap: 20px;
+          column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%\">\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">1.</span>
+          Możesz zobaczyć nowy zestaw przełączników powyżej aplikacji, dzięki którym
+          możesz przełączać się między \"Trybem Projektowania\" i \"Trybem Kodowania\".</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">2.</span>
+          Dodawanie elementu jest bardzo proste - wystarczy przeciągnąć dany element
+          i upuścić w odpowiednim miejscu aplikacji. Kiedy już pojawi się na ekranie
+          aplikacji, możesz go przesunąć, zmienić jego rozmiar, a także wiele właściwości
+          tego elementu.</p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\"><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">3.</span>Zakładka<em>właściwości</em>
+          pokazuje Ci wszystko co możesz zmienić odnośnie wyglądu i zachowania danego
+          elementu UI.</p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\"><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">4.</span><strong>ID elementu</strong>
+          jest ważne, ponieważ to dzięki niemu odnosisz się do danego elementu w swoim
+          kodzie. Więcej o ID powiemy w dalszych etapach tego kursu.</p>\n</div>\n\n![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)\n\n\n<div
+          style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 66%; float: right\">\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">5.</span>Możesz
+          zmienić tekst, który użytkownik widzi na przycisku na jakikolwiek chcesz.</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">6.</span><strong>Uwaga:</strong>
+          Zjedź na dół strony, aby zobaczyć inne właściwości elementu, które mogą
+          się \"ukrywać\" poniżej.</p>\n</div>\n\n<div style=\"clear: both\"></div>\n<hr>\n\n**Teraz
+          Twoja kolej!**"
+        teacher_markdown: |-
+          ### Najpierw projekt
+
+          Być może część uczniów kusi wizja, aby zacząć eksperymentować z Trybem Kodowania, jednak w tej lekcji całkowicie skoncentrujemy się na tworzeniu wyglądu aplikacji. Przekaż uczniom informację, że do kodu przejdziemy już niedługo. Te kilka pierwszych lekcji pozwoli uczniom zbudować ekran aplikacji według ich własnego projektu przy wykorzystaniu elementów udostępnianych przez App Lab bez obaw o docelową aplikację, którą będziemy tworzyć.
+      CSD - Getters and Setters:
+        markdown: |
+          # Gettery i settery
+
+          # Settery
+
+          Settery to polecenia, które **ustawiają** (ang. "set") lub zmieniają dane. Settery wymagają co najmniej jednej danej wejściowej: tej, którą chcemy ustawić.
+
+          Używałeś wcześniej funkcji `setScreen()`.  Funkcja `setScreen()` zmienia ekran widoczny dla użytkownika. Daną wejściową do `setScreen()` jest nowy ekran, który chcemy wyświetlić.
+
+          Innym przykładem settera, którego będziesz używać jest `setText()`.
+
+          <img src="//curriculum.code.org/images/applab/setText.png" style="margin: 20px auto">
+
+          # Gettery
+
+          Gettery to polecenia, które **pobierają** (ang. "get") dane. Gettery zazwyczaj wymagają co najmniej jednej danej wejściowej: miejsca, z którego chcemy pobrać dane.
+
+          Funkcja `getText()` jest getterem, którego będziesz często używać. Może być używany do pobrania tekstu na przykład z pola tekstowego.
+
+          <img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
+
+          Kiedy używasz gettera, dobrze jest zapisać wynik do zmiennej, aby móc go później wykorzystać w programie.
+      'CSD: getText vs getNumber':
+        markdown: |
+          # odczytajTekst (getText) kontra odczytajLiczbę (getNumber)
+
+          Komputery zapisują informację na wiele różnych sposobów. Dwa z nich to zapisywanie informacji jako ciągi znaków lub liczby.
+
+          `getNumber()` (odczytajLiczbę) stara się odczytać wartość podanych informacji jako liczbę.
+
+          `getText()` (odczytajTekst) pobiera wartość podanych danych jako ciąg znaków (string). Ciągi znaków są często zaznaczane w Twoich programach przez `" "`. Na przykład wszystkie nazwy jakie nadajesz ID są ciągami znaków. Możesz wykorzystać `getText()`, aby odczytać liczbę, musisz jedynie pamiętać, że będzie ona otoczona przez `" "`.
+
+          ## Dlaczego to jest ważne?
+
+          Zazwyczaj odczytywanie wszystkich danych jako ciąg znaków jest w porządku, jednak gdy chcesz wykonać na odczytanych danych działania matematyczne potrzebujesz liczb, nie ciągów znaków. Gdy chcesz dodać do siebie dwa ciągi znaków, komputer myśli, że chcesz je połączyć w jeden ciąg znaków.
+
+          Zatem, gdy powiesz `"2" + "2"`, komputer wykona działanie i poda wynik `"22"`.
+
+          Kiedy jednak podasz `2 + 2` (zauważ, że teraz nie użyliśmy `" " `), komputer poda wynik jako `4`.
+      'CSD: setProperty':
+        markdown: "# Jak działa ustawWłaściwość\n\n`ustawWłaściwość` to kod, który
+          umożliwia ustawienie właściwości elementów UI - takich jak kolor, szerokość,
+          wielkość fontu, itp. Każda właściwość, którą możesz ustawić w Trybie Projektowania,
+          może być również ustawiona w kodzie z wykorzystaniem `ustawWłaściwość`\n\n<br><br>\n\n<div
+          style=\"column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n\t<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span> W trybie programowania
+          możesz znaleźć <code>ustawWłaściwość</code> w przyborniku kontrolek UI.<br>\n\n\t<span
+          style=\"color: #00adbc; font-size: 150%\">2.</span> Wybierz id elementu,
+          którego właściwość chcesz ustawić\n</p>\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n\t<span
+          style=\"color: #00adbc; font-size: 150%\">3.</span> W rozwijanym menu zobaczysz
+          listę wszystkich właściwości, które możesz ustawić dla wybranego element.
+          Odpowiada ona liście właściwości, które widzisz dla danego elementu w <strong>Trybie
+          Projektowania</strong>\n</p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\">\n\n\t<span style=\"color:
+          #00adbc; font-size: 150%\">4.</span> Ostatnim parametrem jest wartość jaką
+          chcesz ustawić dla danej właściwości. W naszym przypadku będzie to background-color
+          (kolor tła), której możemy przypisać wiele różnych wartości.\n</p>\n\n\n</div>\n\n<img
+          src=\"https://images.code.org/b7736bdcbde48f7951ebdc87135dd46c-image-1480536740764.png\"
+          style=\"display: block; margin: auto\">\n\n\n## Jak ustawić \"background-color\"
+          (kolor tła)\n\n<span style=\"color: #00adbc; font-size: 150%\">1.</span>
+          *background-color (kolor tła)* to ciąg znaków (w cudzysłowie), który reprezentuje
+          dany kolor. Zazwyczaj kolor zapisuje się w wartości HEX lub trzech wartości
+          RGB np *\"rgb(255,0,0)\"*.\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
+          style=\"display: block; margin: auto\">\n"
+      Responding to User Input:
+        markdown: |+
+          # Odpowiadanie na dane wejściowe użytkownika
+
+          Tryb projektu pozwala na łatwe ułożenie interface'u użytkownika w Twoim programie, ale musimy zagłębić się w trybie kodowania, aby móc zareagować na działania użytkownika.
+
+          W Game Labie pętla Rysuj nieprzerwanie uruchamia kod, używając poleceń warunkowych, aby sprawdzać działania użytkownika. App Lab, z drugiej strony, oczekuje na odpowiedzi na określone **zdarzenia**, które mają miejsce w programie. To sposób App Labu na powiedzenie "Hej, coś się zdarzyło!". Oznacza to, że kod nie musi nieprzerwanie działać, dopóki nie wykonujemy działań w programie, a Twój kod odpowie na zdarzenia dopiero wtedy, kiedy do nich dojdzie.
+
+          Fragmenty kodu, które służą do tego, aby program odpowiadał na zdarzenia poprzez wywoływanie odpowiednich funkcji są zbiorczo nazywane **obsługą zdarzeń**.
+
+          W App Labie każda obsługa zdarzeń zaczyna się od bloku `onEvent`.  Oto, co musisz zrobić:
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Przejdź do trybu kodowania</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Przeciągnij blok <code>onEvent</code> z przybornika na przestrzeń roboczą.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Użyj listy rozwijanej, aby wybrać <em>identyfikator</em> elementu interface'u, który ma odpowiadać na zdarzenie. Identyfikatory elementów interface'u dodanych w trybie projektowania będą tutaj wymienione.</p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Użyj listy rozwijanej, aby wybrać <em>typ</em> zdarzenia, na które chcemy odpowiedzieć. Póki co wybierz "kliknięcie".</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Wpisz kod wewnątrz funkcji, która ma być wykonywana <em>kiedy</em> użytkownik wyzwoli zdarzenie. Funkcja zostanie uruchomiona za każdym razem, kiedy użytkownik wyzwoli określone zdarzenie.</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+
+          ### Zmiana ekranów poprzez kliknięcie
+
+          Ważne jest, aby rozumieć programowanie oparte na zdarzeniach:
+
+          * **Użytkownicy wyzwalają zdarzenia** - Zdarzenia mają miejsce, kiedy użytkownicy klikają przycisk, dotykają ekranu, ruszają myszą, wciskają przycisk na klawiaturze itd.
+          * **Zdarzenia wyzwalają kod** - Kiedy zdarzenie ma miejsce, uruchamiana jest określona funkcja.
+
+          Blok `onEvent` w app Labie to rodzaj funkcji obsługującej zdarzenia nazywanej **Event Listenerem**. Opakowuje on całą obsługę zdarzeń w jedną komendę, skłądającą się z kilku części. Oto przykład z objaśnieniami:
+
+          <img src="//curriculum.code.org/images/applab/onEvent_diagram.png" style="display: block; margin: 20px auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Kod do wykonania, kiedy wyzwalana jest funkcja zwrotna po kliknięciu w <em>button1</em>.  W tym przypadku żółw przejdzie do przodu o 25 pikseli. Zazwyczaj kod do obsługi zdarzeń składa się z więcej, niż jednej linii. To prosty przykład na początek.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Zauważ, że ta funkcja, w odróżnieniu od innych, które widzieliśmy, nie ma nazwy. Jest to <em>funkcja zwrotna</em>, co jest specyficznym terminem. Funkcja zwrotna różni się od zwykłej funkcji jedynie tym, że nie wywołujemy jej bezpośrednio w kodzie. Zamiast tego funkcja zwrotna jest <strong>wywoływana przez system</strong>, kiedy zajdzie odpowiednie zdarzenie. Funkcje zwrotne są często pojawiającym się wzorcem  w programowaniu opartym na zdarzeniach.</p>
+          </div>
+
+
+          ### Następnym razem je wykorzystamy!
+
+        teacher_markdown: "\n#### Po prostu fakty\n\nZnajomość szczegółów dotyczących
+          tego, jak działają zdarzenia w App Labie nie jest niezbędna na potrzeby
+          tego kursu. Jeżeli uczniowie mają problemy ze zrozumieniem programowania
+          w App Labie, skup się na tych podstawach:\n\n* Nie ma nieskończonej pętli
+          `draw`\n* Blok`onEvent()` określa:\n    * identyfikator elementu\n    *
+          zdarzenie (takie jak \"kliknięcie\" czy \"najechanie myszą\")\n    * kod,
+          który jest wykonywany, kiedy nastąpi zdarzenie (technicznie jest to anonimowa
+          funkcja zwrotna, reprezentowana przez zielony blok)\n* Kod wewnątrz bloków
+          `onEvent()` jest uruchamiany za każdym razem, kiedy nastąpi zdarzenie\n\n####
+          Porównanie z Game Labem\n\nW Game Labie możemy użyc następującego kodu,
+          aby sprawdzić, czy duszek nazwany \"button\" został kliknięty i wtedy coś
+          zrobić:\n\n    function draw() {\n    \tif (mousePressedOver(button)) {\n
+          \      \t\t// Zrób coś\n       \t}\n    }\n\n\nW App Labie, mając przycisk
+          o identyfikatorze \"button\", możemy napisać następujący kod, aby osiągnąć
+          ten sam cel:\n\n\n    onEvent(\"button\", \"click\", function () {\n    \t//
+          Zrób coś\n    });\n\nW przykładzie z App Labu funkcja jest po prostu kolejnym
+          argumentem funkcji `onEvent`; po prostu sam argument może być funkcją. Możemy
+          także zdefiniować funkcję oddzielnie i napisać program w następujący sposób:\n\n
+          \   function doSomething() {\n    \t// Zrób coś\n    }\n    \n    onEvent(\"button\",
+          \"click\", doSomething);\n\n\nZauważ, że w drugim przykładzie, kiedy przekazujemy
+          funkcję `doSomething` funkcji `onEvent` _nie_ wstawiamy nawiasów na końcu.
+          Robimy tak dlatego, że przekazujemy samą funkcję jako argument, nie jej
+          wynik.\n"

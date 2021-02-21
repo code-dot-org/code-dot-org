@@ -37,7 +37,7 @@ export function createStore(numStudents, numLessons) {
     stageExtras: false
   };
   for (let i = 0; i < numStudents; i++) {
-    section.students.push({id: i, name: 'Student' + i});
+    section.students.push({id: i, name: 'Student' + i + ' Long Lastname'});
   }
   try {
     registerReducers({

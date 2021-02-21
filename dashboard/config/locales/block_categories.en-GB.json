@@ -1,0 +1,46 @@
+{
+  "en-GB": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Actions",
+          "Loops": "Loops",
+          "Math": "Mathematics",
+          "Logic": "Logic",
+          "Variables": "Variables"
+        },
+        "CourseD_EOC_dance": {
+          "Logic": "Logic"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Actions",
+          "Loops": "Loops",
+          "Math": "Mathematics",
+          "Logic": "Logic"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Actions"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Actions",
+          "Variables": "Variables",
+          "Math": "Mathematics",
+          "Logic": "Logic",
+          "Text": "Text"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Actions",
+          "Logic": "Logic",
+          "Loops": "Loops",
+          "Math": "Mathematics",
+          "Variables": "Variables"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Actions",
+          "Logic": "Logic",
+          "Math": "Mathematics"
+        }
+      }
+    }
+  }
+}

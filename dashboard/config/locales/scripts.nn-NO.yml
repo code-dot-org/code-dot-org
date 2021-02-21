@@ -4387,7 +4387,7 @@ nn:
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
-              display_name: Løkker i løkke
+              display_name: Betingelser
             csf_functions:
               display_name: Funksjonar
         coursef-2021:
