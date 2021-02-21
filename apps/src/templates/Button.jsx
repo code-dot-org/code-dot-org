@@ -197,6 +197,7 @@ class Button extends React.Component {
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
+    download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     onClick: PropTypes.func,
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -226,6 +227,7 @@ class Button extends React.Component {
       style,
       onClick,
       disabled,
+      download,
       id,
       tabIndex,
       isPending,
@@ -245,6 +247,14 @@ class Button extends React.Component {
       Tag = href ? 'a' : 'div';
     }
 
+    if (download && Tag !== 'a') {
+      // <button> and <div> elements do not support the download attribute, so
+      // don't let this component attempt to do that.
+      throw new Error(
+        'Attempted to use the download attribute with a non-anchor tag'
+      );
+    }
+
     const sizeStyle = __useDeprecatedTag
       ? styles.sizes[size]
       : {...styles.sizes[size], ...styles.updated};
@@ -256,6 +266,7 @@ class Button extends React.Component {
         href={disabled ? 'javascript:void(0);' : href}
         target={target}
         disabled={disabled}
+        download={download}
         onClick={disabled ? null : onClick}
         onKeyDown={this.onKeyDown}
         tabIndex={tabIndex}
