@@ -70,33 +70,11 @@ describe('ProgressTableContainer', () => {
       .false;
   });
 
-  it('passes needsGutter true to the ProgressTableStudentList when the width of the stages exceeds the content view width', () => {
-    // 2000px will exceed with content view width
-    const getTableWidth = () => 2000;
-    const wrapper = setUp({getTableWidth});
-    expect(wrapper.find(ProgressTableStudentList).props().needsGutter).to.be
-      .true;
-  });
-
-  it('passes needsGutter false to the ProgressTableStudentList when the width of the stages is less than the content view width', () => {
-    // 20px will be less than the content view width
-    const getTableWidth = () => 20;
-    const wrapper = setUp({getTableWidth});
-    expect(wrapper.find(ProgressTableStudentList).props().needsGutter).to.be
-      .false;
-  });
-
   it('passes extraHeaderLabels to the ProgressTableStudentList', () => {
     const extraHeaderLabels = ['extraheader'];
     const wrapper = setUp({extraHeaderLabels});
     expect(
       wrapper.find(ProgressTableStudentList).props().extraHeaderLabels
     ).to.equal(extraHeaderLabels);
-  });
-
-  it('renders props.children', () => {
-    const children = <div id="child-div">This is the child</div>;
-    const wrapper = setUp({children});
-    expect(wrapper.find('#child-div')).to.have.length(1);
   });
 });

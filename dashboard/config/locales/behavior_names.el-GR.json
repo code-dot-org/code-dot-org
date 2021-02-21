@@ -30,6 +30,16 @@
           "recovering": "αναρρώνοντας",
           "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
           "moving left and right": "κίνηση αριστερά και δεξιά"
+        },
+        "outbreak_freeplay": {
+          "recovering": "αναρρώνοντας",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "αναρρώνοντας",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
         }
       }
     }

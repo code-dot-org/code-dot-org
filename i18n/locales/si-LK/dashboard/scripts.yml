@@ -2591,10 +2591,12 @@ si:
             'Functions: Songwriting':
               name: ගීත ලිවීම
           lesson_groups:
+            ramp_up:
+              display_name: ලූපයන්
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
             csf_nested_loops:
-              display_name: නැවත නැවත සිදුවන ලුප
+              display_name: කන්ඩිෂනලස්
             csf_functions:
               display_name: ශ්‍රිතයන්
         coursef-2021:
