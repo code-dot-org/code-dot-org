@@ -38,7 +38,7 @@ class DataCard extends Component {
                   {metadata.card.source}
                 </div>
                 <span style={styles.bold}>Columns:</span>
-                <div style={styles.subPanel}>
+                <div style={styles.contents}>
                   {metadata.fields.map(field => {
                     return (
                       <div key={field.id}>
@@ -83,7 +83,7 @@ class DataCard extends Component {
               <div>
                 <br />
                 <span style={styles.bold}>Columns:</span>
-                <div style={styles.subPanel}>
+                <div style={styles.contents}>
                   {Object.keys(data[0]).map(key => {
                     return (
                       <div key={key}>

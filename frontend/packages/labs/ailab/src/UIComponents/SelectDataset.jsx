@@ -106,28 +106,25 @@ class SelectDataset extends Component {
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div>Select a dataset from the collection</div>
-
-            <div style={styles.datasets}>
-              {datasets.map(dataset => {
-                return (
-                  <div
-                    style={{
-                      ...styles.selectDatasetItem,
-                      ...(this.props.name === dataset.name &&
-                        styles.selectDatasetItemSelected)
-                    }}
-                    key={dataset.id}
-                    onClick={() => this.handleDatasetClick(dataset.id)}
-                  >
-                    <img
-                      src={assetPath + dataset.imagePath}
-                      style={styles.selectDatasetImage}
-                    />
-                    <div>{dataset.name}</div>
-                  </div>
-                );
-              })}
-            </div>
+            {datasets.map(dataset => {
+              return (
+                <div
+                  style={{
+                    ...styles.selectDatasetItem,
+                    ...(this.props.name === dataset.name &&
+                      styles.selectDatasetItemSelected)
+                  }}
+                  key={dataset.id}
+                  onClick={() => this.handleDatasetClick(dataset.id)}
+                >
+                  <img
+                    src={assetPath + dataset.imagePath}
+                    style={styles.selectDatasetImage}
+                  />
+                  <div>{dataset.name}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
         {!specifiedDatasets && (

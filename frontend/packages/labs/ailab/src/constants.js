@@ -125,19 +125,6 @@ export const styles = {
     width: "80%"
   },
 
-  subPanel: {
-    padding: 15,
-    backgroundColor: "rgb(206, 206, 206)",
-    borderRadius: 5,
-    //marginTop: 20,
-    //border: "solid 1px white",
-    //overflow: "hidden"
-  },
-
-  scrollContents: {
-    overflow: "scroll"
-  },
-
   validationMessages: {
     position: "fixed",
     bottom: 80,
@@ -166,27 +153,6 @@ export const styles = {
 
   rightPanel: {
     fontSize: 13
-  },
-
-  rightPanelX: {
-    float: "left",
-    marginLeft: 10,
-    width: "calc(30% - 20px)",
-    padding: 20,
-    backgroundColor: "white", // rgb(230,230,230)",
-    //border: "solid 1px black",
-    borderRadius: 5,
-    fontFamily: '"Gotham 4r", sans-serif',
-    boxSizing: "border-box",
-    overflow: "scroll",
-    position: "relative",
-    fontSize: 13,
-    height: "100%"
-  },
-
-  datasets: {
-    //maxHeight: 300,
-    //overflow: "scroll"
   },
 
   selectDatasetItem: {
@@ -219,15 +185,13 @@ export const styles = {
   },
 
   finePrint: {
-    //maxHeight: 300,
     overflow: "scroll",
     overflowWrap: "break-word",
     fontSize: 10,
     padding: 10,
     boxSizing: "border-box",
     borderRadius: 5,
-    backgroundColor: "white" // rgb(206, 206, 206)",
-    //border: "solid 1px white"
+    backgroundColor: "white"
   },
 
   dataDisplayHeader: {
@@ -282,11 +246,6 @@ export const styles = {
     backgroundColor: featureColor
   },
   dataDisplayCellUnselected: {},
-
-  tabContainer: {
-    overflow: "hidden",
-    marginTop: 10
-  },
 
   crossTabCell0: {
     backgroundColor: "rgba(255,100,100, 0)"
@@ -347,12 +306,6 @@ export const styles = {
     color: featureColor,
     paddingLeft: 4,
     paddingRight: 4
-  },
-
-  popupClose: {
-    position: "absolute",
-    right: 20,
-    cursor: "pointer"
   },
 
   selectLabelText: {

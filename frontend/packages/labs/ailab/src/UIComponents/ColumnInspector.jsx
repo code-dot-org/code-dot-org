@@ -158,7 +158,7 @@ class ColumnInspector extends Component {
                       </p>
                     )}
                     {!isNaN(rangesByColumn[currentColumnData.id].min) && (
-                      <div style={styles.subPanel}>
+                      <div style={styles.contents}>
                         min: {rangesByColumn[currentColumnData.id].min}
                         <br />
                         max: {rangesByColumn[currentColumnData.id].max}

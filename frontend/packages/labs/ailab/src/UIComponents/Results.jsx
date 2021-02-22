@@ -113,7 +113,7 @@ class Results extends Component {
                     The average difference between expected and predicted labels
                     is:
                   </div>
-                  <div style={styles.subPanel}>{this.props.summaryStat.stat}</div>
+                  <div style={styles.contents}>{this.props.summaryStat.stat}</div>
                 </div>
               )}
             {this.props.summaryStat.type === MLTypes.CLASSIFICATION &&
@@ -122,7 +122,7 @@ class Results extends Component {
                   <div style={styles.mediumText}>
                     The calculated accuracy of this model is:
                   </div>
-                  <div style={styles.subPanel}>
+                  <div style={styles.contents}>
                     {this.props.summaryStat.stat}%
                   </div>
                 </div>
