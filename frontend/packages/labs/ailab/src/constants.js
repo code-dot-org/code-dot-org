@@ -146,7 +146,8 @@ export const styles = {
     boxSizing: "border-box",
     overflow: "scroll",
     position: "relative",
-    fontSize: 13
+    fontSize: 13,
+    height: "100%"
   },
 
   datasets: {

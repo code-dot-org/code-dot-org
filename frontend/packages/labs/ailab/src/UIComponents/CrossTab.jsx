@@ -23,72 +23,68 @@ class CrossTab extends Component {
   render() {
     const { currentColumn, crossTabData } = this.props;
 
-    return (
-      <div id="cross-tab">
-        {!currentColumn && crossTabData && (
-          <div style={styles.rightPanel}>
-            <div style={styles.largeText}>Correlation Information</div>
-            <div style={styles.subPanel}>
-              <div style={styles.scrollContents}>
-                <table>
-                  <thead>
-                    <tr>
-                      <th colSpan={crossTabData.featureNames.length}>&nbsp;</th>
-                      <th colSpan={crossTabData.uniqueLabelValues.length}>
-                        {crossTabData.labelName}
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      {crossTabData.featureNames.map((featureName, index) => {
-                        return <td key={index}>{featureName}</td>;
-                      })}
+    return !currentColumn && crossTabData && (
+      <div style={styles.rightPanel} id="cross-tab">
+        <div style={styles.largeText}>Correlation Information</div>
+        <div style={styles.subPanel}>
+          <div style={styles.scrollContents}>
+            <table>
+              <thead>
+                <tr>
+                  <th colSpan={crossTabData.featureNames.length}>&nbsp;</th>
+                  <th colSpan={crossTabData.uniqueLabelValues.length}>
+                    {crossTabData.labelName}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {crossTabData.featureNames.map((featureName, index) => {
+                    return <td key={index}>{featureName}</td>;
+                  })}
 
+                  {crossTabData.uniqueLabelValues.map(
+                    (uniqueLabelValue, index) => {
+                      return (
+                        <td key={index} style={styles.dataDisplayCell}>
+                          {uniqueLabelValue}
+                        </td>
+                      );
+                    }
+                  )}
+                </tr>
+                {crossTabData.results.map((result, resultIndex) => {
+                  return (
+                    <tr key={resultIndex}>
+                      {result.featureValues.map(
+                        (featureValue, featureIndex) => {
+                          return <td key={featureIndex}>{featureValue}</td>;
+                        }
+                      )}
                       {crossTabData.uniqueLabelValues.map(
-                        (uniqueLabelValue, index) => {
+                        (uniqueLabelValue, labelIndex) => {
                           return (
-                            <td key={index} style={styles.dataDisplayCell}>
-                              {uniqueLabelValue}
+                            <td
+                              key={labelIndex}
+                              style={this.getCellStyle(
+                                result.labelPercents[uniqueLabelValue]
+                              )}
+                            >
+                              {/*
+                            {result.labelCounts[uniqueLabelValue]}
+                            */}
+                              {result.labelPercents[uniqueLabelValue] || 0}%
                             </td>
                           );
                         }
                       )}
                     </tr>
-                    {crossTabData.results.map((result, resultIndex) => {
-                      return (
-                        <tr key={resultIndex}>
-                          {result.featureValues.map(
-                            (featureValue, featureIndex) => {
-                              return <td key={featureIndex}>{featureValue}</td>;
-                            }
-                          )}
-                          {crossTabData.uniqueLabelValues.map(
-                            (uniqueLabelValue, labelIndex) => {
-                              return (
-                                <td
-                                  key={labelIndex}
-                                  style={this.getCellStyle(
-                                    result.labelPercents[uniqueLabelValue]
-                                  )}
-                                >
-                                  {/*
-                                {result.labelCounts[uniqueLabelValue]}
-                                */}
-                                  {result.labelPercents[uniqueLabelValue] || 0}%
-                                </td>
-                              );
-                            }
-                          )}
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
-        )}
+        </div>
       </div>
     );
   }

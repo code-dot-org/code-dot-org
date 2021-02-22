@@ -36,73 +36,71 @@ class Predict extends Component {
 
   render() {
     return (
-      <div id="predict">
-        <div style={styles.rightPanel}>
-          <div style={styles.largeText}>Test the Model</div>
-          <form>
-            {this.props.selectedContinuousFeatures.map((feature, index) => {
-              return (
-                <div key={index}>
-                  <label>
-                    {feature}:
-                    &nbsp;
-                    <input
-                      type="text"
-                      onChange={event => this.handleChange(event, feature)}
-                    />
-                  </label>
-                </div>
-              );
-            })}
-          </form>
-          <br />
-          <form>
-            {this.props.selectedCategoricalFeatures.map((feature, index) => {
-              return (
-                <div style={{marginBottom: 10}} key={index}>
-                  <label>
-                    {feature}:
-                    &nbsp;
-                    <select
-                      onChange={event => this.handleChange(event, feature)}
-                    >
-                      <option>{""}</option>
-                      {this.props.uniqueOptionsByColumn[feature]
-                        .sort()
-                        .map((option, index) => {
-                          return (
-                            <option key={index} value={option}>
-                              {option}
-                            </option>
-                          );
-                        })}
-                    </select>
-                  </label>
-                </div>
-              );
-            })}
-          </form>
-          <br />
-          <button
-            type="button"
-            style={{ width: "20%" }}
-            onClick={this.onClickPredict}
-          >
-            Predict!
-          </button>
-          <p />
-          {this.props.predictedLabel && (
-            <div>
-              <div>A.I. predicts:</div>
-              <div style={styles.subPanel}>
-                {this.props.labelColumn}: {this.props.predictedLabel}
-                {this.props.confidence && (
-                  <p>Confidence: {this.props.confidence}</p>
-                )}
+      <div id="predict" style={styles.rightPanel}>
+        <div style={styles.largeText}>Test the Model</div>
+        <form>
+          {this.props.selectedContinuousFeatures.map((feature, index) => {
+            return (
+              <div key={index}>
+                <label>
+                  {feature}:
+                  &nbsp;
+                  <input
+                    type="text"
+                    onChange={event => this.handleChange(event, feature)}
+                  />
+                </label>
               </div>
+            );
+          })}
+        </form>
+        <br />
+        <form>
+          {this.props.selectedCategoricalFeatures.map((feature, index) => {
+            return (
+              <div style={{marginBottom: 10}} key={index}>
+                <label>
+                  {feature}:
+                  &nbsp;
+                  <select
+                    onChange={event => this.handleChange(event, feature)}
+                  >
+                    <option>{""}</option>
+                    {this.props.uniqueOptionsByColumn[feature]
+                      .sort()
+                      .map((option, index) => {
+                        return (
+                          <option key={index} value={option}>
+                            {option}
+                          </option>
+                        );
+                      })}
+                  </select>
+                </label>
+              </div>
+            );
+          })}
+        </form>
+        <br />
+        <button
+          type="button"
+          style={{ width: "20%" }}
+          onClick={this.onClickPredict}
+        >
+          Predict!
+        </button>
+        <p />
+        {this.props.predictedLabel && (
+          <div>
+            <div>A.I. predicts:</div>
+            <div style={styles.subPanel}>
+              {this.props.labelColumn}: {this.props.predictedLabel}
+              {this.props.confidence && (
+                <p>Confidence: {this.props.confidence}</p>
+              )}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     );
   }

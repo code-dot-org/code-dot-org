@@ -13,11 +13,7 @@ import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import {
-  getPanelButtons,
-  setCurrentPanel,
-  validationMessages
-} from "./redux";
+import { getPanelButtons, setCurrentPanel, validationMessages } from "./redux";
 
 class PanelButtons extends Component {
   static propTypes = {
@@ -62,6 +58,14 @@ class PanelButtons extends Component {
   }
 }
 
+const BodyContainer = props => (
+  <div style={styles.bodyContainer}>{props.children}</div>
+);
+
+BodyContainer.propTypes = {
+  children: PropTypes.node
+};
+
 const Container = props => (
   <div style={styles.panelContainer}>{props.children}</div>
 );
@@ -101,67 +105,71 @@ class App extends Component {
 
     return (
       <div style={styles.app}>
-        <div style={styles.bodyContainer}>
-          {currentPanel === "selectDataset" && (
-            <div>
-              <Container>
-                <SelectDataset />
-              </Container>
-              <DataCard />
-            </div>
-          )}
+        {currentPanel === "selectDataset" && (
+          <BodyContainer>
+            <Container>
+              <SelectDataset />
+            </Container>
+            <DataCard />
+          </BodyContainer>
+        )}
 
-          {currentPanel === "specifyColumns" && (
+        {currentPanel === "specifyColumns" && (
+          <BodyContainer>
             <Container>
               <SpecifyColumns />
             </Container>
-          )}
+          </BodyContainer>
+        )}
 
-          {["dataDisplayLabel", "dataDisplayFeatures"].includes(
-            currentPanel
-          ) && (
-            <div>
-              <Container>
-                <DataDisplay />
-              </Container>
-              <ColumnInspector />
-              <CrossTab />
-            </div>
-          )}
+        {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
+          <BodyContainer>
+            <Container>
+              <DataDisplay />
+            </Container>
+            <ColumnInspector />
+            <CrossTab />
+          </BodyContainer>
+        )}
 
-          {currentPanel === "selectTrainer" && (
+        {currentPanel === "selectTrainer" && (
+          <BodyContainer>
             <ContainerFullWidth>
               <SelectTrainer />
             </ContainerFullWidth>
-          )}
+          </BodyContainer>
+        )}
 
-          {currentPanel === "trainModel" && (
+        {currentPanel === "trainModel" && (
+          <BodyContainer>
             <ContainerFullWidth>
               <TrainModel />
             </ContainerFullWidth>
-          )}
+          </BodyContainer>
+        )}
 
-          {currentPanel === "results" && (
-            <div>
-              <Container>
-                <Results />
-              </Container>
-              {resultsPhase === 3 && <Predict />}
-            </div>
-          )}
+        {currentPanel === "results" && (
+          <BodyContainer>
+            <Container>
+              <Results />
+            </Container>
+            {resultsPhase === 3 && <Predict />}
+          </BodyContainer>
+        )}
 
-          {currentPanel === "saveModel" && (
+        {currentPanel === "saveModel" && (
+          <BodyContainer>
             <ContainerFullWidth>
               <SaveModel saveTrainedModel={saveTrainedModel} />
             </ContainerFullWidth>
-          )}
+          </BodyContainer>
+        )}
 
-          <PanelButtons
-            panelButtons={panelButtons}
-            currentPanel={currentPanel}
-            setCurrentPanel={setCurrentPanel}
-          />
-        </div>
+        <PanelButtons
+          panelButtons={panelButtons}
+          currentPanel={currentPanel}
+          setCurrentPanel={setCurrentPanel}
+        />
       </div>
     );
   }
