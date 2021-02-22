@@ -114,6 +114,16 @@ class Script < ApplicationRecord
 
   validate :set_is_migrated_only_for_migrated_scripts
 
+  def prevent_duplicate_levels
+    reload
+
+    unless levels.count == levels.uniq.count
+      levels_by_key = levels.map(&:key).group_by {|key| key}
+      duplicate_keys = levels_by_key.select {|_key, values| values.count > 1}.keys
+      raise "duplicate levels detected: #{duplicate_keys.to_json}"
+    end
+  end
+
   include SerializedProperties
 
   after_save :generate_plc_objects
@@ -792,6 +802,10 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSP')
   end
 
+  def csa?
+    under_curriculum_umbrella?('CSA')
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end
@@ -825,6 +839,16 @@ class Script < ApplicationRecord
 
   def self.beta?(name)
     name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
+  def get_script_level_by_absolute_position_and_puzzle_position(absolute_position, puzzle_position)
+    script_levels.find do |sl|
+      # make sure we are checking the native properties of the script level
+      # first, so we only have to load lesson if it's actually necessary.
+      sl.position == puzzle_position.to_i &&
+          !sl.bonus &&
+          sl.lesson.absolute_position == absolute_position.to_i
+    end
   end
 
   def get_script_level_by_id(script_level_id)
@@ -1000,6 +1024,7 @@ class Script < ApplicationRecord
       script.reload
       script.lesson_groups = temp_lgs
       script.save!
+      script.prevent_legacy_script_levels_in_migrated_scripts
 
       script.generate_plc_objects
 
@@ -1033,6 +1058,13 @@ class Script < ApplicationRecord
     end
   end
 
+  def prevent_legacy_script_levels_in_migrated_scripts
+    if is_migrated && script_levels.reject(&:activity_section).any?
+      lesson_names = lessons.all.select {|l| l.script_levels.reject(&:activity_section).any?}.map(&:name)
+      raise "Legacy script levels are not allowed in migrated scripts. Problem lessons: #{lesson_names.to_json}"
+    end
+  end
+
   # Script levels unfortunately have 3 position values:
   # 1. chapter: position within the Script
   # 2. position: position within the Lesson
@@ -1041,9 +1073,8 @@ class Script < ApplicationRecord
   # values of position and chapter on all script levels in the script.
   def fix_script_level_positions
     reload
-    if script_levels.reject(&:activity_section).any?
-      raise "cannot fix position of legacy script levels"
-    end
+    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
+    prevent_legacy_script_levels_in_migrated_scripts
 
     chapter = 0
     lessons.each do |lesson|
@@ -1417,7 +1448,8 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
-      age_13_required: logged_out_age_13_required?
+      age_13_required: logged_out_age_13_required?,
+      is_csf: csf?
     }
   end
 

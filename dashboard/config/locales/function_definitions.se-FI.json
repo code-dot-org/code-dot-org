@@ -468,6 +468,29 @@
               "width": "govdodat"
             }
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+          },
+          "draw a circle": {
+            "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+            "parameters": {
+              "radius": "rádius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "tevdne bieggamillu",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          },
+          "draw a shape": {
+            "name": "tevdne hámi",
+            "parameters": {
+              "sides": "siiddut"
+            }
+          }
         }
       }
     }

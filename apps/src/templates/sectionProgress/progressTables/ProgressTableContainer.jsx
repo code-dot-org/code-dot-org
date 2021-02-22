@@ -33,12 +33,10 @@ const styles = {
 class ProgressTableContainer extends React.Component {
   static propTypes = {
     onClickLesson: PropTypes.func.isRequired,
-    getTableWidth: PropTypes.func.isRequired,
-    columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
+    columnWidths: PropTypes.arrayOf(PropTypes.number),
     lessonCellFormatter: PropTypes.func.isRequired,
     extraHeaderFormatters: PropTypes.arrayOf(PropTypes.func),
     extraHeaderLabels: PropTypes.arrayOf(PropTypes.string),
-    children: PropTypes.node.isRequired,
 
     // redux
     section: sectionDataPropType.isRequired,
@@ -79,14 +77,10 @@ class ProgressTableContainer extends React.Component {
     this.contentView.header.scrollLeft = e.target.scrollLeft;
   }
 
-  needsStudentGutter() {
-    return (
-      this.props.getTableWidth(this.props.scriptData.stages) >
-      parseInt(progressTableStyles.CONTENT_VIEW_WIDTH)
-    );
-  }
-
-  needsContentGutter() {
+  // When the student list is long enough to enable vertical scrolling in the
+  // table body, we need to add a "gutter" to the content view header to
+  // account for the horizontal space used by the vertical scrollbar.
+  needsContentHeaderGutter() {
     return (
       this.props.section.students.length *
         parseInt(progressTableStyles.ROW_HEIGHT) >
@@ -101,19 +95,17 @@ class ProgressTableContainer extends React.Component {
           <ProgressTableStudentList
             ref={r => (this.studentList = r)}
             headers={[i18n.lesson(), ...(this.props.extraHeaderLabels || [])]}
-            needsGutter={this.needsStudentGutter()}
             {...this.props}
           />
         </div>
         <div style={styles.contentView} className="content-view">
           <ProgressTableContentView
             ref={r => (this.contentView = r)}
-            needsGutter={this.needsContentGutter()}
+            needsGutter={this.needsContentHeaderGutter()}
             onScroll={this.onScroll}
             {...this.props}
           />
         </div>
-        {this.props.children}
       </div>
     );
   }

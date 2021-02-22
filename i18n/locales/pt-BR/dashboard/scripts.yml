@@ -16322,6 +16322,8 @@ pt:
             Artist Binary:
               key: 'Artista: binário'
               name: 'Artista: binário'
+            lesson-6:
+              name: Prevendo com o Minecraft
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciamento
@@ -16404,7 +16406,7 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
-              display_name: Laços aninhados
+              display_name: Condições
             csf_functions:
               display_name: funções
             csf_impacts:
@@ -16638,6 +16640,8 @@ pt:
               name: Codificação da simulação
             Course F Introduction:
               name: Introdução ao Sprite Lab
+            Sprites in Action:
+              name: Sprites em Ação
           lesson_groups:
             ramp_up:
               display_name: Introdução

@@ -7,7 +7,9 @@ markdown <<MARKDOWN
 
 # Medical Data Model Card
 
-**Description:** Predict *priority* based on *bleeding*, *shortness of breath*, and *area of pain* with *86%* accuracy
+**Intended Use:** Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.
+
+**Summary:** Predict *priority* based on *age*, *gender*, *race*, *bleeding*, *shortness of breath*, *weight*, and *area of pain* with *86%* accuracy
 
 **Date:** February 2021
 
@@ -29,6 +31,7 @@ markdown <<MARKDOWN
 | **race** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Racial information about the patient | <ul><li>BAM</li><li>AIAN</li><li>W</li><li>A</li><li>NHPI</li></ul> |
 | **bleeding** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Whether or not the patient was bleeding | <ul><li>yes</li><li>no</li></ul> |
 | **shortness of breath** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Whether or not the patient had shortness of breath | <ul><li>yes</li><li>no</li></ul> |
+| **weight** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Weight ranges for the patient | <ul><li>Under 100 lbs</li><li>100-150 lbs</li><li>150-200 lbs</li><li>200-300 lbs</li><li>Over 300 lbs</li></ul> |
 | **area of pain** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Where the pain was located | <ul><li>head</li><li>chest</li><li>limb</li><li>stomach</li></ul> |
 
 :::
@@ -41,21 +44,9 @@ markdown <<MARKDOWN
 
 **Model Accuracy:** 86%
 
-**Dataset Size:** 300 rows
+**Dataset Size:** 1000 rows
 
 **Testing Data:** 10%
-
-:::
-
-## Potential Uses
-
-::: details [**Click to Expand**]
-
-<br />
-
-**What was the intended use of this model?** Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.
-
-**What are ways this model should not be used?** This model shouldn't be used in a way that could reduce the care for people entering an emergency room.
 
 :::
 
@@ -67,12 +58,14 @@ markdown <<MARKDOWN
 
 **Describe the dataset used to create this model:** Data from a month of ER visits at a local hospital. It shows information about each patient, the symptoms they had, and how quickly they received help.
 
+**Uses for this model that should be avoided** This model shouldn't be used in a way that could reduce the care for people entering an emergency room.
+
 **Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
   - [x] Yes
   - [ ] No
 
 **Have we ensured accurate representation of each subgroup within the data?**
-  - [] Yes
+  - [ ] Yes
   - [x] No
 
 **This model could be used to inform decisions central to human life:**

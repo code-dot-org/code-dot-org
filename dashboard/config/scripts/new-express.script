@@ -1,5 +1,5 @@
 lesson_group 'content', display_name: 'Content'
-lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: false
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Algorithms: Graph Paper Programming', has_lesson_plan: false, unplugged: true
 level 'GraphPaperProgramming'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: false
@@ -19,7 +19,7 @@ level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false, unplugged: true
 level 'BuildingAFoundation'
 
 lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: false
@@ -36,7 +36,7 @@ level 'courseC_maze_debugging9'
 bonus 'courseC_maze_debugging_challenge1', challenge: true
 bonus 'courseC_maze_debugging_challenge2', challenge: true
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: false
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
 lesson 'Loops in Artist (UPDATED!)', display_name: 'Loops in Artist (UPDATED!)', has_lesson_plan: false
@@ -105,16 +105,16 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-lesson 'How it Works: The Internet', display_name: 'How it Works: The Internet', has_lesson_plan: false
+lesson 'How it Works: The Internet', display_name: 'How it Works: The Internet', has_lesson_plan: false, unplugged: true
 level 'Internet'
 
-lesson 'Common Sense Education: Digital Citizenship', display_name: 'Common Sense Education: Digital Citizenship', has_lesson_plan: false
+lesson 'Common Sense Education: Digital Citizenship', display_name: 'Common Sense Education: Digital Citizenship', has_lesson_plan: false, unplugged: true
 level 'courseD_unplugged_digitalCitizenship'
 
-lesson 'Common Sense Education: Screen Out the Mean', display_name: 'Common Sense Education: Screen Out the Mean', has_lesson_plan: false
+lesson 'Common Sense Education: Screen Out the Mean', display_name: 'Common Sense Education: Screen Out the Mean', has_lesson_plan: false, unplugged: true
 level 'courseC_Unplugged_ScreenOutTheMean'
 
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: false
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: false, unplugged: true
 level 'BigEvent'
 
 lesson 'Events in Star Wars', display_name: 'Events in Star Wars', has_lesson_plan: false
@@ -224,7 +224,7 @@ variants
   level 'courseD_bounce_events12s'
 endvariants
 
-lesson 'Conditionals: Conditionals with Cards', display_name: 'Conditionals: Conditionals with Cards', has_lesson_plan: false
+lesson 'Conditionals: Conditionals with Cards', display_name: 'Conditionals: Conditionals with Cards', has_lesson_plan: false, unplugged: true
 level 'Conditionals'
 
 lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer', has_lesson_plan: false
@@ -291,7 +291,7 @@ level 'courseD_farmer_condLoops9_predict1'
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
-lesson 'Variables: Envelope Variables', display_name: 'Variables: Envelope Variables', has_lesson_plan: false
+lesson 'Variables: Envelope Variables', display_name: 'Variables: Envelope Variables', has_lesson_plan: false, unplugged: true
 level 'EnvelopeVariables'
 
 lesson 'Variables in Artist', display_name: 'Variables in Artist', has_lesson_plan: false
@@ -327,7 +327,7 @@ level 'courseF_playlab_variables7b'
 bonus 'courseF_playlab_variables_challenge1'
 bonus 'courseF_playlab_variables_challenge2'
 
-lesson 'For Loops: For Loop Fun', display_name: 'For Loops: For Loop Fun', has_lesson_plan: false
+lesson 'For Loops: For Loop Fun', display_name: 'For Loops: For Loop Fun', has_lesson_plan: false, unplugged: true
 level 'ForLoopFun'
 
 lesson 'For Loops in Bee', display_name: 'For Loops in Bee', has_lesson_plan: false
@@ -362,7 +362,7 @@ level 'courseF_artist_for10'
 bonus 'courseF_artist_for_challenge1'
 bonus 'courseF_artist_for_challenge2'
 
-lesson 'Functions: Songwriting with Parameters', display_name: 'Functions: Songwriting with Parameters', has_lesson_plan: false
+lesson 'Functions: Songwriting with Parameters', display_name: 'Functions: Songwriting with Parameters', has_lesson_plan: false, unplugged: true
 level 'SongwritingWithParameters'
 
 lesson 'Functions in Bee', display_name: 'Functions in Bee', has_lesson_plan: false

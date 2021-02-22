@@ -21,8 +21,7 @@ export default class ProgressTableStudentList extends React.Component {
     scriptData: scriptDataPropType.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
-    localeCode: PropTypes.string,
-    needsGutter: PropTypes.bool
+    localeCode: PropTypes.string
   };
 
   constructor(props) {
@@ -88,7 +87,7 @@ export default class ProgressTableStudentList extends React.Component {
           rows={this.props.section.students}
           rowKey={'id'}
           style={{
-            overflowX: this.props.needsGutter ? 'scroll' : 'hidden',
+            overflowX: 'scroll',
             overflowY: 'hidden',
             maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
           }}

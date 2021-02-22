@@ -3691,10 +3691,12 @@ pt:
             'Functions: Songwriting':
               name: Composição
           lesson_groups:
+            ramp_up:
+              display_name: Ciclos
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
-              display_name: Laços aninhados
+              display_name: Condicionais
             csf_functions:
               display_name: Funções
         coursef-2021:

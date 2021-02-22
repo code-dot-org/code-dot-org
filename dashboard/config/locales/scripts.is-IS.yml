@@ -8073,6 +8073,8 @@ is:
             Artist Binary:
               key: 'Listamaður: Tvíundir'
               name: 'Listamaður: Tvíundir'
+            lesson-6:
+              name: Horft fram á við
           lesson_groups:
             csf_sequencing:
               display_name: Skipanaröð
@@ -8101,7 +8103,7 @@ is:
             csf_digcit:
               display_name: Stafrænn borgari
             csf_nested_loops:
-              display_name: Innri lykkjur
+              display_name: Skilyrði
             csf_functions:
               display_name: Föll
         coursef-2021:
@@ -8187,6 +8189,8 @@ is:
           lessons:
             Course F Introduction:
               name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
           lesson_groups:
             ramp_up:
               display_name: Kynning

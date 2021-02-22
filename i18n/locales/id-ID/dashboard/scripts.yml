@@ -16749,6 +16749,10 @@ id:
             End of Course Project:
               key: Proyek Akhir Kursus
               name: Proyek Akhir Kursus
+            lesson-6:
+              name: Melihat ke depan
+            lesson-5:
+              name: Penguatan Kata Sandi
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -16836,7 +16840,7 @@ id:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_nested_loops:
-              display_name: Nested Loop
+              display_name: Kondisi
             csf_functions:
               display_name: fungsi
             csf_impacts:
@@ -17079,6 +17083,8 @@ id:
               name: Membuat Kode Simulasi
             Course F Introduction:
               name: Memperkenalkan Sprite Lab
+            Sprites in Action:
+              name: Sprite tengah Beraksi
           lesson_groups:
             ramp_up:
               display_name: Pendahuluan
