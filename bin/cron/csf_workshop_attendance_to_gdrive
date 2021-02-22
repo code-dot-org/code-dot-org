@@ -29,8 +29,8 @@ def get_rows
       "Is this a Virtual Workshop?",
       "Total Hours",
       "Num Registered",
-      "Num Scholarship Teachers Attending Day 1",
-      "Attendance Day 1"
+      "Number Scholarship Teachers Attending All Sessions",
+      "Attendance Day 1+"
     ]
   ]
 
@@ -51,22 +51,12 @@ def get_rows
         workshop.virtual? ? "Yes" : "No",
         workshop.effective_num_hours,
         workshop.enrollments.count,
-        scholarship_teacher_attendance(workshop),
-        workshop.sessions.first.attendances.count
+        workshop.teachers_attending_all_sessions(true).count,
+        workshop.teachers_attending_all_sessions.count
       ]
     end
 
   results
-end
-
-def scholarship_teacher_attendance(workshop)
-  num_teachers = 0
-  workshop.sessions.first.attendances.each do |attendance|
-    if Pd::ScholarshipInfo.where(pd_enrollment_id: attendance.pd_enrollment_id)
-      num_teachers += 1
-    end
-  end
-  num_teachers
 end
 
 def main
