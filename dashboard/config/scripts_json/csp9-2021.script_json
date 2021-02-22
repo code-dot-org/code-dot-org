@@ -749,7 +749,7 @@
       "key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** What time of year do people tend to search online for chocolate? How could you check your guess?\n\n**Goal:** Student answers will vary, but they may include major holidays like Valentine's Day. Students may also have several different ideas for how those answers could be checked, and ultimately you will want to guide your students towards the idea of using a search tool. \n"
+        "description": "[slide]  **Prompt:** What time of year do people tend to search online for chocolate? How could you check your guess?\n\n**Discussion Goal:** Student answers will vary, but they may include major holidays like Valentine's Day. Students may also have several different ideas for how those answers could be checked, and ultimately you will want to guide your students towards the idea of using a search tool. \n"
       },
       "seeding_key": {
         "activity_section.key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
@@ -830,7 +830,7 @@
       "key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the metadata for the chart you created in Google Trends?\n\n**Goal:** Students may bring up the sources of the data (Google Searches) or the dropdowns that control how the chart is built. If students want to dig deeper into the metadata, consider pointing them to the [Google Trends Help Page](https://support.google.com/trends/answer/4355213?hl=en&ref_topic=4365599). \n"
+        "description": "[slide]  **Prompt:** What is the metadata for the chart you created in Google Trends?\n\n**Discussion Goal:** Students may bring up the sources of the data (Google Searches) or the dropdowns that control how the chart is built. If students want to dig deeper into the metadata, consider pointing them to the [Google Trends Help Page](https://support.google.com/trends/answer/4355213?hl=en&ref_topic=4365599). \n"
       },
       "seeding_key": {
         "activity_section.key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
@@ -898,7 +898,7 @@
       "key": "ffeddc34-db9a-4586-9fe2-0f2c22cd8472",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Why do people make visualizations out of data?\n\n**Goal:** This discussion should be a quick prompt to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \n"
+        "description": "[slide]  **Prompt:** Why do people make visualizations out of data?\n\n**Discussion Goal:** This discussion should be a quick prompt to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "ffeddc34-db9a-4586-9fe2-0f2c22cd8472",
@@ -983,7 +983,7 @@
       "key": "6e279210-ae72-46e2-b9ab-81866203550d",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Optionally discuss the different columns that students chose as useful.\n\n**Goal:** Use this discussion for two purposes. First, use it to build a shared comfort with what a bar chart shows. Have students share out which charts they think are useful and what pieces of information they read from them. Remind students that bar charts are particularly good at finding how common a value is in a column. The second goal is to prepare students to see the value of a histogram. Many bar charts are not at all useful because they have too many unique values. Using a histogram to group these values can help make more useful charts.\n",
+        "description": "**Discuss:** Optionally discuss the different columns that students chose as useful.\n\n**Discussion Goal:** Use this discussion for two purposes. First, use it to build a shared comfort with what a bar chart shows. Have students share out which charts they think are useful and what pieces of information they read from them. Remind students that bar charts are particularly good at finding how common a value is in a column. The second goal is to prepare students to see the value of a histogram. Many bar charts are not at all useful because they have too many unique values. Using a histogram to group these values can help make more useful charts.\n",
         "progression_name": "Making Bar Charts and Histograms"
       },
       "seeding_key": {
@@ -1007,7 +1007,7 @@
       "key": "406d4303-b933-4860-a1b0-fc0bf5d4d0db",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Discuss how the histogram seems to be displaying the data differently from the bar chart.\n\n**Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer but wider\" bars in the histogram. They should also notice that values are sorted correctly. This makes the chart overall easier to read.\n"
+        "description": "**Discuss:** Discuss how the histogram seems to be displaying the data differently from the bar chart.\n\n**Discussion Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer but wider\" bars in the histogram. They should also notice that values are sorted correctly. This makes the chart overall easier to read.\n"
       },
       "seeding_key": {
         "activity_section.key": "406d4303-b933-4860-a1b0-fc0bf5d4d0db",
@@ -1029,7 +1029,7 @@
       "key": "89beaab5-da12-44b9-9b4b-841b17b671d7",
       "position": 8,
       "properties": {
-        "description": "**Discuss:** Optionally have students share out the results of their work on side 2 of the activity guide.\n\n**Goal:** Use this discussion to have students share out how they are designing histograms based on the columns in the dogs data set. Things to look for:\n\n* Students are only creating histograms for numeric columns\n* Students are picking columns that have a number of unique values\n* Students are picking good bucket sizes to group their data in a way that makes it possible to interpret\n* Students are correctly reading charts to understand what they are showing\n"
+        "description": "**Discuss:** Optionally have students share out the results of their work on side 2 of the activity guide.\n\n**Discussion Goal:** Use this discussion to have students share out how they are designing histograms based on the columns in the dogs data set. Things to look for:\n\n* Students are only creating histograms for numeric columns\n* Students are picking columns that have a number of unique values\n* Students are picking good bucket sizes to group their data in a way that makes it possible to interpret\n* Students are correctly reading charts to understand what they are showing\n"
       },
       "seeding_key": {
         "activity_section.key": "89beaab5-da12-44b9-9b4b-841b17b671d7",
@@ -1051,7 +1051,7 @@
       "key": "99735004-9d97-415f-a043-1963d95db0f1",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their reflections and lead a quick discussion about where they saw each step.\n\n**Goal:** This is the first opportunity for students to talk through the Data Analysis Process, a framework they will return to many times throughout this course. Use this discussion to review some key points\n\n* Students in today's lesson may not have \"cleaned and processed\" data but they should've seen every other step.\n* Students answered questions and carefully made conclusions\n* Students created visualization and used them to find patterns.\n* Students chose the datasets that would best answer their question. In other instances they might've gone off to find the data themselves but the Data Library in App Lab helps avoid them needing to do that.\n"
+        "description": "**Discuss:** Have students share their reflections and lead a quick discussion about where they saw each step.\n\n**Discussion Goal:** This is the first opportunity for students to talk through the Data Analysis Process, a framework they will return to many times throughout this course. Use this discussion to review some key points\n\n* Students in today's lesson may not have \"cleaned and processed\" data but they should've seen every other step.\n* Students answered questions and carefully made conclusions\n* Students created visualization and used them to find patterns.\n* Students chose the datasets that would best answer their question. In other instances they might've gone off to find the data themselves but the Data Library in App Lab helps avoid them needing to do that.\n"
       },
       "seeding_key": {
         "activity_section.key": "99735004-9d97-415f-a043-1963d95db0f1",
@@ -1141,7 +1141,7 @@
       "key": "c43ef4e6-224b-4a32-b4dd-7e0684e15f91",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** With partners, students discuss the following prompts:\n\n**Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n",
+        "description": "[slide]  **Discuss:** With partners, students discuss the following prompts:\n\n**Discussion Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n",
         "progression_name": "Cleaning Data"
       },
       "seeding_key": {
@@ -1257,7 +1257,7 @@
       "key": "e1299f88-aee3-4792-bd41-37a32ec1b5a0",
       "position": 12,
       "properties": {
-        "description": "**Discuss:** Have students share their answers from the Activity Guide and reactions to those findings.\n\n**Goal:** Use this discussion to help students practice the skill covered in lesson 1, distinguishing between:\n\n- What the data shows\n- Why that might be the case\n"
+        "description": "**Discuss:** Have students share their answers from the Activity Guide and reactions to those findings.\n\n**Discussion Goal:** Use this discussion to help students practice the skill covered in lesson 1, distinguishing between:\n\n- What the data shows\n- Why that might be the case\n"
       },
       "seeding_key": {
         "activity_section.key": "e1299f88-aee3-4792-bd41-37a32ec1b5a0",
@@ -1268,7 +1268,7 @@
       "key": "287a0685-4752-42f0-877c-cdbdc5dcec96",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?\n\n**Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \n"
+        "description": "[slide]  **Prompt:** Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?\n\n**Discussion Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \n"
       },
       "seeding_key": {
         "activity_section.key": "287a0685-4752-42f0-877c-cdbdc5dcec96",
@@ -1324,7 +1324,7 @@
       "key": "db4a0963-2b66-4b7b-b2c8-04047556f867",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?\n\n**Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \n"
+        "description": "[slide]  **Prompt:** Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?\n\n**Discussion Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \n"
       },
       "seeding_key": {
         "activity_section.key": "db4a0963-2b66-4b7b-b2c8-04047556f867",
@@ -1440,7 +1440,7 @@
       "key": "4444a045-6b6b-4290-883b-f9776277afb4",
       "position": 7,
       "properties": {
-        "description": "**Discuss:** Have students share whether they think there's pattern between the order in which states were admitted and their size.\n\n**Goal:** Students will hopefully notice later states are relatively larger than earlier added ones. The trend does not necessarily reflect any causation, but there is a slight uptick in state size as more are added.\n"
+        "description": "**Discuss:** Have students share whether they think there's pattern between the order in which states were admitted and their size.\n\n**Discussion Goal:** Students will hopefully notice later states are relatively larger than earlier added ones. The trend does not necessarily reflect any causation, but there is a slight uptick in state size as more are added.\n"
       },
       "seeding_key": {
         "activity_section.key": "4444a045-6b6b-4290-883b-f9776277afb4",
@@ -1541,7 +1541,7 @@
       "key": "69f2d8b6-9edd-45d5-bc6f-e7d7d6d0ff0f",
       "position": 2,
       "properties": {
-        "description": "* What is this step and why is it important?\n* Where have we done this step together?\n* What could go wrong if you do this step poorly.\n\n\n\n**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Goal:** This is designed entirely to be a review of concepts students have previously covered and doesn't foreshadow the lesson of the day. If you feel confident your students are comfortable with this process already then quickly move on to the main activity of the day.\n"
+        "description": "* What is this step and why is it important?\n* Where have we done this step together?\n* What could go wrong if you do this step poorly.\n\n\n\n**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This is designed entirely to be a review of concepts students have previously covered and doesn't foreshadow the lesson of the day. If you feel confident your students are comfortable with this process already then quickly move on to the main activity of the day.\n"
       },
       "seeding_key": {
         "activity_section.key": "69f2d8b6-9edd-45d5-bc6f-e7d7d6d0ff0f",
@@ -1614,7 +1614,7 @@
       "key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How can machines \"learn\"?\n\n**Goal:** Based on yesterdays conversations, answers may vary. Stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
+        "description": "[slide]  **Prompt:** How can machines \"learn\"?\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
@@ -1705,7 +1705,7 @@
       "key": "9fd8c76e-c097-4d0c-b02b-34225e2f7be8",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** How do you think your training data influenced the results that A.I. produced?\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n"
+        "description": "[slide]  **Prompt:** How do you think your training data influenced the results that A.I. produced?\n\n**Discussion Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n"
       },
       "seeding_key": {
         "activity_section.key": "9fd8c76e-c097-4d0c-b02b-34225e2f7be8",
@@ -1745,7 +1745,7 @@
       "key": "d0696799-b401-4952-bbb8-a83f2a40cddc",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?\n\n**Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \n"
+        "description": "[slide]  **Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?\n\n**Discussion Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \n"
       },
       "seeding_key": {
         "activity_section.key": "d0696799-b401-4952-bbb8-a83f2a40cddc",
@@ -1992,7 +1992,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Exploring Metadata"
+        "progression": "Exploring Metadata",
+        "level_keys": [
+          "CSP U9L1 Metadata_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2041,7 +2044,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Making Bar Charts and Histograms"
+        "progression": "Making Bar Charts and Histograms",
+        "level_keys": [
+          "CSP U9L2 Making Bar Charts and Histograms_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2090,7 +2096,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Cleaning Data"
+        "progression": "Cleaning Data",
+        "level_keys": [
+          "CSP U9L3 Data Cleaning_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2113,6 +2122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L3 Data Filtering_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2161,7 +2173,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Crosstab and Scatter Charts"
+        "progression": "Crosstab and Scatter Charts",
+        "level_keys": [
+          "CSP U9L4 Making Crosstabs and Scatter Plots_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2184,7 +2199,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "What Type of Chart?"
+        "progression": "What Type of Chart?",
+        "level_keys": [
+          "Which Type of Chart_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2233,7 +2251,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning"
+        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2256,7 +2277,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning"
+        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "Oceans_FishVTrash_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2279,7 +2303,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning"
+        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2302,7 +2329,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning"
+        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "Oceans_CreaturesVTrash_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2325,7 +2355,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning"
+        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "Oceans_Video_Training_Data_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2348,7 +2381,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning"
+        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "Oceans_Short_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2371,7 +2407,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning"
+        "progression": "AI for Oceans - Machine Learning",
+        "level_keys": [
+          "Oceans_Long_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2420,7 +2459,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Data Story Workspace"
+        "progression": "Data Story Workspace",
+        "level_keys": [
+          "CSP U9 Data Story Day 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2443,7 +2485,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Data Story Workspace"
+        "progression": "Data Story Workspace",
+        "level_keys": [
+          "CSP U9 Data Story Day 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
