@@ -51,10 +51,7 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const {
-      currentColumnData,
-      rangesByColumn
-    } = this.props;
+    const { currentColumnData, rangesByColumn } = this.props;
 
     let labels, data, options;
     if (
@@ -68,111 +65,90 @@ class ColumnInspector extends Component {
       options = { fillColor: "#000", strokeColor: "#000" };
     }
 
-    return currentColumnData && (
-      <div id="column-inspector" style={{...styles.panel, ...styles.rightPanel}}>
-        <div style={styles.largeText}>Column Information</div>
-
-        {currentColumnData.dataType === ColumnTypes.OTHER && (
-          <div>
-            <div style={styles.mediumText}>
-              Describe the data in each of your selected columns
-            </div>
-            <div style={styles.smallText}>
-              Categorical columns contain a fixed number of possible values
-              that indicate a group. For example, the column "Size" might
-              contain categorical data such as "small", "medium" and
-              "large".{" "}
-            </div>
-            <div style={styles.smallText}>
-              Continuous columns contain a range of possible numerical
-              values that could fall anywhere on a continuum. For example,
-              the column "Height in inches" might contain continuous data
-              such as "12", "11.25" and "9.07".{" "}
-            </div>
-            <div style={styles.smallText}>
-              If the column contains anything other than categorical or
-              continuous data, it's not going to work for training this type
-              of machine learning model.
-            </div>
-          </div>
-        )}
-
-        <form>
-          <div>
-            <label>
-              {true && (
-                <div>
-                  {currentColumnData.id}: {currentColumnData.dataType}
-                </div>
-              )}
-
-              {currentColumnData.description && (
-                <div>
-                  <br />
-                  <div>{currentColumnData.description}</div>
-                </div>
-              )}
-
-              {false && (
-                <div>
-                  {currentColumnData.id}: &nbsp;
-                  <select
-                    onChange={event =>
-                      this.handleChangeDataType(event, currentColumnData.id)
-                    }
-                    value={currentColumnData.dataType}
-                  >
-                    {Object.values(ColumnTypes).map((option, index) => {
-                      return (
-                        <option key={index} value={option}>
-                          {option}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </div>
-              )}
-            </label>
-
-            {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
-              labels.length < 5 && (
-                <div>
-                  <br />
-                  <Histogram
-                    xLabels={labels}
-                    yValues={data}
-                    width="300"
-                    height="150"
-                    options={options}
-                  />
-                </div>
-              )}
-
-            {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
-              <div>
-                {currentColumnData.range && (
+    return (
+      currentColumnData && (
+        <div
+          id="column-inspector"
+          style={{ ...styles.panel, ...styles.rightPanel }}
+        >
+          <div style={styles.largeText}>Column Information</div>
+          <form>
+            <div>
+              <label>
+                {true && (
                   <div>
-                    {isNaN(rangesByColumn[currentColumnData.id].min) && (
-                      <p style={styles.error}>
-                        Continuous columns should contain only numbers.
-                      </p>
-                    )}
-                    {!isNaN(rangesByColumn[currentColumnData.id].min) && (
-                      <div style={styles.contents}>
-                        min: {rangesByColumn[currentColumnData.id].min}
-                        <br />
-                        max: {rangesByColumn[currentColumnData.id].max}
-                      </div>
-                    )}
+                    {currentColumnData.id}: {currentColumnData.dataType}
                   </div>
                 )}
-              </div>
-            )}
-            <br />
-            <br />
-          </div>
-        </form>
-      </div>
+
+                {currentColumnData.description && (
+                  <div>
+                    <br />
+                    <div>{currentColumnData.description}</div>
+                  </div>
+                )}
+
+                {false && (
+                  <div>
+                    {currentColumnData.id}: &nbsp;
+                    <select
+                      onChange={event =>
+                        this.handleChangeDataType(event, currentColumnData.id)
+                      }
+                      value={currentColumnData.dataType}
+                    >
+                      {Object.values(ColumnTypes).map((option, index) => {
+                        return (
+                          <option key={index} value={option}>
+                            {option}
+                          </option>
+                        );
+                      })}
+                    </select>
+                  </div>
+                )}
+              </label>
+
+              {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
+                labels.length < 5 && (
+                  <div>
+                    <br />
+                    <Histogram
+                      xLabels={labels}
+                      yValues={data}
+                      width="300"
+                      height="150"
+                      options={options}
+                    />
+                  </div>
+                )}
+
+              {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
+                <div>
+                  {currentColumnData.range && (
+                    <div>
+                      {isNaN(rangesByColumn[currentColumnData.id].min) && (
+                        <p style={styles.error}>
+                          Continuous columns should contain only numbers.
+                        </p>
+                      )}
+                      {!isNaN(rangesByColumn[currentColumnData.id].min) && (
+                        <div style={styles.contents}>
+                          min: {rangesByColumn[currentColumnData.id].min}
+                          <br />
+                          max: {rangesByColumn[currentColumnData.id].max}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
+              <br />
+              <br />
+            </div>
+          </form>
+        </div>
+      )
     );
   }
 }

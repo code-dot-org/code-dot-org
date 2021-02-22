@@ -29,13 +29,13 @@ class Results extends Component {
     this.props.setResultsPhase(0);
     setTimeout(() => {
       this.props.setResultsPhase(1);
-    }, 2000);
+    }, 1000);
     setTimeout(() => {
       this.props.setResultsPhase(2);
-    }, 4000);
+    }, 2000);
     setTimeout(() => {
       this.props.setResultsPhase(3);
-    }, 6000);
+    }, 3000);
   }
 
   render() {
