@@ -45,7 +45,7 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
 
     assert Services::LessonPlanPdfs.timestamps_equal(
       "20070129123456",
-      Time.at(1_170_102_896)
+      Time.parse("2007-01-29 12:34:56")
     )
   end
 
