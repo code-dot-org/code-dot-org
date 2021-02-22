@@ -18,7 +18,7 @@ describe('TextareaWithImageUpload', () => {
   it('updates markdown', () => {
     const wrapper = mount(<TextareaWithImageUpload {...defaultProps} />);
     expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('textarea').props().markdown).to.equal(
+    expect(wrapper.find('textarea').props().value).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
 
