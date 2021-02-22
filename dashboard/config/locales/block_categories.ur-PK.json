@@ -1,0 +1,69 @@
+{
+  "ur-PK": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "ایکشنز",
+          "Brushes": "برش",
+          "Loops": "لوپس",
+          "Math": "ریاضی",
+          "Logic": "منطق",
+          "Variables": "متغیرات"
+        },
+        "CourseD_EOC_dance": {
+          "World": "دنیا",
+          "Dancers": "رقص",
+          "Properties": "پراپرٹیز",
+          "Events": "ایونٹس/واقعات",
+          "Numbers": "نمبرز",
+          "Logic": "منطق"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "ایکشنز",
+          "Events": "ایونٹس/واقعات",
+          "Loops": "لوپس",
+          "Math": "ریاضی",
+          "Logic": "منطق",
+          "Games/Score": "گیم/اسکور"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "دنیا",
+          "Actions": "ایکشنز",
+          "Events": "ایونٹس/واقعات",
+          "Behaviors": "رویے"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "دنیا",
+          "Locations": "مقامات",
+          "Actions": "ایکشنز",
+          "Events": "ایونٹس/واقعات",
+          "Behaviors": "رویے",
+          "Variables": "متغیرات",
+          "Math": "ریاضی",
+          "Logic": "منطق",
+          "Text": "متن",
+          "Comments": "تبصرے"
+        },
+        "outbreak_freeplay": {
+          "World": "دنیا",
+          "Actions": "ایکشنز",
+          "Behaviors": "رویے",
+          "Events": "ایونٹس/واقعات",
+          "Locations": "مقامات",
+          "Logic": "منطق",
+          "Loops": "لوپس",
+          "Math": "ریاضی",
+          "Variables": "متغیرات",
+          "Comments": "تبصرے"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "دنیا",
+          "Actions": "ایکشنز",
+          "Events": "ایونٹس/واقعات",
+          "Logic": "منطق",
+          "Math": "ریاضی"
+        }
+      }
+    }
+  }
+}

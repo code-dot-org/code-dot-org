@@ -2510,6 +2510,48 @@
           "build long bridge": {
             "name": "postav dlouhý most"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "points": "body",
+              "length": "délka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnici"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          }
         }
       }
     }

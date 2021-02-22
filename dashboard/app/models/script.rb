@@ -841,6 +841,16 @@ class Script < ApplicationRecord
     name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
   end
 
+  def get_script_level_by_absolute_position_and_puzzle_position(absolute_position, puzzle_position)
+    script_levels.find do |sl|
+      # make sure we are checking the native properties of the script level
+      # first, so we only have to load lesson if it's actually necessary.
+      sl.position == puzzle_position.to_i &&
+          !sl.bonus &&
+          sl.lesson.absolute_position == absolute_position.to_i
+    end
+  end
+
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -1014,6 +1024,7 @@ class Script < ApplicationRecord
       script.reload
       script.lesson_groups = temp_lgs
       script.save!
+      script.prevent_legacy_script_levels_in_migrated_scripts
 
       script.generate_plc_objects
 
@@ -1047,6 +1058,13 @@ class Script < ApplicationRecord
     end
   end
 
+  def prevent_legacy_script_levels_in_migrated_scripts
+    if is_migrated && script_levels.reject(&:activity_section).any?
+      lesson_names = lessons.all.select {|l| l.script_levels.reject(&:activity_section).any?}.map(&:name)
+      raise "Legacy script levels are not allowed in migrated scripts. Problem lessons: #{lesson_names.to_json}"
+    end
+  end
+
   # Script levels unfortunately have 3 position values:
   # 1. chapter: position within the Script
   # 2. position: position within the Lesson
@@ -1055,9 +1073,8 @@ class Script < ApplicationRecord
   # values of position and chapter on all script levels in the script.
   def fix_script_level_positions
     reload
-    if script_levels.reject(&:activity_section).any?
-      raise "cannot fix position of legacy script levels"
-    end
+    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
+    prevent_legacy_script_levels_in_migrated_scripts
 
     chapter = 0
     lessons.each do |lesson|

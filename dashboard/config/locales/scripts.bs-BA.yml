@@ -3263,10 +3263,12 @@ bs:
             'Functions: Songwriting':
               name: Pisanje pjesama
           lesson_groups:
+            ramp_up:
+              display_name: Petlje
             csf_digcit:
               display_name: Digitalno Državljanstvo
             csf_nested_loops:
-              display_name: Ugniježdene Petlje
+              display_name: Uvjeti
             csf_functions:
               display_name: Funkcije
         coursef-2021:

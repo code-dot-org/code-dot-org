@@ -2117,10 +2117,12 @@ sl:
             'Functions: Songwriting':
               name: Napiši pesem
           lesson_groups:
+            ramp_up:
+              display_name: Zanke
             csf_digcit:
               display_name: Digitalno državljanstvo
             csf_nested_loops:
-              display_name: Gnezdenje zank
+              display_name: Pogoji
             csf_functions:
               display_name: Funkcije
         coursef-2021:

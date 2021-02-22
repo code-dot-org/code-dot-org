@@ -3362,10 +3362,12 @@ th:
               key: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
           lesson_groups:
+            ramp_up:
+              display_name: ลูป
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             csf_nested_loops:
-              display_name: ลูปซ้อนลูป
+              display_name: เงื่อนไข
             csf_functions:
               display_name: ฟังก์ชัน
         coursef-2021:

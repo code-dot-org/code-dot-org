@@ -1422,6 +1422,47 @@
           "collect": {
             "name": "събери"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
         }
       }
     }

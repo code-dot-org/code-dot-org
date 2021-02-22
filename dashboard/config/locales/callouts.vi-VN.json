@@ -477,7 +477,8 @@
           "snowflake_dropdown": "Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!"
         },
         "frozen line": {
-          "move_elsa_forward": "Kéo một khối lệnh \"Di chuyển về phía trước\" và gắn nó ngay dưới khối \"Khi chạy\" để làm cho Elsa di chuyển về phía trước"
+          "move_elsa_forward": "Kéo một khối lệnh \"Di chuyển về phía trước\" và gắn nó ngay dưới khối \"Khi chạy\" để làm cho Elsa di chuyển về phía trước",
+          "run": "Nhấn \"Chạy\" để chạy thử chương trình của bạn!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Sử dụng khối \"rẽ\" để làm Elsa rẽ. Số khung bên trong khối xoay sẽ xác định Elsa quay một góc bao nhiêu độ"

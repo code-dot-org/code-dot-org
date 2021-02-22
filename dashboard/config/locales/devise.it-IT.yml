@@ -79,7 +79,7 @@ it:
     invitations:
       send_instructions: Un invito per posta elettronica è stata inviato a %{email}.
       invitation_token_invalid: Il token di invito fornito non è valido!
-      updated: La tua password è stata impostata correttamente. Avete ora accesso
+      updated: La tua password è stata impostata correttamente. Hai quindi accesso
         alle risorse.
       no_invitations_remaining: Nessun invito restante
       invitation_removed: Il tuo invito è stato rimosso.
