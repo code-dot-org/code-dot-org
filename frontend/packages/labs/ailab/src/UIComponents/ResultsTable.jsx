@@ -4,10 +4,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   getConvertedAccuracyCheckExamples,
-  getConvertedLabels,
-  getSummaryStat
+  getConvertedLabels
 } from "../redux";
-import { styles, colors, MLTypes } from "../constants";
+import { styles, colors } from "../constants";
 
 class ResultsTable extends Component {
   static propTypes = {
