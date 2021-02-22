@@ -910,6 +910,7 @@ export function getShowSelectTrainer(state) {
   return !(state.mode && state.mode.hideSelectTrainer);
 }
 
+/*
 const panelList = [
   { id: "selectDataset", label: "Import" },
   { id: "specifyColumns", label: "Columns" },
@@ -921,6 +922,7 @@ const panelList = [
   { id: "predict", label: "Predict" },
   { id: "saveModel", label: "Save" }
 ];
+*/
 
 function isPanelEnabled(state, panelId) {
   const mode = state.mode;

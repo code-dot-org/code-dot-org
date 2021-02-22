@@ -17,7 +17,6 @@ import { getPanelButtons, setCurrentPanel, validationMessages } from "./redux";
 
 class PanelButtons extends Component {
   static propTypes = {
-    panels: PropTypes.arrayOf(PropTypes.object),
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func
@@ -96,7 +95,6 @@ ContainerFullWidth.propTypes = {
 
 class App extends Component {
   static propTypes = {
-    panels: PropTypes.arrayOf(PropTypes.object),
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
@@ -107,7 +105,6 @@ class App extends Component {
 
   render() {
     const {
-      panels,
       panelButtons,
       currentPanel,
       setCurrentPanel,
