@@ -2533,6 +2533,10 @@ sq:
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Veglat
         csp5-virtual:
           lessons:
             While Loops:
@@ -2722,10 +2726,12 @@ sq:
             'Functions: Songwriting':
               name: Të shkruarit e Këngëve
           lesson_groups:
+            ramp_up:
+              display_name: cikle 
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
-              display_name: Përsëritjet e Mbivendosura
+              display_name: Kushtet
             csf_functions:
               display_name: funksione
         coursef-2021:

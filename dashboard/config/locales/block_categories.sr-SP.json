@@ -1,0 +1,72 @@
+{
+  "sr-SP": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Акције",
+          "Brushes": "Четкице",
+          "Loops": "Петље",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "Функције",
+          "Variables": "Променљиве"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Свет",
+          "Dancers": "Плесачи",
+          "Properties": "Својства",
+          "Events": "Догађаји",
+          "Numbers": "Бројеви",
+          "Logic": "Логика"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Акције",
+          "Events": "Догађаји",
+          "Loops": "Петље",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Games/Score": "Игре/Резултат"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Свет",
+          "Actions": "Акције",
+          "Events": "Догађаји",
+          "Behaviors": "Понашање"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Свет",
+          "Locations": "Локације",
+          "Actions": "Акције",
+          "Events": "Догађаји",
+          "Behaviors": "Понашање",
+          "Variables": "Променљиве",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "Функције",
+          "Text": "текст",
+          "Comments": "Коментари"
+        },
+        "outbreak_freeplay": {
+          "World": "Свет",
+          "Actions": "Акције",
+          "Behaviors": "Понашање",
+          "Events": "Догађаји",
+          "Locations": "Локације",
+          "Logic": "Логика",
+          "Loops": "Петље",
+          "Math": "Математика",
+          "Variables": "Променљиве",
+          "Functions": "Функције",
+          "Comments": "Коментари"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Свет",
+          "Actions": "Акције",
+          "Events": "Догађаји",
+          "Logic": "Логика",
+          "Math": "Математика"
+        }
+      }
+    }
+  }
+}

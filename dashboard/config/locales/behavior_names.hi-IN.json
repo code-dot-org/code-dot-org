@@ -30,6 +30,16 @@
           "recovering": "रिकवरिंग",
           "moving left and right": "बाएं और दाएं मूव करना",
           "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        },
+        "outbreak_freeplay": {
+          "recovering": "रिकवरिंग",
+          "moving left and right": "बाएं और दाएं मूव करना",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "रिकवरिंग",
+          "moving left and right": "बाएं और दाएं मूव करना",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
         }
       }
     }

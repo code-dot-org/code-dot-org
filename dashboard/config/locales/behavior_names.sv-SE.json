@@ -30,6 +30,16 @@
           "recovering": "återhämtning",
           "moving left and right": "flytta vänster och höger",
           "moving with arrow keys": "flytta med piltangenter"
+        },
+        "outbreak_freeplay": {
+          "recovering": "återhämtning",
+          "moving left and right": "flytta vänster och höger",
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "återhämtning",
+          "moving left and right": "flytta vänster och höger",
+          "moving with arrow keys": "flytta med piltangenter"
         }
       }
     }
