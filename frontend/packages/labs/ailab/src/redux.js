@@ -923,6 +923,8 @@ const panelList = [
 ];
 
 function isPanelEnabled(state, panelId) {
+  const mode = state.mode;
+
   if (panelId === "selectDataset") {
     if (mode && mode.datasets && mode.datasets.length === 1) {
       return false;
