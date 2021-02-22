@@ -189,6 +189,29 @@ export const styles = {
     //overflow: "scroll"
   },
 
+  selectDatasetItem: {
+    width: "30%",
+    padding: 20,
+    float: "left",
+    boxSizing: "border-box",
+    border: "solid 4px rgba(0,0,0,0)",
+    borderRadius: 10,
+    height: 240
+  },
+
+  selectDatasetItemSelected: {
+    border: "solid 4px white"
+  },
+
+  selectDatasetImage: {
+    width: "100%"
+  },
+
+  specifyColumnsItem: {
+    display: "inline-block",
+    width: "20%"
+  },
+
   dataDisplayTable: {
     whiteSpace: "nowrap",
     borderSpacing: 0,

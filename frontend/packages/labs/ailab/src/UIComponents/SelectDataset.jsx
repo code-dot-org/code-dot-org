@@ -112,40 +112,22 @@ class SelectDataset extends Component {
                 return (
                   <div
                     style={{
-                      width: "30%",
-                      padding: 20,
-                      float: "left",
-                      boxSizing: "border-box",
-                      border:
-                        this.props.name === dataset.name
-                          ? "solid 4px white"
-                          : "solid 4px rgba(0,0,0,0)",
-                      borderRadius: 10,
-                      height: 240
+                      ...styles.selectDatasetItem,
+                      ...(this.props.name === dataset.name &&
+                        styles.selectDatasetItemSelected)
                     }}
                     key={dataset.id}
                     onClick={() => this.handleDatasetClick(dataset.id)}
                   >
                     <img
                       src={assetPath + dataset.imagePath}
-                      style={{ width: "100%" }}
+                      style={styles.selectDatasetImage}
                     />
                     <div>{dataset.name}</div>
                   </div>
                 );
               })}
             </div>
-
-            {/*<select onChange={this.handleDatasetSelect}>
-              <option>{""}</option>
-              {datasets.map(dataset => {
-                return (
-                  <option key={dataset["id"]} value={dataset["id"]}>
-                    {dataset["name"]}
-                  </option>
-                );
-              })}
-            </select>*/}
           </div>
         </div>
         {!specifiedDatasets && (

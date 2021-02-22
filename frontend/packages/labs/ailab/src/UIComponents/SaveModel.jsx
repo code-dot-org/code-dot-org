@@ -79,7 +79,7 @@ class SaveModel extends Component {
               return (
                 <div
                   key={field.id}
-                  style={{ clear: "both", overflow: "hidden", padding: 5 }}
+                  style={styles.cardRow}
                 >
                   {field.type === "checkbox" && (
                     <input
@@ -91,10 +91,9 @@ class SaveModel extends Component {
                   <label>{field.text}</label>
 
                   {field.type !== "checkbox" && !field.answer && (
-                    <div style={{ width: "100%" }}>
+                    <div>
                       <textarea
                         rows="2"
-                        style={{ width: "100%" }}
                         onChange={event =>
                           this.handleChange(event, field.id, field.isColumn)
                         }
@@ -103,7 +102,7 @@ class SaveModel extends Component {
                   )}
 
                   {field.type !== "checkbox" && field.answer && (
-                    <div style={{ width: "100%" }}>{field.answer}</div>
+                    <div>{field.answer}</div>
                   )}
                 </div>
               );

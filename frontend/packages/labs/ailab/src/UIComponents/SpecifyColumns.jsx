@@ -48,15 +48,12 @@ class SpecifyColumns extends Component {
               return (
                 <div
                   key={key}
-                  style={{
-                    marginBottom: 10
-                  }}
+                  style={styles.cardRow}
                 >
                   <div
                     style={{
                       ...styles.bold,
-                      display: "inline-block",
-                      width: "20%"
+                      ...styles.specifyColumnsItem
                     }}
                   >
                     {key}
