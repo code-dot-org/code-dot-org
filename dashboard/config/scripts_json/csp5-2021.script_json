@@ -939,7 +939,6 @@
       "key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
@@ -1589,7 +1588,7 @@
       "key": "352086b2-e0d2-4ef8-a188-410cbaa1c5fb",
       "position": 3,
       "properties": {
-        "description": "[slide] \n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?\n\n**Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\n\n",
+        "description": "[slide] \n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?\n\n**Discussion Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\n\n",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -1758,7 +1757,7 @@
       "key": "9ec7080a-013e-438a-9154-8450fbd6548f",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r"
+        "description": "**Prompt:** What aspects of working with lists do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Discuss:** Have students share with one another before sharing with the whole class.\n\n[slide]  **Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9ec7080a-013e-438a-9154-8450fbd6548f",
@@ -1766,19 +1765,8 @@
       }
     },
     {
-      "key": "78e9d9ce-7675-49d1-ba49-a74eadc9e49f",
-      "position": 3,
-      "properties": {
-        "description": "**Prompt:** What aspects of working with lists do you feel like clicked today? What do you still feel like you have trouble with?\r\n\r\n**Discuss:** Have students share with one another before sharing with the whole class."
-      },
-      "seeding_key": {
-        "activity_section.key": "78e9d9ce-7675-49d1-ba49-a74eadc9e49f",
-        "lesson_activity.key": "b8ca9667-3fb0-44c1-9959-4a2626da517b"
-      }
-    },
-    {
       "key": "db4bb20a-eda1-4ad1-9e16-aff291fb0320",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Working with lists can be tricky - especially working with the index. We will get more practice tomorrow by making an app that uses lists to store information.",
         "remarks": true
@@ -1790,7 +1778,7 @@
     },
     {
       "key": "01fa78a2-f4c9-4455-ba00-d3a63ff0e0f6",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -1801,7 +1789,7 @@
     },
     {
       "key": "8e977ea5-0f1d-4cd2-b622-67177f825e70",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What will be displayed after this code segment is run?\n\n\n![](https://images.code.org/2a4918a1c74eca136db3289e40fa41c1-image-1611869457888.png)\n\n**Question:** What will be displayed after this code segment is run?\n\n![](https://images.code.org/7eeb1819a86373ee190fa7f2909643aa-image-1611869457893.png)",
         "name": "Assessment: Check For Understanding: AP Practice\r"
@@ -1826,7 +1814,7 @@
       "key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
       "position": 1,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** Imagine you want to build an app for reminders. What information do you think would be stored in a list?\n\n**Discussion Goal:** Students may struggle with this question. It's ok if they don't get it right away. The goal is to prime their thinking before they look at the sample app. \n\n**Sample Answer:** The reminders could be stored in a list. "
+        "description": "[slide] **Prompt:** Imagine you want to build an app for reminders. What information do you think would be stored in a list?\n\n**Discussion Goal:** Students may struggle with this question. It's ok if they don't get it right away. The goal is to prime their thinking before they look at the sample app. \n\n**Sample Answer:** The reminders could be stored in a list. "
       },
       "seeding_key": {
         "activity_section.key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
@@ -1866,7 +1854,7 @@
       "key": "9273ec78-0697-4097-856c-59812c508e70",
       "position": 2,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Reminder App in Level 1.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n[slide] **Do This:** Have students explore the working Reminder App in Level 1.",
         "progression_name": "Try the Reminders App"
       },
       "seeding_key": {
@@ -1878,7 +1866,7 @@
       "key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
       "position": 3,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n\n* How many lists do you think are needed to make this app work?\n\t* Only one list is needed. It stores all of the reminders.\n\n* What programming patterns with lists do you think you'll need to use? \n\t* This app uses the List Scrolling pattern. \n"
+        "description": "[slide] **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n\n* How many lists do you think are needed to make this app work?\n\t* Only one list is needed. It stores all of the reminders.\n\n* What programming patterns with lists do you think you'll need to use? \n\t* This app uses the List Scrolling pattern. \n"
       },
       "seeding_key": {
         "activity_section.key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
@@ -1901,7 +1889,7 @@
       "key": "51b7dc7c-028b-462f-9d01-b0d2dce3a4eb",
       "position": 5,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Reminder App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "[slide] **Do This:** Direct students to level three where they complete the Reminder App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Reminders App"
       },
       "seeding_key": {
@@ -2017,10 +2005,23 @@
       }
     },
     {
-      "key": "f7c513a9-3964-43d6-821f-b5bb96ba33ba",
+      "key": "cd295164-f461-4956-8117-d80e4b503bb1",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Video:** \tAs a class watch the video on Loops. \r\n\r\n\r\n[slide] \r\n **Journal:** Have students add to their journals: iteration and infinite loop. \r\n\r\n---"
+        "name": "Introduction to Loops",
+        "description": "[slide] \n **Video:** \tAs a class watch the video on Loops. \n\n\n[slide] \n **Journal:** Have students add to their journals: iteration and infinite loop. ",
+        "progression_name": "Introduction to Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd295164-f461-4956-8117-d80e4b503bb1",
+        "lesson_activity.key": "d766ca0f-63ed-4dd8-802d-3aa3f38ba957"
+      }
+    },
+    {
+      "key": "f7c513a9-3964-43d6-821f-b5bb96ba33ba",
+      "position": 2,
+      "properties": {
+        "description": "\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "f7c513a9-3964-43d6-821f-b5bb96ba33ba",
@@ -2029,10 +2030,11 @@
     },
     {
       "key": "fe52d0b3-f3ba-4fdd-a64a-9a32e50220ff",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.\r\n\r\nThere is no hard-and-fast rule as to which is better, but what do you think? What kinds of circumstances would lead you to writing a function versus using a loop?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Introduction to Loops"
       },
       "seeding_key": {
         "activity_section.key": "fe52d0b3-f3ba-4fdd-a64a-9a32e50220ff",
@@ -2040,19 +2042,8 @@
       }
     },
     {
-      "key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e",
-      "position": 1,
-      "properties": {
-        "progression_name": "Introduction to Loops"
-      },
-      "seeding_key": {
-        "activity_section.key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e",
-        "lesson_activity.key": "24256e70-e392-49e8-a571-6bfb91738b6c"
-      }
-    },
-    {
       "key": "b1dab762-59b7-44b1-a615-4197a822c677",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Check For Understanding"
       },
@@ -2076,7 +2067,7 @@
       "key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Compare your algorithms with a partner and then discuss as a class.\n\n**Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\n\n* Repeat 20 times:\n\t* Stand at the entry doors to the school.\n\t* Start the timer.\n\t* Walk at a steady pace to the end of the hallway. \n\t* Turn off the timer.\n\t* Record the time in a notebook.\n\t* Walk back to the entry doors.\n\n* Add all times together.\n* Divide by 20 to find the average.\n\n\n"
+        "description": "**Discuss:** Compare your algorithms with a partner and then discuss as a class.\n\n**Discussion Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\n\n* Repeat 20 times:\n\t* Stand at the entry doors to the school.\n\t* Start the timer.\n\t* Walk at a steady pace to the end of the hallway. \n\t* Turn off the timer.\n\t* Record the time in a notebook.\n\t* Walk back to the entry doors.\n\n* Add all times together.\n* Divide by 20 to find the average.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
@@ -2115,7 +2106,7 @@
       "key": "b5c73127-81e0-4658-9e0e-440a67548712",
       "position": 2,
       "properties": {
-        "description": "[slide]\n**Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?\n\n**Goal:** Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
+        "description": "[slide]\n**Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?\n\n**Discussion Goal:** Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b5c73127-81e0-4658-9e0e-440a67548712",
@@ -2160,7 +2151,7 @@
       "key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
       "position": 6,
       "properties": {
-        "description": "[slide] \n **Prompt:** How does a loop help when running similar simulations?\n\n**Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
+        "description": "[slide] \n **Prompt:** How does a loop help when running similar simulations?\n\n**Discussion Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
@@ -2218,7 +2209,7 @@
       "key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
       "position": 2,
       "properties": {
-        "description": "[slide] \n **Prompt:** What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
+        "description": "[slide] \n **Prompt:** What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
@@ -2432,7 +2423,7 @@
       "key": "70682325-231d-494d-8aba-f1f9ba4768aa",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What aspects of working with loops do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
+        "description": "**Prompt:** What aspects of working with loops do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
       },
       "seeding_key": {
         "activity_section.key": "70682325-231d-494d-8aba-f1f9ba4768aa",
@@ -3690,7 +3681,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Lists"
+        "progression": "Introduction to Lists",
+        "level_keys": [
+          "U5 L01 Introduction to Lists_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3713,7 +3707,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Lists"
+        "progression": "Introduction to Lists",
+        "level_keys": [
+          "Introduction to Lists - Part 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4334,10 +4331,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Loops",
-        "level_keys": [
-          "csp_applab_loops_2021"
-        ]
+        "progression": "Introduction to Loops"
       },
       "named_level": null,
       "bonus": null,
@@ -4348,7 +4342,7 @@
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e"
+        "activity_section.key": "cd295164-f461-4956-8117-d80e4b503bb1"
       },
       "level_keys": [
         "csp_applab_loops_2021"
@@ -5705,7 +5699,7 @@
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e"
+        "activity_section.key": "cd295164-f461-4956-8117-d80e4b503bb1"
       }
     },
     {

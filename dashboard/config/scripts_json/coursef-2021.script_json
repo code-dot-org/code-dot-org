@@ -1425,6 +1425,19 @@
       }
     },
     {
+      "key": "847b9bf6-33ab-4aa0-a43f-110e04116596",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "847b9bf6-33ab-4aa0-a43f-110e04116596",
+        "lesson.key": "Editing Behaviors",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
       "key": "0c41f900-2229-42ab-b5bd-15b78bb97e4e",
       "position": 1,
       "properties": {
@@ -1461,6 +1474,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121",
+        "lesson.key": "Virtual Pet",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "4cd953ae-9546-4cdf-b6ea-860212b4875f",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4cd953ae-9546-4cdf-b6ea-860212b4875f",
         "lesson.key": "Virtual Pet",
         "lesson_group.key": "csf_sprites",
         "script.name": "coursef-2021"
@@ -2375,7 +2401,7 @@
       "key": "aa24a7a8-7cec-408b-b980-89e9c457605a",
       "position": 1,
       "properties": {
-        "name": "Practice",
+        "name": "Changing Variables with Bee",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2387,7 +2413,6 @@
       "key": "26d46928-c84e-4f97-8482-2575692c9ecb",
       "position": 2,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2399,7 +2424,6 @@
       "key": "94f3b6b8-77fa-42ef-bee6-80a47bdd050e",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2411,8 +2435,7 @@
       "key": "6c011354-ebe1-4a12-87c2-408847faf238",
       "position": 4,
       "properties": {
-        "description": "This set of puzzles takes some serious computational thinking skills.  If you find that students are getting stuck, help them break down the puzzles into the individual pieces:\r\n\r\n- What would it look like if the flowers/honeycomb all had the same amount of nectar/honey?\r\n- What would it look like without the functions?\r\n- Now how can you use a variable to get the quantities the way you want them?\r\n- Now can you build it back up to use a function?\r\n\r\n**Hint:** Puzzle 7 becomes much easier if students utilize the `while path ahead` loop instead of a variable.",
-        "name": "Online Puzzles\r"
+        "description": "####Online Puzzles\n\nThis set of puzzles takes some serious computational thinking skills.  If you find that students are getting stuck, help them break down the puzzles into the individual pieces:\n\n- What would it look like if the flowers/honeycomb all had the same amount of nectar/honey?\n- What would it look like without the functions?\n- Now how can you use a variable to get the quantities the way you want them?\n- Now can you build it back up to use a function?\n\n**Hint:** Puzzle 7 becomes much easier if students utilize the `while path ahead` loop instead of a variable."
       },
       "seeding_key": {
         "activity_section.key": "6c011354-ebe1-4a12-87c2-408847faf238",
@@ -2447,8 +2470,8 @@
       "key": "13122569-6e3b-4fd1-8cbe-226e6fc82d19",
       "position": 1,
       "properties": {
-        "description": "The latter half of this series is made up of freeplay puzzles.  Students will have the opportunity to play with variables, shape, and color to create something unique.",
-        "name": "Online Puzzles\r"
+        "description": "\n\n####Online Puzzles\n\nThe latter half of this series is made up of freeplay puzzles.  Students will have the opportunity to play with variables, shape, and color to create something unique.",
+        "name": "Changing Variables with Artist"
       },
       "seeding_key": {
         "activity_section.key": "13122569-6e3b-4fd1-8cbe-226e6fc82d19",
@@ -2459,7 +2482,6 @@
       "key": "88c99bab-0045-4d56-a8ae-a12f32e2866e",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2471,7 +2493,6 @@
       "key": "d6137926-640f-4180-a257-20c5f32317f5",
       "position": 3,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2483,6 +2504,7 @@
       "key": "9c85a514-ad08-4d73-940b-01608ff1410e",
       "position": 4,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "9c85a514-ad08-4d73-940b-01608ff1410e",
@@ -3502,7 +3524,8 @@
       "key": "a5f79585-94bd-4860-a70a-ad7c983eeb87",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be editing and creating their own behaviors! They’ll begin by making small changes to some familiar but new behaviors and gradually move towards writing their own behaviors from scratch."
+        "description": "**Goal:** Today, students will be editing and creating their own behaviors! They’ll begin by making small changes to some familiar but new behaviors and gradually move towards writing their own behaviors from scratch.",
+        "name": "Behaviors in Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "a5f79585-94bd-4860-a70a-ad7c983eeb87",
@@ -3513,15 +3536,13 @@
       "key": "6a2c5527-8a23-4a81-b3e6-6732f56dd94d",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
+        "description": "####Online Puzzles\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n\r\n"
           }
-        ],
-        "name": "Online Puzzles\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6a2c5527-8a23-4a81-b3e6-6732f56dd94d",
@@ -3543,7 +3564,6 @@
       "key": "8aa111b7-758b-491e-9553-38536ee82234",
       "position": 4,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3555,7 +3575,6 @@
       "key": "bb5ffb2e-819b-424f-8b5a-08afe10b06e2",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3567,7 +3586,6 @@
       "key": "26727953-67d7-4ede-99f7-085068f72ab9",
       "position": 6,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3598,6 +3616,17 @@
       }
     },
     {
+      "key": "997b7762-3be1-47ed-a4c1-a9d4055a1428",
+      "position": 1,
+      "properties": {
+        "description": "###Cosmic Events (30-45 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Cosmic Events](https://docs.google.com/document/d/1bbccw0T-Nnav3L0kqtK2gnYKSSfk-3ytW0yyClNkMUI/edit#heading=h.vowrbq6ykmt2) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. This activity is out of this world as students learn how to program sprites to move in a way which emulates the gravitational force exerted by the Earth.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.SL.5.1.B:** Follow agreed-upon rules for discussions and carry out assigned roles.\n\n- **CCSS.MATH.CONTENT.5.G.A.1:** Use a pair of perpendicular number lines, called axes, to define a coordinate system, with the intersection of the lines (the origin) arranged to coincide with the 0 on each line and a given point in the plane located by using an ordered pair of numbers, called its coordinates. Understand that the first number indicates how far to travel from the origin in the direction of one axis, and the second number indicates how far to travel in the direction of the second axis, with the convention that the names of the two axes and the coordinates correspond (e.g., x-axis and x-coordinate, y-axis and y-coordinate).\n\n- **NGSS.5-PS2-1:** Support an argument that the gravitational force exerted by Earth on objects is directed down. "
+      },
+      "seeding_key": {
+        "activity_section.key": "997b7762-3be1-47ed-a4c1-a9d4055a1428",
+        "lesson_activity.key": "847b9bf6-33ab-4aa0-a43f-110e04116596"
+      }
+    },
+    {
       "key": "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9",
       "position": 1,
       "properties": {
@@ -3613,7 +3642,8 @@
       "key": "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own virtual pet! They will begin by drawing or selecting a new costume for a sprite. Then they will create events that cause actions and behaviors upon interaction."
+        "description": "**Goal:** Today, students will be creating their own virtual pet! They will begin by drawing or selecting a new costume for a sprite. Then they will create events that cause actions and behaviors upon interaction.",
+        "name": "Virtual Pet with Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8",
@@ -3624,15 +3654,13 @@
       "key": "eabbaa23-0f57-46ed-84bc-8bff04cefaf3",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
+        "description": "\n####Online Puzzles\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n\r\n"
           }
-        ],
-        "name": "Online Puzzles\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "eabbaa23-0f57-46ed-84bc-8bff04cefaf3",
@@ -3643,7 +3671,7 @@
       "key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think]."
+        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video"
       },
       "seeding_key": {
         "activity_section.key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
@@ -3654,7 +3682,6 @@
       "key": "a13d087d-2f1e-4ac7-ae0b-2123e880e772",
       "position": 4,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3666,7 +3693,6 @@
       "key": "7a07175e-ed69-46f8-a2c0-3f479f3966f8",
       "position": 5,
       "properties": {
-        "name": "Mini-Project: Virtual Pet",
         "progression_name": "Mini-Project: Virtual Pet"
       },
       "seeding_key": {
@@ -3684,6 +3710,17 @@
       "seeding_key": {
         "activity_section.key": "c2ac88a2-6e26-49e5-a893-c3915816141a",
         "lesson_activity.key": "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121"
+      }
+    },
+    {
+      "key": "fcaf009c-58ce-43f6-bb24-dfdae991fdd2",
+      "position": 1,
+      "properties": {
+        "description": "###Providing Energy for your Virtual Pet (60-90 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Science**\n\n[Providing Energy for your Virtual Pet](https://docs.google.com/document/d/1ZwHXzgPKSyO5F-QnYT9cvy2WWKMvZ19-GY6-2FxUCf0/edit?usp=sharing) is an optional activity aligned to Common Core ELA and Next Generation Science Standards, written by our teacher community. Students will create a scientific model that shows how their virtual pet will receive the energy it needs to survive. \n\n*Standards Addressed:*\n\n- **CCSS.ELA.RI.5.7:** Draw on information from multiple print or digital sources, demonstrating the ability to locate an answer to a question quickly or to solve a problem efficiently. \n\n- **CCSS.ELA.RI.5.9:** Integrate information from several texts on the same topic in order to write or speak about the subject knowledgeably. \n\n- **5- PS3-1:** Use models to describe that energy in animals’ food (used for body repair, growth, motion, and to maintain body warmth) was once energy from the sun. \n\n- **5-LS2-1:** Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment \n\n- **SL.5.5:** Include multimedia components (e.g., graphics, sound) and visual displays in presentations when appropriate to enhance the development of main ideas or themes. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcaf009c-58ce-43f6-bb24-dfdae991fdd2",
+        "lesson_activity.key": "4cd953ae-9546-4cdf-b6ea-860212b4875f"
       }
     },
     {
@@ -5958,7 +5995,8 @@
       "properties": {
         "level_keys": [
           "courseF_artist_variables_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5983,7 +6021,8 @@
       "properties": {
         "level_keys": [
           "courseF_artist_variables_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
