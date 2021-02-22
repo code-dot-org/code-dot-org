@@ -11,7 +11,7 @@ import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
-import {reducedLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 
 const styles = {
   header: {
@@ -32,7 +32,7 @@ const styles = {
 
 class StudentLessonOverview extends Component {
   static propTypes = {
-    lesson: reducedLessonShape.isRequired,
+    lesson: studentLessonShape.isRequired,
 
     // from redux
     announcements: PropTypes.arrayOf(announcementShape),
@@ -79,13 +79,6 @@ class StudentLessonOverview extends Component {
 
   render() {
     const {lesson, announcements, isSignedIn} = this.props;
-    let lessonResources = [];
-    if (lesson.resources['Student']) {
-      lessonResources = lessonResources.concat(lesson.resources['Student']);
-    }
-    if (lesson.resources['All']) {
-      lessonResources = lessonResources.concat(lesson.resources['All']);
-    }
     return (
       <div>
         <div className="lesson-overview-header">
@@ -132,12 +125,12 @@ class StudentLessonOverview extends Component {
             </ul>
           </div>
         )}
-        {lessonResources.length > 0 && (
+        {lesson.resources.length > 0 && (
           <div id="resource-section">
             <h2>Resources</h2>
             <div>
               <ul>
-                {lessonResources.map(resource =>
+                {lesson.resources.map(resource =>
                   this.createResourceListItem(resource)
                 )}
               </ul>

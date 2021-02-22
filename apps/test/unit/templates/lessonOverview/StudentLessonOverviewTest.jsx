@@ -36,34 +36,22 @@ describe('StudentLessonOverview', () => {
         position: 1,
         displayName: 'Lesson 1',
         overview: 'Lesson Overview',
-        resources: {
-          Teacher: [
-            {
-              key: 'teacher-resource',
-              name: 'Teacher Resource',
-              url: 'fake.url',
-              type: 'Slides'
-            }
-          ],
-          Student: [
-            {
-              key: 'student-resource',
-              name: 'Student Resource',
-              url: 'fake.url',
-              download_url: 'download.fake.url',
-              type: 'Activity Guide'
-            }
-          ],
-          All: [
-            {
-              key: 'all-resource',
-              name: 'All Resource',
-              url: 'fake.url',
-              download_url: 'download.fake.url',
-              type: 'Activity Guide'
-            }
-          ]
-        },
+        resources: [
+          {
+            key: 'student-resource',
+            name: 'Student Resource',
+            url: 'fake.url',
+            download_url: 'download.fake.url',
+            type: 'Activity Guide'
+          },
+          {
+            key: 'all-resource',
+            name: 'All Resource',
+            url: 'fake.url',
+            download_url: 'download.fake.url',
+            type: 'Activity Guide'
+          }
+        ],
         vocabularies: [
           {
             key: 'Algorithm',
@@ -117,10 +105,17 @@ describe('StudentLessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
   });
 
-  it('displays the student resources and for all resources', () => {
+  it('displays the student resources', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
     assert.equal(resourceSection.find('ul').length, 1);
     assert.equal(resourceSection.find('li').length, 2);
+  });
+
+  it('does not display the resources section if there are no student resources', () => {
+    let myProps = defaultProps;
+    myProps.lesson.resources = [];
+    const wrapper = shallow(<StudentLessonOverview {...myProps} />);
+    assert.equal(wrapper.find('#resource-section').length, 0);
   });
 });
