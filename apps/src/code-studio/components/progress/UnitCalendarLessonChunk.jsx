@@ -73,6 +73,7 @@ class UnitCalendarLessonChunk extends Component {
   handleMouseEnter = () => {
     this.props.handleHover(this.props.lessonChunk.id);
   };
+
   handleMouseOut = () => {
     this.props.handleHover('');
   };

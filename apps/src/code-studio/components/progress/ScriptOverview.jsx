@@ -24,7 +24,7 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
-import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 
 /**
