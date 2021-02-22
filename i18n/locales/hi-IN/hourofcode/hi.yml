@@ -144,11 +144,17 @@ hi:
     में लें।  "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: हमसे जुड़ें
+  hoc_live_learn_more: अधिक जानें
   hoc_overview_oceans_tutorial_header: "  समुद्रों के लिए कृत्रिम बुद्धि  "
   hoc_overview_oceans_tutorial_desc: "  कृत्रिम बुद्धि (AI), मशीन प्रशिक्षण, प्रशिक्षण
     डेटा और पूर्वाग्रह के बारे में सीखें, साथ ही नैतिक मुद्दों पर चर्चा करें और पता

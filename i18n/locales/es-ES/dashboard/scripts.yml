@@ -16351,6 +16351,8 @@ es:
             End of Course Project:
               key: Proyecto de fin de curso
               name: Proyecto de fin de curso
+            lesson-6:
+              name: Mirando hacia el Futuro con Minecraft
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -16438,7 +16440,7 @@ es:
             csf_digcit:
               display_name: Ciudadanía Digital
             csf_nested_loops:
-              display_name: Bucles anidados
+              display_name: Condicionales
             csf_functions:
               display_name: Funciones
             csf_impacts:
@@ -16677,6 +16679,8 @@ es:
               name: Aprender sprites con Laboratorio de Sprite
             Course F Introduction:
               name: Presentamos el Laboratorio de sprites
+            Sprites in Action:
+              name: Sprites en acción
           lesson_groups:
             ramp_up:
               display_name: Introducción

@@ -2995,10 +2995,12 @@ fi:
             'Functions: Songwriting':
               name: Säveltäminen
           lesson_groups:
+            ramp_up:
+              display_name: Silmukat
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
             csf_nested_loops:
-              display_name: Sisäkkäiset silmukat
+              display_name: Ehtolausekkeet
             csf_functions:
               display_name: Funktiot
         coursef-2021:

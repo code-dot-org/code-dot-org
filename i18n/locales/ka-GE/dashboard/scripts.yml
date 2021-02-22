@@ -8125,7 +8125,7 @@ ka:
             csf_digcit:
               display_name: ციფრული მოქალაქეობა
             csf_nested_loops:
-              display_name: ჩასმული ციკლები
+              display_name: პირობითი ბრძანებები
             csf_functions:
               display_name: ფუნქციები
         coursef-2021:
@@ -8254,6 +8254,9 @@ ka:
               display_name: მოვლენები
           student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
         csf-2021-pilot:
+          lessons:
+            Sprites in Action:
+              name: სპრაიტები მოქმედებაში
           lesson_groups:
             ramp_up:
               display_name: შესავალი

@@ -1877,6 +1877,48 @@
           "draw": {
             "name": "çək"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          }
         }
       }
     }

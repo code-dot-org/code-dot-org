@@ -142,11 +142,17 @@ ms:
     lebih banyak tentang AI sepanjang kurikulum kami.  "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Sertai kami
+  hoc_live_learn_more: Ketahui lebih lanjut
   hoc_overview_oceans_tutorial_header: "  AI for Oceans (Kecerdasan Buatan untuk Lautan)
     \ "
   hoc_overview_oceans_tutorial_desc: "  Belajar tentang kecerdasan buatan (AI), pembelajaran

@@ -16070,6 +16070,8 @@ fr:
             Artist Binary:
               key: Artiste binaire
               name: Artiste binaire
+            lesson-6:
+              name: Regarder vers l'Avenir avec Minecraft
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -16151,7 +16153,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_nested_loops:
-              display_name: Boucles Imbriquées
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: fonctions
             csf_impacts:
@@ -16376,6 +16378,8 @@ fr:
               name: Codage d'une simulation
             Course F Introduction:
               name: Introduction au Labo des Lutins
+            Sprites in Action:
+              name: Les Lutins en Action
           lesson_groups:
             ramp_up:
               display_name: Introduction
