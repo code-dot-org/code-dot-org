@@ -20828,41 +20828,41 @@ en:
             lesson1:
               name: 'Lesson 1A: AI for Oceans'
             lesson2:
-              name: Lesson 2
+              name: How Computers Learn (Unplugged)
             lesson3:
-              name: Lesson 3
+              name: AI for Social Good (Unplugged)
             lesson4:
-              name: Lesson 4
+              name: Patterns in Data
             lesson5:
-              name: Models and Data
-            lesson6:
               name: Introduction to AI Lab
+            lesson6:
+              name: Classification on Planet Vapnik (Unplugged)
             lesson7:
-              name: Classification on Planet Vapnik
-            lesson8:
               name: Using Models in App Lab
-            lesson9:
+            lesson8:
               name: The Need for Model Cards
+            lesson9:
+              name: Numerical Data in AI Lab
             lesson10:
-              name: Lesson 10
+              name: Regression Quest (Unplugged)
             lesson11:
-              name: Lesson 11
+              name: Using Model Cards in App Lab
             lesson12:
-              name: Lesson 12
+              name: Making Data Decisions
             lesson13:
-              name: Lesson 13
+              name: 'Mini-Project: Make an App (2 Days)'
             lesson14:
               name: Lesson 14
             lesson15:
-              name: Lesson 15
+              name: AI Code of Ethics (Unplugged)
             lesson16:
-              name: Lesson 16
+              name: 'Goldilocks Principle: Making Models Just Right'
             lesson17:
               name: Lesson 17
             lesson18:
-              name: Lesson 18
+              name: Planning Your App
             lesson19:
-              name: Lesson 19
+              name: 'Project: App with Real World Data'
             lesson20:
               name: Lesson 20
           lesson_groups:
