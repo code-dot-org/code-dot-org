@@ -1,6 +1,11 @@
 require 'test_helper'
+require 'pdf/conversion'
 
 class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
+  setup do
+    PDF.stubs(:generate_from_url)
+  end
+
   test 'wraps ScriptSeed with PDF generation logic' do
     CDO.stubs(:rack_env).returns(:staging)
     script = create(:script, is_migrated: true, hidden: true)
@@ -79,9 +84,10 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
     lesson = create(:lesson, script: script)
     Dir.mktmpdir('lesson_plan_pdfs_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
+      url = Rails.application.routes.url_helpers.script_lesson_url(script, lesson)
+      filename = File.join(tmpdir, Services::LessonPlanPdfs.get_pathname(lesson))
+      PDF.expects(:generate_from_url).with(url, filename)
       Services::LessonPlanPdfs.generate_lesson_pdf(lesson, tmpdir)
-      assert_equal 1, Dir.glob(File.join(tmpdir, '**/*.pdf')).count
-      assert File.exist? File.join(tmpdir, Services::LessonPlanPdfs.get_pathname(lesson))
     end
   end
 
