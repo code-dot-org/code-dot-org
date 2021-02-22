@@ -1145,7 +1145,7 @@
       "key": "28c0cdd5-a5e8-42e6-a6f9-66684888903a",
       "position": 4,
       "properties": {
-        "description": "**Goal:** The introductory activity sets the stage for the simulation project, which will run throughout the unit. Encourage students to stay in their roles and speak from their specific points of view.  For example, when talking students might say \"As the art teacher, I think... \" or \"As a parent, I know what is best for my student and that is... \"\n"
+        "description": "**Discussion Goal:** The introductory activity sets the stage for the simulation project, which will run throughout the unit. Encourage students to stay in their roles and speak from their specific points of view.  For example, when talking students might say \"As the art teacher, I think... \" or \"As a parent, I know what is best for my student and that is... \"\n"
       },
       "seeding_key": {
         "activity_section.key": "28c0cdd5-a5e8-42e6-a6f9-66684888903a",
@@ -1260,7 +1260,7 @@
       "key": "81816452-79fb-4c66-83a2-a12c6ce6e6a4",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the purpose of a computing innovation?\n\n**Goal:** A computing innovation is designed to solve a problem. \n\n"
+        "description": "[slide]  **Prompt:** What is the purpose of a computing innovation?\n\n**Discussion Goal:** A computing innovation is designed to solve a problem. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "81816452-79fb-4c66-83a2-a12c6ce6e6a4",
@@ -1328,7 +1328,7 @@
       "key": "760b65f1-e52c-4674-a6df-ad9d6c322b58",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?\n\n**Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   \t* help schools run more efficiently\n   \t* help certain groups gain a voice and be heard\n   \t* make learning more fun!\n   \t* save time and money\n\n"
+        "description": "[slide]  **Prompt:** Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   \t* help schools run more efficiently\n   \t* help certain groups gain a voice and be heard\n   \t* make learning more fun!\n   \t* save time and money\n\n"
       },
       "seeding_key": {
         "activity_section.key": "760b65f1-e52c-4674-a6df-ad9d6c322b58",
@@ -1396,7 +1396,7 @@
       "key": "5bf7ffcf-0e5d-4e23-8972-757d00500943",
       "position": 2,
       "properties": {
-        "description": "1. Your full name\n2. Your social security number\n3. Your favorite musician / band\n4. A picture of your face\n5. Your fingerprint\n6. Your birthdate\n7. Your address\n8. Where you go after school\n9. Your phone number\n10. Your medical information\n11. Who your best friends are\n12. Your racial / ethnic identity\n13. A list of everything you've bought this month\n14. A list of recordings of your voice\n15. Your IP address\n16. A video of you singing\n17. Your academic history / report card\n18. The town or city you live in\n\n\n**Discuss:** Have students brainstorm silently at their tables, then have them share with neighbors, and finally have them share out with the room.\n\n**Goal:** This prompt sets up the rest of the lesson where students will be exploring instances where many of the pieces of information on this list are used by the services they use every day. Aim to push students to think about what it means to say that something is \"personal\" or \"private\". This is a lens they should take into the lesson.\n\nAlso, point out to students the items on this list that are biometric data: a picture of your face, your fingerprint, and voice/video recordings. Are these considered any more private or personal than the other items? Why or why not? \n\n"
+        "description": "1. Your full name\n2. Your social security number\n3. Your favorite musician / band\n4. A picture of your face\n5. Your fingerprint\n6. Your birthdate\n7. Your address\n8. Where you go after school\n9. Your phone number\n10. Your medical information\n11. Who your best friends are\n12. Your racial / ethnic identity\n13. A list of everything you've bought this month\n14. A list of recordings of your voice\n15. Your IP address\n16. A video of you singing\n17. Your academic history / report card\n18. The town or city you live in\n\n\n**Discuss:** Have students brainstorm silently at their tables, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This prompt sets up the rest of the lesson where students will be exploring instances where many of the pieces of information on this list are used by the services they use every day. Aim to push students to think about what it means to say that something is \"personal\" or \"private\". This is a lens they should take into the lesson.\n\nAlso, point out to students the items on this list that are biometric data: a picture of your face, your fingerprint, and voice/video recordings. Are these considered any more private or personal than the other items? Why or why not? \n\n"
       },
       "seeding_key": {
         "activity_section.key": "5bf7ffcf-0e5d-4e23-8972-757d00500943",
@@ -1545,7 +1545,7 @@
       "key": "98bd233e-f176-45a9-be50-e153c6118595",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.\n\n**Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "[slide] **Prompt:** As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "name": "Convenience vs Privacy - Facial Recognition - 10 mins\r"
       },
       "seeding_key": {
@@ -1567,7 +1567,7 @@
       "key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** As we watch the following video on facial recognition takes notes on:\n\ndiscussion!!!discussion-0 **Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "[slide]  **Prompt:** As we watch the following video on facial recognition takes notes on:\n\ndiscussion!!!discussion-0 **Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "name": "Security vs Privacy - Should the Government Need a Warrant? - 10 mins\r"
       },
       "seeding_key": {
@@ -1630,7 +1630,7 @@
       "key": "f9aa9a91-fcde-466a-ac9c-331e5b063af6",
       "position": 2,
       "properties": {
-        "description": "* 1: Totally Comfortable: \"Have my data! It makes the technology I love work and I have nothing to hide!\"\n* 2: Mostly Comfortable: \"I want tech innovations and stronger security. Let's make sure we take care of the most damaging privacy concerns.\"\n* 3: Mixed: \"There's a lot of this that makes me uncomfortable, but I'm still going to use technology.\"\n* 4: Mostly Uncomfortable: \"Privacy is more important than empowering innovations or ensuring security. I would give up on some tech innovations to ensure my privacy\"\n* 5: Totally Uncomfortable: \"I'd give up most technology and would like to see much stronger limits on what kind of data can be collected and stored, even if it limits the introduction of new technology\"\n\n**Discuss:** Have a few people from each end of the spectrum share their reasoning.\n\n**Goal:** Use this discussion to do some classwide synthesis of today's discussions about the tradeoffs between privacy and empowering new technology or ensuring security. The goal here is to move individual students to think broadly about their opinions, not force every student to have the same opinion. It's not necessary that students agree, but prompt them to think critically about this important question posed by modern technology. Some ways to do this:\n\n* Ask them why they hold their opinions and ask them to tie them to today's lesson\n* Ask them to give specific examples\n* Ask students who disagree to politely debate their opinions\n* Ask students to tie their opinions to their own experiences\n\n\n\n[slide] **Review:** Review the key takeaways at the end of the lesson."
+        "description": "* 1: Totally Comfortable: \"Have my data! It makes the technology I love work and I have nothing to hide!\"\n* 2: Mostly Comfortable: \"I want tech innovations and stronger security. Let's make sure we take care of the most damaging privacy concerns.\"\n* 3: Mixed: \"There's a lot of this that makes me uncomfortable, but I'm still going to use technology.\"\n* 4: Mostly Uncomfortable: \"Privacy is more important than empowering innovations or ensuring security. I would give up on some tech innovations to ensure my privacy\"\n* 5: Totally Uncomfortable: \"I'd give up most technology and would like to see much stronger limits on what kind of data can be collected and stored, even if it limits the introduction of new technology\"\n\n**Discuss:** Have a few people from each end of the spectrum share their reasoning.\n\n**Discussion Goal:** Use this discussion to do some classwide synthesis of today's discussions about the tradeoffs between privacy and empowering new technology or ensuring security. The goal here is to move individual students to think broadly about their opinions, not force every student to have the same opinion. It's not necessary that students agree, but prompt them to think critically about this important question posed by modern technology. Some ways to do this:\n\n* Ask them why they hold their opinions and ask them to tie them to today's lesson\n* Ask them to give specific examples\n* Ask students who disagree to politely debate their opinions\n* Ask students to tie their opinions to their own experiences\n\n\n\n[slide] **Review:** Review the key takeaways at the end of the lesson."
       },
       "seeding_key": {
         "activity_section.key": "f9aa9a91-fcde-466a-ac9c-331e5b063af6",
@@ -1748,7 +1748,7 @@
       "key": "4604dc0d-cc95-46b4-ad6d-6292e2beaec4",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?\n\n**Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \n\nThings that might make you suspicious:\n\n* Mispellings of the person's name, email, or company\n* Something that seems to good to be true (\"Free Vacations for a year!\")\n* Asking for personal information\n* A flashy link they want you to click on\n\n"
+        "description": "[slide]  **Prompt:** Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?\n\n**Discussion Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \n\nThings that might make you suspicious:\n\n* Mispellings of the person's name, email, or company\n* Something that seems to good to be true (\"Free Vacations for a year!\")\n* Asking for personal information\n* A flashy link they want you to click on\n\n"
       },
       "seeding_key": {
         "activity_section.key": "4604dc0d-cc95-46b4-ad6d-6292e2beaec4",
@@ -2099,7 +2099,7 @@
       "key": "a8366f16-9c44-4a43-a66b-d08cd48396cd",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** Explain how a computing innovation can have an impact beyond its intended purpose. How can rapid sharing of a computing innovation affect these impacts?\n\n**Goal:** Pull out these general ideas from the discussion:\n\n* Computing Innovations can have a harmful impact on society, economy or culture - even when the creator did not intend for this to happen.\n* Responsible creators of innovations should consider potential beneficial and harmful effects and how their innovations may be used in unintended ways, given that not all potential uses can be known ahead of time.\n* Sometimes computing innovations lead to benefits in other fields.\n* Rapid sharing of computing innovations can lead to a greater number of users which can in turn lead to more significant impacts. Consider a social media platform with thousands of users vs. millions. \n"
+        "description": "**Prompt:** Explain how a computing innovation can have an impact beyond its intended purpose. How can rapid sharing of a computing innovation affect these impacts?\n\n**Discussion Goal:** Pull out these general ideas from the discussion:\n\n* Computing Innovations can have a harmful impact on society, economy or culture - even when the creator did not intend for this to happen.\n* Responsible creators of innovations should consider potential beneficial and harmful effects and how their innovations may be used in unintended ways, given that not all potential uses can be known ahead of time.\n* Sometimes computing innovations lead to benefits in other fields.\n* Rapid sharing of computing innovations can lead to a greater number of users which can in turn lead to more significant impacts. Consider a social media platform with thousands of users vs. millions. \n"
       },
       "seeding_key": {
         "activity_section.key": "a8366f16-9c44-4a43-a66b-d08cd48396cd",
@@ -2264,7 +2264,7 @@
       "key": "61683c04-9510-4d98-a132-5e5caefec1ae",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the difference between symmetric encryption and asymmetric (public key) encryption?\n\n**Goal:** This is the main takeaway. Students need to understand that symmetric encryption involves one key that is shared between the encoder and decoder. Asymmetric (public key) encryption uses two keys - a public and a private one. The encoder and the decoder never need to meet to exchange a key. The modern Internet is built around pulic key encryption. \n"
+        "description": "[slide]  **Prompt:** What is the difference between symmetric encryption and asymmetric (public key) encryption?\n\n**Discussion Goal:** This is the main takeaway. Students need to understand that symmetric encryption involves one key that is shared between the encoder and decoder. Asymmetric (public key) encryption uses two keys - a public and a private one. The encoder and the decoder never need to meet to exchange a key. The modern Internet is built around pulic key encryption. \n"
       },
       "seeding_key": {
         "activity_section.key": "61683c04-9510-4d98-a132-5e5caefec1ae",
@@ -2855,7 +2855,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Keylogging"
+        "progression": "Keylogging",
+        "level_keys": [
+          "CSP 20-21 Keylogging_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2878,6 +2881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Phishing_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2900,7 +2906,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Malware"
+        "progression": "Malware",
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2975,7 +2984,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Encryption Widgets"
+        "progression": "Encryption Widgets",
+        "level_keys": [
+          "Crack a Caesar Cipher_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2998,7 +3010,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Encryption Widgets"
+        "progression": "Encryption Widgets",
+        "level_keys": [
+          "Crack Random Substitution_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3073,7 +3088,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 10 Exam"
+        "progression": "Unit 10 Exam",
+        "level_keys": [
+          "CSP 20-21 Unit 10 Assessment_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
