@@ -12,9 +12,6 @@ import {
   getSpecifiedDatasets,
   setSelectedTrainer
 } from "../redux";
-import { parseCSV } from "../csvReaderWrapper";
-import { parseJSON } from "../jsonReaderWrapper";
-import { allDatasets, getAvailableDatasets } from "../datasetManifest";
 import { ColumnTypes, styles } from "../constants";
 
 class SpecifyColumns extends Component {
@@ -48,8 +45,12 @@ class SpecifyColumns extends Component {
         <div style={{ ...styles.subPanel, ...styles.scrollContents }}>
           {Object.keys(data[0]).map(key => {
             return (
-              <div key={key} style={{
-                    marginBottom: 10}}>
+              <div
+                key={key}
+                style={{
+                  marginBottom: 10
+                }}
+              >
                 <div
                   style={{
                     ...styles.bold,

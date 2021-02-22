@@ -11,14 +11,14 @@ import {
   getCompatibleTrainers,
   setKValue
 } from "../redux";
-import { styles, TEST_DATA_PERCENTS, TestDataLocations } from "../constants";
+import { styles } from "../constants";
 
 class SelectTrainer extends Component {
   static propTypes = {
     showChooseReserve: PropTypes.bool,
+    showSelectTrainer: PropTypes.bool,
     percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
-    reserveLocation: PropTypes.string,
     setReserveLocation: PropTypes.func,
     selectedTrainer: PropTypes.string,
     setSelectedTrainer: PropTypes.func,
@@ -47,7 +47,6 @@ class SelectTrainer extends Component {
     const {
       showChooseReserve,
       showSelectTrainer,
-      reserveLocation,
       percentDataToReserve,
       compatibleTrainers,
       selectedTrainer
@@ -73,40 +72,9 @@ class SelectTrainer extends Component {
                   value={percentDataToReserve}
                   onChange={this.handleChangePercentReserve}
                 />
-                {/*<select
-                  value={percentDataToReserve}
-                  onChange={this.handleChangePercentReserve}
-                >
-                  {TEST_DATA_PERCENTS.map((percent, index) => {
-                    return (
-                      <option key={index} value={percent}>
-                        {percent}
-                      </option>
-                    );
-                  })}
-                </select>*/}
               </label>
               <br />
               {percentDataToReserve}%
-              <br />
-              {/*percentDataToReserve > 0 && (
-                <label>
-                  Where in the dataset would you like to pull the test data
-                  from?{" "}
-                  <select
-                    value={reserveLocation}
-                    onChange={this.handleChangeReserveLocation}
-                  >
-                    {Object.keys(TestDataLocations).map((location, index) => {
-                      return (
-                        <option key={index} value={TestDataLocations[location]}>
-                          {TestDataLocations[location]}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </label>
-              )*/}
             </form>
           </div>
         )}
@@ -166,7 +134,6 @@ export default connect(
     showChooseReserve: getShowChooseReserve(state),
     showSelectTrainer: getShowSelectTrainer(state),
     percentDataToReserve: state.percentDataToReserve,
-    reserveLocation: state.reserveLocation,
     selectedTrainer: state.selectedTrainer,
     compatibleTrainers: getCompatibleTrainers(state),
     kValue: state.kValue

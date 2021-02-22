@@ -1067,14 +1067,6 @@ export function getPanelButtons(state) {
   return { prev, next };
 }
 
-export function getCurrentColumnIsSelectedLabel(state) {
-  return state.labelColumn === state.currentColumn;
-}
-
-export function getCurrentColumnIsSelectedFeature(state) {
-  return state.selectedFeatures.includes(state.currentColumn);
-}
-
 /* Returns an object with information for the CrossTab UI.
  *
  * Here is an example result:

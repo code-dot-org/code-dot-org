@@ -113,7 +113,7 @@ class DataDisplay extends Component {
           )}
         </div>
         <br />
-        <div style={styles.xxpanel} style={{overflow:"scroll"}}>
+        <div style={{overflow:"scroll"}}>
           {this.state.showRawData && (
             <div >
               <div style={styles.finePrint}>

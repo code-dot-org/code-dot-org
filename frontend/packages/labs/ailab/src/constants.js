@@ -20,7 +20,6 @@ export const TestDataLocations = {
 const labelColor = "rgb(254, 96, 3)"; // was 186
 const labelColorSemi = "rgba(254, 96, 3, 0.4)";
 const featureColor = "rgb(75, 155, 213)";
-const featureColorSemi = "rgba(75, 155, 213, 04)";
 
 export const styles = {
   app: {
@@ -144,7 +143,6 @@ export const styles = {
     //border: "solid 1px black",
     borderRadius: 5,
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 18,
     boxSizing: "border-box",
     overflow: "scroll",
     position: "relative",
@@ -249,31 +247,6 @@ export const styles = {
   },
   crossTabCell5: {
     backgroundColor: "rgba(255,100,100, 1)"
-  },
-
-  tab: {
-    float: "left",
-    backgroundColor: "rgba(0,0,0,0.8)",
-    color: "white",
-    padding: "5px 30px 5px 30px",
-    marginRight: 1,
-    marginBottom: 2,
-    cursor: "pointer",
-    border: "solid 5px white",
-    borderRadius: 3,
-    fontFamily: '"Gotham 4r", sans-serif'
-  },
-
-  currentTab: {
-    border: "solid 5px #7ad9f7",
-    borderRadius: 3
-  },
-
-  disabledTab: {
-    backgroundColor: "rgb(160,160,160)",
-    color: "rgb(230,230,230)",
-    pointerEvents: "none",
-    cursor: "initial"
   },
 
   previousButton: {
