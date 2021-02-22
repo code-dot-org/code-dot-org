@@ -311,7 +311,7 @@
       "key": "8c069083-ba86-4109-adf2-5a1e44520714",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Read and then discuss with a partner the Scoring Guidelines and Task Instructions. For the Scoring Guidelines you can focus on only the first 3 columns for now: \"Reporting Category\", \"Task\", \"Scoring Criteria\". We'll dive into the decision rules later. Just get familiar with these documents.\n\n**Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* video of their code running\n* written responses\n* PDF of program code\n\nThey should also know the Scoring Guidelines:\n\n* contains 6 rows, each worth 1 point\n* sometimes several rows apply to one written response to pick out specific aspects\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
+        "description": "[slide]  **Prompt:** Read and then discuss with a partner the Scoring Guidelines and Task Instructions. For the Scoring Guidelines you can focus on only the first 3 columns for now: \"Reporting Category\", \"Task\", \"Scoring Criteria\". We'll dive into the decision rules later. Just get familiar with these documents.\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* video of their code running\n* written responses\n* PDF of program code\n\nThey should also know the Scoring Guidelines:\n\n* contains 6 rows, each worth 1 point\n* sometimes several rows apply to one written response to pick out specific aspects\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
       },
       "seeding_key": {
         "activity_section.key": "8c069083-ba86-4109-adf2-5a1e44520714",
@@ -370,7 +370,7 @@
       "key": "d953a165-9fcb-47a1-8600-89d1001fb007",
       "position": 3,
       "properties": {
-        "description": "[slide] **Distribute:** The CSP Create PT Code.org Annotated Sample 1.\n\n[slide] **Prompt:** With your partner look over this annotated version of the sample to see how each row of the scoring guidelines was applied. You should be reading specifically to answer any of the questions you had about the task earlier. After looking it over we will discuss:\n\n* What characteristics of this response made it score well?\n* What parts confused you?\n* What questions do you still have about the Scoring Guidelines or Task description?\n    \n**Discuss:** Ask partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class share the results of their discussion.\n\n**Goal:** Students should understand from this example that the Scoring Guidelines are in many ways as important as the task description. The responses in this sample not only match the task description but address the particular \"gotchas\" of the scoring guidelines.\n\nStudents may still have questions about the individual prompts or scoring guidelines. Encourage them that you'll look at more examples which may help clarify.\n\n    "
+        "description": "[slide] **Distribute:** The CSP Create PT Code.org Annotated Sample 1.\n\n[slide] **Prompt:** With your partner look over this annotated version of the sample to see how each row of the scoring guidelines was applied. You should be reading specifically to answer any of the questions you had about the task earlier. After looking it over we will discuss:\n\n* What characteristics of this response made it score well?\n* What parts confused you?\n* What questions do you still have about the Scoring Guidelines or Task description?\n    \n**Discuss:** Ask partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class share the results of their discussion.\n\n**Discussion Goal:** Students should understand from this example that the Scoring Guidelines are in many ways as important as the task description. The responses in this sample not only match the task description but address the particular \"gotchas\" of the scoring guidelines.\n\nStudents may still have questions about the individual prompts or scoring guidelines. Encourage them that you'll look at more examples which may help clarify.\n\n    "
       },
       "seeding_key": {
         "activity_section.key": "d953a165-9fcb-47a1-8600-89d1001fb007",
@@ -417,7 +417,7 @@
       "key": "1eaa315e-6c86-492a-9885-3511be5cecb4",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students back to Create PT Annotated Sample 2. With a partner, ask students to discuss how they could rewrite 3b in order to earn the point.\n\n**Goal:** Encourage students to use specific programming language in their responses (i.e. variables, conditionals, loops, etc.).\n\nSample 3b response: The answers list manages complexity because without it, each element would need to be stored in its own variable which would increase the length of the code and opportunities for error. The variables would need to be carefully named to indicate if they are positive, neutral, or negative as this is how the program determines what icons to display. For example, one variable might be called positive0 and store the value \"Yes, absolutely\".\n"
+        "description": "[slide]  **Do This:** Direct students back to Create PT Annotated Sample 2. With a partner, ask students to discuss how they could rewrite 3b in order to earn the point.\n\n**Discussion Goal:** Encourage students to use specific programming language in their responses (i.e. variables, conditionals, loops, etc.).\n\nSample 3b response: The answers list manages complexity because without it, each element would need to be stored in its own variable which would increase the length of the code and opportunities for error. The variables would need to be carefully named to indicate if they are positive, neutral, or negative as this is how the program determines what icons to display. For example, one variable might be called positive0 and store the value \"Yes, absolutely\".\n"
       },
       "seeding_key": {
         "activity_section.key": "1eaa315e-6c86-492a-9885-3511be5cecb4",
@@ -428,7 +428,7 @@
       "key": "907a0384-0c76-4cac-bc96-dd528f989c58",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Based on the examples that you saw today write down on separate post-its / scratch piece of paper\n\n**Goal:** The next lesson is designed to address these three specific prompts. Students will have time to dive deep on what counts as a computing innovation and how to choose one wisely. They will be provided a checklist of \"gotchas\" next to each part of the task to use while they complete. There is also time set aside to answer remaining questions. In other words, don't feel the need to respond to all of these prompts here. Use this conversation to synthesize what they saw and remind students that tomorrow you'll investigate all these questions more deeply.\n",
+        "description": "[slide]  **Prompt:** Based on the examples that you saw today write down on separate post-its / scratch piece of paper\n\n**Discussion Goal:** The next lesson is designed to address these three specific prompts. Students will have time to dive deep on what counts as a computing innovation and how to choose one wisely. They will be provided a checklist of \"gotchas\" next to each part of the task to use while they complete. There is also time set aside to answer remaining questions. In other words, don't feel the need to respond to all of these prompts here. Use this conversation to synthesize what they saw and remind students that tomorrow you'll investigate all these questions more deeply.\n",
         "name": "Create PT: Advice, Gotchas, Questions\r"
       },
       "seeding_key": {
@@ -463,7 +463,7 @@
       "key": "eb1cbeb4-8828-4589-a08b-4c7d4de45a03",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Based on our review of the Create PT yesterday...\n\n**Goal**: The purpose of this discussion to warm up students' brains and recall the elements of the Create PT. Students should start thinking about choices in light of what they have to do for the Create PT, rather than simply out of interest or \"coolness.\"  Hopefully, the two go hand in hand.\n\nIn particular we'll looking to understand the requirements so that students select appropriately scoped projects.\n"
+        "description": "[slide]  **Prompt:** Based on our review of the Create PT yesterday...\n\n**Discussion Goal**: The purpose of this discussion to warm up students' brains and recall the elements of the Create PT. Students should start thinking about choices in light of what they have to do for the Create PT, rather than simply out of interest or \"coolness.\"  Hopefully, the two go hand in hand.\n\nIn particular we'll looking to understand the requirements so that students select appropriately scoped projects.\n"
       },
       "seeding_key": {
         "activity_section.key": "eb1cbeb4-8828-4589-a08b-4c7d4de45a03",
@@ -543,7 +543,7 @@
       "key": "79ef7a6a-c541-46d5-95a1-bfb9318e2cb7",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Have students share and compare their responses with a classmate. Afterwards lead a discussion on the patterns they see.\n\n**Goal:** The main takeaways from this activity should be:\n\n* Some \"complicated\" looking functions may still not earn both rows if they are missing a component. \n* Two functions may look very similar but because of small differences one will earn full credit while the other will not.\n* The task only includes 6 total points which are graded quickly by a very specific rubric. Knowing what the graders will be looking for gives you the best chance to demonstrate what you know.\n\nUse the Scoring Guide [Create PT Survival Guide - KEY ](https://docs.google.com/document/d/16cLzE2Xcu878GRi6c03Qnin7pmeFZRQv7QY1FQxeG4k/edit)\t\n for commentary on individual algorithms.\n"
+        "description": "**Discuss:** Have students share and compare their responses with a classmate. Afterwards lead a discussion on the patterns they see.\n\n**Discussion Goal:** The main takeaways from this activity should be:\n\n* Some \"complicated\" looking functions may still not earn both rows if they are missing a component. \n* Two functions may look very similar but because of small differences one will earn full credit while the other will not.\n* The task only includes 6 total points which are graded quickly by a very specific rubric. Knowing what the graders will be looking for gives you the best chance to demonstrate what you know.\n\nUse the Scoring Guide [Create PT Survival Guide - KEY ](https://docs.google.com/document/d/16cLzE2Xcu878GRi6c03Qnin7pmeFZRQv7QY1FQxeG4k/edit)\t\n for commentary on individual algorithms.\n"
       },
       "seeding_key": {
         "activity_section.key": "79ef7a6a-c541-46d5-95a1-bfb9318e2cb7",
@@ -565,7 +565,7 @@
       "key": "4c260233-5177-4832-9d96-7feb08ba4997",
       "position": 8,
       "properties": {
-        "description": "**Discuss:** Have students share and compare their responses with a classmate. Afterwards lead a discussion on the patterns they see.\n\n**Goal:** This activity is designed to help students anticipate how they'll need to respond to prompt 3d and potentially make some decisions about how to design their functions. Here's some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
+        "description": "**Discuss:** Have students share and compare their responses with a classmate. Afterwards lead a discussion on the patterns they see.\n\n**Discussion Goal:** This activity is designed to help students anticipate how they'll need to respond to prompt 3d and potentially make some decisions about how to design their functions. Here's some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
       },
       "seeding_key": {
         "activity_section.key": "4c260233-5177-4832-9d96-7feb08ba4997",
@@ -576,7 +576,7 @@
       "key": "835268fb-ab04-4c0b-87be-562a107418ff",
       "position": 9,
       "properties": {
-        "description": "[slide] **Narrow it Down (page 6) - 5 mins:** As a class read the \"Narrow It Down\" section of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n[slide] **Practice Narrowing It Down (page 6) - 10 mins:** Have students go through one of the three project ideas and practice helping the example student narrow down their project. Give students roughly 5 minutes to discuss ideas with a partner. Then have a couple volunteers from each project idea share how they helped narrow down the project idea.\n\n**Discuss:** Lead a discussion about how to narrow down project ideas.\n* Many projects have sub parts, each of which could stand on its own as a PT\n* You should be able to easily see a list and function opportunity within at least one of the sub parts -- if you can't, not a good choice.\n* For any project idea it should be relatively easy to scope it down to one or two things that will be totally acceptable for the Create PT\n\n**Goal:** Understand it doesn't have to be a big project; The create PT is about demonstrating something you already know how to do.  \n\nThe biggest thing we're trying to guard against is students' eyes being bigger than their stomachs.  We want to encourage students to be creative and start build whatever they want, but temper that with the realities of the Create PT...\n\n* It doesn't need to be a big project\n* Your job is to demonstrate that you know how to program something and identify certain aspects of it.\n* There are no points for coolness or prettiness\n* If you want to do something big, just get it started for the Create PT and come back to it afterward.\n"
+        "description": "[slide] **Narrow it Down (page 6) - 5 mins:** As a class read the \"Narrow It Down\" section of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n[slide] **Practice Narrowing It Down (page 6) - 10 mins:** Have students go through one of the three project ideas and practice helping the example student narrow down their project. Give students roughly 5 minutes to discuss ideas with a partner. Then have a couple volunteers from each project idea share how they helped narrow down the project idea.\n\n**Discuss:** Lead a discussion about how to narrow down project ideas.\n* Many projects have sub parts, each of which could stand on its own as a PT\n* You should be able to easily see a list and function opportunity within at least one of the sub parts -- if you can't, not a good choice.\n* For any project idea it should be relatively easy to scope it down to one or two things that will be totally acceptable for the Create PT\n\n**Discussion Goal:** Understand it doesn't have to be a big project; The create PT is about demonstrating something you already know how to do.  \n\nThe biggest thing we're trying to guard against is students' eyes being bigger than their stomachs.  We want to encourage students to be creative and start build whatever they want, but temper that with the realities of the Create PT...\n\n* It doesn't need to be a big project\n* Your job is to demonstrate that you know how to program something and identify certain aspects of it.\n* There are no points for coolness or prettiness\n* If you want to do something big, just get it started for the Create PT and come back to it afterward.\n"
       },
       "seeding_key": {
         "activity_section.key": "835268fb-ab04-4c0b-87be-562a107418ff",
@@ -609,7 +609,7 @@
       "key": "c4d9dd35-c39e-4c73-b88f-42a3e1f09e4c",
       "position": 12,
       "properties": {
-        "description": "**Discuss:** Have students share and compare their responses with a classmate. When deciding on a project the answer to all of the questions in the guide should be \"yes\".\n\n**Goal:** Students should exit this brief activity with (1) a basic idea of what they're going to do for their project and (2) confidence that they can do it.\n\n"
+        "description": "**Discuss:** Have students share and compare their responses with a classmate. When deciding on a project the answer to all of the questions in the guide should be \"yes\".\n\n**Discussion Goal:** Students should exit this brief activity with (1) a basic idea of what they're going to do for their project and (2) confidence that they can do it.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "c4d9dd35-c39e-4c73-b88f-42a3e1f09e4c",
@@ -632,7 +632,7 @@
       "key": "338d08f7-00eb-4f83-b257-c72afc3acbf6",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share where they think most of their time should go.\n\n**Goal:** the goal here is to have students start planning in earnest for the Create PT. Students should take seriously how they will allocate their time, and should think about how they probably want to maximize the amount of time they have to write the code and the written responses.\n"
+        "description": "**Discuss:** Have students share where they think most of their time should go.\n\n**Discussion Goal:** the goal here is to have students start planning in earnest for the Create PT. Students should take seriously how they will allocate their time, and should think about how they probably want to maximize the amount of time they have to write the code and the written responses.\n"
       },
       "seeding_key": {
         "activity_section.key": "338d08f7-00eb-4f83-b257-c72afc3acbf6",
@@ -708,7 +708,7 @@
       "key": "4a687458-fabd-43ee-b597-4d8ee8a1a3c6",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Read Pages 14-15: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the **You must**, **You may not**, and **You may** sections of this page. Then with you partner summarize: *what kinds of things can your teacher help you with?*\n\n**Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
+        "description": "[slide]  **Prompt:** Read Pages 14-15: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the **You must**, **You may not**, and **You may** sections of this page. Then with you partner summarize: *what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
         "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
@@ -799,7 +799,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Tech Setup and Tools for Create PT"
+        "progression": "Tech Setup and Tools for Create PT",
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -822,7 +825,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create PT Coding Workspace"
+        "progression": "Create PT Coding Workspace",
+        "level_keys": [
+          "Create PT Workspace 2020_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
