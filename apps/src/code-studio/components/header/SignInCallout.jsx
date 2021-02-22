@@ -25,12 +25,6 @@ const styles = {
     backgroundColor: CALLOUT_COLOR,
     borderRadius: 3
   },
-  modalBackdrop: {
-    // Most backdrop attributes come from the 'modal-backdrop' class defined by bootstrap
-    // but we need to override the opacity as the default opacity of 0.8 is too dark.
-    // Note that bootstrap defaults the z-index of the backdrop to 1040.
-    opacity: 0.5
-  },
   upTriangle: {
     position: 'absolute',
     top: CALLOUT_TOP - TRIANGLE_HEIGHT,
@@ -101,13 +95,14 @@ export default class SignInCallout extends React.Component {
   render() {
     return (
       <div style={styles.container}>
+        <div style={styles.upTriangle} />
         <div
           className="login-callout"
-          style={styles.modalBackdrop}
           onClick={this.props.handleClose}
-        />
-        <div style={styles.upTriangle} />
-        <div style={styles.content}>{this.renderContent()}</div>
+          style={styles.content}
+        >
+          {this.renderContent()}
+        </div>
       </div>
     );
   }
