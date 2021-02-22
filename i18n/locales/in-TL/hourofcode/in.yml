@@ -68,8 +68,11 @@ in:
   social_hoc2019_oceans_desc: crwdns2289851:0crwdne2289851:0
   hoc_live: crwdns2471238:0crwdne2471238:0
   hoc_live_sign_up_title: crwdns2471240:0crwdne2471240:0
+  hoc_live_learn_title: crwdns2481826:0crwdne2481826:0
   hoc_live_sign_up_message: crwdns2471242:0[here]crwdnd2471242:0%{episodes_url}crwdne2471242:0
+  hoc_live_learn_message: crwdns2481828:0crwdne2481828:0
   hoc_live_join_us: crwdns2471244:0crwdne2471244:0
+  hoc_live_learn_more: crwdns2481830:0crwdne2481830:0
   hoc_overview_oceans_tutorial_header: crwdns2289714:0crwdne2289714:0
   hoc_overview_oceans_tutorial_desc: crwdns2289716:0crwdne2289716:0
   ai_video_title_what_is_ai: crwdns2289853:0crwdne2289853:0

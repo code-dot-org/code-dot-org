@@ -129,11 +129,17 @@ he:
     הראשון של Code.org במסע חדש ללימוד בינה מלאכותית באמצעות תוכנית הלימודים שלנו.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: הצטרפו אלינו
+  hoc_live_learn_more: Learn more
   hoc_overview_oceans_tutorial_header: בינה מלאכותית למען האוקיינוסים והימים
   hoc_overview_oceans_tutorial_desc: 'למדו על בינה מלאכותית (AI), למידת־מכונה, נתוני
     אימון והטייה, תוך בחינת דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות

@@ -3010,6 +3010,49 @@
           "draw bit": {
             "name": "бит зурах"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
         }
       }
     }
