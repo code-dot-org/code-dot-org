@@ -1572,8 +1572,7 @@
       "key": "e8be4727-c687-43bb-a1be-e1b3da780020",
       "position": 4,
       "properties": {
-        "name": "Day 4 & 5 - Present Your Project",
-        "duration": 45
+        "name": "Day 4 & 5 - Present Your Project"
       },
       "seeding_key": {
         "lesson_activity.key": "e8be4727-c687-43bb-a1be-e1b3da780020",
@@ -1586,7 +1585,7 @@
       "key": "070a6c7f-86b0-4bd2-b220-99469d1f1169",
       "position": 5,
       "properties": {
-        "name": "Extension Activity"
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "070a6c7f-86b0-4bd2-b220-99469d1f1169",
@@ -3678,7 +3677,6 @@
       "key": "bc3611fe-1160-47c2-a928-c7c666478ecf",
       "position": 2,
       "properties": {
-        "name": "Example Projects",
         "progression_name": "Example Projects"
       },
       "seeding_key": {
@@ -3690,7 +3688,6 @@
       "key": "f8b211c2-4c26-4946-ab95-74efdb7ca40a",
       "position": 3,
       "properties": {
-        "name": "Create your project",
         "progression_name": "Create your project"
       },
       "seeding_key": {
@@ -3741,7 +3738,7 @@
       "key": "281f3680-418c-4e9f-b18f-dedc11afe3f2",
       "position": 1,
       "properties": {
-        "description": "Students will use this day to build an initial version of their project.\r\n\r\nEquipped with their [r final-project-design-worksheet], students should head to the computers to start bringing their projects to life. \r\n\r\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\r\n\r\nDon’t let the class forget to fill out their [r final-project-design-worksheet] as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \r\n\r\nBe sure that each team member has their own Final Project Design Worksheet, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "Students will use this day to build an initial version of their project.\n\nEquipped with their **End of Course Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their **End of Course Project Guide** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own **End of Course Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3754,7 +3751,8 @@
       "position": 1,
       "properties": {
         "description": "Students will create and present their projects in an approved manner (written, oral, or using multimedia).",
-        "name": "Presentations\r"
+        "name": "Presentations - Day 4",
+        "duration": "45"
       },
       "seeding_key": {
         "activity_section.key": "d9e64ac0-86c1-4035-8bc6-467cac99039f",
@@ -3781,10 +3779,23 @@
       "key": "943225fd-17d1-40af-884c-76370ba25b32",
       "position": 3,
       "properties": {
-        "description": "#### Create:\r\n\r\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like [r google-slides]. For other presentation ideas, visit [r 72-creative-ways-for-your-students-to-show-what-they-know].\r\n\r\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\r\n\r\n#### Present:\r\n\r\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \r\n\r\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
+        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like **Google Slides**. For other presentation ideas, visit [72 Creative Ways for Your Students to Show What They Know](http://minds-in-bloom.com/72-creative-ways-for-students-to-show/) - Website.\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present:\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
       },
       "seeding_key": {
         "activity_section.key": "943225fd-17d1-40af-884c-76370ba25b32",
+        "lesson_activity.key": "e8be4727-c687-43bb-a1be-e1b3da780020"
+      }
+    },
+    {
+      "key": "6a4f65e2-5864-40c5-84bb-d1f70643e914",
+      "position": 4,
+      "properties": {
+        "name": "Presentations - Day 5",
+        "duration": "45",
+        "description": "Students will continue to present their projects in an approved manner (written, oral, or using multimedia). "
+      },
+      "seeding_key": {
+        "activity_section.key": "6a4f65e2-5864-40c5-84bb-d1f70643e914",
         "lesson_activity.key": "e8be4727-c687-43bb-a1be-e1b3da780020"
       }
     },
@@ -3793,7 +3804,8 @@
       "position": 1,
       "properties": {
         "description": "Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\r\n\r\n#### Reflect:\r\n\r\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the Final Project Design Worksheet.  \r\n\r\nEncourage students to ask the questions on the Final Project Design Worksheet and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
-        "name": "Reflect and Try Again (45 min)\r"
+        "name": "Reflect and Try Again ",
+        "duration": "45"
       },
       "seeding_key": {
         "activity_section.key": "f8072f39-4638-4fa9-9ad9-f26e5e9af893",
