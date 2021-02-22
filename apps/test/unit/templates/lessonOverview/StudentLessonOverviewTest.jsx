@@ -53,6 +53,15 @@ describe('StudentLessonOverview', () => {
               download_url: 'download.fake.url',
               type: 'Activity Guide'
             }
+          ],
+          All: [
+            {
+              key: 'all-resource',
+              name: 'All Resource',
+              url: 'fake.url',
+              download_url: 'download.fake.url',
+              type: 'Activity Guide'
+            }
           ]
         },
         vocabularies: [
@@ -108,9 +117,10 @@ describe('StudentLessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
   });
 
-  it('displays the student resources', () => {
+  it('displays the student resources and for all resources', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
     assert.equal(resourceSection.find('ul').length, 1);
+    assert.equal(resourceSection.find('li').length, 2);
   });
 });

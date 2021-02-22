@@ -14,20 +14,6 @@ import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonN
 import {reducedLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 
 const styles = {
-  frontPage: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 40
-  },
-  left: {
-    width: '60%',
-    paddingRight: 20
-  },
-  right: {
-    width: '40%',
-    padding: '0px 10px 10px 20px',
-    borderLeft: 'solid 1px #333'
-  },
   header: {
     margin: '10px 0px',
     display: 'flex',
@@ -38,13 +24,6 @@ const styles = {
     lineHeight: '22px',
     color: color.purple,
     margin: '10px 0px'
-  },
-  copyResourceWarningArea: {
-    color: '#8a6d3b',
-    backgroundColor: '#fcf8e3',
-    border: '2px solid #f5e79e',
-    borderRadius: 4,
-    padding: '10px 10px 0px 10px'
   },
   titleNoTopMargin: {
     marginTop: 0
@@ -74,39 +53,39 @@ class StudentLessonOverview extends Component {
     }
   };
 
-  compileResourceList = key => {
-    const {lesson} = this.props;
-    return (
-      <ul>
-        {lesson.resources[key].map(resource => (
-          <li key={resource.key}>
-            <a
-              href={this.normalizeUrl(resource.url)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {resource.name}
-            </a>
-            {resource.type && ` -  ${resource.type}`}
-            {resource.download_url && (
-              <span>
-                {' ('}
-                <a
-                  href={this.normalizeUrl(resource.download_url)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >{`${i18n.download()}`}</a>
-                {')'}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
-    );
-  };
+  createResourceListItem = resource => (
+    <li key={resource.key}>
+      <a
+        href={this.normalizeUrl(resource.url)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {resource.name}
+      </a>
+      {resource.type && ` -  ${resource.type}`}
+      {resource.download_url && (
+        <span>
+          {' ('}
+          <a
+            href={this.normalizeUrl(resource.download_url)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >{`${i18n.download()}`}</a>
+          {')'}
+        </span>
+      )}
+    </li>
+  );
 
   render() {
     const {lesson, announcements, isSignedIn} = this.props;
+    let lessonResources = [];
+    if (lesson.resources['Student']) {
+      lessonResources = lessonResources.concat(lesson.resources['Student']);
+    }
+    if (lesson.resources['All']) {
+      lessonResources = lessonResources.concat(lesson.resources['All']);
+    }
     return (
       <div>
         <div className="lesson-overview-header">
@@ -153,18 +132,16 @@ class StudentLessonOverview extends Component {
             </ul>
           </div>
         )}
-        {Object.keys(lesson.resources).length > 0 && (
+        {lessonResources.length > 0 && (
           <div id="resource-section">
             <h2>Resources</h2>
-            {lesson.resources['Student'] && (
-              <div>{this.compileResourceList('Student')}</div>
-            )}
-            {lesson.resources['All'] && (
-              <div>
-                <h5>{i18n.forAll()}</h5>
-                {this.compileResourceList('All')}
-              </div>
-            )}
+            <div>
+              <ul>
+                {lessonResources.map(resource =>
+                  this.createResourceListItem(resource)
+                )}
+              </ul>
+            </div>
           </div>
         )}
       </div>
