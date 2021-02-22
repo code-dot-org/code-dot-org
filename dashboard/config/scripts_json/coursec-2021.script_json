@@ -2944,7 +2944,7 @@
       "key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf",
       "position": 1,
       "properties": {
-        "name": "Practice",
+        "name": "Looking Ahead with Minecraft",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2956,7 +2956,6 @@
       "key": "05fb6b2e-8946-4909-a662-a74aaa704845",
       "position": 2,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2968,7 +2967,6 @@
       "key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2980,7 +2978,6 @@
       "key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba",
       "position": 4,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2992,8 +2989,7 @@
       "key": "927f6676-69e5-479e-b467-f1d9b7635888",
       "position": 5,
       "properties": {
-        "description": "Students are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\r\n\r\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\r\n\r\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
       "seeding_key": {
         "activity_section.key": "927f6676-69e5-479e-b467-f1d9b7635888",
@@ -3016,7 +3012,7 @@
       "key": "839db598-cb23-4dc3-881d-e2bd447b6fa1",
       "position": 1,
       "properties": {
-        "description": "#### More Minecraft\r\n\r\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
       },
       "seeding_key": {
         "activity_section.key": "839db598-cb23-4dc3-881d-e2bd447b6fa1",
@@ -5944,7 +5940,7 @@
       "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5970,7 +5966,7 @@
       "chapter": 89,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5996,7 +5992,7 @@
       "chapter": 90,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6022,7 +6018,7 @@
       "chapter": 91,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6048,7 +6044,7 @@
       "chapter": 92,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6074,7 +6070,7 @@
       "chapter": 93,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6100,7 +6096,7 @@
       "chapter": 94,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6126,7 +6122,7 @@
       "chapter": 95,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6152,7 +6148,7 @@
       "chapter": 96,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6178,7 +6174,7 @@
       "chapter": 97,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6204,7 +6200,7 @@
       "chapter": 98,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6231,7 +6227,7 @@
       "chapter": 99,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6258,7 +6254,7 @@
       "chapter": 100,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6284,7 +6280,7 @@
       "chapter": 101,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
