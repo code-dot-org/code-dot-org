@@ -1734,6 +1734,47 @@
           "collect": {
             "name": "เก็บ"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "วาดรูปดวงดาว",
+            "parameters": {
+              "points": "คะแนน",
+              "length": "ความยาว"
+            }
+          },
+          "draw a circle": {
+            "name": "วาดวงกลม"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ความยาว",
+              "repeat": "ทำซ้ำ"
+            }
+          },
+          "draw a triangle": {
+            "name": "วาดสามเหลี่ยม",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a house": {
+            "name": "วาดรูปบ้าน",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          },
+          "draw a square": {
+            "name": "วาดสี่เหลี่ยมจตุรัส",
+            "parameters": {
+              "length": "ความยาว"
+            }
+          }
         }
       }
     }

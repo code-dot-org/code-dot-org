@@ -16342,6 +16342,10 @@ ja:
             End of Course Project:
               key: コース最後のプロジェクト
               name: コース最後のプロジェクト
+            lesson-6:
+              name: マインクラフトで先を見る
+            lesson-5:
+              name: パスワードの強化
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -16425,7 +16429,7 @@ ja:
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_nested_loops:
-              display_name: 入れ子のループ
+              display_name: 条件
             csf_functions:
               display_name: 関数(かんすう) 
             csf_impacts:
@@ -16666,6 +16670,8 @@ ja:
               name: スプライトラボで泳ぐ魚
             Course F Introduction:
               name: スプライトラボの紹介
+            Sprites in Action:
+              name: 実行中のスプライト
           lesson_groups:
             ramp_up:
               display_name: はじめに
