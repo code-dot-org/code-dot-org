@@ -468,13 +468,13 @@ export default function rootReducer(state = initialState, action) {
           ...state,
           selectedFeatures: state.selectedFeatures.filter(
             item => item !== action.currentColumn
-          ),
+          )
           //currentColumn: undefined
         };
       } else {
         return {
           ...state,
-          selectedFeatures: [...state.selectedFeatures, action.currentColumn],
+          selectedFeatures: [...state.selectedFeatures, action.currentColumn]
           //currentColumn: action.currentColumn
         };
       }
@@ -484,7 +484,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       resultsPhase: action.phase
-    }
+    };
   }
   return state;
 }
@@ -906,8 +906,13 @@ export function getShowChooseReserve(state) {
   return !(state.mode && state.mode.hideChooseReserve);
 }
 
+export function getShowSelectTrainer(state) {
+  return !(state.mode && state.mode.hideSelectTrainer);
+}
+
 const panelList = [
   { id: "selectDataset", label: "Import" },
+  { id: "specifyColumns", label: "Columns" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
   { id: "selectTrainer", label: "Trainer" },
@@ -933,7 +938,7 @@ function isPanelVisible(state, panelId) {
   }
 
   if (panelId === "selectTrainer") {
-    if (mode && mode.hideSelectTrainer) {
+    if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
       return false;
     }
   }
@@ -1006,14 +1011,23 @@ export function getPanelButtons(state) {
   if (state.currentPanel === "selectDataset") {
     prev = null;
     next =
-      isPanelVisible(state, "dataDisplayLabel") &&
-      isPanelEnabled(state, "dataDisplayLabel")
+      isPanelVisible(state, "specifyColumns") &&
+      isPanelEnabled(state, "specifyColumns")
+        ? { panel: "specifyColumns", text: "Continue" }
+        : isPanelVisible(state, "dataDisplayLabel") &&
+          isPanelEnabled(state, "dataDisplayLabel")
         ? { panel: "dataDisplayLabel", text: "Continue" }
         : null;
+  } else if (state.currentPanel === "specifyColumns") {
+    prev = { panel: "selectDataset", text: "Back" };
+    next = { panel: "dataDisplayLabel", text: "Continue" };
   } else if (state.currentPanel === "dataDisplayLabel") {
     prev =
-      isPanelVisible(state, "selectDataset") &&
-      isPanelEnabled(state, "selectDataset")
+      isPanelVisible(state, "specifyColumns") &&
+      isPanelEnabled(state, "specifyColumns")
+        ? { panel: "specifyColumns", text: "Back" }
+        : isPanelVisible(state, "selectDataset") &&
+          isPanelEnabled(state, "selectDataset")
         ? { panel: "selectDataset", text: "Back" }
         : null;
     next =

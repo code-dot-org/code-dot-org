@@ -113,7 +113,7 @@ class ColumnInspector extends Component {
             <form>
               <div>
                 <label>
-                  {currentColumnData.readOnly && (
+                  {true && (
                     <div>
                       {currentColumnData.id}: {currentColumnData.dataType}
                     </div>
@@ -126,7 +126,7 @@ class ColumnInspector extends Component {
                     </div>
                   )}
 
-                  {!currentColumnData.readOnly && (
+                  {false && (
                     <div>
                       {currentColumnData.id}: &nbsp;
                       <select

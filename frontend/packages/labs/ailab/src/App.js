@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
+import SpecifyColumns from "./UIComponents/SpecifyColumns";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
@@ -126,6 +127,7 @@ class Panels extends Component {
     return (
       <div id="panel-container" style={panelContainer}>
         {currentPanel === "selectDataset" && <SelectDataset />}
+        {currentPanel === "specifyColumns" && <SpecifyColumns />}
         {currentPanel === "dataDisplayLabel" && <DataDisplay />}
         {currentPanel === "dataDisplayFeatures" && <DataDisplay />}
         {currentPanel === "selectTrainer" && <SelectTrainer />}

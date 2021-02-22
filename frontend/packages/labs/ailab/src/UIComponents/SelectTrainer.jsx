@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   getShowChooseReserve,
+  getShowSelectTrainer,
   setPercentDataToReserve,
   setReserveLocation,
   setSelectedTrainer,
@@ -45,6 +46,7 @@ class SelectTrainer extends Component {
   render() {
     const {
       showChooseReserve,
+      showSelectTrainer,
       reserveLocation,
       percentDataToReserve,
       compatibleTrainers,
@@ -64,7 +66,14 @@ class SelectTrainer extends Component {
             <form>
               <label>
                 Percent of dataset to reserve:{" "}
-                <select
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value={percentDataToReserve}
+                  onChange={this.handleChangePercentReserve}
+                />
+                {/*<select
                   value={percentDataToReserve}
                   onChange={this.handleChangePercentReserve}
                 >
@@ -75,11 +84,12 @@ class SelectTrainer extends Component {
                       </option>
                     );
                   })}
-                </select>
+                </select>*/}
               </label>
               <br />
+              {percentDataToReserve}%
               <br />
-              {percentDataToReserve > 0 && (
+              {/*percentDataToReserve > 0 && (
                 <label>
                   Where in the dataset would you like to pull the test data
                   from?{" "}
@@ -96,52 +106,56 @@ class SelectTrainer extends Component {
                     })}
                   </select>
                 </label>
+              )*/}
+            </form>
+          </div>
+        )}
+        {showSelectTrainer && (
+          <div>
+            <br />
+            <br />
+            <div style={styles.largeText}>Pick an Algorithm</div>
+            <form>
+              <label>
+                <p>Which Machine Learning Algorithm would you like to use?</p>
+                <select
+                  value={this.props.selectedTrainer}
+                  onChange={this.handleChangeSelectTrainer}
+                >
+                  <option>{""}</option>
+                  {Object.keys(compatibleTrainers).map((trainerKey, index) => {
+                    return (
+                      <option key={index} value={trainerKey}>
+                        {compatibleTrainers[trainerKey]["name"]}
+                      </option>
+                    );
+                  })}
+                </select>
+                {this.props.selectedTrainer && (
+                  <div>
+                    <div style={styles.mediumText}>
+                      {compatibleTrainers[selectedTrainer]["mlType"]}
+                    </div>{" "}
+                    {compatibleTrainers[selectedTrainer]["description"]}
+                  </div>
+                )}
+              </label>
+              {(this.props.selectedTrainer === "knnClassify" ||
+                this.props.selectedTrainer === "knnRegress") && (
+                <div>
+                  <label>
+                    <p>What would you like the value of K to be?</p>
+                    <input
+                      /* value of input is handled by default */
+                      onChange={this.handleChangeKValue}
+                      type="text"
+                    />
+                  </label>
+                </div>
               )}
             </form>
           </div>
         )}
-        <br />
-        <br />
-        <div style={styles.largeText}>Pick an Algorithm</div>
-        <form>
-          <label>
-            <p>Which Machine Learning Algorithm would you like to use?</p>
-            <select
-              value={this.props.selectedTrainer}
-              onChange={this.handleChangeSelectTrainer}
-            >
-              <option>{""}</option>
-              {Object.keys(compatibleTrainers).map((trainerKey, index) => {
-                return (
-                  <option key={index} value={trainerKey}>
-                    {compatibleTrainers[trainerKey]["name"]}
-                  </option>
-                );
-              })}
-            </select>
-            {this.props.selectedTrainer && (
-              <div>
-                <div style={styles.mediumText}>
-                  {compatibleTrainers[selectedTrainer]["mlType"]}
-                </div>{" "}
-                {compatibleTrainers[selectedTrainer]["description"]}
-              </div>
-            )}
-          </label>
-          {(this.props.selectedTrainer === "knnClassify" ||
-            this.props.selectedTrainer === "knnRegress") && (
-            <div>
-              <label>
-                <p>What would you like the value of K to be?</p>
-                <input
-                  /* value of input is handled by default */
-                  onChange={this.handleChangeKValue}
-                  type="text"
-                />
-              </label>
-            </div>
-          )}
-        </form>
       </div>
     );
   }
@@ -150,6 +164,7 @@ class SelectTrainer extends Component {
 export default connect(
   state => ({
     showChooseReserve: getShowChooseReserve(state),
+    showSelectTrainer: getShowSelectTrainer(state),
     percentDataToReserve: state.percentDataToReserve,
     reserveLocation: state.reserveLocation,
     selectedTrainer: state.selectedTrainer,

@@ -50,10 +50,13 @@ const sampleModes = {
   },
 
   "ml-mini-project-ailab": {
-    datasets: ["candy", "titanic", "foods"]
+    datasets: ["candy", "titanic", "foods"],
+    hideSelectTrainer: "knnClassify"
   },
 
-  "ml-final-project-ailab": {}
+  "ml-final-project-ailab": {
+    hideSelectTrainer: "knnClassify"
+  }
 };
 
 // Look for a ?mode= parameter on the URL

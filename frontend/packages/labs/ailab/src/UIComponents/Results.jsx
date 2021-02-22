@@ -57,44 +57,46 @@ class Results extends Component {
         )}
 
         {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
-          <div style={{ ...styles.subPanel, ...styles.scrollContents }}>
-            <table>
-              <thead>
-                <tr>
-                  {this.props.selectedFeatures.map((feature, index) => {
-                    return <th key={index}>{feature}</th>;
+          <div>
+            <p>
+              {this.props.percentDataToReserve}% of the training data was reserved
+              to test the accuracy of the newly trained model.
+            </p>
+
+            <div style={{ ...styles.subPanel, ...styles.scrollContents }}>
+              <table>
+                <thead>
+                  <tr>
+                    {this.props.selectedFeatures.map((feature, index) => {
+                      return <th key={index}>{feature}</th>;
+                    })}
+                    <th>Expected Label: {this.props.labelColumn}</th>
+                    <th>Predicted Label: {this.props.labelColumn}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.props.accuracyCheckExamples.map((examples, index) => {
+                    return (
+                      <tr key={index}>
+                        {examples.map((example, i) => {
+                          return <td key={i}>{example}</td>;
+                        })}
+                        <td>{this.props.accuracyCheckLabels[index]}</td>
+                        <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
+                        {this.props.accuracyCheckLabels[index] ===
+                          this.props.accuracyCheckPredictedLabels[index] && (
+                          <td style={styles.ready}>&#x2713;</td>
+                        )}
+                      </tr>
+                    );
                   })}
-                  <th>Expected Label: {this.props.labelColumn}</th>
-                  <th>Predicted Label: {this.props.labelColumn}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.props.accuracyCheckExamples.map((examples, index) => {
-                  return (
-                    <tr key={index}>
-                      {examples.map((example, i) => {
-                        return <td key={i}>{example}</td>;
-                      })}
-                      <td>{this.props.accuracyCheckLabels[index]}</td>
-                      <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
-                      {this.props.accuracyCheckLabels[index] ===
-                        this.props.accuracyCheckPredictedLabels[index] && (
-                        <td style={styles.ready}>&#x2713;</td>
-                      )}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
 
         <div style={{opacity: this.props.resultsPhase >= 2 ? 1 : 0}}>
-          <p>
-            {this.props.percentDataToReserve}% of the training data was reserved
-            to test the accuracy of the newly trained model.
-          </p>
-
           {isNaN(this.props.summaryStat.stat) && (
             <p>
               An accuracy score was not calculated because no training data was
