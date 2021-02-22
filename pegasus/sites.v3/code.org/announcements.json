@@ -2,7 +2,7 @@
   "pages": {
     "/projects": "home-learning-2020",
     "/home": "teacher-apps-open-2021",
-    "/courses": "teacher-apps-open-2021-2"
+    "/courses": "teacher-apps-open-2021"
   },
 
   "banners": {
@@ -11,15 +11,7 @@
       "title": "Sign up for Professional Learning",
       "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
       "buttonText": "Join us",
-      "buttonUrl": "https://bit.ly/PLsignup-teacherdash",
-      "buttonId": "teacher-apps-open-2021-sign-up"
-    },
-    "teacher-apps-open-2021-2": {
-      "image": "/images/fill-970x562/professional-learning-2021-1.jpg",
-      "title": "Sign up for Professional Learning",
-      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
-      "buttonText": "Join us",
-      "buttonUrl": "http://bit.ly/PLsignup-teach",
+      "buttonUrl": "https://code.org/educate/professional-learning",
       "buttonId": "teacher-apps-open-2021-sign-up"
     },
     "teacher-apps-closing-2020": {
