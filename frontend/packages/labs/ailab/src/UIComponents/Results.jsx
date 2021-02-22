@@ -58,12 +58,14 @@ class Results extends Component {
 
         {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
           <div>
-            <p>
-              {this.props.percentDataToReserve}% of the training data was reserved
-              to test the accuracy of the newly trained model.
-            </p>
+            {this.props.percentDataToReserve}% of the training data was reserved
+            to test the accuracy of the newly trained model.
+          </div>
+        )}
 
-            <div style={{ ...styles.subPanel, ...styles.scrollContents }}>
+        {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
+          <div style={styles.scrollableContentsTinted}>
+            <div style={styles.scrollingContents}>
               <table>
                 <thead>
                   <tr>
@@ -125,8 +127,6 @@ class Results extends Component {
                   </div>
                 </div>
               )}
-            <br />
-            <br />
           </div>
         </div>
       </div>

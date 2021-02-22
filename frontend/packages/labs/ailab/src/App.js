@@ -66,11 +66,23 @@ BodyContainer.propTypes = {
   children: PropTypes.node
 };
 
-const Container = props => (
-  <div style={styles.panelContainer}>{props.children}</div>
+const ContainerLeft = props => (
+  <div style={{ ...styles.panelContainer, ...styles.panelContainerLeft }}>
+    {props.children}
+  </div>
 );
 
-Container.propTypes = {
+ContainerLeft.propTypes = {
+  children: PropTypes.node
+};
+
+const ContainerRight = props => (
+  <div style={{ ...styles.panelContainer, ...styles.panelContainerRight }}>
+    {props.children}
+  </div>
+);
+
+ContainerRight.propTypes = {
   children: PropTypes.node
 };
 
@@ -107,28 +119,32 @@ class App extends Component {
       <div style={styles.app}>
         {currentPanel === "selectDataset" && (
           <BodyContainer>
-            <Container>
+            <ContainerLeft>
               <SelectDataset />
-            </Container>
-            <DataCard />
+            </ContainerLeft>
+            <ContainerRight>
+              <DataCard />
+            </ContainerRight>
           </BodyContainer>
         )}
 
         {currentPanel === "specifyColumns" && (
           <BodyContainer>
-            <Container>
+            <ContainerLeft>
               <SpecifyColumns />
-            </Container>
+            </ContainerLeft>
           </BodyContainer>
         )}
 
         {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
           <BodyContainer>
-            <Container>
+            <ContainerLeft>
               <DataDisplay />
-            </Container>
-            <ColumnInspector />
-            <CrossTab />
+            </ContainerLeft>
+            <ContainerRight>
+              <ColumnInspector />
+              <CrossTab />
+            </ContainerRight>
           </BodyContainer>
         )}
 
@@ -150,10 +166,14 @@ class App extends Component {
 
         {currentPanel === "results" && (
           <BodyContainer>
-            <Container>
+            <ContainerLeft>
               <Results />
-            </Container>
-            {resultsPhase === 3 && <Predict />}
+            </ContainerLeft>
+            {resultsPhase === 3 &&
+              <ContainerRight>
+                <Predict />
+              </ContainerRight>
+            }
           </BodyContainer>
         )}
 

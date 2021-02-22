@@ -36,7 +36,7 @@ class Predict extends Component {
 
   render() {
     return (
-      <div id="predict" style={styles.rightPanel}>
+      <div id="predict" style={{...styles.panel, ...styles.rightPanel}}>
         <div style={styles.largeText}>Test the Model</div>
         <form>
           {this.props.selectedContinuousFeatures.map((feature, index) => {
@@ -58,7 +58,7 @@ class Predict extends Component {
         <form>
           {this.props.selectedCategoricalFeatures.map((feature, index) => {
             return (
-              <div style={{marginBottom: 10}} key={index}>
+              <div style={styles.cardRow} key={index}>
                 <label>
                   {feature}:
                   &nbsp;
@@ -84,7 +84,7 @@ class Predict extends Component {
         <br />
         <button
           type="button"
-          style={{ width: "20%" }}
+          style={styles.regularButton}
           onClick={this.onClickPredict}
         >
           Predict!

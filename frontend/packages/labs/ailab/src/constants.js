@@ -28,7 +28,7 @@ export const styles = {
   },
 
   bold: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif'
   },
 
   error: {
@@ -45,6 +45,15 @@ export const styles = {
     float: "left",
     width: "70%",
     height: "100%"
+  },
+
+  panelContainerLeft: {
+    width: "70%"
+  },
+
+  panelContainerRight: {
+    marginLeft: 10,
+    width: "calc(30% - 20px)"
   },
 
   panelContainerFullWidth: {
@@ -81,13 +90,34 @@ export const styles = {
     padding: 20,
     backgroundColor: "white", // rgb(230,230,230)",
     borderRadius: 5,
-    xwidth: "calc(70% - 100px)",
-    //border: "solid 1px black",
     overflow: "hidden",
     height: "100%",
     boxSizing: "border-box",
     display: "flex",
     flexDirection: "column"
+  },
+
+  scrollableContents: {
+    overflow: "hidden"
+  },
+
+  scrollableContentsTinted: {
+    overflow: "hidden",
+    borderRadius: 5,
+    backgroundColor: "rgb(206, 206, 206)"
+  },
+
+  scrollingContents: {
+    padding: 15,
+    overflow: "scroll",
+    height: "100%",
+    boxSizing: "border-box"
+  },
+
+  contents: {
+    borderRadius: 5,
+    backgroundColor: "rgb(206, 206, 206)",
+    padding: 15
   },
 
   panelContentLeft: {
@@ -101,7 +131,7 @@ export const styles = {
     borderRadius: 5,
     //marginTop: 20,
     //border: "solid 1px white",
-    overflow: "hidden"
+    //overflow: "hidden"
   },
 
   scrollContents: {
@@ -135,6 +165,10 @@ export const styles = {
   },
 
   rightPanel: {
+    fontSize: 13
+  },
+
+  rightPanelX: {
     float: "left",
     marginLeft: 10,
     width: "calc(30% - 20px)",
@@ -276,19 +310,6 @@ export const styles = {
     cursor: "pointer"
   },
 
-  predictButton: {
-    backgroundColor: labelColor
-  },
-  predictBasedButton: {
-    backgroundColor: featureColor
-  },
-  dontPredictButton: {
-    backgroundColor: labelColor
-  },
-  dontPredictBasedButton: {
-    backgroundColor: featureColor
-  },
-
   statement: {
     fontSize: 36
   },
@@ -320,30 +341,32 @@ export const styles = {
   },
 
   trainBot: {
-    position: 'relative',
-    width: '20%'
+    position: "relative",
+    width: "20%"
   },
   trainBotHead: {
-    transition: 'transform 500ms',
-    left: '3%',
-    width: '43%',
-    top: '0%',
-    position: 'absolute',
-    direction: 'ltr'
+    transition: "transform 500ms",
+    left: "3%",
+    width: "43%",
+    top: "0%",
+    position: "absolute",
+    direction: "ltr"
   },
   trainBotOpen: {
-    transform: 'rotate(90deg)',
-    transformOrigin: 'bottom right',
-    direction: 'ltr'
+    transform: "rotate(90deg)",
+    transformOrigin: "bottom right",
+    direction: "ltr"
   },
   trainBotBody: {
-    width: '49%',
-    marginTop: '30%',
-    direction: 'ltr'
+    width: "49%",
+    marginTop: "30%",
+    direction: "ltr"
   },
 
   cardRow: {
     marginTop: 5,
     marginBottom: 5
-  }
+  },
+
+  regularButton: { width: "20%" }
 };

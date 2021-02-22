@@ -24,10 +24,10 @@ class CrossTab extends Component {
     const { currentColumn, crossTabData } = this.props;
 
     return !currentColumn && crossTabData && (
-      <div style={styles.rightPanel} id="cross-tab">
+      <div id="cross-tab" style={{...styles.panel, ...styles.rightPanel}}>
         <div style={styles.largeText}>Correlation Information</div>
-        <div style={styles.subPanel}>
-          <div style={styles.scrollContents}>
+        <div style={styles.scrollableContents}>
+          <div style={styles.scrollingContents}>
             <table>
               <thead>
                 <tr>

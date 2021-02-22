@@ -69,7 +69,7 @@ class ColumnInspector extends Component {
     }
 
     return currentColumnData && (
-      <div id="column-inspector" style={styles.rightPanel}>
+      <div id="column-inspector" style={{...styles.panel, ...styles.rightPanel}}>
         <div style={styles.largeText}>Column Information</div>
 
         {currentColumnData.dataType === ColumnTypes.OTHER && (

@@ -42,40 +42,42 @@ class SpecifyColumns extends Component {
     return (
       <div id="select-dataset" style={styles.panel}>
         <div style={styles.largeText}>Review and adjust the column types</div>
-        <div style={{ ...styles.subPanel, ...styles.scrollContents }}>
-          {Object.keys(data[0]).map(key => {
-            return (
-              <div
-                key={key}
-                style={{
-                  marginBottom: 10
-                }}
-              >
+        <div style={styles.scrollableContentsTinted}>
+          <div style={styles.scrollingContents}>
+            {Object.keys(data[0]).map(key => {
+              return (
                 <div
+                  key={key}
                   style={{
-                    ...styles.bold,
-                    display: "inline-block",
-                    width: "20%"
+                    marginBottom: 10
                   }}
                 >
-                  {key}
-                </div>
+                  <div
+                    style={{
+                      ...styles.bold,
+                      display: "inline-block",
+                      width: "20%"
+                    }}
+                  >
+                    {key}
+                  </div>
 
-                <select
-                  onChange={event => this.handleChangeDataType(event, key)}
-                  value={columnsByDataType[key]}
-                >
-                  {Object.values(ColumnTypes).map((option, index) => {
-                    return (
-                      <option key={index} value={option}>
-                        {option}
-                      </option>
-                    );
-                  })}
-                </select>
-              </div>
-            );
-          })}
+                  <select
+                    onChange={event => this.handleChangeDataType(event, key)}
+                    value={columnsByDataType[key]}
+                  >
+                    {Object.values(ColumnTypes).map((option, index) => {
+                      return (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
