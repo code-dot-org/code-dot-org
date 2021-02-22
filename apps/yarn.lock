@@ -1638,39 +1638,6 @@
     remark-stringify "^6.0.0"
     unified "^7.0.0"
 
-"@codemirror/autocomplete@^0.17.0":
-  version "0.17.4"
-  resolved "https://registry.yarnpkg.com/@codemirror/autocomplete/-/autocomplete-0.17.4.tgz#06e1ff689b07c7fb3a4a9de121e94282b49c86ee"
-  integrity sha512-fni2OJC1aStMeQaQQE9lMSJAntWoDeGucLMGbf8XZrTNxZR1IoWKLXBy9YoA0CQfJX/VNnJljNG7WRvwxHmBiQ==
-  dependencies:
-    "@codemirror/language" "^0.17.0"
-    "@codemirror/state" "^0.17.0"
-    "@codemirror/text" "^0.17.0"
-    "@codemirror/tooltip" "^0.17.0"
-    "@codemirror/view" "^0.17.0"
-    lezer-tree "^0.13.0"
-
-"@codemirror/basic-setup@^0.17.1":
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/@codemirror/basic-setup/-/basic-setup-0.17.1.tgz#3c8b507da7f2438098bf7618fa69ce0a9cbe0119"
-  integrity sha512-d17H3bcseOia/YxT4Zfqn455wBRfbs3aKFAg9+FoP11BeQLFAqxiDIXtbwtfFbNx4rUvtmHkzeaMUZHNEp5ZSQ==
-  dependencies:
-    "@codemirror/autocomplete" "^0.17.0"
-    "@codemirror/closebrackets" "^0.17.0"
-    "@codemirror/commands" "^0.17.0"
-    "@codemirror/comment" "^0.17.0"
-    "@codemirror/fold" "^0.17.0"
-    "@codemirror/gutter" "^0.17.0"
-    "@codemirror/highlight" "^0.17.0"
-    "@codemirror/history" "^0.17.0"
-    "@codemirror/language" "^0.17.0"
-    "@codemirror/lint" "^0.17.0"
-    "@codemirror/matchbrackets" "^0.17.0"
-    "@codemirror/rectangular-selection" "^0.17.0"
-    "@codemirror/search" "^0.17.0"
-    "@codemirror/state" "^0.17.0"
-    "@codemirror/view" "^0.17.0"
-
 "@codemirror/closebrackets@^0.17.0":
   version "0.17.2"
   resolved "https://registry.yarnpkg.com/@codemirror/closebrackets/-/closebrackets-0.17.2.tgz#f78c750c43da4655bf9026a937fd37324767193d"
@@ -1763,17 +1730,6 @@
     lezer "^0.13.0"
     lezer-tree "^0.13.0"
 
-"@codemirror/lint@^0.17.0":
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/@codemirror/lint/-/lint-0.17.1.tgz#970dbfdb52cef35ff0210d22230dbff1c7dab7a4"
-  integrity sha512-Jzhf3g+hIr8frQaLsRSYJgM3BFVt7qQ59J0l/oqkjx8LsqYn0zbCM6zHnKMC0lOUdZXf7O8D24jTmVJb/8n4YQ==
-  dependencies:
-    "@codemirror/panel" "^0.17.0"
-    "@codemirror/state" "^0.17.0"
-    "@codemirror/tooltip" "^0.17.0"
-    "@codemirror/view" "^0.17.0"
-    crelt "^1.0.5"
-
 "@codemirror/matchbrackets@^0.17.0":
   version "0.17.2"
   resolved "https://registry.yarnpkg.com/@codemirror/matchbrackets/-/matchbrackets-0.17.2.tgz#9dd72046d7bf09550612b2553c41317ed22577b1"
@@ -1838,14 +1794,6 @@
   integrity sha512-zqA5SVRq9/oBZViYx4W2OiJkwf0GCWhfIkXGRbNImlNlml+mmnM/EFyx8rVan53rwl2MiMyH6gUJEihNKS/INg==
   dependencies:
     "@codemirror/highlight" "^0.17.0"
-    "@codemirror/state" "^0.17.0"
-    "@codemirror/view" "^0.17.0"
-
-"@codemirror/tooltip@^0.17.0":
-  version "0.17.2"
-  resolved "https://registry.yarnpkg.com/@codemirror/tooltip/-/tooltip-0.17.2.tgz#1dcf43626fedb2f2fd4261b5ad555e7670c1f23d"
-  integrity sha512-Ux2lKYzTUCiAluu3PJj78e58eGQeCRaFWpzn8pg4KQIFxSVyZoCv5VWcIp/1i4bLGyrUWDWwP0CAxGq759AwaQ==
-  dependencies:
     "@codemirror/state" "^0.17.0"
     "@codemirror/view" "^0.17.0"
 
