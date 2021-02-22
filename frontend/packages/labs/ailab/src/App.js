@@ -14,7 +14,6 @@ import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
 import {
-  getPanels,
   getPanelButtons,
   setCurrentPanel,
   validationMessages
@@ -158,7 +157,6 @@ class App extends Component {
           )}
 
           <PanelButtons
-            panels={panels}
             panelButtons={panelButtons}
             currentPanel={currentPanel}
             setCurrentPanel={setCurrentPanel}
@@ -171,7 +169,6 @@ class App extends Component {
 
 export default connect(
   state => ({
-    panels: getPanels(state),
     panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
     validationMessages: validationMessages(state),

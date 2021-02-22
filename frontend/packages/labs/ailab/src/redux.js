@@ -922,30 +922,13 @@ const panelList = [
   { id: "saveModel", label: "Save" }
 ];
 
-function isPanelVisible(state, panelId) {
-  const mode = state.mode;
-
+function isPanelEnabled(state, panelId) {
   if (panelId === "selectDataset") {
     if (mode && mode.datasets && mode.datasets.length === 1) {
       return false;
     }
   }
 
-  if (panelId === "saveModel") {
-    if (mode && mode.hideSave) {
-      return false;
-    }
-  }
-
-  if (panelId === "selectTrainer") {
-    if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
-      return false;
-    }
-  }
-  return true;
-}
-
-function isPanelEnabled(state, panelId) {
   if (panelId === "dataDisplayLabel") {
     if (state.data.length === 0) {
       return false;
@@ -970,6 +953,12 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
+  if (panelId === "selectTrainer") {
+    if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
+      return false;
+    }
+  }
+
   if (panelId === "trainModel") {
     if (!readyToTrain(state)) {
       return false;
@@ -985,23 +974,13 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  // Also see if the previous panel was visible, recursively.
-  const panelIndex = panelList.findIndex(element => element.id === panelId);
-  if (panelIndex > 0) {
-    return isPanelEnabled(state, panelList[panelIndex - 1].id);
+  if (panelId === "saveModel") {
+    if (mode && mode.hideSave) {
+      return false;
+    }
   }
 
   return true;
-}
-
-export function getPanels(state) {
-  return panelList
-    .filter(panel => {
-      return isPanelVisible(state, panel.id);
-    })
-    .map(panel => {
-      return { ...panel, enabled: isPanelEnabled(state, panel.id) };
-    });
 }
 
 // Given the current panel, return the appropriate previous & next buttons.
@@ -1010,47 +989,35 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next =
-      isPanelVisible(state, "specifyColumns") &&
-      isPanelEnabled(state, "specifyColumns")
-        ? { panel: "specifyColumns", text: "Continue" }
-        : isPanelVisible(state, "dataDisplayLabel") &&
-          isPanelEnabled(state, "dataDisplayLabel")
-        ? { panel: "dataDisplayLabel", text: "Continue" }
-        : null;
+    next = isPanelEnabled(state, "specifyColumns")
+      ? { panel: "specifyColumns", text: "Continue" }
+      : isPanelEnabled(state, "dataDisplayLabel")
+      ? { panel: "dataDisplayLabel", text: "Continue" }
+      : null;
   } else if (state.currentPanel === "specifyColumns") {
     prev = { panel: "selectDataset", text: "Back" };
     next = { panel: "dataDisplayLabel", text: "Continue" };
   } else if (state.currentPanel === "dataDisplayLabel") {
-    prev =
-      isPanelVisible(state, "specifyColumns") &&
-      isPanelEnabled(state, "specifyColumns")
-        ? { panel: "specifyColumns", text: "Back" }
-        : isPanelVisible(state, "selectDataset") &&
-          isPanelEnabled(state, "selectDataset")
-        ? { panel: "selectDataset", text: "Back" }
-        : null;
-    next =
-      isPanelVisible(state, "dataDisplayFeatures") &&
-      isPanelEnabled(state, "dataDisplayFeatures")
-        ? { panel: "dataDisplayFeatures", text: "Continue" }
-        : null;
+    prev = isPanelEnabled(state, "specifyColumns")
+      ? { panel: "specifyColumns", text: "Back" }
+      : isPanelEnabled(state, "selectDataset")
+      ? { panel: "selectDataset", text: "Back" }
+      : null;
+    next = isPanelEnabled(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      : null;
   } else if (state.currentPanel === "dataDisplayFeatures") {
     prev = { panel: "dataDisplayLabel", text: "Back" };
-    next =
-      isPanelVisible(state, "selectTrainer") &&
-      isPanelEnabled(state, "selectTrainer")
-        ? { panel: "selectTrainer", text: "Continue" }
-        : isPanelVisible(state, "trainModel") &&
-          isPanelEnabled(state, "trainModel")
-        ? { panel: "trainModel", text: "Continue" }
-        : null;
+    next = isPanelEnabled(state, "selectTrainer")
+      ? { panel: "selectTrainer", text: "Continue" }
+      : isPanelEnabled(state, "trainModel")
+      ? { panel: "trainModel", text: "Continue" }
+      : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
-    next =
-      isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
-        ? { panel: "trainModel", text: "Continue" }
-        : null;
+    next = isPanelEnabled(state, "trainModel")
+      ? { panel: "trainModel", text: "Continue" }
+      : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
       prev = null;
