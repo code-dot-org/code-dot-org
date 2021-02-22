@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'pdf/conversion'
 
 # When adding a new model, update the following:
 # - serialize_seeding_json
@@ -14,6 +15,7 @@ module Services
   class ScriptSeedTest < ActiveSupport::TestCase
     setup do
       Game.game_cache = nil
+      PDF.stubs(:generate_from_url)
     end
 
     # Tests serialization of a "full Script tree" - a Script with all of the associated models under it populated.
