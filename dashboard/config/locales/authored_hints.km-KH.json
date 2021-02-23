@@ -2929,6 +2929,23 @@
         },
         "courseE_farmer_functions9b": {
           "courseE_farmer_functions9b_b": "ប្រើ `repeat until pumpkin` សម្រាប់ផ្លាស់ទីគ្រប់ផ្លូវទាំងអស់។"
+        },
+        "courseE_artist_concept1": {
+          "courseE_artist_concept1_a": "ឆកោនមានជ្រុង៥០ភីកសែលនិង ៦០ ដឺក្រេបែរទៅខាងស្តាំ។"
+        },
+        "courseE_artist_concept1_2018": {
+          "courseE_artist_concept1_a": "ឆកោនមានជ្រុង៥០ភីកសែលនិង ៦០ ដឺក្រេបែរទៅខាងស្តាំ។"
+        },
+        "courseE_bee_concept2": {
+          "courseE_bee_concept2_a": "តើ `while` loopប្រើនៅទីនេះបានឬ?"
+        },
+        "courseE_bee_concept2_2018": {
+          "courseE_bee_concept2_a": "តើ `while` loopប្រើនៅទីនេះបានឬ?"
+        },
+        "courseE_farmer_functions10b": {
+          "courseE_farmer_functions10b_a": "ដំបូងអ្នកត្រូវបង្កើតអនុគមន៍របស់អ្នកឡើងវិញ។",
+          "courseE_farmer_functions10b_b": "តើអ្នកត្រូវបត់ទៅផ្លូវណាបន្ទាប់ពីផ្លែល្ពៅដំបូង?",
+          "courseE_farmer_functions10b_c": "ក្រឡេកមើលទៅរូបផ្គុំចុងក្រោយប្រសិន បើអ្នកត្រូវការជំនួយបង្កើតអនុគមន៍។"
         }
       }
     }

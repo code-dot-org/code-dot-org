@@ -5505,7 +5505,7 @@ ru:
             csf_digcit:
               display_name: Цифровое гражданство
             csf_nested_loops:
-              display_name: Вложенные циклы
+              display_name: Условные команды
             csf_functions:
               display_name: функции
         coursef-2021:
@@ -5617,6 +5617,8 @@ ru:
               name: Программирование симулятора
             Course F Introduction:
               name: Представляем Лабораторию спрайтов
+            Sprites in Action:
+              name: Спрайты в действии
           lesson_groups:
             ramp_up:
               display_name: Введение

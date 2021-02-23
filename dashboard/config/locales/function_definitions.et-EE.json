@@ -1262,6 +1262,47 @@
           "collect": {
             "name": "kogu"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "points": "punktid",
+              "length": "pikkus"
+            }
+          },
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
         }
       }
     }

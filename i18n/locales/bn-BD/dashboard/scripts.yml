@@ -1729,8 +1729,10 @@ bn:
             'Functions: Songwriting':
               name: গান লিখা
           lesson_groups:
+            ramp_up:
+              display_name: চক্র
             csf_nested_loops:
-              display_name: নেষ্টেড লুপ
+              display_name: শর্তযুক্ত
             csf_functions:
               display_name: ফাংশনগুলি
         coursef-2021:
