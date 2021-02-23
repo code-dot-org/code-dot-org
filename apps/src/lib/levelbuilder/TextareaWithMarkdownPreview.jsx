@@ -56,7 +56,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
             <TextareaWithImageUpload
               markdown={this.props.markdown}
               name={this.props.name}
-              inputRows={this.props.inputRows}
+              inputRows={this.props.inputRows || 5}
               handleMarkdownChange={this.props.handleMarkdownChange}
             />
           </div>

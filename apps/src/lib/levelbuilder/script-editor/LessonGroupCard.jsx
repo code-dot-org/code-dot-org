@@ -295,7 +295,11 @@ class LessonGroupCard extends Component {
                 <TextareaWithImageUpload
                   markdown={this.props.lessonGroup.description}
                   name={'description'}
-                  inputRows={1}
+                  inputRows={Math.max(
+                    this.props.lessonGroup.description.split(/\r\n|\r|\n/)
+                      .length + 1,
+                    2
+                  )}
                   handleMarkdownChange={this.handleChangeDescription}
                 />
               </label>
@@ -304,7 +308,11 @@ class LessonGroupCard extends Component {
                 <TextareaWithImageUpload
                   markdown={this.props.lessonGroup.bigQuestions}
                   name={'big_questions'}
-                  inputRows={1}
+                  inputRows={Math.max(
+                    this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
+                      .length + 1,
+                    2
+                  )}
                   handleMarkdownChange={this.handleChangeBigQuestions}
                 />
               </label>

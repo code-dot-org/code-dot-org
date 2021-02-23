@@ -129,6 +129,8 @@ describe('LessonGroupCard', () => {
     expect(wrapper.find('TextareaWithImageUpload')).to.have.lengthOf(0);
 
     expect(wrapper.contains('Lesson Group Name:')).to.be.false;
+    expect(wrapper.contains('Big Questions')).to.be.false;
+    expect(wrapper.contains('Description')).to.be.false;
   });
 
   it('adds lesson when button pressed', () => {
