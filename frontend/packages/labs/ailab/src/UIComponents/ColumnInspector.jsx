@@ -40,14 +40,27 @@ const barData = {
   datasets: [
     {
       label: "",
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
+      backgroundColor: "rgba(255,99,132,0.2)",
+      borderColor: "rgba(255,99,132,1)",
       borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
+      hoverBackgroundColor: "rgba(255,99,132,0.4)",
+      hoverBorderColor: "rgba(255,99,132,1)",
       data: []
     }
   ]
+};
+
+const chartOptions = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true
+        }
+      }
+    ]
+  },
+  maintainAspectRatio: false
 };
 
 class ColumnInspector extends Component {
@@ -98,7 +111,6 @@ class ColumnInspector extends Component {
         return currentColumnData.frequencies[option];
       });
       barData.datasets[0].label = currentColumnData.id;
-
     } else if (
       currentColumnData &&
       currentColumnData.dataType === ColumnTypes.CONTINUOUS
@@ -144,16 +156,14 @@ class ColumnInspector extends Component {
                       data={barData}
                       width={100}
                       height={150}
-                      options={{
-                        maintainAspectRatio: false
-                      }}
+                      options={chartOptions}
                     />
                   </div>
                 )}
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>
-                  <Scatter data={scatterData} />
+                  <Scatter data={scatterData} options={chartOptions} />
 
                   {currentColumnData.range && (
                     <div>
