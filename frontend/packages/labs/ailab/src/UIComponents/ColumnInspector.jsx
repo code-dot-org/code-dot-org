@@ -89,19 +89,12 @@ class ColumnInspector extends Component {
   render() {
     const { currentColumnData, rangesByColumn } = this.props;
 
-    let labels, data, options;
     if (
       currentColumnData &&
       currentColumnData.dataType === ColumnTypes.CATEGORICAL
     ) {
-      labels = Object.values(currentColumnData.uniqueOptions);
-      data = labels.map(option => {
-        return currentColumnData.frequencies[option];
-      });
-      options = { fillColor: "#000", strokeColor: "#000" };
-
       barData.labels = Object.values(currentColumnData.uniqueOptions);
-      barData.datasets[0].data = labels.map(option => {
+      barData.datasets[0].data = barData.labels.map(option => {
         return currentColumnData.frequencies[option];
       });
       barData.datasets[0].label = currentColumnData.id;
@@ -144,7 +137,7 @@ class ColumnInspector extends Component {
               </label>
 
               {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
-                labels.length < 5 && (
+                barData.labels.length < 5 && (
                   <div>
                     <br />
                     <Bar
