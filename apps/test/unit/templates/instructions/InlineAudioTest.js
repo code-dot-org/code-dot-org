@@ -126,31 +126,6 @@ describe('InlineAudio', function() {
     expect(component.state().playing).to.be.true;
   });
 
-  it('plays audio after click if autoplay play() throws a dom exception', async () => {
-    const playStub = sinon.stub(FakeAudio.prototype, 'play');
-    playStub.rejects(new DOMException());
-    // playStub.onSecondCall().resolves();
-
-    const component = mount(
-      <div id="tts-autoplay-trigger">
-        <StatelessInlineAudio
-          assetUrl={function() {}}
-          ttsAutoplayEnabled={true}
-          autoplayTriggerElementId="tts-autoplay-trigger"
-        />
-      </div>
-    );
-
-    await playStub;
-
-    sinon.assert.calledOnce(playStub);
-    expect(component.find(StatelessInlineAudio).state().playing).to.be.false;
-    console.log(component.first().debug());
-    component.first().simulate('click');
-    console.log('click happened');
-    sinon.assert.calledTwice(playStub);
-  });
-
   it('only initializes Audio once', function() {
     sinon.spy(window, 'Audio');
     const component = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
