@@ -6,6 +6,21 @@ Scenario: Should see callout on 20-hour farmer lesson
   And I wait for the page to fully load
   And element ".login-callout" is visible
 
+@no_mobile
+Scenario: Should be able to clear cookies and session storage to see callout again
+  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And element ".login-callout" is visible
+  And I dismiss the login reminder
+  And I reload the page
+  And I delete the cookie named "hide_signin_callout"
+  And I clear session storage
+  And I reload the page
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And element ".login-callout" is visible
+
 @as_student
 Scenario: Should not see callout on farmer lesson if logged in
   Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
@@ -37,11 +52,10 @@ Scenario: See age callout, not signin callout on hour of code
   And I wait until I don't see selector "#p5_loading"
   And I select age 10 in the age dialog
 
+# Cookies operate on mobile according to device settings: test only passes on rerun
+@no_mobile
 Scenario: After dismissing the callout, it should not reappear upon refresh
   Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
-  And I delete the cookie named "hide_signin_callout"
-  And I clear session storage
-  Then I reload the page
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".login-callout" is visible
