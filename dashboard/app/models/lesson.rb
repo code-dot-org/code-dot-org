@@ -255,7 +255,6 @@ class Lesson < ApplicationRecord
         unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
-      puts "data.script.name.#{script.name}.lessons.#{key}.description_student"
 
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
