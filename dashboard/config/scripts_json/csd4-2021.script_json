@@ -736,7 +736,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "f7e5ef43-65ac-4a19-90b2-3b1c9231c3f4",
@@ -820,7 +820,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "34e38d74-53c5-45f5-94c0-6f381f367946",
@@ -1790,7 +1790,7 @@
       "key": "bffb7609-21c3-4e03-b16a-e4753c421cbc",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Let's think about products that look good vs products that are easy to use. \r\n\r\n* Can you think of any examples of a product that looked good but was hard to use? \r\n* What about something that was easy to use, but you didn't like how it looked.",
+        "description": "**Prompt:** Let's think about products that look good vs products that are easy to use. \n\n* Can you think of any examples of a product that looked good but was hard to use? \n* What about something that was easy to use, but you didn't like how it looked.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -1805,7 +1805,6 @@
         "description": "**Discuss:** Have students journal their thoughts. As they share with their neighbors what they wrote, ask them to also discuss whether they care about a product being usable or looking good. After a couple of minutes allow a couple of partners to bubble up what they discussed.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Highlight that there are many kinds of user needs that we need to empathize with as designers. In particular call out that usability of a product is an important and separate consideration from whether it is merely aesthetically pleasing.\r\n"
           }
@@ -1832,7 +1831,7 @@
       "key": "66cabdfb-9de1-4019-8c82-60f8bcc9d565",
       "position": 4,
       "properties": {
-        "description": "[slide] **Question of the Day:** How can we make sure a product is meeting the needs of a user?"
+        "description": "**Question of the Day:** How can we make sure a product is meeting the needs of a user?"
       },
       "seeding_key": {
         "activity_section.key": "66cabdfb-9de1-4019-8c82-60f8bcc9d565",
@@ -1843,10 +1842,9 @@
       "key": "e90bcc9b-7ad0-4e59-9c21-3e80d85c08f4",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Distribute:** a User Profile handout to each student. Try to vary the user profiles within student groups so they are not all the same.",
+        "description": "**Distribute:** a User Profile handout to each student. Try to vary the user profiles within student groups so they are not all the same.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\nThe User Profiles are used for reference only.  Students can look at digital versions during this activity.  Assign each student a link, rather than handing out the actual profiles.\r\n\r\nIf you choose to print out the user profiles, they can be reused, as long as the students are told not to write on them.\r\n\r\n"
           }
@@ -1884,7 +1882,7 @@
       "key": "273655dd-a5a5-4702-8c3a-e362a3781b3c",
       "position": 4,
       "properties": {
-        "description": "[slide] **Display**: The next three slides contain different choices for the same product - a pet, a backpack, and a car. For each slide, ask students to choose a corner based on which picture _their user_ would be drawn to. Then have students walk to the corner (A, B, C, or D) that they have chosen to discuss with other students.\r\n\r\n**Share:** Have the groups in each corner briefly discuss (1-2 minutes) why they think their user is drawn to this version of the product. Have one or two students or groups share what they discussed with the whole class. Repeat this for each of the slides.\r\n\r\n**Group:** After repeating this activity for all the objects in the slides, place students in groups of 3-5 based on their assigned user profile - students with the same profile will be working together through the next activity.",
+        "description": "**Display**: The next three slides contain different choices for the same product - a pet, a backpack, and a car. For each slide, ask students to choose a corner based on which picture _their user_ would be drawn to. Then have students walk to the corner (A, B, C, or D) that they have chosen to discuss with other students.\n\n**Share:** Have the groups in each corner briefly discuss (1-2 minutes) why they think their user is drawn to this version of the product. Have one or two students or groups share what they discussed with the whole class. Repeat this for each of the slides.\n\n**Group:** After repeating this activity for all the objects in the slides, place students in groups of 3-5 based on their assigned user profile - students with the same profile will be working together through the next activity.",
         "name": "Think Like a User\r"
       },
       "seeding_key": {
@@ -1896,10 +1894,9 @@
       "key": "9a00392e-73f9-4bf0-9ca9-fc29a07a6bf1",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Distribute:** Hand out copies of the activity guide to each student.",
+        "description": "**Distribute:** Hand out copies of the activity guide to each student.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\n**Online Option:** The Activity Guide can be completed online.  Students can \"circle\" their chosen ratings by putting a border around them, or by typing the rating in the box.  For the chair design, students can either draw their design online or submit a paper version of their design separately.\r\n\r\n**Journal Option:** This activity can be completed as a journal entry.  Students can use a digital version of the Activity Guide as a prompt, copying the charts and questions into their journals.\r\n\r\n**Tip:** Multiple windows or tabs open on the same computer can be confusing.  Have groups work together with one computer displaying the User Profile while another displays the Activity Guide.\r\n"
           }
@@ -1925,10 +1922,9 @@
       "key": "8accf144-8730-45d6-a806-475e5164395c",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Display**: The next three slides contain different products for each user group to react to - waterproof boots, a bicycle, and chocolate cupcakes. Students will react to each product as their user by filling out a row in the activity guide. The guide asks students to make a distinction between the _usability_ of an item for their user and whether a user likes or dislikes it. You may want to go through the first one as a group so you can model that a product may be aesthetically appealing, but not very usable, or usable but not aesthetically appealing.",
+        "description": "**Display**: The next three slides contain different products for each user group to react to - waterproof boots, a bicycle, and chocolate cupcakes. Students will react to each product as their user by filling out a row in the activity guide. The guide asks students to make a distinction between the _usability_ of an item for their user and whether a user likes or dislikes it. You may want to go through the first one as a group so you can model that a product may be aesthetically appealing, but not very usable, or usable but not aesthetically appealing.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Adapting the Activity:** The provided slides include several products already, but you could add some additional products and images that you think will resonate with your students.\r\n\r\n\r\n"
           }
@@ -1946,7 +1942,6 @@
         "description": "**Circulate:** Monitor students as they complete the activity guide, ensuring that they are taking on the role of their user rather than reacting to the product as themselves. Remind students that this is an intentional part of the activity - to see the world through the eyes of another person rather than just themselves.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "On the first page, check that students' reasoning includes references to the user profile and reasonably connects the description of the user to the preference that the student has chosen.\r\n\r\nOn the bottom of the second page, check that students have made explicit connections between the user profile and the features that they have added to their chair.\r\n"
           }
@@ -1961,7 +1956,7 @@
       "key": "82b86ad9-04a5-4f6c-aae0-1a6b85532fd9",
       "position": 9,
       "properties": {
-        "description": "**Share:** Have a few groups share out their reactions to each product.\r\n\r\n[slide] **Display:** The final slide contains a table with several chairs, which is used for the second page of the activity guide. Students can work individually on the second page, which asks them to consider which of the chairs displayed best fits their user. After reflecting on the features that lead them to choose a specific chair, students have a space to design an even more appropriate chair for their user. This is a creative activity, and students can choose to approach it in whatever way is most expressive for them, including drawing their design.\r\n\r\n**Share:** Circle around the room to share some of the chair designs, prompting students to define what specifically makes their design a better choice for their user."
+        "description": "**Share:** Have a few groups share out their reactions to each product.\n\n**Display:** The final slide contains a table with several chairs, which is used for the second page of the activity guide. Students can work individually on the second page, which asks them to consider which of the chairs displayed best fits their user. After reflecting on the features that lead them to choose a specific chair, students have a space to design an even more appropriate chair for their user. This is a creative activity, and students can choose to approach it in whatever way is most expressive for them, including drawing their design.\n\n**Share:** Circle around the room to share some of the chair designs, prompting students to define what specifically makes their design a better choice for their user."
       },
       "seeding_key": {
         "activity_section.key": "82b86ad9-04a5-4f6c-aae0-1a6b85532fd9",
@@ -1972,7 +1967,7 @@
       "key": "ac33d632-f30f-4def-b290-37aa318342ca",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** \r\n\r\n* What were 3 things about your user that were different from you personally?\r\n* What were 2 times that you found it hard to empathize with your user?\r\n* What was 1 thing you think your user would really like about the chair you designed?",
+        "description": "**Prompt:** \n\n* What were 3 things about your user that were different from you personally?\n* What were 2 times that you found it hard to empathize with your user?\n* What was 1 thing you think your user would really like about the chair you designed?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -1984,7 +1979,7 @@
       "key": "5becca11-20b8-4141-9617-ef7c518a3d99",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** In the last two lessons we've seen that products are designed with a purpose and that different designs are more useful or pleasing to different people. Since different people have different needs or interests, what might be some of the challenges if you're trying to design a product for someone else?",
+        "description": "**Prompt:** In the last two lessons we've seen that products are designed with a purpose and that different designs are more useful or pleasing to different people. Since different people have different needs or interests, what might be some of the challenges if you're trying to design a product for someone else?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -1999,7 +1994,6 @@
         "description": "**Discuss:** Have students think silently before having them share with their tables and then the class as a whole.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This should be a very quick introduction to the lesson. You are looking to call out that designing for other people requires you to consider their needs instead of your own, which can often be challenging. This discussion will lead into the video introduced just after the warm up.\r\n"
           }
@@ -2026,7 +2020,7 @@
       "key": "abdaf61c-0cf9-48e6-86f3-b2883c09332d",
       "position": 4,
       "properties": {
-        "description": "[slide] **Question of the Day: How can we design for people other than ourselves?**"
+        "description": "**Question of the Day: How can we design for people other than ourselves?**"
       },
       "seeding_key": {
         "activity_section.key": "abdaf61c-0cf9-48e6-86f3-b2883c09332d",
@@ -2037,10 +2031,9 @@
       "key": "b1931821-27e8-4550-98c6-ffc17f93cb62",
       "position": 1,
       "properties": {
-        "description": "[slide] **Video:** Watch the Design Thinking Process video with students. Stop the video after Step 5 (around 3:10).",
+        "description": "**Video:** Watch the Design Thinking Process video with students. Stop the video after Step 5 (around 3:10).",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Design Thinking:** Today's activity, as well as this entire unit, are heavily influenced by Design Thinking. This is a very open-ended, creative process that may be hard to visualize if you've never participated in a design thinking activity yourself. The resources below can help you imagine what your classroom will look like during these design thinking activities. \r\n\r\n* [What is Design Thinking? A Handy Guide for Educators](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\r\n* [Design Thinking: Lessons for the Classroom](https://www.edutopia.org/blog/design-thinking-betty-ray)\r\n* [Design Thinking Teacher Training (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\r\n\r\nSome of these resources are framed around science classrooms or physical prototypes, which is different from this unit which ultimately focuses on creating apps. Regardless, they should offer some clarity on what the entire process looks like from start-to-finish and what your classroom may look-and-sound like during these activities.\r\n"
           }
@@ -2056,7 +2049,7 @@
       "key": "44cf2df5-54a8-46bb-97d0-e2f2d1c56afe",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display:** Display the steps from the Design Thinking Process. As you talk about this process, click the animation on the slide to have these steps fade out and the Problem Solving Process fade in."
+        "description": "**Display:** Display the steps from the Design Thinking Process. As you talk about this process, click the animation on the slide to have these steps fade out and the Problem Solving Process fade in."
       },
       "seeding_key": {
         "activity_section.key": "44cf2df5-54a8-46bb-97d0-e2f2d1c56afe",
@@ -2091,10 +2084,9 @@
       "key": "d9db5d0e-f332-4e7f-8526-6bf166cae8a7",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Distribute:** Hand out the activity guide to each student, as well as markers, sticky notes, and poster paper for each group.",
+        "description": "**Distribute:** Hand out the activity guide to each student, as well as markers, sticky notes, and poster paper for each group.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\n**Online Option:** The Activity Guide can be completed online.  For the drawing, students can either draw their product online or submit a paper version of their product separately.\r\n\r\n**Journal Option:** This activity can be completed as a journal entry.  Students can use a digital version of the Activity Guide as a prompt, copying the headers or prompts into their journals.\r\n"
           }
@@ -2120,10 +2112,9 @@
       "key": "f5c05e62-80c7-422f-b578-b9ba663db140",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Overview:** As a class read through the \"Overview\" section to make sure groups understand the goal of the activity.",
+        "description": "**Overview:** As a class read through the \"Overview\" section to make sure groups understand the goal of the activity.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Why Smart Clothes?:** This type of product was chosen because there are broad applications for combining computing technology with clothing that could benefit many types of users. An additional benefit is that the field is not yet well-defined and so it provides students more leeway to develop ideas for how to solve people's problems rather than rely on more established solutions. \r\n\r\n\r\n"
           }
@@ -2138,10 +2129,9 @@
       "key": "ceaa3d86-c33a-4a0a-b56c-75b2b938786f",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Brainstorm User Groups:** Ask students to list on their activity guides as many different potential user groups of smart clothing as they can think of. The video gave an example of elderly people, but students can come up with different groups of people. Give students a couple of minutes to brainstorm independently. Once they're done, ask each student to create a post-it for the two or three user groups they think are most interesting.",
+        "description": "**Brainstorm User Groups:** Ask students to list on their activity guides as many different potential user groups of smart clothing as they can think of. The video gave an example of elderly people, but students can come up with different groups of people. Give students a couple of minutes to brainstorm independently. Once they're done, ask each student to create a post-it for the two or three user groups they think are most interesting.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Brainstorming User Groups:** In this first brainstorming activity, try to model this process carefully. Encourage students to consider different identifying factors when brainstorming users - for example, identifying users by age or occupation or living situation. These should be broad, one or two word responses that identify large groups of people in the population. Some examples may include: young students, military, doctors, pet owners, live on a farm, etc. \r\n\r\nEncourage students to draw from people they know in their lives to help generalize to a certain type of user. Emphasize the fact that there are no right or wrong ideas, and students will have a chance to narrow down their choices later. \r\n"
           }
@@ -2157,10 +2147,9 @@
       "key": "a400fd77-feee-4d7d-8be6-7ceb8e378cd0",
       "position": 9,
       "properties": {
-        "description": "[slide] **Categorize Users:** Have students group together post-its of their users into similar categories on their poster board, such as by age or occupation. It is okay if some post-its don’t fit into any similar groups and are left by themselves.",
+        "description": "**Categorize Users:** Have students group together post-its of their users into similar categories on their poster board, such as by age or occupation. It is okay if some post-its don’t fit into any similar groups and are left by themselves.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Categorizing Users:** The larger goal is for students to notice any patterns or similarities between the groups that each person brainstormed independently. The categories may continue to generalize user groups - for example, post-its like “police” and “firefighter” and “EMTs” might get grouped together because they are all “first responders”.\r\n\r\nWhen creating categories, emphasize that again there are no \"right\" categories - instead, remind students that the goal here is to Define the problem they will try to solve and this process is a useful way to begin focusing on a specific problem.\r\n"
           }
@@ -2175,7 +2164,7 @@
       "key": "398782e5-226b-4a53-8a89-2325552fa7dc",
       "position": 10,
       "properties": {
-        "description": "[slide] **Choose Specific User:** Ask groups to pick one of the user categories they’ve created. Do your best to ensure a good mix of categories in the classroom but it's not a problem if some groups choose similar user categories.\r\n\r\n\r\n[slide] **Brainstorm & Categorize Needs:** Students will repeat the brainstorming process to identify a list of potential concerns, interests, and needs of the user they picked. Begin by brainstorming on the activity guide, then creating post-its for two or three of their ideas to share on the poster board. Encourage students to think carefully about what might be important to those people."
+        "description": "**Choose Specific User:** Ask groups to pick one of the user categories they’ve created. Do your best to ensure a good mix of categories in the classroom but it's not a problem if some groups choose similar user categories.\n\n**Brainstorm & Categorize Needs:** Students will repeat the brainstorming process to identify a list of potential concerns, interests, and needs of the user they picked. Begin by brainstorming on the activity guide, then creating post-its for two or three of their ideas to share on the poster board. Encourage students to think carefully about what might be important to those people."
       },
       "seeding_key": {
         "activity_section.key": "398782e5-226b-4a53-8a89-2325552fa7dc",
@@ -2189,7 +2178,6 @@
         "description": "**Circulate:** Students should repeat the same process of creating scraps of paper for each need, interest, or concern of their user and then grouping them. Students can use the markers and poster paper to do this step if you have provided those materials.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "As you circulate the room, check that students are grouping ideas into meaningful categories.  Categories should be broad enough that several related ideas fall into them, but not so broad that there are only one or two categories for the entire group.\r\n\r\n"
           }
@@ -2204,7 +2192,7 @@
       "key": "43cd587e-fe86-499c-ad1f-9ee8665da856",
       "position": 12,
       "properties": {
-        "description": "[slide] **Choose Specific Need:** Ask groups to pick the specific need for their user that they want to address. They should try to pick a need they think could be addressed by smart clothing so in some cases they may need to be a little creative in thinking about these needs.\r\n\r\n[slide] **Share Out:** By this point, each group should have settled on a specific user group and a need or interest that group has. Ask groups to share their user group and need with the rest of the class."
+        "description": "**Choose Specific Need:** Ask groups to pick the specific need for their user that they want to address. They should try to pick a need they think could be addressed by smart clothing so in some cases they may need to be a little creative in thinking about these needs.\n\n**Share Out:** By this point, each group should have settled on a specific user group and a need or interest that group has. Ask groups to share their user group and need with the rest of the class."
       },
       "seeding_key": {
         "activity_section.key": "43cd587e-fe86-499c-ad1f-9ee8665da856",
@@ -2215,7 +2203,7 @@
       "key": "8e25228f-7396-4a9d-9dab-ff41c9ceeb53",
       "position": 13,
       "properties": {
-        "description": "[slide] **Brainstorm Solutions:** Ask students to brainstorm potential ways smart clothing could be used to address the problem they've decided to solve. Record their thoughts on the second page of their activity guide.",
+        "description": "**Brainstorm Solutions:** Ask students to brainstorm potential ways smart clothing could be used to address the problem they've decided to solve. Record their thoughts on the second page of their activity guide.",
         "name": "Prepare\r"
       },
       "seeding_key": {
@@ -2227,10 +2215,9 @@
       "key": "6c2b2e0f-0ca5-4f49-b7a4-e90ddc47860d",
       "position": 14,
       "properties": {
-        "description": "[slide]  **Discuss Pros and Cons:** Once students have brainstormed solutions individually, have students share their ideas with their group and discuss the pros and cons of each solution. Encourage students to use the discussion to build on each other's ideas, possibly generating even more potential solutions.",
+        "description": "**Discuss Pros and Cons:** Once students have brainstormed solutions individually, have students share their ideas with their group and discuss the pros and cons of each solution. Encourage students to use the discussion to build on each other's ideas, possibly generating even more potential solutions.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Discussing Pros and Cons:** Students should speak from the standpoint of their user, imagining any intended or unintended benefits and harms for each proposed solution. They are not judging ideas as “good” or “bad”, but instead discussing whether or not the solution addresses the needs & interests of their user. Some useful phrases during the discussion are saying “Yes, and…” when they hear a pro, and saying “No, but…” when they hear a con.\r\n"
           }
@@ -2245,7 +2232,7 @@
       "key": "d3efa834-c54a-4cc1-ac97-95ef774a3089",
       "position": 15,
       "properties": {
-        "description": "[slide] **Choose Specific Solution:** Have the group choose a specific solution they will focus on. They may decide to combine solutions from their discussion, or use a brand new solution that developed during the discussion. This decision will guide the product they create in tomorrow's activity."
+        "description": "**Choose Specific Solution:** Have the group choose a specific solution they will focus on. They may decide to combine solutions from their discussion or use a brand new solution that developed during the discussion. This decision will guide the product they create in tomorrow's activity."
       },
       "seeding_key": {
         "activity_section.key": "d3efa834-c54a-4cc1-ac97-95ef774a3089",
@@ -2294,7 +2281,6 @@
         "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should reflect on how different voices helped elevate the ideas the group had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others ideas will be important throughout the unit as students work together to develop apps for others.\r\n"
           }
@@ -2320,7 +2306,7 @@
       "key": "77645736-2519-4d27-b58f-460674b37ac3",
       "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:** Look at your activity guide from yesterday and list out:\r\n\r\n* The user you are designing for\r\n* Their specific need or interest\r\n* Your chosen solution to their need\r\n\r\nThen write down an idea for a specific type of smart clothing you could design based on your solution.",
+        "description": "**Prompt:** Look at your activity guide from yesterday and list out:\n\n* The user you are designing for\n* Their specific need or interest\n* Your chosen solution to their need\n\nThen write down an idea for a specific type of smart clothing you could design based on your solution.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2335,7 +2321,6 @@
         "description": "**Discuss:** Allow students a minute to remind themselves of their work yesterday. Once they’ve written these notes in their journal, ask them to take turns sharing this information with their groups from yesterday.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This is a quick refresher of the work that students did yesterday and an opportunity to share different product ideas before making a decision as a group in the first part of the activity.\r\n"
           }
@@ -2362,7 +2347,7 @@
       "key": "2ab94314-31c6-4d42-9fb3-e4c4d1885c00",
       "position": 5,
       "properties": {
-        "description": "[slide] **Question of the Day: How can we design a product to meet a user's needs?**"
+        "description": "**Question of the Day: How can we design a product to meet a user's needs?**"
       },
       "seeding_key": {
         "activity_section.key": "2ab94314-31c6-4d42-9fb3-e4c4d1885c00",
@@ -2375,7 +2360,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Smart Clothing Research:** If students are unfamiliar with smart clothing, encourage them to use the internet to do some initial research first on how smart clothing works or has been used to solve problems. They should steer away from trying to find an existing smart clothing product that meets their user’s needs, but they can still investigate common uses for smart clothing if they’re unfamiliar.\r\n"
           }
@@ -2390,7 +2374,7 @@
       "key": "e47eea09-c3ea-4ba3-8b4d-6976340b86ef",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** The User Centered Design (Try & Reflect) Activity Guide to each group. If available, also distribute poster paper to each group.\r\n\r\n\r\n\r\n#### User Centered Design (Try & Reflect)"
+        "description": "**Distribute:** The User Centered Design (Try & Reflect) Activity Guide to each group. If available, also distribute poster paper to each group.\n\n\n\n#### User Centered Design (Try & Reflect)"
       },
       "seeding_key": {
         "activity_section.key": "e47eea09-c3ea-4ba3-8b4d-6976340b86ef",
@@ -2401,7 +2385,7 @@
       "key": "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c",
       "position": 3,
       "properties": {
-        "description": "[slide] **Overview:** Read the overview as a class to ensure students understand the activity. Lean into the role-playing aspect of this project, encouraging students to imagine they have all the resources they need to complete this task.\r\n\r\n[slide] **Assign Roles:** Have students assign roles - a scribe, an artist, a timekeeper, and a presenter. Ensure students are clear on their roles and assignments during this task.\r\n\r\n[slide] **Do This:** Students should work together to design a smart clothing product to meet the needs of their user. They can use their discussion during the warm up to help guide this process. They should also create a sketch of how the design could look, with arrows and labels to help communicate how the product functions. The artist can draw their product either on the activity guide or the poster paper provided. See the included Exemplar for an example of what students may end up creating. Give students a time limit and ensure the timekeeper in each group is aware of it.\r\n\r\n**Circulate**: Monitor students as they work through the Try stage, checking in that the user needs are guiding the decisions for their product. If needed, remind students to \"get in the head\" of their user similar to the Understanding Your User lesson.",
+        "description": "**Overview:** Read the overview as a class to ensure students understand the activity. Lean into the role-playing aspect of this project, encouraging students to imagine they have all the resources they need to complete this task.\n\n**Assign Roles:** Have students assign roles - a scribe, an artist, a timekeeper, and a presenter. Ensure students are clear on their roles and assignments during this task.\n\n**Do This:** Students should work together to design a smart clothing product to meet the needs of their users. They can use their discussion during the warm-up to help guide this process. They should also create a sketch of how the design could look, with arrows and labels to help communicate how the product functions. The artist can draw their product either on the activity guide or the poster paper provided. See the included Exemplar for an example of what students may end up creating. Give students a time limit and ensure the timekeeper in each group is aware of it.\n\n**Circulate**: Monitor students as they work through the Try stage, checking in that the user needs are guiding the decisions for their product. If needed, remind students to \"get in the head\" of their user similar to the Understanding Your User lesson.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -2425,7 +2409,7 @@
       "key": "b640029f-89eb-45d2-a087-e6d57d703c12",
       "position": 5,
       "properties": {
-        "description": "[slide] **Do This:** Have students answer the questions on the second page of the activity guide and be prepared to share the results with their peers.\r\n\r\n**Circulate:** Check in with students as they summarize their thoughts on this reflection guide. As students answer these questions, they may decide to make last-minute changes to their product.\r\n\r\n\r\n\r\n[slide] **Share Out:** Have groups take turns sharing out the products they designed. They should be sure to share their intended user and their needs, and how the product addresses those needs. When they finish, encourage other groups to give feedback in the form of “I like…” and “I wish… statements.",
+        "description": "**Do This:** Have students answer the questions on the second page of the activity guide and be prepared to share the results with their peers.\n\n**Circulate:** Check in with students as they summarize their thoughts on this reflection guide. As students answer these questions, they may decide to make last-minute changes to their product.\n\n\n\n**Share Out:** Have groups take turns sharing out the products they designed. They should be sure to share their intended user and their needs, and how the product addresses those needs. When they finish, encourage other groups to give feedback in the form of “I like…” and “I wish… statements.",
         "name": "Reflect\r"
       },
       "seeding_key": {
@@ -2440,7 +2424,6 @@
         "description": "**Prompt:** What was one challenge in designing a product for someone other than yourself? What was one activity from today or yesterday that made this challenge easier?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Answers will vary, especially if students are still learning to empathize with users other than themselves. Encourage students to see how brainstorming and collaborating with their peers can be helpful in generating ideas and thinking outside of their own experiences.\r\n"
           }
@@ -2456,7 +2439,7 @@
       "key": "9cdb66ed-0a11-469c-86c7-516372ae3eca",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** What is an app? What apps do you or other people you know use?",
+        "description": "**Prompt:** What is an app? What apps do you or other people you know use?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2471,7 +2454,6 @@
         "description": "**Discuss:** Have students write down their responses in a journal, then ask students to share with the class. Keep a running list of responses on the board. Once everyone has had an opportunity to share, write down a proposed shared definition of an app as \"a piece of software designed for a purpose\".",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion aims to introduce the definition of an app. Most suggestions students provide should be able to be tied to this definition. Apps can provide services, organize or provide information, or might just be a game or other form of entertainment. In all cases, you just want to establish an app as a piece of software built for a purpose.\r\n"
           }
@@ -2486,7 +2468,7 @@
       "key": "9af85d3c-6e77-492b-b1e0-9d63f16ca9b4",
       "position": 3,
       "properties": {
-        "description": "[slide] **Vocab:**\r\n\r\n* **App:** A piece of software designed for a purpose"
+        "description": "**Vocab:**\n\n* **App:** A piece of software designed for a purpose"
       },
       "seeding_key": {
         "activity_section.key": "9af85d3c-6e77-492b-b1e0-9d63f16ca9b4",
@@ -2509,7 +2491,7 @@
       "key": "b9b435a8-7790-4386-b2a9-f6f76af1f9a1",
       "position": 5,
       "properties": {
-        "description": "[slide] **Question of the Day:** How can we test an app to make sure it meets a user's needs?"
+        "description": "**Question of the Day:** How can we test an app to make sure it meets a user's needs?"
       },
       "seeding_key": {
         "activity_section.key": "b9b435a8-7790-4386-b2a9-f6f76af1f9a1",
@@ -2532,10 +2514,9 @@
       "key": "889b61a1-6e88-49a4-9250-5e48853f289c",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Distribute:** Hand out a copy of the User Interface Screens activity guide to each pair of students. If you haven't already cut the screens apart, give students a few minutes to do so.",
+        "description": "**Distribute:** Hand out a copy of the User Interface Screens activity guide to each pair of students. If you haven't already cut the screens apart, give students a few minutes to do so.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\nThese manipulatives can be reused if students do not write on them.  You will need them for the next lesson's activity, too.\r\n\r\n"
           }
@@ -2550,7 +2531,7 @@
       "key": "3063baca-d796-4feb-8030-600b71988449",
       "position": 3,
       "properties": {
-        "description": "[slide] **Display** the following definitions while addressing the class \r\n\r\n* **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.\r\n* **User Interface** - The visual elements of a program that a user controls and interacts with the application. Often abbreviated UI."
+        "description": "**Display** the following definitions while addressing the class \n\n* **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.\n* **User Interface** - The visual elements of a program that a user controls and interacts with the application. Often abbreviated UI."
       },
       "seeding_key": {
         "activity_section.key": "3063baca-d796-4feb-8030-600b71988449",
@@ -2573,7 +2554,7 @@
       "key": "d989fccc-126d-4cd9-afb5-fbf5171d4a52",
       "position": 5,
       "properties": {
-        "description": "[slide] **Prompt:** Based solely on the screens, who do you think is the main user of this app? What do you think this app was designed to do?"
+        "description": "**Prompt:** Based solely on the screens, who do you think is the main user of this app? What do you think this app was designed to do?"
       },
       "seeding_key": {
         "activity_section.key": "d989fccc-126d-4cd9-afb5-fbf5171d4a52",
@@ -2587,7 +2568,6 @@
         "description": "**Discuss:** Have students discuss with their partner, then share ideas with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Encourage students to identify specific elements of the prototype that support their arguments, and to consider the user needs that this prototype might have been designed to address\r\n"
           }
@@ -2614,7 +2594,7 @@
       "key": "f6ae2b78-f4b1-4f5b-87b5-3bbb4b9f2f41",
       "position": 8,
       "properties": {
-        "description": "[slide] **Taking Roles:** For each pair of students, assign each student a role of _Computer_ and _User_. Once the roles have been assigned, have pairs move so that they are sitting across from each other."
+        "description": "**Taking Roles:** For each pair of students, assign each student a role of _Computer_ and _User_. Once the roles have been assigned, have pairs move so that they are sitting across from each other."
       },
       "seeding_key": {
         "activity_section.key": "f6ae2b78-f4b1-4f5b-87b5-3bbb4b9f2f41",
@@ -2625,10 +2605,9 @@
       "key": "b7a9b018-0728-4b91-935e-b3ec7c723623",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Distribute:** Give each of the _Computers_ a copy of  User Experience (computer) activity guide and each of the _Users_ a copy of  User Experience (user) activity guide. The computer activity guide should only be seen by the computer and not the user.",
+        "description": "**Distribute:** Give each of the _Computers_ a copy of  User Experience (computer) activity guide and each of the _Users_ a copy of  User Experience (user) activity guide. The computer activity guide should only be seen by the computer and not the user.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\n**Computer Activity Guide** The computer's Activity Guides are used for reference only.  Students can look at digital versions during this activity.  If you choose to print out the guide, they can be reused, as long as the students are told not to write on them.\r\n\r\n**User Activity Guide:** The user's Activity Guide can be completed online or as a journal activity.  Students can use a digital version of the Activity Guide as a prompt, copying the charts and questions into their journals.\r\n"
           }
@@ -2643,7 +2622,7 @@
       "key": "6cca8c81-d83c-4316-b8b4-5b2e48069e1c",
       "position": 10,
       "properties": {
-        "description": "#### User Testing\r\n\r\n[slide] **Display**: Read through the opening paragraph on Test Cases with the class. Emphasize that users have a set list of tasks to complete, and both people should give reactions on ways to improve the experience. Some of these tasks may not even be possible, which means we can make suggestions for how to improve the app and complete the task.\r\n\r\n**Model:** This activity has pairs of students testing the paper prototype, with one acting as the _User_ and one as the _Computer_. The basic process is as follows, and should be modeled for students before working independently in their pairs:\r\n\r\n1. The _Computer_ places the home screen (the one titled \"Txt Ur Grndkds\") in front of the _User_.\r\n2. The _User_ selects a task from the table on their activity guide.\r\n3. The _User_ attempts to complete the tasking by \"clicking\" on the paper prototype screen in front of them.\r\n4. Every time the _User_ clicks on the screen, the _Computer_ consults the Navigation Diagram on their activity guide.\r\n\t* If the Navigation Diagram shows a line connected to the element that was clicked, find the screen at the other end of the line and place it in front of the user.\r\n\t* If the Navigation Diagram doesn't show a line connected to the element that was clicked, do nothing.\r\n5. When the _User_ completes a task (or decides it is impossible in the current prototype), they fill out the \"What I Tried\" and \"My Reaction\" columns and the computer resets the app back to the home screen.\r\n\r\n**Circulate**: Monitor students as they work in pairs to complete this task. Ensure computers are using the guided arrows to navigate the screens, and ensure users are completing each row of tasks in the table. Have students swap halfway through the task, trading who is the user and who is the computer."
+        "description": "#### User Testing\n\n**Display**: Read through the opening paragraph on Test Cases with the class. Emphasize that users have a set list of tasks to complete, and both people should give reactions on ways to improve the experience. Some of these tasks may not even be possible, which means we can make suggestions for how to improve the app and complete the task.\n\n**Model:** This activity has pairs of students testing the paper prototype, with one acting as the _User_ and one as the _Computer_. The basic process is as follows, and should be modeled for students before working independently in their pairs:\n\n1. The _Computer_ places the home screen (the one titled \"Txt Ur Grndkds\") in front of the _User_.\n2. The _User_ selects a task from the table on their activity guide.\n3. The _User_ attempts to complete the tasking by \"clicking\" on the paper prototype screen in front of them.\n4. Every time the _User_ clicks on the screen, the _Computer_ consults the Navigation Diagram on their activity guide.\n\t* If the Navigation Diagram shows a line connected to the element that was clicked, find the screen at the other end of the line and place it in front of the user.\n\t* If the Navigation Diagram doesn't show a line connected to the element that was clicked, do nothing.\n5. When the _User_ completes a task (or decides it is impossible in the current prototype), they fill out the \"What I Tried\" and \"My Reaction\" columns and the computer resets the app back to the home screen.\n\n**Circulate**: Monitor students as they work in pairs to complete this task. Ensure computers are using the guided arrows to navigate the screens, and ensure users are completing each row of tasks in the table. Have students swap halfway through the task, trading who is the user and who is the computer."
       },
       "seeding_key": {
         "activity_section.key": "6cca8c81-d83c-4316-b8b4-5b2e48069e1c",
@@ -2654,7 +2633,7 @@
       "key": "9ed017b1-a7ee-4c38-87f0-8dea971bd9e6",
       "position": 11,
       "properties": {
-        "description": "[slide] **Prompt:** What was a problem that a _User_ ran into while using the app? What is a potential improvement you would make to the prototype based on your experience?",
+        "description": "**Prompt:** What was a problem that a _User_ ran into while using the app? What is a potential improvement you would make to the prototype based on your experience?",
         "name": "Debriefing\r"
       },
       "seeding_key": {
@@ -2669,7 +2648,6 @@
         "description": "**Discuss:** Have students discuss in their pairs, then invite each pair to share their feedback with the class. Keep a list of potential improvements in the front of the classroom.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students should connect specific user experiences to problems with the app and brainstorm how those problems could be addressed.  If necessary, ask students to recount specific incidents during the test that revealed problems with the design.\r\n"
           }
@@ -2696,10 +2674,9 @@
       "key": "18ddafa9-e84c-403f-a417-d4516a1ae6a7",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Earlier in the lesson we guessed the user needs that this prototype addresses. Now that you experienced the app first hand, jot down the following:",
+        "description": "**Prompt:** Earlier in the lesson we guessed the user needs that this prototype addresses. Now that you experienced the app first hand, jot down the following:",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students should synthesize the earlier discussion to key, actionable points for a revision of the design.  These should be clearly related to the  earlier discussion, and check that students are connecting the user needs, user experience in the test, and the specific features of the app.\r\n"
           }
@@ -2726,7 +2703,7 @@
       "key": "d4051ea3-89a9-4721-812c-0eaff899cb06",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Think about a piece of software (like an app) that was hard to use. Maybe you couldn't find something you needed, it was poorly organized, or just difficult to use. What specifically didn't you like about it? How could it have been improved?",
+        "description": "**Prompt:** Think about a piece of software (like an app) that was hard to use. Maybe you couldn't find something you needed, it was poorly organized, or just difficult to use. What specifically didn't you like about it? How could it have been improved?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2741,7 +2718,6 @@
         "description": "**Discuss:** Students should silently write down their ideas. Then move to a full class discussion of the types of issues students have had with apps in the past. Direct conversation towards what specifically about the user interface or user experience of the app was lacking, and follow up by asking how those aspects of the app could be improved.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Explore how many of the issues we have when using an app can be solved with changes to the user interface. This is primarily a brainstorm and a way for students to make personal connections between the apps they use every day and the activity we’ll complete in class to help improve an app’s design and user interface.\r\n"
           }
@@ -2768,7 +2744,7 @@
       "key": "590542a6-7c3e-4ab3-9038-079cf2171680",
       "position": 4,
       "properties": {
-        "description": "[slide] **Question of the Day:** How can we use feedback to improve an app?"
+        "description": "**Question of the Day:** How can we use feedback to improve an app?"
       },
       "seeding_key": {
         "activity_section.key": "590542a6-7c3e-4ab3-9038-079cf2171680",
@@ -2791,10 +2767,9 @@
       "key": "2ee54cfb-c1d2-4524-86c2-6ef303a598ea",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Distribute:** Give each group of students a copy of the Prototype Feedback slips of paper. If possible, try to have these cut out ahead of time - otherwise, give students time to cut these out in class. You should also either distribute copies of the User Interface Screens resource or display them on the screen.",
+        "description": "**Distribute:** Give each group of students a copy of the Prototype Feedback slips of paper. If possible, try to have these cut out ahead of time - otherwise, give students time to cut these out in class. You should also either distribute copies of the User Interface Screens resource or display them on the screen.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\nThe Prototype Feedback and User Interface screens can be reused, as long as students don't write on them.  The User Interface Screens should already be printed from the previous lesson.\r\n\r\nThe Activity Guide can be completed online or as a journal activity.  Students who complete the activity online may choose to use an online drawing tool to sketch the improved user interface or submit the sketch separately on paper.\r\n\r\n"
           }
@@ -2809,7 +2784,7 @@
       "key": "25e2bf05-fed1-4d00-a2c9-b63c80d2b656",
       "position": 3,
       "properties": {
-        "description": "[slide] **Do This:** Students should work in groups to create piles of slips of paper so that each pile is a category of feedback. Categories should correspond with similar needs or problems that the feedback is addressing. For example, several pieces of feedback might all be about the fact that the font is too small to read.  As they categorize the feedback, they should also discuss which categories they would like to focus on and why.\r\n\r\n**Circulate:** Monitor student progress, asking groups to explain how they are forming their categories. There's no correct grouping of feedback here, but students should be prepared to justify their categories.  Prompt students to explain which categories they have chosen as most important to address and why.\r\n\r\n[slide] **Share:** Once all groups have categorized their feedback ask for a few suggestions of the types of categories they created."
+        "description": "**Do This:** Students should work in groups to create piles of slips of paper so that each pile is a category of feedback. Categories should correspond with similar needs or problems that the feedback is addressing. For example, several pieces of feedback might all be about the fact that the font is too small to read.  As they categorize the feedback, they should also discuss which categories they would like to focus on and why.\n\n**Circulate:** Monitor student progress, asking groups to explain how they are forming their categories. There's no correct grouping of feedback here, but students should be prepared to justify their categories.  Prompt students to explain which categories they have chosen as most important to address and why.\n\n**Share:** Once all groups have categorized their feedback ask for a few suggestions of the types of categories they created."
       },
       "seeding_key": {
         "activity_section.key": "25e2bf05-fed1-4d00-a2c9-b63c80d2b656",
@@ -2820,7 +2795,7 @@
       "key": "10d99ae6-1017-4eee-bd4b-f29db65a8188",
       "position": 4,
       "properties": {
-        "description": "[slide] **Distribute:** A copy of the Improve a Screen Activity Guide to each group. Each group only needs one copy to share between students.\r\n\r\n\r\n\r\n#### Improve a Screen",
+        "description": "**Distribute:** A copy of the Improve a Screen Activity Guide to each group. Each group only needs one copy to share between students.\n\n\n\n#### Improve a Screen",
         "name": "Responding to Feedback\r"
       },
       "seeding_key": {
@@ -2843,10 +2818,9 @@
       "key": "2c2e61bd-0e80-4e8a-8377-5680d0d95f90",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Do This:** As a group, students take the feedback that they categorized and propose some potential improvements to the app. Each proposed improvement should be clearly connected to one of the feedback categories that were created in the last activity.",
+        "description": "**Do This:** As a group, students take the feedback that they categorized and propose some potential improvements to the app. Each proposed improvement should be clearly connected to one of the feedback categories that were created in the last activity.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Choosing Improvements:** Students may need help brainstorming good improvements to their apps. For example, if multiple users are complaining about small text then they could try to increase the size of the font on the screen they are improving. They might also choose to add a \"text size\" setting in their \"Settings\" page. There are always many improvements to an app that might have the desired effect. For this lesson it is more important that the change reasonably addresses the need they chose. There will be more opportunities to investigate what is realistic to change in an app's UI later in the unit. \r\n"
           }
@@ -2861,7 +2835,7 @@
       "key": "47850443-e8d5-4a7f-940f-7ef92470e1c5",
       "position": 7,
       "properties": {
-        "description": "**Circulate:** Monitor students as they work in their groups, ensuring that all voices are heard within the groups and clarifying any questions.\r\n\r\n#### Screen Redesign\r\n\r\n[slide] **Do This:** Each student will draw an improved version of one of the screens in the paper prototype app. The activity guide contains one page for each screen of the app for the group to divvy up. If possible, print the activity guide single-sided so it is easier for students to divide up the screens.\r\n\r\n\r\n\r\n[slide] **Share:** Ask one student from each group briefly present the screen that they have updated. Ask them to describe specifically\r\n\r\n* The category of needs they chose to address\r\n* Different ways they considered to address those needs\r\n* The changes to the user interface they designed to address those needs"
+        "description": "**Circulate:** Monitor students as they work in their groups, ensuring that all voices are heard within the groups and clarifying any questions.\n\n#### Screen Redesign\n\n**Do This:** Each student will draw an improved version of one of the screens in the paper prototype app. The activity guide contains one page for each screen of the app for the group to divvy up. If possible, print the activity guide single-sided so it is easier for students to divide up the screens.\n\n\n\n**Share:** Ask one student from each group to briefly present the screen that they have updated. Ask them to describe specifically\n\n* The category of needs they chose to address\n* Different ways they considered to address those needs\n* The changes to the user interface they designed to address those needs"
       },
       "seeding_key": {
         "activity_section.key": "47850443-e8d5-4a7f-940f-7ef92470e1c5",
@@ -2872,7 +2846,7 @@
       "key": "6c56c6d8-505f-450b-af78-6589752885e9",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Display the Problem Solving Process. Where do you think User Feedback fits in the problem solving process? What do you think is a next-step after gathering user feedback?",
+        "description": "**Prompt:** Display the Problem Solving Process. Where do you think User Feedback fits in the problem solving process? What do you think is the next-step after gathering user feedback?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2887,7 +2861,6 @@
         "description": "**Discuss:** Have students write a response in their journal, then discuss with their neighbors. If time, have a full group discussion relating user feedback to the problem solving process.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should gravitate towards placing user feedback in the Reflect or Try stages of the problem solving process. Try to guide the conversation towards what next-steps could be, emphasizing that the diagram has arrows going in both directions. Being flexible with this process is important when developing an app to meet user’s needs.\r\n\r\nFor example, if user feedback is in the Reflect stage, then you can move backwards to the Try stage to make quick changes and test again, or the feedback may cause you to move forward to the Define stage where you discovered a whole new user need that you’ve decided to address. \r\n"
           }
@@ -2902,7 +2875,7 @@
       "key": "6c9f71c2-38be-428f-88e2-c7b16c1f4b47",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** What do you think should be some of the first steps when designing an app for a specific group of people, especially if you want to make sure people will actually use it?",
+        "description": "**Prompt:** What do you think should be some of the first steps when designing an app for a specific group of people, especially if you want to make sure people will actually use it?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2917,7 +2890,6 @@
         "description": "**Discuss:** Have students brainstorm in their journal, then discuss with a partner, then invite students to share out as a full group.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** There are many possible answers here, but it’s important to steer the class conversation towards the idea of a user interview. If we want to make an app for a certain group of people, we need to talk to them and make sure we understand their needs and interests when designing the app. If students don’t make this point explicitly, that’s okay - you should still mention it in the remarks that transition to the next activity.\r\n"
           }
@@ -2944,7 +2916,7 @@
       "key": "dfd2f487-13e7-429a-8291-c57da6fc2a31",
       "position": 4,
       "properties": {
-        "description": "[slide] **Question of the Day:** How can user interviews help us create apps to meet the needs of a user?"
+        "description": "**Question of the Day:** How can user interviews help us create apps to meet the needs of a user?"
       },
       "seeding_key": {
         "activity_section.key": "dfd2f487-13e7-429a-8291-c57da6fc2a31",
@@ -2967,10 +2939,9 @@
       "key": "1715dc9b-df4c-4292-8b4a-f5cc8aea73a4",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Distribute:** Give each student one copy of the **User Interview Activity Guide**. Give each group of students one copy of each of the **Example User Interviews**, which contains four user interviews",
+        "description": "**Distribute:** Give each student one copy of the **User Interview Activity Guide**. Give each group of students one copy of each of the **Example User Interviews**, which contains four user interviews",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**: This Activity Guide can be completed online or as a journal activity.\r\n\r\n**Connections to the Community:** Rather than using the example user interviews, you may want to collect real user interviews from people in your community. Consider asking people in your school, or in small businesses, or parents & family members of your students to answer similar questions. As a result, students can prototype apps that serve the needs of real people and can directly impact their community.\r\n"
           }
@@ -2996,7 +2967,7 @@
       "key": "cfca8397-bf47-4775-a4a8-947fc8be08e8",
       "position": 4,
       "properties": {
-        "description": "[slide] **Do This:** Have students read each of the user interviews in their groups. Individually, they will select a user that they would like to design an app for. It is okay for multiple students to choose the same user, and it’s also okay for every student to choose a different user. After students identify their user, they should begin filling out the User Interview activity guide to identify needs and interests, and then identify barriers and opportunities."
+        "description": "**Do This:** Have students read each of the user interviews in their groups. Individually, they will select a user that they would like to design an app for. It is okay for multiple students to choose the same user, and it’s also okay for every student to choose a different user. After students identify their users, they should begin filling out the User Interview activity guide to identify needs and interests, and then identify barriers and opportunities."
       },
       "seeding_key": {
         "activity_section.key": "cfca8397-bf47-4775-a4a8-947fc8be08e8",
@@ -3010,7 +2981,6 @@
         "description": "**Circulate:** Monitor groups as they complete this task. The room may start off quiet as students read the user interviews. Once finished, encourage students to discuss their choices with their group and brainstorm ideas together, even if others in the group aren’t working with the same user. Encourage groups to use each other as “thought partners” during this brainstorming stage.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Needs & Interests:** The example interviews are designed for students to pick up on different facets of each user, with some needs and interests being more explicit than others. However, students can also “read between the lines” and make additional connections to the user, especially taking into account a user’s age and location. In a real-world scenario, students might wish to ask follow-up questions to get more clarity from a user.\r\n\r\n**Barriers & Opportunities:** This section requires more speculation from students as they try to imagine barriers to users meeting their needs, or opportunities for users to explore their interests. It’s okay if these are less connected to the user interview, but they should be strongly tied to a specific need or interest that they’ve identified.\r\n\r\n"
           }
@@ -3038,7 +3008,7 @@
       "key": "03a882f3-b062-4c38-bacd-5d08a350756d",
       "position": 7,
       "properties": {
-        "description": "**Do This:** Have students choose one of the barriers or opportunities they identified and circle it on their paper.\r\n\r\n[slide] **Group:** Have students move to different areas of the room based on which user they are designing for (for example: each corner of the room is a different user). If one group has more than 4 students, ask them to split into smaller groups of no more than 4. Give each group a piece of poster paper, markers, and some post-its.\r\n\r\n[slide] **Do This:** Have each student write the barrier or opportunity that they circled on the poster paper. As a group, discuss each item on the poster paper and brainstorm potential apps that could address that barrier or opportunity. Students should write each app idea down on a post-it and place it on the poster around the idea. Empathize that there are no wrong-answers when brainstorming - every idea should get written on a post-it.\r\n\r\n**Circulate:** Monitor groups as they complete this task, ensuring that app ideas are written down on post-its and placed on the board. The room may start to sound loud and energetic as students get excited by their ideas and write them on post-its. Make sure groups are building each other up and staying positive, and not devaluing any ideas from their peers."
+        "description": "**Do This:** Have students choose one of the barriers or opportunities they identified and circle it on their paper.\n\n**Group:** Have students move to different areas of the room based on which user they are designing for (for example: each corner of the room is a different user). If one group has more than 4 students, ask them to split into smaller groups of no more than 4. Give each group a piece of poster paper, markers, and some post-its.\n\n**Do This:** Have each student write the barrier or opportunity that they circled on the poster paper. As a group, discuss each item on the poster paper and brainstorm potential apps that could address that barrier or opportunity. Students should write each app idea down on a post-it and place it on the poster around the idea. Empathize that there are no wrong-answers when brainstorming - every idea should get written on a post-it.\n\n**Circulate:** Monitor groups as they complete this task, ensuring that app ideas are written down on post-its and placed on the board. The room may start to sound loud and energetic as students get excited by their ideas and write them on post-its. Make sure groups are building each other up and staying positive, and not devaluing any ideas from their peers."
       },
       "seeding_key": {
         "activity_section.key": "03a882f3-b062-4c38-bacd-5d08a350756d",
@@ -3061,7 +3031,7 @@
       "key": "93135d45-c43f-4dce-9b1d-83da5ce4da77",
       "position": 9,
       "properties": {
-        "description": "[slide] **Do This:** Have students record their app idea on the bottom of their activity guide"
+        "description": "**Do This:** Have students record their app idea on the bottom of their activity guide"
       },
       "seeding_key": {
         "activity_section.key": "93135d45-c43f-4dce-9b1d-83da5ce4da77",
@@ -3072,7 +3042,7 @@
       "key": "b1a23a75-eac2-45e6-aeb9-dc86a259ee94",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Now that we’ve brainstormed our app ideas, what do you think will be the next steps in designing our app for our users?",
+        "description": "**Prompt:** Now that we’ve brainstormed our app ideas, what do you think will be the next steps in designing our app for our users?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3087,7 +3057,6 @@
         "description": "**Discuss:** Have students journal, then share in their groups, then ask a few students to share with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students are essentially predicting what they will do in the next few days. Answers will probably reflect activities from the last few lessons, such as developing a paper prototype, doing user testing, and responding to feedback.\r\n"
           }
@@ -3117,7 +3086,6 @@
         "description": "**Discuss:** Have students share their ideas. You can record them on the board for reference throughout the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Before sending students off to design their paper prototypes give them an opportunity to brainstorm attributes of effective designs. For example they may bring up\r\n\r\n* Simple interfaces\r\n* Reusing design elements\r\n* Placing common elements in the same place on each screen\r\n* Draw attention to what's important\r\n"
           }
@@ -3144,7 +3112,7 @@
       "key": "0b2efd87-9305-4f69-b54f-ad720a636f39",
       "position": 1,
       "properties": {
-        "description": "[slide] **Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\r\n\r\n\r\n\r\n#### Paper Prototype Project\r\n\r\n[slide] **Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed.",
+        "description": "**Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\n\n\n\n#### Paper Prototype Project\n\n**Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed.",
         "name": "Getting Started\r"
       },
       "seeding_key": {
@@ -3156,7 +3124,7 @@
       "key": "12f11146-c803-4801-9d08-ccff0c84dc8e",
       "position": 2,
       "properties": {
-        "description": "[slide] **Define:** Have students complete the Define section of the project guide. They should reference their User Interview Activity Guide from the previous lesson."
+        "description": "**Define:** Have students complete the Define section of the project guide. They should reference their User Interview Activity Guide from the previous lesson."
       },
       "seeding_key": {
         "activity_section.key": "12f11146-c803-4801-9d08-ccff0c84dc8e",
@@ -3167,10 +3135,9 @@
       "key": "a23e57c3-d624-46df-bc76-87d7e4c16ad9",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prepare:** Students should brainstorm the minimum set of features their app would need in order to address their user's needs. This can be completed as a bulleted list on the activity guide.",
+        "description": "**Prepare:** Students should brainstorm the minimum set of features their app would need in order to address their user's needs. This can be completed as a bulleted list on the activity guide.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Scoping Projects:** Encourage students at this point to scope the functionality of their app to the minimum amount necessary to address their user's needs. As they work they'll likely discover new components they need to add so it's best to start with a small set early on.\r\n"
           }
@@ -3185,10 +3152,9 @@
       "key": "54a5e672-f71d-4cd7-9bb7-db4ad99104f5",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Decide Your Screens:** Students are provided space on their activity guide to sketch out their ideas for the screens of their app. This is an opportunity to make a quick first draft of their app. This should take about 10 minutes and focus primarily on",
+        "description": "**Decide Your Screens:** Students are provided space on their activity guide to sketch out their ideas for the screens of their app. This is an opportunity to make a quick first draft of their app. This should take about 10 minutes and focus primarily on",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Why Six Screens?:** There's nothing magical about the number six. It's a rough estimate of the number of screens most students should be able to work within for their ideas and is a concrete way to help scope students' apps. It also just fits nicely on one piece of paper. Feel free, however, to impose any other limit you like.\r\n\r\n"
           }
@@ -3214,7 +3180,7 @@
       "key": "8fe4701a-2679-43c1-8b88-b23615e04523",
       "position": 6,
       "properties": {
-        "description": "[slide] **Distribute:** Give each student up to six note cards for creating their screens as well as drawing supplies.\r\n\r\n[slide] **Do This:** Have students create their paper prototype screens based on their navigation diagram. Leave enough time for students to begin filling in the table for User Testing before Day 1 ends.\r\n\r\n**Circulate:** Monitor student progress as they create their screens, keeping an eye on time management. If possible, have a timer available for students to see so they know how much time they have remaining. Encourage students to start with the basics on their screens so they are usable, then add more details once all the screens have the basics and are usable.",
+        "description": "**Distribute:** Give each student up to six note cards for creating their screens as well as drawing supplies.\n\n**Do This:** Have students create their paper prototype screens based on their navigation diagram. Leave enough time for students to begin filling in the table for User Testing before Day 1 ends.\n\n**Circulate:** Monitor student progress as they create their screens, keeping an eye on time management. If possible, have a timer available for students to see so they know how much time they have remaining. Encourage students to start with the basics on their screens so they are usable, then add more details once all the screens have the basics and are usable.",
         "name": "Paper Prototyping\r"
       },
       "seeding_key": {
@@ -3238,7 +3204,7 @@
       "key": "743d6e6b-6320-4157-962e-5789b717aa34",
       "position": 8,
       "properties": {
-        "description": "[slide] **Display:** Have students turn to page 4 of their Project Guide, which focuses on User Testing. Have students fill in the left-most column of the table with the main tasks they would like to test with a user. This will be the first activity students start with the next day.\r\n\r\n**Collect:** Decide how you would like to collect or store the notecards for students who have finished their paper prototype. You may decide to collect and redistribute them, or you may have students keep their materials in a specific location.",
+        "description": "**Display:** Have students turn to page 4 of their Project Guide, which focuses on User Testing. Have students fill in the left-most column of the table with the main tasks they would like to test with a user. This will be the first activity students start with the next day.\n\n**Collect:** Decide how you would like to collect or store the notecards for students who have finished their paper prototype. You may decide to collect and redistribute them, or you may have students keep their materials in a specific location.",
         "name": "Wrap Up\r"
       },
       "seeding_key": {
@@ -3250,7 +3216,7 @@
       "key": "9afae521-da27-48d1-9d5f-e90c8690923f",
       "position": 1,
       "properties": {
-        "description": "[slide] **Distribute:** As students enter, have them gather their paper prototype notecards and **Paper Prototype Project Guide**. Instruct them to test the app themselves and practice “navigating” the app as if they were a user by pressing buttons and switching screens. Once all students are ready, jump right into the next activity.",
+        "description": "**Distribute:** As students enter, have them gather their paper prototype notecards and **Paper Prototype Project Guide**. Instruct them to test the app themselves and practice “navigating” the app as if they were a user by pressing buttons and switching screens. Once all students are ready, jump right into the next activity.",
         "name": "Warm Up\r"
       },
       "seeding_key": {
@@ -3286,10 +3252,9 @@
       "key": "8672a531-0212-4a3a-9831-5c522d710bd4",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Test Your App:** Using the same structure as an earlier lesson with one person as the user and another person as the computer, have students take turns testing their app with each other. One person acts as the user and navigates the paper prototype, the other person acts as the computer and changes the screens. The user should try and complete each of the tasks outlined on the User Testing section of the activity guide. Further instructions exist inside the project guide.",
+        "description": "**Test Your App:** Using the same structure as an earlier lesson with one person as the user and another person as the computer, have students take turns testing their app with each other. One person acts as the user and navigates the paper prototype, the other person acts as the computer and changes the screens. The user should try and complete each of the tasks outlined on the User Testing section of the activity guide. Further instructions exist inside the project guide.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Timing:** Students should spend no more than five minutes each testing each other’s paper prototypes. This ensures there is enough time for the remaining activities in this lesson.\r\n\r\n**Challenges:** Students may struggle to empathize with their users while they are testing the app. Decisions that may seem “obvious” to the creator of the app are not always so clear for the user, which may be frustrating. App designers may try to clarify their app or interject and say “you’re supposed to…” as the user navigates the app. Encourage students to avoid these instincts and instead let the user explore the app in whatever way seems intuitive to them.\r\n\r\nThis is exactly what is supposed to happen with user testing - it challenges our assumptions and helps us see from another person’s perspective, uncovering problems we may not have even known existed. This will enrich the Reflect stage of the process, since there will be many places that the app can be improved\r\n"
           }
@@ -3315,7 +3280,7 @@
       "key": "33e66783-8c6a-4b44-a3ce-7715ffb2307d",
       "position": 6,
       "properties": {
-        "description": "[slide] **Display:** Have students turn to page 5 of the activity guide for the Reflect prompt. Students have a T chart on the project guide to interpret their user feedback and identify potential changes or improvements. On the left side of the T chart, students list all of the interesting observations they made during testing (such as assumptions the user had, ways they tried to interact with the app, or statements they made while using the app). The right side of the chart is an area to interpret what each of those observations might mean. This process will help students identify what changes they should consider for their app.\r\n\r\n**Circulate:** Monitor students as they reflect on their feedback from user testing. If students appear discouraged because the app didn’t work as intended, encourage them to see this as a good thing because it means the feedback was valuable and will lead to real improvements.",
+        "description": "**Display:** Have students turn to page 5 of the activity guide for the Reflect prompt. Students have a T chart on the project guide to interpret their user feedback and identify potential changes or improvements. On the left side of the T chart, students list all of the interesting observations they made during testing (such as assumptions the user had, ways they tried to interact with the app, or statements they made while using the app). The right side of the chart is an area to interpret what each of those observations might mean. This process will help students identify what changes they should consider for their app.\n\n**Circulate:** Monitor students as they reflect on their feedback from user testing. If students appear discouraged because the app didn’t work as intended, encourage them to see this as a good thing because it means the feedback was valuable and will lead to real improvements.",
         "name": "Reflect\r"
       },
       "seeding_key": {
@@ -3339,7 +3304,7 @@
       "key": "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400",
       "position": 8,
       "properties": {
-        "description": "[slide] **Display:** Have students read the Create a Poster section of the activity guide. This step requires students to cut out pieces of their activity guide and paste them on a poster. Additionally, they will write a small summary of their app based on the questions on the bottom of the activity guide.\r\n\r\n[slide] **Display:** Show students a copy of the rubric for this project, which will be distributed to students in a moment. All the criteria from this rubric can be found in the activity guide and on the poster when it is finished."
+        "description": "**Display:** Have students read the Create a Poster section of the activity guide. This step requires students to cut out pieces of their activity guide and paste them on a poster. Additionally, they will write a small summary of their app based on the questions on the bottom of the activity guide.\n\n**Display:** Show students a copy of the rubric for this project, which will be distributed to students in a moment. All the criteria from this rubric can be found in the activity guide and on the poster when it is finished."
       },
       "seeding_key": {
         "activity_section.key": "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400",
@@ -3350,7 +3315,7 @@
       "key": "7e32f943-ba51-43d2-ab04-dc850e9ead5c",
       "position": 9,
       "properties": {
-        "description": "[slide] **Distribute:** Each student needs a piece of poster paper and a copy of the rubric. Groups of students can share tape or glue-sticks, scissors, and markers or colored pencils."
+        "description": "**Distribute:** Each student needs a piece of poster paper and a copy of the rubric. Groups of students can share tape or glue-sticks, scissors, and markers or colored pencils."
       },
       "seeding_key": {
         "activity_section.key": "7e32f943-ba51-43d2-ab04-dc850e9ead5c",
@@ -3364,7 +3329,6 @@
         "description": "**Circulate:** Monitor students as they create their posters, clarifying any questions. Emphasize that the goal is for the poster to describe the entire design process, not just showcase the app idea and paper prototype. Encourage students to use the rubric to help guide what information they include on their poster.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Displaying the Posters:** As students finish their posters, encourage them to hang them around the classroom. If there is time in class, students can also participate in a gallery walk and give positive feedback and “shoutouts” to other student posters via post-it notes. Even if the posters are not discussed at the end of the lesson, they can remain prominently displayed throughout the rest of the unit as a reminder of the successful design process.\r\n"
           }
@@ -3379,7 +3343,7 @@
       "key": "3f6409bb-cc17-4e85-8567-bd8e0fdd0e53",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Think about the entire development process for your paper prototype, from the initial interview to designing the prototype, to testing, to brainstorming further improvements.\r\n\r\n* What were the biggest challenges involved in designing a piece of software for a different user?\r\n* What skills from this project do you think will be useful when programming app prototypes later in this unit?",
+        "description": "**Prompt:** Think about the entire development process for your paper prototype, from the initial interview to designing the prototype, to testing, to brainstorming further improvements.\n\n* What were the biggest challenges involved in designing a piece of software for a different user?\n* What skills from this project do you think will be useful when programming app prototypes later in this unit?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3394,7 +3358,6 @@
         "description": "**Discuss:** Ask students to share their reflections with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Highlight the difficulty in viewing projects from another person's perspective, especially when you are the one doing the creating. This is a skill students will need to continue to use in this unit. Call out skills like interpreting user needs from interviews and live tests, scoping large projects, designing user interfaces, and general organization that students will continue to use in the second chapter of the unit.\r\n"
           }
@@ -3409,7 +3372,7 @@
       "key": "3c6018f8-0048-4c97-9970-72884de4c736",
       "position": 3,
       "properties": {
-        "description": "[slide] &fa-desktop; **Survey:** Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "description": "**Survey:** Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
       },
       "seeding_key": {
         "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736",
@@ -3420,7 +3383,6 @@
       "key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
       "position": 1,
       "properties": {
-        "name": "Reflection",
         "progression_name": "Reflection"
       },
       "seeding_key": {
@@ -6018,10 +5980,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
-        ],
-        "progression": "Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6044,10 +6006,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Demo Apps",
         "level_keys": [
           "Example App Types_2021"
-        ],
-        "progression": "Demo Apps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6070,10 +6032,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Quiz App Demo_2021"
-        ],
-        "progression": "Demo Apps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6096,10 +6058,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Decision App Demo_2021"
-        ],
-        "progression": "Demo Apps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6122,10 +6084,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 List App Demo_2021"
-        ],
-        "progression": "Demo Apps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6148,10 +6110,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "progression": "Demo Apps",
         "level_keys": [
           "CSDU4 Crowdsource App Demo_2021"
-        ],
-        "progression": "Demo Apps"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6174,10 +6136,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Build a Screen",
         "level_keys": [
           "CSDU4 Design Mode Video_2021"
-        ],
-        "progression": "Build a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6200,10 +6162,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 1_2021"
-        ],
-        "progression": "Build a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6226,10 +6188,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 2_2021"
-        ],
-        "progression": "Build a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6252,10 +6214,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 3_2021"
-        ],
-        "progression": "Build a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6278,10 +6240,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "progression": "Build a Screen",
         "level_keys": [
           "U4 Model Design 4_2021"
-        ],
-        "progression": "Build a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6304,10 +6266,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 5_2021"
-        ],
-        "progression": "Finish a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6330,10 +6292,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 6_2021"
-        ],
-        "progression": "Finish a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6356,10 +6318,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "progression": "Finish a Screen",
         "level_keys": [
           "U4 Model Design 7_2021"
-        ],
-        "progression": "Finish a Screen"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6382,10 +6344,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App Project: Screen Design",
         "level_keys": [
           "Design a Screen for your App_2021"
-        ],
-        "progression": "App Project: Screen Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6408,10 +6370,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "App Project: Screen Design",
         "level_keys": [
           "CSD U4 - Design Mode Project_2021"
-        ],
-        "progression": "App Project: Screen Design"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6434,10 +6396,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 1_2021"
-        ],
-        "progression": "Adding Screens"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6460,10 +6422,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 1.5_2021"
-        ],
-        "progression": "Adding Screens"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6486,10 +6448,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 2_2021"
-        ],
-        "progression": "Adding Screens"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6512,10 +6474,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "Adding Screens",
         "level_keys": [
           "U4 Model Program 2.5_2021"
-        ],
-        "progression": "Adding Screens"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6538,10 +6500,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 3_2021"
-        ],
-        "progression": "Events and Linking Screens"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6564,10 +6526,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 4_2021"
-        ],
-        "progression": "Events and Linking Screens"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6590,10 +6552,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "progression": "Events and Linking Screens",
         "level_keys": [
           "U4 Model Program 5_2021"
-        ],
-        "progression": "Events and Linking Screens"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6616,10 +6578,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Combining Projects",
         "level_keys": [
           "CSDU4 Project Import_2021"
-        ],
-        "progression": "Combining Projects"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6642,10 +6604,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Combining Projects",
         "level_keys": [
           "CSDU4 Project Events_2021"
-        ],
-        "progression": "Combining Projects"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6693,10 +6655,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
-        ],
-        "progression": "Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,

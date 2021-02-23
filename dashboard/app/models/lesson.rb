@@ -38,6 +38,7 @@ class Lesson < ApplicationRecord
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
   has_and_belongs_to_many :vocabularies, join_table: :lessons_vocabularies
+  has_and_belongs_to_many :programming_expressions, join_table: :lessons_programming_expressions
   has_many :objectives, dependent: :destroy
 
   # join tables needed for seeding logic
@@ -98,6 +99,7 @@ class Lesson < ApplicationRecord
         lockable: !!raw_lesson[:lockable],
         has_lesson_plan: !!raw_lesson[:has_lesson_plan],
         visible_after: raw_lesson[:visible_after],
+        unplugged: !!raw_lesson[:unplugged],
         relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
       )
       lesson.save! if lesson.changed?
@@ -160,15 +162,6 @@ class Lesson < ApplicationRecord
     script_levels.first.oldest_active_level.unplugged?
   end
 
-  # This is currently only relevant to CSF levels, which use the Unplugged
-  # level type. As an alternative to the Unplugged level type, Levelbuilders
-  # can select if External/Markdown levels should display as unplugged.
-  def display_as_unplugged
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged_lesson?
-  end
-
   def spelling_bee?
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
@@ -207,7 +200,7 @@ class Lesson < ApplicationRecord
   end
 
   def localized_lesson_plan
-    return lesson_path(id: id) if script.is_migrated
+    return script_lesson_path(script, self) if script.is_migrated
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -254,7 +247,7 @@ class Lesson < ApplicationRecord
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
-        unplugged: display_as_unplugged, # TODO: Update to use unplugged property
+        unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
 
@@ -289,6 +282,17 @@ class Lesson < ApplicationRecord
       lesson_data
     end
     lesson_summary.freeze
+  end
+
+  def summarize_for_calendar
+    {
+      id: id,
+      title: localized_title,
+      duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
+      assessment: !!assessment,
+      unplugged: unplugged,
+      url: script_lesson_path(script, self)
+    }
   end
 
   # Provides data about this lesson needed by the script edit page.
@@ -335,7 +339,7 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
-      lessonPath: lesson_path(id: id)
+      lessonPath: script_lesson_path(script, self)
     }
   end
 
@@ -363,7 +367,7 @@ class Lesson < ApplicationRecord
     {
       key: key,
       displayName: localized_name,
-      link: lesson_path(id: id),
+      link: script_lesson_path(script, self),
       position: relative_position
     }
   end
