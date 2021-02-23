@@ -213,7 +213,7 @@ const initialState = {
   trainingExamples: [],
   trainingLabels: [],
   percentDataToReserve: 10,
-  reserveLocation: TestDataLocations.BEGINNING,
+  reserveLocation: TestDataLocations.END,
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],

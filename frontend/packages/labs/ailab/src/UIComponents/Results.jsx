@@ -9,8 +9,9 @@ import {
   setResultsPhase
 } from "../redux";
 import { styles, MLTypes } from "../constants";
-import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
-import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
+import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
+import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
+import ResultsTable from "./ResultsTable";
 
 class Results extends Component {
   static propTypes = {
@@ -49,56 +50,30 @@ class Results extends Component {
               src={aiBotHead}
               style={{
                 ...styles.trainBotHead,
-                ...false && styles.trainBotOpen
+                ...(false && styles.trainBotOpen)
               }}
             />
             <img src={aiBotBody} style={styles.trainBotBody} />
           </div>
         )}
 
-        {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
-          <div>
-            {this.props.percentDataToReserve}% of the training data was reserved
-            to test the accuracy of the newly trained model.
-          </div>
-        )}
+        {this.props.resultsPhase >= 1 &&
+          !isNaN(this.props.summaryStat.stat) && (
+            <div>
+              {this.props.percentDataToReserve}% of the training data was
+              reserved to test the accuracy of the newly trained model.
+            </div>
+          )}
 
         {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
           <div style={styles.scrollableContentsTinted}>
             <div style={styles.scrollingContents}>
-              <table>
-                <thead>
-                  <tr>
-                    {this.props.selectedFeatures.map((feature, index) => {
-                      return <th key={index}>{feature}</th>;
-                    })}
-                    <th>Expected Label: {this.props.labelColumn}</th>
-                    <th>Predicted Label: {this.props.labelColumn}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {this.props.accuracyCheckExamples.map((examples, index) => {
-                    return (
-                      <tr key={index}>
-                        {examples.map((example, i) => {
-                          return <td key={i}>{example}</td>;
-                        })}
-                        <td>{this.props.accuracyCheckLabels[index]}</td>
-                        <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
-                        {this.props.accuracyCheckLabels[index] ===
-                          this.props.accuracyCheckPredictedLabels[index] && (
-                          <td style={styles.ready}>&#x2713;</td>
-                        )}
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+              <ResultsTable />
             </div>
           </div>
         )}
 
-        <div style={{opacity: this.props.resultsPhase >= 2 ? 1 : 0}}>
+        <div style={{ opacity: this.props.resultsPhase >= 2 ? 1 : 0 }}>
           {isNaN(this.props.summaryStat.stat) && (
             <p>
               An accuracy score was not calculated because no training data was
@@ -113,7 +88,9 @@ class Results extends Component {
                     The average difference between expected and predicted labels
                     is:
                   </div>
-                  <div style={styles.contents}>{this.props.summaryStat.stat}</div>
+                  <div style={styles.contents}>
+                    {this.props.summaryStat.stat}
+                  </div>
                 </div>
               )}
             {this.props.summaryStat.type === MLTypes.CLASSIFICATION &&

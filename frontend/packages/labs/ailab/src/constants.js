@@ -12,7 +12,7 @@ export const MLTypes = {
 export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
 
 export const TestDataLocations = {
-  BEGINNING: "beginnning",
+  BEGINNING: "beginning",
   END: "end",
   RANDOM: "random"
 };
@@ -20,6 +20,11 @@ export const TestDataLocations = {
 const labelColor = "rgb(254, 96, 3)"; // was 186
 const labelColorSemi = "rgba(254, 96, 3, 0.4)";
 const featureColor = "rgb(75, 155, 213)";
+
+export const colors = {
+  feature: "rgb(70, 186, 168)",
+  label: "rgb(186, 168, 70)"
+};
 
 export const styles = {
   app: {
@@ -246,7 +251,6 @@ export const styles = {
     backgroundColor: featureColor
   },
   dataDisplayCellUnselected: {},
-
   crossTabCell0: {
     backgroundColor: "rgba(255,100,100, 0)"
   },
@@ -344,5 +348,10 @@ export const styles = {
     marginBottom: 5
   },
 
-  regularButton: { width: "20%" }
+  regularButton: { width: "20%" },
+
+  floatLeft: {
+    float: "left",
+    margin: 20
+  }
 };
