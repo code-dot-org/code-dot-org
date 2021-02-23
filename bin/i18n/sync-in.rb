@@ -17,7 +17,7 @@ require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
   puts "Sync in starting"
-  HocSyncUtils.sync_in
+  # HocSyncUtils.sync_in
   localize_level_content
   localize_project_content
   localize_block_content
@@ -107,19 +107,21 @@ def get_i18n_strings(level)
       end
 
       ## Variable Names
+      variable_names = "variable_names"
       variables = blocks.xpath("//block[@type=\"variables_get\"]")
-      i18n_strings['variable_names'] = Hash.new unless variables.empty?
+      i18n_strings[variable_names] = Hash.new unless variables.empty?
       variables.each do |variable|
         name = variable.at_xpath('./title[@name="VAR"]')
-        i18n_strings['variable_names'][name.content] = name.content if name
+        i18n_strings[variable_names][name.content] = name.content if name
       end
 
       ## Parameter Names
+      parameter_names = "parameter_names"
       parameters = blocks.xpath("//block[@type=\"parameters_get\"]")
-      i18n_strings['parameter_names'] = Hash.new unless parameters.empty?
+      i18n_strings[parameter_names] = Hash.new unless parameters.empty?
       parameters.each do |parameter|
         name = parameter.at_xpath('./title[@name="VAR"]')
-        i18n_strings['parameter_names'][name.content] = name.content if name
+        i18n_strings[parameter_names][name.content] = name.content if name
       end
 
       ## Placeholder texts
@@ -191,6 +193,12 @@ def localize_level_content
   block_category_strings = {}
   progression_strings = {}
   level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
+  variable_strings = {}
+  parameter_strings = {}
+  block_categories = "block_categories"
+  progressions = "progressions"
+  variable_names = "variable_names"
+  parameter_names = "parameter_names"
 
   # We have to run this specifically from the Rails directory because
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
@@ -213,8 +221,17 @@ def localize_level_content
         # level, the expectation here is that there is a massive amount of
         # overlap between levels, so we actually want to just present these all
         # as a single group rather than breaking them up by script
-        if script_strings[url].key? "block_categories"
-          block_category_strings.merge! script_strings[url].delete("block_categories")
+        if script_strings[url].key? block_categories
+          block_category_strings.merge! script_strings[url].delete(block_categories)
+        end
+
+        # do the same for variables and parameters
+        if script_strings[url].key? variable_names
+          variable_strings.merge! script_strings[url].delete(variable_names)
+        end
+
+        if script_strings[url].key? parameter_names
+          parameter_strings.merge! script_strings[url].delete(parameter_names)
         end
       end
       script_strings.delete_if {|_, value| value.blank?}
@@ -264,23 +281,19 @@ def localize_level_content
     end
   end
 
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.yml"), 'w') do |file|
+  write_to_yml(block_categories, block_category_strings)
+  write_to_yml(progressions, progression_strings)
+  write_to_yml(variable_names, variable_strings)
+  write_to_yml(parameter_names, parameter_strings)
+end
+
+def write_to_yml(block_type, block_strings)
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{block_type}.yml"), "w") do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
       "en" => {
         "data" => {
-          "block_categories" => block_category_strings.sort.to_h
-        }
-      }
-    }
-    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
-  end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/progressions.yml"), 'w') do |file|
-    # Format strings for consumption by the rails i18n engine
-    formatted_data = {
-      "en" => {
-        "data" => {
-          "progressions" => progression_strings.sort.to_h
+          block_type => block_strings.sort.to_h
         }
       }
     }

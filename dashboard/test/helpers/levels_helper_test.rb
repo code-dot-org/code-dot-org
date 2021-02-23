@@ -710,14 +710,10 @@ class LevelsHelperTest < ActionView::TestCase
     custom_i18n = {
       "data" => {
         "variable_names" => {
-          @level.name => {
-            "length" =>  toolbox_translated_name
-          }
+          "length" =>  toolbox_translated_name
         },
         "parameter_names" => {
-          @level.name => {
-            "points" => start_translated_name
-          }
+          "points" => start_translated_name
         }
       }
     }
