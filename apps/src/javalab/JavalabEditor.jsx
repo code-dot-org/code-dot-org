@@ -1,17 +1,17 @@
 import React from 'react';
-import $ from 'jquery';
-import AceEditor from 'react-ace';
 import {connect} from 'react-redux';
 import {setEditorText} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import 'ace-builds/src-noconflict/mode-java';
-import 'ace-builds/src-noconflict/theme-monokai';
+import {EditorView} from '@codemirror/view';
+import {editorSetup} from './editorSetup';
+import {EditorState} from '@codemirror/state';
 
 const style = {
   editor: {
     width: '100%',
-    height: 600
+    height: 600,
+    backgroundColor: '#282c34'
   }
 };
 
@@ -23,17 +23,29 @@ class JavalabEditor extends React.Component {
     setEditorText: PropTypes.func
   };
 
-  onChange = newValue => {
-    this.props.setEditorText(newValue);
-  };
-
   componentDidMount() {
-    let textInput = $('.ace_text-input');
-    if (textInput) {
-      let textInputElement = textInput.first();
-      textInputElement.attr('aria-label', 'java editor panel');
-    }
+    this.editor = new EditorView({
+      state: EditorState.create({
+        extensions: editorSetup
+      }),
+      parent: this._codeMirror,
+      dispatch: this.dispatchEditorChange()
+    });
   }
+
+  dispatchEditorChange = () => {
+    // tr is a code mirror transaction
+    // see https://codemirror.net/6/docs/ref/#state.Transaction
+    return tr => {
+      // we are overwriting the default dispatch method for codemirror,
+      // so we need to manually call the update method.
+      this.editor.update([tr]);
+      // if there are changes to the editor, update redux.
+      if (!tr.changes.empty && tr.newDoc) {
+        this.props.setEditorText(tr.newDoc.toString());
+      }
+    };
+  };
 
   render() {
     return (
@@ -41,14 +53,7 @@ class JavalabEditor extends React.Component {
         <PaneHeader hasFocus={true}>
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
-        <AceEditor
-          mode="java"
-          theme="monokai"
-          onChange={this.onChange}
-          name="java-lab-editor"
-          editorProps={{$blockScrolling: true}}
-          style={style.editor}
-        />
+        <div ref={el => (this._codeMirror = el)} style={style.editor} />
       </div>
     );
   }
