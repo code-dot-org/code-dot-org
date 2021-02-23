@@ -132,7 +132,7 @@
         "overview": "In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in the maze. \r\nDebugging is an essential element of learning to program. Students will encounter some puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
         "student_overview": "In this lesson, you will learn how to write your very own programs!",
         "purpose": "We recognize that every classroom has a spectrum of understanding for every subject. Some students in your class may be computer wizards, while others haven't had much experience at all. In order to create an equal playing (and learning) field, we have developed these ramp-up lessons. This can be used as either an introduction or a review of how to use Code.org and basic computer science concepts. \r\nStudents in your class might become frustrated with this lesson because of the essence of debugging. _Debugging_ is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
-        "preparation": " - Play through the puzzles yourself to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class. \r\n - Make sure every student has a journal.\r\n - Review [r csf-debugging-handout] with the class.",
+        "preparation": " - Play through the puzzles yourself to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a journal.\n - Review **CSF Debugging** handout with the class.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -554,8 +554,7 @@
       "key": "d0f3f318-0d7f-456a-b680-8af4fc90f457",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "d0f3f318-0d7f-456a-b680-8af4fc90f457",
@@ -1251,11 +1250,23 @@
       }
     },
     {
-      "key": "7be0880f-622a-49df-a654-50a18845985f",
+      "key": "b4ae143b-f79d-4ab9-9346-dca177438f61",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4ae143b-f79d-4ab9-9346-dca177438f61",
+        "lesson.key": "Functions: Songwriting",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "7be0880f-622a-49df-a654-50a18845985f",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "7be0880f-622a-49df-a654-50a18845985f",
@@ -1266,7 +1277,7 @@
     },
     {
       "key": "6aed97c6-89bd-4bc0-a4dd-ac23af33e065",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -1280,7 +1291,7 @@
     },
     {
       "key": "a0d784ef-8d53-486a-ac4c-eba8617be681",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Assessment",
         "duration": 5
@@ -1294,7 +1305,7 @@
     },
     {
       "key": "a3701255-a00e-431c-a6bc-ee1f6d192ebf",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "Extended Learning"
       },
@@ -1306,13 +1317,13 @@
       }
     },
     {
-      "key": "b4ae143b-f79d-4ab9-9346-dca177438f61",
-      "position": 6,
+      "key": "6c35971f-0c71-44c4-b6d7-9380216625a5",
+      "position": 7,
       "properties": {
-        "name": "Levels"
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
-        "lesson_activity.key": "b4ae143b-f79d-4ab9-9346-dca177438f61",
+        "lesson_activity.key": "6c35971f-0c71-44c4-b6d7-9380216625a5",
         "lesson.key": "Functions: Songwriting",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2021"
@@ -1612,7 +1623,7 @@
       "key": "76f4a5c7-5323-4ed5-baad-e5ad5b7504f9",
       "position": 2,
       "properties": {
-        "description": "This lesson has four new and important vocabulary words:\n\n - **Program** - Say it with me: Pro - Gram\nAn algorithm that has been coded into something that can be run by a machine. \n\n - **Programming** - Say it with me: Pro - Gramm - ing\nThe art of creating a program. \n\n - **Bug** - Say it with me: Bug\nAn error in a program that prevents the program from running as expected. \n\n - **Debugging** - Say it with me: De - Bugg - ing\nFinding and fixing errors in programs. \n\n\n#### Say:\n\nDebugging is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, Scrat from Ice Age. If students aren't familiar with Scrat, show some video clips of the quirky squirrel running into trouble.",
+        "description": "This lesson has four new and important vocabulary words:\n\n - **Program** - *Say it with me: Pro - Gram*\n\nAn algorithm that has been coded into something that can be run by a machine. \n\n - **Programming** - *Say it with me: Pro - Gramm - ing*\n\nThe art of creating a program. \n\n - **Bug** - *Say it with me: Bug*\n\nAn error in a program that prevents the program from running as expected. \n\n - **Debugging** - *Say it with me: De - Bugg - ing*\n\nFinding and fixing errors in programs. \n\n\n#### Say:\n\n*Debugging is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!*\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, *Scrat* from *Ice Age*. If students aren't familiar with *Scrat*, show some video clips of the quirky squirrel running into trouble.",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -1626,11 +1637,11 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n\r\n"
           }
-        ]
+        ],
+        "name": "Sequencing in the Maze"
       },
       "seeding_key": {
         "activity_section.key": "117e6e7a-f7d4-4530-92d7-b65156282d97",
@@ -1641,8 +1652,7 @@
       "key": "818fc335-c987-42f4-b53a-c7bcae191436",
       "position": 2,
       "properties": {
-        "description": "Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize [r pair-programming-vid] whenever possible during the activity.\r\n - Encourage students with questions/challenges to start by asking their partner.\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\r\n\r\n\r\nBefore letting the students start on the computer, remind them of the advantages of [r pair-programming-vid] and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize [Pair Programming Video](https://www.youtube.com/watch?v=vgkahOzFH2Q) whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n\nBefore letting the students start on the computer, remind them of the advantages of [Pair Programming Video](https://www.youtube.com/watch?v=vgkahOzFH2Q) and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher."
       },
       "seeding_key": {
         "activity_section.key": "818fc335-c987-42f4-b53a-c7bcae191436",
@@ -1653,7 +1663,6 @@
       "key": "d49bf109-2543-40ee-9fce-0c69e13ac185",
       "position": 3,
       "properties": {
-        "name": "Maze Intro: Programming with Blocks",
         "progression_name": "Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
@@ -1665,7 +1674,6 @@
       "key": "c1a101ad-d674-496e-978e-2fd7bf196022",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1677,7 +1685,6 @@
       "key": "74868c8b-a655-4ea5-a493-d92849957afd",
       "position": 5,
       "properties": {
-        "name": "Debugging with the Step Button",
         "progression_name": "Debugging with the Step Button"
       },
       "seeding_key": {
@@ -1689,7 +1696,6 @@
       "key": "d64f7ad4-be48-428b-a27f-cb46015a444a",
       "position": 6,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1701,7 +1707,6 @@
       "key": "1823aca8-b31b-4700-a724-c3f295cdfcb5",
       "position": 7,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1713,7 +1718,6 @@
       "key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7",
       "position": 8,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3090,8 +3094,8 @@
       "key": "372220f1-abea-4376-a0a2-d5a7c389adec",
       "position": 1,
       "properties": {
-        "description": "This lesson has one new and important word:\r\n\r\n - **Function** - Say it with me: Func-shun \r\n\r\nA piece of code that you can call over and over again.",
-        "name": "Vocabulary\r"
+        "description": "\n####Vocabulary\n\nThis lesson has one new and important word:\n\n - **Function** - Say it with me: Func-shun \n\nA piece of code that you can call over and over again.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "372220f1-abea-4376-a0a2-d5a7c389adec",
@@ -3102,8 +3106,7 @@
       "key": "b535d4bd-acf0-486e-9f4e-8483b5d35c44",
       "position": 2,
       "properties": {
-        "description": "- Let the class know that today is song day!\r\n- We're going to learn a song together.\r\n\t- Start with a simple song, either written out or projected on the screen.\r\n\t- Point to the chorus and be sure that the class knows how it goes before you begin on the song.\r\n\t- Blast through the song, singing it with them in the beginning, then see what happens when you get to the part where it calls the chorus.",
-        "name": "Sing a Song\r"
+        "description": "####Sing a Song\n\n- Let the class know that today is song day!\n- We're going to learn a song together.\n\t- Start with a simple song, either written out or projected on the screen.\n\t- Point to the chorus and be sure that the class knows how it goes before you begin on the song.\n\t- Blast through the song, singing it with them in the beginning, then see what happens when you get to the part where it calls the chorus."
       },
       "seeding_key": {
         "activity_section.key": "b535d4bd-acf0-486e-9f4e-8483b5d35c44",
@@ -3114,7 +3117,6 @@
       "key": "4c6d3147-e36c-42f0-9fa6-929ca790207c",
       "position": 3,
       "properties": {
-        "description": "***Chorus:***",
         "tips": [
           {
             "type": "teachingTip",
@@ -3131,7 +3133,7 @@
       "key": "f92bd484-5bb9-411e-ba94-98b2513e0d54",
       "position": 4,
       "properties": {
-        "description": "Little bunny Foo Foo<br/>\r\nHopping through the forest<br/>\r\nScooping up the field mice<br/>\r\nAnd bopping ‘em on the head<br/>\r\nDown came the Fairy<br/>\r\nAnd she said<br/>\r\n“Little bunny Foo Foo<br/>\r\nI don’t wanna see you<br/>\r\nScooping up the field mice<br/>\r\nAnd bopping ‘em on the head”*<br/>\r\n\r\n***Song:***\r\n\r\n*Chorus*\r\n\r\n*I’ll give you 3 chances.<br/>\r\nThen I’ll turn you into a goon!<br/>\r\nThe next day. . .*\r\n\r\n*Chorus*\r\n\r\n*I’ll give you 2 chances.<br/>\r\nThen I’ll turn you into a goon!<br/>\r\nThe next day. . .*\r\n\r\n*Chorus*\r\n\r\n*I’ll give you 1 chance.<br/>\r\nThen I’ll turn you into a goon!<br/>\r\nThe next day. . .*\r\n\r\n*Chorus*\r\n\r\n*\"I gave you two chances.<br/>\r\nNow I’ll turn you into a goon!”<br/>\r\n(POOF!)<br/>\r\nAnd the moral of the story is:<br/>\r\nHare today, goon tomorrow!*\r\n\r\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\r\n\t- Stop the song once that happens, and explicitly highlight what just happened.\r\n\t\t- You defined the chorus.\r\n\t\t- You called the chorus.\r\n\t\t- They sang the chorus.\r\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\r\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
+        "description": "***Chorus:***\n\nLittle bunny Foo Foo<br/>\nHopping through the forest<br/>\nScooping up the field mice<br/>\nAnd bopping ‘em on the head<br/>\nDown came the Fairy<br/>\nAnd she said<br/>\n“Little bunny Foo Foo<br/>\nI don’t wanna see you<br/>\nScooping up the field mice<br/>\nAnd bopping ‘em on the head”*<br/>\n\n***Song:***\n\n*Chorus*\n\n*I’ll give you 3 chances.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*I’ll give you 2 chances.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*I’ll give you 1 chance.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*\"I gave you two chances.<br/>\nNow I’ll turn you into a goon!”<br/>\n(POOF!)<br/>\nAnd the moral of the story is:<br/>\nHare today, goon tomorrow!*\n\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\n\t- Stop the song once that happens, and explicitly highlight what just happened.\n\t\t- You defined the chorus.\n\t\t- You called the chorus.\n\t\t- They sang the chorus.\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
       },
       "seeding_key": {
         "activity_section.key": "f92bd484-5bb9-411e-ba94-98b2513e0d54",
@@ -3166,20 +3168,21 @@
       }
     },
     {
-      "key": "1a3c2376-40ac-4038-b9d6-e51eb8b46316",
+      "key": "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d",
       "position": 1,
       "properties": {
-        "description": "A fantastic way to compare functions to something we see in our everyday lives is to look at songs. Songs often have certain groups of lyrics that repeat over and over. We call such a group a \"chorus.\"\r\n\r\n**Directions:**",
-        "name": "[r csf-songwriting-worksheets]\r"
+        "name": "Songwriting",
+        "description": "A fantastic way to compare functions to something we see in our everyday lives is to look at songs. Songs often have certain groups of lyrics that repeat over and over. We call such a group a \"chorus.\"",
+        "progression_name": "Songwriting - Functions Unplugged Activity"
       },
       "seeding_key": {
-        "activity_section.key": "1a3c2376-40ac-4038-b9d6-e51eb8b46316",
-        "lesson_activity.key": "7be0880f-622a-49df-a654-50a18845985f"
+        "activity_section.key": "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d",
+        "lesson_activity.key": "b4ae143b-f79d-4ab9-9346-dca177438f61"
       }
     },
     {
       "key": "dfc4f2ab-d9c6-454e-b3a6-8696815b4fdc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "tips": [
           {
@@ -3195,9 +3198,9 @@
     },
     {
       "key": "88cccb48-efc0-4649-886d-c649589769b3",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "- Divide into groups of 4, 5, or 6.\r\n- Give each group several copies of the Songwriting Worksheet.\r\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\r\n- Challenge the class to identify (and write down) the chorus.\r\n- Compare results from each group.\r\n\r\nDid everyone get the same thing?\r\nSing your choruses together to find out!\r\nPlay this game over and over until the class has little trouble identifying the choruses.\r\n\r\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
+        "description": "\n**Directions:**\n\n- Divide into groups of 4, 5, or 6.\n- Give each group several copies of the **Songwriting Worksheet**.\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\n- Challenge the class to identify (and write down) the chorus.\n- Compare results from each group.\n\nDid everyone get the same thing?\nSing your choruses together to find out!\nPlay this game over and over until the class has little trouble identifying the choruses.\n\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
       },
       "seeding_key": {
         "activity_section.key": "88cccb48-efc0-4649-886d-c649589769b3",
@@ -3213,7 +3216,8 @@
             "type": "teachingTip",
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.\r\n"
           }
-        ]
+        ],
+        "name": "Flash Chat/Journaling"
       },
       "seeding_key": {
         "activity_section.key": "06b4ee77-0a27-48bc-9dca-d55b530d1ce6",
@@ -3224,8 +3228,7 @@
       "key": "3143fa54-1a02-46ef-850f-f7e7ec4ff64f",
       "position": 2,
       "properties": {
-        "description": "- Would you rather write lyrics over and over again or define a chorus?\r\n- Do you think it's possible to make multiple choruses for the same song?\r\n- Does it make sense to make a new chorus for every time it's needed in a song?",
-        "name": "Flash Chat: What did we learn?\r"
+        "description": "\n####Flash Chat: What did we learn?\n\n- Would you rather write lyrics over and over again or define a chorus?\n- Do you think it's possible to make multiple choruses for the same song?\n- Does it make sense to make a new chorus for every time it's needed in a song?"
       },
       "seeding_key": {
         "activity_section.key": "3143fa54-1a02-46ef-850f-f7e7ec4ff64f",
@@ -3236,8 +3239,7 @@
       "key": "41faed4d-716c-40d1-aab9-3125f7a8a917",
       "position": 3,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a function and how do you use it?\r\n - Can you think of another activity where you might want to call a special group of instructions several times?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a function and how do you use it?\n - Can you think of another activity where you might want to call a special group of instructions several times?"
       },
       "seeding_key": {
         "activity_section.key": "41faed4d-716c-40d1-aab9-3125f7a8a917",
@@ -3248,8 +3250,7 @@
       "key": "0abea6de-f093-42f4-a3de-e84fba11870e",
       "position": 1,
       "properties": {
-        "description": "Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities.",
-        "name": "[r csf-songwriting-assessment]\r"
+        "description": "Hand out the **Songwriting Assessment worksheet** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "0abea6de-f093-42f4-a3de-e84fba11870e",
@@ -3268,13 +3269,14 @@
       }
     },
     {
-      "key": "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d",
+      "key": "0b96a39e-810a-4444-89ff-3485fd7882ad",
       "position": 1,
       "properties": {
+        "description": "###Fossil Fact Rap (45-60 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Science**\n\n[Fossil Fact Rap](https://docs.google.com/document/d/1WVISJLZToK70QxehPSo127FMSrKik2rK2AdPuaPPxmQ/edit#) is an optional activity aligned to Common Core ELA and Next Generation Science Standards, written by our teacher community. Students will expand their knowledge of functions to write a rap using academic terminology and facts related to fossils and rock layers. They will then learn how to “call a function” using the provided “defined function,” or rap song’s hook.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.4.2.D:** Use precise language and domain-specific vocabulary to inform about or explain the topic.\n\n- **CCSS.ELA-LITERACY.W.4.7:** Conduct short research projects that build knowledge through investigation of different aspects of a topic.\n\n- **CCSS.ELA-LITERACY.SL.4.5:** Add audio recordings and visual displays to presentations when appropriate to enhance the development of main ideas or themes.\n\n- **NGSS.4-ESS1-1:** Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time. \n"
       },
       "seeding_key": {
-        "activity_section.key": "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d",
-        "lesson_activity.key": "b4ae143b-f79d-4ab9-9346-dca177438f61"
+        "activity_section.key": "0b96a39e-810a-4444-89ff-3485fd7882ad",
+        "lesson_activity.key": "6c35971f-0c71-44c4-b6d7-9380216625a5"
       }
     },
     {
@@ -3699,7 +3701,7 @@
       "key": "4c5a950e-1fc0-4ec3-9eda-a4a8e7631801",
       "position": 1,
       "properties": {
-        "description": "Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\r\n\r\n#### Preparing Students for the Process:\r\n\r\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \r\n\r\nTo help your class manage this multi-stage undertaking, they should be given both the project guide and the [r rubric-csf-final-projects] on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \r\n\r\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \r\n\r\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the **Final Project Design Worksheet** and the **CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \n\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -6906,7 +6908,8 @@
       "properties": {
         "level_keys": [
           "Songwriting-Unplugged_2021"
-        ]
+        ],
+        "progression": "Songwriting - Functions Unplugged Activity"
       },
       "named_level": null,
       "bonus": false,
