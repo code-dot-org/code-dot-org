@@ -7,6 +7,8 @@ Scenario: Should see callout on 20-hour farmer lesson
   And element ".login-callout" is visible
 
 @no_mobile
+@no_ie
+# Issue with cookie clearing on IE
 Scenario: Should be able to clear cookies and session storage to see callout again
   Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
   And I rotate to landscape
@@ -63,6 +65,7 @@ Scenario: After dismissing the callout, it should not reappear upon refresh
   Then I reload the page
   Then element ".login-callout" is not visible
 
+@no_mobile
 Scenario: Nested callouts should work as expected
   Given I am on "http://studio.code.org/s/coursea-2020/stage/2/puzzle/2?noautoplay=true"
   And I rotate to landscape
