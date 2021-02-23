@@ -501,7 +501,7 @@
     },
     {
       "key": "Be A Super Digital Citizen",
-      "name": "Be A Super Digital Citizen",
+      "name": "Be A Super Digital Citizen -- TO BE REMOVED",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -509,7 +509,7 @@
       "properties": {
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
         "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
-        "purpose": "Common Sense Eduucation created this lesson to teach students how they can be upstanders when they see cyberbullying.",
+        "purpose": "Common Sense Education created this lesson to teach students how they can be upstanders when they see cyberbullying.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Prepare colored pencils or markers for students.",
         "creative_commons_license": "Creative Commons BY-NC-ND",
         "unplugged": true
@@ -8903,7 +8903,7 @@
       "chapter": 177,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "csf_be_a_super_digital_citizen_2021"
