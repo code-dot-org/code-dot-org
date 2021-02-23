@@ -84,9 +84,7 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
-    # Prevent state leakage and test flakiness by clearing the shared cache.
-    # Once https://codedotorg.atlassian.net/browse/FND-1411 is complete, we can update this to
-    # CDO.shared_cache.clear.
+    # A list of keys used by our shared cache that should be cleared between every test.
     [
       ProfanityHelper::PROFANITY_PREFIX,
       AzureTextToSpeech::AZURE_SERVICE_PREFIX,
