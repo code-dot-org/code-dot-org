@@ -989,6 +989,7 @@ class ScriptTest < ActiveSupport::TestCase
       isHocScript: false,
       student_detail_progress_view: false,
       age_13_required: false,
+      is_csf: false,
     }
     assert_equal expected, script.summarize_header
   end
@@ -2811,7 +2812,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'fix script level positions' do
-    script = create :script
+    script = create :script, is_migrated: true, hidden: true
     lesson_group = create :lesson_group, script: script
 
     lesson_1 = create :lesson, script: script, lesson_group: lesson_group
@@ -2867,7 +2868,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cannot fix position of legacy script levels' do
-    script = create :script
+    script = create :script, is_migrated: true, hidden: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -2877,7 +2878,7 @@ class ScriptTest < ActiveSupport::TestCase
     error = assert_raises do
       script.fix_script_level_positions
     end
-    assert_includes error.message, "cannot fix position of legacy script levels"
+    assert_includes error.message, 'Legacy script levels are not allowed in migrated scripts.'
   end
 
   private
