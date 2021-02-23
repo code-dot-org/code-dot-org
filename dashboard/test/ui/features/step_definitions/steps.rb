@@ -1486,6 +1486,10 @@ And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
   end
 end
 
+And(/^I clear the session storage/) do
+  @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)

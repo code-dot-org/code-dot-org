@@ -39,6 +39,9 @@ Scenario: See age callout, not signin callout on hour of code
 
 Scenario: After I dismiss the callout, it should not reappear upon refresh
   Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  And I delete the cookie named "hide_signin_callout"
+  And I clear session storage
+  Then I reload the page
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".login-callout" is visible
