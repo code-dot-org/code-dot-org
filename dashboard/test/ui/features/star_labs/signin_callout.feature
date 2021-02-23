@@ -37,7 +37,7 @@ Scenario: See age callout, not signin callout on hour of code
   And I wait until I don't see selector "#p5_loading"
   And I select age 10 in the age dialog
 
-Scenario: After I dismiss the callout, it should not reappear upon refresh
+Scenario: After dismissing the callout, it should not reappear upon refresh
   Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
   And I delete the cookie named "hide_signin_callout"
   And I clear session storage
