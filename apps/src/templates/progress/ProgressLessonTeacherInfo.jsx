@@ -126,7 +126,7 @@ class ProgressLessonTeacherInfo extends React.Component {
             <Button
               __useDeprecatedTag
               href={lesson.student_lesson_plan_html_url}
-              text={'Student Resources'}
+              text={i18n.studentResources()}
               icon="file-text"
               color="purple"
               target="_blank"
