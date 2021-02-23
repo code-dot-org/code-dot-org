@@ -3601,12 +3601,14 @@ hu:
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
           lesson_groups:
+            ramp_up:
+              display_name: hurkok
             csf_sprites:
               display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
-              display_name: Egymásba ágyazott ciklusok
+              display_name: Feltételek
             csf_functions:
               display_name: funkciók
         coursef-2021:

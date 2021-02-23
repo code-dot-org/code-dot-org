@@ -1,0 +1,72 @@
+{
+  "ko-KR": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "동작",
+          "Brushes": "브러쉬",
+          "Loops": "반복",
+          "Math": "계산",
+          "Logic": "논리",
+          "Functions": "함수",
+          "Variables": "변수"
+        },
+        "CourseD_EOC_dance": {
+          "World": "세계",
+          "Dancers": "댄서",
+          "Properties": "등록 정보",
+          "Events": "이벤트",
+          "Numbers": "숫자",
+          "Logic": "논리"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "동작",
+          "Events": "이벤트",
+          "Loops": "반복",
+          "Math": "계산",
+          "Logic": "논리",
+          "Games/Score": "게임/점수"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "세계",
+          "Actions": "동작",
+          "Events": "이벤트",
+          "Behaviors": "행동"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "세계",
+          "Locations": "위치",
+          "Actions": "동작",
+          "Events": "이벤트",
+          "Behaviors": "행동",
+          "Variables": "변수",
+          "Math": "계산",
+          "Logic": "논리",
+          "Functions": "함수",
+          "Text": "문장",
+          "Comments": "의견"
+        },
+        "outbreak_freeplay": {
+          "World": "세계",
+          "Actions": "동작",
+          "Behaviors": "행동",
+          "Events": "이벤트",
+          "Locations": "위치",
+          "Logic": "논리",
+          "Loops": "반복",
+          "Math": "계산",
+          "Variables": "변수",
+          "Functions": "함수",
+          "Comments": "의견"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "세계",
+          "Actions": "동작",
+          "Events": "이벤트",
+          "Logic": "논리",
+          "Math": "계산"
+        }
+      }
+    }
+  }
+}

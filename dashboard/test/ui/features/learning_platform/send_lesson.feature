@@ -12,8 +12,6 @@ Scenario: Send lesson dialog renders properly
   Then I see no difference for "send lesson dialog"
   Then I close my eyes
 
-@no_ie
-@no_safari
 @no_mobile
 Scenario: Send lesson dialog opens and closes
   Given I am on "http://studio.code.org/s/csp3-2018"
@@ -23,8 +21,6 @@ Scenario: Send lesson dialog opens and closes
   When I click selector "button:contains(Done)"
   Then I wait until element ".modal" is not visible
 
-@no_ie
-@no_safari
 @no_mobile
 Scenario: Send lesson dialog copy link button works
   Given I am on "http://studio.code.org/s/coursec-2017"

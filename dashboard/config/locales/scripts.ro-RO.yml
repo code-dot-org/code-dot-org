@@ -7342,7 +7342,7 @@ ro:
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
-              display_name: Repetiții imbricate
+              display_name: Condiţionale
             csf_functions:
               display_name: Funcţii
         coursef-2021:
@@ -7395,6 +7395,8 @@ ro:
               name: Cum se Codifică o Simulare
             Course F Introduction:
               name: Prezentând Laboratorul de Desen
+            Sprites in Action:
+              name: Spiriduși în acțiune
           lesson_groups:
             ramp_up:
               display_name: Introducere

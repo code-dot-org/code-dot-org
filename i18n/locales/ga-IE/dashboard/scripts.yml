@@ -4043,7 +4043,7 @@ ga:
             csf_digcit:
               display_name: Saoránacht Dhigiteach
             csf_nested_loops:
-              display_name: Lúba Neadaithe
+              display_name: Coinníollacha
             csf_functions:
               display_name: Feidhmeanna
         coursef-2021:
@@ -4128,6 +4128,8 @@ ga:
               name: Éisc ar snámh i Saotharlann na Sprideanna
             Course F Introduction:
               name: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
           lesson_groups:
             ramp_up:
               display_name: Réamhrá
