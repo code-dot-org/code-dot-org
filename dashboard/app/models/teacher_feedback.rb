@@ -29,7 +29,6 @@ class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
   validates_presence_of :student_id, :script_id, :level_id, :teacher_id, :script_level_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
-
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :script
   belongs_to :level
@@ -78,7 +77,7 @@ class TeacherFeedback < ApplicationRecord
   end
 
   def self.latest_per_teacher
-    # Only select feedback from teachers who lead sections in which the student is still enrolled
+    #Only select feedback from teachers who lead sections in which the student is still enrolled
     find(
       joins(:student_sections).
         where('sections.user_id = teacher_id').
