@@ -31,24 +31,7 @@ For high schools, we offer two years computer science courses for beginners: Com
 <%@show_csa = DCDO.get('courses_show_csa', false)%>
 <% if @show_csa %>
 # Computer Science A (coming in 2022)
-
-<div class="col-40" style="padding-right: 10px;">
-
-<img src="/images/csa/fill-380x215/csa-hs-page.png" style="max-width: 100%">
-
-</div>
-
-[col-60]
-
-In Computer Science A, students learn object-oriented programming using Java. Students take on the role of software engineers, and practice skills that are used in the field. The Code.org CSA course is designed for any high school student who wishes to continue their computer science education after completing an introductory course such as Computer Science Principles (CSP) or Computer Science Discoveries (CSD).
-
-[<button>Learn about CSA</button>](/educate/csa)
-
-[/col-60]
-
-<div style="clear: both;"></div>
-
-<br>
+<%=view :csa_information %>
 <hr>
 <% end %>
 
