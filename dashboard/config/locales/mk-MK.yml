@@ -68,6 +68,7 @@ mk:
     save: Зачувај во галерија
   race_interstitial:
     submit: Поднеси
+    decline: затвори
   project:
     projects: Проекти
     project_gallery: Проекти

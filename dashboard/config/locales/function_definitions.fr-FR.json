@@ -3591,6 +3591,56 @@
           "draw bit": {
             "name": "dessiner un peu"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "dessine une étoile",
+            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "parameters": {
+              "points": "points",
+              "length": "longueur"
+            }
+          },
+          "draw a circle": {
+            "name": "dessine un cercle",
+            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "parameters": {
+              "radius": "rayon"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dessiner une girouette",
+            "parameters": {
+              "sides": "côtés",
+              "length": "longueur",
+              "repeat": "répéter"
+            }
+          },
+          "draw a triangle": {
+            "name": "dessine un triangle",
+            "parameters": {
+              "length": "longueur"
+            }
+          },
+          "draw a shape": {
+            "name": "dessiner une forme",
+            "parameters": {
+              "sides": "côtés",
+              "length": "longueur"
+            }
+          },
+          "draw a house": {
+            "name": "dessine une maison",
+            "parameters": {
+              "length": "longueur"
+            }
+          },
+          "draw a square": {
+            "name": "dessine un carré",
+            "parameters": {
+              "length": "longueur"
+            }
+          }
         }
       }
     }

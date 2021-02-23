@@ -18719,6 +18719,10 @@ de:
             End of Course Project:
               key: Projekt am Ende des Kurses
               name: Projekt am Ende des Kurses
+            lesson-6:
+              name: Ausblick auf Minecraft
+            lesson-5:
+              name: Passwort-Power
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -18806,7 +18810,7 @@ de:
             csf_digcit:
               display_name: Digitalen Staatsbürgerschaft
             csf_nested_loops:
-              display_name: Verschachtelte Schleifen
+              display_name: Bedingungen
             csf_functions:
               display_name: Funktionen
             csf_impacts:
@@ -19051,6 +19055,8 @@ de:
               name: Programmierung einer Simulation
             Course F Introduction:
               name: Einführung Sprite Lab
+            Sprites in Action:
+              name: Sprites in Aktion
           lesson_groups:
             ramp_up:
               display_name: Einführung

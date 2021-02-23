@@ -16510,6 +16510,8 @@ zh-TW:
             End of Course Project:
               key: 課程結束專案
               name: 課程結束專案
+            lesson-6:
+              name: 與 Minecraft 一起展望未來
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -16597,7 +16599,7 @@ zh-TW:
             csf_digcit:
               display_name: 數位公民
             csf_nested_loops:
-              display_name: 巢狀迴圈
+              display_name: 條件判斷（Conditionals）
             csf_functions:
               display_name: 函式
             csf_impacts:
@@ -16845,6 +16847,8 @@ zh-TW:
               name: 編碼一個模擬
             Course F Introduction:
               name: Sprite Lab 簡介
+            Sprites in Action:
+              name: 運行中的角色
           lesson_groups:
             ramp_up:
               display_name: 介紹

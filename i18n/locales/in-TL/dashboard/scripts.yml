@@ -18581,6 +18581,7 @@ in:
           description_short: 'crwdns2463868:0crwdne2463868:0'
           description: 'crwdns2463870:0crwdne2463870:0'
           student_description: 'crwdns2478374:0crwdne2478374:0'
+          name: crwdns2481410:0crwdne2481410:0
         vpl-csp-2020:
           lessons:
             Module 1:
@@ -18719,6 +18720,8 @@ in:
               name: crwdns2474790:0crwdne2474790:0
             intro-categorical:
               name: crwdns2481332:0crwdne2481332:0
+            model-cards:
+              name: crwdns2481412:0crwdne2481412:0
           lesson_groups: { }
           title: crwdns2471290:0crwdne2471290:0
           description_audience: 'crwdns2471292:0crwdne2471292:0'
@@ -18779,6 +18782,18 @@ in:
               name: crwdns2481324:0crwdne2481324:0
             video:
               name: crwdns2481334:0crwdne2481334:0
+            blank space stories:
+              name: crwdns2481414:0crwdne2481414:0
+            how things spread:
+              name: crwdns2481416:0crwdne2481416:0
+            contagion simulator setup:
+              name: crwdns2481418:0crwdne2481418:0
+            sometimes but not always:
+              name: crwdns2481420:0crwdne2481420:0
+            modifying your model:
+              name: crwdns2481422:0crwdne2481422:0
+            telling a data story:
+              name: crwdns2481424:0crwdne2481424:0
           lesson_groups:
             Toolbox Levels:
               display_name: crwdns2471978:0crwdne2471978:0
@@ -18792,6 +18807,8 @@ in:
               display_name: crwdns2478418:0crwdne2478418:0
             Loom Levels:
               display_name: crwdns2481336:0crwdne2481336:0
+            contagion:
+              display_name: crwdns2481426:0crwdne2481426:0
           title: crwdns2471980:0crwdne2471980:0
           description_audience: crwdns2471982:0crwdne2471982:0
           description_short: crwdns2471984:0crwdne2471984:0
@@ -20019,6 +20036,10 @@ in:
             End of Course Project:
               key: crwdns2476798:0crwdne2476798:0
               name: crwdns2476800:0crwdne2476800:0
+            lesson-6:
+              name: crwdns2481428:0crwdne2481428:0
+            lesson-5:
+              name: crwdns2481430:0crwdne2481430:0
           lesson_groups:
             csf_sequencing:
               display_name: crwdns2476802:0crwdne2476802:0
@@ -20099,6 +20120,8 @@ in:
             End of Course Project:
               key: crwdns2476898:0crwdne2476898:0
               name: crwdns2476900:0crwdne2476900:0
+            lesson-4:
+              name: crwdns2481432:0crwdne2481432:0
           lesson_groups:
             ramp_up:
               display_name: crwdns2476902:0crwdne2476902:0
@@ -20114,6 +20137,8 @@ in:
               display_name: crwdns2476912:0crwdne2476912:0
             end_of_course_project:
               display_name: crwdns2476914:0crwdne2476914:0
+            lessonGroup-8:
+              display_name: crwdns2481434:0crwdne2481434:0
           name: crwdns2476916:0crwdne2476916:0
           student_description: crwdns2478546:0crwdne2478546:0
         coursef-2021:
@@ -20385,6 +20410,8 @@ in:
               name: crwdns2479156:0crwdne2479156:0
             chatbot:
               name: crwdns2479158:0crwdne2479158:0
+            blank space stories:
+              name: crwdns2481436:0crwdne2481436:0
           lesson_groups:
             ramp_up:
               display_name: crwdns2477238:0crwdne2477238:0
@@ -20742,3 +20769,6 @@ in:
           description_short: crwdns2480906:0crwdne2480906:0
           description: 'crwdns2480908:0crwdne2480908:0'
           student_description: 'crwdns2480910:0crwdne2480910:0'
+        teststandard:
+          lessons: { }
+          lesson_groups: { }

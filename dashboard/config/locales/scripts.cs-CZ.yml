@@ -4290,6 +4290,8 @@ cs:
             Artist Binary:
               key: Binární umělec
               name: Binární obrázky s umělcem
+            lesson-6:
+              name: Pohled do budoucna s Minecraftem
           lesson_groups:
             csf_sequencing:
               display_name: Sekvence
@@ -4322,12 +4324,14 @@ cs:
             Functions in Harvester:
               name: Funkce s farmářkou
           lesson_groups:
+            ramp_up:
+              display_name: Cykly
             csf_sprites:
               display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
             csf_nested_loops:
-              display_name: Vnořené cykly
+              display_name: Podmínky
             csf_functions:
               display_name: Funkce
         coursef-2021:

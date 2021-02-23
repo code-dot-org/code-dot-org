@@ -7172,6 +7172,8 @@ vi:
             Artist Binary:
               key: Nghệ sĩ nhị phân
               name: Nghệ sĩ nhị phân
+            lesson-6:
+              name: Nhìn về phía trước
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -7197,10 +7199,12 @@ vi:
             'Functions: Songwriting':
               name: Sáng tác với tham số
           lesson_groups:
+            ramp_up:
+              display_name: Vòng lặp
             csf_digcit:
               display_name: Công dân số
             csf_nested_loops:
-              display_name: Vòng lặp lồng nhau
+              display_name: Điều kiện
             csf_functions:
               display_name: Các hàm
         coursef-2021:

@@ -76,7 +76,8 @@
           "2-3_Artist Loops_New_12_c": "Художнику доведеться повернути праворуч лише на 60 градусів, щоб створити широкий кут."
         },
         "2-3 Artist Loops New 13": {
-          "2-3_Artist_Loops_New_13_a": "В кінці кожного алмазу, художник вже стоїть у правильному напрямку, щоб розпочати наступний. Через це нам не потрібно додавати додатковий блок \\`повернути ліворуч 'до того, як ми знову почнемось."
+          "2-3_Artist_Loops_New_13_a": "В кінці кожного алмазу, художник вже стоїть у правильному напрямку, щоб розпочати наступний. Через це нам не потрібно додавати додатковий блок \\`повернути ліворуч 'до того, як ми знову почнемось.",
+          "2-3_Artist_Loops_New_13_b": "Щоб зробити кожен алмаз, художнику потрібно:   \n\n-   рухатись\n-   повернути праворуч на 120 градусів\n-   рухатись\n-   повернути праворуч на 60 градусів  \n\nПотім зробити все це ще раз!"
         },
         "2-3 Artist Loops New 9": {
           "2-3_Artist_Loops_New_9_a": "Художник повинен повернути 45 градусів праворуч, перш ніж почати малювати.",
@@ -801,7 +802,7 @@
         },
         "course1_maze_seq_challenge2": {
           "courseB_maze_seq_challenge1_a": "Найкращий шлях може не працювати на цей раз.",
-          "courseB_maze_seq_challenge1_b": "Спробуйте рухати на захід, щоб розпочати"
+          "courseB_maze_seq_challenge1_b": "Спочатку спробуйте рухатися на захід."
         },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_b": "Додайте код, щоб намалювати трикутник всередині вкладеного циклу. Використовуйте 120 градусів для вашого трикутника."
@@ -816,7 +817,9 @@
           "courseD_bee_conditionals_challenge1_b": "У цій головоломці кожен простір може мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити ваш `if / else` умовно на кожному квадраті."
         },
         "course2_harvester_loops_challenge1": {
-          "courseC_harvester_loops_challenge1_a": "Не думайте навіть про спробу цього спробувати без циклів!"
+          "courseC_harvester_loops_challenge1_a": "Не думайте навіть про спробу цього спробувати без циклів!",
+          "courseC_harvester_loops_challenge1_b": "Ви можете повторити \"рухатися вперед\" і \"зібрати кукурудзу\" стільки разів, скільки вам потрібно, а потім \"повернути праворуч\" на кожному кутку.",
+          "courseC_harvester_loops_challenge1_c": "Найкращий спосіб зібрати перші чотири кукурудзи, це скористатися блоком \"повторити\" всередині іншого блоку \"повторити\". Ви можете використовувати такий принцип і для решти завдання!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
         },
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Один із способів вирішити це виглядає як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень для загадки, як це. Бути наполегливим!"
@@ -2134,7 +2137,8 @@
           "courseA_artist_loops_challenge2_c": "Вам потрібно буде БАГАТО блоків всередині циклу для цього завдання"
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_b": "Розпочати зацикливши команду \"рухати на південь\" та \"отримати скарб\""
+          "courseB_collector_loops_challenge1_b": "Розпочати зацикливши команду \"рухати на південь\" та \"отримати скарб\"",
+          "courseB_collector_loops_challenge1_a": "Північний візерунок трохи відрізняється від південного.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Деякі шляхи приведуть до вибухівки, якщо Ви зайдете занадто далеко."
@@ -2164,6 +2168,26 @@
         "outbreak7": {
           "whenclicked": "## Вакцини\n\nВи можете симулювати вакцинацію монстрів при клацанні по них. Щоб це зробити, використайте блок `змінити костюм` у цій події:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Застрягли? Завжди можна скасувати зміни, клацаючи `Історія версій` внизу, коли обираєте \"Почати знову\"."
+        },
+        "course1_artist_loops_challenge1": {
+          "courseA_artist_loops_challenge1_a": "Ви можете використовувати такі цикли для створення стін і даху. Спробуйте повторити різні блоки.  \n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nСтворіть свій власний дизайн або натисніть ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png), щоб переглянути кілька ідей!"
+        },
+        "course1_collector_loops_challenge1": {
+          "courseA_collector_loops_challenge1_a": "Спробуйте змінити цифри в кожному циклі, якщо щось піде не так.",
+          "courseA_collector_loops_challenge1_c": "На правій стороні печери 6 самоцвітів, але вам достатньо рухатися та збирати їх лише 5 разів. Ви знаєте чому так?"
+        },
+        "course1_collector_loops_challenge2": {
+          "courseA_collector_loops_challenge2_b": "Для вирішення проблеми потрібно скористатися лише одним блоком ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png>).",
+          "courseA_collector_loops_challenge2_a": "Ви можете рухатися назад і повернутися на шлях знову, перш ніж іти на південь.\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)"
+        },
+        "course1_maze_debugging_challenge2": {
+          "courseB_maze_seq_challenge2_b": "Переставте блоки та йдіть середнім шляхом."
+        },
+        "course1_playlab_events_challenge1": {
+          "courseA_playlab_events_challenge1_e": "Нарешті, відкрийте чарівника Венделя, натиснувши на Спіфа!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "course2_collector_loops_challenge2": {
+          "courseC_maze_loops_challenge2_a": "Початковий код працював би чудово, якби в кожній купі був лише одна часточка скарбу!"
         }
       }
     }

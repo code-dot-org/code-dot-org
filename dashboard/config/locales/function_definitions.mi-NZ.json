@@ -1262,6 +1262,47 @@
           "collect": {
             "name": "kohia"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "tāngia he whetū",
+            "parameters": {
+              "points": "ngā piro",
+              "length": "roanga"
+            }
+          },
+          "draw a circle": {
+            "name": "tāngia he porohita"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "roanga",
+              "repeat": "tōai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tāngia he tapatoru",
+            "parameters": {
+              "length": "roanga"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "roanga"
+            }
+          },
+          "draw a house": {
+            "name": "tāngia he whare",
+            "parameters": {
+              "length": "roanga"
+            }
+          },
+          "draw a square": {
+            "name": "tāngia he tapawhā",
+            "parameters": {
+              "length": "roanga"
+            }
+          }
         }
       }
     }
