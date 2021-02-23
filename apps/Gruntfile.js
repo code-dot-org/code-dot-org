@@ -77,6 +77,7 @@ describe('entry tests', () => {
     'eval',
     'fish',
     'flappy',
+    'javalab',
     'gamelab',
     'spritelab',
     'jigsaw',
@@ -351,8 +352,7 @@ describe('entry tests', () => {
           [
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss'
-          ],
-          ['build/package/css/javalab.css', 'style/javalab/style.scss']
+          ]
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -567,8 +567,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-    'javalab/index': './src/sites/studio/pages/javalab/index.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
   };
 
   var internalEntries = {
