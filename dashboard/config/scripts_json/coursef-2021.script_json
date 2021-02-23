@@ -373,7 +373,7 @@
         "overview": "Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.",
         "student_overview": "Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.",
         "purpose": "If you have been doing every lesson in this course, then each student in your classroom has used the internet...but how many know how it works? Learning more about the internet will help students develop a better understanding of its endless possibilities.",
-        "preparation": "- Watch the [r teacher-video-internet].\r\n- Print enough [r csf-ip-address-cards-and-delivery-type-cards] for each group.\r\n- Print one [r csf-internet-assessment] for each student.\r\n- Access to the internet (such as [get-site-ip.com](http://get-site-ip.com/)).\r\n- Make sure every student has a [r think-spot-journal].",
+        "preparation": "- Watch the [Internet - Teacher Video](https://www.youtube.com/watch?v=Z6CEAOFZRRk).\n- Print enough [IPAddress Cards and Delivery Type Cards - Manipulatives]( https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit) for each group.\n- Print one [Internet Assessment](https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit) for each student.\n- Access to the internet (such as [get-site-ip.com](http://get-site-ip.com/)).\n- Make sure every student has a [Think Spot Journal -Reflection Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY).",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -1078,11 +1078,23 @@
       }
     },
     {
-      "key": "318137df-9f81-49a9-87ef-40922374ff9c",
+      "key": "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4",
       "position": 2,
       "properties": {
-        "name": "Activity",
+        "name": "Main Activity",
         "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4",
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "318137df-9f81-49a9-87ef-40922374ff9c",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "318137df-9f81-49a9-87ef-40922374ff9c",
@@ -1093,7 +1105,7 @@
     },
     {
       "key": "3f386349-319f-49fa-a87b-4de41f39f1d4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -1107,26 +1119,12 @@
     },
     {
       "key": "5e959966-cfc9-4300-a563-9427222987c8",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "5e959966-cfc9-4300-a563-9427222987c8",
-        "lesson.key": "AI for Oceans",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4",
         "lesson.key": "AI for Oceans",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021"
@@ -1147,11 +1145,23 @@
       }
     },
     {
-      "key": "9e23142c-b619-48ac-8a8e-afa614f7d21c",
+      "key": "d51df268-72e1-4472-8d8e-e3c44c3ba133",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d51df268-72e1-4472-8d8e-e3c44c3ba133",
+        "lesson.key": "Internet",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "9e23142c-b619-48ac-8a8e-afa614f7d21c",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "9e23142c-b619-48ac-8a8e-afa614f7d21c",
@@ -1162,7 +1172,7 @@
     },
     {
       "key": "0aa21975-4a9b-4130-84ed-799e4602fb8e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 15
@@ -1176,26 +1186,13 @@
     },
     {
       "key": "19c350ea-4420-4a94-a91e-f7d798799cc4",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Assessment",
         "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "19c350ea-4420-4a94-a91e-f7d798799cc4",
-        "lesson.key": "Internet",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "d51df268-72e1-4472-8d8e-e3c44c3ba133",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d51df268-72e1-4472-8d8e-e3c44c3ba133",
         "lesson.key": "Internet",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021"
@@ -1216,11 +1213,23 @@
       }
     },
     {
-      "key": "4d3c8aac-0044-4034-9468-8960fb9fca43",
+      "key": "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "4d3c8aac-0044-4034-9468-8960fb9fca43",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "4d3c8aac-0044-4034-9468-8960fb9fca43",
@@ -1231,7 +1240,7 @@
     },
     {
       "key": "757244a2-8803-4a75-af32-3b24bebec03a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 15
@@ -1245,7 +1254,7 @@
     },
     {
       "key": "5c35a689-64d1-49a2-b19f-688ddf190d1e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Assessment",
         "duration": 5
@@ -1259,26 +1268,12 @@
     },
     {
       "key": "f6c99d2f-9ec7-4706-8a77-71513d31db13",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "f6c99d2f-9ec7-4706-8a77-71513d31db13",
-        "lesson.key": "For Loop Fun",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9",
         "lesson.key": "For Loop Fun",
         "lesson_group.key": "csf_for_loops",
         "script.name": "coursef-2021"
@@ -1302,7 +1297,7 @@
       "key": "5b774bd6-b243-4d1d-9145-20747f320129",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - For Loops",
+        "name": "Bridging Activity - Choose One",
         "duration": 15
       },
       "seeding_key": {
@@ -1552,8 +1547,7 @@
       "key": "25d5e16a-9db1-441d-a4c4-916612df574b",
       "position": 5,
       "properties": {
-        "name": "Day 5 & 6 - Present Your Project",
-        "duration": 45
+        "name": "Day 5 & 6 - Present Your Project"
       },
       "seeding_key": {
         "lesson_activity.key": "25d5e16a-9db1-441d-a4c4-916612df574b",
@@ -1566,8 +1560,7 @@
       "key": "d9a085a2-e557-4826-952e-fdc5836fe8a2",
       "position": 6,
       "properties": {
-        "name": "Extension Activity",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "d9a085a2-e557-4826-952e-fdc5836fe8a2",
@@ -2624,6 +2617,17 @@
       }
     },
     {
+      "key": "708bfaf4-4547-4c24-87d4-3822f97185b5",
+      "position": 1,
+      "properties": {
+        "name": "AI For Oceans"
+      },
+      "seeding_key": {
+        "activity_section.key": "708bfaf4-4547-4c24-87d4-3822f97185b5",
+        "lesson_activity.key": "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4"
+      }
+    },
+    {
       "key": "ca1410c6-ae9f-4f3e-8eda-cb7be8ca5c5f",
       "position": 1,
       "properties": {
@@ -2639,15 +2643,13 @@
       "key": "daee1c13-09e4-4f2f-88c8-d3841869bfcb",
       "position": 2,
       "properties": {
-        "description": "**Video**: [r ai-ml]",
+        "description": "\n###Level 1 - [Machine Learning](https://studio.code.org/s/oceans/stage/1/puzzle/1)\n\n###[AI- Machine Learning Video](https://www.youtube.com/watch?v=OeU5m6vRyCk)",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "You can share these stories with your class to help them see how AI will impact the future.\n\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\n"
           }
-        ],
-        "name": "Level 1 - [Machine Learning](https://studio.code.org/s/oceans/stage/1/puzzle/1)"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "daee1c13-09e4-4f2f-88c8-d3841869bfcb",
@@ -2669,14 +2671,7 @@
       "key": "b377fcf1-3fc0-4c8c-ae57-93580547e336",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Beginning in small groups then moving to whole class, students share their responses.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Get students familiar with the world of artificial intelligence.  \n"
-          }
-        ]
+        "description": "**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** Get students familiar with the world of artificial intelligence.  "
       },
       "seeding_key": {
         "activity_section.key": "b377fcf1-3fc0-4c8c-ae57-93580547e336",
@@ -2687,7 +2682,7 @@
       "key": "840e5bd9-37cf-44f5-bfd4-ab83d7ea117d",
       "position": 5,
       "properties": {
-        "description": "**Say:** Machine learning refers to a computer that can recognize patterns and make decisions on its own based on data. In this activity you’re going to give the computer data to train it. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?"
+        "description": "**Say:** *Machine learning refers to a computer that can recognize patterns and make decisions on its own based on data. In this activity you’re going to give the computer data to train it. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?*"
       },
       "seeding_key": {
         "activity_section.key": "840e5bd9-37cf-44f5-bfd4-ab83d7ea117d",
@@ -2698,15 +2693,13 @@
       "key": "0c9dc510-4ea6-468e-9742-679a423e5d43",
       "position": 6,
       "properties": {
-        "description": "Students can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "description": "\n####Levels 2-4 - [Train AI to Clean the Ocean](https://studio.code.org/s/oceans/stage/1/puzzle/2)\n\nStudents can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Every image in this part of the tutorial is fed into a neural network that has been pre-trained on a huge set of data called [ImageNet](http://www.image-net.org/). The database contains over 14 million hand-annotated images. ImageNet contains more than 20,000 categories with a typical category, such as \"balloon\" or \"strawberry\", consisting of several hundred images. When A.I. is scanning new images and making its own predictions in the tutorial, it is actually comparing the possible categories for the new image with the patterns it found in the training dataset. \n"
           }
-        ],
-        "name": "Levels 2-4 - [Train AI to Clean the Ocean](https://studio.code.org/s/oceans/stage/1/puzzle/2)"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0c9dc510-4ea6-468e-9742-679a423e5d43",
@@ -2717,8 +2710,7 @@
       "key": "b10ef3bc-5288-4c55-b69e-6fb33ebc2119",
       "position": 7,
       "properties": {
-        "description": "**Quick Share-out:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n**Video**: [r ai-training]",
-        "name": "Level 5 - [Training Data & Bias](https://studio.code.org/s/oceans/stage/1/puzzle/5)"
+        "description": "###Level 5 - [Training Data & Bias](https://studio.code.org/s/oceans/stage/1/puzzle/5)\n\n**Quick Share-out:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n###[AI-Training Video](https://youtu.be/x2mRoFNm22g)"
       },
       "seeding_key": {
         "activity_section.key": "b10ef3bc-5288-4c55-b69e-6fb33ebc2119",
@@ -2740,14 +2732,7 @@
       "key": "a1e98a6b-7bf2-4d7b-8677-927be95f2a3d",
       "position": 9,
       "properties": {
-        "description": "**Discuss:** In small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n\n"
-          }
-        ]
+        "description": "**Discuss:** In small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\"."
       },
       "seeding_key": {
         "activity_section.key": "a1e98a6b-7bf2-4d7b-8677-927be95f2a3d",
@@ -2758,15 +2743,13 @@
       "key": "85ec3108-13e9-4784-98f4-752a933ca338",
       "position": 10,
       "properties": {
-        "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how machine learning works, it should be encouraged!",
+        "description": "\n###Level 6 - [Using Training Data](https://studio.code.org/s/oceans/stage/1/puzzle/6)\n\nIn the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how machine learning works, it should be encouraged!",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "The fish in this tutorial are randomly generated based on some pre-defined components, including mouths, tails, eyes, scales, and fins, with a randomly chosen body color, shape, and size. Rather than looking at the actual image data, A.I. is now looking for patterns in these components based on how the student classifies each fish. It will be more likely to label a fish the same way the student would have if it has matching traits.\n"
           }
-        ],
-        "name": "Level 6 - [Using Training Data](https://studio.code.org/s/oceans/stage/1/puzzle/6)"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "85ec3108-13e9-4784-98f4-752a933ca338",
@@ -2777,8 +2760,7 @@
       "key": "abecbbe6-7273-4017-8638-463a018e54d4",
       "position": 11,
       "properties": {
-        "description": "**Video**: [r ai-societal]\n\n**Say:** Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.",
-        "name": "Level 7 - [Impacts on Society](https://studio.code.org/s/oceans/stage/1/puzzle/7)"
+        "description": "\n###Level 7 - [Impacts on Society](https://studio.code.org/s/oceans/stage/1/puzzle/7)\n\n###[AI - Impact on Society Video](https://youtu.be/ng4c1g3COfs)\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.*"
       },
       "seeding_key": {
         "activity_section.key": "abecbbe6-7273-4017-8638-463a018e54d4",
@@ -2789,7 +2771,7 @@
       "key": "9b8f9dda-85c1-4523-992a-f585a383ea52",
       "position": 12,
       "properties": {
-        "description": "**Say:** Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? *(For example, voice recognition fails to understand you.)*\n\n**Prompt:** Could training data actually create problems? How?"
+        "description": "**Say:** *Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n**Prompt:** *Could training data actually create problems? How?*"
       },
       "seeding_key": {
         "activity_section.key": "9b8f9dda-85c1-4523-992a-f585a383ea52",
@@ -2800,14 +2782,7 @@
       "key": "c53448a6-a851-4f7c-bfa7-699ead34f410",
       "position": 13,
       "properties": {
-        "description": "**Discuss:** Beginning in small groups then moving to whole class, students share their responses.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n"
-          }
-        ]
+        "description": "**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n"
       },
       "seeding_key": {
         "activity_section.key": "c53448a6-a851-4f7c-bfa7-699ead34f410",
@@ -2818,7 +2793,7 @@
       "key": "a571b154-1fbe-4e90-883a-09f66f5fdcb5",
       "position": 14,
       "properties": {
-        "description": "**Say:** Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways."
+        "description": "**Say:** *Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*"
       },
       "seeding_key": {
         "activity_section.key": "a571b154-1fbe-4e90-883a-09f66f5fdcb5",
@@ -2829,8 +2804,7 @@
       "key": "b0a42852-7651-4072-bbac-90667d3ec936",
       "position": 15,
       "properties": {
-        "description": "Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.",
-        "name": "Level 8 - [Teach A.I. a new word](https://studio.code.org/s/oceans/stage/1/puzzle/8)"
+        "description": "\n###Level 8 - [Teach A.I. a new word](https://studio.code.org/s/oceans/stage/1/puzzle/8)\n\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
       },
       "seeding_key": {
         "activity_section.key": "b0a42852-7651-4072-bbac-90667d3ec936",
@@ -2862,21 +2836,11 @@
       }
     },
     {
-      "key": "708bfaf4-4547-4c24-87d4-3822f97185b5",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "708bfaf4-4547-4c24-87d4-3822f97185b5",
-        "lesson_activity.key": "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4"
-      }
-    },
-    {
       "key": "fda34361-ffaa-4440-98c7-a5ab57d1cf17",
       "position": 1,
       "properties": {
-        "description": "This lesson has several new and important words:\r\n\r\n - **IP Address** - Say it with me: I-P Add-ress \r\n\r\nA number assigned to any item that is connected to the Internet\r\n\r\n - **DNS (Domain Name Service)** - Say it with me: D-N-S \r\n\r\nThe service that translates URLs to IP addresses\r\n\r\n - **URL (Universal Resource Locator)** - Say it with me: U-R-L \r\n\r\nAn easy-to-remember address for calling a web page (like www.code.org)\r\n\r\n - **Internet** - Say it with me: In-ter-net \r\n\r\nA group of computers and servers that are connected to each other\r\n\r\n - **Servers** - Say it with me: Ser-vers \r\n\r\nComputers that exist only to provide things to others",
-        "name": "Vocabulary\r"
+        "description": "\n####Vocabulary:\n\nThis lesson has several new and important words:\n\n - **IP Address** - Say it with me: I-P Add-ress \n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - Say it with me: D-N-S \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - Say it with me: U-R-L \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - Say it with me: In-ter-net \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - Say it with me: Ser-vers \n\nComputers that exist only to provide things to others",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "fda34361-ffaa-4440-98c7-a5ab57d1cf17",
@@ -2889,7 +2853,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a \"see if you can spot these during the day\" type of heads-up.\r\n\r\n - **Fiber Optic Cable** - Say it with me: Fye-ber Op-tic Cay-bl \r\n"
           }
@@ -2917,7 +2880,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "There are some great YouTube videos on this subject that can make this lesson a little easier to understand. You can show them to the class in advance, or just watch them yourself. [Here is one of the videos in the Code.org video series on \"How the Internet Works\"](https://www.youtube.com/watch?v=5o8CwafCxnU&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=3). \r\n(We recommend watching from 1:44 - 5:13, if possible.) The rest of the playlist is available [here](https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7).\r\n"
           }
@@ -2932,8 +2894,7 @@
       "key": "2499b5f3-c706-4d1f-9de4-17e97847be41",
       "position": 5,
       "properties": {
-        "description": "- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\r\n\t- Ask \"What is the internet?\"\r\n\t- Is the internet a public place or a private place?\r\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\r\n\t- How does information get from place to place?\r\n- Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?\r\n\t- What do I do as a user?\r\n\t- What do you think happens inside the internet?\r\n\r\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\r\n\r\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those \"packets.\" Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\r\n\r\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\r\n\r\nWhere do you think those packets are headed?\r\n\r\n- Even if you're sending messages to another person, they first have to go to at least one \"server.\"\r\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\r\n\t- Every website has a server.\r\n\t- Even email goes through servers.\r\n\r\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\r\n\r\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\r\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\r\n\r\nThere are many ways to reach the internet from your house, school, or place of business.\r\n\r\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\r\n- Or you can connect using radio waves over the air through Wi-Fi\r\n\r\nDirect connections are most reliable, but they can be inconvenient.\r\n\r\n- Can you figure out why?\r\n\t- (You have to be attached to a cable!)\r\n\r\nWi-Fi connections are super convenient, but the aren't always reliable.\r\n\r\n- Can you figure out why not?\r\n\t- (Radio waves bounce all over the place and can get lost.)",
-        "name": "Getting the Message\r"
+        "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- Ask \"What is the internet?\"\n\t- Is the internet a public place or a private place?\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- How does information get from place to place?\n- Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?\n\t- What do I do as a user?\n\t- What do you think happens inside the internet?\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those \"packets.\" Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\nWhere do you think those packets are headed?\n\n- Even if you're sending messages to another person, they first have to go to at least one \"server.\"\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- Can you figure out why?\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- Can you figure out why not?\n\t- (Radio waves bounce all over the place and can get lost.)"
       },
       "seeding_key": {
         "activity_section.key": "2499b5f3-c706-4d1f-9de4-17e97847be41",
@@ -2946,7 +2907,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If you're thinking that this is a lot of text and it would be extremely boring to try to lecture this to a class full of elementary school kids, you're absolutely right!\r\nIf you're unable to show a YouTube video in class to help explain it all, I highly recommend drawing pictures to explain each idea above, or choosing students as volunteers to act out what you describe while you're explaining. They're not expected to get every detail and definition at this point, only to gain exposure.\r\n"
           }
@@ -2969,11 +2929,22 @@
       }
     },
     {
+      "key": "3c0ece8c-eca6-4340-9023-7a89cfad4090",
+      "position": 1,
+      "properties": {
+        "name": "The Internet",
+        "progression_name": "The Internet - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c0ece8c-eca6-4340-9023-7a89cfad4090",
+        "lesson_activity.key": "d51df268-72e1-4472-8d8e-e3c44c3ba133"
+      }
+    },
+    {
       "key": "f7944893-91f6-4fa0-bc46-73816c9a88c9",
       "position": 1,
       "properties": {
-        "description": "**Directions:**\r\n\r\n- Create your own DNS table, similar to what is shown above.\r\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like [www.get-site-ip.com](http://get-site-ip.com/).\r\n- Divide into groups of 3 to 5.\r\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\r\n\t- The Message Writer\r\n\t- The Internet\r\n\t- The Server (carries the IP address)\r\n\t- The Return Internet (optional)\r\n\t- The Message Receiver (optional)\r\n- Each group will draw an [r csf-ip-address-cards-and-delivery-type-cards] to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\r\n- The Message Writer will craft a note to send to the server.\r\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\r\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\r\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\r\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\r\n\r\n**Rules:**\r\n\r\n- The Internet must rip the message into exactly four packets.\r\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\r\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\r\n\r\n**Info:**\r\n\r\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\r\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\r\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\r\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\r\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\r\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times.",
-        "name": "The Internet\r"
+        "description": "**Directions:**\r\n\r\n- Create your own DNS table, similar to what is shown above.\r\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like [www.get-site-ip.com](http://get-site-ip.com/).\r\n- Divide into groups of 3 to 5.\r\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\r\n\t- The Message Writer\r\n\t- The Internet\r\n\t- The Server (carries the IP address)\r\n\t- The Return Internet (optional)\r\n\t- The Message Receiver (optional)\r\n- Each group will draw an [r csf-ip-address-cards-and-delivery-type-cards] to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\r\n- The Message Writer will craft a note to send to the server.\r\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\r\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\r\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\r\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\r\n\r\n**Rules:**\r\n\r\n- The Internet must rip the message into exactly four packets.\r\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\r\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\r\n\r\n**Info:**\r\n\r\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\r\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\r\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\r\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\r\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\r\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times."
       },
       "seeding_key": {
         "activity_section.key": "f7944893-91f6-4fa0-bc46-73816c9a88c9",
@@ -2986,7 +2957,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If it feels like there are too many rules to explain outright, feel free to post them on the board and just explain the game as you go. You can play multiple rounds until the class really understands.\r\n"
           }
@@ -3014,11 +2984,11 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.\r\n"
           }
-        ]
+        ],
+        "name": "Flash Chat/Journaling"
       },
       "seeding_key": {
         "activity_section.key": "77fd3087-e475-4e92-937b-775e410c6585",
@@ -3029,8 +2999,7 @@
       "key": "17ba7429-02a4-495b-a9e3-a82ab6402746",
       "position": 2,
       "properties": {
-        "description": "- What kind of connection would you rather have (Wi-Fi, DSL/Cable, or Fiber Optic)? Why?\r\n- Why might it take your message a long time to get somewhere?",
-        "name": "Flash Chat: What did we learn?\r"
+        "description": "\n####Flash Chat: What did we learn?\n\n- What kind of connection would you rather have (Wi-Fi, DSL/Cable, or Fiber Optic)? Why?\n- Why might it take your message a long time to get somewhere?"
       },
       "seeding_key": {
         "activity_section.key": "17ba7429-02a4-495b-a9e3-a82ab6402746",
@@ -3041,8 +3010,7 @@
       "key": "cc16620c-98a2-47a8-b603-909cff0d4baf",
       "position": 3,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What's something you learned about the internet today?\r\n - Why is learning about the internet important?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What's something you learned about the internet today?\n - Why is learning about the internet important?"
       },
       "seeding_key": {
         "activity_section.key": "cc16620c-98a2-47a8-b603-909cff0d4baf",
@@ -3053,22 +3021,11 @@
       "key": "6b2de955-080b-4dc9-a71d-ef478aa88b02",
       "position": 1,
       "properties": {
-        "description": "Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities.",
-        "name": "[r csf-internet-assessment]\r"
+        "description": "Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "6b2de955-080b-4dc9-a71d-ef478aa88b02",
         "lesson_activity.key": "19c350ea-4420-4a94-a91e-f7d798799cc4"
-      }
-    },
-    {
-      "key": "3c0ece8c-eca6-4340-9023-7a89cfad4090",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3c0ece8c-eca6-4340-9023-7a89cfad4090",
-        "lesson_activity.key": "d51df268-72e1-4472-8d8e-e3c44c3ba133"
       }
     },
     {
@@ -3087,8 +3044,7 @@
       "key": "761bf8e6-2303-4c05-a1c3-59046f829e91",
       "position": 2,
       "properties": {
-        "description": "- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- \"for\" loops give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game (example in English)\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">",
-        "name": "For One and All"
+        "description": "\n####For One and All\n\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- \"for\" loops give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game (example in English)\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
       },
       "seeding_key": {
         "activity_section.key": "761bf8e6-2303-4c05-a1c3-59046f829e91",
@@ -3096,11 +3052,21 @@
       }
     },
     {
+      "key": "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210",
+      "position": 1,
+      "properties": {
+        "progression_name": "For Loop Fun - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210",
+        "lesson_activity.key": "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9"
+      }
+    },
+    {
       "key": "95417529-72b3-4c15-95d1-7bd479743269",
       "position": 1,
       "properties": {
-        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a \"for\" loop comes in handy. When you use a \"for\" loop, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\r\n\r\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)",
-        "name": "[r csf-for-loop-fun-worksheet]\r"
+        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a \"for\" loop comes in handy. When you use a \"for\" loop, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\r\n\r\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
       },
       "seeding_key": {
         "activity_section.key": "95417529-72b3-4c15-95d1-7bd479743269",
@@ -3113,7 +3079,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "When you play this game, it's as if you're running through a loop like this\r\n\r\nfor (x=startValue; x <= stopValue; x = x + step){<br/>\r\ncircle currentXvalue;<br/>\r\nadd currentXvalue to roundScore;<br/>\r\n}\r\n"
           }
@@ -3141,7 +3106,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If any of the values rolled are outside the bounds of the game (like rolling a start value of 6 but \tthen rolling 2, 1, 2 for the end value), have the student re-roll everything.\r\n"
           }
@@ -3169,11 +3133,11 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.\r\n"
           }
-        ]
+        ],
+        "name": "Flash Chat/Journaling"
       },
       "seeding_key": {
         "activity_section.key": "2b2aff9f-1682-4071-a395-c38394654e47",
@@ -3184,8 +3148,7 @@
       "key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
       "position": 2,
       "properties": {
-        "description": "- What would your interval need to be if you wanted to count from 4 to 13 by threes?\r\n- What kinds of things do you think you could do with a for loop?\r\n- Can you reproduce a normal loop using a for loop?\r\n- What would you need to do?",
-        "name": "Flash Chat: What did we learn?\r"
+        "description": "\n####Flash Chat: What did we learn?\n\n- What would your interval need to be if you wanted to count from 4 to 13 by threes?\n- What kinds of things do you think you could do with a for loop?\n- Can you reproduce a normal loop using a for loop?\n- What would you need to do?"
       },
       "seeding_key": {
         "activity_section.key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
@@ -3208,8 +3171,7 @@
       "key": "6dd8f3bb-f8c8-4ad9-857a-73fc00f922f1",
       "position": 1,
       "properties": {
-        "description": "Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities.",
-        "name": "[r csf-for-loop-fun-assessment]\r"
+        "description": "Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "6dd8f3bb-f8c8-4ad9-857a-73fc00f922f1",
@@ -3228,16 +3190,6 @@
       }
     },
     {
-      "key": "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210",
-        "lesson_activity.key": "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9"
-      }
-    },
-    {
       "key": "2e172722-51c4-49c9-8a05-4447b2627ab3",
       "position": 1,
       "properties": {
@@ -3253,7 +3205,7 @@
       "key": "3498df7c-475d-453f-b7b8-abb1d05b2ca9",
       "position": 1,
       "properties": {
-        "description": "This activity will help bring the unplugged concepts from \"For Loop Fun\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
+        "description": "These activities will help bring the unplugged concepts from \"For Loop Fun\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "3498df7c-475d-453f-b7b8-abb1d05b2ca9",
@@ -3264,7 +3216,7 @@
       "key": "f636ac37-29ac-45d0-8b65-8bad3da1ab56",
       "position": 2,
       "properties": {
-        "description": "Split up the students of your class into pairs. Ideally have the pairs be the same from when your class did \"For Loop Fun\". Print out a `for` loop from [r course-cf-blockly-blocks] for each pair of students. Pass out one die to each pair. Have the partners take turns rolling the die to obtain the following values:\r\n\r\n - One roll for the starting value\r\n - Four rolls for the ending value\r\n - One roll for the step value\r\n\r\nHave each pair fill in the `for` loop with the appropriate values in the correct spot.\r\n\r\n![](https://curriculum.code.org/media/uploads/image_zA5XUL7.png)\r\n\r\nUsing a basic number line, like the one used in \"For Loop Fun\", have the students mark the beginning, ending, and middle values that this `for` loop will touch. When everyone is done, see who got the most points by totaling the starting, middle, and ending numbers of each pair.",
+        "description": "Split up the students of your class into pairs. Ideally have the pairs be the same from when your class did \"For Loop Fun\". Print out a `for` loop from [r course-cf-blockly-blocks] for each pair of students. Pass out one die to each pair. Have the partners take turns rolling the die to obtain the following values:\n\n - One roll for the starting value\n - Four rolls for the ending value\n - One roll for the step value\n\nHave each pair fill in the `for` loop with the appropriate values in the correct spot.\n\n![](https://curriculum.code.org/media/uploads/image_zA5XUL7.png)\n\nUsing a basic number line, like the one used in \"For Loop Fun\", have the students mark the beginning, ending, and middle values that this `for` loop will touch. When everyone is done, see who got the most points by totaling the starting, middle, and ending numbers of each pair.\n\n####-Or",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -3288,8 +3240,7 @@
       "key": "30ee92f3-9378-4f76-acea-3c22d8df60dd",
       "position": 1,
       "properties": {
-        "description": "Some students may have a hard time differentiating between `repeat` loops and `for` loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students.",
-        "name": "Online Puzzles\r"
+        "description": "\n####Online Puzzles\n\nSome students may have a hard time differentiating between `repeat` loops and `for` loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students."
       },
       "seeding_key": {
         "activity_section.key": "30ee92f3-9378-4f76-acea-3c22d8df60dd",
@@ -3300,7 +3251,6 @@
       "key": "1668a313-16da-49db-9713-13d7ad33889e",
       "position": 2,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3312,7 +3262,6 @@
       "key": "671c8e13-e78c-49f3-867b-45e7643d0026",
       "position": 3,
       "properties": {
-        "name": "For Loops and Repeat Blocks",
         "progression_name": "For Loops and Repeat Blocks"
       },
       "seeding_key": {
@@ -3324,7 +3273,6 @@
       "key": "297e5651-8422-476e-b1db-3d893b7e0bc8",
       "position": 4,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3336,7 +3284,6 @@
       "key": "b500137c-9df8-40c5-8b4d-e4f364f8255e",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3348,7 +3295,6 @@
       "key": "729a9e74-6bd2-4833-8b46-12f83a6a83b7",
       "position": 6,
       "properties": {
-        "name": "Challenge",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3360,7 +3306,6 @@
       "key": "1d230f35-347e-4faf-a24e-07f70742931e",
       "position": 7,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3372,6 +3317,7 @@
       "key": "7a256684-5f37-4780-b2d7-a75a079dfc95",
       "position": 8,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "7a256684-5f37-4780-b2d7-a75a079dfc95",
@@ -3406,8 +3352,9 @@
       "key": "b838a926-533f-414b-86f6-17f8ea078fad",
       "position": 1,
       "properties": {
-        "name": "Intro to For Loops",
-        "progression_name": "Intro to For Loops"
+        "name": "For Loops with Artist",
+        "progression_name": "Intro to For Loops",
+        "description": "These puzzles are super fun, but it may be helpful for students to have protractors, pencils and scratch paper to see how these designs were made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers."
       },
       "seeding_key": {
         "activity_section.key": "b838a926-533f-414b-86f6-17f8ea078fad",
@@ -3418,7 +3365,6 @@
       "key": "5a79bfa7-16f2-41b1-8ebf-88fadad29acb",
       "position": 2,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3430,7 +3376,6 @@
       "key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6",
       "position": 3,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -3442,7 +3387,6 @@
       "key": "8bcd37d6-c773-4388-a38a-8be57282b59a",
       "position": 4,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3454,7 +3398,6 @@
       "key": "47940214-b1b7-4be8-95f2-fb725fb9c61c",
       "position": 5,
       "properties": {
-        "name": "Prediction",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3466,7 +3409,6 @@
       "key": "2faabfda-d8cb-4b9d-b49c-2e79c30f7507",
       "position": 6,
       "properties": {
-        "name": "Free Play",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3478,21 +3420,10 @@
       "key": "6ea6e198-fa99-46cb-a234-0f2b60eaff4d",
       "position": 7,
       "properties": {
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "6ea6e198-fa99-46cb-a234-0f2b60eaff4d",
-        "lesson_activity.key": "1360b113-804c-4697-8c6d-a184de310850"
-      }
-    },
-    {
-      "key": "293f05e2-63f6-42b7-be68-069b7d818eca",
-      "position": 8,
-      "properties": {
-        "description": "These puzzles are super fun, but it may be helpful for students to have protractors and scratch paper to see these designs made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers.",
-        "name": "Online Puzzles\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "293f05e2-63f6-42b7-be68-069b7d818eca",
         "lesson_activity.key": "1360b113-804c-4697-8c6d-a184de310850"
       }
     },
@@ -3727,8 +3658,7 @@
       "key": "41c8a77e-7549-4597-94c2-b5d1916209eb",
       "position": 1,
       "properties": {
-        "description": "Goal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\r\n\r\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\r\n\r\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\r\n\r\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.",
-        "name": "Example Projects\r"
+        "description": "\n\n\nGoal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use."
       },
       "seeding_key": {
         "activity_section.key": "41c8a77e-7549-4597-94c2-b5d1916209eb",
@@ -3739,7 +3669,6 @@
       "key": "db7f26e9-547b-4801-8328-a93aefc4ce9e",
       "position": 2,
       "properties": {
-        "name": "Example projects",
         "progression_name": "Example projects"
       },
       "seeding_key": {
@@ -3751,7 +3680,6 @@
       "key": "211604af-3347-4da2-ae2b-e5a81fd6d49d",
       "position": 3,
       "properties": {
-        "name": "Create your project",
         "progression_name": "Create your project"
       },
       "seeding_key": {
@@ -3763,7 +3691,7 @@
       "key": "1008c1d7-2968-4264-9de2-076e0bc0b086",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\r\n\r\n#### Preparing Students for the Process:\r\n\r\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \r\n\r\nTo help your class manage this multi-stage undertaking, they should be given both the [r final-project-design-worksheet] and the [r rubric-csf-final-projects] on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \r\n\r\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \r\n\r\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "Goal: Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the **Final Project Design Worksheet** and the **CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \n\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -3777,7 +3705,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Save 5 minutes or so at the end of the day to have students trade Final Project Design Worksheets to look at each other’s work.  This will help make sure that nothing is omitted or overlooked.\r\n"
           }
@@ -3792,7 +3719,7 @@
       "key": "5a4707ae-6dfd-4612-b953-991e3b180169",
       "position": 3,
       "properties": {
-        "description": "#### Define and Prepare:\r\n\r\nNow that the class has their Final Project Design Worksheet in hand, they should start filling out the questions under **Day 1**.\r\n\r\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \r\n\r\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\r\n\r\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
+        "description": "\nNow that the class has their Final Project Design Worksheet in hand, they should start filling out the questions under **Day 1**.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
       },
       "seeding_key": {
         "activity_section.key": "5a4707ae-6dfd-4612-b953-991e3b180169",
@@ -3803,7 +3730,7 @@
       "key": "556e548d-e34d-419a-8c67-85ccde21b96f",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will use this day to build an initial version of their project.\r\n\r\nEquipped with their Final Project Design Worksheet, students should head to the computers to start bringing their projects to life. \r\n\r\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\r\n\r\nDon’t let the class forget to fill out their Final Project Design Worksheets as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \r\n\r\nBe sure that each team member has their own Final Project Design Worksheet, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "Goal: Students will use this day to build an initial version of their project.\n\nEquipped with their **Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their **Final Project Design Worksheets** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own **Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3815,7 +3742,7 @@
       "key": "63989a97-d3e6-437f-b08c-d3f0ec592f5e",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\r\n\r\n#### Reflect:\r\n\r\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the Final Project Design Worksheet.  \r\n\r\nEncourage students to ask the questions on the FPDW and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
+        "description": "Goal: Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Reflect:\n\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the **Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the **Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
         "name": "Reflect and Try Again\r"
       },
       "seeding_key": {
@@ -3829,7 +3756,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Teachers should avoid assigning the final bit of project work as homework unless they are certain that students both live within a close \t\tproximity to one another **and** have internet access at home.\r\n"
           }
@@ -3856,7 +3782,8 @@
       "position": 1,
       "properties": {
         "description": "Goal: Students will create and present their projects in an approved manner (written, oral, or using multimedia).",
-        "name": "Presentations\r"
+        "name": "Presentations - Day 5",
+        "duration": "45"
       },
       "seeding_key": {
         "activity_section.key": "910ddad6-f546-4378-9991-170e0fa35093",
@@ -3869,7 +3796,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If you are looking for a section of this series to assign as homework, this is it!  Projects do not have to be presented in electronic form, so this is a great offline option.\r\n"
           }
@@ -3884,10 +3810,22 @@
       "key": "247265f8-7e8f-40d9-a4e6-4044cde2c95a",
       "position": 3,
       "properties": {
-        "description": "#### Create:\r\n\r\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like [r google-slides]. For other presentation ideas, visit [r 72-creative-ways-for-your-students-to-show-what-they-know].\r\n\r\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\r\n\r\n#### Present\r\n\r\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \r\n\r\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
+        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like **Google Slides**. For other presentation ideas, visit [72 Creative Ways for Your Students to Show What They Know](http://minds-in-bloom.com/72-creative-ways-for-students-to-show/).\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
       },
       "seeding_key": {
         "activity_section.key": "247265f8-7e8f-40d9-a4e6-4044cde2c95a",
+        "lesson_activity.key": "25d5e16a-9db1-441d-a4c4-916612df574b"
+      }
+    },
+    {
+      "key": "de8956c3-6f81-4290-9b7a-b90fd6f630d0",
+      "position": 4,
+      "properties": {
+        "name": "Presentations - Day 6",
+        "description": "Students will continue to present their projects in an approved manner (written, oral, or using multimedia)."
+      },
+      "seeding_key": {
+        "activity_section.key": "de8956c3-6f81-4290-9b7a-b90fd6f630d0",
         "lesson_activity.key": "25d5e16a-9db1-441d-a4c4-916612df574b"
       }
     },
@@ -6324,7 +6262,8 @@
       "properties": {
         "level_keys": [
           "Internet-Unplugged_2021"
-        ]
+        ],
+        "progression": "The Internet - Unplugged Activity"
       },
       "named_level": null,
       "bonus": false,
@@ -6349,7 +6288,8 @@
       "properties": {
         "level_keys": [
           "ForLoopFun-Unplugged_2021"
-        ]
+        ],
+        "progression": "For Loop Fun - Unplugged Activity"
       },
       "named_level": null,
       "bonus": false,
@@ -6687,7 +6627,8 @@
       "properties": {
         "level_keys": [
           "courseF_bee_for_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -6712,7 +6653,8 @@
       "properties": {
         "level_keys": [
           "courseF_bee_for_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7049,7 +6991,8 @@
       "properties": {
         "level_keys": [
           "courseF_artist_for_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -7074,7 +7017,8 @@
       "properties": {
         "level_keys": [
           "courseF_artist_for_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
