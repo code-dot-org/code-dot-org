@@ -20137,7 +20137,7 @@ en:
               name: Binary Images with Artist
             Be A Super Digital Citizen:
               key: Be A Super Digital Citizen
-              name: Be A Super Digital Citizen
+              name: Be A Super Digital Citizen -- TO BE REMOVED
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
@@ -20182,7 +20182,7 @@ en:
               name: Conditionals with the Farmer
             Simon Says:
               key: Simon Says
-              name: Simon Says
+              name: Follow the Algorithm
             Learning Sprites with Sprite Lab:
               key: Learning Sprites with Sprite Lab
               name: Swimming Fish with Sprite Lab
@@ -20226,7 +20226,7 @@ en:
               key: End of Course Project
               name: End of Course Project
             lesson-4:
-              name: Context-Settng Lesson
+              name: Be A Super Digital Citizen
           lesson_groups:
             ramp_up:
               display_name: Loops
