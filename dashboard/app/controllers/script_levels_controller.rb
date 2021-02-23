@@ -163,9 +163,21 @@ class ScriptLevelsController < ApplicationController
     if params[:chapter]
       script.get_script_level_by_chapter(params[:chapter])
     elsif params[:stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+      if  (['csp2-2020', 'csp3-2020', 'csp4-2020', 'csp5-2020', 'csp6-2020', 'csp7-2020', 'csp9-2020', 'csp10-2020'].include? script.name) && script.lessons.last.absolute_position == params[:stage_position].to_i
+        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
+      elsif script.name == 'csp1-2020' && script.lessons.last.absolute_position - 1 == params[:stage_position].to_i
+        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
+      else
+        script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+      end
     elsif params[:lockable_stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+      if  (['csp2-2020', 'csp3-2020', 'csp4-2020', 'csp5-2020', 'csp6-2020', 'csp7-2020', 'csp9-2020', 'csp10-2020'].include? script.name) && script.lessons.last.absolute_position == params[:stage_position].to_i
+        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
+      elsif script.name == 'csp1-2020' && script.lessons.last.absolute_position - 1 == params[:stage_position].to_i
+        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
+      else
+        script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+      end
     else
       script.get_script_level_by_id(params[:id])
     end
