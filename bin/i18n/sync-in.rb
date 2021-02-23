@@ -17,7 +17,7 @@ require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
   puts "Sync in starting"
-  # HocSyncUtils.sync_in
+  HocSyncUtils.sync_in
   localize_level_content
   localize_project_content
   localize_block_content
@@ -55,10 +55,11 @@ def get_i18n_strings(level)
 
     # authored_hints
     if level.authored_hints
+      authored_hints_string = 'authored_hints'
       authored_hints = JSON.parse(level.authored_hints)
-      i18n_strings['authored_hints'] = Hash.new unless authored_hints.empty?
+      i18n_strings[authored_hints_string] = Hash.new unless authored_hints.empty?
       authored_hints.each do |hint|
-        i18n_strings['authored_hints'][hint['hint_id']] = hint['hint_markdown']
+        i18n_strings[authored_hints_string][hint['hint_id']] = hint['hint_markdown']
       end
     end
 
@@ -75,16 +76,18 @@ def get_i18n_strings(level)
     blocks = level_xml.xpath('//blocks').first
     if blocks
       ## Categories
+      block_categories_string = 'block_categories'
       block_categories = blocks.xpath('//category')
-      i18n_strings['block_categories'] = Hash.new unless block_categories.empty?
+      i18n_strings[block_categories_string] = Hash.new unless block_categories.empty?
       block_categories.each do |category|
         name = category.attr('name')
-        i18n_strings['block_categories'][name] = name if name
+        i18n_strings[block_categories_string][name] = name if name
       end
 
       ## Function Names
+      function_definitions = 'function_definitions'
       functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
-      i18n_strings['function_definitions'] = Hash.new unless functions.empty?
+      i18n_strings[function_definitions] = Hash.new unless functions.empty?
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
         description = function.at_xpath('./mutation/description')
@@ -95,15 +98,16 @@ def get_i18n_strings(level)
         function_definition["name"] = name.content if name
         function_definition["description"] = description.content if description
         function_definition["parameters"] = parameters unless parameters.empty?
-        i18n_strings['function_definitions'][name.content] = function_definition
+        i18n_strings[function_definitions][name.content] = function_definition
       end
 
       # Spritelab behaviors
+      behavior_names = 'behavior_names'
       behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
-      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      i18n_strings[behavior_names] = Hash.new unless behaviors.empty?
       behaviors.each do |behavior|
         name = behavior.at_xpath('./title[@name="NAME"]')
-        i18n_strings['behavior_names'][name.content] = name.content if name
+        i18n_strings[behavior_names][name.content] = name.content if name
       end
 
       ## Variable Names
