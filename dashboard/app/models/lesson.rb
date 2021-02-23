@@ -229,6 +229,11 @@ class Lesson < ApplicationRecord
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
+      description_student = I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')
+      description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
+      description_teacher = I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')
+      description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
+
       lesson_data = {
         script_id: script.id,
         script_name: script.name,
@@ -245,11 +250,12 @@ class Lesson < ApplicationRecord
         hasLessonPlan: has_lesson_plan,
         numberedLesson: numbered_lesson?,
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
-        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
-        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
+        description_student: description_student,
+        description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
+      puts "data.script.name.#{script.name}.lessons.#{key}.description_student"
 
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -406,7 +412,9 @@ class Lesson < ApplicationRecord
       script.name => {
         'lessons' => {
           key => {
-            'name' => name
+            'name' => name,
+            'description_student' => student_overview,
+            'description_teacher' => overview
           }
         }
       }
