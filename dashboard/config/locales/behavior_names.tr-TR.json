@@ -1154,7 +1154,54 @@
           "moving north": "kuzeye ilerleme",
           "jittering": "kararsızlık",
           "moving west": "batıya ilerleme",
-          "patrolling": "denetleme"
+          "patrolling": "kontrol sağlama",
+          "recovering": "iyileşiyor",
+          "moving left and right": "sola ve sağa hareket",
+          "moving with arrow keys": "ok tuşları ile hareket"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "wandering": "gezinme"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "iyileşiyor",
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "moving left and right": "sola ve sağa hareket",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "moving with arrow keys": "ok tuşları ile hareket"
         }
       }
     }

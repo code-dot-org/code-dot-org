@@ -2370,10 +2370,12 @@ eu:
             'Functions: Songwriting':
               name: Musika idazten
           lesson_groups:
+            ramp_up:
+              display_name: Itzuliak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
-              display_name: Kabiatutako begiztak
+              display_name: Baldintzak
             csf_functions:
               display_name: Funtzioak
         coursef-2021:

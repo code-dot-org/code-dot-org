@@ -16387,6 +16387,8 @@ es-MX:
             End of Course Project:
               key: Proyecto de fin de curso
               name: Proyecto de fin de curso
+            lesson-6:
+              name: Mirando hacia el Futuro con Minecraft
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -16474,7 +16476,7 @@ es-MX:
             csf_digcit:
               display_name: Ciudadanía digital
             csf_nested_loops:
-              display_name: Bucles anidados
+              display_name: Condicionales
             csf_functions:
               display_name: Funciones
             csf_impacts:
@@ -16716,6 +16718,8 @@ es-MX:
               name: Cómo codificar una simulación
             Course F Introduction:
               name: Presentamos el Laboratorio de sprites
+            Sprites in Action:
+              name: Sprites en acción
           lesson_groups:
             ramp_up:
               display_name: Introducción
@@ -16927,6 +16931,8 @@ es-MX:
           student_description: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'
         ai-unit-pilot:
           lessons:
+            intro:
+              name: Lección 1
             lesson14:
               name: Lección 14
             lesson15:

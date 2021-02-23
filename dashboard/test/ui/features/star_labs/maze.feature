@@ -5,6 +5,7 @@ Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   And element ".csf-top-instructions p" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
 
 @no_mobile

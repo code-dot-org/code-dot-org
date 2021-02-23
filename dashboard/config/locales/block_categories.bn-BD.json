@@ -1,0 +1,55 @@
+{
+  "bn-BD": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "ক্রিয়া",
+          "Loops": "চক্র",
+          "Math": "গণিত",
+          "Logic": "যুক্তি",
+          "Functions": "ফাংশনগুলি",
+          "Variables": "চলকগুলো"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "ঘটনাবলী",
+          "Logic": "যুক্তি"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "ক্রিয়া",
+          "Events": "ঘটনাবলী",
+          "Loops": "চক্র",
+          "Math": "গণিত",
+          "Logic": "যুক্তি"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "ক্রিয়া",
+          "Events": "ঘটনাবলী"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "ক্রিয়া",
+          "Events": "ঘটনাবলী",
+          "Variables": "চলকগুলো",
+          "Math": "গণিত",
+          "Logic": "যুক্তি",
+          "Functions": "ফাংশনগুলি",
+          "Text": "পাঠ"
+        },
+        "outbreak_freeplay": {
+          "Actions": "ক্রিয়া",
+          "Events": "ঘটনাবলী",
+          "Logic": "যুক্তি",
+          "Loops": "চক্র",
+          "Math": "গণিত",
+          "Variables": "চলকগুলো",
+          "Functions": "ফাংশনগুলি"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "ক্রিয়া",
+          "Events": "ঘটনাবলী",
+          "Logic": "যুক্তি",
+          "Math": "গণিত"
+        }
+      }
+    }
+  }
+}

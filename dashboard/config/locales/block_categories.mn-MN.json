@@ -1,0 +1,76 @@
+{
+  "mn-MN": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Үйлдлүүд",
+          "Brushes": "Багс",
+          "Loops": "Гогцоонууд",
+          "Math": "Математик",
+          "Logic": "Логик",
+          "Functions": "Функцүүд",
+          "Variables": "Хувьсагчууд"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Ертөнц",
+          "Dancers": "Бүжигчид",
+          "Properties": "Шинж чанарууд",
+          "Events": "Үйл явдлууд",
+          "Numbers": "Дугаар",
+          "Logic": "Логик"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Үйлдлүүд",
+          "Events": "Үйл явдлууд",
+          "Loops": "Гогцоонууд",
+          "Math": "Математик",
+          "Logic": "Логик",
+          "Games/Score": "Тоглоом/Оноо"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Ертөнц",
+          "Sprites": "Шидтэнгүүд",
+          "Actions": "Үйлдлүүд",
+          "Events": "Үйл явдлууд",
+          "Behaviors": "Зан чанар"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Ертөнц",
+          "Sprites": "Шидтэнгүүд",
+          "Locations": "Байрлалууд",
+          "Actions": "Үйлдлүүд",
+          "Events": "Үйл явдлууд",
+          "Behaviors": "Зан чанар",
+          "Variables": "Хувьсагчууд",
+          "Math": "Математик",
+          "Logic": "Логик",
+          "Functions": "Функцүүд",
+          "Text": "Текст",
+          "Comments": "Тайлбарууд"
+        },
+        "outbreak_freeplay": {
+          "World": "Ертөнц",
+          "Sprites": "Шидтэнгүүд",
+          "Actions": "Үйлдлүүд",
+          "Behaviors": "Зан чанар",
+          "Events": "Үйл явдлууд",
+          "Locations": "Байрлалууд",
+          "Logic": "Логик",
+          "Loops": "Гогцоонууд",
+          "Math": "Математик",
+          "Variables": "Хувьсагчууд",
+          "Functions": "Функцүүд",
+          "Comments": "Тайлбарууд"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Ертөнц",
+          "Sprites": "Шидтэнгүүд",
+          "Actions": "Үйлдлүүд",
+          "Events": "Үйл явдлууд",
+          "Logic": "Логик",
+          "Math": "Математик"
+        }
+      }
+    }
+  }
+}

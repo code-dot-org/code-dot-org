@@ -284,6 +284,17 @@ class Lesson < ApplicationRecord
     lesson_summary.freeze
   end
 
+  def summarize_for_calendar
+    {
+      id: id,
+      title: localized_title,
+      duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
+      assessment: !!assessment,
+      unplugged: unplugged,
+      url: script_lesson_path(script, self)
+    }
+  end
+
   # Provides data about this lesson needed by the script edit page.
   #
   # TODO: [PLAT-369] trim down to only include those fields needed on the

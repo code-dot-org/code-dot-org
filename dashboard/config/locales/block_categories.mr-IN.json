@@ -1,0 +1,26 @@
+{
+  "mr-IN": {
+    "data": {
+      "block_categories": {
+        "CourseD_EOC_dance": {
+          "Events": "ईव्हेंट्स"
+        },
+        "CourseD_EOC_starwars": {
+          "Events": "ईव्हेंट्स"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Events": "ईव्हेंट्स"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Events": "ईव्हेंट्स"
+        },
+        "outbreak_freeplay": {
+          "Events": "ईव्हेंट्स"
+        },
+        "outbreak_freeplay_basic": {
+          "Events": "ईव्हेंट्स"
+        }
+      }
+    }
+  }
+}

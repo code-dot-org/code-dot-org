@@ -143,11 +143,17 @@ tr:
     öğretme yolculuğunda Code.org'un ilk adımının keyfini çıkarın.
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: "Özel misafirle birlikte gerçek zamanlı olarak öğrenin!
     Tüm yaştaki ve yetenekteki hatta bilgisayarı olmayan öğrenciler de davetlidir.
     \nEvde öğrenmeye devam etmek için bölümlerin ve kaynakların kayıtlarını almak
     için posta listemize katılın.  Geçmiş bölümlere göz atın [here](%{episodes_url})."
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Bize katılın
+  hoc_live_learn_more: Daha fazla bilgi edinin
   hoc_overview_oceans_tutorial_header: Okyanuslar için Yapay Zeka
   hoc_overview_oceans_tutorial_desc: Etik meseleleri ve dünya problemlerini ele almada
     yapay zekanın nasıl kullanılabildiğini keşfederken, yapay zeka, makine öğrenimi,

@@ -11374,6 +11374,8 @@ fil:
             Artist Binary:
               key: Artist na Binary
               name: Artist na Binary
+            lesson-6:
+              name: Masdan ang Hinaharap
           lesson_groups:
             csf_events:
               display_name: Mga event
@@ -11417,7 +11419,7 @@ fil:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
             csf_nested_loops:
-              display_name: Mga Loops na naka-nest
+              display_name: Mga conditional
             csf_functions:
               display_name: Mga function
             csf_impacts:

@@ -1,0 +1,72 @@
+{
+  "nn-NO": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Handlingar",
+          "Brushes": "Penslar",
+          "Loops": "Løkker",
+          "Math": "Matematikk",
+          "Logic": "Logikk",
+          "Functions": "Funksjonar",
+          "Variables": "Variablar"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Verd",
+          "Dancers": "Dansarar",
+          "Properties": "Eigenskapar",
+          "Events": "Hendingar",
+          "Numbers": "Tal",
+          "Logic": "Logikk"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Handlingar",
+          "Events": "Hendingar",
+          "Loops": "Løkker",
+          "Math": "Matematikk",
+          "Logic": "Logikk",
+          "Games/Score": "Spel/Poengsum"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Verd",
+          "Actions": "Handlingar",
+          "Events": "Hendingar",
+          "Behaviors": "Atferd"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Verd",
+          "Locations": "Stadar",
+          "Actions": "Handlingar",
+          "Events": "Hendingar",
+          "Behaviors": "Atferd",
+          "Variables": "Variablar",
+          "Math": "Matematikk",
+          "Logic": "Logikk",
+          "Functions": "Funksjonar",
+          "Text": "Tekst",
+          "Comments": "Kommentar"
+        },
+        "outbreak_freeplay": {
+          "World": "Verd",
+          "Actions": "Handlingar",
+          "Behaviors": "Atferd",
+          "Events": "Hendingar",
+          "Locations": "Stadar",
+          "Logic": "Logikk",
+          "Loops": "Løkker",
+          "Math": "Matematikk",
+          "Variables": "Variablar",
+          "Functions": "Funksjonar",
+          "Comments": "Kommentar"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Verd",
+          "Actions": "Handlingar",
+          "Events": "Hendingar",
+          "Logic": "Logikk",
+          "Math": "Matematikk"
+        }
+      }
+    }
+  }
+}

@@ -1265,6 +1265,47 @@
           "collect": {
             "name": "saml op"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
         }
       }
     }

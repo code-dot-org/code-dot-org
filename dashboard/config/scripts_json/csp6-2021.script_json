@@ -528,7 +528,7 @@
       "key": "88a741b7-9186-48b2-abcc-d316064077a4",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?\n\n**Goal:** This is an optional prompt. If you are able to move directly to the main activity you should do so. This prompt should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
+        "description": "[slide]  **Prompt:** What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?\n\n**Discussion Goal:** This is an optional prompt. If you are able to move directly to the main activity you should do so. This prompt should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
       },
       "seeding_key": {
         "activity_section.key": "88a741b7-9186-48b2-abcc-d316064077a4",
@@ -585,7 +585,7 @@
       "key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Prompt:** Which problems did you need to do something similar in order to solve them?\n\n**Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
+        "description": "[slide]  **Prompt:** Which problems did you need to do something similar in order to solve them?\n\n**Discussion Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
       },
       "seeding_key": {
         "activity_section.key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
@@ -632,7 +632,7 @@
       "key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** Which of these algorithms are “the same” as one another?\n\n**Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
+        "description": "[slide]  **Prompt:** Which of these algorithms are “the same” as one another?\n\n**Discussion Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
       },
       "seeding_key": {
         "activity_section.key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
@@ -676,7 +676,7 @@
       "key": "4e8774b8-a0ca-425a-9648-a3b0626ceee5",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Goal:** Use this discussion to reinforce vocabulary introduced in the slides and check in on whether students have begun the transition towards thinking on a higher level about algorithms and problems. \n"
+        "description": "**Discuss:** Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** Use this discussion to reinforce vocabulary introduced in the slides and check in on whether students have begun the transition towards thinking on a higher level about algorithms and problems. \n"
       },
       "seeding_key": {
         "activity_section.key": "4e8774b8-a0ca-425a-9648-a3b0626ceee5",
@@ -722,7 +722,7 @@
       "key": "2a1ac74b-aca7-4991-9854-26330b83effb",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Have you ever lost a pencil in a backpack? What are the steps you take to find the pencil?\n\n**Goal:** Use this discussion to highlight the following points\n\n* Students may have as systematic approach (search through every pocket in order) or a random approach.\n* Some students may have a system where they place their books and materials in their backpack to be retrieved in the order of their class schedule. If they look in their bag at a certain spot and don't see the pencil, they have a pretty good idea where to search next. \n* There are no right answers here - the idea is to start thinking about the efficiency of different search methods. \n"
+        "description": "[slide]  **Prompt:** Have you ever lost a pencil in a backpack? What are the steps you take to find the pencil?\n\n**Discussion Goal:** Use this discussion to highlight the following points\n\n* Students may have as systematic approach (search through every pocket in order) or a random approach.\n* Some students may have a system where they place their books and materials in their backpack to be retrieved in the order of their class schedule. If they look in their bag at a certain spot and don't see the pencil, they have a pretty good idea where to search next. \n* There are no right answers here - the idea is to start thinking about the efficiency of different search methods. \n"
       },
       "seeding_key": {
         "activity_section.key": "2a1ac74b-aca7-4991-9854-26330b83effb",
@@ -1043,7 +1043,7 @@
       "key": "a1dee69e-0914-4035-97ad-7aab30413277",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What does it mean to say one algorithm is “more efficient” than another?\n\n**Goal:** This prompt is a review from the previous lesson. Students should be free to refer to notes or their journals. You should might hear the following points.\n\n* One algorithm requires fewer steps to complete than another\n* \"The line for one algorithm curves below the other\"\n* More efficient algorithms are much more helpful as input size grows. The amount of work grows more slowly.\n\nYou may wish to refer to slides from previous lessons. \n"
+        "description": "[slide]  **Prompt:** What does it mean to say one algorithm is “more efficient” than another?\n\n**Discussion Goal:** This prompt is a review from the previous lesson. Students should be free to refer to notes or their journals. You should might hear the following points.\n\n* One algorithm requires fewer steps to complete than another\n* \"The line for one algorithm curves below the other\"\n* More efficient algorithms are much more helpful as input size grows. The amount of work grows more slowly.\n\nYou may wish to refer to slides from previous lessons. \n"
       },
       "seeding_key": {
         "activity_section.key": "a1dee69e-0914-4035-97ad-7aab30413277",
@@ -1128,7 +1128,7 @@
       "key": "cf61000d-24ab-49b3-9779-2aebc3d03a6c",
       "position": 5,
       "properties": {
-        "description": "**Prompt:** Which raffle felt like it was more difficult to check? Why?\n\n**Goal:** This discussion is primarily designed to get quick reactions from students to motivate the second big activity in this lesson. Students will likely note that the group raffle felt a lot harder to check, even with the ability to talk. That said, there's no wrong answers at this point. You're about to check their intutions mathematically.\n"
+        "description": "**Prompt:** Which raffle felt like it was more difficult to check? Why?\n\n**Discussion Goal:** This discussion is primarily designed to get quick reactions from students to motivate the second big activity in this lesson. Students will likely note that the group raffle felt a lot harder to check, even with the ability to talk. That said, there's no wrong answers at this point. You're about to check their intutions mathematically.\n"
       },
       "seeding_key": {
         "activity_section.key": "cf61000d-24ab-49b3-9779-2aebc3d03a6c",
@@ -1212,7 +1212,7 @@
       "key": "93d95de4-a4be-4553-ba9f-6baa1eb35298",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** Your school is considering running the group raffle at an upcoming assembly to give away a prize. Write a brief explanation of what advice you would give them.\n\n**Goal:** Use this discussion to reinforce vocabulary introduced in the slides and make sure they have understood the main concepts of the day. Students should be able to explain with the term reasonable, unreasonable, and exponential, why running a group raffle in a school of most sizes is impossible.\n"
+        "description": "**Prompt:** Your school is considering running the group raffle at an upcoming assembly to give away a prize. Write a brief explanation of what advice you would give them.\n\n**Discussion Goal:** Use this discussion to reinforce vocabulary introduced in the slides and make sure they have understood the main concepts of the day. Students should be able to explain with the term reasonable, unreasonable, and exponential, why running a group raffle in a school of most sizes is impossible.\n"
       },
       "seeding_key": {
         "activity_section.key": "93d95de4-a4be-4553-ba9f-6baa1eb35298",
@@ -1269,7 +1269,7 @@
       "key": "6a6ede20-50c7-4950-8b16-87e10c0bb4a2",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the difference between a reasonable and unreasonable time algorithm?\n\n**Goal:** Use this discussion to quickly review topics brought up in the previous lesson.\n\n* Reasonable algorithms grow at a polynomial rate or slower. Unreasonable algorithms grow exponentially.\n* The time to solve an unreasonable algorithm grows very quickly even for relatively small problem sizes.\n"
+        "description": "[slide]  **Prompt:** What is the difference between a reasonable and unreasonable time algorithm?\n\n**Discussion Goal:** Use this discussion to quickly review topics brought up in the previous lesson.\n\n* Reasonable algorithms grow at a polynomial rate or slower. Unreasonable algorithms grow exponentially.\n* The time to solve an unreasonable algorithm grows very quickly even for relatively small problem sizes.\n"
       },
       "seeding_key": {
         "activity_section.key": "6a6ede20-50c7-4950-8b16-87e10c0bb4a2",
@@ -1328,7 +1328,7 @@
       "key": "a10a4d75-2889-4f2a-ae40-bfc3f13b3a7f",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** How did you create your heuristic? Did you change your heuristic after testing it out?\n\n**Goal:** Tease out what factors students used to create their heuristics. "
+        "description": "[slide]  **Prompt:** How did you create your heuristic? Did you change your heuristic after testing it out?\n\n**Discussion Goal:** Tease out what factors students used to create their heuristics. "
       },
       "seeding_key": {
         "activity_section.key": "a10a4d75-2889-4f2a-ae40-bfc3f13b3a7f",
@@ -1339,7 +1339,7 @@
       "key": "894ba9f8-de1d-4542-a727-420ae1c42326",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Discuss:** Call on several students to share their heuristics. As a class, discuss which heuristic we think is best, and will give us a \"good enough\" result for most cases.\n\n**Goal:** There are times when the Next-Closest heuristic will not provide the best option, but on average it's a good option. \n\n* Students can reflect back on the paper route problem from earlier in the class. This may have been the option they first suggested. \n\n"
+        "description": "[slide]  **Discuss:** Call on several students to share their heuristics. As a class, discuss which heuristic we think is best, and will give us a \"good enough\" result for most cases.\n\n**Discussion Goal:** There are times when the Next-Closest heuristic will not provide the best option, but on average it's a good option. \n\n* Students can reflect back on the paper route problem from earlier in the class. This may have been the option they first suggested. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "894ba9f8-de1d-4542-a727-420ae1c42326",
@@ -1493,7 +1493,7 @@
       "key": "f1db5574-263e-4f1c-83fe-7871d9da6996",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Brainstorm a task that you can complete faster if you get other people to help. What’s the most number of people you’d want to help you and why?\n\n**Goal:** This should be a quick prompt to foreshadow the main ideas of the lesson. Students should brainstorm many potential tasks. When they start mentioning the maximum number of people they'd want to help them direct attention towards why that's the case. You might hear that:\n\n* Adding extra people makes it more complicated\n* Sometimes extra people doesn't really speed things up\n* If you're working with lots of people then if one person is slower the whole group is slowed down\n"
+        "description": "[slide]  **Prompt:** Brainstorm a task that you can complete faster if you get other people to help. What’s the most number of people you’d want to help you and why?\n\n**Discussion Goal:** This should be a quick prompt to foreshadow the main ideas of the lesson. Students should brainstorm many potential tasks. When they start mentioning the maximum number of people they'd want to help them direct attention towards why that's the case. You might hear that:\n\n* Adding extra people makes it more complicated\n* Sometimes extra people doesn't really speed things up\n* If you're working with lots of people then if one person is slower the whole group is slowed down\n"
       },
       "seeding_key": {
         "activity_section.key": "f1db5574-263e-4f1c-83fe-7871d9da6996",
@@ -1578,7 +1578,7 @@
       "key": "ffa20030-db47-4e84-8640-eb0a43e84183",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** What portions of your algorithms for Challenges 2 and 3 were parallel? What makes things complicated or slows you down during parallel portions of your algorithm?\n\n**Goal:** This discussion has two goals. The first is to reinforce the difference between parallel and sequential portions of an algorithm. Any time multiple processes are happening at once (for example multiple people are sorting cards), an algorithm is parallel. The second goal is to bring up some common challenges that come up when running parallel algorithms. The remarks cover some of the most important ones but the main point is that while parallel algorithms are faster, they still present challenges.\n"
+        "description": "[slide]  **Prompt:** What portions of your algorithms for Challenges 2 and 3 were parallel? What makes things complicated or slows you down during parallel portions of your algorithm?\n\n**Discussion Goal:** This discussion has two goals. The first is to reinforce the difference between parallel and sequential portions of an algorithm. Any time multiple processes are happening at once (for example multiple people are sorting cards), an algorithm is parallel. The second goal is to bring up some common challenges that come up when running parallel algorithms. The remarks cover some of the most important ones but the main point is that while parallel algorithms are faster, they still present challenges.\n"
       },
       "seeding_key": {
         "activity_section.key": "ffa20030-db47-4e84-8640-eb0a43e84183",
@@ -1612,7 +1612,7 @@
       "key": "a500cb91-1d95-4a30-9156-6e8bb4b5f5c8",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** What was your group’s speedup in Challenge 2? What about in Challenge 3? Are you surprised?\n\n**Goal:** Use this discussion to reinforce how speedup is calculated, but also to prime students to realize that adding additional parallel processes doesn't always lead to the same amount of speedup. During the parallel portion things are in fact moving faster, but sequential portions still take a long time (e.g. collecting individual piles once each group member has sorted their cards). Therefore speedup is rarely your original time divided by the number of computers running the process. Eventually it will level off.\n"
+        "description": "[slide]  **Prompt:** What was your group’s speedup in Challenge 2? What about in Challenge 3? Are you surprised?\n\n**Discussion Goal:** Use this discussion to reinforce how speedup is calculated, but also to prime students to realize that adding additional parallel processes doesn't always lead to the same amount of speedup. During the parallel portion things are in fact moving faster, but sequential portions still take a long time (e.g. collecting individual piles once each group member has sorted their cards). Therefore speedup is rarely your original time divided by the number of computers running the process. Eventually it will level off.\n"
       },
       "seeding_key": {
         "activity_section.key": "a500cb91-1d95-4a30-9156-6e8bb4b5f5c8",
@@ -1693,7 +1693,7 @@
       "key": "f34dadb4-6ba3-4df6-8012-0901760a7b29",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Based on what we saw here today, create a list of pros and cons for distributed and parallel computing. Share it with a partner.\n\n**Goal:** This lesson covers a lot of ground so this is a good chance to review some of the main points of the lesson. Here's some big ones to cover.\n\n* Parallel programs typically are faster\n* Parallel programs don't get faster forever. At some point adding more processors doesn't really help\n* Parallel programs can be more complicated.\n* Parallel programs can be slowed down if only one of many devices is slow.\n* Distributed programs can be run on thousands or even millions of computers which allows you to take on enormous problems\n"
+        "description": "[slide]  **Prompt:** Based on what we saw here today, create a list of pros and cons for distributed and parallel computing. Share it with a partner.\n\n**Discussion Goal:** This lesson covers a lot of ground so this is a good chance to review some of the main points of the lesson. Here's some big ones to cover.\n\n* Parallel programs typically are faster\n* Parallel programs don't get faster forever. At some point adding more processors doesn't really help\n* Parallel programs can be more complicated.\n* Parallel programs can be slowed down if only one of many devices is slow.\n* Distributed programs can be run on thousands or even millions of computers which allows you to take on enormous problems\n"
       },
       "seeding_key": {
         "activity_section.key": "f34dadb4-6ba3-4df6-8012-0901760a7b29",
@@ -1807,7 +1807,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Ticket Generator"
+        "progression": "Widget: Ticket Generator",
+        "level_keys": [
+          "CSP U6L2 Ticket Generator_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1934,7 +1937,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Traveling Salesman"
+        "progression": "Widget: Traveling Salesman",
+        "level_keys": [
+          "CSP U6L4 Traveling Salesman_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1957,7 +1963,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Traveling Salesman - Random Nodes"
+        "progression": "Widget: Traveling Salesman - Random Nodes",
+        "level_keys": [
+          "CSP U6L4 Random Traveling Salesman_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
