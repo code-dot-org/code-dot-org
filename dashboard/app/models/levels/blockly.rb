@@ -604,7 +604,7 @@ class Blockly < Level
       next unless variable_name
       localized_name = I18n.t(
         variable_name.content,
-        scope: [:data, :variable_names, name],
+        scope: [:data, :variable_names],
         default: nil,
         smart: true
       )
@@ -616,7 +616,7 @@ class Blockly < Level
       next unless parameter_name
       localized_name = I18n.t(
         parameter_name.content,
-        scope: [:data, :parameter_names, name],
+        scope: [:data, :parameter_names],
         default: nil,
         smart: true
       )
