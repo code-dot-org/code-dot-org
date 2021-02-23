@@ -270,6 +270,9 @@ class Lesson < ApplicationRecord
       if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+        if script.include_student_lesson_plans
+          lesson_data[:student_lesson_plan_html_url] = script_lesson_path(script, self) + '/student'
+        end
       end
 
       if script.hoc?
