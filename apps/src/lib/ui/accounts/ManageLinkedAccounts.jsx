@@ -224,9 +224,15 @@ class OauthConnection extends React.Component {
       ? `/users/auth/${id}/disconnect`
       : `/users/auth/${credentialType}?action=connect`;
 
-    const buttonDisabled =
-      !!disconnectDisabledStatus ||
-      (isCodeOrgBrowser() && credentialType === OAuthProviders.google);
+    // There are two causes for errors: disconnectDisabledStatus and logging in to
+    // Google from the Maker App. Set the appropriate error text.
+    let disconnectDisabledMessage;
+    if (isCodeOrgBrowser() && credentialType === OAuthProviders.google) {
+      disconnectDisabledMessage = i18n.manageLinkedAccounts_makerAuthError();
+    } else if (!!disconnectDisabledStatus) {
+      disconnectDisabledMessage = this.getDisconnectDisabledTooltip();
+    }
+
     return (
       <tr>
         <td style={styles.cell}>{displayName}</td>
@@ -251,25 +257,18 @@ class OauthConnection extends React.Component {
                 type="submit"
                 style={styles.button}
                 text={buttonText}
-                disabled={buttonDisabled}
+                disabled={!!disconnectDisabledMessage}
               />
               <RailsAuthenticityToken />
             </form>
-            {buttonDisabled && (
+            {!!disconnectDisabledMessage && (
               <ReactTooltip
                 id={tooltipId}
                 offset={styles.tooltipOffset}
                 role="tooltip"
                 effect="solid"
               >
-                <div style={styles.tooltip}>
-                  {/* There are two causes for errors: disconnectDisabledStatus and logging in to
-                      Google from the Maker App. Display the appropriate error text.
-                    */}
-                  {disconnectDisabledStatus
-                    ? this.getDisconnectDisabledTooltip()
-                    : i18n.manageLinkedAccounts_makerAuthError()}
-                </div>
+                <div style={styles.tooltip}> {disconnectDisabledMessage} </div>
               </ReactTooltip>
             )}
           </div>
