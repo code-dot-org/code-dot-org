@@ -1,0 +1,75 @@
+# All CloudFront configuration necessary to host S3 buckets at subdomains, like
+# we do for the TTS audio files. We need three distinct components for this
+# functionality:
+#
+# 1. Route53 record mapping subdomain to CloudFront distribution (ie, tts.code.org)
+# 2. CloudFront distribution with the domain of the S3 Bucket as origin (ie, cdo-tts.s3.amazonaws.com)
+# 3. S3 Bucket with a BucketPolicy grants global read access (ie, cdo-tts)
+#
+# Example usage:
+# <%%= component 's3_backed_subdomains', bucket_name: 'cdo-tts', subdomain: 'tts' -%>
+#
+# For more, see:
+#
+# https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
+# https://github.com/aws-samples/amazon-cloudfront-secure-static-site
+
+<%
+bucket_name ||= raise('bucket name required')
+subdomain ||= raise('subdomain required')
+
+# reduce the passed values to strictly alphanumeric, so we can use them to
+# distinguish the unique Resource identifiers.
+sanitized_bucket_name = bucket_name.gsub(/[^0-9a-z ]/i, '')
+sanitized_subdomain = subdomain.gsub(/[^0-9a-z ]/i, '')
+-%>
+
+  Bucket<%= sanitized_bucket_name %>:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      BucketName: <%= bucket_name %>
+
+  BucketPolicy<%= sanitized_bucket_name %>:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Bucket<%= sanitized_bucket_name %>
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: 's3:GetObject'
+            Resource: !Join
+              - ''
+              - - 'arn:aws:s3:::'
+                - !Ref Bucket<%= sanitized_bucket_name %>
+                - /*
+
+  BucketBackedDistribution<%= sanitized_bucket_name %>:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        DefaultCacheBehavior:
+          # Use the Managed-CachingOptimized policy from
+          # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+          TargetOriginId: s3-<%= bucket_name %>
+          ViewerProtocolPolicy: https-only
+        Origins:
+          - DomainName: <%= bucket_name %>.s3.amazonaws.com
+            Id: s3-<%= bucket_name %>
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+
+  SubdomainRecord<%= sanitized_subdomain %>:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneName: code.org.
+      Name: <%= subdomain %>.code.org
+      Type: A
+      AliasTarget:
+        DNSName: !Ref BucketBackedDistribution<%= sanitized_bucket_name %>
+        # This is always the hosted zone ID when you create an alias record that routes traffic to a CloudFront distribution.
+        # from https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget-1.html#cfn-route53-aliastarget-hostedzoneid
+        HostedZoneId: Z2FDTNDATAQYW2
