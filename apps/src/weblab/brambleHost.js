@@ -34,8 +34,13 @@ let _lastSyncedVersionId;
 // Project root in file system
 const weblabRoot = '/codedotorg/weblab';
 
-// TODO: make this work for any element type and multiline statements
-const disallowedElementsRegex = /<script.*<\/script>/gim;
+// HTML tags we have disallowed in Bramble. The resulting regex will match on open+close and self-closing versions of
+// disallowed tags. Example: <script></script> and <iframe/> will both match.
+const DISALLOWED_HTML_TAGS = 'script|iframe';
+const DISALLOWED_ELEMENTS_REGEX = new RegExp(
+  `<(${DISALLOWED_HTML_TAGS})[\\s\\S]*\\/(${DISALLOWED_HTML_TAGS})*>`,
+  'gi'
+);
 
 function ensureProjectRootDirExists(callback) {
   const fs = bramble_.getFileSystem();
@@ -577,13 +582,13 @@ function handleDisallowedElements(path, callback) {
 
   const fs = bramble_.getFileSystem();
   fs.readFile(path, 'utf8', function(error, data) {
-    if (error || !data.match(disallowedElementsRegex)) {
+    if (error || !data.match(DISALLOWED_ELEMENTS_REGEX)) {
       wrappedCallback();
       return;
     }
 
     brambleProxy_.enableReadonly();
-    data = data.replace(disallowedElementsRegex, '');
+    data = data.replace(DISALLOWED_ELEMENTS_REGEX, '');
     fs.writeFile(path, Buffer.from(data), function(error) {
       brambleProxy_.disableReadonly();
       wrappedCallback();
