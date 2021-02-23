@@ -584,7 +584,7 @@ function handleDisallowedElements(path, callback) {
 
     brambleProxy_.enableReadonly();
     data = data.replace(disallowedElementsRegex, '');
-    fs.writeFile(path, new Buffer(data), function(error) {
+    fs.writeFile(path, Buffer.from(data), function(error) {
       brambleProxy_.disableReadonly();
       wrappedCallback();
     });
