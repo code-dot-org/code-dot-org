@@ -113,6 +113,14 @@ class Ability
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
+        can :read, Lesson do |lesson|
+          script = lesson.script
+          if script.pilot?
+            script.has_pilot_access?(user)
+          else
+            user.persisted? || !script.login_required?
+          end
+        end
       end
 
       if user.facilitator?
@@ -199,7 +207,7 @@ class Ability
         user.persisted? || !script.login_required?
       end
     end
-    can [:read, :student_lesson_plan], Lesson do |lesson|
+    can :student_lesson_plan, Lesson do |lesson|
       script = lesson.script
       if script.pilot?
         script.has_pilot_access?(user)
