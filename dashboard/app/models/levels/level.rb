@@ -411,6 +411,7 @@ class Level < ApplicationRecord
     'Flappy', # no ideal solution
     'Gamelab', # freeplay
     'GoBeyond', # unknown
+    'Javalab', # no ideal solution
     'Level', # base class
     'LevelGroup', # dsl defined, covered in dsl
     'Map', # no user submitted content
