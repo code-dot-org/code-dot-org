@@ -34,6 +34,9 @@ let _lastSyncedVersionId;
 // Project root in file system
 const weblabRoot = '/codedotorg/weblab';
 
+// TODO: make this work for any element type and multiline statements
+const disallowedElementsRegex = /<script.*<\/script>/gim;
+
 function ensureProjectRootDirExists(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
@@ -556,6 +559,38 @@ function syncFiles(callback) {
   syncFilesWithBramble(currentFileEntries, currentProjectVersion, callback);
 }
 
+/**
+ * Remove disallowed elements from the HTML file at the given path. The editor is set to readOnly
+ * while overwriting the file if any disallowed elements are found.
+ */
+function handleDisallowedElements(path, callback) {
+  function wrappedCallback() {
+    if (callback) {
+      callback(path);
+    }
+  }
+
+  if (!path.endsWith('.html')) {
+    wrappedCallback();
+    return;
+  }
+
+  const fs = bramble_.getFileSystem();
+  fs.readFile(path, 'utf8', function(error, data) {
+    if (error || !data.match(disallowedElementsRegex)) {
+      wrappedCallback();
+      return;
+    }
+
+    brambleProxy_.enableReadonly();
+    data = data.replace(disallowedElementsRegex, '');
+    fs.writeFile(path, new Buffer(data), function(error) {
+      brambleProxy_.disableReadonly();
+      wrappedCallback();
+    });
+  });
+}
+
 // Init change list and version structures
 resetBrambleChangesAndProjectVersion();
 
@@ -650,6 +685,10 @@ function load(Bramble) {
       }
     }
 
+    function validateFileAndHandleChange(path) {
+      handleDisallowedElements(path, handleFileChange);
+    }
+
     function handleFileDelete(path) {
       // Remove leading project root path
       var cleanedPath = path.replace(removeProjectRootRegex, '');
@@ -693,7 +732,7 @@ function load(Bramble) {
     }
 
     bramble.on('inspectorChange', handleInspectorChange);
-    bramble.on('fileChange', handleFileChange);
+    bramble.on('fileChange', validateFileAndHandleChange);
     bramble.on('fileDelete', handleFileDelete);
     bramble.on('fileRename', handleFileRename);
     bramble.on('folderRename', handleFolderRename);
