@@ -8,6 +8,7 @@ import {
   getSummaryStat
 } from "../redux";
 import { styles, MLTypes } from "../constants";
+import ResultsTable from "./ResultsTable";
 
 class Results extends Component {
   static propTypes = {
@@ -61,40 +62,7 @@ class Results extends Component {
             <br />
             <br />
           </div>
-          {!isNaN(this.props.summaryStat.stat) && (
-            <div style={styles.subPanel}>
-              <table>
-                <thead>
-                  <tr>
-                    {this.props.selectedFeatures.map((feature, index) => {
-                      return <th key={index}>{feature}</th>;
-                    })}
-                    <th>Expected Label: {this.props.labelColumn}</th>
-                    <th>Predicted Label: {this.props.labelColumn}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {this.props.accuracyCheckExamples.map((examples, index) => {
-                    return (
-                      <tr key={index}>
-                        {examples.map((example, i) => {
-                          return <td key={i}>{example}</td>;
-                        })}
-                        <td>{this.props.accuracyCheckLabels[index]}</td>
-                        <td>
-                          {this.props.accuracyCheckPredictedLabels[index]}
-                        </td>
-                        {this.props.accuracyCheckLabels[index] ===
-                          this.props.accuracyCheckPredictedLabels[index] && (
-                          <td style={styles.ready}>&#x2713;</td>
-                        )}
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          )}
+          {!isNaN(this.props.summaryStat.stat) && <ResultsTable />}
         </div>
       </div>
     );

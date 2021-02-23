@@ -17,6 +17,11 @@ export const TestDataLocations = {
   RANDOM: "random"
 };
 
+export const colors = {
+  feature: "rgb(70, 186, 168)",
+  label: "rgb(186, 168, 70)"
+};
+
 export const styles = {
   app: {
     userSelect: "none"
@@ -183,12 +188,10 @@ export const styles = {
     backgroundColor: "rgb(70, 186, 168)"
   },
   dataDisplayCellUnselected: {},
-
   tabContainer: {
     overflow: "hidden",
     marginTop: 10
   },
-
   crossTabCell0: {
     backgroundColor: "rgba(255,100,100, 0)"
   },
@@ -314,5 +317,10 @@ export const styles = {
 
   selectFeaturesText: {
     color: "rgb(70, 186, 168)"
+  },
+
+  floatLeft: {
+    float: "left",
+    margin: 20
   }
 };
