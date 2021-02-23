@@ -2617,12 +2617,14 @@ da:
             'Functions: Songwriting':
               name: Sangskrivning
           lesson_groups:
+            ramp_up:
+              display_name: Løkker
             csf_sprites:
               display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
             csf_nested_loops:
-              display_name: Indlejret Løkker
+              display_name: Betingelser
             csf_functions:
               display_name: Funktioner
         coursef-2021:

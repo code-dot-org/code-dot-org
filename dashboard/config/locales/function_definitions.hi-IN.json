@@ -2742,6 +2742,49 @@
           "draw bit": {
             "name": "बिट चित्रित करें"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "points": "अंक",
+              "length": "लंबाई"
+            }
+          },
+          "draw a circle": {
+            "name": "एक चक्र बनाएं"
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
         }
       }
     }

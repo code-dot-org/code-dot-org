@@ -1158,7 +1158,54 @@
           "moving north": "posúvať sa na sever",
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "recovering": "zotavenie",
+          "moving left and right": "pohybovať sa vľavo a vpravo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "wandering": "túlať sa"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "zotavenie",
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving left and right": "pohybovať sa vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
+          "moving with arrow keys": "posúvanie klávesami so šípkami"
         }
       }
     }

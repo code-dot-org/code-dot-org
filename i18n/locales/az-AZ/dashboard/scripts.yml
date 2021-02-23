@@ -1760,6 +1760,10 @@ az:
             Conditionals:
               key: Şərti ifadələr
           lesson_groups:
+            ramp_up:
+              display_name: dövrlər
+            csf_nested_loops:
+              display_name: Şərti ifadələr
             csf_functions:
               display_name: Funksiyalar
         coursef-2021:

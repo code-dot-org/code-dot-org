@@ -2178,6 +2178,49 @@
           "draw": {
             "name": "zīmēt"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "zīmet zvaigzni",
+            "parameters": {
+              "points": "punkti",
+              "length": "garums"
+            }
+          },
+          "draw a circle": {
+            "name": "zīmēt apli"
+          },
+          "draw a pinwheel": {
+            "name": "uzzīmēt vējdzirnavas",
+            "parameters": {
+              "length": "garums",
+              "repeat": "atkārtot"
+            }
+          },
+          "draw a triangle": {
+            "name": "zīmēt trīsstūri",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a shape": {
+            "name": "uzzīmēt formu",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a house": {
+            "name": "zīmēt māju",
+            "parameters": {
+              "length": "garums"
+            }
+          },
+          "draw a square": {
+            "name": "zīmēt kvadrātu",
+            "parameters": {
+              "length": "garums"
+            }
+          }
         }
       }
     }
