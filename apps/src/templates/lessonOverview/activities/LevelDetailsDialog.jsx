@@ -156,6 +156,7 @@ export default class LevelDetailsDialog extends Component {
             : {}
         }
       >
+        <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
         {preview}
         <DialogFooter rightAlign>
