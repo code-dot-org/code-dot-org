@@ -568,7 +568,7 @@ function syncFiles(callback) {
  * Remove disallowed elements from the HTML file at the given path. The editor is set to readOnly
  * while overwriting the file if any disallowed elements are found.
  */
-function handleDisallowedElements(path, callback) {
+function handleDisallowedElements(fileSystem, brambleProxy, path, callback) {
   function wrappedCallback() {
     if (callback) {
       callback(path);
@@ -580,17 +580,16 @@ function handleDisallowedElements(path, callback) {
     return;
   }
 
-  const fs = bramble_.getFileSystem();
-  fs.readFile(path, 'utf8', function(error, data) {
+  fileSystem.readFile(path, 'utf8', function(error, data) {
     if (error || !data.match(DISALLOWED_ELEMENTS_REGEX)) {
       wrappedCallback();
       return;
     }
 
-    brambleProxy_.enableReadonly();
+    brambleProxy.enableReadonly();
     data = data.replace(DISALLOWED_ELEMENTS_REGEX, '');
-    fs.writeFile(path, Buffer.from(data), function(error) {
-      brambleProxy_.disableReadonly();
+    fileSystem.writeFile(path, Buffer.from(data), function(error) {
+      brambleProxy.disableReadonly();
       wrappedCallback();
     });
   });
@@ -691,7 +690,12 @@ function load(Bramble) {
     }
 
     function validateFileAndHandleChange(path) {
-      handleDisallowedElements(path, handleFileChange);
+      handleDisallowedElements(
+        bramble_.getFileSystem(),
+        brambleProxy_,
+        path,
+        handleFileChange
+      );
     }
 
     function handleFileDelete(path) {
