@@ -12,7 +12,43 @@ import {
   setCurrentColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
-import Histogram from "react-chart-histogram";
+import { Scatter, Bar } from "react-chartjs-2";
+
+const scatterData = {
+  labels: ["Scatter"],
+  datasets: [
+    {
+      label: "",
+      fill: true,
+      backgroundColor: "rgba(75,192,192,0.4)",
+      pointBorderColor: "rgba(75,192,192,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 2,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(75,192,192,1)",
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: []
+    }
+  ]
+};
+
+const barData = {
+  labels: [],
+  datasets: [
+    {
+      label: "",
+      backgroundColor: 'rgba(255,99,132,0.2)',
+      borderColor: 'rgba(255,99,132,1)',
+      borderWidth: 1,
+      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+      hoverBorderColor: 'rgba(255,99,132,1)',
+      data: []
+    }
+  ]
+};
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -63,6 +99,24 @@ class ColumnInspector extends Component {
         return currentColumnData.frequencies[option];
       });
       options = { fillColor: "#000", strokeColor: "#000" };
+
+      barData.labels = Object.values(currentColumnData.uniqueOptions);
+      barData.datasets[0].data = labels.map(option => {
+        return currentColumnData.frequencies[option];
+      });
+      barData.datasets[0].label = currentColumnData.id;
+
+    } else if (
+      currentColumnData &&
+      currentColumnData.dataType === ColumnTypes.CONTINUOUS
+    ) {
+      const frequencies = currentColumnData.frequencies;
+      scatterData.datasets[0].data = Object.keys(frequencies).map(
+        (value, index) => {
+          return { x: index, y: frequencies[value] };
+        }
+      );
+      scatterData.datasets[0].label = currentColumnData.id;
     }
 
     return (
@@ -87,44 +141,27 @@ class ColumnInspector extends Component {
                     <div>{currentColumnData.description}</div>
                   </div>
                 )}
-
-                {false && (
-                  <div>
-                    {currentColumnData.id}: &nbsp;
-                    <select
-                      onChange={event =>
-                        this.handleChangeDataType(event, currentColumnData.id)
-                      }
-                      value={currentColumnData.dataType}
-                    >
-                      {Object.values(ColumnTypes).map((option, index) => {
-                        return (
-                          <option key={index} value={option}>
-                            {option}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                )}
               </label>
 
               {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
                 labels.length < 5 && (
                   <div>
                     <br />
-                    <Histogram
-                      xLabels={labels}
-                      yValues={data}
-                      width="300"
-                      height="150"
-                      options={options}
+                    <Bar
+                      data={barData}
+                      width={100}
+                      height={150}
+                      options={{
+                        maintainAspectRatio: false
+                      }}
                     />
                   </div>
                 )}
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>
+                  <Scatter data={scatterData} />
+
                   {currentColumnData.range && (
                     <div>
                       {isNaN(rangesByColumn[currentColumnData.id].min) && (

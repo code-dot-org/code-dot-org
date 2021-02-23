@@ -1015,12 +1015,12 @@ export function getPanelButtons(state) {
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Continue" }
+      ? { panel: "trainModel", text: "Train A.I."  }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Continue" }
+      ? { panel: "trainModel", text: "Train A.I." }
       : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
