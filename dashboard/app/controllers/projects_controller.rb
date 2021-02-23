@@ -138,6 +138,10 @@ class ProjectsController < ApplicationController
     },
     eval: {
       name: 'Eval Free Play'
+    },
+    javalab: {
+      name: 'New Java Lab Project',
+      levelbuilder_required: true
     }
   }.with_indifferent_access.freeze
 
