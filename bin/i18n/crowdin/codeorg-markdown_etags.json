@@ -1276,7 +1276,7 @@
   },
   "tr": {
     "/educate/curriculum/csf-transition-guide.md": "\"d9b89e07ae178a6096169f674c2668e0\"",
-    "/international/about.md": "\"48b0dae963a7699c927a466a4c2f5fbd\"",
+    "/international/about.md": "\"a2bd17d9ca6a943a66b77b4c36afb967\"",
     "/csforgood.md": "\"56b7cd72d9120c38d2def279df2428a5\"",
     "/break.md": "\"dc743acdb2e95dfc4751329c4e86e8f7\"",
     "/athome.md": "\"100ae4be93edbb9831779a684ae4ede6\"",
@@ -1441,19 +1441,35 @@
     "/hourofcode/artist.md": "\"24ea283426205c0c7ed57dc569ac508a\""
   },
   "in": {
-    "/educate/curriculum/csf-transition-guide.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
-    "/international/about.md": "\"442a9887b43316e1ea94afc3ecd1be72\"",
-    "/csforgood.md": "\"ab49a0f582b6c03809c1adc5682574c9\"",
-    "/break.md": "\"ab49a0f582b6c03809c1adc5682574c9\"",
-    "/athome.md": "\"ab49a0f582b6c03809c1adc5682574c9\"",
-    "/hourofcode/infinity.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
-    "/hourofcode/mc.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
-    "/hourofcode/unplugged-conditionals-with-cards.md": "\"c01c899335ef96916034c5a4b4fff5e0\"",
-    "/hourofcode/hourofcode.md": "\"574942b6b3e4eeda875f92457bb2ee64\"",
-    "/hourofcode/flappy.md": "\"574942b6b3e4eeda875f92457bb2ee64\"",
-    "/hourofcode/starwars.md": "\"574942b6b3e4eeda875f92457bb2ee64\"",
-    "/hourofcode/frozen.md": "\"3651b7b91c631d2f043a4268f3011847\"",
-    "/hourofcode/playlab.md": "\"3651b7b91c631d2f043a4268f3011847\"",
-    "/hourofcode/artist.md": "\"3651b7b91c631d2f043a4268f3011847\""
+    "/educate/curriculum/csf-transition-guide.md": "\"56f38e4480eb85f3f8608864af5849b6\"",
+    "/international/about.md": "\"52afe4f31826a76b8226d91b95425ecd\"",
+    "/csforgood.md": "\"56f38e4480eb85f3f8608864af5849b6\"",
+    "/break.md": "\"85bc6c9a6a50a5cac30d8d11d0275225\"",
+    "/athome.md": "\"85bc6c9a6a50a5cac30d8d11d0275225\"",
+    "/hourofcode/infinity.md": "\"56f38e4480eb85f3f8608864af5849b6\"",
+    "/hourofcode/mc.md": "\"5e306d62004b88707de0b55b448073d0\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"5e306d62004b88707de0b55b448073d0\"",
+    "/hourofcode/hourofcode.md": "\"5e306d62004b88707de0b55b448073d0\"",
+    "/hourofcode/flappy.md": "\"aa2570374dc53b712b1a36eb72f5dcd3\"",
+    "/hourofcode/starwars.md": "\"aa2570374dc53b712b1a36eb72f5dcd3\"",
+    "/hourofcode/frozen.md": "\"aa2570374dc53b712b1a36eb72f5dcd3\"",
+    "/hourofcode/playlab.md": "\"795bbf4391bc0a985a8b73fea0c56f13\"",
+    "/hourofcode/artist.md": "\"795bbf4391bc0a985a8b73fea0c56f13\""
+  },
+  "eo": {
+    "/educate/curriculum/csf-transition-guide.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/international/about.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/csforgood.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/break.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/athome.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/hourofcode/infinity.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/hourofcode/mc.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/hourofcode/unplugged-conditionals-with-cards.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/hourofcode/hourofcode.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/hourofcode/flappy.md": "\"18b48a774321232994e6203a737882e3\"",
+    "/hourofcode/starwars.md": "\"be11f4dd23333a5db3f7249ae03044e5\"",
+    "/hourofcode/frozen.md": "\"be11f4dd23333a5db3f7249ae03044e5\"",
+    "/hourofcode/playlab.md": "\"be11f4dd23333a5db3f7249ae03044e5\"",
+    "/hourofcode/artist.md": "\"be11f4dd23333a5db3f7249ae03044e5\""
   }
 }

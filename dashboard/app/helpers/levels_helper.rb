@@ -254,7 +254,7 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
@@ -324,7 +324,8 @@ module LevelsHelper
     use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_javalab = @level.game == Game.javalab
+    use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
     use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
