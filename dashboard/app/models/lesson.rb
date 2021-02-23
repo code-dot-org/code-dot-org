@@ -229,9 +229,9 @@ class Lesson < ApplicationRecord
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
-      description_student = I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')
+      description_student = I18n.t('description_student', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
       description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
-      description_teacher = I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')
+      description_teacher = I18n.t('description_teacher', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
       description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
 
       lesson_data = {
@@ -405,7 +405,7 @@ class Lesson < ApplicationRecord
 
   # Returns a hash representing i18n strings in scripts.en.yml which may need
   # to be updated after this object was updated. Currently, this only updates
-  # the lesson name.
+  # the lesson name and overviews.
   def i18n_hash
     {
       script.name => {
