@@ -4,11 +4,13 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import UnitCalendarDialog from './UnitCalendarDialog';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 export default class UnitCalendarButton extends React.Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
-    weeklyInstructionalMinutes: PropTypes.number
+    weeklyInstructionalMinutes: PropTypes.number,
+    scriptId: PropTypes.number.isRequired
   };
 
   constructor(props) {
@@ -20,6 +22,17 @@ export default class UnitCalendarButton extends React.Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'script_overview_actions',
+        study_group: 'unit_calendar',
+        event: 'open_unit_calendar',
+        data_json: JSON.stringify({
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeDialog = () => {

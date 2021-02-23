@@ -123,6 +123,7 @@ class ScriptOverviewTopRow extends React.Component {
             <UnitCalendarButton
               lessons={unitCalendarLessons}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+              scriptId={scriptId}
             />
           )}
         </div>
