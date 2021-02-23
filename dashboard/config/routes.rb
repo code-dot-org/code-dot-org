@@ -777,8 +777,6 @@ Dashboard::Application.routes.draw do
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
-  get 'javalab', to: 'javalab#index'
-
   namespace :foorm do
     resources :forms, only: [:create] do
       member do

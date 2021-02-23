@@ -21,8 +21,7 @@
         }
       ],
       "pilot_experiment": "csf-2021-pilot",
-      "hideable_lessons": true,
-      "peer_reviews_to_complete": 0
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
@@ -112,6 +111,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "blank space stories",

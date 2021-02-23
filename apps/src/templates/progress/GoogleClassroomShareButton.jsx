@@ -39,14 +39,8 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     height: Button.ButtonHeight.default
   };
 
-  /*
-   * The button doesn't render immediately, so we use its resize event to
-   * detect when it's rendered and wait to display the label until then.
-   */
   constructor(props) {
     super(props);
-    this.onButtonResize = this.onButtonResize.bind(this);
-    this.resizeObserver = new ResizeObserver(this.onButtonResize);
 
     this.onShareStart = this.onShareStart.bind(this);
     this.onShareComplete = this.onShareComplete.bind(this);
@@ -62,12 +56,12 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
   buttonRef = null;
   iframeMouseOver = false;
   state = {
-    buttonRendered: false
+    buttonMounted: false
   };
 
   componentDidMount() {
     this.renderButton();
-    this.resizeObserver.observe(this.buttonRef);
+    this.setState({buttonMounted: true});
 
     // Use unique callback names since we're adding to the global namespace
     window[this.onShareStartName()] = this.onShareStart;
@@ -85,11 +79,6 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     if (!_.isEqual(this.props, prevProps)) {
       this.renderButton();
     }
-  }
-
-  onButtonResize() {
-    this.setState({buttonRendered: true});
-    this.resizeObserver.disconnect();
   }
 
   onShareStartName() {
@@ -157,7 +146,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}
         />
-        {this.state.buttonRendered && (
+        {this.state.buttonMounted && (
           <span style={styles.label}>{i18n.shareToGoogleClassroom()}</span>
         )}
       </span>
