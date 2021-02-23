@@ -727,6 +727,7 @@ SPRITE_LAB_ANIMATION_LIST = [
   'category_game_blocks/stone_silver_alt',
   'category_game_blocks/stone_snow',
   'category_game_blocks/stump',
+  'category_game_blocks/sun_happy',
   'category_game_blocks/textGameOver',
   'category_game_blocks/textGetReady',
   'category_game_blocks/trunk_02',
