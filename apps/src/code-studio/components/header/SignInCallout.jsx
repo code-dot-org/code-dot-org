@@ -7,6 +7,7 @@ const TRIANGLE_BASE = 30;
 const TRIANGLE_HEIGHT = 15;
 const CALLOUT_Z_INDEX = 1040;
 const CALLOUT_TOP = 30;
+const HEADER_HEIGHT = 50;
 
 const styles = {
   container: {
@@ -29,7 +30,13 @@ const styles = {
     // Most backdrop attributes come from the 'modal-backdrop' class defined by bootstrap
     // but we need to override the opacity as the default opacity of 0.8 is too dark.
     // Note that bootstrap defaults the z-index of the backdrop to 1040.
-    opacity: 0.5
+    position: 'fixed',
+    opacity: 0.5,
+    zIndex: 800,
+    top: HEADER_HEIGHT,
+    right: 0,
+    bottom: 0,
+    left: 0
   },
   upTriangle: {
     position: 'absolute',
