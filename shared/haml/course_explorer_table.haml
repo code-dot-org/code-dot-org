@@ -44,7 +44,7 @@
     }
 
 :ruby
-  show_csa = DCDO.get("courses_show_csa", false)
+  show_csa = DCDO.get("courses_show_csa", CDO.default_courses_show_csa)
   courses = []
   csa_offset = show_csa ? 1 : 0
 
