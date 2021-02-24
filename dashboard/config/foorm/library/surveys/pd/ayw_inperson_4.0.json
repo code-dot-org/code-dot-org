@@ -1,7 +1,7 @@
 {
+  "published": true,
   "pages": [
     {
-      "name": "page1",
       "elements": [
         {
           "type": "panel",
@@ -87,11 +87,11 @@
                 {
                   "value": "wrap_up",
                   "text": "Wrap Up"
-                }
+                },
                 {
                   "value": "debrief",
                   "text": "Debrief"
-                },
+                }
               ]
             },
             {
@@ -172,6 +172,9 @@
               "rows": 2
             }
           ]
+        },
+        {
+          "name": "feed me"
         }
       ]
     }
