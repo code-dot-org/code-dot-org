@@ -42,7 +42,7 @@ level 'courseF_text_events', progression: 'Skill Building'
 level 'courseF_text_prompts', progression: 'Skill Building'
 level 'courseF_text_answer', progression: 'Skill Building'
 level 'courseF_text_concat', progression: 'Skill Building'
-level 'courseF_text_practice'
+level 'courseF_text_practice', progression: 'Practice'
 
 lesson 'lesson-3', display_name: 'Create a Chat-Bot', has_lesson_plan: false
 

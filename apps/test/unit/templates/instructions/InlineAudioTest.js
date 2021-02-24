@@ -18,6 +18,12 @@ const DEFAULT_PROPS = {
   ttsAutoplayEnabled: false
 };
 
+// this is a helper function which is used in a test to
+// wait for all preceeding promises to resolve
+const waitForPromises = async () => {
+  return Promise.resolve();
+};
+
 describe('InlineAudio', function() {
   setExternalGlobals();
 
@@ -105,17 +111,19 @@ describe('InlineAudio', function() {
     expect(component.exists('.inline-audio')).to.be.true;
   });
 
-  it('can toggle audio', function() {
+  it('can toggle audio', async function() {
     const component = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
 
     expect(component.state().playing).to.be.false;
     component.instance().toggleAudio();
+    await waitForPromises();
     expect(component.state().playing).to.be.true;
     component.instance().toggleAudio();
+    await waitForPromises();
     expect(component.state().playing).to.be.false;
   });
 
-  it('autoplays if autoplay of text-to-speech is enabled', function() {
+  it('autoplays if autoplay of text-to-speech is enabled', async function() {
     const component = mount(
       <StatelessInlineAudio
         assetUrl={function() {}}
@@ -123,6 +131,20 @@ describe('InlineAudio', function() {
       />
     );
 
+    await waitForPromises();
+    expect(component.state().playing).to.be.true;
+  });
+
+  it('when playAudio resolves, state.playing set to true', async () => {
+    const component = mount(
+      <StatelessInlineAudio
+        assetUrl={function() {}}
+        ttsAutoplayEnabled={false}
+      />
+    );
+
+    expect(component.state().playing).to.be.false;
+    await component.instance().playAudio();
     expect(component.state().playing).to.be.true;
   });
 
@@ -160,7 +182,9 @@ describe('InlineAudio', function() {
 // Could extend this to have real EventTarget behavior,
 // then write tests for 'ended' and 'error' events.
 class FakeAudio {
-  play() {}
+  play() {
+    return Promise.resolve();
+  }
   pause() {}
   load() {}
   // EventTarget interface

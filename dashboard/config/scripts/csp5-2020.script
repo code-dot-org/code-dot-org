@@ -130,7 +130,7 @@ lesson 'Semester Hackathon Part 5', display_name: 'Semester Hackathon Part 5', h
 level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment: true
 
-lesson 'Lesson 18: Assessment Day', display_name: 'Lesson 18: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 18: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
 
