@@ -66,6 +66,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import project from '../code-studio/initApp/project';
@@ -691,6 +692,13 @@ Applab.init = function(config) {
   });
 
   config.dropletConfig = dropletConfig;
+
+  if (config.level.aiEnabled && experiments.isEnabled(experiments.APPLAB_ML)) {
+    config.dropletConfig = utils.deepMergeConcatArrays(
+      config.dropletConfig,
+      aiConfig
+    );
+  }
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
