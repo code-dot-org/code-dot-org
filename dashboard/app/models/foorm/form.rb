@@ -57,7 +57,7 @@ class Foorm::Form < ApplicationRecord
         form.questions = questions
         form.published = published
         form.save! if form.changed?
-      rescue
+      rescue JSON::ParserError
         raise format('failed to parse %s', full_name)
       end
     end

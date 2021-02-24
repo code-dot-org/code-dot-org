@@ -60,7 +60,7 @@ class Foorm::Library < ApplicationRecord
             library_question.save! if library_question.changed?
           end
         end
-      rescue
+      rescue JSON::ParserError
         raise format('failed to parse %s', full_name)
       end
     end
