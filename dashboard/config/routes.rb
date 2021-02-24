@@ -706,6 +706,7 @@ Dashboard::Application.routes.draw do
 
       post 'ml_models/save', to: 'ml_models#save'
       get 'ml_models/names', to: 'ml_models#user_ml_model_names'
+      get 'ml_models/metadata/:model_id', to: 'ml_models#user_ml_model_metadata'
       get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
 
       resources :teacher_feedbacks, only: [:index, :create] do
@@ -773,8 +774,6 @@ Dashboard::Application.routes.draw do
   get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
-
-  get 'java_ide', to: 'java_ide#index'
 
   namespace :foorm do
     resources :forms, only: [:create] do
