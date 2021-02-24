@@ -1673,6 +1673,7 @@ ActiveRecord::Schema.define(version: 2021_02_18_164121) do
     t.integer "script_level_id"
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
+    t.integer "analytics_section_id"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end

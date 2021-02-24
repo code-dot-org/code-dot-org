@@ -2688,10 +2688,12 @@ lt:
             'Functions: Songwriting':
               name: Dainų rašymas
           lesson_groups:
+            ramp_up:
+              display_name: Kartojimas
             csf_digcit:
               display_name: Virtuali pilietybė
             csf_nested_loops:
-              display_name: Kartojimas kartojime
+              display_name: Sąlyginiai sakiniai
             csf_functions:
               display_name: Komandų kūrimas
         coursef-2021:

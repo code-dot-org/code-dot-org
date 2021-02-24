@@ -10,8 +10,7 @@
           "lessonPlans",
           "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
         ]
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
@@ -149,6 +148,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "blank space stories",
@@ -1105,6 +1105,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseF_text_practice"
         ]

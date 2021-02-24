@@ -11649,6 +11649,7 @@ en:
             Concept Practice with Minecraft:
               name: Concept Practice with Minecraft
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          name: express-2019
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -12158,6 +12159,7 @@ en:
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          name: pre-express-2019
         removed19:
           title: Removed from CSF for 2019
           description_audience: ''
@@ -20826,41 +20828,41 @@ en:
             lesson1:
               name: 'Lesson 1A: AI for Oceans'
             lesson2:
-              name: Lesson 2
+              name: How Computers Learn (Unplugged)
             lesson3:
-              name: Lesson 3
+              name: AI for Social Good (Unplugged)
             lesson4:
-              name: Lesson 4
+              name: Patterns in Data
             lesson5:
-              name: Models and Data
-            lesson6:
               name: Introduction to AI Lab
+            lesson6:
+              name: Classification on Planet Vapnik (Unplugged)
             lesson7:
-              name: Classification on Planet Vapnik
-            lesson8:
               name: Using Models in App Lab
-            lesson9:
+            lesson8:
               name: The Need for Model Cards
+            lesson9:
+              name: Numerical Data in AI Lab
             lesson10:
-              name: Lesson 10
+              name: Regression Quest (Unplugged)
             lesson11:
-              name: Lesson 11
+              name: Using Model Cards in App Lab
             lesson12:
-              name: Lesson 12
+              name: Making Data Decisions
             lesson13:
-              name: Lesson 13
+              name: 'Mini-Project: Make an App (2 Days)'
             lesson14:
               name: Lesson 14
             lesson15:
-              name: Lesson 15
+              name: AI Code of Ethics (Unplugged)
             lesson16:
-              name: Lesson 16
+              name: 'Goldilocks Principle: Making Models Just Right'
             lesson17:
               name: Lesson 17
             lesson18:
-              name: Lesson 18
+              name: Planning Your App
             lesson19:
-              name: Lesson 19
+              name: 'Project: App with Real World Data'
             lesson20:
               name: Lesson 20
           lesson_groups:
@@ -20887,8 +20889,12 @@ en:
           description: ''
           student_description: ''
         csa2-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
           name: csa2-pilot
           title: ''
           description_audience: ''
@@ -20958,3 +20964,102 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        k5-onlinepd-2021:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_audience: ''
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Welcome to "Teaching Computer Science Fundamentals"
+              name: Welcome to "Teaching Computer Science Fundamentals"
+              description_student: ''
+              description_teacher: ''
+            Understanding the Computer Science Fundamentals Courses:
+              key: Understanding the Computer Science Fundamentals Courses
+              name: Understanding the Computer Science Fundamentals Courses
+              description_student: ''
+              description_teacher: ''
+            Sequencing:
+              key: Sequencing
+              name: Sequencing
+              description_student: ''
+              description_teacher: ''
+            Loops:
+              key: Loops
+              name: Loops
+              description_student: ''
+              description_teacher: ''
+            Events:
+              key: Events
+              name: Events
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+            End of Course projects:
+              key: End of Course projects
+              name: End of Course projects
+              description_student: ''
+              description_teacher: ''
+            Functions:
+              key: Functions
+              name: Functions
+              description_student: ''
+              description_teacher: ''
+            Variables:
+              key: Variables
+              name: Variables
+              description_student: ''
+              description_teacher: ''
+            For Loops:
+              key: For Loops
+              name: For Loops
+              description_student: ''
+              description_teacher: ''
+            Sprite Lab:
+              key: Sprite Lab
+              name: Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Reviewing your reflections:
+              key: Reviewing your reflections
+              name: Reviewing your reflections
+              description_student: ''
+              description_teacher: ''
+            Next steps:
+              key: Next steps
+              name: Next steps
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Getting Started
+            k5_basic_concepts_1:
+              display_name: Basic Coding Concepts and Teaching Practices
+            k5_diving_deeper_1:
+              display_name: 'Diving Deeper: Courses E and F'
+            k5_next_steps_1:
+              display_name: Next Steps
+          name: k5-onlinepd-2021
+        haikubot-pilot:
+          lessons:
+            new lesson:
+              name: lesson display name
+            haiku_prototype_choice:
+              name: Haiku Prototype
+            Haiku Bot:
+              name: Haiku Bot
+          lesson_groups:
+            haiku bot:
+              display_name: Haiku Bot
+          name: haikubot-pilot
+          title: Haiku Bot
+          description_audience: Grade 4, Grade 5
+          description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
+          description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Haiku Bot. Once they’ve built their Haiku Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"
+          student_description: Use Sprite Lab to make a Haiku Bot!

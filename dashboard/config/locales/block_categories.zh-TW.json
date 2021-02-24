@@ -1,0 +1,76 @@
+{
+  "zh-TW": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "動作",
+          "Brushes": "畫筆",
+          "Loops": "迴圈",
+          "Math": "運算",
+          "Logic": "邏輯",
+          "Functions": "函式",
+          "Variables": "變數"
+        },
+        "CourseD_EOC_dance": {
+          "World": "世界",
+          "Dancers": "舞者",
+          "Properties": "屬性",
+          "Events": "事件",
+          "Numbers": "運算",
+          "Logic": "邏輯"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "動作",
+          "Events": "事件",
+          "Loops": "迴圈",
+          "Math": "運算",
+          "Logic": "邏輯",
+          "Games/Score": "遊戲/分數"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "世界",
+          "Sprites": "角色",
+          "Actions": "動作",
+          "Events": "事件",
+          "Behaviors": "行為"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "世界",
+          "Sprites": "角色",
+          "Locations": "座標",
+          "Actions": "動作",
+          "Events": "事件",
+          "Behaviors": "行為",
+          "Variables": "變數",
+          "Math": "運算",
+          "Logic": "邏輯",
+          "Functions": "函式",
+          "Text": "文字",
+          "Comments": "註解"
+        },
+        "outbreak_freeplay": {
+          "World": "世界",
+          "Sprites": "角色",
+          "Actions": "動作",
+          "Behaviors": "行為",
+          "Events": "事件",
+          "Locations": "座標",
+          "Logic": "邏輯",
+          "Loops": "迴圈",
+          "Math": "運算",
+          "Variables": "變數",
+          "Functions": "函式",
+          "Comments": "註解"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "世界",
+          "Sprites": "角色",
+          "Actions": "動作",
+          "Events": "事件",
+          "Logic": "邏輯",
+          "Math": "運算"
+        }
+      }
+    }
+  }
+}
