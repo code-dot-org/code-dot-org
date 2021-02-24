@@ -10,6 +10,8 @@ var i18n = require('@cdo/netsim/locale');
 var markup = require('./NetSimShardSelectionPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 import {KeyCodes} from '../constants';
+import {getStore} from '../redux';
+import {selectSection} from '../templates/teacherDashboard/teacherSectionsRedux';
 
 /**
  * @type {string}
@@ -149,6 +151,25 @@ NetSimShardSelectionPanel.prototype.setNameButtonClick_ = function() {
 };
 
 /**
+ * @param {Node} selectElement
+ * @private
+ */
+NetSimShardSelectionPanel.prototype.updateTeacherSelectedSection_ = function(
+  selectElement
+) {
+  const shardID = selectElement.value;
+  if (shardID && getStore().getState().currentUser.userType === 'teacher') {
+    const sectionIdSelected = selectElement
+      .querySelector(`option[value=${shardID}]`)
+      .getAttribute('section-id');
+
+    if (sectionIdSelected) {
+      getStore().dispatch(selectSection(sectionIdSelected));
+    }
+  }
+};
+
+/**
  * @param {Event} jQueryEvent
  * @private
  */
@@ -158,6 +179,7 @@ NetSimShardSelectionPanel.prototype.onShardSelectChange_ = function(
   var shardID = jQueryEvent.target.value;
   var setShardButton = this.getBody().find('#netsim-shard-confirm-button');
   setShardButton.attr('disabled', !shardID || shardID === SELECTOR_NONE_VALUE);
+  this.updateTeacherSelectedSection_(jQueryEvent.target);
 };
 
 /**
@@ -174,6 +196,7 @@ NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function(
     jQueryEvent.which === KeyCodes.ENTER
   ) {
     this.setShardButtonClick_();
+    this.updateTeacherSelectedSection_(jQueryEvent.target);
   }
 };
 
