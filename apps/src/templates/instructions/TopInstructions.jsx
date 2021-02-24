@@ -158,12 +158,13 @@ class TopInstructions extends Component {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     height: PropTypes.number.isRequired,
-    expandedHeight: PropTypes.number.isRequired,
+    expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    collapsed: PropTypes.bool.isRequired,
+    collapsible: PropTypes.bool.isRequired,
+    collapsed: PropTypes.bool,
     noVisualization: PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: PropTypes.func.isRequired,
+    toggleInstructionsCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
@@ -180,8 +181,13 @@ class TopInstructions extends Component {
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
+    isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool
+    widgetMode: PropTypes.bool,
+    isCSF: PropTypes.bool,
+    mainStyle: PropTypes.object,
+    containerStyle: PropTypes.object,
+    resizeable: PropTypes.bool
   };
 
   constructor(props) {
@@ -333,7 +339,7 @@ class TopInstructions extends Component {
    * via a call to handleHeightResize from HeightResizer.
    */
   getItemTop = () => {
-    return this.topInstructions.getBoundingClientRect().top;
+    return this.refs.topInstructions.getBoundingClientRect().top;
   };
 
   /**
@@ -375,16 +381,16 @@ class TopInstructions extends Component {
     let element;
     switch (this.state.tabSelected) {
       case TabType.RESOURCES:
-        element = this.helpTab;
+        element = this.refs.helpTab;
         break;
       case TabType.INSTRUCTIONS:
-        element = this.instructions;
+        element = this.refs.instructions;
         break;
       case TabType.COMMENTS:
-        element = this.commentTab;
+        element = this.refs.commentTab;
         break;
       case TabType.TEACHER_ONLY:
-        element = this.teacherOnlyTab;
+        element = this.refs.teacherOnlyTab;
         break;
     }
     const maxNeededHeight =
@@ -527,12 +533,14 @@ class TopInstructions extends Component {
       hasContainedLevels
     } = this.props;
 
-    const isCSF = !this.props.noInstructionsWhenCollapsed;
-    const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
+    const isCSF = this.props.isCSF || !this.props.noInstructionsWhenCollapsed;
+    const isCSDorCSP = !isCSF;
     const widgetWidth = WIDGET_WIDTH + 'px';
 
     const mainStyle = [
-      this.props.isRtl ? styles.mainRtl : styles.main,
+      !this.props.mainStyle &&
+        (this.props.isRtl ? styles.mainRtl : styles.main),
+      this.props.mainStyle,
       {
         height: this.props.height - RESIZER_HEIGHT
       },
@@ -541,6 +549,7 @@ class TopInstructions extends Component {
       this.props.widgetMode &&
         (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth})
     ];
+    console.log(mainStyle);
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
 
@@ -597,11 +606,7 @@ class TopInstructions extends Component {
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
     return (
-      <div
-        style={mainStyle}
-        className="editor-column"
-        ref={ref => (this.topInstructions = ref)}
-      >
+      <div style={mainStyle} className="editor-column" ref="topInstructions">
         <PaneHeader
           hasFocus={false}
           teacherOnly={teacherOnly}
@@ -678,7 +683,8 @@ class TopInstructions extends Component {
                 )}
             </div>
             {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-            {!this.props.isEmbedView &&
+            {this.props.collapsible &&
+              !this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
                   collapsed={this.props.collapsed}
@@ -698,26 +704,16 @@ class TopInstructions extends Component {
               !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
                 ? styles.csfBody
-                : styles.body,
+                : this.props.containerStyle || styles.body,
               this.props.isMinecraft && craftStyles.instructionsBody
             ]}
             id="scroll-container"
           >
-            <div
-              ref={ref => {
-                if (ref) {
-                  this.instructions = ref;
-                }
-              }}
-            >
+            <div ref="instructions">
               {this.props.hasContainedLevels && (
                 <div>
                   <ContainedLevel
-                    ref={ref => {
-                      if (ref) {
-                        this.instructions = ref;
-                      }
-                    }}
+                    ref="instructions"
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
                 </div>
@@ -726,11 +722,7 @@ class TopInstructions extends Component {
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <InstructionsCSF
-                    ref={ref => {
-                      if (ref) {
-                        this.instructions = ref;
-                      }
-                    }}
+                    ref="instructions"
                     handleClickCollapser={this.handleClickCollapser}
                     adjustMaxNeededHeight={this.adjustMaxNeededHeight}
                     isEmbedView={this.props.isEmbedView}
@@ -744,21 +736,19 @@ class TopInstructions extends Component {
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
                     <Instructions
-                      ref={ref => {
-                        if (ref) {
-                          this.instructions = ref;
-                        }
-                      }}
+                      ref="instructions"
                       longInstructions={this.props.longInstructions}
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
+                      isBlockly={this.props.isBlockly}
+                      collapsible={this.props.collapsible}
                     />
                   </div>
                 )}
             </div>
             {this.state.tabSelected === TabType.RESOURCES && (
               <HelpTabContents
-                ref={ref => (this.helpTab = ref)}
+                ref="helpTab"
                 videoData={videoData}
                 mapReference={this.props.mapReference}
                 referenceLinks={this.props.referenceLinks}
@@ -774,7 +764,7 @@ class TopInstructions extends Component {
                   !this.state.teacherViewingStudentWork
                 }
                 rubric={this.state.rubric}
-                ref={ref => (this.commentTab = ref)}
+                ref="commentTab"
                 latestFeedback={this.state.feedbacks}
                 token={this.state.token}
               />
@@ -797,7 +787,7 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!this.props.isEmbedView && (
+          {!this.props.isEmbedView && this.props.resizeable && (
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={this.props.height}
@@ -809,7 +799,7 @@ class TopInstructions extends Component {
     );
   }
 }
-export const UnconnectedTopInstructions = TopInstructions;
+export const UnconnectedTopInstructions = Radium(TopInstructions);
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -823,6 +813,7 @@ export default connect(
     ),
     longInstructions: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
+    collapsible: true,
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,

@@ -1,5 +1,7 @@
 import React from 'react';
 import LevelDetailsDialog from './LevelDetailsDialog';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/code-studio/redux';
 
 const defaultProps = {
   handleClose: () => {
@@ -82,6 +84,16 @@ const bubbleChoiceScriptLevel = {
   ]
 };
 
+const levelWithInstructions = {
+  url: '/s/csd6-2020/stage/16/puzzle/9/page/1',
+  level: {
+    type: 'Weblab',
+    longInstructions:
+      'These are some long instructions!\n**Do this**\nSome more detailed instructions.',
+    teacherMarkdown: 'Just some markdown for teachers.'
+  }
+};
+
 export default storybook => {
   storybook.storiesOf('LevelDetailsDialog', module).addStoryTable([
     {
@@ -118,6 +130,17 @@ export default storybook => {
           {...defaultProps}
           scriptLevel={bubbleChoiceScriptLevel}
         />
+      )
+    },
+    {
+      name: 'TopInstructions',
+      story: () => (
+        <Provider store={getStore()}>
+          <LevelDetailsDialog
+            {...defaultProps}
+            scriptLevel={levelWithInstructions}
+          />
+        </Provider>
       )
     }
   ]);
