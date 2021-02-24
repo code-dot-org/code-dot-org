@@ -70,9 +70,6 @@ class CrossTab extends Component {
                                 result.labelPercents[uniqueLabelValue]
                               )}
                             >
-                              {/*
-                            {result.labelCounts[uniqueLabelValue]}
-                            */}
                               {result.labelPercents[uniqueLabelValue] || 0}%
                             </td>
                           );

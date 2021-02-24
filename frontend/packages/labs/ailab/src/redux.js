@@ -389,6 +389,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === RESET_STATE) {
     return {
       ...initialState,
+      selectedTrainer: state.mode && state.mode.hideSelectTrainer,
       mode: state.mode
     };
   }

@@ -54,9 +54,6 @@ class SelectDataset extends Component {
       download: true
     });
 
-    // We reset state, but we want to keep hiding the trainer selection.
-    this.props.setSelectedTrainer("knnClassify");
-
     parseCSV(csvPath, true, false);
 
     parseJSON(jsonPath);

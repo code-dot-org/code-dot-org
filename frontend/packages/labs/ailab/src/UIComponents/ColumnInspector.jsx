@@ -65,6 +65,8 @@ class ColumnInspector extends Component {
       options = { fillColor: "#000", strokeColor: "#000" };
     }
 
+    const maxLabelsInHistogram = 4;
+
     return (
       currentColumnData && (
         <div
@@ -75,11 +77,9 @@ class ColumnInspector extends Component {
           <form>
             <div>
               <label>
-                {true && (
-                  <div>
-                    {currentColumnData.id}: {currentColumnData.dataType}
-                  </div>
-                )}
+                <div>
+                  {currentColumnData.id}: {currentColumnData.dataType}
+                </div>
 
                 {currentColumnData.description && (
                   <div>
@@ -87,30 +87,10 @@ class ColumnInspector extends Component {
                     <div>{currentColumnData.description}</div>
                   </div>
                 )}
-
-                {false && (
-                  <div>
-                    {currentColumnData.id}: &nbsp;
-                    <select
-                      onChange={event =>
-                        this.handleChangeDataType(event, currentColumnData.id)
-                      }
-                      value={currentColumnData.dataType}
-                    >
-                      {Object.values(ColumnTypes).map((option, index) => {
-                        return (
-                          <option key={index} value={option}>
-                            {option}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                )}
               </label>
 
               {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
-                labels.length < 5 && (
+                labels.length <= maxLabelsInHistogram && (
                   <div>
                     <br />
                     <Histogram
