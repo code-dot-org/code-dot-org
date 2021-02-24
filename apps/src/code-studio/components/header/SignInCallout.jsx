@@ -55,7 +55,8 @@ const styles = {
     padding: 20
   },
   imageContainer: {
-    width: 100,
+    width: 116,
+    height: 116,
     marginRight: 20
   },
   textContainer: {
