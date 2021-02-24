@@ -187,7 +187,7 @@ class TopInstructions extends Component {
     isCSF: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
-    resizeable: PropTypes.bool
+    resizable: PropTypes.bool
   };
 
   constructor(props) {
@@ -787,7 +787,7 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!this.props.isEmbedView && this.props.resizeable && (
+          {!this.props.isEmbedView && this.props.resizable && (
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={this.props.height}
@@ -813,6 +813,7 @@ export default connect(
     ),
     longInstructions: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
+    resizable: true,
     collapsible: true,
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
