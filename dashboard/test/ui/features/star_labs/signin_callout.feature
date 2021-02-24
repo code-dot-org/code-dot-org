@@ -73,3 +73,17 @@ Scenario: Nested callouts should work as expected
   And element ".login-callout" is visible
   And I dismiss the login reminder
   And I wait until element ".csf-top-instructions p" is visible
+
+@no_mobile
+@no_ie
+# Issue with cookie clearing on IE
+Scenario: Should be immediately redirected to sign in if pressing sign in button
+  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  And I wait for the page to fully load
+  And I delete the cookie named "hide_signin_callout"
+  And I clear session storage
+  And I reload the page
+  And I rotate to landscape
+  And element ".login-callout" is visible
+  And I click selector ".header_button" if I see it
+  And I am redirected away from current page
