@@ -283,8 +283,7 @@ describe('LibraryPublisher', () => {
 
       it('sets error state if library is too long', async () => {
         publishSpy.callsArgWith(1, {
-          message:
-            'httpStatusCode: 413; status: error; error: Request Entity Too Large'
+          message: 'httpStatusCode: 413; status: error; error: '
         });
         sinon.stub(console, 'warn');
         wrapper.setState({
