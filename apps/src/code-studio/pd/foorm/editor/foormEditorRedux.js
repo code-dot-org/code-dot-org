@@ -53,10 +53,14 @@ export const setLastSavedQuestions = formQuestions => ({
 });
 
 const initialState = {
+  editorType: 'Form',
+  questions: '',
   formQuestions: '',
-  isFormPublished: null,
+  isPublished: null,
   hasError: false,
+  name: null,
   formName: null,
+  version: null,
   formVersion: null,
   formId: null,
   availableForms: [],
@@ -69,7 +73,8 @@ export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_FORM_QUESTIONS) {
     return {
       ...state,
-      formQuestions: action.formQuestions
+      formQuestions: action.formQuestions,
+      questions: action.formQuestions
     };
   }
   if (action.type === SET_HAS_ERROR) {
@@ -82,9 +87,12 @@ export default function foormEditorRedux(state = initialState, action) {
     return {
       ...state,
       formQuestions: action.formData['questions'],
+      questions: action.formData['questions'],
       isFormPublished: action.formData['published'],
       formName: action.formData['name'],
+      name: action.formData['name'],
       formVersion: action.formData['version'],
+      version: action.formData['version'],
       formId: action.formData['id']
     };
   }
