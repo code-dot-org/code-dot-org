@@ -69,7 +69,9 @@ sanitized_subdomain = subdomain.gsub(/[^0-9a-z ]/i, '')
       Name: <%= subdomain %>.code.org
       Type: A
       AliasTarget:
-        DNSName: !Ref BucketBackedDistribution<%= sanitized_bucket_name %>
+        DNSName: !GetAtt
+          - BucketBackedDistribution<%= sanitized_bucket_name %>
+          - DomainName
         # This is always the hosted zone ID when you create an alias record that routes traffic to a CloudFront distribution.
         # from https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget-1.html#cfn-route53-aliastarget-hostedzoneid
         HostedZoneId: Z2FDTNDATAQYW2
