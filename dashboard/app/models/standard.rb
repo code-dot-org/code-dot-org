@@ -7,9 +7,14 @@
 #  organization_id :string(255)      not null
 #  description     :text(65535)
 #  concept         :text(65535)
+#  category_id     :bigint
+#  framework_id    :integer
+#  shortcode       :string(255)
 #
 # Indexes
 #
+#  index_standards_on_category_id                       (category_id)
+#  index_standards_on_framework_id_and_shortcode        (framework_id,shortcode)
 #  index_standards_on_organization_and_organization_id  (organization,organization_id) UNIQUE
 #
 

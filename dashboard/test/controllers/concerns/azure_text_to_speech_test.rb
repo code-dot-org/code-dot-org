@@ -132,8 +132,9 @@ class AzureTextToSpeechTest < ActionController::TestCase
     assert_nil AzureTextToSpeech.get_voices
   end
 
-  # TODO: (maddie 01/21/2021) This test is flaky and blocking builds. The behavior has been verified as expected/wanted.
-  # https://codedotorg.atlassian.net/browse/STAR-1410
+  # 02/17/2020 Disabling this test temporarily as it's blocking the build due to flakiness.
+  # TODO: (madelynkasula) Re-enable this test in https://github.com/code-dot-org/code-dot-org/pull/39108
+  #
   # test 'get_azure_speech_service_voices returns nil on error' do
   #   AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
   #   Honeybadger.expects(:notify).once

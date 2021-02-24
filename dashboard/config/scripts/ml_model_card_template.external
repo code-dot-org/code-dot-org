@@ -1,0 +1,70 @@
+name 'ml-model card-template'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# [Name] Model Card
+
+**Intended Use:**
+
+**Summary:**
+
+**Date:**
+
+## Label
+
+::: details [**Click to Expand**]
+| Name | Type | Description | Possible Values |
+|----------|-------------|--------------------------------------------|---------|
+| Name | &nbsp;&nbsp;Type&nbsp;&nbsp; | Description | <ul><li>Value 1</li><li>Value 2</li></ul> |
+:::
+
+## Features
+
+::: details [**Click to Expand**]
+| Name | Type | Description | Possible Values |
+|----------|-------------|--------------------------------------------|---------|
+| Name | &nbsp;&nbsp;Type&nbsp;&nbsp; | Description | <ul><li>Value 1</li><li>Value 2</li></ul> |
+
+:::
+
+## Training Information
+
+::: details [**Click to Expand**]
+
+<br />
+
+**Model Accuracy:**
+
+**Dataset Size:**
+
+**Testing Data:**
+
+:::
+
+## Model Disclaimers
+
+::: details [**Click to Expand**]
+
+**Describe the dataset used to create this model:**
+
+**Uses for this model that should be avoided:**
+
+**Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
+  - [ ] Yes
+  - [ ] No
+  
+**(If answer above was yes) Have we ensured accurate representation of each subgroup within the data? If you are not sure, select No**
+  - [ ] Yes
+  - [ ] No
+  
+**This model could be used to inform decisions central to human life:**
+  - [ ] Yes
+  - [ ] No
+  
+**The data has been cleaned & prepared before being used to train the model:**
+  - [ ] Yes
+  - [ ] No
+  
+:::
+MARKDOWN

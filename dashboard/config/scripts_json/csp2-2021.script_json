@@ -1058,11 +1058,11 @@
       "key": "be3ec1b7-dd95-4440-bb2e-0735a0dd747d",
       "position": 4,
       "properties": {
-        "description": "1. [slide] **Read:** As a class, read through the guidelines for all challenges. \n\n2. [slide] **Challenge #1 (3 mins):** As a group, create a network where everyone can speak directly to everyone else.\n\n3. [slide] **Read:** Guideline #1: Strings cost money, so try to use the least number of strings possible\n\n4. [slide] **Challenge #2 (3 mins):** As a group, create a network that uses the least number of strings.\n\n5. [slide] **Read:** Guideline #2: Strings can be cut, which might disconnect people from the network\n\n6. [slide] **Challenge #3 (8 mins):** As a group, create a network that keeps everyone connected even if any line is cut.\n\n7. [slide] **Read:** Guidelines #3: Direct connections are faster  than long paths with indirect connections\n\n8. [slide] **Challenge #4 (10 mins):** As a group, create a network that you feel balances all 3 guidelines. There are many possible answers to this as long as you have a reason for why you created the network that you did.\n\n",
+        "description": "1. [slide] **Read:** As a class, read through the guidelines for all challenges. \n\n2. [slide] **Challenge #1 (3 mins):** As a group, create a network where everyone can speak directly to everyone else.\n\n3. [slide] **Read:** Guideline #1: Strings cost money, so try to use the least number of strings possible\n\n4. [slide] **Challenge #2 (3 mins):** As a group, create a network that uses the least number of strings.\n\n5. [slide] **Read:** Guideline #2: Strings can be cut, which might disconnect people from the network\n\n6. [slide] **Challenge #3 (8 mins):** As a group, create a network that keeps everyone connected even if any line is cut.\n\n7. [slide] **Read:** Guidelines #3: Direct connections are faster  than long paths with indirect connections\n\n8. [slide] **Challenge #4 (10 mins):** As a group, create a network that you feel balances all 3 guidelines. There are many possible answers to this as long as you have a reason for why you created the network that you did.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The first 3 challenges have very direct solutions with most networks in the class looking nearly identical:\n\n![](https://images.code.org/5188abf00c224b8777b6121eb109f34f-challenges.png)"
+            "markdown": "The first 3 challenges have very direct solutions with most networks in the class looking nearly identical:\n\n![](https://images.code.org/65ef124a58e0bad5dc219a928a8d816d-challenges 1.png)"
           }
         ]
       },
@@ -1155,7 +1155,7 @@
       "key": "4652a86f-e996-47c5-a03e-86572416869d",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Describe two different paths that a message could take from Person A to Person D:\n\n\n![](https://images.code.org/2263e9e726230245de31df5beaa1f010-network.png)\n\n",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Describe two different paths that a message could take from Person A to Person D:\n\n\n\n\n\n\n![](https://images.code.org/a15d79d6c9cdb1a0f295a0b6e180f955-network.png)",
         "name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {

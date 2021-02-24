@@ -64,11 +64,11 @@ level 'courseE_farmer_ramp12f_experiment', progression: 'Challenge', challenge: 
 level 'courseE_farmer_ramp12g_experiment', progression: 'Practice'
 
 lesson_group 'csf_events', display_name: 'Events'
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: false
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: false, unplugged: true
 level 'BigEvent-Unplugged_experiment'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
-lesson 'Simon Says', display_name: 'Simon Says', has_lesson_plan: false
+lesson 'Simon Says', display_name: 'Simon Says', has_lesson_plan: false, unplugged: true
 level 'SimonSays-Unplugged_experiment'
 
 lesson 'Learning Sprites with Sprite Lab', display_name: 'Learning Sprites with Sprite Lab', has_lesson_plan: false
@@ -94,7 +94,7 @@ level 'Dance Party 7_experiment', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_experiment', progression: 'Mini-Project: Alien Dance Party'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: false
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: false, unplugged: true
 level 'PrivatePersonalInformation-Unplugged_experiment'
 
 lesson 'About Me', display_name: 'About Me', has_lesson_plan: false
@@ -106,7 +106,7 @@ level 'courseE_aboutme_5_experiment', progression: 'Mini-project: Interactive Po
 level 'courseE_aboutme_6_experiment', progression: 'Mini-project: Interactive Poster'
 
 lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
-lesson 'Access Ability', display_name: 'Access Ability', has_lesson_plan: false
+lesson 'Access Ability', display_name: 'Access Ability', has_lesson_plan: false, unplugged: true
 level 'DesigningForAccessibilityMarkdownLevel_2019_experiment'
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
