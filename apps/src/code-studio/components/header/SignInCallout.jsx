@@ -28,6 +28,8 @@ const styles = {
   modalBackdrop: {
     // Most backdrop attributes come from the 'modal-backdrop' class defined by bootstrap
     // but we need to override the opacity as the default opacity of 0.8 is too dark.
+    // Setting the z-index to -1 allows it to sit behind the sign in button that we are
+    // pulling on top. It does not keep the backdrop from being clickable.
     opacity: 0.5,
     zIndex: -1
   },
