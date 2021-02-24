@@ -561,6 +561,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     unarchivedSections.map(
       function(section) {
         return {
+          sectionId: section.id,
           shardSeed: section.id,
           shardID: this.makeShardIDFromSeed_(section.id),
           displayName: section.name
