@@ -10,6 +10,10 @@ class AbilityTest < ActiveSupport::TestCase
     @login_required_script = create(:script, login_required: true).tap do |script|
       @login_required_script_level = create(:script_level, script: script)
     end
+
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, hidden: true).tap do |script|
+      @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true)
+    end
   end
 
   test "as guest" do
@@ -30,6 +34,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_script)
     refute ability.can?(:read, @login_required_script)
+
+    refute ability.can?(:read, @login_required_migrated_lesson)
 
     assert ability.can?(:read, @public_script_level)
     refute ability.can?(:read, @public_script_level, {login_required: "true"})
@@ -55,6 +61,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
 
+    refute ability.can?(:read, @login_required_migrated_lesson)
+
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @public_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
@@ -78,6 +86,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
+
+    assert ability.can?(:read, @login_required_migrated_lesson)
 
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @public_script_level, {login_required: "true"})
@@ -104,6 +114,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.cannot?(:read, @public_script)
     assert ability.cannot?(:read, @login_required_script)
+
+    assert ability.cannot?(:read, @login_required_migrated_lesson)
 
     assert ability.cannot?(:read, @public_script_level)
     assert ability.cannot?(:read, @login_required_script_level)
@@ -157,6 +169,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Game)
     assert ability.can?(:manage, Level)
     assert ability.can?(:manage, Script)
+    assert ability.can?(:manage, Lesson)
     assert ability.can?(:manage, ScriptLevel)
   end
 
