@@ -1,8 +1,11 @@
 {
+  "published": true,
   "pages": [
     {
-      "name": "page1",
       "elements": [
+        {
+          "name": "feed me"
+        },
         {
           "type": "panel",
           "name": "module_7_panel",
