@@ -171,7 +171,7 @@ class Script < ApplicationRecord
   #   CourseOffering version.  Used during seeding to create the appropriate
   #   CourseVersion and CourseOffering objects. For example, this should be
   #   true for CourseA-CourseF .script files.
-  # seeded_at - a timestamp indicating when this object was seeded from
+  # seeded_from - a timestamp indicating when this object was seeded from
   #   its script_json file, as determined by the serialized_at value within
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
@@ -202,7 +202,7 @@ class Script < ApplicationRecord
     show_calendar
     weekly_instructional_minutes
     is_migrated
-    seeded_at
+    seeded_from
   )
 
   def self.twenty_hour_script
