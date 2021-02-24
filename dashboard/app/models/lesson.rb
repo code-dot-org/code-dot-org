@@ -218,7 +218,11 @@ class Lesson < ApplicationRecord
   end
 
   def lesson_plan_pdf_url
-    "#{lesson_plan_base_url}/Teacher.pdf"
+    if script.is_migrated && has_lesson_plan
+      Services::LessonPlanPdfs.get_url(self)
+    else
+      "#{lesson_plan_base_url}/Teacher.pdf"
+    end
   end
 
   def lesson_plan_base_url
