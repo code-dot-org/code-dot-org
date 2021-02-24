@@ -346,6 +346,16 @@ img.video_thumbnail {
       padding-right: 10px;
     }
   }
+
+  #sign_in_or_user {
+    &.z_index_above_modal {
+      z-index: 1050;
+
+      .header_user {
+        background-color: $teal;
+      }
+    }
+  }
 }
 
 #header-banner {
