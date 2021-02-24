@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import $ from 'jquery';
@@ -36,7 +38,8 @@ export default class LevelDetailsDialog extends Component {
     scriptLevel.highlighted = true;
     this.state = {
       selectedLevel,
-      scriptLevel
+      scriptLevel,
+      height: 500
     };
   }
 
@@ -61,6 +64,14 @@ export default class LevelDetailsDialog extends Component {
           {i18n.levelGroupDetailsDialogText({buttonText: i18n.seeFullLevel()})}
         </div>
       );
+    } else if (level.containedLevels && level.containedLevels.length > 0) {
+      return (
+        <div>
+          {level.containedLevels.map(l => (
+            <div key={l.name}>{this.getContentComponent(l)}</div>
+          ))}
+        </div>
+      );
     } else if (level.type === 'BubbleChoice') {
       return (
         <div style={styles.sublevelCards}>
@@ -74,7 +85,37 @@ export default class LevelDetailsDialog extends Component {
         </div>
       );
     } else {
-      return <div>Not implemented yet</div>;
+      console.log(level);
+      return (
+        <UnconnectedTopInstructions
+          hasContainedLevels={false}
+          noVisualization={true}
+          isMinecraft={false}
+          isRtl={false}
+          longInstructions={level.longInstructions || level.long_instructions}
+          shortInstructions={level.shortInstructions}
+          noInstructionsWhenCollapsed={true}
+          levelVideos={level.videos}
+          mapReference={level.mapReference}
+          referenceLinks={level.referenceLinks}
+          teacherMarkdown={level.teacherMarkdown}
+          viewAs={ViewType.Teacher}
+          height={this.state.height}
+          maxHeight={this.state.maxHeight}
+          expandedHeight={this.state.height}
+          collapsible={false}
+          collapsed={false}
+          hidden={false}
+          isEmbedView={false}
+          isCSF={false}
+          mainStyle={{paddingBottom: 5}}
+          containerStyle={{overflowY: 'scroll', height: this.state.height}}
+          setInstructionsRenderedHeight={height => this.setState({height})}
+          setInstructionsMaxHeightNeeded={maxHeight =>
+            this.setState({maxHeight})
+          }
+        />
+      );
     }
   };
 
@@ -145,6 +186,7 @@ export default class LevelDetailsDialog extends Component {
     const {scriptLevel} = this.props;
     const level = this.state.selectedLevel;
     const preview = this.getComponentContent(level);
+    console.log(this.state);
     return (
       <BaseDialog
         isOpen={true}
@@ -158,17 +200,21 @@ export default class LevelDetailsDialog extends Component {
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
-        {preview}
+        <div>{preview}</div>
         <DialogFooter rightAlign>
           <Button
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
+            __useDeprecatedTag
+            style={{margin: 5}}
           />
           <Button
-            href={scriptLevel.url}
+            href={level.url || scriptLevel.url}
             text={i18n.seeFullLevel()}
             color={'orange'}
+            __useDeprecatedTag
+            style={{margin: 5}}
           />
         </DialogFooter>
       </BaseDialog>

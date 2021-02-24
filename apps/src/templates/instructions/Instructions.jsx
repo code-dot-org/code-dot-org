@@ -33,7 +33,9 @@ class Instructions extends React.Component {
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
-    onResize: PropTypes.func
+    onResize: PropTypes.func,
+    isBlockly: PropTypes.bool,
+    collapsible: PropTypes.bool
   };
 
   /**
@@ -55,6 +57,8 @@ class Instructions extends React.Component {
           markdown={this.props.longInstructions}
           onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
+          isBlockly={this.props.isBlockly}
+          collapsible={this.props.collapsible}
         />
       );
     } else {
