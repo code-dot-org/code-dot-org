@@ -2237,6 +2237,56 @@
           "draw": {
             "name": "ισοπαλία"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "σχεδίασε ένα αστέρι",
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "parameters": {
+              "points": "πόντοι",
+              "length": "μήκος"
+            }
+          },
+          "draw a circle": {
+            "name": "Σχεδίασε ένα κύκλο",
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "sides": "πλευρές",
+              "length": "μήκος",
+              "repeat": "επανάλαβε"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "sides": "πλευρές",
+              "length": "μήκος"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          }
         }
       }
     }

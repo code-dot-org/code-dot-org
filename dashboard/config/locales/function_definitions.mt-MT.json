@@ -357,6 +357,13 @@
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
         }
       }
     }

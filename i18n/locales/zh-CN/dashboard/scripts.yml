@@ -16454,6 +16454,10 @@ zh-CN:
             End of Course Project:
               key: 课程结束项目
               name: 课程结束项目
+            lesson-6:
+              name: 与《我的世界》往前看
+            lesson-5:
+              name: 密码升级
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -16541,7 +16545,7 @@ zh-CN:
             csf_digcit:
               display_name: 数字公民
             csf_nested_loops:
-              display_name: 循环嵌套
+              display_name: 条件语句
             csf_functions:
               display_name: 函数
             csf_impacts:
@@ -16786,6 +16790,8 @@ zh-CN:
               name: 编码一个模拟
             Course F Introduction:
               name: 向你介绍精灵图实验室
+            Sprites in Action:
+              name: 动作精灵图
           lesson_groups:
             ramp_up:
               display_name: 介绍

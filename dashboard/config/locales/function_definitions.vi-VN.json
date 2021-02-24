@@ -1478,6 +1478,52 @@
           "collect": {
             "name": "thu thập"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "points": "điểm",
+              "length": "chiều dài"
+            }
+          },
+          "draw a circle": {
+            "name": "vẽ một hình tròn"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "hàm của tôi"
+          }
         }
       }
     }

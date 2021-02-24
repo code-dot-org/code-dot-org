@@ -11649,6 +11649,7 @@ en:
             Concept Practice with Minecraft:
               name: Concept Practice with Minecraft
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          name: express-2019
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -12158,6 +12159,7 @@ en:
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          name: pre-express-2019
         removed19:
           title: Removed from CSF for 2019
           description_audience: ''
@@ -18656,6 +18658,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          name: vpl-csd-2020
         vpl-csp-2020:
           lessons:
             Module 1:
@@ -18794,6 +18797,10 @@ en:
               name: Appendix
             intro-categorical:
               name: Introduction to AI Lab
+            model-cards:
+              name: Model Cards Playground
+            bug-bash:
+              name: Bug Bash Playground
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -18856,6 +18863,16 @@ en:
               name: Sprite Lab Videos
             blank space stories:
               name: Blank Space Stories
+            how things spread:
+              name: How Things Spread
+            contagion simulator setup:
+              name: Contagion Simulator Setup
+            sometimes but not always:
+              name: Sometimes, but Not Always
+            modifying your model:
+              name: Modifying Your model
+            telling a data story:
+              name: Telling a Data Story
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18869,6 +18886,8 @@ en:
               display_name: Outbreak Simulation
             Loom Levels:
               display_name: Loom Levels
+            contagion:
+              display_name: Contagion
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -19928,7 +19947,7 @@ en:
           name: coursea-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb-2021:
-          title: Course B (2020)
+          title: Course B (2021)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
@@ -19983,7 +20002,7 @@ en:
           name: courseb-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec-2021:
-          title: Course C (2020)
+          title: Course C (2021)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
@@ -20060,7 +20079,7 @@ en:
           name: coursec-2021
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed-2021:
-          title: Course D (2020)
+          title: Course D (2021)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
@@ -20122,6 +20141,10 @@ en:
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
+            lesson-6:
+              name: Looking Ahead with Minecraft
+            lesson-5:
+              name: Password Power-Up
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -20140,7 +20163,7 @@ en:
           name: coursed-2021
           student_description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
         coursee-2021:
-          title: Course E (2020)
+          title: Course E (2021)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: 'Ages: 8-12'
@@ -20202,21 +20225,25 @@ en:
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
+            lesson-4:
+              name: Context-Settng Lesson
           lesson_groups:
             ramp_up:
-              display_name: Ramp Up
+              display_name: Loops
             csf_sprites:
               display_name: Sprites
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
-              display_name: Nested Loops
+              display_name: Conditionals
             csf_functions:
               display_name: Functions
             csf_impacts:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Removed
           name: coursee-2021
           student_description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef-2021:
@@ -20300,7 +20327,7 @@ en:
           name: coursef-2021
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         express-2021:
-          title: Express Course (2020)
+          title: Express Course (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
@@ -20411,7 +20438,7 @@ en:
           name: express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
         pre-express-2021:
-          title: Pre-reader Express (2020)
+          title: Pre-reader Express (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
@@ -20485,9 +20512,11 @@ en:
             Sprites in Action:
               name: Sprites in Action
             variables-in-spritelab:
-              name: Storing and Retrieving Text - coming soon!
+              name: Text and Prompts - coming soon!
             chatbot:
               name: Create a Chat-Bot - coming soon!
+            blank space stories:
+              name: Blank Space Stories
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -20809,11 +20838,11 @@ en:
             lesson6:
               name: Introduction to AI Lab
             lesson7:
-              name: Lesson 7
+              name: Classification on Planet Vapnik
             lesson8:
-              name: Lesson 8
+              name: Using Models in App Lab
             lesson9:
-              name: Lesson 9
+              name: The Need for Model Cards
             lesson10:
               name: Lesson 10
             lesson11:
@@ -20848,3 +20877,189 @@ en:
         teststandard:
           lessons: {}
           lesson_groups: {}
+        csa1-pilot:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+          lesson_groups: {}
+          name: csa1-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-pilot:
+          lessons:
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: csa2-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa3-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa3-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa4-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa4-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa5-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa6-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa6-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa7-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa7-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa8-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa8-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa9-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csa9-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        k5-onlinepd-2021:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          description_audience: ''
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Welcome to "Teaching Computer Science Fundamentals"
+              name: Welcome to "Teaching Computer Science Fundamentals"
+              description_student: ''
+              description_teacher: ''
+            Understanding the Computer Science Fundamentals Courses:
+              key: Understanding the Computer Science Fundamentals Courses
+              name: Understanding the Computer Science Fundamentals Courses
+              description_student: ''
+              description_teacher: ''
+            Sequencing:
+              key: Sequencing
+              name: Sequencing
+              description_student: ''
+              description_teacher: ''
+            Loops:
+              key: Loops
+              name: Loops
+              description_student: ''
+              description_teacher: ''
+            Events:
+              key: Events
+              name: Events
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+            End of Course projects:
+              key: End of Course projects
+              name: End of Course projects
+              description_student: ''
+              description_teacher: ''
+            Functions:
+              key: Functions
+              name: Functions
+              description_student: ''
+              description_teacher: ''
+            Variables:
+              key: Variables
+              name: Variables
+              description_student: ''
+              description_teacher: ''
+            For Loops:
+              key: For Loops
+              name: For Loops
+              description_student: ''
+              description_teacher: ''
+            Sprite Lab:
+              key: Sprite Lab
+              name: Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Reviewing your reflections:
+              key: Reviewing your reflections
+              name: Reviewing your reflections
+              description_student: ''
+              description_teacher: ''
+            Next steps:
+              key: Next steps
+              name: Next steps
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Getting Started
+            k5_basic_concepts_1:
+              display_name: Basic Coding Concepts and Teaching Practices
+            k5_diving_deeper_1:
+              display_name: 'Diving Deeper: Courses E and F'
+            k5_next_steps_1:
+              display_name: Next Steps
+          name: k5-onlinepd-2021
+        haikubot-pilot:
+          lessons:
+            new lesson:
+              name: lesson display name
+            haiku_prototype_choice:
+              name: Haiku Prototype
+            Haiku Bot:
+              name: Haiku Bot
+          lesson_groups:
+            haiku bot:
+              display_name: Haiku Bot
+          name: haikubot-pilot
+          title: Haiku Bot
+          description_audience: Grade 4, Grade 5
+          description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
+          description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Haiku Bot. Once they’ve built their Haiku Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"
+          student_description: Use Sprite Lab to make a Haiku Bot!
