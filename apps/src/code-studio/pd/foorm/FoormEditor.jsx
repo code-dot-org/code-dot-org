@@ -33,6 +33,12 @@ const styles = {
   preview: {
     width: '48%',
     marginRight: 12
+  },
+  surveyTitle: {
+    marginBottom: 0
+  },
+  surveyState: {
+    marginTop: 0
   }
 };
 
@@ -50,7 +56,9 @@ class FoormEditor extends React.Component {
     isFormPublished: PropTypes.bool,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
-    formId: PropTypes.number
+    formId: PropTypes.number,
+    name: PropTypes.string,
+    version: PropTypes.number
   };
 
   constructor(props) {
@@ -169,6 +177,23 @@ class FoormEditor extends React.Component {
     this.setState({livePreviewStatus: toggleValue});
   };
 
+  renderHeaderTitle() {
+    return (
+      <div>
+        <h2 style={styles.surveyTitle}>
+          {`Form Name: ${this.props.name}, version ${
+            this.props.version
+          }`}
+        </h2>
+        <h3 style={styles.surveyState}>
+          {`Form State: ${
+            this.props.isPublished ? 'Published' : 'Draft'
+          }`}
+        </h3>
+      </div>
+    );
+  }
+
   renderVariables() {
     return (
       <div style={styles.options}>
@@ -259,6 +284,7 @@ class FoormEditor extends React.Component {
           livePreviewStatus={this.state.livePreviewStatus}
           validateURL={'/api/v1/pd/foorm/forms/validate_form'}
           validateDataKey={'form_questions'}
+          renderHeaderTitle={() => this.renderHeaderTitle()}
         />
         <div style={styles.foormEditor}>
           <Tabs
@@ -325,5 +351,7 @@ export default connect(state => ({
   formHasError: state.foorm.hasError,
   formName: state.foorm.formName,
   formVersion: state.foorm.formVersion,
-  formId: state.foorm.formId
+  formId: state.foorm.formId,
+  name: state.foorm.name,
+  version: state.foorm.version
 }))(FoormEditor);

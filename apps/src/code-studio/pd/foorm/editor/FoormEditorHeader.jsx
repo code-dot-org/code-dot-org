@@ -10,12 +10,6 @@ import moment from 'moment';
 import {connect} from 'react-redux';
 
 const styles = {
-  surveyTitle: {
-    marginBottom: 0
-  },
-  surveyState: {
-    marginTop: 0
-  },
   validationInfo: {
     marginTop: 10,
     marginLeft: 10
@@ -48,6 +42,7 @@ class FoormEditorHeader extends Component {
     livePreviewStatus: PropTypes.string,
     validateURL: PropTypes.string,
     validateDataKey: PropTypes.string,
+    renderHeaderTitle: PropTypes.func,
 
     // populated by Redux
     questions: PropTypes.object,
@@ -99,20 +94,7 @@ class FoormEditorHeader extends Component {
   render() {
     return (
       <div>
-        {this.props.name && (
-          <div>
-            <h2 style={styles.surveyTitle}>
-              {`${this.props.editorType} Name: ${this.props.name}, version ${
-                this.props.version
-              }`}
-            </h2>
-            <h3 style={styles.surveyState}>
-              {`${this.props.editorType} State: ${
-                this.props.isPublished ? 'Published' : 'Draft'
-              }`}
-            </h3>
-          </div>
-        )}
+        {this.props.name && this.props.renderHeaderTitle()}
         <div style={styles.helperButtons}>
           <div style={styles.livePreview}>
             <ToggleGroup
