@@ -18,8 +18,7 @@ require_relative '../../tools/scripts/ManifestBuilder'
 def sync_in
   puts "Sync in starting"
   HocSyncUtils.sync_in
-  localize_level_content
-  localize_project_content
+  localize_level_and_project_content
   localize_block_content
   localize_animation_library
   localize_shared_functions
@@ -32,6 +31,15 @@ def sync_in
 rescue => e
   puts "Sync in failed from the error: #{e}"
   raise e
+end
+
+def localize_level_and_project_content
+  variable_strings = {}
+  parameter_strings = {}
+  localize_level_content(variable_strings, parameter_strings)
+  localize_project_content(variable_strings, parameter_strings)
+  write_to_yml("variable_names", variable_strings)
+  write_to_yml("parameter_names", parameter_strings)
 end
 
 def get_i18n_strings(level)
@@ -167,7 +175,7 @@ def get_placeholder_texts(blocks, block_type, title_names)
   results
 end
 
-def localize_project_content
+def localize_project_content(variable_strings, parameter_strings)
   puts "Preparing project content"
   project_content_file = "../#{I18N_SOURCE_DIR}/course_content/projects.json"
   project_strings = {}
@@ -178,9 +186,16 @@ def localize_project_content
       level = Level.find_by_name(value["name"])
       url = "https://studio.code.org/p/#{key}"
       project_strings[url] = get_i18n_strings(level)
-      # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
-      %w[block_categories variable_names parameter_names].each do |type|
-        project_strings[url].delete(type) if project_strings[url].key? type
+      # Block categories are handled differently below and are generally covered by the script levels
+      project_strings[url].delete("block_categories") if project_strings[url].key? "block_categories"
+
+      # add project-level variables to the flattened hash structures of
+      # all variable & parameter strings
+      if project_strings[url].key? "variable_names"
+        variable_strings.merge! project_strings[url].delete("variable_names")
+      end
+      if project_strings[url].key? "parameter_names"
+        parameter_strings.merge! project_strings[url].delete("parameter_names")
       end
     end
     project_strings.delete_if {|_, value| value.blank?}
@@ -191,14 +206,12 @@ def localize_project_content
   end
 end
 
-def localize_level_content
+def localize_level_content(variable_strings, parameter_strings)
   puts "Preparing level content"
 
   block_category_strings = {}
   progression_strings = {}
   level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
-  variable_strings = {}
-  parameter_strings = {}
 
   # We have to run this specifically from the Rails directory because
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
@@ -283,8 +296,6 @@ def localize_level_content
 
   write_to_yml("block_categories", block_category_strings)
   write_to_yml("progressions", progression_strings)
-  write_to_yml("variable_names", variable_strings)
-  write_to_yml("parameter_names", parameter_strings)
 end
 
 def write_to_yml(type, strings)
