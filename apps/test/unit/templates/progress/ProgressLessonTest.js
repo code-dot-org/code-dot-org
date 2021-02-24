@@ -1,5 +1,4 @@
 import {assert} from '../../../util/deprecatedChai';
-import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/progress/ProgressLesson';
@@ -8,7 +7,6 @@ import {
   fakeLesson,
   fakeLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
