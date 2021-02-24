@@ -1,7 +1,7 @@
 lesson_extras_available true
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
-lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF_2018'
 
 lesson 'Sequence in Maze', display_name: 'Sequence in Maze', has_lesson_plan: true
@@ -19,7 +19,7 @@ level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
 level 'courseF_markdown_algorithms_end'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation_2018'
 
 lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: true
@@ -50,7 +50,7 @@ level 'courseC_artist_prog6_predict1_2018', assessment: true
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF_2018'
 
 lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
@@ -136,7 +136,7 @@ level 'timeforcs_demo_c1_3', named: true
 level 'timeforcs_demo_c1_4', named: true
 level 'timeforcs_demo_c1_5_journal', named: true
 
-lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'timeforcs_demo_crowdsourcing', progression: 'Crowdsourcing'
 
 lesson 'Everglades Habitats', display_name: 'Everglades Habitats', has_lesson_plan: true
@@ -163,7 +163,7 @@ level 'timeforcs_demo_c2_3', named: true
 level 'timeforcs_demo_c2_4', named: true
 level 'timeforcs_demo_c2_5', named: true
 
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'timeforcs_demo_conditionals', progression: 'Conditionals'
 
 lesson 'Alligator Holes', display_name: 'Alligator Holes', has_lesson_plan: true
@@ -192,7 +192,7 @@ level 'timeforcs_demo_c2_3', named: true
 level 'timeforcs_demo_c2_4', named: true
 level 'timeforcs_demo_c2_5', named: true
 
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent_2019'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
@@ -293,7 +293,7 @@ level 'timeforcs_demo_c2_3', named: true
 level 'timeforcs_demo_c2_4', named: true
 level 'timeforcs_demo_c2_5', named: true
 
-lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true
+lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters_2019'
 
 lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: true

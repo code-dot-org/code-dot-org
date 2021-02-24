@@ -1,22 +1,26 @@
 import $ from 'jquery';
 import designMode from './designMode';
+import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 
 function generateCodeDesignElements(modelId, modelData) {
   var x = 20;
   var y = 20;
   var SPACER_PIXELS = 20;
   designMode.onInsertEvent(`var testValues = {};`);
+  var inputFields = [];
   modelData.selectedFeatures.forEach(feature => {
     y = y + SPACER_PIXELS;
     var label = designMode.createElement('LABEL', x, y);
+    var alphaNumFeature = stripSpaceAndSpecial(feature);
+    let fieldId;
     label.textContent = feature + ':';
-    label.id = 'design_' + feature + '_label';
+    label.id = 'design_' + alphaNumFeature + '_label';
     label.style.width = '300px';
     y = y + SPACER_PIXELS;
     if (Object.keys(modelData.featureNumberKey).includes(feature)) {
-      var selectId = feature + '_dropdown';
+      fieldId = alphaNumFeature + '_dropdown';
       var select = designMode.createElement('DROPDOWN', x, y);
-      select.id = 'design_' + selectId;
+      select.id = 'design_' + fieldId;
       // App Lab automatically addss "option 1" and "option 2", remove them.
       select.options.remove(0);
       select.options.remove(0);
@@ -25,29 +29,33 @@ function generateCodeDesignElements(modelId, modelData) {
         optionElement.text = option;
         select.options.add(optionElement);
       });
+      y = y + SPACER_PIXELS;
     } else {
-      var input = designMode.createElement('TEXT_INPUT');
-      input.id = 'design_' + feature + '_input';
+      var input = designMode.createElement('TEXT_INPUT', x, y);
+      fieldId = alphaNumFeature + '_input';
+      input.id = 'design_' + fieldId;
+      y = y + SPACER_PIXELS;
     }
-    var addFeature = `testValues.${feature} = getText("${selectId}");`;
-    designMode.onInsertEvent(addFeature);
+    var addFeature = `testValues.${alphaNumFeature} = getText("${fieldId}");`;
+    inputFields.push(addFeature);
   });
   y = y + 2 * SPACER_PIXELS;
   var label = designMode.createElement('LABEL', x, y);
   label.textContent = modelData.labelColumn;
-  // TODO: this could be problematic if the name isn't formatted appropriately
-  label.id = 'design_' + modelData.name + '_label';
+  var alphaNumModelName = stripSpaceAndSpecial(modelData.name);
+  label.id = 'design_' + alphaNumModelName + '_label';
   label.style.width = '300px';
   y = y + SPACER_PIXELS;
-  var predictionId = modelData.name + '_prediction';
+  var predictionId = alphaNumModelName + '_prediction';
   var prediction = designMode.createElement('TEXT_INPUT', x, y);
   prediction.id = 'design_' + predictionId;
   y = y + 2 * SPACER_PIXELS;
   var predictButton = designMode.createElement('BUTTON', x, y);
   predictButton.textContent = 'Predict';
-  var predictButtonId = modelData.name + '_predict';
+  var predictButtonId = alphaNumModelName + '_predict';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
+    ${inputFields.join('\n\t\t')}
     getPrediction("${
       modelData.name
     }", "${modelId}", testValues, function(value) {

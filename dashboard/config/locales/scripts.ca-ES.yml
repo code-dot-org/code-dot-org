@@ -2352,10 +2352,12 @@ ca:
             'Functions: Songwriting':
               name: Composició de cançons
           lesson_groups:
+            ramp_up:
+              display_name: Bucles
             csf_digcit:
               display_name: Ciutadania digital
             csf_nested_loops:
-              display_name: Bucles imbricats
+              display_name: Condicionals
             csf_functions:
               display_name: Funcions
         coursef-2021:

@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "crwdns2067174:0crwdne2067174:0",
   "danceFeedbackNeedTwoDancers": "crwdns2067176:0crwdne2067176:0",
   "danceFeedbackOnlyOneDancerMoved": "crwdns2067178:0crwdne2067178:0",
-  "danceFeedbackNeedLead": "crwdns2067180:0{'x: 200, y: 200'}crwdne2067180:0",
+  "danceFeedbackNeedLead": "crwdns2067180:0'{'x: 200, y: 200'}'crwdne2067180:0",
   "danceFeedbackNeedBackup": "crwdns2067182:0crwdne2067182:0",
   "danceFeedbackSetSize": "crwdns2067184:0crwdne2067184:0",
   "measure": "crwdns331090:0crwdne331090:0"
