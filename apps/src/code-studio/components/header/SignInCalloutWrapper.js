@@ -24,13 +24,11 @@ export default class SignInCalloutWrapper extends React.Component {
     };
   }
 
-  getSignInElement() {
-    return document.getElementById('sign_in_or_user');
-  }
-
   componentDidMount() {
     if (!this.state.hideCallout) {
-      this.getSignInElement().classList.add('z_index_above_modal');
+      this.signInElement = document.getElementById('sign_in_or_user');
+      this.signInElement &&
+        this.signInElement.classList.add('z_index_above_modal');
     }
   }
 
@@ -42,7 +40,8 @@ export default class SignInCalloutWrapper extends React.Component {
     cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
     sessionStorage.setItem(HideSignInCallout, 'true');
     event.preventDefault();
-    this.getSignInElement().classList.remove('z_index_above_modal');
+    this.signInElement &&
+      this.signInElement.classList.remove('z_index_above_modal');
   }
 
   // After the first dismissal, this returns null
