@@ -291,13 +291,13 @@ def localize_level_content
   write_to_yml(parameter_names, parameter_strings)
 end
 
-def write_to_yml(block_type, block_strings)
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{block_type}.yml"), "w") do |file|
+def write_to_yml(type, strings)
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{type}.yml"), "w") do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
       "en" => {
         "data" => {
-          block_type => block_strings.sort.to_h
+          type => strings.sort.to_h
         }
       }
     }
