@@ -24,6 +24,16 @@ export default class SignInCalloutWrapper extends React.Component {
     };
   }
 
+  getSignInElement() {
+    return document.getElementById('sign_in_or_user');
+  }
+
+  componentDidMount() {
+    if (!this.state.hideCallout) {
+      this.getSignInElement().classList.add('z_index_above_modal');
+    }
+  }
+
   // Upon close, set both cookies and session storage, and prevent the click
   // event from being bubbled up to any other components. The path '/' allows
   // the data to be seen one directory higher.
@@ -32,6 +42,7 @@ export default class SignInCalloutWrapper extends React.Component {
     cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
     sessionStorage.setItem(HideSignInCallout, 'true');
     event.preventDefault();
+    this.getSignInElement().classList.remove('z_index_above_modal');
   }
 
   // After the first dismissal, this returns null
