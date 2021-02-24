@@ -365,12 +365,16 @@ class LessonTest < ActiveSupport::TestCase
     script = create :script, name: 'dummy-script'
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, key: 'dummy-key', name: 'Dummy Name'
+    lesson.student_overview = 'student overview'
+    lesson.overview = 'teacher overview'
 
     expected_i18n = {
       'dummy-script' => {
         'lessons' => {
           'dummy-key' => {
-            'name' => 'Dummy Name'
+            'name' => 'Dummy Name',
+            'description_student' => 'student overview',
+            'description_teacher' => 'teacher overview'
           }
         }
       }
