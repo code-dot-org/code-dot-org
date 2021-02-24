@@ -18,21 +18,21 @@ class Foorm::Library < ApplicationRecord
 
   has_many :library_questions, primary_key: [:name, :version], foreign_key: [:library_name, :library_version]
 
-  after_save :write_library_to_file
+  after_commit :write_library_to_file
 
   def self.setup
-    Dir.glob('config/foorm/library/**/*.json').each do |path|
-      # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
-      # we get full_name: "surveys/pd/pre_workshop_survey"
-      #      and version: 0
-      unique_path = path.partition("config/foorm/library/")[2]
-      filename_and_version = File.basename(unique_path, ".json")
-      filename, version = filename_and_version.split(".")
-      version = version.to_i
-      full_name = File.dirname(unique_path) + "/" + filename
+    ActiveRecord::Base.transaction do
+      Dir.glob('config/foorm/library/**/*.json').each do |path|
+        # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
+        # we get full_name: "surveys/pd/pre_workshop_survey"
+        #      and version: 0
+        unique_path = path.partition("config/foorm/library/")[2]
+        filename_and_version = File.basename(unique_path, ".json")
+        filename, version = filename_and_version.split(".")
+        version = version.to_i
+        full_name = File.dirname(unique_path) + "/" + filename
 
-      # Let's load the JSON text.
-      begin
+        # Let's load the JSON text.
         library = Foorm::Library.find_or_initialize_by(
           name: full_name,
           version: version
