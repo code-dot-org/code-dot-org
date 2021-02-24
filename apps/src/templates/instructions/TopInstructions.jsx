@@ -804,6 +804,7 @@ export default connect(
     isEmbedView: state.pageConstants.isEmbedView,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     isMinecraft: !!state.pageConstants.isMinecraft,
+    isBlockly: !!state.pageConstants.isBlockly,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(
