@@ -257,8 +257,6 @@ Resources:
 <% if frontends-%>
 <%=  component 'cache'%>
 <% end -%>
-# Subdomains which are backed by S3 buckets
-<%= component 's3_backed_subdomains', bucket_name: 'cdo-tts', subdomain: 'tts' -%>
 <%= component 's3_backed_subdomains', bucket_name: 'cdo-lesson-plans', subdomain: 'lesson-plans' -%>
   DaemonRole:
     Type: AWS::IAM::Role
