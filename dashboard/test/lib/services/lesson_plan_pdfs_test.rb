@@ -62,24 +62,24 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
     script_data = JSON.parse(script_data.to_json)
 
     assert Services::LessonPlanPdfs.generate_pdfs?(script_data)
-    script.update!(seeded_at: script_data['serialized_at'])
+    script.update!(seeded_from: script_data['serialized_at'])
     refute Services::LessonPlanPdfs.generate_pdfs?(script_data)
   end
 
   test 'PDF paths (and urls) are versioned' do
-    script = create(:script, seeded_at: Time.at(123_456_789))
+    script = create(:script, seeded_from: Time.at(123_456_789))
     lesson = create(:lesson, script: script)
     original_pathname = Services::LessonPlanPdfs.get_pathname(lesson)
     unmodified_pathname = Services::LessonPlanPdfs.get_pathname(lesson)
     assert_equal original_pathname, unmodified_pathname
 
-    script.update!(seeded_at: Time.at(234_567_890))
+    script.update!(seeded_from: Time.at(234_567_890))
     new_pathname = Services::LessonPlanPdfs.get_pathname(lesson)
     refute_equal original_pathname, new_pathname
   end
 
   test 'Lesson PDFs are generated into the given directory' do
-    script = create(:script, seeded_at: Time.now)
+    script = create(:script, seeded_from: Time.now)
     lesson = create(:lesson, script: script)
     Dir.mktmpdir('lesson_plan_pdfs_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?

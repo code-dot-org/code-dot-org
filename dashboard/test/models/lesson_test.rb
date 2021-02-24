@@ -626,10 +626,10 @@ class LessonTest < ActiveSupport::TestCase
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.lesson_plan_pdf_url)
 
-    script.seeded_at = Time.now.to_s
+    script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://cdo-lesson-plans.s3.amazonaws.com/#{script.name}/#{Time.parse(script.seeded_at).to_s(:number)}/Some Verbose Lesson Name.pdf"
+      "https://cdo-lesson-plans.s3.amazonaws.com/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/Some Verbose Lesson Name.pdf"
     )
   end
 

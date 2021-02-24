@@ -201,7 +201,7 @@ module Services
 
     def self.import_script(script_data)
       script_to_import = Script.new(script_data.except('seeding_key', 'serialized_at'))
-      script_to_import.seeded_at = script_data['serialized_at']
+      script_to_import.seeded_from = script_data['serialized_at']
       script_to_import.is_migrated = true
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
@@ -502,16 +502,16 @@ module Services
         :seeding_key
       )
 
-      # The "seeded_at" property is set by the seeding process; we don't need
+      # The "seeded_from" property is set by the seeding process; we don't need
       # to include it in the serialization.
       attribute :properties do
-        object.properties.except("seeded_at")
+        object.properties.except("seeded_from")
       end
 
       # A simple field to track when the script was most recently serialized.
       # This will be set by levelbuilder whenever the script is saved, and then
       # read by the seeding process on other environments and persisted to the
-      # `seeded_at` property on Script objects. Currently used by the PDF
+      # `seeded_from` property on Script objects. Currently used by the PDF
       # generation logic to identify when a script is actually being updated,
       # but could easily be used by other business logic that has similar
       # versioning concerns.
