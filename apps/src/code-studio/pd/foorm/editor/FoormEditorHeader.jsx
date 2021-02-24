@@ -1,4 +1,4 @@
-// Metadata and buttons for the Foorm Editor. Shows form name and version,
+// Metadata and buttons for the Foorm Editor. Shows name and version,
 // live preview toggle, and validate button/validation status.
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
@@ -46,12 +46,15 @@ class FoormEditorHeader extends Component {
   static propTypes = {
     livePreviewToggled: PropTypes.func,
     livePreviewStatus: PropTypes.string,
+    validateURL: PropTypes.string,
+    validateDataKey: PropTypes.string,
 
     // populated by Redux
-    formQuestions: PropTypes.object,
-    isFormPublished: PropTypes.bool,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number
+    questions: PropTypes.object,
+    isPublished: PropTypes.bool,
+    name: PropTypes.string,
+    version: PropTypes.number,
+    editorType: PropTypes.string
   };
 
   constructor(props) {
@@ -67,12 +70,12 @@ class FoormEditorHeader extends Component {
   validateQuestions = () => {
     this.setState({validationStarted: true});
     $.ajax({
-      url: '/api/v1/pd/foorm/forms/validate_form',
+      url: this.props.validateURL,
       type: 'post',
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        form_questions: this.props.formQuestions
+        [this.props.validateDataKey]: this.props.questions
       })
     })
       .done(result => {
@@ -96,16 +99,16 @@ class FoormEditorHeader extends Component {
   render() {
     return (
       <div>
-        {this.props.formName && (
+        {this.props.name && (
           <div>
             <h2 style={styles.surveyTitle}>
-              {`Form Name: ${this.props.formName}, version ${
-                this.props.formVersion
+              {`${this.props.editorType} Name: ${this.props.name}, version ${
+                this.props.version
               }`}
             </h2>
             <h3 style={styles.surveyState}>
-              {`Form State: ${
-                this.props.isFormPublished ? 'Published' : 'Draft'
+              {`${this.props.editorType} State: ${
+                this.props.isPublished ? 'Published' : 'Draft'
               }`}
             </h3>
           </div>
@@ -141,7 +144,7 @@ class FoormEditorHeader extends Component {
                   {this.state.validationError && (
                     <FontAwesome icon="exclamation-triangle" />
                   )}
-                  {` Form was last validated at ${
+                  {`${this.state.editorType} was last validated at ${
                     this.state.lastValidated
                   }. Validation status: ${
                     this.state.validationError ? 'Invalid.' : 'Valid.'
@@ -160,8 +163,9 @@ class FoormEditorHeader extends Component {
 }
 
 export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished,
-  formName: state.foorm.formName,
-  formVersion: state.foorm.formVersion
+  questions: state.foorm.questions || {},
+  isPublished: state.foorm.isPublished,
+  name: state.foorm.name,
+  version: state.foorm.version,
+  editorType: state.foorm.editorType
 }))(FoormEditorHeader);

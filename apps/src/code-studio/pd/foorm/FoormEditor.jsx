@@ -255,10 +255,10 @@ class FoormEditor extends React.Component {
     return (
       <div>
         <FoormEditorHeader
-          formName={this.props.formName}
-          formVersion={this.props.formVersion}
           livePreviewToggled={this.livePreviewToggled}
           livePreviewStatus={this.state.livePreviewStatus}
+          validateURL={'/api/v1/pd/foorm/forms/validate_form'}
+          validateDataKey={'form_questions'}
         />
         <div style={styles.foormEditor}>
           <Tabs
