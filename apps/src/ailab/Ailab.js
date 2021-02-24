@@ -133,10 +133,15 @@ Ailab.prototype.initMLActivities = function() {
         type: 'json',
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify(dataToSave)
-      }).then(response => {
-        callback(response);
-        return resolve();
-      });
+      })
+        .then(response => {
+          callback(response);
+          return resolve();
+        })
+        .fail((jqHXhr, status) => {
+          callback(JSON.stringify({status: 'failure'}));
+          return reject();
+        });
     });
   };
 
