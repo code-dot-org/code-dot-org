@@ -113,7 +113,7 @@ export default class LessonNavigationDropdown extends Component {
         : this.createSectionsOfLessons();
 
     return (
-      <div style={styles.dropdown}>
+      <div style={styles.dropdown} className="uitest-lesson-dropdown-nav">
         <DropdownButton
           text={i18n.otherLessonsInUnit()}
           color={Button.ButtonColor.purple}
