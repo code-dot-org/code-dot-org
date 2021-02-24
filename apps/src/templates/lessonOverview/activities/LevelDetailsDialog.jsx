@@ -13,10 +13,12 @@ import i18n from '@cdo/locale';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import _ from 'lodash';
+import styleConstants from '@cdo/apps/styleConstants';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
 const VIDEO_MODAL_WIDTH = 700;
+const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 
 const styles = {
   sublevelCards: {
@@ -110,7 +112,10 @@ export default class LevelDetailsDialog extends Component {
           isEmbedView={false}
           isCSF={false}
           mainStyle={{paddingBottom: 5}}
-          containerStyle={{overflowY: 'scroll', height: this.state.height}}
+          containerStyle={{
+            overflowY: 'scroll',
+            height: this.state.height - HEADER_HEIGHT
+          }}
           setInstructionsRenderedHeight={height => this.setState({height})}
           setInstructionsMaxHeightNeeded={maxHeight =>
             this.setState({maxHeight})
