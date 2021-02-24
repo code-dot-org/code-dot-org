@@ -11,6 +11,7 @@ window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
+import {removeDisallowedHtmlContent} from './brambleUtils';
 
 // the main Bramble object -- used to access file system
 let bramble_ = null;
@@ -33,14 +34,6 @@ let _lastSyncedVersionId;
 
 // Project root in file system
 const weblabRoot = '/codedotorg/weblab';
-
-// HTML tags we have disallowed in Bramble. The resulting regex will match on open+close and self-closing versions of
-// disallowed tags. Example: <script></script> and <iframe/> will both match.
-const DISALLOWED_HTML_TAGS = 'script|iframe';
-const DISALLOWED_ELEMENTS_REGEX = new RegExp(
-  `<(${DISALLOWED_HTML_TAGS})[\\s\\S]*\\/(${DISALLOWED_HTML_TAGS})*>`,
-  'gi'
-);
 
 function ensureProjectRootDirExists(callback) {
   const fs = bramble_.getFileSystem();
@@ -564,37 +557,6 @@ function syncFiles(callback) {
   syncFilesWithBramble(currentFileEntries, currentProjectVersion, callback);
 }
 
-/**
- * Remove disallowed elements from the HTML file at the given path. The editor is set to readOnly
- * while overwriting the file if any disallowed elements are found.
- */
-function handleDisallowedElements(fileSystem, brambleProxy, path, callback) {
-  function wrappedCallback() {
-    if (callback) {
-      callback(path);
-    }
-  }
-
-  if (!path.endsWith('.html')) {
-    wrappedCallback();
-    return;
-  }
-
-  fileSystem.readFile(path, 'utf8', function(error, data) {
-    if (error || !data.match(DISALLOWED_ELEMENTS_REGEX)) {
-      wrappedCallback();
-      return;
-    }
-
-    brambleProxy.enableReadonly();
-    data = data.replace(DISALLOWED_ELEMENTS_REGEX, '');
-    fileSystem.writeFile(path, Buffer.from(data), function(error) {
-      brambleProxy.disableReadonly();
-      wrappedCallback();
-    });
-  });
-}
-
 // Init change list and version structures
 resetBrambleChangesAndProjectVersion();
 
@@ -690,10 +652,11 @@ function load(Bramble) {
     }
 
     function validateFileAndHandleChange(path) {
-      handleDisallowedElements(
+      removeDisallowedHtmlContent(
         bramble_.getFileSystem(),
         brambleProxy_,
         path,
+        webLab_.disallowedElementsRegex,
         handleFileChange
       );
     }

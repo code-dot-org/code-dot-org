@@ -23,6 +23,13 @@ import {getCurrentId} from '../code-studio/initApp/project';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
+// HTML tags that are disallowed in WebLab. These tags will be removed from users' projects.
+const DISALLOWED_HTML_TAGS = 'script|iframe';
+export const DISALLOWED_ELEMENTS_REGEX = new RegExp(
+  `<(${DISALLOWED_HTML_TAGS})[\\s\\S]*\\/(${DISALLOWED_HTML_TAGS})*>`,
+  'gi'
+);
+
 /**
  * An instantiable WebLab class
  */
@@ -82,6 +89,7 @@ WebLab.prototype.init = function(config) {
   this.level = config.level;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
+  this.disallowedElementsRegex = DISALLOWED_ELEMENTS_REGEX;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
