@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
+   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```

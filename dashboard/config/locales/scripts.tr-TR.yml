@@ -25973,6 +25973,10 @@ tr:
             End of Course Project:
               key: Ders Projesinin Sonu
               name: Ders Projesinin Sonu
+            lesson-6:
+              name: Geleceğe bakış
+            lesson-5:
+              name: Şifre Güçlendirme
           lesson_groups:
             csf_sequencing:
               display_name: Sıralama
@@ -26065,7 +26069,7 @@ tr:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_nested_loops:
-              display_name: İç İçe Döngüler
+              display_name: Koşullar
             csf_functions:
               display_name: Fonksiyonlar
             csf_impacts:
@@ -26338,6 +26342,8 @@ tr:
               name: Simülasyon Kodlama
             Course F Introduction:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
+            Sprites in Action:
+              name: Eylem halindeki Hareketli Nesneler
           lesson_groups:
             ramp_up:
               display_name: Giriş

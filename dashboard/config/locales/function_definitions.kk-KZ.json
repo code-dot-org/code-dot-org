@@ -1201,6 +1201,46 @@
           "collect": {
             "name": "жинау"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "жұлдыз салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a circle": {
+            "name": "Шеңбер салу"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ұзындық",
+              "repeat": "қайтала"
+            }
+          },
+          "draw a triangle": {
+            "name": "үшбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a house": {
+            "name": "үй салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          },
+          "draw a square": {
+            "name": "төртбұрыш салу",
+            "parameters": {
+              "length": "ұзындық"
+            }
+          }
         }
       }
     }

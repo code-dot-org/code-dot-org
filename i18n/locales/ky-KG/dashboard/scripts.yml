@@ -1640,6 +1640,10 @@ ky:
               key: Сүрөтчүдөгү функциялар
               name: Сүрөтчү менен функциялар
           lesson_groups:
+            ramp_up:
+              display_name: Циклдер
+            csf_nested_loops:
+              display_name: Шартуулар
             csf_functions:
               display_name: Функциялар
         coursef-2021:

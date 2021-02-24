@@ -3576,6 +3576,56 @@
           "draw bit": {
             "name": "zeichne ein bisschen"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "zeichne einen Stern",
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "parameters": {
+              "points": "Punkte",
+              "length": "Länge"
+            }
+          },
+          "draw a circle": {
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge",
+              "repeat": "wiederhole"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge"
+            }
+          }
         }
       }
     }

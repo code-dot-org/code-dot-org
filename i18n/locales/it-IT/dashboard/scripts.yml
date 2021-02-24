@@ -7588,7 +7588,7 @@ it:
         2021drafting:
           lessons:
             Course F Introduction:
-              name: Introducendo lo Sviluppo Personaggi
+              name: Introduzione al Laboratorio dei Personaggi
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
             Sprites in Action:
@@ -7980,6 +7980,8 @@ it:
             End of Course Project:
               key: Progetto di fine corso
               name: Progetto di fine corso
+            lesson-6:
+              name: Uno sguardo avanti con Minecraft
           lesson_groups:
             csf_sequencing:
               display_name: Sequenze di istruzioni
@@ -8051,7 +8053,7 @@ it:
             csf_digcit:
               display_name: Cittadinanza digitale
             csf_nested_loops:
-              display_name: Cicli annidati
+              display_name: Istruzioni condizionali
             csf_functions:
               display_name: Funzioni
             end_of_course_project:
@@ -8267,7 +8269,9 @@ it:
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
             Course F Introduction:
-              name: Introducendo lo Sviluppo Personaggi
+              name: Introduzione al Laboratorio dei Personaggi
+            Sprites in Action:
+              name: Personaggi in azione
           lesson_groups:
             ramp_up:
               display_name: Introduzione

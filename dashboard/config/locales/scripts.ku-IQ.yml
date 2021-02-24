@@ -756,6 +756,10 @@ ku:
             Conditionals:
               key: مەرجیەکان
           lesson_groups:
+            ramp_up:
+              display_name: گرێکان
+            csf_nested_loops:
+              display_name: مەرجیەکان
             csf_functions:
               display_name: فرمانەکان
         coursef-2021:

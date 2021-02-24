@@ -1369,6 +1369,47 @@
           "wander path": {
             "name": "ទីតាំង​ថត"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ",
+            "parameters": {
+              "points": "ពិន្ទុ",
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a circle": {
+            "name": "គូរ​រង្វង់​មួយ"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ប្រវែង",
+              "repeat": "ធ្វើ​ឡើង​វិញ"
+            }
+          },
+          "draw a triangle": {
+            "name": "គូរ​ត្រីកោណ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a house": {
+            "name": "គូរ​ផ្ទះ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
         }
       }
     }

@@ -3191,10 +3191,12 @@ et:
             'Functions: Songwriting':
               name: Laulude kirjutamine
           lesson_groups:
+            ramp_up:
+              display_name: Tsüklid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_nested_loops:
-              display_name: Korduvad tsüklid
+              display_name: Tingimuslaused
             csf_functions:
               display_name: Funktsioonid
         coursef-2021:

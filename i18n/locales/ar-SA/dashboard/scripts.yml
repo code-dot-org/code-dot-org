@@ -16364,6 +16364,10 @@ ar:
             Be A Super Digital Citizen:
               key: كن مواطنًا رقميًا متميزًا
               name: كن مواطنًا رقميًا متميزًا
+            lesson-6:
+              name: التطلع إلى المستقبل مع ماينكرافت
+            lesson-5:
+              name: تشغيل كلمة المرور
           lesson_groups:
             csf_sequencing:
               display_name: التجزيء
@@ -16446,7 +16450,7 @@ ar:
             csf_digcit:
               display_name: المواطنة الرقمية
             csf_nested_loops:
-              display_name: الحلقات المتداخلة
+              display_name: الجمل الشرطية
             csf_functions:
               display_name: دوال
             csf_impacts:
@@ -16677,6 +16681,8 @@ ar:
               name: برمجة محاكاة
             Course F Introduction:
               name: التعريف بمشروع Sprite Lab (مختبر سبرايت)
+            Sprites in Action:
+              name: الصور المتحركة الثنائية الأبعاد تتحرك
           lesson_groups:
             ramp_up:
               display_name: مقدمة
