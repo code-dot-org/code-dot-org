@@ -5,7 +5,8 @@
   padding: 24px 0;
 }
 
-.careers__banner {
+.careers__banner,
+.careers__banner--faq {
   align-items: center;
   background: url('/images/careers-at-code/jobs-banner.jpg') top right/contain no-repeat #00adbc;
   display: flex;
@@ -14,20 +15,20 @@
 }
 
 .careers__banner h1,
-.careers__banner h2,
-.careers__banner h3 {
+.careers__banner--faq h2,
+.careers__banner--faq h3 {
   color: #ffffff;
   margin: 0;
   width: 70%;
 }
 
-.careers__banner a:link,
-.careers__banner a:visited {
+.careers__banner--faq a:link,
+.careers__banner--faq a:visited {
   color: #ffffff;
   font-family: 'Gotham 4r', sans-serif;
 }
 
-.careers__banner i {
+.careers__banner--faq i {
   color: #ffffff;
   font-size: 72px;
   padding-right: 24px;
@@ -242,3 +243,63 @@ ul li:before {
 .careers__team-photos img:first-of-type {
   margin-right: 12px;
 }
+
+@media screen and (max-width: 970px) {
+
+  .careers__banner {
+    background-position-x: 125%;
+  }
+
+  .careers__banner h1 {
+    width: 55%;
+  }
+
+  .careers__banner--faq {
+    background-position: top right;
+  }
+
+  .careers__banner--faq h2,
+  .careers__banner--faq h3 {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 600px) and (min-width: 470px) {
+
+  .careers__banner {
+    background-position: top right;
+  }
+
+  .careers__banner h1 {
+    max-width: 70%;
+    min-width: 60%;
+    width: auto;
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+
+  .careers__banner--faq {
+    background: #00adbc;
+  }
+
+  .careers__banner--faq h2,
+  .careers__banner--faq h3 {
+    width: 100%;
+  }
+
+  #lever-jobs-container {
+    columns: 1;
+  }
+
+}
+
+@media screen and (max-width: 475px) {
+
+  .careers__banner {
+    padding: 12px;
+  }
+
+} 
