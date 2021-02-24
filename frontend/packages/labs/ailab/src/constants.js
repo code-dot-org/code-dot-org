@@ -17,6 +17,12 @@ export const TestDataLocations = {
   RANDOM: "random"
 };
 
+export const saveMessages = {
+  success: "Your model was saved!",
+  failure: "There was an error. Your model did not save.",
+  name: "Please name your model."
+};
+
 export const styles = {
   app: {
     userSelect: "none"

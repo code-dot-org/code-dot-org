@@ -7,7 +7,7 @@ import {
   getTrainedModelDataToSave,
   getSelectedColumnDescriptions
 } from "../redux";
-import { styles } from "../constants";
+import { styles, saveMessages } from "../constants";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -33,13 +33,13 @@ class SaveModel extends Component {
   };
 
   catchResponse = response => {
-    this.setState({ saveMessage: response.message });
+    this.setState({ saveMessage: saveMessages[response.status] });
   };
 
   onClickSave = () => {
     this.setState({ saveMessage: null });
     if (this.props.trainedModelDetails.name === undefined) {
-      this.setState({ saveMessage: "Please name your model." });
+      this.setState({ saveMessage: saveMessages["name"] });
     } else {
       this.props.saveTrainedModel(this.props.dataToSave, this.catchResponse);
     }
@@ -122,13 +122,12 @@ class SaveModel extends Component {
             );
           })}
         </div>
-
-        <button type="button" onClick={this.onClickSave}>
-          Save Trained Model
-        </button>
-        {this.state.saveMessage && <div>{this.state.saveMessage}</div>}
-        {/* This is a temporary hack to prevent the predict button from hiding  the save button. */}
-        <div style={{ height: 200 }} />
+        <div style={{ float: "right" }}>
+          <button type="button" onClick={this.onClickSave}>
+            Save Trained Model
+          </button>
+          {this.state.saveMessage && <div>{this.state.saveMessage}</div>}
+        </div>
       </div>
     );
   }
