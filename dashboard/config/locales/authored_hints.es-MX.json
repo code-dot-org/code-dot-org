@@ -8593,7 +8593,7 @@
         },
         "courseF_playlab_variables4b": {
           "courseF_playlab_variables4b_a": "No necesitas más bloques de la caja de herramientas aquí.",
-          "courseF_playlab_variables4b_b": "Coloca las dos variables 'año' y una variable 'nombre' donde tengan más sentido en la conversación."
+          "courseF_playlab_variables4b_b": "Coloca las dos variables 'edad' y una variable 'nombre' donde tengan más sentido en la conversación."
         },
         "courseF_playlab_variables5c": {
           "courseF_playlab_variables5c_a": "Encuentra un bloque de variables `respuesta` en la caja de herramientas, debajo de\" Variables \".",

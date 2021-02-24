@@ -128,12 +128,18 @@ class InlineAudio extends React.Component {
 
   constructor(props) {
     super(props);
-    this.triggerAudio = this.triggerAudio.bind(this);
+    this.autoplayAudio = this.autoplayAudio.bind(this);
+    this.autoplayTriggerElement = null;
   }
 
   componentDidMount() {
     this.getAudioElement();
     if (this.props.ttsAutoplayEnabled && !this.state.autoplayed) {
+      const {autoplayTriggerElementId} = this.props;
+      this.autoplayTriggerElement = autoplayTriggerElementId
+        ? document.getElementById(autoplayTriggerElementId)
+        : document;
+
       this.playAudio();
     }
   }
@@ -237,26 +243,20 @@ class InlineAudio extends React.Component {
     });
   }
 
-  getAutoplayTriggerElement() {
-    const {autoplayTriggerElementId} = this.props;
-    return autoplayTriggerElementId
-      ? document.getElementById(autoplayTriggerElementId)
-      : document;
-  }
-
-  // adds event listeners from the dom which trigger audio
-  // when a significant enough user has happened
+  // adds event listeners to the DOM which trigger audio
+  // when a significant enough user interaction has happened
   addAudioAutoplayTrigger() {
     AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
-      const listeningElement = this.getAutoplayTriggerElement();
-      listeningElement.addEventListener(event, this.triggerAudio);
+      this.autoplayTriggerElement.addEventListener(event, this.autoplayAudio);
     });
   }
 
   removeAudioAutoplayTrigger() {
     AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
-      const listeningElement = this.getAutoplayTriggerElement();
-      listeningElement.removeEventListener(event, this.triggerAudio);
+      this.autoplayTriggerElement.removeEventListener(
+        event,
+        this.autoplayAudio
+      );
     });
   }
 
@@ -282,7 +282,7 @@ class InlineAudio extends React.Component {
       });
   }
 
-  triggerAudio() {
+  autoplayAudio() {
     this.playAudio().then(() => this.removeAudioAutoplayTrigger());
   }
 

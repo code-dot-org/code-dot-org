@@ -2217,10 +2217,12 @@ lv:
             'Functions: Songwriting':
               name: Dziesmu rakstīšana
           lesson_groups:
+            ramp_up:
+              display_name: Cikli
             csf_digcit:
               display_name: Digitālā pilsonība
             csf_nested_loops:
-              display_name: Cikls ciklā
+              display_name: Sazarojumi
             csf_functions:
               display_name: Funkcijas
         coursef-2021:

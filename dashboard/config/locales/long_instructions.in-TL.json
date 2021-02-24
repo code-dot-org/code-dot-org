@@ -3976,7 +3976,13 @@
         "simconfig_2020": "crwdns2460968:0crwdne2460968:0",
         "simstarter": "crwdns2021684:0crwdne2021684:0",
         "simstarter_2020": "crwdns2460966:0crwdne2460966:0",
-        "spritelab_extras_repeat": "crwdns2460344:0[0]crwdnd2460344:0[1]crwdnd2460344:0[2]crwdne2460344:0"
+        "spritelab_extras_repeat": "crwdns2460344:0[0]crwdnd2460344:0[1]crwdnd2460344:0[2]crwdne2460344:0",
+        "CourseD_EOC_artist": "crwdns2481172:0crwdne2481172:0",
+        "CourseD_EOC_bounce1": "crwdns2481130:0crwdne2481130:0",
+        "CourseD_EOC_dance": "crwdns2481154:0crwdne2481154:0",
+        "CourseD_EOC_starwars": "crwdns2481136:0crwdne2481136:0",
+        "outbreak_freeplay": "crwdns2480986:0crwdne2480986:0",
+        "outbreak_freeplay_basic": "crwdns2480940:0crwdne2480940:0"
       }
     }
   }

@@ -3688,10 +3688,12 @@ bg:
             'Functions: Songwriting':
               name: Писане на песен
           lesson_groups:
+            ramp_up:
+              display_name: Повторения
             csf_digcit:
               display_name: Цифрови граждани
             csf_nested_loops:
-              display_name: Вмъкнати цикли
+              display_name: Условия
             csf_functions:
               display_name: Функции
         coursef-2021:

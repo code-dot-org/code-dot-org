@@ -444,6 +444,13 @@
           "do something": {
             "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          }
         }
       }
     }

@@ -2622,10 +2622,12 @@ kk:
             'Functions: Songwriting':
               name: Ән Жазу
           lesson_groups:
+            ramp_up:
+              display_name: Ілмек
             csf_digcit:
               display_name: Сандық Азаматтық
             csf_nested_loops:
-              display_name: Кіріккен Циклдер
+              display_name: Шарттар
             csf_functions:
               display_name: Функциялар
         coursef-2021:

@@ -1092,6 +1092,50 @@
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
           "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "wandering": "לשוטט"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "להחלים",
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "moving left and right": "לנוע שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         }
       }
     }

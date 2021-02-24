@@ -30,6 +30,9 @@ export const WEBLAB_FOOTER_HEIGHT = 30;
 // Global singleton
 let webLab_ = null;
 
+// The max size in bytes for a WebLab project. 20 megabytes == 20971520 bytes
+const MAX_PROJECT_CAPACITY = 20971520;
+
 const WebLab = function() {
   this.skin = null;
   this.level = null;
@@ -79,6 +82,7 @@ WebLab.prototype.init = function(config) {
   this.level = config.level;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
+  getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
 
@@ -341,6 +345,14 @@ WebLab.prototype.onFinish = function(submit) {
   } else {
     this.reportResult(submit, true /* validated */);
   }
+};
+
+WebLab.prototype.getMaxProjectCapacity = function() {
+  return getStore().getState().maxProjectCapacity;
+};
+
+WebLab.prototype.setProjectSize = function(bytes) {
+  getStore().dispatch(actions.changeProjectSize(bytes));
 };
 
 WebLab.prototype.getCodeAsync = function() {
