@@ -70,7 +70,6 @@ export const styles = {
   },
 
   bodyContainer: {
-    marginTop: 10,
     height: "100%",
     boxSizing: "border-box",
     paddingBottom: 100
