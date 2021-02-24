@@ -1,4 +1,5 @@
 import {assert} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/progress/ProgressLesson';
@@ -7,6 +8,7 @@ import {
   fakeLesson,
   fakeLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
@@ -289,6 +291,41 @@ describe('ProgressLesson', () => {
       wrapper.find('ProgressLessonContent').props().description,
       'Teacher description here'
     );
+  });
+
+  it('shows Lesson Resources button when viewing as a student and student_lesson_plan_html_url is not null', () => {
+    let myLesson = defaultProps.lesson;
+    myLesson.student_lesson_plan_html_url = 'test-url';
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={myLesson}
+        viewAs={ViewType.Student}
+      />
+    );
+    assert.equal(wrapper.find('Button').props().href, 'test-url');
+    delete myLesson.student_lesson_plan_html_url;
+  });
+
+  it('does not show Lesson Resources button when viewing as a student and student_lesson_plan_html_url is null', () => {
+    const wrapper = shallow(
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
+    );
+    assert.equal(wrapper.find('Button').length, 0);
+  });
+
+  it('does not show Lesson Resources button when viewing as a teacher and student_lesson_plan_html_url is not null', () => {
+    let myLesson = defaultProps.lesson;
+    myLesson.student_lesson_plan_html_url = 'test-url';
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={myLesson}
+        viewAs={ViewType.Teacher}
+      />
+    );
+    assert.equal(wrapper.find('Button').length, 0);
+    delete myLesson.student_lesson_plan_html_url;
   });
 
   it('does not lock non-lockable stages, such as peer reviews', () => {
