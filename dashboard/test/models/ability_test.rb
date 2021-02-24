@@ -35,7 +35,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     refute ability.can?(:read, @login_required_script)
 
-    refute ability.can?(:read, @login_required_migrated_lesson)
+    assert ability.can?(:read, @login_required_migrated_lesson)
 
     assert ability.can?(:read, @public_script_level)
     refute ability.can?(:read, @public_script_level, {login_required: "true"})
@@ -61,7 +61,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @public_script)
     assert ability.can?(:read, @login_required_script)
 
-    refute ability.can?(:read, @login_required_migrated_lesson)
+    assert ability.can?(:read, @login_required_migrated_lesson)
 
     assert ability.can?(:read, @public_script_level)
     assert ability.can?(:read, @public_script_level, {login_required: "true"})
