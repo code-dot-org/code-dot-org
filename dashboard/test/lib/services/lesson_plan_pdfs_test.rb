@@ -10,7 +10,6 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
     CDO.stubs(:rack_env).returns(:staging)
     script = create(:script, is_migrated: true, hidden: true)
     seed_hash = JSON.parse(Services::ScriptSeed.serialize_seeding_json(script))
-    puts seed_hash
 
     # Generate PDFs on first seed
     Services::LessonPlanPdfs.expects(:generate_pdfs).once
