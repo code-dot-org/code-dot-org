@@ -11,6 +11,7 @@ describe('UnitCalendarButton', () => {
       <UnitCalendarButton
         lessons={testLessons}
         weeklyInstructionalMinutes={90}
+        scriptId={1}
       />
     );
 

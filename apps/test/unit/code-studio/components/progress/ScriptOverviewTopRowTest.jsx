@@ -185,6 +185,7 @@ describe('ScriptOverviewTopRow', () => {
         <UnitCalendarButton
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
+          scriptId={42}
         />
       )
     ).to.be.true;
@@ -204,6 +205,7 @@ describe('ScriptOverviewTopRow', () => {
         <UnitCalendarButton
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
+          scriptId={42}
         />
       )
     ).to.be.false;
@@ -224,6 +226,7 @@ describe('ScriptOverviewTopRow', () => {
         <UnitCalendarButton
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
+          scriptId={42}
         />
       )
     ).to.be.false;
