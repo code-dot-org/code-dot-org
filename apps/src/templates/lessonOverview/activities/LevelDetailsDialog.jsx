@@ -39,7 +39,8 @@ export default class LevelDetailsDialog extends Component {
     this.state = {
       selectedLevel,
       scriptLevel,
-      height: 500
+      height: 500,
+      maxHeight: 500
     };
   }
 
@@ -85,12 +86,12 @@ export default class LevelDetailsDialog extends Component {
         </div>
       );
     } else {
-      console.log(level);
       return (
         <UnconnectedTopInstructions
           hasContainedLevels={false}
           noVisualization={true}
           isMinecraft={false}
+          isBlockly={false}
           isRtl={false}
           longInstructions={level.longInstructions || level.long_instructions}
           shortInstructions={level.shortInstructions}
@@ -186,7 +187,6 @@ export default class LevelDetailsDialog extends Component {
     const {scriptLevel} = this.props;
     const level = this.state.selectedLevel;
     const preview = this.getComponentContent(level);
-    console.log(this.state);
     return (
       <BaseDialog
         isOpen={true}

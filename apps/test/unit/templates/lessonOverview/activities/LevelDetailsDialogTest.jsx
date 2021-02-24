@@ -158,4 +158,23 @@ describe('LevelDetailsDialogTest', () => {
         .props().markdown
     ).to.equal('Markdown1');
   });
+
+  it('can display a CSD/CSP puzzle level', () => {
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        handleClose={handleCloseSpy}
+        scriptLevel={{
+          id: 'scriptlevel',
+          url: 'level.url',
+          status: 'not_tried',
+          level: {
+            type: 'Weblab',
+            id: 'level',
+            longInstructions: 'long instructions'
+          }
+        }}
+      />
+    );
+    expect(wrapper.find('TopInstructions').length).to.equal(1);
+  });
 });
