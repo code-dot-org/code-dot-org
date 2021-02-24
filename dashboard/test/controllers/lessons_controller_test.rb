@@ -67,15 +67,17 @@ class LessonsControllerTest < ActionController::TestCase
     }
 
     @levelbuilder = create :levelbuilder
+    @teacher = create :teacher
   end
 
-  # anyone can show lesson with lesson plan
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: nil, response: :success
-  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :success
+  # teachers and levelbuilders can show lesson with lesson plan
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   test 'can not show lesson when has_lesson_plan is false' do
+    sign_in @teacher
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {
         script_id: @script.name,
@@ -107,6 +109,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'show lesson when lesson is the only lesson in script' do
+    sign_in @teacher
     script = create :script, name: 'one-lesson-script', is_migrated: true, hidden: true
     lesson_group = create :lesson_group, script: script
     @solo_lesson_in_script = create(
@@ -155,6 +158,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'show lesson when script has multiple lessons' do
+    sign_in @teacher
     get :show, params: {
       script_id: @script.name,
       position: @lesson.relative_position
@@ -168,6 +172,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'show lesson with activities' do
+    sign_in @teacher
     activity = @lesson.lesson_activities.create(
       name: 'My Activity',
       position: 1,
