@@ -67,11 +67,9 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_equal @script_level, @activity_section.script_levels.first
 
     @levelbuilder = create :levelbuilder
-    @teacher = create :teacher
   end
 
   test 'lesson show page contains expected data' do
-    sign_in @teacher
     get script_lesson_path(@lesson.script, @lesson)
     assert_response :success
     assert_select 'script[data-lesson]', 1

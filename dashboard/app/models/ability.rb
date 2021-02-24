@@ -113,16 +113,6 @@ class Ability
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
-
-        # Override Lesson
-        can :read, Lesson do |lesson|
-          script = lesson.script
-          if script.pilot?
-            script.has_pilot_access?(user)
-          else
-            user.persisted? || !script.login_required?
-          end
-        end
       end
 
       if user.facilitator?
@@ -207,6 +197,14 @@ class Ability
         script.has_pilot_access?(user)
       else
         user.persisted? || !script.login_required?
+      end
+    end
+    can :read, Lesson do |lesson|
+      script = lesson.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        true
       end
     end
     can :read, ScriptLevel do |script_level, params|
