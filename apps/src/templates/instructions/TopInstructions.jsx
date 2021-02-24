@@ -161,7 +161,7 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    collapsible: PropTypes.bool.isRequired,
+    collapsible: PropTypes.bool,
     collapsed: PropTypes.bool,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func,
@@ -549,7 +549,6 @@ class TopInstructions extends Component {
       this.props.widgetMode &&
         (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth})
     ];
-    console.log(mainStyle);
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
 
