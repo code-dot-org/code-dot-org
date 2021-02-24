@@ -86,4 +86,4 @@ Scenario: Should be immediately redirected to sign in if pressing sign in button
   And I rotate to landscape
   And element ".login-callout" is visible
   And I click selector ".header_button" if I see it
-  And I am redirected away from current page
+  Then I am on "http://studio.code.org/users/sign_in"
