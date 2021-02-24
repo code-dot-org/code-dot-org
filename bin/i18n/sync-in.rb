@@ -55,11 +55,10 @@ def get_i18n_strings(level)
 
     # authored_hints
     if level.authored_hints
-      authored_hints_string = 'authored_hints'
       authored_hints = JSON.parse(level.authored_hints)
-      i18n_strings[authored_hints_string] = Hash.new unless authored_hints.empty?
+      i18n_strings['authored_hints'] = Hash.new unless authored_hints.empty?
       authored_hints.each do |hint|
-        i18n_strings[authored_hints_string][hint['hint_id']] = hint['hint_markdown']
+        i18n_strings['authored_hints'][hint['hint_id']] = hint['hint_markdown']
       end
     end
 
@@ -76,18 +75,16 @@ def get_i18n_strings(level)
     blocks = level_xml.xpath('//blocks').first
     if blocks
       ## Categories
-      block_categories_string = 'block_categories'
       block_categories = blocks.xpath('//category')
-      i18n_strings[block_categories_string] = Hash.new unless block_categories.empty?
+      i18n_strings['block_categories'] = Hash.new unless block_categories.empty?
       block_categories.each do |category|
         name = category.attr('name')
-        i18n_strings[block_categories_string][name] = name if name
+        i18n_strings['block_categories'][name] = name if name
       end
 
       ## Function Names
-      function_definitions = 'function_definitions'
       functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
-      i18n_strings[function_definitions] = Hash.new unless functions.empty?
+      i18n_strings['function_definitions'] = Hash.new unless functions.empty?
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
         description = function.at_xpath('./mutation/description')
@@ -98,34 +95,31 @@ def get_i18n_strings(level)
         function_definition["name"] = name.content if name
         function_definition["description"] = description.content if description
         function_definition["parameters"] = parameters unless parameters.empty?
-        i18n_strings[function_definitions][name.content] = function_definition
+        i18n_strings['function_definitions'][name.content] = function_definition
       end
 
       # Spritelab behaviors
-      behavior_names = 'behavior_names'
       behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
-      i18n_strings[behavior_names] = Hash.new unless behaviors.empty?
+      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
       behaviors.each do |behavior|
         name = behavior.at_xpath('./title[@name="NAME"]')
-        i18n_strings[behavior_names][name.content] = name.content if name
+        i18n_strings['behavior_names'][name.content] = name.content if name
       end
 
       ## Variable Names
-      variable_names = "variable_names"
       variables = blocks.xpath("//block[@type=\"variables_get\"]")
-      i18n_strings[variable_names] = Hash.new unless variables.empty?
+      i18n_strings['variable_names'] = Hash.new unless variables.empty?
       variables.each do |variable|
         name = variable.at_xpath('./title[@name="VAR"]')
-        i18n_strings[variable_names][name.content] = name.content if name
+        i18n_strings['variable_names'][name.content] = name.content if name
       end
 
       ## Parameter Names
-      parameter_names = "parameter_names"
       parameters = blocks.xpath("//block[@type=\"parameters_get\"]")
-      i18n_strings[parameter_names] = Hash.new unless parameters.empty?
+      i18n_strings['parameter_names'] = Hash.new unless parameters.empty?
       parameters.each do |parameter|
         name = parameter.at_xpath('./title[@name="VAR"]')
-        i18n_strings[parameter_names][name.content] = name.content if name
+        i18n_strings['parameter_names'][name.content] = name.content if name
       end
 
       ## Placeholder texts
@@ -140,6 +134,10 @@ def get_i18n_strings(level)
     i18n_strings["sublevels"] = {}
     level.sublevels.map do |sublevel|
       i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
+      # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
+      %w[block_categories variable_names parameter_names].each do |type|
+        i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
+      end
     end
   end
 
@@ -180,8 +178,10 @@ def localize_project_content
       level = Level.find_by_name(value["name"])
       url = "https://studio.code.org/p/#{key}"
       project_strings[url] = get_i18n_strings(level)
-      # Block categories are handled differently below and are generally covered by the script levels
-      project_strings[url].delete("block_categories") if project_strings[url].key? "block_categories"
+      # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
+      %w[block_categories variable_names parameter_names].each do |type|
+        project_strings[url].delete(type) if project_strings[url].key? type
+      end
     end
     project_strings.delete_if {|_, value| value.blank?}
 
@@ -199,10 +199,6 @@ def localize_level_content
   level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
   variable_strings = {}
   parameter_strings = {}
-  block_categories = "block_categories"
-  progressions = "progressions"
-  variable_names = "variable_names"
-  parameter_names = "parameter_names"
 
   # We have to run this specifically from the Rails directory because
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
@@ -225,17 +221,17 @@ def localize_level_content
         # level, the expectation here is that there is a massive amount of
         # overlap between levels, so we actually want to just present these all
         # as a single group rather than breaking them up by script
-        if script_strings[url].key? block_categories
-          block_category_strings.merge! script_strings[url].delete(block_categories)
+        if script_strings[url].key? "block_categories"
+          block_category_strings.merge! script_strings[url].delete("block_categories")
         end
 
         # do the same for variables and parameters
-        if script_strings[url].key? variable_names
-          variable_strings.merge! script_strings[url].delete(variable_names)
+        if script_strings[url].key? "variable_names"
+          variable_strings.merge! script_strings[url].delete("variable_names")
         end
 
-        if script_strings[url].key? parameter_names
-          parameter_strings.merge! script_strings[url].delete(parameter_names)
+        if script_strings[url].key? "parameter_names"
+          parameter_strings.merge! script_strings[url].delete("parameter_names")
         end
       end
       script_strings.delete_if {|_, value| value.blank?}
@@ -285,14 +281,14 @@ def localize_level_content
     end
   end
 
-  write_to_yml(block_categories, block_category_strings)
-  write_to_yml(progressions, progression_strings)
-  write_to_yml(variable_names, variable_strings)
-  write_to_yml(parameter_names, parameter_strings)
+  write_to_yml("block_categories", block_category_strings)
+  write_to_yml("progressions", progression_strings)
+  write_to_yml("variable_names", variable_strings)
+  write_to_yml("parameter_names", parameter_strings)
 end
 
 def write_to_yml(type, strings)
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{type}.yml"), "w") do |file|
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{type}.yml"), 'w') do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
       "en" => {
