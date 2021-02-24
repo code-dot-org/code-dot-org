@@ -48,4 +48,23 @@ namespace :lesson_plan_pdfs do
       end
     end
   end
+
+  task generate_all_pdfs: :environment do
+    puts "About to (re)generate all PDFs for all scripts."
+    puts "As of Feb 2021, we expect this operation to take about half an hour. We expect it to take longer the more content we've added since that date."
+    puts "Are you sure you want to proceed? (y/N)"
+    input = STDIN.gets.strip.downcase
+    next unless input == 'y'
+
+    Dir.mktmpdir("pdf_generation") do |dir|
+      get_pdf_enabled_scripts.each do |script|
+        script.lessons.select(&:has_lesson_plan).each do |lesson|
+          Services::LessonPlanPdfs.generate_lesson_pdf(lesson, dir)
+        end
+      end
+      Services::LessonPlanPdfs.upload_generated_pdfs_to_s3(dir)
+    end
+
+    puts "Generated all PDFs"
+  end
 end
