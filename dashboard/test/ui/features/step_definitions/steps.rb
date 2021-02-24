@@ -1214,6 +1214,13 @@ And /^I dismiss the language selector$/ do
   }
 end
 
+And /^I dismiss the login reminder$/ do
+  steps %Q{
+    And I click selector ".login-callout" if I see it
+    And I wait until I don't see selector ".login-callout"
+  }
+end
+
 And /^I dismiss the teacher panel$/ do
   steps %Q{
     And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
