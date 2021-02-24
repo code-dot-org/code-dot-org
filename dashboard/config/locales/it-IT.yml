@@ -1431,3 +1431,4 @@ it:
   behaviors:
     this_sprite: questo personaggio
   unit_prefix: Unità %{n}
+  code_org_logo_alt: Code.org Home

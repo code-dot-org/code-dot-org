@@ -1,0 +1,76 @@
+{
+  "fil-PH": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Mga aksyon",
+          "Brushes": "Brushes",
+          "Loops": "Mga loop",
+          "Math": "Math",
+          "Logic": "Lohika",
+          "Functions": "Mga function",
+          "Variables": "Mga variable"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Mundo",
+          "Dancers": "Mananayaw",
+          "Properties": "Mga katangian",
+          "Events": "Mga event",
+          "Numbers": "Mga numero",
+          "Logic": "Lohika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Mga aksyon",
+          "Events": "Mga event",
+          "Loops": "Mga loop",
+          "Math": "Math",
+          "Logic": "Lohika",
+          "Games/Score": "Laro/score"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Sprites": "Mga Sprites",
+          "Actions": "Mga aksyon",
+          "Events": "Mga event",
+          "Behaviors": "Pag-uugali"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Sprites": "Mga Sprites",
+          "Locations": "Lugar",
+          "Actions": "Mga aksyon",
+          "Events": "Mga event",
+          "Behaviors": "Pag-uugali",
+          "Variables": "Mga variable",
+          "Math": "Math",
+          "Logic": "Lohika",
+          "Functions": "Mga function",
+          "Text": "Text",
+          "Comments": "Komento"
+        },
+        "outbreak_freeplay": {
+          "World": "Mundo",
+          "Sprites": "Mga Sprites",
+          "Actions": "Mga aksyon",
+          "Behaviors": "Pag-uugali",
+          "Events": "Mga event",
+          "Locations": "Lugar",
+          "Logic": "Lohika",
+          "Loops": "Mga loop",
+          "Math": "Math",
+          "Variables": "Mga variable",
+          "Functions": "Mga function",
+          "Comments": "Komento"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Mundo",
+          "Sprites": "Mga Sprites",
+          "Actions": "Mga aksyon",
+          "Events": "Mga event",
+          "Logic": "Lohika",
+          "Math": "Math"
+        }
+      }
+    }
+  }
+}

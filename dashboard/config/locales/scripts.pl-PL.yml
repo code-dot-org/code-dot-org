@@ -13125,8 +13125,7 @@ pl:
               name: Ukończ Dział  Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
             Complete Explore Deeper Learning Reflections:
-              name: Ukończ eksplorowanie przemyśleń na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ przemyślenia na temat badania pogłębionej nauki
           student_description: 'To jest Dział "Eksploruj AP"  "Planu pogłębionej nauki"
             dla prowadzących "Zasady informatyki" Code.org w trakcie szkolenia. Tutaj
             znajdziesz podpowiedzi i wytyczne wynikające z przemyśleń umożliwiających
@@ -13135,8 +13134,7 @@ pl:
             tej strony dostępne są pozycje do weryfikacji przez rówieśników po przedłożeniu
             przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
         csp-create-dlp-18:
-          title: '"Zasady informatyki''  kreują "Pogłębioną naukę" [CS Principles
-            Deeper Learning] 2018-2019'
+          title: Kurs Zasady informatyki kreuje pogłębioną naukę 2018-2019
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
             2018-2019 [CS Principles Facilitators in Training 2019]
           description_short: Materiały do "Pogłębionej nauki" przeznaczone dla prowadzących
@@ -13157,8 +13155,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Create Deeper Learning Reflections:
-              name: Ukończ tworzenie przemyśleń na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ tworzenie przemyśleń na temat pogłębionej nauki
           student_description: 'To jest Dział "Twórz AP"  "Planu pogłębionej nauki"
             dla prowadzących "Zasady informatyki" Code.org w trakcie szkolenia. Tutaj
             znajdziesz podpowiedzi i wytyczne wynikające z przemyśleń umożliwiających
@@ -13168,7 +13165,7 @@ pl:
             przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
         csd-post-survey:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
-          description_audience: Uczniowie CSD
+          description_audience: Uczniowie kursu CSD
           description_short: CSD Ankieta dla uczniów po odbyciu kursu
           description: Witamy w ankiecie po ukończeniu kursu poświęconego "Odkryciom
             informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi
@@ -13238,7 +13235,7 @@ pl:
             osobistego, pięciodniowego warsztatu letniego. Te pytania będą podstawą
             pracy, którą realizujemy na "Weekendzie szkoleniowym dla prowadzących".
         csd-apprentice-18:
-          title: Przemyślenia stażysty "Odkrycia CS" 2018-2019
+          title: Refleksje stażysty kursu Odkrycia Informatyki 2018-2019
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia
             2019 [CS Discoveries Facilitators in Training 2019]
           description_short: Materiały do przemyśleń stażysty przeznaczone dla prowadzących
@@ -13280,7 +13277,7 @@ pl:
             osobistego, pięciodniowego warsztatu letniego. Te pytania będą podstawą
             pracy, którą realizujemy na "Weekendzie szkoleniowym dla prowadzących".
         csp-novice-18:
-          title: Przemyślenia nowicjusza "Zasady informatyki" 2018-2019
+          title: Przemyślenia nowicjusza kursu Zaady informatyki 2018-2019
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
             2018-2019 [CS Principles Facilitators in Training 2019]
           description_short: Materiały do przemyśleń nowicjusza przeznaczone dla prowadzących
@@ -13322,7 +13319,7 @@ pl:
             Twojego osobistego, pięciodniowego warsztatu letniego. Te pytania będą
             podstawą pracy, którą realizujemy na "Weekendzie szkoleniowym dla prowadzących".
         csp-apprentice-18:
-          title: Przemyślenia stażysty "Zasady informatyki" 2018-2019
+          title: Przemyślenia stażysty kursu zZasady informatyki 2018-2019
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
             2018-2019 [CS Principles Facilitators in Training 2019]
           description_short: Materiały do przemyśleń stażysty przeznaczone dla prowadzących
@@ -18209,7 +18206,7 @@ pl:
               name: Pętle z Rey i BB-8
         csd-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
-          description_audience: Uczniowie CSD
+          description_audience: Uczniowie kursu CSD
           description_short: Ankieta dla uczniów po odbyciu kursu CSD 2018
           description: "Ankieta po kursie Odkrycia informatyki stanowi ważne narzędzie,
             którego używamy do uzyskania od Ciebie informacji zwrotnej oraz wprowadzenia
@@ -25549,6 +25546,7 @@ pl:
               name: Moduł 8
           title: Wirtualne Profesjonalne Kształcenie w zakresie Odkrywania Informatyki
             w latach 2020-2021
+          name: vpl-csd-2020
         vpl-csp-2020:
           lessons:
             Module 1:
@@ -25586,6 +25584,8 @@ pl:
               name: Kurs E/F
             CS Discoveries:
               name: Odkrycia informatyki
+            contagions:
+              name: 'Integracja treści: Zarażenia '
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
@@ -25593,6 +25593,7 @@ pl:
           description_audience: Wewnętrzne
           description_short: Poziomy, które są bezpośrednio powiązane z planami lekcji,
             ale nie pojawiają się w innych skryptach.
+          name: curriculum na poziomach piaskownicy
         virustest:
           lessons:
             Virus Simulation for Code Bytes:
@@ -25682,6 +25683,8 @@ pl:
               name: Appendix
             intro-categorical:
               name: Lekcja 6
+            model-cards:
+              name: Plac zabaw dla modeli kart
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
@@ -25735,6 +25738,20 @@ pl:
               name: Duszki w akcji
             lesson-3-ci:
               name: Utwórz bot Haiku
+            video:
+              name: Filmy Sprite Lab
+            blank space stories:
+              name: Historie pustej przestrzeni
+            how things spread:
+              name: Jak się rozprzestrzeniają
+            contagion simulator setup:
+              name: Konfiguracja symulatora zakażeń
+            sometimes but not always:
+              name: Czasem, ale nie zawsze
+            modifying your model:
+              name: Modyfikujc Twój model
+            telling a data story:
+              name: Opowiadanie historii o danych
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -25749,6 +25766,10 @@ pl:
                 ekscytujące interaktywne projekty!
             outbreak:
               display_name: Symulowanie przerwania
+            Loom Levels:
+              display_name: Poziomy krosna
+            contagion:
+              display_name: Zakażenie
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
@@ -27156,6 +27177,10 @@ pl:
             End of Course Project:
               key: Koniec projektu kursu
               name: Koniec projektu kursu
+            lesson-6:
+              name: Patrząc w przyszłość z Minecraftem
+            lesson-5:
+              name: Włączenie na hasło
           lesson_groups:
             csf_sequencing:
               display_name: Sekwencjonowanie
@@ -27242,6 +27267,8 @@ pl:
             End of Course Project:
               key: Koniec projektu kursu
               name: Koniec projektu kursu
+            lesson-4:
+              name: Lekcja kontekstowa
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -27250,13 +27277,15 @@ pl:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
             csf_nested_loops:
-              display_name: Zagnieżdżające się  pętle
+              display_name: Zdania z warunkami
             csf_functions:
               display_name: Funkcje
             csf_impacts:
               display_name: Wplywy informatyki
             end_of_course_project:
               display_name: Koniec projektu kursu
+            lessonGroup-8:
+              display_name: Usunięto
           name: coursee-2021
           student_description: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń
             warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej
@@ -27545,10 +27574,14 @@ pl:
               name: Utwórz grę Kolekcjonera
             Making Sprites:
               name: Tworzenie duszków
+            Sprites in Action:
+              name: Duszki w akcji
             variables-in-spritelab:
               name: Przechowywanie i przetwarzanie tekstu - wkrótce!
             chatbot:
               name: Tworzenie Chat-Bota - już wkrótce!
+            blank space stories:
+              name: Historie pustej przestrzeni
           lesson_groups:
             ramp_up:
               display_name: Wstęp
@@ -28286,6 +28319,14 @@ pl:
           lessons:
             how things spread gp:
               name: Praktyka z przewodnikiem dotyczącym, jak rozpowszechnia się zarażanie
+            contagion simulator gp:
+              name: Symulator zarażenia - praktyka z przewodnikiem
+            sometimes not always gp:
+              name: Czasami, nie zawsze - ćwiczenia
+            modifying your simulator gp:
+              name: Modyfikowanie Twojego symulatora - praktyka z przewodnikiem
+            collecting data gp:
+              name: Gromadzenie danych - praktyka z przewodnikiem
           lesson_groups:
             lesson group:
               display_name: Praktyka z przewodnikiem dotyczącym zarażania

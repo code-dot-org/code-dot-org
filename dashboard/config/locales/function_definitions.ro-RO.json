@@ -2080,6 +2080,48 @@
           "draw": {
             "name": "desenează"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenează o formă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
         }
       }
     }

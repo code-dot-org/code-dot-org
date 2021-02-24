@@ -1,0 +1,72 @@
+{
+  "th-TH": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "การดำเนินการ",
+          "Brushes": "พู่กัน",
+          "Loops": "ลูป",
+          "Math": "คำนวณ",
+          "Logic": "ตรรกะ",
+          "Functions": "ฟังก์ชัน",
+          "Variables": "ตัวแปร"
+        },
+        "CourseD_EOC_dance": {
+          "World": "โลก",
+          "Dancers": "นักเต้น",
+          "Properties": "คุณสมบัติ",
+          "Events": "เหตุการณ์",
+          "Numbers": "ตัวเลข",
+          "Logic": "ตรรกะ"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "การดำเนินการ",
+          "Events": "เหตุการณ์",
+          "Loops": "ลูป",
+          "Math": "คำนวณ",
+          "Logic": "ตรรกะ",
+          "Games/Score": "เกม/คะแนน"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "โลก",
+          "Actions": "การดำเนินการ",
+          "Events": "เหตุการณ์",
+          "Behaviors": "พฤติกรรม"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "โลก",
+          "Locations": "สถานที่ตั้ง",
+          "Actions": "การดำเนินการ",
+          "Events": "เหตุการณ์",
+          "Behaviors": "พฤติกรรม",
+          "Variables": "ตัวแปร",
+          "Math": "คำนวณ",
+          "Logic": "ตรรกะ",
+          "Functions": "ฟังก์ชัน",
+          "Text": "ข้อความ",
+          "Comments": "หมายเหตุ (Comment)"
+        },
+        "outbreak_freeplay": {
+          "World": "โลก",
+          "Actions": "การดำเนินการ",
+          "Behaviors": "พฤติกรรม",
+          "Events": "เหตุการณ์",
+          "Locations": "สถานที่ตั้ง",
+          "Logic": "ตรรกะ",
+          "Loops": "ลูป",
+          "Math": "คำนวณ",
+          "Variables": "ตัวแปร",
+          "Functions": "ฟังก์ชัน",
+          "Comments": "หมายเหตุ (Comment)"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "โลก",
+          "Actions": "การดำเนินการ",
+          "Events": "เหตุการณ์",
+          "Logic": "ตรรกะ",
+          "Math": "คำนวณ"
+        }
+      }
+    }
+  }
+}

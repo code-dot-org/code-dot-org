@@ -5917,7 +5917,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
-        title: Variabili Multiple Ape
+        title: Variabili multiple con l'ape
       courseF_bee_variables_8a_2018_2019:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5937,7 +5937,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
-        title: Variabili Multiple Ape
+        title: Variabili multiple con l'ape
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5957,7 +5957,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
-        title: Variabili Multiple Ape
+        title: Variabili multiple con l'ape
       courseF_external_variableConstant:
         markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
@@ -6003,6 +6003,7 @@ it-IT:
           ### **Algoritmo** - Una sequenza di passi per svolgere un'attività\n\n*
           ### **Programma** - Un algoritmo tradotto in un linguaggio comprensibile
           ed eseguibile da una macchina\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_algorithms_intro:
         markdown: |
           # **In questa lezione...**
@@ -6020,6 +6021,7 @@ it-IT:
           ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+        content1: Test Markdown Textbook Page
       courseF_markdown_conditionals_end:
         markdown: "# **Hai appena imparato cosa sono le \"istruzioni condizionali\"!**\n\n###
           Le istruzioni condizionali sono estremamente utili in informatica. Immagina
@@ -6032,11 +6034,13 @@ it-IT:
           programma controlla per decidere se eseguire una certa azione\n\n* ### **Istruzioni
           condizionali** - Istruzioni che vengono eseguite solo se si verificano certe
           condizioni\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_conditionals_intro:
         markdown: "# **In questa lezione...**\n\n### Le **condizioni** sono delle
           situazioni che possono essere vere o false. \n\n### Imparerai come usare
           le condizioni nei programmi, per far avvenire le cose `mentre`, `fino a
           che` o `se` una certa situazione è vera!\n---\n\n## **Blocchi da conoscere**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_debugging_end:
         markdown: |
           # **Hai appena imparato cos'è il "debugging"!**
@@ -6054,6 +6058,7 @@ it-IT:
           * ### **Debugging** - Trovare e correggere gli errori in algoritmi o programmi
 
           * ### **Perseveranza** - Non arrendersi!
+        content1: Test Markdown Textbook Page
       courseF_markdown_debugging_intro:
         markdown: |
           # In questa lezione...
@@ -6073,6 +6078,7 @@ it-IT:
           ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_end:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli con contatore"!**
@@ -6089,6 +6095,7 @@ it-IT:
 
           ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_end_2019:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli con contatore"!**
@@ -6105,6 +6112,7 @@ it-IT:
 
           ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_end_2019_2020:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli con contatore"!**
@@ -6121,6 +6129,7 @@ it-IT:
 
           ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_intro:
         markdown: |+
           # **In questa lezione...**
@@ -6143,6 +6152,7 @@ it-IT:
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_intro_2019:
         markdown: |+
           # **In questa lezione...**
@@ -6165,6 +6175,7 @@ it-IT:
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_intro_2019_2020:
         markdown: |+
           # **In questa lezione...**
@@ -6187,6 +6198,7 @@ it-IT:
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_loops_end:
         markdown: "# **Hai appena imparato cosa sono i \"cicli\"!**  \n\n### **Un
           ciclo consiste nell'eseguire più e più volte una certa azione.** In altre
@@ -6197,6 +6209,7 @@ it-IT:
           all'interno di un blocco `ripeti`!\n\n---\n\n## **Termini da conoscere**\n\n*
           ### **Ciclo** - L'esecuzione ripetuta di una certa azione\n\n* ### **Ripetere**
           - Fare qualcosa più e più volte \n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_loops_intro:
         markdown: |
           # In questa lezione...
@@ -6212,6 +6225,7 @@ it-IT:
           ## Blocchi da conoscere
 
           ![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)
+        content1: Test Markdown Textbook Page
       courseF_markdown_nestedloops_end:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli annidati"!**
@@ -6226,6 +6240,7 @@ it-IT:
 
           ### __Cicli annidati__ - Un ciclo contenuto all'interno di un altro ciclo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_nestedloops_intro:
         markdown: |
           # **In questa lezione...**
@@ -6241,6 +6256,7 @@ it-IT:
           ## **Blocchi da conoscere**
 
           ![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_end:
         markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
           poter essere usata, una variabile ha bisogno di un nome e di un valore.
@@ -6248,6 +6264,7 @@ it-IT:
           una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
           **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
           che può cambiare\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_end_2019:
         markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
           poter essere usata, una variabile ha bisogno di un nome e di un valore.
@@ -6255,6 +6272,7 @@ it-IT:
           una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
           **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
           che può cambiare\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_end_2019_2020:
         markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
           poter essere usata, una variabile ha bisogno di un nome e di un valore.
@@ -6262,6 +6280,7 @@ it-IT:
           una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
           **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
           che può cambiare\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_intro:
         markdown: |+
           # **In questa lezione...**
@@ -6276,6 +6295,7 @@ it-IT:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
 
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_intro_2019:
         markdown: |+
           # **In questa lezione...**
@@ -6290,6 +6310,7 @@ it-IT:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
 
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_intro_2019_2020:
         markdown: |+
           # **In questa lezione...**
@@ -6304,6 +6325,7 @@ it-IT:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
 
 
+        content1: Test Markdown Textbook Page
       courseF_multi_artist_for10_predict1:
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
@@ -7215,9 +7237,9 @@ it-IT:
 
           Gioca un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
       gradek1_activity_beNice:
-        markdown: "# Comportarsi Bene nel Laboratorio di Informatica\n  \n<br/><br/>
+        markdown: "# Comportamento corretto bene in aula computer\n  \n<br/><br/>
           \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
-          target=\"_new\">\n<button>\nVai al piano della lezione\n</button>\n</a>\n\n<br/><br/>\n<a
+          target=\"_new\">\n<button>\nVai al piano di lavoro della lezione\n</button>\n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continua</a>"
       CSD U5 test:
         title: Test Post-Progetto sui Dati e la Società
@@ -7500,6 +7522,7 @@ it-IT:
           |---|---|
           | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
           | Diventiamo creativi con i loop annidati! | Diventiamo creativi con le funzioni! |
+        content1: Test Markdown Textbook Page
       courseF_project_exemplars_2019:
         markdown: |-
           # Esempi di progetti
@@ -7519,6 +7542,7 @@ it-IT:
           |---|---|
           | [![Fiori (Artista)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spirale (Artista)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
           | Diventiamo creativi con le variabili! | Diventiamo creativi con i For Loop! |
+        content1: Test Markdown Textbook Page
       csd-post-survey-intro-2019:
         markdown: |+
           # CS Discoveries Post-Course Survey
@@ -7540,3 +7564,11 @@ it-IT:
           # Il Mio Vicino Online
 
           ## Come fai in sicurezza nei posti online?
+      courseD_project_exemplars_2020_2021:
+        content1: Test Markdown Textbook Page
+      courseE_project_exemplars_2019_2020:
+        content1: Test Markdown Textbook Page
+      courseExpress_project_exemplars_2019_2020:
+        content1: Test Markdown Textbook Page
+      courseF_project_exemplars_2019_2020:
+        content1: Test Markdown Textbook Page

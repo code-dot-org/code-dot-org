@@ -3475,6 +3475,49 @@
           "draw bit": {
             "name": "０か1で もようを かく"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "星形 を かく",
+            "parameters": {
+              "points": "ポイント",
+              "length": "長さ"
+            }
+          },
+          "draw a circle": {
+            "name": "円 を かく"
+          },
+          "draw a pinwheel": {
+            "name": "風車をかく",
+            "parameters": {
+              "length": "長さ",
+              "repeat": "くりかえし"
+            }
+          },
+          "draw a triangle": {
+            "name": "三角形を描画します。",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a shape": {
+            "name": "図形をかく",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a house": {
+            "name": "家 を かく",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a square": {
+            "name": "正方形 を かく",
+            "parameters": {
+              "length": "長さ"
+            }
+          }
         }
       }
     }

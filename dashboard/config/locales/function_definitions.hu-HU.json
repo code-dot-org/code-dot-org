@@ -3419,6 +3419,49 @@
           "garden square": {
             "name": "kerti négyzet"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "hossza"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "hossza",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "hossza"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "hossza"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "hossza"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "hossza"
+            }
+          }
         }
       }
     }
