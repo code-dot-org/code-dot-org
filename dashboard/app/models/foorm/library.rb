@@ -21,6 +21,8 @@ class Foorm::Library < ApplicationRecord
   after_commit :write_library_to_file
 
   def self.setup
+    # Seed all libraries inside of a transaction, such that all libraries are imported/updated successfully
+    # or none at all.
     ActiveRecord::Base.transaction do
       Dir.glob('config/foorm/library/**/*.json').each do |path|
         # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
