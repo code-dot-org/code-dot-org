@@ -54,6 +54,7 @@ const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
+const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 
 // Action creators
 export function setMode(mode) {
@@ -193,6 +194,10 @@ export function setCurrentColumn(currentColumn) {
   return { type: SET_CURRENT_COLUMN, currentColumn };
 }
 
+export function setResultsPhase(phase) {
+  return { type: SET_RESULTS_PHASE, phase };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -218,7 +223,8 @@ const initialState = {
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: "selectDataset",
-  currentColumn: undefined
+  currentColumn: undefined,
+  resultsPhase: undefined
 };
 
 // Reducer
@@ -383,6 +389,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === RESET_STATE) {
     return {
       ...initialState,
+      selectedTrainer: state.mode && state.mode.hideSelectTrainer,
       mode: state.mode
     };
   }
@@ -436,21 +443,49 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_CURRENT_PANEL) {
     return {
       ...state,
-      currentPanel: action.currentPanel
+      currentPanel: action.currentPanel,
+      currentColumn: undefined
     };
   }
   if (action.type === SET_CURRENT_COLUMN) {
-    if (state.currentColumn === action.currentColumn) {
-      return {
-        ...state,
-        currentColumn: undefined
-      };
-    } else {
-      return {
-        ...state,
-        currentColumn: action.currentColumn
-      };
+    if (state.currentPanel === "dataDisplayLabel") {
+      if (action.currentColumn === state.labelColumn) {
+        return state;
+        /*return {
+          ...state,
+          labelColumn: undefined,
+          currentColumn: undefined
+        };*/
+      } else {
+        return {
+          ...state,
+          labelColumn: action.currentColumn,
+          currentColumn: action.currentColumn
+        };
+      }
+    } else if (state.currentPanel === "dataDisplayFeatures") {
+      if (state.selectedFeatures.includes(action.currentColumn)) {
+        return {
+          ...state,
+          selectedFeatures: state.selectedFeatures.filter(
+            item => item !== action.currentColumn
+          )
+          //currentColumn: undefined
+        };
+      } else {
+        return {
+          ...state,
+          selectedFeatures: [...state.selectedFeatures, action.currentColumn]
+          //currentColumn: action.currentColumn
+        };
+      }
     }
+  }
+  if (action.type === SET_RESULTS_PHASE) {
+    return {
+      ...state,
+      resultsPhase: action.phase
+    };
   }
   return state;
 }
@@ -872,17 +907,25 @@ export function getShowChooseReserve(state) {
   return !(state.mode && state.mode.hideChooseReserve);
 }
 
+export function getShowSelectTrainer(state) {
+  return !(state.mode && state.mode.hideSelectTrainer);
+}
+
+/*
 const panelList = [
   { id: "selectDataset", label: "Import" },
-  { id: "dataDisplay", label: "Data" },
+  { id: "specifyColumns", label: "Columns" },
+  { id: "dataDisplayLabel", label: "Label" },
+  { id: "dataDisplayFeatures", label: "Features" },
   { id: "selectTrainer", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
   { id: "saveModel", label: "Save" }
 ];
+*/
 
-function isPanelVisible(state, panelId) {
+function isPanelEnabled(state, panelId) {
   const mode = state.mode;
 
   if (panelId === "selectDataset") {
@@ -891,23 +934,14 @@ function isPanelVisible(state, panelId) {
     }
   }
 
-  if (panelId === "saveModel") {
-    if (mode && mode.hideSave) {
-      return false;
-    }
-  }
-
-  if (panelId === "selectTrainer") {
-    if (mode && mode.hideSelectTrainer) {
-      return false;
-    }
-  }
-  return true;
-}
-
-function isPanelEnabled(state, panelId) {
-  if (panelId === "dataDisplay") {
+  if (panelId === "dataDisplayLabel") {
     if (state.data.length === 0) {
+      return false;
+    }
+  }
+
+  if (panelId === "dataDisplayFeatures") {
+    if (!state.labelColumn) {
       return false;
     }
   }
@@ -920,6 +954,12 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "selectFeatures") {
     if (!isDataUploaded(state)) {
+      return false;
+    }
+  }
+
+  if (panelId === "selectTrainer") {
+    if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
       return false;
     }
   }
@@ -939,23 +979,13 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  // Also see if the previous panel was visible, recursively.
-  const panelIndex = panelList.findIndex(element => element.id === panelId);
-  if (panelIndex > 0) {
-    return isPanelEnabled(state, panelList[panelIndex - 1].id);
+  if (panelId === "saveModel") {
+    if (mode && mode.hideSave) {
+      return false;
+    }
   }
 
   return true;
-}
-
-export function getPanels(state) {
-  return panelList
-    .filter(panel => {
-      return isPanelVisible(state, panel.id);
-    })
-    .map(panel => {
-      return { ...panel, enabled: isPanelEnabled(state, panel.id) };
-    });
 }
 
 // Given the current panel, return the appropriate previous & next buttons.
@@ -964,56 +994,49 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next =
-      isPanelVisible(state, "dataDisplay") &&
-      isPanelEnabled(state, "dataDisplay")
-        ? { panel: "dataDisplay", text: "Data" }
-        : null;
-  } else if (state.currentPanel === "dataDisplay") {
-    prev =
-      isPanelVisible(state, "selectDataset") &&
-      isPanelEnabled(state, "selectDataset")
-        ? { panel: "selectDataset", text: "Import" }
-        : null;
-    next =
-      isPanelVisible(state, "selectTrainer") &&
-      isPanelEnabled(state, "selectTrainer")
-        ? { panel: "selectTrainer", text: "Trainer" }
-        : isPanelVisible(state, "trainModel") &&
-          isPanelEnabled(state, "trainModel")
-        ? { panel: "trainModel", text: "Train" }
-        : null;
+    next = isPanelEnabled(state, "specifyColumns")
+      ? { panel: "specifyColumns", text: "Continue" }
+      : isPanelEnabled(state, "dataDisplayLabel")
+      ? { panel: "dataDisplayLabel", text: "Continue" }
+      : null;
+  } else if (state.currentPanel === "specifyColumns") {
+    prev = { panel: "selectDataset", text: "Back" };
+    next = { panel: "dataDisplayLabel", text: "Continue" };
+  } else if (state.currentPanel === "dataDisplayLabel") {
+    prev = isPanelEnabled(state, "specifyColumns")
+      ? { panel: "specifyColumns", text: "Back" }
+      : isPanelEnabled(state, "selectDataset")
+      ? { panel: "selectDataset", text: "Back" }
+      : null;
+    next = isPanelEnabled(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      : null;
+  } else if (state.currentPanel === "dataDisplayFeatures") {
+    prev = { panel: "dataDisplayLabel", text: "Back" };
+    next = isPanelEnabled(state, "selectTrainer")
+      ? { panel: "selectTrainer", text: "Continue" }
+      : isPanelEnabled(state, "trainModel")
+      ? { panel: "trainModel", text: "Continue" }
+      : null;
   } else if (state.currentPanel === "selectTrainer") {
-    prev = { panel: "dataDisplay", text: "Data" };
-    next =
-      isPanelVisible(state, "trainModel") && isPanelEnabled(state, "trainModel")
-        ? { panel: "trainModel", text: "Train" }
-        : null;
+    prev = { panel: "dataDisplayFeatures", text: "Back" };
+    next = isPanelEnabled(state, "trainModel")
+      ? { panel: "trainModel", text: "Continue" }
+      : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
       prev = null;
-      next = { panel: "results", text: "Results" };
+      next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = { panel: "dataDisplay", text: "Data" };
-    next = { panel: "predict", text: "Predict" };
-  } else if (state.currentPanel === "predict") {
-    prev = { panel: "results", text: "Results" };
-    next = { panel: "saveModel", text: "Save" };
+    prev = { panel: "dataDisplayFeatures", text: "Back" };
+    next = { panel: "saveModel", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
-    prev = { panel: "predict", text: "Predict" };
+    prev = { panel: "results", text: "Back" };
     next = null;
   }
 
   return { prev, next };
-}
-
-export function getCurrentColumnIsSelectedLabel(state) {
-  return state.labelColumn === state.currentColumn;
-}
-
-export function getCurrentColumnIsSelectedFeature(state) {
-  return state.selectedFeatures.includes(state.currentColumn);
 }
 
 /* Returns an object with information for the CrossTab UI.

@@ -1,5 +1,5 @@
-import { initAll } from "./index";
 import "./assetPath";
+import { initAll } from "./index";
 import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.
@@ -13,7 +13,9 @@ const sampleModes = {
   },
 
   "preload-metadata": {
-    hideSpecifyColumns: true
+    hideSpecifyColumns: true,
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true,
   },
 
   "load-foods": { datasets: ["foods"] },
@@ -48,10 +50,13 @@ const sampleModes = {
   },
 
   "ml-mini-project-ailab": {
-    datasets: ["candy", "titanic", "foods"]
+    datasets: ["candy", "titanic", "foods"],
+    hideSelectTrainer: "knnClassify"
   },
 
-  "ml-final-project-ailab": {}
+  "ml-final-project-ailab": {
+    hideSelectTrainer: "knnClassify"
+  }
 };
 
 // Look for a ?mode= parameter on the URL

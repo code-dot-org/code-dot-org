@@ -9,7 +9,8 @@ import {
   resetState,
   setColumnsByDataType,
   setLabelColumn,
-  getSpecifiedDatasets
+  getSpecifiedDatasets,
+  setSelectedTrainer
 } from "../redux";
 import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
@@ -23,10 +24,12 @@ class SelectDataset extends Component {
     setSelectedJSON: PropTypes.func.isRequired,
     setColumnsByDataType: PropTypes.func.isRequired,
     setLabelColumn: PropTypes.func.isRequired,
+    setSelectedTrainer: PropTypes.func.isRequired,
     csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     resetState: PropTypes.func.isRequired,
-    specifiedDatasets: PropTypes.arrayOf(PropTypes.string)
+    specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
+    name: PropTypes.string
   };
 
   constructor(props) {
@@ -97,42 +100,32 @@ class SelectDataset extends Component {
     return (
       <div id="select-dataset" style={styles.panel}>
         <div style={styles.largeText}>Which dataset would you like to use?</div>
-        <form>
-          <div style={styles.subPanel}>
+        <div style={styles.scrollableContentsTinted}>
+          <div style={styles.scrollingContents}>
             <div>Select a dataset from the collection</div>
-
-            <div style={styles.datasets}>
-              {datasets.map(dataset => {
-                return (
-                  <div
-                    style={{ width: "100%", padding: 20, clear: "both" }}
-                    key={dataset.id}
-                    onClick={() => this.handleDatasetClick(dataset.id)}
-                  >
-                    <img
-                      src={assetPath + dataset.imagePath}
-                      style={{ width: 240, float: "left" }}
-                    />
-                    <div style={{ float: "left", paddingLeft: 20 }}>{dataset.name}</div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/*<select onChange={this.handleDatasetSelect}>
-              <option>{""}</option>
-              {datasets.map(dataset => {
-                return (
-                  <option key={dataset["id"]} value={dataset["id"]}>
-                    {dataset["name"]}
-                  </option>
-                );
-              })}
-            </select>*/}
+            {datasets.map(dataset => {
+              return (
+                <div
+                  style={{
+                    ...styles.selectDatasetItem,
+                    ...(this.props.name === dataset.name &&
+                      styles.selectDatasetItemSelected)
+                  }}
+                  key={dataset.id}
+                  onClick={() => this.handleDatasetClick(dataset.id)}
+                >
+                  <img
+                    src={assetPath + dataset.imagePath}
+                    style={styles.selectDatasetImage}
+                  />
+                  <div>{dataset.name}</div>
+                </div>
+              );
+            })}
           </div>
-        </form>
+        </div>
         {!specifiedDatasets && (
-          <div style={styles.subPanel}>
+          <div style={{ ...styles.contents, marginTop: 20 }}>
             <div>or import a CSV File</div>
             <input
               className="csv-input"
@@ -160,7 +153,8 @@ export default connect(
   state => ({
     csvfile: state.csvfile,
     jsonfile: state.jsonfile,
-    specifiedDatasets: getSpecifiedDatasets(state)
+    specifiedDatasets: getSpecifiedDatasets(state),
+    name: state.name
   }),
   dispatch => ({
     resetState() {
@@ -180,6 +174,9 @@ export default connect(
     },
     setLabelColumn(labelColumn) {
       dispatch(setLabelColumn(labelColumn));
+    },
+    setSelectedTrainer(selectedTrainer) {
+      dispatch(setSelectedTrainer(selectedTrainer));
     }
   })
 )(SelectDataset);

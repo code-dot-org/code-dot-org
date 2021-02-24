@@ -6,6 +6,12 @@
     "type": "git",
     "url": "git+ssh://git@github.com/code-dot-org/ml-playground.git"
   },
+  "jest": {
+    "moduleNameMapper": {
+      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif)$": "identity-obj-proxy",
+      "^@public(.*)$": "<rootDir>/public/$1"
+    }
+  },
   "author": "",
   "license": "MIT",
   "private": false,
@@ -44,6 +50,8 @@
     "core-js": "^3",
     "eslint": "6.1.0",
     "eslint-plugin-react": "7.14.3",
+    "file-loader": "^4.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "ml-knn": "^3.0.0",
     "query-string": "4.1.0",
@@ -52,6 +60,7 @@
     "react-papaparse": "^3.8.0",
     "react-redux": "^5.0.0",
     "redux": "^4.0.5",
+    "url-loader": "^2.2.0",
     "webpack": "4.19.1",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.6",
