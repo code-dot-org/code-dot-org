@@ -678,7 +678,7 @@ Applab.init = function(config) {
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
     librariesEnabled: !!config.level.librariesEnabled,
-    aiEnabled: !!config.level.aiEnabled,
+    aiEnabled: !!config.level.aiEnabled || !!config.level.isProjectLevel,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
