@@ -7,6 +7,8 @@ import {appendOutputLog} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
+import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 const style = {
   instructionsAndPreview: {
@@ -62,7 +64,11 @@ const style = {
 
 class JavalabView extends React.Component {
   static propTypes = {
+    onMount: PropTypes.func.isRequired,
+
     // populated by redux
+    isProjectLevel: PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func
   };
 
@@ -78,58 +84,65 @@ class JavalabView extends React.Component {
 
   render() {
     return (
-      <div style={style.javalab}>
-        <div style={style.instructionsAndPreview}>
-          <div style={style.instructions}>
-            <PaneHeader hasFocus={true}>
-              <PaneSection>Instructions</PaneSection>
-            </PaneHeader>
-            <ul>
-              <li>Instruction 1</li>
-              <li>Another Instruction</li>
-            </ul>
-          </div>
-          <div style={style.preview}>
-            <PaneHeader hasFocus={true}>
-              <PaneSection>Preview</PaneSection>
-            </PaneHeader>
-          </div>
-        </div>
-        <div style={style.editorAndConsole}>
-          <JavalabEditor />
-          <div style={style.consoleAndButtons}>
-            <div style={style.buttons}>
-              <button
-                type="button"
-                style={style.singleButton}
-                onClick={this.compile}
-              >
-                <FontAwesome icon="cubes" className="fa-2x" />
-                <br />
-                Compile
-              </button>
-              <button
-                type="button"
-                style={style.singleButton}
-                onClick={this.run}
-              >
-                <FontAwesome icon="play" className="fa-2x" />
-                <br />
-                Run
-              </button>
+      <StudioAppWrapper>
+        <InstructionsWithWorkspace>
+          <div style={style.javalab}>
+            <div style={style.instructionsAndPreview}>
+              <div style={style.instructions}>
+                <PaneHeader hasFocus={true}>
+                  <PaneSection>Instructions</PaneSection>
+                </PaneHeader>
+                <ul>
+                  <li>Instruction 1</li>
+                  <li>Another Instruction</li>
+                </ul>
+              </div>
+              <div style={style.preview}>
+                <PaneHeader hasFocus={true}>
+                  <PaneSection>Preview</PaneSection>
+                </PaneHeader>
+              </div>
             </div>
-            <div style={style.consoleStyle}>
-              <JavalabConsole />
+            <div style={style.editorAndConsole}>
+              <JavalabEditor />
+              <div style={style.consoleAndButtons}>
+                <div style={style.buttons}>
+                  <button
+                    type="button"
+                    style={style.singleButton}
+                    onClick={this.compile}
+                  >
+                    <FontAwesome icon="cubes" className="fa-2x" />
+                    <br />
+                    Compile
+                  </button>
+                  <button
+                    type="button"
+                    style={style.singleButton}
+                    onClick={this.run}
+                  >
+                    <FontAwesome icon="play" className="fa-2x" />
+                    <br />
+                    Run
+                  </button>
+                </div>
+                <div style={style.consoleStyle}>
+                  <JavalabConsole />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </InstructionsWithWorkspace>
+      </StudioAppWrapper>
     );
   }
 }
 
 export default connect(
-  null,
+  state => ({
+    isProjectLevel: state.pageConstants.isProjectLevel,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+  }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log))
   })
