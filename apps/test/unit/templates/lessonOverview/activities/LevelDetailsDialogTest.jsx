@@ -2,7 +2,8 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import LevelDetailsDialog from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 
 describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, defaultProps;
@@ -11,25 +12,41 @@ describe('LevelDetailsDialogTest', () => {
     handleCloseSpy = sinon.spy();
     defaultProps = {
       handleClose: handleCloseSpy,
-      scriptLevel: {
-        url: 'level.url',
-        level: {
-          type: 'External',
-          markdown: 'Some markdown'
-        }
-      }
+      viewAs: ViewType.Teacher
     };
   });
 
   it('calls handleClose when dismiss is clicked', () => {
-    const wrapper = shallow(<LevelDetailsDialog {...defaultProps} />);
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        {...defaultProps}
+        scriptLevel={{
+          url: 'level.url',
+          level: {
+            type: 'External',
+            markdown: 'Some markdown'
+          }
+        }}
+      />
+    );
     const dismissButton = wrapper.find('Button').at(0);
     dismissButton.simulate('click');
     expect(handleCloseSpy.calledOnce).to.be.true;
   });
 
   it('links to level url', () => {
-    const wrapper = shallow(<LevelDetailsDialog {...defaultProps} />);
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        {...defaultProps}
+        scriptLevel={{
+          url: 'level.url',
+          level: {
+            type: 'External',
+            markdown: 'Some markdown'
+          }
+        }}
+      />
+    );
     const levelLink = wrapper.find('Button').at(1);
     expect(levelLink.props().href).to.equal('level.url');
   });
@@ -37,7 +54,7 @@ describe('LevelDetailsDialogTest', () => {
   it('can display an external markdown level', () => {
     const wrapper = mount(
       <LevelDetailsDialog
-        handleClose={handleCloseSpy}
+        {...defaultProps}
         scriptLevel={{
           url: 'level.url',
           level: {type: 'External', markdown: 'This is some text.'}
@@ -50,7 +67,7 @@ describe('LevelDetailsDialogTest', () => {
   it('can display a LevelGroup', () => {
     const wrapper = mount(
       <LevelDetailsDialog
-        handleClose={handleCloseSpy}
+        {...defaultProps}
         scriptLevel={{
           url: 'level.url',
           level: {type: 'LevelGroup'}
@@ -72,7 +89,7 @@ describe('LevelDetailsDialogTest', () => {
     const loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
     const wrapper = mount(
       <LevelDetailsDialog
-        handleClose={handleCloseSpy}
+        {...defaultProps}
         scriptLevel={{
           url: 'level.url',
           level: {
@@ -89,7 +106,7 @@ describe('LevelDetailsDialogTest', () => {
   it('can display a bubble choice level', () => {
     const wrapper = shallow(
       <LevelDetailsDialog
-        handleClose={handleCloseSpy}
+        {...defaultProps}
         scriptLevel={{
           id: 'scriptlevel',
           url: 'level.url',
@@ -142,10 +159,7 @@ describe('LevelDetailsDialogTest', () => {
       ]
     };
     const wrapper = shallow(
-      <LevelDetailsDialog
-        handleClose={handleCloseSpy}
-        scriptLevel={bubbleChoiceLevel}
-      />
+      <LevelDetailsDialog {...defaultProps} scriptLevel={bubbleChoiceLevel} />
     );
     wrapper
       .instance()
@@ -162,7 +176,7 @@ describe('LevelDetailsDialogTest', () => {
   it('can display a CSD/CSP puzzle level', () => {
     const wrapper = shallow(
       <LevelDetailsDialog
-        handleClose={handleCloseSpy}
+        {...defaultProps}
         scriptLevel={{
           id: 'scriptlevel',
           url: 'level.url',
