@@ -135,11 +135,6 @@ class FormEditorManager extends React.Component {
     this.props.resetCodeMirror(formData['questions']);
   };
 
-  // What does this function do?
-  // [x] making ajax request
-  // setting some state on FoormEditor -- shouldn't have to know details of FoormEditor state? modify its own state, pass as props to foormeditor?
-  // some of that state is specific to the "form version" of this editor (libraryError and libraryErrorMessage). based on type of error received from server, decide what to show
-
   // use debounce to only call once per second
   fillFormWithLibraryItems = _.debounce(
     function() {
@@ -192,7 +187,6 @@ class FormEditorManager extends React.Component {
   }
 
   // bind this instead of using arrow function?
-  // pass down from manager?
   renderHeaderTitle() {
     return (
       <div>
