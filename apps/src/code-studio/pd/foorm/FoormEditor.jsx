@@ -51,8 +51,8 @@ class FoormEditor extends React.Component {
     resetCodeMirror: PropTypes.func.isRequired,
     formCategories: PropTypes.array,
     // populated by redux
-    formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool,
+    questions: PropTypes.object,
+    hasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
@@ -103,7 +103,7 @@ class FoormEditor extends React.Component {
     // call preview form if we got new form questions or we have switched
     // on live preview.
     if (
-      prevProps.formQuestions !== this.props.formQuestions ||
+      prevProps.questions !== this.props.questions ||
       (prevState.livePreviewStatus === PREVIEW_OFF &&
         this.state.livePreviewStatus === PREVIEW_ON)
     ) {
@@ -145,7 +145,7 @@ class FoormEditor extends React.Component {
         contentType: 'application/json',
         processData: false,
         data: JSON.stringify({
-          form_questions: this.props.formQuestions
+          form_questions: this.props.questions
         })
       })
         .done(result => {
@@ -179,6 +179,7 @@ class FoormEditor extends React.Component {
   };
 
   // bind this instead of using arrow function?
+  // pass down from manager?
   renderHeaderTitle() {
     return (
       <div>
@@ -195,7 +196,7 @@ class FoormEditor extends React.Component {
   listPreviewErrors() {
     let errors = [];
 
-    if (this.props.formHasError) {
+    if (this.props.hasError) {
       errors.push(
         'There is a parsing error in the survey configuration. Errors are noted on the left side of the editor.'
       );
@@ -317,7 +318,7 @@ class FoormEditor extends React.Component {
                   // 3rd parameter specifies number of spaces to insert
                   // into the output JSON string for readability purposes.
                   // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-                  value={JSON.stringify(this.props.formQuestions, null, 2)}
+                  value={JSON.stringify(this.props.questions, null, 2)}
                   // Change handler is required for this element, but changes will be handled by the code mirror.
                   onChange={() => {}}
                 />
@@ -366,11 +367,12 @@ class FoormEditor extends React.Component {
 export default connect(state => ({
   formQuestions: state.foorm.formQuestions || {},
   isFormPublished: state.foorm.isFormPublished,
-  formHasError: state.foorm.hasError,
+  hasError: state.foorm.hasError,
   formName: state.foorm.formName,
   formVersion: state.foorm.formVersion,
   formId: state.foorm.formId,
   name: state.foorm.name,
   version: state.foorm.version,
-  isPublished: state.foorm.isPublished
+  isPublished: state.foorm.isPublished,
+  questions: state.foorm.questions
 }))(FoormEditor);
