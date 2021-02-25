@@ -5,7 +5,7 @@ import {expect} from '../util/reconfiguredChai';
 import {setExternalGlobals} from '../util/testUtils';
 
 import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
-import {StatelessMarkdownInstructions} from '@cdo/apps/templates/instructions/MarkdownInstructions';
+import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 describe('instructions components', () => {
   setExternalGlobals();
@@ -13,7 +13,7 @@ describe('instructions components', () => {
   describe('MarkdownInstructions', function() {
     it('standard case had top padding and no left margin', function() {
       const wrapper = shallow(
-        <StatelessMarkdownInstructions
+        <MarkdownInstructions
           markdown="md"
           markdownClassicMargins={false}
           inTopPane={false}
@@ -32,7 +32,7 @@ describe('instructions components', () => {
 
     it('inTopPane has no top padding', function() {
       const wrapper = shallow(
-        <StatelessMarkdownInstructions
+        <MarkdownInstructions
           markdown="md"
           inTopPane={true}
           noInstructionsWhenCollapsed={true}
