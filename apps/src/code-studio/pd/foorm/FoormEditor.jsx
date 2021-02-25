@@ -6,7 +6,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
-import _ from 'lodash';
 import FormSaveBar from './editor/FormSaveBar';
 import FoormEditorPreview from './editor/FoormEditorPreview';
 import FoormEditorHeader from './editor/FoormEditorHeader';
@@ -33,12 +32,6 @@ const styles = {
   preview: {
     width: '48%',
     marginRight: 12
-  },
-  surveyTitle: {
-    marginBottom: 0
-  },
-  surveyState: {
-    marginTop: 0
   }
 };
 
@@ -50,16 +43,22 @@ class FoormEditor extends React.Component {
     populateCodeMirror: PropTypes.func.isRequired,
     resetCodeMirror: PropTypes.func.isRequired,
     categories: PropTypes.array,
+    preparePreview: PropTypes.func,
+    previewQuestions: PropTypes.object,
+    previewErrors: PropTypes.array,
+    forceRerenderKey: PropTypes.number,
+    renderHeaderTitle: PropTypes.func,
+
     // populated by redux
     questions: PropTypes.object,
-    hasError: PropTypes.bool,
+    //hasError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
-    formId: PropTypes.number,
-    name: PropTypes.string,
-    version: PropTypes.number,
-    isPublished: PropTypes.bool
+    formId: PropTypes.number
+    // name: PropTypes.string,
+    // version: PropTypes.number,
+    // isPublished: PropTypes.bool
   };
 
   constructor(props) {
@@ -67,8 +66,8 @@ class FoormEditor extends React.Component {
 
     this.state = {
       livePreviewStatus: PREVIEW_ON,
-      forceRerenderKey: 0,
-      previewQuestions: null,
+      //forceRerenderKey: 0,
+      //previewQuestions: null,
       num_facilitators: 2,
       workshop_course: 'CS Principles',
       workshop_subject: '5-day Summer',
@@ -136,41 +135,42 @@ class FoormEditor extends React.Component {
     }
   };
 
-  // use debounce to only call once per second
-  fillFormWithLibraryItems = _.debounce(
-    function() {
-      $.ajax({
-        url: '/api/v1/pd/foorm/forms/form_with_library_items',
-        type: 'post',
-        contentType: 'application/json',
-        processData: false,
-        data: JSON.stringify({
-          form_questions: this.props.questions
-        })
-      })
-        .done(result => {
-          this.setState({
-            forceRerenderKey: this.state.forceRerenderKey + 1,
-            previewQuestions: result,
-            libraryError: false,
-            libraryErrorMessage: null
-          });
-        })
-        .fail(result => {
-          this.setState({
-            libraryError: true,
-            libraryErrorMessage:
-              (result.responseJSON && result.responseJSON.error) || 'unknown'
-          });
-        });
-    },
-    1000,
-    {leading: true}
-  );
+  // // use debounce to only call once per second
+  // fillFormWithLibraryItems = _.debounce(
+  //   function() {
+  //     $.ajax({
+  //       url: '/api/v1/pd/foorm/forms/form_with_library_items',
+  //       type: 'post',
+  //       contentType: 'application/json',
+  //       processData: false,
+  //       data: JSON.stringify({
+  //         form_questions: this.props.questions
+  //       })
+  //     })
+  //       .done(result => {
+  //         this.setState({
+  //           forceRerenderKey: this.state.forceRerenderKey + 1,
+  //           previewQuestions: result,
+  //           libraryError: false,
+  //           libraryErrorMessage: null
+  //         });
+  //       })
+  //       .fail(result => {
+  //         this.setState({
+  //           libraryError: true,
+  //           libraryErrorMessage:
+  //             (result.responseJSON && result.responseJSON.error) || 'unknown'
+  //         });
+  //       });
+  //   },
+  //   1000,
+  //   {leading: true}
+  // );
 
   previewFoorm = () => {
     if (this.state.livePreviewStatus === PREVIEW_ON) {
-      this.fillFormWithLibraryItems();
+      // this.fillFormWithLibraryItems();
+      this.props.preparePreview();
     }
   };
 
@@ -178,39 +178,40 @@ class FoormEditor extends React.Component {
     this.setState({livePreviewStatus: toggleValue});
   };
 
-  // bind this instead of using arrow function?
-  // pass down from manager?
-  renderHeaderTitle() {
-    return (
-      <div>
-        <h2 style={styles.surveyTitle}>
-          {`Form Name: ${this.props.name}, version ${this.props.version}`}
-        </h2>
-        <h3 style={styles.surveyState}>
-          {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
-        </h3>
-      </div>
-    );
-  }
+  // // bind this instead of using arrow function?
+  // // pass down from manager?
+  // renderHeaderTitle() {
+  //   return (
+  //     <div>
+  //       <h2 style={styles.surveyTitle}>
+  //         {`Form Name: ${this.props.name}, version ${this.props.version}`}
+  //       </h2>
+  //       <h3 style={styles.surveyState}>
+  //         {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
+  //       </h3>
+  //     </div>
+  //   );
+  // }
 
-  listPreviewErrors() {
-    let errors = [];
-
-    if (this.props.hasError) {
-      errors.push(
-        'There is a parsing error in the survey configuration. Errors are noted on the left side of the editor.'
-      );
-    }
-    if (this.state.libraryError) {
-      errors.push(
-        `There is an error in the use of at least one library question. The error is: ${
-          this.state.libraryErrorMessage
-        }`
-      );
-    }
-
-    return errors;
-  }
+  // // can we manage these error messages from the server?
+  // listPreviewErrors() {
+  //   let errors = [];
+  //
+  //   if (this.props.hasError) {
+  //     errors.push(
+  //       'There is a parsing error in the JSON configuration. Errors are noted on the left side of the editor.'
+  //     );
+  //   }
+  //   if (this.state.libraryError) {
+  //     errors.push(
+  //       `There is an error in the use of at least one library question. The error is: ${
+  //         this.state.libraryErrorMessage
+  //       }`
+  //     );
+  //   }
+  //
+  //   return errors;
+  // }
 
   renderVariables() {
     return (
@@ -302,7 +303,7 @@ class FoormEditor extends React.Component {
           livePreviewStatus={this.state.livePreviewStatus}
           validateURL={'/api/v1/pd/foorm/forms/validate_form'}
           validateDataKey={'form_questions'}
-          renderHeaderTitle={() => this.renderHeaderTitle()}
+          renderHeaderTitle={this.props.renderHeaderTitle}
         />
         <div style={styles.foormEditor}>
           <Tabs
@@ -335,11 +336,9 @@ class FoormEditor extends React.Component {
           >
             <Tab eventKey={'preview'} title={'Preview'}>
               <FoormEditorPreview
-                libraryError={this.state.libraryError}
-                libraryErrorMessage={this.state.libraryErrorMessage}
-                previewQuestions={this.state.previewQuestions}
-                forceRerenderKey={this.state.forceRerenderKey}
-                errorMessages={this.listPreviewErrors()}
+                previewQuestions={this.props.previewQuestions}
+                forceRerenderKey={this.props.forceRerenderKey}
+                errorMessages={this.props.previewErrors}
                 surveyData={{
                   facilitators: this.state.facilitators,
                   num_facilitators: this.state.num_facilitators,
@@ -367,12 +366,12 @@ class FoormEditor extends React.Component {
 export default connect(state => ({
   formQuestions: state.foorm.formQuestions || {},
   isFormPublished: state.foorm.isFormPublished,
-  hasError: state.foorm.hasError,
+  //hasError: state.foorm.hasError,
   formName: state.foorm.formName,
   formVersion: state.foorm.formVersion,
   formId: state.foorm.formId,
-  name: state.foorm.name,
-  version: state.foorm.version,
-  isPublished: state.foorm.isPublished,
+  // name: state.foorm.name,
+  // version: state.foorm.version,
+  // isPublished: state.foorm.isPublished,
   questions: state.foorm.questions
 }))(FoormEditor);

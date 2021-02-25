@@ -15,11 +15,18 @@ import {
   setHasError,
   setLastSavedQuestions
 } from './editor/foormEditorRedux';
+import _ from 'lodash';
 
 const styles = {
   loadError: {
     fontWeight: 'bold',
     padding: '1em'
+  },
+  surveyTitle: {
+    marginBottom: 0
+  },
+  surveyState: {
+    marginTop: 0
   }
 };
 
@@ -31,6 +38,7 @@ class FormEditorManager extends React.Component {
     categories: PropTypes.array,
 
     // populated by redux
+    hasError: PropTypes.bool,
     formQuestions: PropTypes.object,
     availableForms: PropTypes.array,
     resetAvailableForms: PropTypes.func,
@@ -38,17 +46,21 @@ class FormEditorManager extends React.Component {
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
     setHasError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
+    setLastSavedQuestions: PropTypes.func,
+    questions: PropTypes.object,
+    name: PropTypes.string,
+    version: PropTypes.number,
+    isPublished: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      formKey: 0,
-      formPreviewQuestions: null,
       showCodeMirror: false,
-      hasLoadError: false
+      hasLoadError: false,
+      forceRerenderKey: 0,
+      previewQuestions: null
     };
 
     this.props.resetAvailableForms(this.props.namesAndVersions);
@@ -123,6 +135,77 @@ class FormEditorManager extends React.Component {
     this.props.resetCodeMirror(formData['questions']);
   };
 
+  // What does this function do?
+  // [x] making ajax request
+  // setting some state on FoormEditor -- shouldn't have to know details of FoormEditor state? modify its own state, pass as props to foormeditor?
+  // some of that state is specific to the "form version" of this editor (libraryError and libraryErrorMessage). based on type of error received from server, decide what to show
+
+  // use debounce to only call once per second
+  fillFormWithLibraryItems = _.debounce(
+    function() {
+      $.ajax({
+        url: '/api/v1/pd/foorm/forms/form_with_library_items',
+        type: 'post',
+        contentType: 'application/json',
+        processData: false,
+        data: JSON.stringify({
+          form_questions: this.props.questions
+        })
+      })
+        .done(result => {
+          this.setState({
+            forceRerenderKey: this.state.forceRerenderKey + 1,
+            previewQuestions: result,
+            libraryError: false,
+            libraryErrorMessage: null
+          });
+        })
+        .fail(result => {
+          this.setState({
+            libraryError: true,
+            libraryErrorMessage:
+              (result.responseJSON && result.responseJSON.error) || 'unknown'
+          });
+        });
+    },
+    1000,
+    {leading: true}
+  );
+
+  listPreviewErrors() {
+    let errors = [];
+
+    if (this.props.hasError) {
+      errors.push(
+        'There is a parsing error in the JSON configuration. Errors are noted on the left side of the editor.'
+      );
+    }
+    if (this.state.libraryError) {
+      errors.push(
+        `There is an error in the use of at least one library question. The error is: ${
+          this.state.libraryErrorMessage
+        }`
+      );
+    }
+
+    return errors;
+  }
+
+  // bind this instead of using arrow function?
+  // pass down from manager?
+  renderHeaderTitle() {
+    return (
+      <div>
+        <h2 style={styles.surveyTitle}>
+          {`Form Name: ${this.props.name}, version ${this.props.version}`}
+        </h2>
+        <h3 style={styles.surveyState}>
+          {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
+        </h3>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div>
@@ -156,6 +239,10 @@ class FormEditorManager extends React.Component {
             categories={this.props.categories}
             resetCodeMirror={this.props.resetCodeMirror}
             preparePreview={() => this.fillFormWithLibraryItems()}
+            previewQuestions={this.state.previewQuestions}
+            previewErrors={this.listPreviewErrors()}
+            forceRerenderKey={this.state.forceRerenderKey}
+            renderHeaderTitle={() => this.renderHeaderTitle()}
           />
         )}
       </div>
@@ -165,8 +252,13 @@ class FormEditorManager extends React.Component {
 
 export default connect(
   state => ({
+    questions: state.foorm.questions || {},
     formQuestions: state.foorm.formQuestions || {},
-    availableForms: state.foorm.availableForms || []
+    availableForms: state.foorm.availableForms || [],
+    hasError: state.foorm.hasError,
+    name: state.foorm.name,
+    version: state.foorm.version,
+    isPublished: state.foorm.isPublished
   }),
   dispatch => ({
     resetAvailableForms: formMetadata =>
