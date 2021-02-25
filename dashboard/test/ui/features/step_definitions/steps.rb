@@ -1216,8 +1216,8 @@ end
 
 And /^I dismiss the login reminder$/ do
   steps %Q{
-    And I click selector ".login-callout" if I see it
-    And I wait until I don't see selector ".login-callout"
+    And I click selector ".uitest-login-callout" if I see it
+    And I wait until I don't see selector ".uitest-login-callout"
   }
 end
 
