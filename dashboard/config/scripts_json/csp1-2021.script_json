@@ -1259,7 +1259,7 @@
       "key": "c59591f1-d97f-40b3-8051-f163351f5eea",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n\n[pull-right]\n\n![](https://images.code.org/30bd74ce97a3d5cf661d5529d2640050-image-1611866929814.png)\n\n[/pull-right]\n\n* To check if you have access:\n\n\t1. Navigate to the [Unit 1 overview page](https://studio.code.org/s/csp1)\n\t2. Do you see the CS Principles Pre-course Survey at the top of the unit overview page?\n\t3. If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n[pull-right]\n\n![](https://images.code.org/e69e38888ac07fc0ce5f479c8d71ec8f-image-1611866998474.png)\n\n[/pull-right]\n\n* You can either...\n\n\t* Go to the [r how_to_videos_1] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.",
+        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n\n[pull-right]\n\n![](https://images.code.org/0989bbfe1f2ee63670754387f9e3b523-pre-survey-screencap.png)\n\n[/pull-right]\n\n* To check if you have access:\n\n\t1. Navigate to the [Unit 1 overview page](https://studio.code.org/s/csp1)\n\t2. Do you see the CS Principles Pre-course Survey at the top of the unit overview page?\n\t3. If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n[pull-right]\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n[/pull-right]\n\n* You can either...\n\n\t* Go to the [r how_to_videos_1] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
         "name": "Before your first class\r"
       },
       "seeding_key": {
@@ -1294,13 +1294,7 @@
       "key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
       "position": 5,
       "properties": {
-        "description": "[slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \r\n"
-          }
-        ]
+        "description": "[slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join."
       },
       "seeding_key": {
         "activity_section.key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
@@ -1311,7 +1305,13 @@
       "key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
       "position": 6,
       "properties": {
-        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey"
+        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
