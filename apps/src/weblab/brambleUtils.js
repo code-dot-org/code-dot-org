@@ -33,10 +33,10 @@ function removeDisallowedHtmlContent(
       return;
     }
 
-    brambleProxy.enableReadonly();
+    brambleProxy.enableReadOnly();
     data = data.replace(regex, '');
     fileSystem.writeFile(path, Buffer.from(data), function(error) {
-      brambleProxy.disableReadonly();
+      brambleProxy.disableReadOnly();
       wrappedCallback();
     });
   });
