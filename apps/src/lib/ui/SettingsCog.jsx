@@ -201,7 +201,7 @@ ManageAssets.propTypes = {
 };
 
 export function ManageModels(props) {
-  return <PopUpMenu.Item {...props}>{'Manage Models'}</PopUpMenu.Item>;
+  return <PopUpMenu.Item {...props}>{'Manage A.I. Models'}</PopUpMenu.Item>;
 }
 
 export function ManageLibraries(props) {
