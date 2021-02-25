@@ -17,15 +17,13 @@ const styles = {
 
 class FoormEditorPreview extends Component {
   static propTypes = {
-    libraryError: PropTypes.bool,
-    libraryErrorMessage: PropTypes.string,
-    formPreviewQuestions: PropTypes.object,
-    formKey: PropTypes.number,
+    previewQuestions: PropTypes.object,
+    forceRerenderKey: PropTypes.number,
     surveyData: PropTypes.object,
     errorMessages: PropTypes.array,
 
     // Populated by Redux
-    formHasError: PropTypes.bool
+    hasError: PropTypes.bool
   };
 
   renderErrorMessages() {
@@ -43,16 +41,16 @@ class FoormEditorPreview extends Component {
       <div className="foorm-preview">
         <div style={styles.previewBox}>
           {this.renderErrorMessages()}
-          {this.props.formPreviewQuestions &&
-            !this.props.formHasError &&
-            !this.props.libraryError && (
+          {this.props.previewQuestions &&
+            !this.props.hasError &&
+            !(this.props.errorMessages && this.props.errorMessages.length) && (
               // key allows us to force re-render when preview is called
               <Foorm
-                formQuestions={this.props.formPreviewQuestions}
+                formQuestions={this.props.previewQuestions}
                 formName={'preview'}
                 formVersion={0}
                 submitApi={'/none'}
-                key={`form-${this.props.formKey}`}
+                key={`form-${this.props.forceRerenderKey}`}
                 surveyData={this.props.surveyData}
                 inEditorMode={true}
               />
@@ -64,5 +62,5 @@ class FoormEditorPreview extends Component {
 }
 
 export default connect(state => ({
-  formHasError: state.foorm.hasError
+  hasError: state.foorm.hasError
 }))(FoormEditorPreview);

@@ -67,8 +67,8 @@ class FoormEditor extends React.Component {
 
     this.state = {
       livePreviewStatus: PREVIEW_ON,
-      formKey: 0,
-      formPreviewQuestions: null,
+      forceRerenderKey: 0,
+      previewQuestions: null,
       num_facilitators: 2,
       workshop_course: 'CS Principles',
       workshop_subject: '5-day Summer',
@@ -150,8 +150,8 @@ class FoormEditor extends React.Component {
       })
         .done(result => {
           this.setState({
-            formKey: this.state.formKey + 1,
-            formPreviewQuestions: result,
+            forceRerenderKey: this.state.forceRerenderKey + 1,
+            previewQuestions: result,
             libraryError: false,
             libraryErrorMessage: null
           });
@@ -336,8 +336,8 @@ class FoormEditor extends React.Component {
               <FoormEditorPreview
                 libraryError={this.state.libraryError}
                 libraryErrorMessage={this.state.libraryErrorMessage}
-                formPreviewQuestions={this.state.formPreviewQuestions}
-                formKey={this.state.formKey}
+                previewQuestions={this.state.previewQuestions}
+                forceRerenderKey={this.state.forceRerenderKey}
                 errorMessages={this.listPreviewErrors()}
                 surveyData={{
                   facilitators: this.state.facilitators,
