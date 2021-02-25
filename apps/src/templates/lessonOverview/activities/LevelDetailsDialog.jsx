@@ -14,6 +14,7 @@ import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import _ from 'lodash';
 import styleConstants from '@cdo/apps/styleConstants';
+import {connect} from 'react-redux';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
@@ -27,10 +28,11 @@ const styles = {
   }
 };
 
-export default class LevelDetailsDialog extends Component {
+class LevelDetailsDialog extends Component {
   static propTypes = {
     scriptLevel: PropTypes.object.isRequired,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
   };
 
   constructor(props) {
@@ -102,7 +104,7 @@ export default class LevelDetailsDialog extends Component {
           mapReference={level.mapReference}
           referenceLinks={level.referenceLinks}
           teacherMarkdown={level.teacherMarkdown}
-          viewAs={ViewType.Teacher}
+          viewAs={this.props.viewAs}
           height={this.state.height}
           maxHeight={this.state.maxHeight}
           expandedHeight={this.state.height}
@@ -226,3 +228,9 @@ export default class LevelDetailsDialog extends Component {
     );
   }
 }
+
+export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
+
+export default connect(state => ({
+  viewAs: state.viewAs
+}))(LevelDetailsDialog);
