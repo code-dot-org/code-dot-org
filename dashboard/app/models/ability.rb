@@ -12,7 +12,6 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       Script, # see override below
-      Lesson, # see override below
       ScriptLevel, # see override below
       :reports,
       User,
@@ -113,14 +112,6 @@ class Ability
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
-        can :read, Lesson do |lesson|
-          script = lesson.script
-          if script.pilot?
-            script.has_pilot_access?(user)
-          else
-            user.persisted? || !script.login_required?
-          end
-        end
       end
 
       if user.facilitator?
@@ -199,7 +190,7 @@ class Ability
       end
     end
 
-    # Override Script, Lesson and ScriptLevel.
+    # Override Script and ScriptLevel.
     can :read, Script do |script|
       if script.pilot?
         script.has_pilot_access?(user)
@@ -283,7 +274,6 @@ class Ability
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
-        can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
     end
 
@@ -305,7 +295,6 @@ class Ability
         Level,
         UnitGroup,
         Script,
-        Lesson,
         ScriptLevel,
         UserLevel,
         UserScript,
