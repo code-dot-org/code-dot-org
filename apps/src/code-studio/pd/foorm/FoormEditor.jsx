@@ -49,7 +49,7 @@ class FoormEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
     resetCodeMirror: PropTypes.func.isRequired,
-    formCategories: PropTypes.array,
+    categories: PropTypes.array,
     // populated by redux
     questions: PropTypes.object,
     hasError: PropTypes.bool,
@@ -356,7 +356,7 @@ class FoormEditor extends React.Component {
           </Tabs>
         </div>
         <FormSaveBar
-          formCategories={this.props.formCategories}
+          formCategories={this.props.categories}
           resetCodeMirror={this.props.resetCodeMirror}
         />
       </div>

@@ -27,8 +27,8 @@ class FormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
-    formNamesAndVersions: PropTypes.array,
-    formCategories: PropTypes.array,
+    namesAndVersions: PropTypes.array,
+    categories: PropTypes.array,
 
     // populated by redux
     formQuestions: PropTypes.object,
@@ -51,13 +51,7 @@ class FormEditorManager extends React.Component {
       hasLoadError: false
     };
 
-    this.props.resetAvailableForms(this.props.formNamesAndVersions);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.formNamesAndVersions !== this.props.formNamesAndVersions) {
-      this.props.resetAvailableForms(this.props.formNamesAndVersions);
-    }
+    this.props.resetAvailableForms(this.props.namesAndVersions);
   }
 
   getFormattedConfigurationDropdownOptions() {
@@ -159,7 +153,7 @@ class FormEditorManager extends React.Component {
         {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
-            formCategories={this.props.formCategories}
+            categories={this.props.categories}
             resetCodeMirror={this.props.resetCodeMirror}
             preparePreview={() => this.fillFormWithLibraryItems()}
           />

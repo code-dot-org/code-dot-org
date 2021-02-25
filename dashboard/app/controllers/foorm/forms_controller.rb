@@ -11,8 +11,8 @@ module Foorm
 
       @script_data = {
         props: {
-          formNamesAndVersions: formatted_names_and_versions,
-          formCategories: categories
+          namesAndVersions: formatted_names_and_versions,
+          categories: categories
         }.to_json
       }
 

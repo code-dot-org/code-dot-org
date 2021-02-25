@@ -93,7 +93,8 @@ export default function foormEditorRedux(state = initialState, action) {
       name: action.formData['name'],
       formVersion: action.formData['version'],
       version: action.formData['version'],
-      formId: action.formData['id']
+      formId: action.formData['id'],
+      isPublished: action.formData['published']
     };
   }
   if (action.type === RESET_AVAILABLE_FORMS) {
