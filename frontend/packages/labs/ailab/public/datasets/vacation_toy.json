@@ -1,0 +1,43 @@
+{
+  "card": {
+    "description": "Results from a survey that determines your ideal vacation spot based on several questions",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Fun and silly quiz app",
+      "potentialMisuses": "Anything serious"
+    }
+  },
+  "fields": [
+    {
+      "id": "plant",
+      "type": "categorical",
+      "description": "Which is the better plant?"
+    },
+    {
+      "id": "activity",
+      "type": "categorical",
+      "description": "Which is the better activity?"
+    },
+    {
+      "id": "personality",
+      "type": "categorical",
+      "description": "How would you describe yourself?"
+    },
+    {
+      "id": "scent",
+      "type": "categorical",
+      "description": "Which is the better scent?"
+    },
+    {
+      "id": "vacation",
+      "type": "categorical",
+      "description": "Your ideal vacation spot"
+    }
+  ],
+  "defaultLabelColumn": "vacation"
+}

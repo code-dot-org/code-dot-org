@@ -31,18 +31,19 @@
       "description": "The country where the measurement was taken"
     }
   ],
+  "defaultLabelColumn": "AverageTemperature",
   "card": {
     "description": "A dataset with historical land temperature data by month, year, and country.",
     "source": "https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data?select=GlobalLandTemperaturesByState.csv",
-    "last_updated": "2016",
+    "lastUpdated": "2016",
     "context": {
-      "created_by": "Berkeley Earth Program (http://berkeleyearth.org/data/)",
-      "preparation": "Yes",
-      "confidentiality": "No",
-      "subgroup_identifiers": "No",
-	  "representative": "No",
-      "potential_uses": "Predict the average temperature for a country in a given month.",
-      "potential_misuses": "Cannot, using KNN regression, successfully be used to predict things like future temperature rises."
+      "createdBy": "Berkeley Earth Program (http://berkeleyearth.org/data/)",
+      "preparation": true,
+      "confidentiality": false,
+      "subgroupIdentifiers": false,
+	  "representative": false,
+      "potentialUses": "Predict the average temperature for a country in a given month.",
+      "potentialMisuses": "Cannot, using KNN regression, successfully be used to predict things like future temperature rises."
     }
   }
 }

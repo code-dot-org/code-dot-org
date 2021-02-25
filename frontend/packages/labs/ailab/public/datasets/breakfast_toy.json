@@ -1,0 +1,43 @@
+{
+  "card": {
+    "description": "Determines your ideal breakfast based on several quiz questions",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "A fun and silly quiz",
+      "potentialMisuses": "Anything serious"
+    }
+  },
+  "fields": [
+    {
+      "id": "pet",
+      "type": "categorical",
+      "description": "What is your favorite pet?"
+    },
+    {
+      "id": "color",
+      "type": "categorical",
+      "description": "What is your favorite color?"
+    },
+    {
+      "id": "utensil",
+      "type": "categorical",
+      "description": "What is your favorite utensil?"
+    },
+    {
+      "id": "feet",
+      "type": "categorical",
+      "description": "What is your favorite type of footwear?"
+    },
+    {
+      "id": "breakfast",
+      "type": "categorical",
+      "description": "Your favorite breakfast meal"
+    }
+  ],
+  "defaultLabelColumn": "breakfast"
+}
