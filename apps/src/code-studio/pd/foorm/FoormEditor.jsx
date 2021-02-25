@@ -50,15 +50,7 @@ class FoormEditor extends React.Component {
     renderHeaderTitle: PropTypes.func,
 
     // populated by redux
-    questions: PropTypes.object,
-    //hasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number,
-    formId: PropTypes.number
-    // name: PropTypes.string,
-    // version: PropTypes.number,
-    // isPublished: PropTypes.bool
+    questions: PropTypes.object
   };
 
   constructor(props) {
@@ -66,8 +58,6 @@ class FoormEditor extends React.Component {
 
     this.state = {
       livePreviewStatus: PREVIEW_ON,
-      //forceRerenderKey: 0,
-      //previewQuestions: null,
       num_facilitators: 2,
       workshop_course: 'CS Principles',
       workshop_subject: '5-day Summer',
@@ -87,9 +77,7 @@ class FoormEditor extends React.Component {
       ],
       day: 1,
       is_friday_institute: false,
-      workshop_agenda: 'module1',
-      libraryError: false,
-      libraryErrorMessage: null
+      workshop_agenda: 'module1'
     };
   }
 
@@ -99,7 +87,7 @@ class FoormEditor extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // call preview form if we got new form questions or we have switched
+    // call preview if we got new questions or we have switched
     // on live preview.
     if (
       prevProps.questions !== this.props.questions ||
@@ -135,41 +123,8 @@ class FoormEditor extends React.Component {
     }
   };
 
-  // // use debounce to only call once per second
-  // fillFormWithLibraryItems = _.debounce(
-  //   function() {
-  //     $.ajax({
-  //       url: '/api/v1/pd/foorm/forms/form_with_library_items',
-  //       type: 'post',
-  //       contentType: 'application/json',
-  //       processData: false,
-  //       data: JSON.stringify({
-  //         form_questions: this.props.questions
-  //       })
-  //     })
-  //       .done(result => {
-  //         this.setState({
-  //           forceRerenderKey: this.state.forceRerenderKey + 1,
-  //           previewQuestions: result,
-  //           libraryError: false,
-  //           libraryErrorMessage: null
-  //         });
-  //       })
-  //       .fail(result => {
-  //         this.setState({
-  //           libraryError: true,
-  //           libraryErrorMessage:
-  //             (result.responseJSON && result.responseJSON.error) || 'unknown'
-  //         });
-  //       });
-  //   },
-  //   1000,
-  //   {leading: true}
-  // );
-
   previewFoorm = () => {
     if (this.state.livePreviewStatus === PREVIEW_ON) {
-      // this.fillFormWithLibraryItems();
       this.props.preparePreview();
     }
   };
@@ -177,41 +132,6 @@ class FoormEditor extends React.Component {
   livePreviewToggled = toggleValue => {
     this.setState({livePreviewStatus: toggleValue});
   };
-
-  // // bind this instead of using arrow function?
-  // // pass down from manager?
-  // renderHeaderTitle() {
-  //   return (
-  //     <div>
-  //       <h2 style={styles.surveyTitle}>
-  //         {`Form Name: ${this.props.name}, version ${this.props.version}`}
-  //       </h2>
-  //       <h3 style={styles.surveyState}>
-  //         {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
-  //       </h3>
-  //     </div>
-  //   );
-  // }
-
-  // // can we manage these error messages from the server?
-  // listPreviewErrors() {
-  //   let errors = [];
-  //
-  //   if (this.props.hasError) {
-  //     errors.push(
-  //       'There is a parsing error in the JSON configuration. Errors are noted on the left side of the editor.'
-  //     );
-  //   }
-  //   if (this.state.libraryError) {
-  //     errors.push(
-  //       `There is an error in the use of at least one library question. The error is: ${
-  //         this.state.libraryErrorMessage
-  //       }`
-  //     );
-  //   }
-  //
-  //   return errors;
-  // }
 
   renderVariables() {
     return (
@@ -364,14 +284,5 @@ class FoormEditor extends React.Component {
 }
 
 export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished,
-  //hasError: state.foorm.hasError,
-  formName: state.foorm.formName,
-  formVersion: state.foorm.formVersion,
-  formId: state.foorm.formId,
-  // name: state.foorm.name,
-  // version: state.foorm.version,
-  // isPublished: state.foorm.isPublished,
   questions: state.foorm.questions
 }))(FoormEditor);
