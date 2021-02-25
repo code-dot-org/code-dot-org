@@ -177,9 +177,15 @@ class Script < ApplicationRecord
     end
   end
 
-  # is_course - true if this Script/Unit is intended to be the root of a CourseOffering version. Used during seeding
-  #   to create the appropriate CourseVersion and CourseOffering objects. For example, this should be true for
-  #   CourseA-CourseF .script files.
+  # is_course - true if this Script/Unit is intended to be the root of a
+  #   CourseOffering version.  Used during seeding to create the appropriate
+  #   CourseVersion and CourseOffering objects. For example, this should be
+  #   true for CourseA-CourseF .script files.
+  # seeded_from - a timestamp indicating when this object was seeded from
+  #   its script_json file, as determined by the serialized_at value within
+  #   said json.  Expect this to be nil on levelbulider, since those objects
+  #   are created, not seeded. Used by the staging build to identify when a
+  #   script is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
     peer_reviews_to_complete
@@ -207,6 +213,7 @@ class Script < ApplicationRecord
     weekly_instructional_minutes
     include_student_lesson_plans
     is_migrated
+    seeded_from
   )
 
   def self.twenty_hour_script
