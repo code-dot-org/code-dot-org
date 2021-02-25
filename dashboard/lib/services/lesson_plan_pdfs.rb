@@ -4,7 +4,9 @@ require 'pdf/conversion'
 
 module Services
   # Contains all code related to the generation, storage, and
-  # retrieval of Lesson Plan PDFs
+  # retrieval of Lesson Plan PDFs.
+  #
+  # Also see lesson_plan_pdfs.rake for some associated logic
   module LessonPlanPdfs
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
@@ -133,6 +135,11 @@ module Services
       return nil unless pathname.present?
 
       File.join(get_base_url, pathname)
+    end
+
+    def self.pdf_exists_for?(lesson)
+      pathname = get_pathname(lesson)
+      AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
     end
 
     def self.generate_lesson_pdf(lesson, directory="/tmp/")
