@@ -9,7 +9,7 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
-import FoormEditor from '../../../../../src/code-studio/pd/foorm/FoormEditor';
+import FoormEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEditor';
 import foorm, {
   setFormData
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
