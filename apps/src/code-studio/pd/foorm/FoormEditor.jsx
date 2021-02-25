@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
-import FoormSaveBar from './editor/FoormSaveBar';
+import FormSaveBar from './editor/FormSaveBar';
 import FoormEditorPreview from './editor/FoormEditorPreview';
 import FoormEditorHeader from './editor/FoormEditorHeader';
 
@@ -355,7 +355,7 @@ class FoormEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        <FoormSaveBar
+        <FormSaveBar
           formCategories={this.props.formCategories}
           resetCodeMirror={this.props.resetCodeMirror}
         />
