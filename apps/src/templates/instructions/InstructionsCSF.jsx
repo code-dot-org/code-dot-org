@@ -714,29 +714,20 @@ export default connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,
+
       skinId: state.pageConstants.skinId,
-      isMinecraft: !!state.pageConstants.isMinecraft,
-      isBlockly: !!state.pageConstants.isBlockly,
+
       aniGifURL: state.pageConstants.aniGifURL,
+
       inputOutputTable: state.pageConstants.inputOutputTable,
-      isRtl: state.isRtl,
-      noVisualization: state.pageConstants.noVisualization,
+
       feedback: state.instructions.feedback,
-      collapsed: state.instructions.collapsed,
+
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       hasAuthoredHints: state.instructions.hasAuthoredHints,
       showNextHint: state.pageConstants.showNextHint,
-      height: state.instructions.renderedHeight,
-      maxHeight: Math.min(
-        state.instructions.maxAvailableHeight,
-        state.instructions.maxNeededHeight
-      ),
-      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
-      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
-      shortInstructions: state.instructions.shortInstructions,
-      shortInstructions2: state.instructions.shortInstructions2,
-      longInstructions: state.instructions.longInstructions,
+
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar
     };

@@ -161,6 +161,8 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
+    shortInstructions: PropTypes.string,
+    shortInstructions2: PropTypes.string,
     collapsible: PropTypes.bool,
     collapsed: PropTypes.bool,
     noVisualization: PropTypes.bool.isRequired,
@@ -169,6 +171,7 @@ class TopInstructions extends Component {
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
+    ttsShortInstructionsUrl: PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
@@ -179,7 +182,6 @@ class TopInstructions extends Component {
     noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
     teacherMarkdown: PropTypes.string,
     hidden: PropTypes.bool.isRequired,
-    shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -187,7 +189,8 @@ class TopInstructions extends Component {
     isCSF: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
-    resizable: PropTypes.bool
+    resizable: PropTypes.bool,
+    isRTL: PropTypes.bool
   };
 
   constructor(props) {
@@ -728,6 +731,18 @@ class TopInstructions extends Component {
                     teacherViewingStudentWork={
                       this.state.teacherViewingStudentWork
                     }
+                    isMinecraft={this.props.isMinecraft}
+                    isBlockly={this.props.isBlockly}
+                    isRTL={this.props.isRTL}
+                    collapsed={this.props.collapsed}
+                    longInstructions={this.props.longInstructions}
+                    shortInstructions={this.props.shortInstructions}
+                    shortInstructions2={this.props.shortInstructions2}
+                    height={this.props.height}
+                    maxHeight={this.props.maxHeight}
+                    ttsLongInstructionsUrl={this.props.ttsLongInstructionsUrl}
+                    ttsShortInstructionsUrl={this.props.ttsShortInstructionsUrl}
+                    noVisualization={this.props.noVisualization}
                   />
                 )}
               {!this.props.hasContainedLevels &&
@@ -818,6 +833,7 @@ export default connect(
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
+    ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
     levelVideos: state.instructions.levelVideos,
     mapReference: state.instructions.mapReference,
     referenceLinks: state.instructions.referenceLinks,
@@ -829,6 +845,7 @@ export default connect(
     teacherMarkdown: state.instructions.teacherMarkdown,
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
+    shortInstructions2: state.instructions.shortInstructions2,
     isRtl: state.isRtl,
     widgetMode: state.pageConstants.widgetMode
   }),
