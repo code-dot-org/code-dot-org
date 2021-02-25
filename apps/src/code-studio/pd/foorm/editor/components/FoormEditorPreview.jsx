@@ -23,7 +23,7 @@ class FoormEditorPreview extends Component {
     errorMessages: PropTypes.array,
 
     // Populated by Redux
-    hasError: PropTypes.bool
+    hasJSONError: PropTypes.bool
   };
 
   renderErrorMessages() {
@@ -42,7 +42,7 @@ class FoormEditorPreview extends Component {
         <div style={styles.previewBox}>
           {this.renderErrorMessages()}
           {this.props.previewQuestions &&
-            !this.props.hasError &&
+            !this.props.hasJSONError &&
             !(this.props.errorMessages && this.props.errorMessages.length) && (
               // key allows us to force re-render when preview is called
               <Foorm
@@ -62,5 +62,5 @@ class FoormEditorPreview extends Component {
 }
 
 export default connect(state => ({
-  hasError: state.foorm.hasError
+  hasJSONError: state.foorm.hasJSONError
 }))(FoormEditorPreview);

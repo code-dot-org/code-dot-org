@@ -106,7 +106,7 @@ class FormSaveBar extends Component {
 
     // Populated by Redux
     formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool,
+    hasJSONError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formId: PropTypes.number,
     lastSaved: PropTypes.number,
@@ -335,19 +335,19 @@ class FormSaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.formHasError && (
+            !this.props.hasJSONError && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.formHasError && (
+          {this.props.hasJSONError && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.formHasError && (
+          {this.props.saveError && !this.props.hasJSONError && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -364,7 +364,7 @@ class FormSaveBar extends Component {
               type="button"
               style={styles.button}
               onClick={this.handlePublish}
-              disabled={this.state.isSaving || this.props.formHasError}
+              disabled={this.state.isSaving || this.props.hasJSONError}
             >
               Publish
             </button>
@@ -374,7 +374,7 @@ class FormSaveBar extends Component {
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.formHasError}
+            disabled={this.state.isSaving || this.props.hasJSONError}
           >
             Save
           </button>
@@ -415,7 +415,7 @@ export default connect(
   state => ({
     formQuestions: state.foorm.formQuestions || {},
     isFormPublished: state.foorm.isFormPublished,
-    formHasError: state.foorm.hasError,
+    hasJSONError: state.foorm.hasJSONError,
     formId: state.foorm.formId,
     lastSaved: state.foorm.lastSaved,
     saveError: state.foorm.saveError

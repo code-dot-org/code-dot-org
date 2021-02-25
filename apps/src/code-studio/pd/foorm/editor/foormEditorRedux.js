@@ -1,5 +1,5 @@
 const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
-const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
+const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
 const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
 const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
@@ -7,7 +7,7 @@ const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
 
-// formQuestions is an object in surveyJS format that represents
+// questions is an object in surveyJS format that represents
 // a single survey
 export const setFormQuestions = formQuestions => ({
   type: SET_FORM_QUESTIONS,
@@ -22,9 +22,9 @@ export const setFormData = formData => ({
   formData
 });
 
-export const setHasError = hasError => ({
-  type: SET_HAS_ERROR,
-  hasError
+export const setHasJSONError = hasJSONError => ({
+  type: SET_HAS_JSON_ERROR,
+  hasJSONError
 });
 
 export const resetAvailableForms = formsMetadata => ({
@@ -57,7 +57,7 @@ const initialState = {
   questions: '',
   formQuestions: '',
   isPublished: null,
-  hasError: false,
+  hasJSONError: false,
   name: null,
   formName: null,
   version: null,
@@ -77,10 +77,10 @@ export default function foormEditorRedux(state = initialState, action) {
       questions: action.formQuestions
     };
   }
-  if (action.type === SET_HAS_ERROR) {
+  if (action.type === SET_HAS_JSON_ERROR) {
     return {
       ...state,
-      hasError: action.hasError
+      hasJSONError: action.hasJSONError
     };
   }
   if (action.type === SET_FORM_DATA) {
