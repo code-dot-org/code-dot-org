@@ -339,6 +339,7 @@ img.video_thumbnail {
     &.z_index_above_modal {
       z-index: 1050;
 
+      // Usually transparent, so adding teal allows button to render in front
       .header_user {
         background-color: $teal;
       }

@@ -89,7 +89,15 @@ describe('Check cookies and session storage appear on click', () => {
     expect(wrapper.html()).to.be.null;
   });
 
-  it('shows prior to click, and dismisses after', () => {
+  it('shows prior to click, and dismisses after clicking backdrop', () => {
+    const wrapper = mount(<SignInCalloutWrapper />);
+    wrapper.setState({hideCallout: false});
+    expect(wrapper.html().includes('uitest-signincallout')).to.be.true;
+    wrapper.find('.modal-backdrop').simulate('click');
+    expect(wrapper.html()).to.be.null;
+  });
+
+  it('shows prior to click, and dismisses after clicking callout', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
     expect(wrapper.html().includes('uitest-signincallout')).to.be.true;
