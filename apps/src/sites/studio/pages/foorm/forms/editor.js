@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
+import FormEditorManager from '@cdo/apps/code-studio/pd/foorm/FormEditorManager';
 import foorm, {
   setFormQuestions,
   setHasError
@@ -20,7 +20,7 @@ $(document).ready(function() {
   const store = getStore();
   ReactDOM.render(
     <Provider store={store}>
-      <FoormEditorManager
+      <FormEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}

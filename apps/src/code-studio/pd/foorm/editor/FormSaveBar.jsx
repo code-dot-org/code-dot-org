@@ -99,7 +99,7 @@ const confirmationDialogNames = {
   publish: 'publish'
 };
 
-class FoormSaveBar extends Component {
+class FormSaveBar extends Component {
   static propTypes = {
     formCategories: PropTypes.array,
     resetCodeMirror: PropTypes.func,
@@ -430,4 +430,4 @@ export default connect(
     setLastSavedQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
-)(FoormSaveBar);
+)(FormSaveBar);

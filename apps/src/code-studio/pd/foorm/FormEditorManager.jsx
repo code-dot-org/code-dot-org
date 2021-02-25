@@ -23,7 +23,7 @@ const styles = {
   }
 };
 
-class FoormEditorManager extends React.Component {
+class FormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
@@ -161,6 +161,7 @@ class FoormEditorManager extends React.Component {
             populateCodeMirror={this.props.populateCodeMirror}
             formCategories={this.props.formCategories}
             resetCodeMirror={this.props.resetCodeMirror}
+            preparePreview={() => this.fillFormWithLibraryItems()}
           />
         )}
       </div>
@@ -183,4 +184,4 @@ export default connect(
     setLastSavedQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
-)(FoormEditorManager);
+)(FormEditorManager);
