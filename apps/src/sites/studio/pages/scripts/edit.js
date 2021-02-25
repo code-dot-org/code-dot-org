@@ -78,6 +78,9 @@ export default function initPage(scriptEditorData) {
           scriptData.weeklyInstructionalMinutes
         }
         isMigrated={scriptData.is_migrated}
+        initialIncludeStudentLessonPlans={
+          scriptData.includeStudentLessonPlans || false
+        }
       />
     </Provider>,
     document.querySelector('.edit_container')
