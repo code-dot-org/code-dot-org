@@ -58,7 +58,8 @@ class FoormEditor extends React.Component {
     formVersion: PropTypes.number,
     formId: PropTypes.number,
     name: PropTypes.string,
-    version: PropTypes.number
+    version: PropTypes.number,
+    isPublished: PropTypes.bool
   };
 
   constructor(props) {
@@ -177,21 +178,37 @@ class FoormEditor extends React.Component {
     this.setState({livePreviewStatus: toggleValue});
   };
 
+  // bind this instead of using arrow function?
   renderHeaderTitle() {
     return (
       <div>
         <h2 style={styles.surveyTitle}>
-          {`Form Name: ${this.props.name}, version ${
-            this.props.version
-          }`}
+          {`Form Name: ${this.props.name}, version ${this.props.version}`}
         </h2>
         <h3 style={styles.surveyState}>
-          {`Form State: ${
-            this.props.isPublished ? 'Published' : 'Draft'
-          }`}
+          {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
         </h3>
       </div>
     );
+  }
+
+  listPreviewErrors() {
+    let errors = [];
+
+    if (this.props.formHasError) {
+      errors.push(
+        'There is a parsing error in the survey configuration. Errors are noted on the left side of the editor.'
+      );
+    }
+    if (this.state.libraryError) {
+      errors.push(
+        `There is an error in the use of at least one library question. The error is: ${
+          this.state.libraryErrorMessage
+        }`
+      );
+    }
+
+    return errors;
   }
 
   renderVariables() {
@@ -321,6 +338,7 @@ class FoormEditor extends React.Component {
                 libraryErrorMessage={this.state.libraryErrorMessage}
                 formPreviewQuestions={this.state.formPreviewQuestions}
                 formKey={this.state.formKey}
+                errorMessages={this.listPreviewErrors()}
                 surveyData={{
                   facilitators: this.state.facilitators,
                   num_facilitators: this.state.num_facilitators,
@@ -353,5 +371,6 @@ export default connect(state => ({
   formVersion: state.foorm.formVersion,
   formId: state.foorm.formId,
   name: state.foorm.name,
-  version: state.foorm.version
+  version: state.foorm.version,
+  isPublished: state.foorm.isPublished
 }))(FoormEditor);

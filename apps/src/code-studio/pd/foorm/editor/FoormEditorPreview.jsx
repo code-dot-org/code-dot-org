@@ -22,30 +22,27 @@ class FoormEditorPreview extends Component {
     formPreviewQuestions: PropTypes.object,
     formKey: PropTypes.number,
     surveyData: PropTypes.object,
+    errorMessages: PropTypes.array,
 
     // Populated by Redux
     formHasError: PropTypes.bool
   };
 
+  renderErrorMessages() {
+    return this.props.errorMessages.map((errorMessage, i) => {
+      return (
+        <div style={styles.errorMessage} key={i}>
+          <FontAwesome icon="exclamation-triangle" /> {errorMessage}
+        </div>
+      );
+    });
+  }
+
   render() {
     return (
       <div className="foorm-preview">
         <div style={styles.previewBox}>
-          {this.props.formHasError && (
-            <div style={styles.errorMessage}>
-              <FontAwesome icon="exclamation-triangle" /> There is a parsing
-              error in the survey configuration. Errors are noted on the left
-              side of the editor.
-            </div>
-          )}
-          {this.props.libraryError && (
-            <div style={styles.errorMessage}>
-              <FontAwesome icon="exclamation-triangle" />
-              {`There is an error in the use of at least one library question. The error is: ${
-                this.props.libraryErrorMessage
-              }`}
-            </div>
-          )}
+          {this.renderErrorMessages()}
           {this.props.formPreviewQuestions &&
             !this.props.formHasError &&
             !this.props.libraryError && (
