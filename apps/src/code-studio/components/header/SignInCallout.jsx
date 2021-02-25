@@ -104,12 +104,11 @@ export default class SignInCallout extends React.Component {
   render() {
     return (
       <div style={styles.container} onClick={this.props.handleClose}>
-        <div
-          className="uitest-login-callout modal-backdrop"
-          style={styles.modalBackdrop}
-        />
+        <div className="modal-backdrop" style={styles.modalBackdrop} />
         <div style={styles.upTriangle} />
-        <div style={styles.content}>{this.renderContent()}</div>
+        <div className="uitest-login-callout" style={styles.content}>
+          {this.renderContent()}
+        </div>
       </div>
     );
   }
