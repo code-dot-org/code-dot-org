@@ -95,7 +95,7 @@ or
 
 To run a specific unit test, from the dashboard directory you can run
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
-The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: test is called "testing some unit" you would use `--name test_testing_some_unit`.
+The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: If the test is called "testing some unit" you would use `--name test_testing_some_unit`.
 
 You can get a local coverage report with
 `COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`

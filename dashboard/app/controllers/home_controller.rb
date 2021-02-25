@@ -98,8 +98,6 @@ class HomeController < ApplicationController
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
     @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
-    @homepage_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
-    @homepage_data[:preReaderScriptIds] = Script.pre_reader_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
@@ -154,6 +152,8 @@ class HomeController < ApplicationController
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:donorName] = current_user.school_donor_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
+      @homepage_data[:preReaderScriptIds] = Script.pre_reader_script_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school
