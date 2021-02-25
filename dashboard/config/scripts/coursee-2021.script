@@ -53,6 +53,9 @@ level 'CourseE_HOC 2018 Level_9b_2021', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_10_2021', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_11_2021', progression: 'Practice'
 
+lesson 'lesson-4', display_name: 'Be A Super Digital Citizen', has_lesson_plan: true, unplugged: true
+level 'csf_be_a_super_digital_citizen_2021', progression: 'Be a Super Digital Citizen'
+
 lesson 'Conditionals', display_name: 'Conditionals with the Farmer', has_lesson_plan: true
 level 'courseD_video_whileIntro_2021', progression: 'While Loops with the Farmer'
 level 'courseD_farmer_while4_predict1_2021', progression: 'Prediction'
@@ -96,8 +99,6 @@ level 'Dance Party 7_2021', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_2021', progression: 'Mini-Project: Alien Dance Party'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'lesson-4', display_name: 'Be A Super Digital Citizen', has_lesson_plan: true
-
 lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: true, unplugged: true
 level 'PrivatePersonalInformation-Unplugged_2021'
 
