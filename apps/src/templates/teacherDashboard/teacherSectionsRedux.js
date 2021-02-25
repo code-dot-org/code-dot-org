@@ -836,8 +836,10 @@ export default function teacherSections(state = initialState, action) {
     const stageExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
-      ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
-        state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
+      // TODO: enable autoplay by default if script is a pre-reader script
+      // and teacher is on IE, Edge or Chrome after initial release
+      // ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
+      //   state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
