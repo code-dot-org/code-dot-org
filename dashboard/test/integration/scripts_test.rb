@@ -17,7 +17,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
 
     @unit = create :script, name: 'csp1-2020'
     @lesson_group = create :lesson_group, script: @unit
-    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: false, absolute_position: 15, relative_position: 2)
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 15, relative_position: 14)
     @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
@@ -35,7 +35,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
 
     @unit = create :script, name: 'csp2-2020'
     @lesson_group = create :lesson_group, script: @unit
-    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: false, absolute_position: 9, relative_position: 1)
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9)
     @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
