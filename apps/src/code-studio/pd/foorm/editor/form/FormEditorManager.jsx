@@ -6,7 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
-import FoormEditor from './FoormEditor';
+import FoormEditor from '../components/FoormEditor';
 import {
   resetAvailableForms,
   setLastSaved,
@@ -14,7 +14,7 @@ import {
   setFormData,
   setHasError,
   setLastSavedQuestions
-} from './editor/foormEditorRedux';
+} from '../foormEditorRedux';
 import _ from 'lodash';
 
 const styles = {

@@ -6,9 +6,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
-import FormSaveBar from './editor/FormSaveBar';
-import FoormEditorPreview from './editor/FoormEditorPreview';
-import FoormEditorHeader from './editor/FoormEditorHeader';
+import FormSaveBar from '../form/FormSaveBar';
+import FoormEditorPreview from './FoormEditorPreview';
+import FoormEditorHeader from './FoormEditorHeader';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 

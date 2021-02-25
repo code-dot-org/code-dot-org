@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import FormEditorManager from '@cdo/apps/code-studio/pd/foorm/FormEditorManager';
+import FormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FormEditorManager';
 import foorm, {
   setFormQuestions,
   setHasError
