@@ -1,17 +1,17 @@
-const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
+const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
-const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
+const RESET_AVAILABLE_OPTIONS = 'foormEditor/RESET_AVAILABLE_OPTIONS';
+const ADD_AVAILABLE_OPTION = 'foormEditor/ADD_AVAILABLE_OPTION';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
 
 // questions is an object in surveyJS format that represents
-// a single survey
-export const setFormQuestions = formQuestions => ({
-  type: SET_FORM_QUESTIONS,
-  formQuestions
+// a valid survey.
+export const setQuestions = questions => ({
+  type: SET_QUESTIONS,
+  questions
 });
 
 // formData is an object in the format
@@ -27,14 +27,14 @@ export const setHasJSONError = hasJSONError => ({
   hasJSONError
 });
 
-export const resetAvailableForms = formsMetadata => ({
-  type: RESET_AVAILABLE_FORMS,
-  formsMetadata
+export const resetAvailableOptions = optionsMetadata => ({
+  type: RESET_AVAILABLE_OPTIONS,
+  optionsMetadata
 });
 
-export const addAvilableForm = formMetadata => ({
-  type: ADD_AVAILABLE_FORM,
-  formMetadata
+export const addAvailableOption = optionMetadata => ({
+  type: ADD_AVAILABLE_OPTION,
+  optionMetadata
 });
 
 export const setLastSaved = lastSaved => ({
@@ -63,17 +63,16 @@ const initialState = {
   version: null,
   formVersion: null,
   formId: null,
-  availableForms: [],
+  availableOptions: [],
   saveError: null,
   lastSaved: null,
   lastSavedFormQuestions: ''
 };
 
 export default function foormEditorRedux(state = initialState, action) {
-  if (action.type === SET_FORM_QUESTIONS) {
+  if (action.type === SET_QUESTIONS) {
     return {
       ...state,
-      formQuestions: action.formQuestions,
       questions: action.formQuestions
     };
   }
@@ -97,18 +96,18 @@ export default function foormEditorRedux(state = initialState, action) {
       isPublished: action.formData['published']
     };
   }
-  if (action.type === RESET_AVAILABLE_FORMS) {
+  if (action.type === RESET_AVAILABLE_OPTIONS) {
     return {
       ...state,
-      availableForms: action.formsMetadata
+      availableOptions: action.optionsMetadata
     };
   }
-  if (action.type === ADD_AVAILABLE_FORM) {
-    let newFormList = [...state.availableForms];
-    newFormList.push(action.formMetadata);
+  if (action.type === ADD_AVAILABLE_OPTION) {
+    let newOptionList = [...state.availableOptions];
+    newOptionList.push(action.optionMetadata);
     return {
       ...state,
-      availableForms: newFormList
+      availableOptions: newOptionList
     };
   }
   if (action.type === SET_LAST_SAVED) {
