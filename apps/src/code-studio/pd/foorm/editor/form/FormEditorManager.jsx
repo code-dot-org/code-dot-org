@@ -12,7 +12,7 @@ import {
   setLastSaved,
   setSaveError,
   setFormData,
-  setHasError,
+  setHasJSONError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
 import _ from 'lodash';
@@ -38,14 +38,14 @@ class FormEditorManager extends React.Component {
     categories: PropTypes.array,
 
     // populated by redux
-    hasError: PropTypes.bool,
+    hasJSONError: PropTypes.bool,
     formQuestions: PropTypes.object,
     availableForms: PropTypes.array,
     resetAvailableForms: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
-    setHasError: PropTypes.func,
+    setHasJSONError: PropTypes.func,
     setLastSavedQuestions: PropTypes.func,
     questions: PropTypes.object,
     name: PropTypes.string,
@@ -130,7 +130,7 @@ class FormEditorManager extends React.Component {
 
   updateFormData = formData => {
     this.props.setFormData(formData);
-    this.props.setHasError(false);
+    this.props.setHasJSONError(false);
     this.props.setLastSavedQuestions(formData['questions']);
     this.props.resetCodeMirror(formData['questions']);
   };
@@ -170,7 +170,7 @@ class FormEditorManager extends React.Component {
   listPreviewErrors() {
     let errors = [];
 
-    if (this.props.hasError) {
+    if (this.props.hasJSONError) {
       errors.push(
         'There is a parsing error in the JSON configuration. Errors are noted on the left side of the editor.'
       );
@@ -251,7 +251,7 @@ export default connect(
     questions: state.foorm.questions || {},
     formQuestions: state.foorm.formQuestions || {},
     availableForms: state.foorm.availableForms || [],
-    hasError: state.foorm.hasError,
+    hasJSONError: state.foorm.hasJSONError,
     name: state.foorm.name,
     version: state.foorm.version,
     isPublished: state.foorm.isPublished
@@ -262,7 +262,7 @@ export default connect(
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setFormData: formData => dispatch(setFormData(formData)),
-    setHasError: hasError => dispatch(setHasError(hasError)),
+    setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
     setLastSavedQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
