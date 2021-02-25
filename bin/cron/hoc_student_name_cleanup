@@ -8,7 +8,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 #
 # This script is part 2 of a two-step process to ensure that student names
 # stored in pegasus.hoc_activity are deleted after 3 months. This script assumes
-# that the finished_at value is a resonable estimate for when a name is written
+# that the finished_at value is a reasonable estimate for when a name is written
 # to the row. This relationship is almost always true in practice for recently
 # written rows but it is not directly enforced by our code. (Older rows may not
 # meet this assumption and were removed by bin/oneoff/hoc_student_name_initial_cleanup.)
@@ -160,9 +160,9 @@ while date < options[:end_date]
     last_row = nil
 
     # Construct the sql where clauses for the start and end of the interval for
-    # this batch. Rows are ordered by finished_at, then id so intervals are
-    # described by (finished_at, id) tuples. The id for the end of the interval
-    # is always 0. The interval includes the start but excludes the end.
+    # this batch. Rows are ordered by (finished_at, id). The interval starts at
+    # (batch_start_time, batch_start_id) inclusive and ends at (batch_end_time, 0)
+    # exclusive.
     interval_start_where_clause = Sequel.lit(
       '(finished_at = ? AND id >= ?) OR finished_at > ?',
       batch_start_time, batch_start_id, batch_start_time
@@ -220,5 +220,5 @@ summary += "Script ran for #{(Time.now - script_start_time).round(1)} seconds. "
   "#{total_rows_processed} rows processed, #{total_rows_updated} rows updated.\n"
 summary += "Script options: #{options}\n"
 
-ChatClient.message summary if options[:notify_slack]
+ChatClient.message 'cron-daily', summary if options[:notify_slack]
 CDO.log.info summary
