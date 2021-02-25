@@ -7,7 +7,7 @@ import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import FormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FormEditorManager';
 import foorm, {
   setFormQuestions,
-  setHasError
+  setHasJSONError
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 import _ from 'lodash';
 
@@ -47,26 +47,26 @@ function onCodeMirrorChange(editor) {
   } catch (e) {
     // There is a JSON error.
     getStore().dispatch(setFormQuestions({}));
-    getStore().dispatch(setHasError(true));
+    getStore().dispatch(setHasJSONError(true));
   }
 }
 
 const updateFormQuestions = formQuestions => {
   getStore().dispatch(setFormQuestions(formQuestions));
-  getStore().dispatch(setHasError(false));
+  getStore().dispatch(setHasJSONError(false));
 };
 
 function resetCodeMirror(json) {
   if (codeMirror) {
     codeMirror.setValue(JSON.stringify(json, null, 2));
-    getStore().dispatch(setHasError(false));
+    getStore().dispatch(setHasJSONError(false));
   }
 }
 
 window.onbeforeunload = evt => {
   let storeState = getStore().getState().foorm;
   if (
-    storeState.hasError ||
+    storeState.hasJSONError ||
     !_.isEqual(storeState.lastSavedFormQuestions, storeState.formQuestions)
   ) {
     return 'Are you sure you want to exit? You may have unsaved changes.';
