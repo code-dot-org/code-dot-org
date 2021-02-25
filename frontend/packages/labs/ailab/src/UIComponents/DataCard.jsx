@@ -17,78 +17,90 @@ class DataCard extends Component {
 
     const card = metadata && metadata.card;
 
-    return (
-      <div id="data-card">
-        {dataLength !== 0 && (
-          <div style={styles.validationMessagesLight}>
+    return dataLength !== 0 && (
+      <div id="data-card" style={{...styles.panel, ...styles.rightPanel}}>
+        <div style={styles.largeText}>Data Information</div>
+        <div style={styles.scrollableContents}>
+          <div style={styles.scrollingContents}>
+            <span style={styles.bold}>Name:</span>
+            &nbsp;
             {name}
             {card && (
               <div>
-                <div>
-                  Description:
+                <div style={styles.cardRow}>
+                  <span style={styles.bold}>Description:</span>
+                  &nbsp;
                   {metadata.card.description}
                 </div>
-                <div>
-                  Source:
+                <div style={styles.cardRow}>
+                  <span style={styles.bold}>Source:</span>
+                  &nbsp;
                   {metadata.card.source}
                 </div>
-                Columns:
-                <div style={styles.subPanel}>
+                <span style={styles.bold}>Columns:</span>
+                <div style={styles.contents}>
                   {metadata.fields.map(field => {
                     return (
                       <div key={field.id}>
-                        {field.id}:
+                        <span style={styles.bold}>{field.id}:</span>
+                        &nbsp;
                         {field.description}
                       </div>
                     );
                   })}
                 </div>
-                <div>
-                  Rows of data:
+                <div style={styles.cardRow}>
+                  <span style={styles.bold}>Rows of data:</span>
+                  &nbsp;
                   {dataLength}
                 </div>
 
-                <div>
-                  This data has been cleaned & prepared beforehand
-                </div>
-                <div>
-                  This Data contains columns that can be used to identify a subgroup of people (for example: by age, by race, by gender, etc):
+                <div style={styles.cardRow}>This data has been cleaned & prepared beforehand</div>
+                <div style={styles.cardRow}>
+                  This Data contains columns that can be used to identify a
+                  subgroup of people (for example: by age, by race, by gender,
+                  etc):
                 </div>
 
-                <div>
-                  Potential uses:
+                <div style={styles.cardRow}>
+                  <span style={styles.bold}>Potential uses:</span>
+                  &nbsp;
                   {metadata.card.context.potentialUses}
                 </div>
-                <div>
-                  Potential misuses:
+                <div style={styles.cardRow}>
+                  <span style={styles.bold}>Potential misuses:</span>
+                  &nbsp;
                   {metadata.card.context.potentialMisuses}
                 </div>
-                <div>
-                  Last updated:
+                <div style={styles.cardRow}>
+                  <span style={styles.bold}>Last updated:</span>
+                  &nbsp;
                   {metadata.card.lastUpdated}
                 </div>
               </div>
             )}
             {!card && dataLength > 0 && (
               <div>
-                Columns:
-                <div style={styles.subPanel}>
+                <br />
+                <span style={styles.bold}>Columns:</span>
+                <div style={styles.contents}>
                   {Object.keys(data[0]).map(key => {
                     return (
                       <div key={key}>
-                        {key}
+                        <span style={styles.bold}>{key}</span>
                       </div>
                     );
                   })}
                 </div>
-                <div>
-                  Rows of data:
+                <div style={styles.cardRow}>
+                  <span style={styles.bold}>Rows of data:</span>
+                  &nbsp;
                   {dataLength}
                 </div>
               </div>
             )}
           </div>
-        )}
+        </div>
       </div>
     );
   }

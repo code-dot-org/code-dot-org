@@ -86,47 +86,54 @@ class SaveModel extends Component {
 
   render() {
     return (
-      <div>
-        <div style={{ ...styles.subPanel, overflow: "hidden" }}>
-          {this.getFields().map(field => {
-            return (
-              <div
-                key={field.id}
-                style={{ clear: "both", overflow: "hidden", padding: 5 }}
-              >
-                {field.type === "checkbox" && (
-                  <input
-                    type="checkbox"
-                    onChange={event => this.handleChange(event, field.id)}
-                  />
-                )}
-
-                <label>{field.text}</label>
-
-                {field.type !== "checkbox" && !field.answer && (
-                  <div style={{ width: "100%" }}>
-                    <textarea
-                      rows="2"
-                      style={{ width: "100%" }}
-                      onChange={event =>
-                        this.handleChange(event, field.id, field.isColumn)
-                      }
+      <div style={styles.panel}>
+        <div style={styles.largeText}>Save the Trained Model</div>
+        <div style={styles.scrollableContentsTinted}>
+          <div style={styles.scrollingContents}>
+            {this.getFields().map(field => {
+              return (
+                <div key={field.id} style={styles.cardRow}>
+                  {field.type === "checkbox" && (
+                    <input
+                      type="checkbox"
+                      onChange={event => this.handleChange(event, field.id)}
                     />
-                  </div>
-                )}
+                  )}
 
-                {field.type !== "checkbox" && field.answer && (
-                  <div style={{ width: "100%" }}>{field.answer}</div>
-                )}
-              </div>
-            );
-          })}
+                  <label>{field.text}</label>
+
+                  {field.type !== "checkbox" && !field.answer && (
+                    <div>
+                      <textarea
+                        rows="2"
+                        onChange={event =>
+                          this.handleChange(event, field.id, field.isColumn)
+                        }
+                      />
+                    </div>
+                  )}
+
+                  {field.type !== "checkbox" && field.answer && (
+                    <div>{field.answer}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div style={{ float: "right" }}>
-          <button type="button" onClick={this.onClickSave}>
+        <div>
+          <button
+            type="button"
+            onClick={this.onClickSave}
+            style={styles.regularButton}
+          >
             Save Trained Model
           </button>
-          {this.state.saveMessage && <div>{this.state.saveMessage}</div>}
+          {this.state.saveMessage && (
+            <div style={{ position: "absolute", bottom: 0 }}>
+              {this.state.saveMessage}
+            </div>
+          )}
         </div>
       </div>
     );

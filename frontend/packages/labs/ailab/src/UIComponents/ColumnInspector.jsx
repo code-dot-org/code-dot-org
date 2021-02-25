@@ -8,15 +8,11 @@ import {
   getCurrentColumnData,
   addSelectedFeature,
   removeSelectedFeature,
-  getCurrentColumnIsSelectedFeature,
-  getCurrentColumnIsSelectedLabel,
   getRangesByColumn,
   setCurrentColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 import Histogram from "react-chart-histogram";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -25,8 +21,6 @@ class ColumnInspector extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
-    currentColumnIsSelectedFeature: PropTypes.bool,
-    currentColumnIsSelectedLabel: PropTypes.bool,
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func
   };
@@ -46,7 +40,7 @@ class ColumnInspector extends Component {
 
   removeLabel = () => {
     this.props.setLabelColumn(null);
-  }
+  };
 
   removeFeature = () => {
     this.props.removeSelectedFeature(this.props.currentColumnData.id);
@@ -54,15 +48,10 @@ class ColumnInspector extends Component {
 
   onClose = () => {
     this.props.setCurrentColumn(undefined);
-  }
+  };
 
   render() {
-    const {
-      currentColumnData,
-      currentColumnIsSelectedFeature,
-      currentColumnIsSelectedLabel,
-      rangesByColumn
-    } = this.props;
+    const { currentColumnData, rangesByColumn } = this.props;
 
     let labels, data, options;
     if (
@@ -76,78 +65,32 @@ class ColumnInspector extends Component {
       options = { fillColor: "#000", strokeColor: "#000" };
     }
 
+    const maxLabelsInHistogram = 4;
+
     return (
-      <div id="column-inspector">
-        {currentColumnData && (
-          <div style={styles.validationMessagesLight}>
-            <div onClick={this.onClose} style={styles.popupClose}>
-              <FontAwesomeIcon icon={faTimes} />
-            </div>
-
-            {currentColumnData.dataType === ColumnTypes.OTHER && (
-              <div>
-                <div style={styles.mediumText}>
-                  Describe the data in each of your selected columns
+      currentColumnData && (
+        <div
+          id="column-inspector"
+          style={{ ...styles.panel, ...styles.rightPanel }}
+        >
+          <div style={styles.largeText}>Column Information</div>
+          <form>
+            <div>
+              <label>
+                <div>
+                  {currentColumnData.id}: {currentColumnData.dataType}
                 </div>
-                <div style={styles.smallText}>
-                  Categorical columns contain a fixed number of possible values that
-                  indicate a group. For example, the column "Size" might contain
-                  categorical data such as "small", "medium" and "large".{" "}
-                </div>
-                <div style={styles.smallText}>
-                  Continuous columns contain a range of possible numerical values
-                  that could fall anywhere on a continuum. For example, the column
-                  "Height in inches" might contain continuous data such as "12",
-                  "11.25" and "9.07".{" "}
-                </div>
-                <div style={styles.smallText}>
-                  If the column contains anything other than categorical or
-                  continuous data, it's not going to work for training this type of
-                  machine learning model.
-                </div>
-              </div>
-            )}
 
-            <form>
-              <div>
-                <label>
-                  {currentColumnData.readOnly && (
-                    <div>
-                      {currentColumnData.id}: {currentColumnData.dataType}
-                    </div>
-                  )}
+                {currentColumnData.description && (
+                  <div>
+                    <br />
+                    <div>{currentColumnData.description}</div>
+                  </div>
+                )}
+              </label>
 
-                  {currentColumnData.description && (
-                    <div>
-                      <br/>
-                      <div>
-                        {currentColumnData.description}
-                      </div>
-                    </div>
-                  )}
-
-                  {!currentColumnData.readOnly && (
-                    <div>
-                      {currentColumnData.id}: &nbsp;
-                      <select
-                        onChange={event =>
-                          this.handleChangeDataType(event, currentColumnData.id)
-                        }
-                        value={currentColumnData.dataType}
-                      >
-                        {Object.values(ColumnTypes).map((option, index) => {
-                          return (
-                            <option key={index} value={option}>
-                              {option}
-                            </option>
-                          );
-                        })}
-                      </select>
-                    </div>
-                  )}
-                </label>
-
-                {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+              {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
+                labels.length <= maxLabelsInHistogram && (
                   <div>
                     <br />
                     <Histogram
@@ -160,78 +103,32 @@ class ColumnInspector extends Component {
                   </div>
                 )}
 
-                {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
-                  <div>
-                    {currentColumnData.range && (
-                      <div>
-                        {isNaN(rangesByColumn[currentColumnData.id].min) && (
-                          <p style={styles.error}>
-                            Continuous columns should contain only numbers.
-                          </p>
-                        )}
-                        {!isNaN(rangesByColumn[currentColumnData.id].min) && (
-                          <div style={styles.subPanel}>
-                            min: {rangesByColumn[currentColumnData.id].min}
-                            <br />
-                            max: {rangesByColumn[currentColumnData.id].max}
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                )}
-                <br />
-                <br />
-              </div>
-            </form>
-
-            {currentColumnData.dataType !== ColumnTypes.OTHER && (
-              <div>
-                {!currentColumnIsSelectedLabel && !currentColumnIsSelectedFeature && (
-                  <div>
-                    <button
-                      type="button"
-                      onClick={this.setPredictColumn}
-                      style={styles.predictButton}
-                    >
-                      Predict this column
-                    </button>
-                    <br />
-                    <button
-                      type="button"
-                      onClick={this.addFeature}
-                      style={styles.predictBasedButton}
-                    >
-                      Predict based on this column
-                    </button>
-                    <br />
-                  </div>
-                )}
-
-                {currentColumnIsSelectedLabel && (
-                  <button
-                    type="button"
-                    onClick={this.removeLabel}
-                    style={styles.dontPredictButton}
-                  >
-                    Don't predict this column
-                  </button>
-                )}
-
-                {currentColumnIsSelectedFeature && (
-                  <button
-                    type="button"
-                    onClick={this.removeFeature}
-                    style={styles.dontPredictBasedButton}
-                  >
-                    Don't predict based on this column
-                  </button>
-                )}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
+              {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
+                <div>
+                  {currentColumnData.range && (
+                    <div>
+                      {isNaN(rangesByColumn[currentColumnData.id].min) && (
+                        <p style={styles.error}>
+                          Continuous columns should contain only numbers.
+                        </p>
+                      )}
+                      {!isNaN(rangesByColumn[currentColumnData.id].min) && (
+                        <div style={styles.contents}>
+                          min: {rangesByColumn[currentColumnData.id].min}
+                          <br />
+                          max: {rangesByColumn[currentColumnData.id].max}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
+              <br />
+              <br />
+            </div>
+          </form>
+        </div>
+      )
     );
   }
 }
@@ -239,8 +136,6 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    currentColumnIsSelectedFeature: getCurrentColumnIsSelectedFeature(state),
-    currentColumnIsSelectedLabel: getCurrentColumnIsSelectedLabel(state),
     rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({

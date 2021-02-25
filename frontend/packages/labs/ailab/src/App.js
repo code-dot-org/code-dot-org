@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
+import SpecifyColumns from "./UIComponents/SpecifyColumns";
+import SpecifyColumnsInfo from "./UIComponents/SpecifyColumnsInfo";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
@@ -12,60 +14,10 @@ import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import {
-  getPanels,
-  getPanelButtons,
-  setCurrentPanel,
-  validationMessages
-} from "./redux";
-
-class PanelTabs extends Component {
-  static propTypes = {
-    panels: PropTypes.arrayOf(PropTypes.object),
-    currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func
-  };
-
-  getTabStyle(panel) {
-    if (panel.enabled) {
-      if (panel.id === this.props.currentPanel) {
-        return { ...styles.tab, ...styles.currentTab };
-      } else {
-        return styles.tab;
-      }
-    } else {
-      return { ...styles.tab, ...styles.disabledTab };
-    }
-  }
-
-  render() {
-    return null;
-
-    /*
-    const { panels, setCurrentPanel } = this.props;
-
-    return (
-      <div style={styles.tabContainer}>
-        {panels.map(panel => {
-          return (
-            <div
-              key={panel.id}
-              style={this.getTabStyle(panel)}
-              onClick={() => setCurrentPanel(panel.id)}
-            >
-              {panel.label}
-            </div>
-          );
-        })}
-      </div>
-    );
-    */
-  }
-}
+import { getPanelButtons, setCurrentPanel, validationMessages } from "./redux";
 
 class PanelButtons extends Component {
   static propTypes = {
-    panels: PropTypes.arrayOf(PropTypes.object),
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func
@@ -106,112 +58,139 @@ class PanelButtons extends Component {
   }
 }
 
-class Panels extends Component {
-  static propTypes = {
-    currentPanel: PropTypes.string,
-    saveTrainedModel: PropTypes.func
-  };
+const BodyContainer = props => (
+  <div style={styles.bodyContainer}>{props.children}</div>
+);
 
-  render() {
-    const { currentPanel, saveTrainedModel } = this.props;
+BodyContainer.propTypes = {
+  children: PropTypes.node
+};
 
-    return (
-      <div style={styles.panelContainer}>
-        {currentPanel === "selectDataset" && <SelectDataset />}
-        {currentPanel === "dataDisplay" && <DataDisplay />}
-        {currentPanel === "selectTrainer" && <SelectTrainer />}
-        {currentPanel === "trainModel" && <TrainModel />}
-        {currentPanel === "results" && <Results />}
-        {currentPanel === "predict" && <Predict />}
-        {currentPanel === "saveModel" && (
-          <SaveModel saveTrainedModel={saveTrainedModel} />
-        )}
-      </div>
-    );
-  }
-}
+const ContainerLeft = props => (
+  <div style={{ ...styles.panelContainer, ...styles.panelContainerLeft }}>
+    {props.children}
+  </div>
+);
 
-/*
-class ValidationMessages extends Component {
-  static propTypes = {
-    currentPanel: PropTypes.string,
-    validationMessages: PropTypes.object
-  };
+ContainerLeft.propTypes = {
+  children: PropTypes.node
+};
 
-  render() {
-    const { currentPanel, validationMessages } = this.props;
+const ContainerRight = props => (
+  <div style={{ ...styles.panelContainer, ...styles.panelContainerRight }}>
+    {props.children}
+  </div>
+);
 
-    return (
-      <div style={styles.validationMessagesLight}>
-        {Object.keys(validationMessages).filter(
-          messageKey => validationMessages[messageKey].panel === currentPanel
-        ).length === 0 && <div>Carry on.</div>}
-        {Object.keys(validationMessages)
-          .filter(
-            messageKey => validationMessages[messageKey].panel === currentPanel
-          )
-          .map((key, index) => {
-            return validationMessages[key].readyToTrain ? (
-              <p key={index} style={styles.ready}>
-                <FontAwesomeIcon icon={faCheckSquare} />
-                &nbsp;
-                {validationMessages[key].successString}{" "}
-              </p>
-            ) : (
-              <p key={index} style={styles.error}>
-                <FontAwesomeIcon icon={faSquare} />
-                &nbsp;
-                {validationMessages[key].errorString}{" "}
-              </p>
-            );
-          })}
-      </div>
-    );
-  }
-}
-*/
+ContainerRight.propTypes = {
+  children: PropTypes.node
+};
+
+const ContainerFullWidth = props => (
+  <div style={styles.panelContainerFullWidth}>{props.children}</div>
+);
+
+ContainerFullWidth.propTypes = {
+  children: PropTypes.node
+};
 
 class App extends Component {
   static propTypes = {
-    panels: PropTypes.arrayOf(PropTypes.object),
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
-    saveTrainedModel: PropTypes.func
+    saveTrainedModel: PropTypes.func,
+    resultsPhase: PropTypes.number
   };
 
   render() {
     const {
-      panels,
       panelButtons,
       currentPanel,
       setCurrentPanel,
-      saveTrainedModel
+      saveTrainedModel,
+      resultsPhase
     } = this.props;
 
     return (
       <div style={styles.app}>
-        <PanelTabs
-          panels={panels}
+        {currentPanel === "selectDataset" && (
+          <BodyContainer>
+            <ContainerLeft>
+              <SelectDataset />
+            </ContainerLeft>
+            <ContainerRight>
+              <DataCard />
+            </ContainerRight>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "specifyColumns" && (
+          <BodyContainer>
+            <ContainerLeft>
+              <SpecifyColumns />
+            </ContainerLeft>
+            <ContainerRight>
+              <SpecifyColumnsInfo />
+            </ContainerRight>
+          </BodyContainer>
+        )}
+
+        {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
+          <BodyContainer>
+            <ContainerLeft>
+              <DataDisplay />
+            </ContainerLeft>
+            <ContainerRight>
+              <ColumnInspector />
+              <CrossTab />
+            </ContainerRight>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "selectTrainer" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <SelectTrainer />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "trainModel" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <TrainModel />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "results" && (
+          <BodyContainer>
+            <ContainerLeft>
+              <Results />
+            </ContainerLeft>
+            {resultsPhase === 3 &&
+              <ContainerRight>
+                <Predict />
+              </ContainerRight>
+            }
+          </BodyContainer>
+        )}
+
+        {currentPanel === "saveModel" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <SaveModel saveTrainedModel={saveTrainedModel} />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        <PanelButtons
+          panelButtons={panelButtons}
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
         />
-        <div style={styles.bodyContainer}>
-          <Panels
-            currentPanel={currentPanel}
-            saveTrainedModel={saveTrainedModel}
-          />
-          {currentPanel === "dataDisplay" && <ColumnInspector />}
-          {currentPanel === "dataDisplay" && <CrossTab />}
-          {currentPanel === "selectDataset" && <DataCard />}
-          <PanelButtons
-            panels={panels}
-            panelButtons={panelButtons}
-            currentPanel={currentPanel}
-            setCurrentPanel={setCurrentPanel}
-          />
-        </div>
       </div>
     );
   }
@@ -219,10 +198,10 @@ class App extends Component {
 
 export default connect(
   state => ({
-    panels: getPanels(state),
     panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
-    validationMessages: validationMessages(state)
+    validationMessages: validationMessages(state),
+    resultsPhase: state.resultsPhase
   }),
   dispatch => ({
     setCurrentPanel(panel) {

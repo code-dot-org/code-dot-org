@@ -37,7 +37,19 @@ const commonConfig = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.(png|gif)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          outputPath: 'assets/images',
+          publicPath: 'images',
+          postTransformPublicPath: p =>
+            `__ml_playground_asset_public_path__ + ${p}`,
+          name: '[name].[ext]?[contenthash]'
+        }
+      },
     ]
   },
   performance: {
