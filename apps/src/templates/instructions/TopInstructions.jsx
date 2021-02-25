@@ -189,8 +189,7 @@ class TopInstructions extends Component {
     isCSF: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
-    resizable: PropTypes.bool,
-    isRTL: PropTypes.bool
+    resizable: PropTypes.bool
   };
 
   constructor(props) {
@@ -751,7 +750,7 @@ class TopInstructions extends Component {
                     }
                     isMinecraft={this.props.isMinecraft}
                     isBlockly={this.props.isBlockly}
-                    isRTL={this.props.isRTL}
+                    isRtl={this.props.isRtl}
                     collapsed={this.props.collapsed}
                     longInstructions={this.props.longInstructions}
                     shortInstructions={this.props.shortInstructions}
