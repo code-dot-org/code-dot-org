@@ -50,18 +50,7 @@ class FoormEditor extends React.Component {
     renderHeaderTitle: PropTypes.func,
 
     // populated by redux
-<<<<<<< HEAD:apps/src/code-studio/pd/foorm/editor/components/FoormEditor.jsx
     questions: PropTypes.object
-=======
-    questions: PropTypes.object,
-    isFormPublished: PropTypes.bool,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number,
-    formId: PropTypes.number
-    // name: PropTypes.string,
-    // version: PropTypes.number,
-    // isPublished: PropTypes.bool
->>>>>>> Rename hasError to hasJSONError:apps/src/code-studio/pd/foorm/FoormEditor.jsx
   };
 
   constructor(props) {
@@ -144,24 +133,6 @@ class FoormEditor extends React.Component {
     this.setState({livePreviewStatus: toggleValue});
   };
 
-<<<<<<< HEAD:apps/src/code-studio/pd/foorm/editor/components/FoormEditor.jsx
-=======
-  // // bind this instead of using arrow function?
-  // // pass down from manager?
-  // renderHeaderTitle() {
-  //   return (
-  //     <div>
-  //       <h2 style={styles.surveyTitle}>
-  //         {`Form Name: ${this.props.name}, version ${this.props.version}`}
-  //       </h2>
-  //       <h3 style={styles.surveyState}>
-  //         {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
-  //       </h3>
-  //     </div>
-  //   );
-  // }
-
->>>>>>> Rename hasError to hasJSONError:apps/src/code-studio/pd/foorm/FoormEditor.jsx
   renderVariables() {
     return (
       <div style={styles.options}>
@@ -313,16 +284,5 @@ class FoormEditor extends React.Component {
 }
 
 export default connect(state => ({
-<<<<<<< HEAD:apps/src/code-studio/pd/foorm/editor/components/FoormEditor.jsx
-=======
-  formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished,
-  formName: state.foorm.formName,
-  formVersion: state.foorm.formVersion,
-  formId: state.foorm.formId,
-  // name: state.foorm.name,
-  // version: state.foorm.version,
-  // isPublished: state.foorm.isPublished,
->>>>>>> Rename hasError to hasJSONError:apps/src/code-studio/pd/foorm/FoormEditor.jsx
   questions: state.foorm.questions
 }))(FoormEditor);

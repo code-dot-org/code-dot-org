@@ -67,7 +67,7 @@ window.onbeforeunload = evt => {
   let storeState = getStore().getState().foorm;
   if (
     storeState.hasJSONError ||
-    !_.isEqual(storeState.lastSavedFormQuestions, storeState.questions)
+    !_.isEqual(storeState.lastSavedQuestions, storeState.questions)
   ) {
     return 'Are you sure you want to exit? You may have unsaved changes.';
   }

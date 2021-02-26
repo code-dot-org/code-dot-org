@@ -47,16 +47,16 @@ export const setSaveError = saveError => ({
   saveError
 });
 
-export const setLastSavedQuestions = formQuestions => ({
+export const setLastSavedQuestions = questions => ({
   type: SET_LAST_SAVED_QUESTIONS,
-  formQuestions
+  questions
 });
 
 const initialState = {
   editorType: 'Form',
   questions: '',
   formQuestions: '',
-  isPublished: null,
+  isFormPublished: null,
   hasJSONError: false,
   name: null,
   formName: null,
@@ -66,14 +66,14 @@ const initialState = {
   availableOptions: [],
   saveError: null,
   lastSaved: null,
-  lastSavedFormQuestions: ''
+  lastSavedQuestions: ''
 };
 
 export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_QUESTIONS) {
     return {
       ...state,
-      questions: action.formQuestions
+      questions: action.questions
     };
   }
   if (action.type === SET_HAS_JSON_ERROR) {
@@ -125,7 +125,7 @@ export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_LAST_SAVED_QUESTIONS) {
     return {
       ...state,
-      lastSavedFormQuestions: action.formQuestions
+      lastSavedQuestions: action.questions
     };
   }
 
