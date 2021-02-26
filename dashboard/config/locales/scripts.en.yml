@@ -18844,7 +18844,7 @@ en:
             lesson-2:
               name: Text and Prompts
             lesson-3:
-              name: Create a Chat-Bot
+              name: User Input Apps
             lesson-4:
               name: Counting with Variables
             lesson-5:
@@ -21013,6 +21013,8 @@ en:
               name: End of Course Project
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
+            lesson-1:
+              name: Designing for Accessibility
           lesson_groups:
             ramp_up:
               display_name: Ramp Up
@@ -21028,6 +21030,8 @@ en:
               display_name: Sprites
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Impacts of Computing
           name: coursef-2021
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         express-2021:
@@ -21845,3 +21849,33 @@ en:
           description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
           description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Haiku Bot. Once they’ve built their Haiku Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"
           student_description: Use Sprite Lab to make a Haiku Bot!
+        allthemigratedthings:
+          lessons:
+            lesson-1:
+              name: First Lesson
+              description_student: Student overview of the lesson
+              description_teacher: Teacher overview of the lesson
+            lesson-2:
+              name: Second Lesson
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Third Lesson
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lesson Group 1
+              big_questions: |-
+                * Who?
+                * What?
+                * Where?
+              description: Lesson group 1 description
+            lessonGroup-3:
+              display_name: Lesson Group 2
+          name: allthemigratedthings
+          title: All the Migrated Things
+          description_audience: ''
+          description_short: ''
+          description: Teacher overview of the unit.
+          student_description: Student overview of the unit.
