@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
-import WebLab, {DISALLOWED_ELEMENTS_REGEX} from '@cdo/apps/weblab/WebLab';
+import WebLab from '@cdo/apps/weblab/WebLab';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
@@ -33,59 +33,6 @@ describe('WebLab', () => {
       };
       weblab.onFinish(false);
       expect(reportStub).to.have.been.calledWith(false, false);
-    });
-  });
-
-  describe('DISALLOWED_ELEMENTS_REGEX', () => {
-    it('matches on script tags', () => {
-      let test;
-
-      // single line tag
-      test = '<script src="index.js"></script>';
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([test]);
-      test = '<script src="index.js">some content</script>';
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([test]);
-
-      // multiline tag
-      test = `<script async src="file.js">
-      </script>`;
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([test]);
-
-      // mixed with allowed tags
-      const match = '<script src="index.js"></script>';
-      test = `<body>
-        <a href="/some.url"></a>
-        ${match}
-        <div></div>
-      </body>
-      `;
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([match]);
-    });
-
-    // <script> and <iframe> tags should work the same, so some expectations
-    // aren't reiterated below for brevity.
-    it('matches on iframe tags', () => {
-      let test;
-
-      // single line tag
-      test = '<iframe src="/weblab"></iframe>';
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([test]);
-
-      // self-closing tag
-      test = '<iframe async src="/weblab"/>';
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([test]);
-      test = '<iframe async src="/weblab" />';
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([test]);
-
-      // mixed with allowed tags
-      const match = '<iframe src="/weblab"></iframe>';
-      test = `<body>
-        <a href="/some.url"></a>
-        ${match}
-        <div></div>
-      </body>
-      `;
-      expect(test.match(DISALLOWED_ELEMENTS_REGEX)).to.deep.equal([match]);
     });
   });
 
