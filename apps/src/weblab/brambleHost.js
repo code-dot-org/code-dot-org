@@ -656,7 +656,7 @@ function load(Bramble) {
         bramble_.getFileSystem(),
         brambleProxy_,
         path,
-        webLab_.disallowedElementsRegex,
+        webLab_.disallowedHtmlTags,
         handleFileChange
       );
     }
