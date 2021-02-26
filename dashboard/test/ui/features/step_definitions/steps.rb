@@ -1216,8 +1216,8 @@ end
 
 And /^I dismiss the login reminder$/ do
   steps %Q{
-    And I click selector ".login-callout" if I see it
-    And I wait until I don't see selector ".login-callout"
+    And I click selector ".modal-backdrop" if I see it
+    And I wait until I don't see selector ".uitest-login-callout"
   }
 end
 
@@ -1484,6 +1484,10 @@ And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
   if @browser.manage.all_cookies.any? {|cookie| cookie[:name] == cookie_name}
     @browser.manage.delete_cookie cookie_name
   end
+end
+
+And(/^I clear session storage/) do
+  @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
 end
 
 When(/^I debug cookies$/) do
