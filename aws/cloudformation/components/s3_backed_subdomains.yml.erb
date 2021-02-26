@@ -65,8 +65,8 @@ sanitized_subdomain = subdomain.gsub(/[^0-9a-z ]/i, '')
   SubdomainRecord<%= sanitized_subdomain %>:
     Type: AWS::Route53::RecordSet
     Properties:
-      HostedZoneName: code.org.
-      Name: <%= subdomain %>.code.org
+      HostedZoneName: <%= domain %>.
+      Name: <%= subdomain %>.<%= domain %>
       Type: A
       AliasTarget:
         DNSName: !GetAtt
