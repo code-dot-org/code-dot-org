@@ -45,11 +45,11 @@ class FormEditorManager extends React.Component {
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
     setHasJSONError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func,
+    setLastSavedFormQuestions: PropTypes.func,
     questions: PropTypes.object,
-    name: PropTypes.string,
-    version: PropTypes.number,
-    isPublished: PropTypes.bool
+    formName: PropTypes.string,
+    formVersion: PropTypes.number,
+    isFormPublished: PropTypes.bool
   };
 
   constructor(props) {
@@ -130,7 +130,7 @@ class FormEditorManager extends React.Component {
   updateFormData = formData => {
     this.props.setFormData(formData);
     this.props.setHasJSONError(false);
-    this.props.setLastSavedQuestions(formData['questions']);
+    this.props.setLastSavedFormQuestions(formData['questions']);
     this.props.resetCodeMirror(formData['questions']);
   };
 
@@ -190,10 +190,12 @@ class FormEditorManager extends React.Component {
     return (
       <div>
         <h2 style={styles.surveyTitle}>
-          {`Form Name: ${this.props.name}, version ${this.props.version}`}
+          {`Form Name: ${this.props.formName}, version ${
+            this.props.formVersion
+          }`}
         </h2>
         <h3 style={styles.surveyState}>
-          {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
+          {`Form State: ${this.props.isFormPublished ? 'Published' : 'Draft'}`}
         </h3>
       </div>
     );
@@ -248,9 +250,9 @@ export default connect(
     questions: state.foorm.questions || {},
     availableForms: state.foorm.availableOptions || [],
     hasJSONError: state.foorm.hasJSONError,
-    name: state.foorm.name,
-    version: state.foorm.version,
-    isPublished: state.foorm.isPublished
+    formName: state.foorm.formName,
+    formVersion: state.foorm.formVersion,
+    isFormPublished: state.foorm.isFormPublished
   }),
   dispatch => ({
     resetAvailableForms: formsMetadata =>
@@ -259,7 +261,7 @@ export default connect(
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setFormData: formData => dispatch(setFormData(formData)),
     setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
-    setLastSavedQuestions: formQuestions =>
+    setLastSavedFormQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
 )(FormEditorManager);
