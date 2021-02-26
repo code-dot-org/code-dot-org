@@ -25,6 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
+    "serialized_at": "2021-02-26 01:05:54 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -79,21 +80,9 @@
       }
     },
     {
-      "key": "csf_binary",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Binary"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
       "key": "csf_digcit",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "Digital Citizenship"
       },
@@ -105,7 +94,7 @@
     {
       "key": "end_of_course_project",
       "user_facing": true,
-      "position": 7,
+      "position": 6,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -187,7 +176,7 @@
         "overview": "This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.",
         "student_overview": "Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!",
         "purpose": "Teamwork is very important in computer science. Teams write and debug code with each other, instead of working as individuals. In this lesson, students will learn to work together while being as efficient as possible. \r\n\r\nThis activity also provides a sense of urgency that will teach students to balance their time carefully and avoid mistakes without falling too far behind.  This experience can be stressful (which is expected!)  Make sure you provide students with the tools to deal with potential frustration.",
-        "preparation": "- Watch the **Relay Programming - Teacher Video**.\r\n- Locate a wide open space for this activity, such as the gym or outdoor field.\r\n- Print out one **Relay Programming - Activity Packet** for each group.\r\n- Supply each group with plenty of paper and pens/pencils.\r\n- Print one **Relay Programming - Worksheet** for each student.\r\n- Make sure every student has a journal.",
+        "preparation": "- Watch the ***Relay Programming** - Teacher Video.\n- Locate a wide open space for this activity, such as the gym or outdoor field.\n- Print out one ***Relay Programming** - Activity Packet for each group.\n- Supply each group with plenty of paper and pens/pencils.\n- Print one ***Relay Programming** - Worksheet for each student.\n- Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -207,7 +196,7 @@
       "properties": {
         "overview": "In this online activity, students will practice debugging in the \"collector\" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.",
         "student_overview": "Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.",
-        "purpose": "The purpose of this lesson is to teach students that failure is normal when learning a new skill. Students will be given pre-written programs that do NOT work. They will be asked to fix these programs. This process, called \"debugging\", teaches students essential problem solving and critical thinking skills. These skills transfer over as students proceed to harder and harder programming projects.",
+        "purpose": "The purpose of this lesson is to teach students that failure is normal when learning a new skill. Students will be given pre-written programs that do NOT work. They will be asked to fix these programs. This process, called **debugging**, teaches students essential problem solving and critical thinking skills. These skills transfer over as students proceed to harder and harder programming projects.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -228,7 +217,7 @@
         "overview": "In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.",
         "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!",
         "purpose": "Events are very common in computer programs, especially in video games.  \r\n\r\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
-        "preparation": " - Make sure every student has a journal.\r\n - Play through the puzzles to find any potential problem areas for your class.\r\n - Read the \"Events in Bounce - How Do They Happen?\" slide deck (to be presented to students at end of class).",
+        "preparation": " - Make sure every student has a journal.\n - Play through the puzzles to find any potential problem areas for your class.\n - Read the ***Events in Bounce - How Do They Happen?** slide deck (to be presented to students at end of class).",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -348,7 +337,7 @@
         "overview": "This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.\r\n\r\n",
         "student_overview": "It's time to play a game where you earn points only under certain conditions!",
         "purpose": "One of the best parts of teaching _conditionals_ is that students already understand the concept from their everyday lives. \r\n\r\nThis lesson merges computer science into the real world by building off of their ability to tell if a condition is true or false. Students will learn to use `if` statements to declare when a certain command should be run, as well as `if / else` statements to declare when a command should be run and what to run otherwise. Students may not recognize the word _conditionals_, but most students will understand the idea of using \"if\" to make sure that some action only occurs when it is supposed to.",
-        "preparation": "- (Optional) Watch the Lesson in Action Video.\r\n- Gather decks of cards or something similar.\r\n- Print or display the sample programs.\r\n- Print one assessment for each student.\r\n- Make sure every student has a journal.",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** Video.\n- Gather decks of cards or something similar.\n- Print or display the ***sample programs**.\n- Print one ***assessment** for each student.\n- Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -438,53 +427,12 @@
       }
     },
     {
-      "key": "Unplugged: Binary",
-      "name": "Binary Images",
+      "key": "Be A Super Digital Citizen",
+      "name": "Be A Super Digital Citizen -- TO BE REMOVED",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
-      "properties": {
-        "overview": "Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.",
-        "student_overview": "Learn how computers store pictures using a language with only two options.",
-        "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning _binary_, students will have the opportunity to write code and share it with peers to view as images. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press \"save\", a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been stored.",
-        "preparation": "- Print one worksheet and assessment per student.\r\n- Make sure every student has a journal.\r\n- (Optional)Gather groupings of items that can show opposites for students to use when coming up with their own binary encodings.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "Artist Binary",
-      "name": "Binary Images with Artist",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
-      "properties": {
-        "overview": "This series of online lessons will have students learning to make images using on and off.",
-        "student_overview": "In this lesson, you will learn how to make images using only 0s and 1s.",
-        "purpose": "This will help reinforce the fact that computers can do a multitude of things with 0s and 1s.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
-      },
-      "seeding_key": {
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "Be A Super Digital Citizen",
-      "name": "Be A Super Digital Citizen -- TO BE REMOVED",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 19,
       "properties": {
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
         "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
@@ -502,15 +450,15 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 20,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 18,
       "properties": {
         "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
-        "preparation": "* Play through the puzzles to find any potential problem areas for your class.\r\n* Print out one **Project Planning Guide** for each student (or pair).\r\n* (Optional) Complete your own planning guide and code your own project to show to students!",
+        "preparation": "* Play through the puzzles to find any potential problem areas for your class.\n* Print out one ***Project Planning Guide** for each student (or pair).\n* (Optional) Complete your own planning guide and code your own project to show to students!",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1504,131 +1452,6 @@
       }
     },
     {
-      "key": "99384f74-25b3-4dde-b2d8-53db906d7ffa",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 10
-      },
-      "seeding_key": {
-        "lesson_activity.key": "99384f74-25b3-4dde-b2d8-53db906d7ffa",
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "82660036-2168-4b98-bf50-8b8fa8a9b28b",
-      "position": 2,
-      "properties": {
-        "name": "Main Activity",
-        "duration": 20
-      },
-      "seeding_key": {
-        "lesson_activity.key": "82660036-2168-4b98-bf50-8b8fa8a9b28b",
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "09e403bf-c0da-4ea1-91bf-23230a57118d",
-      "position": 3,
-      "properties": {
-        "name": "Wrap Up",
-        "duration": 10
-      },
-      "seeding_key": {
-        "lesson_activity.key": "09e403bf-c0da-4ea1-91bf-23230a57118d",
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "a560e213-3d6d-489e-88fb-f15c935f4bdf",
-      "position": 4,
-      "properties": {
-        "name": "Assessment (10 min)",
-        "duration": 0
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a560e213-3d6d-489e-88fb-f15c935f4bdf",
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "7716cf39-a438-4cb7-8fd0-a7d571177df9",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning",
-        "duration": 0
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7716cf39-a438-4cb7-8fd0-a7d571177df9",
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "4318287f-7581-4710-9913-a3fb61ef4034",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4318287f-7581-4710-9913-a3fb61ef4034",
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "0b4b3157-e478-4fe2-a545-c96dbf899596",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0b4b3157-e478-4fe2-a545-c96dbf899596",
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "7fcfb587-51b7-4308-bd63-7266b6185f32",
-      "position": 2,
-      "properties": {
-        "name": "Main Activity",
-        "duration": 30
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7fcfb587-51b7-4308-bd63-7266b6185f32",
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "56a5e44b-926d-42ec-bb56-f193b9142f7a",
-      "position": 3,
-      "properties": {
-        "name": "Wrap Up",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "56a5e44b-926d-42ec-bb56-f193b9142f7a",
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
       "key": "ace48e11-aa0f-420a-b10e-df02179a727d",
       "position": 1,
       "properties": {
@@ -1965,8 +1788,8 @@
       "key": "47c800d4-0c46-42ae-bc19-d837d28fd912",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - Draw another image that you could code. Can you write the program that goes with this drawing?\r\n - What other types of robots could we program if we changed what the arrows meant?",
-        "name": "Journaling"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw another image that you could code. Can you write the program that goes with this drawing?\n - What other types of robots could we program if we changed what the arrows meant?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "47c800d4-0c46-42ae-bc19-d837d28fd912",
@@ -1977,7 +1800,7 @@
       "key": "7ae979e9-a47d-4858-aa74-c4c258f2a916",
       "position": 1,
       "properties": {
-        "description": "- Hand out **Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\r\n- This should feel familiar, thanks to the previous activities."
+        "description": "- Hand out ***Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "7ae979e9-a47d-4858-aa74-c4c258f2a916",
@@ -2062,7 +1885,7 @@
       "key": "528f5675-b238-4157-849e-e3c9882d39f5",
       "position": 2,
       "properties": {
-        "description": "####Online Puzzles\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize **Pair Programming - Student Video** whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+        "description": "####Online Puzzles\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming - Student Video** whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "528f5675-b238-4157-849e-e3c9882d39f5",
@@ -2117,8 +1940,8 @@
       "key": "44f59c64-44ce-47bb-bcf6-d11a73277e48",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How did you feel about today's lesson?\r\n - List some of the bugs you found in your programs today.\r\n - What was your favorite puzzle to complete? Draw your favorite character completing a puzzle.",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - List some of the bugs you found in your programs today.\n - What was your favorite puzzle to complete? Draw your favorite character completing a puzzle.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "44f59c64-44ce-47bb-bcf6-d11a73277e48",
@@ -2140,7 +1963,7 @@
       "key": "67688952-e1da-43b1-a7d0-f2889dec7e48",
       "position": 2,
       "properties": {
-        "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n**Display:** Show your students the provided **Relay Programming - Teacher Debugging Image**.\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- Start at the star.\n- Follow the instructions step-by-step.\n- End when all of the right squares are filled in.\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n**Think:** Can you figure out why my program doesn't work?\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at \"debugging\"!",
+        "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n**Display:** Show your students the provided ***Relay Programming - Teacher Debugging Image**.\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- Start at the star.\n- Follow the instructions step-by-step.\n- End when all of the right squares are filled in.\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at **debugging**!",
         "name": "Where did I go wrong?"
       },
       "seeding_key": {
@@ -2169,7 +1992,7 @@
       "key": "f3c9c8ad-1f77-4506-ba5e-076eaa74813d",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the **Relay Programming - Worksheet** and have students complete the task in pairs.  \n\n*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.\n\n**Transition:** Now it's time to play the game!"
+        "description": "**Distribute:** To make sure that students understand the idea of finding and fixing errors (**debugging**) pass out the ***Relay Programming - Worksheet** and have students complete the task in pairs.  \n\n*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.\n\n**Transition:** Now it's time to play the game!"
       },
       "seeding_key": {
         "activity_section.key": "f3c9c8ad-1f77-4506-ba5e-076eaa74813d",
@@ -2192,7 +2015,7 @@
       "key": "c6c65318-513e-41d1-9250-8402d6154e40",
       "position": 1,
       "properties": {
-        "description": "With Graph Paper Programming in mind, it's time to split up into teams and prepare to run the activity as a relay!  \r\n\r\n**Set-Up:** Prepare the **Relay Programming - Activity Packet** by printing out one copy for each team of 4-5 students. Cut or fold each page along the center dotted line."
+        "description": "With Graph Paper Programming in mind, it's time to split up into teams and prepare to run the activity as a relay!  \n\n**Set-Up:** Prepare the ***Relay Programming - Activity Packet** by printing out one copy for each team of 4-5 students. Cut or fold each page along the center dotted line."
       },
       "seeding_key": {
         "activity_section.key": "c6c65318-513e-41d1-9250-8402d6154e40",
@@ -2219,7 +2042,7 @@
       "key": "39b3a444-1dcd-4b13-b3f9-079ad9d593b1",
       "position": 3,
       "properties": {
-        "description": "Go over the rules of the game with your class:\r\n\r\n- Divide students into groups of 3-5.\r\n- Have each group queue up relay-style.\r\n- Place an identical image at the other side of the room/gym/field from each team.\r\n- Have the first student in line dash over to the image, review it, and write down the first symbol in the program to reproduce that image.\r\n- The first student then runs back and tags the next person in line, then goes to the back of the queue.\r\n- The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by crossing out an incorrect symbol, or adds a new one. That student then dashes back to tag the next person, and the process continues until one group has finished their program.\r\n\r\nFirst group to finish with a program that matches the image is the winner! \r\nPlay through this several times, with images of increasing difficulty.\r\n\r\nGo through the game as many times as you can before time runs out or your students begin feeling exhausted.\r\n\r\n**Transition:** Once the game is over, circle everyone up to share lessons learned.\r\n\r\n**Discuss:** What did we learn today?\r\n\r\n- What if each person on a team were allowed to do five arrows at a time?\r\n\t- How important would it be to debug our own work and the work of the programmer before us?\r\n\t- How about with 10 arrows?\r\n\t- 10,000? Would it be more or less important?\r\n- Do you think a program is better or worse when more than one person has worked on it?\r\n- Do you think people make more or fewer mistakes when they're in a hurry?\r\n- If you find a mistake, do you have to throw out the entire program and start over?"
+        "description": "Go over the rules of the game with your class:\n\n- Divide students into groups of 3-5.\n- Have each group queue up relay-style.\n- Place an identical image at the other side of the room/gym/field from each team.\n- Have the first student in line dash over to the image, review it, and write down the first symbol in the program to reproduce that image.\n- The first student then runs back and tags the next person in line, then goes to the back of the queue.\n- The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by crossing out an incorrect symbol, or adds a new one. That student then dashes back to tag the next person, and the process continues until one group has finished their program.\n\nFirst group to finish with a program that matches the image is the winner! \nPlay through this several times, with images of increasing difficulty.\n\nGo through the game as many times as you can before time runs out or your students begin feeling exhausted.\n\n**Transition:** Once the game is over, circle everyone up to share lessons learned.\n\n**Discuss:** *What did we learn today?*\n\n- *What if each person on a team were allowed to do five arrows at a time?*\n\t- *How important would it be to debug our own work and the work of the programmer before us?*\n\t- *How about with 10 arrows?*\n\t- *10,000? Would it be more or less important?*\n- *Do you think a program is better or worse when more than one person has worked on it?*\n- *Do you think people make more or fewer mistakes when they're in a hurry?*\n- *If you find a mistake, do you have to throw out the entire program and start over?*"
       },
       "seeding_key": {
         "activity_section.key": "39b3a444-1dcd-4b13-b3f9-079ad9d593b1",
@@ -2230,8 +2053,8 @@
       "key": "fe8fc837-1652-4638-bb0d-fe8c61b31f79",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How did you feel during today's lesson?\r\n - How did teamwork play a role in the success of writing today's program?\r\n - Did you start to get frustrated at any point? What did you do about it?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel during today's lesson?\n - How did teamwork play a role in the success of writing today's program?\n - Did you start to get frustrated at any point? What did you do about it?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "fe8fc837-1652-4638-bb0d-fe8c61b31f79",
@@ -2253,7 +2076,7 @@
       "key": "d2a287ee-e85d-4ced-a525-517d98f9258b",
       "position": 1,
       "properties": {
-        "description": "One of the most important parts of learning to program is learning to debug. Ask the class if they have ever learned a new skill and faced failure.\r\n\r\nFor example:\r\n\r\n - Learning to ride a bike and falling down\r\n - Learning to bake and burning the food\r\n - Learning to play a sport and not winning a game\r\n\r\nFacing failure is very common when learning new things. Have students discuss past failures and how they overcame them.\r\n\r\nIn programming, computer scientists often run into \"bugs\" in their code.\r\n\r\n - **Bug**: Part of a program that does not work correctly.\r\n\r\nA bug can really mess up the program, so it's important to learn to \"debug\" your code.\r\n\r\n - **Debug**: Finding and fixing problems in your algorithm or program.\r\n\r\nContinue the conversation if you think your class needs more of an introduction, but leave time for one of the bridging activities.",
+        "description": "One of the most important parts of learning to program is learning to debug. Ask the class if they have ever learned a new skill and faced failure.\n\nFor example:\n\n - Learning to ride a bike and falling down\n - Learning to bake and burning the food\n - Learning to play a sport and not winning a game\n\nFacing failure is very common when learning new things. Have students discuss past failures and how they overcame them.\n\nIn programming, computer scientists often run into \"bugs\" in their code.\n\n - **Bug**: Part of a program that does not work correctly.\n\nA bug can really mess up the program, so it's important to learn to \"debug\" your code.\n\n - **Debugging**: Finding and fixing problems in your algorithm or program.\n\nContinue the conversation if you think your class needs more of an introduction, but leave time for one of the bridging activities.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2276,7 +2099,7 @@
       "key": "058f7f9f-1629-4511-91f8-6eb16b1f7c9a",
       "position": 2,
       "properties": {
-        "description": "Break your class up into teams of 3-5 and go to a large space. This space could be in a gym or outside. Queue up these teams like in \"Relay Programming\". Pick a semi-difficult design from **Relay Programming - Activity Packet**. Display this design at the end of a long distance between each team. Along with the display, provide each team with enough paper blocks from **Unplugged Blocks (Courses C-F) - Manipulatives**. Each team will need plenty of `fill 1` and `move ___` blocks. The `move ___` blocks can either be filled in ahead of time, or filled in during the game. Either way, make sure these blocks are properly defined when the game is playing out.\r\n\r\nOnce all the teams are lined up, display or read out the following rules:\r\n\r\n- The first student in line gets to run over to the image, review it, and place the first code block in the program to reproduce that image.\r\n- The first student then runs back and tags the next person in line, then goes to the back of the queue.\r\n- The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by taking out an incorrect code block, or adds a new block in. That student then dashes back to tag the next person, and the process continues until one group has finished their program.\r\n\r\nMake sure the students are only using the `fill 1` or `move ___` blocks, and only placing one down per turn. The first team to _correctly_ write out the code for their image wins.",
+        "description": "Break your class up into teams of 3-5 and go to a large space. This space could be in a gym or outside. Queue up these teams like in \"Relay Programming\". Pick a semi-difficult design from ***Relay Programming - Activity Packet**. Display this design at the end of a long distance between each team. Along with the display, provide each team with enough paper blocks from ***Unplugged Blocks (Courses C-F) - Manipulatives**. Each team will need plenty of `fill 1` and `move ___` blocks. The `move ___` blocks can either be filled in ahead of time, or filled in during the game. Either way, make sure these blocks are properly defined when the game is playing out.\n\nOnce all the teams are lined up, display or read out the following rules:\n\n- The first student in line gets to run over to the image, review it, and place the first code block in the program to reproduce that image.\n- The first student then runs back and tags the next person in line, then goes to the back of the queue.\n- The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by taking out an incorrect code block, or adds a new block in. That student then dashes back to tag the next person, and the process continues until one group has finished their program.\n\nMake sure the students are only using the `fill 1` or `move ___` blocks, and only placing one down per turn. The first team to _correctly_ write out the code for their image wins.\n\n####-Or-",
         "name": "Unplugged Activity with Paper Blocks\r"
       },
       "seeding_key": {
@@ -2356,8 +2179,8 @@
       "key": "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What is a bug? How do you know there is a bug in your program?\r\n - What does it mean to debug code? How do you debug a program?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What is a bug? How do you know there is a bug in your program?\n - What does it mean to debug code? How do you debug a program?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9",
@@ -2407,7 +2230,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) - Video.\n"
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video.\n"
           }
         ]
       },
@@ -2420,11 +2243,11 @@
       "key": "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d",
       "position": 1,
       "properties": {
-        "description": "\nPresent the **Events in Bounce - How Do They Happen?** slide deck to students. Allow them to record the correct order of events on the second slide in their journals first. Call on a few students to share their answers before revealing the third slide. Discuss the correct sequence with the class.",
+        "description": "\n\n####\n\nPresent the ***Events in Bounce - How Do They Happen?** slide deck to students. Allow them to record the correct order of events on the second slide in their journals first. Call on a few students to share their answers before revealing the third slide. Discuss the correct sequence with the class.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Although introduced in this lesson, the slide deck \"Events in Bounce - How Do They Happen?\" can be applied more generally to express the relationship between hardware and software. Particularly, the final slide simplifies the input-to-output sequence and can be made into a poster for your classroom.\r\n"
+            "markdown": "Although introduced in this lesson, the slide deck ***Events in Bounce - How Do They Happen?** can be applied more generally to express the relationship between hardware and software. Particularly, the final slide simplifies the input-to-output sequence and can be made into a poster for your classroom.\n"
           }
         ],
         "name": "Assessment"
@@ -2435,21 +2258,11 @@
       }
     },
     {
-      "key": "40e4e6a2-c0fe-4278-b98f-3a966299e9bd",
+      "key": "15ed6573-547c-40be-a75f-e4d93a55e1b1",
       "position": 2,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "40e4e6a2-c0fe-4278-b98f-3a966299e9bd",
-        "lesson_activity.key": "592a6eba-5e83-43f7-b622-1c58f47e3dea"
-      }
-    },
-    {
-      "key": "15ed6573-547c-40be-a75f-e4d93a55e1b1",
-      "position": 3,
-      "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What did you do to make your game super cool?\r\n - What kind of game do you want to code in the future?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What did you do to make your game super cool?\n - What kind of game do you want to code in the future?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "15ed6573-547c-40be-a75f-e4d93a55e1b1",
@@ -2526,7 +2339,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class: \n\n[Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) - Video.\n"
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class: \n\n***Pause and Think Online** - Video.\n"
           }
         ]
       },
@@ -2550,8 +2363,8 @@
       "key": "df2c1698-1e56-4e44-9a0b-9d43facaf9f2",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - Give an example of an event you used in your program today?\r\n - Why is it important not to share private information online? How do you know if information is private?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - Give an example of an event you used in your program today?\n - Why is it important not to share private information online? How do you know if information is private?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "df2c1698-1e56-4e44-9a0b-9d43facaf9f2",
@@ -2577,7 +2390,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering [\"Dance Party: Unplugged\"](https://curriculum.code.org/hoc/unplugged/4/) before this lesson. This brief lesson introduces students to the idea of events triggering different dance moves.\r\n\r\n"
+            "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering ***Dance Party: Unplugged** before this lesson. This brief lesson introduces students to the idea of events triggering different dance moves.\n\n"
           }
         ]
       },
@@ -2602,7 +2415,7 @@
       "key": "84005af4-60c5-4ba3-a308-151c13d819ef",
       "position": 4,
       "properties": {
-        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\r\n\r\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\r\n\r\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this [r dance-party-playlist] to help kick things off. Capture your class's moves on video.\r\n\r\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist (all ages)** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
       },
       "seeding_key": {
         "activity_section.key": "84005af4-60c5-4ba3-a308-151c13d819ef",
@@ -2613,7 +2426,7 @@
       "key": "2fe76df3-dde6-43fd-a725-2a1c458996b2",
       "position": 1,
       "properties": {
-        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list [Spotify Playlist](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). If you would like to use the filtered list with older students, you can share [this link](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) with your classroom.",
+        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist (all ages).**. We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list ***Spotify Playlist.** If you would like to use the filtered list with older students, you can share ***Spotify Playlist for Under 13** with your classroom.",
         "name": "Code Your Own Dance Party"
       },
       "seeding_key": {
@@ -2752,7 +2565,7 @@
       "position": 1,
       "properties": {
         "description": "- Pose a prompt that has multiple answers such as “What is something you enjoyed about today's activity?” or “What is the connection between creativity and computer science?\"",
-        "name": "Debrief\r",
+        "name": "Reflection",
         "duration": "5"
       },
       "seeding_key": {
@@ -2789,7 +2602,7 @@
       "key": "d343f1b8-bbf5-455e-8d7d-e50907b2fc18",
       "position": 1,
       "properties": {
-        "description": "####Repeat After Me\n\n**Model:** Ask for a volunteer and have them stand.\n\n- Instruct your volunteer to walk around the table (or their chair, or a friend).\n- When they finish, instruct them to do it again, using the exact same words you did before.\n- When they finish, instruct again.\n- Then again.\n\n**Prompt:** Would it have been easier for me to just ask you to go around the table four times? \n\n**Think:** What if I wanted you to do it ten times? How would you reword my instructions so that they were more efficient and I didn't have to repeat myself so much? Feel free to write your instructions down on a piece of scrap paper.\n\n**Share:** Ask a few students to share their instructions with the class, pointing out how each approach has simplified the overall approach to giving instructions.\n\n\n**Say:**  Today we're going to work on finding ways to make giving lots of instructions easier, especially when those instructions repeat themselves a lot.",
+        "description": "####Repeat After Me\n\n**Model:** Ask for a volunteer and have them stand.\n\n- Instruct your volunteer to walk around the table (or their chair, or a friend).\n- When they finish, instruct them to do it again, using the exact same words you did before.\n- When they finish, instruct again.\n- Then again.\n\n**Prompt:** *Would it have been easier for me to just ask you to go around the table four times?*\n\n**Think:** *What if I wanted you to do it ten times? How would you reword my instructions so that they were more efficient and I didn't have to repeat myself so much? Feel free to write your instructions down on a piece of scrap paper.*\n\n**Share:** Ask a few students to share their instructions with the class, pointing out how each approach has simplified the overall approach to giving instructions.\n\n\n**Say:**  *Today we're going to work on finding ways to make giving lots of instructions easier, especially when those instructions repeat themselves a lot.*",
         "name": "The Unplugged Foundation"
       },
       "seeding_key": {
@@ -2896,7 +2709,7 @@
       "key": "c94f17b5-c6a4-4011-a5a0-0af169f73d03",
       "position": 8,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pause and Think Online** Video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "c94f17b5-c6a4-4011-a5a0-0af169f73d03",
@@ -2907,8 +2720,8 @@
       "key": "37881eab-e326-4635-89a0-382e72e6fffc",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw your own maze with Scrat trying to get to an Acorn. Will loops help you solve it?\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw your own maze with *Scrat* trying to get to an acorn. Will loops help you solve it?\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "37881eab-e326-4635-89a0-382e72e6fffc",
@@ -3020,8 +2833,8 @@
       "key": "b5ff885e-a9ca-4b9b-8c1e-53f9273c7935",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What was the coolest shape or figure you programmed today? Draw it out!\r\n - What is another shape or figure you could program using loops? Can you come up with the code to create it?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you could program using loops? Can you come up with the code to create it?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "b5ff885e-a9ca-4b9b-8c1e-53f9273c7935",
@@ -3032,7 +2845,7 @@
       "key": "07ca6e20-a059-4b67-b099-6a90c6d7f4ab",
       "position": 1,
       "properties": {
-        "description": "Briefly review with the class what loops are and why we use them.\r\n\r\n - What do loops do?\r\n    - Loops repeat a set of commands. (see vocabulary on command if students don't recognize it)\r\n - How do we use loops?\r\n    - We use loops to create a pattern made of repeated actions.\r\n\r\nTell the class that they will now be doing something super cool: using loops inside loops. Ask the class to predict what kinds of things we would be using a loop inside of a loop for.\r\n\r\n\"If a loop repeats a pattern, then looping a loop would repeat a pattern of patterns!\"\r\n\r\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
+        "description": "Briefly review with the class what loops are and why we use them.\n\n - *What do loops do?*\n    - Loops repeat a set of commands. (see vocabulary on command if students don't recognize it)\n - *How do we use loops?*\n    - We use loops to create a pattern made of repeated actions.\n\nTell the class that they will now be doing something super cool: using loops inside loops. Ask the class to predict what kinds of things we would be using a loop inside of a loop for.\n\n*If a loop repeats a pattern, then looping a loop would repeat a pattern of patterns!*\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3144,8 +2957,8 @@
       "key": "b014e946-ff8d-4740-9c42-51c8aa635252",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How did you feel about today's lesson?\r\n - What is a nested loop?\r\n - Can you draw a puzzle that would use a nested loop? Try coding the solution to your own puzzle.",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What is a nested loop?\n - Can you draw a puzzle that would use a nested loop? Try coding the solution to your own puzzle.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "b014e946-ff8d-4740-9c42-51c8aa635252",
@@ -3156,7 +2969,7 @@
       "key": "6b52ae43-bb00-43ac-9260-7c554d2f9f29",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary\n\nThis lesson has one new and important word:\n\n**Conditionals** - Say it with me: *Con-di-shun-uls* \n\nStatements that only run under certain conditions."
+        "description": "####Vocabulary\n\nThis lesson has one new and important word:\n\n**Conditionals** - *Say it with me: Con-di-shun-uls* \n\nStatements that only run under certain conditions."
       },
       "seeding_key": {
         "activity_section.key": "6b52ae43-bb00-43ac-9260-7c554d2f9f29",
@@ -3167,7 +2980,7 @@
       "key": "75e07169-e97a-4d68-b9dc-18aefddf1eab",
       "position": 2,
       "properties": {
-        "description": "- We can start this lesson off right away\r\n\t- Let the class know that if they can be completely quiet for thirty seconds, you will do something like:\r\n\t\t- Sing an opera song\r\n\t\t- Give five more minutes of recess\r\n\t\t- Do a handstand\r\n\t- Start counting right away.\r\n\t- If the students succeed, point out that they succeeded, so they get the reward.\r\n\t- Otherwise, point out that they were not completely quiet for a full thirty seconds, so they do not get the reward.\r\n- Ask the class \"What was the condition of the reward?\"\r\n\t- The condition was IF you were quiet for 30 seconds\r\n\t\t- If you were, the condition would be true, and you would get the reward.\r\n\t\t- If you weren't, the condition would be false, so the reward woud not apply.\r\n\t- Can we come up with another conditional?\r\n\t\t- If you can guess my age correctly, the class can give you applause.\r\n\t\t- If I know an answer, I can raise my hand.\r\n\t\t- What examples can you come up with?\r\n- Sometimes, we want to have an extra condition, in case the \"IF\" statement is not true.\r\n\t- This extra condition is called an \"ELSE\" statement\r\n\t- When the \"IF\" condition isn't met, we can look at the \"ELSE\" for what to do\r\n\t\t- Example: IF I draw a king from this deck of cards, everybody claps. Or ELSE, everyone says \"Awwwwwwe.\"\r\n\t\t- Let's try it. (Draw a card and see if your class reacts appropriately.)\r\n\t- Ask the class to analyze what just happened.\r\n\t\t- What was the IF?\r\n\t\t- What was the ELSE?\r\n\t\t- Which condition was met?\r\n\t- Believe it or not, we have even one more option.\r\n\t\t- What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say \"YAY,\" or else you say \"Awwwwwwwe\"?\r\n\t\t\t- This is why we have the terms If, Else-If, and Else.\r\n\t\t\t- If is the first condition\r\n\t\t\t- Else-If gets looked at only if the \"If\" isn't true.\r\n\t\t\t- Else gets looked at only if nothing before it is true.\r\n\r\nNow let's play a game.",
+        "description": "- We can start this lesson off right away\n\t- Let the class know that if they can be completely quiet for thirty seconds, you will do something like:\n\t\t- Sing an opera song\n\t\t- Give five more minutes of recess\n\t\t- Do a handstand\n\t- Start counting right away.\n\t- If the students succeed, point out that they succeeded, so they get the reward.\n\t- Otherwise, point out that they were not completely quiet for a full thirty seconds, so they do not get the reward.\n- Ask the class *What was the condition of the reward?*\n\t- The condition was IF you were quiet for 30 seconds\n\t\t- If you were, the condition would be true, and you would get the reward.\n\t\t- If you weren't, the condition would be false, so the reward would not apply.\n\t- *Can we come up with another conditional?*\n\t\t- If you can guess my age correctly, the class can give you applause.\n\t\t- If I know an answer, I can raise my hand.\n\t\t- What examples can you come up with?\n- *Sometimes, we want to have an extra condition, in case the \"IF\" statement is not true.*\n\t- *This extra condition is called an \"ELSE\" statement*\n\t- *When the \"IF\" condition isn't met, we can look at the \"ELSE\" for what to do*\n\t\t- *Example: IF I draw a king from this deck of cards, everybody claps. Or ELSE, everyone says \"Awwwwwwe.\"*\n\t\t- *Let's try it.*(Draw a card and see if your class reacts appropriately.)\n\t- Ask the class to analyze what just happened.\n\t\t- *What was the IF?*\n\t\t- *What was the ELSE?*\n\t\t- *Which condition was met?*\n\t- *Believe it or not, we have even one more option.*\n\t\t- *What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say \"YAY,\" or else you say \"Awwwwwwwe\"?*\n\t\t\t- *This is why we have the terms If, Else-If, and Else.*\n\t\t\t- *If is the first condition.*\n\t\t\t- *Else-If gets looked at only if the \"If\" isn't true.*\n\t\t\t- *Else gets looked at only if nothing before it is true.*\n\nNow let's play a game.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3207,7 +3020,8 @@
             "type": "teachingTip",
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.\r\n"
           }
-        ]
+        ],
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "4a483f91-af16-44dc-982f-c62424c8d5ec",
@@ -3241,7 +3055,7 @@
       "key": "d3c82a83-b5e1-498a-a130-9df9f7f36e88",
       "position": 1,
       "properties": {
-        "description": "Hand out **Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. Here's a **Conditionals with Cards - Assessment Video** to watch as a guide."
+        "description": "Hand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. Here's a ***Conditionals with Cards - Assessment Video** to watch as a guide."
       },
       "seeding_key": {
         "activity_section.key": "d3c82a83-b5e1-498a-a130-9df9f7f36e88",
@@ -3275,7 +3089,7 @@
       "position": 1,
       "properties": {
         "name": "Introduction",
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using _conditionals_ during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code."
+        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a **conditional** in your code."
       },
       "seeding_key": {
         "activity_section.key": "6b12a150-fd35-4498-821d-938ad47883e4",
@@ -3331,8 +3145,8 @@
       "key": "3cb11179-29ea-4362-b237-a509e3e0943f",
       "position": 1,
       "properties": {
-        "name": "Journaling",
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this minecraft world.\n - Can you draw a scene where someone is using a conditional?"
+        "name": "Reflection",
+        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this minecraft world.\n - Can you draw a scene where someone is using a conditional?"
       },
       "seeding_key": {
         "activity_section.key": "3cb11179-29ea-4362-b237-a509e3e0943f",
@@ -3377,7 +3191,7 @@
       "key": "e11af7aa-44d8-4cff-8c00-b83f57637592",
       "position": 2,
       "properties": {
-        "description": "Print and cut out 2-3 `if / else` and blank action blocks from **Unplugged Blocks (Courses C-F) - Manipulatives** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" When the conditionals have been decided on as a class, fill in the blank part of the `if` block with the various card values that the kids came up with. Examples include \"King of Hearts\", \"Even Numbered\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly under the `if` or `else` block. Click on the thumbnail below to see an example.\n\n![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.10-Lesson-hint.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it.\n\n####-Or-",
+        "description": "Print and cut out 2-3 `if / else` and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" When the conditionals have been decided on as a class, fill in the blank part of the `if` block with the various card values that the kids came up with. Examples include \"King of Hearts\", \"Even Numbered\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly under the `if` or `else` block. Click on the thumbnail below to see an example.\n\n![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.10-Lesson-hint.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -3512,8 +3326,8 @@
       "key": "fd68c153-b4d6-4729-a742-09f9ee9c25b1",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How did today's lesson make you feel?\r\n - What conditionals did you use in your code today?\r\n - What are some other conditionals a bee might use? Examples include: \r\n    - if there is a tree in front of me, buzz out of the way   \r\n    - if my wing is hurt, rest on the ground   \r\n    - if I see another bee, say \"Hello!\"",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did today's lesson make you feel?\n - What conditionals did you use in your code today?\n - What are some other conditionals a bee might use? Examples include: \n    - if there is a tree in front of me, buzz out of the way   \n    - if my wing is hurt, rest on the ground   \n    - if I see another bee, say \"Hello!\"",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "fd68c153-b4d6-4729-a742-09f9ee9c25b1",
@@ -3535,7 +3349,7 @@
       "key": "9edcc1a3-dce9-45bc-86af-546b41287b53",
       "position": 1,
       "properties": {
-        "description": "Use \"while\" in a sentence in front of the students. Ask the students what the word \"while\" means. If you were to say \"while there is a hole, fill it with dirt\" what would they do? How long would they do that?\r\n\r\nWhen you use a word like “while”, you are relying on a condition to tell the computer how long the loop should run. A condition is a statement that is tested and found to be true or false. In the case above, the condition is if there is a hole. It’s only possible for there to be a hole or for there not to be a hole, thus the statement is only ever true or false.\r\n\r\nTell the students they will be learning about a new kind of loop. Previously, students only used loops to repeat a command a certain number of times. Here, they won't always know how many times to repeat the command, however, they will know when to stop or when to keep going. `While` loops allow the programmer to repeat a command as long as a condition is still true. In the previous example, the condition is the existence of a hole.\r\n\r\nIf there's time, have the students discuss other times using a `while` loop would be useful. Examples include:\r\n\r\n - Running toward a ball **while** it is in front of you.\r\n - Filling a glass **while** it has space for more liquid.\r\n - Walk forward **while** there is a path ahead.",
+        "description": "Use \"while\" in a sentence in front of the students. Ask the students what the word \"while\" means. If you were to say *\"while there is a hole, fill it with dirt\"* what would they do? How long would they do that?\n\nWhen you use a word like “while”, you are relying on a condition to tell the computer how long the loop should run. A condition is a statement that is tested and found to be true or false. In the case above, the condition is if there is a hole. It’s only possible for there to be a hole or for there not to be a hole, thus the statement is only ever true or false.\n\nTell the students they will be learning about a new kind of loop. Previously, students only used loops to repeat a command a certain number of times. Here, they won't always know how many times to repeat the command, however, they will know when to stop or when to keep going. `While` loops allow the programmer to repeat a command as long as a condition is still true. In the previous example, the condition is the existence of a hole.\n\nIf there's time, have the students discuss other times using a `while` loop would be useful. Examples include:\n\n - Running toward a ball **while** it is in front of you.\n - Filling a glass **while** it has space for more liquid.\n - Walk forward **while** there is a path ahead.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3558,7 +3372,7 @@
       "key": "0266eaa6-e5a9-4d9a-8c7f-3e73f4b704b3",
       "position": 2,
       "properties": {
-        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from **Unplugged Blocks (Courses C-F) - Manipulatives** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a `while` loop. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the `while` block with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the `while` block. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/express17.png\" style=\"width: 30%;\">\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this `while` loop experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a `while` loop, you continue moving forward and do not return to the previous loop just because the conditions match again.",
+        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a `while` loop. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the `while` block with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the `while` block. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/express17.png\" style=\"width: 30%;\">\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this `while` loop experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a `while` loop, you continue moving forward and do not return to the previous loop just because the conditions match again.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -3682,8 +3496,8 @@
       "key": "6751c001-d379-4682-8c2e-3eead4acba66",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is the difference between a `while` loop and a normal `repeat` loop?\r\n - Give an example of a puzzle where you would use a `while` loop, but not use a `repeat` loop. Can you give an example of a puzzle where you would use a `repeat` loop, but not a `while` loop?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is the difference between a `while` loop and a normal `repeat` loop?\n - Give an example of a puzzle where you would use a `while` loop, but not use a `repeat` loop. Can you give an example of a puzzle where you would use a `repeat` loop, but not a `while` loop?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "6751c001-d379-4682-8c2e-3eead4acba66",
@@ -3694,7 +3508,7 @@
       "key": "6ecd9736-c038-433f-bd11-18b7ae703bcd",
       "position": 1,
       "properties": {
-        "description": "In this lesson, students will be creating loops that only run `until` a condition is true.  Help the students understand how this works by leading them in group activities and having them do an action `until` some condition is true.  *For example: Have students touch their nose `until` you tell them to stop.*",
+        "description": "In this lesson, students will be creating loops that only run `until` a condition is true.  Help the students understand how this works by leading them in group activities and having them do an action `until` some condition is true.  For example: Have students touch their nose `until` you tell them to stop.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3806,186 +3620,12 @@
       "key": "b9c0e01d-2222-4dca-ad71-dc6068af0439",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What's the difference between an `until` loop and a `while` loop?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What's the difference between an `until` loop and a `while` loop?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "b9c0e01d-2222-4dca-ad71-dc6068af0439",
         "lesson_activity.key": "96a24d88-fba0-4caf-ae83-05431cff5aea"
-      }
-    },
-    {
-      "key": "60f785b5-da89-422a-8fc5-3cee86300b86",
-      "position": 1,
-      "properties": {
-        "description": "This lesson has two new terms:\r\n\r\n - **Binary** - Say it with me: Bi-nare-ee \r\n\r\nA way of representing information using only two options.\r\n\r\n - **Binary Alphabet** - Say it with me: Bi-nare-ee Al-fa-bet \r\n\r\nThe two options used in your binary code.",
-        "name": "Vocabulary\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "60f785b5-da89-422a-8fc5-3cee86300b86",
-        "lesson_activity.key": "99384f74-25b3-4dde-b2d8-53db906d7ffa"
-      }
-    },
-    {
-      "key": "806b67be-8921-4ad9-adf3-971b04f0b337",
-      "position": 2,
-      "properties": {
-        "description": "What if we had a picture like this, where there's only two color options for each square, black or white.\r\n\r\n![](https://levelbuilder.code.org/curriculum/course4/17/sample.png)\r\n\r\nHow might we encode this so that someone else could recreate the picture without seeing it?\r\n\r\n- Some students might think back to the Graph Paper Programming lesson. While there could be a lot of similarities, let them know that this is different enough that they should not use that lesson to guide this one\r\n\r\nYou may hear suggestions like: \"Say 'white, black, white, black'.\"\r\n\r\n- \"That's a great suggestion! Now I'm going to break you up into pairs. Work with your teammate to decide on a binary alphabet.\"\r\n\r\nDecide whether you want your pairs to share their encodings with the other groups ahead of time, and tell them if they will be creating a key, or keeping their methods secret.\r\n\r\n- \"Now, let's encode some images, just like a computer would!\"",
-        "name": "Introduction to Binary\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "806b67be-8921-4ad9-adf3-971b04f0b337",
-        "lesson_activity.key": "99384f74-25b3-4dde-b2d8-53db906d7ffa"
-      }
-    },
-    {
-      "key": "81d89558-b13c-4f56-9a52-afa0112cb4d4",
-      "position": 1,
-      "properties": {
-        "description": "Now it's the students' turn!\r\n\r\n#### Activity Directions:\r\n\r\n1. Divide students into pairs. \r\n2. Have them choose an image with their partner. \r\n3. Encourage them to figure out what their binary alphabet is going to be. \r\n4. Have them encode their image using their new binary alphabet. \r\n5. Instruct students to trade encodings with another team and see if they can figure out which picture the other worked on.\r\n6. Choose a Level \r\n\t- Easy: Let the other team know what your encoding method was \r\n\t- Tough: Have the other team guess your encoding method.",
-        "name": "Binary Images - Worksheet\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "81d89558-b13c-4f56-9a52-afa0112cb4d4",
-        "lesson_activity.key": "82660036-2168-4b98-bf50-8b8fa8a9b28b"
-      }
-    },
-    {
-      "key": "17722ff0-d597-4395-9fd8-80dd8e92ca57",
-      "position": 1,
-      "properties": {
-        "description": "- What did we learn today?\r\n- What kind of binary alphabet did you create?\r\n- Can you think of how you could encode an image using only your fingers?\r\n- Do you think you could create a binary alphabet out of sounds?",
-        "name": "Flash Chat: What did we learn?\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "17722ff0-d597-4395-9fd8-80dd8e92ca57",
-        "lesson_activity.key": "09e403bf-c0da-4ea1-91bf-23230a57118d"
-      }
-    },
-    {
-      "key": "468b3a57-7711-4595-bfb6-59e1df1a810d",
-      "position": 2,
-      "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a binary alphabet?\r\n - What kind of information can you share using binary?",
-        "name": "Journaling\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "468b3a57-7711-4595-bfb6-59e1df1a810d",
-        "lesson_activity.key": "09e403bf-c0da-4ea1-91bf-23230a57118d"
-      }
-    },
-    {
-      "key": "7299e013-2e92-4459-a5f5-a0be47bfc254",
-      "position": 1,
-      "properties": {
-        "description": "Pass out this assessment for students to do individually. Try to save time at the end to go over answers.",
-        "name": "Binary Images - Assessment\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "7299e013-2e92-4459-a5f5-a0be47bfc254",
-        "lesson_activity.key": "a560e213-3d6d-489e-88fb-f15c935f4bdf"
-      }
-    },
-    {
-      "key": "ea40db35-e7d9-41be-9560-605f22964c8d",
-      "position": 1,
-      "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Storing Color Images**\r\n\r\n- If your class really gets the idea behind storing binary images, they may want to know how to do color images.\r\n\t- First, you'll need to discuss how color works using binary (as in [r binary-baubles], page 21).\r\n\t- Then, introduce some images that use combinations of those colors  \r\n- Encourage your students to come up with ways to code these color images.\r\n\r\n![](https://levelbuilder.code.org/curriculum/course4/17/color.png)\r\n\r\n**Hexadecimal**\r\n\r\n- Take the idea of color one step further to introduce [hexadecimal color codes](http://www.mathsisfun.com/hexadecimal-decimal-colors.html)."
-      },
-      "seeding_key": {
-        "activity_section.key": "ea40db35-e7d9-41be-9560-605f22964c8d",
-        "lesson_activity.key": "7716cf39-a438-4cb7-8fd0-a7d571177df9"
-      }
-    },
-    {
-      "key": "8d1f83da-f5da-424b-9a8c-eb3a578b9659",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8d1f83da-f5da-424b-9a8c-eb3a578b9659",
-        "lesson_activity.key": "4318287f-7581-4710-9913-a3fb61ef4034"
-      }
-    },
-    {
-      "key": "5ae97170-99b1-4198-b53c-ee91d01eaf88",
-      "position": 1,
-      "properties": {
-        "description": "To begin, it can be helpful to review the previous lesson, specifically different ways of using binary to indicate how to create an image on a grid. This stage will translate the unplugged activity into a simple, independent online lesson."
-      },
-      "seeding_key": {
-        "activity_section.key": "5ae97170-99b1-4198-b53c-ee91d01eaf88",
-        "lesson_activity.key": "0b4b3157-e478-4fe2-a545-c96dbf899596"
-      }
-    },
-    {
-      "key": "7cac04ef-762a-4e6e-893d-caa0d42dee97",
-      "position": 1,
-      "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97",
-        "lesson_activity.key": "7fcfb587-51b7-4308-bd63-7266b6185f32"
-      }
-    },
-    {
-      "key": "56e49441-13e2-4a17-b6e7-0a3d3fa7d4bc",
-      "position": 2,
-      "properties": {
-        "name": "Prediction",
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "56e49441-13e2-4a17-b6e7-0a3d3fa7d4bc",
-        "lesson_activity.key": "7fcfb587-51b7-4308-bd63-7266b6185f32"
-      }
-    },
-    {
-      "key": "7dfc8fc5-9328-4327-a695-65e77c431c07",
-      "position": 3,
-      "properties": {
-        "name": "Free Play",
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "7dfc8fc5-9328-4327-a695-65e77c431c07",
-        "lesson_activity.key": "7fcfb587-51b7-4308-bd63-7266b6185f32"
-      }
-    },
-    {
-      "key": "1764eaa4-4d51-409c-9824-0d6eedf38d0d",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1764eaa4-4d51-409c-9824-0d6eedf38d0d",
-        "lesson_activity.key": "7fcfb587-51b7-4308-bd63-7266b6185f32"
-      }
-    },
-    {
-      "key": "c811a1fa-9671-4313-8ea9-c637596a608b",
-      "position": 5,
-      "properties": {
-        "description": "Not all of these images are intuitive.  Encourage students to click \"Run\" to see what happens, even if their code isn't \"finished\" yet.",
-        "name": "Online Puzzles\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "c811a1fa-9671-4313-8ea9-c637596a608b",
-        "lesson_activity.key": "7fcfb587-51b7-4308-bd63-7266b6185f32"
-      }
-    },
-    {
-      "key": "aa5ab9ac-d48b-447f-a5d2-446ecdfb6709",
-      "position": 1,
-      "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - Did you like drawing on the 8x8 grid or the 16x16 grid better? Why?\r\n - Computers also store sounds using binary.  Use your imagination to write down a possible way for that to work.",
-        "name": "Journaling\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "aa5ab9ac-d48b-447f-a5d2-446ecdfb6709",
-        "lesson_activity.key": "56a5e44b-926d-42ec-bb56-f193b9142f7a"
       }
     },
     {
@@ -4082,7 +3722,7 @@
       "key": "ea88a8c8-980d-4d9f-a288-545a8cd65be6",
       "position": 3,
       "properties": {
-        "description": "**Distribute**: Distribute one **CSF Course D End of Course Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
+        "description": "**Distribute**: Distribute one ***Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -8039,367 +7679,6 @@
       "assessment": null,
       "properties": {
         "level_keys": [
-          "BinaryImages-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "BinaryImages-Unplugged_2021"
-        ],
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "8d1f83da-f5da-424b-9a8c-eb3a578b9659"
-      },
-      "level_keys": [
-        "BinaryImages-Unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 151,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_external_binary1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_external_binary1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_external_binary1_2021"
-      ]
-    },
-    {
-      "chapter": 152,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary1_2021"
-      ]
-    },
-    {
-      "chapter": 153,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary2_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary2_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary2_2021"
-      ]
-    },
-    {
-      "chapter": 154,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary3_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary3_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary3_2021"
-      ]
-    },
-    {
-      "chapter": 155,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary4_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary4_2021"
-      ]
-    },
-    {
-      "chapter": 156,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary5_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary5_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary5_2021"
-      ]
-    },
-    {
-      "chapter": 157,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary6_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary6_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary6_2021"
-      ]
-    },
-    {
-      "chapter": 158,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary7_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary7_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary7_2021"
-      ]
-    },
-    {
-      "chapter": 159,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_artist_binary8_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary8_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      },
-      "level_keys": [
-        "courseD_artist_binary8_2021"
-      ]
-    },
-    {
-      "chapter": 160,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Prediction",
-        "level_keys": [
-          "courseD_artist_binary8_predict1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary8_predict1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "56e49441-13e2-4a17-b6e7-0a3d3fa7d4bc"
-      },
-      "level_keys": [
-        "courseD_artist_binary8_predict1_2021"
-      ]
-    },
-    {
-      "chapter": 161,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Free Play",
-        "level_keys": [
-          "courseD_artist_binaryFP_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binaryFP_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7dfc8fc5-9328-4327-a695-65e77c431c07"
-      },
-      "level_keys": [
-        "courseD_artist_binaryFP_2021"
-      ]
-    },
-    {
-      "chapter": 162,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseD_artist_binary_challenge1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary_challenge1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "1764eaa4-4d51-409c-9824-0d6eedf38d0d"
-      },
-      "level_keys": [
-        "courseD_artist_binary_challenge1_2021"
-      ]
-    },
-    {
-      "chapter": 163,
-      "position": 13,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseD_artist_binary_challenge2_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_artist_binary_challenge2_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "1764eaa4-4d51-409c-9824-0d6eedf38d0d"
-      },
-      "level_keys": [
-        "courseD_artist_binary_challenge2_2021"
-      ]
-    },
-    {
-      "chapter": 164,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
           "csf_be_a_super_digital_citizen_2021"
         ]
       },
@@ -8419,7 +7698,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -8445,7 +7724,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 152,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -10262,174 +9541,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "BinaryImages-Unplugged_2021",
-        "script_level.level_keys": [
-          "BinaryImages-Unplugged_2021"
-        ],
-        "lesson.key": "Unplugged: Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "8d1f83da-f5da-424b-9a8c-eb3a578b9659"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_external_binary1_2021",
-        "script_level.level_keys": [
-          "courseD_external_binary1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary1_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary2_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary2_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary3_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary3_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary4_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary4_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary5_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary5_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary6_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary6_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary7_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary7_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary8_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary8_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7cac04ef-762a-4e6e-893d-caa0d42dee97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary8_predict1_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary8_predict1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "56e49441-13e2-4a17-b6e7-0a3d3fa7d4bc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binaryFP_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binaryFP_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "7dfc8fc5-9328-4327-a695-65e77c431c07"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary_challenge1_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary_challenge1_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "1764eaa4-4d51-409c-9824-0d6eedf38d0d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_artist_binary_challenge2_2021",
-        "script_level.level_keys": [
-          "courseD_artist_binary_challenge2_2021"
-        ],
-        "lesson.key": "Artist Binary",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursed-2021",
-        "activity_section.key": "1764eaa4-4d51-409c-9824-0d6eedf38d0d"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csf_be_a_super_digital_citizen_2021",
         "script_level.level_keys": [
           "csf_be_a_super_digital_citizen_2021"
@@ -10757,6 +9868,30 @@
       }
     },
     {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "pause_and_think_online",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "pause_and_think_online",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
       "name": "Dance Party Project Guide",
       "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
       "key": "dance-party-project-guide",
@@ -10778,6 +9913,30 @@
       },
       "seeding_key": {
         "resource.key": "dance-party-playlist"
+      }
+    },
+    {
+      "name": "Dance Party: Unplugged",
+      "url": "https://curriculum.code.org/hoc/unplugged/4/",
+      "key": "dance_party_unplugged",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "name": "Spotify Play List (Under 13)",
+      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
+      "key": "spotify_play_list_under_13_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "spotify_play_list_under_13_"
       }
     },
     {
@@ -10803,6 +9962,18 @@
       },
       "seeding_key": {
         "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "pause_and_think_online_1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online_1"
       }
     },
     {
@@ -10916,58 +10087,6 @@
       },
       "seeding_key": {
         "resource.key": "csf-conditionals-with-cards-sample-program"
-      }
-    },
-    {
-      "name": "Binary Images",
-      "url": "https://youtu.be/dzHlZV53VfY",
-      "key": "unplugged-video-binary-images",
-      "properties": {
-        "type": "Unplugged Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C4-unplugged-binary.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged-video-binary-images"
-      }
-    },
-    {
-      "name": "Binary Images",
-      "url": "https://drive.google.com/open?id=1dvJzX56ZSQfTv97JYgfMeubbE4So03z5eBJjnfiJBp4",
-      "key": "csf-binary-images-worksheet",
-      "properties": {
-        "type": "Worksheet",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-binary-images-worksheet"
-      }
-    },
-    {
-      "name": "Binary Images",
-      "url": "https://drive.google.com/open?id=1QCEYUamNYX7VT3dnrUkiAHqUK8I4CyuBLOHlAnXDZIE",
-      "key": "csf-binary-image-assessment",
-      "properties": {
-        "type": "Assessment",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-binary-image-assessment"
-      }
-    },
-    {
-      "name": "Binary Images",
-      "url": "https://drive.google.com/open?id=1P9poJc00iDA2NX7BtOpISDC0Oe_JcolZFPvfMJDUQwk",
-      "key": "assessment-answer-binary-images",
-      "properties": {
-        "type": "Assessment Answer Key",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "assessment-answer-binary-images"
       }
     },
     {
@@ -11213,6 +10332,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Dance Party",
         "resource.key": "dance-party-project-guide"
       }
@@ -11225,6 +10356,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "spotify_play_list_under_13_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops in Ice Age",
         "resource.key": "pair-programming-vid"
       }
@@ -11233,6 +10376,12 @@
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
         "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "pause_and_think_online_1"
       }
     },
     {
@@ -11287,30 +10436,6 @@
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "resource.key": "csf-conditionals-with-cards-sample-program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "resource.key": "unplugged-video-binary-images"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "resource.key": "csf-binary-images-worksheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "resource.key": "csf-binary-image-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "resource.key": "assessment-answer-binary-images"
       }
     },
     {
@@ -11682,30 +10807,6 @@
       "seeding_key": {
         "vocabulary.key": "Until"
       }
-    },
-    {
-      "key": "Binary",
-      "word": "Binary",
-      "definition": "A way of representing information using only two options.",
-      "seeding_key": {
-        "vocabulary.key": "Binary"
-      }
-    },
-    {
-      "key": "Binary Alphabet",
-      "word": "Binary Alphabet",
-      "definition": "The two options used in your binary code.",
-      "seeding_key": {
-        "vocabulary.key": "Binary Alphabet"
-      }
-    },
-    {
-      "key": "Binary",
-      "word": "Binary",
-      "definition": "A way of representing information using only two options.",
-      "seeding_key": {
-        "vocabulary.key": "Binary"
-      }
     }
   ],
   "lessons_vocabularies": [
@@ -11947,24 +11048,6 @@
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
         "vocabulary.key": "Until"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "vocabulary.key": "Binary"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "vocabulary.key": "Binary Alphabet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Artist Binary",
-        "vocabulary.key": "Binary"
       }
     }
   ],
@@ -12366,66 +11449,6 @@
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
         "objective.key": "630e79db-15ec-49fd-804c-060b8adf40ea"
-      }
-    },
-    {
-      "key": "09cda68b-6374-4d7a-a399-0b5bb0536f40",
-      "properties": {
-        "description": "Identify methods for encoding images into binary."
-      },
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "objective.key": "09cda68b-6374-4d7a-a399-0b5bb0536f40"
-      }
-    },
-    {
-      "key": "a963ad79-9124-4e6f-b4f0-2f69a4361596",
-      "properties": {
-        "description": "Relate images to a peer using binary encoding."
-      },
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "objective.key": "a963ad79-9124-4e6f-b4f0-2f69a4361596"
-      }
-    },
-    {
-      "key": "63745aaf-be8f-45b4-b36b-5233924ca4a1",
-      "properties": {
-        "description": "Reproduce an image, based on binary code."
-      },
-      "seeding_key": {
-        "lesson.key": "Unplugged: Binary",
-        "objective.key": "63745aaf-be8f-45b4-b36b-5233924ca4a1"
-      }
-    },
-    {
-      "key": "6095c2ab-de01-497a-9090-ca35bd55fa22",
-      "properties": {
-        "description": "Create pictures using unique combinations of on and off"
-      },
-      "seeding_key": {
-        "lesson.key": "Artist Binary",
-        "objective.key": "6095c2ab-de01-497a-9090-ca35bd55fa22"
-      }
-    },
-    {
-      "key": "2b294ed3-bd2e-41a0-8036-f27536338141",
-      "properties": {
-        "description": "Identify repeated sequences and break long codes up into smaller chunks that can be looped"
-      },
-      "seeding_key": {
-        "lesson.key": "Artist Binary",
-        "objective.key": "2b294ed3-bd2e-41a0-8036-f27536338141"
-      }
-    },
-    {
-      "key": "c5481317-1583-44f4-87fb-b4962e9ad596",
-      "properties": {
-        "description": "Utilize loops and binary code to recreate provided images"
-      },
-      "seeding_key": {
-        "lesson.key": "Artist Binary",
-        "objective.key": "c5481317-1583-44f4-87fb-b4962e9ad596"
       }
     },
     {
