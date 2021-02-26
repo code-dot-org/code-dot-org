@@ -46,9 +46,7 @@ class FoormEditorHeader extends Component {
 
     // populated by Redux
     questions: PropTypes.object,
-    isPublished: PropTypes.bool,
     name: PropTypes.string,
-    version: PropTypes.number,
     editorType: PropTypes.string
   };
 
@@ -146,8 +144,6 @@ class FoormEditorHeader extends Component {
 
 export default connect(state => ({
   questions: state.foorm.questions || {},
-  isPublished: state.foorm.isPublished,
   name: state.foorm.name,
-  version: state.foorm.version,
   editorType: state.foorm.editorType
 }))(FoormEditorHeader);
