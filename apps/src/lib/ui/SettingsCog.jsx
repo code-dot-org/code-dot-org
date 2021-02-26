@@ -140,6 +140,9 @@ class SettingsCog extends Component {
       rootStyle.color = color.dark_charcoal;
     }
 
+    const aiEnabled =
+      experiments.isEnabled(experiments.APPLAB_ML) && this.areAIToolsEnabled();
+
     return (
       <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
         <FontAwesome
@@ -160,22 +163,18 @@ class SettingsCog extends Component {
           {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
-          {experiments.isEnabled(experiments.APPLAB_ML) &&
-            this.areAIToolsEnabled() && (
-              <ManageModels onClick={this.manageModels} />
-            )}
+          {aiEnabled && <ManageModels onClick={this.manageModels} />}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
         </PopUpMenu>
-        {experiments.isEnabled(experiments.APPLAB_ML) &&
-          this.areAIToolsEnabled() && (
-            <ModelManagerDialog
-              isOpen={this.state.managingModels}
-              onClose={this.closeModelManager}
-              autogenerateML={this.props.autogenerateML}
-            />
-          )}
+        {aiEnabled && (
+          <ModelManagerDialog
+            isOpen={this.state.managingModels}
+            onClose={this.closeModelManager}
+            autogenerateML={this.props.autogenerateML}
+          />
+        )}
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}
@@ -201,7 +200,7 @@ ManageAssets.propTypes = {
 };
 
 export function ManageModels(props) {
-  return <PopUpMenu.Item {...props}>{'Manage A.I. Models'}</PopUpMenu.Item>;
+  return <PopUpMenu.Item {...props}>{msg.manageAIModels()}</PopUpMenu.Item>;
 }
 
 export function ManageLibraries(props) {
