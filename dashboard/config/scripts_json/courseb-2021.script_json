@@ -6919,14 +6919,14 @@
     {
       "name": "The Big Event (Courses A, B)",
       "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "csf-the-big-event-activity-worksheet-AB",
+      "key": "the_big_event_courses_a_b_",
       "properties": {
         "type": "Controller Image",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -6995,14 +6995,14 @@
     {
       "name": "The Big Event (Courses A, B)",
       "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "csf-the-big-event-activity-worksheet-AB",
+      "key": "the_big_event_courses_a_b_",
       "properties": {
         "type": "Controller Image",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7322,7 +7322,7 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7358,7 +7358,7 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {

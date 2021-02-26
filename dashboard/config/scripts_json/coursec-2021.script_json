@@ -9467,14 +9467,14 @@
     {
       "name": "The Big Event (Course C)",
       "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
-      "key": "csf-the-big-event-activity-worksheet-CF",
+      "key": "the_big_event_course_c_",
       "properties": {
         "type": "Event Controller",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
@@ -9518,14 +9518,14 @@
     {
       "name": "The Big Event (Course C)",
       "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
-      "key": "csf-the-big-event-activity-worksheet-CF",
+      "key": "the_big_event_course_c_",
       "properties": {
         "type": "Event Controller",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
@@ -9787,7 +9787,7 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
@@ -9811,7 +9811,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Flappy Game",
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
