@@ -10481,26 +10481,26 @@
     {
       "name": "Password Power-Up: If...Then...Scenarios",
       "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
-      "key": "password_power-up_if...then...scenarios",
+      "key": "password_power-up_if_then_scenarios",
       "properties": {
         "type": "Handout",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "password_power-up_if...then...scenarios"
+        "resource.key": "password_power-up_if_then_scenarios"
       }
     },
     {
       "name": "Password Power-Up: If...Then...Scenarios Answer Key",
       "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
-      "key": "password_power-up_if...then...scenarios_answer_key",
+      "key": "password_power-up_if_then_scenarios_answer_key",
       "properties": {
         "type": "Handout",
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "password_power-up_if...then...scenarios_answer_key"
+        "resource.key": "password_power-up_if_then_scenarios_answer_key"
       }
     },
     {
@@ -11082,13 +11082,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_if...then...scenarios"
+        "resource.key": "password_power-up_if_then_scenarios"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_if...then...scenarios_answer_key"
+        "resource.key": "password_power-up_if_then_scenarios_answer_key"
       }
     },
     {
