@@ -11,7 +11,8 @@ var markup = require('./NetSimShardSelectionPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 import {KeyCodes} from '../constants';
 import {getStore} from '../redux';
-import {selectSection} from '../templates/teacherDashboard/teacherSectionsRedux';
+import {updateQueryParam} from '../code-studio/utils';
+import {reload} from '../utils';
 
 /**
  * @type {string}
@@ -163,9 +164,10 @@ NetSimShardSelectionPanel.prototype.updateTeacherSelectedSection_ = function(
       .querySelector(`option[value=${shardID}]`)
       .getAttribute('section-id');
 
-    if (sectionIdSelected) {
-      getStore().dispatch(selectSection(sectionIdSelected));
-    }
+    updateQueryParam('section_id', sectionIdSelected || undefined);
+    // If we have a user_id when we switch sections we should get rid of it
+    updateQueryParam('user_id', undefined);
+    reload();
   }
 };
 
