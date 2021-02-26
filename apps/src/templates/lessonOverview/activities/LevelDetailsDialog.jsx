@@ -20,6 +20,7 @@ const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
 const VIDEO_MODAL_WIDTH = 700;
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+const MAX_LEVEL_HEIGHT = 400;
 
 const styles = {
   sublevelCards: {
@@ -43,8 +44,8 @@ class LevelDetailsDialog extends Component {
     this.state = {
       selectedLevel,
       scriptLevel,
-      height: 500,
-      maxHeight: 500
+      height: MAX_LEVEL_HEIGHT,
+      maxHeight: MAX_LEVEL_HEIGHT
     };
   }
 
@@ -69,14 +70,6 @@ class LevelDetailsDialog extends Component {
           {i18n.levelGroupDetailsDialogText({buttonText: i18n.seeFullLevel()})}
         </div>
       );
-    } else if (level.containedLevels && level.containedLevels.length > 0) {
-      return (
-        <div>
-          {level.containedLevels.map(l => (
-            <div key={l.name}>{this.getContentComponent(l)}</div>
-          ))}
-        </div>
-      );
     } else if (level.type === 'BubbleChoice') {
       return (
         <div style={styles.sublevelCards}>
@@ -90,6 +83,7 @@ class LevelDetailsDialog extends Component {
         </div>
       );
     } else {
+      // TODO: calculate more of these parameters based on the level and pages
       return (
         <UnconnectedTopInstructions
           hasContainedLevels={false}
@@ -106,7 +100,7 @@ class LevelDetailsDialog extends Component {
           teacherMarkdown={level.teacherMarkdown}
           viewAs={this.props.viewAs}
           height={this.state.height}
-          maxHeight={this.state.maxHeight}
+          maxHeight={Math.min(this.state.maxHeight, MAX_LEVEL_HEIGHT)}
           expandedHeight={this.state.height}
           collapsible={false}
           collapsed={false}
