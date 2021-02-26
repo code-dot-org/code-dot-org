@@ -299,6 +299,9 @@ WebLab.prototype.init = function(config) {
 
   window.onbeforeunload = evt => {
     if (project.hasOwnerChangedProject()) {
+      // Manually trigger an autosave instead of waiting for the next autosave.
+      project.autosave();
+
       return weblabMsg.confirmExitWithUnsavedChanges();
     }
   };
