@@ -21845,26 +21845,3 @@ en:
           description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
           description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Haiku Bot. Once they’ve built their Haiku Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"
           student_description: Use Sprite Lab to make a Haiku Bot!
-        allthemigratedthings:
-          lessons:
-            new lesson:
-              name: First Lesson
-            lesson-2:
-              name: Second Lesson
-            lesson-1:
-              name: Third Lesson
-          lesson_groups:
-            lesson group:
-              display_name: Lesson Group 1
-              big_questions: |-
-                * Question 1?
-                * Question 2?
-              description: This is the lesson group description
-            lessonGroup-2:
-              display_name: Lesson Group 2
-          name: allthemigratedthings
-          title: All the migrated things
-          description_audience: ''
-          description_short: ''
-          description: Teacher overview of the unit
-          student_description: Student overview of the unit
