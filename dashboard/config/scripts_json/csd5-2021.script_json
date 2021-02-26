@@ -147,7 +147,7 @@
         "purpose": "This lesson introduces another commonly used system of representing information in binary. The most obvious takeaways from the Pixelation Widget will obviously be that a 1 means an \"On\" and a 0 means an \"Off\". What might be less obvious, however, is that the width and height of the image need to be agreed upon in order to interpret the binary image information as well. Finally this is an opportunity to explore how systems for representing information are created. A \"raw\" image is really hard to represent. The idea to turn an image into a grid of black and white squares significantly simplifies this challenge and makes it into the kind of problem that computer scientists knew how to solve. While the activity in this lesson may feel like just typing 0s and 1s, it actually reveals a lot about how people think about representing information in binary, and what challenges and tradeoffs are created as a result.",
         "preparation": "* Practice using the Pixelation Widget for ~10 mins to prepare to respond to questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Create and manipulate binary patterns to represent black and white images**\r\n\r\n\tCode Studio: In bubble 3, the student should have created a smiley face with the widget.\r\n\r\n2. **Describe common features of systems used to represent information in binary**\r\n\r\n\tWrap up: Students should identify key shared features of the binary systems they have seen."
+        "assessment_opportunities": "1. **Create and manipulate binary patterns to represent black and white images**\n\n\tCode Studio: In bubble 2, the student should have created a smiley face with the widget.\n\n2. **Describe common features of systems used to represent information in binary**\n\n\tWrap up: Students should identify key shared features of the binary systems they have seen."
       },
       "seeding_key": {
         "lesson.key": "Representing Images",
@@ -450,7 +450,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "cf690c94-3a16-4106-8bb0-260d9a235edc",
@@ -586,27 +586,27 @@
       }
     },
     {
-      "key": "2884b29c-c047-4ad0-a002-deed110cc32a",
+      "key": "492ffd04-46d9-4fb8-b653-dd9ea474f42f",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "2884b29c-c047-4ad0-a002-deed110cc32a",
+        "lesson_activity.key": "492ffd04-46d9-4fb8-b653-dd9ea474f42f",
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "492ffd04-46d9-4fb8-b653-dd9ea474f42f",
+      "key": "2884b29c-c047-4ad0-a002-deed110cc32a",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "492ffd04-46d9-4fb8-b653-dd9ea474f42f",
+        "lesson_activity.key": "2884b29c-c047-4ad0-a002-deed110cc32a",
         "lesson.key": "Representing Images",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
@@ -631,7 +631,7 @@
       "position": 2,
       "properties": {
         "name": "Activity ",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "f0382e17-7382-485a-8bc9-c194902fd193",
@@ -641,27 +641,27 @@
       }
     },
     {
-      "key": "80de8d2e-b18f-4142-9b64-064cfb8908f8",
+      "key": "2d2229f4-d843-4f53-9a85-609b25a620e2",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "80de8d2e-b18f-4142-9b64-064cfb8908f8",
+        "lesson_activity.key": "2d2229f4-d843-4f53-9a85-609b25a620e2",
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "2d2229f4-d843-4f53-9a85-609b25a620e2",
+      "key": "80de8d2e-b18f-4142-9b64-064cfb8908f8",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "2d2229f4-d843-4f53-9a85-609b25a620e2",
+        "lesson_activity.key": "80de8d2e-b18f-4142-9b64-064cfb8908f8",
         "lesson.key": "Representing Numbers",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
@@ -696,27 +696,27 @@
       }
     },
     {
-      "key": "8bf33e47-d789-4d92-b788-f6cf714bdda5",
+      "key": "9ad7281f-d33f-41a3-87b1-4a36a2ac36a7",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "8bf33e47-d789-4d92-b788-f6cf714bdda5",
+        "lesson_activity.key": "9ad7281f-d33f-41a3-87b1-4a36a2ac36a7",
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "9ad7281f-d33f-41a3-87b1-4a36a2ac36a7",
+      "key": "8bf33e47-d789-4d92-b788-f6cf714bdda5",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "9ad7281f-d33f-41a3-87b1-4a36a2ac36a7",
+        "lesson_activity.key": "8bf33e47-d789-4d92-b788-f6cf714bdda5",
         "lesson.key": "Combining Representations",
         "lesson_group.key": "csd5_1",
         "script.name": "csd5-2021"
@@ -1278,10 +1278,9 @@
       "key": "322ad615-5d42-4b54-ab60-5d7b7d36e277",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:**",
+        "description": "**Prompt:**",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Offer Encouragement:** If students have a hard time getting started, remind them that this is really just a brainstorm, and they will be working on answering these questions for the entire unit.  Data may have different definitions depending on context (mobile phone plan, math class, etc.).  Encourage the students to think of different situations in which they have used data, and remind them that there is no one \"right\" answer.\r\n"
           }
@@ -1311,7 +1310,6 @@
         "description": "**Discuss:** Give students a few minutes to think on their own about what data is, and then allow them to share quietly with a partner.  After all students have had a chance to speak to each other, share as a whole class, writing the ideas down in the front of the classroom.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should understand that data is information that has been collected about the world.  They should see that data could be any type of information, not just numbers.  \r\n"
           }
@@ -1338,7 +1336,7 @@
       "key": "980907cf-1f1c-4366-ac23-8758ddec8edf",
       "position": 6,
       "properties": {
-        "description": "[slide] **Question of the Day: How does data affect decisions we make everyday?**"
+        "description": "**Question of the Day: How does data affect decisions we make everyday?**"
       },
       "seeding_key": {
         "activity_section.key": "980907cf-1f1c-4366-ac23-8758ddec8edf",
@@ -1349,7 +1347,7 @@
       "key": "88970797-ed0f-4245-8c8a-449de089ae33",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students into groups of 3-5.\r\n\r\n[slide] **Distribute:** Give each group a copy of the activity guide and one of the four versions of the Meals Data resource.  Make sure at least one group has a picture resource, one the menu resource, one group the nutrition resource, and one group the recipe resource."
+        "description": "**Group:** Put students into groups of 3-5\n\n**Distribute:** Give each group a copy of the activity guide and one of the four versions of the Meals Data resource.  Make sure at least one group has a picture resource, one the menu resource, one group the nutrition resource, and one group the recipe resource."
       },
       "seeding_key": {
         "activity_section.key": "88970797-ed0f-4245-8c8a-449de089ae33",
@@ -1360,7 +1358,7 @@
       "key": "ce151ed4-ddfc-48ba-a74f-b2383a3a8d9d",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display**: Read through the instructions for this activity. Each group of students will make a meal recommendation to four different people, and they must justify their recommendation with only their group’s data.  Because different groups have different data sets, the difficulty of the recommendations will vary from group to group."
+        "description": "**Display**: Read through the instructions for this activity. Each group of students will make a meal recommendation to four different people, and they must justify their recommendation with only their group’s data.  Because different groups have different data sets, the difficulty of the recommendations will vary from group to group."
       },
       "seeding_key": {
         "activity_section.key": "ce151ed4-ddfc-48ba-a74f-b2383a3a8d9d",
@@ -1374,7 +1372,6 @@
         "description": "**Circulate:** Allow students to complete the activity in their groups. Monitor conversations to ensure groups are discussing each others ideas, and making reference to the data they have.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Dealing with Frustration:** Because each group will only have adequate information for one of the four recommendations, students may become frustrated that they cannot find the \"right\" answer.  Reassure them that there's not always a \"right\" recommendation, and that the most important part of the exercise is for them to explain why they made their choice.\r\n"
           }
@@ -1415,7 +1412,6 @@
         "description": "Although the menu and pictures may help somewhat, the recipe data set is the only one that tells the students the ingredients in each meal.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Questions and Assumptions about the Given Data:** During the discussion, some students may note that chilaquiles often have eggs.  This is a good chance to point out that if the data about the meal was collected in a way that didn't include information about the ingredients, then they didn't have enough information and made the best decision based on the data that they had.  Remind students that although it's reasonable to make certain assumptions, that only with the relevant data can they be confident in their decisions.\r\n"
           }
@@ -1457,7 +1453,6 @@
         "description": "Those with the menu data set should see prices for each meal.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Using the Data You Have:** For any of these questions, students may have reasons to choose a different answer, or complain that it's not fair that they did not have all the information that they needed.  Remind them that the activity is about using the data they have in a reasonable way, not necessarily getting a particular answer.\r\n"
           }
@@ -1496,7 +1491,7 @@
       "key": "a36ac9d8-2433-4347-81c6-ec75b2f277e5",
       "position": 12,
       "properties": {
-        "description": "[slide] **Share-Out:** When all groups have completed the worksheet, come back together as a class and ask one person from each group to share the answers and reasoning for each recommendation.  As the groups share answers and reasoning, allow them to see each other's data sets.\r\n\r\n[slide] **Display:** As groups share the datasets they used, use the slides to highlight their data so the entire class can see\r\n\r\n\r\n[slide]  **Prompt:**  Now that you've seen all of the different ways we represented the four meals, think about what makes a way of representing something good or bad.  Do you think any of the representations were better or worse than others?  What made them better or worse?"
+        "description": "**Share-Out:** When all groups have completed the worksheet, come back together as a class and ask one person from each group to share the answers and reasoning for each recommendation.  As the groups share answers and reasoning, allow them to see each other's data sets.\n\n**Display:** As groups share the datasets they used, use the slides to highlight their data so the entire class can see\n\n\n**Prompt:**  Now that you've seen all of the different ways we represented the four meals, think about what makes a way of representing something good or bad.  Do you think any of the representations were better or worse than others?  What made them better or worse?"
       },
       "seeding_key": {
         "activity_section.key": "a36ac9d8-2433-4347-81c6-ec75b2f277e5",
@@ -1510,7 +1505,6 @@
         "description": "**Discuss:** Allow students to reflect on their own before discussing with a partner. Ask a few partners to share with the class.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "**Goal:** Students should understand that different representations are good for solving different problems. As they explain which representations are better or worse, make sure that they are justifying their choices within the context of particular problems they were asked to solve in the activity.  They should recognize that each representation had advantages and disadvantages for different problems, and identify how the nature of each problem lent itself to a particular representation.\r\n"
           }
@@ -1537,7 +1531,7 @@
       "key": "a050b814-d2e2-4a84-8fee-d1320e9bb9ea",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt**: Today, you saw four different ways of representing a meal, and how those different representations were useful for solving different problems.\r\n\r\n* Why were some representations more useful than others?\r\n* If you were to create a way of representing a meal, what would be the most important things for you to think about?",
+        "description": "**Prompt**: Today, you saw four different ways of representing a meal, and how those different representations were useful for solving different problems.\n\n* Why were some representations more useful than others?\n* If you were to create a way of representing a meal, what would be the most important things for you to think about?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -1549,7 +1543,7 @@
       "key": "a8a0cd51-12b0-4c58-8d16-b4b4778d2719",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Imagine your friend asked if you could hang out later. This is a yes-no question and so one way you could respond is by saying \"Yes\" or \"No\". This is one possible pair of responses you could use so your friend understood, but there are many more possible pairs.\r\n\r\nList as many many different ways that you could write, say, or represent the answer to a \"Yes-No\" question.",
+        "description": "**Prompt:** Imagine your friend asked if you could hang out later. This is a yes-no question and so one way you could respond is by saying \"Yes\" or \"No\". This is one possible pair of responses you could use so your friend understood, but there are many more possible pairs.\n\nList as many different ways that you could write, say, or represent the answer to a \"Yes-No\" question.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -1564,7 +1558,6 @@
         "description": "**Discuss:** Students should brainstorm silently, then share with their tables, then finally share as a class. Write down ideas in a table at the front of the room as ideas are shared.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/20170314_125652.jpg\" style=\"height:150px;float:right;\">\r\n\r\n**Goal:** Students should see that the same information can be represented in lots of different ways. They might come up with saying \"Yes\" or \"No\" in many different languages, thumbs up vs. thumbs down, plus or minus, up arrow vs. down arrow, shaking head up and down vs side to side etc. Prompt students with examples if they don't understand that they need pairs of responses.\r\n\r\nYour board might look like this after writing responses.\r\n"
           }
@@ -1579,10 +1572,9 @@
       "key": "7e296c41-f0fb-4d31-8b13-31f6e7abe2f5",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Each row in our table is a different \"system\" but they all represent the same information. Why do you think we have so many different systems to represent the same information?",
+        "description": "**Prompt:** Each row in our table is a different \"system\" but they all represent the same information. Why do you think we have so many different systems to represent the same information?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This conversation sets you up to make another important point, that different systems are created for different contexts. Today you're going to ask students to make a system for what will seem like a very arbitrary context, a deck of animal cards. Lean on the fact that they'll have brainstormed lots of \"weird arbitrary systems\" in this warm-up. That's because there's different contexts in which they're used. In the subsequent lesson you can call out how designing systems for wires with electricity in them is just as weird and arbitrary.\r\n"
           }
@@ -1620,7 +1612,7 @@
       "key": "2be236ca-be9d-4aec-8419-af8a9aa7eaae",
       "position": 6,
       "properties": {
-        "description": "[slide] **Question of the Day: How can we create a system for representing information?**"
+        "description": "**Question of the Day: How can we create a system for representing information?**"
       },
       "seeding_key": {
         "activity_section.key": "2be236ca-be9d-4aec-8419-af8a9aa7eaae",
@@ -1631,7 +1623,7 @@
       "key": "1cfdd35d-ad4c-4c95-a583-e099a12e53af",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two or three.\r\n\r\n[slide] **Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\r\n    \r\n\r\n\r\n#### Activity Guide - Representing Information\r\n\r\n[slide] **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
+        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n[slide] **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
       },
       "seeding_key": {
         "activity_section.key": "1cfdd35d-ad4c-4c95-a583-e099a12e53af",
@@ -1642,10 +1634,9 @@
       "key": "98a216a1-8aa6-4216-ad6e-b7ab5abca491",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Brainstorm**: Give students a few minutes to brainstorm their rules. Encourage them to test their ideas with their group members since they know exactly how the test will run. Ask them to choose a couple short words and test them with their group members before sharing with another group.",
+        "description": "**Brainstorm**: Give students a few minutes to brainstorm their rules. Encourage them to test their ideas with their group members since they know exactly how the test will run. Ask them to choose a couple short words and test them with their group members before sharing with another group.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "**Understanding the Activity:** The fact that there are only six types of cards means students will need to make patterns of multiple cards to represent each letter. The fact that the cards are all placed in a row means that they will need to indicate when one pattern stops and the next begins.  Computer scientists run up against these same challenges when designing their own representation systems.\r\n\r\nThe simplest solutions to the activity will be to assign each letter a unique pattern of two shapes (e.g. A = \"Pig Pig\", B = \"Pig Elephant\" and so on). Nevertheless there are still an enormous number of systems possible systems with these qualities and likely no two systems in your class will be the same. There is no one \"best\" system and so what matters is that each group collectively decides to use the same one. Again this is true of representation systems students will see in coming lessons.\r\n"
           }
@@ -1663,7 +1654,6 @@
         "description": "**Circulate**: Monitor group progress, listening for groups working together and listening to each other's ideas. Offer tips or starter-patterns if a group appears particularly stuck in coming up with their initial set of rules.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Encourage Students to Problem Solve:** There are many possible solutions to this activity and it is intentionally very open-ended. Remind students that problem solving doesn't always mean getting something to work the first time, and that they'll need to iteratively test their solutions before being sure they're correct.\r\n\r\n**Common Misconception:** Students may come up with patterns of different lengths. For example \"A = 1 Elephant, B = 2 Elephants, C = 3 Elephants ...\". They'll find that then they won't know if a word has 2 A's in a row or a single B. Let students find this for themselves by testing their system (an important part of the problem solving process).\r\n"
           }
@@ -1678,7 +1668,7 @@
       "key": "2d3b79a7-c3e8-4353-9d18-e6554489dd95",
       "position": 4,
       "properties": {
-        "description": "[slide] **Test Rules:** Once students have finished developing their rules, have them pick a new short word to represent and carefully make a single row of cards to represent their word. Groups should trade with each other by either rotating around the room to visit other groups, or passing their rules and cards around the room. Groups should then carefully decode the word using the rules from the other group.\r\n\r\nWhen they are finished, groups should check with the original rule creators to see if they successfully decoded the word.\r\n\r\n**Circulate**: Monitor groups as they exchange cards & rules, making sure no cards get jumbled in the process. Encourage groups to follow the rules exactly as written, even if they are different from the rules their group came up with.\r\n\r\n[slide] **Feedback & Revision:** Based on the test, have groups decide if the rules make sense or if they need to be improved in some way. Ask groups to provide constructive feedback using the phrases \"I Like…\" and \"I Wish…\". Provide some time for each group to revise their rules if necessary.\r\n\r\n[slide] **Test Rules Again:** Have groups prepare a row of cards to represent a new word before repeating the test. They should switch rules with a different group this time."
+        "description": "**Test Rules:** Once students have finished developing their rules, have them pick a new short word to represent and carefully make a single row of cards to represent their word. Groups should trade with each other by either rotating around the room to visit other groups, or passing their rules and cards around the room. Groups should then carefully decode the word using the rules from the other group.\n\nWhen they are finished, groups should check with the original rule creators to see if they successfully decoded the word.\n\n**Circulate**: Monitor groups as they exchange cards & rules, making sure no cards get jumbled in the process. Encourage groups to follow the rules exactly as written, even if they are different from the rules their group came up with.\n\n**Feedback & Revision:** Based on the test, have groups decide if the rules make sense or if they need to be improved in some way. Ask groups to provide constructive feedback using the phrases \"I Like…\" and \"I Wish…\". Provide some time for each group to revise their rules if necessary.\n\n**Test Rules Again:** Have groups prepare a row of cards to represent a new word before repeating the test. They should switch rules with a different group this time."
       },
       "seeding_key": {
         "activity_section.key": "2d3b79a7-c3e8-4353-9d18-e6554489dd95",
@@ -1689,10 +1679,9 @@
       "key": "05ef09a7-e47c-4238-b280-31aeb3b4dc00",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Review and Revise Rules:** Give students one more opportunity to provide feedback and make final edits to their rules.",
+        "description": "**Review and Revise Rules:** Give students one more opportunity to provide feedback and make final edits to their rules.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**How Many Tests:** This activity gives students a chance to experience for themselves the challenges of creating a system to represent information. After two tests students should have enough experience to participate in the wrap-up discussions and see the important points of the activity, even if they feel their system is still incomplete.\r\n"
           }
@@ -1704,28 +1693,17 @@
       }
     },
     {
-      "key": "b15626ad-1c06-4e7c-9ffe-62e8f3f043a1",
+      "key": "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6",
       "position": 1,
       "properties": {
+        "description": "**Prompt**: \n\n",
+        "name": "Journal\r",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
-            "markdown": "Students should recognize that even very different sets of systems for representing this information could work, but that each system must share key features to work.  For example: \r\n\r\n* Each letter needs a separate pattern\r\n* We need to know when one pattern stops and the next starts.\r\n"
+            "markdown": "Students should recognize that even very different sets of systems for representing this information could work, but that each system must share key features to work.  For example: \n\n* Each letter needs a separate pattern\n* We need to know when one pattern stops and the next starts.\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b15626ad-1c06-4e7c-9ffe-62e8f3f043a1",
-        "lesson_activity.key": "aa25d648-15c2-44b2-b27c-8b4423498b20"
-      }
-    },
-    {
-      "key": "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6",
-      "position": 2,
-      "properties": {
-        "description": "[slide]  **Prompt**: \r\n\r",
-        "name": "Journal\r"
       },
       "seeding_key": {
         "activity_section.key": "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6",
@@ -1734,7 +1712,7 @@
     },
     {
       "key": "c5e6f388-f8ae-4f1b-8ad7-c5c5ea53903e",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "* What was the same and what was different about the different sets of rules you saw?\r\n* Are there some things that every group needed to account for to complete the challenge?"
       },
@@ -1745,7 +1723,7 @@
     },
     {
       "key": "bbd217d1-663a-4915-b7db-a08eee746a15",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Today you created your own systems to represent information. We saw that there are many different systems we could use to represent the same information. What's important is that there are clear rules for how to use the systems, and that everyone knows the rules.\r\n\r\nComputer scientists care about systems for representing information because a computer doesn't \"understand\" the world the way humans do. It needs to be given information using a system that takes into account the fact that it's just a box of wires. \r\n\r\nWhen we change the way that we represent information so that it's easier for a computer to use, we encode that information.  When we change it back so that it's easier for a human to understand, we decode that information.",
         "remarks": true
@@ -1757,9 +1735,9 @@
     },
     {
       "key": "3cfd663f-71e4-4145-a628-eade2bc94faa",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "[slide] **Vocabulary:** Introduce the following terms\r\n\r\n* **Encode:** change how information is represented so that it can be read by a computer\r\n* **Decode:** change how information is represented so that it can be read by a person"
+        "description": "**Vocabulary:** Introduce the following terms\n\n* **Encode:** change how information is represented so that it can be read by a computer\n* **Decode:** change how information is represented so that it can be read by a person"
       },
       "seeding_key": {
         "activity_section.key": "3cfd663f-71e4-4145-a628-eade2bc94faa",
@@ -1768,7 +1746,7 @@
     },
     {
       "key": "b44b9be0-7248-4ff8-bb29-93b11f382833",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "In the rest of this chapter, we're going to look at ways that we can encode information so that it can be used by a computer.",
         "remarks": true
@@ -1782,7 +1760,7 @@
       "key": "71a4871e-99e0-48c7-8dbc-e651828553d8",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt**: Yesterday’s activity used six different animal symbols to represent letters. Do you think we could do the same activity with only two symbols instead? Would that change the patterns you used yesterday?",
+        "description": "**Prompt**: Yesterday’s activity used six different animal symbols to represent letters. Do you think we could do the same activity with only two symbols instead? Would that change the patterns you used yesterday?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -1797,7 +1775,6 @@
         "description": "**Discuss:** Have students discuss their answers with a neighbor but don’t worry about sharing out as a full group. Instead, begin transitioning to the main activity.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Jump to the Activity:** This introductory prompt is important to justify the patterns students will see on the activity guide. Otherwise, however, most of the discussion in this lesson can happen after the activity.\r\n"
           }
@@ -1824,7 +1801,7 @@
       "key": "4822d11d-63d3-41ad-b0be-51b4f890d105",
       "position": 4,
       "properties": {
-        "description": "[slide] **Question of the Day: What system do computers use to represent letters and words?**"
+        "description": "**Question of the Day: What system do computers use to represent letters and words?**"
       },
       "seeding_key": {
         "activity_section.key": "4822d11d-63d3-41ad-b0be-51b4f890d105",
@@ -1835,7 +1812,7 @@
       "key": "47d2a823-af64-4c77-9eb8-66bb3c656c90",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in pairs\r\n\r\n[slide] **Distribute:** one copy of the ASCII Text resource per pair of students, and copies of the ASCII Challenges activity guide to each individual student\r\n\r\n\r\n\r\n#### ASCII Text Resource\r\n\r\n[slide] **ASCII Text:** Read this section of the resource as a class. Help students with the pronunciation of ASCII (ask-ee). After reading both paragraphs, display the vocabulary for the class to see.\r\n\r\n[slide] **Vocabulary:** \r\n\r\n* **Binary System:** a way of representing information using only two options\r\n* **ASCII:** a popular system for representing text in binary\r\n\r\n[slide] **Display:** Review the ASCII table with students, emphasizing that this table is one way to solve the problem introduced in the warm-up journal prompt. Inform students that ASCII is the system that likely every computer they've ever used uses to represent letters. Once the table has been discussed, have students use the table to solve the challenges in the activity guide.\r\n\r\n\r\n\r\n\r\n\r\n#### ASCII Challenges Activity Guide"
+        "description": "**Group:** Place students in pairs\n\n**Distribute:** one copy of the ASCII Text resource per pair of students, and copies of the ASCII Challenges activity guide to each individual student\n\n\n\n#### ASCII Text Resource\n\n**ASCII Text:** Read this section of the resource as a class. Help students with the pronunciation of ASCII (ask-ee). After reading both paragraphs, display the vocabulary for the class to see.\n\n**Vocabulary:** \n\n* **Binary System:** a way of representing information using only two options\n* **ASCII:** a popular system for representing text in binary\n\n**Display:** Review the ASCII table with students, emphasizing that this table is one way to solve the problem introduced in the warm-up journal prompt. Inform students that ASCII is the system that likely every computer they've ever used uses to represent letters. Once the table has been discussed, have students use the table to solve the challenges in the activity guide.\n\n\n\n\n\n#### ASCII Challenges Activity Guide"
       },
       "seeding_key": {
         "activity_section.key": "47d2a823-af64-4c77-9eb8-66bb3c656c90",
@@ -1846,7 +1823,7 @@
       "key": "b19adc05-c5d0-473e-9091-5f3f6523a749",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display:** Have students decode the three messages in pairs, checking answers with each other as they work."
+        "description": "**Display:** Have students decode the three messages in pairs, checking answers with each other as they work."
       },
       "seeding_key": {
         "activity_section.key": "b19adc05-c5d0-473e-9091-5f3f6523a749",
@@ -1860,7 +1837,6 @@
         "description": "**Circulate:** Be on the lookout for strategies pairs use to decode the messages. Encourage pairs to check their answers with you before continuing to the back of the activity guide.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "**Why Not Split the Symbols:** When sending information with electricity, there's no way to put a \"space\" between signals. At any moment you're either sending electricity or you're not. This is the primary reason why characters are an agreed-upon length, in this case 7 bits long.\r\n"
           }
@@ -1886,7 +1862,7 @@
       "key": "6825c7b1-6eff-4c2f-884c-b346da6af6b3",
       "position": 1,
       "properties": {
-        "description": "[slide] **Share-out:** Ask students to share the symbols they used for their binary system when creating their own messages. Have several students share their ideas."
+        "description": "**Share-out:** Ask students to share the symbols they used for their binary system when creating their own messages. Have several students share their ideas."
       },
       "seeding_key": {
         "activity_section.key": "6825c7b1-6eff-4c2f-884c-b346da6af6b3",
@@ -1900,9 +1876,8 @@
         "description": "All of these are valid binary systems, where we can represent letters with just two pieces of information. Computers have their own binary system - they use 0’s and 1’s to represent information. This is why you may have heard that computer science is all “0’s and 1’s”. When you have a single 0 or 1, that is called one **bit** of information.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
-            "markdown": "**Ignore Numbers for Now:** The ASCII system as presented here is just **a system for representing characters with patterns of bits**. In reality the characters are often associated with the binary number system, which is presented in a later lesson. If this comes up, acknowledge there's lots of extra information to know about that we’ll continue to explore in later lessons.\r\n\r\n <img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/on-off.png\" style=\"height:100px;float:right\">\r\n\r\n\r\n**On-Off Symbol:** Students may have seen this on-off icon before. It's just a 0 and a 1 combined!\r\n"
+            "markdown": " <img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/on-off.png\" style=\"height:100px;float:right\">\n\n**Ignore Numbers for Now:** The ASCII system as presented here is just **a system for representing characters with patterns of bits**. In reality, the characters are often associated with the binary number system, which is presented in a later lesson. If this comes up, acknowledge there's lots of extra information to know about that we’ll continue to explore in later lessons.\n\n**On-Off Symbol:** Students may have seen this on-off icon before. It's just a 0 and a 1 combined!\n"
           }
         ],
         "remarks": true
@@ -1916,7 +1891,7 @@
       "key": "597e3c88-340f-44cf-83ca-c6dcfa231275",
       "position": 3,
       "properties": {
-        "description": "[slide] **Vocabulary:**\r\n\r\n* **Bit:** a single piece of binary information"
+        "description": "**Vocabulary:**\n\n* **Bit:** a single piece of binary information"
       },
       "seeding_key": {
         "activity_section.key": "597e3c88-340f-44cf-83ca-c6dcfa231275",
@@ -1939,7 +1914,7 @@
       "key": "306f6b92-b8b0-4cca-a7ce-13e65d9de71f",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Show the images of the bicycle and tree to students from the first slide"
+        "description": "**Display:** Show the images of the bicycle and tree to students from the first slide"
       },
       "seeding_key": {
         "activity_section.key": "306f6b92-b8b0-4cca-a7ce-13e65d9de71f",
@@ -1965,7 +1940,6 @@
         "description": "**Discuss:** Have students brainstorm silently, then share with a partner, then discuss as a whole class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The aim is to point out how daunting representing this complex piece of information might be. Be prepared as you're presenting students this challenge to normalize the fact that it is really hard but still give them a chance.\r\n"
           }
@@ -1980,7 +1954,7 @@
       "key": "41c303b0-e3a8-40a3-a233-14ecee21e373",
       "position": 4,
       "properties": {
-        "description": "[slide] **Display:** Show the second slide showing different versions of the same image in more pixelated forms.\r\n\r\n**Prompt:** What strategy is being used with these examples that might help a computer represent images?"
+        "description": "**Display:** Show the second slide showing different versions of the same image in more pixelated forms.\n\n**Prompt:** What strategy is being used with these examples that might help a computer represent images?"
       },
       "seeding_key": {
         "activity_section.key": "41c303b0-e3a8-40a3-a233-14ecee21e373",
@@ -1994,7 +1968,6 @@
         "description": "**Discuss:** You may choose to run this as a second silent brainstorm or else just immediately discuss as a whole class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** These images are intended to visually demonstrate the idea of breaking images up into smaller pieces. Students should hopefully recognize that what they are looking at is a binary system (black and white) and so with the right system they should be able to represent the last images. You should be prepared to acknowledge that while the last image is lower quality, the same ideas could probably be used to make the original. It is on their screen after all!\r\n"
           }
@@ -2021,7 +1994,7 @@
       "key": "a1aa284f-85a3-4cf3-8ae7-eb12df690ad1",
       "position": 7,
       "properties": {
-        "description": "[slide] **Question of the Day: What systems do computers use to represent images?**"
+        "description": "**Question of the Day: What systems do computers use to represent images?**"
       },
       "seeding_key": {
         "activity_section.key": "a1aa284f-85a3-4cf3-8ae7-eb12df690ad1",
@@ -2032,7 +2005,7 @@
       "key": "9e5d6b6b-12e9-4a3e-8523-8bd2156e7209",
       "position": 1,
       "properties": {
-        "description": "[slide] **Vocabulary:** Briefly introduce the following vocabulary\n\n* **Pixel:** a tiny square or dot which contains a single point of color of a larger image.\n\n&fa-desktop; **Code Studio**: Have students navigate to this lesson in Code Studio beginning on Level 2.\n\n\n\n#### Pixelation Widget"
+        "description": "**Vocabulary:** Briefly introduce the following vocabulary\n\n* **Pixel:** a tiny square or dot which contains a single point of color of a larger image.\n\n**Code Studio**: Have students navigate to this lesson in Code Studio beginning on Level 1.\n\n\n\n#### Pixelation Widget"
       },
       "seeding_key": {
         "activity_section.key": "9e5d6b6b-12e9-4a3e-8523-8bd2156e7209",
@@ -2043,10 +2016,9 @@
       "key": "0cb3b9f4-af2b-43e0-bdaa-4ce6ff013a37",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Level 2:** Students learn to type 0s and 1s to turn on the pixels of a 10 by 10 X-pattern.",
+        "description": "**Level 1:** Students learn to type 0s and 1s to turn on the pixels of a 10 by 10 X-pattern.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**You Can't Break It:** Widgets are designed to enforce rules so that students can freely explore concepts. Encourage students to experiment and not to worry about breaking it. \n\n**Giving Students Space to Problem Solve:** As a teacher you also will likely find that students learn more by playing with the tool themselves than having it explained. Try setting a timer for 5-10 minutes after which computers are put down to discuss what they're seeing. A little struggle at first should be expected but generally leads to the payoff of students solving problems on their own.\n\n  "
           }
@@ -2061,7 +2033,7 @@
       "key": "37b68445-9a68-4976-82d7-ff063c8cd877",
       "position": 3,
       "properties": {
-        "description": "[slide] **Level 3:** Students make a 10 by 10 smiley. Show students the \"Clean Format\" vs. \"Raw Format\" buttons if they don't see it. This is a very helpful way to make the tool easier to use."
+        "description": "**Level 2:** Students make a 10 by 10 smiley. Show students the \"Clean Format\" vs. \"Raw Format\" buttons if they don't see it. This is a very helpful way to make the tool easier to use."
       },
       "seeding_key": {
         "activity_section.key": "37b68445-9a68-4976-82d7-ff063c8cd877",
@@ -2072,10 +2044,9 @@
       "key": "2f614323-09fc-4fc3-949a-d8326ea2dedf",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Level 4:** Students change the width slider to \"find\" the image from a set of bits.",
+        "description": "**Level 3:** Students change the width slider to \"find\" the image from a set of bits.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "**Knowing The System Being Used:** This puzzle demonstrates the importance of knowing the exact \"system\" being used to interpret a string of bits. Reading an 8-bit wide image as though it is 10 bits wide will lead to a garbled image. This is one place where students clearly see this phenomenon but may miss it if it's not pointed out.\n"
           }
@@ -2090,7 +2061,7 @@
       "key": "79680c7f-0f85-4543-9436-9c474a890730",
       "position": 5,
       "properties": {
-        "description": "[slide] **Level 5:** Students \"edit\" an image to add eyebrows to a smiley face. This activity demonstrates that the bits are being read in sequence. If you delete or add one earlier on the computer doesn't \"know\" that the rest aren't supposed to move."
+        "description": "**Level 4:** Students \"edit\" an image to add eyebrows to a smiley face. This activity demonstrates that the bits are being read in sequence. If you delete or add one earlier on the computer doesn't \"know\" that the rest aren't supposed to move."
       },
       "seeding_key": {
         "activity_section.key": "79680c7f-0f85-4543-9436-9c474a890730",
@@ -2101,10 +2072,9 @@
       "key": "17536ac7-f578-4492-9a2b-034697748108",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Level 6:** Free-play. Students should create at least an 8 by 8 image (though ideally larger). You will probably want to time-box this activity and let students know in advance how long they'll have. 10-15 minutes before doing the class discussion is probably fine. If you have more time students can always come back to finish their drawings.",
+        "description": "**Level 5:** Free-play. Students should create at least an 8 by 8 image (though ideally larger). You will probably want to time-box this activity and let students know in advance how long they'll have. 10-15 minutes before doing the class discussion is probably fine. If you have more time students can always come back to finish their drawings.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Have Ideas Ready:** Many students may need help deciding what to draw. Have a couple of ideas ready to share like their hobby, their favorite animal, a personal logo, etc. \n\n"
           }
@@ -2127,10 +2097,21 @@
       }
     },
     {
+      "key": "bf46dca6-d1b6-4a84-9ea3-752bf28a385a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Representing Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf46dca6-d1b6-4a84-9ea3-752bf28a385a",
+        "lesson_activity.key": "492ffd04-46d9-4fb8-b653-dd9ea474f42f"
+      }
+    },
+    {
       "key": "d49613fe-8fcf-4801-a656-6bd752db7c1b",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Think about the ASCII system we learned yesterday and the image representation system we learned today. \r\n\r\n* How are both examples of breaking down big problems into small ones that we are able to solve?\r\n* What information BESIDES the 0s and 1s do you need in order to decode a binary message?",
+        "description": "**Prompt:** Think about the ASCII system we learned yesterday and the image representation system we learned today. \n\n* How are both examples of breaking down big problems into small ones that we are able to solve?\n* What information BESIDES the 0s and 1s do you need in order to decode a binary message?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2145,7 +2126,6 @@
         "description": "**Discuss:** Give students a minute to write their ideas before sharing with a neighbor. Eventually run a whole class discussion.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "The first discussion calls out that both systems were breaking down complex information such as words or images into small pieces that are easier to represent. With text this is already done for us since a page of words is already broken into letters. With images we needed to get a bit more creative to break the image into pixels. Students should recognize that once this is done the problem gets much simple. \r\n\r\nThe second prompt is designed to call out that a series of binary information doesn't actually mean anything if you don't know the system used to encode it. Students should recognize that for any system to work, it must be known to everyone who needs to use it.  They may also recognize that this system should be unambiguous, so that there is only one way to interpret a given sequence of bits. \r\n"
           }
@@ -2169,25 +2149,12 @@
       }
     },
     {
-      "key": "bf46dca6-d1b6-4a84-9ea3-752bf28a385a",
-      "position": 1,
-      "properties": {
-        "name": "Representing Images",
-        "progression_name": "Representing Images"
-      },
-      "seeding_key": {
-        "activity_section.key": "bf46dca6-d1b6-4a84-9ea3-752bf28a385a",
-        "lesson_activity.key": "492ffd04-46d9-4fb8-b653-dd9ea474f42f"
-      }
-    },
-    {
       "key": "85c49ae4-5b52-40ad-96eb-424f02d8539e",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Create a list of all the information you might want to represent to a computer as a number. Here's some ideas to get you started",
+        "description": "**Prompt:** Create a list of all the information you might want to represent to a computer as a number. Here's some ideas to get you started",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** In this and the following lessons students will be learning a new system to represent numbers using on-off signals. Motivate this activity by thinking back to the kinds of information students eventually will want to represent with this system. If students need help brainstorming give them a couple examples, e.g. age, their height, their birthday, the number of friends they have, the cost of items, an item's rating, etc.  \r\n"
           }
@@ -2226,7 +2193,7 @@
       "key": "f3bb8fa1-e825-4782-bf7a-4dd2c8d9339f",
       "position": 4,
       "properties": {
-        "description": "[slide] **Question of the Day: What system do computers use to represent numbers?**"
+        "description": "**Question of the Day: What system do computers use to represent numbers?**"
       },
       "seeding_key": {
         "activity_section.key": "f3bb8fa1-e825-4782-bf7a-4dd2c8d9339f",
@@ -2240,7 +2207,6 @@
         "description": "**Group:** Put students into pairs.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "For younger students, you may want to stop the activity after they have finished the first page of the worksheet.  This means that they will not need to go online for any part of the lesson.\r\n"
           }
@@ -2255,7 +2221,7 @@
       "key": "36a71be9-67a0-488f-8a5e-d96a0bd6b221",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** Give each student a copy of the activity guide and a set of number cards.\r\n\r\n\r\n\r\n#### Representing Numbers Activity Guide"
+        "description": "**Distribute:** Give each student a copy of the activity guide and a set of number cards.\n\n\n\n#### Representing Numbers Activity Guide"
       },
       "seeding_key": {
         "activity_section.key": "36a71be9-67a0-488f-8a5e-d96a0bd6b221",
@@ -2266,10 +2232,9 @@
       "key": "5e396df7-105a-46f4-8083-63f1c708ca2a",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Model:** Go through the example problem as a class.  Ask students to arrange cards face up and face down so that exactly thirteen dots are showing.  (It is important that each group uses only one set of cards.)  After some trial and error, students should see that the 8, 4, and 1 cards should be face up, and the 2 card should be face down. (U U D U)",
+        "description": "**Model:** Go through the example problem as a class.  Ask students to arrange cards face up and face down so that exactly thirteen dots are showing.  (It is important that each group uses only one set of cards.)  After some trial and error, students should see that the 8, 4, and 1 cards should be face up, and the 2 card should be face down. (U U D U)",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Digital Manipulatives**: A digital version of the binary cards are provided in the teacher resources for you to make your own copy. To use with students: have the presentation open but not in “present” mode - this will let you move the cards as if you are covering or uncovering different cards.\r\n\r\n**Focus on Binary System**: This activity models a base-2 number system for the student.  However, it is not necessary for the students to understand the math behind the patterns that they are creating.  Students should focus on the fact that they are using a binary system (face up/face down) to represent information.  \r\n"
           }
@@ -2284,7 +2249,7 @@
       "key": "a50f90f5-e892-412c-8220-9c0b007e5e2c",
       "position": 4,
       "properties": {
-        "description": "[slide] **Do This:** Allow students to complete the rest of the front page of the activity in pairs. Instruct students to check with you before moving to the back page.\r\n\r\n**Circulate:** Monitor students as they progress through the activity, looking for students working well in pairs. If students get stuck, suggest they use the number card manipulatives to help themselves out.\r\n\r\n[slide] **Share-Out:** Ask students to share out their responses as a way of checking their answers. In particular, make sure the entire class agrees on the last few questions where they predict the pattern for 5-bit and 6-bit numbers."
+        "description": "**Do This:** Allow students to complete the rest of the front page of the activity in pairs. Instruct students to check with you before moving to the back page.\n\n**Circulate:** Monitor students as they progress through the activity, looking for students working well in pairs. If students get stuck, suggest they use the number card manipulatives to help themselves out.\n\n**Share-Out:** Ask students to share out their responses as a way of checking their answers. In particular, make sure the entire class agrees on the last few questions where they predict the pattern for 5-bit and 6-bit numbers."
       },
       "seeding_key": {
         "activity_section.key": "a50f90f5-e892-412c-8220-9c0b007e5e2c",
@@ -2295,7 +2260,7 @@
       "key": "e36c026d-7f3c-4605-8117-b0da1b07448e",
       "position": 5,
       "properties": {
-        "description": "[slide] **Prompt:** Was there more than one possible answer for any of the problems?"
+        "description": "**Prompt:** Was there more than one possible answer for any of the problems?"
       },
       "seeding_key": {
         "activity_section.key": "e36c026d-7f3c-4605-8117-b0da1b07448e",
@@ -2309,7 +2274,6 @@
         "description": "**Discuss:** Allow students to check with other pairs and try to find another way to represent the numbers before regrouping and discussing as a class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal** After some discussion, students should note that there is only one way to represent any particular number in this system.  This is an important point to bring out because it would be confusing if two patterns meant the same thing.\r\n"
           }
@@ -2324,7 +2288,7 @@
       "key": "b4133437-14b2-4221-8202-c411f147e13c",
       "position": 7,
       "properties": {
-        "description": "[slide] **Display:** Have students flip to the back of their worksheet. In the top section, students will create a Binary Profile by answering a few questions and encoding their answers as binary numbers. Once completed, they will trade with a partner and use the widget to decode their binary profile to reveal the answers so humans can understand them.\r\n\r\n&fa-desktop; **Code Studio:** Send students to the Binary Number widget.\r\n\r\n**Circulate**: Allow students to complete the top half of the worksheet with the support of the widget. When both students in a pair have finished, have them trade papers to decode the other person's profile. When they finish, have them trade back and verify the answers were correct.\r\n\r\n**Challenge:** If students have finished encoding and decoding their Binary profiles, have them create a new question that they can trade with another student in the room."
+        "description": "**Display:** Have students flip to the back of their worksheet. In the top section, students will create a Binary Profile by answering a few questions and encoding their answers as binary numbers. Once completed, they will trade with a partner and use the widget to decode their binary profile to reveal the answers so humans can understand them.\n\n**Code Studio:** Send students to the Binary Number widget.\n\n**Circulate**: Allow students to complete the top half of the worksheet with the support of the widget. When both students in a pair have finished, have them trade papers to decode the other person's profile. When they finish, have them trade back and verify the answers were correct.\n\n**Challenge:** If students have finished encoding and decoding their Binary profiles, have them create a new question that they can trade with another student in the room."
       },
       "seeding_key": {
         "activity_section.key": "b4133437-14b2-4221-8202-c411f147e13c",
@@ -2335,10 +2299,9 @@
       "key": "30ef889b-387b-4dbd-b6bc-96ca25489944",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** The last question on this activity guide uses an 8-bit number, even though we haven't talked about how to represent these numbers yet. Do you think we can figure out what numbers are needed for 8-bit numbers? How?",
+        "description": "**Prompt:** The last question on this activity guide uses an 8-bit number, even though we haven't talked about how to represent these numbers yet. Do you think we can figure out what numbers are needed for 8-bit numbers? How?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal** Students should recognize that the patterns of the numbers and the rules that they follow can help them determine the next numbers in the sequence. For an 8-bit number, starting from the left, the pattern goes **128 | 64 | 32 | 16 | 8 | 4 | 2 | 1**.  \r\n  "
           }
@@ -2373,10 +2336,32 @@
       }
     },
     {
+      "key": "76feecf7-2285-44be-8370-70d7db7fb010",
+      "position": 1,
+      "properties": {
+        "progression_name": "Binary Numbers"
+      },
+      "seeding_key": {
+        "activity_section.key": "76feecf7-2285-44be-8370-70d7db7fb010",
+        "lesson_activity.key": "2d2229f4-d843-4f53-9a85-609b25a620e2"
+      }
+    },
+    {
+      "key": "38317c40-2286-4bdc-ae50-584849b6baed",
+      "position": 2,
+      "properties": {
+        "progression_name": "Binary and Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "38317c40-2286-4bdc-ae50-584849b6baed",
+        "lesson_activity.key": "2d2229f4-d843-4f53-9a85-609b25a620e2"
+      }
+    },
+    {
       "key": "984f56b5-6790-4ba6-bb1d-c3cb2bdcb4fd",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** So far, we've looked at how we could represent text, images, and numbers in binary.  Are there any other types of data that you use on your computer that need to be represented?\r\n\r\nAllow students to call out different types of data, such as music, videos, etc."
+        "description": "**Prompt:** So far, we've looked at how we could represent text, images, and numbers in binary.  Are there any other types of data that you use on your computer that need to be represented?\n\nAllow students to call out different types of data, such as music, videos, etc."
       },
       "seeding_key": {
         "activity_section.key": "984f56b5-6790-4ba6-bb1d-c3cb2bdcb4fd",
@@ -2399,7 +2384,7 @@
       "key": "1128304f-5c68-48ac-bf6a-229b5abc8153",
       "position": 3,
       "properties": {
-        "description": "[slide] **Display:** Play the \"Binary and Data\" video."
+        "description": "**Display:** Play the \"Binary and Data\" video."
       },
       "seeding_key": {
         "activity_section.key": "1128304f-5c68-48ac-bf6a-229b5abc8153",
@@ -2407,34 +2392,10 @@
       }
     },
     {
-      "key": "76feecf7-2285-44be-8370-70d7db7fb010",
-      "position": 1,
-      "properties": {
-        "name": "Binary Numbers",
-        "progression_name": "Binary Numbers"
-      },
-      "seeding_key": {
-        "activity_section.key": "76feecf7-2285-44be-8370-70d7db7fb010",
-        "lesson_activity.key": "2d2229f4-d843-4f53-9a85-609b25a620e2"
-      }
-    },
-    {
-      "key": "38317c40-2286-4bdc-ae50-584849b6baed",
-      "position": 2,
-      "properties": {
-        "name": "Binary and Data",
-        "progression_name": "Binary and Data"
-      },
-      "seeding_key": {
-        "activity_section.key": "38317c40-2286-4bdc-ae50-584849b6baed",
-        "lesson_activity.key": "2d2229f4-d843-4f53-9a85-609b25a620e2"
-      }
-    },
-    {
       "key": "f5e577d7-b133-493e-995f-76c9ef44de1d",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Show students the binary code in the slides\r\n\r\n**Prompt:** A friend sent you the binary message above, but did not send any encoding system to help you decide what it means. Using what you already know about binary systems: write down at least 2 things that this message could represent",
+        "description": "**Display:** Show students the binary code in the slides\n\n**Prompt:** A friend sent you the binary message above but did not send any encoding system to help you decide what it means. Using what you already know about binary systems: write down at least 2 things that this message could represent",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2449,7 +2410,6 @@
         "description": "**Discuss:** Give students a chance to think on their own, then talk in table groups before opening up to a full class discussion.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should note that without knowing which code is being used, they can't know for sure what the binary means.  Specifically, they may see that the code could be the character \"C\" in ASCII or the number 67 as a binary number.  In fact, it could be a code that they haven't seen before, in which case it could mean anything.\r\n"
           }
@@ -2464,10 +2424,9 @@
       "key": "1282f8e7-0fd9-47bc-b7b4-75b4025eedb5",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Tell students that this friend has told you that this code represents a number, but nothing else. What do you think this number could represent for your friend?",
+        "description": "**Prompt:** Tell students that this friend has told you that this code represents a number, but nothing else. What do you think this number could represent for your friend?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:**  Push students past the answer that the number is just 67. One way to do this to note that if a stranger approached them and said \"67\" out of the blue, would they know what that person was talking about? \r\n\r\nStudents should come up with some different possible meanings of the number, such as an age, a temperature, an address, etc. The larger realization should be that, without context, the number could mean many things.\r\n\r\n"
           }
@@ -2494,7 +2453,7 @@
       "key": "1d086581-d5bc-4987-9829-2fe567019965",
       "position": 5,
       "properties": {
-        "description": "[slide] **Question of the Day: How do computers tell the difference between binary codes for letters, numbers, or images?**"
+        "description": "**Question of the Day: How do computers tell the difference between binary codes for letters, numbers, or images?**"
       },
       "seeding_key": {
         "activity_section.key": "1d086581-d5bc-4987-9829-2fe567019965",
@@ -2517,7 +2476,7 @@
       "key": "dd0276c6-105c-4245-8982-cdab6d9b8e25",
       "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:**  What types of information would the school want to know about each student? How should it keep track of all this information?"
+        "description": "**Prompt:**  What types of information would the school want to know about each student? How should it keep track of all this information?"
       },
       "seeding_key": {
         "activity_section.key": "dd0276c6-105c-4245-8982-cdab6d9b8e25",
@@ -2531,7 +2490,6 @@
         "description": "**Discuss:** Let students talk with a partner before bringing to a full group. Ask a few students to share their ideas before continuing to the student record example.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal** Encourage students to make connections between the previous lesson, where they made numerical binary profiles as practice, and this more realistic scenario of keeping track of student information for a school. Encourage students to think beyond just numerical data - for example, a school may need to keep a picture of you for your ID, and your name and address, and other information.\r\n\r\nIt’s okay for students to be less sure about how the information should be tracked. Students may suggest keeping a long list or having a large table. When punchcards are introduced later, make connections back to these suggestions and note any similarities between students’ ideas and the punchcard.\r\n\r\n"
           }
@@ -2546,10 +2504,9 @@
       "key": "a4df917c-be45-4977-bc95-fbe945f3c3cf",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Display:** Display the binary student record and the rules for encoding it. Explain that this is one possible student record system",
+        "description": "**Display:** Display the binary student record and the rules for encoding it. Explain that this is one possible student record system",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "**8-Bit Consistency:** In previous lessons, ASCII has used 7 bits and numbers were between 4 and 8 bits.  In this lesson, we begin to organize the information into sets of 8 bits, called a **byte**. This is a standard unit for binary information that is used in many different contexts.\r\n\r\n**Starting at 0:** In our records, we start at row 0 rather than row 1.  This is a common way of numbering in Computer Science.\r\n\r\n**Punchcards in History:** Punchcards were used frequently in the early days of computer science - stories of their use can be researched online. Remnants of this technology can still be found when students fill in bubble sheets for standardized tests - the way these exams are graded mimics how a computer decodes a punchcard.\r\n"
           }
@@ -2564,7 +2521,7 @@
       "key": "5b070069-8e80-48a8-8a84-435906d67aef",
       "position": 5,
       "properties": {
-        "description": "**Model:** Show students how to decode this record as a class. You should use the new [8-bit binary widget in Code Studio (UPDATE LATER)](https://levelbuilder-studio.code.org/levels/24667?show_callouts=1) for the numerical rows, and the ASCII to Binary Table for the letter rows. Encourage the class to assist you with the correct steps in using these resources."
+        "description": "**Model:** Show students how to decode this record as a class. You should use the new [8-bit binary widget in Code Studio](https://levelbuilder-studio.code.org/levels/24667?show_callouts=1) for the numerical rows, and the ASCII to Binary Table for the letter rows. Encourage the class to assist you with the correct steps in using these resources."
       },
       "seeding_key": {
         "activity_section.key": "5b070069-8e80-48a8-8a84-435906d67aef",
@@ -2587,7 +2544,7 @@
       "key": "ed4fecf3-07ff-4c7e-a3e8-67651afae88a",
       "position": 7,
       "properties": {
-        "description": "**Group:** Put students into pairs.\r\n\r\n[slide] &fa-desktop; **Distribute:** Give a copy of the activity guide and Binary to ASCII Tabkle. Ensure each group has access to the 8-bit binary widget in Code Studio\r\n\r\n\r\n\r\n#### Pet Records Activity Guide"
+        "description": "**Group:** Put students into pairs.\n\n**Distribute:** Give a copy of the activity guide and Binary to ASCII Tabkle. Ensure each group has access to the 8-bit binary widget in Code Studio\n\n\n\n#### Pet Records Activity Guide"
       },
       "seeding_key": {
         "activity_section.key": "ed4fecf3-07ff-4c7e-a3e8-67651afae88a",
@@ -2598,7 +2555,7 @@
       "key": "915919b7-a41d-4cdd-b996-0d751a174259",
       "position": 8,
       "properties": {
-        "description": "[slide] **Display:** Read through the first section of the activity guide as a class and clarify any questions from students."
+        "description": "**Display:** Read through the first section of the activity guide as a class and clarify any questions from students."
       },
       "seeding_key": {
         "activity_section.key": "915919b7-a41d-4cdd-b996-0d751a174259",
@@ -2609,10 +2566,9 @@
       "key": "38324708-63cb-4738-92c9-af06aed187f7",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Do This:** Students should use the binary widget to decode the numbers and their ASCII to Binary tables to decode the letters.  There is no need to decode the image because it is already in the correct formatting to see it directly.",
+        "description": "**Do This:** Students should use the binary widget to decode the numbers and their ASCII to Binary tables to decode the letters.  There is no need to decode the image because it is already in the correct formatting to see it directly.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Because the name does not fill up all the space it has available, student may wonder why bytes 06 and 07 exist.  Remind them that without the structure of the record, the computer will not know where to look. If the image were to start at Byte 06, the computer would interpret it as a character in the name.\r\n\r\n"
           }
@@ -2627,7 +2583,7 @@
       "key": "1612220a-6b92-4852-b480-207228a4261f",
       "position": 10,
       "properties": {
-        "description": "**Circulate:** Make sure students are using their resources to help solve this problem, especially the Binary widget and the ASCII to Binary Table. Students can check their answers to the first page with you before continuing to the second page.\r\n\r\n[slide] **Display:** As students finish up the first page, discuss the new record on the second page of the activity guide. The image is replaced with a new integer and characters, because the image itself did not hold enough information to be very useful. Clarify any questions about this new record before having students continue.\r\n\r\n[slide] **Do This:** Have students decode the second punchcard.\r\n\r\n**Circulate:** Monitor student progress to check on how they are decoding the punchcard. This can also be an opportunity to ask students about their own pets and what a punchcard for their animals might look like.\r\n\r\n[slide] **Share Out:** On the bottom of the worksheet, students are also asked to think of a new piece of information and how it will be encoded.  Ask students to share out their ideas and write them on the board."
+        "description": "**Circulate:** Make sure students are using their resources to help solve this problem, especially the Binary widget and the ASCII to Binary Table. Students can check their answers to the first page with you before continuing to the second page.\n\n**Display:** As students finish up the first page, discuss the new record on the second page of the activity guide. The image is replaced with a new integer and characters, because the image itself did not hold enough information to be very useful. Clarify any questions about this new record before having students continue.\n\n**Do This:** Have students decode the second punchcard.\n\n**Circulate:** Monitor student progress to check on how they are decoding the punchcard. This can also be an opportunity to ask students about their own pets and what a punchcard for their animals might look like.\n\n**Share Out:** On the bottom of the worksheet, students are also asked to think of a new piece of information and how it will be encoded.  Ask students to share out their ideas and write them on the board."
       },
       "seeding_key": {
         "activity_section.key": "1612220a-6b92-4852-b480-207228a4261f",
@@ -2647,27 +2603,26 @@
       }
     },
     {
-      "key": "8df6cc07-f2c4-499d-87e8-6ffe1c84ebd0",
-      "position": 1,
-      "properties": {
-        "description": "[slide] **Prompt:** Which type of information (number, character, image) did you find most useful? What made it so useful?",
-        "name": "Journal\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "8df6cc07-f2c4-499d-87e8-6ffe1c84ebd0",
-        "lesson_activity.key": "8bf33e47-d789-4d92-b788-f6cf714bdda5"
-      }
-    },
-    {
       "key": "de491790-8abd-431c-9bc5-6dfbcb07c765",
       "position": 1,
       "properties": {
-        "name": "Combining Representations",
         "progression_name": "Combining Representations"
       },
       "seeding_key": {
         "activity_section.key": "de491790-8abd-431c-9bc5-6dfbcb07c765",
         "lesson_activity.key": "9ad7281f-d33f-41a3-87b1-4a36a2ac36a7"
+      }
+    },
+    {
+      "key": "8df6cc07-f2c4-499d-87e8-6ffe1c84ebd0",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Which type of information (number, character, image) did you find most useful? What made it so useful?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "8df6cc07-f2c4-499d-87e8-6ffe1c84ebd0",
+        "lesson_activity.key": "8bf33e47-d789-4d92-b788-f6cf714bdda5"
       }
     },
     {
@@ -2688,7 +2643,6 @@
         "description": "**Prompt:**  Here's an example of a message that someone might send over the Internet to a friend.  What do you need to decode this message?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The prompt serves to kick off the review of what someone needs in an encoding system.  Students should understand that without knowing the system used to encode the string into binary, they have no way of knowing what it would mean.\r\n"
           }
@@ -2740,7 +2694,6 @@
         "description": "**Prompt** What if I wanted to send a message that was secret, so only my friend could understand it?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Allow students to brainstorm ideas to keep message a secret.  In most cases, students may think of using a secret code rather than one publicly available.  This could work, but it's a lot of work to make a new code for every type of data, and you would have to repeat that work if your code was accidentally revealed.\r\n"
           }
@@ -2780,7 +2733,6 @@
         "description": "**Distribute** one copy of the activity guide to each student.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Paper** This activity can be done online.  Rather than coloring in the squares, students can type \"B\" for every black square and \"W\" for every white square in the row.\r\n"
           }
@@ -2846,7 +2798,6 @@
         "description": "This message has been encrypted.  That means that someone changed it so that we cannot read it.  In order to read the message, we'll first need to decrypt it.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Students may not understand the difference between encoding/decoding and encryption/decryption.  The main thing for students to understand is that the intentions between the two are very different.   \r\nEncoding is used to change the form of data, not to hide its meaning from others.  For example, ASCII is used to encode characters into binary, but the intention is that everyone should be able to decode the information.  The purpose is to make it easier to store and process information.\r\nEncryption is used to ensure that only the intended recipient of the information can read it.  It is used for security and privacy.\r\n"
           }
@@ -2876,7 +2827,6 @@
         "description": "Partners create their own emoji message and key, then encode and encrypt it.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "In this encryption system, the method of encryption and decryption are identical and use the same key.  In most encryption systems, that is not the case.  This once has been chosen for the same of simplicity.\r\n"
           }
@@ -2906,7 +2856,6 @@
         "description": "**Prompt** Everyone has shared their encrypted data.  Do you think that you could decrypt anyone's data without the key?  How?  What makes it difficult?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is to highlight the value of encryption, and that even with knowledge of the algorithm, it's difficult to crack a code without the key.  Allow students the opportunity to share their ideas for how to crack this code and try them out, then have students dicuss what makes it difficult.\r\n"
           }
@@ -2935,7 +2884,6 @@
         "description": "**Prompt** How did you you keep your key safe when giving it to your partner?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "The goal of the first discussion is to introduce the idea of physical security, which includes everything we do in the physical world, such as preventing physical access to computers and passwords.\r\n\r\nStudents should understand that physical security is as important as digital security when safeguarding information.  Some things students may do to keep their information safe might be to keep passwords in a safe place (or avoid writing them down entirely) and to keep devices locked away when they aren't in use.\r\n"
           }
@@ -3000,7 +2948,6 @@
         "description": "**Prompt:** When people communicate on the Internet, they cannot rely on physical security to keep their keys safe.  Try to think of  a way that they could still communicate securely, even if someone could read everything that they sent.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal is not for students to come up with a viable solution, but for them to brainstorm different ways that they might try to solve the problem.\r\n"
           }
@@ -5268,12 +5215,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Representing Images",
         "level_keys": [
           "CSD U5 black white images pixelation_2021"
-        ],
-        "progression": "Representing Images"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5294,12 +5241,12 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Representing Images",
         "level_keys": [
           "CSD U5 black white images pixelation 2_2021"
-        ],
-        "progression": "Representing Images"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5320,12 +5267,12 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Representing Images",
         "level_keys": [
           "CSD U5 black white images pixelation 3_2021"
-        ],
-        "progression": "Representing Images"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5346,12 +5293,12 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Representing Images",
         "level_keys": [
           "CSD U5 black white images pixelation 4_2021"
-        ],
-        "progression": "Representing Images"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5372,12 +5319,12 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Representing Images",
         "level_keys": [
           "CSD U5 black white images pixelation 5_2021"
-        ],
-        "progression": "Representing Images"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5398,12 +5345,12 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Binary Numbers",
         "level_keys": [
           "CSD U5 binary 1_2021"
-        ],
-        "progression": "Binary Numbers"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5424,12 +5371,12 @@
       "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Binary Numbers",
         "level_keys": [
           "CSD U5 binary 2_2021"
-        ],
-        "progression": "Binary Numbers"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5450,12 +5397,12 @@
       "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Binary Numbers",
         "level_keys": [
           "CSD U5 binary 4-new_2021"
-        ],
-        "progression": "Binary Numbers"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5476,12 +5423,12 @@
       "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Binary Numbers",
         "level_keys": [
           "CSD U5 binary 5-new_2021"
-        ],
-        "progression": "Binary Numbers"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5502,12 +5449,12 @@
       "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Binary Numbers",
         "level_keys": [
           "CSD U5 binary 6-new_2021"
-        ],
-        "progression": "Binary Numbers"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5528,12 +5475,12 @@
       "chapter": 11,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Binary Numbers",
         "level_keys": [
           "CSD U5 binary 7-new_2021"
-        ],
-        "progression": "Binary Numbers"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5554,12 +5501,12 @@
       "chapter": 12,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Binary and Data",
         "level_keys": [
           "CSD U5 binary video_2021"
-        ],
-        "progression": "Binary and Data"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5580,12 +5527,12 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Combining Representations",
         "level_keys": [
           "CSD U3 combining rep_2021"
-        ],
-        "progression": "Combining Representations"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5606,12 +5553,12 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Combining Representations",
         "level_keys": [
           "CSD U5 student record_2021"
-        ],
-        "progression": "Combining Representations"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5632,12 +5579,12 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Keeping Data Secret",
         "level_keys": [
           "CSD U5 Encryption 2_2021"
-        ],
-        "progression": "Keeping Data Secret"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5658,12 +5605,12 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Keeping Data Secret",
         "level_keys": [
           "CSD U5 Encryption 1_2021"
-        ],
-        "progression": "Keeping Data Secret"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5686,10 +5633,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch1_2021"
-        ],
-        "progression": "Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5712,10 +5659,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Data Visualization",
         "level_keys": [
           "CSD U5 data visualization_2021"
-        ],
-        "progression": "Data Visualization"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5738,10 +5685,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Data Visualization",
         "level_keys": [
           "CSD U5 Pizza_2021"
-        ],
-        "progression": "Data Visualization"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5764,10 +5711,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Data Visualization",
         "level_keys": [
           "CSD U5 Pizza 2_2021"
-        ],
-        "progression": "Data Visualization"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5790,10 +5737,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Cake Survey",
         "level_keys": [
           "CSD U5 crosstab warmup_2021"
-        ],
-        "progression": "Cake Survey"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5816,10 +5763,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Problem Solving",
         "level_keys": [
           "CSD U5 Netflix Data Video_2021"
-        ],
-        "progression": "Problem Solving"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5842,10 +5789,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Problem Solving",
         "level_keys": [
           "CSD U5 Waze Data Video_2021"
-        ],
-        "progression": "Problem Solving"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5868,10 +5815,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Problem Solving",
         "level_keys": [
           "CSD U5 Amazon Data Video_2021"
-        ],
-        "progression": "Problem Solving"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5894,10 +5841,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Sample App",
         "level_keys": [
           "csd u5 recommender sample_2021"
-        ],
-        "progression": "Sample App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5920,10 +5867,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U5Ch2_2021"
-        ],
-        "progression": "Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6480,7 +6427,7 @@
     },
     {
       "name": "ASCII",
-      "url": "https://studio.code.org/s/csd5-2019/stage/3/puzzle/1",
+      "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit",
       "key": "ascii-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6580,7 +6527,7 @@
     },
     {
       "name": "Representing Numbers",
-      "url": "https://studio.code.org/s/csd5-2019/stage/5/puzzle/1",
+      "url": "https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/edit",
       "key": "representing-numbers-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6617,7 +6564,7 @@
     },
     {
       "name": "Pet Records",
-      "url": "https://studio.code.org/s/csd5-2019/stage/7/puzzle/1",
+      "url": "https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/edit",
       "key": "pet-records-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6655,7 +6602,7 @@
     },
     {
       "name": "Keeping Data Secret",
-      "url": "https://studio.code.org/s/csd5-2019/stage/6/puzzle/1",
+      "url": "https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/edit",
       "key": "keeping-data-secret-exemplar-2019",
       "properties": {
         "type": "Exemplar",

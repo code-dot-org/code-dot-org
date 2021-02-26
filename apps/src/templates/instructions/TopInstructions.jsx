@@ -192,6 +192,11 @@ class TopInstructions extends Component {
     resizable: PropTypes.bool
   };
 
+  static defaultProps = {
+    resizable: true,
+    collapsible: true
+  };
+
   constructor(props) {
     super(props);
     //Pull the student id from the url
@@ -849,8 +854,6 @@ export default connect(
     ),
     longInstructions: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
-    resizable: true,
-    collapsible: true,
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
