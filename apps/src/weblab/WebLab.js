@@ -297,14 +297,19 @@ WebLab.prototype.init = function(config) {
     document.getElementById(config.containerId)
   );
 
-  window.onbeforeunload = evt => {
-    if (project.hasOwnerChangedProject()) {
-      // Manually trigger an autosave instead of waiting for the next autosave.
-      project.autosave();
+  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
 
-      return weblabMsg.confirmExitWithUnsavedChanges();
-    }
-  };
+WebLab.prototype.beforeUnload = function(event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = weblabMsg.confirmExitWithUnsavedChanges();
+  } else {
+    delete event.returnValue;
+  }
 };
 
 WebLab.prototype.reportResult = function(submit, validated) {
