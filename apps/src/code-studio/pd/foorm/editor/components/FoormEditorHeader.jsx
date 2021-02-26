@@ -42,7 +42,7 @@ class FoormEditorHeader extends Component {
     livePreviewStatus: PropTypes.string,
     validateURL: PropTypes.string,
     validateDataKey: PropTypes.string,
-    renderHeaderTitle: PropTypes.func,
+    headerTitle: PropTypes.element,
 
     // populated by Redux
     questions: PropTypes.object,
@@ -94,7 +94,7 @@ class FoormEditorHeader extends Component {
   render() {
     return (
       <div>
-        {this.props.name && this.props.renderHeaderTitle()}
+        {this.props.name && this.props.headerTitle}
         <div style={styles.helperButtons}>
           <div style={styles.livePreview}>
             <ToggleGroup
@@ -126,7 +126,7 @@ class FoormEditorHeader extends Component {
                   {this.state.validationError && (
                     <FontAwesome icon="exclamation-triangle" />
                   )}
-                  {`${this.state.editorType} was last validated at ${
+                  {`${this.props.editorType} was last validated at ${
                     this.state.lastValidated
                   }. Validation status: ${
                     this.state.validationError ? 'Invalid.' : 'Valid.'

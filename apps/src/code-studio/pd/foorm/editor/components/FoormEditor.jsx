@@ -47,7 +47,9 @@ class FoormEditor extends React.Component {
     previewQuestions: PropTypes.object,
     previewErrors: PropTypes.array,
     forceRerenderKey: PropTypes.number,
-    renderHeaderTitle: PropTypes.func,
+    headerTitle: PropTypes.element,
+    validateURL: PropTypes.string,
+    validateDataKey: PropTypes.string,
 
     // populated by redux
     questions: PropTypes.object
@@ -221,9 +223,9 @@ class FoormEditor extends React.Component {
         <FoormEditorHeader
           livePreviewToggled={this.livePreviewToggled}
           livePreviewStatus={this.state.livePreviewStatus}
-          validateURL={'/api/v1/pd/foorm/forms/validate_form'}
-          validateDataKey={'form_questions'}
-          renderHeaderTitle={this.props.renderHeaderTitle}
+          validateURL={this.props.validateURL}
+          validateDataKey={this.props.validateDataKey}
+          headerTitle={this.props.headerTitle}
         />
         <div style={styles.foormEditor}>
           <Tabs
