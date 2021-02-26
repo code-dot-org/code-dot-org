@@ -14,26 +14,8 @@ scripts_map = {
   'algebra' => 'algebra',
   'flappy' => 'flappy',
   '20-hour' => '20-hour',
-  'course1' => 'course1',
-  'course2' => 'course2',
-  'course3' => 'course3',
-  'course4' => 'course4',
-  'cspunit1' => 'cspunit1',
-  'cspunit2' => 'cspunit2',
-  'cspunit3' => 'cspunit3',
-  'cspunit4' => 'cspunit4',
-  'cspunit5' => 'cspunit5',
-  'cspunit6' => 'cspunit6',
   'ECSPD' => 'ECSPD',
   'allthethings' => 'allthethings',
-  'coursea-2017' => 'coursea-2017',
-  'courseb-2017' => 'courseb-2017',
-  'coursec-2017' => 'coursec-2017',
-  'coursed-2017' => 'coursed-2017',
-  'coursee-2017' => 'coursee-2017',
-  'coursef-2017' => 'coursef-2017',
-  'express-2017' => 'express-2017',
-  'pre-express-2017' => 'pre-express-2017'
 }
 
 @unit_groups = {}
