@@ -30,8 +30,8 @@
 class Resource < ApplicationRecord
   include SerializedProperties
 
-  KEY_RE = /\A[a-z0-9\-\_\.]+\Z/
-  validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, underscores, and periods."
+  KEY_RE = /\A[a-z0-9\-\_]+\Z/
+  validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores."
 
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   belongs_to :course_version
