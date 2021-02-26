@@ -5025,7 +5025,8 @@ en:
               name: Discovery Learning
             Measuring Student Learning:
               name: Measuring Student Learning
-          student_description: "####  **This course is associated with a version of the course that is no longer supported.  Please visit our Courses Overview page (https://studio.code.org/courses) to see our most current curricula.**\r\n\r\nThis is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5."
+          student_description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
+          name: csp5-support
         csp6-support:
           stage: {}
           title: AP Preparation and Resources for Teachers
@@ -14885,6 +14886,7 @@ en:
             'Step 2: Demonstrate Understanding':
               name: 'Step 2: Demonstrate Understanding'
           student_description: ''
+          name: dlp19-csp-mod-w2
         dlp19-csp-mod-w3:
           title: CS Principles Deeper Learning Module for Workshop 3
           description_audience: CS Principles Facilitators in Training 2019
@@ -20916,28 +20918,28 @@ en:
             Functions in Minecraft:
               key: Functions in Minecraft
               name: Functions in Minecraft
-              description_student: Can you figure out how to use functions for the most efficient code?
-              description_teacher: Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!
+              description_student: Can you figure out how to use **functions** for the most efficient code?
+              description_teacher: Students will begin to understand how **functions** can be helpful in this fun and interactive Minecraft adventure!
             Learning Sprites with Sprite Lab:
               key: Learning Sprites with Sprite Lab
               name: Swimming Fish with Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that sprites will take continuously until they are stopped.'
             Events with Sprite Lab:
               key: Events with Sprite Lab
               name: Alien Dance Party with Sprite Lab
               description_student: Create an interactive project that can be shared with classmates.
-              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an "alien dance party".   '
+              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as **events** to create an "alien dance party".   '
             Loops with the Artist:
               key: Loops with the Artist
               name: Drawing with Loops
-              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_student: In this lesson, **loops** make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
             Nested Loops in the Maze:
               key: Nested Loops in the Maze
               name: Nested Loops in Maze
-              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
-              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
+              description_student: "**Loops** inside **loops** inside **loops**. What does this mean? This lesson will teach you what happens when you place a **loop** inside another **loop**."
+              description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             The Power of Words:
               key: The Power of Words
               name: The Power of Words
@@ -20956,18 +20958,18 @@ en:
             Variables as Constant in Artist:
               key: Variables as Constant in Artist
               name: Variables with Artist
-              description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.
-              description_teacher: In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read, even when the values don't change at runtime.
+              description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using **variables**.
+              description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.
             Variables that Change in Bee:
               key: Variables that Change in Bee
               name: Changing Variables with Bee
-              description_student: This bee loves variables!
-              description_teacher: 'This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. '
+              description_student: This bee loves **variables**!
+              description_teacher: 'This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. '
             Variables that Change in Artist:
               key: Variables that Change in Artist
               name: Changing Variables with Artist
               description_student: In this lesson, you'll make drawings using variables that change as the program runs.
-              description_teacher: In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a freeplay level to show what they have learned and create their own designs.
+              description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.
             Simulating Experiments:
               key: Simulating Experiments
               name: Simulating Experiments
@@ -21015,6 +21017,8 @@ en:
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
             lesson-1:
               name: Designing for Accessibility
+              description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+              description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
           lesson_groups:
             ramp_up:
               display_name: Ramp Up
@@ -21300,9 +21304,11 @@ en:
             variables-in-spritelab:
               name: Text and Prompts - coming soon!
             chatbot:
-              name: Create a Chat-Bot - coming soon!
+              name: User Input Apps - coming soon!
             blank space stories:
               name: Blank Space Stories
+            texts-and-prompts:
+              name: Text and Prompts
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -21879,3 +21885,16 @@ en:
           description_short: ''
           description: Teacher overview of the unit.
           student_description: Student overview of the unit.
+        fancygeometry-pilot:
+          lessons:
+            Fancy Geometry:
+              name: Fancy Geometry
+          lesson_groups:
+            Fancy Geometry:
+              display_name: Fancy Geometry
+          name: fancygeometry-pilot
+          title: Fancy Geometry
+          description_audience: Grade 3, Grade 4
+          description_short: " In this module, students will explore different geometric shapes by examining the relationships between angles, sides, and lengths. They will also compare the different affordances of using different tools to complete an artistic task."
+          description: "**Overview**\nThe Artist tool is an especially explorative and creative platform to build and decompose intricate geometric patterns. Fourth grade math standards focus on developing student proficiency in geometry, encouraging students to discover the relationships between angles, sides, and lengths of different shapes. With the Artist, teachers can help make these geometric relationships come to life. "
+          student_description: ''

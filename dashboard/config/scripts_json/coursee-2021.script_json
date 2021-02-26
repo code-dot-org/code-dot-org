@@ -30,6 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
+    "serialized_at": "2021-02-26 22:21:21 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -132,7 +133,7 @@
         "overview": "In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in the maze. \r\nDebugging is an essential element of learning to program. Students will encounter some puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
         "student_overview": "In this lesson, you will learn how to write your very own programs!",
         "purpose": "We recognize that every classroom has a spectrum of understanding for every subject. Some students in your class may be computer wizards, while others haven't had much experience at all. In order to create an equal playing (and learning) field, we have developed these ramp-up lessons. This can be used as either an introduction or a review of how to use Code.org and basic computer science concepts. \r\nStudents in your class might become frustrated with this lesson because of the essence of debugging. _Debugging_ is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
-        "preparation": " - Play through the puzzles yourself to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a journal.\n - Review **CSF Debugging** handout with the class.",
+        "preparation": " - Play through the puzzles yourself to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a journal.\n - Review ***CSF Debugging** handout with the class.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1754,7 +1755,7 @@
       "key": "818fc335-c987-42f4-b53a-c7bcae191436",
       "position": 2,
       "properties": {
-        "description": "\n####Online Puzzles\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize [Pair Programming Video](https://www.youtube.com/watch?v=vgkahOzFH2Q) whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n\nBefore letting the students start on the computer, remind them of the advantages of [Pair Programming Video](https://www.youtube.com/watch?v=vgkahOzFH2Q) and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher."
+        "description": "\n####Online Puzzles\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming Video** whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\nAs mentioned in the purpose of this lesson, make sure the students are aware that they will face frustrating puzzles. Tell them it is okay to feel frustrated, but it is important to work through the problem and ask for help. As the students work through the puzzles, walk around to make sure no student is feeling so stuck that they aren't willing to continue anymore.\n\n\nBefore letting the students start on the computer, remind them of the advantages of ***Pair Programming Video** and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher."
       },
       "seeding_key": {
         "activity_section.key": "818fc335-c987-42f4-b53a-c7bcae191436",
@@ -1828,22 +1829,11 @@
       }
     },
     {
-      "key": "bc7d0a85-75a7-4f77-85aa-fc411f826c31",
-      "position": 9,
-      "properties": {
-        "description": "As mentioned in the purpose of this lesson, make sure the students are aware that they will face frustrating puzzles. Tell them it is okay to feel frustrated, but it is important to work through the problem and ask for help. As the students work through the puzzles, walk around to make sure no student is feeling so stuck that they aren't willing to continue anymore."
-      },
-      "seeding_key": {
-        "activity_section.key": "bc7d0a85-75a7-4f77-85aa-fc411f826c31",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
       "key": "079b8057-df95-4101-ab81-6300e72ec34e",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What kind of bugs did you find today?\r\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "079b8057-df95-4101-ab81-6300e72ec34e",
@@ -4028,7 +4018,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Maze Intro: Programming with Blocks",
         "level_keys": [
@@ -4054,7 +4044,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4080,7 +4070,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4106,7 +4096,7 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4132,7 +4122,7 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4158,7 +4148,7 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging with the Step Button",
         "level_keys": [
@@ -4184,7 +4174,7 @@
       "chapter": 7,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4210,7 +4200,7 @@
       "chapter": 8,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4236,7 +4226,7 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4262,7 +4252,7 @@
       "chapter": 10,
       "position": 10,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4288,7 +4278,7 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4315,7 +4305,7 @@
       "chapter": 12,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4341,7 +4331,7 @@
       "chapter": 13,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10252,6 +10242,18 @@
       }
     },
     {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair_programming",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
       "name": "Be A Super Digital Citizen: Lesson Slides",
       "url": "https://drive.google.com/open?id=1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM",
       "key": "be_a_super_digital_citizen_lesson_slides",
@@ -10557,6 +10559,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing in the Maze",
         "resource.key": "csf-debugging-handout"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in the Maze",
+        "resource.key": "pair_programming"
       }
     },
     {

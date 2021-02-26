@@ -18,6 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-02-26 21:10:11 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -4331,7 +4332,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Loops"
+        "progression": "Introduction to Loops",
+        "level_keys": [
+          "csp_applab_loops_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
