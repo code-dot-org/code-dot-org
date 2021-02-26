@@ -47,7 +47,7 @@ class FoormEditor extends React.Component {
     previewQuestions: PropTypes.object,
     previewErrors: PropTypes.array,
     forceRerenderKey: PropTypes.number,
-    headerTitle: PropTypes.element,
+    headerTitle: PropTypes.node,
     validateURL: PropTypes.string,
     validateDataKey: PropTypes.string,
 
