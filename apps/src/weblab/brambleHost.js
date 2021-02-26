@@ -692,6 +692,7 @@ function load(Bramble) {
       }
     }
 
+    bramble.disableJavaScript(); // Prevents JS from executing.
     bramble.on('inspectorChange', handleInspectorChange);
     bramble.on('fileChange', handleFileChange);
     bramble.on('fileDelete', handleFileDelete);
