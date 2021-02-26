@@ -257,7 +257,9 @@ Resources:
 <% if frontends-%>
 <%=  component 'cache'%>
 <% end -%>
-<%= component 's3_backed_subdomains', bucket_name: 'cdo-lesson-plans', subdomain: 'lesson-plans' -%>
+<% if rack_env?(:production) -%>
+<%=  component 's3_backed_subdomains', bucket_name: 'cdo-lesson-plans', subdomain: 'lesson-plans' -%>
+<% end -%>
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
