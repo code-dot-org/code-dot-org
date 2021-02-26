@@ -281,11 +281,11 @@ class Script < ApplicationRecord
   end
 
   def self.text_to_speech_script_ids
-    Script.all.select(&:text_to_speech_enabled?).pluck(:id)
+    all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
   def self.pre_reader_script_ids
-    Script.all.select(&:pre_reader_tts_level?).pluck(:id)
+    all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
