@@ -2276,37 +2276,37 @@
     {
       "name": "CSP Unit 6 - Algorithms",
       "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp unit 6 presentation",
+      "key": "csp_unit_6_-_algorithms",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "name": "CSP Unit 6 - Algorithms",
       "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp unit 6 presentation",
+      "key": "csp_unit_6_-_algorithms",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "name": "CSP Unit 6 - Algorithms",
       "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp unit 6 presentation",
+      "key": "csp_unit_6_-_algorithms",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
@@ -2325,37 +2325,37 @@
     {
       "name": "CSP Unit 6 - Algorithms",
       "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp unit 6 presentation",
+      "key": "csp_unit_6_-_algorithms",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "name": "CSP Unit 6 - Algorithms",
       "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp unit 6 presentation",
+      "key": "csp_unit_6_-_algorithms",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "name": "CSP Unit 6 - Algorithms",
       "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp unit 6 presentation",
+      "key": "csp_unit_6_-_algorithms",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     }
   ],
@@ -2363,19 +2363,19 @@
     {
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
@@ -2387,19 +2387,19 @@
     {
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Assessment Day",
-        "resource.key": "csp unit 6 presentation"
+        "resource.key": "csp_unit_6_-_algorithms"
       }
     }
   ],
