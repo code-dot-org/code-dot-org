@@ -286,5 +286,5 @@ class FoormEditor extends React.Component {
 }
 
 export default connect(state => ({
-  questions: state.foorm.questions
+  questions: state.foorm.questions || {}
 }))(FoormEditor);

@@ -32,10 +32,19 @@ describe('FoormEditor', () => {
 
     store = getStore();
 
+    const headerTitle = React.createElement('h1', null, 'A title');
+
     defaultProps = {
       populateCodeMirror: () => {},
       resetCodeMirror: () => {},
-      formCategories: ['surveys/pd', 'surveys/teacher']
+      categories: ['surveys/pd', 'surveys/teacher'],
+      preparePreview: () => {},
+      previewQuestions: {},
+      previewErrors: [],
+      forceRerenderKey: 0,
+      headerTitle: headerTitle,
+      validateURL: '/a/fake/url',
+      validateDataKey: 'a_string'
     };
   });
 
@@ -95,7 +104,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleSaveData)
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
@@ -127,7 +136,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleSaveData)
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     const publishButton = saveBar.find('button').at(0);
     expect(publishButton.contains('Publish')).to.be.true;
@@ -171,7 +180,7 @@ describe('FoormEditor', () => {
       'Save error'
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
@@ -207,7 +216,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleSaveData)
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -246,7 +255,7 @@ describe('FoormEditor', () => {
     store.dispatch(setFormData(samplePublishedFormData));
     wrapper.update();
 
-    const saveBarButtons = wrapper.find('FoormSaveBar').find('button');
+    const saveBarButtons = wrapper.find('FormSaveBar').find('button');
     const saveButton = saveBarButtons.at(0);
 
     expect(saveButton.contains('Publish')).to.be.false;
@@ -260,7 +269,7 @@ describe('FoormEditor', () => {
     store.dispatch(setFormData(samplePublishedFormData));
     wrapper.update();
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -297,7 +306,7 @@ describe('FoormEditor', () => {
     store.dispatch(setFormData(sampleDraftFormData));
     wrapper.update();
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Publish')).to.be.true;
@@ -343,7 +352,7 @@ describe('FoormEditor', () => {
     // expect to see no form name
     expect(wrapper.find('FoormEditorHeader').find('h2').length).to.equal(0);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     // click save button
     const saveButton = saveBar.find('button').at(1);
@@ -393,7 +402,7 @@ describe('FoormEditor', () => {
     // expect to see no form name
     expect(wrapper.find('FoormEditorHeader').find('h2').length).to.equal(0);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find('FormSaveBar');
 
     // click save button
     const saveButton = saveBar.find('button').at(1);
