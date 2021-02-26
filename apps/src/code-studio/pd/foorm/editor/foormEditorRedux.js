@@ -53,20 +53,17 @@ export const setLastSavedQuestions = questions => ({
 });
 
 const initialState = {
-  editorType: 'Form',
   questions: '',
-  formQuestions: '',
-  isFormPublished: null,
   hasJSONError: false,
-  name: null,
-  formName: null,
-  version: null,
-  formVersion: null,
-  formId: null,
   availableOptions: [],
   saveError: null,
   lastSaved: null,
-  lastSavedQuestions: ''
+  lastSavedQuestions: '',
+  // State specific to Foorm Form editor
+  isFormPublished: null,
+  formName: null,
+  formVersion: null,
+  formId: null
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -85,15 +82,11 @@ export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_FORM_DATA) {
     return {
       ...state,
-      formQuestions: action.formData['questions'],
       questions: action.formData['questions'],
       isFormPublished: action.formData['published'],
       formName: action.formData['name'],
-      name: action.formData['name'],
       formVersion: action.formData['version'],
-      version: action.formData['version'],
-      formId: action.formData['id'],
-      isPublished: action.formData['published']
+      formId: action.formData['id']
     };
   }
   if (action.type === RESET_AVAILABLE_OPTIONS) {
