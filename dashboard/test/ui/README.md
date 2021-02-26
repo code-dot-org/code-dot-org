@@ -46,7 +46,7 @@ You can find the values for these settings in your saucelabs account settings (`
 If you want to run tests on saucelabs against localhost you need to set up your tunnel:
 
 1. Login to Saucelabs and download the [tunnel](https://app.saucelabs.com/tunnels)
-2. Start the tunnel via `~/bin/sc/ -u $SAUCELABS_USERNAME -k SAUCELABS_ACCESS_KEY`
+2. Start the tunnel via `~/bin/sc/ -u $SAUCELABS_USERNAME -k $SAUCELABS_ACCESS_KEY`
    - Notes: The link above has an example command line with your credentials that you can copy.
      - `bin/sc` should be replaced with the path that points to the tunnel software downloaded in step 1.
      - The unique tunnel identifier `-i [tunnel_id]` included in that command can be safely ignored; if you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
