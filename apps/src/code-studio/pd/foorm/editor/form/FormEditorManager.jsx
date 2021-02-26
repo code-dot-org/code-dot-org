@@ -5,8 +5,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
+import {MenuItem} from 'react-bootstrap';
 import FoormEditor from '../components/FoormEditor';
+import FoormLoadButtons from '../components/FoormLoadButtons';
 import {
   resetAvailableOptions,
   setLastSaved,
@@ -18,10 +19,6 @@ import {
 import _ from 'lodash';
 
 const styles = {
-  loadError: {
-    fontWeight: 'bold',
-    padding: '1em'
-  },
   surveyTitle: {
     marginBottom: 0
   },
@@ -166,6 +163,10 @@ class FormEditorManager extends React.Component {
     {leading: true}
   );
 
+  setShowCodeMirror() {
+    this.setState({showCodeMirror: true});
+  }
+
   listPreviewErrors() {
     let errors = [];
 
@@ -221,17 +222,11 @@ class FormEditorManager extends React.Component {
           </a>{' '}
           to get started.
         </p>
-        <div>
-          <DropdownButton id="load_config" title="Load Form..." className="btn">
-            {this.getFormattedConfigurationDropdownOptions()}
-          </DropdownButton>
-          <Button onClick={this.initializeEmptyCodeMirror} className="btn">
-            New Form
-          </Button>
-        </div>
-        {this.state.hasLoadError && (
-          <div style={styles.loadError}>Could not load the selected form.</div>
-        )}
+        <FoormLoadButtons
+          resetCodeMirror={this.props.resetCodeMirror}
+          namesAndVersions={this.props.namesAndVersions}
+          setShowCodeMirror={() => this.setShowCodeMirror()}
+        />
         {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
