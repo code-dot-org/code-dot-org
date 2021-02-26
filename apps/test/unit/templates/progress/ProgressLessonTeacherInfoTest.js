@@ -12,7 +12,8 @@ const MOCK_SECTION = {
   pairingAllowed: true,
   studentCount: 4,
   code: 'TQGSJR',
-  providerManaged: false
+  providerManaged: false,
+  ttsAutoplayEnabled: false
 };
 
 describe('ProgressLessonTeacherInfo', () => {
