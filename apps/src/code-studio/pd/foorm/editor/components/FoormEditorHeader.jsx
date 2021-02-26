@@ -46,7 +46,6 @@ class FoormEditorHeader extends Component {
 
     // populated by Redux
     questions: PropTypes.object,
-    name: PropTypes.string,
     editorType: PropTypes.string
   };
 
@@ -92,7 +91,7 @@ class FoormEditorHeader extends Component {
   render() {
     return (
       <div>
-        {this.props.name && this.props.renderHeaderTitle()}
+        {this.props.renderHeaderTitle()}
         <div style={styles.helperButtons}>
           <div style={styles.livePreview}>
             <ToggleGroup
@@ -124,7 +123,7 @@ class FoormEditorHeader extends Component {
                   {this.state.validationError && (
                     <FontAwesome icon="exclamation-triangle" />
                   )}
-                  {`${this.state.editorType} was last validated at ${
+                  {`Last validated at ${
                     this.state.lastValidated
                   }. Validation status: ${
                     this.state.validationError ? 'Invalid.' : 'Valid.'
@@ -143,7 +142,5 @@ class FoormEditorHeader extends Component {
 }
 
 export default connect(state => ({
-  questions: state.foorm.questions || {},
-  name: state.foorm.name,
-  editorType: state.foorm.editorType
+  questions: state.foorm.questions || {}
 }))(FoormEditorHeader);

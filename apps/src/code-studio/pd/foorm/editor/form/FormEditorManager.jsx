@@ -40,16 +40,16 @@ class FormEditorManager extends React.Component {
     // populated by redux
     hasJSONError: PropTypes.bool,
     availableForms: PropTypes.array,
+    questions: PropTypes.object,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number,
+    isFormPublished: PropTypes.bool,
     resetAvailableForms: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
     setHasJSONError: PropTypes.func,
-    setLastSavedFormQuestions: PropTypes.func,
-    questions: PropTypes.object,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number,
-    isFormPublished: PropTypes.bool
+    setLastSavedFormQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -188,16 +188,20 @@ class FormEditorManager extends React.Component {
   // bind this instead of using arrow function?
   renderHeaderTitle() {
     return (
-      <div>
-        <h2 style={styles.surveyTitle}>
-          {`Form Name: ${this.props.formName}, version ${
-            this.props.formVersion
-          }`}
-        </h2>
-        <h3 style={styles.surveyState}>
-          {`Form State: ${this.props.isFormPublished ? 'Published' : 'Draft'}`}
-        </h3>
-      </div>
+      this.props.formName && (
+        <div>
+          <h2 style={styles.surveyTitle}>
+            {`Form Name: ${this.props.formName}, version ${
+              this.props.formVersion
+            }`}
+          </h2>
+          <h3 style={styles.surveyState}>
+            {`Form State: ${
+              this.props.isFormPublished ? 'Published' : 'Draft'
+            }`}
+          </h3>
+        </div>
+      )
     );
   }
 
