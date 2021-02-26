@@ -114,7 +114,7 @@ class FormSaveBar extends Component {
     addAvailableForm: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
+    setLastSavedFormQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -242,7 +242,7 @@ class FormSaveBar extends Component {
       id: result.id,
       questions: updatedQuestions
     });
-    this.props.setLastSavedQuestions(updatedQuestions);
+    this.props.setLastSavedFormQuestions(updatedQuestions);
   }
 
   handleSaveError(result) {
@@ -411,7 +411,7 @@ class FormSaveBar extends Component {
 
 export default connect(
   state => ({
-    formQuestions: state.foorm.formQuestions || {},
+    formQuestions: state.foorm.questions || {},
     isFormPublished: state.foorm.isFormPublished,
     hasJSONError: state.foorm.hasJSONError,
     formId: state.foorm.formId,
@@ -424,7 +424,7 @@ export default connect(
       dispatch(addAvailableOption(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setLastSavedQuestions: formQuestions =>
+    setLastSavedFormQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
 )(FormSaveBar);
