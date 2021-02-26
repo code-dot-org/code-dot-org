@@ -16233,6 +16233,19 @@
       }
     },
     {
+      "name": "Shapes and Parameters - (Map Level)",
+      "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
+      "key": "shapes_and_parameters_-_map_level",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/a/code.org/uc?id=1qjYMu7Kvs-sKyAVGM2c_6NK3S6_Lo7Pm&export=download"
+      },
+      "seeding_key": {
+        "resource.key": "shapes_and_parameters_-_map_level"
+      }
+    },
+    {
       "name": "Variables",
       "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
       "key": "variables",
@@ -16515,6 +16528,18 @@
       }
     },
     {
+      "name": "If-Else Statements - Map Level (PDF)",
+      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view",
+      "key": "if-else_statements_-_map_level_pdf_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "if-else_statements_-_map_level_pdf_"
+      }
+    },
+    {
       "name": "Computer Science Practices",
       "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
       "key": "computer-science-practices",
@@ -16724,6 +16749,18 @@
       },
       "seeding_key": {
         "resource.key": "complex-sprite-movement"
+      }
+    },
+    {
+      "name": "Velocity and the Counter Pattern - Map Level (PDF)",
+      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view",
+      "key": "velocity_and_the_counter_pattern_-_map_level_pdf_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_and_the_counter_pattern_-_map_level_pdf_"
       }
     },
     {
@@ -17014,6 +17051,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "shapes_and_parameters_-_map_level"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Variables",
         "resource.key": "variables"
       }
@@ -17152,6 +17195,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "if-else_statements_-_map_level_pdf_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "resource.key": "computer-science-practices"
       }
@@ -17250,6 +17299,12 @@
       "seeding_key": {
         "lesson.key": "Complex Sprite Movement",
         "resource.key": "complex-sprite-movement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "velocity_and_the_counter_pattern_-_map_level_pdf_"
       }
     },
     {

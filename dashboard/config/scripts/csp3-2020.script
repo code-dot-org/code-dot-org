@@ -82,6 +82,6 @@ lesson 'Project - Designing an App Part 5', display_name: 'Project - Designing a
 level 'CSP U3L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L10 Submit App', progression: 'Submit Your App', assessment: true
 
-lesson 'Lesson 11: Assessment Day', display_name: 'Lesson 11: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 11: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 3 MC Assessment _2020', progression: 'Unit 3 Exam', assessment: true
 
