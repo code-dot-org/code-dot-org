@@ -218,7 +218,11 @@ class Lesson < ApplicationRecord
   end
 
   def lesson_plan_pdf_url
-    "#{lesson_plan_base_url}/Teacher.pdf"
+    if script.is_migrated && has_lesson_plan
+      Services::LessonPlanPdfs.get_url(self)
+    else
+      "#{lesson_plan_base_url}/Teacher.pdf"
+    end
   end
 
   def lesson_plan_base_url
@@ -228,6 +232,11 @@ class Lesson < ApplicationRecord
   def summarize(include_bonus_levels = false, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
+
+      description_student = I18n.t('description_student', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+      description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
+      description_teacher = I18n.t('description_teacher', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+      description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
 
       lesson_data = {
         script_id: script.id,
@@ -245,8 +254,8 @@ class Lesson < ApplicationRecord
         hasLessonPlan: has_lesson_plan,
         numberedLesson: numbered_lesson?,
         levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
-        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
-        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
+        description_student: description_student,
+        description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
@@ -414,13 +423,15 @@ class Lesson < ApplicationRecord
 
   # Returns a hash representing i18n strings in scripts.en.yml which may need
   # to be updated after this object was updated. Currently, this only updates
-  # the lesson name.
+  # the lesson name and overviews.
   def i18n_hash
     {
       script.name => {
         'lessons' => {
           key => {
-            'name' => name
+            'name' => name,
+            'description_student' => student_overview,
+            'description_teacher' => overview
           }
         }
       }
