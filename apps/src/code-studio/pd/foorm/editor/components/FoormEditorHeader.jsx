@@ -42,7 +42,7 @@ class FoormEditorHeader extends Component {
     livePreviewStatus: PropTypes.string,
     validateURL: PropTypes.string,
     validateDataKey: PropTypes.string,
-    headerTitle: PropTypes.element,
+    headerTitle: PropTypes.node,
 
     // populated by Redux
     questions: PropTypes.object,
@@ -91,7 +91,7 @@ class FoormEditorHeader extends Component {
   render() {
     return (
       <div>
-        {this.props.name && this.props.headerTitle}
+        {this.props.headerTitle}
         <div style={styles.helperButtons}>
           <div style={styles.livePreview}>
             <ToggleGroup
