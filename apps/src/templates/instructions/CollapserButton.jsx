@@ -58,9 +58,4 @@ CollapserButton.propTypes = {
   isMinecraft: PropTypes.bool.isRequired
 };
 
-export default connect(state => {
-  return {
-    isRtl: state.isRtl,
-    isMinecraft: !!state.pageConstants.isMinecraft
-  };
-})(Radium(CollapserButton));
+export default Radium(CollapserButton);

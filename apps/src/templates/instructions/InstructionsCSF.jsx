@@ -6,7 +6,7 @@ import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import CollapserButton from './CollapserButton';
-import ScrollButtons from './ScrollButtons';
+import {UnconnectedScrollButtons as ScrollButtons} from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
 import HintDisplayLightbulb from '../HintDisplayLightbulb';
@@ -152,6 +152,7 @@ class InstructionsCSF extends React.Component {
     hasAuthoredHints: PropTypes.bool.isRequired,
 
     collapsed: PropTypes.bool.isRequired,
+    collapsible: PropTypes.bool.isRequired,
 
     shortInstructions: PropTypes.string,
     shortInstructions2: PropTypes.string,
@@ -325,7 +326,7 @@ class InstructionsCSF extends React.Component {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
       !collapsed && this.scrollButtons
-        ? this.scrollButtons.getWrappedInstance().getMinHeight()
+        ? this.scrollButtons.getMinHeight()
         : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
@@ -364,7 +365,7 @@ class InstructionsCSF extends React.Component {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
       !collapsed && this.scrollButtons
-        ? this.scrollButtons.getWrappedInstance().getMinHeight()
+        ? this.scrollButtons.getMinHeight()
         : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
@@ -598,7 +599,7 @@ class InstructionsCSF extends React.Component {
                   : styles.instructionsWithTips)
             ]}
           >
-            <ChatBubble ttsUrl={ttsUrl}>
+            <ChatBubble ttsUrl={ttsUrl} textToSpeechEnabled={!!ttsUrl} isMinecraft={this.props.isMinecraft} skinId={this.props.skinId}>
               <Instructions
                 ref={c => {
                   this.instructions = c;
@@ -611,7 +612,7 @@ class InstructionsCSF extends React.Component {
                 imgURL={this.props.aniGifURL}
                 inTopPane
                 isBlockly={this.props.isBlockly}
-                collapsible={true}
+                collapsible={this.props.collapsible}
               />
               {this.props.shortInstructions2 && (
                 <div className="secondary-instructions">
@@ -678,6 +679,8 @@ class InstructionsCSF extends React.Component {
               ]}
               collapsed={this.props.collapsed}
               onClick={this.props.handleClickCollapser}
+              isRtl={this.props.isRtl}
+              isMinecraft={this.props.isMinecraft}
             />
             {!this.props.collapsed && (
               <ScrollButtons
@@ -690,6 +693,7 @@ class InstructionsCSF extends React.Component {
                       ? craftStyles.scrollButtonsRtl
                       : craftStyles.scrollButtons)
                 ]}
+                isMinecraft={this.props.isMinecraft}
                 ref={c => {
                   this.scrollButtons = c;
                 }}
@@ -710,6 +714,7 @@ class InstructionsCSF extends React.Component {
   }
 }
 
+export const UnconnectedInstructionsCSF = Radium(InstructionsCSF);
 export default connect(
   function propsFromStore(state) {
     return {

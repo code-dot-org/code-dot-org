@@ -27,7 +27,7 @@ import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
-import InstructionsCSF from './InstructionsCSF';
+import InstructionsCSF, {UnconnectedInstructionsCSF} from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 import {hasInstructions} from './utils';
@@ -713,7 +713,7 @@ class TopInstructions extends Component {
               isCSF &&
               !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
-                ? styles.csfBody
+                ? this.props.containerStyle || styles.csfBody
                 : this.props.containerStyle || styles.body,
               this.props.isMinecraft && craftStyles.instructionsBody
             ]}
@@ -741,7 +741,7 @@ class TopInstructions extends Component {
               {!this.props.hasContainedLevels &&
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
-                  <InstructionsCSF
+                  <UnconnectedInstructionsCSF
                     ref={ref => {
                       if (ref) {
                         this.instructions = ref;
@@ -765,6 +765,14 @@ class TopInstructions extends Component {
                     ttsLongInstructionsUrl={this.props.ttsLongInstructionsUrl}
                     ttsShortInstructionsUrl={this.props.ttsShortInstructionsUrl}
                     noVisualization={this.props.noVisualization}
+                    hints={[]}
+                    hasUnseenHint={false}
+                    hasAuthoredHints={false}
+                    setInstructionsRenderedHeight={this.props.setInstructionsRenderedHeight}
+                    skinId={'iceage'}
+                    hideOverlay={() => {}}
+                    showNextHint={() => {}}
+                    collapsible={this.props.collapsible}
                   />
                 )}
               {!this.props.hasContainedLevels &&
@@ -871,7 +879,8 @@ export default connect(
     shortInstructions: state.instructions.shortInstructions,
     shortInstructions2: state.instructions.shortInstructions2,
     isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode
+    widgetMode: state.pageConstants.widgetMode,
+    unconnected: false
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

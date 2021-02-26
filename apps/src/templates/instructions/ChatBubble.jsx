@@ -98,11 +98,4 @@ ChatBubble.propTypes = {
   textToSpeechEnabled: PropTypes.bool
 };
 
-export default connect(state => {
-  return {
-    skinId: state.pageConstants.skinId,
-    isMinecraft: !!state.pageConstants.isMinecraft,
-    textToSpeechEnabled:
-      state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
-  };
-})(Radium(ChatBubble));
+export default Radium(ChatBubble);
