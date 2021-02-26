@@ -56,7 +56,7 @@
     {
       "id": "Ham",
       "type": "categorical",
-      "description": "Did the pizza have hame?"
+      "description": "Did the pizza have ham?"
     },
     {
       "id": "Bacon",

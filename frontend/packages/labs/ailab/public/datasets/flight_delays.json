@@ -59,7 +59,7 @@
       "description": "Distance of flight"
     },
     {
-      "id": "dep_delayed_15min",
+      "id": "DelayedBy15",
       "type": "categorical",
       "description": "Whether or not the flight was delayed by at least 15 minutes"
     }

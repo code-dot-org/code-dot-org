@@ -46,7 +46,7 @@
     {
       "id": "rhino",
       "type": "continuous",
-      "description": "Number of rhino's seen during a visit"
+      "description": "Number of rhinos seen during a visit"
     },
     {
       "id": "elephant",
@@ -69,7 +69,7 @@
       "description": "Number of mosquitos seen during the visit"
     },
     {
-      "id": "overgrowth_percent",
+      "id": "overgrowthPercent",
       "type": "continuous",
       "description": "Percent of the land that has grass and bushes and shrubbery during a visit"
     }
