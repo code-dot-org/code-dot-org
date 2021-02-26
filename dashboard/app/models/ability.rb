@@ -203,7 +203,7 @@ class Ability
       if script.pilot?
         script.has_pilot_access?(user)
       else
-        user.persisted? || !script.login_required?
+        true
       end
     end
     can :read, ScriptLevel do |script_level, params|
