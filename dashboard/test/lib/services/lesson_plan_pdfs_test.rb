@@ -26,6 +26,23 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
     Services::ScriptSeed.seed_from_hash(seed_hash)
   end
 
+  test 'gracefully handles nonexistent scripts' do
+    # right now, we just handle nonexistent scripts by doing nothing. This
+    # means that after a script gets added, it will need to be updated in some
+    # way to trigger PDF generation. We could probably instead be more
+    # proactive about generating PDFs for newly created scripts, but since this
+    # feature is still brand new I think it makes sense to be conservative.
+    script_data = {
+      'properties' => {
+        'is_migrated' => true
+      },
+      'serialized_at' => Time.now.getutc,
+      'name' => "Some Script That Doesn't Exist (#{Time.now.to_i})"
+    }
+    assert_nil Script.find_by(name: script_data['name'])
+    refute Services::LessonPlanPdfs.generate_pdfs?(script_data)
+  end
+
   test 'timestamp equality can compare Times and Strings' do
     assert Services::LessonPlanPdfs.timestamps_equal(
       Time.new(2007, 1, 29, 12, 34, 56),
