@@ -236,7 +236,9 @@ class FormEditorManager extends React.Component {
             previewQuestions={this.state.previewQuestions}
             previewErrors={this.listPreviewErrors()}
             forceRerenderKey={this.state.forceRerenderKey}
-            renderHeaderTitle={() => this.renderHeaderTitle()}
+            headerTitle={this.renderHeaderTitle()}
+            validateURL={'/api/v1/pd/foorm/forms/validate_form'}
+            validateDataKey={'form_questions'}
           />
         )}
       </div>
