@@ -258,7 +258,7 @@ Resources:
 <%=  component 'cache'%>
 <% end -%>
 <% if rack_env?(:production) -%>
-<%=  component 's3_backed_subdomains', bucket_name: 'cdo-lesson-plans', subdomain: 'lesson-plans' -%>
+<%=  component 's3_backed_subdomains', bucket_name: 'cdo-lesson-plans', subdomain: 'lesson-plans', certificate_arn: certificate_arn, domain: domain -%>
 <% end -%>
   DaemonRole:
     Type: AWS::IAM::Role

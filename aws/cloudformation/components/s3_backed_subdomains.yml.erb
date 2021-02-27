@@ -7,7 +7,7 @@
 # 3. S3 Bucket with a BucketPolicy grants global read access (ie, cdo-tts)
 #
 # Example usage:
-# <%%= component 's3_backed_subdomains', bucket_name: 'cdo-tts', subdomain: 'tts' -%>
+# <%%= component 's3_backed_subdomains', bucket_name: 'cdo-tts', subdomain: 'tts', certificate_arn: 'arn:aws:acm:us-east-1:...', domain: 'code.org' -%>
 #
 # For more, see:
 #
@@ -16,6 +16,8 @@
 
 <%
 bucket_name ||= raise('bucket name required')
+certificate_arn ||= raise('ACM Certificate ARN required')
+domain ||= raise('domain required')
 subdomain ||= raise('subdomain required')
 
 # reduce the passed values to strictly alphanumeric, so we can use them to
@@ -61,6 +63,10 @@ sanitized_subdomain = subdomain.gsub(/[^0-9a-z ]/i, '')
             Id: s3-<%= bucket_name %>
             S3OriginConfig:
               OriginAccessIdentity: ""
+        ViewerCertificate:
+          AcmCertificateArn: <%= certificate_arn %>
+          MinimumProtocolVersion: TLSv1
+          SslSupportMethod: sni-only
 
   SubdomainRecord<%= sanitized_subdomain %>:
     Type: AWS::Route53::RecordSet
