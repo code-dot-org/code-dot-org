@@ -3208,7 +3208,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp u5 written response] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
+            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp_u5_written_response] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
           }
         ],
         "name": "Hackathon Prep\r"
@@ -6191,122 +6191,122 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Lists Make - Reminder App",
       "url": "https://docs.google.com/document/d/1GlcxUvD-czBrwGGq70ZiiItOSB3R77s0JOSL2XvxecM/edit?usp=sharing",
-      "key": "csp lists make",
+      "key": "csp_lists_make_-_reminder_app",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp lists make"
+        "resource.key": "csp_lists_make_-_reminder_app"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "Loops Game Board",
       "url": "https://docs.google.com/document/d/1tvAqNjn1ktrzMROtHAxOZDfHHMOn367Fdpnp9sbWghM/view",
-      "key": "csp loops game board",
+      "key": "loops_game_board",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp loops game board"
+        "resource.key": "loops_game_board"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6325,225 +6325,225 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "Traversal Machine",
       "url": "https://docs.google.com/document/d/155CFeFELE2dfoQCip9CwLb6KbJqDeUcvhumCRecCU-Y/view",
-      "key": "csp traversal machine",
+      "key": "traversal_machine",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp traversal machine"
+        "resource.key": "traversal_machine"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Traversals Make - Random Forecaster App",
       "url": "https://docs.google.com/document/d/1a6MK9hALSWPJ_mHs0uM5dwrGammMAr5IfXGbf7gtczg/edit?usp=sharing",
-      "key": "csp traversals make",
+      "key": "csp_traversals_make_-_random_forecaster_app",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp traversals make"
+        "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Written Response",
       "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
-      "key": "csp u5 written response",
+      "key": "csp_u5_hackathon_project_written_response",
       "properties": {
         "type": "Written Response",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Written Response",
       "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
-      "key": "csp u5 written response",
+      "key": "csp_u5_hackathon_project_written_response",
       "properties": {
         "type": "Written Response",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -6562,13 +6562,13 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     }
   ],
@@ -6576,61 +6576,61 @@
     {
       "seeding_key": {
         "lesson.key": "Lists Explore",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Practice",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
-        "resource.key": "csp lists make"
+        "resource.key": "csp_lists_make_-_reminder_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Explore",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Explore",
-        "resource.key": "csp loops game board"
+        "resource.key": "loops_game_board"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Practice",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6642,109 +6642,109 @@
     {
       "seeding_key": {
         "lesson.key": "Traversals Explore",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Explore",
-        "resource.key": "csp traversal machine"
+        "resource.key": "traversal_machine"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Practice",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
-        "resource.key": "csp traversals make"
+        "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 2",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 2",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 3",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 3",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -6756,7 +6756,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 18: Assessment Day",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     }
   ],
