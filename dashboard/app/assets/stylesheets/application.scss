@@ -334,6 +334,17 @@ img.video_thumbnail {
   #signin_button .header_button {
     margin-top: 6px;
   }
+
+  #sign_in_or_user {
+    &.z_index_above_modal {
+      z-index: 1050;
+
+      // Usually transparent, so adding teal allows button to render in front
+      .header_user {
+        background-color: $teal;
+      }
+    }
+  }
 }
 
 #language_dir.rtl #pageheader-wrapper {
