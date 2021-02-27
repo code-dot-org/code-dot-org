@@ -263,6 +263,11 @@ namespace :seed do
     Block.load_records
   end
 
+  timed_task programming_expressions: :environment do
+    ProgrammingEnvironment.seed_all
+    ProgrammingExpression.seed_all
+  end
+
   timed_task shared_blockly_functions: :environment do
     SharedBlocklyFunction.load_records
   end
