@@ -5,7 +5,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {MenuItem} from 'react-bootstrap';
 import FoormEditor from '../components/FoormEditor';
 import FoormLoadButtons from '../components/FoormLoadButtons';
 import {
@@ -24,6 +23,10 @@ const styles = {
   },
   surveyState: {
     marginTop: 0
+  },
+  loadError: {
+    fontWeight: 'bold',
+    padding: '1em'
   }
 };
 
@@ -62,24 +65,22 @@ class FormEditorManager extends React.Component {
     this.props.resetAvailableForms(this.props.namesAndVersions);
   }
 
-  getFormattedConfigurationDropdownOptions() {
-    return this.props.availableForms.map((formNameAndVersion, i) => {
+  // For loading buttons
+  getDropdownOptions() {
+    return this.props.availableForms.map(formNameAndVersion => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
       const formId = formNameAndVersion['id'];
-      return (
-        <MenuItem
-          key={i}
-          eventKey={i}
-          onClick={() => this.loadConfiguration(formId)}
-        >
-          {`${formName}, version ${formVersion}`}
-        </MenuItem>
-      );
+
+      return {
+        id: formId,
+        text: `${formName}, version ${formVersion}`
+      };
     });
   }
 
-  loadConfiguration(formId) {
+  // For loading buttons
+  loadConfiguration = formId => {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
@@ -106,24 +107,25 @@ class FormEditorManager extends React.Component {
           hasLoadError: true
         });
       });
-  }
+  };
 
-  initializeEmptyCodeMirror = () => {
-    this.props.setLastSaved(null);
-    this.props.setSaveError(null);
-    this.updateFormData({
+  // For loading buttons
+  resetSelectedData() {
+    this.props.setFormData({
       questions: {},
       published: null,
       formName: null,
       formVersion: null,
       formId: null
     });
-    this.setState({
-      showCodeMirror: true,
-      hasLoadError: false
-    });
-  };
+  }
 
+  // For loading buttons
+  showCodeMirror() {
+    this.setState({showCodeMirror: true});
+  }
+
+  // For loading buttons
   updateFormData = formData => {
     this.props.setFormData(formData);
     this.props.setHasJSONError(false);
@@ -131,6 +133,7 @@ class FormEditorManager extends React.Component {
     this.props.resetCodeMirror(formData['questions']);
   };
 
+  // for preview
   // use debounce to only call once per second
   fillFormWithLibraryItems = _.debounce(
     function() {
@@ -163,10 +166,7 @@ class FormEditorManager extends React.Component {
     {leading: true}
   );
 
-  setShowCodeMirror() {
-    this.setState({showCodeMirror: true});
-  }
-
+  // for preview
   listPreviewErrors() {
     let errors = [];
 
@@ -186,7 +186,7 @@ class FormEditorManager extends React.Component {
     return errors;
   }
 
-  // bind this instead of using arrow function?
+  // for header
   renderHeaderTitle() {
     return (
       this.props.formName && (
@@ -225,8 +225,15 @@ class FormEditorManager extends React.Component {
         <FoormLoadButtons
           resetCodeMirror={this.props.resetCodeMirror}
           namesAndVersions={this.props.namesAndVersions}
-          setShowCodeMirror={() => this.setShowCodeMirror()}
+          setSelectedData={this.props.setFormData}
+          resetSelectedData={() => this.resetSelectedData()}
+          showCodeMirror={() => this.showCodeMirror()}
+          onSelect={this.loadConfiguration}
+          dropdownOptions={this.getDropdownOptions()}
         />
+        {this.state.hasLoadError && (
+          <div style={styles.loadError}>Could not load the selected form.</div>
+        )}
         {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
