@@ -41,7 +41,7 @@ By visiting or using our Services, you expressly consent to the information hand
 Code.org is a signatory to the [Student Privacy Pledge](https://studentprivacypledge.org/), which contains a set of principles intended to safeguard student privacy, including responsible stewardship, protection, and transparent handling of student data.
 
 ## Quick Reference
-|You can use the links below to quickly find information in our Privacy Policy.|
+|You can use the links below to quickly find information in our Privacy Policy|
 | --- |
 |[How We Collect and Use Information](#how-we-collect-and-use-information)|
 |[How We Share or Transfer Information](#how-we-share-or-transfer-information)|
