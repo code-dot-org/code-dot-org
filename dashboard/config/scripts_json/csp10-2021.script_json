@@ -1196,7 +1196,7 @@
       "key": "888e973b-48f4-480c-8573-2654a891a669",
       "position": 3,
       "properties": {
-        "description": "[slide] **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp innovation sim guide]\r\n\r\n\r\n[slide] **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
+        "description": "[slide] **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp_innovation_simulation_project_guide]\r\n\r\n\r\n[slide] **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
         "name": "Innovation Simulation Project\r"
       },
       "seeding_key": {
@@ -2076,7 +2076,7 @@
       "key": "6fe9b2ee-f1c2-4ee8-9c8d-053587d45387",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give students back [r csp innovation sim guide] if they don't already have them on hand.\r\n\r\n\r\n[slide] **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
+        "description": "**Distribute:** Give students back [r csp_innovation_simulation_project_guide] if they don't already have them on hand.\r\n\r\n\r\n[slide] **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
       },
       "seeding_key": {
         "activity_section.key": "6fe9b2ee-f1c2-4ee8-9c8d-053587d45387",
@@ -3309,50 +3309,50 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Innovation Simulation Nameplates",
       "url": "https://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/",
-      "key": "csp innovation sim nameplates",
+      "key": "csp_innovation_simulation_nameplates",
       "properties": {
         "type": "Handout",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim nameplates"
+        "resource.key": "csp_innovation_simulation_nameplates"
       }
     },
     {
       "name": "CSP Innovation Simulation Badges",
       "url": "https://drive.google.com/file/d/1iTYcQ-Jqe-aCQ3Jcq0Td0xZEgreNdGVp/",
-      "key": "csp innovation sim badges",
+      "key": "csp_innovation_simulation_badges",
       "properties": {
         "type": "Handout",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim badges"
+        "resource.key": "csp_innovation_simulation_badges"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3371,38 +3371,38 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3421,13 +3421,13 @@
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3459,50 +3459,50 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3534,50 +3534,50 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3609,26 +3609,26 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3647,26 +3647,26 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3685,38 +3685,38 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     }
   ],
@@ -3742,25 +3742,25 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp innovation sim nameplates"
+        "resource.key": "csp_innovation_simulation_nameplates"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp innovation sim badges"
+        "resource.key": "csp_innovation_simulation_badges"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3772,19 +3772,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Data Policies and Privacy",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3796,7 +3796,7 @@
     {
       "seeding_key": {
         "lesson.key": "The Value of Privacy",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3814,25 +3814,25 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Security Risks Part 1",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3850,25 +3850,25 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 4",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 4",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Protecting Data Part 1",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Protecting Data Part 2",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3886,13 +3886,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 5",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 5",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3904,13 +3904,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 6",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 6",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3922,19 +3922,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 7",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 7",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 14: Unit Assessment Day",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     }
   ],

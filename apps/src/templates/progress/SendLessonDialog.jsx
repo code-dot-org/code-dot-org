@@ -70,11 +70,11 @@ class SendLessonDialog extends Component {
   onCopyLink() {
     copyToClipboard(this.props.lessonUrl);
 
-    // show "Link copied!" for 2 seconds
+    // show message "Link copied!" for 4 seconds
     this.setState({showLinkCopied: true});
     setTimeout(() => {
       this.setState({showLinkCopied: false});
-    }, 2000);
+    }, 4000);
 
     firehoseClient.putRecord(
       {
