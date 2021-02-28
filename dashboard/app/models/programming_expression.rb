@@ -21,19 +21,27 @@ class ProgrammingExpression < ApplicationRecord
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
 
-    environment_name = File.basename(File.dirname(path)) == 'GamelabJr' ? 'spritelab' : ''
+    environment_name = File.basename(File.dirname(path)) == 'GamelabJr' ? 'spritelab' : File.basename(File.dirname(path))
     programming_environment = ProgrammingEnvironment.find_by(name: environment_name)
 
-    {
-      name: expression_config['config']['func'] || expression_config['config']['name'],
-      programming_environment_id: programming_environment.id,
-      category: expression_config['category']
-    }
+    if environment_name == 'spritelab'
+      {
+        name: expression_config['config']['func'] || expression_config['config']['name'],
+        programming_environment_id: programming_environment.id,
+        category: expression_config['category']
+      }
+    else
+      {
+        name: expression_config['func'],
+        programming_environment_id: programming_environment.id,
+        category: expression_config['category']
+      }
+    end
   end
 
-  def self.seed_all(blob="config/blocks/GamelabJr/*.json")
+  def self.seed_all
     removed_records = all.pluck(:name)
-    Dir.glob(Rails.root.join(blob)).each do |path|
+    Dir.glob(Rails.root.join("config/blocks/{applab,gamelab,weblab,GamelabJr}/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
     where(name: removed_records).destroy_all
