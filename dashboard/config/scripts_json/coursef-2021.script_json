@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-02-26 22:11:28 UTC",
+    "serialized_at": "2021-03-01 23:12:47 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -286,7 +286,7 @@
         "overview": "Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.",
         "student_overview": "Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.",
         "purpose": "Variables are very helpful in programming. Students will be introduced to this topic using envelopes to represent variables that have been given names. The value of the variable will be written on a card inside of an envelope. This lesson helps students understand how names can be a placeholder for values in the physical world, so that programming with variables will seem less confusing in the virtual world.",
-        "preparation": "- Obtain 6 or more blank envelopes for warm up plus some for the main activity.\r\n- Print one worksheet per student.\r\n- Print one assessment for each student.\r\n- Provide students with envelopes, paper, pens & pencils.\r\n- Make sure every student has a journal.",
+        "preparation": "- Obtain 6 or more blank envelopes for warm up plus some for the main activity.\n- Print one ***worksheet** per student.\n- Print one ***assessment** for each student.\n- Provide students with envelopes, paper, pens & pencils.\n- Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -900,11 +900,23 @@
       }
     },
     {
-      "key": "30d33bb7-570e-4fe9-bdf1-8368eb902a81",
+      "key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
+        "lesson.key": "Envelope Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "30d33bb7-570e-4fe9-bdf1-8368eb902a81",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "30d33bb7-570e-4fe9-bdf1-8368eb902a81",
@@ -915,7 +927,7 @@
     },
     {
       "key": "43630383-2d34-4c94-a247-c89980c26d3e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 10
@@ -929,7 +941,7 @@
     },
     {
       "key": "3aacc1a8-90a4-4bc4-8351-e4c6442474b2",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Assessment",
         "duration": 10
@@ -943,10 +955,9 @@
     },
     {
       "key": "5e1b2e68-9eac-4f96-8016-a5d89547aa5a",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "5e1b2e68-9eac-4f96-8016-a5d89547aa5a",
@@ -956,13 +967,13 @@
       }
     },
     {
-      "key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
-      "position": 6,
+      "key": "2824eaf2-a435-4c9d-8d75-7f1d985ed6ea",
+      "position": 7,
       "properties": {
-        "name": "Levels"
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
-        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
+        "lesson_activity.key": "2824eaf2-a435-4c9d-8d75-7f1d985ed6ea",
         "lesson.key": "Envelope Variables",
         "lesson_group.key": "csf_variables",
         "script.name": "coursef-2021"
@@ -2309,8 +2320,8 @@
       "key": "b4ab7a6d-4cd3-4045-a864-451f3510c69f",
       "position": 1,
       "properties": {
-        "description": "This lesson has one important word:\r\n\r\n - **Variable** - Say it with me: Vayr-ee-ah-buhl \r\n\r\nA placeholder for a piece of information that can change.",
-        "name": "Vocabulary\r"
+        "description": "This lesson has one important word:\n\n - **Variable** - *Say it with me: Vayr-ee-ah-buhl* \n\nA placeholder for a piece of information that can change.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "b4ab7a6d-4cd3-4045-a864-451f3510c69f",
@@ -2321,8 +2332,7 @@
       "key": "ba304c03-8de0-4209-b9a6-15b215575186",
       "position": 2,
       "properties": {
-        "description": "Call four volunteers to the front of the room and line them up. Let the students know that you are going to write a poem for each of them.\r\n\r\nOn the board (or under your document camera) write the sentence for your first student (suppose it's Bill):\r\n\r\n\"My student Bill, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nEncourage the students to clap at your abilities and thank Bill for volunteering. Allow Bill to sit down (or go to the back of the line) as you erase the board, then call the next volunteer (we'll say that she's called Annie).\r\n\r\n\"My student Annie, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAgain, accepting applause, erase the board and invite the next volunteer.\r\n\r\n\"My student Jenny, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAs you call the final volunteer, inquire as to whether everyone in the class would like a poem written about each of them. Maybe the everyone in the whole school? Goodness, that's going to take a while! Pose the question to your students:\r\n\r\n\"How could I do this more quickly?\"\r\n\r\nYour students will likely pick up on the fact that only one word is changing, and that word is simply a person's name. Help them see the location by circling Jenny's name on the board and writing \"firstName\" next to it.\r\n\r\n\"It would take a long time to write a poem for everyone in the school if I couldn't start until I knew who I was writing it about, wouldn't it?\"\r\n\r\n- How long do you think it would take to make a video game if they couldn't start until they knew your username?\r\n- How expensive would video games be if they had to be created separately for each person?\r\n- How do you think we can get around that?\r\n\r\nBy this time, it's quite likely that your class will come up with the idea of having a placeholder. With that, they're most of the way into understanding where this lesson goes.\r\n\r\n- What would we call that placeholder?\r\n\t- We need to call it something that makes sense. We wouldn't want to call it \"age\" if it was a placeholder for their name, right?\r\n\r\nNow, let's add some more volunteers. Give them each a piece of paper to write their name on, and have them tuck it inside individual envelopes labeled firstName.\r\n\r\nThis time, put the poem on the board with a blank space labeled \"firstName\" where the student's name will go. \r\n\r\n- Have the first student in line (likely the last student from the previous example) pull their name from the envelope and that's what you'll write in the space.\r\n- When you erase the board, only erase the portion with the last student's name in it. \r\n- Call the next student to show their variable. \r\n- Repeat as many times as is entertaining\r\n\r\nNow it's time for the main activity.",
-        "name": "Introduction\r"
+        "description": "Call four volunteers to the front of the room and line them up. Let the students know that you are going to write a poem for each of them.\r\n\r\nOn the board (or under your document camera) write the sentence for your first student (suppose it's Bill):\r\n\r\n\"My student Bill, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nEncourage the students to clap at your abilities and thank Bill for volunteering. Allow Bill to sit down (or go to the back of the line) as you erase the board, then call the next volunteer (we'll say that she's called Annie).\r\n\r\n\"My student Annie, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAgain, accepting applause, erase the board and invite the next volunteer.\r\n\r\n\"My student Jenny, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAs you call the final volunteer, inquire as to whether everyone in the class would like a poem written about each of them. Maybe the everyone in the whole school? Goodness, that's going to take a while! Pose the question to your students:\r\n\r\n\"How could I do this more quickly?\"\r\n\r\nYour students will likely pick up on the fact that only one word is changing, and that word is simply a person's name. Help them see the location by circling Jenny's name on the board and writing \"firstName\" next to it.\r\n\r\n\"It would take a long time to write a poem for everyone in the school if I couldn't start until I knew who I was writing it about, wouldn't it?\"\r\n\r\n- How long do you think it would take to make a video game if they couldn't start until they knew your username?\r\n- How expensive would video games be if they had to be created separately for each person?\r\n- How do you think we can get around that?\r\n\r\nBy this time, it's quite likely that your class will come up with the idea of having a placeholder. With that, they're most of the way into understanding where this lesson goes.\r\n\r\n- What would we call that placeholder?\r\n\t- We need to call it something that makes sense. We wouldn't want to call it \"age\" if it was a placeholder for their name, right?\r\n\r\nNow, let's add some more volunteers. Give them each a piece of paper to write their name on, and have them tuck it inside individual envelopes labeled firstName.\r\n\r\nThis time, put the poem on the board with a blank space labeled \"firstName\" where the student's name will go. \r\n\r\n- Have the first student in line (likely the last student from the previous example) pull their name from the envelope and that's what you'll write in the space.\r\n- When you erase the board, only erase the portion with the last student's name in it. \r\n- Call the next student to show their variable. \r\n- Repeat as many times as is entertaining\r\n\r\nNow it's time for the main activity."
       },
       "seeding_key": {
         "activity_section.key": "ba304c03-8de0-4209-b9a6-15b215575186",
@@ -2330,11 +2340,22 @@
       }
     },
     {
+      "key": "f5758309-4689-41df-a585-3f3d2e4d657c",
+      "position": 1,
+      "properties": {
+        "name": "Envelope Variables",
+        "progression_name": "Envelope Variables - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5758309-4689-41df-a585-3f3d2e4d657c",
+        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b"
+      }
+    },
+    {
       "key": "de0a05bb-644b-4c90-97d2-f2e44f65d27b",
       "position": 1,
       "properties": {
-        "description": "Once the students understand how the envelopes relate to the sentences, pass out the activity worksheet and let them prepare some variables of their own.\r\n\r\n**Directions:**\r\n\r\n- Divide students into groups of 2-4.\r\n- Have students design (draw) a robot.\r\n- After 10-15 minutes, request that the students fill their envelopes with important details about their robot such as its name, height, and purpose.\r\n- Collect each group's envelopes, then bring them to the front of the room to share.\r\n- Write on the board, \"My robot's name is robotName, it is numUnitsTall tall, and it's purpose is purpose.\"\r\n- Use the envelopes to fill the appropriate variable in the sentence, then ask each group to stand when they hear the sentence that describes their creation.",
-        "name": "[r csf-envelope-variables-worksheet]\r"
+        "description": "Once the students understand how the envelopes relate to the sentences, pass out the ***activity worksheet** and let them prepare some variables of their own.\n\n**Directions:**\n\n- Divide students into groups of 2-4.\n- Have students design (draw) a robot.\n- After 10-15 minutes, request that the students fill their envelopes with important details about their robot such as its name, height, and purpose.\n- Collect each group's envelopes, then bring them to the front of the room to share.\n- Write on the board, \"My robot's name is robotName, it is numUnits tall, and it's purpose is purpose.\"\n- Use the envelopes to fill the appropriate variable in the sentence, then ask each group to stand when they hear the sentence that describes their creation."
       },
       "seeding_key": {
         "activity_section.key": "de0a05bb-644b-4c90-97d2-f2e44f65d27b",
@@ -2345,8 +2366,8 @@
       "key": "de2b5eb5-3fc3-4a9d-a368-4f5750155c50",
       "position": 1,
       "properties": {
-        "description": "- What did we learn today?\r\n- Can you think of anywhere that you have seen variables before?\r\n- There is at least one variable at the top of most homework hand outs? Can you think of what it could be?\r\n- Why do you think that professionals do not put spaces in variable names?\r\n\t- What would happen if there was a variable \"eye\" a variable \"color\" and a variable \"eye color\"?\r\n- Variables can be used to store numbers, too.\r\n\t- Suppose I have envelopes labeled num1 and num2, then I write num1+num2?\r\n\t- What happens if the \"num1\" envelope contains the number 4 and \"num2\" contains the number 5?",
-        "name": "Flash Chat: What did we learn?\r"
+        "description": "####Flash Chat: What did we learn?\n\n- What did we learn today?\n- Can you think of anywhere that you have seen variables before?\n- There is at least one variable at the top of most homework hand outs? Can you think of what it could be?\n- Why do you think that professionals do not put spaces in variable names?\n\t- What would happen if there was a variable \"eye\" a variable \"color\" and a variable \"eye color\"?\n- Variables can be used to store numbers, too.\n\t- Suppose I have envelopes labeled num1 and num2, then I write num1+num2?\n\t- What happens if the \"num1\" envelope contains the number 4 and \"num2\" contains the number 5?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "de2b5eb5-3fc3-4a9d-a368-4f5750155c50",
@@ -2357,8 +2378,7 @@
       "key": "b5955f44-a441-4382-bad6-036ba38e1f49",
       "position": 2,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a variable?\r\n - Why do you think variables are important in programming?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a variable?\n - Why do you think variables are important in programming?"
       },
       "seeding_key": {
         "activity_section.key": "b5955f44-a441-4382-bad6-036ba38e1f49",
@@ -2369,8 +2389,7 @@
       "key": "d0346557-37ff-4de2-9c76-76e6ea1cb5b2",
       "position": 1,
       "properties": {
-        "description": "Allow students enough time to finish this assessment. If you are willing to spare more time, go over the answers as a class.",
-        "name": "[r csf-variables-assessment-worksheet]\t\r"
+        "description": "Allow students enough time to finish this ***assessment.** If you are willing to spare more time, go over the answers as a class."
       },
       "seeding_key": {
         "activity_section.key": "d0346557-37ff-4de2-9c76-76e6ea1cb5b2",
@@ -2389,13 +2408,14 @@
       }
     },
     {
-      "key": "f5758309-4689-41df-a585-3f3d2e4d657c",
+      "key": "94a320fa-f3d5-4f24-916b-1387a5987082",
       "position": 1,
       "properties": {
+        "description": "###Food Chain Variables (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[**Food Chain Variables**](https://docs.google.com/document/d/1RcvvFf8Cjkok6L6KSnJgIwpbC-_bqGK68TE7ykkH1ms/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will identify various values for the variables found in food chains (Example: plants, animals, decomposer, etc.) as they document these values on notecards and show the movement of matter through an environment. Students will also learn about the 10% Rule and further describe energy flow with a writing prompt.\n\n*Standards Addressed:*\n\n - **CCSS.ELA-LITERACY.W.5.2.B:** Develop the topic with facts, definitions, concrete details, quotations, or other information and examples related to the topic.\n- **CCSS.MATH.CONTENT.5.NF.B.7.C:** Solve real world problems involving division of unit fractions by non-zero whole numbers and division of whole numbers by unit fractions, e.g., by using visual fraction models and equations to represent the problem. \n\n - **NGSS.5-LS2-1:** Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment. \n\n"
       },
       "seeding_key": {
-        "activity_section.key": "f5758309-4689-41df-a585-3f3d2e4d657c",
-        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b"
+        "activity_section.key": "94a320fa-f3d5-4f24-916b-1387a5987082",
+        "lesson_activity.key": "2824eaf2-a435-4c9d-8d75-7f1d985ed6ea"
       }
     },
     {
@@ -5459,7 +5479,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Designing for Accessibility - Unplugged Activity"
+        "progression": "Designing for Accessibility - Unplugged Activity",
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5505,11 +5528,12 @@
       "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "EnvelopeVariables-Unplugged_2021"
-        ]
+        ],
+        "progression": "Envelope Variables - Unplugged Activity"
       },
       "named_level": null,
       "bonus": null,
@@ -9559,19 +9583,6 @@
       }
     },
     {
-      "name": "Variables",
-      "url": "https://youtu.be/DI7DprN4FtE",
-      "key": "variables",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2015/course4/C4-Variables-in-envelopes-JIE-2015_720.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "variables"
-      }
-    },
-    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
@@ -9606,6 +9617,19 @@
       },
       "seeding_key": {
         "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://youtu.be/DI7DprN4FtE",
+      "key": "variables",
+      "properties": {
+        "type": "Student Video",
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2015/course4/C4-Variables-in-envelopes-JIE-2015_720.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "variables"
       }
     },
     {
@@ -9922,18 +9946,12 @@
     {
       "seeding_key": {
         "lesson.key": "Variables as Constant in Artist",
-        "resource.key": "variables"
+        "resource.key": "course-cf-blockly-blocks"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables as Constant in Artist",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
         "resource.key": "variables"
       }
     },
@@ -9941,6 +9959,12 @@
       "seeding_key": {
         "lesson.key": "Variables that Change in Artist",
         "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables that Change in Artist",
+        "resource.key": "variables"
       }
     },
     {

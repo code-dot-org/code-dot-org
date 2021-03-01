@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-01 19:56:14 UTC",
+    "serialized_at": "2021-03-01 22:29:06 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -697,19 +697,6 @@
       }
     },
     {
-      "key": "0d1cbf20-4041-40bd-b99f-aaa4d78dd76c",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0d1cbf20-4041-40bd-b99f-aaa4d78dd76c",
-        "lesson.key": "Binary Numbers",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
       "key": "6936af82-8c41-4b9b-85c7-135b2835057e",
       "position": 1,
       "properties": {
@@ -788,19 +775,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5f278023-9086-42f6-91d9-9eb05dc3bb08",
-        "lesson.key": "Representing Text",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "key": "333c60ec-8d4c-4294-ae03-a3765ee7ee64",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "333c60ec-8d4c-4294-ae03-a3765ee7ee64",
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021"
@@ -2008,7 +1982,6 @@
         "description": "[slide]  **Prompt:** Yesterday, you created your own number system using circles and squares.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** In previous lessons, students represented information using two options.  This is a quick thinking question to tap into students’ prior knowledge and experiences.  Once students have mentioned a few of the points below, they can move on.\n\n* The answer to a yes/no or true/false question\n* Flipping a switch on/off\n* Combinations of yes/no answers by using multiple symbols in a row\n* We can keep adding more of the same symbols, so the only limit is how much space we have to write or store those symbols\n"
           }
@@ -2034,7 +2007,7 @@
       "key": "46eccac1-8239-4e4a-b1c7-5d5361ad3dea",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Use the activity slides for this lesson to introduce students to the binary number system.  Use the presenter notes as a guide to explaining how the shapes we used in the previous lesson relate to binary numbers. These slides use a lot of animations. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: <img src=\"https://curriculum.code.org/media/uploads/animation_CBj3Vf5.png\" style=\"width:30px\">. Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information0_ZTRvGAG.svg) |  **Say:** Today we are going to explore how Binary Numbers work.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-01_D8Nnv9y.svg) | **Say:** With only one place value, we only have two possible patterns: circle or square. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation**<br><br> **Say:** I started with circle, but we could have easily started with square instead.   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information2.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** With two place values, we can make two sets of the previous patterns. Then, insert circles in front of the first set and squares in front of the second set. This makes four possible patterns.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information3.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** For three place value patterns, we can make two copies of the two place value patterns. Then, just like we did before, fill in the first set with circles in front and the second set with squares in front. This makes 8 arrangements. <br><br> **Note:** Computer scientists like to start counting at 0! |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information4.svg) | **Say:** Instead of two shapes, what if we had 10 shapes? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-00.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** We could use more geometric shapes, or we could use letters, but the shapes we are used to are the numbers 0 through 9. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information6.svg) | **Say:** With two places, we have one hundred 2-shape patterns. These are the numbers 00 through 99. ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** | \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information7.svg) | **Say:** What happens when we count up to the last shape? <br><br> **Do This:** Quick quiz! What comes after this number? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information8.svg) | **Say:** 100! When we run up to the last shape, 9, we roll over back to 0 and add one in the next place to the left. This is the place value that we have used all our lives. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information9.svg) | **Say:** Where is this heading? ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information10.svg) | **Say:** Binary is a number system with two shapes. ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information11.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Instead of shapes, we use 0's and 1's. In this example, each pattern maps to a decimal number from 0 to 7.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information12.svg) | **Say:** For today's activity, you will be creating your own Flippy Do. This is a tool that will allow you to quickly and easily translate between the decimal number base we are used to as humans and the binary number base that computers use. <br><br> **Distribute:** Hand out the Flippy Do templates - one per student. <br><br> **Do This:** Lead students through completing their Flippy Do's using the slide as a guide.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information16.svg) | **Say:** Each place value represents one \"bit\" which is short for \"binary digit\". A binary digit can be a zero or a one. Your flippy do has eight \"bits\". <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Together, eight place values, or \"bits\", makes up one \"byte\". Since computers represent information digitally, the lowest level components of information are bits. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information14.svg) | **Do This:** Use your Flippy Do to try out these six problems. <br><br> **Note:** It may be necessary to demonstrate how values can be calculated by flipping up a “1” for each value required to arrive at the sum of values equal to the decimal number.<br><br>For example, To convert the decimal number 10, I would flip up a one in the 8's position, because eight can fit in 10 (The next bit to the left is 16, which is too big). Then I have 2 left. I flip up a one in the 2's position. This gives me the binary number \"1010\", which means 10 in decimal.<br><br>If students are having a difficult time understanding the rules of the system, remind them of the concept of place value and relate to base 10. <br><br>| ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see answers.**\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information15.svg) | **Say:** Let's continue to practice with our own two number bases, decimal and binary. After you finish each of the four parts of the Activity Guide, I want you to check your work with your partner. Feel free to use your Flippy Do as you work. <br><br>**Distribute:** Activity Guide <br><br>**Note:** Encourage students to use their Flippy Do as a resource. <br><br><ul><li> **Challenge 1 - All 4-bit Numbers:** Students should produce all binary numbers with a length of 4 bits, from 0000 to 1111. They should see that all odd numbers end in 1 and even numbers end in 0. Students may also notice that the binary digits increasingly “roll-over” to 1’s (from right to left) as numbers become larger and larger.</li><li> **Challenge 2 - Binary Numbers with Exactly One 1:**  The goal here is for students to systematically find all binary numbers that have all zeros, except for one bit. Students should notice that the resulting decimal values are all powers of 2.</li><li>**Challenge 3 - Conversion Practice:** This section gives students more practice converting between number bases. The last two decimal numbers, 256 and 513, are too big to represent using the Flippy Do, however students should make the connection that more bits could be added to the left of the Flippy Do using increasing powers of 2.</li><li> **Challenge 4 - Putting it all Together:**   The last four questions on the Activity Guide ask students to apply their understanding to new situations. The first two questions ask students to describe what happens to the value when 0’s are added to the left or right of a binary number. The last two questions ask students to think about how many bits are required to represent specific values in binary.</li></ul> <br><br> **Note:** As you circulate, take an opportunity to be a Lead Learner. Help students discover the items below using the suggested questions:<br><br><ul><li>**Reading a number vs. Placing a Number:** Do we fill in the places on the Flippy Do starting on the left or right? Does it matter? (Yes. If we have a 5-bit number, we actually use the 5 bits on the far right. If we were to use the bits on the far left, this changes the value of the number. This is similar to adding more zeros to a decimal number.)</li><li>**Highest value possible with a given number of bits:** What is the largest number we can make with 4 bits? Is the last number we can make always odd? (A meaningful pattern is that we can count as high as one less than the next bit on the left. If we have four bits, we can count up to the number 15, because the next bit has a value of 16.) </li><li>**Number of numbers we can make:** How many total unique numbers are possible with 4 bits? (This is a base 2 number system. With each new bit, we double the amount of unique numbers we can make. With four bits, we can make the decimal numbers 0 to 15 (0000 to 1111), for a total of 16 unique numbers.)</li></ul>    |"
+        "description": "[slide] **Display:** Use the activity slides for this lesson to introduce students to the binary number system.  Use the presenter notes as a guide to explaining how the shapes we used in the previous lesson relate to binary numbers. These slides use a lot of animations. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information0_ZTRvGAG.svg) |  **Say:** Today we are going to explore how Binary Numbers work.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-01_D8Nnv9y.svg) | **Say:** With only one place value, we only have two possible patterns: circle or square. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> **Say:** I started with circle, but we could have easily started with square instead.   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information2.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** With two place values, we can make two sets of the previous patterns. Then, insert circles in front of the first set and squares in front of the second set. This makes four possible patterns.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information3.svg) |![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** For three place value patterns, we can make two copies of the two place value patterns. Then, just like we did before, fill in the first set with circles in front and the second set with squares in front. This makes 8 arrangements. <br><br> **Note:** Computer scientists like to start counting at 0! |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information4.svg) | **Say:** Instead of two shapes, what if we had 10 shapes? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-00.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** We could use more geometric shapes, or we could use letters, but the shapes we are used to are the numbers 0 through 9. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information6.svg) | **Say:** With two places, we have one hundred 2-shape patterns. These are the numbers 00 through 99. ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** | \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information7.svg) | **Say:** What happens when we count up to the last shape? <br><br> **Do This:** Quick quiz! What comes after this number? |\n| ![](![](https://images.code.org/b5bd1b6994a0a376858cfd8231ed8260-CSP-Unit-1-1.png) | **Say:** 100! When we run up to the last shape, 9, we roll over back to 0 and add one in the next place to the left. This is the place value that we have used all our lives. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information9.svg) | **Say:** Where is this heading? ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information10.svg) | **Say:** Binary is a number system with two shapes. ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information11.svg) | ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** Instead of shapes, we use 0's and 1's. In this example, each pattern maps to a decimal number from 0 to 7.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information12.svg) | **Say:** For today's activity, you will be creating your own Flippy Do. This is a tool that will allow you to quickly and easily translate between the decimal number base we are used to as humans and the binary number base that computers use. <br><br> **Distribute:** Hand out the Flippy Do templates - one per student. <br><br> **Do This:** Lead students through completing their Flippy Do's using the slide as a guide.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information16.svg) | **Say:** Each place value represents one \"bit\" which is short for \"binary digit\". A binary digit can be a zero or a one. Your flippy do has eight \"bits\". <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Together, eight place values, or \"bits\", makes up one \"byte\". Since computers represent information digitally, the lowest level components of information are bits. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information14.svg) | **Do This:** Use your Flippy Do to try out these six problems. <br><br> **Note:** It may be necessary to demonstrate how values can be calculated by flipping up a “1” for each value required to arrive at the sum of values equal to the decimal number.<br><br>For example, To convert the decimal number 10, I would flip up a one in the 8's position, because eight can fit in 10 (The next bit to the left is 16, which is too big). Then I have 2 left. I flip up a one in the 2's position. This gives me the binary number \"1010\", which means 10 in decimal.<br><br>If students are having a difficult time understanding the rules of the system, remind them of the concept of place value and relate to base 10. <br><br>| ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation to see answers.**\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information15.svg) | **Say:** Let's continue to practice with our own two number bases, decimal and binary. After you finish each of the four parts of the Activity Guide, I want you to check your work with your partner. Feel free to use your Flippy Do as you work. <br><br>**Distribute:** Activity Guide <br><br>**Note:** Encourage students to use their Flippy Do as a resource. <br><br><ul><li> **Challenge 1 - All 4-bit Numbers:** Students should produce all binary numbers with a length of 4 bits, from 0000 to 1111. They should see that all odd numbers end in 1 and even numbers end in 0. Students may also notice that the binary digits increasingly “roll-over” to 1’s (from right to left) as numbers become larger and larger.</li><li> **Challenge 2 - Binary Numbers with Exactly One 1:**  The goal here is for students to systematically find all binary numbers that have all zeros, except for one bit. Students should notice that the resulting decimal values are all powers of 2.</li><li>**Challenge 3 - Conversion Practice:** This section gives students more practice converting between number bases. The last two decimal numbers, 256 and 513, are too big to represent using the Flippy Do, however students should make the connection that more bits could be added to the left of the Flippy Do using increasing powers of 2.</li><li> **Challenge 4 - Putting it all Together:**   The last four questions on the Activity Guide ask students to apply their understanding to new situations. The first two questions ask students to describe what happens to the value when 0’s are added to the left or right of a binary number. The last two questions ask students to think about how many bits are required to represent specific values in binary.</li></ul> <br><br> **Note:** As you circulate, take an opportunity to be a Lead Learner. Help students discover the items below using the suggested questions:<br><br><ul><li>**Reading a number vs. Placing a Number:** Do we fill in the places on the Flippy Do starting on the left or right? Does it matter? (Yes. If we have a 5-bit number, we actually use the 5 bits on the far right. If we were to use the bits on the far left, this changes the value of the number. This is similar to adding more zeros to a decimal number.)</li><li>**Highest value possible with a given number of bits:** What is the largest number we can make with 4 bits? Is the last number we can make always odd? (A meaningful pattern is that we can count as high as one less than the next bit on the left. If we have four bits, we can count up to the number 15, because the next bit has a value of 16.) </li><li>**Number of numbers we can make:** How many total unique numbers are possible with 4 bits? (This is a base 2 number system. With each new bit, we double the amount of unique numbers we can make. With four bits, we can make the decimal numbers 0 to 15 (0000 to 1111), for a total of 16 unique numbers.)</li></ul>   \n"
       },
       "seeding_key": {
         "activity_section.key": "46eccac1-8239-4e4a-b1c7-5d5361ad3dea",
@@ -2048,7 +2021,6 @@
         "description": "[slide]  It's important to know the differences between binary and decimal number systems. As a review, the decimal number system is base-10. There are ten different symbols used to represent numbers (0-9). The binary numbers system is base-2. There are two different symbols used to represent numbers (0-1). Using our Flippy Do, we can convert between Binary and Decimal number systems.While it is easier for humans to use the decimal number system in our everyday lives, we will see later in this unit how electrical signals inside computers can be best represented by using the the binary number system.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Number Bases:**\r\n\r\nNumber bases help us express data and reason about quantities.  With ten digits on our hands and feet, the decimal (base 10) number base was natural for humans to develop.  The ten symbols we use for this number base are the digits 0-9.   For a computer, however, it makes more sense that data be represented in binary (base 2), as this can easily be interpreted with electrical switches set to two states: ON or OFF.  The two symbols we use for this number base are the digits 0 and 1.\r\n\r\nBoth number bases take advantage of the concept of place value.  In decimal, numbers are composed of powers of 10, increasing in value from right to left.  Binary is similar, however we use powers of 2 (1, 2, 4, 8, 16, etc.).  Expressed in binary, these values are 1, 10, 100, 1000, 10000, and so on.  These make up the incremental place values in the binary number system.\r\n\r\n**Why Binary?**\r\n\r\nStudents will see in a later lesson how computers use binary numbers as a representation of electrical signals on a wire. The wire is always set to one of two different options: on or off. Off can be reprsented with a 0 and on with a 1. \r\n"
           }
@@ -2061,25 +2033,8 @@
       }
     },
     {
-      "key": "d6afaded-7d1f-40c6-9d21-68d4f664dcef",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this exercise to help assess what students learned and what needs to be clarified.  Some misconceptions can be visually clarified using the Binary Odometer Widget in the next lesson.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d6afaded-7d1f-40c6-9d21-68d4f664dcef",
-        "lesson_activity.key": "a9d4e34c-bb8b-41b6-922d-a025c4043449"
-      }
-    },
-    {
       "key": "0c9193f0-bccb-49c0-81fc-f778672464ef",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide]  **Prompt:** Now that we’ve had a chance to practice, let’s find out what we’ve learned and what we still have questions about.  Write down:\r\n\r"
       },
@@ -2090,7 +2045,7 @@
     },
     {
       "key": "527bac24-61d2-426d-84dd-76dedc4bddc4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "* 3 things you learned today\r\n* 2 things you found interesting\r\n* 1 question you still have.\r\n\r\n**Journal:** Add to your journal the vocab definitions for bit and byte. \r\n\r\n---"
       },
@@ -2101,26 +2056,21 @@
     },
     {
       "key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How many bits would be needed to count all of the students in class today?\r\n\r\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\r\n\r\n**Question:** What are the similarities and differences between the binary and decimal systems?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Use this exercise to help assess what students learned and what needs to be clarified.  Some misconceptions can be visually clarified using the Binary Odometer Widget in the next lesson.\n"
+          }
+        ],
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469",
         "lesson_activity.key": "a9d4e34c-bb8b-41b6-922d-a025c4043449"
-      }
-    },
-    {
-      "key": "0aa85546-def3-4106-b635-65b18b991671",
-      "position": 1,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671",
-        "lesson_activity.key": "0d1cbf20-4041-40bd-b99f-aaa4d78dd76c"
       }
     },
     {
@@ -2396,24 +2346,8 @@
       }
     },
     {
-      "key": "377471a7-6e8a-479e-ac06-ba45c3ea42bd",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Each item in the list represents a non-denominational holiday - New Years Day, Valentine’s Day, Independence Day, and Halloween. Students should be initially puzzled by what this list represents - it may be helpful to point out the format of the list (two numbers) and that this list happens throughout the year.\r\n\r\n**Alternate Discussion:** This example could be adapted to fit your classroom or school environment in order to better help your students predict what the list represents. For example: a list of room numbers in your school that students can relate to, or a list of street addresses that have meaning to students. If you decide to adapt this example, make sure it still addresses the larger concept that this warm-up introduces: that numbers can be used to represent different types of information.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "377471a7-6e8a-479e-ac06-ba45c3ea42bd",
-        "lesson_activity.key": "93ede618-3e5f-4adf-b72a-315289705034"
-      }
-    },
-    {
       "key": "b99a33f5-3a63-4563-a96c-5d40be3fddd7",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "This list secretly represents four things we experience every year. This list is not complete - there are others that we could add to it.",
         "remarks": true
@@ -2425,9 +2359,15 @@
     },
     {
       "key": "52b6817e-87e3-4d7f-a34e-7f6252bbb4ba",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:** Brainstorm with your neighbor what you think this list represents. When you think you have an idea, come up with another item to add to this list and be ready to explain why it belongs.\r\n\r\n* 1 1\r\n* 2 14\r\n* 7 4\r\n* 10 31"
+        "description": "[slide] **Prompt:** Brainstorm with your neighbor what you think this list represents. When you think you have an idea, come up with another item to add to this list and be ready to explain why it belongs.\r\n\r\n* 1 1\r\n* 2 14\r\n* 7 4\r\n* 10 31",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Each item in the list represents a non-denominational holiday - New Years Day, Valentine’s Day, Independence Day, and Halloween. Students should be initially puzzled by what this list represents - it may be helpful to point out the format of the list (two numbers) and that this list happens throughout the year.\n\n**Alternate Discussion:** This example could be adapted to fit your classroom or school environment in order to better help your students predict what the list represents. For example: a list of room numbers in your school that students can relate to, or a list of street addresses that have meaning to students. If you decide to adapt this example, make sure it still addresses the larger concept that this warm-up introduces: that numbers can be used to represent different types of information.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "52b6817e-87e3-4d7f-a34e-7f6252bbb4ba",
@@ -2479,12 +2419,6 @@
       "position": 4,
       "properties": {
         "description": "[slide]  **Do This:**",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The four challenges are designed to test the limits of the students' systems. For each challenge, after one partner has put their head down, click through to reveal the challenge to the the other partner. \n\nAfter the partner has translated the message to numbers, they hand the sticky note to the other partner and put their head down. The other partner translates back to English. \n\nAfter the challenge is done, give students a few minutes to update their systems as needed. \n\nBe on the lookout for cheats in a system - students cannot use spaces (aside from between two numbers to differentiate that where one number stops and the other starts) or symbols - only numbers one after the other. \n\n"
-          }
-        ],
         "name": "Challenge #1 - Spaces"
       },
       "seeding_key": {
@@ -2559,6 +2493,10 @@
           {
             "type": "discussionGoal",
             "markdown": "* There's many possible systems and there's usually not a \"right\" one so long as everyone agrees.\n* Adding more possibilities increases the risk of having too many characters to represent and not enough bits to do it. This is a practical example of the overflow and rounding issues from the previous lesson.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "The four challenges are designed to test the limits of the students' systems. For each challenge, after one partner has put their head down, click through to reveal the challenge to the the other partner. \n\nAfter the partner has translated the message to numbers, they hand the sticky note to the other partner and put their head down. The other partner translates back to English. \n\nAfter the challenge is done, give students a few minutes to update their systems as needed. \n\nBe on the lookout for cheats in a system - students cannot use spaces (aside from between two numbers to differentiate that where one number stops and the other starts) or symbols - only numbers one after the other. \n\n"
           }
         ]
       },
@@ -2624,13 +2562,7 @@
       "key": "41b0a1c4-e765-4b4c-9200-027efff57922",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:**",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Answers:** \r\n\r\n* Students should identify they were trying to send text messages.\r\n\r\n* Students were using decimal numbers instead of binary numbers or AB patterns\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:**"
       },
       "seeding_key": {
         "activity_section.key": "41b0a1c4-e765-4b4c-9200-027efff57922",
@@ -2641,7 +2573,13 @@
       "key": "ee135379-855c-42a8-88fb-d2cdcf84273c",
       "position": 3,
       "properties": {
-        "description": "* What problem were we trying to solve today?\r\n* What detail from the last few lessons was hidden or out of focus?"
+        "description": "* What problem were we trying to solve today?\r\n* What detail from the last few lessons was hidden or out of focus?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Answers:** \n\n* Students should identify they were trying to send text messages.\n\n* Students were using decimal numbers instead of binary numbers or AB patterns\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ee135379-855c-42a8-88fb-d2cdcf84273c",
@@ -2693,23 +2631,12 @@
       "position": 7,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** \"The binary pattern `01000001` represents the number 65.\" Write a brief response explaining whether or not you believe this statement is always true. Explain your reasoning.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0d34d7f2-d741-4f61-b7db-32a742eff92c",
         "lesson_activity.key": "5f278023-9086-42f6-91d9-9eb05dc3bb08"
-      }
-    },
-    {
-      "key": "af1432f2-3e68-4ae1-b085-c0458c4164f3",
-      "position": 1,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "af1432f2-3e68-4ae1-b085-c0458c4164f3",
-        "lesson_activity.key": "333c60ec-8d4c-4294-ae03-a3765ee7ee64"
       }
     },
     {
@@ -4750,10 +4677,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L5 CFU how many bits_2021"
-        ]
+        "progression": "Check for Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4764,7 +4688,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       },
       "level_keys": [
         "U1L5 CFU how many bits_2021"
@@ -4776,10 +4700,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L5 CFU adding bits_2021"
-        ]
+        "progression": "Check for Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4790,7 +4711,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       },
       "level_keys": [
         "U1L5 CFU adding bits_2021"
@@ -4802,10 +4723,7 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L5 CFU bin dec similarities_2021"
-        ]
+        "progression": "Check for Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4816,7 +4734,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       },
       "level_keys": [
         "U1L5 CFU bin dec similarities_2021"
@@ -4906,10 +4824,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L8 Reflection Multiple Representations CSP_2021"
-        ]
+        "progression": "Check for Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4920,7 +4835,7 @@
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "af1432f2-3e68-4ae1-b085-c0458c4164f3"
+        "activity_section.key": "0d34d7f2-d741-4f61-b7db-32a742eff92c"
       },
       "level_keys": [
         "U1L8 Reflection Multiple Representations CSP_2021"
@@ -5777,7 +5692,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       }
     },
     {
@@ -5789,7 +5704,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       }
     },
     {
@@ -5801,7 +5716,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       }
     },
     {
@@ -5849,7 +5764,7 @@
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "af1432f2-3e68-4ae1-b085-c0458c4164f3"
+        "activity_section.key": "0d34d7f2-d741-4f61-b7db-32a742eff92c"
       }
     },
     {
