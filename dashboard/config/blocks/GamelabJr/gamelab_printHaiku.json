@@ -1,0 +1,34 @@
+{
+  "category": "",
+  "config": {
+    "func": "printHaiku",
+    "blockText": "print haiku {BREAK} poem title {TITLE} poem author {AUTHOR} line 1 {LINE1} line 2 {LINE2} line 3 {LINE3}",
+    "args": [
+      {
+        "name": "BREAK",
+        "dummy": true
+      },
+      {
+        "name": "TITLE",
+        "type": "String"
+      },
+      {
+        "name": "AUTHOR",
+        "type": "String"
+      },
+      {
+        "name": "LINE1",
+        "type": "String"
+      },
+      {
+        "name": "LINE2",
+        "type": "String"
+      },
+      {
+        "name": "LINE3",
+        "type": "String"
+      }
+    ],
+    "inline": false
+  }
+}
