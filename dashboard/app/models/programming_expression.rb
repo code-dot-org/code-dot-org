@@ -32,7 +32,7 @@ class ProgrammingExpression < ApplicationRecord
       }
     else
       {
-        name: expression_config['func'],
+        name: expression_config['docFunc'] || expression_config['func'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category']
       }

@@ -1,0 +1,1 @@
+{"func":"getKeyValue","category":"Data","paletteParams":["key","callback"],"params":["\"key\"","function (value) {\n  \n}"],"allowFunctionDrop":{"1":true,"2":true}}

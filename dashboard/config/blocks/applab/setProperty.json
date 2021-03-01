@@ -1,5 +1,1 @@
-{
-  "func": "setProperty",
-  "category": "UI controls",
-  "paletteParams": ["id", "property", "value"]
-}
+{"func":"setProperty","category":"UI controls","paletteParams":["id","property","value"],"params":["\"id\"","\"width\"","100"]}
