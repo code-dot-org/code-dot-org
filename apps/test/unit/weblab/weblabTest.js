@@ -5,9 +5,8 @@ import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
 
-describe('WebLab', () => {
+describe('Web Lab', () => {
   let reportStub, weblab;
-
   describe('onFinish', () => {
     beforeEach(() => {
       weblab = new WebLab();
