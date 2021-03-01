@@ -2851,14 +2851,14 @@
     {
       "name": "Filtering Data Unit 9 Lesson 3",
       "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
-      "key": "csp filtering data",
+      "key": "filtering_data_unit_9_lesson_3",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp filtering data"
+        "resource.key": "filtering_data_unit_9_lesson_3"
       }
     },
     {
@@ -3020,7 +3020,7 @@
     {
       "seeding_key": {
         "lesson.key": "Filtering and Cleaning Data",
-        "resource.key": "csp filtering data"
+        "resource.key": "filtering_data_unit_9_lesson_3"
       }
     },
     {

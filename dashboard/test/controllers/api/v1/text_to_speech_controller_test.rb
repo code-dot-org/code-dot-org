@@ -13,10 +13,6 @@ class Api::V1::TextToSpeechControllerTest < ActionController::TestCase
     @default_limit = Api::V1::TextToSpeechController::REQUEST_LIMIT_PER_MIN_DEFAULT
   end
 
-  teardown do
-    CDO.shared_cache.clear
-  end
-
   test 'azure: returns 400 if speech not received from Azure' do
     AzureTextToSpeech.expects(:throttled_get_speech).once.yields(nil)
     post :azure

@@ -177,9 +177,15 @@ class Script < ApplicationRecord
     end
   end
 
-  # is_course - true if this Script/Unit is intended to be the root of a CourseOffering version. Used during seeding
-  #   to create the appropriate CourseVersion and CourseOffering objects. For example, this should be true for
-  #   CourseA-CourseF .script files.
+  # is_course - true if this Script/Unit is intended to be the root of a
+  #   CourseOffering version.  Used during seeding to create the appropriate
+  #   CourseVersion and CourseOffering objects. For example, this should be
+  #   true for CourseA-CourseF .script files.
+  # seeded_from - a timestamp indicating when this object was seeded from
+  #   its script_json file, as determined by the serialized_at value within
+  #   said json.  Expect this to be nil on levelbulider, since those objects
+  #   are created, not seeded. Used by the staging build to identify when a
+  #   script is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
     peer_reviews_to_complete
@@ -207,6 +213,7 @@ class Script < ApplicationRecord
     weekly_instructional_minutes
     include_student_lesson_plans
     is_migrated
+    seeded_from
   )
 
   def self.twenty_hour_script
@@ -842,16 +849,6 @@ class Script < ApplicationRecord
     name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
   end
 
-  def get_script_level_by_absolute_position_and_puzzle_position(absolute_position, puzzle_position)
-    script_levels.find do |sl|
-      # make sure we are checking the native properties of the script level
-      # first, so we only have to load lesson if it's actually necessary.
-      sl.position == puzzle_position.to_i &&
-          !sl.bonus &&
-          sl.lesson.absolute_position == absolute_position.to_i
-    end
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -1020,6 +1017,15 @@ class Script < ApplicationRecord
 
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+
+      # More all lessons into the last lesson group so that we do not delete
+      # the lesson entries unless the lesson has been entirely removed from the
+      # script
+      last_lesson_group = script.lesson_groups.last
+      script.lessons.each do |l|
+        l.lesson_group = last_lesson_group
+        l.save!
+      end
 
       temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
       script.reload

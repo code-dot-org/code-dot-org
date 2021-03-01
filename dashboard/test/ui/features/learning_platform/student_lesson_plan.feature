@@ -10,7 +10,7 @@ Feature: Student Lesson Plan
 
     # Check for Overview
     And I wait until element "h2:contains(Overview)" is visible
-    And I wait until element "p:contains(This is the student overview)" is visible
+    And I wait until element "p:contains(Student overview of the lesson)" is visible
 
     # Check for resources
     And I wait until element "h2:contains(Resources)" is visible
@@ -25,7 +25,7 @@ Feature: Student Lesson Plan
     And element ".announcement-notification:first" contains text matching "Information for Students"
 
     Then I wait until element ".announcement-notification:nth(1)" is visible
-    And element ".announcement-notification:nth(1)" contains text matching "Information for Everyone"
+    And element ".announcement-notification:nth(1)" contains text matching "Information for Students and Teachers"
 
     # Navigating between lessons
     Then I wait until element ".uitest-lesson-dropdown-nav" is visible
@@ -37,6 +37,6 @@ Feature: Student Lesson Plan
     And I wait until element "h1:contains(Lesson 2: Second Lesson)" is visible
 
     # Navigate to the Unit page
-    And I wait until element "a:contains(All the migrated things)" is visible
-    And I click selector "a:contains(All the migrated things)"
+    And I wait until element "a:contains(allthemigratedthings)" is visible
+    And I click selector "a:contains(allthemigratedthings)"
     And I wait until I am on "http://studio.code.org/s/allthemigratedthings"
