@@ -1,0 +1,74 @@
+{
+  "script": {
+    "name": "fancygeometry-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-02-26 22:37:37 UTC",
+    "seeding_key": {
+      "script.name": "fancygeometry-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "Fancy Geometry",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Fancy Geometry"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Fancy Geometry",
+        "script.name": "fancygeometry-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Fancy Geometry",
+      "name": "Fancy Geometry",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Fancy Geometry",
+        "lesson_group.key": "Fancy Geometry",
+        "script.name": "fancygeometry-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
+  ]
+}
