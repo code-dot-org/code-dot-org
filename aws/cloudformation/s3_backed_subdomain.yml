@@ -51,9 +51,6 @@ Resources:
               - - 'arn:aws:s3:::'
                 - !Ref Bucket
                 - /*
-      Tags:
-        - Key: environment
-          Value: production
 
   BucketBackedDistribution:
     Type: AWS::CloudFront::Distribution
@@ -107,6 +104,3 @@ Resources:
         # This is always the hosted zone ID when you create an alias record that routes traffic to a CloudFront distribution.
         # from https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget-1.html#cfn-route53-aliastarget-hostedzoneid
         HostedZoneId: Z2FDTNDATAQYW2
-      Tags:
-        - Key: environment
-          Value: production
