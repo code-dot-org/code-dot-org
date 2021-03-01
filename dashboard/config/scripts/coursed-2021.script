@@ -210,10 +210,6 @@ level 'courseD_maze_until9_2021', progression: 'Challenge', challenge: true
 level 'courseD_maze_until10_2021', progression: 'Practice'
 level 'courseD_maze_until10_predict2_2021', progression: 'Prediction'
 
-lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Be A Super Digital Citizen', display_name: 'Be A Super Digital Citizen -- TO BE REMOVED', has_lesson_plan: true, unplugged: true
-level 'csf_be_a_super_digital_citizen_2021'
-
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
 level 'courseD_project_exemplars_2021', progression: 'Example projects'

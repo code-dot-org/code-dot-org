@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-02-26 01:05:54 UTC",
+    "serialized_at": "2021-03-01 21:50:16 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -80,21 +80,9 @@
       }
     },
     {
-      "key": "csf_digcit",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Digital Citizenship"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
       "key": "end_of_course_project",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -427,33 +415,12 @@
       }
     },
     {
-      "key": "Be A Super Digital Citizen",
-      "name": "Be A Super Digital Citizen -- TO BE REMOVED",
-      "absolute_position": 17,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 17,
-      "properties": {
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
-        "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
-        "purpose": "Common Sense Education created this lesson to teach students how they can be upstanders when they see cyberbullying.",
-        "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Prepare colored pencils or markers for students.",
-        "creative_commons_license": "Creative Commons BY-NC-ND",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
       "key": "End of Course Project",
       "name": "End of Course Project",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
         "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
@@ -1448,88 +1415,6 @@
         "lesson_activity.key": "96a24d88-fba0-4caf-ae83-05431cff5aea",
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "ace48e11-aa0f-420a-b10e-df02179a727d",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up: Secret Superhero",
-        "duration": 5
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ace48e11-aa0f-420a-b10e-df02179a727d",
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "263ec267-3128-4626-b561-7b41d3a8fb17",
-      "position": 2,
-      "properties": {
-        "name": "Learn: Being an Upstander",
-        "duration": 10
-      },
-      "seeding_key": {
-        "lesson_activity.key": "263ec267-3128-4626-b561-7b41d3a8fb17",
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "b6b942f4-f32b-44ba-97b7-a618dd0e2db6",
-      "position": 3,
-      "properties": {
-        "name": "Create: Your Digital Citizen Superhero",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b6b942f4-f32b-44ba-97b7-a618dd0e2db6",
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "5db532da-9f4d-442d-8cf0-00420b6a2479",
-      "position": 4,
-      "properties": {
-        "name": "Wrap Up: Save the Day! Comic Strip",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5db532da-9f4d-442d-8cf0-00420b6a2479",
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "17b5ab2b-f3d8-4a5b-8365-c3abbbaff402",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "17b5ab2b-f3d8-4a5b-8365-c3abbbaff402",
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021"
-      }
-    },
-    {
-      "key": "bd0b953d-50b7-4707-bd0a-9d1a5bf63dc7",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bd0b953d-50b7-4707-bd0a-9d1a5bf63dc7",
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
         "script.name": "coursed-2021"
       }
     },
@@ -3101,7 +2986,8 @@
       "position": 1,
       "properties": {
         "progression_name": "Practice",
-        "name": "Looking Ahead with Minecraft"
+        "name": "Looking Ahead with Minecraft",
+        "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
       "seeding_key": {
         "activity_section.key": "2f024770-481d-43dc-aa55-7133819f6663",
@@ -3626,72 +3512,6 @@
       "seeding_key": {
         "activity_section.key": "b9c0e01d-2222-4dca-ad71-dc6068af0439",
         "lesson_activity.key": "96a24d88-fba0-4caf-ae83-05431cff5aea"
-      }
-    },
-    {
-      "key": "a3d91822-63dd-461b-8463-4007c4af0fda",
-      "position": 1,
-      "properties": {
-        "description": "* **cyberbullying**: using digital devices, sites, and apps to intimidate, harm, and upset someone\r\n* **digital citizen**: someone who uses technology responsibly to learn, create, and participate\r\n* **upstander**: a person who supports and stands up for someone else\r\n\r\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\r\n\r\n**Ask**: _Do you have a favorite superhero? If so, who is it and why? If not, why not? Take turns sharing with your partner._ ([Slide 4](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_16))\r\n\r\nInvite students to share out. Follow up by asking students to name specific super powers from their favorite superhero. Point out that one thing that all superheroes have in common is that they use their powers to help other people.\r\n\r\n**Say**: _Today we're going to talk about how we can all be superheroes and help others. We're going to watch a video about being super digital citizens. As we watch, think about the question, \"What does a super digital citizen do?\"_\r\n\r\n**Show** the video [Super Digital Citizen](https://www.commonsense.org/education/videos/super-digital-citizen) on [Slide 5](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_18).\r\n\r\n**Invite** students to share out their responses. Their answers should be based on what the Super Digital Citizen helps Guts do:\r\n\r\n* _Changes his password to be secure._\r\n* _Protects his tablet with a case and carries it in his backpack so that it won't break._\r\n* _Asks permission from Heart first before sharing a photo of her online._\r\n\r\n**Ask**: _You might have noticed that Guts became a superhero too. How did he do that?_\r\n\r\nInvite students to respond. Explain that Guts became a superhero because he took steps to help himself and others be responsible online. Define **digital citizen** as _someone who uses technology responsibly to learn, create, and participate._ ([Slide 6](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_30))",
-        "name": "Key Vocabulary\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "a3d91822-63dd-461b-8463-4007c4af0fda",
-        "lesson_activity.key": "ace48e11-aa0f-420a-b10e-df02179a727d"
-      }
-    },
-    {
-      "key": "e7324f19-3da6-48b4-886b-ab0752c007d5",
-      "position": 1,
-      "properties": {
-        "description": "**Say**: _One situation a super digital citizen might see online is cyberbullying. **Cyberbullying** is when someone uses digital devices, sites, or apps to intimidate, harm, or upset someone._ ([Slide 7](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_43))\r\n\r\nExplain that cyberbullying can take many forms, including:\r\n\r\n* Someone making fun of or pressuring someone else repeatedly\r\n* Comments, memes, private messages, or chatting\r\n* The person being bullied not knowing everyone who's doing the bullying (as people can hide their identity online)\r\n* A group of people ganging up on someone\r\n\r\n**Ask**: _So if you saw someone being cyberbullied, what's something you could do to stop it? Take turns sharing with your partner._\r\n\r\nInvite students to respond. Point out three ways that cyberbullying can be addressed:\r\n\r\n* Defending or supporting the person being bullied\r\n* Telling a trusted adult\r\n* Addressing it directly with the bully\r\n\r\n**Explain** to students that doing any of these things makes you an upstander. An **upstander** is _a person who supports and stands up for someone else._ ([Slide 8](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_124))\r\n\r\n**Distribute** the [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) to each student and have a student read the directions for Part 1 aloud. Allow students five minutes to complete the activity. ([Slide 9](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_0_0))"
-      },
-      "seeding_key": {
-        "activity_section.key": "e7324f19-3da6-48b4-886b-ab0752c007d5",
-        "lesson_activity.key": "263ec267-3128-4626-b561-7b41d3a8fb17"
-      }
-    },
-    {
-      "key": "2683e929-dada-4bb9-97b2-b0ccad8923e7",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute** colored pencils or markers and tell students: _You're going to create your own digital citizen superhero, who will help people like Guts to become super digital citizens._\r\n\r\n**Distribute** the [Digital Citizen Superhero Student Handout](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) and read the directions aloud. ([Slide 10](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g410938bbc1_132_0))\r\n\r\n**Optional**: Have students use [Marvel's Create Your Own Superhero](https://www.marvelhq.com/create-your-own-super-hero), save the image, and paste the image into the handout.\r\n\r\n**Allow** students 10 minutes to work on their superheroes. If time permits, have students share out their superheroes with the class, or have them on display for a gallery walk."
-      },
-      "seeding_key": {
-        "activity_section.key": "2683e929-dada-4bb9-97b2-b0ccad8923e7",
-        "lesson_activity.key": "b6b942f4-f32b-44ba-97b7-a618dd0e2db6"
-      }
-    },
-    {
-      "key": "a387b282-03dc-4e8f-bfe0-9147773fbf9a",
-      "position": 1,
-      "properties": {
-        "description": "**Have** students go back to their [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) and go to Part 2. Have a student read the directions aloud before students create their comic strip stories. ([Slide 11](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_1_0))\r\n\r\n**Optional**: Have students use a digital comic creation tool. See our recommendations: [Classroom-Friendly Websites and Apps for Making Comics](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\r\n\r\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
-      },
-      "seeding_key": {
-        "activity_section.key": "a387b282-03dc-4e8f-bfe0-9147773fbf9a",
-        "lesson_activity.key": "5db532da-9f4d-442d-8cf0-00420b6a2479"
-      }
-    },
-    {
-      "key": "f381416e-18fe-4ff7-9eff-a8ea4bdb1502",
-      "position": 1,
-      "properties": {
-        "description": "Here are additional resources you can provide students to enhance their learning:\r\n\r\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\r\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\r\n* Have students brainstorm and write an opinion piece on what the quote \"with great power comes great responsibility\" means in the digital world. How is having access to the internet a \"great power\"? What responsibilities do we have to ourselves and others? Students can post their work to a blog or your class page."
-      },
-      "seeding_key": {
-        "activity_section.key": "f381416e-18fe-4ff7-9eff-a8ea4bdb1502",
-        "lesson_activity.key": "17b5ab2b-f3d8-4a5b-8365-c3abbbaff402"
-      }
-    },
-    {
-      "key": "3a9667e5-5287-4f15-b100-b534024da1c8",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3a9667e5-5287-4f15-b100-b534024da1c8",
-        "lesson_activity.key": "bd0b953d-50b7-4707-bd0a-9d1a5bf63dc7"
       }
     },
     {
@@ -7678,31 +7498,6 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "level_keys": [
-          "csf_be_a_super_digital_citizen_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csf_be_a_super_digital_citizen_2021"
-        ],
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021",
-        "activity_section.key": "3a9667e5-5287-4f15-b100-b534024da1c8"
-      },
-      "level_keys": [
-        "csf_be_a_super_digital_citizen_2021"
-      ]
-    },
-    {
-      "chapter": 151,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
         "progression": "Example projects",
         "level_keys": [
           "courseD_project_exemplars_2021"
@@ -7724,7 +7519,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 151,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -9541,18 +9336,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csf_be_a_super_digital_citizen_2021",
-        "script_level.level_keys": [
-          "csf_be_a_super_digital_citizen_2021"
-        ],
-        "lesson.key": "Be A Super Digital Citizen",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursed-2021",
-        "activity_section.key": "3a9667e5-5287-4f15-b100-b534024da1c8"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseD_project_exemplars_2021",
         "script_level.level_keys": [
           "courseD_project_exemplars_2021"
@@ -9587,31 +9370,6 @@
       },
       "seeding_key": {
         "resource.key": "password_power-up_lesson_slides"
-      }
-    },
-    {
-      "name": "Password Power-Up: If...Then...Scenarios",
-      "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
-      "key": "password_power-up_if_then_scenarios",
-      "properties": {
-        "type": "Handout",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "password_power-up_if_then_scenarios"
-      }
-    },
-    {
-      "name": "Password Power-Up: If...Then...Scenarios Answer Key",
-      "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
-      "key": "password_power-up_if_then_scenarios_answer_key",
-      "properties": {
-        "type": "Handout",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "password_power-up_if_then_scenarios_answer_key"
       }
     },
     {
@@ -9662,6 +9420,31 @@
       },
       "seeding_key": {
         "resource.key": "password_power-up_lesson_quiz_answer_key"
+      }
+    },
+    {
+      "name": "Password Power-Up: If...Then...Scenarios",
+      "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
+      "key": "password_power-up_if_then_scenarios",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "password_power-up_if_then_scenarios"
+      }
+    },
+    {
+      "name": "Password Power-Up: If...Then...Scenarios Answer Key",
+      "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
+      "key": "password_power-up_if_then_scenarios_answer_key",
+      "properties": {
+        "type": "Handout",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "password_power-up_if_then_scenarios_answer_key"
       }
     },
     {
@@ -10090,94 +9873,6 @@
       }
     },
     {
-      "name": "Be A Super Digital Citizen: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM",
-      "key": "be-a-super-digital-citizen-lesson-slides",
-      "properties": {
-        "type": "Slide Deck",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "be-a-super-digital-citizen-lesson-slides"
-      }
-    },
-    {
-      "name": "Be A Super Digital Citizen: Super Digital Citizen",
-      "url": "https://www.commonsense.org/education/videos/super-digital-citizen",
-      "key": "be-a-super-digital-citizen-super-digital-citizen",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student",
-        "download_url": "https://www.commonsense.org/education/video-download/4141361"
-      },
-      "seeding_key": {
-        "resource.key": "be-a-super-digital-citizen-super-digital-citizen"
-      }
-    },
-    {
-      "name": "Be A Super Digital Citizen: Digital Citizen Superhero",
-      "url": "https://docs.google.com/document/d/1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8/edit",
-      "key": "be-a-super-digital-citizen-digital-citizenship-super-hero",
-      "properties": {
-        "type": "Student Handout",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "be-a-super-digital-citizen-digital-citizenship-super-hero"
-      }
-    },
-    {
-      "name": "Be A Super Digital Citizen: What Would A Super Digital Citizen Do?",
-      "url": "https://docs.google.com/document/d/11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo/edit",
-      "key": "be-a-super-digital-citizen-what-would-a-super-digital-citizen-do",
-      "properties": {
-        "type": "Student Handout",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "be-a-super-digital-citizen-what-would-a-super-digital-citizen-do"
-      }
-    },
-    {
-      "name": "Be A Super Digital Citizen: What Would A Super Digital Citizen Do? Answer Key",
-      "url": "https://docs.google.com/document/d/1Z57X0YQkSElGOdHgf64Siigc3x0BvtxadRqHhFYP7C0/edit",
-      "key": "be-a-super-digital-citizen-what-would-a-super-digital-citizen-do-answer-key",
-      "properties": {
-        "type": "Student Handout",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "be-a-super-digital-citizen-what-would-a-super-digital-citizen-do-answer-key"
-      }
-    },
-    {
-      "name": "Be A Super Digital Citizen: Lesson Quiz",
-      "url": "https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy",
-      "key": "be-a-super-digital-citizen-lesson-quiz",
-      "properties": {
-        "type": "Form",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "be-a-super-digital-citizen-lesson-quiz"
-      }
-    },
-    {
-      "name": "Be A Super Digital Citizen: Lesson Quiz Answer Key",
-      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/grade-4-super-digital-citizen-lesson-quiz-answers",
-      "key": "be-a-super-digital-citizen-lesson-quiz-answer-key",
-      "properties": {
-        "type": "Website",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "be-a-super-digital-citizen-lesson-quiz-answer-key"
-      }
-    },
-    {
       "name": "CSF Course D End of Course Project Planning Guide",
       "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
       "key": "course-d-project-planning-guide-1",
@@ -10196,18 +9891,6 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "password_power-up_lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_if_then_scenarios"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "password_power-up_if_then_scenarios_answer_key"
       }
     },
     {
@@ -10232,6 +9915,18 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "password_power-up_lesson_quiz_answer_key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "password_power-up_if_then_scenarios"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "password_power-up_if_then_scenarios_answer_key"
       }
     },
     {
@@ -10436,48 +10131,6 @@
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "resource.key": "csf-conditionals-with-cards-sample-program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "resource.key": "be-a-super-digital-citizen-lesson-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "resource.key": "be-a-super-digital-citizen-super-digital-citizen"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "resource.key": "be-a-super-digital-citizen-digital-citizenship-super-hero"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "resource.key": "be-a-super-digital-citizen-what-would-a-super-digital-citizen-do"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "resource.key": "be-a-super-digital-citizen-what-would-a-super-digital-citizen-do-answer-key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "resource.key": "be-a-super-digital-citizen-lesson-quiz"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "resource.key": "be-a-super-digital-citizen-lesson-quiz-answer-key"
       }
     },
     {
@@ -11449,36 +11102,6 @@
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
         "objective.key": "630e79db-15ec-49fd-804c-060b8adf40ea"
-      }
-    },
-    {
-      "key": "c61c43dc-608a-49ef-9a47-acd5d14a0f12",
-      "properties": {
-        "description": "Reflect on the characteristics that make someone an upstanding digital citizen."
-      },
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "objective.key": "c61c43dc-608a-49ef-9a47-acd5d14a0f12"
-      }
-    },
-    {
-      "key": "79b0b355-3f57-4245-8f5b-957f78e769f1",
-      "properties": {
-        "description": "Recognize what cyberbullying is."
-      },
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "objective.key": "79b0b355-3f57-4245-8f5b-957f78e769f1"
-      }
-    },
-    {
-      "key": "8eb7af46-1534-48e2-a069-52f96ae0b705",
-      "properties": {
-        "description": "Show ways to be an upstander by creating a digital citizenship superhero comic strip."
-      },
-      "seeding_key": {
-        "lesson.key": "Be A Super Digital Citizen",
-        "objective.key": "8eb7af46-1534-48e2-a069-52f96ae0b705"
       }
     },
     {
