@@ -17,6 +17,7 @@ Description:
 Parameters:
   BucketName:
     Type: String
+    Default: cdo-dev-s3-backed-subdomain
   CertificateArn:
     Type: String
   Domain:
@@ -24,6 +25,7 @@ Parameters:
     Default: dev-code.org
   Subdomain:
     Type: String
+    Default: s3-backed-subdomain
 
 Resources:
   Bucket:
