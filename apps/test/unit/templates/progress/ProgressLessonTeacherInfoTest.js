@@ -78,6 +78,10 @@ describe('ProgressLessonTeacherInfo', () => {
 
     assert.equal(wrapperWithoutPlan.find('Button').length, 0);
     assert.equal(wrapperWithPlan.find('Button').props().color, 'purple');
+    assert.equal(
+      wrapperWithPlan.find('Button').props().href,
+      'foo/bar/student'
+    );
   });
 
   it('renders our StageLock button when lesson is lockable', () => {
