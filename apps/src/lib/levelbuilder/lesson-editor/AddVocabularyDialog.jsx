@@ -26,6 +26,12 @@ const styles = {
   textInput: {
     width: '98%'
   },
+  checkboxAndLabel: {
+    display: 'flex'
+  },
+  checkboxInput: {
+    marginRight: 5
+  },
   submitButton: {
     color: 'white',
     backgroundColor: color.orange,
@@ -44,6 +50,7 @@ const styles = {
 const initialState = {
   word: '',
   definition: '',
+  commonSenseMedia: false,
   isSaving: false,
   error: '',
   lessons: []
@@ -79,6 +86,10 @@ export default class AddVocabularyDialog extends Component {
     this.setState({definition: e.target.value});
   };
 
+  handleCommonSenseMediaChange = e => {
+    this.setState({commonSenseMedia: e.target.checked});
+  };
+
   resetState = () => {
     this.setState(initialState);
   };
@@ -101,6 +112,7 @@ export default class AddVocabularyDialog extends Component {
     const data = {
       word: this.state.word,
       definition: this.state.definition,
+      commonSenseMedia: this.state.commonSenseMedia,
       courseVersionId: this.props.courseVersionId
     };
     if (this.props.editingVocabulary) {
@@ -173,7 +185,22 @@ export default class AddVocabularyDialog extends Component {
             value={this.state.definition}
             onChange={this.handleDefinitionChange}
             style={styles.textInput}
+            disabled={
+              !!this.props.editingVocabulary && this.state.commonSenseMedia
+            }
           />
+        </label>
+        <label style={styles.checkboxAndLabel}>
+          <input
+            type="checkbox"
+            name="commonSenseMedia"
+            value={this.state.commonSenseMedia}
+            checked={this.state.commonSenseMedia}
+            onChange={this.handleCommonSenseMediaChange}
+            style={styles.checkboxInput}
+            disabled={!!this.props.editingVocabulary}
+          />
+          Common Sense Media
         </label>
         {this.props.selectableLessons && (
           <label>
