@@ -48,5 +48,3 @@ level 'courseF_text_answer', progression: 'Skill Building'
 level 'courseF_text_concat', progression: 'Skill Building'
 level 'courseF_text_practice', progression: 'Practice'
 
-lesson 'chatbot', display_name: 'User Input Apps - coming soon!', has_lesson_plan: false
-
