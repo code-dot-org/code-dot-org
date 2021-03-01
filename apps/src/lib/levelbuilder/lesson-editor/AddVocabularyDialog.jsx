@@ -144,7 +144,8 @@ export default class AddVocabularyDialog extends Component {
     const canSubmit =
       !this.state.isSaving &&
       this.state.word !== '' &&
-      this.state.definition !== '';
+      this.state.definition !== '' &&
+      !(this.props.editingVocabulary && this.state.commonSenseMedia);
     const selectableLessonOptions = this.props.selectableLessons
       ? this.props.selectableLessons.map(l => ({
           label: l.name,
