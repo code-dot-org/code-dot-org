@@ -20,12 +20,12 @@ Our Privacy Policy is fueled by our commitment to the following Privacy Principl
 
 1. We’re deeply committed to creating a safe and secure learning environment for our students and teachers. We take the protection of this information seriously.
 2. We do not require you to provide any Personal Information in order to try our courses, most of which are accessible without a User account (only your IP address is collected). However, learning progress won't be saved without creating an account.
-3. The only reason we collect any data from Students or Teachers is to better succeed at our mission of providing a great computer science education for every student in every school.
-4. We do not sell your Personal Information or exploit it for financial gain; we do not sell ads. We are a charitable 501(c)(3) nonprofit and almost all our revenue comes from philanthropic gifts and donations. We established ourselves as a nonprofit so our mission and your trust will not be in conflict with a for-profit motive.
-5. Any Student academic data provided by us or by our school district partners to third-party evaluators for the purpose of evaluating our courses in meeting our mission will be de-identified (per standard industry practice).
-6. We strive to provide you with access to and control over the information you give us (as detailed below), and we take the protection of your information very seriously.
-7. When student Personal Information is provided to Code.org by a school or school district, Code.org agrees to retain such information as directed by the school or school district.
-8. We hold our partners to privacy and security practices no less stringent than our own.
+3. The only reason we collect any data from Students or Teachers is to better succeed at our mission of providing high-quality computer science education for every student in every school.
+4. We do not sell your Personal Information or exploit it for financial gain. We do not sell ads. We are a charitable nonprofit and almost all our revenue comes from philanthropic gifts and donations. We established ourselves as a nonprofit so our mission and your trust will not be in conflict with a for-profit motive.
+5. Any Student academic data we provide to third-party evaluators for the purpose of evaluating our courses in meeting our mission will be de-identified (per standard industry practice).
+6. We strive to provide you with access to and control over the information you give us (as detailed below), and we use physical, administrative, and technical safeguards designed to reasonably protect your information.
+7. When Student Records are provided to Code.org by a school or school district, Code.org agrees to retain such information as directed by the school or school district.
+8. We hold our partners and service providers to privacy and security practices no less stringent than our own.
 
 ## Privacy Policy
 We are committed to creating a safe and secure environment for learners of all ages and other visitors on our websites located at [https://code.org](https://code.org/), [https://studio.code.org](https://studio.code.org/), [https://hourofcode.com](https://hourofcode.com/), [https://curriculum.code.org](https://curriculum.code.org/), [https://advocacy.code.org](https://advocacy.code.org/), [https://k12cs.org](https://k12cs.org/), and any other websites or online services (collectively, our "Services") that link to this Privacy Policy.
