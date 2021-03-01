@@ -81,17 +81,20 @@ class AdminSearchController < ApplicationController
   end
 
   def add_to_pilot
-    email = params[:email]
+    emails = params[:email]
     pilot_name = params[:pilot_name]
-    return head :bad_request unless Experiment::PILOT_EXPERIMENTS.find {|p| p[:name] == pilot_name}
-    user = User.find_by_email_or_hashed_email(email)
-    if !user
-      flash[:alert] = "An account with the email address #{email} does not exist"
-    elsif user.student?
-      flash[:alert] = "Cannot add a student to the pilot"
-    else
-      SingleUserExperiment.find_or_create_by!(min_user_id: user.id, name: pilot_name)
-      flash[:notice] = "Successfully added #{email} to #{pilot_name}!"
+    email_array = emails.split(",").map(&:strip)
+    email_array.each do |email|
+      return head :bad_request unless Experiment::PILOT_EXPERIMENTS.find {|p| p[:name] == pilot_name}
+      user = User.find_by_email_or_hashed_email(email)
+      if !user
+        flash[:alert] = "An account with the email address #{email} does not exist"
+      elsif user.student?
+        flash[:alert] = "Cannot add a student to the pilot"
+      else
+        SingleUserExperiment.find_or_create_by!(min_user_id: user.id, name: pilot_name)
+        flash[:notice] = "Successfully added #{email} to #{pilot_name}!"
+      end
     end
     redirect_to action: 'show_pilot', pilot_name: pilot_name
   end
