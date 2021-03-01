@@ -33,14 +33,7 @@ function removeDisallowedHtmlContent(
       return;
     }
 
-    const dom = new DOMParser().parseFromString(data, 'text/xml');
-    // An invalid DOM returns an error document rather than throwing an error:
-    // https://developer.mozilla.org/en-US/docs/Web/API/DOMParser#examples
-    if (dom.documentElement.innerHTML.includes('parsererror')) {
-      wrappedCallback();
-      return;
-    }
-
+    const dom = new DOMParser().parseFromString(data, 'text/html');
     const nodes = dom.querySelectorAll(disallowedTags.join(', '));
     if (nodes.length <= 0) {
       wrappedCallback();
@@ -51,11 +44,10 @@ function removeDisallowedHtmlContent(
     for (var i = 0; i < nodes.length; i++) {
       nodes[i].parentElement.removeChild(nodes[i]);
     }
-    // We prefer <!DOCTYPE html>\n<html>, but serializeToString returns
-    // <!DOCTYPE html><html>. Manually add newline to keep formatting consistent.
-    data = new XMLSerializer()
-      .serializeToString(dom)
-      .replace('<!DOCTYPE html>', '<!DOCTYPE html>\n');
+    data = createHtmlDocument(
+      dom.head.innerHTML.trim(),
+      dom.body.innerHTML.trim()
+    );
 
     fileSystem.writeFile(path, Buffer.from(data), function(error) {
       brambleProxy.disableReadOnly();
@@ -64,6 +56,12 @@ function removeDisallowedHtmlContent(
   });
 }
 
+function createHtmlDocument(headContent, bodyContent) {
+  return `<!DOCTYPE html>\n<html>\n  <head>\n${headContent ||
+    ''}\n  </head>\n  <body>\n    ${bodyContent || ''}\n  </body>\n</html>`;
+}
+
 export default {
-  removeDisallowedHtmlContent
+  removeDisallowedHtmlContent,
+  createHtmlDocument
 };
