@@ -1,7 +1,7 @@
 import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
-  // Haiku lesson in content integration pilot 2021
+  // Haiku lesson in CS connections pilot 2021
   drawHaiku() {
     const haiku = coreLibrary.screenText.haiku;
     if (!haiku) {
