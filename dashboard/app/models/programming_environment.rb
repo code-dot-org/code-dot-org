@@ -9,12 +9,19 @@
 #  updated_at :datetime         not null
 #
 class ProgrammingEnvironment < ApplicationRecord
+  include SerializedProperties
+
   has_many :programming_expressions
 
-  def self.properties_from_file(path, content)
+  serialized_attrs %w(
+    editor_type
+  )
+
+  def self.properties_from_file(content)
     environment_config = JSON.parse(content)
     {
-      name: environment_config['name']
+      name: environment_config['name'],
+      editor_type: environment_config['editorType']
     }
   end
 
@@ -27,7 +34,7 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def self.seed_record(file_path)
-    properties = properties_from_file(file_path, File.read(file_path))
+    properties = properties_from_file(File.read(file_path))
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
     environment.update! properties
     environment.name

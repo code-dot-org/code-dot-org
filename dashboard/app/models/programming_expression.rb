@@ -15,8 +15,15 @@
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
 #
 class ProgrammingExpression < ApplicationRecord
+  include SerializedProperties
+
   belongs_to :programming_environment
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
+
+  serialized_attrs %w(
+    display_name
+    color
+  )
 
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
@@ -28,14 +35,41 @@ class ProgrammingExpression < ApplicationRecord
       {
         name: expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
-        category: expression_config['category']
+        category: expression_config['category'],
+        display_name: expression_config['config']['blockText'] || expression_config['config']['func'] || expression_config['config']['name'],
+        color: expression_config['config']['color']
       }
     else
       {
         name: expression_config['docFunc'] || expression_config['func'],
         programming_environment_id: programming_environment.id,
-        category: expression_config['category']
+        category: expression_config['category'],
+        display_name: expression_config['func'],
+        color: ProgrammingExpression.get_category_color(expression_config['category'])
       }
+    end
+  end
+
+  def self.get_category_color(category)
+    case category
+    when 'UI controls'
+      '#fff176'
+    when 'Canvas'
+      '#f78183'
+    when 'Data'
+      '#d3e965'
+    when 'Turtle'
+      '#4dd0e1'
+    when 'Advanced'
+      '#19c3e1'
+    when 'Control'
+      '#64B5F6'
+    when 'Math'
+      '#FFB74D'
+    when 'Variables'
+      '#BB77C7'
+    when 'Functions'
+      '#68D995'
     end
   end
 
