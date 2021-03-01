@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-02-26 20:29:06 UTC",
+    "serialized_at": "2021-03-01 19:03:36 UTC",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }
@@ -131,21 +131,6 @@
       },
       "seeding_key": {
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "key": "chatbot",
-      "name": "User Input Apps - coming soon!",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "chatbot",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
