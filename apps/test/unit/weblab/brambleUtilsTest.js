@@ -14,15 +14,17 @@ const invalidHtmlFile = `<!DOCTYPE html>
   <body>
     <script src="index.js">
     </script>
-    <a href="/some.url">I will be deleted!</a>
+    Content outside diallowed tag <a href="/some.url">I will be deleted!</a>
     <div>divs are allowed</div>
   </body>
 </html>`;
 const fixedInvalidHtmlFile = `<!DOCTYPE html>
 <html>
+  <head>
+
+  </head>
   <body>
-    
-    
+    Content outside diallowed tag 
     <div>divs are allowed</div>
   </body>
 </html>`;
