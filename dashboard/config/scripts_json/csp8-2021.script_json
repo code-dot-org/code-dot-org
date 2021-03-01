@@ -876,151 +876,151 @@
     {
       "name": "CSP Unit 8 - Create PT Prep",
       "url": "https://docs.google.com/presentation/d/130WMgJC9JxZ2bz7pO59i-0-XafKeKLADKSqIGx1ZcSQ/copy",
-      "key": "csp unit 8 presentation",
+      "key": "csp_unit_8_-_create_pt_prep",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 8 presentation"
+        "resource.key": "csp_unit_8_-_create_pt_prep"
       }
     },
     {
       "name": "APCSP CT 20-21 Task Instructions",
       "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
-      "key": "apcsp draft pt instructions",
+      "key": "apcsp_ct_20-21_task_instructions",
       "properties": {
         "type": "Resource",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "apcsp draft pt instructions"
+        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
       "name": "APCSP CT 20-21 Scoring Guidelines",
       "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
-      "key": "apcsp draft pt rubric",
+      "key": "apcsp_ct_20-21_scoring_guidelines",
       "properties": {
         "type": "Rubric",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "apcsp draft pt rubric"
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
       }
     },
     {
       "name": "CSP Create PT Code.org Sample 1 Video",
       "url": "https://drive.google.com/file/d/1QkAkYVDp5pxuE_g60-vaziOknrEDfwJx/view?usp=sharing",
-      "key": "csp create pt 1 video",
+      "key": "csp_create_pt_code_org_sample_1_video",
       "properties": {
         "type": "Video",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "csp create pt 1 video"
+        "resource.key": "csp_create_pt_code_org_sample_1_video"
       }
     },
     {
       "name": "CSP Create PT Code.org Sample 1 WR ",
       "url": "https://docs.google.com/document/d/1fyoXamP6NaToEQPwH8X4IgvairKauWlkt-bwZjcC4b0/edit?usp=sharing",
-      "key": "csp create pt 1 wr",
+      "key": "csp_create_pt_code_org_sample_1_wr",
       "properties": {
         "type": "Written Response",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp create pt 1 wr"
+        "resource.key": "csp_create_pt_code_org_sample_1_wr"
       }
     },
     {
       "name": "CSP Create PT Code.org Sample 2 Video",
       "url": "https://drive.google.com/file/d/1G0kHFUkaib8eDEqa6EyGrzsJcf3smBSM/view?usp=sharing",
-      "key": "csp create pt 2 video",
+      "key": "csp_create_pt_code_org_sample_2_video",
       "properties": {
         "type": "Video",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "csp create pt 2 video"
+        "resource.key": "csp_create_pt_code_org_sample_2_video"
       }
     },
     {
       "name": "CSP Create PT Code.org Sample 2 WR",
       "url": "https://docs.google.com/document/d/16E5NTKp9HXzgWj10JcQc7LiDTyk0v3eDNaQZi-CRKtM/edit?usp=sharing",
-      "key": "csp create pt 2 wr",
+      "key": "csp_create_pt_code_org_sample_2_wr",
       "properties": {
         "type": "Written Response",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp create pt 2 wr"
+        "resource.key": "csp_create_pt_code_org_sample_2_wr"
       }
     },
     {
       "name": "CSP Create PT Code.org Sample 3 Video",
       "url": "https://drive.google.com/file/d/13medsGUeI2T3BlWcgzebVxlAnVgSKc2e/view?usp=sharing",
-      "key": "csp create pt 3 video",
+      "key": "csp_create_pt_code_org_sample_3_video",
       "properties": {
         "type": "Video",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "csp create pt 3 video"
+        "resource.key": "csp_create_pt_code_org_sample_3_video"
       }
     },
     {
       "name": "CSP Create PT Code.org Sample 3 WR",
       "url": "https://docs.google.com/document/d/1sd0KEIBFAVeF0mKnVko17W4bHIapQnyjRtYs_MuCC5I/edit?usp=sharing",
-      "key": "csp create pt 3 wr",
+      "key": "csp_create_pt_code_org_sample_3_wr",
       "properties": {
         "type": "Written Response",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp create pt 3 wr"
+        "resource.key": "csp_create_pt_code_org_sample_3_wr"
       }
     },
     {
       "name": "CSP Create PT Code.org Annotated Sample 1",
       "url": "https://docs.google.com/document/d/1UFIgYE6RlW0wbLo80JxtrRy-2gy8tzGwDWvp2jOXZIQ/edit?usp=sharing",
-      "key": "csp create pt 1 annotated",
+      "key": "csp_create_pt_code_org_annotated_sample_1",
       "properties": {
         "type": "Annotated Sample",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp create pt 1 annotated"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
       }
     },
     {
       "name": "CSP Create PT Code.org Annotated Sample 2",
       "url": "https://docs.google.com/document/d/1Fo5pPczV3gDcCujg_dvyneq5anEEeqAZqIvdVt8uQV8/edit?usp=sharing",
-      "key": "csp create pt 2 annotated",
+      "key": "csp_create_pt_code_org_annotated_sample_2",
       "properties": {
         "type": "Annotated Sample",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp create pt 2 annotated"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
       }
     },
     {
       "name": "CSP Create PT Code.org Annotated Sample 3",
       "url": "https://docs.google.com/document/d/16eWwTwyYzFJ_7z5Ru0HF9LbqTjS-XFIy4SL_ZW-T7Rg/edit?usp=sharing",
-      "key": "csp create pt 3 annotated",
+      "key": "csp_create_pt_code_org_annotated_sample_3",
       "properties": {
         "type": "Annotated Sample",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp create pt 3 annotated"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
       }
     },
     {
@@ -1078,13 +1078,13 @@
     {
       "name": "CSP Unit 8 - Create PT Prep",
       "url": "https://docs.google.com/presentation/d/130WMgJC9JxZ2bz7pO59i-0-XafKeKLADKSqIGx1ZcSQ/copy",
-      "key": "csp unit 8 presentation",
+      "key": "csp_unit_8_-_create_pt_prep",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 8 presentation"
+        "resource.key": "csp_unit_8_-_create_pt_prep"
       }
     },
     {
@@ -1102,37 +1102,37 @@
     {
       "name": "CSP Unit 8 - Create PT Prep",
       "url": "https://docs.google.com/presentation/d/130WMgJC9JxZ2bz7pO59i-0-XafKeKLADKSqIGx1ZcSQ/copy",
-      "key": "csp unit 8 presentation",
+      "key": "csp_unit_8_-_create_pt_prep",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 8 presentation"
+        "resource.key": "csp_unit_8_-_create_pt_prep"
       }
     },
     {
       "name": "APCSP CT 20-21 Task Instructions",
       "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
-      "key": "apcsp draft pt instructions",
+      "key": "apcsp_ct_20-21_task_instructions",
       "properties": {
         "type": "Resource",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "apcsp draft pt instructions"
+        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
       "name": "APCSP CT 20-21 Scoring Guidelines",
       "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
-      "key": "apcsp draft pt rubric",
+      "key": "apcsp_ct_20-21_scoring_guidelines",
       "properties": {
         "type": "Rubric",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "apcsp draft pt rubric"
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
       }
     }
   ],
@@ -1140,73 +1140,73 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp unit 8 presentation"
+        "resource.key": "csp_unit_8_-_create_pt_prep"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "apcsp draft pt instructions"
+        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "apcsp draft pt rubric"
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 1 video"
+        "resource.key": "csp_create_pt_code_org_sample_1_video"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 1 wr"
+        "resource.key": "csp_create_pt_code_org_sample_1_wr"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 2 video"
+        "resource.key": "csp_create_pt_code_org_sample_2_video"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 2 wr"
+        "resource.key": "csp_create_pt_code_org_sample_2_wr"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 3 video"
+        "resource.key": "csp_create_pt_code_org_sample_3_video"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 3 wr"
+        "resource.key": "csp_create_pt_code_org_sample_3_wr"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 1 annotated"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 2 annotated"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp create pt 3 annotated"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
       }
     },
     {
@@ -1236,7 +1236,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Make a Plan",
-        "resource.key": "csp unit 8 presentation"
+        "resource.key": "csp_unit_8_-_create_pt_prep"
       }
     },
     {
@@ -1248,19 +1248,19 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "csp unit 8 presentation"
+        "resource.key": "csp_unit_8_-_create_pt_prep"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "apcsp draft pt instructions"
+        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "apcsp draft pt rubric"
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
       }
     }
   ],

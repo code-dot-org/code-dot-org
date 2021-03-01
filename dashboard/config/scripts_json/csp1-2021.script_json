@@ -167,7 +167,7 @@
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r FlippyDo Template]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -254,7 +254,7 @@
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
         "student_overview": "Learn how computers represent black and white images using bits.",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r bw sampling activity guide] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
+        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -283,7 +283,7 @@
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
         "student_overview": "Learn how computers represent color images using bits.",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
-        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r CSP Unit 1 Presentation]\t\r\n",
+        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information]\t\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -341,7 +341,7 @@
         "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost.",
         "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
-        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r CSP Unit 1 Presentation] ready for the discussion towards the end of the lesson\r\n",
+        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information] ready for the discussion towards the end of the lesson\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -2279,7 +2279,7 @@
       "key": "a71aae55-6d99-498d-a6fa-4c729901e49e",
       "position": 8,
       "properties": {
-        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy do pro]",
+        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy_do_pro]",
         "remarks": true,
         "name": "Flippy Do Pro"
       },
@@ -2898,7 +2898,7 @@
       "key": "6a7f6a14-c3c7-4531-8526-59bfd13e0967",
       "position": 7,
       "properties": {
-        "description": " **Distribute:**  [r bw sampling activity guide]"
+        "description": " **Distribute:**  [r u1l7_black_and_white_images]"
       },
       "seeding_key": {
         "activity_section.key": "6a7f6a14-c3c7-4531-8526-59bfd13e0967",
@@ -6266,13 +6266,13 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6351,25 +6351,25 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6401,87 +6401,87 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "U1 L4 Flippy Do",
       "url": "https://drive.google.com/a/code.org/file/d/1ZrO6gBcLYrj2_scYsbxA78ZuQyGdHOjC/view?usp=sharing",
-      "key": "FlippyDo Template",
+      "key": "u1_l4_flippy_do",
       "properties": {
         "type": "Template",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "FlippyDo Template"
+        "resource.key": "u1_l4_flippy_do"
       }
     },
     {
       "name": "U1 L4 How to Make a FlippyDo",
       "url": "https://docs.google.com/document/d/1ecO5-Vg8eQVVvpjIUX8P0dAVX2Mi1-QW7zfIMFWeqgY/edit?usp=sharing",
-      "key": "FlippyDo Directions",
+      "key": "u1_l4_how_to_make_a_flippydo",
       "properties": {
         "type": "Teacher Guide",
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "FlippyDo Directions"
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
       }
     },
     {
       "name": "U1 L4 Flippy Do Pt 1 - Activity Guide",
       "url": "https://docs.google.com/document/d/1DmzViCZqIJTEPZQ2-aVa4Z-8_3PmzgRIS_XzzPbxXsU/edit?usp=sharing",
-      "key": "Number Conversions Activity Guide",
+      "key": "u1_l4_flippy_do_pt_1_-_activity_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "Number Conversions Activity Guide"
+        "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "Flippy Do Pro",
       "url": "https://drive.google.com/a/code.org/file/d/1VpZH4E2c5fR-g2fBMggd4-pz8GNRxxwZ/view?usp=sharing",
-      "key": "flippy do pro",
+      "key": "flippy_do_pro",
       "properties": {
         "type": "Template",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "flippy do pro"
+        "resource.key": "flippy_do_pro"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6499,13 +6499,13 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6524,26 +6524,26 @@
     {
       "name": "U1L7 Black and White Images",
       "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
-      "key": "bw sampling activity guide",
+      "key": "u1l7_black_and_white_images",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "bw sampling activity guide"
+        "resource.key": "u1l7_black_and_white_images"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6562,13 +6562,13 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6587,25 +6587,25 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6623,13 +6623,13 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6671,38 +6671,38 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "CSP Unit 1 Project Rubric",
       "url": "https://docs.google.com/document/d/14rAnNQCTjhGgWCqnVo4XczoNEDFM-oYLNqhJvLW-88Q/edit?usp=sharing",
-      "key": "CSP U1 Project Rubric",
+      "key": "csp_unit_1_project_rubric",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U1 Project Rubric"
+        "resource.key": "csp_unit_1_project_rubric"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     }
   ],
@@ -6710,7 +6710,7 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6752,13 +6752,13 @@
     {
       "seeding_key": {
         "lesson.key": "Representing Information",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circle Square Patterns",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6776,43 +6776,43 @@
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "FlippyDo Template"
+        "resource.key": "u1_l4_flippy_do"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "FlippyDo Directions"
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "Number Conversions Activity Guide"
+        "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Overflow and Rounding",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Overflow and Rounding",
-        "resource.key": "flippy do pro"
+        "resource.key": "flippy_do_pro"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Representing Text",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6824,7 +6824,7 @@
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6836,13 +6836,13 @@
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "bw sampling activity guide"
+        "resource.key": "u1l7_black_and_white_images"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Color Images",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6854,7 +6854,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lossless Compression",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6866,13 +6866,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lossy Compression",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6884,7 +6884,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6908,19 +6908,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "CSP U1 Project Rubric"
+        "resource.key": "csp_unit_1_project_rubric"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 14: Assessment Day",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     }
   ],
