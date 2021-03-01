@@ -11,7 +11,7 @@ window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
-import {removeDisallowedHtmlContent} from './brambleUtils';
+import {createHtmlDocument, removeDisallowedHtmlContent} from './brambleUtils';
 
 // the main Bramble object -- used to access file system
 let bramble_ = null;
@@ -416,8 +416,7 @@ function addFileHTML() {
     {
       basenamePrefix: 'new',
       ext: 'html',
-      contents:
-        '<!DOCTYPE html>\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n  </body>\n</html>'
+      contents: createHtmlDocument()
     },
     err => {
       if (err) {
