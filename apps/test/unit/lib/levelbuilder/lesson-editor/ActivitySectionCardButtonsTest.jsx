@@ -102,7 +102,13 @@ describe('ActivitySectionCardButtons', () => {
       <ActivitySectionCardButtons
         {...defaultProps}
         vocabularies={[
-          {id: 1, key: 'word1', word: 'word1', definition: 'definition1'}
+          {
+            id: 1,
+            key: 'word1',
+            word: 'word1',
+            definition: 'definition1',
+            commonSenseMedia: false
+          }
         ]}
       />
     );

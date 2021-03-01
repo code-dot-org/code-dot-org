@@ -11,13 +11,15 @@ const getInitialState = () => [
     id: 1,
     key: 'vocabulary-1',
     word: 'vocabulary-1',
-    definition: 'definition1'
+    definition: 'definition1',
+    commonSenseMedia: false
   },
   {
     id: 2,
     key: 'vocabulary-2',
     word: 'vocabulary-2',
-    definition: 'definition2'
+    definition: 'definition2',
+    commonSenseMedia: false
   }
 ];
 
@@ -32,7 +34,8 @@ describe('vocabulariesEditorRedux reducer tests', () => {
         id: 3,
         key: 'new-word',
         word: 'new-word',
-        definition: 'new-definition'
+        definition: 'new-definition',
+        commonSenseMedia: false
       })
     );
     assert.deepEqual(nextState.map(r => r.key), [
