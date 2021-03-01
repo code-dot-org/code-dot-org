@@ -73,6 +73,7 @@ module MultiFileSeeded
 
     def load_record(file_path)
       properties = properties_from_file(file_path, File.read(file_path))
+      return nil if properties.nil?
       record = find_or_initialize_by(name: properties[:name])
       record.update! properties
       record.name
