@@ -33,6 +33,9 @@ Resources:
     Properties:
       AccessControl: PublicRead
       BucketName: !Ref BucketName
+      Tags:
+        - Key: environment
+          Value: production
 
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
@@ -48,6 +51,9 @@ Resources:
               - - 'arn:aws:s3:::'
                 - !Ref Bucket
                 - /*
+      Tags:
+        - Key: environment
+          Value: production
 
   BucketBackedDistribution:
     Type: AWS::CloudFront::Distribution
@@ -78,6 +84,9 @@ Resources:
           AcmCertificateArn: !Ref CertificateArn
           MinimumProtocolVersion: TLSv1
           SslSupportMethod: sni-only
+      Tags:
+        - Key: environment
+          Value: production
 
   SubdomainRecord:
     Type: AWS::Route53::RecordSet
@@ -98,3 +107,6 @@ Resources:
         # This is always the hosted zone ID when you create an alias record that routes traffic to a CloudFront distribution.
         # from https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget-1.html#cfn-route53-aliastarget-hostedzoneid
         HostedZoneId: Z2FDTNDATAQYW2
+      Tags:
+        - Key: environment
+          Value: production
