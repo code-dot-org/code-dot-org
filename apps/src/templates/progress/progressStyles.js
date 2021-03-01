@@ -37,6 +37,15 @@ export const font = {
   fontFamily: '"Gotham 5r", sans-serif'
 };
 
+export const tightlyConstrainedSizeStyle = size => {
+  return {
+    minWidth: size,
+    maxWidth: size,
+    minHeight: size,
+    maxHeight: size
+  };
+};
+
 export const CELL_PADDING = 4;
 export const cellContent = {
   padding: `0px ${CELL_PADDING}px`
