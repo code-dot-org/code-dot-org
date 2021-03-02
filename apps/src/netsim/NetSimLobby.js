@@ -582,8 +582,9 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
   }
 
   // selected section in the teacher panel
-  const teacherSelectedSectionId = getStore().getState().teacherSections
-    .selectedSectionId;
+  const stateTeacherSections = getStore().getState().teacherSections;
+  const teacherSelectedSectionId =
+    stateTeacherSections && stateTeacherSections.selectedSectionId;
 
   if (this.shardChoices_.length === 1 && !this.selectedShardID_) {
     this.setShardID(this.shardChoices_[0].shardID);
