@@ -77,9 +77,19 @@ class ColumnInspector extends Component {
           <form>
             <div>
               <label>
-                <div>
-                  {currentColumnData.id}: {currentColumnData.dataType}
-                </div>
+                <div>{currentColumnData.id}</div>
+                <select
+                  onChange={event => this.handleChangeDataType(event, key)}
+                  value={currentColumnData.dataType}
+                >
+                  {Object.values(ColumnTypes).map((option, index) => {
+                    return (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    );
+                  })}
+                </select>
 
                 {currentColumnData.description && (
                   <div>
