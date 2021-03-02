@@ -5,7 +5,7 @@ const SET_FILE_NAME = 'javalab/SET_FILE_NAME';
 const initialState = {
   consoleLogs: [],
   editorText: '',
-  fileName: 'Untitled File'
+  fileName: 'MyClass.java'
 };
 
 export const appendInputLog = input => ({
