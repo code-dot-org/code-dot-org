@@ -50,7 +50,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 1. Run the website `bin/dashboard-server`
 1. Visit http://localhost-studio.code.org:3000/ to verify it is running.
-1. Install necessary plugins described in the 'Editor configuration' section below.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
