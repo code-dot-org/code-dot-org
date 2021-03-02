@@ -23,7 +23,7 @@ class CrossTab extends Component {
   render() {
     const { currentColumn, crossTabData } = this.props;
 
-    return !currentColumn && crossTabData && (
+    return currentColumn !== undefined && crossTabData !== undefined && (
       <div id="cross-tab" style={{...styles.panel, ...styles.rightPanel}}>
         <div style={styles.largeText}>Correlation Information</div>
         <div style={styles.scrollableContents}>
@@ -89,5 +89,5 @@ class CrossTab extends Component {
 
 export default connect(state => ({
   currentColumn: state.currentColumn,
-  crossTabData: getCrossTabData(state)
+  crossTabData: state.currentColumn && getCrossTabData(state)
 }))(CrossTab);
