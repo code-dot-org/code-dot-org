@@ -37,6 +37,6 @@ Feature: Student Lesson Plan
     And I wait until element "h1:contains(Lesson 2: Second Lesson)" is visible
 
     # Navigate to the Unit page
-    And I wait until element "a:contains(allthemigratedthings)" is visible
-    And I click selector "a:contains(allthemigratedthings)"
+    And I wait until element "a:contains(All the Migrated Things)" is visible
+    And I click selector "a:contains(All the Migrated Things)"
     And I wait until I am on "http://studio.code.org/s/allthemigratedthings"
