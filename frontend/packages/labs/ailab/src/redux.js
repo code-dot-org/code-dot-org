@@ -469,14 +469,14 @@ export default function rootReducer(state = initialState, action) {
           ...state,
           selectedFeatures: state.selectedFeatures.filter(
             item => item !== action.currentColumn
-          )
-          //currentColumn: undefined
+          ),
+          currentColumn: undefined
         };
       } else {
         return {
           ...state,
-          selectedFeatures: [...state.selectedFeatures, action.currentColumn]
-          //currentColumn: action.currentColumn
+          selectedFeatures: [...state.selectedFeatures, action.currentColumn],
+          currentColumn: action.currentColumn
         };
       }
     }
@@ -1069,7 +1069,14 @@ export function getPanelButtons(state) {
  */
 
 export function getCrossTabData(state) {
-  if (!state.labelColumn || state.selectedFeatures.length <= 0) {
+  if (!state.labelColumn || !state.currentColumn) {
+    return null;
+  }
+
+  if (
+    state.columnsByDataType[state.labelColumn] !== ColumnTypes.CATEGORICAL ||
+    state.columnsByDataType[state.currentColumn] !== ColumnTypes.CATEGORICAL
+  ) {
     return null;
   }
 
@@ -1082,9 +1089,7 @@ export function getCrossTabData(state) {
 
   for (let row of state.data) {
     var featureValues = [];
-    for (let selectedFeature of state.selectedFeatures) {
-      featureValues.push(row[selectedFeature]);
-    }
+    featureValues.push(row[state.currentColumn]);
 
     var existingEntry = results.find(result => {
       return areArraysEqual(result.featureValues, featureValues);
@@ -1129,7 +1134,7 @@ export function getCrossTabData(state) {
   return {
     results,
     uniqueLabelValues,
-    featureNames: state.selectedFeatures,
+    featureNames: [state.currentColumn],
     labelName: state.labelColumn
   };
 }

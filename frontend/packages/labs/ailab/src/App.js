@@ -143,8 +143,12 @@ class App extends Component {
               <DataDisplay />
             </ContainerLeft>
             <ContainerRight>
-              <ColumnInspector />
-              <CrossTab />
+              {currentPanel === "dataDisplayLabel" && (
+                <ColumnInspector />
+              )}
+              {currentPanel === "dataDisplayFeatures" && (
+                <CrossTab />
+              )}
             </ContainerRight>
           </BodyContainer>
         )}
