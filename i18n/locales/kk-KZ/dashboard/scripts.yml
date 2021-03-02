@@ -2600,3 +2600,23 @@ kk:
               display_name: Кіріспе
             lessonGroup-3:
               display_name: Айнымалылар
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Ілмек
+              name: Ілмек
+            Events:
+              key: Шаралар
+              name: Шаралар
+            Conditionals:
+              key: Шарттар
+              name: Шарттар
+            Functions:
+              key: Функциялар
+              name: Функциялар
+            Variables:
+              key: Айнымалылар
+              name: Айнымалылар
+            For Loops:
+              key: For ілмектері
+              name: For ілмектері
