@@ -6,7 +6,7 @@ import {
   setModelSize,
   setTrainedModel,
   setPrediction,
-  setAccuracyCheckPredictedLabels,
+  setAccuracyCheckPredictedLabels
 } from "../redux";
 
 const KNN = require("ml-knn");
@@ -15,7 +15,7 @@ export default class KNNTrainer {
   startTraining() {
     const state = store.getState();
     this.knn = new KNN(state.trainingExamples, state.trainingLabels, {
-      k: state.kValue,
+      k: state.kValue
     });
     var model = this.knn.toJSON();
     store.dispatch(setTrainedModel(model));
