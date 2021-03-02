@@ -8,6 +8,8 @@ import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 import $ from 'jquery';
 
+import {setShowSubset} from '../redux/instructions';
+
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
  * image telling the user to rotate their device to landscape mode.  Because
@@ -122,9 +124,14 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
+Ailab.prototype.setInstructionSubset = function(subset) {
+  getStore().dispatch(setShowSubset(subset));
+};
+
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
+  const setInstructionSubset = this.setInstructionSubset.bind(this);
   const saveTrainedModel = (dataToSave, callback) => {
     return new Promise((resolve, reject) => {
       $.ajax({
@@ -153,6 +160,7 @@ Ailab.prototype.initMLActivities = function() {
   initAll({
     mode,
     onContinue,
+    setInstructionSubset,
     i18n: ailabMsg,
     saveTrainedModel
   });

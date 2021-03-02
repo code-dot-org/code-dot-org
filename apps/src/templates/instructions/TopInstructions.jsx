@@ -752,6 +752,7 @@ class TopInstructions extends Component {
                       longInstructions={this.props.longInstructions}
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
+                      showSubset={this.props.showSubset}
                     />
                   </div>
                 )}
@@ -838,7 +839,8 @@ export default connect(
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode
+    widgetMode: state.pageConstants.widgetMode,
+    showSubset: state.instructions.showSubset
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

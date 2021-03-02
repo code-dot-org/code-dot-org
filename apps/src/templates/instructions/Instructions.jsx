@@ -33,7 +33,8 @@ class Instructions extends React.Component {
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
-    onResize: PropTypes.func
+    onResize: PropTypes.func,
+    showSubset: PropTypes.string
   };
 
   /**
@@ -79,6 +80,23 @@ class Instructions extends React.Component {
           title={this.props.puzzleTitle || i18n.instructions()}
           text={this.props.longInstructions || this.props.shortInstructions}
         />
+        {this.props.showSubset === "selectDataset" && (
+          <div style={{marginTop: 10}}>Choose a data set.</div>
+        )}
+        {this.props.showSubset === "specifyColumns" && (
+          <div style={{marginTop: 10}}>Review the column types.</div>
+        )}
+        {this.props.showSubset === "dataDisplayLabel" && (
+          <div style={{marginTop: 10}}>Choose one column to predict.</div>
+        )}
+        {this.props.showSubset === "dataDisplayFeatures" && (
+          <div style={{marginTop: 10}}>Choose one or more additional columns.</div>
+        )}
+        {this.props.showSubset === "selectTrainer" && (
+          <div style={{marginTop: 10}}>Prepare for training.</div>
+        )}
+
+        {/*}
         {this.renderMainBody()}
 
         {this.props.inputOutputTable && (
@@ -90,6 +108,7 @@ class Instructions extends React.Component {
         )}
         {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
         {this.props.authoredHints}
+        */}
       </div>
     );
   }
