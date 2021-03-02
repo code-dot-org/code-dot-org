@@ -69,6 +69,46 @@ class JavalabEditor extends React.Component {
     };
   };
 
+  displayFileRename() {
+    return (
+      <div style={style.tabs}>
+        <div style={style.tab}>
+          <input
+            type="text"
+            ariaLabel="file name"
+            value={this.props.fileName}
+            onChange={e => this.props.setFileName(e.target.value)}
+            onBlur={() => this.setState({renameFileActive: false})}
+          />
+        </div>
+        <button
+          type="button"
+          onClick={() => this.setState({renameFileActive: false})}
+          className="btn btn-default btn-sm"
+          style={style.button}
+        >
+          Save
+        </button>
+      </div>
+    );
+  }
+
+  displayFileNameAndRenameButton() {
+    return (
+      <div style={style.tabs}>
+        <div style={style.tab}>{this.props.fileName}</div>
+        <button
+          type="button"
+          onClick={() => this.setState({renameFileActive: true})}
+          className="btn btn-default btn-sm"
+          style={style.button}
+        >
+          Rename
+        </button>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div style={this.props.style}>
@@ -76,39 +116,9 @@ class JavalabEditor extends React.Component {
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <div>
-          {this.state.renameFileActive ? (
-            <div style={style.tabs}>
-              <div style={style.tab}>
-                <input
-                  type="text"
-                  ariaLabel="file name"
-                  value={this.props.fileName}
-                  onChange={e => this.props.setFileName(e.target.value)}
-                  onBlur={() => this.setState({renameFileActive: false})}
-                />
-              </div>
-              <button
-                type="button"
-                onClick={() => this.setState({renameFileActive: false})}
-                className="btn btn-default btn-sm"
-                style={style.button}
-              >
-                Save
-              </button>
-            </div>
-          ) : (
-            <div style={style.tabs}>
-              <div style={style.tab}>{this.props.fileName}</div>
-              <button
-                type="button"
-                onClick={() => this.setState({renameFileActive: true})}
-                className="btn btn-default btn-sm"
-                style={style.button}
-              >
-                Rename
-              </button>
-            </div>
-          )}
+          {this.state.renameFileActive
+            ? this.displayFileRename()
+            : this.displayFileNameAndRenameButton()}
         </div>
         <div ref={el => (this._codeMirror = el)} style={style.editor} />
       </div>
