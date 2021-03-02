@@ -11,6 +11,16 @@ We're working to give every student the opportunity to learn computer science â€
 
 [<button>Donate now</button>](https://donate.code.org/give/172233/#!/donation/checkout)     [<button>Start a fundraiser</button>](https://donate.code.org/campaign/computer-science-education/c142257)
 
+## Have Amazon make a donation for you
+If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
+
+[<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
+
+## Ask your school to teach computer science
+Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/courses?view=teacher) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
+
+[<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>Resources for schools</button>](/yourschool)
+
 ## Help us spread the word
 Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share our posts.  Or stay in touch with our [quarterly email updates](http://go.pardot.com/l/153401/2018-01-12/k555vp).
 
@@ -32,16 +42,6 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 ![Code.org stickers](/images//fit-160/swag8.jpg)
 
 [<button>Shop</button>](/shop)
-
-## Have Amazon make a donation for you
-If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
-
-[<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
-
-## Ask your school to teach computer science
-Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/courses?view=teacher) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
-
-[<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>Resources for schools</button>](/yourschool)
 
 ## Learn about our advocacy efforts in your state
 Learn more about [Code.org's advocacy work](https://advocacy.code.org) across the U.S. and the nine policies we recommend states adopt to make computer science foundational for all students. And, find out how you can drive change in your state.
