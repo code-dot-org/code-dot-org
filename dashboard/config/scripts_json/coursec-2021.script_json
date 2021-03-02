@@ -31,6 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
+    "serialized_at": "2021-03-02 19:58:38 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -273,7 +274,7 @@
         "overview": "Building on the initial \"My Robotic Friends\" activity, students tackle larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
-        "preparation": " - Make sure each student has a journal.\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***image pack** per group of 4 students.",
+        "preparation": " - Make sure each student has a journal.\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 4 students.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -3415,7 +3416,7 @@
       "key": "aa392e98-dff3-420d-8dd5-4a29b7d3ce6f",
       "position": 1,
       "properties": {
-        "description": "In a moment I am going to ask each of you to tell me your favorite favorite season. On the count of 3, everyone should answer the question and then we will try to see if we can figure out which is the most popular season with the students in this class. Are you thinking of your favorite season? 1, 2, 3...",
+        "description": "*In a moment I am going to ask each of you to tell me your favorite favorite season. On the count of 3, everyone should answer the question and then we will try to see if we can figure out which is the most popular season with the students in this class. Are you thinking of your favorite season? 1, 2, 3...*",
         "remarks": true,
         "name": "The Need for Visualization\r"
       },
@@ -3439,7 +3440,7 @@
       "key": "b4d7372a-86cd-4d90-855d-0c241617237f",
       "position": 3,
       "properties": {
-        "description": "Tally marks like these help us to keep track of everyone's answers, which is great. It still takes time to count them to know which option was chosen by the most or fewest students. Imagine if someone showed us tally marks for the entire school. It would take some time to count them!",
+        "description": "*Tally marks like these help us to keep track of everyone's answers, which is great. It still takes time to count them to know which option was chosen by the most or fewest students. Imagine if someone showed us tally marks for the entire school. It would take some time to count them!*",
         "remarks": true
       },
       "seeding_key": {
@@ -9239,6 +9240,18 @@
       }
     },
     {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
+      "key": "debugging_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
@@ -9465,19 +9478,6 @@
       }
     },
     {
-      "name": "The Big Event (Course C)",
-      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
-      "key": "the_big_event_course_c_",
-      "properties": {
-        "type": "Event Controller",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_course_c_"
-      }
-    },
-    {
       "name": "The Big Event",
       "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
       "key": "csf-the-big-event-assessment",
@@ -9504,18 +9504,6 @@
       }
     },
     {
-      "name": " Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "course-cf-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
       "name": "The Big Event (Course C)",
       "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
       "key": "the_big_event_course_c_",
@@ -9529,6 +9517,18 @@
       }
     },
     {
+      "name": " Unplugged Blocks (Courses C-F)",
+      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+      "key": "course-cf-blockly-blocks",
+      "properties": {
+        "type": "Manipulatives",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online",
@@ -9538,6 +9538,19 @@
       },
       "seeding_key": {
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "name": "The Big Event (Course C)",
+      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
+      "key": "the_big_event_course_c_",
+      "properties": {
+        "type": "Event Controller",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
@@ -9678,6 +9691,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Programming in Collector",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -9787,12 +9806,6 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "the_big_event_course_c_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
         "resource.key": "csf-the-big-event-assessment"
       }
     },
@@ -9804,6 +9817,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "the_big_event_course_c_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Flappy Game",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -9811,13 +9830,13 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Flappy Game",
-        "resource.key": "the_big_event_course_c_"
+        "resource.key": "pause_and_think_online"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Build a Flappy Game",
-        "resource.key": "pause_and_think_online"
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
