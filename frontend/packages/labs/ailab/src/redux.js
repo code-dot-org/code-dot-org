@@ -715,23 +715,6 @@ export function getCompatibleTrainers(state) {
   return compatibleTrainers;
 }
 
-function getSum(total, num) {
-  return total + num;
-}
-
-function getAverageDiff(state) {
-  let diffs = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    diffs.push(
-      Math.abs(
-        state.accuracyCheckLabels[i] - state.accuracyCheckPredictedLabels[i]
-      )
-    );
-  }
-  return (diffs.reduce(getSum, 0) / numPredictedLabels).toFixed(2);
-}
-
 export function getAccuracyClassification(state) {
   let numCorrect = 0;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
@@ -747,8 +730,20 @@ export function getAccuracyClassification(state) {
 }
 
 export function getAccuracyRegression(state) {
-  let range = getRange(state, state.labelColumn);
-  return getAverageDiff(state) / (range.max - range.min);
+  let numCorrect = 0;
+  const maxMin = getRange(state, state.labelColumn);
+  const range = Math.abs(maxMin.max - maxMin.min);
+  const errorTolerance = range * 0.03;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  for (let i = 0; i < numPredictedLabels; i++) {
+    const diff = Math.abs(
+      state.accuracyCheckLabels[i] - state.accuracyCheckPredictedLabels[i]
+    );
+    if (diff <= errorTolerance) {
+      numCorrect++;
+    }
+  }
+  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
 
 export function getSummaryStat(state) {

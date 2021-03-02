@@ -1,4 +1,8 @@
-import { getOptionFrequenciesByColumn } from "../../src/redux.js";
+import {
+  getOptionFrequenciesByColumn,
+  getRange,
+  getAccuracyRegression
+} from "../../src/redux.js";
 
 const initialState = {
   data: [
@@ -54,6 +58,38 @@ const initialState = {
   }
 };
 
+const resultsState = {
+  data: [
+    {
+      sun: "high",
+      height: 3.8
+    },
+    {
+      sun: "high",
+      height: 3.9
+    },
+    {
+      sun: "medium",
+      height: 2.6
+    },
+    {
+      sun: "medium",
+      height: 2.5
+    },
+    {
+      sun: "low",
+      height: 0.9
+    },
+    {
+      sun: "low",
+      height: 1.6
+    }
+  ],
+  labelColumn: "height",
+  accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
+  accuracyCheckLabels: [3.9, 3.8, 2.6, 2.5, 1.6, 0.9]
+};
+
 describe("redux functions", () => {
   test("getOptionFrequenciesByColumn", async () => {
     const frequencies = getOptionFrequenciesByColumn(initialState);
@@ -63,5 +99,14 @@ describe("redux functions", () => {
     expect(frequencies["nuts"]["no"]).toBe(3);
     expect(frequencies["delicious"]["yes"]).toBe(5);
     expect(frequencies["delicious"]["no"]).toBe(1);
+  });
+
+  test("getAccuracyRegression", async () => {
+    const maxMin = getRange(resultsState, resultsState.labelColumn);
+    const range = Math.abs(maxMin.max - maxMin.min);
+    expect(range).toBe(3);
+    const score = getAccuracyRegression(resultsState);
+    // error tolerance of +/- 0.09, 4/6 correct
+    expect(score).toBe("66.67");
   });
 });
