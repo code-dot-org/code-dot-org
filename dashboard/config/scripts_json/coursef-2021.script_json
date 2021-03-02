@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-01 23:12:47 UTC",
+    "serialized_at": "2021-03-02 19:48:40 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -256,7 +256,7 @@
     },
     {
       "key": "The Power of Words",
-      "name": "The Power of Words",
+      "name": "The Power of Words To be Removed",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -426,8 +426,8 @@
       "properties": {
         "overview": "We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. ",
         "student_overview": "You're going to have loads of fun learning about `for` loops!",
-        "purpose": "At this point, students have become masters of loops. Today, they will learn about another loop commonly used in programming. The for loop repeats commands a certain number of times, but also keeps track of the values it is iterating over. For example, a for loop that begins at 4, ends with 8, and has a step value of 1 will repeat 4 times, but the values 4, 5, 6, and 7 will also be captured for use elsewhere. Using this structure with variables can create some pretty fantastic programs. Today, students will simply be learning the basics of a for loop before diving into programming with them next time!",
-        "preparation": "- Watch the [r lesson-in-action-for-loop-fun].\r\n- Print one [r csf-for-loop-fun-worksheet] per group.\r\n- Print one [r csf-for-loop-fun-assessment] for each student.\r\n- Make sure every student has a [r think-spot-journal].",
+        "purpose": "At this point, students have become masters of loops. Today, they will learn about another loop commonly used in programming. The **for loop** repeats commands a certain number of times, but also keeps track of the values it is iterating over. For example, a **for loop** that begins at 4, ends with 8, and has a step value of 1 will repeat 4 times, but the values 4, 5, 6, and 7 will also be captured for use elsewhere. Using this structure with variables can create some pretty fantastic programs. Today, students will simply be learning the basics of a **for loop** before diving into programming with them next time!",
+        "preparation": "- Watch the ***Lesson in Action for Loop Fun** - video.\n- Print one ***CSF For Loop Fun** - worksheet per group.\n- Print one ***CSF For Loop Fun** - assessment for each student.\n- Make sure every student has a  journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -1631,7 +1631,7 @@
       "key": "459d00f2-e296-4205-bca6-eab8d4599354",
       "position": 4,
       "properties": {
-        "name": "Day 4 (Recommended for 5th Grade) - Revise Your Project",
+        "name": "Day 4 - Revise Your Project",
         "duration": 45
       },
       "seeding_key": {
@@ -2332,7 +2332,7 @@
       "key": "ba304c03-8de0-4209-b9a6-15b215575186",
       "position": 2,
       "properties": {
-        "description": "Call four volunteers to the front of the room and line them up. Let the students know that you are going to write a poem for each of them.\r\n\r\nOn the board (or under your document camera) write the sentence for your first student (suppose it's Bill):\r\n\r\n\"My student Bill, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nEncourage the students to clap at your abilities and thank Bill for volunteering. Allow Bill to sit down (or go to the back of the line) as you erase the board, then call the next volunteer (we'll say that she's called Annie).\r\n\r\n\"My student Annie, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAgain, accepting applause, erase the board and invite the next volunteer.\r\n\r\n\"My student Jenny, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAs you call the final volunteer, inquire as to whether everyone in the class would like a poem written about each of them. Maybe the everyone in the whole school? Goodness, that's going to take a while! Pose the question to your students:\r\n\r\n\"How could I do this more quickly?\"\r\n\r\nYour students will likely pick up on the fact that only one word is changing, and that word is simply a person's name. Help them see the location by circling Jenny's name on the board and writing \"firstName\" next to it.\r\n\r\n\"It would take a long time to write a poem for everyone in the school if I couldn't start until I knew who I was writing it about, wouldn't it?\"\r\n\r\n- How long do you think it would take to make a video game if they couldn't start until they knew your username?\r\n- How expensive would video games be if they had to be created separately for each person?\r\n- How do you think we can get around that?\r\n\r\nBy this time, it's quite likely that your class will come up with the idea of having a placeholder. With that, they're most of the way into understanding where this lesson goes.\r\n\r\n- What would we call that placeholder?\r\n\t- We need to call it something that makes sense. We wouldn't want to call it \"age\" if it was a placeholder for their name, right?\r\n\r\nNow, let's add some more volunteers. Give them each a piece of paper to write their name on, and have them tuck it inside individual envelopes labeled firstName.\r\n\r\nThis time, put the poem on the board with a blank space labeled \"firstName\" where the student's name will go. \r\n\r\n- Have the first student in line (likely the last student from the previous example) pull their name from the envelope and that's what you'll write in the space.\r\n- When you erase the board, only erase the portion with the last student's name in it. \r\n- Call the next student to show their variable. \r\n- Repeat as many times as is entertaining\r\n\r\nNow it's time for the main activity."
+        "description": "Call four volunteers to the front of the room and line them up. Let the students know that you are going to write a poem for each of them.\n\nOn the board (or under your document camera) write the sentence for your first student (suppose it's Bill):\n\n\"My student Bill, standing proud<br/>\nis a fine example for the crowd\"\n\nEncourage the students to clap at your abilities and thank Bill for volunteering. Allow Bill to sit down (or go to the back of the line) as you erase the board, then call the next volunteer (we'll say that she's called Annie).\n\n\"My student Annie, standing proud<br/>\nis a fine example for the crowd\"\n\nAgain, accepting applause, erase the board and invite the next volunteer.\n\n\"My student Jenny, standing proud<br/>\nis a fine example for the crowd\"\n\nAs you call the final volunteer, inquire as to whether everyone in the class would like a poem written about each of them. Maybe the everyone in the whole school? Goodness, that's going to take a while! Pose the question to your students:\n\n*\"How could I do this more quickly?\"*\n\nYour students will likely pick up on the fact that only one word is changing, and that word is simply a person's name. Help them see the location by circling Jenny's name on the board and writing \"firstName\" next to it.\n\n*\"It would take a long time to write a poem for everyone in the school if I couldn't start until I knew who I was writing it about, wouldn't it?\"*\n\n- *How long do you think it would take to make a video game if they couldn't start until they knew your username?*\n- *How expensive would video games be if they had to be created separately for each person?*\n- *How do you think we can get around that?*\n\nBy this time, it's quite likely that your class will come up with the idea of having a placeholder. With that, they're most of the way into understanding where this lesson goes.\n\n- *What would we call that placeholder?*\n\t- *We need to call it something that makes sense. We wouldn't want to call it \"age\" if it was a placeholder for their name, right?*\n\nNow, let's add some more volunteers. Give them each a piece of paper to write their name on, and have them tuck it inside individual envelopes labeled firstName.\n\nThis time, put the poem on the board with a blank space labeled \"firstName\" where the student's name will go. \n\n- Have the first student in line (likely the last student from the previous example) pull their name from the envelope and that's what you'll write in the space.\n- When you erase the board, only erase the portion with the last student's name in it. \n- Call the next student to show their variable. \n- Repeat as many times as is entertaining\n\nNow it's time for the main activity."
       },
       "seeding_key": {
         "activity_section.key": "ba304c03-8de0-4209-b9a6-15b215575186",
@@ -2753,7 +2753,7 @@
       "key": "2c7244e0-80ea-472a-9dbe-051909768cfc",
       "position": 1,
       "properties": {
-        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \r\n\r\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch it as a class and debrief afterwards to help students build connections to the content.",
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.",
         "name": "Build Excitement!\r"
       },
       "seeding_key": {
@@ -3177,8 +3177,7 @@
       "key": "5cecb186-d4c0-4846-81f4-d2ca2b02ecb1",
       "position": 1,
       "properties": {
-        "description": "This lesson has one new and important word:\n\n - **For Loop** - Say it with me: For-Loop \n\nLoops that have a predetermined start, stop, and step value.",
-        "name": "Vocabulary"
+        "description": "\n####Vocabulary\n\nThis lesson has one new and important word:\n\n - **For Loop** - *Say it with me: For-Loop*. \n\nLoops that have a predetermined start, stop, and step value."
       },
       "seeding_key": {
         "activity_section.key": "5cecb186-d4c0-4846-81f4-d2ca2b02ecb1",
@@ -3189,7 +3188,7 @@
       "key": "761bf8e6-2303-4c05-a1c3-59046f829e91",
       "position": 2,
       "properties": {
-        "description": "\n####For One and All\n\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- \"for\" loops give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game (example in English)\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
+        "description": "\n####For One and All\n\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- **\"for\" loops** give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
       },
       "seeding_key": {
         "activity_section.key": "761bf8e6-2303-4c05-a1c3-59046f829e91",
@@ -3211,7 +3210,7 @@
       "key": "95417529-72b3-4c15-95d1-7bd479743269",
       "position": 1,
       "properties": {
-        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a \"for\" loop comes in handy. When you use a \"for\" loop, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\r\n\r\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
+        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a **\"for\" loop** comes in handy. When you use a **\"for\" loop**, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
       },
       "seeding_key": {
         "activity_section.key": "95417529-72b3-4c15-95d1-7bd479743269",
@@ -3238,7 +3237,7 @@
       "key": "d2e77c7f-eeec-40fd-adc1-68818f2069c7",
       "position": 3,
       "properties": {
-        "description": "\"for\" Loop block (in English)\r\n\r\n**Directions:**"
+        "description": "\n\n###**Directions:**"
       },
       "seeding_key": {
         "activity_section.key": "d2e77c7f-eeec-40fd-adc1-68818f2069c7",
@@ -3265,7 +3264,7 @@
       "key": "f015d285-cf66-41ed-9019-636e8fda2954",
       "position": 5,
       "properties": {
-        "description": "It may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a \"for\" loop.\r\n\r\n- Divide students into pairs\r\n- To start the round, each student rolls three times:\r\n\t- One die to determine the starting value of X\r\n\t- Three dice to determine the stopping value for X\r\n\t- One die to determine the stepping value of X each time through\r\n- Use one of the provided number lines to trace the \"for\" loop that they’ve made\r\n\t- Start at the starting value of X\r\n\t- Count down the number line, circling the numbers at the rolled interval\r\n\t- Stop when you get to the predetermined stopping value\r\n- Add all of the circled values to your score, then let the other player take a turn\r\n- Best 2 out of 3 wins"
+        "description": "It may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a ***\"for\" loop**.\n\n- Divide students into pairs\n- To start the round, each student rolls three times:\n\t- One die to determine the starting value of X\n\t- Three dice to determine the stopping value for X\n\t- One die to determine the stepping value of X each time through\n- Use one of the provided number lines to trace the ***\"for\" loop** that they’ve made\n\t- Start at the starting value of X\n\t- Count down the number line, circling the numbers at the rolled interval\n\t- Stop when you get to the predetermined stopping value\n- Add all of the circled values to your score, then let the other player take a turn\n- Best 2 out of 3 wins"
       },
       "seeding_key": {
         "activity_section.key": "f015d285-cf66-41ed-9019-636e8fda2954",
@@ -3282,7 +3281,7 @@
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.\r\n"
           }
         ],
-        "name": "Flash Chat/Journaling"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "2b2aff9f-1682-4071-a395-c38394654e47",
@@ -3293,7 +3292,7 @@
       "key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
       "position": 2,
       "properties": {
-        "description": "\n####Flash Chat: What did we learn?\n\n- What would your interval need to be if you wanted to count from 4 to 13 by threes?\n- What kinds of things do you think you could do with a for loop?\n- Can you reproduce a normal loop using a for loop?\n- What would you need to do?"
+        "description": "\n####Flash Chat: What did we learn?\n\n- What would your interval need to be if you wanted to count from 4 to 13 by threes?\n- What kinds of things do you think you could do with a **\"for\" loop**?\n- Can you reproduce a normal loop using a **\"for\" loop**?\n- What would you need to do?"
       },
       "seeding_key": {
         "activity_section.key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
@@ -3304,8 +3303,7 @@
       "key": "e4880f32-ec01-4be0-a4c3-3b8762d73daa",
       "position": 3,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a \"for\" loop?\r\n - Why would you use a \"for\" loop instead of a \"repeat\" loop or a \"while\" loop?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a **\"for\" loop**?\n - Why would you use a **\"for\" loop** instead of a \"repeat\" loop or a \"while\" loop?"
       },
       "seeding_key": {
         "activity_section.key": "e4880f32-ec01-4be0-a4c3-3b8762d73daa",
@@ -3836,7 +3834,7 @@
       "key": "1008c1d7-2968-4264-9de2-076e0bc0b086",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the **Final Project Design Worksheet** and the **CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \n\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "Goal: Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Final Project Design Worksheet** and the ***CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \n\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -3864,7 +3862,7 @@
       "key": "5a4707ae-6dfd-4612-b953-991e3b180169",
       "position": 3,
       "properties": {
-        "description": "\nNow that the class has their Final Project Design Worksheet in hand, they should start filling out the questions under **Day 1**.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
+        "description": "\nNow that the class has their ***Final Project Design Worksheet** in hand, they should start filling out the questions under **Day 1**.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
       },
       "seeding_key": {
         "activity_section.key": "5a4707ae-6dfd-4612-b953-991e3b180169",
@@ -3875,7 +3873,7 @@
       "key": "556e548d-e34d-419a-8c67-85ccde21b96f",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will use this day to build an initial version of their project.\n\nEquipped with their **Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their **Final Project Design Worksheets** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own **Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "Goal: Students will use this day to build an initial version of their project.\n\nEquipped with their ***Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their ***Final Project Design Worksheets** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3887,7 +3885,7 @@
       "key": "63989a97-d3e6-437f-b08c-d3f0ec592f5e",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Reflect:\n\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the **Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the **Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
+        "description": "Goal: Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Reflect:\n\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
         "name": "Reflect and Try Again\r"
       },
       "seeding_key": {
@@ -5503,7 +5501,7 @@
       "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "PowerOfWords-Unplugged_2021"
@@ -6230,7 +6228,7 @@
       "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Machine_Learning_2021"
@@ -6255,7 +6253,7 @@
       "chapter": 88,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_FishVTrash_2021"
@@ -6280,7 +6278,7 @@
       "chapter": 89,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrashDemo_2021"
@@ -6305,7 +6303,7 @@
       "chapter": 90,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrash_2021"
@@ -6330,7 +6328,7 @@
       "chapter": 91,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Training_Data_2021"
@@ -6355,7 +6353,7 @@
       "chapter": 92,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Short_2021"
@@ -6380,7 +6378,7 @@
       "chapter": 93,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Societal_Implications_2021"
@@ -6405,7 +6403,7 @@
       "chapter": 94,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Long_2021"
@@ -6456,7 +6454,7 @@
       "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "For Loop Fun - Unplugged Activity",
         "level_keys": [
@@ -7651,7 +7649,7 @@
       "chapter": 142,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example projects",
         "level_keys": [
@@ -7677,7 +7675,7 @@
       "chapter": 143,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [

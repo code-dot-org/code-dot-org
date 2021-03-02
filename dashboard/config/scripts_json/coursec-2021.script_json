@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-01 21:20:38 UTC",
+    "serialized_at": "2021-03-02 19:58:38 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -3416,7 +3416,7 @@
       "key": "aa392e98-dff3-420d-8dd5-4a29b7d3ce6f",
       "position": 1,
       "properties": {
-        "description": "In a moment I am going to ask each of you to tell me your favorite favorite season. On the count of 3, everyone should answer the question and then we will try to see if we can figure out which is the most popular season with the students in this class. Are you thinking of your favorite season? 1, 2, 3...",
+        "description": "*In a moment I am going to ask each of you to tell me your favorite favorite season. On the count of 3, everyone should answer the question and then we will try to see if we can figure out which is the most popular season with the students in this class. Are you thinking of your favorite season? 1, 2, 3...*",
         "remarks": true,
         "name": "The Need for Visualization\r"
       },
@@ -3440,7 +3440,7 @@
       "key": "b4d7372a-86cd-4d90-855d-0c241617237f",
       "position": 3,
       "properties": {
-        "description": "Tally marks like these help us to keep track of everyone's answers, which is great. It still takes time to count them to know which option was chosen by the most or fewest students. Imagine if someone showed us tally marks for the entire school. It would take some time to count them!",
+        "description": "*Tally marks like these help us to keep track of everyone's answers, which is great. It still takes time to count them to know which option was chosen by the most or fewest students. Imagine if someone showed us tally marks for the entire school. It would take some time to count them!*",
         "remarks": true
       },
       "seeding_key": {
