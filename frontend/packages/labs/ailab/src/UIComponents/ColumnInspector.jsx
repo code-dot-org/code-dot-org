@@ -79,7 +79,9 @@ class ColumnInspector extends Component {
               <label>
                 <div>{currentColumnData.id}</div>
                 <select
-                  onChange={event => this.handleChangeDataType(event, key)}
+                  onChange={event =>
+                    this.handleChangeDataType(event, currentColumnData.id)
+                  }
                   value={currentColumnData.dataType}
                 >
                   {Object.values(ColumnTypes).map((option, index) => {
