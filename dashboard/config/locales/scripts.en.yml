@@ -20821,7 +20821,7 @@ en:
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Simon Says:
               key: Simon Says
-              name: Follow the Algorithm
+              name: Simon Says
               description_student: Play a game and think about what commands are needed to get the right result.
               description_teacher: 'In this lesson, students will play a game intended to get them thinking about the way commands need to be given to produce the right result. This will help them more easily carry over to Sprite Lab in the upcoming lessons. '
             Learning Sprites with Sprite Lab:
