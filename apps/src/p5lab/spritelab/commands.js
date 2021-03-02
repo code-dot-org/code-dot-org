@@ -338,9 +338,11 @@ export const commands = {
   getHaiku() {
     return customLessonCommands.getHaiku();
   },
+
   hideHaiku() {
     customLessonCommands.hideHaiku();
   },
+
   printHaiku(title, author, line1, line2, line3) {
     customLessonCommands.printHaiku.apply(this, [
       // default to empty string for any args not provided

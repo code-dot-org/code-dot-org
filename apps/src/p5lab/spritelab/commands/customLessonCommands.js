@@ -7,6 +7,8 @@ export const commands = {
     if (!haiku) {
       return;
     }
+    // Start a new drawing layer so changing things like stroke, fill, etc won't overwrite existing values
+    this.push();
     this.textAlign(this.CENTER, this.CENTER);
     this.stroke('white');
     this.fill('black');
@@ -15,14 +17,26 @@ export const commands = {
     this.textStyle(this.BOLD);
     const defaultSize = 25;
 
+    // Compute how much space the given text would take up at the specified size
+    const computeTextWidth = (text, size) => {
+      this.push();
+      this.textSize(size);
+      const width = this.textWidth(text);
+      this.pop();
+      return width;
+    };
+
+    // Computes the right size for the specified text based on the desired scale
+    // multiplier, scaled down to fit on the screen if necessary.
     const scaleTextSize = (scaleMultiplier, text) => {
-      const oldTextSize = this.textSize();
-      this.textSize(defaultSize * scaleMultiplier);
+      const desiredSize = defaultSize * scaleMultiplier;
+      // The playspace is 400x400. We should leave a slight margin on either side,
+      // so the available width for each line of text is 370.
+      const availableWidth = 370;
       const size = Math.min(
-        defaultSize * scaleMultiplier,
-        (defaultSize * scaleMultiplier * 370) / this.textWidth(text)
+        desiredSize,
+        (desiredSize * availableWidth) / computeTextWidth(text, desiredSize)
       );
-      this.textSize(oldTextSize);
       return size;
     };
 
@@ -38,6 +52,9 @@ export const commands = {
     this.text(haiku.line2, 200, 225);
     this.textSize(scaleTextSize(1, haiku.line3));
     this.text(haiku.line3, 200, 275);
+
+    // Restore the original drawing layer
+    this.pop();
   },
 
   getHaiku() {
