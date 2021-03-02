@@ -7,7 +7,7 @@ import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
 import DataCard from "./UIComponents/DataCard";
-import SelectTrainer from "./UIComponents/SelectTrainer";
+import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
@@ -152,7 +152,7 @@ class App extends Component {
         {currentPanel === "selectTrainer" && (
           <BodyContainer>
             <ContainerFullWidth>
-              <SelectTrainer />
+              <TrainingSettings />
             </ContainerFullWidth>
           </BodyContainer>
         )}
