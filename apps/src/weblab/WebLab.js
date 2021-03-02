@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {Provider} from 'react-redux';
-import weblabMsg from '@cdo/weblab/locale';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
@@ -306,7 +305,7 @@ WebLab.prototype.beforeUnload = function(event) {
     project.autosave();
 
     event.preventDefault();
-    event.returnValue = weblabMsg.confirmExitWithUnsavedChanges();
+    event.returnValue = '';
   } else {
     delete event.returnValue;
   }
