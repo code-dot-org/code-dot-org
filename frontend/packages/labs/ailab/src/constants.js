@@ -64,7 +64,7 @@ export const styles = {
 
   panelContainerRight: {
     marginLeft: 10,
-    width: "calc(30% - 20px)"
+    width: "calc(30% - 10px)"
   },
 
   panelContainerFullWidth: {
