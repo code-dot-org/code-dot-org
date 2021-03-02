@@ -387,10 +387,12 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
   end
 
+  # Note: this test fails locally when it's not run as part of the full
+  # test suite
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    query_count = 15
+    query_count = 14
     assert_queries query_count do
       get :home
     end
