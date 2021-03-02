@@ -1074,7 +1074,14 @@ export function getPanelButtons(state) {
  */
 
 export function getCrossTabData(state) {
-  if (!state.labelColumn || state.selectedFeatures.length <= 0) {
+  if (!state.labelColumn || !state.currentColumn) {
+    return null;
+  }
+
+  if (
+    state.columnsByDataType[state.labelColumn] !== ColumnTypes.CATEGORICAL ||
+    state.columnsByDataType[state.currentColumn] !== ColumnTypes.CATEGORICAL
+  ) {
     return null;
   }
 
