@@ -70,6 +70,12 @@ class ProgrammingExpression < ApplicationRecord
       '#BB77C7'
     when 'Functions'
       '#68D995'
+    when 'Maker'
+      "#4dd0e1"
+    when 'Circuit'
+      "#f78183"
+    when 'micro:bit'
+      "#f78183"
     end
   end
 
