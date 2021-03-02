@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-02 19:48:40 UTC",
+    "serialized_at": "2021-03-02 20:05:49 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -1372,6 +1372,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f6c99d2f-9ec7-4706-8a77-71513d31db13",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "22f02104-4519-48dd-aa08-c532f9e080c9",
+      "position": 7,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22f02104-4519-48dd-aa08-c532f9e080c9",
         "lesson.key": "For Loop Fun",
         "lesson_group.key": "csf_for_loops",
         "script.name": "coursef-2021"
@@ -3330,6 +3343,17 @@
       "seeding_key": {
         "activity_section.key": "94a2704e-d539-4fc7-b390-a8e9850c64f5",
         "lesson_activity.key": "f6c99d2f-9ec7-4706-8a77-71513d31db13"
+      }
+    },
+    {
+      "key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
+      "position": 1,
+      "properties": {
+        "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n*Standards Addressed:*\n- **MD** - Measurement And Data\n\n - **2.MD.10:** - Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put- together, take-apart, and compare problems4 using information presented in a bar graph."
+      },
+      "seeding_key": {
+        "activity_section.key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
+        "lesson_activity.key": "22f02104-4519-48dd-aa08-c532f9e080c9"
       }
     },
     {
