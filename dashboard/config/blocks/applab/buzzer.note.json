@@ -1,0 +1,1 @@
+{"func":"buzzer.note","category":"Circuit","paletteParams":["note","duration"],"params":["\"A4\"","100"],"paramButtons":{"minArgs":1,"maxArgs":2}}
