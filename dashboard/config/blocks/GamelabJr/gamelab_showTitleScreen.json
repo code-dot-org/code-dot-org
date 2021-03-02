@@ -1,5 +1,6 @@
 {
   "category": "World",
+  "docFunc": "gamelab_showTitleScreen",
   "config": {
     "color": [
       240,

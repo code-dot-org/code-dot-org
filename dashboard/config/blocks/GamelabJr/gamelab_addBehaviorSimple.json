@@ -1,5 +1,6 @@
 {
   "category": "Behaviors",
+  "docFunc": "gamelab_addBehaviorSimple",
   "config": {
     "func": "addBehaviorSimple",
     "blockText": "sprite {SPRITE} begins {BEHAVIOR}",

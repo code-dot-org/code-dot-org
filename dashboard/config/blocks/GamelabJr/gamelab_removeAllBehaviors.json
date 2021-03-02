@@ -1,5 +1,6 @@
 {
   "category": "Behaviors",
+  "docFunc": "gamelab_removeAllBehaviors",
   "config": {
     "func": "removeAllBehaviors",
     "blockText": "{SPRITE} stops everything",

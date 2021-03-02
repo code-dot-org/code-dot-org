@@ -1,5 +1,6 @@
 {
   "category": "Sprites",
+  "docFunc": "gamelab_setTint",
   "config": {
     "color": [
       184,

@@ -1,5 +1,6 @@
 {
   "category": "Location",
+  "docFunc": "gamelab_locationMouse",
   "config": {
     "func": "locationMouse",
     "blockText": "mouse location",

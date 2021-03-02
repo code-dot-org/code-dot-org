@@ -1,5 +1,6 @@
 {
   "category": "Sprites",
+  "docFunc": "gamelab_allSpritesWithAnimation",
   "config": {
     "name": "allSpritesWithAnimation",
     "expression": "{costume: VALUE}",

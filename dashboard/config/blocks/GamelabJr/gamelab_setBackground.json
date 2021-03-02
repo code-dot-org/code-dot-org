@@ -1,5 +1,6 @@
 {
   "category": "World",
+  "docFunc": "gamelab_setBackground",
   "config": {
     "color": [
       240,
