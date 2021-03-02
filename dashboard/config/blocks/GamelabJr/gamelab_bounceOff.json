@@ -1,5 +1,6 @@
 {
   "category": "Sprites",
+  "docFunc": "bounce-off",
   "config": {
     "color": [
       184,

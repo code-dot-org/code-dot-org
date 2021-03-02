@@ -1,5 +1,6 @@
 {
   "category": "Location",
+  "docFunc": "gamelab_location_picker",
   "config": {
     "simpleValue": true,
     "name": "location_picker",

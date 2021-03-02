@@ -1,5 +1,6 @@
 {
   "category": "Events",
+  "docFunc": "gamelab_spriteClicked",
   "config": {
     "color": [
       140,

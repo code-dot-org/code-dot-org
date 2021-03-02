@@ -1,5 +1,6 @@
 {
   "category": "Location",
+  "docFunc": "gamelab_randomLocation",
   "config": {
     "func": "randomLocation",
     "blockText": "random location",

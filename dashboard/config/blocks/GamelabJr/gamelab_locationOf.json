@@ -1,5 +1,6 @@
 {
   "category": "Sprites",
+  "docFunc": "gamelab_locationOf",
   "config": {
     "func": "locationOf",
     "blockText": "location of {SPRITE}",

@@ -1,5 +1,6 @@
 {
   "category": "Sprites",
+  "docFunc": "gamelab_moveToward",
   "config": {
     "inline": false,
     "func": "moveToward",

@@ -1,5 +1,6 @@
 {
   "category": "Sprites",
+  "docFunc": "gamelab_changePropBy",
   "config": {
     "func": "changePropBy",
     "blockText": "change {SPRITE} {PROPERTY} by {VAL}",

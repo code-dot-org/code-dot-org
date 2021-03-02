@@ -1,5 +1,6 @@
 {
   "category": "Unused",
+  "docFunc": "gamelab_whileTouching",
   "config": {
     "color": [
       140,

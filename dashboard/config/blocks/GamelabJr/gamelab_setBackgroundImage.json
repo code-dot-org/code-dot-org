@@ -1,5 +1,6 @@
 {
   "category": "Unused",
+  "docFunc": "gamelab_setBackgroundImage",
   "config": {
     "color": [
       240,

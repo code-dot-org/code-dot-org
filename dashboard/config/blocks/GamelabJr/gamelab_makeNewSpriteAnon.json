@@ -1,5 +1,6 @@
 {
   "category": "Sprites",
+  "docFunc": "gamelab_makeNewSpriteAnon",
   "config": {
     "func": "makeNewSpriteAnon",
     "inline": false,

@@ -33,7 +33,7 @@ class ProgrammingExpression < ApplicationRecord
 
     if environment_name == 'spritelab'
       {
-        name: expression_config['config']['func'] || expression_config['config']['name'],
+        name: expression_config['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         display_name: expression_config['config']['blockText'] || expression_config['config']['func'] || expression_config['config']['name'],
