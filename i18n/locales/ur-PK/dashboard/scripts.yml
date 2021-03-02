@@ -709,3 +709,17 @@ ur:
           description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: لوپس
+              name: لوپس
+            Events:
+              key: ایونٹس/واقعات
+              name: ایونٹس/واقعات
+            Conditionals:
+              key: شرائط
+              name: شرائط
+            Variables:
+              key: متغیرات
+              name: متغیرات
