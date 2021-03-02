@@ -2317,3 +2317,23 @@ mi:
               display_name: Kupu Whakataki
             lessonGroup-3:
               display_name: Ngā Taurangi
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Ngā Koromeke
+              name: Ngā Koromeke
+            Events:
+              key: Ngā Takunetanga
+              name: Ngā Takunetanga
+            Conditionals:
+              key: Ngā Here
+              name: Ngā Here
+            Functions:
+              key: Ngā Taumahi
+              name: Ngā Taumahi
+            Variables:
+              key: Ngā Taurangi
+              name: Ngā Taurangi
+            For Loops:
+              key: Mō Ngā Koromeke
+              name: Mō Ngā Koromeke
