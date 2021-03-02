@@ -61,7 +61,7 @@ describe('NetSimLobby', () => {
   it('when a teacher has a section selected (teacher panel), NetSim lobby selects the selected section', () => {
     const teacherSelectedSectionId = 3;
 
-    sinon.stub(redux, 'getStore').returns({
+    const reduxStub = sinon.stub(redux, 'getStore').returns({
       getState: sinon.stub().returns({
         teacherSections: {selectedSectionId: teacherSelectedSectionId}
       })
@@ -92,10 +92,12 @@ describe('NetSimLobby', () => {
       teacherSelectedSectionId
     );
     expect(netsimLobby.selectedShardID_).to.eq(expectedSelectedShardID);
+
+    reduxStub.restore();
   });
 
   it('when a teacher does not have a section selected and multiple sections, NetSim lobby does not auto select section', () => {
-    sinon.stub(redux, 'getStore').returns({
+    const reduxStub = sinon.stub(redux, 'getStore').returns({
       getState: sinon.stub().returns({
         teacherSections: {selectedSectionId: ''}
       })
@@ -118,5 +120,7 @@ describe('NetSimLobby', () => {
 
     netsimLobby.buildShardChoiceList_(sectionList, null);
     expect(netsimLobby.selectedShardID_).to.eq(undefined);
+
+    reduxStub.restore();
   });
 });

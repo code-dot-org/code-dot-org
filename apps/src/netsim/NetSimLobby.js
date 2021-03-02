@@ -581,14 +581,16 @@ NetSimLobby.prototype.buildShardChoiceList_ = function(
     });
   }
 
-  // selected section in the teacher panel
-  const stateTeacherSections = getStore().getState().teacherSections;
+  // Get teacher selected section (selected in TeacherPanel)
+  const teacherSections = getStore().getState().teacherSections;
   const teacherSelectedSectionId =
-    stateTeacherSections && stateTeacherSections.selectedSectionId;
+    teacherSections && teacherSections.selectedSectionId;
 
+  // If there's only one possible shard, select it by default
   if (this.shardChoices_.length === 1 && !this.selectedShardID_) {
     this.setShardID(this.shardChoices_[0].shardID);
   } else if (teacherSelectedSectionId && !this.selectedShardID_) {
+    // If teacher has selected a section, select it by default
     const selectedSectionShardId = this.makeShardIDFromSeed_(
       teacherSelectedSectionId
     );
