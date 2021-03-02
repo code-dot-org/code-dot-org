@@ -1,9 +1,12 @@
 %h1
   = @pilot_name
-%h2 Input form below now accepts multiple emails!
-%h5 Ex: teach@school.org, teach2@school.org, teach3@school.org
+%h2 Enter a single email address, or several!
+%h5 Separate emails by line. For example:
+%h6 teach@school.org
+%h6 teach2@school.org
+%h6 teach3@school.org
 = form_tag controller: 'admin_search', action: 'add_to_pilot', method: "post" do
-  = text_field_tag :email, nil, placeholder: "Teacher's email(s)", style: 'margin-bottom: 0'
+  = text_area_tag :email, nil, width: '300px', height: '300px'
   = hidden_field_tag 'pilot_name', @pilot_name
   = submit_tag "Add", class: 'btn'
 %table
