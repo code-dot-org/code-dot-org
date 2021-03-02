@@ -34,9 +34,7 @@ describe('WebLab', () => {
 
       expect(project.autosave).to.have.been.calledOnce;
       expect(eventStub.preventDefault).to.have.been.calledOnce;
-      expect(eventStub.returnValue).to.equal(
-        'Do you want to exit with unsaved changes?'
-      );
+      expect(eventStub.returnValue).to.equal('');
 
       project.hasOwnerChangedProject.restore();
     });
