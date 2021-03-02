@@ -2422,3 +2422,23 @@ eu:
               display_name: Sarrera
             lessonGroup-3:
               display_name: Aldagaiak
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Itzuliak
+              name: Itzuliak
+            Events:
+              key: Gertaerak
+              name: Gertaerak
+            Conditionals:
+              key: Baldintzak
+              name: Baldintzak
+            Functions:
+              key: Funtzioak
+              name: Funtzioak
+            Variables:
+              key: Aldagaiak
+              name: Aldagaiak
+            For Loops:
+              key: For begiztak
+              name: For begiztak

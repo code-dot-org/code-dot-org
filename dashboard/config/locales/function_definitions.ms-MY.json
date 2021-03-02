@@ -486,6 +486,9 @@
         "courseE_artist_concept1": {
           "do something": {
             "name": "Buat sesuatu"
+          },
+          "draw a hexagon": {
+            "name": "lukiskan bentuk segi enam"
           }
         },
         "courseE_artist_concept4": {
@@ -906,7 +909,8 @@
           "draw a star": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan satu  bentuk bintang"
           },
           "draw a pinwheel": {
             "parameters": {
@@ -917,7 +921,8 @@
           "draw a triangle": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan satu bentuk segi tiga"
           },
           "draw a shape": {
             "parameters": {
@@ -927,7 +932,8 @@
           "draw a house": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan sebuah rumah"
           },
           "draw a square": {
             "name": "lukis segi empat",
@@ -940,6 +946,9 @@
               "length": "panjang",
               "min": "terkecil"
             }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan"
           }
         },
         "courseF_artist_fwp_challenge1": {
@@ -1027,7 +1036,8 @@
           "draw a star": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan satu  bentuk bintang"
           },
           "draw a pinwheel": {
             "parameters": {
@@ -1038,7 +1048,8 @@
           "draw a triangle": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan satu bentuk segi tiga"
           },
           "draw a shape": {
             "parameters": {
@@ -1048,13 +1059,87 @@
           "draw a house": {
             "parameters": {
               "length": "panjang"
-            }
+            },
+            "name": "lukiskan sebuah rumah"
           },
           "draw a square": {
             "name": "lukis segi empat",
             "parameters": {
               "length": "panjang"
             }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan"
+          }
+        },
+        "Geometric Sun": {
+          "draw a house": {
+            "name": "lukiskan sebuah rumah"
+          }
+        },
+        "Geometric Sun_2018": {
+          "draw a house": {
+            "name": "lukiskan sebuah rumah"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "lukiskan bentuk segi enam"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a house": {
+            "name": "lukiskan sebuah rumah"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a house": {
+            "name": "lukiskan sebuah rumah"
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a house": {
+            "name": "lukiskan sebuah rumah"
           }
         }
       }

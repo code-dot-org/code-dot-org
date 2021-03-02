@@ -2635,3 +2635,23 @@ hy:
               display_name: ներածություն
             lessonGroup-3:
               display_name: փոփոխականների
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: loops
+              name: loops
+            Events:
+              key: Իրադարձություններ
+              name: Իրադարձություններ
+            Conditionals:
+              key: conditionals
+              name: conditionals
+            Functions:
+              key: գործառույթները
+              name: գործառույթները
+            Variables:
+              key: փոփոխականների
+              name: փոփոխականների
+            For Loops:
+              key: For Loops
+              name: For Loops

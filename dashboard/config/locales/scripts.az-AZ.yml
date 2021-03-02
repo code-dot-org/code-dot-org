@@ -1850,3 +1850,20 @@ az:
               name: Dərs 14
             lesson15:
               name: Dərs 15
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: dövrlər
+              name: dövrlər
+            Events:
+              key: Hadisələr
+              name: Hadisələr
+            Conditionals:
+              key: Şərti ifadələr
+              name: Şərti ifadələr
+            Functions:
+              key: Funksiyalar
+              name: Funksiyalar
+            Variables:
+              key: dəyişənlər
+              name: dəyişənlər

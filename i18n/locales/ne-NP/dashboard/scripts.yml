@@ -2453,3 +2453,23 @@ ne:
               display_name: Introduction
             lessonGroup-3:
               display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Loops
+              name: Loops
+            Events:
+              key: कार्य 
+              name: कार्य 
+            Conditionals:
+              key: Conditionals
+              name: Conditionals
+            Functions:
+              key: Functions
+              name: Functions
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: For Loops
+              name: For Loops

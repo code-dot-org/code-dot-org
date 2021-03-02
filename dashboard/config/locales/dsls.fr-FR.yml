@@ -981,7 +981,9 @@ fr-FR:
         - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
-        - {}
+        - text: Lis le code et prédit ce à quoi l'application va ressembler lorsqu'elle
+            sera lancée.
+        title: Faites une prévision
       CSD U6 setProperty predict multi_2018:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -990,7 +992,9 @@ fr-FR:
         - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
-        - {}
+        - text: Lis le code et prédit ce à quoi l'application va ressembler lorsqu'elle
+            sera lancée.
+        title: Faites une prévision
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -999,7 +1003,9 @@ fr-FR:
         - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
-        - {}
+        - text: Lis le code et prédit ce à quoi l'application va ressembler lorsqu'elle
+            sera lancée.
+        title: Faites une prévision
       ConditionalsWithCards-Unplugged:
         markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
           crée des règles comme « Si je dessine un carton rouge, j'obtiens un point

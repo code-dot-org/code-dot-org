@@ -160,7 +160,7 @@
           "craft2_run_button_callout": "Jakmile budeš připravený vyzkoušet svůj program, zmáčkni tlačítko \"Spustit\"."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Klikni na \"Spustit\" pro spuštění pohybu."
+          "MC_HOC_2016_New_Walk_callout2": "Klikni na \"Běh\" pro spuštění pohybu."
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
@@ -487,6 +487,12 @@
         },
         "outbreak7": {
           "costumes_callout": "Kliknutím vytvořte nový kostým"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Změnila se barva obrazovky na zelenou? Pokud ano, stiskni 'Dokončit'. Pokud ne, stiskni 'Reset',  uprav svůj kód a znovu stiskni 'Spustit'."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
         }
       }
     }

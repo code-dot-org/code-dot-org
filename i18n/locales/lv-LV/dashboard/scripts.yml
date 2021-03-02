@@ -2236,3 +2236,23 @@ lv:
               display_name: Ievads
             lessonGroup-3:
               display_name: Mainīgie
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Cikli
+              name: Cikli
+            Events:
+              key: Pasākumi
+              name: Pasākumi
+            Conditionals:
+              key: Sazarojumi
+              name: Sazarojumi
+            Functions:
+              key: Funkcijas
+              name: Funkcijas
+            Variables:
+              key: Mainīgie
+              name: Mainīgie
+            For Loops:
+              key: '"par" cikli'
+              name: '"par" cikli'

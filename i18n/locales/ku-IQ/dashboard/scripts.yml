@@ -787,3 +787,17 @@ ku:
           lesson_groups:
             lessonGroup-3:
               display_name: گۆڕاوەکان
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: گرێکان
+              name: گرێکان
+            Conditionals:
+              key: مەرجیەکان
+              name: مەرجیەکان
+            Functions:
+              key: فرمانەکان
+              name: فرمانەکان
+            Variables:
+              key: گۆڕاوەکان
+              name: گۆڕاوەکان

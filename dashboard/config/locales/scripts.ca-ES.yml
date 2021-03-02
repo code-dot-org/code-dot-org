@@ -2403,3 +2403,26 @@ ca:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Esdeveniments
+              name: Esdeveniments
+            Conditionals:
+              key: Condicionals
+              name: Condicionals
+            Functions:
+              key: Funcions
+              name: Funcions
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Per bucles
+              name: Per bucles
+            Sprite Lab:
+              key: Laboratori de personatges
+              name: Laboratori de personatges
