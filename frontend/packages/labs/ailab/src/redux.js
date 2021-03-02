@@ -934,6 +934,12 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
+  if (panelId === "specifyColumns") {
+    if (state.data.length === 0) {
+      return false;
+    }
+  }
+
   if (panelId === "dataDisplayLabel") {
     if (state.data.length === 0) {
       return false;
@@ -960,6 +966,9 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "selectTrainer") {
     if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
+      return false;
+    }
+    if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
   }
