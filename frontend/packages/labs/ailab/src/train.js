@@ -13,7 +13,7 @@ import {
   setTrainingExamples,
   setTrainingLabels,
   setAccuracyCheckExamples,
-  setAccuracyCheckLabels,
+  setAccuracyCheckLabels
 } from "./redux";
 import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
 
@@ -25,7 +25,7 @@ export const availableTrainers = {
     mlType: MLTypes.CLASSIFICATION,
     binary: true,
     supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
-    labelType: ColumnTypes.CATEGORICAL,
+    labelType: ColumnTypes.CATEGORICAL
   },
   knnClassify: {
     name: "KNN Classifier",
@@ -34,7 +34,7 @@ export const availableTrainers = {
     mlType: MLTypes.CLASSIFICATION,
     binary: false,
     supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
-    labelType: ColumnTypes.CATEGORICAL,
+    labelType: ColumnTypes.CATEGORICAL
   },
   knnRegress: {
     name: "KNN Regression",
@@ -43,20 +43,20 @@ export const availableTrainers = {
     mlType: MLTypes.REGRESSION,
     binary: false,
     supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
-    labelType: ColumnTypes.CONTINUOUS,
-  },
+    labelType: ColumnTypes.CONTINUOUS
+  }
 };
 
 export const defaultRegressionTrainer = "knnRegress";
 export const defaultClassificationTrainer = "knnClassify";
 
-const filterTrainersByType = (type) => {
+const filterTrainersByType = type => {
   let trainersOfType = {};
   const trainerKeys = Object.keys(availableTrainers).filter(
-    (trainerKey) => availableTrainers[trainerKey].mlType === type
+    trainerKey => availableTrainers[trainerKey].mlType === type
   );
   trainerKeys.forEach(
-    (trainerKey) => (trainersOfType[trainerKey] = availableTrainers[trainerKey])
+    trainerKey => (trainersOfType[trainerKey] = availableTrainers[trainerKey])
   );
   return trainersOfType;
 };
@@ -69,7 +69,7 @@ export const getRegressionTrainers = () => {
   return filterTrainersByType(MLTypes.REGRESSION);
 };
 
-export const getMLType = (trainerName) => {
+export const getMLType = trainerName => {
   if (availableTrainers[trainerName]) {
     return availableTrainers[trainerName].mlType;
   }
@@ -89,7 +89,7 @@ const buildOptionNumberKey = (state, feature) => {
   let optionsMappedToNumbers = {};
   const uniqueOptions = getUniqueOptions(state, feature);
   uniqueOptions.forEach(
-    (option) => (optionsMappedToNumbers[option] = uniqueOptions.indexOf(option))
+    option => (optionsMappedToNumbers[option] = uniqueOptions.indexOf(option))
   );
   return optionsMappedToNumbers;
 };
@@ -111,13 +111,13 @@ const buildOptionNumberKey = (state, feature) => {
   }
   */
 
-const buildOptionNumberKeysByFeature = (state) => {
+const buildOptionNumberKeysByFeature = state => {
   let optionsMappedToNumbersByFeature = {};
   const categoricalColumnsToConvert = getSelectedCategoricalColumns(
     state
   ).concat(state.labelColumn);
   categoricalColumnsToConvert.forEach(
-    (feature) =>
+    feature =>
       (optionsMappedToNumbersByFeature[feature] = buildOptionNumberKey(
         state,
         feature
@@ -159,11 +159,11 @@ const convertValue = (state, feature, row) => {
   */
 const extractExamples = (state, row) => {
   let exampleValues = [];
-  state.selectedFeatures.forEach((feature) =>
+  state.selectedFeatures.forEach(feature =>
     exampleValues.push(convertValue(state, feature, row))
   );
   return exampleValues.filter(
-    (label) => label !== undefined && label !== "" && !isNaN(label)
+    label => label !== undefined && label !== "" && !isNaN(label)
   );
 };
 
@@ -171,18 +171,18 @@ const extractLabel = (state, row) => {
   return convertValue(state, state.labelColumn, row);
 };
 
-const getRandomInt = (max) => {
+const getRandomInt = max => {
   return Math.floor(Math.random() * Math.floor(max));
 };
 
 const prepareTrainingData = () => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data
-    .map((row) => extractExamples(updatedState, row))
-    .filter((example) => example.length > 0 && example !== undefined);
+    .map(row => extractExamples(updatedState, row))
+    .filter(example => example.length > 0 && example !== undefined);
   const trainingLabels = updatedState.data
-    .map((row) => extractLabel(updatedState, row))
-    .filter((label) => label !== undefined && label !== "" && !isNaN(label));
+    .map(row => extractLabel(updatedState, row))
+    .filter(label => label !== undefined && label !== "" && !isNaN(label));
   /*
   Select X% of examples and corresponding labels from the training set to reserve for a post-training accuracy calculation. The accuracy check examples and labels are excluded from the training set when the model is trained and saved to state separately to test the model's accuracy.
   */
@@ -222,7 +222,7 @@ const prepareTrainingData = () => {
 const prepareTestData = () => {
   const updatedState = store.getState();
   let testValues = [];
-  updatedState.selectedFeatures.forEach((feature) =>
+  updatedState.selectedFeatures.forEach(feature =>
     testValues.push(convertValue(updatedState, feature, updatedState.testData))
   );
   return testValues;
@@ -262,5 +262,5 @@ const onClickPredict = () => {
 export default {
   init,
   onClickTrain,
-  onClickPredict,
+  onClickPredict
 };

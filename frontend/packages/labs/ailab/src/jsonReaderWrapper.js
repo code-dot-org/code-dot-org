@@ -2,15 +2,15 @@ import { store } from "./index.js";
 import {
   setImportedMetadata,
   setColumnsByDataType,
-  setLabelColumn,
+  setLabelColumn
 } from "./redux";
 import { ColumnTypes } from "./constants.js";
 
-export const parseJSON = (jsonfile) => {
+export const parseJSON = jsonfile => {
   var rawFile = new XMLHttpRequest();
   rawFile.overrideMimeType("application/json");
   rawFile.open("GET", jsonfile, true);
-  rawFile.onreadystatechange = function () {
+  rawFile.onreadystatechange = function() {
     if (rawFile.readyState === 4 && rawFile.status === 200) {
       updateData(rawFile.responseText);
     }
@@ -18,7 +18,7 @@ export const parseJSON = (jsonfile) => {
   rawFile.send(null);
 };
 
-const updateData = (result) => {
+const updateData = result => {
   var metadata = JSON.parse(result);
   store.dispatch(setImportedMetadata(metadata));
 

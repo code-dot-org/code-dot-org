@@ -5,12 +5,12 @@ import { ColumnTypes } from "./constants.js";
 
 export const parseCSV = (csvfile, download, setColumnsToOther) => {
   Papa.parse(csvfile, {
-    complete: (result) => {
+    complete: result => {
       updateData(result, setColumnsToOther);
     },
     header: true,
     download: download,
-    skipEmptyLines: true,
+    skipEmptyLines: true
   });
 };
 
@@ -23,8 +23,8 @@ const updateData = (result, setColumnsToOther) => {
   }
 };
 
-const setDefaultColumnDataType = (data) => {
-  Object.keys(data[0]).map((column) =>
+const setDefaultColumnDataType = data => {
+  Object.keys(data[0]).map(column =>
     store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))
   );
 };

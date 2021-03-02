@@ -8,8 +8,9 @@ import { ColumnTypes, styles } from "../constants";
 class ColumnTypeSelector extends Component {
   static propTypes = {
     setColumnsByDataType: PropTypes.func.isRequired,
+    selectedFeatures: PropTypes.array,
     columnsByDataType: PropTypes.object,
-    labelColumn: PropTypes.string,
+    labelColumn: PropTypes.string
   };
 
   handleChangeDataType = (event, feature) => {
@@ -18,27 +19,27 @@ class ColumnTypeSelector extends Component {
   };
 
   render() {
-    const { data, columnsByDataType } = this.props;
-    const columns = this.props.selectedFeatures.concat(this.props.labelColumn);
+    const { columnsByDataType, selectedFeatures, labelColumn } = this.props;
+    const columns = selectedFeatures.concat(labelColumn);
 
     return (
       <div>
         <div>Double check the data type for each column.</div>
         <div style={styles.scrollingContents}>
-          {columns.map((key) => {
+          {columns.map(key => {
             return (
               <div key={key} style={styles.cardRow}>
                 <div
                   style={{
                     ...styles.bold,
-                    ...styles.specifyColumnsItem,
+                    ...styles.specifyColumnsItem
                   }}
                 >
                   {key}
                 </div>
 
                 <select
-                  onChange={(event) => this.handleChangeDataType(event, key)}
+                  onChange={event => this.handleChangeDataType(event, key)}
                   value={columnsByDataType[key]}
                 >
                   {Object.values(ColumnTypes).map((option, index) => {
@@ -59,14 +60,14 @@ class ColumnTypeSelector extends Component {
 }
 
 export default connect(
-  (state) => ({
+  state => ({
     columnsByDataType: state.columnsByDataType,
     labelColumn: state.labelColumn,
-    selectedFeatures: state.selectedFeatures,
+    selectedFeatures: state.selectedFeatures
   }),
-  (dispatch) => ({
+  dispatch => ({
     setColumnsByDataType(column, dataType) {
       dispatch(setColumnsByDataType(column, dataType));
-    },
+    }
   })
 )(ColumnTypeSelector);

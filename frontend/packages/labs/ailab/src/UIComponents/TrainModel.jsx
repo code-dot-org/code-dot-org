@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import train, { availableTrainers } from "../train";
+import train from "../train";
 import { readyToTrain } from "../redux";
 import { styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +13,7 @@ import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 class TrainModel extends Component {
   static propTypes = {
     readyToTrain: PropTypes.bool,
-    modelSize: PropTypes.number,
+    modelSize: PropTypes.number
   };
 
   componentDidMount() {
@@ -36,7 +36,7 @@ class TrainModel extends Component {
                 src={aiBotHead}
                 style={{
                   ...styles.trainBotHead,
-                  ...(false && styles.trainBotOpen),
+                  ...(false && styles.trainBotOpen)
                 }}
               />
               <img src={aiBotBody} style={styles.trainBotBody} />
@@ -48,7 +48,7 @@ class TrainModel extends Component {
   }
 }
 
-export default connect((state) => ({
+export default connect(state => ({
   readyToTrain: readyToTrain(state),
-  modelSize: state.modelSize,
+  modelSize: state.modelSize
 }))(TrainModel);

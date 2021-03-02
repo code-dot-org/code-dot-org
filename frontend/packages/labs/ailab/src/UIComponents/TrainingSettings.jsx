@@ -9,7 +9,7 @@ import { styles } from "../constants";
 class TrainingSettings extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
-    labelColumn: PropTypes.string,
+    labelColumn: PropTypes.string
   };
 
   render() {
@@ -29,7 +29,7 @@ class TrainingSettings extends Component {
   }
 }
 
-export default connect((state) => ({
+export default connect(state => ({
   labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures,
+  selectedFeatures: state.selectedFeatures
 }))(TrainingSettings);
