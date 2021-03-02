@@ -178,7 +178,7 @@ class AdminSearchControllerTest < ActionController::TestCase
     assert SingleUserExperiment.find_by(min_user_id: teacher2.id, name: pilot_name).present?
   end
 
-  test 'even if first email fails, second given will work successfully' do
+  test 'if first email fails, second given will work successfully' do
     student = create :student
     teacher = create :teacher
     pilot_name = 'csd-piloters'
