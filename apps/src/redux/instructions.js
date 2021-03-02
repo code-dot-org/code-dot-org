@@ -21,6 +21,7 @@ const SET_ALLOW_INSTRUCTIONS_RESIZE =
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
+const SET_SHOW_SUBSET = 'instructions/SET_SHOW_SUBSET';
 
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
@@ -161,6 +162,12 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
+  if (action.type === SET_SHOW_SUBSET) {
+    return Object.assign({}, state, {
+      showSubset: action.showSubset
+    });
+  }
+
   return state;
 }
 
@@ -237,6 +244,11 @@ export const setFeedback = feedback => ({
 
 export const hideOverlay = () => ({
   type: HIDE_OVERLAY
+});
+
+export const setShowSubset = showSubset => ({
+  type: SET_SHOW_SUBSET,
+  showSubset: showSubset
 });
 
 // HELPERS
