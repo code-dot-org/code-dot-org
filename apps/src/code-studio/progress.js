@@ -175,6 +175,7 @@ progress.renderCourseProgress = function(scriptData) {
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
+
   ReactDOM.render(
     <Provider store={store}>
       <ScriptOverview
@@ -194,6 +195,9 @@ progress.renderCourseProgress = function(scriptData) {
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
         assignedSectionId={scriptData.assigned_section_id}
+        showCalendar={scriptData.showCalendar}
+        weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
+        unitCalendarLessons={scriptData.calendarLessons}
       />
     </Provider>,
     mountPoint

@@ -65,6 +65,78 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     AzureTextToSpeech.unstub(:get_voices)
   end
 
+  test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
+    @unit = create :script, name: 'csp1-2020'
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 15, relative_position: 14)
+    @external = create(:external, name: 'markdown level')
+    @external_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@external])
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position - 1,
+      id: @external_sl.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, '/s/csp1-2020/stage/14/'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position - 1,
+      id: @lockable_level_group_sl.position
+    }
+
+    assert_redirected_to '/s/csp1-2020/stage/14/puzzle/2/page/1'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position - 1,
+      id: @lockable_level_group_sl.position,
+      puzzle_page: 1
+    }
+
+    assert_redirected_to '/s/csp1-2020/stage/14/puzzle/2/page/1'
+  end
+
+  test 'should show script level for csp2-2020 lockable lesson with lesson plan' do
+    @unit = create :script, name: 'csp2-2020'
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9)
+    @external = create(:external, name: 'markdown level')
+    @external_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@external])
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position,
+      id: @external_sl.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, '/s/csp2-2020/stage/9/'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position,
+      id: @lockable_level_group_sl.position
+    }
+
+    assert_redirected_to '/s/csp2-2020/stage/9/puzzle/2/page/1'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position,
+      id: @lockable_level_group_sl.position,
+      puzzle_page: 1
+    }
+
+    assert_redirected_to '/s/csp2-2020/stage/9/puzzle/2/page/1'
+  end
+
   test 'should show script level for twenty hour' do
     get_show_script_level_page(@script_level)
     assert_response :success

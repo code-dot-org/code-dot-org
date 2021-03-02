@@ -4,7 +4,7 @@ require 'timecop'
 
 class ThrottleTest < Minitest::Test
   def teardown
-    CDO.shared_cache.clear
+    CDO.shared_cache.delete_matched(Cdo::Throttle::CACHE_PREFIX)
   end
 
   def test_throttle_with_limit_1
