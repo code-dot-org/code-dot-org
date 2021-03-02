@@ -36,12 +36,25 @@ const serverProgressResponse = {
         status: 'locked',
         result: 1001,
         paired: false,
-        time_spent: undefined
+        time_spent: undefined,
+        last_progress_at: 12345
       },
-      '2001': {status: 'perfect', result: 30, paired: true, time_spent: 12345}
+      '2001': {
+        status: 'perfect',
+        result: 30,
+        paired: true,
+        time_spent: 12345,
+        last_progress_at: 12345
+      }
     },
     '102': {
-      '2000': {status: 'perfect', result: 100, paired: false, time_spent: 6789}
+      '2000': {
+        status: 'perfect',
+        result: 100,
+        paired: false,
+        time_spent: 6789,
+        last_progress_at: 6789
+      }
     }
   }
 };
@@ -63,9 +76,16 @@ const firstServerProgressResponse = {
         status: 'locked',
         result: 1001,
         paired: false,
-        time_spent: undefined
+        time_spent: undefined,
+        last_progress_at: 12345
       },
-      '2001': {status: 'perfect', result: 30, paired: true, time_spent: 12345}
+      '2001': {
+        status: 'perfect',
+        result: 30,
+        paired: true,
+        time_spent: 12345,
+        last_progress_at: 12345
+      }
     }
   }
 };
@@ -81,7 +101,13 @@ const secondServerProgressResponse = {
   },
   student_progress: {
     '102': {
-      '2000': {status: 'perfect', result: 100, paired: false, time_spent: 6789}
+      '2000': {
+        status: 'perfect',
+        result: 100,
+        paired: false,
+        time_spent: 6789,
+        last_progress_at: 6789
+      }
     }
   }
 };
@@ -109,14 +135,16 @@ const fullExpectedResult = {
           status: 'locked',
           result: 1001,
           paired: false,
-          timeSpent: 0
+          timeSpent: 0,
+          lastTimestamp: 12345
         },
         '2001': {
           pages: null,
           status: 'perfect',
           result: 30,
           paired: true,
-          timeSpent: 12345
+          timeSpent: 12345,
+          lastTimestamp: 12345
         }
       },
       102: {
@@ -125,7 +153,8 @@ const fullExpectedResult = {
           status: 'perfect',
           result: 100,
           paired: false,
-          timeSpent: 6789
+          timeSpent: 6789,
+          lastTimestamp: 6789
         }
       }
     }
