@@ -80,11 +80,13 @@ class AdminSearchController < ApplicationController
     @emails = User.where(id: user_ids).pluck(:email)
   end
 
+  # Parses newline separated emails, ignores commas and whitespace
   def add_to_pilot
     emails = params[:email]
     pilot_name = params[:pilot_name]
-    email_array = emails.split(",").map(&:strip)
+    email_array = emails.split("\n").map(&:strip)
     email_array.each do |email|
+      email = email.gsub(/[\s,]/, "")
       return head :bad_request unless Experiment::PILOT_EXPERIMENTS.find {|p| p[:name] == pilot_name}
       user = User.find_by_email_or_hashed_email(email)
       if !user
