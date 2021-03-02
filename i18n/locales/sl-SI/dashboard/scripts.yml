@@ -2163,3 +2163,20 @@ sl:
               display_name: Uvod
             lessonGroup-3:
               display_name: Spremenljivke
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Zanke
+              name: Zanke
+            Events:
+              key: Dogodki
+              name: Dogodki
+            Conditionals:
+              key: Pogoji
+              name: Pogoji
+            Functions:
+              key: Funkcije
+              name: Funkcije
+            Variables:
+              key: Spremenljivke
+              name: Spremenljivke
