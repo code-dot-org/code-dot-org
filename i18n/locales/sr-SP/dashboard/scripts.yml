@@ -2190,3 +2190,23 @@ sr:
           lesson_groups:
             lessonGroup-3:
               display_name: Променљиве
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Петље
+              name: Петље
+            Events:
+              key: Догађаји
+              name: Догађаји
+            Conditionals:
+              key: Кондиционали
+              name: Кондиционали
+            Functions:
+              key: Функције
+              name: Функције
+            Variables:
+              key: Променљиве
+              name: Променљиве
+            For Loops:
+              key: Бројачке петље
+              name: Бројачке петље
