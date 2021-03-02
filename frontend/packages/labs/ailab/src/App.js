@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
-import SpecifyColumns from "./UIComponents/SpecifyColumns";
-import SpecifyColumnsInfo from "./UIComponents/SpecifyColumnsInfo";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
