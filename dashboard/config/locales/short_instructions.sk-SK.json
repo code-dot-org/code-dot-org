@@ -2383,7 +2383,9 @@
         "outbreak5": "Nechajte, aby sa všetky choré príšery začali zotavovať, keď sa zdravá príšera dotkne chorej príšery.",
         "outbreak6": "Zadajte percentuálnu šancu, že príšery ochorejú, kedykoľvek sa zdravé príšery dotknú chorých príšer. Urobte to pre všetky kombinácie príšer s maskami aj bez masiek.",
         "outbreak7": "Vytvorte nový kostým pre príšery imúnne voči vírusu a použite ho pri svojej simulácii.",
-        "outbreak8": "Zdieľajte správu so svojou simuláciou."
+        "outbreak8": "Zdieľajte správu so svojou simuláciou.",
+        "express_maze_debugging9_2019": "Na vytvorenie svojho programu použi bloky z panela nástrojov. Dostaň Scrata k žaluďu.",
+        "express_maze_debugging9_2020": "Na vytvorenie svojho programu použi bloky z panela nástrojov. Dostaň Scrata k žaluďu."
       }
     }
   }
