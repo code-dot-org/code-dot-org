@@ -1,10 +1,9 @@
 %h1
   = @pilot_name
 %h2 Enter a single email address, or several!
-%h5 Separate emails by line. For example:
-%h6 teach@school.org
-%h6 teach2@school.org
-%h6 teach3@school.org
+%p Separate emails by line. For example:
+%p teacher@school.org<br>teacher2@school.org<br>teacher3@school.org
+%p Note: Use the lower right-hand corner to drag the box to any size.
 = form_tag controller: 'admin_search', action: 'add_to_pilot', method: "post" do
   = text_area_tag :email, nil, width: '300px', height: '300px'
   = hidden_field_tag 'pilot_name', @pilot_name
@@ -12,7 +11,7 @@
 %table
   %tr
     %th
-      %span Email
+      %span Current Pilot Participants
   - @emails.each do |email|
     %tr
       %td
