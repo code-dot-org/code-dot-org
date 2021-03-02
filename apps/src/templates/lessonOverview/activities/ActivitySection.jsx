@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -39,7 +40,8 @@ const styles = {
 
 export default class ActivitySection extends Component {
   static propTypes = {
-    section: activitySectionShape
+    section: activitySectionShape,
+    isCSF: PropTypes.bool
   };
 
   render() {
@@ -93,7 +95,7 @@ export default class ActivitySection extends Component {
           </div>
         </div>
         {section.scriptLevels.length > 0 && (
-          <ProgressionDetails section={section} />
+          <ProgressionDetails section={section} isCSF={this.props.isCSF} />
         )}
       </div>
     );

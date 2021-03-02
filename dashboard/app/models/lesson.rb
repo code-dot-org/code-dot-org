@@ -368,7 +368,8 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
-      assessmentOpportunities: assessment_opportunities
+      assessmentOpportunities: assessment_opportunities,
+      isCSF: script.csf?
     }
   end
 

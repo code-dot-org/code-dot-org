@@ -22,7 +22,8 @@ const styles = {
 
 export default class ProgressionDetails extends Component {
   static propTypes = {
-    section: PropTypes.object
+    section: PropTypes.object,
+    isCSF: PropTypes.bool
   };
 
   state = {
@@ -67,6 +68,7 @@ export default class ProgressionDetails extends Component {
           <LevelDetailsDialog
             scriptLevel={this.state.previewingLevel}
             handleClose={() => this.setState({previewingLevel: null})}
+            isCSF={this.props.isCSF}
           />
         )}
         <div style={styles.progressionBox}>

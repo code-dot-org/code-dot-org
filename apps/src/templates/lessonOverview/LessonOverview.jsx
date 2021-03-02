@@ -226,7 +226,11 @@ class LessonOverview extends Component {
 
         <h2>{i18n.teachingGuide()}</h2>
         {this.props.activities.map(activity => (
-          <Activity activity={activity} key={activity.key} />
+          <Activity
+            activity={activity}
+            key={activity.key}
+            isCSF={this.props.lesson.isCSF}
+          />
         ))}
       </div>
     );

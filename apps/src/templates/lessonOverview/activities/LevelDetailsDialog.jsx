@@ -33,7 +33,8 @@ class LevelDetailsDialog extends Component {
   static propTypes = {
     scriptLevel: PropTypes.object.isRequired,
     handleClose: PropTypes.func.isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isCSF: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -83,6 +84,10 @@ class LevelDetailsDialog extends Component {
         </div>
       );
     } else {
+      const isCSF = this.props.isCSF;
+      const containerStyle = isCSF
+        ? {overflowX: 'hidden', overflowY: 'scroll'}
+        : {overflowY: 'scroll', height: this.state.height - HEADER_HEIGHT};
       // TODO: calculate more of these parameters based on the level and pages
       return (
         <UnconnectedTopInstructions
@@ -107,18 +112,14 @@ class LevelDetailsDialog extends Component {
           collapsed={false}
           hidden={false}
           isEmbedView={false}
-          isCSF={true}
+          isCSF={isCSF}
           mainStyle={{paddingBottom: 5}}
-          containerStyle={{
-            overflowY: 'scroll',
-            height: this.state.height - HEADER_HEIGHT
-          }}
+          containerStyle={containerStyle}
           setInstructionsRenderedHeight={height => this.setState({height})}
           setInstructionsMaxHeightNeeded={maxHeight =>
             this.setState({maxHeight})
           }
           unconnected={true}
-        
         />
       );
     }

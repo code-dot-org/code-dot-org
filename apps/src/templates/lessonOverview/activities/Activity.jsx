@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
 import color from '@cdo/apps/util/color';
@@ -12,7 +13,8 @@ const styles = {
 
 export default class Activity extends Component {
   static propTypes = {
-    activity: activityShape
+    activity: activityShape,
+    isCSF: PropTypes.bool
   };
 
   render() {
@@ -31,7 +33,13 @@ export default class Activity extends Component {
           )}
         </h2>
         {activity.activitySections.map(item => {
-          return <ActivitySection key={item.key} section={item} />;
+          return (
+            <ActivitySection
+              key={item.key}
+              section={item}
+              isCSF={this.props.isCSF}
+            />
+          );
         })}
       </div>
     );
