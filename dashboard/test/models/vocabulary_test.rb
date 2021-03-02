@@ -17,4 +17,12 @@ class VocabularyTest < ActiveSupport::TestCase
     assert_equal 1, vocab.lessons.length
     assert_equal 1, lesson.vocabularies.length
   end
+
+  test "cannot edit definition of common sense media vocabulary" do
+    vocab = create :vocabulary, key: 'foo', word: 'foo', definition: 'a fake word', common_sense_media: true
+    assert_raises ActiveRecord::RecordInvalid do
+      vocab.definition = 'updated definition'
+      vocab.save!
+    end
+  end
 end

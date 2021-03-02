@@ -25,6 +25,8 @@ class Vocabulary < ApplicationRecord
 
   before_validation :generate_key, on: :create
 
+  validate :check_readonly_fields, on: :update
+
   serialized_attrs %w(
     common_sense_media
   )
@@ -67,7 +69,7 @@ class Vocabulary < ApplicationRecord
       word: word,
       definition: definition,
       lessons: lessons.map(&:id),
-      commonSenseMedia: common_sense_media
+      commonSenseMedia: !!common_sense_media
     }
   end
 
@@ -84,5 +86,10 @@ class Vocabulary < ApplicationRecord
 
   def display_definition
     definition
+  end
+
+  def check_readonly_fields
+    errors.add(:word, "cannot be updated") if word_changed?
+    errors.add(:definition, "cannot be updated for common sense media vocabulary") if common_sense_media && definition_changed?
   end
 end

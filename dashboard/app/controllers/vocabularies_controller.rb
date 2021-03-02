@@ -36,9 +36,7 @@ class VocabulariesController < ApplicationController
         lesson.script.write_script_json
       end
     end
-    if vocabulary && vocabulary.common_sense_media
-      render json: {status: 422, error: "Cannot update common sense media vocabulary"}
-    elsif vocabulary && vocabulary.update!(vocabulary_params.except(:lesson_ids))
+    if vocabulary && vocabulary.update!(vocabulary_params.except(:lesson_ids))
       render json: vocabulary.summarize_for_lesson_edit
     else
       render json: {status: 404, error: "Vocabulary #{vocabulary_params[:id]} not found"}
