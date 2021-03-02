@@ -323,12 +323,14 @@
         "InspirationalArtwork": {
           "n-sided shape": {
             "parameters": {
-              "length": "chiều dài"
+              "length": "chiều dài",
+              "sides": "các cạnh"
             }
           },
           "draw a loop": {
             "parameters": {
-              "length": "chiều dài"
+              "length": "chiều dài",
+              "sides": "các cạnh"
             }
           },
           "draw spiral circle": {
@@ -340,7 +342,8 @@
         "InspirationalArtwork_2018": {
           "draw a loop": {
             "parameters": {
-              "length": "chiều dài"
+              "length": "chiều dài",
+              "sides": "các cạnh"
             }
           },
           "draw spiral circle": {
@@ -1287,21 +1290,24 @@
         "courseF_artist_fwp4": {
           "draw a polygon": {
             "parameters": {
-              "length": "chiều dài"
+              "length": "chiều dài",
+              "sides": "các cạnh"
             }
           }
         },
         "courseF_artist_fwp5": {
           "draw a polygon": {
             "parameters": {
-              "length": "chiều dài"
+              "length": "chiều dài",
+              "sides": "các cạnh"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "chiều dài"
+              "length": "chiều dài",
+              "sides": "các cạnh"
             }
           }
         },
@@ -1309,7 +1315,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "chiều dài",
-              "min": "nhỏ nhất"
+              "min": "nhỏ nhất",
+              "sides": "các cạnh"
             }
           }
         },
@@ -1317,7 +1324,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "chiều dài",
-              "min": "nhỏ nhất"
+              "min": "nhỏ nhất",
+              "sides": "các cạnh"
             }
           }
         },
@@ -1330,13 +1338,19 @@
             }
           },
           "draw a circle": {
-            "name": "vẽ một hình tròn"
+            "name": "vẽ một hình tròn",
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "parameters": {
+              "radius": "bán kính"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một cái chong chóng"
           },
           "draw a triangle": {
             "name": "vẽ một hình tam giác",
@@ -1346,8 +1360,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "chiều dài"
-            }
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một hình khối"
           },
           "draw a house": {
             "name": "vẽ một căn nhà",
@@ -1364,7 +1380,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "chiều dài",
-              "min": "nhỏ nhất"
+              "min": "nhỏ nhất",
+              "sides": "các cạnh"
             }
           }
         },
@@ -1376,6 +1393,11 @@
           },
           "do something": {
             "name": "thực hiện"
+          },
+          "draw a polygon": {
+            "parameters": {
+              "sides": "các cạnh"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1488,13 +1510,19 @@
             }
           },
           "draw a circle": {
-            "name": "vẽ một hình tròn"
+            "name": "vẽ một hình tròn",
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "parameters": {
+              "radius": "bán kính"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một cái chong chóng"
           },
           "draw a triangle": {
             "name": "vẽ một hình tam giác",
@@ -1504,8 +1532,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "chiều dài"
-            }
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một hình khối"
           },
           "draw a house": {
             "name": "vẽ một căn nhà",
@@ -1523,6 +1553,84 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "hàm của tôi"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          },
+          "build long bridge": {
+            "name": "xây cầu dài"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          },
+          "build long bridge": {
+            "name": "xây cầu dài"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          },
+          "build long bridge": {
+            "name": "xây cầu dài"
           }
         }
       }
