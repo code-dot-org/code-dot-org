@@ -52,30 +52,45 @@ class ProgrammingExpression < ApplicationRecord
 
   def self.get_category_color(category)
     case category
-    when 'UI controls'
-      '#fff176'
+    # General
+    when 'Advanced'
+      '#19c3e1'
+      # Gamelab and Applab have different blue colors for this. Waiting to hear thoughts on what to do
+    when 'Control'
+      '#64B5F6'
+    when 'Functions'
+      '#68D995'
+    when 'Math'
+      '#FFB74D'
+    when 'Variables'
+      '#BB77C7'
+    # Applab
     when 'Canvas'
       '#f78183'
     when 'Data'
       '#d3e965'
     when 'Turtle'
       '#4dd0e1'
-    when 'Advanced'
-      '#19c3e1'
-    when 'Control'
-      '#64B5F6'
-    when 'Math'
-      '#FFB74D'
-    when 'Variables'
-      '#BB77C7'
-    when 'Functions'
-      '#68D995'
-    when 'Maker'
-      "#4dd0e1"
+    when 'UI controls'
+      '#fff176'
+    # Applab - Maker
     when 'Circuit'
       "#f78183"
+    when 'Maker'
+      "#4dd0e1"
     when 'micro:bit'
       "#f78183"
+    # Game lab
+    when 'Animations'
+      "#f78183"
+    when 'Drawing'
+      "#4dd0e1"
+    when 'Groups'
+      "#f78183"
+    when 'Sprites'
+      "#f78183"
+    when 'World'
+      "#fff176"
     end
   end
 
