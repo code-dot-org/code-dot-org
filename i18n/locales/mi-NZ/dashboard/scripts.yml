@@ -2263,10 +2263,12 @@ mi:
             'Functions: Songwriting':
               name: Te Tito Waiata
           lesson_groups:
+            ramp_up:
+              display_name: Ngā Koromeke
             csf_digcit:
               display_name: Te Kirirarautanga Matihiko
             csf_nested_loops:
-              display_name: Ngā Koromeke Tauroto
+              display_name: Ngā Here
             csf_functions:
               display_name: Ngā Taumahi
         coursef-2021:

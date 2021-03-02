@@ -3002,12 +3002,14 @@ el:
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
           lesson_groups:
+            ramp_up:
+              display_name: Βρόχοι
             csf_sprites:
               display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_nested_loops:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Συνθήκες
             csf_functions:
               display_name: Συναρτήσεις
         coursef-2021:
@@ -3058,6 +3060,8 @@ el:
           lessons:
             Virus Simulation for Code Bytes:
               name: Κωδικοποίηση μίας προσομοίωσης
+            Sprites in Action:
+              name: Χαρακτήρες σε Δράση
           lesson_groups:
             ramp_up:
               display_name: Εισαγωγή

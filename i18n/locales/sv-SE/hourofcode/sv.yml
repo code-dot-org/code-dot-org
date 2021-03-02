@@ -123,11 +123,17 @@ sv:
     Code.org:s första steg i sin nya resa att lära ut mer om AI genom vår läroplan.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Delta
+  hoc_live_learn_more: Läs mer
   hoc_overview_oceans_tutorial_header: AI för haven
   hoc_overview_oceans_tutorial_desc: Lär dig om AI, maskininlärning, träningsdata,
     och bias, samtidigt som du utforskar etiska dilemman och hur AI kan användas för

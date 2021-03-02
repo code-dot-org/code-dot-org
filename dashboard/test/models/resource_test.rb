@@ -2,8 +2,8 @@ require 'test_helper'
 
 class ResourceTest < ActiveSupport::TestCase
   test "can create resource" do
-    resource = create :resource, key: 'my key'
-    assert_equal 'my key', resource.key
+    resource = create :resource, key: 'my_key'
+    assert_equal 'my_key', resource.key
   end
 
   test "resource can be in multiple lessons" do
@@ -47,7 +47,7 @@ class ResourceTest < ActiveSupport::TestCase
 
   test "resource names with special characters still work" do
     resource = create :resource, key: nil, name: "my students' projects @ code.org"
-    assert_equal 'my_students_projects_code.org', resource.key
+    assert_equal 'my_students_projects_code_org', resource.key
   end
 
   test "resource downcases and strips whitespace for key generation" do
@@ -55,10 +55,23 @@ class ResourceTest < ActiveSupport::TestCase
     assert_equal 'plotting_shapes', resource.key
   end
 
+  test "resource enforces key format" do
+    resource = create :resource
+    assert resource.valid?
+
+    resource.update(key: "Key with invalid characters")
+    refute resource.valid?
+    assert_equal [{error: :invalid, value: "Key with invalid characters"}],
+      resource.errors.details[:key]
+
+    resource.update(key: "abcdefghijklmnopqrstuvwxyz1234567890-_")
+    assert resource.valid?
+  end
+
   test "summarize for lesson plan" do
-    resource = create :resource, key: 'my key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
+    resource = create :resource, key: 'my_key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
     assert_equal(
-      {key: 'my key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
+      {key: 'my_key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
       resource.summarize_for_lesson_plan
     )
   end

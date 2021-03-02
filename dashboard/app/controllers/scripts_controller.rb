@@ -207,6 +207,7 @@ class ScriptsController < ApplicationController
       :pilot_experiment,
       :editor_experiment,
       :background,
+      :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],

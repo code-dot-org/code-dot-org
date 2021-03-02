@@ -17001,6 +17001,10 @@ ko:
             End of Course Project:
               key: 과정말 프로젝트
               name: 과정말 프로젝트
+            lesson-6:
+              name: 마인크래프트로 미리보기
+            lesson-5:
+              name: 비밀번호 보안 강화
           lesson_groups:
             csf_sequencing:
               display_name: 시퀸싱
@@ -17087,7 +17091,7 @@ ko:
             csf_digcit:
               display_name: 디지털 시민의식
             csf_nested_loops:
-              display_name: 중첩 반복
+              display_name: 조건
             csf_functions:
               display_name: 함수
             csf_impacts:
