@@ -84,10 +84,10 @@ class AdminSearchController < ApplicationController
   def add_to_pilot
     emails = params[:email]
     pilot_name = params[:pilot_name]
-    email_array = emails.split("\n").map(&:strip)
+    return head :bad_request unless Experiment::PILOT_EXPERIMENTS.find {|p| p[:name] == pilot_name}
+    email_array = emails.split("\n")
     email_array.each do |email|
-      email = email.gsub(/[\s,]/, "")
-      return head :bad_request unless Experiment::PILOT_EXPERIMENTS.find {|p| p[:name] == pilot_name}
+      email = email.strip.gsub(/[\s,]/, "")
       user = User.find_by_email_or_hashed_email(email)
       if !user
         flash[:alert] = "An account with the email address #{email} does not exist"
