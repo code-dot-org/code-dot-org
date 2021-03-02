@@ -148,6 +148,36 @@ class AdminSearchControllerTest < ActionController::TestCase
     assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
   end
 
+  test 'can add multiple teachers to pilot' do
+    teacher = create :teacher
+    teacher2 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: teacher.email + "'\n'" + teacher2.email, pilot_name: pilot_name}
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher2.id, name: pilot_name).present?
+  end
+
+  test 'can add multiple teachers to pilot with incorrect formatting' do
+    teacher3 = create :teacher
+    teacher4 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: teacher3.email + " '\n'" + teacher4.email, pilot_name: pilot_name}
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher3.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher4.id, name: pilot_name).present?
+  end
+
+  test 'even if first email fails, second given will work successfully' do
+    student2 = create :student
+    teacher5 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: student2.email + "'\n'" + teacher5.email, pilot_name: pilot_name}
+
+    refute SingleUserExperiment.find_by(min_user_id: student.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher5.id, name: pilot_name).present?
+  end
+
   test 'cannot add student to pilot' do
     student = create :student
     pilot_name = 'csd-piloters'
