@@ -75,8 +75,11 @@ module Services
       return false unless script_data['properties'].fetch('is_migrated', false)
       return false if DCDO.get('disable_lesson_plan_pdf_generation', false)
 
+      script = Script.find_by(name: script_data['name'])
+      return false unless script.present?
+
       new_timestamp = script_data['serialized_at']
-      existing_timestamp = Script.find_by(name: script_data['name']).seeded_from
+      existing_timestamp = script.seeded_from
       !timestamps_equal(new_timestamp, existing_timestamp)
     end
 
