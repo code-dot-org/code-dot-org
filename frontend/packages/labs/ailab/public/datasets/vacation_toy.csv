@@ -1,0 +1,1001 @@
+plant,activity,personality,scent,vacation
+rose,reading,motivated,sweet perfume,Paris
+lily pad,reading,lazy,tacos,Bahamas
+sunflower,swimming,motivated,flowers,Bahamas
+sunflower,hiking,motivated,sweet perfume,Bahamas
+rose,reading,motivated,the woods,London
+tree,solving a puzzle,prepared,tacos,New York
+tree,reading,oblivious,flowers,Bahamas
+sunflower,solving a puzzle,prepared,the woods,New York
+sunflower,solving a puzzle,oblivious,the woods,New York
+rose,reading,motivated,flowers,Paris
+lily pad,swimming,prepared,sweet perfume,Bahamas
+tree,solving a puzzle,oblivious,tacos,New York
+sunflower,hiking,motivated,the woods,New York
+sunflower,solving a puzzle,prepared,the woods,New York
+sunflower,hiking,motivated,the woods,New York
+tree,solving a puzzle,oblivious,sweet perfume,London
+sunflower,solving a puzzle,oblivious,sweet perfume,Paris
+rose,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,oblivious,the woods,New York
+tree,solving a puzzle,lazy,sweet perfume,London
+rose,swimming,lazy,tacos,Bahamas
+rose,reading,oblivious,the woods,London
+sunflower,swimming,prepared,flowers,Bahamas
+tree,solving a puzzle,prepared,tacos,New York
+sunflower,hiking,prepared,the woods,New York
+rose,reading,lazy,sweet perfume,London
+tree,solving a puzzle,motivated,sweet perfume,Paris
+tree,reading,prepared,the woods,London
+lily pad,swimming,prepared,flowers,Bahamas
+sunflower,solving a puzzle,prepared,the woods,New York
+lily pad,reading,motivated,tacos,Bahamas
+rose,solving a puzzle,motivated,flowers,Paris
+sunflower,reading,lazy,tacos,Bahamas
+rose,solving a puzzle,lazy,the woods,London
+rose,reading,lazy,flowers,London
+lily pad,reading,lazy,tacos,Bahamas
+rose,solving a puzzle,prepared,the woods,London
+tree,solving a puzzle,prepared,tacos,New York
+sunflower,solving a puzzle,oblivious,flowers,Bahamas
+lily pad,solving a puzzle,motivated,flowers,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,reading,oblivious,sweet perfume,London
+sunflower,hiking,prepared,tacos,New York
+rose,hiking,motivated,flowers,Paris
+sunflower,hiking,prepared,tacos,New York
+rose,reading,oblivious,the woods,London
+rose,reading,lazy,flowers,London
+sunflower,reading,prepared,sweet perfume,Paris
+rose,solving a puzzle,oblivious,the woods,London
+sunflower,hiking,prepared,the woods,New York
+sunflower,hiking,oblivious,the woods,New York
+rose,hiking,motivated,flowers,Paris
+sunflower,hiking,prepared,the woods,New York
+tree,hiking,prepared,flowers,Paris
+sunflower,solving a puzzle,lazy,flowers,Bahamas
+rose,solving a puzzle,lazy,sweet perfume,London
+rose,solving a puzzle,oblivious,sweet perfume,Paris
+rose,solving a puzzle,lazy,the woods,London
+sunflower,hiking,motivated,the woods,New York
+tree,hiking,prepared,flowers,Paris
+tree,solving a puzzle,prepared,flowers,London
+sunflower,hiking,motivated,the woods,New York
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,reading,lazy,sweet perfume,Bahamas
+rose,swimming,motivated,flowers,Bahamas
+tree,solving a puzzle,prepared,the woods,London
+sunflower,hiking,oblivious,tacos,New York
+tree,solving a puzzle,oblivious,flowers,London
+rose,reading,motivated,sweet perfume,London
+sunflower,solving a puzzle,oblivious,the woods,New York
+rose,hiking,prepared,flowers,Paris
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,solving a puzzle,oblivious,the woods,London
+tree,swimming,prepared,flowers,Bahamas
+sunflower,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,reading,motivated,flowers,Paris
+sunflower,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,oblivious,flowers,Paris
+rose,reading,lazy,the woods,London
+sunflower,hiking,prepared,tacos,New York
+tree,reading,prepared,the woods,Bahamas
+sunflower,hiking,oblivious,the woods,New York
+sunflower,hiking,prepared,tacos,New York
+sunflower,solving a puzzle,prepared,the woods,New York
+sunflower,swimming,lazy,flowers,Bahamas
+tree,solving a puzzle,oblivious,the woods,London
+sunflower,reading,motivated,sweet perfume,Paris
+rose,reading,motivated,flowers,Paris
+sunflower,solving a puzzle,motivated,tacos,New York
+rose,solving a puzzle,motivated,flowers,Paris
+tree,hiking,motivated,flowers,Paris
+sunflower,hiking,prepared,tacos,New York
+sunflower,hiking,prepared,the woods,New York
+lily pad,swimming,oblivious,flowers,Bahamas
+sunflower,swimming,motivated,the woods,Bahamas
+sunflower,solving a puzzle,oblivious,the woods,New York
+rose,hiking,motivated,flowers,Paris
+tree,swimming,prepared,flowers,Bahamas
+tree,swimming,lazy,flowers,Bahamas
+sunflower,hiking,oblivious,flowers,Bahamas
+rose,solving a puzzle,motivated,flowers,Paris
+sunflower,hiking,prepared,tacos,New York
+sunflower,solving a puzzle,prepared,the woods,New York
+sunflower,swimming,oblivious,sweet perfume,Bahamas
+rose,reading,lazy,the woods,London
+sunflower,solving a puzzle,oblivious,tacos,New York
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,reading,lazy,the woods,London
+tree,solving a puzzle,oblivious,the woods,London
+rose,solving a puzzle,oblivious,flowers,Paris
+tree,hiking,prepared,sweet perfume,Bahamas
+sunflower,swimming,prepared,the woods,Bahamas
+sunflower,hiking,oblivious,tacos,New York
+rose,reading,prepared,the woods,Bahamas
+rose,solving a puzzle,motivated,flowers,Paris
+sunflower,solving a puzzle,prepared,the woods,New York
+tree,reading,oblivious,sweet perfume,Bahamas
+tree,hiking,lazy,sweet perfume,Bahamas
+rose,solving a puzzle,prepared,the woods,London
+rose,reading,prepared,sweet perfume,London
+rose,swimming,prepared,flowers,Bahamas
+tree,reading,lazy,the woods,London
+sunflower,swimming,prepared,flowers,Bahamas
+tree,solving a puzzle,lazy,the woods,London
+tree,reading,motivated,flowers,Paris
+rose,reading,motivated,the woods,London
+rose,solving a puzzle,oblivious,flowers,Paris
+rose,solving a puzzle,oblivious,the woods,London
+sunflower,hiking,motivated,flowers,Paris
+rose,reading,motivated,flowers,Paris
+sunflower,solving a puzzle,motivated,the woods,New York
+rose,solving a puzzle,motivated,the woods,London
+rose,solving a puzzle,lazy,flowers,London
+tree,swimming,lazy,flowers,Bahamas
+rose,reading,motivated,sweet perfume,Paris
+lily pad,swimming,oblivious,flowers,Bahamas
+rose,solving a puzzle,oblivious,the woods,London
+sunflower,reading,prepared,tacos,Bahamas
+sunflower,hiking,prepared,the woods,New York
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,reading,prepared,the woods,London
+tree,solving a puzzle,prepared,flowers,London
+tree,reading,motivated,flowers,Bahamas
+tree,reading,oblivious,flowers,Paris
+rose,reading,motivated,sweet perfume,Paris
+rose,solving a puzzle,prepared,flowers,Paris
+rose,solving a puzzle,motivated,flowers,London
+sunflower,hiking,oblivious,the woods,New York
+tree,solving a puzzle,oblivious,flowers,Paris
+tree,reading,oblivious,flowers,London
+sunflower,reading,oblivious,flowers,Paris
+rose,reading,prepared,flowers,London
+tree,solving a puzzle,prepared,the woods,New York
+rose,hiking,motivated,flowers,Paris
+tree,solving a puzzle,prepared,the woods,London
+tree,hiking,prepared,flowers,Paris
+lily pad,swimming,prepared,flowers,Bahamas
+tree,hiking,motivated,the woods,New York
+tree,reading,motivated,the woods,London
+sunflower,reading,oblivious,sweet perfume,Paris
+lily pad,hiking,motivated,flowers,Bahamas
+tree,reading,prepared,sweet perfume,London
+tree,reading,prepared,tacos,Bahamas
+tree,solving a puzzle,prepared,the woods,London
+tree,solving a puzzle,motivated,tacos,New York
+rose,solving a puzzle,motivated,flowers,London
+tree,solving a puzzle,oblivious,sweet perfume,Paris
+tree,solving a puzzle,prepared,flowers,London
+rose,reading,motivated,the woods,London
+tree,reading,prepared,the woods,London
+lily pad,reading,lazy,flowers,Bahamas
+tree,solving a puzzle,motivated,flowers,Paris
+rose,solving a puzzle,prepared,the woods,London
+rose,solving a puzzle,prepared,sweet perfume,Paris
+sunflower,swimming,lazy,tacos,Bahamas
+rose,solving a puzzle,oblivious,the woods,London
+lily pad,swimming,lazy,flowers,Bahamas
+rose,solving a puzzle,lazy,the woods,London
+sunflower,hiking,motivated,flowers,Paris
+rose,reading,motivated,the woods,London
+rose,swimming,motivated,tacos,Bahamas
+sunflower,hiking,motivated,flowers,Paris
+rose,swimming,oblivious,tacos,Bahamas
+lily pad,reading,prepared,flowers,Bahamas
+rose,solving a puzzle,lazy,sweet perfume,London
+tree,reading,prepared,sweet perfume,London
+sunflower,hiking,oblivious,tacos,New York
+rose,reading,motivated,sweet perfume,Paris
+tree,hiking,oblivious,tacos,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+sunflower,hiking,oblivious,tacos,New York
+rose,solving a puzzle,oblivious,flowers,Bahamas
+tree,solving a puzzle,prepared,tacos,New York
+rose,hiking,motivated,flowers,Paris
+rose,reading,prepared,the woods,London
+tree,solving a puzzle,oblivious,tacos,New York
+rose,hiking,motivated,flowers,Paris
+tree,solving a puzzle,oblivious,the woods,London
+tree,reading,motivated,flowers,London
+tree,hiking,motivated,sweet perfume,Paris
+lily pad,solving a puzzle,oblivious,flowers,Bahamas
+rose,reading,motivated,flowers,Bahamas
+rose,reading,oblivious,the woods,London
+tree,solving a puzzle,motivated,sweet perfume,London
+rose,hiking,prepared,sweet perfume,Paris
+rose,reading,oblivious,the woods,London
+rose,solving a puzzle,prepared,flowers,Paris
+rose,reading,prepared,tacos,Bahamas
+sunflower,reading,oblivious,flowers,Bahamas
+rose,reading,motivated,sweet perfume,Paris
+tree,solving a puzzle,lazy,tacos,Bahamas
+rose,swimming,oblivious,sweet perfume,Bahamas
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,reading,lazy,sweet perfume,London
+sunflower,hiking,motivated,the woods,New York
+lily pad,swimming,motivated,flowers,Bahamas
+tree,solving a puzzle,prepared,flowers,London
+sunflower,hiking,prepared,the woods,New York
+rose,swimming,oblivious,flowers,Bahamas
+rose,solving a puzzle,motivated,flowers,London
+tree,reading,motivated,sweet perfume,Bahamas
+sunflower,solving a puzzle,motivated,tacos,New York
+sunflower,hiking,prepared,the woods,New York
+lily pad,solving a puzzle,motivated,tacos,Bahamas
+tree,reading,motivated,flowers,Paris
+tree,hiking,oblivious,sweet perfume,Paris
+rose,solving a puzzle,oblivious,the woods,London
+tree,reading,oblivious,flowers,London
+tree,reading,prepared,the woods,London
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,reading,prepared,flowers,Paris
+rose,hiking,oblivious,flowers,Paris
+tree,solving a puzzle,motivated,the woods,London
+rose,reading,lazy,sweet perfume,London
+sunflower,hiking,prepared,flowers,Bahamas
+rose,reading,motivated,sweet perfume,Paris
+lily pad,solving a puzzle,lazy,tacos,Bahamas
+tree,solving a puzzle,prepared,flowers,London
+sunflower,hiking,oblivious,the woods,New York
+rose,swimming,prepared,sweet perfume,Bahamas
+tree,hiking,prepared,sweet perfume,Bahamas
+tree,reading,motivated,flowers,Paris
+rose,reading,motivated,sweet perfume,Paris
+tree,reading,motivated,the woods,London
+tree,reading,oblivious,sweet perfume,London
+rose,reading,motivated,flowers,London
+rose,reading,lazy,flowers,London
+lily pad,reading,oblivious,flowers,Bahamas
+sunflower,swimming,motivated,flowers,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,reading,lazy,the woods,London
+tree,solving a puzzle,prepared,sweet perfume,Paris
+tree,hiking,prepared,the woods,New York
+rose,hiking,oblivious,sweet perfume,Paris
+tree,reading,motivated,sweet perfume,London
+tree,solving a puzzle,prepared,sweet perfume,London
+sunflower,hiking,oblivious,the woods,New York
+rose,swimming,prepared,tacos,Bahamas
+sunflower,hiking,prepared,tacos,New York
+sunflower,solving a puzzle,prepared,tacos,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+sunflower,swimming,prepared,flowers,Bahamas
+rose,swimming,motivated,flowers,Bahamas
+rose,reading,oblivious,sweet perfume,Paris
+rose,solving a puzzle,lazy,flowers,London
+tree,solving a puzzle,motivated,tacos,New York
+rose,reading,oblivious,sweet perfume,Paris
+rose,swimming,oblivious,flowers,Bahamas
+rose,solving a puzzle,motivated,the woods,London
+rose,solving a puzzle,prepared,the woods,London
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,solving a puzzle,motivated,sweet perfume,Paris
+rose,reading,prepared,sweet perfume,London
+tree,solving a puzzle,motivated,the woods,London
+sunflower,hiking,lazy,flowers,Bahamas
+sunflower,reading,motivated,flowers,Bahamas
+sunflower,hiking,motivated,the woods,New York
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,solving a puzzle,motivated,flowers,Paris
+tree,solving a puzzle,motivated,sweet perfume,Paris
+lily pad,swimming,oblivious,flowers,Bahamas
+tree,hiking,motivated,sweet perfume,Paris
+rose,hiking,oblivious,sweet perfume,Paris
+rose,swimming,prepared,flowers,Bahamas
+sunflower,hiking,motivated,the woods,New York
+lily pad,solving a puzzle,lazy,tacos,Bahamas
+sunflower,hiking,lazy,tacos,Bahamas
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,swimming,oblivious,flowers,Bahamas
+sunflower,reading,prepared,flowers,Bahamas
+tree,hiking,prepared,flowers,Bahamas
+tree,reading,motivated,sweet perfume,Paris
+tree,solving a puzzle,oblivious,sweet perfume,London
+tree,swimming,prepared,flowers,Bahamas
+rose,reading,motivated,sweet perfume,London
+rose,reading,motivated,sweet perfume,London
+tree,reading,oblivious,sweet perfume,Paris
+rose,reading,prepared,flowers,Paris
+tree,reading,prepared,the woods,London
+tree,solving a puzzle,prepared,the woods,London
+tree,solving a puzzle,prepared,tacos,New York
+sunflower,hiking,motivated,the woods,New York
+sunflower,swimming,motivated,flowers,Bahamas
+tree,solving a puzzle,oblivious,tacos,New York
+rose,reading,motivated,the woods,London
+tree,reading,prepared,the woods,London
+tree,reading,lazy,the woods,London
+lily pad,hiking,oblivious,flowers,Bahamas
+rose,reading,motivated,sweet perfume,Paris
+sunflower,hiking,prepared,tacos,New York
+rose,swimming,prepared,flowers,Bahamas
+tree,reading,motivated,flowers,Paris
+rose,reading,prepared,sweet perfume,Paris
+sunflower,solving a puzzle,oblivious,tacos,New York
+tree,hiking,motivated,tacos,New York
+sunflower,solving a puzzle,motivated,the woods,New York
+rose,solving a puzzle,motivated,the woods,London
+rose,solving a puzzle,oblivious,flowers,London
+sunflower,hiking,oblivious,tacos,New York
+tree,solving a puzzle,motivated,the woods,New York
+rose,swimming,motivated,tacos,Bahamas
+sunflower,solving a puzzle,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+sunflower,hiking,lazy,flowers,Bahamas
+tree,reading,motivated,sweet perfume,Paris
+sunflower,swimming,lazy,flowers,Bahamas
+tree,hiking,prepared,flowers,Bahamas
+tree,solving a puzzle,prepared,tacos,New York
+tree,reading,prepared,sweet perfume,London
+rose,reading,oblivious,sweet perfume,Paris
+sunflower,hiking,motivated,tacos,New York
+tree,reading,motivated,the woods,London
+rose,reading,motivated,sweet perfume,Paris
+lily pad,swimming,oblivious,sweet perfume,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,solving a puzzle,motivated,sweet perfume,London
+tree,solving a puzzle,prepared,the woods,London
+sunflower,reading,oblivious,sweet perfume,Paris
+rose,reading,motivated,the woods,London
+rose,reading,oblivious,flowers,Paris
+sunflower,reading,oblivious,flowers,Paris
+rose,reading,motivated,the woods,London
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,solving a puzzle,oblivious,the woods,London
+tree,solving a puzzle,prepared,tacos,New York
+sunflower,reading,motivated,sweet perfume,Paris
+rose,hiking,prepared,flowers,Paris
+sunflower,hiking,oblivious,tacos,New York
+sunflower,swimming,lazy,flowers,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+sunflower,solving a puzzle,motivated,tacos,New York
+sunflower,solving a puzzle,motivated,tacos,New York
+tree,reading,prepared,sweet perfume,London
+rose,hiking,motivated,flowers,Paris
+sunflower,hiking,oblivious,the woods,New York
+sunflower,solving a puzzle,motivated,tacos,New York
+rose,hiking,oblivious,sweet perfume,Paris
+sunflower,hiking,motivated,the woods,New York
+tree,swimming,lazy,flowers,Bahamas
+tree,swimming,lazy,tacos,Bahamas
+rose,solving a puzzle,lazy,sweet perfume,London
+tree,swimming,motivated,tacos,Bahamas
+sunflower,solving a puzzle,motivated,tacos,New York
+tree,hiking,motivated,sweet perfume,Paris
+tree,reading,oblivious,the woods,London
+tree,solving a puzzle,prepared,the woods,London
+tree,solving a puzzle,lazy,the woods,London
+sunflower,hiking,prepared,the woods,New York
+rose,solving a puzzle,lazy,sweet perfume,London
+tree,reading,motivated,flowers,Paris
+rose,reading,motivated,sweet perfume,Paris
+sunflower,hiking,prepared,sweet perfume,Paris
+tree,reading,motivated,sweet perfume,Paris
+rose,swimming,prepared,tacos,Bahamas
+rose,reading,motivated,sweet perfume,Paris
+tree,hiking,prepared,sweet perfume,Paris
+sunflower,hiking,oblivious,tacos,New York
+sunflower,solving a puzzle,oblivious,the woods,New York
+lily pad,swimming,oblivious,tacos,Bahamas
+sunflower,solving a puzzle,prepared,the woods,New York
+lily pad,reading,lazy,sweet perfume,Bahamas
+tree,swimming,lazy,tacos,Bahamas
+rose,reading,lazy,the woods,London
+tree,solving a puzzle,lazy,the woods,London
+lily pad,swimming,prepared,flowers,Bahamas
+sunflower,hiking,oblivious,tacos,New York
+tree,reading,prepared,the woods,London
+tree,solving a puzzle,prepared,tacos,New York
+tree,swimming,prepared,flowers,Bahamas
+rose,solving a puzzle,lazy,the woods,London
+rose,solving a puzzle,prepared,flowers,Paris
+sunflower,hiking,prepared,tacos,New York
+rose,swimming,lazy,the woods,Bahamas
+tree,reading,oblivious,flowers,London
+sunflower,solving a puzzle,motivated,sweet perfume,Paris
+tree,reading,prepared,flowers,Bahamas
+rose,solving a puzzle,prepared,flowers,Paris
+sunflower,solving a puzzle,oblivious,sweet perfume,Paris
+tree,solving a puzzle,lazy,the woods,London
+sunflower,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,oblivious,the woods,New York
+sunflower,reading,motivated,flowers,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+lily pad,hiking,prepared,flowers,Bahamas
+sunflower,hiking,motivated,tacos,New York
+sunflower,solving a puzzle,lazy,the woods,Bahamas
+rose,hiking,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,motivated,flowers,Bahamas
+sunflower,solving a puzzle,oblivious,sweet perfume,Paris
+tree,hiking,motivated,flowers,Bahamas
+sunflower,reading,oblivious,sweet perfume,Paris
+lily pad,hiking,motivated,sweet perfume,Bahamas
+tree,solving a puzzle,lazy,the woods,London
+sunflower,hiking,oblivious,the woods,New York
+sunflower,hiking,prepared,the woods,New York
+tree,reading,prepared,flowers,Paris
+rose,solving a puzzle,prepared,the woods,London
+tree,solving a puzzle,oblivious,the woods,London
+tree,solving a puzzle,prepared,the woods,New York
+sunflower,hiking,oblivious,the woods,New York
+rose,reading,oblivious,tacos,Bahamas
+sunflower,solving a puzzle,motivated,tacos,New York
+rose,reading,motivated,flowers,Paris
+tree,swimming,prepared,tacos,Bahamas
+rose,reading,oblivious,sweet perfume,Paris
+sunflower,hiking,prepared,the woods,New York
+tree,reading,oblivious,flowers,Bahamas
+rose,solving a puzzle,oblivious,flowers,Paris
+rose,solving a puzzle,motivated,sweet perfume,London
+rose,swimming,prepared,the woods,Bahamas
+sunflower,hiking,oblivious,tacos,New York
+sunflower,solving a puzzle,motivated,flowers,Paris
+tree,solving a puzzle,motivated,the woods,London
+rose,solving a puzzle,motivated,flowers,London
+sunflower,hiking,oblivious,flowers,Paris
+sunflower,hiking,motivated,sweet perfume,Paris
+tree,reading,motivated,flowers,London
+rose,solving a puzzle,prepared,tacos,Bahamas
+rose,reading,motivated,sweet perfume,Paris
+rose,reading,prepared,the woods,Bahamas
+sunflower,solving a puzzle,oblivious,the woods,New York
+sunflower,hiking,prepared,the woods,New York
+rose,hiking,oblivious,sweet perfume,Paris
+tree,swimming,oblivious,flowers,Bahamas
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,solving a puzzle,prepared,sweet perfume,Paris
+sunflower,hiking,oblivious,the woods,New York
+rose,reading,motivated,flowers,Paris
+tree,reading,motivated,flowers,Paris
+rose,reading,motivated,the woods,London
+rose,hiking,oblivious,flowers,Paris
+rose,solving a puzzle,oblivious,the woods,London
+sunflower,solving a puzzle,motivated,flowers,Bahamas
+tree,reading,oblivious,flowers,Paris
+rose,reading,lazy,the woods,London
+rose,solving a puzzle,prepared,flowers,Bahamas
+rose,reading,motivated,sweet perfume,Bahamas
+rose,reading,motivated,flowers,London
+sunflower,solving a puzzle,oblivious,tacos,New York
+tree,hiking,oblivious,flowers,Paris
+rose,solving a puzzle,motivated,flowers,London
+tree,swimming,motivated,flowers,Bahamas
+sunflower,solving a puzzle,motivated,tacos,New York
+tree,reading,oblivious,the woods,Bahamas
+sunflower,solving a puzzle,motivated,tacos,New York
+lily pad,hiking,motivated,flowers,Bahamas
+tree,hiking,motivated,flowers,Paris
+rose,reading,lazy,flowers,London
+lily pad,swimming,oblivious,flowers,Bahamas
+tree,reading,prepared,the woods,London
+tree,reading,prepared,the woods,Bahamas
+rose,hiking,motivated,flowers,Paris
+tree,solving a puzzle,lazy,the woods,London
+tree,solving a puzzle,motivated,the woods,London
+lily pad,swimming,oblivious,the woods,Bahamas
+sunflower,hiking,prepared,the woods,New York
+tree,solving a puzzle,lazy,sweet perfume,Bahamas
+rose,reading,lazy,the woods,London
+tree,solving a puzzle,prepared,flowers,Paris
+tree,swimming,oblivious,sweet perfume,Bahamas
+rose,reading,oblivious,tacos,Bahamas
+rose,solving a puzzle,lazy,flowers,London
+sunflower,hiking,prepared,the woods,New York
+rose,reading,lazy,sweet perfume,London
+tree,solving a puzzle,lazy,flowers,London
+tree,solving a puzzle,lazy,flowers,London
+tree,solving a puzzle,motivated,sweet perfume,Paris
+tree,hiking,oblivious,the woods,New York
+tree,swimming,lazy,tacos,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+lily pad,swimming,lazy,flowers,Bahamas
+rose,solving a puzzle,oblivious,flowers,Paris
+sunflower,reading,oblivious,flowers,Paris
+lily pad,solving a puzzle,oblivious,tacos,Bahamas
+rose,solving a puzzle,motivated,sweet perfume,Paris
+rose,reading,motivated,the woods,London
+tree,reading,oblivious,the woods,London
+rose,solving a puzzle,lazy,the woods,London
+rose,reading,motivated,flowers,Paris
+tree,reading,motivated,tacos,Bahamas
+rose,solving a puzzle,prepared,the woods,London
+rose,solving a puzzle,prepared,sweet perfume,London
+tree,reading,prepared,flowers,London
+tree,hiking,oblivious,sweet perfume,Paris
+tree,solving a puzzle,prepared,the woods,New York
+sunflower,reading,prepared,sweet perfume,Bahamas
+sunflower,solving a puzzle,oblivious,tacos,New York
+tree,solving a puzzle,motivated,flowers,Bahamas
+tree,reading,motivated,flowers,Paris
+sunflower,reading,lazy,flowers,Bahamas
+tree,reading,motivated,flowers,Paris
+tree,reading,prepared,flowers,London
+tree,swimming,prepared,tacos,Bahamas
+tree,reading,motivated,flowers,Paris
+rose,swimming,oblivious,flowers,Bahamas
+tree,reading,prepared,the woods,London
+tree,reading,oblivious,flowers,Paris
+rose,hiking,prepared,flowers,Paris
+sunflower,reading,motivated,sweet perfume,Paris
+sunflower,hiking,motivated,tacos,New York
+sunflower,solving a puzzle,oblivious,tacos,Bahamas
+tree,reading,oblivious,the woods,London
+tree,hiking,oblivious,tacos,Bahamas
+sunflower,solving a puzzle,motivated,flowers,Paris
+rose,reading,lazy,the woods,London
+sunflower,swimming,oblivious,flowers,Bahamas
+rose,reading,motivated,flowers,Paris
+tree,reading,oblivious,the woods,London
+tree,reading,lazy,sweet perfume,London
+rose,solving a puzzle,prepared,the woods,London
+tree,reading,oblivious,the woods,London
+sunflower,solving a puzzle,oblivious,flowers,Paris
+tree,hiking,prepared,tacos,New York
+sunflower,swimming,oblivious,the woods,Bahamas
+tree,solving a puzzle,lazy,flowers,London
+sunflower,hiking,motivated,the woods,New York
+tree,solving a puzzle,oblivious,sweet perfume,Paris
+tree,solving a puzzle,prepared,flowers,London
+sunflower,swimming,prepared,tacos,Bahamas
+sunflower,hiking,oblivious,the woods,New York
+rose,reading,motivated,sweet perfume,Paris
+rose,reading,oblivious,the woods,London
+rose,swimming,prepared,tacos,Bahamas
+tree,solving a puzzle,lazy,sweet perfume,London
+tree,swimming,prepared,tacos,Bahamas
+rose,solving a puzzle,lazy,flowers,London
+sunflower,hiking,motivated,the woods,New York
+sunflower,hiking,prepared,the woods,New York
+tree,solving a puzzle,motivated,sweet perfume,London
+sunflower,solving a puzzle,prepared,the woods,New York
+sunflower,hiking,prepared,tacos,New York
+tree,solving a puzzle,prepared,the woods,New York
+rose,solving a puzzle,motivated,flowers,Paris
+tree,swimming,prepared,tacos,Bahamas
+sunflower,hiking,motivated,tacos,New York
+lily pad,swimming,motivated,flowers,Bahamas
+rose,solving a puzzle,prepared,flowers,London
+rose,swimming,oblivious,flowers,Bahamas
+rose,hiking,oblivious,sweet perfume,Paris
+tree,reading,motivated,flowers,Bahamas
+rose,reading,oblivious,flowers,London
+tree,reading,prepared,flowers,London
+tree,reading,prepared,the woods,Bahamas
+rose,solving a puzzle,oblivious,the woods,London
+rose,reading,prepared,the woods,London
+sunflower,swimming,motivated,flowers,Bahamas
+sunflower,hiking,prepared,the woods,New York
+sunflower,hiking,motivated,flowers,Paris
+lily pad,swimming,motivated,tacos,Bahamas
+tree,swimming,prepared,the woods,Bahamas
+rose,solving a puzzle,oblivious,sweet perfume,London
+tree,reading,oblivious,the woods,London
+lily pad,reading,prepared,flowers,Bahamas
+rose,hiking,motivated,flowers,Paris
+lily pad,swimming,oblivious,tacos,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+lily pad,swimming,lazy,flowers,Bahamas
+rose,hiking,motivated,flowers,Paris
+tree,reading,lazy,tacos,Bahamas
+tree,reading,prepared,flowers,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,swimming,lazy,flowers,Bahamas
+tree,solving a puzzle,lazy,sweet perfume,London
+rose,solving a puzzle,motivated,sweet perfume,Paris
+rose,reading,oblivious,the woods,London
+sunflower,hiking,motivated,tacos,New York
+rose,hiking,motivated,sweet perfume,Paris
+rose,reading,prepared,sweet perfume,Paris
+rose,reading,prepared,flowers,Paris
+tree,solving a puzzle,prepared,sweet perfume,Bahamas
+sunflower,solving a puzzle,motivated,tacos,New York
+sunflower,hiking,prepared,sweet perfume,Paris
+tree,reading,motivated,flowers,Paris
+lily pad,solving a puzzle,motivated,flowers,Bahamas
+rose,solving a puzzle,prepared,flowers,Paris
+tree,reading,oblivious,flowers,London
+tree,reading,oblivious,the woods,London
+rose,reading,motivated,sweet perfume,Paris
+rose,reading,motivated,sweet perfume,Paris
+rose,hiking,motivated,flowers,Paris
+rose,swimming,prepared,flowers,Bahamas
+tree,reading,oblivious,flowers,Paris
+rose,reading,prepared,the woods,London
+rose,reading,oblivious,sweet perfume,Paris
+tree,reading,lazy,the woods,Bahamas
+rose,reading,lazy,sweet perfume,London
+lily pad,swimming,prepared,flowers,Bahamas
+tree,reading,oblivious,the woods,Bahamas
+sunflower,hiking,prepared,the woods,New York
+tree,solving a puzzle,motivated,sweet perfume,Paris
+tree,reading,lazy,sweet perfume,London
+sunflower,solving a puzzle,oblivious,the woods,New York
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,hiking,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+sunflower,solving a puzzle,prepared,the woods,New York
+tree,reading,motivated,sweet perfume,Paris
+rose,swimming,lazy,the woods,Bahamas
+rose,reading,oblivious,flowers,London
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,reading,oblivious,sweet perfume,London
+rose,solving a puzzle,motivated,sweet perfume,London
+sunflower,solving a puzzle,motivated,tacos,New York
+tree,swimming,motivated,flowers,Bahamas
+rose,reading,lazy,the woods,London
+sunflower,hiking,prepared,tacos,New York
+sunflower,hiking,motivated,the woods,New York
+sunflower,hiking,motivated,tacos,New York
+rose,reading,motivated,flowers,Paris
+tree,reading,motivated,the woods,London
+sunflower,hiking,prepared,tacos,New York
+sunflower,hiking,prepared,the woods,New York
+sunflower,swimming,lazy,the woods,Bahamas
+rose,reading,lazy,the woods,London
+sunflower,hiking,prepared,the woods,New York
+sunflower,solving a puzzle,lazy,flowers,Bahamas
+rose,hiking,prepared,flowers,Paris
+sunflower,hiking,prepared,tacos,New York
+sunflower,reading,prepared,flowers,Bahamas
+sunflower,hiking,prepared,flowers,Paris
+tree,reading,motivated,flowers,London
+rose,solving a puzzle,oblivious,the woods,London
+tree,reading,motivated,the woods,London
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,solving a puzzle,motivated,flowers,Paris
+rose,reading,motivated,the woods,London
+lily pad,swimming,prepared,flowers,Bahamas
+tree,solving a puzzle,prepared,flowers,London
+tree,solving a puzzle,motivated,the woods,London
+tree,reading,oblivious,the woods,London
+lily pad,swimming,oblivious,tacos,Bahamas
+sunflower,solving a puzzle,prepared,flowers,Paris
+tree,solving a puzzle,lazy,the woods,London
+sunflower,hiking,prepared,the woods,New York
+rose,reading,motivated,tacos,Bahamas
+tree,solving a puzzle,oblivious,sweet perfume,London
+sunflower,hiking,motivated,tacos,New York
+tree,solving a puzzle,motivated,flowers,Paris
+sunflower,hiking,oblivious,flowers,Paris
+tree,reading,oblivious,the woods,London
+rose,hiking,oblivious,sweet perfume,Paris
+sunflower,solving a puzzle,oblivious,flowers,Paris
+lily pad,swimming,motivated,tacos,Bahamas
+rose,solving a puzzle,lazy,flowers,London
+rose,solving a puzzle,oblivious,sweet perfume,London
+lily pad,solving a puzzle,lazy,the woods,Bahamas
+sunflower,reading,motivated,flowers,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,solving a puzzle,oblivious,the woods,London
+tree,reading,oblivious,the woods,Bahamas
+rose,reading,motivated,flowers,Paris
+sunflower,solving a puzzle,lazy,tacos,Bahamas
+rose,solving a puzzle,lazy,the woods,London
+sunflower,solving a puzzle,motivated,the woods,New York
+rose,reading,motivated,flowers,London
+lily pad,reading,prepared,flowers,Bahamas
+tree,swimming,prepared,tacos,Bahamas
+sunflower,reading,prepared,sweet perfume,Paris
+rose,reading,prepared,flowers,London
+rose,solving a puzzle,prepared,the woods,London
+tree,solving a puzzle,motivated,flowers,London
+tree,reading,prepared,sweet perfume,London
+tree,solving a puzzle,lazy,the woods,London
+lily pad,swimming,lazy,flowers,Bahamas
+rose,reading,oblivious,sweet perfume,Paris
+sunflower,reading,motivated,sweet perfume,Paris
+rose,reading,oblivious,sweet perfume,Paris
+lily pad,reading,prepared,flowers,Bahamas
+sunflower,solving a puzzle,motivated,the woods,New York
+sunflower,reading,oblivious,flowers,Paris
+sunflower,hiking,oblivious,the woods,New York
+tree,reading,motivated,sweet perfume,Paris
+sunflower,swimming,lazy,flowers,Bahamas
+tree,reading,motivated,sweet perfume,London
+tree,swimming,lazy,the woods,Bahamas
+lily pad,reading,oblivious,tacos,Bahamas
+rose,solving a puzzle,motivated,flowers,Paris
+rose,reading,oblivious,flowers,London
+sunflower,hiking,motivated,tacos,New York
+tree,reading,prepared,the woods,London
+tree,swimming,oblivious,sweet perfume,Bahamas
+tree,hiking,oblivious,the woods,New York
+sunflower,hiking,prepared,tacos,New York
+rose,solving a puzzle,prepared,flowers,London
+rose,reading,lazy,flowers,Bahamas
+sunflower,swimming,lazy,tacos,Bahamas
+sunflower,solving a puzzle,prepared,the woods,New York
+tree,solving a puzzle,motivated,the woods,London
+sunflower,hiking,motivated,the woods,New York
+rose,reading,motivated,flowers,London
+rose,solving a puzzle,lazy,flowers,London
+rose,solving a puzzle,oblivious,the woods,London
+sunflower,solving a puzzle,prepared,the woods,New York
+sunflower,hiking,prepared,tacos,New York
+rose,reading,prepared,flowers,Paris
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,solving a puzzle,prepared,flowers,Paris
+sunflower,hiking,motivated,the woods,New York
+sunflower,solving a puzzle,motivated,flowers,Paris
+sunflower,swimming,prepared,flowers,Bahamas
+tree,reading,oblivious,sweet perfume,London
+lily pad,swimming,prepared,flowers,Bahamas
+tree,solving a puzzle,motivated,flowers,London
+rose,reading,prepared,the woods,Bahamas
+tree,reading,lazy,the woods,London
+tree,solving a puzzle,lazy,flowers,Bahamas
+sunflower,solving a puzzle,motivated,the woods,New York
+tree,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,flowers,Paris
+lily pad,solving a puzzle,lazy,tacos,Bahamas
+tree,solving a puzzle,motivated,the woods,London
+tree,solving a puzzle,motivated,flowers,Bahamas
+rose,reading,prepared,sweet perfume,Paris
+sunflower,solving a puzzle,oblivious,the woods,New York
+sunflower,reading,prepared,sweet perfume,Paris
+lily pad,reading,motivated,the woods,Bahamas
+sunflower,hiking,prepared,flowers,Paris
+sunflower,swimming,prepared,tacos,Bahamas
+tree,reading,oblivious,flowers,Bahamas
+rose,swimming,lazy,flowers,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,solving a puzzle,motivated,sweet perfume,Paris
+lily pad,reading,lazy,flowers,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+sunflower,hiking,prepared,sweet perfume,Paris
+sunflower,hiking,prepared,the woods,New York
+rose,reading,lazy,the woods,London
+sunflower,hiking,motivated,flowers,Bahamas
+lily pad,hiking,motivated,flowers,Bahamas
+sunflower,hiking,oblivious,flowers,Paris
+tree,swimming,lazy,tacos,Bahamas
+tree,reading,prepared,flowers,Bahamas
+rose,solving a puzzle,motivated,sweet perfume,London
+tree,solving a puzzle,lazy,flowers,London
+tree,hiking,oblivious,sweet perfume,Paris
+tree,hiking,oblivious,the woods,New York
+rose,solving a puzzle,prepared,sweet perfume,Paris
+rose,reading,motivated,the woods,London
+lily pad,swimming,oblivious,flowers,Bahamas
+rose,reading,lazy,the woods,Bahamas
+sunflower,swimming,motivated,sweet perfume,Bahamas
+rose,reading,oblivious,sweet perfume,Paris
+tree,solving a puzzle,motivated,sweet perfume,London
+rose,reading,oblivious,flowers,Paris
+tree,solving a puzzle,prepared,flowers,London
+sunflower,solving a puzzle,motivated,tacos,New York
+sunflower,reading,lazy,flowers,Bahamas
+rose,solving a puzzle,oblivious,sweet perfume,London
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,swimming,motivated,flowers,Bahamas
+tree,reading,motivated,flowers,Bahamas
+rose,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,reading,prepared,sweet perfume,Paris
+tree,reading,motivated,sweet perfume,Paris
+lily pad,reading,motivated,the woods,Bahamas
+rose,solving a puzzle,oblivious,the woods,Bahamas
+sunflower,swimming,prepared,flowers,Bahamas
+rose,solving a puzzle,lazy,tacos,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+sunflower,hiking,motivated,tacos,New York
+tree,reading,prepared,tacos,Bahamas
+rose,reading,motivated,the woods,London
+tree,hiking,motivated,flowers,Bahamas
+tree,swimming,oblivious,flowers,Bahamas
+sunflower,hiking,prepared,tacos,New York
+tree,reading,prepared,flowers,London
+rose,reading,motivated,sweet perfume,Paris
+rose,reading,prepared,flowers,Paris
+tree,solving a puzzle,oblivious,tacos,New York
+lily pad,reading,motivated,the woods,Bahamas
+rose,solving a puzzle,motivated,sweet perfume,Paris
+rose,swimming,motivated,flowers,Bahamas
+rose,reading,lazy,flowers,London
+sunflower,reading,oblivious,flowers,Paris
+rose,reading,motivated,sweet perfume,Paris
+rose,reading,motivated,flowers,Paris
+tree,swimming,motivated,flowers,Bahamas
+lily pad,swimming,motivated,tacos,Bahamas
+tree,swimming,oblivious,flowers,Bahamas
+tree,solving a puzzle,oblivious,the woods,London
+sunflower,reading,prepared,the woods,Bahamas
+rose,solving a puzzle,oblivious,sweet perfume,Paris
+sunflower,solving a puzzle,motivated,the woods,New York
+sunflower,hiking,prepared,the woods,New York
+sunflower,reading,prepared,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,the woods,New York
+tree,swimming,lazy,tacos,Bahamas
+sunflower,hiking,prepared,the woods,New York
+rose,solving a puzzle,lazy,flowers,Bahamas
+rose,solving a puzzle,oblivious,flowers,London
+tree,reading,oblivious,flowers,Paris
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,reading,prepared,flowers,Paris
+tree,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,motivated,sweet perfume,Paris
+lily pad,reading,lazy,flowers,Bahamas
+sunflower,solving a puzzle,prepared,flowers,Paris
+tree,solving a puzzle,lazy,sweet perfume,Bahamas
+sunflower,solving a puzzle,motivated,the woods,New York
+rose,solving a puzzle,motivated,sweet perfume,Paris
+rose,reading,oblivious,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,reading,oblivious,flowers,Paris
+rose,solving a puzzle,motivated,flowers,Paris
+lily pad,hiking,lazy,the woods,Bahamas
+rose,reading,oblivious,the woods,London
+sunflower,solving a puzzle,motivated,sweet perfume,Paris
+sunflower,reading,oblivious,flowers,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+tree,reading,prepared,flowers,Paris
+tree,reading,lazy,flowers,London
+tree,hiking,motivated,flowers,Paris
+sunflower,solving a puzzle,motivated,the woods,New York
+rose,solving a puzzle,oblivious,sweet perfume,Paris
+sunflower,solving a puzzle,motivated,tacos,New York
+sunflower,reading,oblivious,tacos,Bahamas
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,solving a puzzle,oblivious,sweet perfume,London
+rose,swimming,motivated,flowers,Bahamas
+rose,reading,oblivious,flowers,London
+lily pad,solving a puzzle,motivated,flowers,Bahamas
+rose,reading,oblivious,sweet perfume,London
+lily pad,swimming,oblivious,flowers,Bahamas
+lily pad,solving a puzzle,prepared,tacos,Bahamas
+rose,solving a puzzle,prepared,flowers,London
+tree,reading,motivated,the woods,London
+rose,hiking,motivated,flowers,Paris
+rose,solving a puzzle,motivated,flowers,London
+tree,hiking,prepared,the woods,New York
+sunflower,hiking,oblivious,tacos,New York
+sunflower,hiking,motivated,tacos,New York
+rose,solving a puzzle,motivated,flowers,Paris
+rose,reading,prepared,sweet perfume,Paris
+rose,swimming,prepared,tacos,Bahamas
+sunflower,solving a puzzle,motivated,sweet perfume,Paris
+tree,reading,lazy,sweet perfume,Bahamas
+sunflower,solving a puzzle,motivated,the woods,New York
+tree,hiking,prepared,the woods,New York
+sunflower,solving a puzzle,motivated,tacos,New York
+tree,hiking,prepared,the woods,New York
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,reading,oblivious,flowers,Paris
+lily pad,hiking,lazy,sweet perfume,Bahamas
+tree,reading,motivated,sweet perfume,Paris
+rose,hiking,motivated,flowers,Paris
+sunflower,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,reading,prepared,sweet perfume,Paris
+tree,solving a puzzle,motivated,flowers,London
+sunflower,hiking,oblivious,tacos,New York
+tree,swimming,lazy,sweet perfume,Bahamas
+rose,solving a puzzle,oblivious,the woods,London
+tree,hiking,prepared,tacos,New York
+rose,solving a puzzle,lazy,sweet perfume,London
+rose,hiking,motivated,sweet perfume,Paris
+tree,reading,oblivious,sweet perfume,Paris
+rose,solving a puzzle,prepared,flowers,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+lily pad,swimming,motivated,flowers,Bahamas
+rose,solving a puzzle,lazy,sweet perfume,London
+tree,reading,lazy,sweet perfume,Bahamas
+tree,swimming,prepared,flowers,Bahamas
+tree,solving a puzzle,motivated,flowers,Paris
+tree,solving a puzzle,prepared,flowers,London
+sunflower,swimming,lazy,flowers,Bahamas
+tree,reading,motivated,sweet perfume,Paris
+sunflower,reading,oblivious,sweet perfume,Bahamas
+sunflower,solving a puzzle,prepared,the woods,New York
+rose,solving a puzzle,prepared,the woods,London
+sunflower,solving a puzzle,prepared,flowers,Bahamas
+sunflower,solving a puzzle,motivated,the woods,New York
+rose,swimming,prepared,flowers,Bahamas
+sunflower,solving a puzzle,motivated,flowers,Paris
+lily pad,swimming,prepared,flowers,Bahamas
+tree,solving a puzzle,lazy,flowers,London
+sunflower,solving a puzzle,oblivious,tacos,New York
+rose,solving a puzzle,lazy,flowers,London
+tree,swimming,prepared,flowers,Bahamas
+tree,solving a puzzle,lazy,the woods,London
+tree,reading,motivated,sweet perfume,Paris
+tree,reading,lazy,the woods,London
+tree,solving a puzzle,oblivious,flowers,Bahamas
+tree,swimming,motivated,flowers,Bahamas
+tree,reading,oblivious,flowers,London
+tree,reading,motivated,flowers,London
+sunflower,solving a puzzle,prepared,the woods,New York
+sunflower,hiking,oblivious,sweet perfume,Paris
+sunflower,solving a puzzle,motivated,sweet perfume,Paris
+tree,hiking,prepared,flowers,Paris
+rose,solving a puzzle,motivated,flowers,Paris
+sunflower,hiking,prepared,the woods,New York
+lily pad,solving a puzzle,prepared,the woods,Bahamas
+tree,solving a puzzle,prepared,tacos,Bahamas
+lily pad,swimming,oblivious,tacos,Bahamas
+tree,swimming,prepared,flowers,Bahamas
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,reading,lazy,flowers,London
+sunflower,hiking,prepared,the woods,New York
+rose,reading,oblivious,sweet perfume,London
+sunflower,reading,prepared,flowers,Paris
+rose,reading,oblivious,sweet perfume,London
+tree,solving a puzzle,oblivious,the woods,London
+rose,reading,prepared,flowers,Paris
+rose,reading,lazy,the woods,London
+tree,reading,oblivious,the woods,London
+sunflower,hiking,prepared,the woods,New York
+tree,reading,lazy,flowers,Bahamas
+rose,hiking,motivated,sweet perfume,Paris
+tree,hiking,lazy,flowers,Bahamas
+tree,hiking,motivated,flowers,Paris
+sunflower,hiking,oblivious,the woods,New York
+tree,solving a puzzle,motivated,the woods,New York
+rose,reading,oblivious,sweet perfume,London
+rose,reading,prepared,flowers,Paris
+sunflower,swimming,prepared,flowers,Bahamas
+sunflower,hiking,motivated,the woods,New York
+rose,solving a puzzle,prepared,sweet perfume,London
+lily pad,swimming,lazy,tacos,Bahamas
+tree,solving a puzzle,motivated,flowers,Paris
+rose,reading,lazy,flowers,London
+tree,solving a puzzle,motivated,the woods,London
+tree,swimming,oblivious,flowers,Bahamas
+rose,reading,motivated,flowers,Paris
+tree,reading,prepared,sweet perfume,Paris
+rose,solving a puzzle,oblivious,flowers,London
+tree,swimming,oblivious,flowers,Bahamas
+rose,solving a puzzle,oblivious,the woods,London
+tree,solving a puzzle,prepared,the woods,London
+tree,hiking,prepared,tacos,New York
+tree,reading,lazy,flowers,London
+sunflower,hiking,prepared,the woods,New York
+tree,reading,motivated,the woods,London
+rose,hiking,prepared,flowers,Paris
+rose,reading,motivated,sweet perfume,Paris
+tree,solving a puzzle,lazy,the woods,London
+sunflower,solving a puzzle,oblivious,flowers,Paris
+lily pad,reading,lazy,the woods,Bahamas
+lily pad,solving a puzzle,lazy,flowers,Bahamas
+tree,solving a puzzle,prepared,the woods,New York
+rose,hiking,motivated,flowers,Paris
+rose,solving a puzzle,lazy,flowers,London
+lily pad,reading,oblivious,the woods,Bahamas
+rose,hiking,oblivious,flowers,Paris
+rose,solving a puzzle,oblivious,the woods,London
+rose,reading,prepared,sweet perfume,Paris
+tree,reading,lazy,the woods,Bahamas
+tree,hiking,prepared,flowers,Paris
+rose,reading,motivated,sweet perfume,Paris
+sunflower,solving a puzzle,oblivious,the woods,New York
+sunflower,solving a puzzle,oblivious,the woods,New York
+sunflower,hiking,motivated,tacos,New York
+rose,solving a puzzle,motivated,the woods,London
+tree,solving a puzzle,lazy,sweet perfume,London
+lily pad,reading,prepared,the woods,Bahamas
+rose,hiking,motivated,flowers,Paris
+rose,reading,oblivious,sweet perfume,Paris
+rose,solving a puzzle,lazy,flowers,London
+tree,reading,motivated,the woods,London
+tree,hiking,prepared,tacos,New York
+tree,hiking,motivated,flowers,Paris
+sunflower,hiking,motivated,the woods,New York
+tree,reading,lazy,flowers,London
+rose,swimming,motivated,tacos,Bahamas
+rose,solving a puzzle,motivated,the woods,London
+lily pad,swimming,prepared,the woods,Bahamas
+sunflower,hiking,oblivious,tacos,New York
+rose,solving a puzzle,oblivious,flowers,Paris
+sunflower,solving a puzzle,oblivious,the woods,New York
+rose,solving a puzzle,motivated,flowers,Paris
+rose,reading,lazy,the woods,London
+rose,solving a puzzle,prepared,flowers,Paris
+sunflower,solving a puzzle,prepared,tacos,New York
+rose,solving a puzzle,prepared,flowers,Paris
+sunflower,solving a puzzle,oblivious,tacos,New York
+tree,solving a puzzle,motivated,sweet perfume,Paris
+tree,reading,oblivious,tacos,Bahamas
+rose,reading,motivated,flowers,Paris

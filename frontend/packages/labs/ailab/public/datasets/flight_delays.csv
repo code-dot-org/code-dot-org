@@ -1,4 +1,4 @@
-Month,DayofMonth,DayOfWeek,DepTime,TimeOfDay,UniqueCarrier,Origin,Dest,Distance,dep_delayed_15min
+Month,DayofMonth,DayOfWeek,DepTime,TimeOfDay,UniqueCarrier,Origin,Dest,Distance,DelayedBy15
 August,21,Sunday,1934,Evening,AA,ATL,DFW,732,N
 April,20,Tuesday,1548,Afternoon,US,PIT,MCO,834,N
 September,2,Thursday,1422,Afternoon,XE,RDU,CLE,416,N

@@ -66,18 +66,19 @@
       "description": "Whether or not the Pokemon is legendary"
     }
   ],
+  "defaultLabelColumn": "Name",
   "card": {
     "description": "This data set includes 721 Pokemon, including their number, name, first and second type, and basic stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed.",
     "source": "https://www.kaggle.com/abcsds/pokemon",
-    "last_updated": "Unknown",
+    "lastUpdated": "Unknown",
     "context": {
-      "created_by": "Unknown",
-      "preparation": "Yes",
-      "confidentiality": "No",
-      "subgroup_identifiers": "No",
-      "representative": "No",
-      "potential_uses": "",
-      "potential_misuses": ""
+      "createdBy": "Unknown",
+      "preparation": true,
+      "confidentiality": false,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "",
+      "potentialMisuses": ""
     }
   }
 }

@@ -1,82 +1,73 @@
 {
-  "defaultLabelColumn": "Liked",
+  "card": {
+    "description": "Survey of customers in a pizza parlor on whether or not they like certain pizza combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Help make recommendations for what kind of pizza a new customer should buy",
+      "potentialMisuses": "Anything other than pizza recommendations"
+    }
+  },
   "fields": [
     {
       "id": "Pepperoni",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have pepperoni?"
     },
     {
       "id": "Extra Cheese",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have extra cheese?"
     },
     {
       "id": "Broccoli",
-      "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+	  "type": "categorical",
+      "description": "Did the pizza have broccoli?"
     },
     {
       "id": "Olives",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have olives?"
     },
     {
       "id": "Sausage",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have sausage?"
     },
     {
       "id": "Anchovies",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have anchovies?"
     },
     {
       "id": "Fried Chicken",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have fried chicken?"
     },
     {
       "id": "Peppers",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have peppers?"
     },
     {
       "id": "Ham",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have ham?"
     },
     {
       "id": "Bacon",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did the pizza have bacon?"
     },
     {
-      "id": "Liked",
+      "id": "Preference",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "How did you like the pizza?"
     }
-  ]
+  ],
+  "defaultLabelColumn": "Preference"
 }

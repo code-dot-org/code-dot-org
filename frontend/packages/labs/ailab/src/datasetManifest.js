@@ -36,27 +36,6 @@ export const allDatasets = [
     imagePath: "datasets/videogame_sales.jpg"
   },
   {
-    id: "tacos_toy",
-    name: "Tacos (Toy)",
-    path: "datasets/taco_toppings_toy.csv",
-    metadataPath: "datasets/taco_toppings_toy.json",
-    imagePath: "datasets/taco_toppings_toy.jpg"
-  },
-  {
-    id: "icecream_toy",
-    name: "Ice Cream (Toy)",
-    path: "datasets/icecream_toppings_toy.csv",
-    metadataPath: "datasets/icecream_toppings_toy.json",
-    imagePath: "datasets/icecream_toppings_toy.jpg"
-  },
-  {
-    id: "pizza_toy",
-    name: "Pizza (Toy)",
-    path: "datasets/pizza_toppings_toy.csv",
-    metadataPath: "datasets/pizza_toppings_toy.json",
-    imagePath: "datasets/pizza_toppings_toy.jpg"
-  },
-  {
     id: "bike_sharing",
     name: "Bike Sharing",
     path: "datasets/bike_sharing.csv",
@@ -120,10 +99,31 @@ export const allDatasets = [
     imagePath: "datasets/temp.jpg"
   },
   {
-    id: "medical_priority",
-    name: "Medical Priority (toy)",
-    path: "datasets/medical_priority.csv",
-    metadataPath: "datasets/medical_priority.json",
+    id: "spotify",
+    name: "Spotify (1991-2020)",
+    path: "datasets/spotify_1991_to_2020.csv",
+    metadataPath: "datasets/spotify_1991_to_2020.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "state_demographics",
+    name: "State Demographics",
+    path: "datasets/state_demographics.csv",
+    metadataPath: "datasets/state_demographics.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "student_alcohol_consumption",
+    name: "Student Health Survey",
+    path: "datasets/student_alcohol_consumption.csv",
+    metadataPath: "datasets/student_alcohol_consumption.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "heart",
+    name: "Heart Health",
+    path: "datasets/heart.csv",
+    metadataPath: "datasets/heart.json",
     imagePath: "datasets/temp.jpg"
   },
   {
@@ -131,6 +131,69 @@ export const allDatasets = [
     name: "Pokemon",
     path: "datasets/pokemon.csv",
     metadataPath: "datasets/pokemon.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "zoo",
+    name: "Zoo",
+    path: "datasets/zoo.csv",
+    metadataPath: "datasets/zoo.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "tacos_toy",
+    name: "Tacos (Toy)",
+    path: "datasets/taco_toppings_toy.csv",
+    metadataPath: "datasets/taco_toppings_toy.json",
+    imagePath: "datasets/taco_toppings_toy.jpg"
+  },
+  {
+    id: "icecream_toy",
+    name: "Ice Cream (Toy)",
+    path: "datasets/icecream_toppings_toy.csv",
+    metadataPath: "datasets/icecream_toppings_toy.json",
+    imagePath: "datasets/icecream_toppings_toy.jpg"
+  },
+  {
+    id: "pizza_toy",
+    name: "Pizza (Toy)",
+    path: "datasets/pizza_toppings_toy.csv",
+    metadataPath: "datasets/pizza_toppings_toy.json",
+    imagePath: "datasets/pizza_toppings_toy.jpg"
+  },
+  {
+    id: "breakfast_toy",
+    name: "Breakfast Quiz",
+    path: "datasets/breakfast_toy.csv",
+    metadataPath: "datasets/breakfast_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "drink_toy",
+    name: "Drink Quiz",
+    path: "datasets/drink_toy.csv",
+    metadataPath: "datasets/drink_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "workout_toy",
+    name: "Workout Quiz",
+    path: "datasets/workout_toy.csv",
+    metadataPath: "datasets/workout_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "safari_toy",
+    name: "Safari",
+    path: "datasets/safari_toy.csv",
+    metadataPath: "datasets/safari_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "medical_priority",
+    name: "Medical Priority (toy)",
+    path: "datasets/medical_priority.csv",
+    metadataPath: "datasets/medical_priority.json",
     imagePath: "datasets/temp.jpg"
   }
 ];

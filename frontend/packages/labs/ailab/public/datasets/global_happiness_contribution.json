@@ -46,24 +46,25 @@
       "description": "The national average of the response to two 0-1 questions: \"Is corruption widespread throughout the government or not\" and \"Is corrpution widespread within businesses or not\"?"
     }
   ],
+  "defaultLabelColumn": "Score",
   "card": {
     "description": "2019 Global Happiness report rankings, where countries are rated on different attributes that contribute to a total happiness score then ranked.",
     "source": "Sustainable Development Solutions Network (https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv)",
-    "last_updated": "2019",
+    "lastUpdated": "2019",
     "context": {
-      "created_by": "United Nations",
-      "preparation": "Yes",
-      "confidentiality": "No",
-      "subgroup_identifiers": "No",
-	  "representative": "No",
-      "potential_uses": "Predict a country's happiness score based on other features like GDP per capita and freedom to make life choices.",
-      "potential_misuses": "Predicting rank is difficult. This also shouldn't be used as an objective metric for which countries are 'best' - what factors might contribute to these scores that aren't covered by the data?"
+      "createdBy": "United Nations",
+      "preparation": true,
+      "confidentiality": false,
+      "subgroupIdentifiers": false,
+	  "representative": false,
+      "potentialUses": "Predict a country's happiness score based on other features like GDP per capita and freedom to make life choices.",
+      "potentialMisuses": "Predicting rank is difficult. This also shouldn't be used as an objective metric for which countries are 'best' - what factors might contribute to these scores that aren't covered by the data?"
     }
   },
-  "recommended_features": [
+  "recommendedFeatures": [
     "GDP per capita",
     "Social support",
     "Healthy life expectancy"
   ],
-  "recommended_label": "Score"
+  "recommendedLabel": "Score"
 }

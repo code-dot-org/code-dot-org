@@ -1,0 +1,1001 @@
+pet,color,utensil,feet,breakfast
+dog,blue,knife,long socks,bacon and eggs
+hamster,red,knife,fluffy socks,waffles
+cat,red,fork,fluffy socks,waffles
+hamster,orange,fork,fluffy socks,waffles
+cat,red,fork,fluffy socks,french toast
+dog,red,fork,fluffy socks,waffles
+cat,red,spatula,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,french toast
+hamster,orange,fork,fluffy socks,waffles
+fish,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+dog,orange,fork,short socks,bacon and eggs
+dog,orange,fork,long socks,bacon and eggs
+fish,purple,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+hamster,purple,spoon,no socks,cereal
+fish,red,spatula,fluffy socks,french toast
+fish,orange,fork,fluffy socks,french toast
+dog,orange,spatula,fluffy socks,waffles
+cat,red,fork,fluffy socks,waffles
+dog,orange,fork,short socks,bacon and eggs
+dog,red,fork,short socks,bacon and eggs
+dog,red,fork,short socks,bacon and eggs
+hamster,orange,knife,short socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+fish,red,spoon,fluffy socks,cereal
+dog,red,fork,short socks,bacon and eggs
+dog,red,fork,fluffy socks,waffles
+cat,blue,fork,short socks,bacon and eggs
+dog,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+hamster,red,fork,short socks,bacon and eggs
+fish,orange,spatula,fluffy socks,french toast
+dog,orange,fork,short socks,bacon and eggs
+dog,orange,spatula,fluffy socks,french toast
+fish,orange,fork,long socks,french toast
+cat,orange,knife,short socks,waffles
+dog,red,spatula,short socks,waffles
+dog,orange,knife,fluffy socks,waffles
+hamster,orange,fork,fluffy socks,waffles
+dog,red,fork,long socks,bacon and eggs
+cat,purple,spoon,fluffy socks,cereal
+hamster,orange,knife,short socks,waffles
+hamster,orange,fork,fluffy socks,french toast
+fish,orange,fork,long socks,french toast
+hamster,orange,fork,short socks,waffles
+fish,orange,knife,long socks,french toast
+fish,orange,spoon,fluffy socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+fish,red,spoon,fluffy socks,cereal
+cat,red,spatula,fluffy socks,french toast
+fish,red,fork,fluffy socks,french toast
+dog,purple,spoon,fluffy socks,cereal
+dog,orange,fork,fluffy socks,waffles
+hamster,red,spatula,fluffy socks,waffles
+cat,red,spatula,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+dog,orange,fork,fluffy socks,french toast
+hamster,orange,fork,short socks,waffles
+hamster,orange,spatula,short socks,waffles
+fish,red,fork,short socks,bacon and eggs
+dog,orange,fork,fluffy socks,french toast
+dog,purple,spoon,fluffy socks,cereal
+dog,red,fork,fluffy socks,french toast
+fish,red,knife,fluffy socks,french toast
+hamster,purple,fork,long socks,bacon and eggs
+fish,orange,fork,short socks,bacon and eggs
+hamster,blue,fork,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+fish,red,spatula,fluffy socks,french toast
+dog,orange,knife,short socks,bacon and eggs
+cat,orange,spatula,fluffy socks,waffles
+dog,purple,knife,short socks,bacon and eggs
+fish,red,fork,short socks,french toast
+fish,orange,spatula,fluffy socks,french toast
+dog,orange,fork,fluffy socks,waffles
+dog,purple,spoon,fluffy socks,cereal
+hamster,orange,spatula,fluffy socks,waffles
+hamster,orange,knife,fluffy socks,waffles
+dog,orange,knife,short socks,bacon and eggs
+hamster,orange,spatula,fluffy socks,waffles
+dog,orange,fork,short socks,bacon and eggs
+dog,orange,fork,fluffy socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+dog,orange,fork,long socks,bacon and eggs
+dog,orange,knife,fluffy socks,waffles
+dog,red,spatula,fluffy socks,waffles
+dog,blue,fork,short socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+dog,purple,spoon,fluffy socks,cereal
+fish,red,fork,fluffy socks,french toast
+dog,orange,fork,short socks,waffles
+hamster,purple,fork,long socks,bacon and eggs
+hamster,orange,fork,short socks,waffles
+fish,orange,spatula,fluffy socks,french toast
+cat,red,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+dog,blue,knife,short socks,bacon and eggs
+cat,red,spatula,short socks,french toast
+hamster,red,knife,fluffy socks,waffles
+hamster,blue,spoon,no socks,cereal
+dog,purple,knife,short socks,bacon and eggs
+dog,purple,fork,short socks,bacon and eggs
+dog,red,knife,long socks,french toast
+cat,red,knife,short socks,waffles
+fish,orange,spoon,fluffy socks,cereal
+hamster,orange,fork,short socks,waffles
+dog,purple,spoon,no socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+fish,purple,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+hamster,red,fork,fluffy socks,waffles
+fish,red,knife,short socks,french toast
+dog,purple,knife,short socks,bacon and eggs
+dog,red,fork,fluffy socks,french toast
+dog,red,fork,short socks,waffles
+hamster,orange,spatula,fluffy socks,french toast
+cat,purple,spoon,fluffy socks,cereal
+hamster,red,fork,short socks,waffles
+dog,orange,knife,fluffy socks,waffles
+fish,orange,spatula,fluffy socks,french toast
+hamster,orange,fork,fluffy socks,waffles
+dog,orange,fork,fluffy socks,waffles
+fish,purple,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+hamster,orange,fork,short socks,waffles
+dog,blue,spoon,fluffy socks,cereal
+cat,purple,spoon,no socks,cereal
+hamster,red,spatula,fluffy socks,waffles
+dog,purple,knife,long socks,bacon and eggs
+dog,blue,knife,short socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+dog,orange,fork,short socks,bacon and eggs
+dog,orange,spatula,fluffy socks,french toast
+dog,orange,knife,fluffy socks,french toast
+fish,purple,spoon,no socks,cereal
+dog,orange,fork,long socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+fish,orange,fork,fluffy socks,french toast
+dog,blue,fork,long socks,bacon and eggs
+hamster,orange,fork,short socks,bacon and eggs
+cat,orange,fork,fluffy socks,waffles
+hamster,orange,spatula,fluffy socks,waffles
+dog,orange,knife,short socks,bacon and eggs
+dog,blue,knife,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+cat,orange,fork,short socks,bacon and eggs
+fish,orange,fork,short socks,bacon and eggs
+cat,purple,spoon,fluffy socks,cereal
+hamster,orange,knife,fluffy socks,waffles
+hamster,orange,knife,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+dog,red,spatula,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,waffles
+dog,red,fork,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,french toast
+fish,purple,fork,short socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+cat,purple,spoon,fluffy socks,cereal
+cat,red,spatula,long socks,french toast
+dog,purple,fork,short socks,bacon and eggs
+hamster,purple,knife,short socks,bacon and eggs
+fish,blue,spoon,fluffy socks,cereal
+hamster,red,fork,short socks,waffles
+cat,red,spoon,no socks,cereal
+fish,orange,spatula,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+fish,red,spoon,no socks,cereal
+fish,orange,spoon,fluffy socks,cereal
+dog,red,knife,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+cat,red,knife,fluffy socks,french toast
+dog,purple,fork,long socks,bacon and eggs
+cat,orange,fork,short socks,waffles
+fish,red,spatula,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+fish,orange,spatula,fluffy socks,french toast
+fish,orange,knife,fluffy socks,french toast
+hamster,orange,fork,short socks,waffles
+dog,blue,fork,short socks,bacon and eggs
+hamster,orange,fork,short socks,waffles
+fish,red,spoon,fluffy socks,cereal
+cat,orange,spatula,long socks,french toast
+dog,purple,knife,short socks,bacon and eggs
+dog,orange,knife,fluffy socks,french toast
+hamster,orange,knife,fluffy socks,waffles
+cat,orange,knife,short socks,french toast
+hamster,red,spatula,short socks,waffles
+cat,orange,fork,short socks,waffles
+dog,orange,fork,long socks,bacon and eggs
+fish,orange,fork,short socks,bacon and eggs
+hamster,purple,spoon,fluffy socks,cereal
+dog,red,knife,fluffy socks,french toast
+cat,purple,spoon,fluffy socks,cereal
+dog,red,knife,fluffy socks,waffles
+cat,orange,knife,short socks,waffles
+dog,blue,fork,long socks,bacon and eggs
+dog,orange,spatula,long socks,french toast
+hamster,orange,fork,fluffy socks,waffles
+dog,purple,fork,short socks,bacon and eggs
+cat,purple,fork,short socks,bacon and eggs
+cat,orange,spatula,fluffy socks,french toast
+dog,orange,fork,fluffy socks,waffles
+fish,orange,knife,long socks,french toast
+fish,red,spatula,fluffy socks,french toast
+cat,blue,spoon,fluffy socks,cereal
+fish,orange,spoon,fluffy socks,cereal
+dog,red,fork,short socks,waffles
+hamster,orange,fork,short socks,waffles
+dog,orange,fork,fluffy socks,waffles
+dog,blue,fork,short socks,bacon and eggs
+dog,red,knife,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+dog,blue,knife,short socks,bacon and eggs
+fish,red,knife,fluffy socks,french toast
+hamster,purple,spoon,fluffy socks,cereal
+hamster,red,fork,long socks,bacon and eggs
+cat,purple,spoon,fluffy socks,cereal
+hamster,purple,fork,short socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+dog,orange,knife,fluffy socks,waffles
+dog,purple,fork,short socks,bacon and eggs
+dog,red,fork,short socks,bacon and eggs
+cat,red,fork,short socks,bacon and eggs
+dog,red,fork,short socks,waffles
+cat,orange,spoon,fluffy socks,cereal
+hamster,red,fork,short socks,bacon and eggs
+dog,red,spatula,long socks,french toast
+hamster,blue,spoon,fluffy socks,cereal
+dog,orange,knife,short socks,bacon and eggs
+dog,blue,knife,short socks,bacon and eggs
+dog,orange,spatula,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+fish,red,fork,fluffy socks,french toast
+cat,purple,fork,long socks,bacon and eggs
+fish,red,knife,short socks,french toast
+dog,orange,fork,short socks,waffles
+dog,purple,knife,short socks,bacon and eggs
+dog,blue,spoon,fluffy socks,cereal
+hamster,orange,fork,short socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+dog,purple,spoon,fluffy socks,cereal
+dog,red,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+dog,blue,fork,long socks,bacon and eggs
+cat,orange,fork,fluffy socks,waffles
+fish,blue,spoon,fluffy socks,cereal
+hamster,orange,knife,short socks,bacon and eggs
+fish,orange,spatula,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,waffles
+fish,blue,spoon,fluffy socks,cereal
+dog,orange,fork,short socks,bacon and eggs
+hamster,red,fork,fluffy socks,waffles
+fish,orange,fork,fluffy socks,french toast
+cat,orange,fork,fluffy socks,waffles
+dog,orange,fork,short socks,bacon and eggs
+fish,orange,spatula,fluffy socks,french toast
+hamster,red,spatula,fluffy socks,french toast
+hamster,orange,fork,fluffy socks,waffles
+dog,red,fork,fluffy socks,french toast
+cat,orange,fork,short socks,bacon and eggs
+dog,purple,knife,short socks,bacon and eggs
+cat,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+hamster,orange,knife,short socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+hamster,red,knife,short socks,waffles
+fish,red,knife,fluffy socks,french toast
+fish,orange,fork,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+cat,orange,fork,long socks,french toast
+dog,orange,fork,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+hamster,red,spatula,fluffy socks,waffles
+hamster,orange,spatula,short socks,waffles
+dog,purple,fork,short socks,bacon and eggs
+fish,orange,spatula,fluffy socks,french toast
+dog,blue,fork,short socks,bacon and eggs
+hamster,orange,knife,fluffy socks,waffles
+hamster,red,knife,fluffy socks,french toast
+cat,red,fork,short socks,bacon and eggs
+dog,blue,fork,long socks,bacon and eggs
+hamster,red,fork,short socks,waffles
+dog,purple,knife,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+fish,orange,spatula,fluffy socks,french toast
+dog,blue,fork,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+dog,orange,fork,long socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+dog,orange,knife,short socks,bacon and eggs
+hamster,red,spatula,fluffy socks,french toast
+dog,orange,fork,long socks,bacon and eggs
+hamster,orange,knife,short socks,waffles
+cat,orange,spatula,fluffy socks,waffles
+fish,orange,spatula,short socks,french toast
+dog,red,knife,long socks,bacon and eggs
+fish,red,spatula,short socks,french toast
+hamster,orange,spatula,fluffy socks,french toast
+fish,orange,fork,long socks,french toast
+hamster,red,spatula,fluffy socks,waffles
+fish,red,fork,fluffy socks,french toast
+dog,red,spatula,short socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+cat,red,spatula,long socks,french toast
+cat,red,spatula,fluffy socks,french toast
+hamster,orange,knife,fluffy socks,waffles
+hamster,orange,knife,fluffy socks,french toast
+fish,red,knife,fluffy socks,french toast
+hamster,red,spoon,no socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+dog,red,fork,short socks,french toast
+hamster,orange,knife,fluffy socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+fish,orange,spatula,fluffy socks,french toast
+dog,blue,fork,long socks,bacon and eggs
+fish,red,spatula,long socks,french toast
+hamster,red,spatula,fluffy socks,waffles
+cat,red,spoon,fluffy socks,cereal
+fish,red,fork,fluffy socks,french toast
+hamster,purple,spoon,fluffy socks,cereal
+hamster,red,knife,short socks,waffles
+hamster,red,spatula,fluffy socks,waffles
+dog,orange,knife,short socks,waffles
+cat,red,spoon,fluffy socks,cereal
+hamster,orange,knife,short socks,waffles
+fish,blue,spoon,no socks,cereal
+cat,orange,fork,short socks,french toast
+fish,red,spatula,long socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+cat,blue,spoon,fluffy socks,cereal
+hamster,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,no socks,cereal
+hamster,red,spoon,no socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+fish,red,spatula,fluffy socks,french toast
+hamster,orange,fork,fluffy socks,french toast
+fish,red,knife,short socks,bacon and eggs
+fish,red,spatula,long socks,french toast
+fish,red,fork,fluffy socks,french toast
+fish,red,spatula,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+hamster,red,fork,long socks,french toast
+cat,red,spoon,fluffy socks,cereal
+fish,red,spatula,fluffy socks,french toast
+fish,red,spatula,fluffy socks,french toast
+hamster,orange,fork,long socks,french toast
+dog,blue,fork,short socks,bacon and eggs
+fish,orange,fork,fluffy socks,french toast
+dog,purple,knife,long socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+hamster,orange,fork,short socks,waffles
+dog,orange,spatula,fluffy socks,french toast
+dog,red,knife,fluffy socks,french toast
+hamster,orange,spatula,short socks,waffles
+cat,blue,spoon,fluffy socks,cereal
+hamster,orange,fork,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+cat,red,spoon,fluffy socks,cereal
+hamster,red,knife,fluffy socks,waffles
+cat,red,knife,long socks,french toast
+cat,orange,spatula,fluffy socks,waffles
+cat,red,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+fish,red,spoon,fluffy socks,cereal
+dog,orange,spatula,fluffy socks,waffles
+dog,orange,fork,short socks,bacon and eggs
+hamster,orange,fork,short socks,bacon and eggs
+cat,blue,spoon,fluffy socks,cereal
+fish,red,spatula,short socks,french toast
+fish,orange,spoon,fluffy socks,cereal
+hamster,red,spoon,fluffy socks,cereal
+dog,purple,spoon,fluffy socks,cereal
+dog,orange,knife,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,waffles
+dog,red,fork,short socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+cat,blue,spoon,fluffy socks,cereal
+hamster,purple,spoon,fluffy socks,cereal
+hamster,purple,fork,short socks,bacon and eggs
+dog,orange,fork,fluffy socks,waffles
+dog,orange,spatula,fluffy socks,waffles
+hamster,orange,fork,fluffy socks,waffles
+hamster,red,fork,short socks,waffles
+hamster,orange,fork,short socks,french toast
+fish,blue,spoon,no socks,cereal
+fish,blue,spoon,fluffy socks,cereal
+dog,purple,knife,long socks,bacon and eggs
+dog,red,fork,fluffy socks,waffles
+fish,red,spatula,fluffy socks,french toast
+hamster,orange,fork,fluffy socks,waffles
+dog,red,knife,fluffy socks,waffles
+hamster,orange,knife,fluffy socks,waffles
+cat,blue,spoon,fluffy socks,cereal
+cat,red,fork,fluffy socks,waffles
+dog,purple,fork,short socks,bacon and eggs
+hamster,purple,fork,short socks,bacon and eggs
+hamster,red,fork,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,french toast
+fish,red,fork,fluffy socks,french toast
+cat,orange,fork,long socks,french toast
+hamster,red,spatula,fluffy socks,waffles
+fish,orange,spatula,fluffy socks,french toast
+hamster,red,fork,fluffy socks,waffles
+dog,orange,spatula,fluffy socks,french toast
+hamster,red,fork,short socks,waffles
+dog,red,knife,short socks,waffles
+fish,orange,spoon,fluffy socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+hamster,red,spatula,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+cat,purple,spoon,fluffy socks,cereal
+dog,blue,knife,short socks,bacon and eggs
+fish,purple,spoon,no socks,cereal
+hamster,red,fork,long socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+hamster,orange,knife,fluffy socks,waffles
+fish,blue,fork,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+cat,orange,fork,fluffy socks,waffles
+dog,blue,spoon,fluffy socks,cereal
+dog,orange,knife,short socks,bacon and eggs
+hamster,red,fork,long socks,french toast
+dog,purple,fork,short socks,bacon and eggs
+dog,red,knife,long socks,bacon and eggs
+dog,purple,fork,long socks,bacon and eggs
+cat,red,fork,long socks,french toast
+fish,orange,knife,fluffy socks,french toast
+hamster,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+cat,orange,knife,short socks,bacon and eggs
+dog,orange,fork,short socks,waffles
+dog,orange,fork,fluffy socks,waffles
+dog,red,knife,fluffy socks,french toast
+hamster,orange,fork,short socks,waffles
+dog,purple,fork,short socks,bacon and eggs
+dog,purple,fork,short socks,bacon and eggs
+hamster,red,knife,long socks,bacon and eggs
+fish,orange,spatula,long socks,french toast
+hamster,red,knife,fluffy socks,waffles
+hamster,orange,fork,short socks,waffles
+hamster,red,spatula,fluffy socks,waffles
+dog,blue,fork,short socks,bacon and eggs
+fish,orange,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+cat,orange,fork,short socks,waffles
+hamster,orange,spatula,fluffy socks,waffles
+cat,blue,knife,short socks,bacon and eggs
+hamster,red,fork,long socks,french toast
+hamster,blue,spoon,fluffy socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+cat,red,knife,short socks,waffles
+dog,red,fork,fluffy socks,waffles
+hamster,orange,spatula,fluffy socks,french toast
+dog,orange,fork,fluffy socks,waffles
+dog,red,knife,short socks,bacon and eggs
+fish,blue,spoon,fluffy socks,cereal
+hamster,red,knife,fluffy socks,waffles
+hamster,purple,spoon,no socks,cereal
+fish,red,spoon,fluffy socks,cereal
+dog,blue,fork,long socks,bacon and eggs
+hamster,blue,spoon,fluffy socks,cereal
+dog,blue,fork,short socks,bacon and eggs
+cat,orange,fork,fluffy socks,waffles
+dog,orange,fork,fluffy socks,waffles
+dog,red,knife,fluffy socks,waffles
+hamster,orange,spatula,long socks,french toast
+fish,red,fork,fluffy socks,french toast
+cat,orange,spoon,fluffy socks,cereal
+hamster,red,fork,fluffy socks,french toast
+hamster,red,knife,fluffy socks,french toast
+fish,purple,fork,short socks,bacon and eggs
+dog,blue,fork,long socks,bacon and eggs
+dog,red,knife,fluffy socks,waffles
+hamster,blue,fork,long socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+dog,red,fork,short socks,waffles
+dog,red,fork,long socks,french toast
+hamster,orange,spatula,fluffy socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+dog,blue,fork,short socks,bacon and eggs
+dog,orange,spatula,fluffy socks,waffles
+cat,orange,spoon,no socks,cereal
+cat,purple,spoon,fluffy socks,cereal
+hamster,red,spatula,fluffy socks,waffles
+fish,blue,spoon,no socks,cereal
+hamster,red,fork,short socks,waffles
+fish,red,fork,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+fish,red,spatula,fluffy socks,french toast
+dog,blue,fork,short socks,bacon and eggs
+fish,red,fork,fluffy socks,french toast
+hamster,purple,spoon,no socks,cereal
+fish,orange,fork,fluffy socks,french toast
+fish,purple,knife,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+dog,red,fork,fluffy socks,french toast
+dog,blue,fork,short socks,bacon and eggs
+fish,red,fork,short socks,bacon and eggs
+hamster,purple,spoon,fluffy socks,cereal
+fish,red,spoon,fluffy socks,cereal
+dog,orange,knife,fluffy socks,waffles
+fish,orange,knife,long socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+dog,orange,spatula,fluffy socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+dog,blue,fork,long socks,bacon and eggs
+fish,red,spoon,no socks,cereal
+cat,purple,spoon,no socks,cereal
+cat,red,spatula,short socks,french toast
+cat,orange,knife,fluffy socks,waffles
+fish,red,spatula,fluffy socks,french toast
+dog,orange,fork,short socks,bacon and eggs
+hamster,orange,fork,short socks,waffles
+hamster,red,fork,fluffy socks,waffles
+dog,red,fork,fluffy socks,french toast
+cat,red,knife,fluffy socks,waffles
+dog,red,fork,short socks,waffles
+hamster,red,fork,fluffy socks,waffles
+dog,red,knife,short socks,waffles
+fish,blue,spoon,fluffy socks,cereal
+dog,blue,knife,short socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+cat,red,spoon,fluffy socks,cereal
+dog,blue,fork,short socks,bacon and eggs
+cat,orange,fork,fluffy socks,waffles
+hamster,purple,fork,short socks,bacon and eggs
+dog,purple,fork,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+hamster,red,spoon,fluffy socks,cereal
+dog,red,knife,fluffy socks,waffles
+fish,orange,spatula,fluffy socks,french toast
+fish,blue,knife,short socks,bacon and eggs
+fish,orange,fork,fluffy socks,french toast
+fish,blue,spoon,fluffy socks,cereal
+dog,orange,knife,fluffy socks,waffles
+hamster,red,knife,fluffy socks,waffles
+hamster,red,knife,fluffy socks,waffles
+dog,orange,knife,long socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+cat,red,spatula,fluffy socks,waffles
+dog,blue,knife,short socks,bacon and eggs
+cat,blue,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+cat,red,spoon,fluffy socks,cereal
+fish,orange,fork,fluffy socks,french toast
+fish,orange,knife,fluffy socks,french toast
+fish,orange,fork,short socks,bacon and eggs
+dog,orange,fork,fluffy socks,french toast
+hamster,orange,spatula,short socks,french toast
+dog,orange,fork,fluffy socks,french toast
+dog,red,fork,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+cat,purple,knife,short socks,bacon and eggs
+hamster,orange,spatula,fluffy socks,french toast
+fish,red,knife,fluffy socks,french toast
+hamster,orange,fork,fluffy socks,waffles
+dog,orange,spatula,fluffy socks,waffles
+dog,orange,knife,fluffy socks,french toast
+fish,orange,spatula,fluffy socks,french toast
+cat,purple,spoon,fluffy socks,cereal
+dog,red,spatula,fluffy socks,french toast
+hamster,orange,knife,fluffy socks,waffles
+hamster,orange,knife,fluffy socks,waffles
+fish,red,spatula,long socks,french toast
+fish,red,spatula,fluffy socks,french toast
+hamster,blue,spoon,fluffy socks,cereal
+cat,purple,spoon,no socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+fish,blue,spoon,no socks,cereal
+hamster,purple,spoon,fluffy socks,cereal
+hamster,red,knife,fluffy socks,french toast
+dog,red,fork,short socks,bacon and eggs
+fish,blue,fork,long socks,bacon and eggs
+hamster,orange,fork,short socks,bacon and eggs
+dog,red,spatula,fluffy socks,french toast
+hamster,orange,spatula,short socks,french toast
+dog,blue,knife,long socks,bacon and eggs
+fish,blue,fork,short socks,bacon and eggs
+dog,orange,fork,short socks,waffles
+hamster,orange,knife,fluffy socks,waffles
+fish,red,knife,fluffy socks,french toast
+dog,orange,fork,short socks,bacon and eggs
+dog,orange,spatula,fluffy socks,waffles
+fish,orange,spatula,long socks,french toast
+cat,orange,spatula,fluffy socks,french toast
+fish,blue,spoon,fluffy socks,cereal
+dog,orange,fork,short socks,bacon and eggs
+hamster,purple,spoon,fluffy socks,cereal
+fish,red,spoon,fluffy socks,cereal
+dog,orange,fork,short socks,waffles
+dog,red,fork,short socks,bacon and eggs
+hamster,red,fork,fluffy socks,waffles
+cat,purple,spoon,fluffy socks,cereal
+dog,orange,spatula,fluffy socks,french toast
+hamster,orange,fork,fluffy socks,waffles
+hamster,orange,spatula,short socks,waffles
+fish,orange,fork,fluffy socks,french toast
+fish,orange,fork,short socks,french toast
+hamster,orange,spatula,fluffy socks,waffles
+hamster,orange,fork,short socks,waffles
+fish,purple,spoon,fluffy socks,cereal
+dog,orange,knife,short socks,waffles
+hamster,red,spatula,fluffy socks,waffles
+hamster,orange,spoon,fluffy socks,cereal
+dog,red,fork,short socks,bacon and eggs
+dog,red,spoon,fluffy socks,cereal
+hamster,red,spatula,fluffy socks,french toast
+dog,purple,knife,short socks,bacon and eggs
+cat,red,fork,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+fish,red,knife,fluffy socks,french toast
+cat,orange,fork,short socks,bacon and eggs
+cat,orange,spatula,fluffy socks,waffles
+dog,red,spatula,fluffy socks,waffles
+hamster,red,knife,short socks,bacon and eggs
+hamster,red,fork,fluffy socks,waffles
+cat,orange,fork,fluffy socks,french toast
+fish,orange,knife,long socks,french toast
+hamster,red,spatula,fluffy socks,waffles
+dog,red,knife,long socks,french toast
+dog,orange,fork,fluffy socks,waffles
+dog,red,spatula,fluffy socks,waffles
+dog,orange,spatula,long socks,french toast
+dog,orange,spoon,fluffy socks,cereal
+fish,orange,spatula,fluffy socks,french toast
+hamster,red,fork,fluffy socks,waffles
+dog,blue,knife,short socks,bacon and eggs
+dog,blue,fork,long socks,bacon and eggs
+hamster,red,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+hamster,red,fork,short socks,waffles
+fish,red,spatula,long socks,french toast
+dog,red,fork,long socks,bacon and eggs
+cat,orange,knife,short socks,bacon and eggs
+dog,red,fork,short socks,bacon and eggs
+hamster,red,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+fish,orange,spatula,fluffy socks,french toast
+dog,orange,fork,long socks,french toast
+dog,red,fork,short socks,bacon and eggs
+cat,red,spoon,fluffy socks,cereal
+cat,red,spatula,fluffy socks,french toast
+hamster,orange,spatula,long socks,french toast
+dog,orange,spatula,short socks,french toast
+dog,orange,knife,short socks,bacon and eggs
+dog,orange,spatula,fluffy socks,waffles
+fish,red,fork,short socks,bacon and eggs
+dog,orange,knife,fluffy socks,french toast
+dog,red,spatula,short socks,waffles
+fish,orange,fork,fluffy socks,french toast
+cat,blue,spoon,fluffy socks,cereal
+hamster,orange,knife,fluffy socks,waffles
+dog,red,fork,fluffy socks,waffles
+cat,red,knife,short socks,bacon and eggs
+hamster,red,spatula,fluffy socks,french toast
+hamster,orange,knife,short socks,waffles
+cat,red,spoon,fluffy socks,cereal
+fish,orange,fork,short socks,bacon and eggs
+dog,red,knife,short socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+fish,red,fork,fluffy socks,french toast
+fish,orange,spatula,fluffy socks,french toast
+dog,red,knife,long socks,bacon and eggs
+dog,purple,fork,short socks,bacon and eggs
+hamster,orange,fork,short socks,waffles
+fish,blue,spoon,no socks,cereal
+dog,purple,knife,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+hamster,blue,fork,short socks,bacon and eggs
+dog,orange,fork,long socks,bacon and eggs
+hamster,red,knife,fluffy socks,french toast
+hamster,orange,knife,fluffy socks,waffles
+dog,red,fork,short socks,bacon and eggs
+dog,purple,fork,short socks,bacon and eggs
+fish,red,spoon,fluffy socks,cereal
+dog,blue,fork,short socks,bacon and eggs
+hamster,red,fork,fluffy socks,waffles
+fish,blue,spoon,fluffy socks,cereal
+fish,orange,fork,fluffy socks,french toast
+dog,orange,fork,short socks,bacon and eggs
+dog,purple,knife,short socks,bacon and eggs
+dog,purple,fork,short socks,bacon and eggs
+hamster,orange,knife,fluffy socks,french toast
+cat,orange,spoon,fluffy socks,cereal
+fish,purple,fork,short socks,bacon and eggs
+dog,orange,fork,fluffy socks,waffles
+hamster,blue,spoon,fluffy socks,cereal
+fish,red,knife,fluffy socks,french toast
+fish,red,spatula,fluffy socks,french toast
+fish,orange,fork,long socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+dog,orange,fork,fluffy socks,waffles
+dog,blue,fork,long socks,bacon and eggs
+dog,blue,knife,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+fish,red,fork,short socks,bacon and eggs
+cat,red,fork,fluffy socks,french toast
+dog,orange,fork,fluffy socks,waffles
+fish,orange,fork,long socks,bacon and eggs
+hamster,red,fork,short socks,waffles
+fish,red,fork,long socks,bacon and eggs
+fish,red,spatula,fluffy socks,french toast
+dog,purple,fork,long socks,bacon and eggs
+hamster,red,knife,fluffy socks,waffles
+fish,purple,spoon,fluffy socks,cereal
+cat,purple,spoon,fluffy socks,cereal
+fish,orange,spatula,fluffy socks,french toast
+fish,orange,spoon,fluffy socks,cereal
+fish,red,fork,fluffy socks,french toast
+dog,orange,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+fish,red,knife,fluffy socks,french toast
+cat,red,spatula,long socks,french toast
+dog,red,knife,fluffy socks,waffles
+dog,blue,fork,short socks,bacon and eggs
+hamster,blue,spoon,fluffy socks,cereal
+dog,red,fork,short socks,french toast
+fish,orange,spatula,long socks,french toast
+cat,orange,knife,fluffy socks,french toast
+fish,red,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+dog,orange,fork,long socks,bacon and eggs
+fish,red,spatula,fluffy socks,french toast
+dog,orange,spatula,short socks,waffles
+dog,blue,knife,short socks,bacon and eggs
+dog,red,knife,short socks,waffles
+dog,purple,spoon,fluffy socks,cereal
+hamster,red,fork,fluffy socks,waffles
+cat,orange,knife,fluffy socks,waffles
+dog,blue,knife,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+hamster,red,spoon,fluffy socks,cereal
+dog,purple,knife,short socks,bacon and eggs
+dog,orange,knife,fluffy socks,waffles
+hamster,purple,knife,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+fish,red,fork,fluffy socks,french toast
+dog,red,spatula,fluffy socks,french toast
+fish,red,spoon,fluffy socks,cereal
+hamster,orange,fork,short socks,waffles
+hamster,red,fork,fluffy socks,waffles
+hamster,red,knife,fluffy socks,french toast
+dog,orange,knife,short socks,waffles
+fish,blue,knife,long socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+hamster,orange,knife,short socks,french toast
+dog,orange,fork,long socks,bacon and eggs
+hamster,purple,spoon,no socks,cereal
+fish,blue,spoon,fluffy socks,cereal
+dog,orange,fork,short socks,french toast
+dog,orange,spatula,fluffy socks,waffles
+hamster,red,spatula,fluffy socks,waffles
+fish,red,spatula,long socks,french toast
+fish,orange,knife,short socks,french toast
+cat,orange,fork,fluffy socks,waffles
+cat,red,knife,fluffy socks,waffles
+hamster,orange,spatula,fluffy socks,french toast
+fish,orange,spoon,fluffy socks,cereal
+cat,red,spoon,fluffy socks,cereal
+fish,orange,knife,short socks,french toast
+hamster,purple,spoon,no socks,cereal
+fish,red,spoon,fluffy socks,cereal
+dog,blue,fork,short socks,bacon and eggs
+hamster,orange,knife,fluffy socks,waffles
+dog,orange,fork,fluffy socks,waffles
+fish,orange,fork,long socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+fish,purple,spoon,fluffy socks,cereal
+fish,orange,knife,fluffy socks,french toast
+cat,orange,fork,fluffy socks,waffles
+fish,red,knife,fluffy socks,french toast
+cat,purple,spoon,no socks,cereal
+hamster,purple,spoon,fluffy socks,cereal
+dog,blue,fork,long socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+hamster,red,spoon,fluffy socks,cereal
+dog,red,knife,fluffy socks,waffles
+dog,purple,fork,short socks,bacon and eggs
+dog,orange,knife,fluffy socks,waffles
+fish,red,fork,short socks,bacon and eggs
+dog,blue,fork,short socks,bacon and eggs
+cat,orange,spatula,fluffy socks,waffles
+cat,blue,fork,short socks,bacon and eggs
+cat,blue,fork,short socks,bacon and eggs
+hamster,orange,knife,short socks,bacon and eggs
+cat,orange,fork,short socks,bacon and eggs
+hamster,orange,knife,short socks,waffles
+hamster,red,fork,fluffy socks,waffles
+fish,red,spatula,long socks,french toast
+dog,orange,knife,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+hamster,orange,knife,fluffy socks,waffles
+fish,purple,spoon,no socks,cereal
+fish,orange,spatula,fluffy socks,french toast
+fish,red,spatula,fluffy socks,french toast
+dog,orange,spatula,fluffy socks,french toast
+dog,red,fork,short socks,bacon and eggs
+cat,red,fork,fluffy socks,french toast
+cat,purple,spoon,fluffy socks,cereal
+fish,red,spoon,fluffy socks,cereal
+fish,red,spoon,fluffy socks,cereal
+dog,red,fork,fluffy socks,waffles
+fish,orange,fork,short socks,bacon and eggs
+hamster,red,knife,fluffy socks,french toast
+fish,red,spatula,fluffy socks,french toast
+hamster,red,fork,short socks,waffles
+hamster,orange,spatula,short socks,waffles
+fish,orange,knife,fluffy socks,french toast
+hamster,red,fork,short socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+cat,red,spatula,fluffy socks,waffles
+fish,orange,spatula,long socks,french toast
+dog,blue,fork,short socks,bacon and eggs
+fish,orange,fork,fluffy socks,french toast
+hamster,purple,knife,long socks,bacon and eggs
+fish,blue,spoon,no socks,cereal
+fish,red,spoon,fluffy socks,cereal
+fish,orange,fork,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,waffles
+cat,blue,spoon,fluffy socks,cereal
+hamster,orange,fork,short socks,waffles
+fish,red,spoon,fluffy socks,cereal
+cat,orange,spoon,fluffy socks,cereal
+hamster,red,spatula,fluffy socks,waffles
+dog,orange,fork,long socks,bacon and eggs
+dog,blue,fork,long socks,bacon and eggs
+fish,red,knife,fluffy socks,french toast
+dog,orange,spatula,fluffy socks,french toast
+cat,orange,fork,fluffy socks,waffles
+hamster,orange,spatula,fluffy socks,waffles
+cat,blue,spoon,fluffy socks,cereal
+fish,red,knife,short socks,bacon and eggs
+fish,orange,spoon,fluffy socks,cereal
+cat,red,fork,fluffy socks,french toast
+hamster,red,knife,short socks,waffles
+dog,red,spatula,fluffy socks,french toast
+cat,red,fork,fluffy socks,french toast
+hamster,red,fork,fluffy socks,french toast
+hamster,orange,fork,short socks,waffles
+dog,red,fork,short socks,bacon and eggs
+fish,purple,spoon,no socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+fish,red,spoon,fluffy socks,cereal
+fish,red,spatula,fluffy socks,french toast
+fish,red,fork,fluffy socks,french toast
+dog,orange,fork,fluffy socks,french toast
+dog,purple,knife,long socks,bacon and eggs
+hamster,orange,knife,fluffy socks,waffles
+hamster,red,fork,short socks,waffles
+fish,orange,spatula,long socks,french toast
+dog,orange,knife,short socks,bacon and eggs
+hamster,purple,fork,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+cat,blue,fork,short socks,bacon and eggs
+dog,red,fork,short socks,bacon and eggs
+hamster,red,fork,fluffy socks,waffles
+dog,orange,fork,fluffy socks,waffles
+dog,blue,fork,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+fish,orange,knife,fluffy socks,french toast
+dog,red,fork,short socks,waffles
+fish,red,spatula,short socks,french toast
+cat,red,fork,short socks,bacon and eggs
+cat,purple,fork,short socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+fish,purple,fork,short socks,bacon and eggs
+dog,orange,fork,fluffy socks,waffles
+dog,red,knife,fluffy socks,french toast
+dog,orange,fork,fluffy socks,waffles
+fish,blue,spoon,fluffy socks,cereal
+cat,red,fork,fluffy socks,french toast
+fish,blue,spoon,fluffy socks,cereal
+hamster,orange,fork,fluffy socks,waffles
+hamster,orange,fork,fluffy socks,french toast
+cat,red,spoon,fluffy socks,cereal
+dog,orange,spatula,fluffy socks,french toast
+cat,orange,fork,short socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+cat,orange,fork,fluffy socks,waffles
+dog,blue,fork,short socks,bacon and eggs
+fish,orange,spatula,fluffy socks,french toast
+fish,orange,fork,fluffy socks,french toast
+fish,red,fork,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+hamster,purple,spoon,fluffy socks,cereal
+hamster,orange,fork,short socks,waffles
+fish,red,spoon,fluffy socks,cereal
+dog,blue,fork,short socks,bacon and eggs
+fish,red,knife,fluffy socks,french toast
+fish,red,spatula,fluffy socks,french toast
+cat,red,spoon,fluffy socks,cereal
+dog,orange,fork,long socks,bacon and eggs
+fish,red,spatula,fluffy socks,french toast
+fish,blue,fork,short socks,bacon and eggs
+cat,orange,spatula,short socks,french toast
+cat,purple,spoon,fluffy socks,cereal
+cat,red,fork,fluffy socks,waffles
+dog,orange,fork,short socks,waffles
+dog,orange,fork,short socks,bacon and eggs
+hamster,orange,spatula,fluffy socks,waffles
+dog,orange,fork,short socks,bacon and eggs
+dog,purple,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+cat,blue,spoon,fluffy socks,cereal
+cat,orange,knife,long socks,bacon and eggs
+dog,orange,knife,fluffy socks,waffles
+dog,orange,fork,fluffy socks,waffles
+fish,orange,fork,short socks,bacon and eggs
+cat,red,knife,short socks,bacon and eggs
+hamster,red,fork,short socks,bacon and eggs
+cat,purple,spoon,fluffy socks,cereal
+dog,red,fork,long socks,bacon and eggs
+fish,purple,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+fish,red,spatula,long socks,french toast
+hamster,red,fork,short socks,waffles
+dog,orange,fork,fluffy socks,waffles
+hamster,red,knife,fluffy socks,waffles
+fish,red,knife,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+dog,red,spoon,fluffy socks,cereal
+hamster,red,knife,short socks,waffles
+cat,orange,spoon,fluffy socks,cereal
+fish,red,fork,short socks,bacon and eggs
+dog,orange,knife,fluffy socks,french toast
+cat,orange,spatula,fluffy socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+fish,red,spatula,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+fish,red,fork,fluffy socks,french toast
+dog,orange,spoon,fluffy socks,cereal
+dog,red,fork,long socks,french toast
+hamster,red,knife,fluffy socks,waffles
+dog,red,spatula,fluffy socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+dog,red,knife,short socks,waffles
+hamster,purple,spoon,fluffy socks,cereal
+dog,red,knife,fluffy socks,waffles
+cat,orange,fork,fluffy socks,waffles
+cat,red,spatula,fluffy socks,french toast
+cat,purple,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+hamster,purple,spoon,fluffy socks,cereal
+dog,blue,fork,long socks,bacon and eggs
+hamster,orange,spatula,short socks,waffles
+dog,orange,knife,fluffy socks,waffles
+cat,red,spoon,no socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+dog,orange,fork,short socks,bacon and eggs
+hamster,red,fork,short socks,waffles
+hamster,orange,spatula,fluffy socks,waffles
+dog,orange,fork,short socks,bacon and eggs
+cat,orange,knife,fluffy socks,waffles
+fish,purple,spoon,fluffy socks,cereal
+dog,red,fork,short socks,bacon and eggs
+cat,orange,fork,fluffy socks,waffles
+fish,red,spoon,fluffy socks,cereal
+hamster,orange,fork,long socks,french toast
+dog,orange,spatula,long socks,french toast
+dog,orange,knife,fluffy socks,waffles
+fish,red,spoon,fluffy socks,cereal
+fish,blue,spoon,fluffy socks,cereal
+cat,red,spoon,fluffy socks,cereal
+fish,orange,knife,fluffy socks,french toast
+fish,red,knife,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+hamster,orange,fork,short socks,waffles
+dog,orange,knife,long socks,bacon and eggs
+hamster,red,knife,fluffy socks,french toast
+fish,red,knife,fluffy socks,french toast
+hamster,red,fork,fluffy socks,waffles
+fish,purple,spoon,fluffy socks,cereal
+hamster,red,spoon,fluffy socks,cereal
+dog,purple,spoon,fluffy socks,cereal
+cat,blue,spoon,fluffy socks,cereal
+cat,blue,fork,short socks,bacon and eggs
+dog,purple,fork,short socks,bacon and eggs
+dog,red,spoon,fluffy socks,cereal
+fish,orange,spoon,fluffy socks,cereal
+cat,orange,spatula,long socks,french toast
+fish,purple,spoon,fluffy socks,cereal
+dog,purple,fork,short socks,bacon and eggs
+hamster,orange,fork,fluffy socks,waffles
+dog,purple,fork,long socks,bacon and eggs
+dog,red,knife,fluffy socks,waffles
+hamster,orange,spatula,fluffy socks,french toast
+hamster,orange,spatula,fluffy socks,waffles

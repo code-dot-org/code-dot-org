@@ -1,0 +1,43 @@
+{
+  "card": {
+    "description": "Survey results from a quiz that determines your ideal workout based on several questions",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Silly and fun app",
+      "potentialMisuses": "Anything serious"
+    }
+  },
+  "fields": [
+    {
+      "id": "snack",
+      "type": "categorical",
+      "description": "What is your favorite snack?"
+    },
+    {
+      "id": "scenario",
+      "type": "categorical",
+      "description": "Which location do you like the most?"
+    },
+    {
+      "id": "time",
+      "type": "categorical",
+      "description": "What time of day do you prefer?"
+    },
+    {
+      "id": "preference",
+      "type": "categorical",
+      "description": "How do you like to spend your time?"
+    },
+    {
+      "id": "workout",
+      "type": "categorical",
+      "description": "Ideal workout"
+    }
+  ],
+  "defaultLabelColumn": "workout"
+}
