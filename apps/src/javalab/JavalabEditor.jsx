@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setEditorText} from './javalabRedux';
+import {setEditorText, setFileName} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
@@ -12,6 +12,17 @@ const style = {
     width: '100%',
     height: 600,
     backgroundColor: '#282c34'
+  },
+  tabs: {
+    display: 'flex'
+  },
+  tab: {
+    backgroundColor: '#282c34',
+    textAlign: 'center',
+    padding: 10
+  },
+  button: {
+    marginLeft: 10
   }
 };
 
@@ -20,8 +31,19 @@ class JavalabEditor extends React.Component {
     style: PropTypes.object,
     // populated by redux
     editorText: PropTypes.string,
-    setEditorText: PropTypes.func
+    setEditorText: PropTypes.func,
+    fileName: PropTypes.string,
+    setFileName: PropTypes.func
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      renameFileActive: false,
+      showFileManagementPanel: false
+    };
+  }
 
   componentDidMount() {
     this.editor = new EditorView({
@@ -53,6 +75,41 @@ class JavalabEditor extends React.Component {
         <PaneHeader hasFocus={true}>
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
+        <div>
+          {this.state.renameFileActive ? (
+            <div style={style.tabs}>
+              <div style={style.tab}>
+                <input
+                  type="text"
+                  ariaLabel="file name"
+                  value={this.props.fileName}
+                  onChange={e => this.props.setFileName(e.target.value)}
+                  onBlur={() => this.setState({renameFileActive: false})}
+                />
+              </div>
+              <button
+                type="button"
+                onClick={() => this.setState({renameFileActive: false})}
+                className="btn btn-default btn-sm"
+                style={style.button}
+              >
+                Save
+              </button>
+            </div>
+          ) : (
+            <div style={style.tabs}>
+              <div style={style.tab}>{this.props.fileName}</div>
+              <button
+                type="button"
+                onClick={() => this.setState({renameFileActive: true})}
+                className="btn btn-default btn-sm"
+                style={style.button}
+              >
+                Rename
+              </button>
+            </div>
+          )}
+        </div>
         <div ref={el => (this._codeMirror = el)} style={style.editor} />
       </div>
     );
@@ -61,9 +118,11 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    editorText: state.javalab.editorText
+    editorText: state.javalab.editorText,
+    fileName: state.javalab.fileName
   }),
   dispatch => ({
-    setEditorText: editorText => dispatch(setEditorText(editorText))
+    setEditorText: editorText => dispatch(setEditorText(editorText)),
+    setFileName: fileName => dispatch(setFileName(fileName))
   })
 )(JavalabEditor);
