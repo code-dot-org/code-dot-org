@@ -99,10 +99,8 @@ class SelectDataset extends Component {
 
     return (
       <div id="select-dataset" style={styles.panel}>
-        <div style={styles.largeText}>Which dataset would you like to use?</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
-            <div>Select a dataset from the collection</div>
             {datasets.map(dataset => {
               return (
                 <div

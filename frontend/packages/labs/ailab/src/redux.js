@@ -55,6 +55,7 @@ const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
+const SET_INSTRUCTIONS_SUBSET_CALLBACK = "SET_INSTRUCTIONS_SUBSET_CALLBACK";
 
 // Action creators
 export function setMode(mode) {
@@ -186,6 +187,10 @@ export function setTrainedModelDetail(field, value, isColumn) {
   return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
 
+export function setInstructionSubsetCallback(instructionSubsetCallback) {
+  return { type: SET_INSTRUCTIONS_SUBSET_CALLBACK, instructionSubsetCallback };
+}
+
 export function setCurrentPanel(currentPanel) {
   return { type: SET_CURRENT_PANEL, currentPanel };
 }
@@ -222,6 +227,7 @@ const initialState = {
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
+  instructionSubsetCallback: undefined,
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined
@@ -440,7 +446,14 @@ export default function rootReducer(state = initialState, action) {
       ...trainedModelDetails
     };
   }
+  if (action.type === SET_INSTRUCTIONS_SUBSET_CALLBACK) {
+    state.instructionSubsetCallback = action.instructionSubsetCallback;
+  }
   if (action.type === SET_CURRENT_PANEL) {
+    if (state.instructionSubsetCallback) {
+      state.instructionSubsetCallback(action.currentPanel);
+    }
+
     return {
       ...state,
       currentPanel: action.currentPanel,

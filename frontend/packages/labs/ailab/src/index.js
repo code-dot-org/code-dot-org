@@ -8,7 +8,8 @@ import rootReducer, {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setSelectedTrainer
+  setSelectedTrainer,
+  setInstructionSubsetCallback
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -20,6 +21,7 @@ export const initAll = function(options) {
   // Handle an optional mode.
   const mode = options && options.mode;
   const saveTrainedModel = options && options.saveTrainedModel;
+  store.dispatch(setInstructionSubsetCallback(options && options.setInstructionSubset));
   store.dispatch(setMode(mode));
   processMode(mode);
 

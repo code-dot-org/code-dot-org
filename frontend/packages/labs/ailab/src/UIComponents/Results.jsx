@@ -42,8 +42,6 @@ class Results extends Component {
   render() {
     return (
       <div id="results" style={styles.panel}>
-        <div style={styles.largeText}>Results</div>
-
         {this.props.resultsPhase === 0 && (
           <div style={styles.trainBot}>
             <img

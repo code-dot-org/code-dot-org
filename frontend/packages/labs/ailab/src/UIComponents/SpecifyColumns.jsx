@@ -41,7 +41,6 @@ class SpecifyColumns extends Component {
 
     return (
       <div id="select-dataset" style={styles.panel}>
-        <div style={styles.largeText}>Review and adjust the column types</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             {Object.keys(data[0]).map(key => {

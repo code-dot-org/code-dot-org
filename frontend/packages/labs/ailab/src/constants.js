@@ -35,7 +35,8 @@ export const colors = {
 export const styles = {
   app: {
     userSelect: "none",
-    height: "100%"
+    height: "100%",
+    fontFamily: '"Gotham 4r", sans-serif'
   },
 
   bold: {
@@ -51,7 +52,6 @@ export const styles = {
   },
 
   panelContainer: {
-    fontFamily: '"Gotham 4r", sans-serif',
     position: "relative",
     float: "left",
     width: "70%",
@@ -64,7 +64,7 @@ export const styles = {
 
   panelContainerRight: {
     marginLeft: 10,
-    width: "calc(30% - 20px)"
+    width: "calc(30% - 10px)"
   },
 
   panelContainerFullWidth: {
@@ -76,9 +76,18 @@ export const styles = {
   },
 
   bodyContainer: {
-    height: "100%",
+    height: "calc(100% - 60px)",
     boxSizing: "border-box",
     paddingBottom: 100
+  },
+
+  instructions: {
+    width: "calc(100% - 40px)",
+    backgroundColor: "rgb(206, 206, 206)",
+    color: "white",
+    padding: 20,
+    marginBottom: 10,
+    borderRadius: 5
   },
 
   largeText: {

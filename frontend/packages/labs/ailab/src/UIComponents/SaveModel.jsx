@@ -87,7 +87,6 @@ class SaveModel extends Component {
   render() {
     return (
       <div style={styles.panel}>
-        <div style={styles.largeText}>Save the Trained Model</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             {this.getFields().map(field => {

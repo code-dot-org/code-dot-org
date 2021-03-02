@@ -34,8 +34,6 @@ class TrainModel extends Component {
       <div id="train-model" style={styles.panel}>
         {this.props.readyToTrain && (
           <div>
-            <p />
-            <div style={styles.largeText}>Train the Model</div>
             <p>
               The machine learning algorithm you selected,{" "}
               {availableTrainers[this.props.selectedTrainer]["name"]}, is going

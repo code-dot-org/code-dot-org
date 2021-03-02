@@ -66,6 +66,14 @@ BodyContainer.propTypes = {
   children: PropTypes.node
 };
 
+const Instructions = props => (
+  <span></span>
+);
+
+Instructions.propTypes = {
+  children: PropTypes.node
+};
+
 const ContainerLeft = props => (
   <div style={{ ...styles.panelContainer, ...styles.panelContainerLeft }}>
     {props.children}
@@ -117,6 +125,9 @@ class App extends Component {
       <div style={styles.app}>
         {currentPanel === "selectDataset" && (
           <BodyContainer>
+            <Instructions>
+              Choose a data set
+            </Instructions>
             <ContainerLeft>
               <SelectDataset />
             </ContainerLeft>
@@ -128,6 +139,9 @@ class App extends Component {
 
         {currentPanel === "specifyColumns" && (
           <BodyContainer>
+            <Instructions>
+              Review the column types
+            </Instructions>
             <ContainerLeft>
               <SpecifyColumns />
             </ContainerLeft>
@@ -139,6 +153,18 @@ class App extends Component {
 
         {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
           <BodyContainer>
+            <Instructions>
+              {currentPanel === "dataDisplayLabel" && (
+                <div>
+                  Choose one column to predict
+                </div>
+              )}
+              {currentPanel === "dataDisplayFeatures" && (
+                <div>
+                  Chose one or more columns for the prediction
+                </div>
+              )}
+            </Instructions>
             <ContainerLeft>
               <DataDisplay />
             </ContainerLeft>
@@ -151,6 +177,9 @@ class App extends Component {
 
         {currentPanel === "selectTrainer" && (
           <BodyContainer>
+            <Instructions>
+              Select a trainer
+            </Instructions>
             <ContainerFullWidth>
               <SelectTrainer />
             </ContainerFullWidth>
@@ -159,6 +188,9 @@ class App extends Component {
 
         {currentPanel === "trainModel" && (
           <BodyContainer>
+            <Instructions>
+              Train the model
+            </Instructions>
             <ContainerFullWidth>
               <TrainModel />
             </ContainerFullWidth>
@@ -167,7 +199,10 @@ class App extends Component {
 
         {currentPanel === "results" && (
           <BodyContainer>
-            <ContainerLeft>
+            <Instructions>
+              Review the results
+            </Instructions>
+              <ContainerLeft>
               <Results />
             </ContainerLeft>
             {resultsPhase === 3 &&
@@ -180,6 +215,9 @@ class App extends Component {
 
         {currentPanel === "saveModel" && (
           <BodyContainer>
+            <Instructions>
+              Save the trained model
+            </Instructions>
             <ContainerFullWidth>
               <SaveModel saveTrainedModel={saveTrainedModel} />
             </ContainerFullWidth>
