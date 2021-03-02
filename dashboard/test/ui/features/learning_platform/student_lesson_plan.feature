@@ -18,7 +18,7 @@ Feature: Student Lesson Plan
 
     # Check for Vocab
     And I wait until element "h2:contains(Vocabulary)" is visible
-    And I wait until element "li:contains(word - This is a definition of the word word)" is visible
+    And I wait until element "li:contains(Word - This is a definition of the word word)" is visible
 
     # Check for Announcements
     Then I wait until element ".announcement-notification:first" is visible
