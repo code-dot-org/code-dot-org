@@ -70,6 +70,8 @@ lesson 'lesson14', display_name: 'Lesson 14', has_lesson_plan: true
 lesson 'lesson15', display_name: 'AI Code of Ethics (Unplugged)', has_lesson_plan: true
 
 lesson 'lesson16', display_name: 'Goldilocks Principle: Making Models Just Right', has_lesson_plan: true
+level 'csd-unit-5-goldilocks-principle-app-lab', progression: 'What Is Your Net Worth?'
+level 'csd-unit-5-goldilocks-principle-ai-lab', progression: 'What Is Your Net Worth?'
 
 lesson 'lesson17', display_name: 'Lesson 17', has_lesson_plan: true
 
