@@ -1007,18 +1007,11 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next = isPanelEnabled(state, "specifyColumns")
-      ? { panel: "specifyColumns", text: "Continue" }
-      : isPanelEnabled(state, "dataDisplayLabel")
+    next = isPanelEnabled(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Continue" }
       : null;
-  } else if (state.currentPanel === "specifyColumns") {
-    prev = { panel: "selectDataset", text: "Back" };
-    next = { panel: "dataDisplayLabel", text: "Continue" };
   } else if (state.currentPanel === "dataDisplayLabel") {
-    prev = isPanelEnabled(state, "specifyColumns")
-      ? { panel: "specifyColumns", text: "Back" }
-      : isPanelEnabled(state, "selectDataset")
+    prev = isPanelEnabled(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
       : null;
     next = isPanelEnabled(state, "dataDisplayFeatures")

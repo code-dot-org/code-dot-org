@@ -126,17 +126,6 @@ class App extends Component {
           </BodyContainer>
         )}
 
-        {currentPanel === "specifyColumns" && (
-          <BodyContainer>
-            <ContainerLeft>
-              <SpecifyColumns />
-            </ContainerLeft>
-            <ContainerRight>
-              <SpecifyColumnsInfo />
-            </ContainerRight>
-          </BodyContainer>
-        )}
-
         {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
           <BodyContainer>
             <ContainerLeft>
@@ -170,11 +159,11 @@ class App extends Component {
             <ContainerLeft>
               <Results />
             </ContainerLeft>
-            {resultsPhase === 3 &&
+            {resultsPhase === 3 && (
               <ContainerRight>
                 <Predict />
               </ContainerRight>
-            }
+            )}
           </BodyContainer>
         )}
 
