@@ -76,7 +76,7 @@ class ManifestBuilder
     EOS
 
     if @options[:spritelab] && @options[:upload_to_s3]
-      info "Uploading file to S3"
+      info "Uploading manifests/spritelabCostumeLibrary.json to S3"
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
         "manifests/spritelabCostumeLibrary.json",
@@ -215,7 +215,7 @@ The animation has been skipped.
       normalized_category_map[key.tr(' ', '_')] = value
     end
 
-    info "Uploading file to S3"
+    info "Uploading manifests/spritelabCostumeLibrary.#{locale}.json to S3"
     AWS::S3.upload_to_bucket(
       DEFAULT_S3_BUCKET,
       "manifests/spritelabCostumeLibrary.#{locale}.json",
@@ -356,7 +356,15 @@ The animation has been skipped.
 
       # Record target version in the metadata, so environments (and projects)
       # consistently reference the version they originally imported.
-      metadata['version'] = objects['png'].object.version_id
+      begin
+        metadata['version'] = objects['png'].object.version_id
+      rescue Aws::Errors::ServiceError => service_error
+        next <<-WARN
+There was an error retrieving the version_id for #{name}.png from S3:
+#{service_error}
+The animation has been skipped.
+        WARN
+      end
 
       # Generate appropriate sourceUrl pointing to the animation library API
       metadata['sourceUrl'] = "/api/v1/animation-library/#{@options[:spritelab] ? 'spritelab' : 'gamelab'}/#{metadata['version']}/#{name}.png"
