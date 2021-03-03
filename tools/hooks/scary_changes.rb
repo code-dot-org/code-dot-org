@@ -80,7 +80,8 @@ class ScaryChangeDetector
 
         Looks like you are renaming a column in this migration:
         #{changes.join("\n")}
-        Have you verified that if the migration is run without any application changes that there are no errors?
+        In production, database migrations may be applied much earlier than when application servers are upgraded.
+        Have you verified that the updated database schema works with the previously deployed application version?
         For more information on this issue see https://docs.google.com/document/d/1QHCjUdLz7D7fE-Cy4HrrtJ5FOSnSth7sNHfSemwNSfw.
 
     EOS
