@@ -27,7 +27,7 @@ Feature: Student Lesson Plan
     Then I wait until element ".announcement-notification:nth(1)" is visible
     And element ".announcement-notification:nth(1)" contains text matching "Information for Students and Teachers"
 
-    # Navigating between lessons
+    # Navigate between student lesson plans
     Then I wait until element ".uitest-lesson-dropdown-nav" is visible
     And I click ".uitest-lesson-dropdown-nav"
     Then I wait until element "a.navigate:nth(1)" is visible
