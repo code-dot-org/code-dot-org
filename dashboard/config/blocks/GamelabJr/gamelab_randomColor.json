@@ -1,8 +1,8 @@
 {
   "category": "World",
-  "docFunc": "gamelab_randomColor",
   "config": {
     "func": "randomColor",
+    "docFunc": "gamelab_randomColor",
     "blockText": "random color",
     "returnType": "Colour"
   }

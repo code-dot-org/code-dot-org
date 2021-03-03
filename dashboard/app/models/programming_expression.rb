@@ -33,7 +33,7 @@ class ProgrammingExpression < ApplicationRecord
 
     if environment_name == 'spritelab'
       {
-        name: expression_config['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
+        name: expression_config['config']['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         display_name: expression_config['config']['blockText'] || expression_config['config']['func'] || expression_config['config']['name'],
@@ -96,7 +96,10 @@ class ProgrammingExpression < ApplicationRecord
 
   def self.seed_all
     removed_records = all.pluck(:name)
-    Dir.glob(Rails.root.join("config/blocks/{applab,gamelab,weblab,GamelabJr}/*.json")).each do |path|
+    Dir.glob(Rails.root.join("config/programming_expressions/{applab,gamelab,weblab,spritelab}/*.json")).each do |path|
+      removed_records -= [ProgrammingExpression.seed_record(path)]
+    end
+    Dir.glob(Rails.root.join("config/blocks/GamelabJr/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
     where(name: removed_records).destroy_all

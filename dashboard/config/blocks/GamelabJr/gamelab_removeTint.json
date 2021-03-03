@@ -1,6 +1,5 @@
 {
   "category": "Sprites",
-  "docFunc": "gamelab_removeTint",
   "config": {
     "color": [
       184,
@@ -8,6 +7,7 @@
       0.74
     ],
     "func": "removeTint",
+    "docFunc": "gamelab_removeTint",
     "blockText": "remove color from {THIS}",
     "args": [
       {

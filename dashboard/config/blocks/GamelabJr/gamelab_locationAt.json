@@ -1,8 +1,8 @@
 {
   "category": "Location",
-  "docFunc": "gamelab_locationAt",
   "config": {
     "func": "locationAt",
+    "docFunc": "gamelab_locationAt",
     "blockText": "location x: {X} y: {Y}",
     "returnType": "Location",
     "args": [

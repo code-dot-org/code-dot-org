@@ -1,8 +1,8 @@
 {
   "category": "Behaviors",
-  "docFunc": "gamelab_removeBehaviorSimple",
   "config": {
     "func": "removeBehaviorSimple",
+    "docFunc": "gamelab_removeBehaviorSimple",
     "blockText": "sprite {SPRITE} stops {BEHAVIOR}",
     "inline": false,
     "args": [
