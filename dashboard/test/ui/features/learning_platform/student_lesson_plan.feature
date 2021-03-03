@@ -2,7 +2,7 @@ Feature: Student Lesson Plan
 
   Scenario: Viewing Student Lesson Plan
     Given I create a student named "Jean"
-    And I am on "http://studio.code.org/s/allthemigratedthings/lessons/1/student"
+    And I am on "http://studio.code.org/s/allthemigratedthings/lessons/1/student?no_redirect=true"
     And I wait until element "#show-container" is visible
 
     # Check for name of lesson
@@ -18,7 +18,7 @@ Feature: Student Lesson Plan
 
     # Check for Vocab
     And I wait until element "h2:contains(Vocabulary)" is visible
-    And I wait until element "li:contains(word - This is a definition of the word word)" is visible
+    And I wait until element "li:contains(Word - This is a definition of the word word)" is visible
 
     # Check for Announcements
     Then I wait until element ".announcement-notification:first" is visible
@@ -27,16 +27,16 @@ Feature: Student Lesson Plan
     Then I wait until element ".announcement-notification:nth(1)" is visible
     And element ".announcement-notification:nth(1)" contains text matching "Information for Students and Teachers"
 
-    # Navigating between lessons
+    # Navigate between student lesson plans
     Then I wait until element ".uitest-lesson-dropdown-nav" is visible
     And I click ".uitest-lesson-dropdown-nav"
     Then I wait until element "a.navigate:nth(1)" is visible
     And I click selector "a.navigate:nth(1)"
-    Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/2/student"
+    Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/2/student?no_redirect=true"
     And I wait until element "#show-container" is visible
     And I wait until element "h1:contains(Lesson 2: Second Lesson)" is visible
 
     # Navigate to the Unit page
-    And I wait until element "a:contains(allthemigratedthings)" is visible
-    And I click selector "a:contains(allthemigratedthings)"
-    And I wait until I am on "http://studio.code.org/s/allthemigratedthings"
+    And I wait until element "a:contains(All the Migrated Things)" is visible
+    And I click selector "a:contains(All the Migrated Things)"
+    And I wait until I am on "http://studio.code.org/s/allthemigratedthings?no_redirect=true"
