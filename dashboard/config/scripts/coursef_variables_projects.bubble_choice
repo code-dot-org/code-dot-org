@@ -8,6 +8,8 @@ level 'courseF_variables_card'
 level 'courseF_variables_card_finish'
 level 'courseF_variables_chatbot'
 level 'courseF_variables_chatbot_finish'
+level 'courseF_variables_madlib'
+level 'courseF_variables_madlib_finish'
 markdown <<MARKDOWN
 
 MARKDOWN
