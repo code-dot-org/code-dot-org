@@ -12,8 +12,34 @@ module Services
   # As of March 2021, this is used exclusively by Lesson Plans to emulate
   # existing Markdown syntaxes which we inherited from CurriculumBuilder.
   module MarkdownPreprocessor
-    # Returns a copy of `content` with _all_ occurrences of Resource links
-    # substituted for the equivalent Markdown links
+    # Returns a copy of `content` with all occurrences of server-only syntax
+    # substituted with the equivalent Markdown syntax
+    def self.process(content)
+      process!(content.dup)
+    end
+
+    # Performs the substitutions of MarkdownPreprocessor#process in place
+    def self.process!(content)
+      return unless content.present?
+      sub_resource_links! content
+      sub_vocab_links! content
+      content
+    end
+
+    # Returns a copy of `content` with all occurrences of Vocabulary links
+    # substituted with the equivalent Markdown links
+    def self.sub_vocab_links(content)
+      sub_vocab_links!(content.dup)
+    end
+
+    # Performs the substitutions of MarkdownPreprocessor#sub_vocab_links in
+    # place
+    def self.sub_vocab_links!(content)
+      # TODO
+    end
+
+    # Returns a copy of `content` with all occurrences of Resource links
+    # substituted with the equivalent Markdown links
     def self.sub_resource_links(content)
       sub_resource_links!(content.dup)
     end
