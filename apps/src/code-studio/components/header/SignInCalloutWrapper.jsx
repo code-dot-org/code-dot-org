@@ -24,14 +24,27 @@ export default class SignInCalloutWrapper extends React.Component {
     };
   }
 
+  // When the component mounts, retrieve sign in button updates from
+  // z_index_above_modal class within application.scss to pull button forward
+  componentDidMount() {
+    if (!this.state.hideCallout) {
+      this.signInElement = document.getElementById('sign_in_or_user');
+      this.signInElement &&
+        this.signInElement.classList.add('z_index_above_modal');
+    }
+  }
+
   // Upon close, set both cookies and session storage, and prevent the click
   // event from being bubbled up to any other components. The path '/' allows
   // the data to be seen one directory higher.
+  // Additionally, remove special sign in button rendering from the document
   closeCallout(event) {
     this.setState({hideCallout: true});
     cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
     sessionStorage.setItem(HideSignInCallout, 'true');
     event.preventDefault();
+    this.signInElement &&
+      this.signInElement.classList.remove('z_index_above_modal');
   }
 
   // After the first dismissal, this returns null
