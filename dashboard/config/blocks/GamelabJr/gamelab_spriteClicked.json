@@ -1,6 +1,5 @@
 {
   "category": "Events",
-  "docFunc": "gamelab_spriteClicked",
   "config": {
     "color": [
       140,
@@ -8,6 +7,7 @@
       0.74
     ],
     "func": "spriteClicked",
+    "docFunc": "gamelab_spriteClicked",
     "blockText": "{CONDITION} {SPRITE} clicked",
     "miniToolboxBlocks": [
       "gamelab_clickedSpritePointer"

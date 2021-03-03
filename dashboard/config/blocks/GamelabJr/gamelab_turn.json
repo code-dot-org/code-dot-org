@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
-  "docFunc": "gamelab_turn",
   "config": {
     "func": "turn",
+    "docFunc": "gamelab_turn",
     "blockText": "turn {SPRITE} {DIRECTION} {N} degrees",
     "args": [
       {

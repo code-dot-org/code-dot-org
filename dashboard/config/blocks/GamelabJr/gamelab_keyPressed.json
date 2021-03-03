@@ -1,6 +1,5 @@
 {
   "category": "Events",
-  "docFunc": "gamelab_keyPressed",
   "config": {
     "color": [
       140,
@@ -8,6 +7,7 @@
       0.74
     ],
     "func": "keyPressed",
+    "docFunc": "gamelab_keyPressed",
     "blockText": "{CONDITION} {KEY} pressed",
     "args": [
       {

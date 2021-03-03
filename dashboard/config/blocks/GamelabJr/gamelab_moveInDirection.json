@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
-  "docFunc": "gamelab_moveInDirection",
   "config": {
     "func": "moveInDirection",
+    "docFunc": "gamelab_moveInDirection",
     "blockText": "move {SPRITE} {DISTANCE} pixels {DIRECTION}",
     "args": [
       {

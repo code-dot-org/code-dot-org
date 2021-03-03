@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
-  "docFunc": "gamelab_createNewSprite",
   "config": {
     "func": "createNewSprite",
+    "docFunc": "gamelab_createNewSprite",
     "inline": false,
     "blockText": "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}",
     "color": [

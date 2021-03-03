@@ -1,8 +1,8 @@
 {
   "category": "World",
-  "docFunc": "gamelab_printText",
   "config": {
     "func": "printText",
+    "docFunc": "gamelab_printText",
     "blockText": "print {TEXT}",
     "args": [
       {
