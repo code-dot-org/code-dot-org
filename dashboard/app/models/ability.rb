@@ -199,7 +199,7 @@ class Ability
         user.persisted? || !script.login_required?
       end
     end
-    can :read, Lesson do |lesson|
+    can [:read, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
       if script.pilot?
         script.has_pilot_access?(user)
