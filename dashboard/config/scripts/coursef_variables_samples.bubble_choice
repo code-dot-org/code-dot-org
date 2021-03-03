@@ -1,15 +1,17 @@
 name 'courseF_variables_samples'
 editor_experiment ''
-display_name 'Choose a Project'
-description 'You will be creating either a greeting card, a chatbot, or a blank space story. If you have already finished \"Part 1\" of your project, go on to \"Part 2\".'
+display_name 'Exploration - Sample Programs'
+description 'You will be creating either a greeting card, a chatbot, or a blank space story. Before you start, explore the example projects below to see what you are interested in creating. Press \"Finish\" when you are ready to start planning your own program.'
 
 sublevels
-level 'courseF_variables_chatbot'
-level 'courseF_variables_chatbot_finish'
+level 'courseF_editable_card'
+level 'courseF_editable_chatbot'
+level 'courseF_editable_madlib'
+
 markdown <<MARKDOWN
 
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Students may need really clear instructions to understand how to navigate the choices here. For each of the project choices, there are two sub-levels here. To begin, students should pick one of the levels marked "Part 1". Once they finish that level they should return here and select "Part 2" of the *same* project. The first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a "free play" which is intended to allow students to make any changes to their code that they like.
+Students should look at these projects carefully before deciding what they want to create. You can look at them together as a class or have students explore on their own.
 MARKDOWN

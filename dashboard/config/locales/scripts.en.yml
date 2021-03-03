@@ -18847,7 +18847,7 @@ en:
             lesson-2:
               name: Text and Prompts
             lesson-3:
-              name: User Input Apps
+              name: 'Mini-Project: User Input Programs'
             lesson-4:
               name: Counting with Variables
             lesson-5:
@@ -20845,7 +20845,7 @@ en:
               key: Learning Sprites with Sprite Lab
               name: Swimming Fish with Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.'
             Alien Dance Party with Sprite Lab:
               key: Alien Dance Party with Sprite Lab
               name: Alien Dance Party with Sprite Lab
