@@ -768,7 +768,9 @@ class TopInstructions extends Component {
                     hints={[]}
                     hasUnseenHint={false}
                     hasAuthoredHints={false}
-                    setInstructionsRenderedHeight={this.props.setInstructionsRenderedHeight}
+                    setInstructionsRenderedHeight={
+                      this.props.setInstructionsRenderedHeight
+                    }
                     skinId={'iceage'}
                     hideOverlay={() => {}}
                     showNextHint={() => {}}

@@ -595,7 +595,12 @@ class InstructionsCSF extends React.Component {
                   : styles.instructionsWithTips)
             ]}
           >
-            <ChatBubble ttsUrl={ttsUrl} textToSpeechEnabled={!!ttsUrl} isMinecraft={this.props.isMinecraft} skinId={this.props.skinId}>
+            <ChatBubble
+              ttsUrl={ttsUrl}
+              textToSpeechEnabled={!!ttsUrl}
+              isMinecraft={this.props.isMinecraft}
+              skinId={this.props.skinId}
+            >
               <Instructions
                 ref={c => {
                   this.instructions = c;
