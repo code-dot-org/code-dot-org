@@ -24,8 +24,8 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -62,8 +62,8 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={noStudentsSection}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -100,8 +100,8 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -138,8 +138,8 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -179,8 +179,8 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -205,8 +205,8 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -228,8 +228,8 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -254,8 +254,8 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -277,8 +277,8 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
@@ -300,8 +300,8 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
+        textToSpeechScriptIds={[]}
         stageExtrasAvailable={() => false}
-        ttsAvailable={() => false}
         hiddenStageState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"

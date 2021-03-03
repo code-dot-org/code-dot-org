@@ -14,8 +14,7 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  stageExtrasAvailable,
-  ttsAvailable
+  stageExtrasAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -70,8 +69,8 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
+    textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
-    ttsAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
@@ -134,7 +133,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
-      ttsAvailable,
+      textToSpeechScriptIds,
       assignedScriptName,
       localeEnglishName,
       isNewSection
@@ -221,7 +220,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {ttsAvailable(section.scriptId) && (
+          {textToSpeechScriptIds.indexOf(section.scriptId) > -1 && (
             <TtsAutoplayField
               value={section.ttsAutoplayEnabled}
               onChange={ttsAutoplayEnabled =>
@@ -484,8 +483,8 @@ let defaultPropsFromState = state => ({
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
+  textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-  ttsAvailable: id => ttsAvailable(state, id),
   hiddenStageState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName
