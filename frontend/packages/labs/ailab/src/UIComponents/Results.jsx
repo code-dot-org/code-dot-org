@@ -36,7 +36,7 @@ class Results extends Component {
     }, 2000);
     setTimeout(() => {
       this.props.setResultsPhase(3);
-    }, 300);
+    }, 3000);
   }
 
   render() {

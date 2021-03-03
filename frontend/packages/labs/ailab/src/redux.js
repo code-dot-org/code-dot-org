@@ -1171,8 +1171,8 @@ export function getScatterPlotData(state) {
     data.push({ x: row[state.currentColumn], y: row[state.labelColumn] });
   }
 
-  const label = state.currentColumn;
-  const feature = state.labelColumn;
+  const label = state.labelColumn;
+  const feature = state.currentColumn;
 
   return {
     label,
