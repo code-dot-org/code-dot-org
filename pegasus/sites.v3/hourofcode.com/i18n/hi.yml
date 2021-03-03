@@ -144,11 +144,17 @@ hi:
     में लें।  "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: हमसे जुड़ें
+  hoc_live_learn_more: अधिक जानें
   hoc_overview_oceans_tutorial_header: "  समुद्रों के लिए कृत्रिम बुद्धि  "
   hoc_overview_oceans_tutorial_desc: "  कृत्रिम बुद्धि (AI), मशीन प्रशिक्षण, प्रशिक्षण
     डेटा और पूर्वाग्रह के बारे में सीखें, साथ ही नैतिक मुद्दों पर चर्चा करें और पता
@@ -6646,12 +6652,12 @@ hi:
   tutorial_tynkermult_string_detail_grades: Grades 2-8
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: do-not-show
-  tutorial_tynkerpup_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkerpup_string_detail_grades: Grades 2-5
   tutorial_livecode_string_detail_grades: Grades 9+
   tutorial_cocomgame_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
-  tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
+  tutorial_tynkerspin_string_detail_grades: Grades 2-5
   tutorial_code-avengers_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
-  tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkercq_string_detail_grades: Grades 2-5
   tutorial_cmgame_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_codesters_string_detail_grades: do-not-show
   tutorial_qrm_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
@@ -6846,8 +6852,8 @@ hi:
   tutorial_tap_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_cintl_string_detail_grades: do-not-show
   tutorial_itchstop_string_detail_grades: Grades 2-8
-  tutorial_tynkerpn_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkerpd_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkerpn_string_detail_grades: Grades 2-5
+  tutorial_tynkerpd_string_detail_grades: Grades 2-5
   tutorial_persistence_string_detail_grades: Pre-reader+
   tutorial_getloopy_string_detail_grades: Pre-reader+
   tutorial_createface_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
@@ -7157,13 +7163,13 @@ hi:
   tutorial_gcevents_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_gcloops_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_gcvariables_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
-  tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
+  tutorial_beanything_string_detail_grades: Grades 2-5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_landscape_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_pets_string_detail_grades: Grades 2-5
-  tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
+  tutorial_petvet_string_detail_grades: Grades 2-5
   tutorial_superhero_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_vidcodeplastic_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_vidcodetypeface_string_detail_grades: ग्रेड 6+ (11 और ऊपर)

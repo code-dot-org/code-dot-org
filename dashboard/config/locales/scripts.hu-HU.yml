@@ -2055,7 +2055,7 @@ hu:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
             Move It, Move It:
-              name: Mozgás, mozgás
+              name: Gyerünk, gyerünk!
             Copyright and Creativity:
               name: Remek dolog tisztességesen alkotni és játszani
         coursed-2018:
@@ -2369,7 +2369,7 @@ hu:
             Spelling Bee:
               name: Betüző méh
             Move It, Move It:
-              name: Mozgás, mozgás
+              name: Gyerünk, gyerünk!
             Your Digital Footprint:
               name: A digitális lábnyomod
             Copyright and Creativity:
@@ -2682,7 +2682,7 @@ hu:
               display_name: Események
           lessons:
             Move It, Move It:
-              name: Mozgás, mozgás
+              name: Gyerünk, gyerünk!
             Your Digital Footprint:
               name: A digitális lábnyomod
             Programming with Rey and BB-8:
@@ -2699,7 +2699,7 @@ hu:
               display_name: Események
           lessons:
             Move It, Move It:
-              name: Mozgás, mozgás
+              name: Gyerünk, gyerünk!
             Your Digital Footprint:
               name: A digitális lábnyomod
             Programming with Rey and BB-8:
@@ -3355,7 +3355,7 @@ hu:
             Your Digital Footprint:
               name: A digitális lábnyomod
             Move It, Move It:
-              name: Mozgás, mozgás
+              name: Gyerünk, gyerünk!
             'Loops: Getting Loopy':
               name: Ciklikusság
             The Right App:
@@ -3743,8 +3743,8 @@ hu:
         courseb-2021:
           lessons:
             Move It, Move It:
-              key: Mozgás, mozgás
-              name: Mozgás, mozgás
+              key: Gyerünk, gyerünk!
+              name: Gyerünk, gyerünk!
             'Loops: Getting Loopy':
               name: Ciklikusság
             The Right App:
@@ -3825,12 +3825,14 @@ hu:
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
           lesson_groups:
+            ramp_up:
+              display_name: hurkok
             csf_sprites:
               display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
-              display_name: Egymásba ágyazott ciklusok
+              display_name: Feltételek
             csf_functions:
               display_name: funkciók
         coursef-2021:

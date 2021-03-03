@@ -331,6 +331,7 @@ pl:
     invite_sent: Zaproszenie wysłane
     added_teacher: "%{name} dodany jako Twój nauczyciel"
     registered: Zarejestrowałeś się do %{section_name}.
+    captcha_required: Wypełnij CAPTCHA, aby dołączyć do sesji.
     error:
       signed_in: Wyloguj się, zanim będziesz kontynuować
       username_not_found: Nie znaleziono nazwy użytkownika %{username}
@@ -1408,9 +1409,6 @@ pl:
         nowy token.
       error_wrong_provider: Niewłaściwy dostawca. Prosimy sprawdzić, czy logujesz
         się za pośrednictwem Google.
-      error_no_linked_google: 'Wróć do aplikacji Maker App i użyj przycisku „Zaloguj
-        się” w prawym górnym rogu, aby się zalogować, lub kliknij przycisk Wstecz,
-        aby zalogować się z innym kontem Google '
       error_invalid_user: Nieważny identyfikator użytkownika. Prosimy spróbować zalogować
         się ponownie.
       error_no_code: Prosimy wpisać swój kod logowania.
@@ -1425,3 +1423,4 @@ pl:
   behaviors:
     this_sprite: ten duszek
   unit_prefix: Jednostka %{n}
+  code_org_logo_alt: Strona domowa Code.org

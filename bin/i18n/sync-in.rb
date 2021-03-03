@@ -18,8 +18,7 @@ require_relative '../../tools/scripts/ManifestBuilder'
 def sync_in
   puts "Sync in starting"
   HocSyncUtils.sync_in
-  localize_level_content
-  localize_project_content
+  localize_level_and_project_content
   localize_block_content
   localize_animation_library
   localize_shared_functions
@@ -32,6 +31,15 @@ def sync_in
 rescue => e
   puts "Sync in failed from the error: #{e}"
   raise e
+end
+
+def localize_level_and_project_content
+  variable_strings = {}
+  parameter_strings = {}
+  localize_level_content(variable_strings, parameter_strings)
+  localize_project_content(variable_strings, parameter_strings)
+  write_to_yml("variable_names", variable_strings)
+  write_to_yml("parameter_names", parameter_strings)
 end
 
 def get_i18n_strings(level)
@@ -106,18 +114,27 @@ def get_i18n_strings(level)
         i18n_strings['behavior_names'][name.content] = name.content if name
       end
 
-      text_blocks = blocks.xpath("//block[@type=\"text\"]")
-      i18n_strings['placeholder_texts'] = Hash.new unless text_blocks.empty?
-      text_blocks.each do |text_block|
-        text_title = text_block.at_xpath('./title[@name="TEXT"]')
-        # Skip empty or untranslatable string.
-        # A translatable string must have at least 3 consecutive alphabetic characters.
-        next unless text_title&.content =~ /[a-zA-Z]{3,}/
-
-        # Use only alphanumeric characters in lower cases as string key
-        text_key = Digest::MD5.hexdigest text_title.content
-        i18n_strings['placeholder_texts'][text_key] = text_title.content
+      ## Variable Names
+      variables = blocks.xpath("//block[@type=\"variables_get\"]")
+      i18n_strings['variable_names'] = Hash.new unless variables.empty?
+      variables.each do |variable|
+        name = variable.at_xpath('./title[@name="VAR"]')
+        i18n_strings['variable_names'][name.content] = name.content if name
       end
+
+      ## Parameter Names
+      parameters = blocks.xpath("//block[@type=\"parameters_get\"]")
+      i18n_strings['parameter_names'] = Hash.new unless parameters.empty?
+      parameters.each do |parameter|
+        name = parameter.at_xpath('./title[@name="VAR"]')
+        i18n_strings['parameter_names'][name.content] = name.content if name
+      end
+
+      ## Placeholder texts
+      i18n_strings['placeholder_texts'] = Hash.new
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
     end
   end
 
@@ -125,6 +142,10 @@ def get_i18n_strings(level)
     i18n_strings["sublevels"] = {}
     level.sublevels.map do |sublevel|
       i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
+      # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
+      %w[block_categories variable_names parameter_names].each do |type|
+        i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
+      end
     end
   end
 
@@ -135,7 +156,26 @@ def get_i18n_strings(level)
   i18n_strings.delete_if {|_, value| value.blank?}
 end
 
-def localize_project_content
+def get_placeholder_texts(blocks, block_type, title_names)
+  results = {}
+  blocks.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+    title_names.each do |title_name|
+      title = block.at_xpath("./title[@name=\"#{title_name}\"]")
+
+      # Skip empty or untranslatable string.
+      # A translatable string must have at least 3 consecutive alphabetic characters.
+      next unless title&.content =~ /[a-zA-Z]{3,}/
+
+      # Use only alphanumeric characters in lower cases as string key
+      text_key = Digest::MD5.hexdigest title.content
+      results[text_key] = title.content
+    end
+  end
+
+  results
+end
+
+def localize_project_content(variable_strings, parameter_strings)
   puts "Preparing project content"
   project_content_file = "../#{I18N_SOURCE_DIR}/course_content/projects.json"
   project_strings = {}
@@ -148,6 +188,15 @@ def localize_project_content
       project_strings[url] = get_i18n_strings(level)
       # Block categories are handled differently below and are generally covered by the script levels
       project_strings[url].delete("block_categories") if project_strings[url].key? "block_categories"
+
+      # add project-level variables to the flattened hash structures of
+      # all variable & parameter strings
+      if project_strings[url].key? "variable_names"
+        variable_strings.merge! project_strings[url].delete("variable_names")
+      end
+      if project_strings[url].key? "parameter_names"
+        parameter_strings.merge! project_strings[url].delete("parameter_names")
+      end
     end
     project_strings.delete_if {|_, value| value.blank?}
 
@@ -157,7 +206,7 @@ def localize_project_content
   end
 end
 
-def localize_level_content
+def localize_level_content(variable_strings, parameter_strings)
   puts "Preparing level content"
 
   block_category_strings = {}
@@ -187,6 +236,15 @@ def localize_level_content
         # as a single group rather than breaking them up by script
         if script_strings[url].key? "block_categories"
           block_category_strings.merge! script_strings[url].delete("block_categories")
+        end
+
+        # do the same for variables and parameters
+        if script_strings[url].key? "variable_names"
+          variable_strings.merge! script_strings[url].delete("variable_names")
+        end
+
+        if script_strings[url].key? "parameter_names"
+          parameter_strings.merge! script_strings[url].delete("parameter_names")
         end
       end
       script_strings.delete_if {|_, value| value.blank?}
@@ -236,23 +294,17 @@ def localize_level_content
     end
   end
 
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.yml"), 'w') do |file|
+  write_to_yml("block_categories", block_category_strings)
+  write_to_yml("progressions", progression_strings)
+end
+
+def write_to_yml(type, strings)
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{type}.yml"), 'w') do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
       "en" => {
         "data" => {
-          "block_categories" => block_category_strings.sort.to_h
-        }
-      }
-    }
-    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
-  end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/progressions.yml"), 'w') do |file|
-    # Format strings for consumption by the rails i18n engine
-    formatted_data = {
-      "en" => {
-        "data" => {
-          "progressions" => progression_strings.sort.to_h
+          type => strings.sort.to_h
         }
       }
     }

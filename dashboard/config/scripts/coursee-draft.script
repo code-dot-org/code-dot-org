@@ -1,7 +1,7 @@
 login_required true
 
 lesson_group 'content', display_name: 'Content'
-lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race', has_lesson_plan: true
+lesson 'Algorithms: Dice Race', display_name: 'Algorithms: Dice Race', has_lesson_plan: true, unplugged: true
 level 'DiceRace'
 
 lesson 'Introduction', display_name: 'Introduction', has_lesson_plan: true
@@ -72,7 +72,7 @@ video_key_for_next_level 'starwars_blocks_congrats'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true
+lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters'
 
 lesson 'Functions in Artist', display_name: 'Functions in Artist', has_lesson_plan: true
@@ -159,9 +159,9 @@ lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_
 level 'Prepare for your presentation', named: true
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
-lesson 'Internet', display_name: 'Internet', has_lesson_plan: true
+lesson 'Internet', display_name: 'Internet', has_lesson_plan: true, unplugged: true
 level 'Internet'
 
-lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'Crowdsourcing'
 

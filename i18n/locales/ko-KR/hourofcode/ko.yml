@@ -110,9 +110,15 @@ ko:
     더 많은 내용을 가르치기 위한 새로운 여정에서 Code.org의 제일보를 즐기세요.
   hoc_live: 아워오브코드 라이브
   hoc_live_sign_up_title: 아워오브코드 라이브 가입
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: '특별 게스트와 함께 실시간으로 배우세요! 컴퓨터가 없는 학생을 포함하여, 연령과 능력 수준에 상관
     없이 모든 학생을 환영합니다. 가정에서 계속 학습하려면 에피소드 녹화물 및 자료를 수신할 주소를 알려 주십시오.  '
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: 함께 참여하기
+  hoc_live_learn_more: 더보기
   hoc_overview_oceans_tutorial_header: 바다환경을 위한 AI
   hoc_overview_oceans_tutorial_desc: 인공지능 (AI)과 머신러닝, 트레이닝 데이터, 편견에 관해 배우는 한편 윤리 문제를
     탐구하고 AI로 세계적 문제를 어떻게 해결할지 알아보세요.
@@ -4933,7 +4939,7 @@ ko:
     포르투갈어, 스페인어, 스웨덴어, 터키어
   tutorial_dance2019_string_detail_grades: 초등 2학년 이상
   tutorial_danceparty_string_detail_grades: 초등 2학년 이상
-  tutorial_chibitronics_string_detail_grades: 2-5학년
+  tutorial_chibitronics_string_detail_grades: 프리 리더 - 5학년
   tutorial_athlete_string_detail_grades: 초등 2학년 이상
   tutorial_moana_string_detail_grades: 초등 2학년 이상
   tutorial_star-wars_string_detail_grades: 초등 2학년 이상
@@ -4983,7 +4989,7 @@ ko:
   tutorial_tynkerpup_string_detail_grades: 프리 리더 - 5학년
   tutorial_livecode_string_detail_grades: 9학년 이상
   tutorial_cocomgame_string_detail_grades: 초등 2학년 이상
-  tutorial_tynkerspin_string_detail_grades: 프리 리더 -8학년
+  tutorial_tynkerspin_string_detail_grades: 프리 리더 - 5학년
   tutorial_code-avengers_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_tynkercq_string_detail_grades: 프리 리더 - 5학년
   tutorial_cmgame_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -5068,7 +5074,7 @@ ko:
   tutorial_baubles_string_detail_grades: 2-8 학년
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: 초등 2학년 이상
-  tutorial_fufafit_string_detail_grades: 2-5학년
+  tutorial_fufafit_string_detail_grades: 프리 리더 - 5학년
   tutorial_ozodance_string_detail_grades: 모든 연령
   tutorial_codingrobotics_string_detail_grades: 프리 리더 - 5학년
   tutorial_box_string_detail_grades: do-not-show
@@ -5093,13 +5099,13 @@ ko:
   tutorial_besttech_string_detail_grades: 9학년 이상
   tutorial_tlcbrain_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_hopquiz_string_detail_grades: 6-8 학년
-  tutorial_unfortunate_string_detail_grades: 2-5학년
+  tutorial_unfortunate_string_detail_grades: 프리 리더 - 5학년
   tutorial_cha_string_detail_grades: 6-8 학년
   tutorial_elaseq_string_detail_grades: 프리 리더 - 5학년
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: 2-8 학년
   tutorial_arduino_string_detail_grades: 6-8 학년
-  tutorial_introrobo_string_detail_grades: 2-5학년
+  tutorial_introrobo_string_detail_grades: 프리 리더 - 5학년
   tutorial_tlcinvis_string_detail_grades: 초등 2학년 이상
   tutorial_tlcjflap_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_procolor_string_detail_grades: 프리 리더 -8학년
@@ -5108,7 +5114,7 @@ ko:
   tutorial_ticklel_string_detail_grades: 초등 2학년 이상
   tutorial_spiralsdash_string_detail_grades: 2-8 학년
   tutorial_ghdebug_string_detail_grades: 2-8 학년
-  tutorial_tlckk_string_detail_grades: 2-5학년
+  tutorial_tlckk_string_detail_grades: 프리 리더 - 5학년
   tutorial_firstcomp_string_detail_grades: 프리 리더 -1학년
   tutorial_mazefinch_string_detail_grades: 프리 리더 - 5학년
   tutorial_tlccc_string_detail_grades: 2-8 학년
@@ -5133,14 +5139,14 @@ ko:
   tutorial_grokflags_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_robomind_string_detail_grades: 2-8 학년
   tutorial_scratchanimwork_string_detail_grades: 2-8 학년
-  tutorial_adventureq_string_detail_grades: 2-5학년
+  tutorial_adventureq_string_detail_grades: 프리 리더 - 5학년
   tutorial_khan-es_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_kpt_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_kpl_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_khe_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_kfr_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_app-inventor_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_bits_string_detail_grades: 2-5학년
+  tutorial_bits_string_detail_grades: 프리 리더 - 5학년
   tutorial_blockly_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: 모든 연령
@@ -5149,13 +5155,13 @@ ko:
   tutorial_spellcraft_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_pirates_string_detail_grades: 2-8 학년
   tutorial_csfirst_string_detail_grades: 초등 2학년 이상
-  tutorial_loopedy_string_detail_grades: 2-5학년
+  tutorial_loopedy_string_detail_grades: 프리 리더 - 5학년
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
   tutorial_ssw_string_detail_grades: do-not-show
   tutorial_sswb_string_detail_grades: do-not-show
   tutorial_kodable-unplugged_string_detail_grades: 2-8 학년
-  tutorial_scratch_string_detail_grades: 2-5학년
+  tutorial_scratch_string_detail_grades: 프리 리더 - 5학년
   tutorial_bayes_string_detail_grades: 모든 연령
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -5165,7 +5171,7 @@ ko:
   tutorial_rmc_string_detail_grades: do-not-show
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
-  tutorial_thinkersmith-es_string_detail_grades: 2-5학년
+  tutorial_thinkersmith-es_string_detail_grades: 프리 리더 - 5학년
   tutorial_pixie_string_detail_grades: 초등 2학년 이상
   tutorial_play_string_detail_grades: do-not-show
   tutorial_robomind-nl_string_detail_grades: 2-8 학년
@@ -5209,7 +5215,7 @@ ko:
   tutorial_computeit_string_detail_grades: 초등 2학년 이상
   tutorial_codesterssj_string_detail_grades: 2-8 학년
   tutorial_cmchat_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_tynkerdb_string_detail_grades: 2-5학년
+  tutorial_tynkerdb_string_detail_grades: 프리 리더 - 5학년
   tutorial_cmbuild_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_robotrattle_string_detail_grades: 2-8 학년
   tutorial_codestersh_string_detail_grades: 2-8 학년
@@ -5221,7 +5227,7 @@ ko:
   tutorial_kodmaze_string_detail_grades: 프리 리더 - 5학년
   tutorial_codestersa_string_detail_grades: 2-8 학년
   tutorial_cmdodo_string_detail_grades: 2-5학년
-  tutorial_tynkerspace_string_detail_grades: 2-5학년
+  tutorial_tynkerspace_string_detail_grades: 프리 리더 - 5학년
   tutorial_gfbloons_string_detail_grades: 9학년 이상
   tutorial_raspipong_string_detail_grades: 9학년 이상
   tutorial_codehsvr_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -5236,7 +5242,7 @@ ko:
   tutorial_codehsjsgraph_string_detail_grades: 9학년 이상
   tutorial_thunkable_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_hopcrossyroad_string_detail_grades: 2-8 학년
-  tutorial_switchglitch_string_detail_grades: 2-5학년
+  tutorial_switchglitch_string_detail_grades: 프리 리더 - 5학년
   tutorial_codecar_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_codesterscp_string_detail_grades: 6-8 학년
   tutorial_grokpetblock_string_detail_grades: 6-8 학년
@@ -5245,7 +5251,7 @@ ko:
   tutorial_codesterscr_string_detail_grades: 2-8 학년
   tutorial_grokdisease_string_detail_grades: 9학년 이상
   tutorial_techec_string_detail_grades: 대학생
-  tutorial_rgbegin_string_detail_grades: 2-5학년
+  tutorial_rgbegin_string_detail_grades: 프리 리더 - 5학년
   tutorial_myradream_string_detail_grades: 2-8 학년
   tutorial_thinkfun_string_detail_grades: 2-8 학년
   tutorial_hopfireworks_string_detail_grades: 2-8 학년
@@ -5253,7 +5259,7 @@ ko:
   tutorial_codehspython_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_codehsjava_string_detail_grades: 9학년 이상
   tutorial_techioda_string_detail_grades: 대학생
-  tutorial_grokmonster_string_detail_grades: 2-5학년
+  tutorial_grokmonster_string_detail_grades: 프리 리더 - 5학년
   tutorial_techmjs_string_detail_grades: 대학생
   tutorial_techga_string_detail_grades: 대학생
   tutorial_techioan_string_detail_grades: 대학생
@@ -5261,19 +5267,19 @@ ko:
   tutorial_groktunnel_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_stemcod_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_techikb_string_detail_grades: 대학생
-  tutorial_kanostreet_string_detail_grades: 2-5학년
-  tutorial_nyblebot_string_detail_grades: 2-5학년
-  tutorial_codemojijs_string_detail_grades: 2-5학년
+  tutorial_kanostreet_string_detail_grades: 프리 리더 - 5학년
+  tutorial_nyblebot_string_detail_grades: 프리 리더 - 5학년
+  tutorial_codemojijs_string_detail_grades: 프리 리더 - 5학년
   tutorial_techapf_string_detail_grades: 대학생
   tutorial_techfpjs_string_detail_grades: 대학생
   tutorial_techlinq_string_detail_grades: 대학생
   tutorial_gpbcatapult_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_quorumastro_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_alicewonder_string_detail_grades: 2-5학년
+  tutorial_alicewonder_string_detail_grades: 프리 리더 - 5학년
   tutorial_rginter_string_detail_grades: 6-8 학년
   tutorial_cssgrid_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_jshero_string_detail_grades: 9학년 이상
-  tutorial_codemojipy_string_detail_grades: 2-5학년
+  tutorial_codemojipy_string_detail_grades: 프리 리더 - 5학년
   tutorial_nclabdrone_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_gpbcircle_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_gpbpaint_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -5305,11 +5311,11 @@ ko:
   tutorial_isavesanta_string_detail_grades: 2-8 학년
   tutorial_iorder_string_detail_grades: 2-8 학년
   tutorial_ianimate_string_detail_grades: 2-8 학년
-  tutorial_iloveada_string_detail_grades: 2-5학년
+  tutorial_iloveada_string_detail_grades: 프리 리더 - 5학년
   tutorial_kodflash_string_detail_grades: 프리 리더 - 5학년
-  tutorial_kodchoose_string_detail_grades: 2-5학년
+  tutorial_kodchoose_string_detail_grades: 프리 리더 - 5학년
   tutorial_kodpizzapre_string_detail_grades: 프리 리더 -1학년
-  tutorial_kodpizza_string_detail_grades: 2-5학년
+  tutorial_kodpizza_string_detail_grades: 프리 리더 - 5학년
   tutorial_kodwomen_string_detail_grades: 2-8 학년
   tutorial_tfunplug_string_detail_grades: 6-8 학년
   tutorial_lbvariables_string_detail_grades: 2-8 학년
@@ -5321,9 +5327,9 @@ ko:
   tutorial_lbpotato_string_detail_grades: 초등 2학년 이상
   tutorial_lbguitar_string_detail_grades: 초등 2학년 이상
   tutorial_lbio_string_detail_grades: 2-8 학년
-  tutorial_wonpuppy_string_detail_grades: 2-5학년
+  tutorial_wonpuppy_string_detail_grades: 프리 리더 - 5학년
   tutorial_woncue_string_detail_grades: 초등 2학년 이상
-  tutorial_wonzoo_string_detail_grades: 2-5학년
+  tutorial_wonzoo_string_detail_grades: 프리 리더 - 5학년
   tutorial_wontrip_string_detail_grades: 2-8 학년
   tutorial_woncollect_string_detail_grades: 프리 리더 - 5학년
   tutorial_wonsecret_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -5364,10 +5370,10 @@ ko:
   tutorial_3dbearmars_string_detail_grades: 2-8 학년
   tutorial_alexaskill_string_detail_grades: 2-8 학년
   tutorial_bitsboxyak_string_detail_grades: 2-8 학년
-  tutorial_blockscadbargraphs_string_detail_grades: 2-5학년
-  tutorial_blockscadbirdhouses_string_detail_grades: 2-5학년
+  tutorial_blockscadbargraphs_string_detail_grades: 프리 리더 - 5학년
+  tutorial_blockscadbirdhouses_string_detail_grades: 프리 리더 - 5학년
   tutorial_blockscadclock_string_detail_grades: 9학년 이상
-  tutorial_blockscaddinner_string_detail_grades: 2-5학년
+  tutorial_blockscaddinner_string_detail_grades: 프리 리더 - 5학년
   tutorial_blockscadicecream_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_blockscadpizza_string_detail_grades: 6-8 학년
   tutorial_blockscadsugar_string_detail_grades: 6-8 학년
@@ -5378,20 +5384,20 @@ ko:
   tutorial_bpenglishvid_string_detail_grades: 2-8 학년
   tutorial_bphealthscratch_string_detail_grades: 초등 2학년 이상
   tutorial_bphealthvid_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_bpmathscratch_string_detail_grades: 2-5학년
+  tutorial_bpmathscratch_string_detail_grades: 프리 리더 - 5학년
   tutorial_bpmathvid_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_bpmlkscratch_string_detail_grades: 2-8 학년
   tutorial_bpmlkvid_string_detail_grades: 6-8 학년
-  tutorial_bpsafetyscratch_string_detail_grades: 2-5학년
+  tutorial_bpsafetyscratch_string_detail_grades: 프리 리더 - 5학년
   tutorial_bpsafetyvid_string_detail_grades: 6-8 학년
-  tutorial_bpsciencescratch_string_detail_grades: 2-5학년
+  tutorial_bpsciencescratch_string_detail_grades: 프리 리더 - 5학년
   tutorial_bpsciencevid_string_detail_grades: 6-8 학년
   tutorial_bptechscratch_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_bptechvid_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_caflags_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_matariki_string_detail_grades: 2-5학년
+  tutorial_matariki_string_detail_grades: 프리 리더 - 5학년
   tutorial_carestaurant_string_detail_grades: 초등 2학년 이상
-  tutorial_casea_string_detail_grades: 2-5학년
+  tutorial_casea_string_detail_grades: 프리 리더 - 5학년
   tutorial_cashield_string_detail_grades: 2-8 학년
   tutorial_ccwslimer_string_detail_grades: 2-8 학년
   tutorial_codinggalaxy_string_detail_grades: 프리 리더 -8학년
@@ -5430,8 +5436,8 @@ ko:
   tutorial_groklearningpython_string_detail_grades: 9학년 이상
   tutorial_htmltimetravel_string_detail_grades: 9학년 이상
   tutorial_hp_flappy_string_detail_grades: 9학년 이상
-  tutorial_appytappin_string_detail_grades: 2-5학년
-  tutorial_icipher_string_detail_grades: 2-5학년
+  tutorial_appytappin_string_detail_grades: 프리 리더 - 5학년
+  tutorial_icipher_string_detail_grades: 프리 리더 - 5학년
   tutorial_iguess_string_detail_grades: 프리 리더 - 5학년
   tutorial_imake_string_detail_grades: 프리 리더 -1학년
   tutorial_imorse_string_detail_grades: 2-8 학년
@@ -5440,7 +5446,7 @@ ko:
   tutorial_kibobowl_string_detail_grades: 프리 리더 - 5학년
   tutorial_kibodance_string_detail_grades: 프리 리더 - 5학년
   tutorial_buildcharacters_string_detail_grades: 프리 리더 - 5학년
-  tutorial_designgames_string_detail_grades: 2-5학년
+  tutorial_designgames_string_detail_grades: 프리 리더 - 5학년
   tutorial_makelevels_string_detail_grades: 프리 리더 - 5학년
   tutorial_wizard_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_mbscratchcards_string_detail_grades: 초등 2학년 이상
@@ -5456,19 +5462,19 @@ ko:
   tutorial_ozotroll_string_detail_grades: 6-8 학년
   tutorial_peblioart_string_detail_grades: 9학년 이상
   tutorial_astropi_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_rgart_string_detail_grades: 2-5학년
-  tutorial_rgengineer_string_detail_grades: 2-5학년
-  tutorial_rgmath_string_detail_grades: 2-5학년
-  tutorial_rgscience_string_detail_grades: 2-5학년
-  tutorial_rgtech_string_detail_grades: 2-5학년
+  tutorial_rgart_string_detail_grades: 프리 리더 - 5학년
+  tutorial_rgengineer_string_detail_grades: 프리 리더 - 5학년
+  tutorial_rgmath_string_detail_grades: 프리 리더 - 5학년
+  tutorial_rgscience_string_detail_grades: 프리 리더 - 5학년
+  tutorial_rgtech_string_detail_grades: 프리 리더 - 5학년
   tutorial_robotmagic3d_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_robotmagicflappy_string_detail_grades: 9학년 이상
   tutorial_scratchadventure_string_detail_grades: 초등 2학년 이상
   tutorial_scratchtalk_string_detail_grades: 초등 2학년 이상
-  tutorial_scratchjrstory_string_detail_grades: 2-5학년
+  tutorial_scratchjrstory_string_detail_grades: 프리 리더 - 5학년
   tutorial_scratchjrtwinkle_string_detail_grades: 프리 리더
   tutorial_spherocomm_string_detail_grades: 2-8 학년
-  tutorial_spherocommunity_string_detail_grades: 2-5학년
+  tutorial_spherocommunity_string_detail_grades: 프리 리더 - 5학년
   tutorial_spherofunctions_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_spheroinfrared_string_detail_grades: 6-8 학년
   tutorial_spherolightsensor_string_detail_grades: 2-8 학년
@@ -5493,15 +5499,15 @@ ko:
   tutorial_gcvariables_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_beanything_string_detail_grades: 프리 리더 - 5학년
   tutorial_change_string_detail_grades: 2-8 학년
-  tutorial_cooking_string_detail_grades: 2-5학년
+  tutorial_cooking_string_detail_grades: 프리 리더 - 5학년
   tutorial_crystal_string_detail_grades: 초등 2학년 이상
   tutorial_landscape_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_pets_string_detail_grades: 2-5학년
+  tutorial_pets_string_detail_grades: 프리 리더 - 5학년
   tutorial_petvet_string_detail_grades: 프리 리더 - 5학년
   tutorial_superhero_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_vidcodeplastic_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_vidcodetypeface_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_washustorm_string_detail_grades: 2-5학년
+  tutorial_washustorm_string_detail_grades: 프리 리더 - 5학년
   tutorial_activitypackets_string_detail_grades: 프리 리더 -8학년
   tutorial_googlerookie_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_tommyturtle_string_detail_grades: 프리 리더 - 5학년
@@ -5593,7 +5599,7 @@ ko:
   tutorial_ozobotcolor1_string_detail_grades: 초등 2학년 이상
   tutorial_scigirlspixels_string_detail_grades: 초등 2학년 이상
   tutorial_kcjheroines_string_detail_grades: 2-8 학년
-  tutorial_ozobotvalue_string_detail_grades: 2-5학년
+  tutorial_ozobotvalue_string_detail_grades: 프리 리더 - 5학년
   tutorial_icodebytes_string_detail_grades: 프리 리더
   tutorial_clfashion2_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_ai4all_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -5604,7 +5610,7 @@ ko:
   tutorial_kiboprogram_string_detail_grades: 프리 리더 - 5학년
   tutorial_hellorubycsin60_string_detail_grades: 프리 리더 - 5학년
   tutorial_clfashion1_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_irobottraffic_string_detail_grades: 2-5학년
+  tutorial_irobottraffic_string_detail_grades: 프리 리더 - 5학년
   tutorial_edisonmystery_string_detail_grades: 6-8 학년
   tutorial_microbitseaturtles_string_detail_grades: 6-8 학년
   tutorial_ozobotknow_string_detail_grades: 초등 2학년 이상
@@ -5613,7 +5619,7 @@ ko:
   tutorial_irobotkind_string_detail_grades: 프리 리더 - 5학년
   tutorial_firiavirtual_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_irobotguesscode_string_detail_grades: 2-8 학년
-  tutorial_ozobotnouns_string_detail_grades: 2-5학년
+  tutorial_ozobotnouns_string_detail_grades: 프리 리더 - 5학년
   tutorial_nasa3d_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_blupants_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_legodance_string_detail_grades: 6-8 학년
@@ -8263,15 +8269,15 @@ ko:
   tutorial_codehstriangle_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_ttwhitehouse_string_detail_grades: 초등 2학년 이상
   tutorial_modulo_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_codingtown_string_detail_grades: 2-5학년
-  tutorial_kanoart_string_detail_grades: 2-5학년
+  tutorial_codingtown_string_detail_grades: 프리 리더 - 5학년
+  tutorial_kanoart_string_detail_grades: 프리 리더 - 5학년
   tutorial_dragonscript_string_detail_grades: 9학년 이상
   tutorial_uwcloud_string_detail_grades: 초등 2학년 이상
   tutorial_htmlmuffin_string_detail_grades: 6-8 학년
   tutorial_microsoftpizza_string_detail_grades: 6-8 학년
   tutorial_stemc_blckhole_string_detail_grades: 9학년 이상
   tutorial_careconfigure_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_rpiscratch_string_detail_grades: 2-5학년
+  tutorial_rpiscratch_string_detail_grades: 프리 리더 - 5학년
   tutorial_ozaria_string_detail_grades: 초등 2학년 이상
   tutorial_ttovum_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_ttpassage_string_detail_grades: 2-8 학년
@@ -8319,7 +8325,7 @@ ko:
   tutorial_modvariables_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_codestersmicro_string_detail_grades: 6-8 학년
   tutorial_codestersdata_string_detail_grades: 6-8 학년
-  tutorial_ikodexmas_string_detail_grades: 2-5학년
+  tutorial_ikodexmas_string_detail_grades: 프리 리더 - 5학년
   tutorial_rpisensehat_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_modtraits_string_detail_grades: 초등 2학년 이상
   tutorial_mee_string_detail_grades: 초등 2학년 이상

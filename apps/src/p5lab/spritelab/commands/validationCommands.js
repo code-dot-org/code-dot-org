@@ -25,7 +25,22 @@ export const commands = {
     return coreLibrary.getBehaviorsForSpriteId(spriteId);
   },
 
+  getPrintLog() {
+    return coreLibrary.printLog;
+  },
+
+  getPromptVars() {
+    return coreLibrary.promptVars;
+  },
+
   getSpriteIdsInUse() {
     return coreLibrary.getSpriteIdsInUse();
+  },
+
+  getTitle() {
+    return {
+      title: coreLibrary.screenText.title,
+      subtitle: coreLibrary.screenText.subtitle
+    };
   }
 };

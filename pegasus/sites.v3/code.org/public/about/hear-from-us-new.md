@@ -11,16 +11,12 @@ style_min: true
 
 Interested in learning more about the work we do? Take a peek under the hood and stay in touch with what's happening at Code.org and throughout the computer science community. When you sign-up for our emails, you'll hear the latest CS news, learn about special Code.org milestones, and discover heartwarming testimonials and stories from classrooms across the globe. 
 
-<br>You can also catch-up by taking a look at our <a href="https://code.org/about/past-newsletters" target="_blank">past newsletters</a>.
+<br>You can also catch-up by taking a look at our <a href="https://code.org/about/past-newsletters" target="_blank">past newsletters</a>, and following us on <a href="https://twitter.com/codeorg">Twitter</a>, <a href="https://www.facebook.com/Code.org/">Facebook</a>, and <a href="https://www.instagram.com/codeorg/">Instagram</a>.
 
 ## Sign-up for our mailing list
+<iframe src="http://go.pardot.com/l/153401/2021-01-13/p1jgm7" width="100%" height="435" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 
-<iframe src="http://go.pardot.com/l/153401/2021-01-13/p1jgm7" width="100%" height="415" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
-
-<hr>
-
-<b>TIP</b>: If you're <strong>already a member of our mailing list</strong>, you can update your subscription preferences through your email preference center which is located at the bottom of every Code.org email. 
-
+If you're <strong>already a member of our mailing list</strong>, you can update your subscription preferences through your email preference center which is located at the bottom of every Code.org email.
 <hr>
 
 ## <a name="Blog"></a>Hear more from Code.org

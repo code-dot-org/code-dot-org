@@ -134,11 +134,17 @@ ka:
     in a new journey to teach more about AI throughout our curriculum.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: შემოგვიერთდით
+  hoc_live_learn_more: Learn more
   hoc_overview_oceans_tutorial_header: AI for Oceans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
@@ -6769,7 +6775,7 @@ ka:
   tutorial_meeempathy_language: ქართული
   tutorial_dance2019_string_detail_grades: კლასები 2+
   tutorial_danceparty_string_detail_grades: კლასები 2+
-  tutorial_chibitronics_string_detail_grades: 2-5 კლასები
+  tutorial_chibitronics_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_athlete_string_detail_grades: კლასები 2+
   tutorial_moana_string_detail_grades: კლასები 2+
   tutorial_star-wars_string_detail_grades: კლასები 2+
@@ -6819,7 +6825,7 @@ ka:
   tutorial_tynkerpup_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_livecode_string_detail_grades: კლასები 9+
   tutorial_cocomgame_string_detail_grades: კლასები 2+
-  tutorial_tynkerspin_string_detail_grades: დამწყებები - მე-8 კლასი
+  tutorial_tynkerspin_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_code-avengers_string_detail_grades: კლასები 6+
   tutorial_tynkercq_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_cmgame_string_detail_grades: კლასები 6+
@@ -6929,13 +6935,13 @@ ka:
   tutorial_besttech_string_detail_grades: კლასები 9+
   tutorial_tlcbrain_string_detail_grades: კლასები 6+
   tutorial_hopquiz_string_detail_grades: კლასები 6-8
-  tutorial_unfortunate_string_detail_grades: 2-5 კლასები
+  tutorial_unfortunate_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_cha_string_detail_grades: კლასები 6-8
   tutorial_elaseq_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_bbcmathi_string_detail_grades: არ-აჩვენო
   tutorial_tlcpixel_string_detail_grades: კლასები 2-8
   tutorial_arduino_string_detail_grades: კლასები 6-8
-  tutorial_introrobo_string_detail_grades: 2-5 კლასები
+  tutorial_introrobo_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_tlcinvis_string_detail_grades: კლასები 2+
   tutorial_tlcjflap_string_detail_grades: კლასები 6+
   tutorial_procolor_string_detail_grades: დამწყებები - მე-8 კლასი
@@ -6944,7 +6950,7 @@ ka:
   tutorial_ticklel_string_detail_grades: კლასები 2+
   tutorial_spiralsdash_string_detail_grades: კლასები 2-8
   tutorial_ghdebug_string_detail_grades: კლასები 2-8
-  tutorial_tlckk_string_detail_grades: 2-5 კლასები
+  tutorial_tlckk_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_firstcomp_string_detail_grades: დამწყებები - 1-ლი კლასი
   tutorial_mazefinch_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_tlccc_string_detail_grades: კლასები 2-8
@@ -6969,14 +6975,14 @@ ka:
   tutorial_grokflags_string_detail_grades: კლასები 6+
   tutorial_robomind_string_detail_grades: კლასები 2-8
   tutorial_scratchanimwork_string_detail_grades: კლასები 2-8
-  tutorial_adventureq_string_detail_grades: 2-5 კლასები
+  tutorial_adventureq_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_khan-es_string_detail_grades: კლასები 6+
   tutorial_kpt_string_detail_grades: კლასები 6+
   tutorial_kpl_string_detail_grades: კლასები 6+
   tutorial_khe_string_detail_grades: კლასები 6+
   tutorial_kfr_string_detail_grades: კლასები 6+
   tutorial_app-inventor_string_detail_grades: კლასები 6+
-  tutorial_bits_string_detail_grades: 2-5 კლასები
+  tutorial_bits_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_blockly_string_detail_grades: კლასები 6+
   tutorial_tynker_string_detail_grades: არ-აჩვენო
   tutorial_baypt_string_detail_grades: ყველა ასაკისთვის
@@ -6985,13 +6991,13 @@ ka:
   tutorial_spellcraft_string_detail_grades: კლასები 6+
   tutorial_pirates_string_detail_grades: კლასები 2-8
   tutorial_csfirst_string_detail_grades: კლასები 2+
-  tutorial_loopedy_string_detail_grades: 2-5 კლასები
+  tutorial_loopedy_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_dsw_string_detail_grades: არ-აჩვენო
   tutorial_dswb_string_detail_grades: არ-აჩვენო
   tutorial_ssw_string_detail_grades: არ-აჩვენო
   tutorial_sswb_string_detail_grades: არ-აჩვენო
   tutorial_kodable-unplugged_string_detail_grades: კლასები 2-8
-  tutorial_scratch_string_detail_grades: 2-5 კლასები
+  tutorial_scratch_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_bayes_string_detail_grades: ყველა ასაკისთვის
   tutorial_gumball_string_detail_grades: არ-აჩვენო
   tutorial_hrm_string_detail_grades: კლასები 6+
@@ -7001,7 +7007,7 @@ ka:
   tutorial_rmc_string_detail_grades: არ-აჩვენო
   tutorial_smc_string_detail_grades: არ-აჩვენო
   tutorial_minecraft-2016_string_detail_grades: არ-აჩვენო
-  tutorial_thinkersmith-es_string_detail_grades: 2-5 კლასები
+  tutorial_thinkersmith-es_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_pixie_string_detail_grades: კლასები 2+
   tutorial_play_string_detail_grades: არ-აჩვენო
   tutorial_robomind-nl_string_detail_grades: კლასები 2-8
@@ -7045,7 +7051,7 @@ ka:
   tutorial_computeit_string_detail_grades: კლასები 2+
   tutorial_codesterssj_string_detail_grades: კლასები 2-8
   tutorial_cmchat_string_detail_grades: კლასები 6+
-  tutorial_tynkerdb_string_detail_grades: 2-5 კლასები
+  tutorial_tynkerdb_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_cmbuild_string_detail_grades: კლასები 6+
   tutorial_robotrattle_string_detail_grades: კლასები 2-8
   tutorial_codestersh_string_detail_grades: კლასები 2-8
@@ -7057,7 +7063,7 @@ ka:
   tutorial_kodmaze_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_codestersa_string_detail_grades: კლასები 2-8
   tutorial_cmdodo_string_detail_grades: 2-5 კლასები
-  tutorial_tynkerspace_string_detail_grades: 2-5 კლასები
+  tutorial_tynkerspace_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_gfbloons_string_detail_grades: კლასები 9+
   tutorial_raspipong_string_detail_grades: კლასები 9+
   tutorial_codehsvr_string_detail_grades: კლასები 6+
@@ -7072,7 +7078,7 @@ ka:
   tutorial_codehsjsgraph_string_detail_grades: კლასები 9+
   tutorial_thunkable_string_detail_grades: კლასები 6+
   tutorial_hopcrossyroad_string_detail_grades: კლასები 2-8
-  tutorial_switchglitch_string_detail_grades: 2-5 კლასები
+  tutorial_switchglitch_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_codecar_string_detail_grades: კლასები 6+
   tutorial_codesterscp_string_detail_grades: კლასები 6-8
   tutorial_grokpetblock_string_detail_grades: კლასები 6-8
@@ -7081,7 +7087,7 @@ ka:
   tutorial_codesterscr_string_detail_grades: კლასები 2-8
   tutorial_grokdisease_string_detail_grades: კლასები 9+
   tutorial_techec_string_detail_grades: უნივერსიტეტი
-  tutorial_rgbegin_string_detail_grades: 2-5 კლასები
+  tutorial_rgbegin_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_myradream_string_detail_grades: კლასები 2-8
   tutorial_thinkfun_string_detail_grades: კლასები 2-8
   tutorial_hopfireworks_string_detail_grades: კლასები 2-8
@@ -7089,7 +7095,7 @@ ka:
   tutorial_codehspython_string_detail_grades: კლასები 6+
   tutorial_codehsjava_string_detail_grades: კლასები 9+
   tutorial_techioda_string_detail_grades: უნივერსიტეტი
-  tutorial_grokmonster_string_detail_grades: 2-5 კლასები
+  tutorial_grokmonster_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_techmjs_string_detail_grades: უნივერსიტეტი
   tutorial_techga_string_detail_grades: უნივერსიტეტი
   tutorial_techioan_string_detail_grades: უნივერსიტეტი
@@ -7097,19 +7103,19 @@ ka:
   tutorial_groktunnel_string_detail_grades: კლასები 6+
   tutorial_stemcod_string_detail_grades: კლასები 6+
   tutorial_techikb_string_detail_grades: უნივერსიტეტი
-  tutorial_kanostreet_string_detail_grades: 2-5 კლასები
-  tutorial_nyblebot_string_detail_grades: 2-5 კლასები
-  tutorial_codemojijs_string_detail_grades: 2-5 კლასები
+  tutorial_kanostreet_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_nyblebot_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_codemojijs_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_techapf_string_detail_grades: უნივერსიტეტი
   tutorial_techfpjs_string_detail_grades: უნივერსიტეტი
   tutorial_techlinq_string_detail_grades: უნივერსიტეტი
   tutorial_gpbcatapult_string_detail_grades: კლასები 6+
   tutorial_quorumastro_string_detail_grades: კლასები 6+
-  tutorial_alicewonder_string_detail_grades: 2-5 კლასები
+  tutorial_alicewonder_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_rginter_string_detail_grades: კლასები 6-8
   tutorial_cssgrid_string_detail_grades: კლასები 6+
   tutorial_jshero_string_detail_grades: კლასები 9+
-  tutorial_codemojipy_string_detail_grades: 2-5 კლასები
+  tutorial_codemojipy_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_nclabdrone_string_detail_grades: კლასები 6+
   tutorial_gpbcircle_string_detail_grades: კლასები 6+
   tutorial_gpbpaint_string_detail_grades: კლასები 6+
@@ -7141,11 +7147,11 @@ ka:
   tutorial_isavesanta_string_detail_grades: კლასები 2-8
   tutorial_iorder_string_detail_grades: კლასები 2-8
   tutorial_ianimate_string_detail_grades: კლასები 2-8
-  tutorial_iloveada_string_detail_grades: 2-5 კლასები
+  tutorial_iloveada_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_kodflash_string_detail_grades: დამწყებები - მე-5 კლასი
-  tutorial_kodchoose_string_detail_grades: 2-5 კლასები
+  tutorial_kodchoose_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_kodpizzapre_string_detail_grades: დამწყებები - 1-ლი კლასი
-  tutorial_kodpizza_string_detail_grades: 2-5 კლასები
+  tutorial_kodpizza_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_kodwomen_string_detail_grades: კლასები 2-8
   tutorial_tfunplug_string_detail_grades: კლასები 6-8
   tutorial_lbvariables_string_detail_grades: კლასები 2-8
@@ -7157,9 +7163,9 @@ ka:
   tutorial_lbpotato_string_detail_grades: კლასები 2+
   tutorial_lbguitar_string_detail_grades: კლასები 2+
   tutorial_lbio_string_detail_grades: კლასები 2-8
-  tutorial_wonpuppy_string_detail_grades: 2-5 კლასები
+  tutorial_wonpuppy_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_woncue_string_detail_grades: კლასები 2+
-  tutorial_wonzoo_string_detail_grades: 2-5 კლასები
+  tutorial_wonzoo_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_wontrip_string_detail_grades: კლასები 2-8
   tutorial_woncollect_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_wonsecret_string_detail_grades: კლასები 6+
@@ -7200,10 +7206,10 @@ ka:
   tutorial_3dbearmars_string_detail_grades: კლასები 2-8
   tutorial_alexaskill_string_detail_grades: კლასები 2-8
   tutorial_bitsboxyak_string_detail_grades: კლასები 2-8
-  tutorial_blockscadbargraphs_string_detail_grades: 2-5 კლასები
-  tutorial_blockscadbirdhouses_string_detail_grades: 2-5 კლასები
+  tutorial_blockscadbargraphs_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_blockscadbirdhouses_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_blockscadclock_string_detail_grades: კლასები 9+
-  tutorial_blockscaddinner_string_detail_grades: 2-5 კლასები
+  tutorial_blockscaddinner_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_blockscadicecream_string_detail_grades: კლასები 6+
   tutorial_blockscadpizza_string_detail_grades: კლასები 6-8
   tutorial_blockscadsugar_string_detail_grades: კლასები 6-8
@@ -7214,20 +7220,20 @@ ka:
   tutorial_bpenglishvid_string_detail_grades: კლასები 2-8
   tutorial_bphealthscratch_string_detail_grades: კლასები 2+
   tutorial_bphealthvid_string_detail_grades: კლასები 6+
-  tutorial_bpmathscratch_string_detail_grades: 2-5 კლასები
+  tutorial_bpmathscratch_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_bpmathvid_string_detail_grades: კლასები 6+
   tutorial_bpmlkscratch_string_detail_grades: კლასები 2-8
   tutorial_bpmlkvid_string_detail_grades: კლასები 6-8
-  tutorial_bpsafetyscratch_string_detail_grades: 2-5 კლასები
+  tutorial_bpsafetyscratch_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_bpsafetyvid_string_detail_grades: კლასები 6-8
-  tutorial_bpsciencescratch_string_detail_grades: 2-5 კლასები
+  tutorial_bpsciencescratch_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_bpsciencevid_string_detail_grades: კლასები 6-8
   tutorial_bptechscratch_string_detail_grades: კლასები 6+
   tutorial_bptechvid_string_detail_grades: კლასები 6+
   tutorial_caflags_string_detail_grades: კლასები 6+
-  tutorial_matariki_string_detail_grades: 2-5 კლასები
+  tutorial_matariki_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_carestaurant_string_detail_grades: კლასები 2+
-  tutorial_casea_string_detail_grades: 2-5 კლასები
+  tutorial_casea_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_cashield_string_detail_grades: კლასები 2-8
   tutorial_ccwslimer_string_detail_grades: კლასები 2-8
   tutorial_codinggalaxy_string_detail_grades: დამწყებები - მე-8 კლასი
@@ -7266,8 +7272,8 @@ ka:
   tutorial_groklearningpython_string_detail_grades: კლასები 9+
   tutorial_htmltimetravel_string_detail_grades: კლასები 9+
   tutorial_hp_flappy_string_detail_grades: კლასები 9+
-  tutorial_appytappin_string_detail_grades: 2-5 კლასები
-  tutorial_icipher_string_detail_grades: 2-5 კლასები
+  tutorial_appytappin_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_icipher_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_iguess_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_imake_string_detail_grades: დამწყებები - 1-ლი კლასი
   tutorial_imorse_string_detail_grades: კლასები 2-8
@@ -7276,7 +7282,7 @@ ka:
   tutorial_kibobowl_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_kibodance_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_buildcharacters_string_detail_grades: დამწყებები - მე-5 კლასი
-  tutorial_designgames_string_detail_grades: 2-5 კლასები
+  tutorial_designgames_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_makelevels_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_wizard_string_detail_grades: კლასები 6+
   tutorial_mbscratchcards_string_detail_grades: კლასები 2+
@@ -7292,19 +7298,19 @@ ka:
   tutorial_ozotroll_string_detail_grades: კლასები 6-8
   tutorial_peblioart_string_detail_grades: კლასები 9+
   tutorial_astropi_string_detail_grades: კლასები 6+
-  tutorial_rgart_string_detail_grades: 2-5 კლასები
-  tutorial_rgengineer_string_detail_grades: 2-5 კლასები
-  tutorial_rgmath_string_detail_grades: 2-5 კლასები
-  tutorial_rgscience_string_detail_grades: 2-5 კლასები
-  tutorial_rgtech_string_detail_grades: 2-5 კლასები
+  tutorial_rgart_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_rgengineer_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_rgmath_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_rgscience_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_rgtech_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_robotmagic3d_string_detail_grades: კლასები 6+
   tutorial_robotmagicflappy_string_detail_grades: კლასები 9+
   tutorial_scratchadventure_string_detail_grades: კლასები 2+
   tutorial_scratchtalk_string_detail_grades: კლასები 2+
-  tutorial_scratchjrstory_string_detail_grades: 2-5 კლასები
+  tutorial_scratchjrstory_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: კლასები 2-8
-  tutorial_spherocommunity_string_detail_grades: 2-5 კლასები
+  tutorial_spherocommunity_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_spherofunctions_string_detail_grades: კლასები 6+
   tutorial_spheroinfrared_string_detail_grades: კლასები 6-8
   tutorial_spherolightsensor_string_detail_grades: კლასები 2-8
@@ -7329,15 +7335,15 @@ ka:
   tutorial_gcvariables_string_detail_grades: კლასები 6+
   tutorial_beanything_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_change_string_detail_grades: კლასები 2-8
-  tutorial_cooking_string_detail_grades: 2-5 კლასები
+  tutorial_cooking_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_crystal_string_detail_grades: კლასები 2+
   tutorial_landscape_string_detail_grades: კლასები 6+
-  tutorial_pets_string_detail_grades: 2-5 კლასები
+  tutorial_pets_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_petvet_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_superhero_string_detail_grades: კლასები 6+
   tutorial_vidcodeplastic_string_detail_grades: კლასები 6+
   tutorial_vidcodetypeface_string_detail_grades: კლასები 6+
-  tutorial_washustorm_string_detail_grades: 2-5 კლასები
+  tutorial_washustorm_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_activitypackets_string_detail_grades: დამწყებები - მე-8 კლასი
   tutorial_googlerookie_string_detail_grades: კლასები 6+
   tutorial_tommyturtle_string_detail_grades: დამწყებები - მე-5 კლასი
@@ -7429,7 +7435,7 @@ ka:
   tutorial_ozobotcolor1_string_detail_grades: კლასები 2+
   tutorial_scigirlspixels_string_detail_grades: კლასები 2+
   tutorial_kcjheroines_string_detail_grades: კლასები 2-8
-  tutorial_ozobotvalue_string_detail_grades: 2-5 კლასები
+  tutorial_ozobotvalue_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_icodebytes_string_detail_grades: Pre-reader
   tutorial_clfashion2_string_detail_grades: კლასები 6+
   tutorial_ai4all_string_detail_grades: კლასები 6+
@@ -7440,7 +7446,7 @@ ka:
   tutorial_kiboprogram_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_hellorubycsin60_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_clfashion1_string_detail_grades: კლასები 6+
-  tutorial_irobottraffic_string_detail_grades: 2-5 კლასები
+  tutorial_irobottraffic_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_edisonmystery_string_detail_grades: კლასები 6-8
   tutorial_microbitseaturtles_string_detail_grades: კლასები 6-8
   tutorial_ozobotknow_string_detail_grades: კლასები 2+
@@ -7449,7 +7455,7 @@ ka:
   tutorial_irobotkind_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_firiavirtual_string_detail_grades: კლასები 6+
   tutorial_irobotguesscode_string_detail_grades: კლასები 2-8
-  tutorial_ozobotnouns_string_detail_grades: 2-5 კლასები
+  tutorial_ozobotnouns_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_nasa3d_string_detail_grades: კლასები 6+
   tutorial_blupants_string_detail_grades: კლასები 6+
   tutorial_legodance_string_detail_grades: კლასები 6-8
@@ -10405,15 +10411,15 @@ ka:
   tutorial_codehstriangle_string_detail_grades: კლასები 6+
   tutorial_ttwhitehouse_string_detail_grades: კლასები 2+
   tutorial_modulo_string_detail_grades: კლასები 6+
-  tutorial_codingtown_string_detail_grades: 2-5 კლასები
-  tutorial_kanoart_string_detail_grades: 2-5 კლასები
+  tutorial_codingtown_string_detail_grades: დამწყებები - მე-5 კლასი
+  tutorial_kanoart_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_dragonscript_string_detail_grades: კლასები 9+
   tutorial_uwcloud_string_detail_grades: კლასები 2+
   tutorial_htmlmuffin_string_detail_grades: კლასები 6-8
   tutorial_microsoftpizza_string_detail_grades: კლასები 6-8
   tutorial_stemc_blckhole_string_detail_grades: კლასები 9+
   tutorial_careconfigure_string_detail_grades: კლასები 6+
-  tutorial_rpiscratch_string_detail_grades: 2-5 კლასები
+  tutorial_rpiscratch_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_ozaria_string_detail_grades: კლასები 2+
   tutorial_ttovum_string_detail_grades: კლასები 6+
   tutorial_ttpassage_string_detail_grades: კლასები 2-8
@@ -10461,7 +10467,7 @@ ka:
   tutorial_modvariables_string_detail_grades: კლასები 6+
   tutorial_codestersmicro_string_detail_grades: კლასები 6-8
   tutorial_codestersdata_string_detail_grades: კლასები 6-8
-  tutorial_ikodexmas_string_detail_grades: 2-5 კლასები
+  tutorial_ikodexmas_string_detail_grades: დამწყებები - მე-5 კლასი
   tutorial_rpisensehat_string_detail_grades: კლასები 6+
   tutorial_modtraits_string_detail_grades: კლასები 2+
   tutorial_mee_string_detail_grades: კლასები 2+

@@ -134,11 +134,17 @@ ky:
     in a new journey to teach more about AI throughout our curriculum.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Бизге кошулгула
+  hoc_live_learn_more: Көптү үйрөн
   hoc_overview_oceans_tutorial_header: AI for Oceans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
@@ -6584,7 +6590,7 @@ ky:
   tutorial_meeempathy_language: Англисче
   tutorial_dance2019_string_detail_grades: 2+ класстар
   tutorial_danceparty_string_detail_grades: 2+ класстар
-  tutorial_chibitronics_string_detail_grades: 2-5-класстар
+  tutorial_chibitronics_string_detail_grades: Окуучу+ - 5 класс
   tutorial_athlete_string_detail_grades: 2+ класстар
   tutorial_moana_string_detail_grades: 2+ класстар
   tutorial_star-wars_string_detail_grades: 2+ класстар
@@ -6634,7 +6640,7 @@ ky:
   tutorial_tynkerpup_string_detail_grades: Окуучу+ - 5 класс
   tutorial_livecode_string_detail_grades: 9+ класстар
   tutorial_cocomgame_string_detail_grades: 2+ класстар
-  tutorial_tynkerspin_string_detail_grades: Окуучу+ - 8-класс
+  tutorial_tynkerspin_string_detail_grades: Окуучу+ - 5 класс
   tutorial_code-avengers_string_detail_grades: 6+ класстар
   tutorial_tynkercq_string_detail_grades: Окуучу+ - 5 класс
   tutorial_cmgame_string_detail_grades: 6+ класстар
@@ -6744,13 +6750,13 @@ ky:
   tutorial_besttech_string_detail_grades: 9+ класстар
   tutorial_tlcbrain_string_detail_grades: 6+ класстар
   tutorial_hopquiz_string_detail_grades: 6-8-класстар
-  tutorial_unfortunate_string_detail_grades: 2-5-класстар
+  tutorial_unfortunate_string_detail_grades: Окуучу+ - 5 класс
   tutorial_cha_string_detail_grades: 6-8-класстар
   tutorial_elaseq_string_detail_grades: Окуучу+ - 5 класс
   tutorial_bbcmathi_string_detail_grades: көрсөтүүгө болбойт
   tutorial_tlcpixel_string_detail_grades: 2-8-класстар
   tutorial_arduino_string_detail_grades: 6-8-класстар
-  tutorial_introrobo_string_detail_grades: 2-5-класстар
+  tutorial_introrobo_string_detail_grades: Окуучу+ - 5 класс
   tutorial_tlcinvis_string_detail_grades: 2+ класстар
   tutorial_tlcjflap_string_detail_grades: 6+ класстар
   tutorial_procolor_string_detail_grades: Окуучу+ - 8-класс
@@ -6759,7 +6765,7 @@ ky:
   tutorial_ticklel_string_detail_grades: 2+ класстар
   tutorial_spiralsdash_string_detail_grades: 2-8-класстар
   tutorial_ghdebug_string_detail_grades: 2-8-класстар
-  tutorial_tlckk_string_detail_grades: 2-5-класстар
+  tutorial_tlckk_string_detail_grades: Окуучу+ - 5 класс
   tutorial_firstcomp_string_detail_grades: Окуучу+ - 1-класс
   tutorial_mazefinch_string_detail_grades: Окуучу+ - 5 класс
   tutorial_tlccc_string_detail_grades: 2-8-класстар
@@ -6784,14 +6790,14 @@ ky:
   tutorial_grokflags_string_detail_grades: 6+ класстар
   tutorial_robomind_string_detail_grades: 2-8-класстар
   tutorial_scratchanimwork_string_detail_grades: 2-8-класстар
-  tutorial_adventureq_string_detail_grades: 2-5-класстар
+  tutorial_adventureq_string_detail_grades: Окуучу+ - 5 класс
   tutorial_khan-es_string_detail_grades: 6+ класстар
   tutorial_kpt_string_detail_grades: 6+ класстар
   tutorial_kpl_string_detail_grades: 6+ класстар
   tutorial_khe_string_detail_grades: 6+ класстар
   tutorial_kfr_string_detail_grades: 6+ класстар
   tutorial_app-inventor_string_detail_grades: 6+ класстар
-  tutorial_bits_string_detail_grades: 2-5-класстар
+  tutorial_bits_string_detail_grades: Окуучу+ - 5 класс
   tutorial_blockly_string_detail_grades: 6+ класстар
   tutorial_tynker_string_detail_grades: көрсөтүүгө болбойт
   tutorial_baypt_string_detail_grades: Бардык курактагылар
@@ -6800,13 +6806,13 @@ ky:
   tutorial_spellcraft_string_detail_grades: 6+ класстар
   tutorial_pirates_string_detail_grades: 2-8-класстар
   tutorial_csfirst_string_detail_grades: 2+ класстар
-  tutorial_loopedy_string_detail_grades: 2-5-класстар
+  tutorial_loopedy_string_detail_grades: Окуучу+ - 5 класс
   tutorial_dsw_string_detail_grades: көрсөтүүгө болбойт
   tutorial_dswb_string_detail_grades: көрсөтүүгө болбойт
   tutorial_ssw_string_detail_grades: көрсөтүүгө болбойт
   tutorial_sswb_string_detail_grades: көрсөтүүгө болбойт
   tutorial_kodable-unplugged_string_detail_grades: 2-8-класстар
-  tutorial_scratch_string_detail_grades: 2-5-класстар
+  tutorial_scratch_string_detail_grades: Окуучу+ - 5 класс
   tutorial_bayes_string_detail_grades: Бардык курактагылар
   tutorial_gumball_string_detail_grades: көрсөтүүгө болбойт
   tutorial_hrm_string_detail_grades: 6+ класстар
@@ -6816,7 +6822,7 @@ ky:
   tutorial_rmc_string_detail_grades: көрсөтүүгө болбойт
   tutorial_smc_string_detail_grades: көрсөтүүгө болбойт
   tutorial_minecraft-2016_string_detail_grades: көрсөтүүгө болбойт
-  tutorial_thinkersmith-es_string_detail_grades: 2-5-класстар
+  tutorial_thinkersmith-es_string_detail_grades: Окуучу+ - 5 класс
   tutorial_pixie_string_detail_grades: 2+ класстар
   tutorial_play_string_detail_grades: көрсөтүүгө болбойт
   tutorial_robomind-nl_string_detail_grades: 2-8-класстар
@@ -6860,7 +6866,7 @@ ky:
   tutorial_computeit_string_detail_grades: 2+ класстар
   tutorial_codesterssj_string_detail_grades: 2-8-класстар
   tutorial_cmchat_string_detail_grades: 6+ класстар
-  tutorial_tynkerdb_string_detail_grades: 2-5-класстар
+  tutorial_tynkerdb_string_detail_grades: Окуучу+ - 5 класс
   tutorial_cmbuild_string_detail_grades: 6+ класстар
   tutorial_robotrattle_string_detail_grades: 2-8-класстар
   tutorial_codestersh_string_detail_grades: 2-8-класстар
@@ -6872,7 +6878,7 @@ ky:
   tutorial_kodmaze_string_detail_grades: Окуучу+ - 5 класс
   tutorial_codestersa_string_detail_grades: 2-8-класстар
   tutorial_cmdodo_string_detail_grades: 2-5-класстар
-  tutorial_tynkerspace_string_detail_grades: 2-5-класстар
+  tutorial_tynkerspace_string_detail_grades: Окуучу+ - 5 класс
   tutorial_gfbloons_string_detail_grades: 9+ класстар
   tutorial_raspipong_string_detail_grades: 9+ класстар
   tutorial_codehsvr_string_detail_grades: 6+ класстар
@@ -6887,7 +6893,7 @@ ky:
   tutorial_codehsjsgraph_string_detail_grades: 9+ класстар
   tutorial_thunkable_string_detail_grades: 6+ класстар
   tutorial_hopcrossyroad_string_detail_grades: 2-8-класстар
-  tutorial_switchglitch_string_detail_grades: 2-5-класстар
+  tutorial_switchglitch_string_detail_grades: Окуучу+ - 5 класс
   tutorial_codecar_string_detail_grades: 6+ класстар
   tutorial_codesterscp_string_detail_grades: 6-8-класстар
   tutorial_grokpetblock_string_detail_grades: 6-8-класстар
@@ -6896,7 +6902,7 @@ ky:
   tutorial_codesterscr_string_detail_grades: 2-8-класстар
   tutorial_grokdisease_string_detail_grades: 9+ класстар
   tutorial_techec_string_detail_grades: Университет
-  tutorial_rgbegin_string_detail_grades: 2-5-класстар
+  tutorial_rgbegin_string_detail_grades: Окуучу+ - 5 класс
   tutorial_myradream_string_detail_grades: 2-8-класстар
   tutorial_thinkfun_string_detail_grades: 2-8-класстар
   tutorial_hopfireworks_string_detail_grades: 2-8-класстар
@@ -6904,7 +6910,7 @@ ky:
   tutorial_codehspython_string_detail_grades: 6+ класстар
   tutorial_codehsjava_string_detail_grades: 9+ класстар
   tutorial_techioda_string_detail_grades: Университет
-  tutorial_grokmonster_string_detail_grades: 2-5-класстар
+  tutorial_grokmonster_string_detail_grades: Окуучу+ - 5 класс
   tutorial_techmjs_string_detail_grades: Университет
   tutorial_techga_string_detail_grades: Университет
   tutorial_techioan_string_detail_grades: Университет
@@ -6912,19 +6918,19 @@ ky:
   tutorial_groktunnel_string_detail_grades: 6+ класстар
   tutorial_stemcod_string_detail_grades: 6+ класстар
   tutorial_techikb_string_detail_grades: Университет
-  tutorial_kanostreet_string_detail_grades: 2-5-класстар
-  tutorial_nyblebot_string_detail_grades: 2-5-класстар
-  tutorial_codemojijs_string_detail_grades: 2-5-класстар
+  tutorial_kanostreet_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_nyblebot_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_codemojijs_string_detail_grades: Окуучу+ - 5 класс
   tutorial_techapf_string_detail_grades: Университет
   tutorial_techfpjs_string_detail_grades: Университет
   tutorial_techlinq_string_detail_grades: Университет
   tutorial_gpbcatapult_string_detail_grades: 6+ класстар
   tutorial_quorumastro_string_detail_grades: 6+ класстар
-  tutorial_alicewonder_string_detail_grades: 2-5-класстар
+  tutorial_alicewonder_string_detail_grades: Окуучу+ - 5 класс
   tutorial_rginter_string_detail_grades: 6-8-класстар
   tutorial_cssgrid_string_detail_grades: 6+ класстар
   tutorial_jshero_string_detail_grades: 9+ класстар
-  tutorial_codemojipy_string_detail_grades: 2-5-класстар
+  tutorial_codemojipy_string_detail_grades: Окуучу+ - 5 класс
   tutorial_nclabdrone_string_detail_grades: 6+ класстар
   tutorial_gpbcircle_string_detail_grades: 6+ класстар
   tutorial_gpbpaint_string_detail_grades: 6+ класстар
@@ -6956,11 +6962,11 @@ ky:
   tutorial_isavesanta_string_detail_grades: 2-8-класстар
   tutorial_iorder_string_detail_grades: 2-8-класстар
   tutorial_ianimate_string_detail_grades: 2-8-класстар
-  tutorial_iloveada_string_detail_grades: 2-5-класстар
+  tutorial_iloveada_string_detail_grades: Окуучу+ - 5 класс
   tutorial_kodflash_string_detail_grades: Окуучу+ - 5 класс
-  tutorial_kodchoose_string_detail_grades: 2-5-класстар
+  tutorial_kodchoose_string_detail_grades: Окуучу+ - 5 класс
   tutorial_kodpizzapre_string_detail_grades: Окуучу+ - 1-класс
-  tutorial_kodpizza_string_detail_grades: 2-5-класстар
+  tutorial_kodpizza_string_detail_grades: Окуучу+ - 5 класс
   tutorial_kodwomen_string_detail_grades: 2-8-класстар
   tutorial_tfunplug_string_detail_grades: 6-8-класстар
   tutorial_lbvariables_string_detail_grades: 2-8-класстар
@@ -6972,9 +6978,9 @@ ky:
   tutorial_lbpotato_string_detail_grades: 2+ класстар
   tutorial_lbguitar_string_detail_grades: 2+ класстар
   tutorial_lbio_string_detail_grades: 2-8-класстар
-  tutorial_wonpuppy_string_detail_grades: 2-5-класстар
+  tutorial_wonpuppy_string_detail_grades: Окуучу+ - 5 класс
   tutorial_woncue_string_detail_grades: 2+ класстар
-  tutorial_wonzoo_string_detail_grades: 2-5-класстар
+  tutorial_wonzoo_string_detail_grades: Окуучу+ - 5 класс
   tutorial_wontrip_string_detail_grades: 2-8-класстар
   tutorial_woncollect_string_detail_grades: Окуучу+ - 5 класс
   tutorial_wonsecret_string_detail_grades: 6+ класстар
@@ -7015,10 +7021,10 @@ ky:
   tutorial_3dbearmars_string_detail_grades: 2-8-класстар
   tutorial_alexaskill_string_detail_grades: 2-8-класстар
   tutorial_bitsboxyak_string_detail_grades: 2-8-класстар
-  tutorial_blockscadbargraphs_string_detail_grades: 2-5-класстар
-  tutorial_blockscadbirdhouses_string_detail_grades: 2-5-класстар
+  tutorial_blockscadbargraphs_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_blockscadbirdhouses_string_detail_grades: Окуучу+ - 5 класс
   tutorial_blockscadclock_string_detail_grades: 9+ класстар
-  tutorial_blockscaddinner_string_detail_grades: 2-5-класстар
+  tutorial_blockscaddinner_string_detail_grades: Окуучу+ - 5 класс
   tutorial_blockscadicecream_string_detail_grades: 6+ класстар
   tutorial_blockscadpizza_string_detail_grades: 6-8-класстар
   tutorial_blockscadsugar_string_detail_grades: 6-8-класстар
@@ -7029,20 +7035,20 @@ ky:
   tutorial_bpenglishvid_string_detail_grades: 2-8-класстар
   tutorial_bphealthscratch_string_detail_grades: 2+ класстар
   tutorial_bphealthvid_string_detail_grades: 6+ класстар
-  tutorial_bpmathscratch_string_detail_grades: 2-5-класстар
+  tutorial_bpmathscratch_string_detail_grades: Окуучу+ - 5 класс
   tutorial_bpmathvid_string_detail_grades: 6+ класстар
   tutorial_bpmlkscratch_string_detail_grades: 2-8-класстар
   tutorial_bpmlkvid_string_detail_grades: 6-8-класстар
-  tutorial_bpsafetyscratch_string_detail_grades: 2-5-класстар
+  tutorial_bpsafetyscratch_string_detail_grades: Окуучу+ - 5 класс
   tutorial_bpsafetyvid_string_detail_grades: 6-8-класстар
-  tutorial_bpsciencescratch_string_detail_grades: 2-5-класстар
+  tutorial_bpsciencescratch_string_detail_grades: Окуучу+ - 5 класс
   tutorial_bpsciencevid_string_detail_grades: 6-8-класстар
   tutorial_bptechscratch_string_detail_grades: 6+ класстар
   tutorial_bptechvid_string_detail_grades: 6+ класстар
   tutorial_caflags_string_detail_grades: 6+ класстар
-  tutorial_matariki_string_detail_grades: 2-5-класстар
+  tutorial_matariki_string_detail_grades: Окуучу+ - 5 класс
   tutorial_carestaurant_string_detail_grades: 2+ класстар
-  tutorial_casea_string_detail_grades: 2-5-класстар
+  tutorial_casea_string_detail_grades: Окуучу+ - 5 класс
   tutorial_cashield_string_detail_grades: 2-8-класстар
   tutorial_ccwslimer_string_detail_grades: 2-8-класстар
   tutorial_codinggalaxy_string_detail_grades: Окуучу+ - 8-класс
@@ -7081,8 +7087,8 @@ ky:
   tutorial_groklearningpython_string_detail_grades: 9+ класстар
   tutorial_htmltimetravel_string_detail_grades: 9+ класстар
   tutorial_hp_flappy_string_detail_grades: 9+ класстар
-  tutorial_appytappin_string_detail_grades: 2-5-класстар
-  tutorial_icipher_string_detail_grades: 2-5-класстар
+  tutorial_appytappin_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_icipher_string_detail_grades: Окуучу+ - 5 класс
   tutorial_iguess_string_detail_grades: Окуучу+ - 5 класс
   tutorial_imake_string_detail_grades: Окуучу+ - 1-класс
   tutorial_imorse_string_detail_grades: 2-8-класстар
@@ -7091,7 +7097,7 @@ ky:
   tutorial_kibobowl_string_detail_grades: Окуучу+ - 5 класс
   tutorial_kibodance_string_detail_grades: Окуучу+ - 5 класс
   tutorial_buildcharacters_string_detail_grades: Окуучу+ - 5 класс
-  tutorial_designgames_string_detail_grades: 2-5-класстар
+  tutorial_designgames_string_detail_grades: Окуучу+ - 5 класс
   tutorial_makelevels_string_detail_grades: Окуучу+ - 5 класс
   tutorial_wizard_string_detail_grades: 6+ класстар
   tutorial_mbscratchcards_string_detail_grades: 2+ класстар
@@ -7107,19 +7113,19 @@ ky:
   tutorial_ozotroll_string_detail_grades: 6-8-класстар
   tutorial_peblioart_string_detail_grades: 9+ класстар
   tutorial_astropi_string_detail_grades: 6+ класстар
-  tutorial_rgart_string_detail_grades: 2-5-класстар
-  tutorial_rgengineer_string_detail_grades: 2-5-класстар
-  tutorial_rgmath_string_detail_grades: 2-5-класстар
-  tutorial_rgscience_string_detail_grades: 2-5-класстар
-  tutorial_rgtech_string_detail_grades: 2-5-класстар
+  tutorial_rgart_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_rgengineer_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_rgmath_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_rgscience_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_rgtech_string_detail_grades: Окуучу+ - 5 класс
   tutorial_robotmagic3d_string_detail_grades: 6+ класстар
   tutorial_robotmagicflappy_string_detail_grades: 9+ класстар
   tutorial_scratchadventure_string_detail_grades: 2+ класстар
   tutorial_scratchtalk_string_detail_grades: 2+ класстар
-  tutorial_scratchjrstory_string_detail_grades: 2-5-класстар
+  tutorial_scratchjrstory_string_detail_grades: Окуучу+ - 5 класс
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: 2-8-класстар
-  tutorial_spherocommunity_string_detail_grades: 2-5-класстар
+  tutorial_spherocommunity_string_detail_grades: Окуучу+ - 5 класс
   tutorial_spherofunctions_string_detail_grades: 6+ класстар
   tutorial_spheroinfrared_string_detail_grades: 6-8-класстар
   tutorial_spherolightsensor_string_detail_grades: 2-8-класстар
@@ -7144,15 +7150,15 @@ ky:
   tutorial_gcvariables_string_detail_grades: 6+ класстар
   tutorial_beanything_string_detail_grades: Окуучу+ - 5 класс
   tutorial_change_string_detail_grades: 2-8-класстар
-  tutorial_cooking_string_detail_grades: 2-5-класстар
+  tutorial_cooking_string_detail_grades: Окуучу+ - 5 класс
   tutorial_crystal_string_detail_grades: 2+ класстар
   tutorial_landscape_string_detail_grades: 6+ класстар
-  tutorial_pets_string_detail_grades: 2-5-класстар
+  tutorial_pets_string_detail_grades: Окуучу+ - 5 класс
   tutorial_petvet_string_detail_grades: Окуучу+ - 5 класс
   tutorial_superhero_string_detail_grades: 6+ класстар
   tutorial_vidcodeplastic_string_detail_grades: 6+ класстар
   tutorial_vidcodetypeface_string_detail_grades: 6+ класстар
-  tutorial_washustorm_string_detail_grades: 2-5-класстар
+  tutorial_washustorm_string_detail_grades: Окуучу+ - 5 класс
   tutorial_activitypackets_string_detail_grades: Окуучу+ - 8-класс
   tutorial_googlerookie_string_detail_grades: 6+ класстар
   tutorial_tommyturtle_string_detail_grades: Окуучу+ - 5 класс
@@ -7244,7 +7250,7 @@ ky:
   tutorial_ozobotcolor1_string_detail_grades: 2+ класстар
   tutorial_scigirlspixels_string_detail_grades: 2+ класстар
   tutorial_kcjheroines_string_detail_grades: 2-8-класстар
-  tutorial_ozobotvalue_string_detail_grades: 2-5-класстар
+  tutorial_ozobotvalue_string_detail_grades: Окуучу+ - 5 класс
   tutorial_icodebytes_string_detail_grades: Pre-reader
   tutorial_clfashion2_string_detail_grades: 6+ класстар
   tutorial_ai4all_string_detail_grades: 6+ класстар
@@ -7255,7 +7261,7 @@ ky:
   tutorial_kiboprogram_string_detail_grades: Окуучу+ - 5 класс
   tutorial_hellorubycsin60_string_detail_grades: Окуучу+ - 5 класс
   tutorial_clfashion1_string_detail_grades: 6+ класстар
-  tutorial_irobottraffic_string_detail_grades: 2-5-класстар
+  tutorial_irobottraffic_string_detail_grades: Окуучу+ - 5 класс
   tutorial_edisonmystery_string_detail_grades: 6-8-класстар
   tutorial_microbitseaturtles_string_detail_grades: 6-8-класстар
   tutorial_ozobotknow_string_detail_grades: 2+ класстар
@@ -7264,7 +7270,7 @@ ky:
   tutorial_irobotkind_string_detail_grades: Окуучу+ - 5 класс
   tutorial_firiavirtual_string_detail_grades: 6+ класстар
   tutorial_irobotguesscode_string_detail_grades: 2-8-класстар
-  tutorial_ozobotnouns_string_detail_grades: 2-5-класстар
+  tutorial_ozobotnouns_string_detail_grades: Окуучу+ - 5 класс
   tutorial_nasa3d_string_detail_grades: 6+ класстар
   tutorial_blupants_string_detail_grades: 6+ класстар
   tutorial_legodance_string_detail_grades: 6-8-класстар
@@ -10219,15 +10225,15 @@ ky:
   tutorial_codehstriangle_string_detail_grades: 6+ класстар
   tutorial_ttwhitehouse_string_detail_grades: 2+ класстар
   tutorial_modulo_string_detail_grades: 6+ класстар
-  tutorial_codingtown_string_detail_grades: 2-5-класстар
-  tutorial_kanoart_string_detail_grades: 2-5-класстар
+  tutorial_codingtown_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_kanoart_string_detail_grades: Окуучу+ - 5 класс
   tutorial_dragonscript_string_detail_grades: 9+ класстар
   tutorial_uwcloud_string_detail_grades: 2+ класстар
   tutorial_htmlmuffin_string_detail_grades: 6-8-класстар
   tutorial_microsoftpizza_string_detail_grades: 6-8-класстар
   tutorial_stemc_blckhole_string_detail_grades: 9+ класстар
   tutorial_careconfigure_string_detail_grades: 6+ класстар
-  tutorial_rpiscratch_string_detail_grades: 2-5-класстар
+  tutorial_rpiscratch_string_detail_grades: Окуучу+ - 5 класс
   tutorial_ozaria_string_detail_grades: 2+ класстар
   tutorial_ttovum_string_detail_grades: 6+ класстар
   tutorial_ttpassage_string_detail_grades: 2-8-класстар
@@ -10275,7 +10281,7 @@ ky:
   tutorial_modvariables_string_detail_grades: 6+ класстар
   tutorial_codestersmicro_string_detail_grades: 6-8-класстар
   tutorial_codestersdata_string_detail_grades: 6-8-класстар
-  tutorial_ikodexmas_string_detail_grades: 2-5-класстар
+  tutorial_ikodexmas_string_detail_grades: Окуучу+ - 5 класс
   tutorial_rpisensehat_string_detail_grades: 6+ класстар
   tutorial_modtraits_string_detail_grades: 2+ класстар
   tutorial_mee_string_detail_grades: 2+ класстар

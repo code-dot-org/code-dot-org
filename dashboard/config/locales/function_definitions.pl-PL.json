@@ -1215,6 +1215,12 @@
         "course3_bee_functions_challenge3": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
+          },
+          "row of nectar": {
+            "name": "rząd nektarów"
+          },
+          "rowOfNectar": {
+            "name": "zbierzRządNektarów"
           }
         },
         "course3_bee_functions_challenge4": {
@@ -1223,6 +1229,12 @@
           },
           "move and check": {
             "name": "przesuń się i sprawdź"
+          },
+          "row of nectar": {
+            "name": "rząd nektarów"
+          },
+          "rowOfNectar": {
+            "name": "zbierzRządNektarów"
           }
         },
         "course4_artist_binary_challenge1": {
@@ -2936,6 +2948,12 @@
         "courseF_bee_functions_challenge1": {
           "check nectar or honey": {
             "name": "sprawdź nektar czy miód"
+          },
+          "row of nectar": {
+            "name": "rząd nektarów"
+          },
+          "rowOfNectar": {
+            "name": "zbierzRządNektarów"
           }
         },
         "courseF_bee_functions_challenge2": {
@@ -2944,27 +2962,33 @@
           },
           "move and check": {
             "name": "przesuń się i sprawdź"
+          },
+          "rowOfNectar": {
+            "name": "zbierzRządNektarów"
           }
         },
         "courseF_bee_fwp4": {
           "rowOfNectar": {
             "parameters": {
               "length": "długość"
-            }
+            },
+            "name": "zbierzRządNektarów"
           }
         },
         "courseF_bee_fwp5": {
           "rowOfNectar": {
             "parameters": {
               "width": "szerokość"
-            }
+            },
+            "name": "zbierzRządNektarów"
           }
         },
         "courseF_bee_fwp6": {
           "rowOfNectar": {
             "parameters": {
               "width": "szerokość"
-            }
+            },
+            "name": "zbierzRządNektarów"
           }
         },
         "courseF_bee_fwp7": {
@@ -3657,6 +3681,143 @@
         "courseF_bee_for_challenge1_2020": {
           "move and get nectar with counter": {
             "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": "zrób 3 miody"
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": "zrób cały miód"
+          }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "narysuj dach"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "narysuj prostokąt"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "narysuj prostokąt"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"proste\" rozwiązanie"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "możliwe rozwiązanie"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "wygrana"
+          },
+          "lose game": {
+            "name": "porażka"
+          },
+          "keep playing": {
+            "name": "graj dalej"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "możliwe rozwiązanie"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "możliwe rozwiązanie"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "możliwe rozwiązanie"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "możliwe rozwiązanie"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "wygrana"
+          },
+          "lose game": {
+            "name": "porażka"
+          },
+          "keep playing": {
+            "name": "graj dalej"
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+            "name": "zbierzRządNektarów"
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
+            "name": "zbierzRządNektarów"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "narysuj gwiazdę",
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości",
+            "parameters": {
+              "points": "punkty",
+              "length": "długość"
+            }
+          },
+          "draw a circle": {
+            "name": "narysuj okrąg",
+            "description": "narysuj okrąg o danym promieniu",
+            "parameters": {
+              "radius": "promień"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "narysuj rozetę",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość",
+              "repeat": "powtarzaj"
+            }
+          },
+          "draw a triangle": {
+            "name": "narysuj trójkąt",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          },
+          "draw a house": {
+            "name": "narysuj dom",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a square": {
+            "name": "narysuj kwadrat",
+            "parameters": {
+              "length": "długość"
+            }
           }
         }
       }

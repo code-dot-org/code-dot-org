@@ -8,12 +8,12 @@ new_name 'coursec-2017'
 family_name 'coursec'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "tr-TR", "uz-UZ", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 is_course true
 
-lesson 'Building a Foundation', display_name: 'Persistence: Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Persistence: Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 
 lesson 'Programming in Maze', display_name: 'Programming in Maze', has_lesson_plan: true
@@ -45,7 +45,7 @@ level 'courseC_maze_debugging9'
 bonus 'courseC_maze_debugging_challenge1'
 bonus 'courseC_maze_debugging_challenge2'
 
-lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true
+lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true, unplugged: true
 level 'PaperPlanes'
 
 lesson 'Programming in Collector', display_name: 'Programming in Collector', has_lesson_plan: true
@@ -79,7 +79,7 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-lesson 'Loops: Getting Loopy', display_name: 'Loops: Getting Loopy', has_lesson_plan: true
+lesson 'Loops: Getting Loopy', display_name: 'Loops: Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy'
 
 lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8', has_lesson_plan: true
@@ -128,7 +128,7 @@ level 'courseC_harvester_loops11_predict1'
 bonus 'courseC_harvester_loops_challenge1a'
 bonus 'courseC_harvester_loops_challenge2'
 
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
@@ -158,9 +158,9 @@ level 'courseC_PlayLab_eventsA'
 level 'courseC_PlayLab_eventsFP'
 bonus 'courseC_PlayLab_events_challenge1'
 
-lesson 'Screen Out the Mean', display_name: 'Digital Citizenship: Screen Out the Mean', has_lesson_plan: true
+lesson 'Screen Out the Mean', display_name: 'Digital Citizenship: Screen Out the Mean', has_lesson_plan: true, unplugged: true
 level 'courseC_Unplugged_ScreenOutTheMean'
 
-lesson 'Binary Bracelets', display_name: 'Beyond Programming: Binary Bracelets', has_lesson_plan: true
+lesson 'Binary Bracelets', display_name: 'Beyond Programming: Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets'
 

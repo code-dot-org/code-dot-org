@@ -1,0 +1,15 @@
+name 'OPD-K5 sprite lab_2021'
+title 'Sprite Lab'
+description 'description here'
+markdown <<MARKDOWN
+# Overview: Sprite Lab
+
+<img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png" class="level-image">
+
+## Advanced coding concept: Sprites and behaviors in Sprite Lab
+- Become familiar with a new coding environment: Sprite Lab
+- Practice creating Sprites
+- Practice coding behaviors for different Sprites
+
+![]()
+MARKDOWN

@@ -13,7 +13,7 @@ curriculum_umbrella 'CSF'
 tts true
 is_course true
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation_2018'
 
 lesson 'Programming in Maze', display_name: 'Programming with Angry Birds', has_lesson_plan: true
@@ -45,7 +45,7 @@ level 'courseC_maze_debugging9_2018'
 bonus 'courseC_maze_debugging_challenge1_2018'
 bonus 'courseC_maze_debugging_challenge2_2018'
 
-lesson 'Real-life Algorithms: Paper Planes', display_name: 'Paper Planes', has_lesson_plan: true
+lesson 'Real-life Algorithms: Paper Planes', display_name: 'Paper Planes', has_lesson_plan: true, unplugged: true
 level 'PaperPlanes_2018'
 
 lesson 'Programming in Collector', display_name: 'Collecting Treasure with Laurel', has_lesson_plan: true
@@ -79,7 +79,7 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true
+lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy_2018'
 
 lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8', has_lesson_plan: true
@@ -131,7 +131,7 @@ level 'courseC_harvester_loops11_predict1_2018'
 bonus 'courseC_harvester_loops_challenge1a_2018'
 bonus 'courseC_harvester_loops_challenge2_2018'
 
-lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent_2018'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
@@ -147,7 +147,7 @@ level 'courseC_flappy_events8_2018'
 level 'courseC_flappy_events9_2018'
 level 'courseC_flappy_events10_2018'
 
-lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean', has_lesson_plan: true
+lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean', has_lesson_plan: true, unplugged: true
 level 'courseC_Unplugged_ScreenOutTheMean_2018'
 
 lesson 'Events in Play Lab', display_name: 'Chase Game with Events', has_lesson_plan: true
@@ -180,6 +180,6 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets_2018'
 

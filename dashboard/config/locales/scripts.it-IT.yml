@@ -1887,7 +1887,7 @@ it:
           description_short: Programmazione
           lessons:
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Functions:
@@ -2218,7 +2218,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Variables:
@@ -2783,7 +2783,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd5-2017:
@@ -2801,7 +2801,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd1-old:
@@ -2833,7 +2833,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             'Chapter 1: Images and Animation':
@@ -4505,7 +4505,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd3-2018:
@@ -4530,7 +4530,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd2-2018:
@@ -7021,7 +7021,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -7600,15 +7600,15 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
               name: Test finale
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
         csp3-pilot:
           lesson_groups:
             content:
@@ -8120,17 +8120,17 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Variables:
               name: Variabili
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -9068,7 +9068,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         code-break:
@@ -9154,11 +9154,11 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Forme e Parametri
+              name: Shapes and Parameters
             Variables:
               name: Variabili
             Random Numbers:
-              name: Numeri Casuali
+              name: Random Numbers
             Sprites:
               name: Personaggi
             Text:
@@ -9168,7 +9168,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -9224,6 +9224,8 @@ it:
           lessons:
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
+            intro-categorical:
+              name: Lezione 6
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -9242,7 +9244,7 @@ it:
         2021drafting:
           lessons:
             Course F Introduction:
-              name: Introducendo lo Sviluppo Personaggi
+              name: Introduzione al Laboratorio dei Personaggi
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
             Sprites in Action:
@@ -9290,14 +9292,14 @@ it:
               key: Disegnare in Sviluppo Giochi
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              key: Forme e Parametri
-              name: Forme e Parametri
+              key: Shapes and Parameters
+              name: Shapes and Parameters
             Variables:
               key: Variabili
               name: Variabili
             Random Numbers:
-              key: Numeri Casuali
-              name: Numeri Casuali
+              key: Random Numbers
+              name: Random Numbers
             Sprites:
               key: Personaggi
               name: Personaggi
@@ -9311,8 +9313,8 @@ it:
               key: Velocità
               name: Velocità
             Collision Detection:
-              key: Rilevamento delle Collisioni
-              name: Rilevamento delle Collisioni
+              key: Collision Detection
+              name: Collision Detection
             Functions:
               key: Funzioni
               name: Funzioni
@@ -9666,6 +9668,8 @@ it:
             End of Course Project:
               key: Progetto di fine corso
               name: Progetto di fine corso
+            lesson-6:
+              name: Uno sguardo avanti con Minecraft
           lesson_groups:
             csf_sequencing:
               display_name: Sequenze di istruzioni
@@ -9746,7 +9750,7 @@ it:
             csf_digcit:
               display_name: Cittadinanza digitale
             csf_nested_loops:
-              display_name: Cicli annidati
+              display_name: Istruzioni condizionali
             csf_functions:
               display_name: Funzioni
             end_of_course_project:
@@ -9993,7 +9997,9 @@ it:
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
             Course F Introduction:
-              name: Introducendo lo Sviluppo Personaggi
+              name: Introduzione al Laboratorio dei Personaggi
+            Sprites in Action:
+              name: Personaggi in azione
           lesson_groups:
             ramp_up:
               display_name: Introduzione

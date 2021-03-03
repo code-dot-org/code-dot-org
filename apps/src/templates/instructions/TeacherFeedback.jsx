@@ -112,7 +112,8 @@ export class TeacherFeedback extends Component {
     verifiedTeacher: PropTypes.bool,
     displayKeyConcept: PropTypes.bool,
     latestFeedback: PropTypes.array,
-    token: PropTypes.string
+    token: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   constructor(props) {
@@ -174,7 +175,8 @@ export class TeacherFeedback extends Component {
       script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
       teacher_id: this.props.teacher,
-      performance: this.state.performance
+      performance: this.state.performance,
+      analytics_section_id: this.props.selectedSectionId
     };
 
     $.ajax({
@@ -420,5 +422,6 @@ export default connect(state => ({
   serverScriptId: state.pageConstants.serverScriptId,
   serverLevelId: state.pageConstants.serverLevelId,
   teacher: state.pageConstants.userId,
-  verifiedTeacher: state.pageConstants.verifiedTeacher
+  verifiedTeacher: state.pageConstants.verifiedTeacher,
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(TeacherFeedback);

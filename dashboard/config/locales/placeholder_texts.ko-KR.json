@@ -34,14 +34,18 @@
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "파랑",
           "f59f10539890569d3b1deb0e4352ab84": "오늘 저는 ",
-          "810f7026db2f96c4e654f4664e44be04": "저지를 입고 있어요!"
+          "810f7026db2f96c4e654f4664e44be04": "저지를 입고 있어요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "courseF_playlab_variables5c": {
           "bda9643ac6601722a28f238714274da4": "빨강",
           "ff800dc7251afead2cdf9c569ff5c9bc": "상당히  ",
           "c30c9d9f51c03a6d42d66cea54206abd": " 오늘, 그렇지 않아요?",
           "b92274a5b4513e80f4bd6a8136581578": "그것은 내가 이제까지 본 그림자 중 ",
-          "f54929e86cc7510907895070d8b05979": " 가장 이상한 그림자예요!"
+          "f54929e86cc7510907895070d8b05979": " 가장 이상한 그림자예요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!",
@@ -50,7 +54,10 @@
           "6b90c9823ff75e6a78aa63b392e7315a": "점수: "
         },
         "Find the Wizard": {
-          "22b45b2cf2d4a2a3d7b3faa522013b26": "셋 까지 세면 저는 사라집니다! 저를 찾기 위해 1부터 400까지 중 한 숫자를 추측하세요!"
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "셋 까지 세면 저는 사라집니다! 저를 찾기 위해 1부터 400까지 중 한 숫자를 추측하세요!",
+          "0b895ef4c917e50663bc2a7327cbee3d": "나 여기 있어!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "Choose Your Own Adventure": {
           "c332bf82ea63d21d1d1b701a07ab9afd": "도와주셔서 감사하지만 이제 가야 합니다.",
@@ -61,34 +68,48 @@
           "fe724bc07d1e8b57e53ebfd03c0ec4f5": "아, 걱정하지 말아요! 찾을 수 있을거라 확신해요.",
           "9360086c2f9d62ba563c6fcbfbd9b402": "지금 찾으러 갈께요! 안녕!",
           "6d411b45e39818da535ba9f8a2cf58e2": "나를 마녀로 변하게 만들었어요!",
-          "73af7ec7b0065fb5eb15d6c0ca695ed3": "이 지팡이의 주인을 정말 찾았어요!"
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "이 지팡이의 주인을 정말 찾았어요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "courseF_playlab_variables1a": {
           "ea904c9d18bd602705f598372988aaa8": "뭐라고 외쳐야 하나요?",
-          "97a97de7add5e8dcd9f70a407d56968e": "골인!"
+          "97a97de7add5e8dcd9f70a407d56968e": "골인!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "courseF_playlab_variables3b_josh": {
           "88789b154a4ffbbd84108b0c80f8c464": "브라이언, 몇 살이예요?",
           "662722f1029078dad7a3683c64d8b922": "와! 나는 ",
-          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!"
+          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "courseF_playlab_variables4b": {
           "2e1749915d40abd8f43fc2b9dd13649c": "기쁩니다,",
           "ecb2903fb054395baf72ea1da127be32": "상당히 키가 큽니다 ",
-          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " 세, "
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " 세, ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "courseF_playlab_variables4c_predictive1": {
-          "d065635d5fffcb3739555ae93006081c": "만나서 반가워요, "
+          "d065635d5fffcb3739555ae93006081c": "만나서 반가워요, ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "courseF_playlab_variables8c": {
           "bec312aa7dbfb0c284d221d2aa8e9ffd": "축하합니다, ",
           "cd0d7bbbbb604e524bfc25effa78095d": ", 색상에 대해 생각하고 있었어요 ",
           "8460ae10541cf8ded22a4e899ddfc0bb": "미안해요, ",
-          "8622f69e8cf70458a82fc22d8e46372f": ", 색상에 대해 생각하고 있지 않았어요 "
+          "8622f69e8cf70458a82fc22d8e46372f": ", 색상에 대해 생각하고 있지 않았어요 ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "FoodFight": {
           "62f1b3a41b5eef66a4b2382bb2ab24f4": "점수 ",
-          "cc2ecba4e56986752892c0e68c8e32e0": "레벨 "
+          "cc2ecba4e56986752892c0e68c8e32e0": "레벨 ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "Guess The Number": {
           "015c8ae47c8964d793ddc123b7ba6b81": "그렇게 어린 사람은 살고 있지 않아요.",
@@ -96,7 +117,9 @@
           "781b7711244d030e4ed6e1bfa883364e": "저는 아직 20살이 안됐어요!",
           "01bab55de9d3319f27c5213b4661c79f": "그렇게 늙지 않았어요!",
           "5c95950acb6c51d88cc8869eb31f2bdf": "알았어요!",
-          "214e809e9d24f40cc42fa2f04f59a1cf": "내가 이 펭귄을 먹어 치우기 전에 내가 몇 살인지 추측해 보세요!"
+          "214e809e9d24f40cc42fa2f04f59a1cf": "내가 이 펭귄을 먹어 치우기 전에 내가 몇 살인지 추측해 보세요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         },
         "Virtual Pet 1_2019": {
           "22661453237feb87f1b00dd17bc39666": "음! 에너지가 증가했어요!",
@@ -152,6 +175,130 @@
         },
         "courseF_playlab_variables_challenge2": {
           "6b90c9823ff75e6a78aa63b392e7315a": "점수: "
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
         }
       }
     }

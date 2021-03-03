@@ -1,0 +1,72 @@
+{
+  "km-KH": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "សកម្មភាព",
+          "Brushes": "ច្រាស់",
+          "Loops": "រង្វិល​ជុំ",
+          "Math": "គណិត​វិទ្យា",
+          "Logic": "តក្ក",
+          "Functions": "អនុ​គមន៍",
+          "Variables": "អ​ថេរ"
+        },
+        "CourseD_EOC_dance": {
+          "World": "ពិភពលោក",
+          "Dancers": "អ្នករាំ",
+          "Properties": "ធាតុ",
+          "Events": "ព្រឹត្តិការណ៍",
+          "Numbers": "ចំនួន",
+          "Logic": "តក្ក"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "សកម្មភាព",
+          "Events": "ព្រឹត្តិការណ៍",
+          "Loops": "រង្វិល​ជុំ",
+          "Math": "គណិត​វិទ្យា",
+          "Logic": "តក្ក",
+          "Games/Score": "ល្បែង/ពិន្ទុ"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "ពិភពលោក",
+          "Actions": "សកម្មភាព",
+          "Events": "ព្រឹត្តិការណ៍",
+          "Behaviors": "ឥរិយាបទ"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "ពិភពលោក",
+          "Locations": "ទីតាំង",
+          "Actions": "សកម្មភាព",
+          "Events": "ព្រឹត្តិការណ៍",
+          "Behaviors": "ឥរិយាបទ",
+          "Variables": "អ​ថេរ",
+          "Math": "គណិត​វិទ្យា",
+          "Logic": "តក្ក",
+          "Functions": "អនុ​គមន៍",
+          "Text": "អត្ថ​​បទ",
+          "Comments": "មតិយោបល់"
+        },
+        "outbreak_freeplay": {
+          "World": "ពិភពលោក",
+          "Actions": "សកម្មភាព",
+          "Behaviors": "ឥរិយាបទ",
+          "Events": "ព្រឹត្តិការណ៍",
+          "Locations": "ទីតាំង",
+          "Logic": "តក្ក",
+          "Loops": "រង្វិល​ជុំ",
+          "Math": "គណិត​វិទ្យា",
+          "Variables": "អ​ថេរ",
+          "Functions": "អនុ​គមន៍",
+          "Comments": "មតិយោបល់"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "ពិភពលោក",
+          "Actions": "សកម្មភាព",
+          "Events": "ព្រឹត្តិការណ៍",
+          "Logic": "តក្ក",
+          "Math": "គណិត​វិទ្យា"
+        }
+      }
+    }
+  }
+}

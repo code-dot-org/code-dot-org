@@ -139,11 +139,17 @@ vi:
     thông qua chương trình đào tạo của chúng tôi nhé.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Hãy tham gia với chúng tớ
+  hoc_live_learn_more: Tìm hiểu thêm
   hoc_overview_oceans_tutorial_header: Trí Tuệ Nhân Tạo cho Đại Dương
   hoc_overview_oceans_tutorial_desc: Hãy tìm hiểu về trí tuệ nhân tạo (AI), học máy,
     dữ liệu đào tạo và định kiến, đồng thời khám phá các vấn đề đạo đức và cách sử
@@ -6622,12 +6628,12 @@ vi:
   tutorial_tynkermult_string_detail_grades: Grades 2-8
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: do-not-show
-  tutorial_tynkerpup_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkerpup_string_detail_grades: Grades 2-5
   tutorial_livecode_string_detail_grades: Grades 9+
   tutorial_cocomgame_string_detail_grades: Grades 2+
-  tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
+  tutorial_tynkerspin_string_detail_grades: Grades 2-5
   tutorial_code-avengers_string_detail_grades: Lớp 6+ (11 trở lên)
-  tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkercq_string_detail_grades: Grades 2-5
   tutorial_cmgame_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codesters_string_detail_grades: do-not-show
   tutorial_qrm_string_detail_grades: Lớp 6+ (11 trở lên)
@@ -6822,8 +6828,8 @@ vi:
   tutorial_tap_string_detail_grades: Grades 2+
   tutorial_cintl_string_detail_grades: do-not-show
   tutorial_itchstop_string_detail_grades: Grades 2-8
-  tutorial_tynkerpn_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkerpd_string_detail_grades: Pre-reader - Grade 5
+  tutorial_tynkerpn_string_detail_grades: Grades 2-5
+  tutorial_tynkerpd_string_detail_grades: Grades 2-5
   tutorial_persistence_string_detail_grades: Pre-reader+
   tutorial_getloopy_string_detail_grades: Pre-reader+
   tutorial_createface_string_detail_grades: Grades 2+
@@ -7133,13 +7139,13 @@ vi:
   tutorial_gcevents_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_gcloops_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_gcvariables_string_detail_grades: Lớp 6+ (11 trở lên)
-  tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
+  tutorial_beanything_string_detail_grades: Grades 2-5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: Grades 2+
   tutorial_landscape_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_pets_string_detail_grades: Grades 2-5
-  tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
+  tutorial_petvet_string_detail_grades: Grades 2-5
   tutorial_superhero_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_vidcodeplastic_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_vidcodetypeface_string_detail_grades: Lớp 6+ (11 trở lên)

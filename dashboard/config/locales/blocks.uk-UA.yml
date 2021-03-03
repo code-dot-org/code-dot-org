@@ -959,6 +959,8 @@ uk:
         text: налаштування
       gamelab_addBehaviorSimple:
         text: спрайт {SPRITE} починає {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE} дістався до цілі {TARGET}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -967,6 +969,9 @@ uk:
           UNIT:
             '"seconds"': секунди
             '"frames"': кадри
+      gamelab_beginCollectingData:
+        text: почати збір даних [BREAK] [0] значення [VALUE] [1] з міткою [LABEL]
+          [2]
       gamelab_bounceOff:
         text: "{SPRITE} відбивається від {TARGET}"
       gamelab_changePropBy:
@@ -990,6 +995,8 @@ uk:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'коментар: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: кількість {SPRITE}
       gamelab_createNewSprite:
@@ -1001,6 +1008,8 @@ uk:
         text: будучи перетягуваним
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
+      gamelab_followingTargets:
+        text: наступні цілі
       gamelab_getAllSprites:
         text: всі спрайти
       gamelab_getProp:
@@ -1210,12 +1219,13 @@ uk:
       gamelab_setBackgroundImageAs:
         text: встановити фон {IMG}
       gamelab_setDefaultSpriteSize:
+        text: встановити новий розмір спрайта за замовчуванням як [SIZE] [0]
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': дуже маленький
+            '50': маленький
             '75': середньо
-            '100': large
+            '100': великий
       gamelab_setPrompt:
         text: запитати користувача {QUESTION} значення змінної {VAR}
       gamelab_setPromptWithChoices:
@@ -1255,8 +1265,14 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_stopCollectingData:
+        text: припинити збір даних
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: спотикатись
       gamelab_turn:
@@ -1288,6 +1304,8 @@ uk:
         text: коли відповідь {VAR}
       gamelab_whenRightArrow:
         text: при натисканні стрілки праворуч
+      gamelab_whenSpriteCreated:
+        text: коли {SPRITE} створили
       gamelab_whenTouching:
         text: коли {SPRITE1} торкається {SPRITE2}
       gamelab_whenUpArrow:
@@ -1519,6 +1537,8 @@ uk:
           DANCE:
             MOVES.ClapHigh: риби
             MOVES.Clown: не мітка
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'місце розташування x: {X} Y: {Y}'
       Mikelab_location_picker:
@@ -1677,6 +1697,12 @@ uk:
         options:
           OPTION:
             '"random"': випадковий
+            '"R2-D2 random"': R2-D2 випадковий
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: малювати двійково {BIN}
       binary_drawBinScreen:
