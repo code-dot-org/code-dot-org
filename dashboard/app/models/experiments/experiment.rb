@@ -119,6 +119,11 @@ class Experiment < ApplicationRecord
       name: 'haikubot-pilot',
       label: 'Haiku Bot',
       allow_joining_via_url: true
+    },
+    {
+      name: 'fancygeometry-pilot',
+      label: 'Fancy Geometry',
+      allow_joining_via_url: true
     }
   ]
 
