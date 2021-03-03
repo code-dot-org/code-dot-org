@@ -24,6 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 19:43:55 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -16110,18 +16111,6 @@
   ],
   "resources": [
     {
-      "name": "CS in Entertainment",
-      "url": "https://studio.code.org/s/csd3-2020/stage/1/puzzle/1/",
-      "key": "cs_in_entertainment",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "cs_in_entertainment"
-      }
-    },
-    {
       "name": "Programming for Entertainment",
       "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
       "key": "programming-for-entertainment",
@@ -16144,6 +16133,18 @@
       },
       "seeding_key": {
         "resource.key": "cs-entertainment-activity"
+      }
+    },
+    {
+      "name": "CS in Entertainment",
+      "url": "https://studio.code.org/s/csd3-2020/stage/1/puzzle/1/",
+      "key": "cs_in_entertainment",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cs_in_entertainment"
       }
     },
     {
@@ -16171,6 +16172,18 @@
       }
     },
     {
+      "name": "Sample Shape Drawing",
+      "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
+      "key": "colored-shape-drawing",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "colored-shape-drawing"
+      }
+    },
+    {
       "name": "Drawing Shapes (Version B)",
       "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
       "key": "drawing_shapes_version_b_",
@@ -16194,18 +16207,6 @@
       },
       "seeding_key": {
         "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "name": "Sample Shape Drawing",
-      "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
-      "key": "colored-shape-drawing",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "colored-shape-drawing"
       }
     },
     {
@@ -16992,12 +16993,6 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs_in_entertainment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
         "resource.key": "programming-for-entertainment"
       }
     },
@@ -17005,6 +17000,12 @@
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
         "resource.key": "cs-entertainment-activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "cs_in_entertainment"
       }
     },
     {
@@ -17022,6 +17023,12 @@
     {
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
+        "resource.key": "colored-shape-drawing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
         "resource.key": "drawing_shapes_version_b_"
       }
     },
@@ -17029,12 +17036,6 @@
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
         "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "colored-shape-drawing"
       }
     },
     {
