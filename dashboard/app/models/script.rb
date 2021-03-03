@@ -857,16 +857,6 @@ class Script < ApplicationRecord
     name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
   end
 
-  def get_script_level_by_absolute_position_and_puzzle_position(absolute_position, puzzle_position)
-    script_levels.find do |sl|
-      # make sure we are checking the native properties of the script level
-      # first, so we only have to load lesson if it's actually necessary.
-      sl.position == puzzle_position.to_i &&
-          !sl.bonus &&
-          sl.lesson.absolute_position == absolute_position.to_i
-    end
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -1054,6 +1044,15 @@ class Script < ApplicationRecord
 
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+
+      # More all lessons into the last lesson group so that we do not delete
+      # the lesson entries unless the lesson has been entirely removed from the
+      # script
+      last_lesson_group = script.lesson_groups.last
+      script.lessons.each do |l|
+        l.lesson_group = last_lesson_group
+        l.save!
+      end
 
       temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
       script.reload

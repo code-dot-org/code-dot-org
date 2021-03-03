@@ -265,7 +265,9 @@ describe('LibraryPublisher', () => {
 
     describe('with valid input', () => {
       it('sets error state when publish fails', async () => {
-        publishSpy.callsArgWith(1, {});
+        publishSpy.callsArgWith(1, {
+          message: ''
+        });
         sinon.stub(console, 'warn');
         wrapper.setState({
           libraryDescription: description,
@@ -283,8 +285,7 @@ describe('LibraryPublisher', () => {
 
       it('sets error state if library is too long', async () => {
         publishSpy.callsArgWith(1, {
-          message:
-            'httpStatusCode: 413; status: error; error: Request Entity Too Large'
+          message: 'httpStatusCode: 413; status: error; error: '
         });
         sinon.stub(console, 'warn');
         wrapper.setState({

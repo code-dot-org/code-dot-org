@@ -108,7 +108,6 @@ export class TeacherFeedback extends Component {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverScriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
-    serverScriptLevelId: PropTypes.number,
     teacher: PropTypes.number,
     verifiedTeacher: PropTypes.bool,
     displayKeyConcept: PropTypes.bool,
@@ -175,7 +174,6 @@ export class TeacherFeedback extends Component {
       student_id: this.state.studentId,
       script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
-      script_level_id: this.props.serverScriptLevelId,
       teacher_id: this.props.teacher,
       performance: this.state.performance,
       analytics_section_id: this.props.selectedSectionId
@@ -423,7 +421,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   serverScriptId: state.pageConstants.serverScriptId,
   serverLevelId: state.pageConstants.serverLevelId,
-  serverScriptLevelId: state.pageConstants.serverScriptLevelId,
   teacher: state.pageConstants.userId,
   verifiedTeacher: state.pageConstants.verifiedTeacher,
   selectedSectionId: state.teacherSections.selectedSectionId

@@ -184,31 +184,21 @@ class Homepage
         }
       ]
     elsif ["post-hoc", "pre-hoc"].include? hoc_mode
-      actions = [
+      [
         {
           text: "homepage_action_text_learn",
           type: "cta_button",
           url: CDO.studio_url("/courses"),
+        },
+        {
+          text: "homepage_action_text_codevideo",
+          type: "video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
         }
       ]
-
-      code_video_action = {
-        text: "homepage_action_text_codevideo",
-        type: "video",
-        youtube_id: youtube_id,
-        download_path: download_path,
-        facebook: facebook,
-        twitter: twitter
-      }
-
-      bhm_action = {
-        type: "cta_link_white",
-        icon_class: "fa-arrow-circle-o-right",
-        href: "/blackhistorymonth",
-        plain_text: "Celebrate Black History Month with us!"
-      }
-
-      actions.push(I18n.locale == :"en-US" ? bhm_action : code_video_action)
     else
       [
         {
