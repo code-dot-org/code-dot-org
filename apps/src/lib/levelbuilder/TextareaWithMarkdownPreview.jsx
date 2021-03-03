@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
-import TextareaWithImageUpload from '@cdo/apps/lib/levelbuilder/TextareaWithImageUpload';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+
+import MarkdownEnabledTextarea from './MarkdownEnabledTextarea';
 
 const styles = {
   wrapper: {
@@ -53,11 +54,12 @@ export default class TextareaWithMarkdownPreview extends React.Component {
         <div style={styles.wrapper}>
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Markdown:</div>
-            <TextareaWithImageUpload
+            <MarkdownEnabledTextarea
               markdown={this.props.markdown}
               name={this.props.name}
               inputRows={this.props.inputRows || 5}
               handleMarkdownChange={this.props.handleMarkdownChange}
+              features={{imageUpload: true}}
             />
           </div>
           <div style={styles.container}>

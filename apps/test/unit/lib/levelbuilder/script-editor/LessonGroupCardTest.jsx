@@ -99,19 +99,19 @@ describe('LessonGroupCard', () => {
     expect(wrapper.find('LessonToken')).to.have.lengthOf(2);
     expect(wrapper.find('button')).to.have.lengthOf(1);
     expect(wrapper.find('input')).to.have.lengthOf(1);
-    expect(wrapper.find('TextareaWithImageUpload')).to.have.lengthOf(2);
+    expect(wrapper.find('MarkdownEnabledTextarea')).to.have.lengthOf(2);
 
     expect(wrapper.contains('Lesson Group Name:')).to.be.true;
 
     expect(
       wrapper
-        .find('TextareaWithImageUpload')
+        .find('MarkdownEnabledTextarea')
         .at(0)
         .props().markdown
     ).to.equal('Lesson group description');
     expect(
       wrapper
-        .find('TextareaWithImageUpload')
+        .find('MarkdownEnabledTextarea')
         .at(1)
         .props().markdown
     ).to.equal('Big questions');
@@ -126,7 +126,7 @@ describe('LessonGroupCard', () => {
     expect(wrapper.find('LessonToken')).to.have.lengthOf(2);
     expect(wrapper.find('button')).to.have.lengthOf(1);
     expect(wrapper.find('input')).to.have.lengthOf(0);
-    expect(wrapper.find('TextareaWithImageUpload')).to.have.lengthOf(0);
+    expect(wrapper.find('MarkdownEnabledTextarea')).to.have.lengthOf(0);
 
     expect(wrapper.contains('Lesson Group Name:')).to.be.false;
     expect(wrapper.contains('Big Questions')).to.be.false;

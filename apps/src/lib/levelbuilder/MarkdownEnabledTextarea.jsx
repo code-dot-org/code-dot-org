@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+
+import UploadImageDialog from './lesson-editor/UploadImageDialog';
 
 const styles = {
   container: {
@@ -19,15 +20,19 @@ const styles = {
   }
 };
 
-/**
- * Component for previewing Markdown for a edit field
- */
-export default class TextareaWithImageUpload extends React.Component {
+export default class MarkdownEnabledTextarea extends React.Component {
   static propTypes = {
     markdown: PropTypes.string,
     name: PropTypes.string,
     inputRows: PropTypes.number,
-    handleMarkdownChange: PropTypes.func.isRequired
+    handleMarkdownChange: PropTypes.func.isRequired,
+    features: PropTypes.shape({
+      imageUpload: PropTypes.bool
+    })
+  };
+
+  static defaultProps = {
+    features: {}
   };
 
   constructor(props) {
@@ -62,20 +67,24 @@ export default class TextareaWithImageUpload extends React.Component {
             style={styles.input}
             onChange={this.props.handleMarkdownChange}
           />
-          <button
-            onMouseDown={this.handleOpenUploadImage}
-            className="btn"
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Image
-          </button>
+          {this.props.features.imageUpload && (
+            <button
+              onMouseDown={this.handleOpenUploadImage}
+              className="btn"
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Image
+            </button>
+          )}
         </div>
-        <UploadImageDialog
-          isOpen={this.state.uploadImageOpen}
-          handleClose={this.handleCloseUploadImage}
-          uploadImage={this.handleUploadImage}
-        />
+        {this.props.features.imageUpload && (
+          <UploadImageDialog
+            isOpen={this.state.uploadImageOpen}
+            handleClose={this.handleCloseUploadImage}
+            uploadImage={this.handleUploadImage}
+          />
+        )}
       </div>
     );
   }
