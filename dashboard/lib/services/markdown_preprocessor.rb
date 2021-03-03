@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 module Services
   # A module for "preprocessing" Markdown strings.
   #
@@ -14,16 +16,25 @@ module Services
   module MarkdownPreprocessor
     # Returns a copy of `content` with all occurrences of server-only syntax
     # substituted with the equivalent Markdown syntax
-    def self.process(content)
-      process!(content.dup)
+    def self.process(content, cache_options: nil)
+      process!(content.dup, cache_options: cache_options)
     end
 
-    # Performs the substitutions of MarkdownPreprocessor#process in place
-    def self.process!(content)
+    # Performs the substitutions of MarkdownPreprocessor#process in place.
+    #
+    # Because the substitutions hit the database, we cache this operation per
+    # content string. `cache_options`, if specified, will be passed to the
+    # cache fetch call. See
+    # https://api.rubyonrails.org/classes/ActiveSupport/Cache/Store.html#method-i-fetch
+    # for relevant documentation
+    def self.process!(content, cache_options: nil)
       return unless content.present?
-      sub_resource_links! content
-      sub_vocab_links! content
-      content
+      cache_key = "MarkdownPreprocessor/process/#{Digest::MD5.hexdigest(content)}"
+      Rails.cache.fetch(cache_key, cache_options) do
+        sub_resource_links! content
+        sub_vocab_links! content
+        content
+      end
     end
 
     # Returns a copy of `content` with all occurrences of Vocabulary links
