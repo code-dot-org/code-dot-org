@@ -69,7 +69,9 @@ export const levelType = PropTypes.shape({
  * @property {bool} paired
  * A boolean indicating if a student was paired on a level.
  * @property {number} timeSpent
- * An optional value indicating the time a student spent on a level.
+ * The number of seconds a student spent on a level.
+ * @property {number} lastTimestamp
+ * A timestamp of the last time a student made progress on a level.
  * @property {array} pages
  * An optional array of recursive progress objects representing progress on
  * individual pages of a multi-page assessment

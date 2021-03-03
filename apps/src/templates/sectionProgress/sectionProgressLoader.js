@@ -9,7 +9,8 @@ import {
 } from './sectionProgressRedux';
 import {
   processedLevel,
-  processServerSectionProgress
+  processServerSectionProgress,
+  progressForLesson
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {
   fetchStandardsCoveredForScript,
@@ -43,6 +44,7 @@ export function loadScript(scriptId, sectionId) {
   let sectionProgress = {
     scriptDataByScript: {},
     studentLevelProgressByScript: {},
+    studentLessonProgressByScript: {},
     studentLastUpdateByScript: {}
   };
 
@@ -93,6 +95,15 @@ export function loadScript(scriptId, sectionId) {
   // Combine and transform the data
   requests.push(scriptRequest);
   Promise.all(requests).then(() => {
+    sectionProgress.studentLessonProgressByScript = {
+      [scriptId]: {
+        ...sectionProgress.studentLessonProgressByScript,
+        ...summarizeLessonProgress(
+          sectionProgress.studentLevelProgressByScript[scriptId],
+          sectionProgress.scriptDataByScript[scriptId].stages
+        )
+      }
+    };
     getStore().dispatch(addDataByScript(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
     getStore().dispatch(finishRefreshingProgress());
@@ -107,6 +118,20 @@ export function loadScript(scriptId, sectionId) {
 function processStudentTimestamps(timestamps) {
   const studentTimestamps = _.mapValues(timestamps, seconds => seconds * 1000);
   return studentTimestamps;
+}
+
+function summarizeLessonProgress(studentLevelProgress, lessons) {
+  const studentLessonProgress = {};
+  Object.entries(studentLevelProgress).forEach(([studentId, levelProgress]) => {
+    studentLessonProgress[studentId] = {};
+    lessons.forEach(lesson => {
+      studentLessonProgress[studentId][lesson.id] = progressForLesson(
+        levelProgress,
+        lesson.levels
+      );
+    });
+  });
+  return studentLessonProgress;
 }
 
 function postProcessDataByScript(scriptData) {

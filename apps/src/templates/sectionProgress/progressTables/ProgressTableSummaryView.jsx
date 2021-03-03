@@ -1,11 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {
-  progressForLesson,
-  lessonIsAllAssessment
-} from '@cdo/apps/templates/progress/progressHelpers';
+import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import {scriptDataPropType} from '../sectionProgressConstants';
+import {studentLessonProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {
   getCurrentScriptData,
   jumpToLessonDetails
@@ -25,6 +23,9 @@ class ProgressTableSummaryView extends React.Component {
   static propTypes = {
     // redux
     scriptData: scriptDataPropType.isRequired,
+    lessonProgressByStudent: PropTypes.objectOf(
+      PropTypes.objectOf(studentLessonProgressType)
+    ).isRequired,
     onClickLesson: PropTypes.func.isRequired
   };
 
@@ -33,17 +34,15 @@ class ProgressTableSummaryView extends React.Component {
     this.summaryCellFormatter = this.summaryCellFormatter.bind(this);
   }
 
-  summaryCellFormatter(lesson, student, studentProgress) {
-    const studentLessonProgress = progressForLesson(
-      studentProgress,
-      lesson.levels
-    );
-    const isAssessmentLesson = lessonIsAllAssessment(lesson.levels);
+  summaryCellFormatter(lesson, student) {
+    const studentLessonProgress = this.props.lessonProgressByStudent[
+      student.id
+    ][lesson.id];
     return (
       <ProgressTableSummaryCell
         studentId={student.id}
         studentLessonProgress={studentLessonProgress}
-        isAssessmentLesson={isAssessmentLesson}
+        isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
         onSelectDetailView={() => this.props.onClickLesson(lesson.position)}
       />
     );
@@ -67,7 +66,11 @@ class ProgressTableSummaryView extends React.Component {
 
 export default connect(
   state => ({
-    scriptData: getCurrentScriptData(state)
+    scriptData: getCurrentScriptData(state),
+    lessonProgressByStudent:
+      state.sectionProgress.studentLessonProgressByScript[
+        state.scriptSelection.scriptId
+      ]
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {
