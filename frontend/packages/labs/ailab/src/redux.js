@@ -1172,9 +1172,11 @@ export function getScatterPlotData(state) {
   }
 
   const label = state.currentColumn;
+  const feature = state.labelColumn;
 
   return {
     label,
+    feature,
     data
   };
 }

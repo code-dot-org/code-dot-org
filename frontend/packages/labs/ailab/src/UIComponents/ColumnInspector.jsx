@@ -39,6 +39,7 @@ const chartOptions = {
       }
     ]
   },
+  legend: { display: false },
   maintainAspectRatio: false
 };
 

@@ -144,15 +144,9 @@ class App extends Component {
               <DataDisplay />
             </ContainerLeft>
             <ContainerRight>
-              {currentPanel === "dataDisplayLabel" && (
-                <ColumnInspector />
-              )}
-              {currentPanel === "dataDisplayFeatures" && (
-                <div>
-                  <CrossTab />
-                  <ScatterPlot />
-                </div>
-              )}
+              {currentPanel === "dataDisplayLabel" && <ColumnInspector />}
+              {currentPanel === "dataDisplayFeatures" && <CrossTab />}
+              {currentPanel === "dataDisplayFeatures" && <ScatterPlot />}
             </ContainerRight>
           </BodyContainer>
         )}
@@ -178,11 +172,11 @@ class App extends Component {
             <ContainerLeft>
               <Results />
             </ContainerLeft>
-            {resultsPhase === 3 &&
+            {resultsPhase === 3 && (
               <ContainerRight>
                 <Predict />
               </ContainerRight>
-            }
+            )}
           </BodyContainer>
         )}
 
