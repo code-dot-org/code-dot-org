@@ -49,6 +49,9 @@ class SettingsCog extends Component {
     autogenerateML: PropTypes.func
   };
 
+  componentDidMount() {
+    this.setState({isAIEnabled: experiments.isEnabled(experiments.APPLAB_ML)});
+  }
   // This ugly two-flag state is a workaround for an event-handling bug in
   // react-portal that prevents closing the portal by clicking on the icon
   // that opened it.  For now we're just disabling the cog when the menu is
@@ -59,7 +62,8 @@ class SettingsCog extends Component {
     canOpen: true,
     confirmingEnableMaker: false,
     managingLibraries: false,
-    managingModels: false
+    managingModels: false,
+    isAIEnabled: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -140,8 +144,7 @@ class SettingsCog extends Component {
       rootStyle.color = color.dark_charcoal;
     }
 
-    const aiEnabled =
-      experiments.isEnabled(experiments.APPLAB_ML) && this.areAIToolsEnabled();
+    const aiEnabled = this.state.isAIEnabled && this.areAIToolsEnabled();
 
     return (
       <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
