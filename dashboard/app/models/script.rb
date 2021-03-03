@@ -280,6 +280,14 @@ class Script < ApplicationRecord
     visible_scripts.select {|s| s.family_name == 'csd6'}
   end
 
+  def self.text_to_speech_script_ids
+    all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
+  end
+
+  def self.pre_reader_script_ids
+    all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
+  end
+
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
@@ -849,16 +857,6 @@ class Script < ApplicationRecord
     name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
   end
 
-  def get_script_level_by_absolute_position_and_puzzle_position(absolute_position, puzzle_position)
-    script_levels.find do |sl|
-      # make sure we are checking the native properties of the script level
-      # first, so we only have to load lesson if it's actually necessary.
-      sl.position == puzzle_position.to_i &&
-          !sl.bonus &&
-          sl.lesson.absolute_position == absolute_position.to_i
-    end
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -893,6 +891,25 @@ class Script < ApplicationRecord
     end
 
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+  end
+
+  def pre_reader_tts_level?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::PRE_READER_EXPRESS_NAME,
+      Script::COURSEA_2018_NAME,
+      Script::COURSEB_2018_NAME,
+      Script::PRE_READER_EXPRESS_2018_NAME,
+      Script::COURSEA_2019_NAME,
+      Script::COURSEB_2019_NAME,
+      Script::PRE_READER_EXPRESS_2019_NAME,
+      Script::COURSEA_2020_NAME,
+      Script::COURSEB_2020_NAME,
+      Script::PRE_READER_EXPRESS_2020_NAME,
+    ].include?(name)
   end
 
   def text_to_speech_enabled?

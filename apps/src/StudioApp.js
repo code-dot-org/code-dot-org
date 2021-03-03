@@ -2760,7 +2760,6 @@ StudioApp.prototype.enableBreakpoints = function() {
             activeBreakpoint,
             projectLevelId: this.config.serverProjectLevelId,
             scriptId: this.config.scriptId,
-            scriptLevelId: this.config.serverScriptLevelId,
             scriptName: this.config.scriptName,
             studentUserId: queryParams('user_id'),
             url: window.location.toString()
@@ -3485,8 +3484,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
         !config.level.isK1 &&
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
-      serverLevelId: config.serverLevelId,
-      serverScriptLevelId: config.serverScriptLevelId
+      serverLevelId: config.serverLevelId
     },
     appSpecificConstants
   );
