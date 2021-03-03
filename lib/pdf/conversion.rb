@@ -7,7 +7,7 @@ module PDF
       'node',
       script_path,
       '-u', url,
-      '-o', outpath,
+      '-o', Shellwords.escape(outpath),
     ].join(" ")
     puts cmd if options[:verbose]
     @result = `#{cmd}`
