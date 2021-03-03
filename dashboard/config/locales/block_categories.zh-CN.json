@@ -1,0 +1,76 @@
+{
+  "zh-CN": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "操作",
+          "Brushes": "刷子",
+          "Loops": "循环",
+          "Math": "数学",
+          "Logic": "逻辑",
+          "Functions": "函数",
+          "Variables": "变量"
+        },
+        "CourseD_EOC_dance": {
+          "World": "世界",
+          "Dancers": "舞者",
+          "Properties": "属性",
+          "Events": "事件",
+          "Numbers": "数字",
+          "Logic": "逻辑"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "操作",
+          "Events": "事件",
+          "Loops": "循环",
+          "Math": "数学",
+          "Logic": "逻辑",
+          "Games/Score": "游戏/得分"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "世界",
+          "Sprites": "精灵图",
+          "Actions": "操作",
+          "Events": "事件",
+          "Behaviors": "行为"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "世界",
+          "Sprites": "精灵图",
+          "Locations": "位置",
+          "Actions": "操作",
+          "Events": "事件",
+          "Behaviors": "行为",
+          "Variables": "变量",
+          "Math": "数学",
+          "Logic": "逻辑",
+          "Functions": "函数",
+          "Text": "文本",
+          "Comments": "评论"
+        },
+        "outbreak_freeplay": {
+          "World": "世界",
+          "Sprites": "精灵图",
+          "Actions": "操作",
+          "Behaviors": "行为",
+          "Events": "事件",
+          "Locations": "位置",
+          "Logic": "逻辑",
+          "Loops": "循环",
+          "Math": "数学",
+          "Variables": "变量",
+          "Functions": "函数",
+          "Comments": "评论"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "世界",
+          "Sprites": "精灵图",
+          "Actions": "操作",
+          "Events": "事件",
+          "Logic": "逻辑",
+          "Math": "数学"
+        }
+      }
+    }
+  }
+}

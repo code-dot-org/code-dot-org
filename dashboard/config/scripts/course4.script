@@ -4,7 +4,7 @@ curriculum_path 'https://code.org/curriculum/course4/{LESSON}/Teacher'
 curriculum_umbrella 'CSF'
 tts true
 
-lesson 'Unplugged: Tangrams', display_name: 'Unplugged: Tangrams', has_lesson_plan: true
+lesson 'Unplugged: Tangrams', display_name: 'Unplugged: Tangrams', has_lesson_plan: true, unplugged: true
 level 'TangramAlgorithms'
 
 lesson 'Maze and Bee', display_name: 'Maze and Bee', has_lesson_plan: true
@@ -36,10 +36,10 @@ level 'Course 4 Artist 11'
 level 'Course 4 Artist 12'
 level 'Course 4 Artist 13'
 
-lesson 'Unplugged: Envelope Variables', display_name: 'Unplugged: Envelope Variables', has_lesson_plan: true
+lesson 'Unplugged: Envelope Variables', display_name: 'Unplugged: Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables'
 
-lesson 'Unplugged: Madlibs', display_name: 'Unplugged: Madlibs', has_lesson_plan: true
+lesson 'Unplugged: Madlibs', display_name: 'Unplugged: Madlibs', has_lesson_plan: true, unplugged: true
 level 'MadGlibs'
 
 lesson 'Artist: Variables', display_name: 'Artist: Variables', has_lesson_plan: true
@@ -72,7 +72,7 @@ level 'Course 4 Play Lab Vars 7'
 level 'Course 4 Play Lab Vars 9'
 bonus 'course4_playlab_variables_challenge1'
 
-lesson 'Unplugged: For Loop Fun', display_name: 'Unplugged: For Loop Fun', has_lesson_plan: true
+lesson 'Unplugged: For Loop Fun', display_name: 'Unplugged: For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun'
 
 lesson 'Bee: For Loops', display_name: 'Bee: For Loops', has_lesson_plan: true
@@ -129,7 +129,7 @@ level 'NEW Course 4 Artist Functions 14'
 bonus 'course4_artist_concept_challenge2'
 bonus 'course4_artist_functions_challenge2'
 
-lesson 'Unplugged: Songwriting with Parameters', display_name: 'Unplugged: Songwriting with Parameters', has_lesson_plan: true
+lesson 'Unplugged: Songwriting with Parameters', display_name: 'Unplugged: Songwriting with Parameters', has_lesson_plan: true, unplugged: true
 level 'SongwritingWithParameters'
 
 lesson 'Artist: Functions with Parameters', display_name: 'Artist: Functions with Parameters', has_lesson_plan: true
@@ -177,7 +177,7 @@ level 'Course 4 Bee Params 8'
 bonus 'course4_bee_fwp_challenge1'
 bonus 'course4_bee_fwp_challenge2'
 
-lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary', has_lesson_plan: true
+lesson 'Unplugged: Binary', display_name: 'Unplugged: Binary', has_lesson_plan: true, unplugged: true
 level 'BinaryImages'
 
 lesson 'Artist Binary', display_name: 'Artist Binary', has_lesson_plan: true

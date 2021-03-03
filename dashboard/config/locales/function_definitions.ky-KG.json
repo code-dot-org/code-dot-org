@@ -1215,6 +1215,47 @@
           "collect": {
             "name": "чогулт"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "жылдыз тарткыла",
+            "parameters": {
+              "points": "упай",
+              "length": "узундугу"
+            }
+          },
+          "draw a circle": {
+            "name": "тегерек тарткыла"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "узундугу",
+              "repeat": "кайталоо"
+            }
+          },
+          "draw a triangle": {
+            "name": "үч бурчтук тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a house": {
+            "name": "саат тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a square": {
+            "name": "чарчы тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          }
         }
       }
     }

@@ -2641,10 +2641,12 @@ hy:
             'Functions: Songwriting':
               name: songwriting
           lesson_groups:
+            ramp_up:
+              display_name: loops
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
-              display_name: nested Loops
+              display_name: conditionals
             csf_functions:
               display_name: գործառույթները
         coursef-2021:

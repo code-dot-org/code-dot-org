@@ -21,10 +21,11 @@
         }
       ],
       "pilot_experiment": "csf-2021-pilot",
-      "peer_reviews_to_complete": 0
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-01 19:03:36 UTC",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }
@@ -104,23 +105,24 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Blank Space Stories - coming soon!",
+      "key": "blank space stories",
+      "name": "Blank Space Stories",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
     },
     {
-      "key": "variables-in-spritelab",
-      "name": "Storing and Retrieving Text - coming soon!",
+      "key": "texts-and-prompts",
+      "name": "Text and Prompts",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -128,22 +130,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "variables-in-spritelab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "key": "chatbot",
-      "name": "Create a Chat-Bot - coming soon!",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "chatbot",
+        "lesson.key": "texts-and-prompts",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
@@ -655,6 +642,256 @@
       "level_keys": [
         "courseF_events_freeplay"
       ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Variables in Envelopes",
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "EnvelopeVariables-Unplugged_2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Prediction",
+        "level_keys": [
+          "courseF_variables_predict"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_predict"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_variables_predict"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Text and Prompts",
+        "level_keys": [
+          "courseF_pilotVideo_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_prompts"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_review"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_text_review"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_print"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_text_print"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_events"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_text_events"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_text_prompts"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_answer"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_text_answer"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_concat"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_text_concat"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_text_practice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_text_practice"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -875,6 +1112,116 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "EnvelopeVariables-Unplugged_2021",
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_predict",
+        "script_level.level_keys": [
+          "courseF_variables_predict"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_pilotVideo_prompts",
+        "script_level.level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_review",
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_print",
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events",
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_prompts",
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_answer",
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat",
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_practice",
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "texts-and-prompts",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csf-2021-pilot"
       }
     }

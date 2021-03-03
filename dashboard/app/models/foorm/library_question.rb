@@ -23,7 +23,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   validate :validate_library_question
 
-  after_save :write_to_file
+  after_commit :write_to_file
 
   def validate_library_question
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
