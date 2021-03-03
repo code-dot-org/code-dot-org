@@ -16705,7 +16705,7 @@ en:
               name: Safety in My Online Neighborhood
               description_student: Learn how to go places safely online.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -16780,7 +16780,7 @@ en:
               name: Digital Trails
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -17001,7 +17001,7 @@ en:
               name: Be A Super Digital Citizen
               description_student: Learn how you can be an upstander when you see cyberbullying.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -17060,7 +17060,7 @@ en:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -17203,7 +17203,7 @@ en:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -18656,6 +18656,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          name: vpl-csd-2020
         vpl-csp-2020:
           lessons:
             Module 1:
@@ -18691,6 +18692,8 @@ en:
               name: Course E/F
             CS Discoveries:
               name: CS Discoveries
+            contagions:
+              name: 'Content Integration: Contagions'
           lesson_groups:
             lesson group:
               display_name: display name
@@ -18699,6 +18702,7 @@ en:
           description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
           description: ''
           student_description: ''
+          name: curriculum-sandbox-levels
         virustest:
           lessons:
             Virus Simulation for Code Bytes:
@@ -18789,6 +18793,10 @@ en:
               name: Final project
             appendix:
               name: Appendix
+            intro-categorical:
+              name: Introduction to AI Lab
+            model-cards:
+              name: Model Cards Playground
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -18830,7 +18838,7 @@ en:
             lesson-1:
               name: Blank Space Variables
             lesson-2:
-              name: Storing and Retrieving Text
+              name: Text and Prompts
             lesson-3:
               name: Create a Chat-Bot
             lesson-4:
@@ -18847,6 +18855,20 @@ en:
               name: Sprites in Action
             lesson-3-ci:
               name: Create a Haiku Bot
+            video:
+              name: Sprite Lab Videos
+            blank space stories:
+              name: Blank Space Stories
+            how things spread:
+              name: How Things Spread
+            contagion simulator setup:
+              name: Contagion Simulator Setup
+            sometimes but not always:
+              name: Sometimes, but Not Always
+            modifying your model:
+              name: Modifying Your model
+            telling a data story:
+              name: Telling a Data Story
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18858,6 +18880,10 @@ en:
               description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
             outbreak:
               display_name: Outbreak Simulation
+            Loom Levels:
+              display_name: Loom Levels
+            contagion:
+              display_name: Contagion
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -19917,7 +19943,7 @@ en:
           name: coursea-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb-2021:
-          title: Course B (2020)
+          title: Course B (2021)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
@@ -19972,7 +19998,7 @@ en:
           name: courseb-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec-2021:
-          title: Course C (2020)
+          title: Course C (2021)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
@@ -20049,7 +20075,7 @@ en:
           name: coursec-2021
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed-2021:
-          title: Course D (2020)
+          title: Course D (2021)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
@@ -20111,6 +20137,10 @@ en:
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
+            lesson-6:
+              name: Looking Ahead with Minecraft
+            lesson-5:
+              name: Password Power-Up
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -20129,7 +20159,7 @@ en:
           name: coursed-2021
           student_description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
         coursee-2021:
-          title: Course E (2020)
+          title: Course E (2021)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: 'Ages: 8-12'
@@ -20191,21 +20221,25 @@ en:
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
+            lesson-4:
+              name: Context-Settng Lesson
           lesson_groups:
             ramp_up:
-              display_name: Ramp Up
+              display_name: Loops
             csf_sprites:
               display_name: Sprites
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
-              display_name: Nested Loops
+              display_name: Conditionals
             csf_functions:
               display_name: Functions
             csf_impacts:
               display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Removed
           name: coursee-2021
           student_description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef-2021:
@@ -20289,7 +20323,7 @@ en:
           name: coursef-2021
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         express-2021:
-          title: Express Course (2020)
+          title: Express Course (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
@@ -20400,7 +20434,7 @@ en:
           name: express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
         pre-express-2021:
-          title: Pre-reader Express (2020)
+          title: Pre-reader Express (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
@@ -20458,7 +20492,7 @@ en:
             Course F Introduction:
               name: Introducing Sprite Lab
             lesson-1:
-              name: Blank Space Variables - coming soon!
+              name: Blank Space Stories - coming soon!
             lesson-2:
               name: Storing and Retrieving Text
             lesson-3:
@@ -20472,11 +20506,13 @@ en:
             Making Sprites:
               name: Making Sprites
             Sprites in Action:
-              name: Sprites in Action - coming soon!
+              name: Sprites in Action
             variables-in-spritelab:
-              name: Storing and Retrieving Text - coming soon!
+              name: Text and Prompts - coming soon!
             chatbot:
               name: Create a Chat-Bot - coming soon!
+            blank space stories:
+              name: Blank Space Stories
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -20761,7 +20797,15 @@ en:
         contagion-guided-practice:
           lessons:
             how things spread gp:
-              name: How Things Spread Guided Practice
+              name: How Things Spread  - Guided Practice
+            contagion simulator gp:
+              name: Contagion Simulator - Guided Practice
+            sometimes not always gp:
+              name: Sometimes, Not Always - Practice
+            modifying your simulator gp:
+              name: Modifying Your Simulator - Guided Practice
+            collecting data gp:
+              name: Collecting Data Guided Practice
           lesson_groups:
             lesson group:
               display_name: Contagion-Guided-Practice
@@ -20778,7 +20822,7 @@ en:
             intro:
               name: Lesson 1
             lesson1:
-              name: Lesson 1
+              name: 'Lesson 1A: AI for Oceans'
             lesson2:
               name: Lesson 2
             lesson3:
@@ -20786,15 +20830,15 @@ en:
             lesson4:
               name: Lesson 4
             lesson5:
-              name: Lesson 5
+              name: Models and Data
             lesson6:
-              name: Lesson 6
+              name: Introduction to AI Lab
             lesson7:
               name: Lesson 7
             lesson8:
-              name: Lesson 8
+              name: Using Models in App Lab
             lesson9:
-              name: Lesson 9
+              name: The Need for Model Cards
             lesson10:
               name: Lesson 10
             lesson11:
@@ -20826,3 +20870,6 @@ en:
           description_short: Pilot for AI Unit in CSD
           description: ''
           student_description: ''
+        teststandard:
+          lessons: {}
+          lesson_groups: {}

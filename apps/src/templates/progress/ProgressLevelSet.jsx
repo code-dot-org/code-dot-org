@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import {levelType} from './progressTypes';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
+import i18n from '@cdo/locale';
 
 const styles = {
   table: {
@@ -73,12 +74,20 @@ class ProgressLevelSet extends React.Component {
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
 
-    let pillText;
+    let pillText, icon;
+    let progressStyle = false;
     if (levels[0].isUnplugged || levels[levels.length - 1].isUnplugged) {
       // We explicitly don't want any text in this case
-      pillText = '';
+      if (multiLevelStep) {
+        pillText = '';
+        icon = getIconForLevel(levels[0]);
+      } else {
+        pillText = i18n.unpluggedActivity();
+        progressStyle = true;
+      }
     } else {
       pillText = levels[0].levelNumber.toString();
+      icon = getIconForLevel(levels[0]);
       if (multiLevelStep) {
         pillText += `-${levels[levels.length - 1].levelNumber}`;
       }
@@ -91,10 +100,11 @@ class ProgressLevelSet extends React.Component {
             <td style={styles.col1}>
               <ProgressPill
                 levels={levels}
-                icon={getIconForLevel(levels[0])}
+                icon={icon}
                 text={pillText}
                 disabled={disabled}
                 selectedSectionId={selectedSectionId}
+                progressStyle={progressStyle}
               />
             </td>
             <td style={styles.col2}>

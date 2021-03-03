@@ -47,6 +47,8 @@ class Experiment < ApplicationRecord
     platformization-partners
   )
 
+  # If allow_joining_via_url, the url to join will be located at:
+  # http://studio.code.org/experiments/set_single_user_experiment/<EXPERIMENT_NAME>
   PILOT_EXPERIMENTS = [
     {
       name: 'csd-piloters',
@@ -101,6 +103,21 @@ class Experiment < ApplicationRecord
     {
       name: 'csd-2021-preview',
       label: 'CSD 2021 Preview',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'contagion-pilot',
+      label: 'Contagion Simulator',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'ai-unit-pilot',
+      label: 'AI Unit Pilot',
+      allow_joining_via_url: false
+    },
+    {
+      name: 'haikubot-pilot',
+      label: 'Haiku Bot',
       allow_joining_via_url: true
     }
   ]

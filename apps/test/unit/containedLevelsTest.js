@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {assert} from '../util/deprecatedChai';
+import {Provider} from 'react-redux';
+import {assert} from '../util/reconfiguredChai';
 import sinon from 'sinon';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import * as callouts from '@cdo/apps/code-studio/callouts';
@@ -16,7 +17,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import UnconnectedGameButtons from '@cdo/apps/templates/GameButtons';
+import GameButtons from '@cdo/apps/templates/GameButtons';
 import {TestResults} from '@cdo/apps/constants';
 import $ from 'jquery';
 import {setInstructionsConstants} from '@cdo/apps/redux/instructions';
@@ -49,15 +50,16 @@ describe('getContainedLevelResultInfo', () => {
 
     gameButtons = document.createElement('div');
     ReactDOM.render(
-      React.createElement(UnconnectedGameButtons, {
-        hideRunButton: false,
-        runButtonText: 'Run',
-        playspacePhoneFrame: false,
-        nextLevelUrl: 'nextUrl',
-        showSkipButton: true,
-        showFinishButton: true,
-        store: getStore()
-      }),
+      <Provider store={getStore()}>
+        <GameButtons
+          hideRunButton={false}
+          runButtonText={'Run'}
+          playspacePhoneFrame={false}
+          nextLevelUrl={'nextUrl'}
+          showSkipButton
+          showFinishButton
+        />
+      </Provider>,
       gameButtons
     );
     document.body.appendChild(gameButtons);

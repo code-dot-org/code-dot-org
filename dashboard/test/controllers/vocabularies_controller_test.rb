@@ -31,6 +31,20 @@ class VocabulariesControllerTest < ActionController::TestCase
     assert(@response.body.include?('updated definition'))
   end
 
+  test "can update vocab from params" do
+    sign_in @levelbuilder
+    course_version = create :course_version
+    lesson = create :lesson
+    vocabulary = create :vocabulary, word: 'word', definition: 'draft definition', course_version: course_version
+    post :update, params: {id: vocabulary.id, word: 'word', definition: 'updated definition', courseVersionId: course_version.id, lessonIds: [lesson.id].to_json}
+    assert_response :success
+
+    vocabulary.reload
+    assert_equal 'updated definition', vocabulary.definition
+    assert(@response.body.include?('updated definition'))
+    assert_equal [lesson], vocabulary.lessons
+  end
+
   test "creating vocabulary that already exists results in error" do
     sign_in @levelbuilder
     course_version = create :course_version
@@ -53,7 +67,7 @@ class VocabulariesControllerTest < ActionController::TestCase
     get :edit, params: {course_name: unit_group.name}
     assert_response :success
     assert_equal assigns(:course_version), course_version
-    assert_equal assigns(:vocabularies), [vocabulary]
+    assert_equal assigns(:vocabularies), [vocabulary.summarize_for_edit]
   end
 
   test "can load vocab edit page of standalone script course version" do
@@ -65,6 +79,6 @@ class VocabulariesControllerTest < ActionController::TestCase
     get :edit, params: {course_name: script.name}
     assert_response :success
     assert_equal assigns(:course_version), course_version
-    assert_equal assigns(:vocabularies), [vocabulary]
+    assert_equal assigns(:vocabularies), [vocabulary.summarize_for_edit]
   end
 end
