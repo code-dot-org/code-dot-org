@@ -148,6 +148,87 @@ class AdminSearchControllerTest < ActionController::TestCase
     assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
   end
 
+  test 'can add multiple teachers to pilot' do
+    teacher = create :teacher
+    teacher2 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: teacher.email + "\n" + teacher2.email, pilot_name: pilot_name}
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher2.id, name: pilot_name).present?
+  end
+
+  test 'can add multiple teachers to pilot with extra spaces' do
+    teacher = create :teacher
+    teacher2 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: teacher.email + " \n" + teacher2.email, pilot_name: pilot_name}
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher2.id, name: pilot_name).present?
+  end
+
+  test 'can add multiple teachers to pilot with extra commas' do
+    teacher = create :teacher
+    teacher2 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: teacher.email + ",\n" + teacher2.email, pilot_name: pilot_name}
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher2.id, name: pilot_name).present?
+  end
+
+  test 'if first email fails, second given will work successfully' do
+    student = create :student
+    teacher = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {email: student.email + "\n" + teacher.email, pilot_name: pilot_name}
+
+    refute SingleUserExperiment.find_by(min_user_id: student.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+  end
+
+  test 'if middle user is not found, first and third still work successfully' do
+    teacher = create :teacher
+    teacher2 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {
+      email: teacher.email + "\nfake@fakey1.fake\n" + teacher2.email, pilot_name: pilot_name
+    }
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher2.id, name: pilot_name).present?
+  end
+
+  test 'longer list of emails works correctly' do
+    teacher = create :teacher
+    teacher2 = create :teacher
+    teacher3 = create :teacher
+    teacher4 = create :teacher
+    teacher5 = create :teacher
+    teacher6 = create :teacher
+    teacher7 = create :teacher
+    teacher8 = create :teacher
+    teacher9 = create :teacher
+    teacher10 = create :teacher
+    teacher11 = create :teacher
+    pilot_name = 'csd-piloters'
+    post :add_to_pilot, params: {
+      email: teacher.email + "\n" + teacher2.email + "\n" + teacher3.email + "\n" +
+      teacher4.email + "\n" + teacher5.email + "\n" + teacher6.email + "\n" +
+      teacher7.email + "\n" + teacher8.email + "\n" + teacher9.email + "\n" +
+      teacher10.email + "\n" + teacher11.email, pilot_name: pilot_name
+    }
+
+    assert SingleUserExperiment.find_by(min_user_id: teacher.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher2.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher3.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher6.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher9.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher10.id, name: pilot_name).present?
+    assert SingleUserExperiment.find_by(min_user_id: teacher11.id, name: pilot_name).present?
+  end
+
   test 'cannot add student to pilot' do
     student = create :student
     pilot_name = 'csd-piloters'
