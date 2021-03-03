@@ -58,6 +58,7 @@ class ActivitySection < ApplicationRecord
   def summarize_for_lesson_show
     summary = summarize
     summary[:scriptLevels] = script_levels.map(&:summarize_for_lesson_show)
+    Services::MarkdownPreprocessor.process!(summary[:description])
     summary
   end
 
