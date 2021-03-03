@@ -1,0 +1,304 @@
+﻿age,sex,Chest Pain Type,Resting Blood Pressure,Cholesterol,Fasting Blood Sugar > 120mg/dl,Resting ECG Results,Maximum Heart Rate Achieved,Exercise Induced Angina,ST Depression Induced By Exercise Relative To Rest,Slope of Peak Exercise ST Segment,Number of Major Vessels Colored by Flourosopy,Diagnosis of Heart Disease
+63,male,None,145,233,TRUE,Normal,150,No,2.3,0,0,Yes
+37,male,Non-Anginal,130,250,FALSE,Some abnormality,187,No,3.5,0,0,Yes
+41,female,Atypical Angina,130,204,FALSE,Normal,172,No,1.4,2,0,Yes
+56,male,Atypical Angina,120,236,FALSE,Some abnormality,178,No,0.8,2,0,Yes
+57,female,Typical Angina,120,354,FALSE,Some abnormality,163,Yes,0.6,2,0,Yes
+57,male,Typical Angina,140,192,FALSE,Some abnormality,148,No,0.4,1,0,Yes
+56,female,Atypical Angina,140,294,FALSE,Normal,153,No,1.3,1,0,Yes
+44,male,Atypical Angina,120,263,FALSE,Some abnormality,173,No,0,2,0,Yes
+52,male,Non-Anginal,172,199,TRUE,Some abnormality,162,No,0.5,2,0,Yes
+57,male,Non-Anginal,150,168,FALSE,Some abnormality,174,No,1.6,2,0,Yes
+54,male,Typical Angina,140,239,FALSE,Some abnormality,160,No,1.2,2,0,Yes
+48,female,Non-Anginal,130,275,FALSE,Some abnormality,139,No,0.2,2,0,Yes
+49,male,Atypical Angina,130,266,FALSE,Some abnormality,171,No,0.6,2,0,Yes
+64,male,None,110,211,FALSE,Normal,144,Yes,1.8,1,0,Yes
+58,female,None,150,283,TRUE,Normal,162,No,1,2,0,Yes
+50,female,Non-Anginal,120,219,FALSE,Some abnormality,158,No,1.6,1,0,Yes
+58,female,Non-Anginal,120,340,FALSE,Some abnormality,172,No,0,2,0,Yes
+66,female,None,150,226,FALSE,Some abnormality,114,No,2.6,0,0,Yes
+43,male,Typical Angina,150,247,FALSE,Some abnormality,171,No,1.5,2,0,Yes
+69,female,None,140,239,FALSE,Some abnormality,151,No,1.8,2,2,Yes
+59,male,Typical Angina,135,234,FALSE,Some abnormality,161,No,0.5,1,0,Yes
+44,male,Non-Anginal,130,233,FALSE,Some abnormality,179,Yes,0.4,2,0,Yes
+42,male,Typical Angina,140,226,FALSE,Some abnormality,178,No,0,2,0,Yes
+61,male,Non-Anginal,150,243,TRUE,Some abnormality,137,Yes,1,1,0,Yes
+40,male,None,140,199,FALSE,Some abnormality,178,Yes,1.4,2,0,Yes
+71,female,Atypical Angina,160,302,FALSE,Some abnormality,162,No,0.4,2,2,Yes
+59,male,Non-Anginal,150,212,TRUE,Some abnormality,157,No,1.6,2,0,Yes
+51,male,Non-Anginal,110,175,FALSE,Some abnormality,123,No,0.6,2,0,Yes
+65,female,Non-Anginal,140,417,TRUE,Normal,157,No,0.8,2,1,Yes
+53,male,Non-Anginal,130,197,TRUE,Normal,152,No,1.2,0,0,Yes
+41,female,Atypical Angina,105,198,FALSE,Some abnormality,168,No,0,2,1,Yes
+65,male,Typical Angina,120,177,FALSE,Some abnormality,140,No,0.4,2,0,Yes
+44,male,Atypical Angina,130,219,FALSE,Normal,188,No,0,2,0,Yes
+54,male,Non-Anginal,125,273,FALSE,Normal,152,No,0.5,0,1,Yes
+51,male,None,125,213,FALSE,Normal,125,Yes,1.4,2,1,Yes
+46,female,Non-Anginal,142,177,FALSE,Normal,160,Yes,1.4,0,0,Yes
+54,female,Non-Anginal,135,304,TRUE,Some abnormality,170,No,0,2,0,Yes
+54,male,Non-Anginal,150,232,FALSE,Normal,165,No,1.6,2,0,Yes
+65,female,Non-Anginal,155,269,FALSE,Some abnormality,148,No,0.8,2,0,Yes
+65,female,Non-Anginal,160,360,FALSE,Normal,151,No,0.8,2,0,Yes
+51,female,Non-Anginal,140,308,FALSE,Normal,142,No,1.5,2,1,Yes
+48,male,Atypical Angina,130,245,FALSE,Normal,180,No,0.2,1,0,Yes
+45,male,Typical Angina,104,208,FALSE,Normal,148,Yes,3,1,0,Yes
+53,female,Typical Angina,130,264,FALSE,Normal,143,No,0.4,1,0,Yes
+39,male,Non-Anginal,140,321,FALSE,Normal,182,No,0,2,0,Yes
+52,male,Atypical Angina,120,325,FALSE,Some abnormality,172,No,0.2,2,0,Yes
+44,male,Non-Anginal,140,235,FALSE,Normal,180,No,0,2,0,Yes
+47,male,Non-Anginal,138,257,FALSE,Normal,156,No,0,2,0,Yes
+53,female,Non-Anginal,128,216,FALSE,Normal,115,No,0,2,0,Yes
+53,female,Typical Angina,138,234,FALSE,Normal,160,No,0,2,0,Yes
+51,female,Non-Anginal,130,256,FALSE,Normal,149,No,0.5,2,0,Yes
+66,male,Typical Angina,120,302,FALSE,Normal,151,No,0.4,1,0,Yes
+62,male,Non-Anginal,130,231,FALSE,Some abnormality,146,No,1.8,1,3,Yes
+44,female,Non-Anginal,108,141,FALSE,Some abnormality,175,No,0.6,1,0,Yes
+63,female,Non-Anginal,135,252,FALSE,Normal,172,No,0,2,0,Yes
+52,male,Atypical Angina,134,201,FALSE,Some abnormality,158,No,0.8,2,1,Yes
+48,male,Typical Angina,122,222,FALSE,Normal,186,No,0,2,0,Yes
+45,male,Typical Angina,115,260,FALSE,Normal,185,No,0,2,0,Yes
+34,male,None,118,182,FALSE,Normal,174,No,0,2,0,Yes
+57,female,Typical Angina,128,303,FALSE,Normal,159,No,0,2,1,Yes
+71,female,Non-Anginal,110,265,TRUE,Normal,130,No,0,2,1,Yes
+54,male,Atypical Angina,108,309,FALSE,Some abnormality,156,No,0,2,0,Yes
+52,male,None,118,186,FALSE,Normal,190,No,0,1,0,Yes
+41,male,Atypical Angina,135,203,FALSE,Some abnormality,132,No,0,1,0,Yes
+58,male,Non-Anginal,140,211,TRUE,Normal,165,No,0,2,0,Yes
+35,female,Typical Angina,138,183,FALSE,Some abnormality,182,No,1.4,2,0,Yes
+51,male,Non-Anginal,100,222,FALSE,Some abnormality,143,Yes,1.2,1,0,Yes
+45,female,Atypical Angina,130,234,FALSE,Normal,175,No,0.6,1,0,Yes
+44,male,Atypical Angina,120,220,FALSE,Some abnormality,170,No,0,2,0,Yes
+62,female,Typical Angina,124,209,FALSE,Some abnormality,163,No,0,2,0,Yes
+54,male,Non-Anginal,120,258,FALSE,Normal,147,No,0.4,1,0,Yes
+51,male,Non-Anginal,94,227,FALSE,Some abnormality,154,Yes,0,2,1,Yes
+29,male,Atypical Angina,130,204,FALSE,Normal,202,No,0,2,0,Yes
+51,male,Typical Angina,140,261,FALSE,Normal,186,Yes,0,2,0,Yes
+43,female,Non-Anginal,122,213,FALSE,Some abnormality,165,No,0.2,1,0,Yes
+55,female,Atypical Angina,135,250,FALSE,Normal,161,No,1.4,1,0,Yes
+51,male,Non-Anginal,125,245,TRUE,Normal,166,No,2.4,1,0,Yes
+59,male,Atypical Angina,140,221,FALSE,Some abnormality,164,Yes,0,2,0,Yes
+52,male,Atypical Angina,128,205,TRUE,Some abnormality,184,No,0,2,0,Yes
+58,male,Non-Anginal,105,240,FALSE,Normal,154,Yes,0.6,1,0,Yes
+41,male,Non-Anginal,112,250,FALSE,Some abnormality,179,No,0,2,0,Yes
+45,male,Atypical Angina,128,308,FALSE,Normal,170,No,0,2,0,Yes
+60,female,Non-Anginal,102,318,FALSE,Some abnormality,160,No,0,2,1,Yes
+52,male,None,152,298,TRUE,Some abnormality,178,No,1.2,1,0,Yes
+42,female,Typical Angina,102,265,FALSE,Normal,122,No,0.6,1,0,Yes
+67,female,Non-Anginal,115,564,FALSE,Normal,160,No,1.6,1,0,Yes
+68,male,Non-Anginal,118,277,FALSE,Some abnormality,151,No,1,2,1,Yes
+46,male,Atypical Angina,101,197,TRUE,Some abnormality,156,No,0,2,0,Yes
+54,female,Non-Anginal,110,214,FALSE,Some abnormality,158,No,1.6,1,0,Yes
+58,female,Typical Angina,100,248,FALSE,Normal,122,No,1,1,0,Yes
+48,male,Non-Anginal,124,255,TRUE,Some abnormality,175,No,0,2,2,Yes
+57,male,Typical Angina,132,207,FALSE,Some abnormality,168,Yes,0,2,0,Yes
+52,male,Non-Anginal,138,223,FALSE,Some abnormality,169,No,0,2,4,Yes
+54,female,Atypical Angina,132,288,TRUE,Normal,159,Yes,0,2,1,Yes
+45,female,Atypical Angina,112,160,FALSE,Some abnormality,138,No,0,1,0,Yes
+53,male,Typical Angina,142,226,FALSE,Normal,111,Yes,0,2,0,Yes
+62,female,Typical Angina,140,394,FALSE,Normal,157,No,1.2,1,0,Yes
+52,male,Typical Angina,108,233,TRUE,Some abnormality,147,No,0.1,2,3,Yes
+43,male,Non-Anginal,130,315,FALSE,Some abnormality,162,No,1.9,2,1,Yes
+53,male,Non-Anginal,130,246,TRUE,Normal,173,No,0,2,3,Yes
+42,male,None,148,244,FALSE,Normal,178,No,0.8,2,2,Yes
+59,male,None,178,270,FALSE,Normal,145,No,4.2,0,0,Yes
+63,female,Atypical Angina,140,195,FALSE,Some abnormality,179,No,0,2,2,Yes
+42,male,Non-Anginal,120,240,TRUE,Some abnormality,194,No,0.8,0,0,Yes
+50,male,Non-Anginal,129,196,FALSE,Some abnormality,163,No,0,2,0,Yes
+68,female,Non-Anginal,120,211,FALSE,Normal,115,No,1.5,1,0,Yes
+69,male,None,160,234,TRUE,Normal,131,No,0.1,1,1,Yes
+45,female,Typical Angina,138,236,FALSE,Normal,152,Yes,0.2,1,0,Yes
+50,female,Atypical Angina,120,244,FALSE,Some abnormality,162,No,1.1,2,0,Yes
+50,female,Typical Angina,110,254,FALSE,Normal,159,No,0,2,0,Yes
+64,female,Typical Angina,180,325,FALSE,Some abnormality,154,Yes,0,2,0,Yes
+57,male,Non-Anginal,150,126,TRUE,Some abnormality,173,No,0.2,2,1,Yes
+64,female,Non-Anginal,140,313,FALSE,Some abnormality,133,No,0.2,2,0,Yes
+43,male,Typical Angina,110,211,FALSE,Some abnormality,161,No,0,2,0,Yes
+55,male,Atypical Angina,130,262,FALSE,Some abnormality,155,No,0,2,0,Yes
+37,female,Non-Anginal,120,215,FALSE,Some abnormality,170,No,0,2,0,Yes
+41,male,Non-Anginal,130,214,FALSE,Normal,168,No,2,1,0,Yes
+56,male,None,120,193,FALSE,Normal,162,No,1.9,1,0,Yes
+46,female,Atypical Angina,105,204,FALSE,Some abnormality,172,No,0,2,0,Yes
+46,female,Typical Angina,138,243,FALSE,Normal,152,Yes,0,1,0,Yes
+64,female,Typical Angina,130,303,FALSE,Some abnormality,122,No,2,1,2,Yes
+59,male,Typical Angina,138,271,FALSE,Normal,182,No,0,2,0,Yes
+41,female,Non-Anginal,112,268,FALSE,Normal,172,Yes,0,2,0,Yes
+54,female,Non-Anginal,108,267,FALSE,Normal,167,No,0,2,0,Yes
+39,female,Non-Anginal,94,199,FALSE,Some abnormality,179,No,0,2,0,Yes
+34,female,Atypical Angina,118,210,FALSE,Some abnormality,192,No,0.7,2,0,Yes
+47,male,Typical Angina,112,204,FALSE,Some abnormality,143,No,0.1,2,0,Yes
+67,female,Non-Anginal,152,277,FALSE,Some abnormality,172,No,0,2,1,Yes
+52,female,Non-Anginal,136,196,FALSE,Normal,169,No,0.1,1,0,Yes
+74,female,Atypical Angina,120,269,FALSE,Normal,121,Yes,0.2,2,1,Yes
+54,female,Non-Anginal,160,201,FALSE,Some abnormality,163,No,0,2,1,Yes
+49,female,Atypical Angina,134,271,FALSE,Some abnormality,162,No,0,1,0,Yes
+42,male,Atypical Angina,120,295,FALSE,Some abnormality,162,No,0,2,0,Yes
+41,male,Atypical Angina,110,235,FALSE,Some abnormality,153,No,0,2,0,Yes
+41,female,Atypical Angina,126,306,FALSE,Some abnormality,163,No,0,2,0,Yes
+49,female,Typical Angina,130,269,FALSE,Some abnormality,163,No,0,2,0,Yes
+60,female,Non-Anginal,120,178,TRUE,Some abnormality,96,No,0,2,0,Yes
+62,male,Atypical Angina,128,208,TRUE,Normal,140,No,0,2,0,Yes
+57,male,Typical Angina,110,201,FALSE,Some abnormality,126,Yes,1.5,1,0,Yes
+64,male,Typical Angina,128,263,FALSE,Some abnormality,105,Yes,0.2,1,1,Yes
+51,female,Non-Anginal,120,295,FALSE,Normal,157,No,0.6,2,0,Yes
+43,male,Typical Angina,115,303,FALSE,Some abnormality,181,No,1.2,1,0,Yes
+42,female,Non-Anginal,120,209,FALSE,Some abnormality,173,No,0,1,0,Yes
+67,female,Typical Angina,106,223,FALSE,Some abnormality,142,No,0.3,2,2,Yes
+76,female,Non-Anginal,140,197,FALSE,Likely hypertrophy,116,No,1.1,1,0,Yes
+70,male,Atypical Angina,156,245,FALSE,Normal,143,No,0,2,0,Yes
+44,female,Non-Anginal,118,242,FALSE,Some abnormality,149,No,0.3,1,1,Yes
+60,female,None,150,240,FALSE,Some abnormality,171,No,0.9,2,0,Yes
+44,male,Non-Anginal,120,226,FALSE,Some abnormality,169,No,0,2,0,Yes
+42,male,Non-Anginal,130,180,FALSE,Some abnormality,150,No,0,2,0,Yes
+66,male,Typical Angina,160,228,FALSE,Normal,138,No,2.3,2,0,Yes
+71,female,Typical Angina,112,149,FALSE,Some abnormality,125,No,1.6,1,0,Yes
+64,male,None,170,227,FALSE,Normal,155,No,0.6,1,0,Yes
+66,female,Non-Anginal,146,278,FALSE,Normal,152,No,0,1,1,Yes
+39,female,Non-Anginal,138,220,FALSE,Some abnormality,152,No,0,1,0,Yes
+58,female,Typical Angina,130,197,FALSE,Some abnormality,131,No,0.6,1,0,Yes
+47,male,Non-Anginal,130,253,FALSE,Some abnormality,179,No,0,2,0,Yes
+35,male,Atypical Angina,122,192,FALSE,Some abnormality,174,No,0,2,0,Yes
+58,male,Atypical Angina,125,220,FALSE,Some abnormality,144,No,0.4,1,4,Yes
+56,male,Atypical Angina,130,221,FALSE,Normal,163,No,0,2,0,Yes
+56,male,Atypical Angina,120,240,FALSE,Some abnormality,169,No,0,0,0,Yes
+55,female,Atypical Angina,132,342,FALSE,Some abnormality,166,No,1.2,2,0,Yes
+41,male,Atypical Angina,120,157,FALSE,Some abnormality,182,No,0,2,0,Yes
+38,male,Non-Anginal,138,175,FALSE,Some abnormality,173,No,0,2,4,Yes
+38,male,Non-Anginal,138,175,FALSE,Some abnormality,173,No,0,2,4,Yes
+67,male,Typical Angina,160,286,FALSE,Normal,108,Yes,1.5,1,3,No
+67,male,Typical Angina,120,229,FALSE,Normal,129,Yes,2.6,1,2,No
+62,female,Typical Angina,140,268,FALSE,Normal,160,No,3.6,0,2,No
+63,male,Typical Angina,130,254,FALSE,Normal,147,No,1.4,1,1,No
+53,male,Typical Angina,140,203,TRUE,Normal,155,Yes,3.1,0,0,No
+56,male,Non-Anginal,130,256,TRUE,Normal,142,Yes,0.6,1,1,No
+48,male,Atypical Angina,110,229,FALSE,Some abnormality,168,No,1,0,0,No
+58,male,Atypical Angina,120,284,FALSE,Normal,160,No,1.8,1,0,No
+58,male,Non-Anginal,132,224,FALSE,Normal,173,No,3.2,2,2,No
+60,male,Typical Angina,130,206,FALSE,Normal,132,Yes,2.4,1,2,No
+40,male,Typical Angina,110,167,FALSE,Normal,114,Yes,2,1,0,No
+60,male,Typical Angina,117,230,TRUE,Some abnormality,160,Yes,1.4,2,2,No
+64,male,Non-Anginal,140,335,FALSE,Some abnormality,158,No,0,2,0,No
+43,male,Typical Angina,120,177,FALSE,Normal,120,Yes,2.5,1,0,No
+57,male,Typical Angina,150,276,FALSE,Normal,112,Yes,0.6,1,1,No
+55,male,Typical Angina,132,353,FALSE,Some abnormality,132,Yes,1.2,1,1,No
+65,female,Typical Angina,150,225,FALSE,Normal,114,No,1,1,3,No
+61,female,Typical Angina,130,330,FALSE,Normal,169,No,0,2,0,No
+58,male,Non-Anginal,112,230,FALSE,Normal,165,No,2.5,1,1,No
+50,male,Typical Angina,150,243,FALSE,Normal,128,No,2.6,1,0,No
+44,male,Typical Angina,112,290,FALSE,Normal,153,No,0,2,1,No
+60,male,Typical Angina,130,253,FALSE,Some abnormality,144,Yes,1.4,2,1,No
+54,male,Typical Angina,124,266,FALSE,Normal,109,Yes,2.2,1,1,No
+50,male,Non-Anginal,140,233,FALSE,Some abnormality,163,No,0.6,1,1,No
+41,male,Typical Angina,110,172,FALSE,Normal,158,No,0,2,0,No
+51,female,Typical Angina,130,305,FALSE,Some abnormality,142,Yes,1.2,1,0,No
+58,male,Typical Angina,128,216,FALSE,Normal,131,Yes,2.2,1,3,No
+54,male,Typical Angina,120,188,FALSE,Some abnormality,113,No,1.4,1,1,No
+60,male,Typical Angina,145,282,FALSE,Normal,142,Yes,2.8,1,2,No
+60,male,Non-Anginal,140,185,FALSE,Normal,155,No,3,1,0,No
+59,male,Typical Angina,170,326,FALSE,Normal,140,Yes,3.4,0,0,No
+46,male,Non-Anginal,150,231,FALSE,Some abnormality,147,No,3.6,1,0,No
+67,male,Typical Angina,125,254,TRUE,Some abnormality,163,No,0.2,1,2,No
+62,male,Typical Angina,120,267,FALSE,Some abnormality,99,Yes,1.8,1,2,No
+65,male,Typical Angina,110,248,FALSE,Normal,158,No,0.6,2,2,No
+44,male,Typical Angina,110,197,FALSE,Normal,177,No,0,2,1,No
+60,male,Typical Angina,125,258,FALSE,Normal,141,Yes,2.8,1,1,No
+58,male,Typical Angina,150,270,FALSE,Normal,111,Yes,0.8,2,0,No
+68,male,Non-Anginal,180,274,TRUE,Normal,150,Yes,1.6,1,0,No
+62,female,Typical Angina,160,164,FALSE,Normal,145,No,6.2,0,3,No
+52,male,Typical Angina,128,255,FALSE,Some abnormality,161,Yes,0,2,1,No
+59,male,Typical Angina,110,239,FALSE,Normal,142,Yes,1.2,1,1,No
+60,female,Typical Angina,150,258,FALSE,Normal,157,No,2.6,1,2,No
+49,male,Non-Anginal,120,188,FALSE,Some abnormality,139,No,2,1,3,No
+59,male,Typical Angina,140,177,FALSE,Some abnormality,162,Yes,0,2,1,No
+57,male,Non-Anginal,128,229,FALSE,Normal,150,No,0.4,1,1,No
+61,male,Typical Angina,120,260,FALSE,Some abnormality,140,Yes,3.6,1,1,No
+39,male,Typical Angina,118,219,FALSE,Some abnormality,140,No,1.2,1,0,No
+61,female,Typical Angina,145,307,FALSE,Normal,146,Yes,1,1,0,No
+56,male,Typical Angina,125,249,TRUE,Normal,144,Yes,1.2,1,1,No
+43,female,Typical Angina,132,341,TRUE,Normal,136,Yes,3,1,0,No
+62,female,Non-Anginal,130,263,FALSE,Some abnormality,97,No,1.2,1,1,No
+63,male,Typical Angina,130,330,TRUE,Normal,132,Yes,1.8,2,3,No
+65,male,Typical Angina,135,254,FALSE,Normal,127,No,2.8,1,1,No
+48,male,Typical Angina,130,256,TRUE,Normal,150,Yes,0,2,2,No
+63,female,Typical Angina,150,407,FALSE,Normal,154,No,4,1,3,No
+55,male,Typical Angina,140,217,FALSE,Some abnormality,111,Yes,5.6,0,0,No
+65,male,None,138,282,TRUE,Normal,174,No,1.4,1,1,No
+56,female,Typical Angina,200,288,TRUE,Normal,133,Yes,4,0,2,No
+54,male,Typical Angina,110,239,FALSE,Some abnormality,126,Yes,2.8,1,1,No
+70,male,Typical Angina,145,174,FALSE,Some abnormality,125,Yes,2.6,0,0,No
+62,male,Atypical Angina,120,281,FALSE,Normal,103,No,1.4,1,1,No
+35,male,Typical Angina,120,198,FALSE,Some abnormality,130,Yes,1.6,1,0,No
+59,male,None,170,288,FALSE,Normal,159,No,0.2,1,0,No
+64,male,Non-Anginal,125,309,FALSE,Some abnormality,131,Yes,1.8,1,0,No
+47,male,Non-Anginal,108,243,FALSE,Some abnormality,152,No,0,2,0,No
+57,male,Typical Angina,165,289,TRUE,Normal,124,No,1,1,3,No
+55,male,Typical Angina,160,289,FALSE,Normal,145,Yes,0.8,1,1,No
+64,male,Typical Angina,120,246,FALSE,Normal,96,Yes,2.2,0,1,No
+70,male,Typical Angina,130,322,FALSE,Normal,109,No,2.4,1,3,No
+51,male,Typical Angina,140,299,FALSE,Some abnormality,173,Yes,1.6,2,0,No
+58,male,Typical Angina,125,300,FALSE,Normal,171,No,0,2,2,No
+60,male,Typical Angina,140,293,FALSE,Normal,170,No,1.2,1,2,No
+77,male,Typical Angina,125,304,FALSE,Normal,162,Yes,0,2,3,No
+35,male,Typical Angina,126,282,FALSE,Normal,156,Yes,0,2,0,No
+70,male,Non-Anginal,160,269,FALSE,Some abnormality,112,Yes,2.9,1,1,No
+59,female,Typical Angina,174,249,FALSE,Some abnormality,143,Yes,0,1,0,No
+64,male,Typical Angina,145,212,FALSE,Normal,132,No,2,1,2,No
+57,male,Typical Angina,152,274,FALSE,Some abnormality,88,Yes,1.2,1,1,No
+56,male,Typical Angina,132,184,FALSE,Normal,105,Yes,2.1,1,1,No
+48,male,Typical Angina,124,274,FALSE,Normal,166,No,0.5,1,0,No
+56,female,Typical Angina,134,409,FALSE,Normal,150,Yes,1.9,1,2,No
+66,male,Atypical Angina,160,246,FALSE,Some abnormality,120,Yes,0,1,3,No
+54,male,Atypical Angina,192,283,FALSE,Normal,195,No,0,2,1,No
+69,male,Non-Anginal,140,254,FALSE,Normal,146,No,2,1,3,No
+51,male,Typical Angina,140,298,FALSE,Some abnormality,122,Yes,4.2,1,3,No
+43,male,Typical Angina,132,247,TRUE,Normal,143,Yes,0.1,1,4,No
+62,female,Typical Angina,138,294,TRUE,Some abnormality,106,No,1.9,1,3,No
+67,male,Typical Angina,100,299,FALSE,Normal,125,Yes,0.9,1,2,No
+59,male,None,160,273,FALSE,Normal,125,No,0,2,0,No
+45,male,Typical Angina,142,309,FALSE,Normal,147,Yes,0,1,3,No
+58,male,Typical Angina,128,259,FALSE,Normal,130,Yes,3,1,2,No
+50,male,Typical Angina,144,200,FALSE,Normal,126,Yes,0.9,1,0,No
+62,female,Typical Angina,150,244,FALSE,Some abnormality,154,Yes,1.4,1,0,No
+38,male,None,120,231,FALSE,Some abnormality,182,Yes,3.8,1,0,No
+66,female,Typical Angina,178,228,TRUE,Some abnormality,165,Yes,1,1,2,No
+52,male,Typical Angina,112,230,FALSE,Some abnormality,160,No,0,2,1,No
+53,male,Typical Angina,123,282,FALSE,Some abnormality,95,Yes,2,1,2,No
+63,female,Typical Angina,108,269,FALSE,Some abnormality,169,Yes,1.8,1,2,No
+54,male,Typical Angina,110,206,FALSE,Normal,108,Yes,0,1,1,No
+66,male,Typical Angina,112,212,FALSE,Normal,132,Yes,0.1,2,1,No
+55,female,Typical Angina,180,327,FALSE,Likely hypertrophy,117,Yes,3.4,1,0,No
+49,male,Non-Anginal,118,149,FALSE,Normal,126,No,0.8,2,3,No
+54,male,Typical Angina,122,286,FALSE,Normal,116,Yes,3.2,1,2,No
+56,male,Typical Angina,130,283,TRUE,Normal,103,Yes,1.6,0,0,No
+46,male,Typical Angina,120,249,FALSE,Normal,144,No,0.8,2,0,No
+61,male,None,134,234,FALSE,Some abnormality,145,No,2.6,1,2,No
+67,male,Typical Angina,120,237,FALSE,Some abnormality,71,No,1,1,0,No
+58,male,Typical Angina,100,234,FALSE,Some abnormality,156,No,0.1,2,1,No
+47,male,Typical Angina,110,275,FALSE,Normal,118,Yes,1,1,1,No
+52,male,Typical Angina,125,212,FALSE,Some abnormality,168,No,1,2,2,No
+58,male,Typical Angina,146,218,FALSE,Some abnormality,105,No,2,1,1,No
+57,male,Atypical Angina,124,261,FALSE,Some abnormality,141,No,0.3,2,0,No
+58,female,Atypical Angina,136,319,TRUE,Normal,152,No,0,2,2,No
+61,male,Typical Angina,138,166,FALSE,Normal,125,Yes,3.6,1,1,No
+42,male,Typical Angina,136,315,FALSE,Some abnormality,125,Yes,1.8,1,0,No
+52,male,Typical Angina,128,204,TRUE,Some abnormality,156,Yes,1,1,0,No
+59,male,Non-Anginal,126,218,TRUE,Some abnormality,134,No,2.2,1,1,No
+40,male,Typical Angina,152,223,FALSE,Some abnormality,181,No,0,2,0,No
+61,male,Typical Angina,140,207,FALSE,Normal,138,Yes,1.9,2,1,No
+46,male,Typical Angina,140,311,FALSE,Some abnormality,120,Yes,1.8,1,2,No
+59,male,None,134,204,FALSE,Some abnormality,162,No,0.8,2,2,No
+57,male,Atypical Angina,154,232,FALSE,Normal,164,No,0,2,1,No
+57,male,Typical Angina,110,335,FALSE,Some abnormality,143,Yes,3,1,1,No
+55,female,Typical Angina,128,205,FALSE,Likely hypertrophy,130,Yes,2,1,1,No
+61,male,Typical Angina,148,203,FALSE,Some abnormality,161,No,0,2,1,No
+58,male,Typical Angina,114,318,FALSE,Likely hypertrophy,140,No,4.4,0,3,No
+58,female,Typical Angina,170,225,TRUE,Normal,146,Yes,2.8,1,2,No
+67,male,Non-Anginal,152,212,FALSE,Normal,150,No,0.8,1,0,No
+44,male,Typical Angina,120,169,FALSE,Some abnormality,144,Yes,2.8,0,0,No
+63,male,Typical Angina,140,187,FALSE,Normal,144,Yes,4,2,2,No
+63,female,Typical Angina,124,197,FALSE,Some abnormality,136,Yes,0,1,0,No
+59,male,Typical Angina,164,176,TRUE,Normal,90,No,1,1,2,No
+57,female,Typical Angina,140,241,FALSE,Some abnormality,123,Yes,0.2,1,0,No
+45,male,None,110,264,FALSE,Some abnormality,132,No,1.2,1,0,No
+68,male,Typical Angina,144,193,TRUE,Some abnormality,141,No,3.4,1,2,No
+57,male,Typical Angina,130,131,FALSE,Some abnormality,115,Yes,1.2,1,1,No
+57,female,Atypical Angina,130,236,FALSE,Normal,174,No,0,1,1,No

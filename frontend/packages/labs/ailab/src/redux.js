@@ -389,6 +389,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === RESET_STATE) {
     return {
       ...initialState,
+      selectedTrainer: state.mode && state.mode.hideSelectTrainer,
       mode: state.mode
     };
   }
@@ -455,12 +456,14 @@ export default function rootReducer(state = initialState, action) {
           labelColumn: undefined,
           currentColumn: undefined
         };*/
-      } else {
+      } else if (!state.selectedFeatures.includes(action.currentColumn)) {
         return {
           ...state,
           labelColumn: action.currentColumn,
           currentColumn: action.currentColumn
         };
+      } else {
+        return state;
       }
     } else if (state.currentPanel === "dataDisplayFeatures") {
       if (state.selectedFeatures.includes(action.currentColumn)) {
@@ -468,15 +471,17 @@ export default function rootReducer(state = initialState, action) {
           ...state,
           selectedFeatures: state.selectedFeatures.filter(
             item => item !== action.currentColumn
-          )
-          //currentColumn: undefined
+          ),
+          currentColumn: undefined
         };
-      } else {
+      } else if (action.currentColumn !== state.labelColumn) {
         return {
           ...state,
-          selectedFeatures: [...state.selectedFeatures, action.currentColumn]
-          //currentColumn: action.currentColumn
+          selectedFeatures: [...state.selectedFeatures, action.currentColumn],
+          currentColumn: action.currentColumn
         };
+      } else {
+        return state;
       }
     }
   }
@@ -714,23 +719,6 @@ export function getCompatibleTrainers(state) {
   return compatibleTrainers;
 }
 
-function getSum(total, num) {
-  return total + num;
-}
-
-function getAverageDiff(state) {
-  let diffs = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
-  for (let i = 0; i < numPredictedLabels; i++) {
-    diffs.push(
-      Math.abs(
-        state.accuracyCheckLabels[i] - state.accuracyCheckPredictedLabels[i]
-      )
-    );
-  }
-  return (diffs.reduce(getSum, 0) / numPredictedLabels).toFixed(2);
-}
-
 export function getAccuracyClassification(state) {
   let numCorrect = 0;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
@@ -746,8 +734,20 @@ export function getAccuracyClassification(state) {
 }
 
 export function getAccuracyRegression(state) {
-  let range = getRange(state, state.labelColumn);
-  return getAverageDiff(state) / (range.max - range.min);
+  let numCorrect = 0;
+  const maxMin = getRange(state, state.labelColumn);
+  const range = Math.abs(maxMin.max - maxMin.min);
+  const errorTolerance = range * 0.03;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  for (let i = 0; i < numPredictedLabels; i++) {
+    const diff = Math.abs(
+      state.accuracyCheckLabels[i] - state.accuracyCheckPredictedLabels[i]
+    );
+    if (diff <= errorTolerance) {
+      numCorrect++;
+    }
+  }
+  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
 }
 
 export function getSummaryStat(state) {
@@ -933,6 +933,12 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
+  if (panelId === "specifyColumns") {
+    if (state.data.length === 0) {
+      return false;
+    }
+  }
+
   if (panelId === "dataDisplayLabel") {
     if (state.data.length === 0) {
       return false;
@@ -959,6 +965,9 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "selectTrainer") {
     if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
+      return false;
+    }
+    if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
   }
@@ -1073,7 +1082,14 @@ export function getPanelButtons(state) {
  */
 
 export function getCrossTabData(state) {
-  if (!state.labelColumn || state.selectedFeatures.length <= 0) {
+  if (!state.labelColumn || !state.currentColumn) {
+    return null;
+  }
+
+  if (
+    state.columnsByDataType[state.labelColumn] !== ColumnTypes.CATEGORICAL ||
+    state.columnsByDataType[state.currentColumn] !== ColumnTypes.CATEGORICAL
+  ) {
     return null;
   }
 
@@ -1086,9 +1102,7 @@ export function getCrossTabData(state) {
 
   for (let row of state.data) {
     var featureValues = [];
-    for (let selectedFeature of state.selectedFeatures) {
-      featureValues.push(row[selectedFeature]);
-    }
+    featureValues.push(row[state.currentColumn]);
 
     var existingEntry = results.find(result => {
       return areArraysEqual(result.featureValues, featureValues);
@@ -1133,7 +1147,7 @@ export function getCrossTabData(state) {
   return {
     results,
     uniqueLabelValues,
-    featureNames: state.selectedFeatures,
+    featureNames: [state.currentColumn],
     labelName: state.labelColumn
   };
 }

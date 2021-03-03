@@ -10,7 +10,6 @@ import { styles } from "../constants.js";
 
 class CrossTab extends Component {
   static propTypes = {
-    currentColumn: PropTypes.string,
     crossTabData: PropTypes.object
   };
 
@@ -21,76 +20,74 @@ class CrossTab extends Component {
     };
   };
   render() {
-    const { currentColumn, crossTabData } = this.props;
+    const { crossTabData } = this.props;
 
-    return !currentColumn && crossTabData && (
-      <div id="cross-tab" style={{...styles.panel, ...styles.rightPanel}}>
-        <div style={styles.largeText}>Correlation Information</div>
-        <div style={styles.scrollableContents}>
-          <div style={styles.scrollingContents}>
-            <table>
-              <thead>
-                <tr>
-                  <th colSpan={crossTabData.featureNames.length}>&nbsp;</th>
-                  <th colSpan={crossTabData.uniqueLabelValues.length}>
-                    {crossTabData.labelName}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  {crossTabData.featureNames.map((featureName, index) => {
-                    return <td key={index}>{featureName}</td>;
+    return (
+      crossTabData && (
+        <div id="cross-tab" style={{ ...styles.panel, ...styles.rightPanel }}>
+          <div style={styles.largeText}>Correlation Information</div>
+          <div style={styles.scrollableContents}>
+            <div style={styles.scrollingContents}>
+              <table>
+                <thead>
+                  <tr>
+                    <th colSpan={crossTabData.featureNames.length}>&nbsp;</th>
+                    <th colSpan={crossTabData.uniqueLabelValues.length}>
+                      {crossTabData.labelName}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {crossTabData.featureNames.map((featureName, index) => {
+                      return <td key={index}>{featureName}</td>;
+                    })}
+
+                    {crossTabData.uniqueLabelValues.map(
+                      (uniqueLabelValue, index) => {
+                        return (
+                          <td key={index} style={styles.dataDisplayCell}>
+                            {uniqueLabelValue}
+                          </td>
+                        );
+                      }
+                    )}
+                  </tr>
+                  {crossTabData.results.map((result, resultIndex) => {
+                    return (
+                      <tr key={resultIndex}>
+                        {result.featureValues.map(
+                          (featureValue, featureIndex) => {
+                            return <td key={featureIndex}>{featureValue}</td>;
+                          }
+                        )}
+                        {crossTabData.uniqueLabelValues.map(
+                          (uniqueLabelValue, labelIndex) => {
+                            return (
+                              <td
+                                key={labelIndex}
+                                style={this.getCellStyle(
+                                  result.labelPercents[uniqueLabelValue]
+                                )}
+                              >
+                                {result.labelPercents[uniqueLabelValue] || 0}%
+                              </td>
+                            );
+                          }
+                        )}
+                      </tr>
+                    );
                   })}
-
-                  {crossTabData.uniqueLabelValues.map(
-                    (uniqueLabelValue, index) => {
-                      return (
-                        <td key={index} style={styles.dataDisplayCell}>
-                          {uniqueLabelValue}
-                        </td>
-                      );
-                    }
-                  )}
-                </tr>
-                {crossTabData.results.map((result, resultIndex) => {
-                  return (
-                    <tr key={resultIndex}>
-                      {result.featureValues.map(
-                        (featureValue, featureIndex) => {
-                          return <td key={featureIndex}>{featureValue}</td>;
-                        }
-                      )}
-                      {crossTabData.uniqueLabelValues.map(
-                        (uniqueLabelValue, labelIndex) => {
-                          return (
-                            <td
-                              key={labelIndex}
-                              style={this.getCellStyle(
-                                result.labelPercents[uniqueLabelValue]
-                              )}
-                            >
-                              {/*
-                            {result.labelCounts[uniqueLabelValue]}
-                            */}
-                              {result.labelPercents[uniqueLabelValue] || 0}%
-                            </td>
-                          );
-                        }
-                      )}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
+      )
     );
   }
 }
 
 export default connect(state => ({
-  currentColumn: state.currentColumn,
   crossTabData: getCrossTabData(state)
 }))(CrossTab);

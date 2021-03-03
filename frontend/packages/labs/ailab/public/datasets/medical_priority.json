@@ -1,4 +1,5 @@
 {
+  "defaultLabelColumn": "decision",
   "fields": [
     {
       "type": "categorical",
@@ -44,15 +45,15 @@
   "card": {
     "description": "Data collected by a hospital on all patients who entered an emergency room over the course of one month",
     "source": "Code.org Generated Dataset",
-    "last_updated": "2020",
+    "lastUpdated": "2020",
     "context": {
-      "created_by": "Code.org",
+      "createdBy": "Code.org",
       "preparation": "Yes",
       "confidentiality": "No",
-      "subgroup_identifiers": "Yes",
+      "subgroupIdentifiers": "Yes",
       "representative": "No",
-      "potential_uses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
-      "potential_misuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
+      "potentialUses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
+      "potentialMisuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
     }
   },
   "recommended_features": [

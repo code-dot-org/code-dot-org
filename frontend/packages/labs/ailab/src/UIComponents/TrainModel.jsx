@@ -43,15 +43,9 @@ class TrainModel extends Component {
               {this.props.selectedFeatures.join(", ")} that might help predict
               the values of the label: {this.props.labelColumn}.
             </p>
-            {/*<button type="button" onClick={this.onClickTrainModel}>
-              Train model
-            </button>*/}
             {!this.props.modelSize && (
               <FontAwesomeIcon icon={faSpinner} />
             )}
-            {/*this.props.modelSize && (
-              <p>The trained model is {this.props.modelSize} KB big.</p>
-            )*/}
             <div style={{...styles.trainBot, margin: '0 auto'}}>
               <img
                 src={aiBotHead}

@@ -1,0 +1,48 @@
+{
+  "card": {
+    "description": "Survey results from a quiz that determines which Pixar character you are based on several quiz questions",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Silly and fun app",
+      "potentialMisuses": "Anything serious"
+    }
+  },
+  "fields": [
+    {
+      "id": "describe",
+      "type": "categorical",
+      "description": "How would you describe yourself?"
+    },
+    {
+      "id": "personality",
+      "type": "categorical",
+      "description": "What is your personality?"
+    },
+    {
+      "id": "pet",
+      "type": "categorical",
+      "description": "What is your favorite pet?"
+    },
+    {
+      "id": "meal",
+      "type": "categorical",
+      "description": "Which meal is your favorite?"
+    },
+    {
+      "id": "school",
+      "type": "categorical",
+      "description": "What is your favorite subject in school?"
+    },
+    {
+      "id": "character",
+      "type": "categorical",
+      "description": "Pixar Character"
+    }
+  ],
+  "defaultLabelColumn": "character"
+}

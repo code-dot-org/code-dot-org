@@ -7,7 +7,7 @@ import {
   getTrainedModelDataToSave,
   getSelectedColumnDescriptions
 } from "../redux";
-import { styles } from "../constants";
+import { styles, saveMessages } from "../constants";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -20,13 +20,28 @@ class SaveModel extends Component {
     columnDescriptions: PropTypes.array
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      saveMessage: null
+    };
+  }
+
   handleChange = (event, field, isColumn) => {
     this.props.setTrainedModelDetail(field, event.target.value, isColumn);
   };
 
+  catchResponse = response => {
+    this.setState({ saveMessage: saveMessages[response.status] });
+  };
+
   onClickSave = () => {
-    if (this.props.trainedModelDetails.name !== undefined) {
-      this.props.saveTrainedModel(this.props.dataToSave);
+    this.setState({ saveMessage: null });
+    if (this.props.trainedModelDetails.name === undefined) {
+      this.setState({ saveMessage: saveMessages["name"] });
+    } else {
+      this.props.saveTrainedModel(this.props.dataToSave, this.catchResponse);
     }
   };
 
@@ -77,10 +92,7 @@ class SaveModel extends Component {
           <div style={styles.scrollingContents}>
             {this.getFields().map(field => {
               return (
-                <div
-                  key={field.id}
-                  style={styles.cardRow}
-                >
+                <div key={field.id} style={styles.cardRow}>
                   {field.type === "checkbox" && (
                     <input
                       type="checkbox"
@@ -109,9 +121,20 @@ class SaveModel extends Component {
             })}
           </div>
         </div>
-        <button type="button" onClick={this.onClickSave} style={styles.regularButton}>
-          Save Trained Model
-        </button>
+        <div>
+          <button
+            type="button"
+            onClick={this.onClickSave}
+            style={styles.regularButton}
+          >
+            Save Trained Model
+          </button>
+          {this.state.saveMessage && (
+            <div style={{ position: "absolute", bottom: 0 }}>
+              {this.state.saveMessage}
+            </div>
+          )}
+        </div>
       </div>
     );
   }

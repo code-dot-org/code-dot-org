@@ -169,26 +169,6 @@ class DataDisplay extends Component {
         <div style={styles.mediumText}>
           There are {this.props.data.length} rows of data.
         </div>
-
-        {/*<div style={styles.mediumText}>
-          There are {this.props.emptyCellDetails.length} empty cells.
-        </div>
-        {this.state.showEmptyCellDetails && (
-          <div>
-            <button type="button" onClick={this.toggleEmptyCellDetails}>
-              hide empty cell details
-            </button>
-            {this.props.emptyCellDetails.map((cellDetails, i) => {
-              return <p key={i}>{cellDetails}</p>;
-            })}
-          </div>
-        )}
-        {!this.state.showEmptyCellDetails &&
-          this.props.emptyCellDetails.length > 0 && (
-            <button type="button" onClick={this.toggleEmptyCellDetails}>
-              show empty cell details
-            </button>
-          )*/}
       </div>
     );
   }

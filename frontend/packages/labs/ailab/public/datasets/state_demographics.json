@@ -1,0 +1,227 @@
+{
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "State"
+    },
+    {
+      "type": "continuous",
+      "id": "Age.Percent 65 and Older"
+    },
+    {
+      "type": "continuous",
+      "id": "Age.Percent Under 18 Years"
+    },
+    {
+      "type": "continuous",
+      "id": "Age.Percent Under 5 Years"
+    },
+    {
+      "type": "continuous",
+      "id": "Education.Bachelor's Degree or Higher"
+    },
+    {
+      "type": "continuous",
+      "id": "Education.High School or Higher"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Nonemployer Establishments"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Private Non-farm Employment"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Private Non-farm Employment Percent Change"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Private Non-farm Establishments"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.American Indian and Alaska Native Alone"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.Asian Alone"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.Black Alone"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.Hispanic or Latino"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.Native Hawaiian and Other Pacific Islander Alone"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.Two or More Races"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.White Alone"
+    },
+    {
+      "type": "continuous",
+      "id": "Ethnicities.White Alone, not Hispanic or Latino"
+    },
+    {
+      "type": "continuous",
+      "id": "Housing.Homeownership Rate"
+    },
+    {
+      "type": "continuous",
+      "id": "Housing.Households"
+    },
+    {
+      "type": "continuous",
+      "id": "Housing.Housing Units"
+    },
+    {
+      "type": "continuous",
+      "id": "Housing.Median Value of Owner-Occupied Units"
+    },
+    {
+      "type": "continuous",
+      "id": "Housing.Persons per Household"
+    },
+    {
+      "type": "continuous",
+      "id": "Housing.Units in Multi-Unit Structures"
+    },
+    {
+      "type": "continuous",
+      "id": "Income.Median Houseold Income"
+    },
+    {
+      "type": "continuous",
+      "id": "Income.Per Capita Income"
+    },
+    {
+      "type": "continuous",
+      "id": "Income.Persons Below Poverty Level"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Building Permits"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Foreign Born"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Land Area"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Language Other than English at Home"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Living in Same House +1 Years"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Manufacturers Shipments"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Mean Travel Time to Work"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Percent Female"
+    },
+    {
+      "type": "continuous",
+      "id": "Miscellaneous.Veterans"
+    },
+    {
+      "type": "continuous",
+      "id": "Population.2010 Population"
+    },
+    {
+      "type": "continuous",
+      "id": "Population.2014 Population"
+    },
+    {
+      "type": "continuous",
+      "id": "Population.Population Percent Change"
+    },
+    {
+      "type": "continuous",
+      "id": "Population.Population per Square Mile"
+    },
+    {
+      "type": "continuous",
+      "id": "Sales.Accommodation and Food Services Sales"
+    },
+    {
+      "type": "continuous",
+      "id": "Sales.Merchant Wholesaler Sales"
+    },
+    {
+      "type": "continuous",
+      "id": "Sales.Retail Sales"
+    },
+    {
+      "type": "continuous",
+      "id": "Sales.Retail Sales per Capita"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Firms.American Indian-Owned"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Firms.Asian-Owned"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Firms.Black-Owned"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Firms.Hispanic-Owned"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Firms.Native Hawaiian and Other Pacific Islander-Owned"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Firms.Total"
+    },
+    {
+      "type": "continuous",
+      "id": "Employment.Firms.Women-Owned"
+    }
+  ],
+  "defaultLabelColumn": "Housing.Homeownership Rate",
+  "card": {
+    "description": "Summarized demographic data about individual US states (and the District of Columbia) from 2015.",
+    "source": "Corgis Dataset Project (https://corgis-edu.github.io/corgis/csv/state_demographics/)",
+    "last_updated": "2016",
+    "context": {
+      "created_by": "US Census",
+      "preparation": true,
+      "confidentiality": false,
+      "subgroupIdentifiers": true,
+      "potentialUses": "Predict a state's home ownership rate based on median household income and the number of persons below the poverty line.",
+      "potentialMisuses": ""
+    }
+  },
+  "recommendedFeatures": [
+    "Income.Median Houseold Income",
+    "Income.Persons Below Poverty Level"
+  ],
+  "recommendedLabel": "Housing.Homeownership Rate"
+}

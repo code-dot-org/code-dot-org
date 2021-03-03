@@ -1,45 +1,68 @@
 {
-  "defaultLabelColumn": "UniqueCarrier",
+  "card": {
+    "description": "Information on flights and how much they are delayed by",
+    "source": "Kaggle - https://www.kaggle.com/kashnitsky/mlcourse",
+    "lastUpdated": "2019",
+    "context": {
+      "createdBy": "Unknown",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Determine whether a flight will be delayed and by how much based on time of day, geographic region, or airline",
+      "potentialMisuses": "Anything other than flight delays"
+    }
+  },
   "fields": [
-  	{
-  		"id": "Month",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "DayofMonth",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "DayOfWeek",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "DepTime",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "TimeOfDay",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "UniqueCarrier",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "Origin",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "Dest",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "Distance",
-  		"type": "continuous"
-  	},
-  	{
-  		"id": "dep_delayed_15min",
-  		"type": "categorical"
-  	}
-  ]
+    {
+      "id": "Month",
+      "type": "categorical",
+      "description": "Month of the flight"
+    },
+    {
+      "id": "DayofMonth",
+      "type": "continuous",
+      "description": "Day of the month of the flight"
+    },
+    {
+      "id": "DayOfWeek",
+      "type": "categorical",
+      "description": "Day of the week of the flight"
+    },
+    {
+      "id": "DepTime",
+      "type": "continuous",
+      "description": "Departure time (in military time)"
+    },
+    {
+      "id": "TimeOfDay",
+      "type": "categorical",
+      "description": "Time of day that flight departed"
+    },
+    {
+      "id": "UniqueCarrier",
+      "type": "categorical",
+      "description": "Airline of flight"
+    },
+    {
+      "id": "Origin",
+      "type": "categorical",
+      "description": "Departing airport"
+    },
+    {
+      "id": "Dest",
+      "type": "categorical",
+      "description": "Arriving airport"
+    },
+    {
+      "id": "Distance",
+      "type": "categorical",
+      "description": "Distance of flight"
+    },
+    {
+      "id": "DelayedBy15",
+      "type": "categorical",
+      "description": "Whether or not the flight was delayed by at least 15 minutes"
+    }
+  ],
+  "defaultLabelColumn": "dep_delayed_15min"
 }

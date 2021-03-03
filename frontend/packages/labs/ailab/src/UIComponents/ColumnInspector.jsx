@@ -124,6 +124,8 @@ class ColumnInspector extends Component {
       scatterData.datasets[0].label = currentColumnData.id;
     }
 
+    const maxLabelsInHistogram = 4;
+
     return (
       currentColumnData && (
         <div
@@ -134,11 +136,9 @@ class ColumnInspector extends Component {
           <form>
             <div>
               <label>
-                {true && (
-                  <div>
-                    {currentColumnData.id}: {currentColumnData.dataType}
-                  </div>
-                )}
+                <div>
+                  {currentColumnData.id}: {currentColumnData.dataType}
+                </div>
 
                 {currentColumnData.description && (
                   <div>
@@ -149,7 +149,7 @@ class ColumnInspector extends Component {
               </label>
 
               {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
-                barData.labels.length < 5 && (
+                barData.labels.length <= maxLabelsInHistogram && (
                   <div>
                     <br />
                     <Bar

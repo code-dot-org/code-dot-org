@@ -1,0 +1,43 @@
+{
+  "card": {
+    "description": "Results of a quiz to determine your favorite drink from several questions",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Silly and fun quiz",
+      "potentialMisuses": "Anything serious"
+    }
+  },
+  "fields": [
+    {
+      "id": "color",
+      "type": "categorical",
+      "description": "Which color is the best?"
+    },
+    {
+      "id": "personality",
+      "type": "categorical",
+      "description": "How would you describe your personality?"
+    },
+    {
+      "id": "sport",
+      "type": "categorical",
+      "description": "Which is the better sport?"
+    },
+    {
+      "id": "element",
+      "type": "categorical",
+      "description": "Which element would you want to control?"
+    },
+    {
+      "id": "drink",
+      "type": "categorical",
+      "description": "Your favorite drink"
+    }
+  ],
+  "defaultLabelColumn": "drink"
+}
