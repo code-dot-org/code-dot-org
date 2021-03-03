@@ -1,4 +1,5 @@
 class LessonsController < ApplicationController
+  check_authorization
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
@@ -18,6 +19,10 @@ class LessonsController < ApplicationController
   def show
     script = Script.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
+
+    if script.pilot? && (!current_user || (current_user && !script.has_pilot_access?(current_user)))
+      render :no_access
+    end
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:position].to_i

@@ -96,41 +96,26 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
   # limit access to lesson plans in pilots
-  test_user_gets_response_for :show, response: :redirect, user: nil,
+  test_user_gets_response_for :show, response: :not_found, user: nil,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
                               name: 'signed out user cannot view pilot lesson'
 
-  test_user_gets_response_for(:show, response: :success, user: :student,
+  test_user_gets_response_for :show, response: :not_found, user: :student,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot lesson'
-  ) do
-    assert response.body.include? no_access_msg
-  end
 
-  test_user_gets_response_for(:show, response: :success, user: :teacher,
+  test_user_gets_response_for :show, response: :not_found, user: :teacher,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
                               name: 'teacher without pilot access cannot view pilot lesson'
-  ) do
-    assert response.body.include? no_access_msg
-  end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot lesson'
-  ) do
-    refute response.body.include? no_access_msg
-  end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot lesson'
-  ) do
-    refute response.body.include? no_access_msg
-  end
 
-  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
-  ) do
-    refute response.body.include? no_access_msg
-  end
 
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do
