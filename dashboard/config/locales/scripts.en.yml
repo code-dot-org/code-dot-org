@@ -20953,7 +20953,7 @@ en:
               description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             The Power of Words:
               key: The Power of Words
-              name: The Power of Words To be Removed
+              name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: |2-
                  [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
