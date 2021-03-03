@@ -456,12 +456,14 @@ export default function rootReducer(state = initialState, action) {
           labelColumn: undefined,
           currentColumn: undefined
         };*/
-      } else {
+      } else if (!state.selectedFeatures.includes(action.currentColumn)) {
         return {
           ...state,
           labelColumn: action.currentColumn,
           currentColumn: action.currentColumn
         };
+      } else {
+        return state;
       }
     } else if (state.currentPanel === "dataDisplayFeatures") {
       if (state.selectedFeatures.includes(action.currentColumn)) {
@@ -472,12 +474,14 @@ export default function rootReducer(state = initialState, action) {
           ),
           currentColumn: undefined
         };
-      } else {
+      } else if (action.currentColumn !== state.labelColumn) {
         return {
           ...state,
           selectedFeatures: [...state.selectedFeatures, action.currentColumn],
           currentColumn: action.currentColumn
         };
+      } else {
+        return state;
       }
     }
   }
