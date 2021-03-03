@@ -1,5 +1,6 @@
 import {commands as actionCommands} from './commands/actionCommands';
 import {commands as behaviorCommands} from './commands/behaviorCommands';
+import {commands as customLessonCommands} from './commands/customLessonCommands';
 import {commands as eventCommands} from './commands/eventCommands';
 import {commands as locationCommands} from './commands/locationCommands';
 import {commands as spriteCommands} from './commands/spriteCommands';
@@ -19,24 +20,18 @@ function drawBackground() {
   }
 }
 
-function updateTitle() {
-  this.fill('black');
-  this.stroke('white');
-  this.strokeWeight(3);
-  this.textAlign(this.CENTER, this.CENTER);
-  this.textSize(50);
-  this.text(coreLibrary.title, 0, 0, 400, 200);
-  this.textSize(35);
-  this.text(coreLibrary.subtitle, 0, 200, 400, 200);
-}
-
 export const commands = {
   executeDrawLoopAndCallbacks() {
     drawBackground.apply(this);
     coreLibrary.runBehaviors();
     coreLibrary.runEvents(this);
     this.drawSprites();
-    updateTitle.apply(this);
+    if (coreLibrary.screenText.title || coreLibrary.screenText.subtitle) {
+      worldCommands.drawTitle.apply(this);
+    }
+    if (coreLibrary.screenText.haiku) {
+      customLessonCommands.drawHaiku.apply(this);
+    }
   },
 
   // Action commands
@@ -336,5 +331,26 @@ export const commands = {
 
   getTitle() {
     return validationCommands.getTitle();
+  },
+
+  // Custom Lesson Commands
+  // These are blocks that are custom built for a particular lesson
+  getHaiku() {
+    return customLessonCommands.getHaiku();
+  },
+
+  hideHaiku() {
+    customLessonCommands.hideHaiku();
+  },
+
+  printHaiku(title, author, line1, line2, line3) {
+    customLessonCommands.printHaiku.apply(this, [
+      // default to empty string for any args not provided
+      title || '',
+      author || '',
+      line1 || '',
+      line2 || '',
+      line3 || ''
+    ]);
   }
 };
