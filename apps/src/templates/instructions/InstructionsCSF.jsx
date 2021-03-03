@@ -325,9 +325,7 @@ class InstructionsCSF extends React.Component {
   getMinHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
-      !collapsed && this.scrollButtons
-        ? this.scrollButtons.getMinHeight()
-        : 0;
+      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
     const instructionsHeight = Math.min(
@@ -364,9 +362,7 @@ class InstructionsCSF extends React.Component {
   getMaxHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
-      !collapsed && this.scrollButtons
-        ? this.scrollButtons.getMinHeight()
-        : 0;
+      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
     const instructionsHeight = getOuterHeight(this.instructions, true);
