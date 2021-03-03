@@ -630,6 +630,7 @@ export function getRange(state, column) {
   let range = {};
   range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
   range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
+  range.range = range.max - range.min;
   return range;
 }
 
@@ -1024,7 +1025,7 @@ export function getPanelButtons(state) {
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train A.I."  }
+      ? { panel: "trainModel", text: "Train A.I." }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
@@ -1149,6 +1150,32 @@ export function getCrossTabData(state) {
     uniqueLabelValues,
     featureNames: [state.currentColumn],
     labelName: state.labelColumn
+  };
+}
+
+export function getScatterPlotData(state) {
+  if (!state.labelColumn || !state.currentColumn) {
+    return null;
+  }
+
+  if (
+    state.columnsByDataType[state.labelColumn] !== ColumnTypes.CONTINUOUS ||
+    state.columnsByDataType[state.currentColumn] !== ColumnTypes.CONTINUOUS
+  ) {
+    return null;
+  }
+
+  // For each row, record the X (feature value) and Y (label value).
+  const data = [];
+  for (let row of state.data) {
+    data.push({ x: row[state.currentColumn], y: row[state.labelColumn] });
+  }
+
+  const label = state.currentColumn;
+
+  return {
+    label,
+    data
   };
 }
 

@@ -6,6 +6,7 @@ import SpecifyColumnsInfo from "./UIComponents/SpecifyColumnsInfo";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
+import ScatterPlot from "./UIComponents/ScatterPlot";
 import DataCard from "./UIComponents/DataCard";
 import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
@@ -147,7 +148,10 @@ class App extends Component {
                 <ColumnInspector />
               )}
               {currentPanel === "dataDisplayFeatures" && (
-                <CrossTab />
+                <div>
+                  <CrossTab />
+                  <ScatterPlot />
+                </div>
               )}
             </ContainerRight>
           </BodyContainer>

@@ -12,28 +12,7 @@ import {
   setCurrentColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
-import { Scatter, Bar } from "react-chartjs-2";
-
-const scatterData = {
-  labels: ["Scatter"],
-  datasets: [
-    {
-      label: "",
-      fill: true,
-      backgroundColor: "rgba(75,192,192,0.4)",
-      pointBorderColor: "rgba(75,192,192,1)",
-      pointBackgroundColor: "#fff",
-      pointBorderWidth: 2,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: "rgba(75,192,192,1)",
-      pointHoverBorderColor: "rgba(220,220,220,1)",
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
-      data: []
-    }
-  ]
-};
+import { Bar } from "react-chartjs-2";
 
 const barData = {
   labels: [],
@@ -111,17 +90,6 @@ class ColumnInspector extends Component {
         return currentColumnData.frequencies[option];
       });
       barData.datasets[0].label = currentColumnData.id;
-    } else if (
-      currentColumnData &&
-      currentColumnData.dataType === ColumnTypes.CONTINUOUS
-    ) {
-      const frequencies = currentColumnData.frequencies;
-      scatterData.datasets[0].data = Object.keys(frequencies).map(
-        (value, index) => {
-          return { x: index, y: frequencies[value] };
-        }
-      );
-      scatterData.datasets[0].label = currentColumnData.id;
     }
 
     const maxLabelsInHistogram = 4;
@@ -163,8 +131,6 @@ class ColumnInspector extends Component {
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>
-                  <Scatter data={scatterData} options={chartOptions} />
-
                   {currentColumnData.range && (
                     <div>
                       {isNaN(rangesByColumn[currentColumnData.id].min) && (
@@ -177,6 +143,8 @@ class ColumnInspector extends Component {
                           min: {rangesByColumn[currentColumnData.id].min}
                           <br />
                           max: {rangesByColumn[currentColumnData.id].max}
+                          <br />
+                          range: {rangesByColumn[currentColumnData.id].range}
                         </div>
                       )}
                     </div>
