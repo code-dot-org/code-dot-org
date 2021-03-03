@@ -76,11 +76,12 @@ export default function sectionData(state = initialState, action) {
       section: action.section
     };
   }
+
   if (action.type === SET_TTS_AUTOPLAY_ENABLED) {
     return {
-      ...initialState,
+      ...state,
       section: {
-        ...initialState.section,
+        ...state.section,
         ttsAutoplayEnabled: action.ttsAutoplayEnabled
       }
     };
