@@ -1,0 +1,76 @@
+{
+  "is-IS": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Aðgerðir",
+          "Brushes": "Penslar",
+          "Loops": "Lykkjur",
+          "Math": "Reikningur",
+          "Logic": "Rökvísi",
+          "Functions": "Föll",
+          "Variables": "Breytur"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Heimur",
+          "Dancers": "Dansarar",
+          "Properties": "Eiginleikar",
+          "Events": "Atvik",
+          "Numbers": "Tölur",
+          "Logic": "Rökvísi"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Aðgerðir",
+          "Events": "Atvik",
+          "Loops": "Lykkjur",
+          "Math": "Reikningur",
+          "Logic": "Rökvísi",
+          "Games/Score": "Leikir/skor"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Heimur",
+          "Sprites": "Kvikar",
+          "Actions": "Aðgerðir",
+          "Events": "Atvik",
+          "Behaviors": "Hegðun"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Heimur",
+          "Sprites": "Kvikar",
+          "Locations": "Staðir",
+          "Actions": "Aðgerðir",
+          "Events": "Atvik",
+          "Behaviors": "Hegðun",
+          "Variables": "Breytur",
+          "Math": "Reikningur",
+          "Logic": "Rökvísi",
+          "Functions": "Föll",
+          "Text": "texti",
+          "Comments": "Athugasemdir"
+        },
+        "outbreak_freeplay": {
+          "World": "Heimur",
+          "Sprites": "Kvikar",
+          "Actions": "Aðgerðir",
+          "Behaviors": "Hegðun",
+          "Events": "Atvik",
+          "Locations": "Staðir",
+          "Logic": "Rökvísi",
+          "Loops": "Lykkjur",
+          "Math": "Reikningur",
+          "Variables": "Breytur",
+          "Functions": "Föll",
+          "Comments": "Athugasemdir"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Heimur",
+          "Sprites": "Kvikar",
+          "Actions": "Aðgerðir",
+          "Events": "Atvik",
+          "Logic": "Rökvísi",
+          "Math": "Reikningur"
+        }
+      }
+    }
+  }
+}

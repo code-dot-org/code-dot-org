@@ -3827,6 +3827,56 @@
           "draw bit": {
             "name": "teikna bita"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            }
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd",
+              "repeat": "endurtaka"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
         }
       }
     }

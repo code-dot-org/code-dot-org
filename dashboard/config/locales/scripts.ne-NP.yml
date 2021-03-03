@@ -2470,10 +2470,12 @@ ne:
             'Functions: Songwriting':
               name: Songwriting
           lesson_groups:
+            ramp_up:
+              display_name: Loops
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
-              display_name: Nested Loops
+              display_name: Conditionals
             csf_functions:
               display_name: Functions
         coursef-2021:

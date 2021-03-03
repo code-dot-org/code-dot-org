@@ -3059,6 +3059,56 @@
           "lose": {
             "name": "потерять\n"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "нарисовать звезду",
+            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины",
+            "parameters": {
+              "points": "очки",
+              "length": "длина"
+            }
+          },
+          "draw a circle": {
+            "name": "нарисовать круг",
+            "description": "нарисуйте круг заданного радиуса",
+            "parameters": {
+              "radius": "радиус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "нарисовать вертушку",
+            "parameters": {
+              "sides": "стороны",
+              "length": "длина",
+              "repeat": "повторить"
+            }
+          },
+          "draw a triangle": {
+            "name": "нарисовать треугольник",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a shape": {
+            "name": "нарисовать фигуру",
+            "parameters": {
+              "sides": "стороны",
+              "length": "длина"
+            }
+          },
+          "draw a house": {
+            "name": "нарисовать дом",
+            "parameters": {
+              "length": "длина"
+            }
+          },
+          "draw a square": {
+            "name": "нарисовать квадрат",
+            "parameters": {
+              "length": "длина"
+            }
+          }
         }
       }
     }

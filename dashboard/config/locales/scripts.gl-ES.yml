@@ -2398,10 +2398,12 @@ gl:
             'Functions: Songwriting':
               name: Composición
           lesson_groups:
+            ramp_up:
+              display_name: Bucles
             csf_digcit:
               display_name: Cidadanía dixital
             csf_nested_loops:
-              display_name: Bucles aniñados
+              display_name: Condicionais
             csf_functions:
               display_name: Funcións
         coursef-2021:

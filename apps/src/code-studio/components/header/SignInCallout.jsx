@@ -28,8 +28,10 @@ const styles = {
   modalBackdrop: {
     // Most backdrop attributes come from the 'modal-backdrop' class defined by bootstrap
     // but we need to override the opacity as the default opacity of 0.8 is too dark.
-    // Note that bootstrap defaults the z-index of the backdrop to 1040.
-    opacity: 0.5
+    // Setting the z-index to -1 allows it to sit behind the sign in button that we are
+    // pulling on top. It does not prevent the backdrop from being clickable.
+    opacity: 0.5,
+    zIndex: -1
   },
   upTriangle: {
     position: 'absolute',
@@ -53,7 +55,8 @@ const styles = {
     padding: 20
   },
   imageContainer: {
-    width: 100,
+    width: 116,
+    height: 116,
     marginRight: 20
   },
   textContainer: {
@@ -100,14 +103,12 @@ export default class SignInCallout extends React.Component {
 
   render() {
     return (
-      <div style={styles.container}>
-        <div
-          className="modal-backdrop"
-          style={styles.modalBackdrop}
-          onClick={this.props.handleClose}
-        />
+      <div style={styles.container} onClick={this.props.handleClose}>
+        <div className="modal-backdrop" style={styles.modalBackdrop} />
         <div style={styles.upTriangle} />
-        <div style={styles.content}>{this.renderContent()}</div>
+        <div className="uitest-login-callout" style={styles.content}>
+          {this.renderContent()}
+        </div>
       </div>
     );
   }
