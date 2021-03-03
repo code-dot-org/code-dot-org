@@ -49,6 +49,10 @@ class Standard < ApplicationRecord
   def self.seed_from_csv(filename)
     created = 0
     updated = 0
+    # The input file dashboard/config/standards.csv for the existing standards
+    # seed task only contains csta standards. This entire method and that input
+    # file will be removed before standards from any other frameworks can be
+    # added to it, therefore it is safe to hardcode 'csta' here.
     framework = Framework.find_by!(shortcode: 'csta')
     categories = StandardCategory.where(framework: framework).all
     CSV.foreach(filename, {headers: true}) do |row|
