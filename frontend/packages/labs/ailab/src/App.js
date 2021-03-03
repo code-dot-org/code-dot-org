@@ -6,6 +6,7 @@ import SpecifyColumnsInfo from "./UIComponents/SpecifyColumnsInfo";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
+import ScatterPlot from "./UIComponents/ScatterPlot";
 import DataCard from "./UIComponents/DataCard";
 import SelectTrainer from "./UIComponents/SelectTrainer";
 import TrainModel from "./UIComponents/TrainModel";
@@ -143,12 +144,9 @@ class App extends Component {
               <DataDisplay />
             </ContainerLeft>
             <ContainerRight>
-              {currentPanel === "dataDisplayLabel" && (
-                <ColumnInspector />
-              )}
-              {currentPanel === "dataDisplayFeatures" && (
-                <CrossTab />
-              )}
+              {currentPanel === "dataDisplayLabel" && <ColumnInspector />}
+              {currentPanel === "dataDisplayFeatures" && <CrossTab />}
+              {currentPanel === "dataDisplayFeatures" && <ScatterPlot />}
             </ContainerRight>
           </BodyContainer>
         )}
@@ -174,11 +172,11 @@ class App extends Component {
             <ContainerLeft>
               <Results />
             </ContainerLeft>
-            {resultsPhase === 3 &&
+            {resultsPhase === 3 && (
               <ContainerRight>
                 <Predict />
               </ContainerRight>
-            }
+            )}
           </BodyContainer>
         )}
 

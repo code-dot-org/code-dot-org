@@ -45,7 +45,7 @@ class Results extends Component {
         <div style={styles.largeText}>Results</div>
 
         {this.props.resultsPhase === 0 && (
-          <div style={styles.trainBot}>
+          <div style={{...styles.trainBot, margin: '0 auto'}}>
             <img
               src={aiBotHead}
               style={{
