@@ -1,0 +1,222 @@
+framework,category,standard,description
+ngss,ESS1,1-ESS1-1,"Use observations of the sun, moon, and stars to describe patterns that can be predicted."
+ngss,ESS1,1-ESS1-2,Make observations at different times of year to relate the amount of daylight to the time of year.
+ngss,ESS1,2-ESS1-1,"Use information from several sources to provide evidence that Earth events can occur quickly or slowly.
+[Clarification Statement: Examples of events and timescales could include volcanic explosions and earthquakes, which happen quickly and erosion of rock"
+ngss,ESS1,4-ESS1-1,Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for  changes in a landscape over time.
+ngss,ESS1,5-ESS1-1,Support an argument that differences in the apparent brightness of the sun compared to other stars is due to their relative distances from Earth.
+ngss,ESS1,5-ESS1-2,"Represent data in graphical displays to reveal patterns of daily changes in length and direction of shadows, day and night, and the seasonal appearance of some stars in the night sky."
+ngss,ESS1,HS-ESS1-1,Develop a model based on evidence to illustrate the life span of the sun and the role of nuclear fusion in the sun's core to release energy that eventually reaches Earth in the form of radiation.
+ngss,ESS1,HS-ESS1-2,"Construct an explanation of the Big Bang theory based on astronomical evidence of light spectra, motion of distant galaxies, and composition of matter in the universe."
+ngss,ESS1,HS-ESS1-3,"Communicate scientific ideas about the way stars, over their life cycle, produce elements."
+ngss,ESS1,HS-ESS1-4,Use mathematical or computational representations to predict the motion of orbiting objects in the solar system.
+ngss,ESS1,HS-ESS1-5,Evaluate evidence of the past and current movements of continental and oceanic crust and the theory of plate tectonics to explain the ages of crustal rocks.
+ngss,ESS1,HS-ESS1-6,"Apply scientific reasoning and evidence from ancient Earth materials, meteorites, and other planetary surfaces to construct an account of Earth's formation and early history."
+ngss,ESS1,MS-ESS1-1,"Develop and use a model of the Earth-sun-moon system to describe the cyclic patterns of lunar phases, eclipses of the sun and moon, and seasons."
+ngss,ESS1,MS-ESS1-2,"Develop and use a model to describe the role of gravity in the motions within galaxies and the solar system.
+[Clarification Statement: Emphasis for the model is on gravity as the force that holds together the solar system and Milky Way galaxy and controls"
+ngss,ESS1,MS-ESS1-3,Analyze and interpret data to determine scale properties of objects in the solar system. 
+ngss,ESS1,MS-ESS1-4,Construct a scientific explanation based on evidence from rock strata for how the geologic time scale is used to organize Earth's 4.6-billion-year-old history. 
+ngss,ESS2,2-ESS2-1,"Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.*
+[Clarification Statement: Examples of solutions could include different designs of dikes and windbreaks to hold back wind and water, and different d"
+ngss,ESS2,2-ESS2-2,Develop a model to represent the shapes and kinds of land and bodies of water in an area.
+ngss,ESS2,2-ESS2-3,Obtain information to identify where water is found on Earth and that it can be solid or liquid.
+ngss,ESS2,3-ESS2-1,Represent data in tables and graphical displays to describe typical weather conditions expected during a particular season.
+ngss,ESS2,3-ESS2-2,Obtain and combine information to describe climates in different regions of the world.
+ngss,ESS2,4-ESS2-1,"Make observations and/or measurements to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, or vegetation."
+ngss,ESS2,4-ESS2-2,Analyze and interpret data from maps to describe patterns of Earth's features.
+ngss,ESS2,5-ESS2-1,"Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere interact."
+ngss,ESS2,5-ESS2-2,Describe and graph the amounts and percentages of water and fresh water in various reservoirs to provide evidence about the distribution of water on Earth.
+ngss,ESS2,HS-ESS2-1,Develop a model to illustrate how Earth's internal and surface processes operate at different spatial and temporal scales to form continental and ocean-floor features.
+ngss,ESS2,HS-ESS2-2,Analyze geoscience data to make the claim that one change to Earth's surface can create feedbacks that cause changes to other Earth systems.
+ngss,ESS2,HS-ESS2-3,"Develop a model based on evidence of Earth's interior to describe the cycling of matter by thermal convection.
+[Clarification Statement:  Emphasis is on both a one-dimensional model of Earth, with radial layers determined by density, and a three-dimension"
+ngss,ESS2,HS-ESS2-4,Use a model to describe how variations in the flow of energy into and out of Earth's systems result in changes in climate.
+ngss,ESS2,HS-ESS2-5,Plan and conduct an investigation of the properties of water and its effects on Earth materials and surface processes.
+ngss,ESS2,HS-ESS2-6,"Develop a quantitative model to describe the cycling of carbon among the hydrosphere, atmosphere, geosphere, and biosphere. "
+ngss,ESS2,HS-ESS2-7,Construct an argument based on evidence about the simultaneous coevolution of Earth's systems and life on Earth.
+ngss,ESS2,K-ESS2-1,Use and share observations of local weather conditions to describe patterns over time.
+ngss,ESS2,K-ESS2-2,Construct an argument supported by evidence for how plants and animals (including humans) can change the environment to meet their needs.
+ngss,ESS2,MS-ESS2-1,"Develop a model to describe the cycling of Earth's materials and the flow of energy that drives this process.
+[Clarification Statement: Emphasis is on the processes of melting, crystallization, weathering, deformation, and sedimentation, which act togethe"
+ngss,ESS2,MS-ESS2-2,Construct an explanation based on evidence for how geoscience processes have changed Earth's surface at varying time and spatial scales.
+ngss,ESS2,MS-ESS2-3,"Analyze and interpret data on the distribution of fossils and rocks, continental shapes, and seafloor structures to provide evidence of the past plate motions."
+ngss,ESS2,MS-ESS2-4,Develop a model to describe the cycling of water through Earth's systems driven by energy from the sun and the force of gravity.
+ngss,ESS2,MS-ESS2-5,Collect data to provide evidence for how the motions and complex interactions of air masses results in changes in weather conditions.
+ngss,ESS2,MS-ESS2-6,Develop and use a model to describe how unequal heating and rotation of the Earth cause patterns of atmospheric and oceanic circulation that determine regional climates.
+ngss,ESS3,3-ESS3-1,"Make a claim about the merit of a design solution that reduces the impacts of a weather-related hazard.*
+[Clarification Statement:  Examples of design solutions to weather-related hazards could include barriers to prevent flooding, wind resistant roofs, a"
+ngss,ESS3,4-ESS3-1,Obtain and combine information to describe that energy and fuels are derived from natural resources and their uses affect the environment.
+ngss,ESS3,4-ESS3-2,Generate and compare multiple solutions to reduce the impacts of natural Earth processes on humans.*
+ngss,ESS3,5-ESS3-1,Obtain and combine information about ways individual communities use science ideas to protect the Earth's resources and environment.
+ngss,ESS3,HS-ESS3-1,"Construct an explanation based on evidence for how the availability of natural resources, occurrence of natural hazards, and changes in climate have influenced human activity."
+ngss,ESS3,HS-ESS3-2,"Evaluate competing design solutions for developing, managing, and utilizing energy and mineral resources based on cost-benefit ratios.*"
+ngss,ESS3,HS-ESS3-3,"Create a computational simulation to illustrate the relationships among management of natural resources, the sustainability of human populations, and biodiversity."
+ngss,ESS3,HS-ESS3-4,"Evaluate or refine a technological solution that reduces impacts of human activities on natural systems.*
+[Clarification Statement: Examples of data on the impacts of human activities could include the quantities and types of pollutants released, changes "
+ngss,ESS3,HS-ESS3-5,Analyze geoscience data and the results from global climate models to make an evidence-based forecast of the current rate of global or regional climate change and associated future impacts to Earth systems.
+ngss,ESS3,HS-ESS3-6,Use a computational representation to illustrate the relationships among Earth systems and how those relationships are being modified due to human activity.
+ngss,ESS3,K-ESS3-1,Use a model to represent the relationship between the needs of different plants or animals (including humans) and the places they live.
+ngss,ESS3,K-ESS3-2,"Ask questions to obtain information about the purpose of weather forecasting to prepare for, and respond to, severe weather.*"
+ngss,ESS3,K-ESS3-3,"Communicate solutions that will reduce the impact of humans on the land, water, air, and/or other living things in the local environment.* "
+ngss,ESS3,MS-ESS3-1,"Construct a scientific explanation based on evidence for how the uneven distributions of Earth's mineral, energy, and groundwater resources are the result of past and current geoscience processes."
+ngss,ESS3,MS-ESS3-2,Analyze and interpret data on natural hazards to forecast future catastrophic events and inform the development of technologies to mitigate their effects.
+ngss,ESS3,MS-ESS3-3,"Apply scientific principles to design a method for monitoring and minimizing a human impact on the environment.*
+[Clarification Statement: Examples of the design process include examining human environmental impacts, assessing the kinds of solutions that "
+ngss,ESS3,MS-ESS3-4,Construct an argument supported by evidence for how increases in human population and per-capita consumption of natural resources impact Earth's systems.
+ngss,ESS3,MS-ESS3-5,Ask questions to clarify evidence of the factors that have caused the rise in global temperatures over the past century.
+ngss,ETS1,3-5-ETS1-1,"Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost."
+ngss,ETS1,3-5-ETS1-2,Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
+ngss,ETS1,3-5-ETS1-3,Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.
+ngss,ETS1,HS-ETS1-1,Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.
+ngss,ETS1,HS-ETS1-2,"Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering."
+ngss,ETS1,HS-ETS1-3,"Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts."
+ngss,ETS1,HS-ETS1-4,Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem.
+ngss,ETS1,K-2-ETS1-1,"Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool."
+ngss,ETS1,K-2-ETS1-2,"Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem."
+ngss,ETS1,K-2-ETS1-3,Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs.
+ngss,ETS1,MS-ETS1-1,"Define the criteria and constraints of a design problem with sufficient precision to ensure a successful solution, taking into account relevant scientific principles and potential impacts on people and the natural environment that may limit possible solut"
+ngss,ETS1,MS-ETS1-2,Evaluate competing design solutions using a systematic process to determine how well they meet the criteria and constraints of the problem.
+ngss,ETS1,MS-ETS1-3,Analyze data from tests to determine similarities and differences among several design solutions to identify the best characteristics of each that can be combined into a new solution to better meet the criteria for success.
+ngss,ETS1,MS-ETS1-4,"Develop a model to generate data for iterative testing and modification of a proposed object, tool, or process such that an optimal design can be achieved."
+ngss,LS1,1-LS1-1,"Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.*"
+ngss,LS1,1-LS1-2,"Read texts and use media to determine patterns in behavior of parents and offspring that help offspring survive.
+[Clarification Statement: Examples of patterns of behaviors could include the signals that offspring make (such as crying, cheeping, and other"
+ngss,LS1,3-LS1-1,"Develop models to describe that organisms have unique and diverse life cycles but all have in common birth, growth, reproduction, and death."
+ngss,LS1,4-LS1-1,"Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior, and reproduction."
+ngss,LS1,4-LS1-2,"Use a model to describe that animals receive different types of information through their senses, process the information in their brain, and respond to the information in different ways."
+ngss,LS1,5-LS1-1,Support an argument that plants get the materials they need for growth chiefly from air and water.
+ngss,LS1,HS-LS1-1,Construct an explanation based on evidence for how the structure of DNA determines the structure of proteins which carry out the essential functions of life through systems of specialized cells.
+ngss,LS1,HS-LS1-2,Develop and use a model to illustrate the hierarchical organization of interacting systems that provide specific functions within multicellular organisms.
+ngss,LS1,HS-LS1-3,"Plan and conduct an investigation to provide evidence that feedback mechanisms maintain homeostasis.
+[Clarification Statement: Examples of investigations could include heart rate response to exercise, stomate response to moisture and temperature, and root"
+ngss,LS1,HS-LS1-4,Use a model to illustrate the role of cellular division (mitosis) and differentiation in producing and maintaining complex organisms.
+ngss,LS1,HS-LS1-5,Use a model to illustrate how photosynthesis transforms light energy into stored chemical energy.
+ngss,LS1,HS-LS1-6,"Construct and revise an explanation based on evidence for how carbon, hydrogen, and oxygen from sugar molecules may combine with other elements to form amino acids and/or other large carbon-based molecules.
+[Clarification Statement: Emphasis is on using e"
+ngss,LS1,HS-LS1-7,Use a model to illustrate that cellular respiration is a chemical process whereby the bonds of food molecules and oxygen molecules are broken and the bonds in new compounds are formed resulting in a net transfer of energy. 
+ngss,LS1,K-LS1-1,Use observations to describe patterns of what plants and animals (including humans) need to survive.
+ngss,LS1,MS-LS1-1,Conduct an investigation to provide evidence that living things are made of cells; either one cell or many different numbers and types of cells.
+ngss,LS1,MS-LS1-2,Develop and use a model to describe the function of a cell as a whole and ways parts of cells contribute to the function. 
+ngss,LS1,MS-LS1-3,Use argument supported by evidence for how the body is a system of interacting subsystems composed of groups of cells.
+ngss,LS1,MS-LS1-4,Use argument based on empirical evidence and scientific reasoning to support an explanation for how characteristic animal behaviors and specialized plant structures affect the probability of successful reproduction of animals and plants respectively.
+ngss,LS1,MS-LS1-5,Construct a scientific explanation based on evidence for how environmental and genetic factors influence the growth of organisms.
+ngss,LS1,MS-LS1-6,Construct a scientific explanation based on evidence for the role of photosynthesis in the cycling of matter and flow of energy into and out of organisms.
+ngss,LS1,MS-LS1-7,Develop a model to describe how food is rearranged through chemical reactions forming new molecules that support growth and/or release energy as this matter moves through an organism.
+ngss,LS1,MS-LS1-8,Gather and synthesize information that sensory receptors respond to stimuli by sending messages to the brain for immediate behavior or storage as memories.
+ngss,LS2,2-LS2-1,Plan and conduct an investigation to determine if plants need sunlight and water to grow.
+ngss,LS2,2-LS2-2,Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants.*
+ngss,LS2,3-LS2-1,Construct an argument that some animals form groups that help members survive.
+ngss,LS2,5-LS2-1,"Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment.
+[Clarification Statement: Emphasis is on the idea that matter that is not food (air, water, decomposed materials in soil) is changed by plants into"
+ngss,LS2,HS-LS2-1,Use mathematical and/or computational representations to support explanations of factors that affect carrying capacity of ecosystems at different scales.
+ngss,LS2,HS-LS2-2,Use mathematical representations to support and revise explanations based on evidence about factors affecting biodiversity and populations in ecosystems of different scales.
+ngss,LS2,HS-LS2-3,Construct and revise an explanation based on evidence for the cycling of matter and flow of energy in aerobic  and anaerobic conditions. 
+ngss,LS2,HS-LS2-4,Use mathematical representations to support claims for the cycling of matter and flow of energy among organisms in an ecosystem.
+ngss,LS2,HS-LS2-5,"Develop a model to illustrate the role of photosynthesis and cellular respiration in the cycling of carbon among the biosphere, atmosphere, hydrosphere, and geosphere."
+ngss,LS2,HS-LS2-6,"Evaluate the claims, evidence, and reasoning that the complex interactions in ecosystems maintain relatively consistent numbers and types of organisms in stable conditions, but changing conditions may result in a new ecosystem."
+ngss,LS2,HS-LS2-7,"Design, evaluate, and refine a solution for reducing the impacts of human activities on the environment and biodiversity.* "
+ngss,LS2,HS-LS2-8,"Evaluate the evidence for the role of group behavior on individual and species' chances to survive and reproduce.[Clarification Statement: Emphasis is on: (1) distinguishing between group and individual behavior, (2) identifying evidence supporting the o"
+ngss,LS2,MS-LS2-1,Analyze and interpret data to provide evidence for the effects of resource availability on organisms and populations of organisms in an ecosystem.
+ngss,LS2,MS-LS2-2,Construct an explanation that predicts patterns of interactions among organisms across multiple ecosystems.[Clarification Statement: Emphasis is on predicting consistent patterns of interactions in different ecosystems in terms of the relationships among
+ngss,LS2,MS-LS2-3,Develop a model to describe the cycling of matter and flow of energy among living and nonliving parts of an ecosystem.
+ngss,LS2,MS-LS2-4,Construct an argument supported by empirical evidence that changes to physical or biological components of an ecosystem affect populations.
+ngss,LS2,MS-LS2-5,Evaluate competing design solutions for maintaining biodiversity and ecosystem services.*
+ngss,LS3,1-LS3-1,"Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents."
+ngss,LS3,3-LS3-1,Analyze and interpret data to provide evidence that plants and animals have traits inherited from parents and that variation of these traits exists in a group of similar organisms.
+ngss,LS3,3-LS3-2,Use evidence to support the explanation that traits can be influenced by the environment.
+ngss,LS3,HS-LS3-1,Ask questions to clarify relationships about the role of DNA and chromosomes in coding the instructions for characteristic traits passed from parents to offspring.
+ngss,LS3,HS-LS3-2,"Make and defend a claim based on evidence that inheritable genetic variations may result from: (1) new genetic combinations through meiosis, (2) viable errors occurring during replication, and/or (3) mutations caused by environmental factors."
+ngss,LS3,HS-LS3-3,Apply concepts of statistics and probability to explain the variation and distribution of expressed traits in a population.
+ngss,LS3,MS-LS3-1,"Develop and use a model to describe why structural changes to genes (mutations) located on chromosomes may affect proteins and may result in harmful, beneficial, or neutral effects to the structure and function of the organism."
+ngss,LS3,MS-LS3-2,Develop and use a model to describe why asexual reproduction results in offspring with identical genetic information and sexual reproduction results in offspring with genetic variation.
+ngss,LS4,2-LS4-1,Make observations of plants and animals to compare the diversity of life in different habitats.
+ngss,LS4,3-LS4-1,Analyze and interpret data from fossils to provide evidence of the organisms and the environments in which they lived long ago.
+ngss,LS4,3-LS4-2,"Use evidence to construct an explanation for how the variations in characteristics among individuals of the same species may provide advantages in surviving, finding mates, and reproducing. "
+ngss,LS4,3-LS4-3,"Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all."
+ngss,LS4,3-LS4-4,Make a claim about the merit of a solution to a problem caused when the environment changes and the types of plants and animals that live there may change.*
+ngss,LS4,HS-LS4-1,Communicate scientific information that common ancestry and biological evolution are supported by multiple lines of empirical evidence.
+ngss,LS4,HS-LS4-2,"Construct an explanation based on evidence that the process of evolution primarily results from four factors: (1) the potential for a species to increase in number, (2) the heritable genetic variation of individuals in a species due to mutation and sexual"
+ngss,LS4,HS-LS4-3,Apply concepts of statistics and probability to support explanations that organisms with an advantageous heritable trait tend to increase in proportion to organisms lacking this trait.
+ngss,LS4,HS-LS4-4,Construct an explanation based on evidence for how natural selection leads to adaptation of populations.[Clarification Statement: Emphasis is on using data to provide evidence for how specific biotic and abiotic differences in ecosystems (such as ranges 
+ngss,LS4,HS-LS4-5,"Evaluate the evidence supporting claims that changes in environmental conditions may result in: (1) increases in the number of individuals of some species, (2) the emergence of new species over time, and (3) the extinction of other species."
+ngss,LS4,HS-LS4-6,"Create or revise a simulation to test a solution to mitigate adverse impacts of human activity on biodiversity.*[Clarification Statement: Emphasis is on designing solutions for a proposed problem related to threatened or endangered species, or to genetic"
+ngss,LS4,MS-LS4-1,"Analyze and interpret data for patterns in the fossil record that document the existence, diversity, extinction, and change of life forms throughout the history of life on Earth under the assumption that natural laws operate today as in the past."
+ngss,LS4,MS-LS4-2,Apply scientific ideas to construct an explanation for the anatomical similarities and differences among modern organisms and between modern and fossil organisms to infer evolutionary relationships.
+ngss,LS4,MS-LS4-3,Analyze displays of pictorial data to compare patterns of similarities in the embryological development across multiple species to identify relationships not evident in the fully formed anatomy.
+ngss,LS4,MS-LS4-4,Construct an explanation based on evidence that describes how genetic variations of traits in a population increase some individuals' probability of surviving and reproducing in a specific environment.
+ngss,LS4,MS-LS4-5,Gather and synthesize information about the technologies that have changed the way humans influence the inheritance of desired traits in organisms.
+ngss,LS4,MS-LS4-6,Use mathematical representations to support explanations of how natural selection may lead to increases and decreases of specific traits in populations over time.
+ngss,PS1,2-PS1-1,Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.
+ngss,PS1,2-PS1-2,Analyze data obtained from testing different materials to determine which materials have the properties that are best suited for an intended purpose.*
+ngss,PS1,2-PS1-3,Make observations to construct an evidence-based account of how an object made of a small set of pieces can be disassembled and made into a new object.
+ngss,PS1,2-PS1-4,Construct an argument with evidence that some changes caused by heating or cooling can be reversed and some cannot. 
+ngss,PS1,5-PS1-1,Develop a model to describe that matter is made of particles too small to be seen.
+ngss,PS1,5-PS1-2,"Measure and graph quantities to provide evidence that regardless of the type of change that occurs when heating, cooling, or mixing substances, the total weight of matter is conserved."
+ngss,PS1,5-PS1-3,Make observations and measurements to identify materials based on their properties.
+ngss,PS1,5-PS1-4,Conduct an investigation to determine whether the mixing of two or more substances results in new substances.
+ngss,PS1,HS-PS1-1,Use the periodic table as a model to predict the relative properties of elements based on the patterns of electrons in the outermost energy level of atoms.
+ngss,PS1,HS-PS1-2,"Construct and revise an explanation for the outcome of a simple chemical reaction based on the outermost electron states of atoms, trends in the periodic table, and knowledge of the patterns of chemical properties.[Clarification Steatement: Examples of c"
+ngss,PS1,HS-PS1-3,Plan and conduct an investigation to gather evidence to compare the structure of substances at the bulk scale to infer the strength of electrical forces between particles.
+ngss,PS1,HS-PS1-4,Develop a model to illustrate that the release or absorption of energy from a chemical reaction system depends upon the changes in total bond energy.
+ngss,PS1,HS-PS1-5,Apply scientific principles and evidence to provide an explanation about the effects of changing the temperature or concentration of the reacting particles on the rate at which a reaction occurs.
+ngss,PS1,HS-PS1-6,Refine the design of a chemical system by specifying a change in conditions that would produce increased amounts of products at equilibrium.*
+ngss,PS1,HS-PS1-7,"Use mathematical representations to support the claim that atoms, and therefore mass, are conserved during a chemical reaction."
+ngss,PS1,HS-PS1-8,"Develop models to illustrate the changes in the composition of the nucleus of the atom and the energy released during the processes of fission, fusion, and radioactive decay."
+ngss,PS1,MS-PS1-1,Develop models to describe the atomic composition of simple molecules and extended structures.
+ngss,PS1,MS-PS1-2,Analyze and interpret data on the properties of substances before and after the substances interact to determine if a chemical reaction has occurred.
+ngss,PS1,MS-PS1-3,Gather and make sense of information to describe that synthetic materials come from natural resources and impact society.
+ngss,PS1,MS-PS1-4,"Develop a model that predicts and describes changes in particle motion, temperature, and state of a pure substance when thermal energy is added or removed."
+ngss,PS1,MS-PS1-5,Develop and use a model to describe how the total number of atoms does not change in a chemical reaction and thus mass is conserved.
+ngss,PS1,MS-PS1-6,"Undertake a design project to construct, test, and modify a device that either releases or absorbs thermal energy by chemical processes.*"
+ngss,PS2,3-PS2-1,Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.
+ngss,PS2,3-PS2-2,Make observations and/or measurements of an object's motion to provide evidence that a pattern can be used to predict future motion.
+ngss,PS2,3-PS2-3,Ask questions to determine cause and effect relationships of electric or magnetic interactions between two objects not in contact with each other.
+ngss,PS2,3-PS2-4,Define a simple design problem that can be solved by applying scientific ideas about magnets.*
+ngss,PS2,5-PS2-1,Support an argument that the gravitational force exerted by Earth on objects is directed down.
+ngss,PS2,HS-PS2-1,"Analyze data to support the claim that Newton's second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration."
+ngss,PS2,HS-PS2-2,Use mathematical representations to support the claim that the total momentum of a system of objects is conserved when there is no net force on the system.
+ngss,PS2,HS-PS2-3,"Apply scientific and engineering ideas to design, evaluate, and refine a device that minimizes the force on a macroscopic object during a collision.* "
+ngss,PS2,HS-PS2-4,Use mathematical representations of Newton's Law of Gravitation and Coulomb's Law to describe and predict the gravitational and electrostatic forces between objects.
+ngss,PS2,HS-PS2-5,Plan and conduct an investigation to provide evidence that an electric current can produce a magnetic field and that a changing magnetic field can produce an electric current.
+ngss,PS2,HS-PS2-6,Communicate scientific and technical information about why the molecular-level structure is important in the functioning of designed materials.*
+ngss,PS2,K-PS2-1,Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.
+ngss,PS2,K-PS2-2,Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.*
+ngss,PS2,MS-PS2-1,"Apply Newton's Third Law to design a solution to a problem involving the motion of two colliding objects.*[Clarification Statement: Examples of practical problems could include the impact of collisions between two cars, between a car and stationary objec"
+ngss,PS2,MS-PS2-2,Plan an investigation to provide evidence that the change in an object's motion depends on the sum of the forces on the object and the mass of the object.
+ngss,PS2,MS-PS2-3,"Ask questions about data to determine the factors that affect the strength of electric and magnetic forces.[Clarification Statement: Examples of devices that use electric and magnetic forces could include electromagnets, electric motors, or generators. E"
+ngss,PS2,MS-PS2-4,Construct and present arguments using evidence to support the claim that gravitational interactions are attractive and depend on the masses of interacting objects.
+ngss,PS2,MS-PS2-5,Conduct an investigation and evaluate the experimental design to provide evidence that fields exist between objects exerting forces on each other even though the objects are not in contact.
+ngss,PS3,4-PS3-1,Use evidence to construct an explanation relating the speed of an object to the energy of that object.
+ngss,PS3,4-PS3-2,"Make observations to provide evidence that energy can be transferred from place to place by sound, light, heat, and electric currents."
+ngss,PS3,4-PS3-3,Ask questions and predict outcomes about the changes in energy that occur when objects collide.
+ngss,PS3,4-PS3-4,"Apply scientific ideas to design, test, and refine a device that converts energy from one form to another.*"
+ngss,PS3,5-PS3-1,"Use models to describe that energy in animals' food (used for body repair, growth, motion, and to maintain body warmth) was once energy from the sun."
+ngss,PS3,HS-PS3-1,Create a computational model to calculate the change in the energy of one component in a system when the change in energy of the other component(s) and energy flows in and out of the system are known.
+ngss,PS3,HS-PS3-2,Develop and use models to illustrate that energy at the macroscopic scale can be accounted for as a combination of energy associated with the motions of particles (objects) and energy associated with the relative position of particles (objects).
+ngss,PS3,HS-PS3-3,"Design, build, and refine a device that works within given constraints to convert one form of energy into another form of energy.*"
+ngss,PS3,HS-PS3-4,Plan and conduct an investigation to provide evidence that the transfer of thermal energy when two components of different temperature are combined within a closed system results in a more uniform energy distribution among the components in the system (se
+ngss,PS3,HS-PS3-5,Develop and use a model of two objects interacting through electric or magnetic fields to illustrate the forces between objects and the changes in energy of the objects due to the interaction.
+ngss,PS3,K-PS3-1,Make observations to determine the effect of sunlight on Earth's surface.
+ngss,PS3,K-PS3-2,"Use tools and materials to design and build a structure that will reduce the warming effect of sunlight on an area.*[Clarification Statement: Examples of structures could include umbrellas, canopies, and tents that minimize the warming effect of the sun."
+ngss,PS3,MS-PS3-1,Construct and interpret graphical displays of data to describe the relationships of kinetic energy to the mass of an object and to the speed of an object.
+ngss,PS3,MS-PS3-2,"Develop a model to describe that when the arrangement of objects interacting at a distance changes, different amounts of potential energy are stored in the system."
+ngss,PS3,MS-PS3-3,"Apply scientific principles to design, construct, and test a device that either minimizes or maximizes thermal energy transfer.*"
+ngss,PS3,MS-PS3-4,"Plan an investigation to determine the relationships among the energy transferred, the type of matter, the mass, and the change in the average kinetic energy of the particles as measured by the temperature of the sample.[Clarification Statement: Examples"
+ngss,PS3,MS-PS3-5,"Construct, use, and present arguments to support the claim that when the kinetic energy of an object changes, energy is transferred to or from the object."
+ngss,PS4,1-PS4-1,Plan and conduct investigations to provide evidence that vibrating materials can make sound and that sound can make materials vibrate.
+ngss,PS4,1-PS4-2,"Make observations to construct an evidence-based account that objects can be seen only when illuminated.[Clarification Statement: Examples of observations could include those made in a completely dark room, a pinhole box, and a video of a cave explorer w"
+ngss,PS4,1-PS4-3,Plan and conduct an investigation to determine the effect of placing objects made with different materials in the path of a beam of light.
+ngss,PS4,1-PS4-4,Use tools and materials to design and build a device that uses light or sound to solve the problem of communicating over a distance.*
+ngss,PS4,4-PS4-1,Develop a model of waves to describe patterns in terms of amplitude and wavelength and that waves can cause objects to move. 
+ngss,PS4,4-PS4-2,"Develop a model to describe that light reflecting from objects and entering the eye allows objects to be seen.[Assessment Boundary:  Assessment does not include knowledge of specific colors reflected and seen, the cellular mechanisms of vision, or how th"
+ngss,PS4,4-PS4-3,Generate and compare multiple solutions that use patterns to transfer information.*
+ngss,PS4,HS-PS4-1,"Use mathematical representations to support a claim regarding relationships among the frequency, wavelength, and speed of waves traveling in various media."
+ngss,PS4,HS-PS4-2,Evaluate questions about the advantages of using a digital transmission and storage of information.
+ngss,PS4,HS-PS4-3,"Evaluate the claims, evidence, and reasoning behind the idea that electromagnetic radiation can be described either by a wave model or a particle model, and that for some situations one model is more useful than the other.
+[Clarification Statement: Emphas"
+ngss,PS4,HS-PS4-4,Evaluate the validity and reliability of claims in published materials of the effects that different frequencies of electromagnetic radiation have when absorbed by matter.
+ngss,PS4,HS-PS4-5,Communicate technical information about how some technological devices use the principles of wave behavior and wave interactions with matter to transmit and capture information and energy.*
+ngss,PS4,MS-PS4-1,Use mathematical representations to describe a simple model for waves that includes how the amplitude of a wave is related to the energy in a wave.
+ngss,PS4,MS-PS4-2,"Develop and use a model to describe that waves are reflected, absorbed, or transmitted through various materials. "
+ngss,PS4,MS-PS4-3,Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.
