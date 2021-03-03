@@ -72,6 +72,20 @@ class ScaryChangeDetector
     EOS
   end
 
+  def detect_column_rename
+    changes = @all.grep(/^dashboard\/db\/migrate\//)
+    return if changes.empty? || !@changed_lines.include?("rename_column")
+
+    puts red <<-EOS
+
+        Looks like you are renaming a column in this migration:
+        #{changes.join("\n")}
+        Have you verified that if the migration is run without any application changes that there are no errors?
+        For more information on this issue see https://docs.google.com/document/d/1QHCjUdLz7D7fE-Cy4HrrtJ5FOSnSth7sNHfSemwNSfw.
+
+    EOS
+  end
+
   def detect_missing_yarn_lock
     changed_package_json = @all.include? 'apps/package.json'
     changed_yarn_lock = @all.include? 'apps/yarn.lock'
@@ -131,6 +145,7 @@ class ScaryChangeDetector
   def detect_scary_changes
     detect_new_models
     detect_new_table_or_new_column
+    detect_column_rename
     detect_missing_yarn_lock
     detect_special_files
     detect_dropbox_conflicts
