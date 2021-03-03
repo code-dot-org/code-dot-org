@@ -125,23 +125,16 @@ export function lessonIsAllAssessment(levels) {
 }
 
 /**
- * Computes progress status percentages for a set of levels.
+ * Computes summary of a student's progress in a lesson's levels.
  * @param {{id:studentLevelProgressType}} studentLevelProgress An object keyed by
  * level id containing objects representing the student's progress in that level
  * @param {levelType[]} levels An array of levels
  * @returns {studentLessonProgressType} An object representing student's progress
  * in the lesson
- *
- * Note: this function will replace `summarizeProgressInStage` below once we
- * refactor the legacy StudentProgressSummaryCell component
  */
 export function progressForLesson(studentLevelProgress, levels) {
   // Filter any bonus levels as they do not count toward progress.
   const filteredLevels = levels.filter(level => !level.bonus);
-  const statuses = filteredLevels.map(level => {
-    const levelProgress = studentLevelProgress[level.id];
-    return (levelProgress && levelProgress.status) || LevelStatus.not_tried;
-  });
 
   const completedStatuses = [
     LevelStatus.perfect,
@@ -151,82 +144,42 @@ export function progressForLesson(studentLevelProgress, levels) {
     LevelStatus.readonly
   ];
 
-  const statusCounts = statuses.reduce(
-    (counts, status) => {
-      counts.attempted += status === LevelStatus.attempted;
-      counts.imperfect += status === LevelStatus.passed;
-      counts.completed += completedStatuses.includes(status);
-      return counts;
-    },
-    {attempted: 0, imperfect: 0, completed: 0}
-  );
-  const incomplete =
-    statuses.length - statusCounts.completed - statusCounts.imperfect;
-  const isLessonStarted =
-    statusCounts.attempted + statusCounts.imperfect + statusCounts.completed >
-    0;
-
-  const getPercent = count => (100 * count) / statuses.length;
-  return {
-    isStarted: isLessonStarted,
-    imperfectPercent: getPercent(statusCounts.imperfect),
-    completedPercent: getPercent(statusCounts.completed),
-    incompletePercent: getPercent(incomplete)
-  };
-}
-
-/**
- * Summarizes stage progress data.
- * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
- * level id containing objects representing the student's progress in that level
- * @param {levelType[]} levels An array of the levels in a stage
- * @returns {object} An object with a total count of levels in each of the
- * following buckets: total, completed, imperfect, incomplete, attempted.
- */
-export function summarizeProgressInStage(studentProgress, levels) {
-  // Filter any bonus levels as they do not count toward progress.
-  const filteredLevels = levels.filter(level => !level.bonus);
-
-  // Get counts of statuses
-  let statusCounts = {
-    total: 0,
-    completed: 0,
+  const aggregates = {
+    attempted: 0,
     imperfect: 0,
-    incomplete: 0,
-    attempted: 0
+    completed: 0,
+    timeSpent: 0,
+    lastTimestamp: 0
   };
 
   filteredLevels.forEach(level => {
-    const levelProgress = studentProgress[level.id];
-    statusCounts.total++;
-    if (!levelProgress) {
-      statusCounts.incomplete++;
-      return;
-    }
-    switch (levelProgress.status) {
-      case LevelStatus.perfect:
-      case LevelStatus.submitted:
-      case LevelStatus.free_play_complete:
-      case LevelStatus.completed_assessment:
-      case LevelStatus.readonly:
-        statusCounts.completed++;
-        break;
-      case LevelStatus.not_tried:
-        statusCounts.incomplete++;
-        break;
-      case LevelStatus.attempted:
-        statusCounts.incomplete++;
-        statusCounts.attempted++;
-        break;
-      case LevelStatus.passed:
-        statusCounts.imperfect++;
-        break;
-      // All others are assumed to be not tried
-      default:
-        statusCounts.incomplete++;
+    const levelProgress = studentLevelProgress[level.id];
+    if (levelProgress) {
+      aggregates.attempted += levelProgress.status === LevelStatus.attempted;
+      aggregates.imperfect += levelProgress.status === LevelStatus.passed;
+      aggregates.completed += completedStatuses.includes(levelProgress.status);
+      aggregates.timeSpent += levelProgress.timeSpent;
+      aggregates.lastTimestamp = Math.max(
+        aggregates.lastTimestamp,
+        levelProgress.lastTimestamp
+      );
     }
   });
-  return statusCounts;
+
+  const incomplete =
+    filteredLevels.length - aggregates.completed - aggregates.imperfect;
+  const isLessonStarted =
+    aggregates.attempted + aggregates.imperfect + aggregates.completed > 0;
+
+  const getPercent = count => (100 * count) / filteredLevels.length;
+  return {
+    isStarted: isLessonStarted,
+    imperfectPercent: getPercent(aggregates.imperfect),
+    completedPercent: getPercent(aggregates.completed),
+    incompletePercent: getPercent(incomplete),
+    timeSpent: aggregates.timeSpent,
+    lastTimestamp: aggregates.lastTimestamp
+  };
 }
 
 /**
