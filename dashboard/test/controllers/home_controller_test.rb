@@ -7,6 +7,10 @@ class HomeControllerTest < ActionController::TestCase
   setup do
     # stub properties so we don't try to hit pegasus db
     Properties.stubs(:get).returns nil
+
+    # ensure consistent query counts by calling Scripts.all_scripts to populate
+    # the script cache here
+    _ = Script.all_scripts
   end
 
   test "teacher without progress or assigned course/script redirected to index" do
@@ -387,6 +391,9 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
   end
 
+  # this test only passes when run as part of the whole test suite
+  # it will fail if you try to run it independently
+  # it is also flakey on drone, passing with different query counts (14 or 15)
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
