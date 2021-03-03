@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-01 22:40:18 UTC",
+    "serialized_at": "2021-03-03 20:37:07 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -240,7 +240,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.",
+        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.",
         "student_overview": "Learn how to create and edit sprites.",
         "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
@@ -2183,7 +2183,7 @@
       "key": "b75bc492-bca4-410c-8c94-8d1c919597c3",
       "position": 1,
       "properties": {
-        "description": "Today students will learn how to work with sprites in Sprite Lab.\r\n\r\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like Scrat from Ice Age or one of the Angry Birds.\r\n\r\n**Discuss:** Let the students know that this character on the screen is a \"sprite.\"  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own sprites to control.",
+        "description": "Today students will learn how to work with **sprites** in Sprite Lab.\n\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like *Scrat* from \"Ice Age\" or one of the \"Angry Birds.\"\n\n**Discuss:** Let the students know that this character on the screen is a **sprite**.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own **sprites** to control.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2210,7 +2210,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a sprite to begin and start the same behavior won't result in any observable effect because there is no time between each action. \r\n\r\nIf students bring up time, such as making a behavior happen for a set duration, it can be helpful to reframe things by asking \"**When** should the behavior stop?\" Programs like this will rely on events to make things start and stop as desired.\r\n"
+            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a **sprite** to begin and start the same **behavior** won't result in any observable effect because there is no time between each action. \n\nIf students bring up time, such as making a **behavior** happen for a set duration, it can be helpful to reframe things by asking \"*When should the behavior stop?\"* Programs like this will rely on events to make things start and stop as desired.\n"
           }
         ]
       },
@@ -2223,7 +2223,7 @@
       "key": "b26f3740-cbf8-45da-b3d7-4f3701c57df2",
       "position": 3,
       "properties": {
-        "description": "- What blocks would we need to connect to make the tumbleweed spin?\r\n- What would happen if we told the sprite to begin two behaviors at once?\r\n- Will the sprite ever stop these behaviors on its own?\r\n- If we want the sprite to stop a behavior when we click it, how might we do that?\r\n\r\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
+        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the **sprite** to begin two behaviors at once?_\n- _Will the **sprite** ever stop these **behaviors** on its own?_\n- _If we want the **sprite** to stop a **behavior** when we click it, how might we do that?\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "b26f3740-cbf8-45da-b3d7-4f3701c57df2",
@@ -5037,7 +5037,7 @@
       "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introducing Sprite Lab",
         "level_keys": [
@@ -5063,7 +5063,7 @@
       "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5089,7 +5089,7 @@
       "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -5115,7 +5115,7 @@
       "chapter": 56,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -5141,7 +5141,7 @@
       "chapter": 57,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -5167,7 +5167,7 @@
       "chapter": 58,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "How to Make a Sprite",
         "level_keys": [
@@ -5193,7 +5193,7 @@
       "chapter": 59,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -5219,7 +5219,7 @@
       "chapter": 60,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -5245,7 +5245,7 @@
       "chapter": 61,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5271,7 +5271,7 @@
       "chapter": 62,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [

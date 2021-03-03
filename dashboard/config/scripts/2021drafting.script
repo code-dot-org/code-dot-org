@@ -4,7 +4,7 @@ lesson_group 'introduction', display_name: 'Introduction'
 lesson_group_description 'Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!'
 lesson 'Course F Introduction', display_name: 'Introducing Sprite Lab', has_lesson_plan: false
 level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
-level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
+level 'courseF_intro_apps', progression: 'Exploration: Sample Programs'
 level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
 
 lesson 'Making Sprites', display_name: 'Making Sprites', has_lesson_plan: false
@@ -44,10 +44,9 @@ level 'courseF_text_answer', progression: 'Skill Building'
 level 'courseF_text_concat', progression: 'Skill Building'
 level 'courseF_text_practice', progression: 'Practice'
 
-lesson 'lesson-3', display_name: 'User Input Apps', has_lesson_plan: false
-level 'courseF_editable_card', progression: 'Exploration: Sample Apps'
-level 'courseF_editable_chatbot', progression: 'Exploration: Sample Apps'
-level 'courseF_editable_madlib', progression: 'Exploration: Sample Apps'
+lesson 'lesson-3', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: false
+level 'courseF_variables_samples', progression: 'Exploration: Sample Programs'
+level 'courseF_variables_stop', progression: 'Prepare Your Plan'
 level 'courseF_variables_projects', progression: 'Application: Create Your Project'
 
 lesson 'lesson-4', display_name: 'Counting with Variables', has_lesson_plan: false

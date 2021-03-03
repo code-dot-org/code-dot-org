@@ -3,7 +3,7 @@ question 'Take a good look at the code below. Which drawing will this program ma
 right 'A', feedback: 'Correct!'
 wrong 'B', feedback: 'Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
 wrong 'C', feedback: 'Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
-wrong 'I don\'t know.', feedback: 'The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
+wrong 'None of the above', feedback: 'Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
 
 
 markdown <<MARKDOWN
