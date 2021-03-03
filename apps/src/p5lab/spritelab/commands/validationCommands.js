@@ -38,6 +38,9 @@ export const commands = {
   },
 
   getTitle() {
-    return {title: coreLibrary.title, subtitle: coreLibrary.subtitle};
+    return {
+      title: coreLibrary.screenText.title,
+      subtitle: coreLibrary.screenText.subtitle
+    };
   }
 };
