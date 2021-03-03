@@ -1,5 +1,4 @@
 class LessonsController < ApplicationController
-  check_authorization
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
