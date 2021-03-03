@@ -85,4 +85,77 @@ describe('LevelDetailsDialogTest', () => {
     expect(loadVideoSpy.calledOnce).to.be.true;
     expect(wrapper.contains('Some things to think about.')).to.be.true;
   });
+
+  it('can display a bubble choice level', () => {
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        handleClose={handleCloseSpy}
+        scriptLevel={{
+          id: 'scriptlevel',
+          url: 'level.url',
+          status: 'not_tried',
+          level: {type: 'BubbleChoice', id: 'level'},
+          sublevels: [
+            {
+              id: '1',
+              status: 'not_tried',
+              name: 'sublevel1'
+            },
+            {
+              id: '2',
+              status: 'not_tried',
+              name: 'sublevel2'
+            },
+            {
+              id: '3',
+              status: 'not_tried',
+              name: 'sublevel3'
+            }
+          ]
+        }}
+      />
+    );
+    expect(wrapper.find('SublevelCard').length).to.equal(3);
+  });
+
+  it('can display a bubble choice sublevel on switch', () => {
+    const bubbleChoiceLevel = {
+      id: 'scriptlevel',
+      url: 'level.url',
+      status: 'not_tried',
+      level: {type: 'BubbleChoice', id: 'level'},
+      sublevels: [
+        {
+          id: '1',
+          status: 'not_tried',
+          name: 'sublevel1',
+          type: 'External',
+          markdown: 'Markdown1'
+        },
+        {
+          id: '2',
+          status: 'not_tried',
+          name: 'sublevel2',
+          type: 'External',
+          markdown: 'Markdown1'
+        }
+      ]
+    };
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        handleClose={handleCloseSpy}
+        scriptLevel={bubbleChoiceLevel}
+      />
+    );
+    wrapper
+      .instance()
+      .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
+    expect(wrapper.find('SublevelCard').length).to.equal(0);
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .first()
+        .props().markdown
+    ).to.equal('Markdown1');
+  });
 });
