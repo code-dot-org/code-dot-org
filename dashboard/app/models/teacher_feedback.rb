@@ -27,20 +27,13 @@
 
 class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
-  validates_presence_of :student_id, :script_id, :level_id, :teacher_id, :script_level_id, unless: :deleted?
+  validates_presence_of :student_id, :script_id, :level_id, :teacher_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :script
   belongs_to :level
   belongs_to :script_level
   belongs_to :teacher, class_name: 'User'
-  validate :validate_script_and_script_level, on: :create
-
-  def validate_script_and_script_level
-    if script_level.script_id != script_id
-      errors.add(:script_id, 'script_id does not match script_level.script_id')
-    end
-  end
 
   # Finds the script level associated with this object, using script id and
   # level id.
