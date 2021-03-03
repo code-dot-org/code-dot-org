@@ -997,8 +997,12 @@ ms:
             Conditionals:
               key: Bersyarat
           lesson_groups:
+            ramp_up:
+              display_name: Gelung
             csf_sprites:
               display_name: Jin
+            csf_nested_loops:
+              display_name: Bersyarat
             csf_functions:
               display_name: Fungsi
         coursef-2021:

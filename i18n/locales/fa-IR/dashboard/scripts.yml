@@ -2456,10 +2456,12 @@ fa:
             'Functions: Songwriting':
               name: ترانه سرایی
           lesson_groups:
+            ramp_up:
+              display_name: حلقه‌ها
             csf_digcit:
               display_name: شهروندی دیجیتالی
             csf_nested_loops:
-              display_name: حلقه های تو در تو
+              display_name: شرطی ها
             csf_functions:
               display_name: توابع
         coursef-2021:

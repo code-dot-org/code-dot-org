@@ -109,6 +109,16 @@ class Experiment < ApplicationRecord
       name: 'contagion-pilot',
       label: 'Contagion Simulator',
       allow_joining_via_url: true
+    },
+    {
+      name: 'ai-unit-pilot',
+      label: 'AI Unit Pilot',
+      allow_joining_via_url: false
+    },
+    {
+      name: 'haikubot-pilot',
+      label: 'Haiku Bot',
+      allow_joining_via_url: true
     }
   ]
 
