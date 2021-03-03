@@ -1228,14 +1228,6 @@ export const stageExtrasAvailable = (state, id) =>
   state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
 
 /**
- * Is the given script ID a text to speech enabled course? `script.rb` owns the list.
- * @param state
- * @param id
- */
-export const ttsAvailable = (state, id) =>
-  state.teacherSections.textToSpeechScriptIds.indexOf(id) > -1;
-
-/**
  * Ask whether the user is currently adding a new section using
  * the Add Section dialog.
  */
