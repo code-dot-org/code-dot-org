@@ -601,12 +601,16 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load('#bramble', {
-    url: BRAMBLE_BASE_URL + '/index.html?disableExtensions=bramble-move-file',
+    url: BRAMBLE_BASE_URL + '/index.html',
     useLocationSearch: true,
     disableUIState: true,
+    capacity: webLab_.getMaxProjectCapacity(),
     initialUIState: {
       theme: 'light-theme',
       readOnly: webLab_.getPageConstants().isReadOnlyWorkspace
+    },
+    extensions: {
+      disable: ['bramble-move-file']
     }
   });
 
@@ -688,11 +692,20 @@ function load(Bramble) {
       }
     }
 
+    bramble.disableJavaScript(); // Prevents JS from executing.
     bramble.on('inspectorChange', handleInspectorChange);
     bramble.on('fileChange', handleFileChange);
     bramble.on('fileDelete', handleFileDelete);
     bramble.on('fileRename', handleFileRename);
     bramble.on('folderRename', handleFolderRename);
+    bramble.on('projectSizeChange', (bytes, percentage) => {
+      // When an image is uploaded, the project tree refreshes and bytes will be 0
+      // for a short time. This causes the project size meter to flash, so
+      // ignore this event if bytes === 0.
+      if (bytes !== 0) {
+        webLab_.setProjectSize(bytes);
+      }
+    });
 
     brambleProxy_ = bramble;
 

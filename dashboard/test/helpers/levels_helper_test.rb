@@ -653,7 +653,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'Test trailing dot in value.', data_t('multi.random question', 'Test trailing dot in key.')
   end
 
-  test 'block options are localized' do
+  test 'function block options are localized' do
     toolbox = "<xml><category name=\"Actions\"/></xml>"
     toolbox_translated_name = "Azioni"
     @level.toolbox_blocks = toolbox
@@ -689,6 +689,38 @@ class LevelsHelperTest < ActionView::TestCase
     new_start = start.sub("details", start_translated_name)
     new_start = new_start.sub("function description", start_translated_description)
     new_start = new_start.sub("parameter", start_translated_parameter)
+    refute_equal new_toolbox, toolbox
+    refute_equal new_start, start
+
+    options = blockly_options
+    assert_equal new_toolbox, options[:level]["toolbox"]
+    assert_equal new_start, options[:level]["startBlocks"]
+  end
+
+  test 'variable block options are localized' do
+    toolbox = "<xml><block type=\"variables_get\"><title name=\"VAR\">length</title></block></xml>"
+    toolbox_translated_name = "lunghezza"
+    @level.toolbox_blocks = toolbox
+
+    start = "<xml><block type=\"parameters_get\"><title name=\"VAR\">points</title></block></xml>"
+    start_translated_name = "punti"
+    @level.start_blocks = start
+
+    I18n.locale = :'it-IT'
+    custom_i18n = {
+      "data" => {
+        "variable_names" => {
+          "length" =>  toolbox_translated_name
+        },
+        "parameter_names" => {
+          "points" => start_translated_name
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, custom_i18n
+
+    new_toolbox = toolbox.sub("length", toolbox_translated_name)
+    new_start = start.sub("points", start_translated_name)
     refute_equal new_toolbox, toolbox
     refute_equal new_start, start
 

@@ -11,7 +11,8 @@ import {
 
 const styles = {
   dropdown: {
-    display: 'inline-block'
+    display: 'inline-block',
+    marginRight: 5
   }
 };
 

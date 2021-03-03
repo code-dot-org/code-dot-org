@@ -13,6 +13,7 @@ Scenario: Loading the level
 @no_ie
 @no_mobile
 Scenario: Solving puzzle
+  And I dismiss the login reminder
   And I drag ".answer[originalindex=0]" to ".emptyslot:first"
   And I drag ".answer[originalindex=1]" to ".emptyslot:first"
   And I drag ".answer[originalindex=2]" to ".emptyslot:first"

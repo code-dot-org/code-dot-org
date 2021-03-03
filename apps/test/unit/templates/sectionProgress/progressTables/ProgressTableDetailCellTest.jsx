@@ -1,14 +1,10 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import ProgressTableDetailCell, {
-  unitTestExports
-} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
+import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
 import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
 import sinon from 'sinon';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
-import i18n from '@cdo/locale';
 import {
   fakeLevel,
   fakeProgressForLevels
@@ -93,53 +89,5 @@ describe('ProgressTableDetailCell', () => {
     );
     sublevel.simulate('click');
     expect(firehoseClient.putRecord).to.have.been.called;
-  });
-
-  it('widthForLevels returns the correct width when there are unplugged levels', () => {
-    const levels = [level_1, level_1];
-    const unpluggedWidth = unitTestExports.getUnpluggedWidth();
-    const expectedWidth = 2 * unpluggedWidth + 2 * progressStyles.CELL_PADDING;
-    expect(ProgressTableDetailCell.widthForLevels(levels)).to.equal(
-      expectedWidth
-    );
-  });
-
-  it('getUnpluggedWidth returns the width of the unplugged bubble in english', () => {
-    expect(unitTestExports.getUnpluggedWidth()).to.equal(121);
-  });
-
-  it('getUnpluggedWidth returns the width of the unplugged bubble in spanish', () => {
-    sinon.stub(i18n, 'unpluggedActivity').returns('Actividad fuera de línea');
-    expect(unitTestExports.getUnpluggedWidth()).to.equal(147);
-  });
-
-  it('widthForLevels returns the correct width when there are no unplugged levels', () => {
-    const notUnpluggedLevel = fakeLevel({
-      isUnplugged: false
-    });
-    const levels = [notUnpluggedLevel, notUnpluggedLevel];
-
-    const levelCount = 2;
-    const expectedWidth =
-      levelCount * progressStyles.BUBBLE_CONTAINER_WIDTH +
-      2 * progressStyles.CELL_PADDING;
-
-    expect(ProgressTableDetailCell.widthForLevels(levels)).to.equal(
-      expectedWidth
-    );
-  });
-
-  it('widthForLevels returns the correct width when there are sublevels', () => {
-    const levels = [level_2];
-
-    const sublevelCount = level_2.sublevels.length;
-    const expectedWidth =
-      progressStyles.BUBBLE_CONTAINER_WIDTH +
-      sublevelCount * progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH +
-      2 * progressStyles.CELL_PADDING;
-
-    expect(ProgressTableDetailCell.widthForLevels(levels)).to.equal(
-      expectedWidth
-    );
   });
 });

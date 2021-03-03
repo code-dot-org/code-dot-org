@@ -310,6 +310,7 @@ class Blockly < Level
             next unless level_options.key? xml_block_prop
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_blocks_with_placeholder_texts(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -590,6 +591,38 @@ class Blockly < Level
     end
 
     localize_behaviors(block_xml)
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing variable names in "variables_get" and "parameters_get" block types
+  def localized_variable_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    block_xml.xpath("//block[@type=\"variables_get\"]").each do |variable|
+      variable_name = variable.at_xpath('./title[@name="VAR"]')
+      next unless variable_name
+      localized_name = I18n.t(
+        variable_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      variable_name.content = localized_name if localized_name
+    end
+
+    block_xml.xpath("//block[@type=\"parameters_get\"]").each do |parameter|
+      parameter_name = parameter.at_xpath('./title[@name="VAR"]')
+      next unless parameter_name
+      localized_name = I18n.t(
+        parameter_name.content,
+        scope: [:data, :parameter_names],
+        default: nil,
+        smart: true
+      )
+      parameter_name.content = localized_name if localized_name
+    end
+
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 

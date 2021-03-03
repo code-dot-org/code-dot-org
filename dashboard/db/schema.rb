@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_30_005212) do
+ActiveRecord::Schema.define(version: 2021_02_26_215944) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -504,6 +504,15 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "frameworks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "shortcode", null: false
+    t.string "name", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shortcode"], name: "index_frameworks_on_shortcode", unique: true
+  end
+
   create_table "games", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at"
@@ -563,6 +572,13 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.integer "position"
     t.text "properties"
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
+  end
+
+  create_table "lessons_programming_expressions", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "lesson_id", null: false
+    t.bigint "programming_expression_id", null: false
+    t.index ["lesson_id", "programming_expression_id"], name: "lesson_programming_expression", unique: true
+    t.index ["programming_expression_id", "lesson_id"], name: "programming_expression_lesson"
   end
 
   create_table "lessons_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1251,6 +1267,23 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
+  create_table "programming_environments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "programming_expressions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "category"
+    t.text "properties"
+    t.bigint "programming_environment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
+  end
+
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "script_id"
@@ -1494,7 +1527,7 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.boolean "pairing_allowed", default: true, null: false
     t.boolean "sharing_disabled", default: false, null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
     t.boolean "hidden", default: false, null: false
-    t.boolean "autoplay_enabled", default: false, null: false
+    t.boolean "tts_autoplay_enabled", default: false, null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"
@@ -1552,11 +1585,28 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.index ["standard_id"], name: "index_stages_standards_on_standard_id"
   end
 
+  create_table "standard_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "shortcode", null: false
+    t.integer "framework_id", null: false
+    t.integer "parent_category_id"
+    t.string "category_type", null: false
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["framework_id", "shortcode"], name: "index_standard_categories_on_framework_id_and_shortcode", unique: true
+    t.index ["parent_category_id"], name: "index_standard_categories_on_parent_category_id"
+  end
+
   create_table "standards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "organization", null: false
     t.string "organization_id", null: false
     t.text "description"
     t.text "concept"
+    t.bigint "category_id"
+    t.integer "framework_id"
+    t.string "shortcode"
+    t.index ["category_id"], name: "index_standards_on_category_id"
+    t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
     t.index ["organization", "organization_id"], name: "index_standards_on_organization_and_organization_id", unique: true
   end
 
@@ -1620,9 +1670,10 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.integer "student_visit_count"
     t.datetime "student_first_visited_at"
     t.datetime "student_last_visited_at"
-    t.integer "script_level_id", null: false
+    t.integer "script_level_id"
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
+    t.integer "analytics_section_id"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
@@ -1698,6 +1749,7 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.datetime "purged_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "metadata"
     t.index ["model_id"], name: "index_user_ml_models_on_model_id"
     t.index ["user_id"], name: "index_user_ml_models_on_user_id"
   end
@@ -1883,6 +1935,7 @@ ActiveRecord::Schema.define(version: 2021_01_30_005212) do
     t.integer "course_version_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "properties"
     t.index ["key", "course_version_id"], name: "index_vocabularies_on_key_and_course_version_id", unique: true
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
