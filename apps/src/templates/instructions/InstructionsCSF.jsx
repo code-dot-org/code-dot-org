@@ -6,7 +6,7 @@ import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import CollapserButton from './CollapserButton';
-import {UnconnectedScrollButtons as ScrollButtons} from './ScrollButtons';
+import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
 import HintDisplayLightbulb from '../HintDisplayLightbulb';
@@ -439,6 +439,10 @@ class InstructionsCSF extends React.Component {
   }
 
   shouldDisplayCollapserButton() {
+    if (!this.props.collapsible) {
+      return false;
+    }
+
     // if we have "extra" (non-instruction) content, we should always
     // give the option of collapsing it
     if (
