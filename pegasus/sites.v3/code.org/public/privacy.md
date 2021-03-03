@@ -3,7 +3,7 @@ title: Privacy Policy
 theme: responsive
 ---
 
-[<img src="/shared/images/student_privacy_pledge.png" width="200" target="_blank">](http://studentprivacypledge.org/)
+[<img src="/shared/images/student_privacy_pledge.png" width="120" target="_blank">](http://studentprivacypledge.org/)
 
 # Privacy Policy
 Date of Last Revision: March 1, 2020
