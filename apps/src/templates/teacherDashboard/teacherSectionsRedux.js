@@ -3,6 +3,11 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+  isChrome,
+  isInternetExplorer,
+  isEdge
+} from '@cdo/apps/code-studio/initApp/userAgentParser';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -836,10 +841,13 @@ export default function teacherSections(state = initialState, action) {
     const stageExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
-      // TODO: enable autoplay by default if script is a pre-reader script
-      // and teacher is on IE, Edge or Chrome after initial release
-      // ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
-      //   state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
+      const isScriptPreReader =
+        state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
+      const isAutoplayEnabledBrowser =
+        isChrome() || isInternetExplorer() || isEdge();
+      ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
+        isScriptPreReader && isAutoplayEnabledBrowser;
+
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
