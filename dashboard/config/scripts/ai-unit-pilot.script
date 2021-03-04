@@ -35,6 +35,9 @@ level 'ml-import ai-import video', progression: 'Video: Importing Models to App 
 level 'ml-models in applab-import 1', progression: 'Import Your Model'
 level 'ml-import ai-conditionals-video2', progression: 'Conditionals Video (Dan: delete later)'
 level 'ml-models in applab-screens-1', progression: 'Changing Screens'
+level 'ml-models in applab-screens-2', progression: 'Changing Screens'
+level 'ml-models in applab-screens-3', progression: 'Changing Screens'
+level 'ml-models in applab-practice choice', progression: 'You Choose: Quiz Apps'
 
 lesson 'lesson8', display_name: 'The Need for Model Cards', has_lesson_plan: true
 level 'ml-model card-medical app v2', progression: 'Medical Priority App'
@@ -70,8 +73,10 @@ lesson 'lesson14', display_name: 'Lesson 14', has_lesson_plan: true
 lesson 'lesson15', display_name: 'AI Code of Ethics (Unplugged)', has_lesson_plan: true
 
 lesson 'lesson16', display_name: 'Goldilocks Principle: Making Models Just Right', has_lesson_plan: true
-level 'csd-unit-5-goldilocks-principle-app-lab', progression: 'What Is Your Net Worth?'
-level 'csd-unit-5-goldilocks-principle-ai-lab', progression: 'What Is Your Net Worth?'
+level 'csd-unit-5-goldilocks-principle-app-lab-underfitted', progression: 'What Will Your Final Grade Be?'
+level 'csd-unit-5-goldilocks-principle-ai-lab-underfitted', progression: 'What Will Your Final Grade Be?'
+level 'csd-unit-5-goldilocks-principle-app-lab-overfitted', progression: 'What Is Your Net Worth?'
+level 'csd-unit-5-goldilocks-principle-ai-lab-overfitted', progression: 'What Is Your Net Worth?'
 
 lesson 'lesson17', display_name: 'Lesson 17', has_lesson_plan: true
 

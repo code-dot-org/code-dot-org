@@ -18847,7 +18847,7 @@ en:
             lesson-2:
               name: Text and Prompts
             lesson-3:
-              name: User Input Apps
+              name: 'Mini-Project: User Input Programs'
             lesson-4:
               name: Counting with Variables
             lesson-5:
@@ -20845,7 +20845,7 @@ en:
               key: Learning Sprites with Sprite Lab
               name: Swimming Fish with Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.'
             Alien Dance Party with Sprite Lab:
               key: Alien Dance Party with Sprite Lab
               name: Alien Dance Party with Sprite Lab
@@ -20870,7 +20870,7 @@ en:
               key: Digital Sharing
               name: Digital Sharing
               description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
-              description_teacher: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+              description_teacher: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and **copyright**, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
             Nested Loops in Bee:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
@@ -21011,8 +21011,8 @@ en:
             Internet:
               key: Internet
               name: The Internet
-              description_student: Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.
-              description_teacher: Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
+              description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
+              description_teacher: Even though many people use the **internet** daily, not very many know how it works. In this lesson, students will pretend to flow through the **internet**, all the while learning about connections, **URLs**, **IP Addresses**, and the **DNS**.
             For Loop Fun:
               key: For Loop Fun
               name: For Loop Fun
@@ -21940,3 +21940,14 @@ en:
           description_short: " In this module, students will explore different geometric shapes by examining the relationships between angles, sides, and lengths. They will also compare the different affordances of using different tools to complete an artistic task."
           description: "**Overview**\nThe Artist tool is an especially explorative and creative platform to build and decompose intricate geometric patterns. Fourth grade math standards focus on developing student proficiency in geometry, encouraging students to discover the relationships between angles, sides, and lengths of different shapes. With the Artist, teachers can help make these geometric relationships come to life. "
           student_description: ''
+        ai-classroom-test:
+          lessons:
+            introai:
+              name: Introduction to AI
+          lesson_groups: {}
+          name: ai-classroom-test
+          title: AI Lab Classroom Test
+          description_audience: ''
+          description_short: Let's Test AI Tools!
+          description: Let's Test AI Tools!
+          student_description: Let's Test AI Tools!
