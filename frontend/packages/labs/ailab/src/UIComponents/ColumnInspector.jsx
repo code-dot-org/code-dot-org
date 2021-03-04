@@ -154,7 +154,7 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     rangesByColumn: getRangesByColumn(state),
-    hideSpecifyColumns: state.mode.hideSpecifyColumns
+    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

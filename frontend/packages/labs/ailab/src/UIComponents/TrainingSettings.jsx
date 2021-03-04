@@ -23,9 +23,7 @@ class TrainingSettings extends Component {
             {this.props.selectedFeatures.join(", ")}.
           </div>
           <PercentReserveSlider />
-          {!this.props.hideSpecifyColumns && (
-            <ColumnTypeSelector />
-          )}
+          {!this.props.hideSpecifyColumns && <ColumnTypeSelector />}
         </div>
       </div>
     );
@@ -35,5 +33,5 @@ class TrainingSettings extends Component {
 export default connect(state => ({
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,
-  hideSpecifyColumns: state.mode.hideSpecifyColumns
+  hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns
 }))(TrainingSettings);
