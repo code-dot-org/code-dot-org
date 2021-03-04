@@ -86,7 +86,11 @@ class LevelDetailsDialog extends Component {
     } else {
       const isCSF = this.props.isCSF;
       const containerStyle = isCSF
-        ? {overflowX: 'hidden', overflowY: 'scroll'}
+        ? {
+            overflowX: 'hidden',
+            overflowY: 'scroll',
+            height: this.state.height - HEADER_HEIGHT
+          }
         : {overflowY: 'scroll', height: this.state.height - HEADER_HEIGHT};
       // TODO: calculate more of these parameters based on the level and pages
       return (
