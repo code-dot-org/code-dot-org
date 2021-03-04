@@ -3106,6 +3106,8 @@ et:
               display_name: Binaarne
             csf_digcit:
               display_name: Digitaalne kodakondsus
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
         coursee-2021:
           lessons:
             Conditionals:
@@ -3183,3 +3185,26 @@ et:
               name: Õppetund 14
             lesson15:
               name: Õppetund 15
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Tsüklid
+              name: Tsüklid
+            Events:
+              key: Sündmused
+              name: Sündmused
+            Conditionals:
+              key: Tingimuslaused
+              name: Tingimuslaused
+            Functions:
+              key: Funktsioonid
+              name: Funktsioonid
+            Variables:
+              key: Muutujad
+              name: Muutujad
+            For Loops:
+              key: For tsükkel
+              name: For tsükkel
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Järgmised sammud

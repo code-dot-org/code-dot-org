@@ -78,15 +78,12 @@ level 'courseD_bee_nestedLoops9_2021', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_predict2_2021', progression: 'Prediction'
 
 lesson_group 'lessonGroup-8', display_name: 'Impacts of Computing'
-lesson 'lesson-1', display_name: 'Designing for Accessibility', has_lesson_plan: true
-
-lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
-level 'PowerOfWords-Unplugged_2021'
+lesson 'lesson-1', display_name: 'Designing for Accessibility', has_lesson_plan: true, unplugged: true
+level 'DesigningForAccessibilityMarkdownLevel_2021', progression: 'Designing for Accessibility - Unplugged Activity'
 
 lesson_group 'csf_variables', display_name: 'Variables'
 lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true, unplugged: true
-level 'EnvelopeVariables-Unplugged_2021'
+level 'EnvelopeVariables-Unplugged_2021', progression: 'Envelope Variables - Unplugged Activity'
 
 lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist', has_lesson_plan: true
 level 'grade5_artist_variables_triangles1_2021', progression: 'Practice'

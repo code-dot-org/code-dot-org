@@ -1,0 +1,22 @@
+fa:
+  data:
+    variable_names:
+      Blue: آبی
+      Green: سبز
+      Red: قرمز
+      actor: بازیگر
+      counter: شمارشگر
+      height: ارتفاع
+      honey: عسل
+      left: سمت چپ
+      length: طول
+      name: نام
+      nectar: شهد
+      random: در هم
+      repeat: تکرار کن
+      right: سمت راست
+      score: امتیاز
+      size: اندازه
+      speed: سرعت
+      variable: متغیر
+      x: طول (x)

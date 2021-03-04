@@ -2072,6 +2072,12 @@ a.download-video {
     &.with-google_oauth2 {
       background-color: $google_red;
       border: 1px solid $google_red;
+      &:disabled {
+        border: 1px solid $lighter_gray;
+        background-color: $lighter_gray;
+        @include box-shadow(none);
+        cursor: not-allowed;
+      }
     }
 
     &.with-facebook {

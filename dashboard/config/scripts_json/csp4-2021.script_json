@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-01 17:09:30 UTC",
+    "serialized_at": "2021-03-03 16:48:37 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -1870,7 +1870,7 @@
       "key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
       "position": 3,
       "properties": {
-        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n[slide] **Discuss:** \n\n* What does this app do?\n  * It lets a user \"like\" an image and add comments to it. \n* What are the inputs?\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* What are the outputs?\n  * The number showing how many thumbs up the image has. \n* What's one piece of information that might be stored in a variable?\n  * The number of likes and all the comments added so far. "
+        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n[slide] **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. "
       },
       "seeding_key": {
         "activity_section.key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
@@ -2564,7 +2564,7 @@
       "key": "0762e48d-f16c-4caa-b03a-8c935ee87352",
       "position": 2,
       "properties": {
-        "description": "[slide] **Discuss:** \n\n* What does this app do?\n\t* Generates a ticket to a museum based on input data from the user.\n* What are the inputs?\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* What are the outputs?\n\t* The ticket generated at the bottom of the screen\t\n* What variables do you think would be necessary for this app to work?\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* What kinds of conditional logic do you think are necessary to make it work?\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
+        "description": "[slide] **Discuss:** \n\n* *What does this app do?*\n\t* Generates a ticket to a museum based on input data from the user.\n* *What are the inputs?*\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* *What are the outputs?*\n\t* The ticket generated at the bottom of the screen\t\n* *What variables do you think would be necessary for this app to work?*\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* *What kinds of conditional logic do you think are necessary to make it work?*\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
         "progression_name": "Try to the Museum Ticket Generator App"
       },
       "seeding_key": {
@@ -2691,7 +2691,7 @@
       "key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
       "position": 3,
       "properties": {
-        "description": "* In Style 1, what line of the song do you sing after line 09? What about in Style 2?\n* Style 2 uses fewer lines to write. Are there fewer lyrics to sing?\n* What are the benefits of writing a song in Style 2? \n\nHave students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Discussion Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
+        "description": "* *In Style 1, what line of the song do you sing after line 09? What about in Style 2?*\n* *Style 2 uses fewer lines to write. Are there fewer lyrics to sing?*\n* *What are the benefits of writing a song in Style 2?*\n\nHave students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Discussion Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
@@ -3081,7 +3081,7 @@
       "key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be",
       "position": 2,
       "properties": {
-        "description": "If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n[slide] **Discuss:**\n\n* What does this app do?\n\t* Display a quote with user-defined fonts and background colors.\n* What are the inputs?\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* What are the outputs?\n\t* The fully designed quote displayed at the bottom of the screen\t\n* How could a function be used in this app?\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
+        "description": "If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n[slide] **Discuss:**\n\n* *What does this app do?*\n\t* Display a quote with user-defined fonts and background colors.\n* *What are the inputs?*\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* *What are the outputs?*\n\t* The fully designed quote displayed at the bottom of the screen\t\n* *How could a function be used in this app?*\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
         "progression_name": "Quote Maker App"
       },
       "seeding_key": {
@@ -3247,7 +3247,7 @@
       "key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
       "position": 4,
       "properties": {
-        "description": "* What does this app do?\r\n* What are the inputs?\r\n* What are the outputs?\r\n* What variables do you think would be necessary for this app to work?\r\n* What kinds of conditional logic do you think are necessary to make it work?\r\n* How could a function be used in this app?\r\n\r\n\r\n[slide] **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
+        "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n[slide] **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
