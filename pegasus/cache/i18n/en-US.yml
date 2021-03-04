@@ -1735,3 +1735,11 @@
   codebytes_skinny_banner_description: 'Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!'
   codebytes_skinny_banner_english_only: "English-only"
   codebytes_skinny_banner_learn: "Learn more at [code.org/codebytes](%{code_bytes_url})."
+  footer_privacy_policy: "Privacy Policy"
+  footer_about: "About"
+  footer_partners: "Partners"
+  footer_blog: "Blog"
+  footer_donate: "Donate"
+  footer_store: "Store"
+  footer_support: "Support"
+  footer_terms: "Terms"
