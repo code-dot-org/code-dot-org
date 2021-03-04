@@ -24,6 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 19:43:55 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -16110,18 +16111,6 @@
   ],
   "resources": [
     {
-      "name": "CS in Entertainment",
-      "url": "https://studio.code.org/s/csd3-2020/stage/1/puzzle/1/",
-      "key": "cs-in-entertainment- 2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "cs-in-entertainment- 2020"
-      }
-    },
-    {
       "name": "Programming for Entertainment",
       "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
       "key": "programming-for-entertainment",
@@ -16144,6 +16133,18 @@
       },
       "seeding_key": {
         "resource.key": "cs-entertainment-activity"
+      }
+    },
+    {
+      "name": "CS in Entertainment",
+      "url": "https://studio.code.org/s/csd3-2020/stage/1/puzzle/1/",
+      "key": "cs_in_entertainment",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cs_in_entertainment"
       }
     },
     {
@@ -16171,32 +16172,6 @@
       }
     },
     {
-      "name": "Drawing Shapes (Version B)",
-      "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
-      "key": "drawing_shapes_version_B",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_B"
-      }
-    },
-    {
-      "name": "Drawing Shapes (Version A)",
-      "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
-      "key": "drawing_shapes_version_A",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_A"
-      }
-    },
-    {
       "name": "Sample Shape Drawing",
       "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
       "key": "colored-shape-drawing",
@@ -16206,6 +16181,32 @@
       },
       "seeding_key": {
         "resource.key": "colored-shape-drawing"
+      }
+    },
+    {
+      "name": "Drawing Shapes (Version B)",
+      "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
+      "key": "drawing_shapes_version_b_",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "drawing_shapes_version_b_"
+      }
+    },
+    {
+      "name": "Drawing Shapes (Version A)",
+      "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
+      "key": "drawing_shapes_version_a_",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "drawing_shapes_version_a_"
       }
     },
     {
@@ -16666,27 +16667,27 @@
     {
       "name": "Collision Detection (Version B)",
       "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
-      "key": "collision-detection-version-B",
+      "key": "collision_detection_version_b_",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "collision-detection-version-B"
+        "resource.key": "collision_detection_version_b_"
       }
     },
     {
       "name": "Collision Detection (Version A)",
       "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
-      "key": "collision-detection-version-A",
+      "key": "collision_detection_version_a_",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "collision-detection-version-A"
+        "resource.key": "collision_detection_version_a_"
       }
     },
     {
@@ -16992,12 +16993,6 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs-in-entertainment- 2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
         "resource.key": "programming-for-entertainment"
       }
     },
@@ -17005,6 +17000,12 @@
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
         "resource.key": "cs-entertainment-activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "cs_in_entertainment"
       }
     },
     {
@@ -17022,19 +17023,19 @@
     {
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_B"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_A"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
         "resource.key": "colored-shape-drawing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "drawing_shapes_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "drawing_shapes_version_a_"
       }
     },
     {
@@ -17262,13 +17263,13 @@
     {
       "seeding_key": {
         "lesson.key": "Collision Detection",
-        "resource.key": "collision-detection-version-B"
+        "resource.key": "collision_detection_version_b_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collision Detection",
-        "resource.key": "collision-detection-version-A"
+        "resource.key": "collision_detection_version_a_"
       }
     },
     {
