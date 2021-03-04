@@ -87,7 +87,8 @@ const createStore = ({preload = false, allowHidden = true} = {}) => {
         studentCount: 4,
         code: 'TQGSJR',
         providerManaged: false,
-        stages: {}
+        stages: {},
+        tts_autoplay_enabled: false
       }
     };
     stages.forEach(stage => {
