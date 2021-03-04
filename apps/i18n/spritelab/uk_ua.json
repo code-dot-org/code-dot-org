@@ -83,5 +83,17 @@
   "didntMoveDown": "Ваш спрайт не рухався вниз.",
   "didntMoveLeft": "Ваш спрайт не рухався вліво.",
   "didntMoveRight": "Ваш спрайт не рухався вправо.",
-  "whenToWhile": "Ваш спрайт рухається у всіх напрямках, але не плавно. Змініть \"коли\" на \"поки\" у кожному блоці подій.\n <xml><xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">while</title><title name=\"KEY\">???</title></block></xml></xml>"
+  "whenToWhile": "Ваш спрайт рухається у всіх напрямках, але не плавно. Змініть \"коли\" на \"поки\" у кожному блоці подій.\n <xml><xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">while</title><title name=\"KEY\">???</title></block></xml></xml>",
+  "addPrompt": "Вам потрібно додати блок підказки до свого коду:\n <xml><block type=\"gamelab_setPrompt\"><value name=\"QUESTION\"><block type=\"text\" can_disconnect_from_parent=\"false\"><title name=\"TEXT\">...</title></block></value><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">???</title></block></value></block></xml>",
+  "answerPrompt": "Не забудьте написати щось у свою підказку!",
+  "addPrintBlock": "Вам потрібно додати блок друку до свого коду:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
+  "addJoinBlocks": "Ви друкуєте той самий текст, який ви ввели. Спробуйте додати якийсь інший текст, використовуючи блоки об’єднання. ",
+  "printMoreText": "Хороший початок. Продовжуйте додавати більше тексту, щоб закінчити рівень. ",
+  "addTitleScreen": "Вам треба додати заголовок до вашого проекту.",
+  "useColorVariable": "Використовуйте змінну, щоб встановити фоновий колір, коли на підказку буде запропоновано відповідь.",
+  "addSpaces": "У надрукованому повідомленні відсутні пробіли. Здогадаєтесь, куди їх додати?",
+  "noTitleScreen": "Заголовок не відображається. ",
+  "titleVariable": "У вашому заголовку не було тексту з підказки. ",
+  "noVarUse": "Вам потрібно використати змінну з вашої підказки в тексті, виведеному на екран.",
+  "addText": "Додайте текст на екран за допомогою блоку друку:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>"
 }

@@ -550,6 +550,7 @@
   "lessAllCaps": "បង្ហាញ​តិច",
   "lessonName": "ឈ្មោះមេរៀន",
   "lessonNumbered": "មេរៀន {lessonNumber}: {lessonName}",
+  "lessonPlans": "ផែនការ​មេរៀន",
   "levelDetails": "សេចក្ដី​លម្អិតនៃ​កម្រិត",
   "levelIncompleteError": "អ្នក​កំពុង​ប្រើ​ប្រភេទ​ប្លុក​សំខាន់ៗ​ទាំង​អស់ ប៉ុន្តែ​មិន​ត្រឹមត្រូវ​នោះ​ទេ។",
   "levelN": "កម្រិត {levelNumber}",

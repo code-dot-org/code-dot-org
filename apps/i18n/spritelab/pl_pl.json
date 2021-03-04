@@ -90,5 +90,17 @@
   "didntMoveDown": "Twój duszek nie ruszył na dół.",
   "didntMoveLeft": "Twój duszek nie ruszył w lewo.",
   "didntMoveRight": "Twój duszek nie ruszył w prawo.",
-  "whenToWhile": "Twój duszek porusza się we wszystkich kierunkach, ale nie płynnie. Zmień „kiedy” na „dopóki” w każdym bloku zdarzeń. \n <xml><xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">dopóki</title><title name=\"KEY\">???</title></block></xml></xml>"
+  "whenToWhile": "Twój duszek porusza się we wszystkich kierunkach, ale nie płynnie. Zmień „kiedy” na „dopóki” w każdym bloku zdarzeń. \n <xml><xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">dopóki</title><title name=\"KEY\">???</title></block></xml></xml>",
+  "addPrompt": "Musisz dodać blok zachęty do swojego kodu: \n <xml><block type=\"gamelab_setPrompt\"><value name=\"QUESTION\"><block type=\"text\" can_disconnect_from_parent=\"false\"><title name=\"TEXT\">...</title></block></value><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">???</title></block></value></block></xml>",
+  "answerPrompt": "Nie zapomnij wpisać czegoś w swoim monicie! ",
+  "addPrintBlock": "Musisz dodać blok drukowania do swojego kodu: \n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
+  "printMoreText": "To dobry początek. Dodawaj więcej tekstu, aby ukończyć ten poziom. ",
+  "addTitleScreen": "Musisz dodać ekran tytułowy do swojego projektu. ",
+  "useColorVariable": "Użyj zmiennej, aby ustawić kolor tła, gdy zostanie udzielona odpowiedź na monit. ",
+  "addSpaces": "W drukowanej wiadomości brakuje niektórych spacji. Czy możesz wskazać, gdzie je dodać? ",
+  "noTitleScreen": "Nie został wyświetlony ekran tytułowy. ",
+  "titleVariable": "Twój ekran tytułowy nie zawierał tekstu z monitu. ",
+  "subtitleVariable": "Podtytuł Twojego ekranu tytułowego nie zawierał tekstu z monitu. ",
+  "noVarUse": "Musisz użyć zmiennej z Twojego znaku zachęty w tekście, który umieścisz na ekranie. ",
+  "addText": "Dodaj tekst do ekranu za pomocą bloku do drukowania: \n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>"
 }

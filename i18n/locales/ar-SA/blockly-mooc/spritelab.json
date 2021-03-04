@@ -1,5 +1,20 @@
 {
+  "clicked": "منقور",
+  "clickedSprite": "العنصر الرسومي المنقور",
+  "new": "جديد",
+  "newSprite": "عنصر رسومي جديد",
+  "subject": "الموضوع",
+  "subjectSprite": "موضوع العنصر الرسومي",
+  "object": "عنصر",
+  "objectSprite": "جسم العنصر الرسومي",
+  "reinfFeedbackMsg": "لقد انتهيت! اضغط \"استمرار\" للانتقال للمرحلة التالية.",
   "shareGame": "شارك لعبتك:",
+  "spritelabFeedbackCreateFishWithBehavior": "عليك أن تستخدم عنصر رسومي واحد علآ الأقل على شكل سمكة و إعطائه سلوك",
+  "spritelabFeedbackMoveFishLeftRight": "على العنصر الرسومي بشكل السمكة أن يتحرك لليمين أو اليسار. حاول أن تغير سلوكه.",
+  "spritelabFeedbackChangeBackgroundColor": "عليك أن تقوم بتغيير الخلفية لشيء غير اللون الأبيض.",
+  "spritelabFeedbackCreateTwoSprites": "عليك أن تنشئ عنصرين رسوميين بالضبط.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "على العنصرين الرسوميين أن يكون لهما زيّ مختلف.",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "عليك أن تنشئ عنصرين رسوميين لكل منهما زي مختلف و لكل منهما أيضاً سلوك.",
   "spritelabFeedbackCreateThreeAliens": "أنت تحتاج أن تنشئ فضائي أزرق و فضائي وردي و و فضائي أصفر.",
   "spritelabFeedbackAliensNotInLine": "شخصياتك الثلاثة تحتاج أن تكون مرتبة بشكل عمودي (بمسافة 50 بكسل). ",
   "spritelabFeedbackYellowAlienBehavior": "الفضائي الأزرق لم يبدأ بالعمل.",
@@ -18,5 +33,8 @@
   "outbreakCostumeTab": "انقر فوق علامة التبويب \"الملابس\" أعلى منطقة اللعب لإضافة زي جديد للوحوش إلى مشروعك.",
   "outbreakUseCostume": "لم يظهر زي الوحش الجديد في المحاكاة. انقر فوق المصباح إذا كنت ترغب في الحصول على تنويه.",
   "outbreakReplaySuccess": "تأكد من إعادة تشغيل المحاكاة عدة مرات قبل المتابعة!",
-  "outbreakSuccess": "لقد أنهيت المستوى. عندما تكون جاهزًا للتحدي التالي، اضغط على متابعة."
+  "outbreakSuccess": "لقد أنهيت المستوى. عندما تكون جاهزًا للتحدي التالي، اضغط على متابعة.",
+  "debugMovement": "لم يتحرك العنصر الرسومي.",
+  "moreSprites": "تحتاج لعمل رسومات أكثر.",
+  "tooManySprites": "كان لديك الكثير من الرسومات. قم بعمل الرسومات التي تحتاجها فقط وفق التعليمات الواردة أعلاه."
 }
