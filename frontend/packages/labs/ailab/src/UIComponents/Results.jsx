@@ -8,7 +8,7 @@ import {
   getSummaryStat,
   setResultsPhase
 } from "../redux";
-import { styles, MLTypes } from "../constants";
+import { styles } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import ResultsTable from "./ResultsTable";
