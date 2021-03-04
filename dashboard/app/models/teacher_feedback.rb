@@ -14,9 +14,10 @@
 #  student_visit_count      :integer
 #  student_first_visited_at :datetime
 #  student_last_visited_at  :datetime
-#  script_level_id          :integer          not null
+#  script_level_id          :integer
 #  seen_on_feedback_page_at :datetime
 #  script_id                :integer          not null
+#  analytics_section_id     :integer
 #
 # Indexes
 #
@@ -26,19 +27,28 @@
 
 class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
-  validates_presence_of :student_id, :script_id, :level_id, :teacher_id, :script_level_id, unless: :deleted?
+  validates_presence_of :student_id, :script_id, :level_id, :teacher_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :script
   belongs_to :level
   belongs_to :script_level
   belongs_to :teacher, class_name: 'User'
-  validate :validate_script_and_script_level, on: :create
 
-  def validate_script_and_script_level
-    if script_level.script_id != script_id
-      errors.add(:script_id, 'script_id does not match script_level.script_id')
-    end
+  # Finds the script level associated with this object, using script id and
+  # level id.
+  def get_script_level
+    script_level = level.script_levels.find {|sl| sl.script_id == script_id}
+    return script_level if script_level
+
+    # This will be somewhat expensive, but will only be executed for feedbacks
+    # which were are associated with a Bubble Choice sublevel.
+    bubble_choice_levels = script.levels.where(type: 'BubbleChoice').all
+    parent_level = bubble_choice_levels.find {|bc| bc.sublevels.include?(level)}
+
+    script_level = parent_level.script_levels.find {|sl| sl.script_id == script_id}
+    raise "no script level found for teacher feedback #{id}" unless script_level
+    script_level
   end
 
   def self.get_student_level_feedback(student_id, level_id, teacher_id)

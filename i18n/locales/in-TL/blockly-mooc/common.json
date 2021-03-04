@@ -1223,6 +1223,8 @@
   "notApplicable": "crwdns1145464:0crwdne1145464:0",
   "notCompleted": "crwdns2290791:0crwdne2290791:0",
   "notSaved": "crwdns991148:0crwdne991148:0",
+  "notSignedInHeader": "crwdns2481440:0crwdne2481440:0",
+  "notSignedInBody": "crwdns2481442:0crwdne2481442:0",
   "notStarted": "crwdns88392:0crwdne88392:0",
   "nPoints": "crwdns79096:0numPoints={numPoints}crwdne79096:0",
   "numMatchCorrect": "crwdns774992:0crwdne774992:0",

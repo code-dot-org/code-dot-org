@@ -1022,6 +1022,40 @@
               "length": "panjang"
             }
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
         }
       }
     }

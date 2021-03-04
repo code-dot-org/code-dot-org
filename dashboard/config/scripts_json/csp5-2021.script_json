@@ -18,6 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 16:59:21 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -639,7 +640,6 @@
       "key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97",
@@ -691,19 +691,6 @@
       }
     },
     {
-      "key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373",
-        "lesson.key": "Lists Investigate",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "5beb0da0-34dd-484b-a002-0810398c6439",
       "position": 1,
       "properties": {
@@ -749,7 +736,6 @@
       "key": "1cc00f11-2df2-4262-ab47-e319e4f663ef",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "1cc00f11-2df2-4262-ab47-e319e4f663ef",
@@ -801,19 +787,6 @@
       }
     },
     {
-      "key": "adaff8cf-1e83-4216-9096-52da35a4090f",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "adaff8cf-1e83-4216-9096-52da35a4090f",
-        "lesson.key": "Lists Make",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "0c3a2eb5-b1ca-4f7f-a9d7-860e397a713d",
       "position": 1,
       "properties": {
@@ -859,7 +832,6 @@
       "key": "24256e70-e392-49e8-a571-6bfb91738b6c",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "24256e70-e392-49e8-a571-6bfb91738b6c",
@@ -914,7 +886,6 @@
       "key": "14a84aad-343a-4889-9683-1903951f99b9",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9",
@@ -969,7 +940,6 @@
       "key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
@@ -1015,19 +985,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "b9b4559f-0922-4a34-a4dc-86186ddcd7c3",
-        "lesson.key": "Loops Make",
-        "lesson_group.key": "csp_loops",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "key": "da5a3225-29c3-4e96-ac8f-2ed1fbcae8bb",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "da5a3225-29c3-4e96-ac8f-2ed1fbcae8bb",
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021"
@@ -1246,8 +1203,7 @@
       "key": "cd12a374-9ef8-485d-ae5f-3371ac6109c8",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cd12a374-9ef8-485d-ae5f-3371ac6109c8",
@@ -1285,24 +1241,10 @@
       }
     },
     {
-      "key": "59296832-c558-4db6-9ab5-1e0089945ea1",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "59296832-c558-4db6-9ab5-1e0089945ea1",
-        "lesson.key": "Semester Hackathon Part 2",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "c293f5df-d64f-48aa-8930-010ba39fa27f",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c293f5df-d64f-48aa-8930-010ba39fa27f",
@@ -1340,24 +1282,10 @@
       }
     },
     {
-      "key": "ea0dbbb0-c549-4732-a335-65dde1340839",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ea0dbbb0-c549-4732-a335-65dde1340839",
-        "lesson.key": "Semester Hackathon Part 3",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "fd43ae7b-1922-4049-a928-e3b058a7e0e9",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "fd43ae7b-1922-4049-a928-e3b058a7e0e9",
@@ -1389,19 +1317,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "facd910b-5ce0-44fa-89d3-ed18edc9f9de",
-        "lesson.key": "Semester Hackathon Part 4",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "key": "e7cbc1af-ea4f-4ea4-9816-43f4779f936e",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e7cbc1af-ea4f-4ea4-9816-43f4779f936e",
         "lesson.key": "Semester Hackathon Part 4",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021"
@@ -1449,19 +1364,6 @@
       }
     },
     {
-      "key": "a0227e3f-e2ef-4bdd-bec2-286ad0c30926",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a0227e3f-e2ef-4bdd-bec2-286ad0c30926",
-        "lesson.key": "Semester Hackathon Part 5",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
       "key": "656d61c3-6f76-49af-b1a6-11c3151f8d16",
       "position": 1,
       "properties": {
@@ -1488,19 +1390,6 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021"
       }
-    },
-    {
-      "key": "4c6e3b02-fc86-4e36-b08f-1b364b76f477",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4c6e3b02-fc86-4e36-b08f-1b364b76f477",
-        "lesson.key": "Lesson 18: Assessment Day",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp5-2021"
-      }
     }
   ],
   "activity_sections": [
@@ -1508,7 +1397,7 @@
       "key": "cd2244da-6c7b-4f9d-8f4f-4a8c64f8874e",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** With a partner, brainstorm lists of information that you encounter on a daily basis. Why are lists useful?",
+        "description": "[slide] \n **Discuss:** *With a partner, brainstorm lists of information that you encounter on a daily basis. Why are lists useful?*",
         "name": "Preview Lists\r"
       },
       "seeding_key": {
@@ -1520,14 +1409,7 @@
       "key": "ad81ee6a-1ae7-4fa4-a08e-6475f2e1b2d9",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students discuss with a partner and then have a few students share out their responses.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goal:** \r\n\r\n* Lists help us group together like information\r\n* We can go through a list item by item to check off things we have completed\r\n* Lists help us stay organized\r\n\r\n"
-          }
-        ]
+        "description": "Have students discuss with a partner and then have a few students share out their responses.\n\n**Discussion Goal:** \n\n* Lists help us group together like information\n* We can go through a list item by item to check off things we have completed\n* Lists help us stay organized\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ad81ee6a-1ae7-4fa4-a08e-6475f2e1b2d9",
@@ -1547,38 +1429,39 @@
       }
     },
     {
-      "key": "ee21799f-e0f9-4836-98de-42e56c50b129",
+      "key": "8f0c877c-20b1-491d-bdfb-b9ee9a5926eb",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Video:** As a class watch both videos on lists. \r\n\r\n\r\n[slide] \r\n**Do This:** Review Key Takeaways and have students add to their journals: lists, element, and index.\r\n\r\n---",
-        "name": "Video and Vocabulary\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "ee21799f-e0f9-4836-98de-42e56c50b129",
-        "lesson_activity.key": "86b6aeb8-b8db-4c5e-8562-7428898febbf"
-      }
-    },
-    {
-      "key": "f1fb9fbc-9d59-4944-9c97-1c7900bee919",
-      "position": 2,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match the index with the value. `var myNumbers = [32, 64, 33, 0, 15, 26, 3]`",
-        "name": "Assessment: Check For Understanding\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "f1fb9fbc-9d59-4944-9c97-1c7900bee919",
-        "lesson_activity.key": "86b6aeb8-b8db-4c5e-8562-7428898febbf"
-      }
-    },
-    {
-      "key": "45e799b2-8b70-49e3-8e7a-f8ee7d130c42",
-      "position": 1,
-      "properties": {
-        "name": "Introduction to Lists",
+        "name": "Video and Vocabulary\r",
+        "description": "[slide] \n **Video:** As a class watch both videos on lists. \n\n\n[slide] \n**Do This:** Review Key Takeaways and have students add to their journals: lists, element, and index.\n\n",
         "progression_name": "Introduction to Lists"
       },
       "seeding_key": {
-        "activity_section.key": "45e799b2-8b70-49e3-8e7a-f8ee7d130c42",
+        "activity_section.key": "8f0c877c-20b1-491d-bdfb-b9ee9a5926eb",
+        "lesson_activity.key": "86b6aeb8-b8db-4c5e-8562-7428898febbf"
+      }
+    },
+    {
+      "key": "e6212f87-4424-4c61-a1ac-0a902ec946eb",
+      "position": 2,
+      "properties": {
+        "description": "---",
+        "progression_name": "Introduction to Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6212f87-4424-4c61-a1ac-0a902ec946eb",
+        "lesson_activity.key": "86b6aeb8-b8db-4c5e-8562-7428898febbf"
+      }
+    },
+    {
+      "key": "7fc53cdc-7b56-4a7b-9074-9e00c3175296",
+      "position": 1,
+      "properties": {
+        "name": "Assessment: Check For Understanding\r",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match the index with the value. `var myNumbers = [32, 64, 33, 0, 15, 26, 3]`"
+      },
+      "seeding_key": {
+        "activity_section.key": "7fc53cdc-7b56-4a7b-9074-9e00c3175296",
         "lesson_activity.key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97"
       }
     },
@@ -1586,7 +1469,6 @@
       "key": "8fee2296-7332-439a-931d-cbb357a0bb76",
       "position": 2,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1598,13 +1480,7 @@
       "key": "22844107-66ce-4b99-b711-0844a7a2f9d3",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** What are some similarities and differences between variables and lists? How does a list manage complexity in a program?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goal:** Students may bring up the following points:\r\n\r\n* Both are used to store information\r\n* Lists store multiple items, but variables only store one\r\n* When written in Javascript, both start with the keyword var\r\n* Lists are written with square brackets around them \r\n* Lists can store many different types of data\r\n\r\nManaging complexity:\r\n\r\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\r\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide] \n **Discuss:** *What are some similarities and differences between variables and lists? How does a list manage complexity in a program?*\n\n**Discussion Goal:** Students may bring up the following points:\n\n* Both are used to store information\n* Lists store multiple items, but variables only store one\n* When written in Javascript, both start with the keyword var\n* Lists are written with square brackets around them \n* Lists can store many different types of data\n\nManaging complexity:\n\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "22844107-66ce-4b99-b711-0844a7a2f9d3",
@@ -1612,11 +1488,11 @@
       }
     },
     {
-      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
+      "key": "a2686ced-42c1-4d9d-aab6-d15f823407a7",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n**Level 2 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n**Group:** Place students in pairs.\r\n\r\n[slide] \r\n **Levels 3 - 4: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\r\n\r\n\r\n[slide] \r\n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.",
-        "name": "Accessing Lists - 20 mins\r",
+        "name": "Accessing Lists",
+        "duration": "20",
         "tips": [
           {
             "type": "teachingTip",
@@ -1625,15 +1501,37 @@
         ]
       },
       "seeding_key": {
+        "activity_section.key": "a2686ced-42c1-4d9d-aab6-d15f823407a7",
+        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
+      }
+    },
+    {
+      "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
+      "position": 2,
+      "properties": {
+        "description": "[slide] \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n[slide] \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n[slide] \n **Discuss:** *Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.*"
+      },
+      "seeding_key": {
         "activity_section.key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
         "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
       }
     },
     {
-      "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
-      "position": 2,
+      "key": "f5bbc83d-7b11-4ec2-a767-4835b7842920",
+      "position": 3,
       "properties": {
-        "description": "[slide] \r\n **Level 5 - Video:** Show the video explaining how to determine the length of a list. \r\n\r\n\r\n[slide] \r\n **Levels 6 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\r\n\r\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.",
+        "progression_name": "Accessing Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920",
+        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
+      }
+    },
+    {
+      "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
+      "position": 4,
+      "properties": {
+        "description": "[slide] \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n[slide] \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** *Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.*",
         "name": "Changing Lists\r"
       },
       "seeding_key": {
@@ -1642,8 +1540,19 @@
       }
     },
     {
+      "key": "3a855513-f086-4945-8d20-3e097a32f4cb",
+      "position": 5,
+      "properties": {
+        "progression_name": "Changing Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb",
+        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
+      }
+    },
+    {
       "key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "If there is time remaining, have pairs return to one or more of the apps and make the suggested modifications.",
         "name": "Modify Apps\r"
@@ -1657,7 +1566,7 @@
       "key": "830879c3-3038-4920-992e-185f705b5a11",
       "position": 1,
       "properties": {
-        "description": "**Levels 7-8:** Review the patterns in these levels as a class.\r\n\r\n* Have students add any relevant notes about the patterns to their journals.\r\n* Discuss which of the three apps you think were using which pattern.",
+        "description": "**Levels 6-7:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which of the three apps you think were using which pattern.",
         "name": "Patterns Review\r"
       },
       "seeding_key": {
@@ -1666,16 +1575,21 @@
       }
     },
     {
-      "key": "352086b2-e0d2-4ef8-a188-410cbaa1c5fb",
+      "key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49",
       "position": 2,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\r\n\r\n"
-          }
-        ],
+        "progression_name": "List Patterns"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49",
+        "lesson_activity.key": "000523bf-2e1f-477c-b7ae-e62cfd34498e"
+      }
+    },
+    {
+      "key": "352086b2-e0d2-4ef8-a188-410cbaa1c5fb",
+      "position": 3,
+      "properties": {
+        "description": "[slide] \n **Discuss:** *What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?*\n\n**Discussion Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\n\n",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -1685,49 +1599,13 @@
     },
     {
       "key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "**Discuss:** Have students write in their journals, then share with a neighbor, then finally discuss as a class."
+        "description": "Have students write in their journals, then share with a neighbor, then finally discuss as a class."
       },
       "seeding_key": {
         "activity_section.key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
         "lesson_activity.key": "000523bf-2e1f-477c-b7ae-e62cfd34498e"
-      }
-    },
-    {
-      "key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1",
-      "position": 1,
-      "properties": {
-        "name": "Accessing Lists",
-        "progression_name": "Accessing Lists"
-      },
-      "seeding_key": {
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1",
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373"
-      }
-    },
-    {
-      "key": "36252583-6c0a-4461-83c5-4514685b17cd",
-      "position": 2,
-      "properties": {
-        "name": "Changing Lists",
-        "progression_name": "Changing Lists"
-      },
-      "seeding_key": {
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd",
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373"
-      }
-    },
-    {
-      "key": "cc12032e-46ff-4ced-b428-7780d258e212",
-      "position": 3,
-      "properties": {
-        "name": "List Patterns",
-        "progression_name": "List Patterns"
-      },
-      "seeding_key": {
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212",
-        "lesson_activity.key": "bfb4f5fa-3360-477c-b0a7-03e37e07c373"
       }
     },
     {
@@ -1757,8 +1635,13 @@
       "key": "9cbdf6df-cd26-4e34-acc9-1f5bef3efcaf",
       "position": 1,
       "properties": {
-        "remarks": true,
-        "name": "Practice Time\r"
+        "name": "Practice Time\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n\n**Common Errors:** The following are common errors students may encounter in this lesson:\n\n* The last index in a list is at `list.length-1` because the first index is 0. One of the most common errors with lists, therefore, is trying to access indexes that are out of bounds, most notably `list.length`,\n* Syntax errors are common with lists, as the bracket notation is new. Encourage students to use the blocks to help if they need.\n* When using the patterns students may become overly reliant on simply copying and pasting without thinking through what the code from the patterns does. They may reference variables that don't exist in their program, for example, because it is in the example code of the pattern.\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9cbdf6df-cd26-4e34-acc9-1f5bef3efcaf",
@@ -1777,44 +1660,26 @@
       }
     },
     {
-      "key": "e817bc80-dc78-4d39-9a05-682e452555d6",
+      "key": "aa841a81-4b3c-477e-89d1-d4afe03761d8",
       "position": 3,
       "properties": {
-        "description": "** Levels 2-3 Setting Up Lists:** These levels involve setting up a list and printing the list to the console",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n\r\n**Common Errors:** The following are common errors students may encounter in this lesson:\r\n\r\n* The last index in a list is at `list.length-1` because the first index is 0. One of the most common errors with lists, therefore, is trying to access indexes that are out of bounds, most notably `list.length`,\r\n* Syntax errors are common with lists, as the bracket notation is new. Encourage students to use the blocks to help if they need.\r\n* When using the patterns students may become overly reliant on simply copying and pasting without thinking through what the code from the patterns does. They may reference variables that don't exist in their program, for example, because it is in the example code of the pattern.\r\n\r\n"
-          }
-        ]
+        "progression_name": "Setting up Lists",
+        "description": "**Levels 1-2 Setting Up Lists:** These levels involve setting up a list and printing the list to the console\n\n* Level 1: a list of numbers\n* Level 2: a list of strings"
       },
       "seeding_key": {
-        "activity_section.key": "e817bc80-dc78-4d39-9a05-682e452555d6",
-        "lesson_activity.key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c"
-      }
-    },
-    {
-      "key": "a3a02118-9087-4b06-80b5-3f443aee274b",
-      "position": 4,
-      "properties": {
-        "description": "* Level 2: a list of numbers\r\n* Level 3: a list of strings"
-      },
-      "seeding_key": {
-        "activity_section.key": "a3a02118-9087-4b06-80b5-3f443aee274b",
+        "activity_section.key": "aa841a81-4b3c-477e-89d1-d4afe03761d8",
         "lesson_activity.key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c"
       }
     },
     {
       "key": "ae3b2394-6868-449e-b5dc-ca21adac89e6",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "**Levels 4-6 Accessing Elements in a List:** Students practice accessing elements in a list using the index. These levels also practice the random list access and list scrolling pattern students saw in the Investigate lesson.",
+        "description": "**Levels 3-5 Accessing Elements in a List:** Students practice accessing elements in a list using the index. These levels also practice the random list access and list scrolling pattern students saw in the Investigate lesson.\n\n* Levels 3: Students practice printing specific elements to the console using bracket notation, as in `myList[1]`.\n* Level 4: Students build a \"Magic 8 Ball\" app that uses the Random List access pattern.\n* Level 5: Students build a \"Class Schedule\" app that uses the List Scrolling pattern.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Extension Opportunities:**\r\n\r\n* Level 6: Ask students to add the ability to add new classes to the list in the Class Schedule app.\r\n* Level 10: Ask students to add the ability to remove items in the Food Diary app\r\n* Level 12: Ask students to add a button that will \"Undo\" adding the most recent song to the list. This is pretty tricky and requires keeping track of some new information."
+            "markdown": "**Extension Opportunities:**\n\n* Level 5: Ask students to add the ability to add new classes to the list in the Class Schedule app.\n* Level 9: Ask students to add the ability to remove items in the Food Diary app\n* Level 11: Ask students to add a button that will \"Undo\" adding the most recent song to the list. This is pretty tricky and requires keeping track of some new information."
           }
         ]
       },
@@ -1824,13 +1689,57 @@
       }
     },
     {
-      "key": "0f8ffe8e-1a03-48d4-a0b9-59f0a644798f",
+      "key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Accessing Elements in a List"
+      },
+      "seeding_key": {
+        "activity_section.key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c",
+        "lesson_activity.key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c"
+      }
+    },
+    {
+      "key": "4f5909ab-6251-4966-a01c-faa1307de605",
       "position": 6,
       "properties": {
-        "description": "* Levels 4: Students practice printing specific elements to the console using bracket notation, as in `myList[1]`.\r\n* Level 5: Students build a \"Magic 8 Ball\" app that uses the Random List access pattern.\r\n* Level 6: Students build a \"Class Schedule\" app that uses the List Scrolling pattern.\r\n\r\n**Levels 7 Strings and Indexes:** Students practice accessing elements in a list\r\n\r\n* Levels 7: Students practice printing the length and first characters of strings\r\n* Level 8: Students debug code that uses `string.substring()` to grab different parts of a date stored as a string.\r\n\r\n**Levels 9-12 List Operations:** In these levels, students work with list operations: `appendItem()`, `removeItem()`, and `insertItem()`\r\n\r\n* Level 9: Students practice using `appendItem` to increase the size of a list\r\n* Level 10: Students modify a \"Food Diary\" app so that the user can add new elements to a list\r\n* Level 11: Students practice using `removeItem` and `insertItem` to modify lists\r\n* Level 12: Students modify a \"Top Ten Songs\" app so that the user can add new items into the middle of a list while keeping the total length of the list to 10."
+        "description": "\n\n**Levels 6 Strings and Indexes:** Students practice accessing elements in a list\n\n* Levels 6: Students practice printing the length and first characters of strings\n* Level 7: Students debug code that uses `string.substring()` to grab different parts of a date stored as a string.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f5909ab-6251-4966-a01c-faa1307de605",
+        "lesson_activity.key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c"
+      }
+    },
+    {
+      "key": "88839953-6cad-4514-8791-d8c632134ecd",
+      "position": 7,
+      "properties": {
+        "progression_name": "Strings and Indexes"
+      },
+      "seeding_key": {
+        "activity_section.key": "88839953-6cad-4514-8791-d8c632134ecd",
+        "lesson_activity.key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c"
+      }
+    },
+    {
+      "key": "0f8ffe8e-1a03-48d4-a0b9-59f0a644798f",
+      "position": 8,
+      "properties": {
+        "description": "\n**Levels 8-11 List Operations:** In these levels, students work with list operations: `appendItem()`, `removeItem()`, and `insertItem()`\n\n* Level 8: Students practice using `appendItem` to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using `removeItem` and `insertItem` to modify lists\n* Level 11: Students modify a \"Top Ten Songs\" app so that the user can add new items into the middle of a list while keeping the total length of the list to 10."
       },
       "seeding_key": {
         "activity_section.key": "0f8ffe8e-1a03-48d4-a0b9-59f0a644798f",
+        "lesson_activity.key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c"
+      }
+    },
+    {
+      "key": "6ffa2301-4b15-4907-a650-6be51d019ef7",
+      "position": 9,
+      "properties": {
+        "progression_name": "List Operations"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7",
         "lesson_activity.key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c"
       }
     },
@@ -1849,7 +1758,7 @@
       "key": "9ec7080a-013e-438a-9154-8450fbd6548f",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r"
+        "description": "**Discuss:** *What aspects of working with lists do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n[slide]  **Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9ec7080a-013e-438a-9154-8450fbd6548f",
@@ -1857,19 +1766,8 @@
       }
     },
     {
-      "key": "78e9d9ce-7675-49d1-ba49-a74eadc9e49f",
-      "position": 3,
-      "properties": {
-        "description": "**Prompt:** What aspects of working with lists do you feel like clicked today? What do you still feel like you have trouble with?\r\n\r\n**Discuss:** Have students share with one another before sharing with the whole class."
-      },
-      "seeding_key": {
-        "activity_section.key": "78e9d9ce-7675-49d1-ba49-a74eadc9e49f",
-        "lesson_activity.key": "b8ca9667-3fb0-44c1-9959-4a2626da517b"
-      }
-    },
-    {
       "key": "db4bb20a-eda1-4ad1-9e16-aff291fb0320",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Working with lists can be tricky - especially working with the index. We will get more practice tomorrow by making an app that uses lists to store information.",
         "remarks": true
@@ -1881,7 +1779,7 @@
     },
     {
       "key": "01fa78a2-f4c9-4455-ba00-d3a63ff0e0f6",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -1892,7 +1790,7 @@
     },
     {
       "key": "8e977ea5-0f1d-4cd2-b622-67177f825e70",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What will be displayed after this code segment is run?\n\n\n![](https://images.code.org/2a4918a1c74eca136db3289e40fa41c1-image-1611869457888.png)\n\n**Question:** What will be displayed after this code segment is run?\n\n![](https://images.code.org/7eeb1819a86373ee190fa7f2909643aa-image-1611869457893.png)",
         "name": "Assessment: Check For Understanding: AP Practice\r"
@@ -1903,58 +1801,9 @@
       }
     },
     {
-      "key": "bfe39771-97de-4ad7-b27d-25a0bba951eb",
+      "key": "9251b08c-8d1b-499f-a75b-906208011f1c",
       "position": 1,
       "properties": {
-        "name": "Setting up Lists",
-        "progression_name": "Setting up Lists"
-      },
-      "seeding_key": {
-        "activity_section.key": "bfe39771-97de-4ad7-b27d-25a0bba951eb",
-        "lesson_activity.key": "1cc00f11-2df2-4262-ab47-e319e4f663ef"
-      }
-    },
-    {
-      "key": "09e8a6ba-8592-4795-a709-d2f04920ffd5",
-      "position": 2,
-      "properties": {
-        "name": "Accessing Elements in a List",
-        "progression_name": "Accessing Elements in a List"
-      },
-      "seeding_key": {
-        "activity_section.key": "09e8a6ba-8592-4795-a709-d2f04920ffd5",
-        "lesson_activity.key": "1cc00f11-2df2-4262-ab47-e319e4f663ef"
-      }
-    },
-    {
-      "key": "3e25eacf-63d7-4fdb-971e-ddceb8e2de40",
-      "position": 3,
-      "properties": {
-        "name": "Strings and Indexes",
-        "progression_name": "Strings and Indexes"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e25eacf-63d7-4fdb-971e-ddceb8e2de40",
-        "lesson_activity.key": "1cc00f11-2df2-4262-ab47-e319e4f663ef"
-      }
-    },
-    {
-      "key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661",
-      "position": 4,
-      "properties": {
-        "name": "List Operations",
-        "progression_name": "List Operations"
-      },
-      "seeding_key": {
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661",
-        "lesson_activity.key": "1cc00f11-2df2-4262-ab47-e319e4f663ef"
-      }
-    },
-    {
-      "key": "9251b08c-8d1b-499f-a75b-906208011f1c",
-      "position": 5,
-      "properties": {
-        "name": "Check For Understanding: AP Practice",
         "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
@@ -1963,27 +1812,10 @@
       }
     },
     {
-      "key": "6f05e922-7025-4425-aaab-ddbee92aa998",
+      "key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goal:** Students may struggle with this question. It's ok if they don't get it right away. The goal is to prime their thinking before they look at the sample app. \r\n\r\n**Sample Answer:** The reminders could be stored in a list. \r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6f05e922-7025-4425-aaab-ddbee92aa998",
-        "lesson_activity.key": "0b996b04-98b6-48dc-b683-78b3ca018ca5"
-      }
-    },
-    {
-      "key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
-      "position": 2,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** Imagine you want to build an app for reminders. What information do you think would be stored in a list?"
+        "description": "[slide] **Discuss:** *Imagine you want to build an app for reminders. What information do you think would be stored in a list?*\n\n**Discussion Goal:** Students may struggle with this question. It's ok if they don't get it right away. The goal is to prime their thinking before they look at the sample app. \n\n**Sample Answer:** The reminders could be stored in a list. "
       },
       "seeding_key": {
         "activity_section.key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
@@ -1992,7 +1824,7 @@
     },
     {
       "key": "8be065f0-192d-452e-bbcb-a393bac606ad",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "For the past few days, we've learned a lot about using lists to help apps keep track of information. In today's Make Project you'll be practicing using lists and programming patterns with lists to create a functioning Reminders app.",
         "remarks": true
@@ -2003,11 +1835,28 @@
       }
     },
     {
-      "key": "9273ec78-0697-4097-856c-59812c508e70",
+      "key": "25b606e9-fe98-4b4b-a55f-442c709f1393",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Reminder App in Level 2.",
-        "name": "Build the Reminder App\r"
+        "name": "Build the Reminder App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \n\n**Debugging:** Review with students steps they can use to debug if they get stuck:\n\n* Run the code on turtle mode\n* Add the variables to the watcher\n* Explain the code to a friend\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "25b606e9-fe98-4b4b-a55f-442c709f1393",
+        "lesson_activity.key": "21da5ec7-42ae-47e5-bf21-4918a884bc33"
+      }
+    },
+    {
+      "key": "9273ec78-0697-4097-856c-59812c508e70",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n[slide] **Do This:** Have students explore the working Reminder App in Level 1.",
+        "progression_name": "Try the Reminders App"
       },
       "seeding_key": {
         "activity_section.key": "9273ec78-0697-4097-856c-59812c508e70",
@@ -2015,27 +1864,10 @@
       }
     },
     {
-      "key": "b4f9780a-49ae-4508-8c5c-f27a51bc414f",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "* How many lists do you think are needed to make this app work?\r\n\t* Only one list is needed. It stores all of the reminders.\r\n\r\n* What programming patterns with lists do you think you'll need to use? \r\n\t* This app uses the List Scrolling pattern. \r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b4f9780a-49ae-4508-8c5c-f27a51bc414f",
-        "lesson_activity.key": "21da5ec7-42ae-47e5-bf21-4918a884bc33"
-      }
-    },
-    {
       "key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
       "position": 3,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\r\n\r\n* How many lists do you think are needed to make this app work?\r\n* What programming patterns with lists do you think you'll need to use?"
+        "description": "If students are not working in pairs they should still discuss the discuss with a neighbor.\n\n[slide] **Discuss:** \n\n\n* *How many lists do you think are needed to make this app work?*\n\t* Only one list is needed. It stores all of the reminders.\n\n* *What programming patterns with lists do you think you'll need to use?* \n\t* This app uses the List Scrolling pattern. \n"
       },
       "seeding_key": {
         "activity_section.key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
@@ -2043,25 +1875,8 @@
       }
     },
     {
-      "key": "1e0cba9e-ac6b-4741-a01e-88743cb1c611",
-      "position": 4,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \r\n\r\n**Debugging:** Review with students steps they can use to debug if they get stuck:\r\n\r\n* Run the code on turtle mode\r\n* Add the variables to the watcher\r\n* Explain the code to a friend\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "1e0cba9e-ac6b-4741-a01e-88743cb1c611",
-        "lesson_activity.key": "21da5ec7-42ae-47e5-bf21-4918a884bc33"
-      }
-    },
-    {
       "key": "61b383a7-cc8e-4670-9847-4471c2b18d0b",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "Now let's build the this app. The screen has been set up for you - it's your job to add the code!",
         "remarks": true
@@ -2073,9 +1888,10 @@
     },
     {
       "key": "51b7dc7c-028b-462f-9d01-b0d2dce3a4eb",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Reminder App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "[slide] **Do This:** Direct students to level three where they complete the Reminder App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Reminders App"
       },
       "seeding_key": {
         "activity_section.key": "51b7dc7c-028b-462f-9d01-b0d2dce3a4eb",
@@ -2083,32 +1899,30 @@
       }
     },
     {
-      "key": "d9315a06-771e-404d-b162-6f267de80d78",
+      "key": "8d6d0bc3-61f3-4400-9b41-80a6e6017b21",
       "position": 1,
       "properties": {
-        "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \r\n\r\n"
+            "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \n\n"
           }
-        ],
-        "remarks": true
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "d9315a06-771e-404d-b162-6f267de80d78",
+        "activity_section.key": "8d6d0bc3-61f3-4400-9b41-80a6e6017b21",
         "lesson_activity.key": "c657ce28-a376-4075-863f-f8e148fcd123"
       }
     },
     {
-      "key": "8cd336be-da4c-4605-a0e5-3a952af5043c",
+      "key": "d9315a06-771e-404d-b162-6f267de80d78",
       "position": 2,
       "properties": {
-        "description": "---"
+        "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "8cd336be-da4c-4605-a0e5-3a952af5043c",
+        "activity_section.key": "d9315a06-771e-404d-b162-6f267de80d78",
         "lesson_activity.key": "c657ce28-a376-4075-863f-f8e148fcd123"
       }
     },
@@ -2125,42 +1939,27 @@
       }
     },
     {
-      "key": "02dee838-807c-4f3d-8bdb-72e016d22e2a",
+      "key": "dc931c66-1eab-4f26-9fe5-2dfe4bd7f46d",
       "position": 1,
       "properties": {
-        "name": "Try the Reminders App",
-        "progression_name": "Try the Reminders App"
+        "name": "Set-up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supplies Substitutions:** \n\n* The game pieces can be replaced with knick-knacks, tokens, markers, paperclips, or scraps of paper.\n* The \"robot\" can be any small item that is clearly facing a direction. It could be as simple as a scrap of paper shaped like a triangle or a paperclip with googly eyes. \n\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "02dee838-807c-4f3d-8bdb-72e016d22e2a",
-        "lesson_activity.key": "adaff8cf-1e83-4216-9096-52da35a4090f"
-      }
-    },
-    {
-      "key": "c6d05b1e-c7ae-4e62-9593-f265d9e5ff96",
-      "position": 2,
-      "properties": {
-        "name": "Make the Reminders App",
-        "progression_name": "Make the Reminders App"
-      },
-      "seeding_key": {
-        "activity_section.key": "c6d05b1e-c7ae-4e62-9593-f265d9e5ff96",
-        "lesson_activity.key": "adaff8cf-1e83-4216-9096-52da35a4090f"
+        "activity_section.key": "dc931c66-1eab-4f26-9fe5-2dfe4bd7f46d",
+        "lesson_activity.key": "0c3a2eb5-b1ca-4f7f-a9d7-860e397a713d"
       }
     },
     {
       "key": "6f01eeac-b8d9-4934-9d6c-6f502f16ccee",
-      "position": 1,
+      "position": 2,
       "properties": {
-        "description": "[slide]   **Distribute:** The activity today involves a lot of moving pieces. Take this time at the beginning of class to pass out supplies and pair students.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Supplies Substitutions:** \r\n\r\n* The game pieces can be replaced with knick-knacks, tokens, markers, paperclips, or scraps of paper.\r\n* The \"robot\" can be any small item that is clearly facing a direction. It could be as simple as a scrap of paper shaped like a triangle or a paperclip with googly eyes. \r\n\r\n"
-          }
-        ],
-        "name": "Set-up\r"
+        "description": "[slide]   **Distribute:** The activity today involves a lot of moving pieces. Take this time at the beginning of class to pass out supplies and pair students."
       },
       "seeding_key": {
         "activity_section.key": "6f01eeac-b8d9-4934-9d6c-6f502f16ccee",
@@ -2169,7 +1968,7 @@
     },
     {
       "key": "9321d86c-69a9-48ad-97b2-1e8c644b266c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "Per pair of students:\r\n\r\n* 1 game board\r\n* 1 \"robot\"\r\n* Game pieces, markers, or tokens that can be used to represent barriers\r\n\r\n**Group:** Put students in groups of two."
       },
@@ -2179,11 +1978,27 @@
       }
     },
     {
-      "key": "0955ca3f-4dce-4124-a915-53a3ede87355",
+      "key": "51069f57-c172-4467-ab6d-8b722d13a545",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \r\n\r\n\r\n\r\n\r\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: `moveForward()`. <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command `turnRight()` <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command `turnLeft()`  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |",
-        "name": "Loops  \r"
+        "name": "Loops  ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\n\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \n\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\n\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "51069f57-c172-4467-ab6d-8b722d13a545",
+        "lesson_activity.key": "c4b3f93b-e745-48ca-9484-e1db79ae86f3"
+      }
+    },
+    {
+      "key": "0955ca3f-4dce-4124-a915-53a3ede87355",
+      "position": 2,
+      "properties": {
+        "description": "[slide] \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \r\n\r\n\r\n\r\n\r\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: `moveForward()`. <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command `turnRight()` <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command `turnLeft()`  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |"
       },
       "seeding_key": {
         "activity_section.key": "0955ca3f-4dce-4124-a915-53a3ede87355",
@@ -2191,27 +2006,23 @@
       }
     },
     {
-      "key": "cbb76f11-afc3-465b-80c6-dfe82aa7d0d1",
-      "position": 2,
+      "key": "cd295164-f461-4956-8117-d80e4b503bb1",
+      "position": 1,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Running the Activity:** This activity asks students to follow along as a number of core concepts for programming are introduced. The model is typically that a term or concept is introduced and modeled and then afterwards students are encouraged to try it out on their own. Trying it out typically means they are writing information on a sticky note and sharing it with another group before discussing the results with the whole class.\r\n\r\nSlides with animations have an icon in the bottom left corner to let you know you need to click to reveal more of the slide's content. \r\n\r\nTo help you more easily prepare the activity and keep track of your instructions, detailed instructions have been included as speaker notes in the presentation. Here are some tips to help you throughout the presentation.\r\n\r\n* There are opportunities throughout the presentation for students to actively engage. At these moments students should be making things with their manipulatives or using them to answer questions. Use these opportunities to check progress.\r\n* There is a fair amount of new vocabulary introduced but it is introduced gradually and with intentional repetition. Make a point of actively modeling the use of new terms.\r\n* The most important goal here is building a mental model. It is ok if students have some open questions that will get resolved over the subsequent conditional lessons.\r\n* Both you and students can use the \"Key Takeaways\" to check your understanding at the end."
-          }
-        ]
+        "name": "Introduction to Loops",
+        "description": "[slide] \n **Video:** \tAs a class watch the video on Loops. \n\n\n[slide] \n **Journal:** Have students add to their journals: iteration and infinite loop. ",
+        "progression_name": "Introduction to Loops"
       },
       "seeding_key": {
-        "activity_section.key": "cbb76f11-afc3-465b-80c6-dfe82aa7d0d1",
-        "lesson_activity.key": "c4b3f93b-e745-48ca-9484-e1db79ae86f3"
+        "activity_section.key": "cd295164-f461-4956-8117-d80e4b503bb1",
+        "lesson_activity.key": "d766ca0f-63ed-4dd8-802d-3aa3f38ba957"
       }
     },
     {
       "key": "f7c513a9-3964-43d6-821f-b5bb96ba33ba",
-      "position": 1,
+      "position": 2,
       "properties": {
-        "description": "[slide] \r\n **Video:** \tAs a class watch the video on Loops. \r\n\r\n\r\n[slide] \r\n **Journal:** Have students add to their journals: iteration and infinite loop. \r\n\r\n---"
+        "description": "\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "f7c513a9-3964-43d6-821f-b5bb96ba33ba",
@@ -2220,10 +2031,11 @@
     },
     {
       "key": "fe52d0b3-f3ba-4fdd-a64a-9a32e50220ff",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.\r\n\r\nThere is no hard-and-fast rule as to which is better, but what do you think? What kinds of circumstances would lead you to writing a function versus using a loop?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Introduction to Loops"
       },
       "seeding_key": {
         "activity_section.key": "fe52d0b3-f3ba-4fdd-a64a-9a32e50220ff",
@@ -2231,22 +2043,9 @@
       }
     },
     {
-      "key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e",
+      "key": "b1dab762-59b7-44b1-a615-4197a822c677",
       "position": 1,
       "properties": {
-        "name": "Introduction to Loops",
-        "progression_name": "Introduction to Loops"
-      },
-      "seeding_key": {
-        "activity_section.key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e",
-        "lesson_activity.key": "24256e70-e392-49e8-a571-6bfb91738b6c"
-      }
-    },
-    {
-      "key": "b1dab762-59b7-44b1-a615-4197a822c677",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -2258,7 +2057,7 @@
       "key": "0213983a-37f2-416d-af62-73a753e7ee20",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** Imagine you are interested in finding out how much time it takes on average to walk from one end of your school to the next. You've decided to figure this out on your lunch break, and are able to complete the walk 20 times. What would your algorithm look like? Where could a loop show up? \r\n\r\n* **Note:** You do not need to write your algorithm in a programming language. You can write it out in English or in pseudocode."
+        "description": "[slide] \n **Discuss:** *Imagine you are interested in finding out how much time it takes on average to walk from one end of your school to the next. You've decided to figure this out on your lunch break, and are able to complete the walk 20 times. What would your algorithm look like? Where could a loop show up?*\n\n* **Note:** You do not need to write your algorithm in a programming language. You can write it out in English or in pseudocode."
       },
       "seeding_key": {
         "activity_section.key": "0213983a-37f2-416d-af62-73a753e7ee20",
@@ -2269,14 +2068,7 @@
       "key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Compare your algorithms with a partner and then discuss as a class.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\r\n\r\n* Repeat 20 times:\r\n\t* Stand at the entry doors to the school.\r\n\t* Start the timer.\r\n\t* Walk at a steady pace to the end of the hallway. \r\n\t* Turn off the timer.\r\n\t* Record the time in a notebook.\r\n\t* Walk back to the entry doors.\r\n\r\n* Add all times together.\r\n* Divide by 20 to find the average.\r\n\r\n\r\n"
-          }
-        ]
+        "description": "Compare your algorithms with a partner and then discuss as a class.\n\n**Discussion Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\n\n* Repeat 20 times:\n\t* Stand at the entry doors to the school.\n\t* Start the timer.\n\t* Walk at a steady pace to the end of the hallway. \n\t* Turn off the timer.\n\t* Record the time in a notebook.\n\t* Walk back to the entry doors.\n\n* Add all times together.\n* Divide by 20 to find the average.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
@@ -2301,7 +2093,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "For this lesson, there are two separate investigations of two different apps. Lead the class through discussions, and circulate around the classroom as students work. \n\nAs time allows, encourage students to do the Modify tasks for each level. This will give students extra practice.\n"
           }
@@ -2316,14 +2107,7 @@
       "key": "b5c73127-81e0-4658-9e0e-440a67548712",
       "position": 2,
       "properties": {
-        "description": "[slide]\n**Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
-          }
-        ]
+        "description": "[slide]\n**Discuss:** *The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?*\n\n**Discussion Goal:** Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b5c73127-81e0-4658-9e0e-440a67548712",
@@ -2346,7 +2130,7 @@
       "key": "839ce746-43d9-403c-b12a-35b4a5beddee",
       "position": 4,
       "properties": {
-        "description": "[slide] \n **Group:** Place students in pairs and have them navigate to the lesson on Code Studio. \n\n\n[slide] \n **Level 2 - Coin Flipper App:** This code investigation includes a number of steps to help students get familiar with a new app. Students run the app and discuss the following:\n\n* What information does the user input?\n* How does the app process that information?\n\t* What is being repeated?\n\t* Where is there an opportunity to use a loop?\n* What information does the app output?\n\n\n\n[slide] \n **Level 3 - Coin Flipper App:** Students navigate to Level 3, run the program, watch the code run, and carefully read each individual part of the program before discussing the following:\n  \n\n[slide] \n Run the program for 10 coin flips, 100 coin flips, and 10,000 coin flips. When do you notice it taking longer?\n* On what lines of code is the program using a loop?\n* Which lines of code decide how many times to flip the coin?\n* What does the `++` command seem to do?"
+        "description": "[slide] \n **Group:** Place students in pairs and have them navigate to the lesson on Code Studio. \n\n\n[slide] \n **Level 1 - Coin Flipper App:** This code investigation includes a number of steps to help students get familiar with a new app. Students run the app and discuss the following:\n\n* What information does the user input?\n* How does the app process that information?\n\t* What is being repeated?\n\t* Where is there an opportunity to use a loop?\n* What information does the app output?\n\n\n\n[slide] \n **Level 2 - Coin Flipper App:** Students navigate to Level 3, run the program, watch the code run, and carefully read each individual part of the program before discussing the following:\n  \n\n[slide] \n Run the program for 10 coin flips, 100 coin flips, and 10,000 coin flips. When do you notice it taking longer?\n* On what lines of code is the program using a loop?\n* Which lines of code decide how many times to flip the coin?\n* What does the `++` command seem to do?"
       },
       "seeding_key": {
         "activity_section.key": "839ce746-43d9-403c-b12a-35b4a5beddee",
@@ -2354,17 +2138,21 @@
       }
     },
     {
-      "key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
+      "key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9",
       "position": 5,
       "properties": {
-        "description": "[slide] \n **Prompt:** How does a loop help when running similar simulations?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
-          }
-        ]
+        "progression_name": "Coin Flipper App"
+      },
+      "seeding_key": {
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9",
+        "lesson_activity.key": "786b1b6e-0ae9-4a64-a7cc-c974ba017716"
+      }
+    },
+    {
+      "key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
+      "position": 6,
+      "properties": {
+        "description": "[slide] \n **Discuss:** *How does a loop help when running similar simulations?*\n\n**Discussion Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
@@ -2373,7 +2161,7 @@
     },
     {
       "key": "78f562b5-b41e-4efe-86ef-0fee66b3ab09",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "Now let's investigate an app that uses loops in a different way. This time loops are used to update elements on the screen.",
         "remarks": true
@@ -2384,10 +2172,22 @@
       }
     },
     {
-      "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
-      "position": 7,
+      "key": "152bfd79-ab84-4edd-b002-2997fd4a40b2",
+      "position": 8,
       "properties": {
-        "description": "[slide] \n **Level 4 - Font Tester App:** Students navigate to Level 4 and run the app before discussing the following:  \n\n\n[slide] \n**Prompt:** Find the four different for loops in the program. What do they each do?\n \n[slide] **Prompt:** Take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
+        "description": "[slide] \n **Level 3 - Font Tester App:** Students navigate to Level 3 and run the app before discussing the following:  ",
+        "progression_name": "Font Tester App"
+      },
+      "seeding_key": {
+        "activity_section.key": "152bfd79-ab84-4edd-b002-2997fd4a40b2",
+        "lesson_activity.key": "786b1b6e-0ae9-4a64-a7cc-c974ba017716"
+      }
+    },
+    {
+      "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
+      "position": 9,
+      "properties": {
+        "description": "[slide] **Discuss:** *Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
       },
       "seeding_key": {
         "activity_section.key": "c862e5d9-df4a-4504-94b6-dd974574b589",
@@ -2410,14 +2210,7 @@
       "key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
       "position": 2,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
-          }
-        ]
+        "description": "[slide] \n **Discuss:** *What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
@@ -2425,19 +2218,8 @@
       }
     },
     {
-      "key": "3e39fb67-ced6-448c-ba71-4266b8df6b2e",
-      "position": 3,
-      "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
-      },
-      "seeding_key": {
-        "activity_section.key": "3e39fb67-ced6-448c-ba71-4266b8df6b2e",
-        "lesson_activity.key": "8329da4e-675d-4656-836c-21f1fabac747"
-      }
-    },
-    {
       "key": "3b1b3598-d91e-4630-88ac-d0adbdc3946a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Working with for loops can be a little tricky. We'll have more opportunities to practice combining loops and lists together to make even more powerful apps.",
         "remarks": true
@@ -2449,7 +2231,7 @@
     },
     {
       "key": "c7718389-7ce6-41d2-82e8-be19806ee631",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -2460,7 +2242,7 @@
     },
     {
       "key": "9865749b-36a9-44b1-bb53-8364b24782f7",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think back on the Font Tester App. Can you think of an example of another app or feature of an app which would use a loop to control different elements on a screen?",
         "name": "Assessment: Check For Understanding\r"
@@ -2471,34 +2253,9 @@
       }
     },
     {
-      "key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c",
+      "key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
       "position": 1,
       "properties": {
-        "name": "Coin Flipper App",
-        "progression_name": "Coin Flipper App"
-      },
-      "seeding_key": {
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c",
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9"
-      }
-    },
-    {
-      "key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f",
-      "position": 2,
-      "properties": {
-        "name": "Font Tester App",
-        "progression_name": "Font Tester App"
-      },
-      "seeding_key": {
-        "activity_section.key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f",
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9"
-      }
-    },
-    {
-      "key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -2512,7 +2269,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code.\r\n"
           }
@@ -2537,12 +2293,28 @@
       }
     },
     {
-      "key": "a215461b-4be9-446b-b373-3bdf17f43ea9",
+      "key": "b20fbe00-bc95-4350-83dc-2c2223f8487a",
       "position": 1,
       "properties": {
+        "name": "Practice Time",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n\n\n "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b20fbe00-bc95-4350-83dc-2c2223f8487a",
+        "lesson_activity.key": "c71c3389-b880-4bae-ac9a-1ec525b74e41"
+      }
+    },
+    {
+      "key": "a215461b-4be9-446b-b373-3bdf17f43ea9",
+      "position": 2,
+      "properties": {
         "description": "[slide] Today you're mostly going to practice what we've learned about programming with loops. I'm here to help you when you need. However, I first want to remind you of the following:\r\n\r\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck.\r\n* Talk to your partner! That's what they're there for!\r\n* Hover over blocks to read the documentation about how they work.\r\n* Read the resources in the Help & Tips tab \r\n* Talk to the group next to you. If another group asks for help make sure to take some time to talk it through with them.",
-        "remarks": true,
-        "name": "Practice Time\r"
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a215461b-4be9-446b-b373-3bdf17f43ea9",
@@ -2551,7 +2323,7 @@
     },
     {
       "key": "b00eb8fc-9966-4194-abab-92a11da6d823",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "[slide] We can debug loops by using the Watch Panel with our iterator variable, usually an i.\r\n\r\n  * Watcher Panel\r\n      * Here you can see the length of a list in addition to all of the elements."
       },
@@ -2562,16 +2334,9 @@
     },
     {
       "key": "01a4b9b2-92c7-46bc-98c5-d1038f665fc3",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students to Lesson 3, Level 2 on Code Studio.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n\r\n\r\n "
-          }
-        ]
+        "description": "[slide]  **Do This:** Direct students to Lesson 3, Level 2 on Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "01a4b9b2-92c7-46bc-98c5-d1038f665fc3",
@@ -2579,10 +2344,54 @@
       }
     },
     {
-      "key": "8fee48b9-689f-4979-ba7e-ba68e5ef97c7",
-      "position": 4,
+      "key": "d61747a8-fdb0-4175-9302-5d8378b9cbf2",
+      "position": 5,
       "properties": {
-        "description": "**Levels 2-4 While Loop Practice:** Simple `console.log` levels in which students practice using while loops.\r\n\r\n* Level 2: Students use a while loop to print the numbers 0-99\r\n* Level 3: Students use a while loop to print a message 100 times\r\n* Level 4: Students use a while loop to fill an array and print the results\r\n\r\n**Levels 5-7 For Loop Practice:** Simple `console.log` levels to practice using for loops.\r\n\r\n* Level 5: Students use a for loop to print the numbers 0-99\r\n* Level 6: Students use a for loop to print a message 100 times\r\n* Level 7: Students use a for loop to fill an array and print the results\r\n\r\n**Levels 8-9 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\r\n\r\n* Level 8: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\r\n* Level 9: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
+        "description": "**Levels 1-3 While Loop Practice:** Simple `console.log` levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results"
+      },
+      "seeding_key": {
+        "activity_section.key": "d61747a8-fdb0-4175-9302-5d8378b9cbf2",
+        "lesson_activity.key": "c71c3389-b880-4bae-ac9a-1ec525b74e41"
+      }
+    },
+    {
+      "key": "abae5b3f-a185-424f-87ee-07544b1c3de2",
+      "position": 6,
+      "properties": {
+        "progression_name": "While Loop Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "abae5b3f-a185-424f-87ee-07544b1c3de2",
+        "lesson_activity.key": "c71c3389-b880-4bae-ac9a-1ec525b74e41"
+      }
+    },
+    {
+      "key": "844366dd-f65f-44b3-bd19-c16bd22f7836",
+      "position": 7,
+      "properties": {
+        "description": "\n**Levels 4-6 For Loop Practice:** Simple `console.log` levels to practice using for loops.\n\n* Level 4: Students use a for loop to print the numbers 0-99\n* Level 5: Students use a for loop to print a message 100 times\n* Level 6: Students use a for loop to fill an array and print the results"
+      },
+      "seeding_key": {
+        "activity_section.key": "844366dd-f65f-44b3-bd19-c16bd22f7836",
+        "lesson_activity.key": "c71c3389-b880-4bae-ac9a-1ec525b74e41"
+      }
+    },
+    {
+      "key": "b73aa278-fef1-4aa4-b0f1-a16954c97259",
+      "position": 8,
+      "properties": {
+        "progression_name": "For Loop Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "b73aa278-fef1-4aa4-b0f1-a16954c97259",
+        "lesson_activity.key": "c71c3389-b880-4bae-ac9a-1ec525b74e41"
+      }
+    },
+    {
+      "key": "8fee48b9-689f-4979-ba7e-ba68e5ef97c7",
+      "position": 9,
+      "properties": {
+        "description": "\n\n**Levels 7-8 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 7: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 8: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
       },
       "seeding_key": {
         "activity_section.key": "8fee48b9-689f-4979-ba7e-ba68e5ef97c7",
@@ -2590,17 +2399,21 @@
       }
     },
     {
+      "key": "ac6845e9-81ab-4515-ab87-681929eb5b25",
+      "position": 10,
+      "properties": {
+        "progression_name": "Loops and Screen Elements"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac6845e9-81ab-4515-ab87-681929eb5b25",
+        "lesson_activity.key": "c71c3389-b880-4bae-ac9a-1ec525b74e41"
+      }
+    },
+    {
       "key": "70682325-231d-494d-8aba-f1f9ba4768aa",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What aspects of working with loops do you feel like clicked today? What do you still feel like you have trouble with?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n"
-          }
-        ]
+        "description": "**Discuss:** *What aspects of working with loops do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
       },
       "seeding_key": {
         "activity_section.key": "70682325-231d-494d-8aba-f1f9ba4768aa",
@@ -2611,7 +2424,7 @@
       "key": "0d418695-d6f8-47dd-974f-74a26b07b1e1",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
+        "description": "Have students share with one another before sharing with the whole class."
       },
       "seeding_key": {
         "activity_section.key": "0d418695-d6f8-47dd-974f-74a26b07b1e1",
@@ -2654,46 +2467,9 @@
       }
     },
     {
-      "key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc",
+      "key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
       "position": 1,
       "properties": {
-        "name": "While Loop Practice",
-        "progression_name": "While Loop Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc",
-        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49"
-      }
-    },
-    {
-      "key": "286c3327-b1c9-4d87-91d4-556f9f1f6281",
-      "position": 2,
-      "properties": {
-        "name": "For Loop Practice",
-        "progression_name": "For Loop Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "286c3327-b1c9-4d87-91d4-556f9f1f6281",
-        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49"
-      }
-    },
-    {
-      "key": "5964f5e5-6f39-4c69-8036-f0b670bde1b8",
-      "position": 3,
-      "properties": {
-        "name": "Loops and Screen Elements",
-        "progression_name": "Loops and Screen Elements"
-      },
-      "seeding_key": {
-        "activity_section.key": "5964f5e5-6f39-4c69-8036-f0b670bde1b8",
-        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49"
-      }
-    },
-    {
-      "key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding: AP Practice",
         "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
@@ -2734,8 +2510,9 @@
       "key": "86b5d792-4084-423d-8997-86aa8f7454fb",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\r\n\r\n[slide] **Level 2 - Explore:** Have students explore the working Lock Screen Maker app in Level 2. If students are not working in pairs they should still discuss the prompts with a neighbor.",
-        "name": "Build the Lock Screen Maker App\r"
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n[slide] **Level 1 - Explore:** Have students explore the working Lock Screen Maker app in Level 1. If students are not working in pairs they should still discuss with a neighbor.",
+        "name": "Build the Lock Screen Maker App\r",
+        "progression_name": "Try the Lock Screen Maker"
       },
       "seeding_key": {
         "activity_section.key": "86b5d792-4084-423d-8997-86aa8f7454fb",
@@ -2746,13 +2523,7 @@
       "key": "da20ca9e-8fd9-4933-be03-6929cf11e64e",
       "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:**",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goals:**\n\nWhere (if at all) do you think this app is using a list?\n\n* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\n\nWhere (if at all) do you think this app is using a loop?\n\n* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\n"
-          }
-        ]
+        "description": "[slide] **Discuss:**"
       },
       "seeding_key": {
         "activity_section.key": "da20ca9e-8fd9-4933-be03-6929cf11e64e",
@@ -2763,7 +2534,8 @@
       "key": "cdaee7b6-c2a4-405d-9ec3-2b4ef0f2ed11",
       "position": 3,
       "properties": {
-        "description": "* Where (if at all) do you think this app is using a loop?  \t\r\n* Where (if at all) do you think this app is using a list?"
+        "description": "* *Where (if at all) do you think this app is using a loop?*\n* *Where (if at all) do you think this app is using a list?*\n\n**Discussion Goals:**\n\nWhere (if at all) do you think this app is using a list?\n\n* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\n\nWhere (if at all) do you think this app is using a loop?\n\n* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\n",
+        "progression_name": "Try the Lock Screen Maker"
       },
       "seeding_key": {
         "activity_section.key": "cdaee7b6-c2a4-405d-9ec3-2b4ef0f2ed11",
@@ -2786,7 +2558,7 @@
       "key": "3386c989-5186-4617-b85d-6ba32fb39c9d",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Give students copies of [r loops-make-activity-guide] if you will be using it during the class.",
+        "description": "**Distribute:** Give students copies of [CSP Loops Make - Lock Screen Maker](https://docs.google.com/document/d/1MPQ1wXqf5SwDuqCJtiG7aGzrtmkOwCD5PUiPU32-LE4/edit?usp=sharing) if you will be using it during the class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2803,7 +2575,8 @@
       "key": "5e66072a-ce65-4675-9fab-969bc241cf48",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students to level three where they complete the Lock Screen Maker app. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\r\n\r\n[slide]  **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "[slide]  **Do This:** Direct students to level two where they complete the Lock Screen Maker app. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n[slide]  **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Lock Screen Maker"
       },
       "seeding_key": {
         "activity_section.key": "5e66072a-ce65-4675-9fab-969bc241cf48",
@@ -2814,14 +2587,12 @@
       "key": "6dc1b8f9-0575-4666-94fd-8a189311b8b1",
       "position": 1,
       "properties": {
-        "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Maximize Work Time:** The wrap up is short to allow the maximum amount of time for students to complete the activity. \r\n\r\n"
           }
-        ],
-        "remarks": true
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6dc1b8f9-0575-4666-94fd-8a189311b8b1",
@@ -2832,7 +2603,8 @@
       "key": "cf7edc1c-aaa7-4a22-be20-732d94520f0e",
       "position": 2,
       "properties": {
-        "description": "---"
+        "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!\n",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "cf7edc1c-aaa7-4a22-be20-732d94520f0e",
@@ -2849,30 +2621,6 @@
       "seeding_key": {
         "activity_section.key": "3a902caa-478d-4879-9eec-d7fd769ec02d",
         "lesson_activity.key": "b9b4559f-0922-4a34-a4dc-86186ddcd7c3"
-      }
-    },
-    {
-      "key": "39305728-8fe2-48eb-91a9-388273c702e1",
-      "position": 1,
-      "properties": {
-        "name": "Try the Lock Screen Maker",
-        "progression_name": "Try the Lock Screen Maker"
-      },
-      "seeding_key": {
-        "activity_section.key": "39305728-8fe2-48eb-91a9-388273c702e1",
-        "lesson_activity.key": "da5a3225-29c3-4e96-ac8f-2ed1fbcae8bb"
-      }
-    },
-    {
-      "key": "5b4f49ce-0982-4521-8cce-378950f79ffe",
-      "position": 2,
-      "properties": {
-        "name": "Make the Lock Screen Maker",
-        "progression_name": "Make the Lock Screen Maker"
-      },
-      "seeding_key": {
-        "activity_section.key": "5b4f49ce-0982-4521-8cce-378950f79ffe",
-        "lesson_activity.key": "da5a3225-29c3-4e96-ac8f-2ed1fbcae8bb"
       }
     },
     {
@@ -3446,12 +3194,10 @@
       "key": "7f3e3e34-5f15-4287-8db4-d57c7afb9652",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Group:** Place students in groups of two.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp u5 written response] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
+            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp_u5_written_response] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
           }
         ],
         "name": "Hackathon Prep\r"
@@ -3465,7 +3211,7 @@
       "key": "7a5b993c-ab64-4822-b71e-a3058098d09c",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Pass out the [r csp u5 planning guide] - one per group. \r\n\r\n\r\n[slide] **Read:** As a class, read through the Project Description on the Planning Guide."
+        "description": "[slide]  **Group:** Place students in groups of two.\n\n**Distribute:** Pass out the [CSP U5 Hackathon Project Planning Guide](\thttps://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing) - one per group. \n\n\n[slide] **Read:** As a class, read through the Project Description on the Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "7a5b993c-ab64-4822-b71e-a3058098d09c",
@@ -3535,7 +3281,8 @@
       "position": 1,
       "properties": {
         "description": "[slide] **Step 4:** Students work with their partners to fill out the tables on pages 4-6 in the Planning Guides. In these tables, students plan out all of the element IDs, onEvents, functions, variables, conditionals, and loops. This step, will help students smoothly transition into the programming phase. \r\n\r\n\r\n[slide] **Step 5 (3 mins):** On one computer, partners quickly build their screens, to be used by the programmer to test their code. Emphasize that these are NOT the final screens. Students drag out elements to the screen and give them the agreed upon names from Step 4. The design does not matter here. \r\n\r\n\r\n[slide] **Do This:** Partners select their primary roles. \r\n\r\n* Programmer: Responsible for the majority of the programming. Needs to communicate decisions with the designer.\r\n* Designer: Responsible for the design of the app. Pair programs with the programmer as needed.\r\n\r\n\r\n[slide] **Step 6:** Students work on building their apps, guided by their roles.\r\n\r\n* Programmers: Use the table to guide you in adding programming statements to your project.",
-        "name": "Hackathon Project\r"
+        "name": "Hackathon Project\r",
+        "progression_name": "Hackathon Project"
       },
       "seeding_key": {
         "activity_section.key": "4412693c-5ccd-4107-ab2c-97b3c66eda7f",
@@ -3549,7 +3296,6 @@
         "description": "*  Designers: Use the chart to guide you in adding screen elements to your program. You can work on a separate computer from your partner.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If the designer finishes their screens early, they can start pair programming with the programmer. \r\n"
           }
@@ -3564,7 +3310,8 @@
       "key": "340739df-f603-4b61-b1a0-54c28100a4e6",
       "position": 3,
       "properties": {
-        "description": "**Do This:** When the designer is ready to share their screens with the programmer, there are specific steps that must be followed after the designer clicks share and copies the link to their app. The programmer: \r\n\r\n1. Add a blank screen.\r\n2. Delete the old project screens.\r\n3. Click the screen dropdown, then click \"Import screen\"\r\n4. Paste in the link from the designer.\r\n5. Select to import all of the screens.\r\n6. Delete the blank screen.\r\n7. Set the home screen to be the default screen (Hint: Go to design mode and click on the screen)"
+        "description": "**Do This:** When the designer is ready to share their screens with the programmer, there are specific steps that must be followed after the designer clicks share and copies the link to their app. The programmer: \r\n\r\n1. Add a blank screen.\r\n2. Delete the old project screens.\r\n3. Click the screen dropdown, then click \"Import screen\"\r\n4. Paste in the link from the designer.\r\n5. Select to import all of the screens.\r\n6. Delete the blank screen.\r\n7. Set the home screen to be the default screen (Hint: Go to design mode and click on the screen)",
+        "progression_name": "Hackathon Project"
       },
       "seeding_key": {
         "activity_section.key": "340739df-f603-4b61-b1a0-54c28100a4e6",
@@ -3595,18 +3342,6 @@
       }
     },
     {
-      "key": "c8404d7b-439b-4443-8496-b860a83ce980",
-      "position": 1,
-      "properties": {
-        "name": "Hackathon Project",
-        "progression_name": "Hackathon Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "c8404d7b-439b-4443-8496-b860a83ce980",
-        "lesson_activity.key": "59296832-c558-4db6-9ab5-1e0089945ea1"
-      }
-    },
-    {
       "key": "8e6cfe49-7504-4f02-9c6d-149e4b0daef2",
       "position": 1,
       "properties": {
@@ -3621,10 +3356,8 @@
       "key": "84c69a15-b1a6-437e-8824-aad6dbadf70b",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Step 6 (continued):** Students work on building their apps, guided by their roles.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Encourage students to check the rubric on the last page of the Planning Guide as they work through building their app. The Written Response portion will be completed on the last day of the project. \r\n"
           }
@@ -3640,7 +3373,7 @@
       "key": "410615c6-af2b-4281-9cdd-a5f9ffa49916",
       "position": 2,
       "properties": {
-        "description": "* Programmers: Use the table to guide you in adding programming statements to your project."
+        "description": "[slide]  **Step 6 (continued):** Students work on building their apps, guided by their roles.\n\n* Programmers: Use the table to guide you in adding programming statements to your project."
       },
       "seeding_key": {
         "activity_section.key": "410615c6-af2b-4281-9cdd-a5f9ffa49916",
@@ -3654,7 +3387,6 @@
         "description": "*  Designers: Use the chart to guide you in adding screen elements to your program. You can work on a separate computer from your partner.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If the designer finishes their screens early, they can start pair programming with the programmer. \r\n"
           }
@@ -3669,7 +3401,8 @@
       "key": "b86b3f59-9edf-4a2b-9d22-09e03b997507",
       "position": 4,
       "properties": {
-        "description": "**Do This:** When the designer is ready to share their screens with the programmer, there are specific steps that must be followed after the designer clicks share and copies the link to their app. The programmer: \r\n\r\n1. Add a blank screen.\r\n2. Delete the old project screens.\r\n3. Click the screen dropdown, then click \"Import screen\"\r\n4. Paste in the link from the designer.\r\n5. Select to import all of the screens.\r\n6. Delete the blank screen.\r\n7. Set the home screen to be the default screen (Hint: Go to design mode and click on the screen)"
+        "description": "**Do This:** When the designer is ready to share their screens with the programmer, there are specific steps that must be followed after the designer clicks share and copies the link to their app. The programmer: \r\n\r\n1. Add a blank screen.\r\n2. Delete the old project screens.\r\n3. Click the screen dropdown, then click \"Import screen\"\r\n4. Paste in the link from the designer.\r\n5. Select to import all of the screens.\r\n6. Delete the blank screen.\r\n7. Set the home screen to be the default screen (Hint: Go to design mode and click on the screen)",
+        "progression_name": "Hackathon Project"
       },
       "seeding_key": {
         "activity_section.key": "b86b3f59-9edf-4a2b-9d22-09e03b997507",
@@ -3697,18 +3430,6 @@
       "seeding_key": {
         "activity_section.key": "ac98ed68-1cdd-4f79-a09a-ce2244d9137c",
         "lesson_activity.key": "a1c4396e-ae0b-47c7-8823-9f2b8642e04e"
-      }
-    },
-    {
-      "key": "9491ecb3-9d87-487e-816a-9ae863ca9116",
-      "position": 1,
-      "properties": {
-        "name": "Hackathon Project",
-        "progression_name": "Hackathon Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "9491ecb3-9d87-487e-816a-9ae863ca9116",
-        "lesson_activity.key": "ea0dbbb0-c549-4732-a335-65dde1340839"
       }
     },
     {
@@ -3741,7 +3462,6 @@
         "description": "*  Designers: Use the chart to guide you in adding screen elements to your program. You can work on a separate computer from your partner.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If the designer finishes their screens early, they can start pair programming with the programmer. \r\n"
           }
@@ -3756,7 +3476,8 @@
       "key": "170b34c2-7c90-40c2-8ead-bcc0c268b161",
       "position": 3,
       "properties": {
-        "description": "**Do This:** When the designer is ready to share their screens with the programmer, there are specific steps that must be followed after the designer clicks share and copies the link to their app. The programmer: \r\n\r\n1. Add a blank screen.\r\n2. Delete the old project screens.\r\n3. Click the screen dropdown, then click \"Import screen\"\r\n4. Paste in the link from the designer.\r\n5. Select to import all of the screens.\r\n6. Delete the blank screen.\r\n7. Set the home screen to be the default screen (Hint: Go to design mode and click on the screen)\r\n\r\n\r\n[slide] **Do This:** Take some time around the midpoint of the activity for students to check the Overall Project section of the Scoring Guidelines (final page of the Planning Guide)."
+        "description": "**Do This:** When the designer is ready to share their screens with the programmer, there are specific steps that must be followed after the designer clicks share and copies the link to their app. The programmer: \r\n\r\n1. Add a blank screen.\r\n2. Delete the old project screens.\r\n3. Click the screen dropdown, then click \"Import screen\"\r\n4. Paste in the link from the designer.\r\n5. Select to import all of the screens.\r\n6. Delete the blank screen.\r\n7. Set the home screen to be the default screen (Hint: Go to design mode and click on the screen)\r\n\r\n\r\n[slide] **Do This:** Take some time around the midpoint of the activity for students to check the Overall Project section of the Scoring Guidelines (final page of the Planning Guide).",
+        "progression_name": "Hackathon Project"
       },
       "seeding_key": {
         "activity_section.key": "170b34c2-7c90-40c2-8ead-bcc0c268b161",
@@ -3784,18 +3505,6 @@
       "seeding_key": {
         "activity_section.key": "dfec55b6-2840-4d90-9a56-f8831fc681ee",
         "lesson_activity.key": "facd910b-5ce0-44fa-89d3-ed18edc9f9de"
-      }
-    },
-    {
-      "key": "f4bd2072-3dbf-4717-b299-8756ac6f7ace",
-      "position": 1,
-      "properties": {
-        "name": "Hackathon Project",
-        "progression_name": "Hackathon Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "f4bd2072-3dbf-4717-b299-8756ac6f7ace",
-        "lesson_activity.key": "e7cbc1af-ea4f-4ea4-9816-43f4779f936e"
       }
     },
     {
@@ -3866,7 +3575,8 @@
       "key": "d1e2844e-c7ad-43f1-8d46-e0f4dcd68aa7",
       "position": 4,
       "properties": {
-        "description": "[slide] **Do This (30 mins):** Students work silently to complete the Written Response. Students will need to take screenshots of code and insert those screenshots into the appropriate boxes in the Written Response. Students can check the Scoring Guidelines in the Planning Guide to make sure they are meeting all the requirements. \n\n[slide] **Submit:** Students submit their project (one per group), Planning Guide (one per group), and Written Response (individual). \n\n[slide] **Share:** Now students display their projects on a computer and complete a gallery walk. If you decide to have a winner of the hackathon, students can vote on their favorite projects by writing down the name of the project on a sticky note and passing it in."
+        "description": "[slide] **Do This (30 mins):** Students work silently to complete the Written Response. Students will need to take screenshots of code and insert those screenshots into the appropriate boxes in the Written Response. Students can check the Scoring Guidelines in the Planning Guide to make sure they are meeting all the requirements. \n\n[slide] **Submit:** Students submit their project (one per group), Planning Guide (one per group), and Written Response (individual). \n\n[slide] **Share:** Now students display their projects on a computer and complete a gallery walk. If you decide to have a winner of the hackathon, students can vote on their favorite projects by writing down the name of the project on a sticky note and passing it in.",
+        "progression_name": "Hackathon Project"
       },
       "seeding_key": {
         "activity_section.key": "d1e2844e-c7ad-43f1-8d46-e0f4dcd68aa7",
@@ -3877,14 +3587,12 @@
       "key": "1c54b6fc-f8fa-4e4d-b1bd-0c070177fd9e",
       "position": 1,
       "properties": {
-        "description": "Great work everyone on the Hackathon Project! It's amazing how much you were able to accomplish in a short amount of time.And now, the moment that everyone has been waiting for. I have tallied up the votes and the winner is...",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Feel free to skip the announcement of a hackathon winner if you want to keep the project non-competitive. \r\n\r\n"
           }
-        ],
-        "remarks": true
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1c54b6fc-f8fa-4e4d-b1bd-0c070177fd9e",
@@ -3895,7 +3603,8 @@
       "key": "e85d764f-ba66-4657-af7c-f005888407ac",
       "position": 2,
       "properties": {
-        "description": "---"
+        "description": "Great work everyone on the Hackathon Project! It's amazing how much you were able to accomplish in a short amount of time.And now, the moment that everyone has been waiting for. I have tallied up the votes and the winner is...\n",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "e85d764f-ba66-4657-af7c-f005888407ac",
@@ -3903,27 +3612,26 @@
       }
     },
     {
-      "key": "99a6c29e-df38-4d02-80bb-dd8e4b806c98",
+      "key": "352ceb18-15a7-479e-8e9f-7e9518ba8203",
       "position": 3,
       "properties": {
-        "description": "**Project:** Use the Scoring Guidelines on the final page of the Planning Guide to assess student projects. The Written Response portion is individual, while the Overall Project portion is a group grade.",
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "352ceb18-15a7-479e-8e9f-7e9518ba8203",
+        "lesson_activity.key": "ad60d948-c66c-4d73-a2bb-3b412f00cfe7"
+      }
+    },
+    {
+      "key": "99a6c29e-df38-4d02-80bb-dd8e4b806c98",
+      "position": 4,
+      "properties": {
+        "description": "\n**Project:** Use the Scoring Guidelines on the final page of the Planning Guide to assess student projects. The Written Response portion is individual, while the Overall Project portion is a group grade.",
         "name": "Assessment: Grading the Project\r"
       },
       "seeding_key": {
         "activity_section.key": "99a6c29e-df38-4d02-80bb-dd8e4b806c98",
         "lesson_activity.key": "ad60d948-c66c-4d73-a2bb-3b412f00cfe7"
-      }
-    },
-    {
-      "key": "fc207c8c-9e39-47a3-ad53-8a0b1ca0ec4b",
-      "position": 1,
-      "properties": {
-        "name": "Hackathon Project",
-        "progression_name": "Hackathon Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc207c8c-9e39-47a3-ad53-8a0b1ca0ec4b",
-        "lesson_activity.key": "a0227e3f-e2ef-4bdd-bec2-286ad0c30926"
       }
     },
     {
@@ -3933,11 +3641,11 @@
         "description": "[slide]  Administer the Unit 5 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics5.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
           }
-        ]
+        ],
+        "progression_name": "Unit 5 Exam"
       },
       "seeding_key": {
         "activity_section.key": "4e85ff7d-88fd-4c72-b725-7975099cde08",
@@ -3954,18 +3662,6 @@
         "activity_section.key": "880d624a-306a-4c0e-b660-a1e8e32ff067",
         "lesson_activity.key": "0247d771-7446-4e81-a4f1-56973d033744"
       }
-    },
-    {
-      "key": "28fba966-8c99-4a3f-a3c7-50fa5e8604fc",
-      "position": 1,
-      "properties": {
-        "name": "Unit 5 Exam",
-        "progression_name": "Unit 5 Exam"
-      },
-      "seeding_key": {
-        "activity_section.key": "28fba966-8c99-4a3f-a3c7-50fa5e8604fc",
-        "lesson_activity.key": "4c6e3b02-fc86-4e36-b08f-1b364b76f477"
-      }
     }
   ],
   "script_levels": [
@@ -3973,7 +3669,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -3989,7 +3685,7 @@
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "45e799b2-8b70-49e3-8e7a-f8ee7d130c42"
+        "activity_section.key": "8f0c877c-20b1-491d-bdfb-b9ee9a5926eb"
       },
       "level_keys": [
         "U5 L01 Introduction to Lists_2021"
@@ -3999,7 +3695,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -4015,7 +3711,7 @@
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "45e799b2-8b70-49e3-8e7a-f8ee7d130c42"
+        "activity_section.key": "8f0c877c-20b1-491d-bdfb-b9ee9a5926eb"
       },
       "level_keys": [
         "Introduction to Lists - Part 2_2021"
@@ -4067,7 +3763,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       },
       "level_keys": [
         "Introduction to Lists - Part 4_2021"
@@ -4093,7 +3789,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       },
       "level_keys": [
         "U5 Lists Investigate Outfitly Code_2021"
@@ -4119,7 +3815,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       },
       "level_keys": [
         "U5 Lists Investigate Bandly Code_2021"
@@ -4145,7 +3841,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       },
       "level_keys": [
         "Introduction to Lists - Part 3_2021"
@@ -4171,7 +3867,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       },
       "level_keys": [
         "U5 Lists Investigate Partnersly Code_2021"
@@ -4197,7 +3893,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       },
       "level_keys": [
         "Random List Access Pattern_2021"
@@ -4223,7 +3919,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       },
       "level_keys": [
         "List Scrolling Pattern_2021"
@@ -4233,7 +3929,7 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Setting up Lists",
         "level_keys": [
@@ -4249,7 +3945,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "bfe39771-97de-4ad7-b27d-25a0bba951eb"
+        "activity_section.key": "aa841a81-4b3c-477e-89d1-d4afe03761d8"
       },
       "level_keys": [
         "U5 L03 Lists Practice 1_2021"
@@ -4259,7 +3955,7 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Setting up Lists",
         "level_keys": [
@@ -4275,7 +3971,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "bfe39771-97de-4ad7-b27d-25a0bba951eb"
+        "activity_section.key": "aa841a81-4b3c-477e-89d1-d4afe03761d8"
       },
       "level_keys": [
         "U5 L03 Lists Practice 2_2021"
@@ -4285,7 +3981,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Accessing Elements in a List",
         "level_keys": [
@@ -4301,7 +3997,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "09e8a6ba-8592-4795-a709-d2f04920ffd5"
+        "activity_section.key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c"
       },
       "level_keys": [
         "U5 L03 Lists Practice 3.75_2021"
@@ -4311,7 +4007,7 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Accessing Elements in a List",
         "level_keys": [
@@ -4327,7 +4023,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "09e8a6ba-8592-4795-a709-d2f04920ffd5"
+        "activity_section.key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c"
       },
       "level_keys": [
         "U5 L03 Lists Practice 3.5_2021"
@@ -4337,7 +4033,7 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Accessing Elements in a List",
         "level_keys": [
@@ -4353,7 +4049,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "09e8a6ba-8592-4795-a709-d2f04920ffd5"
+        "activity_section.key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c"
       },
       "level_keys": [
         "U5 L03 Lists Practice 10_2021"
@@ -4363,7 +4059,7 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Strings and Indexes",
         "level_keys": [
@@ -4379,7 +4075,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "3e25eacf-63d7-4fdb-971e-ddceb8e2de40"
+        "activity_section.key": "88839953-6cad-4514-8791-d8c632134ecd"
       },
       "level_keys": [
         "U5 L03 Lists Practice Strings 2_2021"
@@ -4389,7 +4085,7 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Strings and Indexes",
         "level_keys": [
@@ -4405,7 +4101,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "3e25eacf-63d7-4fdb-971e-ddceb8e2de40"
+        "activity_section.key": "88839953-6cad-4514-8791-d8c632134ecd"
       },
       "level_keys": [
         "U5 L03 Lists Practice Strings 3_2021"
@@ -4415,7 +4111,7 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4431,7 +4127,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       },
       "level_keys": [
         "U5 L03 Lists Practice 4_2021"
@@ -4441,7 +4137,7 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4457,7 +4153,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       },
       "level_keys": [
         "U5 L03 Lists Practice 5_2021"
@@ -4467,7 +4163,7 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4483,7 +4179,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       },
       "level_keys": [
         "U5 L03 Lists Practice 9_2021"
@@ -4493,7 +4189,7 @@
       "chapter": 21,
       "position": 11,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "List Operations",
         "level_keys": [
@@ -4509,7 +4205,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       },
       "level_keys": [
         "U5 L03 Lists Practice 6_2021"
@@ -4571,7 +4267,7 @@
       "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Try the Reminders App",
         "level_keys": [
@@ -4587,7 +4283,7 @@
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "02dee838-807c-4f3d-8bdb-72e016d22e2a"
+        "activity_section.key": "9273ec78-0697-4097-856c-59812c508e70"
       },
       "level_keys": [
         "U5 Lists Make Project Sample App 2020_2021"
@@ -4613,7 +4309,7 @@
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "c6d05b1e-c7ae-4e62-9593-f265d9e5ff96"
+        "activity_section.key": "51b7dc7c-028b-462f-9d01-b0d2dce3a4eb"
       },
       "level_keys": [
         "U5 Lists Make Project 2020_2021"
@@ -4623,7 +4319,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Loops",
         "level_keys": [
@@ -4639,7 +4335,7 @@
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e"
+        "activity_section.key": "cd295164-f461-4956-8117-d80e4b503bb1"
       },
       "level_keys": [
         "csp_applab_loops_2021"
@@ -4675,7 +4371,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Coin Flipper App",
         "level_keys": [
@@ -4691,7 +4387,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       },
       "level_keys": [
         "U5 Loops Investigate Coin Flipper Predict_2021"
@@ -4701,7 +4397,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Coin Flipper App",
         "level_keys": [
@@ -4717,7 +4413,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       },
       "level_keys": [
         "U5 Loops Investigate Coin Flipper_2021"
@@ -4727,7 +4423,7 @@
       "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Font Tester App",
         "level_keys": [
@@ -4743,7 +4439,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f"
+        "activity_section.key": "152bfd79-ab84-4edd-b002-2997fd4a40b2"
       },
       "level_keys": [
         "U5 Loops Investigate Font Tester_2021"
@@ -4779,7 +4475,7 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loop Practice",
         "level_keys": [
@@ -4795,7 +4491,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc"
+        "activity_section.key": "abae5b3f-a185-424f-87ee-07544b1c3de2"
       },
       "level_keys": [
         "U5 Loops Practice Part 1_2021"
@@ -4805,7 +4501,7 @@
       "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loop Practice",
         "level_keys": [
@@ -4821,7 +4517,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc"
+        "activity_section.key": "abae5b3f-a185-424f-87ee-07544b1c3de2"
       },
       "level_keys": [
         "U5 Loops Practice Part 2_2021"
@@ -4831,7 +4527,7 @@
       "chapter": 34,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loop Practice",
         "level_keys": [
@@ -4847,7 +4543,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc"
+        "activity_section.key": "abae5b3f-a185-424f-87ee-07544b1c3de2"
       },
       "level_keys": [
         "U5 Loops Practice Part 3_2021"
@@ -4857,7 +4553,7 @@
       "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "For Loop Practice",
         "level_keys": [
@@ -4873,7 +4569,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "286c3327-b1c9-4d87-91d4-556f9f1f6281"
+        "activity_section.key": "b73aa278-fef1-4aa4-b0f1-a16954c97259"
       },
       "level_keys": [
         "U5 Loops Practice Part 4_2021"
@@ -4883,7 +4579,7 @@
       "chapter": 36,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "For Loop Practice",
         "level_keys": [
@@ -4899,7 +4595,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "286c3327-b1c9-4d87-91d4-556f9f1f6281"
+        "activity_section.key": "b73aa278-fef1-4aa4-b0f1-a16954c97259"
       },
       "level_keys": [
         "U5 Loops Practice Part 5_2021"
@@ -4909,7 +4605,7 @@
       "chapter": 37,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "For Loop Practice",
         "level_keys": [
@@ -4925,7 +4621,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "286c3327-b1c9-4d87-91d4-556f9f1f6281"
+        "activity_section.key": "b73aa278-fef1-4aa4-b0f1-a16954c97259"
       },
       "level_keys": [
         "U5 Loops Practice Part 6_2021"
@@ -4935,7 +4631,7 @@
       "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Loops and Screen Elements",
         "level_keys": [
@@ -4951,7 +4647,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5964f5e5-6f39-4c69-8036-f0b670bde1b8"
+        "activity_section.key": "ac6845e9-81ab-4515-ab87-681929eb5b25"
       },
       "level_keys": [
         "U5 Loops Practice Sentence Randomizer_2021"
@@ -4961,7 +4657,7 @@
       "chapter": 39,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Loops and Screen Elements",
         "level_keys": [
@@ -4977,7 +4673,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5964f5e5-6f39-4c69-8036-f0b670bde1b8"
+        "activity_section.key": "ac6845e9-81ab-4515-ab87-681929eb5b25"
       },
       "level_keys": [
         "U5 Loops Practice Dice Roller_2021"
@@ -5055,7 +4751,7 @@
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "39305728-8fe2-48eb-91a9-388273c702e1"
+        "activity_section.key": "cdaee7b6-c2a4-405d-9ec3-2b4ef0f2ed11"
       },
       "level_keys": [
         "U5 Loops Make Wallpaper App Example 2020_2021"
@@ -5081,7 +4777,7 @@
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5b4f49ce-0982-4521-8cce-378950f79ffe"
+        "activity_section.key": "5e66072a-ce65-4675-9fab-969bc241cf48"
       },
       "level_keys": [
         "U5 Loops Make Wallpaper App 2020_2021"
@@ -5559,7 +5255,7 @@
       "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5575,7 +5271,7 @@
         "lesson.key": "Semester Hackathon Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "c8404d7b-439b-4443-8496-b860a83ce980"
+        "activity_section.key": "340739df-f603-4b61-b1a0-54c28100a4e6"
       },
       "level_keys": [
         "U5 Hackathon Project Day 2_2021"
@@ -5585,7 +5281,7 @@
       "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5601,7 +5297,7 @@
         "lesson.key": "Semester Hackathon Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "9491ecb3-9d87-487e-816a-9ae863ca9116"
+        "activity_section.key": "b86b3f59-9edf-4a2b-9d22-09e03b997507"
       },
       "level_keys": [
         "U5 Hackathon Project Day 3_2021"
@@ -5611,7 +5307,7 @@
       "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5627,7 +5323,7 @@
         "lesson.key": "Semester Hackathon Part 4",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "f4bd2072-3dbf-4717-b299-8756ac6f7ace"
+        "activity_section.key": "170b34c2-7c90-40c2-8ead-bcc0c268b161"
       },
       "level_keys": [
         "U5 Hackathon Project Day 4_2021"
@@ -5653,7 +5349,7 @@
         "lesson.key": "Semester Hackathon Part 5",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "fc207c8c-9e39-47a3-ad53-8a0b1ca0ec4b"
+        "activity_section.key": "d1e2844e-c7ad-43f1-8d46-e0f4dcd68aa7"
       },
       "level_keys": [
         "U5 Hackathon Project Day 5_2021"
@@ -5679,7 +5375,7 @@
         "lesson.key": "Lesson 18: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "28fba966-8c99-4a3f-a3c7-50fa5e8604fc"
+        "activity_section.key": "4e85ff7d-88fd-4c72-b725-7975099cde08"
       },
       "level_keys": [
         "CSP Unit 5 AP-Style Assessment _2021"
@@ -5696,7 +5392,7 @@
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "45e799b2-8b70-49e3-8e7a-f8ee7d130c42"
+        "activity_section.key": "8f0c877c-20b1-491d-bdfb-b9ee9a5926eb"
       }
     },
     {
@@ -5708,7 +5404,7 @@
         "lesson.key": "Lists Explore",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "45e799b2-8b70-49e3-8e7a-f8ee7d130c42"
+        "activity_section.key": "8f0c877c-20b1-491d-bdfb-b9ee9a5926eb"
       }
     },
     {
@@ -5732,7 +5428,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       }
     },
     {
@@ -5744,7 +5440,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       }
     },
     {
@@ -5756,7 +5452,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "fd53cca3-e021-44ca-a5a3-dd141e23c7f1"
+        "activity_section.key": "f5bbc83d-7b11-4ec2-a767-4835b7842920"
       }
     },
     {
@@ -5768,7 +5464,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       }
     },
     {
@@ -5780,7 +5476,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "36252583-6c0a-4461-83c5-4514685b17cd"
+        "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb"
       }
     },
     {
@@ -5792,7 +5488,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       }
     },
     {
@@ -5804,7 +5500,7 @@
         "lesson.key": "Lists Investigate",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "cc12032e-46ff-4ced-b428-7780d258e212"
+        "activity_section.key": "cd0b87e6-a912-4d2b-92ca-3cc0d69d0f49"
       }
     },
     {
@@ -5816,7 +5512,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "bfe39771-97de-4ad7-b27d-25a0bba951eb"
+        "activity_section.key": "aa841a81-4b3c-477e-89d1-d4afe03761d8"
       }
     },
     {
@@ -5828,7 +5524,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "bfe39771-97de-4ad7-b27d-25a0bba951eb"
+        "activity_section.key": "aa841a81-4b3c-477e-89d1-d4afe03761d8"
       }
     },
     {
@@ -5840,7 +5536,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "09e8a6ba-8592-4795-a709-d2f04920ffd5"
+        "activity_section.key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c"
       }
     },
     {
@@ -5852,7 +5548,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "09e8a6ba-8592-4795-a709-d2f04920ffd5"
+        "activity_section.key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c"
       }
     },
     {
@@ -5864,7 +5560,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "09e8a6ba-8592-4795-a709-d2f04920ffd5"
+        "activity_section.key": "07897f16-fcf9-41c5-b86c-3273b4ed5e8c"
       }
     },
     {
@@ -5876,7 +5572,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "3e25eacf-63d7-4fdb-971e-ddceb8e2de40"
+        "activity_section.key": "88839953-6cad-4514-8791-d8c632134ecd"
       }
     },
     {
@@ -5888,7 +5584,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "3e25eacf-63d7-4fdb-971e-ddceb8e2de40"
+        "activity_section.key": "88839953-6cad-4514-8791-d8c632134ecd"
       }
     },
     {
@@ -5900,7 +5596,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       }
     },
     {
@@ -5912,7 +5608,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       }
     },
     {
@@ -5924,7 +5620,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       }
     },
     {
@@ -5936,7 +5632,7 @@
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "8ad9ad67-7e53-41c7-86d1-2ad083c74661"
+        "activity_section.key": "6ffa2301-4b15-4907-a650-6be51d019ef7"
       }
     },
     {
@@ -5972,7 +5668,7 @@
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "02dee838-807c-4f3d-8bdb-72e016d22e2a"
+        "activity_section.key": "9273ec78-0697-4097-856c-59812c508e70"
       }
     },
     {
@@ -5984,7 +5680,7 @@
         "lesson.key": "Lists Make",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2021",
-        "activity_section.key": "c6d05b1e-c7ae-4e62-9593-f265d9e5ff96"
+        "activity_section.key": "51b7dc7c-028b-462f-9d01-b0d2dce3a4eb"
       }
     },
     {
@@ -5996,7 +5692,7 @@
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8b400866-9d70-44ee-aa59-91e7cffe2a7e"
+        "activity_section.key": "cd295164-f461-4956-8117-d80e4b503bb1"
       }
     },
     {
@@ -6020,7 +5716,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       }
     },
     {
@@ -6032,7 +5728,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "2ffc8033-97ff-4379-94c4-cf8a4f2f6f7c"
+        "activity_section.key": "7323e31f-c285-4b2e-a5a2-0feef2bf2bc9"
       }
     },
     {
@@ -6044,7 +5740,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "8f8c6ae2-9d91-418b-ac12-f8fcf463317f"
+        "activity_section.key": "152bfd79-ab84-4edd-b002-2997fd4a40b2"
       }
     },
     {
@@ -6068,7 +5764,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc"
+        "activity_section.key": "abae5b3f-a185-424f-87ee-07544b1c3de2"
       }
     },
     {
@@ -6080,7 +5776,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc"
+        "activity_section.key": "abae5b3f-a185-424f-87ee-07544b1c3de2"
       }
     },
     {
@@ -6092,7 +5788,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "ec37be9e-92f4-415b-9211-ed9ed3d909bc"
+        "activity_section.key": "abae5b3f-a185-424f-87ee-07544b1c3de2"
       }
     },
     {
@@ -6104,7 +5800,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "286c3327-b1c9-4d87-91d4-556f9f1f6281"
+        "activity_section.key": "b73aa278-fef1-4aa4-b0f1-a16954c97259"
       }
     },
     {
@@ -6116,7 +5812,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "286c3327-b1c9-4d87-91d4-556f9f1f6281"
+        "activity_section.key": "b73aa278-fef1-4aa4-b0f1-a16954c97259"
       }
     },
     {
@@ -6128,7 +5824,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "286c3327-b1c9-4d87-91d4-556f9f1f6281"
+        "activity_section.key": "b73aa278-fef1-4aa4-b0f1-a16954c97259"
       }
     },
     {
@@ -6140,7 +5836,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5964f5e5-6f39-4c69-8036-f0b670bde1b8"
+        "activity_section.key": "ac6845e9-81ab-4515-ab87-681929eb5b25"
       }
     },
     {
@@ -6152,7 +5848,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5964f5e5-6f39-4c69-8036-f0b670bde1b8"
+        "activity_section.key": "ac6845e9-81ab-4515-ab87-681929eb5b25"
       }
     },
     {
@@ -6188,7 +5884,7 @@
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "39305728-8fe2-48eb-91a9-388273c702e1"
+        "activity_section.key": "cdaee7b6-c2a4-405d-9ec3-2b4ef0f2ed11"
       }
     },
     {
@@ -6200,7 +5896,7 @@
         "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5b4f49ce-0982-4521-8cce-378950f79ffe"
+        "activity_section.key": "5e66072a-ce65-4675-9fab-969bc241cf48"
       }
     },
     {
@@ -6428,7 +6124,7 @@
         "lesson.key": "Semester Hackathon Part 2",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "c8404d7b-439b-4443-8496-b860a83ce980"
+        "activity_section.key": "340739df-f603-4b61-b1a0-54c28100a4e6"
       }
     },
     {
@@ -6440,7 +6136,7 @@
         "lesson.key": "Semester Hackathon Part 3",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "9491ecb3-9d87-487e-816a-9ae863ca9116"
+        "activity_section.key": "b86b3f59-9edf-4a2b-9d22-09e03b997507"
       }
     },
     {
@@ -6452,7 +6148,7 @@
         "lesson.key": "Semester Hackathon Part 4",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "f4bd2072-3dbf-4717-b299-8756ac6f7ace"
+        "activity_section.key": "170b34c2-7c90-40c2-8ead-bcc0c268b161"
       }
     },
     {
@@ -6464,7 +6160,7 @@
         "lesson.key": "Semester Hackathon Part 5",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "fc207c8c-9e39-47a3-ad53-8a0b1ca0ec4b"
+        "activity_section.key": "d1e2844e-c7ad-43f1-8d46-e0f4dcd68aa7"
       }
     },
     {
@@ -6476,7 +6172,7 @@
         "lesson.key": "Lesson 18: Assessment Day",
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
-        "activity_section.key": "28fba966-8c99-4a3f-a3c7-50fa5e8604fc"
+        "activity_section.key": "4e85ff7d-88fd-4c72-b725-7975099cde08"
       }
     }
   ],
@@ -6484,122 +6180,110 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Lists Make - Reminder App",
       "url": "https://docs.google.com/document/d/1GlcxUvD-czBrwGGq70ZiiItOSB3R77s0JOSL2XvxecM/edit?usp=sharing",
-      "key": "csp lists make",
+      "key": "csp_lists_make_-_reminder_app",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp lists make"
+        "resource.key": "csp_lists_make_-_reminder_app"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "Loops Game Board",
       "url": "https://docs.google.com/document/d/1tvAqNjn1ktrzMROtHAxOZDfHHMOn367Fdpnp9sbWghM/view",
-      "key": "csp loops game board",
+      "key": "loops_game_board",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp loops game board"
+        "resource.key": "loops_game_board"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6618,225 +6302,199 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Lists Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "Traversal Machine",
       "url": "https://docs.google.com/document/d/155CFeFELE2dfoQCip9CwLb6KbJqDeUcvhumCRecCU-Y/view",
-      "key": "csp traversal machine",
+      "key": "traversal_machine",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp traversal machine"
+        "resource.key": "traversal_machine"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Traversals Make - Random Forecaster App",
       "url": "https://docs.google.com/document/d/1a6MK9hALSWPJ_mHs0uM5dwrGammMAr5IfXGbf7gtczg/edit?usp=sharing",
-      "key": "csp traversals make",
+      "key": "csp_traversals_make_-_random_forecaster_app",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp traversals make"
+        "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Written Response",
       "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
-      "key": "csp u5 written response",
+      "key": "csp_u5_hackathon_project_written_response",
       "properties": {
         "type": "Written Response",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
-      }
-    },
-    {
-      "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "name": "CSP U5 Hackathon Project Written Response",
-      "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
-      "key": "csp u5 written response",
-      "properties": {
-        "type": "Written Response",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 written response"
-      }
-    },
-    {
-      "name": "CSP U5 Hackathon Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -6855,13 +6513,51 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "name": "CSP U5 Hackathon Project Written Response",
+      "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
+      "key": "csp_u5_hackathon_project_written_response",
+      "properties": {
+        "type": "Written Response",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_u5_hackathon_project_written_response"
+      }
+    },
+    {
+      "name": "CSP U5 Hackathon Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
+      "key": "csp_u5_hackathon_project_planning_guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Lists Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     }
   ],
@@ -6869,61 +6565,55 @@
     {
       "seeding_key": {
         "lesson.key": "Lists Explore",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Practice",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
-        "resource.key": "csp lists make"
+        "resource.key": "csp_lists_make_-_reminder_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Explore",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Explore",
-        "resource.key": "csp loops game board"
+        "resource.key": "loops_game_board"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Practice",
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6934,110 +6624,98 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "resource.key": "csp u5 presentation"
+        "lesson.key": "Loops Make",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Explore",
-        "resource.key": "csp traversal machine"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "resource.key": "traversal_machine"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Practice",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
-        "resource.key": "csp traversals make"
+        "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 2",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 2",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 3",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 3",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
-        "resource.key": "csp u5 planning guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 written response"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -7048,8 +6726,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "csp_u5_hackathon_project_written_response"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 18: Assessment Day",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     }
   ],

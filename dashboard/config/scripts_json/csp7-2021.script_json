@@ -17,6 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 19:06:27 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -414,7 +415,6 @@
       "key": "6eae0e45-b397-4308-a3b4-6ac8b9cb7fc6",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "6eae0e45-b397-4308-a3b4-6ac8b9cb7fc6",
@@ -469,7 +469,6 @@
       "key": "ee3b6468-bd13-4337-83b3-95d917f3c3de",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "ee3b6468-bd13-4337-83b3-95d917f3c3de",
@@ -524,7 +523,6 @@
       "key": "36f4456b-3fab-4acc-8a4c-c69c6dccb5b1",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "36f4456b-3fab-4acc-8a4c-c69c6dccb5b1",
@@ -579,7 +577,6 @@
       "key": "5b92438b-6de9-4966-b6a6-eafd2b875f82",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "5b92438b-6de9-4966-b6a6-eafd2b875f82",
@@ -634,7 +631,6 @@
       "key": "ded8fcc8-d5dd-4e2a-bf50-0e8bcf8420f7",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "ded8fcc8-d5dd-4e2a-bf50-0e8bcf8420f7",
@@ -689,7 +685,6 @@
       "key": "40bbff70-0eda-4299-b227-465f97c4f0b0",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "40bbff70-0eda-4299-b227-465f97c4f0b0",
@@ -744,7 +739,6 @@
       "key": "5d7b658c-8d5a-40a8-8a2c-906deb340cd7",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "5d7b658c-8d5a-40a8-8a2c-906deb340cd7",
@@ -785,8 +779,7 @@
       "key": "c988997b-17e1-4df9-94f9-c1ee76577fad",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 0
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c988997b-17e1-4df9-94f9-c1ee76577fad",
@@ -799,7 +792,6 @@
       "key": "11d962c0-95bb-464e-972c-69f780b3d5cd",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "11d962c0-95bb-464e-972c-69f780b3d5cd",
@@ -840,8 +832,7 @@
       "key": "3932b04a-e75b-4ed5-85c2-ce661ee76c58",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 0
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "3932b04a-e75b-4ed5-85c2-ce661ee76c58",
@@ -854,7 +845,6 @@
       "key": "b52dd175-f13f-410e-8004-7bf7b94d9ba8",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "b52dd175-f13f-410e-8004-7bf7b94d9ba8",
@@ -906,19 +896,6 @@
       }
     },
     {
-      "key": "b1f0c6be-4b18-48c2-95b7-01feb67c089d",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b1f0c6be-4b18-48c2-95b7-01feb67c089d",
-        "lesson.key": "Project - Make a Library Part 3",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2021"
-      }
-    },
-    {
       "key": "64327b59-a21c-44f6-9b9c-381894ea329c",
       "position": 1,
       "properties": {
@@ -950,7 +927,6 @@
       "key": "5314df05-6fb7-4e61-97c9-cd47d4b7c726",
       "position": 3,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "5314df05-6fb7-4e61-97c9-cd47d4b7c726",
@@ -978,14 +954,7 @@
       "key": "bcce1c99-fdc8-4f83-af10-994ed40b4ea5",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** Why would you want to make your code easier to work with or read?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a good time to remind students that when we write code, we aren't just writing for a computer - we are also writing for humans who will need to understand our code. Better organization can help others quickly understand our code so they can help debug or build upon the code. \r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Why would you want to make your code easier to work with or read?*\n\n**Discussion Goal:** This is a good time to remind students that when we write code, we aren't just writing for a computer - we are also writing for humans who will need to understand our code. Better organization can help others quickly understand our code so they can help debug or build upon the code. \n"
       },
       "seeding_key": {
         "activity_section.key": "bcce1c99-fdc8-4f83-af10-994ed40b4ea5",
@@ -1031,7 +1000,6 @@
       "key": "b1590232-9c6c-4281-a61d-f27176e0d798",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1043,14 +1011,7 @@
       "key": "1e061fa5-3aa7-4163-bcbf-4d2fc7106e0b",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Are clean and organized programs more useful for computers or people? Why? Try to give examples from programs you've written or seen in this class.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Parameters and return values allow students to write programs that are more organized and cleaner. Naming functions helps students write programs that read more like descriptions of what they do, and they also help students reuse code.\r\n\r\nThis quick discussion sets up many of these realizations. Students will not leave this lesson able to \"do more\" than previously. Instead they'll be able to write programs that are cleaner, better organized, and better able to be used elsewhere. Long term, writing programs like this will actually help students write more complex code, but because they as programmers will better be able to understand their programs and reuse the code they write. This quick prompt does not need to cover all of those points and should just be a reminder of things they've already seen. Clean code is for humans, but in the long term it helps them write better programs.\r\n\r\n"
-          }
-        ],
+        "description": "[slide]  **Discuss:** *Are clean and organized programs more useful for computers or people? Why? Try to give examples from programs you've written or seen in this class.*\n\nHave students silently journal their response, then discuss with a partner, and finally share with the class.\n\n**Discussion Goal:** Parameters and return values allow students to write programs that are more organized and cleaner. Naming functions helps students write programs that read more like descriptions of what they do, and they also help students reuse code.\n\nThis quick discussion sets up many of these realizations. Students will not leave this lesson able to \"do more\" than previously. Instead they'll be able to write programs that are cleaner, better organized, and better able to be used elsewhere. Long term, writing programs like this will actually help students write more complex code, but because they as programmers will better be able to understand their programs and reuse the code they write. This quick discussion does not need to cover all of those points and should just be a reminder of things they've already seen. Clean code is for humans, but in the long term it helps them write better programs.\n\n",
         "name": "Who is Clean Code For?\r"
       },
       "seeding_key": {
@@ -1062,7 +1023,6 @@
       "key": "b9a32bf9-574f-4aff-8f2f-60114e389ff3",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students silently journal their response, then discuss with a partner, and finally share with the class."
       },
       "seeding_key": {
         "activity_section.key": "b9a32bf9-574f-4aff-8f2f-60114e389ff3",
@@ -1096,10 +1056,9 @@
       "key": "2f77b7d8-d62a-470a-87e7-cc96552fe60c",
       "position": 2,
       "properties": {
-        "description": "&fa-desktop;  **Do This:** Students navigate to Level 2 and read and respond to the questions there. If students have extra time, they can try the modify activity.",
+        "description": "&fa-desktop;  **Do This:** Students navigate to Level 1 and read and respond to the questions there. If students have extra time, they can try the modify activity.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Make sure you leave time to bring the class back together for discussion and code walkthroughs. There's a lot to dig into with these Investigations. \r\n"
           }
@@ -1114,7 +1073,7 @@
       "key": "5f2943b5-7ca7-4703-8b53-cbac5071d9ae",
       "position": 3,
       "properties": {
-        "description": "* How does calculate() work?\r\n* What are the arguments passed through the parameter in calculate() when it is called?\r\n* What types of data does the parameter require in the upgradeClickerCheck() function? Where can you find that information?\r\n* What is returned? What type of data?\r\n\r\n[slide] **Discuss:** As a class, walk through the questions and the code. Make sure students understand the parts of the function."
+        "description": "* How does calculate() work?\n* What are the arguments passed through the parameter in calculate() when it is called?\n* What types of data does the parameter require in the upgradeClickerCheck() function? Where can you find that information?\n* What is returned? What type of data?\n\n[slide] **Discuss:** *As a class, walk through the questions and the code. Make sure students understand the parts of the function.*"
       },
       "seeding_key": {
         "activity_section.key": "5f2943b5-7ca7-4703-8b53-cbac5071d9ae",
@@ -1128,7 +1087,6 @@
         "description": "[slide]  **Do This:** Now look together at lines 30-36. Students discuss with a partner how they think the MOD operator works.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students need to know how the MOD operator works for the AP CSP exam. The explanations here are enough to help them answer those questions. \r\n\r\nThere are many wonderful and interesting uses of MOD in apps, but students are not expected or required to use the operator themselves when programming apps for this course. \r\n"
           }
@@ -1166,7 +1124,7 @@
       "key": "f7719909-f1dd-48e5-ac25-e979636ba00f",
       "position": 7,
       "properties": {
-        "description": "[slide] **Do This:** Students navigate to Level 3, read likes 1-14 and discuss with their partner what's happening in these lines.\r\n\r\n**Discuss:** Read through the lines together as a class, and clear up any misconceptions. \r\n\r\n[slide] **Do This:** Students carefully read the function on lines 15-34 before explaining to their partners how it works. If students have extra time, they can try the modify activity.\r\n\r\n[slide] **Discuss:** Talk through the app together as a class. Make sure students understand all the parts of the function and understand where to look in the comments for information."
+        "description": "[slide] **Do This:** Students navigate to Level 2, read likes 1-14 and discuss with their partner what's happening in these lines.\n\n**Discuss:** *Read through the lines together as a class, and clear up any misconceptions.*\n\n[slide] **Do This:** Students carefully read the function on lines 15-34 before explaining to their partners how it works. If students have extra time, they can try the modify activity.\n\n[slide] **Discuss:** Talk through the app together as a class. Make sure students understand all the parts of the function and understand where to look in the comments for information."
       },
       "seeding_key": {
         "activity_section.key": "f7719909-f1dd-48e5-ac25-e979636ba00f",
@@ -1174,17 +1132,21 @@
       }
     },
     {
+      "key": "e09ae6e9-707c-4478-b050-e13cbb282c61",
+      "position": 8,
+      "properties": {
+        "progression_name": "App Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "e09ae6e9-707c-4478-b050-e13cbb282c61",
+        "lesson_activity.key": "f9b86f60-f067-483c-84f0-4b954e71c58a"
+      }
+    },
+    {
       "key": "206218d5-88ac-4284-a47b-ae7a5be24d03",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Review:** Discuss the takeaways on the Wrap Up slide.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students are introduced to procedural abstraction on this slide, a concept they will return to throughout the unit. Spend a few minutes discussing what \"generalize\" means - focusing on how a single function can be used to accomplish many different tasks by using parameters. \r\n"
-          }
-        ]
+        "description": "[slide]  **Review:** Discuss the takeaways on the Wrap Up slide.\n\n**Discussion Goal:** Students are introduced to procedural abstraction on this slide, a concept they will return to throughout the unit. Spend a few minutes discussing what \"generalize\" means - focusing on how a single function can be used to accomplish many different tasks by using parameters. \n"
       },
       "seeding_key": {
         "activity_section.key": "206218d5-88ac-4284-a47b-ae7a5be24d03",
@@ -1215,22 +1177,9 @@
       }
     },
     {
-      "key": "96e0ea29-dd28-4cfc-aca5-59fd98718323",
+      "key": "fdc8cf7a-dde1-4afb-9b7e-d1da6d0925a4",
       "position": 1,
       "properties": {
-        "name": "App Investigation",
-        "progression_name": "App Investigation"
-      },
-      "seeding_key": {
-        "activity_section.key": "96e0ea29-dd28-4cfc-aca5-59fd98718323",
-        "lesson_activity.key": "ee3b6468-bd13-4337-83b3-95d917f3c3de"
-      }
-    },
-    {
-      "key": "fdc8cf7a-dde1-4afb-9b7e-d1da6d0925a4",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1242,14 +1191,7 @@
       "key": "4568613c-e3b0-4a68-8086-919369871765",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What is one reason why parameters and return values are useful? What is one way you think programming with parameters and return values may make programming or debugging more challenging?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this quick prompt to review what students should already have seen about parameters and return values while also prompting them to think about how they'll need to use those skills in today's lessons. You should use your remarks to review the fact that parameters and return help write neater programs, but they may be a little tricky at first to read and understand. That's why we practice!\r\n\r\nUp to this point, students have only seen complete traversals - that is, traversals where every element of a list is accessed. Now that they've been introduced to return, students can build partial traversals where a list is only partially accessed. For example: A list could be traversed to find a specific element. Once that element is found, \"found element x\" is returned, and the traversal stops. While students don't actually need to build partial traversals themselves, they now should know how it theoretically could be created. \r\n"
-          }
-        ],
+        "description": "[slide]  **Discuss:** *What is one reason why parameters and return values are useful? What is one way you think programming with parameters and return values may make programming or debugging more challenging?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Use this quick discussion to review what students should already have seen about parameters and return values while also discussing them to think about how they'll need to use those skills in today's lessons. You should use your remarks to review the fact that parameters and return help write neater programs, but they may be a little tricky at first to read and understand. That's why we practice!\n\nUp to this point, students have only seen complete traversals - that is, traversals where every element of a list is accessed. Now that they've been introduced to return, students can build partial traversals where a list is only partially accessed. For example: A list could be traversed to find a specific element. Once that element is found, \"found element x\" is returned, and the traversal stops. While students don't actually need to build partial traversals themselves, they now should know how it theoretically could be created. \n",
         "name": "Quick Warm Up\r"
       },
       "seeding_key": {
@@ -1261,7 +1203,6 @@
       "key": "24f68148-66e3-45ee-870c-965850b47e48",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share responses with a neighbor before discussing with the whole class."
       },
       "seeding_key": {
         "activity_section.key": "24f68148-66e3-45ee-870c-965850b47e48",
@@ -1284,8 +1225,13 @@
       "key": "c946c186-3d2d-44ad-beed-e2f6d552dcbf",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson.",
-        "name": "Practice Time\r"
+        "name": "Practice Time\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c946c186-3d2d-44ad-beed-e2f6d552dcbf",
@@ -1293,8 +1239,19 @@
       }
     },
     {
-      "key": "945226c1-860c-445b-8cd8-c0fae4b92735",
+      "key": "1fcacf12-ee64-44eb-b109-888936acc984",
       "position": 2,
+      "properties": {
+        "description": "**Group:** It is recommended that students work in pairs for this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "1fcacf12-ee64-44eb-b109-888936acc984",
+        "lesson_activity.key": "ab7c974b-c712-45d7-823e-592445266f09"
+      }
+    },
+    {
+      "key": "945226c1-860c-445b-8cd8-c0fae4b92735",
+      "position": 3,
       "properties": {
         "description": "[slide] Today you're mostly going to practice what we've learned about programming with parameters and return values. In general we want to use the debugging process we've practiced all year, but here's some specific things to look out for in today's lesson.\r\n\r\n* [slide] Use console.log to call functions with parameters with different values to see how they run\r\n* Slow down the code with the speed slider to see how the code is running once your function is called",
         "remarks": true
@@ -1306,16 +1263,9 @@
     },
     {
       "key": "f3a6b7ac-de6a-429d-a9ae-63b89f14b784",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "[slide]  **Levels 2-6:** These levels involve functions with parameters and return values, working in the console",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n"
-          }
-        ]
+        "description": "[slide]  **Levels 1-5:** These levels involve functions with parameters and return values, working in the console"
       },
       "seeding_key": {
         "activity_section.key": "f3a6b7ac-de6a-429d-a9ae-63b89f14b784",
@@ -1323,10 +1273,35 @@
       }
     },
     {
-      "key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc",
-      "position": 4,
+      "key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d",
+      "position": 5,
       "properties": {
-        "description": "* Level 2: Calling a function multiple times with a single parameter\r\n* Level 3: Students follow a pattern to choose a randomCompliment from a list that is concatenated with a name passed through a parameter. \r\n* Level 4: This is the same as Level 2, except now the functions use return values. Again, students follow a pattern given in another working function. \r\n* Level 5: Students write a function that returns the season a month is in. By this point, students should be noticing the type of commenting that is happening above each function. This format previews how students will need to write comments for libraries later on in the unit. \r\n* Level 6: This level traverses lists to find the longest and shortest words. Parameters and return values are used. \r\n\r\n**Levels 7-8:** Students continue practicing, now working with apps\r\n\r\n* Level 7: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\r\n* Level 8: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \r\n\r\n**Level 9:** Students do a quick practice with the MOD operator.\r\n\r\n**Extension Opportunities:**\r\n\r\n* Level 8: Add more greeting and compliment options to the lists"
+        "description": "* Level 1: Calling a function multiple times with a single parameter\n* Level 2: Students follow a pattern to choose a random Compliment from a list that is concatenated with a name passed through a parameter. \n* Level 3: This is the same as Level 1, except now the functions use return values. Again, students follow a pattern given in another working function. \n* Level 4: Students write a function that returns the season a month is in. By this point, students should be noticing the type of commenting that is happening above each function. This format previews how students will need to write comments for libraries later on in the unit. \n* Level 5: This level traverses lists to find the longest and shortest words. Parameters and return values are used. ",
+        "progression_name": "console.log Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d",
+        "lesson_activity.key": "ab7c974b-c712-45d7-823e-592445266f09"
+      }
+    },
+    {
+      "key": "16ade91e-eae6-4d89-a536-fdc733b65730",
+      "position": 6,
+      "properties": {
+        "description": "\n**Levels 6-7:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n",
+        "progression_name": "App Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "16ade91e-eae6-4d89-a536-fdc733b65730",
+        "lesson_activity.key": "ab7c974b-c712-45d7-823e-592445266f09"
+      }
+    },
+    {
+      "key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc",
+      "position": 7,
+      "properties": {
+        "description": "\n**Level 8:** Students do a quick practice with the MOD operator.\n\n**Extension Opportunities:**\n\n* Level 8: Add more greeting and compliment options to the lists",
+        "progression_name": "MOD Practice"
       },
       "seeding_key": {
         "activity_section.key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc",
@@ -1334,31 +1309,23 @@
       }
     },
     {
-      "key": "3fcc0a66-2a24-4e1e-9fad-43f87a5993ff",
+      "key": "30e4f57f-0cd0-4713-8459-827b0c39869b",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What aspects of working with parameters and return values do you feel like clicked today? What do you still feel like you have trouble with?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
-          }
-        ]
       },
       "seeding_key": {
-        "activity_section.key": "3fcc0a66-2a24-4e1e-9fad-43f87a5993ff",
+        "activity_section.key": "30e4f57f-0cd0-4713-8459-827b0c39869b",
         "lesson_activity.key": "65233563-7084-4618-83a8-1ebcae33f55d"
       }
     },
     {
-      "key": "30e4f57f-0cd0-4713-8459-827b0c39869b",
+      "key": "3fcc0a66-2a24-4e1e-9fad-43f87a5993ff",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
+        "description": "[slide]  **Discuss:** *What aspects of working with parameters and return values do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
-        "activity_section.key": "30e4f57f-0cd0-4713-8459-827b0c39869b",
+        "activity_section.key": "3fcc0a66-2a24-4e1e-9fad-43f87a5993ff",
         "lesson_activity.key": "65233563-7084-4618-83a8-1ebcae33f55d"
       }
     },
@@ -1398,46 +1365,9 @@
       }
     },
     {
-      "key": "18d4846a-851b-49ba-987c-0938b246ce15",
+      "key": "28deef60-4c89-411b-9e26-d9ec1ce7797d",
       "position": 1,
       "properties": {
-        "name": "console.log Practice",
-        "progression_name": "console.log Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15",
-        "lesson_activity.key": "36f4456b-3fab-4acc-8a4c-c69c6dccb5b1"
-      }
-    },
-    {
-      "key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f",
-      "position": 2,
-      "properties": {
-        "name": "App Practice",
-        "progression_name": "App Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f",
-        "lesson_activity.key": "36f4456b-3fab-4acc-8a4c-c69c6dccb5b1"
-      }
-    },
-    {
-      "key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db",
-      "position": 3,
-      "properties": {
-        "name": "MOD Practice",
-        "progression_name": "MOD Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db",
-        "lesson_activity.key": "36f4456b-3fab-4acc-8a4c-c69c6dccb5b1"
-      }
-    },
-    {
-      "key": "28deef60-4c89-411b-9e26-d9ec1ce7797d",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding: AP Practice",
         "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
@@ -1449,13 +1379,6 @@
       "key": "f9b71a47-4fd8-4a39-a8ef-bc43001a9504",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should prompt students to better understand what turns out to be a slightly different make project. Today they're going to be taking on \"blank functions\" rather than \"blank screens\". This is because with parameters and return values you can chunk out your programs into pieces that have well-defined behavior. Remind students that this is known as procedural abstraction. If students don't land on these ideas don't aim to force it but return to this idea in the wrap up.\r\n"
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "f9b71a47-4fd8-4a39-a8ef-bc43001a9504",
@@ -1466,7 +1389,7 @@
       "key": "60211632-01b4-4a96-9e5b-50b11b6088b9",
       "position": 2,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** How do parameters and return change the way you write programs? \r\n\r\n**Discuss:** Have students share their ideas with a partner and then discuss as a class."
+        "description": "[slide] **Discuss:** *How do parameters and return change the way you write programs?*\n\nHave students share their ideas with a partner and then discuss as a class.\n\n**Discussion Goal:** This discussion should prompt students to better understand what turns out to be a slightly different make project. Today they're going to be taking on \"blank functions\" rather than \"blank screens\". This is because with parameters and return values you can chunk out your programs into pieces that have well-defined behavior. Remind students that this is known as procedural abstraction. If students don't land on these ideas don't aim to force it but return to this idea in the wrap up.\n"
       },
       "seeding_key": {
         "activity_section.key": "60211632-01b4-4a96-9e5b-50b11b6088b9",
@@ -1477,7 +1400,7 @@
       "key": "53535097-5669-484d-a7ee-74e1922d2178",
       "position": 3,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) Today we're going to be working on another Make project, but this one is a little bit different than others we've done in the course. A lot of the code will already be written for us, and we'll be working on blank functions, rather than entirely blank programs. Thanks to the way that parameters and return work, it's easy to design programs this way.",
+        "description": "[slide] Today we're going to be working on another Make project, but this one is a little bit different than others we've done in the course. A lot of the code will already be written for us, and we'll be working on blank functions, rather than entirely blank programs. Thanks to the way that parameters and return work, it's easy to design programs this way.",
         "remarks": true
       },
       "seeding_key": {
@@ -1486,11 +1409,28 @@
       }
     },
     {
-      "key": "a9cf16f0-1cc9-4d9e-8839-62f1bc77adca",
+      "key": "cfc4ed38-b955-4eb3-9a66-6957082ac7ec",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Level 2 - Explore:** Have students explore the working Rock Paper Scissors app in Level 2. If students are not working in pairs they should still discuss the prompts with a neighbor.\r\n\r\n* What does each button do\r\n* How does the screen get updated after clicking each button\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Review:** Quickly review what students will be doing again before they move on to the next step.",
-        "name": "Build the Rock Paper Scissors App\r"
+        "name": "Build the Rock Paper Scissors App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \n\n**Debugging:** Review with students steps they can use to debug if they get stuck:\n\n* Build small parts of the program at a time and test them to make sure they work\n* Run the code on turtle mode\n* Add the variables to the watcher\n* Explain the code to a friend and clarify the differences between what they expect to happen and what is actually happening in \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cfc4ed38-b955-4eb3-9a66-6957082ac7ec",
+        "lesson_activity.key": "ab9a65fa-1d75-43b9-8f78-295bab6089c8"
+      }
+    },
+    {
+      "key": "a9cf16f0-1cc9-4d9e-8839-62f1bc77adca",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n[slide] **Level 1 - Explore:** Have students explore the working Rock Paper Scissors app in Level 1. If students are not working in pairs they should still discuss with a neighbor.\n\n* What does each button do\n* How does the screen get updated after clicking each button\n\n",
+        "progression_name": "Try the Rock Paper Scissors App"
       },
       "seeding_key": {
         "activity_section.key": "a9cf16f0-1cc9-4d9e-8839-62f1bc77adca",
@@ -1499,15 +1439,9 @@
     },
     {
       "key": "33326272-96c3-4c9c-9a5e-1b3d32d471d5",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \r\n\r\n**Debugging:** Review with students steps they can use to debug if they get stuck:\r\n\r\n* Build small parts of the program at a time and test them to make sure they work\r\n* Run the code on turtle mode\r\n* Add the variables to the watcher\r\n* Explain the code to a friend and clarify the differences between what they expect to happen and what is actually happening in \r\n"
-          }
-        ]
+        "description": "[slide] **Review:** Quickly review what students will be doing again before they move on to the next step."
       },
       "seeding_key": {
         "activity_section.key": "33326272-96c3-4c9c-9a5e-1b3d32d471d5",
@@ -1516,9 +1450,10 @@
     },
     {
       "key": "c6b30149-a1a1-4c69-b302-70ba089b312e",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "**Distribute:** Give students copies of [r parameters-and-return-make-activity-guide] if you will be using it during the class.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting."
+        "description": "**Distribute:** Give students copies of [r parameters-and-return-make-activity-guide] if you will be using it during the class.\n\n[slide] **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Rock Paper Scissors App"
       },
       "seeding_key": {
         "activity_section.key": "c6b30149-a1a1-4c69-b302-70ba089b312e",
@@ -1529,14 +1464,7 @@
       "key": "e6dee438-0916-46f4-8776-26e9210e4ac1",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How could using parameters and return help you write programs collaboratively?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt should help review ideas that students saw in this project, in particuarly that parameters and return help break programs into chunks. It should also help them see that this approach could be used to collaboratively design programs. If teammates agree in advance what each function should do they can go off and write them separately before coming back together to make the entire app work.\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *How could using parameters and return help you write programs collaboratively?*\n\n**Discussion Goal:** This should help review ideas that students saw in this project, in particuarly that parameters and return help break programs into chunks. It should also help them see that this approach could be used to collaboratively design programs. If teammates agree in advance what each function should do they can go off and write them separately before coming back together to make the entire app work.\n"
       },
       "seeding_key": {
         "activity_section.key": "e6dee438-0916-46f4-8776-26e9210e4ac1",
@@ -1582,7 +1510,6 @@
       "key": "0f09e960-a774-43a6-812e-5b8b3c3eb203",
       "position": 1,
       "properties": {
-        "name": "Try the Rock Paper Scissors App",
         "progression_name": "Try the Rock Paper Scissors App"
       },
       "seeding_key": {
@@ -1594,7 +1521,6 @@
       "key": "f8bb6642-9926-444f-b88a-af5a1ac5e86c",
       "position": 2,
       "properties": {
-        "name": "Make the Rock Paper Scissors App",
         "progression_name": "Make the Rock Paper Scissors App"
       },
       "seeding_key": {
@@ -1606,14 +1532,7 @@
       "key": "cca04cf3-24f9-4061-bd41-45c4f508e1a3",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How could you share a function with another person so they could use it in their own program?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Guide student answers towards possible answers like these - \r\n\r\n* email code to each other\r\n* used a shared document\r\n* copy/paste functions from one tab to another\r\n"
-          }
-        ],
+        "description": "[slide]  **Discuss:** *How could you share a function with another person so they could use it in their own program?*\n\n**Discussion Goal:** Guide student answers towards possible answers like these - \n\n* email code to each other\n* used a shared document\n* copy/paste functions from one tab to another\n",
         "name": "Preview Libraries\r"
       },
       "seeding_key": {
@@ -1717,7 +1636,6 @@
       "key": "0ab87823-cfee-4964-b0ab-9fea88c9924e",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1729,7 +1647,7 @@
       "key": "a629ed9d-83bf-40c3-b00e-6604024f2ab4",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Today we are going to learn how to use libraries to share code with one another. Usually you do this by writing functions with parameters and return values. Why do you think it's important to use parameters and return values when writing code for other people to use?"
+        "description": "[slide] **Discuss:** *Today we are going to learn how to use libraries to share code with one another. Usually you do this by writing functions with parameters and return values. Why do you think it's important to use parameters and return values when writing code for other people to use?*"
       },
       "seeding_key": {
         "activity_section.key": "a629ed9d-83bf-40c3-b00e-6604024f2ab4",
@@ -1740,14 +1658,7 @@
       "key": "a683f90b-98ed-42ab-b07c-1acf7d8e4201",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share responses.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "Some points that might come up:\r\n\r\n* Parameters and return values allow functions to run in predictable ways without impacting other parts of the app unexpectedly.\r\n* Parameters and return values help communicate what the code is supposed to do.\r\n* Parameters and return values make functions more flexible so that they can be used in a variety of situations.\r\n"
-          }
-        ]
+        "description": "Have students share responses.\n\nSome points that might come up:\n\n* Parameters and return values allow functions to run in predictable ways without impacting other parts of the app unexpectedly.\n* Parameters and return values help communicate what the code is supposed to do.\n* Parameters and return values make functions more flexible so that they can be used in a variety of situations.\n"
       },
       "seeding_key": {
         "activity_section.key": "a683f90b-98ed-42ab-b07c-1acf7d8e4201",
@@ -1769,8 +1680,9 @@
       "key": "24235ed4-651a-4edd-a4ab-2ac22a365d0b",
       "position": 2,
       "properties": {
-        "description": "[slide] **Do This:** Students navigate to Level 2 where they should run the app and try several different inputs.",
-        "name": "Level 2\r"
+        "description": "[slide] **Do This:** Students navigate to Level 1 where they should run the app and try several different inputs.",
+        "name": "Level 1",
+        "progression_name": "States App"
       },
       "seeding_key": {
         "activity_section.key": "24235ed4-651a-4edd-a4ab-2ac22a365d0b",
@@ -1781,14 +1693,7 @@
       "key": "0e8f86c8-2a5e-4aee-82b2-dfb9631c03b6",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** With their partners, students look at the project code and discuss what happens when the button is clicked. After a few minutes, pull the class back together and discuss as a whole.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "When the button is clicked, the screen is updated by calling several functions from a library which return text and images that is displayed.\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *With their partners, students look at the project code and discuss what happens when the button is clicked. After a few minutes, pull the class back together and discuss as a whole.*\n\nWhen the button is clicked, the screen is updated by calling several functions from a library which return text and images that is displayed.\n"
       },
       "seeding_key": {
         "activity_section.key": "0e8f86c8-2a5e-4aee-82b2-dfb9631c03b6",
@@ -1810,14 +1715,7 @@
       "key": "6f5baa2c-5153-4a7c-9d5c-811ca73a4643",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Discuss:** What are the benefits of hiding all of the code for filtering the dataset in a library? What information does the user need to know in order to use the library functions?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Benefits:** The project code is neat and organized. \r\n\r\n**Information:** The end user does not have to know all the inner workings of the functions - they just need to know the documentation for the functions so they can call them correctly and understand what will be returned (if anything).\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** What are the benefits of hiding all of the code for filtering the dataset in a library? What information does the user need to know in order to use the library functions?\n\n**Benefits:** The project code is neat and organized. \n\n**Information:** The end user does not have to know all the inner workings of the functions - they just need to know the documentation for the functions so they can call them correctly and understand what will be returned (if anything).\n"
       },
       "seeding_key": {
         "activity_section.key": "6f5baa2c-5153-4a7c-9d5c-811ca73a4643",
@@ -1828,8 +1726,9 @@
       "key": "8f8552d8-a185-4b5d-a72e-12d84fde0814",
       "position": 6,
       "properties": {
-        "description": "[slide] **Do This:** Students navigate to Level 3 where they run the Pigify app and try several inputs. \r\n\r\n[slide] **Do This:** Again, students open the functions drawer, look at the documentation for each function, and discuss how they work.\r\n\r\n[slide] **Test the Functions:** Now students practice testing the functions to understand how they work. Here are the steps:\r\n\r\n* Re-read the documentation for each library function\r\n* Add a `console.log()` statement to the end of the program and call a function. Put in a reasonable argument in the space for the parameter.\r\n\t* For example: `console.log(StringsLibrary.firstLetter(\"pizza\"));`\r\n* Hit run to see the output. \r\n* Now add `console.log()` statements to test the rest of the functions. Is the output what you would expect? Try several different inputs.",
-        "name": "Level 3\r"
+        "description": "[slide] **Do This:** Students navigate to Level 2 where they run the Pigify app and try several inputs. \n",
+        "name": "Level 2",
+        "progression_name": "Pigify App"
       },
       "seeding_key": {
         "activity_section.key": "8f8552d8-a185-4b5d-a72e-12d84fde0814",
@@ -1840,14 +1739,7 @@
       "key": "d9d8f651-9671-4613-ad5f-3f4f4746300e",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Prompt:** Why should we test the functions in the library? What does this help us to know?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Testing the functions allows the end user to understand the behavior of the function. It's helpful for debugging functions, in addition to looking at the code in the library. \r\n\r\nFor example: If I call a function whose documentation indicates that it will return the first letter of a string, and instead it returns the last number of a string, I know that there is a problem with the library function and not my project code. \r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Why should we test the functions in the library? What does this help us to know?*\n\n[slide] **Do This:** Again, students open the functions drawer, look at the documentation for each function, and discuss how they work.\n\n[slide] **Test the Functions:** Now students practice testing the functions to understand how they work. Here are the steps:\n\n* Re-read the documentation for each library function\n* Add a `console.log()` statement to the end of the program and call a function. Put in a reasonable argument in the space for the parameter.\n\t* For example: `console.log(StringsLibrary.firstLetter(\"pizza\"));`\n* Hit run to see the output. \n* Now add `console.log()` statements to test the rest of the functions. Is the output what you would expect? Try several different inputs.\n\n**Discussion Goal:** Testing the functions allows the end user to understand the behavior of the function. It's helpful for debugging functions, in addition to looking at the code in the library. \n\nFor example: If I call a function whose documentation indicates that it will return the first letter of a string, and instead it returns the last number of a string, I know that there is a problem with the library function and not my project code. \n"
       },
       "seeding_key": {
         "activity_section.key": "d9d8f651-9671-4613-ad5f-3f4f4746300e",
@@ -1869,14 +1761,7 @@
       "key": "f326a30d-5bbd-42ae-b443-5a4511f08cc0",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Prompt:** What makes a good library function? How can you make sure that the end users of your library have what they need in order to use your functions?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Hopefully through the process of testing, students will understand the importance of well-documented functions that do what they are expected to do! \r\n\r\nA good library function contains everything it needs within the function. Beware of global variables or references to element IDs that might not be present in the end user's projects\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *What makes a good library function? How can you make sure that the end users of your library have what they need in order to use your functions?*\n\n**Discussion Goal:** Hopefully through the process of testing, students will understand the importance of well-documented functions that do what they are expected to do! \n\nA good library function contains everything it needs within the function. Beware of global variables or references to element IDs that might not be present in the end user's projects\n"
       },
       "seeding_key": {
         "activity_section.key": "f326a30d-5bbd-42ae-b443-5a4511f08cc0",
@@ -1898,14 +1783,7 @@
       "key": "02a03de7-45b4-476e-a213-ee9997cdb94b",
       "position": 11,
       "properties": {
-        "description": "[slide]  **Prompt:** What are the benefits of using existing algorithms instead of brand new algorithms?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The benefits of using existing algorithms as building blocks for constructing other algorithms include: \r\n\r\n* reduced development time\r\n* reduced testing\r\n* simplification and identification of errors\r\n\r\nWe demonstrated the last two bullets in the exercise using console.log to test functions and isolate errors. \r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *What are the benefits of using existing algorithms instead of brand new algorithms?*\n\n**Discussion Goal:** The benefits of using existing algorithms as building blocks for constructing other algorithms include: \n\n* reduced development time\n* reduced testing\n* simplification and identification of errors\n\nWe demonstrated the last two bullets in the exercise using console.log to test functions and isolate errors. \n"
       },
       "seeding_key": {
         "activity_section.key": "02a03de7-45b4-476e-a213-ee9997cdb94b",
@@ -1927,8 +1805,9 @@
       "key": "75654951-a699-4901-a210-2989c7bd3f1d",
       "position": 13,
       "properties": {
-        "description": "[slide] Now let's review Procedural Abstraction. In Lesson 2, we learned about Procedural Abstraction, where shared features of functions (also known as procedures) are extracted in order to generalize use. Procedural Abstraction encourages code reuse and manages complexity, because generalized functions can be used to accomplish many different tasks.\r\n\r\nNow let's extend that definition. Procedural Abstraction provides a name for a process and allows the procedure to be used only knowing what it does, and not necessarily how it does it.\r\n\r\nThis is how our libraries work!\r\n\r\nThere's a term for using libraries or other forms of ogranization in a program: Modularity - the subdivision of a computer program into separate subprograms. This is what we are doing when we organize functions into a library and then call them in another program. \r\n\r\nThe end user of the library only needs to know how the functions work, which they can learn through the documentation. This means that the creator of the library can udate the functions for any number of reasons, such as making the functions more efficient, without having to notify the end users, as long as the function documentation does not need to be changed. The end users can expect the library to work as intended.",
-        "remarks": true
+        "description": "[slide] Now let's review Procedural Abstraction. In Lesson 2, we learned about Procedural Abstraction, where shared features of functions (also known as procedures) are extracted in order to generalize use. Procedural Abstraction encourages code reuse and manages complexity, because generalized functions can be used to accomplish many different tasks.\n\nNow let's extend that definition. Procedural Abstraction provides a name for a process and allows the procedure to be used only knowing what it does, and not necessarily how it does it.\n\nThis is how our libraries work!\n\nThere's a term for using libraries or other forms of organization in a program: Modularity - the subdivision of a computer program into separate subprograms. This is what we are doing when we organize functions into a library and then call them in another program. \n\nThe end user of the library only needs to know how the functions work, which they can learn through the documentation. This means that the creator of the library can update the functions for any number of reasons, such as making the functions more efficient, without having to notify the end users, as long as the function documentation does not need to be changed. The end users can expect the library to work as intended.",
+        "remarks": true,
+        "progression_name": "Pigify App"
       },
       "seeding_key": {
         "activity_section.key": "75654951-a699-4901-a210-2989c7bd3f1d",
@@ -1950,7 +1829,7 @@
       "key": "2b59e6f8-2fef-4f22-b0bb-a7f023476ee0",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:**  Based on what you saw today, add reasons why someone would argue for the following three statements\r\n\r\n* Libraries help programmers collaborate\r\n* Libraries help programmers reuse code\r\n* Libraries help programmers writer simpler programs",
+        "description": "[slide] **Discuss:**  *Based on what you saw today, add reasons why someone would argue for the following three statements*\n\n* Libraries help programmers collaborate\n* Libraries help programmers reuse code\n* Libraries help programmers writer simpler programs",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -1962,14 +1841,7 @@
       "key": "1e307b1d-d284-498c-865b-457d6ead51f8",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students discuss together before sharing with a class.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "As you discuss focus conversation on the following points.\r\n\r\n* Libraries help programmer collaborate because they can design code with the idea that other people will use them.\r\n* Libraries help programmers reuse code because they can be imported into many different programs\r\n* Libraries help programmers write simpler programs because library code can be used to handle many common (and sometimes complex) behavior and remove it from your core program.\r\n"
-          }
-        ]
+        "description": "Have students discuss together before sharing with a class.\n\nAs you discuss focus conversation on the following points.\n\n* Libraries help programmer collaborate because they can design code with the idea that other people will use them.\n* Libraries help programmers reuse code because they can be imported into many different programs\n* Libraries help programmers write simpler programs because library code can be used to handle many common (and sometimes complex) behavior and remove it from your core program.\n"
       },
       "seeding_key": {
         "activity_section.key": "1e307b1d-d284-498c-865b-457d6ead51f8",
@@ -2003,7 +1875,6 @@
       "key": "0822fa4e-83d6-45a7-99ec-06369789e031",
       "position": 1,
       "properties": {
-        "name": "States App",
         "progression_name": "States App"
       },
       "seeding_key": {
@@ -2015,7 +1886,6 @@
       "key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc",
       "position": 2,
       "properties": {
-        "name": "Pigify App",
         "progression_name": "Pigify App"
       },
       "seeding_key": {
@@ -2027,7 +1897,6 @@
       "key": "130a98f1-9bfa-4cd2-bce9-a54e12238e3e",
       "position": 3,
       "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -2039,14 +1908,7 @@
       "key": "962b98aa-fec0-49c6-886a-fa16b7f757de",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How does using a library allow you to think about programming at \"a higher level\"?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** You'll return to this prompt later in the lesson so use this discussion as much to plant the ideas here in students heads as to really hit them home. The main goal you're aiming for is the first bullet in the remarks at the end of the warm up. Libraries take care of detailed tasks so you can focus on the big picture. Students likely will not mention the fact that this increases the need to debug and test code in the first place but this is another idea that will be explored in the lesson.\r\n"
-          }
-        ],
+        "description": "[slide]  **Discuss:** *How does using a library allow you to think about programming at \"a higher level\"?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** You'll return to this discussion later in the lesson so use this discussion as much to plant the ideas here in students heads as to really hit them home. The main goal you're aiming for is the first bullet in the remarks at the end of the warm up. Libraries take care of detailed tasks so you can focus on the big picture. Students likely will not mention the fact that this increases the need to debug and test code in the first place but this is another idea that will be explored in the lesson.\n",
         "name": "Quick Warm Up\r"
       },
       "seeding_key": {
@@ -2058,7 +1920,6 @@
       "key": "53980c46-16cb-4361-9e53-8ef51fcc36c9",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share responses with a neighbor before discussing with the whole class."
       },
       "seeding_key": {
         "activity_section.key": "53980c46-16cb-4361-9e53-8ef51fcc36c9",
@@ -2105,14 +1966,14 @@
       "key": "86ea97dd-b40f-4bfa-b288-fa533c804710",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Levels 2-3 Using Libraries:** These levels involve students using libraries. These levels focus on students understanding that libraries make the programs that they write simpler and higher level.",
+        "description": "[slide]  **Levels 1-2 Using Libraries:** These levels involve students using libraries. These levels focus on students understanding that libraries make the programs that they write simpler and higher level.\n\n* Level 1: Students build a simple app with the states library from the investigate lesson\n* Level 2: Students build a simple app with a new library that uses the cats data set.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n"
           }
-        ]
+        ],
+        "progression_name": "Using Libraries"
       },
       "seeding_key": {
         "activity_section.key": "86ea97dd-b40f-4bfa-b288-fa533c804710",
@@ -2120,10 +1981,21 @@
       }
     },
     {
-      "key": "4315094c-8370-492c-a8f0-eacd4f628cb6",
+      "key": "33b7273d-4779-4fd8-a393-b57b3ea9bbc9",
       "position": 4,
       "properties": {
-        "description": "* Level 2: Students build a simple app with the states library from the investigate lesson\r\n* Level 3: Students build a simple app with a new library that uses the cats data set.\r\n\r\n**Levels 4-6 Debugging Libraries:** Students practice debugging code that will be used in a library before sending it to a classmate. This is useful help before the project in the next lesson where students will develop a library.\r\n\r\n* Level 4: Students debug a simple library for manipulating numbers\r\n* Level 5: Students debug a simple library for manipulating strings\r\n* Level 6: Students debug and finish writing a simple library for manipulating strings\r\n\r\n**Extension Opportunities:**\r\n\r\n* Levels 2 and 3: Students can add additional features to the two apps in levels 2 and 3 using the library functions made available."
+        "progression_name": "Using Libraries"
+      },
+      "seeding_key": {
+        "activity_section.key": "33b7273d-4779-4fd8-a393-b57b3ea9bbc9",
+        "lesson_activity.key": "1e9ab8b5-a51f-496c-88f4-aa2c6e86f40a"
+      }
+    },
+    {
+      "key": "4315094c-8370-492c-a8f0-eacd4f628cb6",
+      "position": 5,
+      "properties": {
+        "description": "\n\n**Levels 3-5 Debugging Libraries:** Students practice debugging code that will be used in a library before sending it to a classmate. This is useful help before the project in the next lesson where students will develop a library.\n\n* Level 3: Students debug a simple library for manipulating numbers\n* Level 4: Students debug a simple library for manipulating strings\n* Level 5: Students debug and finish writing a simple library for manipulating strings\n\n**Extension Opportunities:**\n\n* Levels 1 and 2: Students can add additional features to the two apps in levels 2 and 3 using the library functions made available."
       },
       "seeding_key": {
         "activity_section.key": "4315094c-8370-492c-a8f0-eacd4f628cb6",
@@ -2131,17 +2003,21 @@
       }
     },
     {
+      "key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a",
+      "position": 6,
+      "properties": {
+        "progression_name": "Testing Libraries"
+      },
+      "seeding_key": {
+        "activity_section.key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a",
+        "lesson_activity.key": "1e9ab8b5-a51f-496c-88f4-aa2c6e86f40a"
+      }
+    },
+    {
       "key": "802952ba-f17e-43c1-a793-babc56cc7ceb",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How do libraries let you write programs at a \"higher level\"? Why is testing important when building and sharing libraries?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** These prompts review the main things students should have seen in today's lesson and that were previewed in the Warm Up. Students should be able to better speak from experience about the fact that the programs they wrote were significantly simpler because they could just use library code. They should also have seen how testing of libraries is important because the user of their library is counting on the functions working exactly as they say they're supposed to. \r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *How do libraries let you write programs at a \"higher level\"? Why is testing important when building and sharing libraries?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** These discussions review the main things students should have seen in today's lesson and that were previewed in the Warm Up. Students should be able to better speak from experience about the fact that the programs they wrote were significantly simpler because they could just use library code. They should also have seen how testing of libraries is important because the user of their library is counting on the functions working exactly as they say they're supposed to. \n"
       },
       "seeding_key": {
         "activity_section.key": "802952ba-f17e-43c1-a793-babc56cc7ceb",
@@ -2152,7 +2028,6 @@
       "key": "364aa475-e7c5-4cc9-ac80-9a28e906785e",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
       },
       "seeding_key": {
         "activity_section.key": "364aa475-e7c5-4cc9-ac80-9a28e906785e",
@@ -2195,34 +2070,9 @@
       }
     },
     {
-      "key": "5ae99147-5c63-48ed-8d2c-9632b76dda88",
+      "key": "dbcdba62-d1f4-49d9-8343-c193b0325833",
       "position": 1,
       "properties": {
-        "name": "Using Libraries",
-        "progression_name": "Using Libraries"
-      },
-      "seeding_key": {
-        "activity_section.key": "5ae99147-5c63-48ed-8d2c-9632b76dda88",
-        "lesson_activity.key": "5d7b658c-8d5a-40a8-8a2c-906deb340cd7"
-      }
-    },
-    {
-      "key": "13892d1f-76d4-47fd-bbb1-038fb0802405",
-      "position": 2,
-      "properties": {
-        "name": "Testing Libraries",
-        "progression_name": "Testing Libraries"
-      },
-      "seeding_key": {
-        "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405",
-        "lesson_activity.key": "5d7b658c-8d5a-40a8-8a2c-906deb340cd7"
-      }
-    },
-    {
-      "key": "dbcdba62-d1f4-49d9-8343-c193b0325833",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -2234,7 +2084,7 @@
       "key": "42b57c1a-9234-44ac-bc55-933dd2d07ccf",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Think back over all the different apps you've built this year. What blocks do you wish already came with App Lab to help you build those apps?"
+        "description": "[slide] **Discuss:** *Think back over all the different apps you've built this year. What blocks do you wish already came with App Lab to help you build those apps?*"
       },
       "seeding_key": {
         "activity_section.key": "42b57c1a-9234-44ac-bc55-933dd2d07ccf",
@@ -2245,14 +2095,7 @@
       "key": "86ae7d86-6e46-46d3-817c-48756d60ecc2",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm either individually or with a partner. Then have a few volunteers share their ideas with the class.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt foreshadows the project students will complete in which they'll be building a library of functions. Sharing this library will allow them to actually add new blocks to App Lab for themselves or their classmates.\r\n"
-          }
-        ]
+        "description": "Have students brainstorm either individually or with a partner. Then have a few volunteers share their ideas with the class.\n\n**Discussion Goal:** This discussion foreshadows the project students will complete in which they'll be building a library of functions. Sharing this library will allow them to actually add new blocks to App Lab for themselves or their classmates.\n"
       },
       "seeding_key": {
         "activity_section.key": "86ae7d86-6e46-46d3-817c-48756d60ecc2",
@@ -2272,10 +2115,26 @@
       }
     },
     {
-      "key": "93e8a0e9-84f0-4418-85e4-cdd2b8ab6c25",
+      "key": "7d3c841c-f5cd-4a19-9639-ac01b4504302",
       "position": 1,
       "properties": {
-        "description": "**Group:** Students may complete this project individually or in pairs.\r\n\r\n**Distribute:** Give students each a copy of the [r project-make-a-library]\r\n\r\n\r\n\r\n[slide] **Project Description - 5 mins:** As a class review the project description, what they'll submit, and the steps. Make sure students are also aware that they have access to the rubric."
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Differentiation:** The size of library is a good way to differentiate in this project. Students who are more comfortable programmers should be encouraged to develop larger libraries of functions.\n\n**Difficulty of Suggested Functions:** The functions suggested in the project guide are loosely in difficulty order. Functions that appear near the bottom of that list are actually quite difficult and will require students to build substantially upon things they've learned in the course. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7d3c841c-f5cd-4a19-9639-ac01b4504302",
+        "lesson_activity.key": "7f2cc9fb-2919-444e-b06c-59af600f6628"
+      }
+    },
+    {
+      "key": "93e8a0e9-84f0-4418-85e4-cdd2b8ab6c25",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Students may complete this project individually or in pairs.\n\n**Distribute:** Give students each a copy of the [Project Guide - Make a Library](\thttps://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing)\n\n\n\n[slide] **Project Description - 5 mins:** As a class review the project description, what they'll submit, and the steps. Make sure students are also aware that they have access to the rubric."
       },
       "seeding_key": {
         "activity_section.key": "93e8a0e9-84f0-4418-85e4-cdd2b8ab6c25",
@@ -2284,7 +2143,7 @@
     },
     {
       "key": "0a3fac10-80a4-427b-b4dd-aff7ab13c8b5",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "[slide] **Step 1 - Brainstorm - 5 Mins:** Give students 5 minutes to brainstorm a theme for their library. Many specific ideas are given to students for the types of functions they could write, but ideally students will develop functions that are focused on a specific context they find interesting."
       },
@@ -2295,16 +2154,10 @@
     },
     {
       "key": "9fbafaaf-f686-474f-9835-d72735c6b0e7",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "[slide]  **Step 2 - Design - 10 mins:** Before students start writing the code for their project they should stend 10 minutes defining the way the different functions in their library should work. This means they'll need to write out the comments that describe the function, the different parameters, and what will be returned.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Differentiation:** The size of library is a good way to differentiate in this project. Students who are more comfortable programmers should be encouraged to develop larger libraries of functions.\r\n\r\n**Difficulty of Suggested Functions:** The functions suggested in the project guide are loosely in difficulty order. Functions that appear near the bottom of that list are actually quite difficult and will require students to build substantially upon things they've learned in the course. \r\n"
-          }
-        ]
+        "description": "[slide]  **Step 2 - Design - 10 mins:** Before students start writing the code for their project they should spend 10 minutes defining the way the different functions in their library should work. This means they'll need to write out the comments that describe the function, the different parameters, and what will be returned.",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "9fbafaaf-f686-474f-9835-d72735c6b0e7",
@@ -2313,9 +2166,10 @@
     },
     {
       "key": "de5ddb4e-0e3a-44b0-bd5b-6a1debf17476",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "[slide] **Step 3 - Build - 20 mins:** Give students the remainder of time in class to work on building out their library. \r\n\r\n* Students should start by working on one of their functions that includes all four features. Students will need to develop a function like this as part of the Create PT and also will be answering questions about their function in the free response questions at the end of the project.\r\n* Circulate the room offering support to students. If they have successfully completed step 2 of their project guides then they should be able to write a lot of code very quickly to set up their functions and comments."
+        "description": "[slide] **Step 3 - Build - 20 mins:** Give students the remainder of time in class to work on building out their library. \r\n\r\n* Students should start by working on one of their functions that includes all four features. Students will need to develop a function like this as part of the Create PT and also will be answering questions about their function in the free response questions at the end of the project.\r\n* Circulate the room offering support to students. If they have successfully completed step 2 of their project guides then they should be able to write a lot of code very quickly to set up their functions and comments.",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "de5ddb4e-0e3a-44b0-bd5b-6a1debf17476",
@@ -2338,7 +2192,6 @@
       "key": "41af2f38-481c-4259-a9fc-91c10d69c295",
       "position": 1,
       "properties": {
-        "name": "Build Your Library",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2362,14 +2215,14 @@
       "key": "ec0f3fb1-cff2-4770-85d8-b66c93f28934",
       "position": 1,
       "properties": {
-        "description": "**Step 4 - Test - 20 mins:** In this section students briefly review how to write tests for functions and then actually go write them.",
+        "description": "**Step 4 - Test - 20 mins:** In this section students briefly review how to write tests for functions and then actually go write them.\n\n",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Writing Tests:** Remind students of these important strategies while testing their program code.\r\n\r\n* They should actually call their functions with different inputs\r\n* They should try out values that try out different ways their functions work, or right below, at, and after the cut offs of the conditional statements within their functions\r\n\r\n**Supporting the Feedback Process:** There are a few logistical steps involved in getting students to provide feedback to one another. They'll need to exchange project guides, navigate to a different level from the one they're working in, and import a classmate's library. Once this is done make sure you encourage good processes in testing one another's libraries by asking questions\r\n\r\n* Can you tell what the library is supposed to do?\r\n* Do all the functions work as they're suppoed to? How do you know?\r\n* What are ways the library could be improved?\r\n"
+            "markdown": "**Writing Tests:** Remind students of these important strategies while testing their program code.\n\n* They should actually call their functions with different inputs\n* They should try out values that try out different ways their functions work, or right below, at, and after the cut offs of the conditional statements within their functions\n\n**Supporting the Feedback Process:** There are a few logistical steps involved in getting students to provide feedback to one another. They'll need to exchange project guides, navigate to a different level from the one they're working in, and import a classmate's library. Once this is done make sure you encourage good processes in testing one another's libraries by asking questions\n\n* Can you tell what the library is supposed to do?\n* Do all the functions work as they're supposed to? How do you know?\n* What are ways the library could be improved?\n"
           }
-        ]
+        ],
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "ec0f3fb1-cff2-4770-85d8-b66c93f28934",
@@ -2377,10 +2230,23 @@
       }
     },
     {
-      "key": "af613240-6204-404e-bd99-4663df759de2",
+      "key": "ebeaa3b1-e291-4805-ba2a-802b7d17ab74",
       "position": 2,
       "properties": {
-        "description": "* [slide] **Tests Refresher:** Briefly review with students how to use `console.log` to write tests for their functions.\r\n* [slide] **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\r\n\r\n\r\n**Group:** Have students find a classmate with whom to share their library and give feedback. Students should trade project guides with their classmate.\r\n\r\n**Step 5 - Feedback - 20 mins:** Students will need to go through a series of steps to share their libraries and given feedback\r\n\r\n* [slide] **Export Your Library:** Walk students through the steps necessary to export their own library\r\n* [slide] **Import a Library:** Walk students through the steps necessary to import a library from their classmate.\r\n* [slide] **Give Feedback:** Walk students through ways that they can use a classmate's library to test it out. Make sure they give feedback on their classmate's project guide under Step 5.\r\n\r\n[slide] **Step 6 - Improve:** Students should return project guides to their classmates and review the feedback. Next class they'll have time to improve their libraries and prepare to submit them."
+        "description": "* [slide] **Tests Refresher:** Briefly review with students how to use `console.log` to write tests for their functions.\n* [slide] **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\n",
+        "progression_name": "Build Your Library"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebeaa3b1-e291-4805-ba2a-802b7d17ab74",
+        "lesson_activity.key": "a1c8d83a-1fbb-4ade-bdf3-cb733d6c2fd9"
+      }
+    },
+    {
+      "key": "af613240-6204-404e-bd99-4663df759de2",
+      "position": 3,
+      "properties": {
+        "description": "\n\n**Group:** Have students find a classmate with whom to share their library and give feedback. Students should trade project guides with their classmate.\n\n**Step 5 - Feedback - 20 mins:** Students will need to go through a series of steps to share their libraries and given feedback\n\n* [slide] **Export Your Library:** Walk students through the steps necessary to export their own library\n* [slide] **Import a Library:** Walk students through the steps necessary to import a library from their classmate.\n* [slide] **Give Feedback:** Walk students through ways that they can use a classmate's library to test it out. Make sure they give feedback on their classmate's project guide under Step 5.\n\n[slide] **Step 6 - Improve:** Students should return project guides to their classmates and review the feedback. Next class they'll have time to improve their libraries and prepare to submit them.",
+        "progression_name": "Test a Classmate's Library"
       },
       "seeding_key": {
         "activity_section.key": "af613240-6204-404e-bd99-4663df759de2",
@@ -2403,7 +2269,6 @@
       "key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8",
       "position": 1,
       "properties": {
-        "name": "Build Your Library",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2415,7 +2280,6 @@
       "key": "807e8eb9-bd96-4daf-8604-684d82c82dd4",
       "position": 2,
       "properties": {
-        "name": "Test a Classmate's Library",
         "progression_name": "Test a Classmate's Library"
       },
       "seeding_key": {
@@ -2439,10 +2303,8 @@
       "key": "d741c61e-1ac4-4532-b51e-17fc4353df8e",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Step 7 - Acknowledge Collaborators / Sources - 2 mins:** If students worked in pairs or imported some code from elsewhere they should acknowledge the sources of that code.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Scheduling Time:** Depending on where students are in the process of developing their libraries they may need to program a little more prior to starting their free response answers. Remind students that in order to finish their responses they only need to have written a single function that has a parameter, return value, loop, and conditional. As soon as students have completed a function like that they should move to free response answers. They can subsequently come back to finish developing the rest of their libraries.\r\n"
           }
@@ -2457,7 +2319,8 @@
       "key": "b3ceda05-2687-4193-8a0b-799b0c833343",
       "position": 2,
       "properties": {
-        "description": "[slide] **Step 8 - Free Response - 20 mins:** With students quickly review the questions students need to answer about one of the functions in their library. These questions are taken nearly exactly from the Create PT and should help students prepare to independently answer these questions when they complete that task.\r\n\r\n**Work Time - 18 mins:** Students should work on their free response answers early in the lesson. Once they've finished working on their responses they can go back to their project to make any final edits to their project code. Encourage students to review the Scoring Guidelines to make sure they're not missing anything in their projects."
+        "description": "[slide]  **Step 7 - Acknowledge Collaborators / Sources - 2 mins:** If students worked in pairs or imported some code from elsewhere they should acknowledge the sources of that code.\n\n[slide] **Step 8 - Free Response - 20 mins:** With students quickly review the questions students need to answer about one of the functions in their library. These questions are taken nearly exactly from the Create PT and should help students prepare to independently answer these questions when they complete that task.\n\n**Work Time - 18 mins:** Students should work on their free response answers early in the lesson. Once they've finished working on their responses they can go back to their project to make any final edits to their project code. Encourage students to review the Scoring Guidelines to make sure they're not missing anything in their projects.",
+        "progression_name": "Build Your Library"
       },
       "seeding_key": {
         "activity_section.key": "b3ceda05-2687-4193-8a0b-799b0c833343",
@@ -2488,25 +2351,12 @@
       }
     },
     {
-      "key": "528258b4-d29a-4c24-b722-f40517c4de2a",
-      "position": 1,
-      "properties": {
-        "name": "Build Your Library",
-        "progression_name": "Build Your Library"
-      },
-      "seeding_key": {
-        "activity_section.key": "528258b4-d29a-4c24-b722-f40517c4de2a",
-        "lesson_activity.key": "b1f0c6be-4b18-48c2-95b7-01feb67c089d"
-      }
-    },
-    {
       "key": "150e8978-6eb6-44a7-b550-ff9688040000",
       "position": 1,
       "properties": {
         "description": "[slide]  Administer the Unit 7 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics7.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n"
           }
@@ -2532,7 +2382,6 @@
       "key": "b05bab05-ef0f-49cb-8638-91636655706e",
       "position": 1,
       "properties": {
-        "name": "Unit 7 Exam",
         "progression_name": "Unit 7 Exam"
       },
       "seeding_key": {
@@ -2588,7 +2437,7 @@
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "96e0ea29-dd28-4cfc-aca5-59fd98718323"
+        "activity_section.key": "e09ae6e9-707c-4478-b050-e13cbb282c61"
       },
       "level_keys": [
         "U7 Param Return Investigate Rock_2021"
@@ -2614,7 +2463,7 @@
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "96e0ea29-dd28-4cfc-aca5-59fd98718323"
+        "activity_section.key": "e09ae6e9-707c-4478-b050-e13cbb282c61"
       },
       "level_keys": [
         "U7 Param Investigate Poetry App_2021"
@@ -2666,7 +2515,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       },
       "level_keys": [
         "U7 Param Return Practice Part 1_2021"
@@ -2692,7 +2541,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       },
       "level_keys": [
         "U7 Param Return Practice Part 2_2021"
@@ -2718,7 +2567,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       },
       "level_keys": [
         "U7 Param Return Practice Part 4_2021"
@@ -2744,7 +2593,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       },
       "level_keys": [
         "U7 Param Return Practice Part 3_2021"
@@ -2770,7 +2619,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       },
       "level_keys": [
         "U7 Param Return Practice Part 5_2021"
@@ -2796,7 +2645,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f"
+        "activity_section.key": "16ade91e-eae6-4d89-a536-fdc733b65730"
       },
       "level_keys": [
         "U7 Param Investigate Calculator App_2021"
@@ -2822,7 +2671,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f"
+        "activity_section.key": "16ade91e-eae6-4d89-a536-fdc733b65730"
       },
       "level_keys": [
         "U7 Param Practice App 2_2021"
@@ -2848,7 +2697,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db"
+        "activity_section.key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc"
       },
       "level_keys": [
         "U7 Param Return Practice MOD_2021"
@@ -2900,7 +2749,7 @@
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "0f09e960-a774-43a6-812e-5b8b3c3eb203"
+        "activity_section.key": "a9cf16f0-1cc9-4d9e-8839-62f1bc77adca"
       },
       "level_keys": [
         "U7 Param Return Make RPS App_2021"
@@ -2926,7 +2775,7 @@
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "f8bb6642-9926-444f-b88a-af5a1ac5e86c"
+        "activity_section.key": "c6b30149-a1a1-4c69-b302-70ba089b312e"
       },
       "level_keys": [
         "U7 Param Return Make RPS App Project_2021"
@@ -2978,7 +2827,7 @@
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "0822fa4e-83d6-45a7-99ec-06369789e031"
+        "activity_section.key": "24235ed4-651a-4edd-a4ab-2ac22a365d0b"
       },
       "level_keys": [
         "U7L6 States App Investigation_2021"
@@ -3004,7 +2853,7 @@
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc"
+        "activity_section.key": "8f8552d8-a185-4b5d-a72e-12d84fde0814"
       },
       "level_keys": [
         "U7L6 Pigify App Investigation_2021"
@@ -3056,7 +2905,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "5ae99147-5c63-48ed-8d2c-9632b76dda88"
+        "activity_section.key": "86ea97dd-b40f-4bfa-b288-fa533c804710"
       },
       "level_keys": [
         "U7 Libraries Practice 3_2021"
@@ -3082,7 +2931,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "5ae99147-5c63-48ed-8d2c-9632b76dda88"
+        "activity_section.key": "86ea97dd-b40f-4bfa-b288-fa533c804710"
       },
       "level_keys": [
         "U7 Libraries Practice 5_2021"
@@ -3108,7 +2957,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405"
+        "activity_section.key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a"
       },
       "level_keys": [
         "U7 Libraries Practice 2_2021"
@@ -3134,7 +2983,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405"
+        "activity_section.key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a"
       },
       "level_keys": [
         "U7 Libraries Practice 1_2021"
@@ -3160,7 +3009,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405"
+        "activity_section.key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a"
       },
       "level_keys": [
         "U7 Libraries Practice 4_2021"
@@ -3212,7 +3061,7 @@
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "41af2f38-481c-4259-a9fc-91c10d69c295"
+        "activity_section.key": "de5ddb4e-0e3a-44b0-bd5b-6a1debf17476"
       },
       "level_keys": [
         "U7 Libraries Project Part 1_2021"
@@ -3238,7 +3087,7 @@
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8"
+        "activity_section.key": "ebeaa3b1-e291-4805-ba2a-802b7d17ab74"
       },
       "level_keys": [
         "U7 Libraries Project Part 2_2021"
@@ -3264,7 +3113,7 @@
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "807e8eb9-bd96-4daf-8604-684d82c82dd4"
+        "activity_section.key": "af613240-6204-404e-bd99-4663df759de2"
       },
       "level_keys": [
         "U7 Libraries Project Test a Library_2021"
@@ -3290,7 +3139,7 @@
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "528258b4-d29a-4c24-b722-f40517c4de2a"
+        "activity_section.key": "b3ceda05-2687-4193-8a0b-799b0c833343"
       },
       "level_keys": [
         "U7 Libraries Project Part 3_2021"
@@ -3345,7 +3194,7 @@
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "96e0ea29-dd28-4cfc-aca5-59fd98718323"
+        "activity_section.key": "e09ae6e9-707c-4478-b050-e13cbb282c61"
       }
     },
     {
@@ -3357,7 +3206,7 @@
         "lesson.key": "Parameters and Return Investigate",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "96e0ea29-dd28-4cfc-aca5-59fd98718323"
+        "activity_section.key": "e09ae6e9-707c-4478-b050-e13cbb282c61"
       }
     },
     {
@@ -3381,7 +3230,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       }
     },
     {
@@ -3393,7 +3242,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       }
     },
     {
@@ -3405,7 +3254,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       }
     },
     {
@@ -3417,7 +3266,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       }
     },
     {
@@ -3429,7 +3278,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "18d4846a-851b-49ba-987c-0938b246ce15"
+        "activity_section.key": "3d3e9823-351b-4e15-bcf4-d5aca4f6f11d"
       }
     },
     {
@@ -3441,7 +3290,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f"
+        "activity_section.key": "16ade91e-eae6-4d89-a536-fdc733b65730"
       }
     },
     {
@@ -3453,7 +3302,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "9a7bb7db-45f0-4e7b-a2f4-afe47d07e78f"
+        "activity_section.key": "16ade91e-eae6-4d89-a536-fdc733b65730"
       }
     },
     {
@@ -3465,7 +3314,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "f0b189af-fd8d-40df-bb54-7e17afb6a1db"
+        "activity_section.key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc"
       }
     },
     {
@@ -3489,7 +3338,7 @@
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "0f09e960-a774-43a6-812e-5b8b3c3eb203"
+        "activity_section.key": "a9cf16f0-1cc9-4d9e-8839-62f1bc77adca"
       }
     },
     {
@@ -3501,7 +3350,7 @@
         "lesson.key": "Parameters and Return Make",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2021",
-        "activity_section.key": "f8bb6642-9926-444f-b88a-af5a1ac5e86c"
+        "activity_section.key": "c6b30149-a1a1-4c69-b302-70ba089b312e"
       }
     },
     {
@@ -3525,7 +3374,7 @@
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "0822fa4e-83d6-45a7-99ec-06369789e031"
+        "activity_section.key": "24235ed4-651a-4edd-a4ab-2ac22a365d0b"
       }
     },
     {
@@ -3537,7 +3386,7 @@
         "lesson.key": "Libraries Investigate",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "ef138a0c-5fc1-4cf6-a149-20adf0075afc"
+        "activity_section.key": "8f8552d8-a185-4b5d-a72e-12d84fde0814"
       }
     },
     {
@@ -3561,7 +3410,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "5ae99147-5c63-48ed-8d2c-9632b76dda88"
+        "activity_section.key": "86ea97dd-b40f-4bfa-b288-fa533c804710"
       }
     },
     {
@@ -3573,7 +3422,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "5ae99147-5c63-48ed-8d2c-9632b76dda88"
+        "activity_section.key": "86ea97dd-b40f-4bfa-b288-fa533c804710"
       }
     },
     {
@@ -3585,7 +3434,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405"
+        "activity_section.key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a"
       }
     },
     {
@@ -3597,7 +3446,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405"
+        "activity_section.key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a"
       }
     },
     {
@@ -3609,7 +3458,7 @@
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "13892d1f-76d4-47fd-bbb1-038fb0802405"
+        "activity_section.key": "28cdbf64-e6cf-45d6-a86f-52f9cdbd080a"
       }
     },
     {
@@ -3633,7 +3482,7 @@
         "lesson.key": "Project - Make a Library Part 1",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "41af2f38-481c-4259-a9fc-91c10d69c295"
+        "activity_section.key": "de5ddb4e-0e3a-44b0-bd5b-6a1debf17476"
       }
     },
     {
@@ -3645,7 +3494,7 @@
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8"
+        "activity_section.key": "ebeaa3b1-e291-4805-ba2a-802b7d17ab74"
       }
     },
     {
@@ -3657,7 +3506,7 @@
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "807e8eb9-bd96-4daf-8604-684d82c82dd4"
+        "activity_section.key": "af613240-6204-404e-bd99-4663df759de2"
       }
     },
     {
@@ -3669,7 +3518,7 @@
         "lesson.key": "Project - Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021",
-        "activity_section.key": "528258b4-d29a-4c24-b722-f40517c4de2a"
+        "activity_section.key": "b3ceda05-2687-4193-8a0b-799b0c833343"
       }
     },
     {
@@ -3689,61 +3538,49 @@
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "name": "Activity Guide - Function Houses",
       "url": "https://docs.google.com/document/d/1SdMlqfeAFtIVh3BKjRDQguOL5d4jC2nsvtdNAi0x-ts/view",
-      "key": "csp function houses",
+      "key": "activity_guide_-_function_houses",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp function houses"
+        "resource.key": "activity_guide_-_function_houses"
       }
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
@@ -3762,49 +3599,49 @@
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
@@ -3823,13 +3660,13 @@
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
@@ -3848,13 +3685,13 @@
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
@@ -3873,13 +3710,25 @@
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
       "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp u7 presentation",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
+      }
+    },
+    {
+      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
+      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
+      "key": "csp_unit_7_-_parameters_return_and_libraries",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     }
   ],
@@ -3887,31 +3736,25 @@
     {
       "seeding_key": {
         "lesson.key": "Parameters and Return Explore",
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameters and Return Explore",
-        "resource.key": "csp function houses"
+        "resource.key": "activity_guide_-_function_houses"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameters and Return Investigate",
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameters and Return Practice",
-        "resource.key": "csp u7 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Make",
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
@@ -3922,26 +3765,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Libraries Explore",
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Libraries Investigate",
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Libraries Practice",
-        "resource.key": "csp u7 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 1",
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
@@ -3952,8 +3795,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 2",
-        "resource.key": "csp u7 presentation"
+        "lesson.key": "Project - Make a Library Part 1",
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
@@ -3964,20 +3807,26 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 3",
-        "resource.key": "csp u7 presentation"
+        "lesson.key": "Project - Make a Library Part 2",
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Library Part 3",
         "resource.key": "project-make-a-library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
-        "resource.key": "csp u7 presentation"
+        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     }
   ],

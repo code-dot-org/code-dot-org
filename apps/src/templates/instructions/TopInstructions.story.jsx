@@ -9,7 +9,9 @@ import {
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import sectionData, {
+  setTtsAutoplayEnabled
+} from '@cdo/apps/redux/sectionDataRedux';
 import TopInstructions from './TopInstructions';
 
 /**
@@ -27,13 +29,6 @@ const createCommonStore = function(options = {}) {
   );
   const pageConstants = {};
   const instructionsConstants = {};
-  const section = {
-    id: 1,
-    script: null,
-    students: [{id: 1, name: 'student'}],
-    stageExtras: false,
-    ttsAutoplayEnabled: false
-  };
 
   // Things that apply to all courses
   instructionsConstants.longInstructions =
@@ -120,7 +115,7 @@ const createCommonStore = function(options = {}) {
 
   store.dispatch(setPageConstants(pageConstants));
   store.dispatch(setInstructionsConstants(instructionsConstants));
-  store.dispatch(setSection(section));
+  store.dispatch(setTtsAutoplayEnabled(false));
 
   return store;
 };

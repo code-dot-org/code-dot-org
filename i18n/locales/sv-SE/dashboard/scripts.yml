@@ -3229,10 +3229,12 @@ sv:
             'Functions: Songwriting':
               name: Låtskrivande
           lesson_groups:
+            ramp_up:
+              display_name: loopar
             csf_digcit:
               display_name: Digitalt medborgarskap
             csf_nested_loops:
-              display_name: Kapslade slingor(loopar)
+              display_name: Villkor
             csf_functions:
               display_name: funktioner
         coursef-2021:

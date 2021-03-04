@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: 'Час кода: руководство для внеклассных занятий'
 layout: wide
 nav: how_to_nav
 ---
@@ -12,7 +12,7 @@ nav: how_to_nav
 
 Вычислительное мышление помогает приобретать навыки решения задач, развивает логическое и творческое мышление. Технологии меняют облик всех отраслей мировой экономики. Сегодня школьники должны учиться не только использовать технологии, но и создавать их. Начав обучение этому с ранних лет, они заложат основы успешной карьеры в 21 веке в любой сфере деятельности.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Участие в Часе кода – простой и занимательный способ познакомить вашего ребенка с информатикой, возможно впервые. Если вам понадобится помощь, вы можете найти [местных волонтёров](%= codeorg_url('/volunteer/local') %), которые помогут запустить Час Кода на внеклассных занятиях или кружках.
 
 ### Час кода может быть организован и удаленно! Для начала ознакомьтесь с [нашими советами по проведению виртуального Часа кода](https://hourofcode.com/us/how-to/virtual).
 

@@ -1894,7 +1894,6 @@
         "description": "Allow students to share out individually.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion serves as a review of the problem solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\r\n"
           }
@@ -1946,7 +1945,6 @@
         "description": "####  Word Search",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This word search can actually take several minutes, especially if students are approaching without some kind of strategy. Remind them that one step is to Prepare before they just jump in and start hunting.\r\n\r\n**Key:** A key showing possible solutions can be found online following the link provided above.\r\n"
           }
@@ -1976,7 +1974,6 @@
         "description": "####  Birthday Guests",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This problem is particularly challenging if you don't Define the problem well. If you take it at face value, your job is to randomly guess and check where to put individual people until you find a solution. It is much easier if you define the problem as place groups of friends instead. Make groups of 2 or 3 you know need to be together and then figure out which groups can't be at the same table. \r\n\r\nThis isn't the only approach to the problem, and you shouldn't rush to introduce it as such. Rather, encourage students to discuss with one another what they know needs to be true at the end and whether different approaches might help.\r\n\r\n**Draw Pictures:** Students will likely do better if they draw pictures. You may wish for students to use a journal or scratch paper as a place to brainstorm ideas.\r\n\r\n**Extending the Problem:** If one group finishes far before others you could give them a blank sheet of paper and ask them to solve the problem again but with a new condition of your choosing (e.g. pick two people sitting at the same table in their solution and ask whether they can solve the problem now that those two people are also in a fight.)\r\n"
           }
@@ -2005,7 +2002,6 @@
         "description": "####  Redesign Your Classroom",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Integrating the Problem Solving Process:** This problem is intentionally very open-ended and in fact has students develop the criteria they'll use to measure success. This problem does the best job of highlighting all 4 steps of the process and walks students more intentionally through the Define, Prepare, Try, and Reflect stages.\r\n\r\n**Give Resource Ideas:** Students may just brainstorm ideas and layouts by themselves, but also let them know about other resources such as search engines and image searchers to help give them inspiration if they are stuck. Let them look at other classrooms online for help.\r\n\r\n**When to Stop:** This problem could easily take a 50 minute class period. Let students know ahead of time that there are time limits on what they're doing and encourage them to think how they would improve their route using the problem solving process if they had more time to iterate.\r\n"
           }
@@ -2033,7 +2029,6 @@
       "properties": {
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students have practiced using the problem solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\r\n\r\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\r\n\r\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\r\n\r\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\r\n\r\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\r\n\r\n**The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\r\n"
           }
@@ -2085,7 +2080,6 @@
         "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "There are many different strategies to help define problems, including the questions on the previous lesson's activity guide.  Some potentially useful questions include:\r\n\r\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\r\n* Why the problem exists? (And why does that problem exist?) Keep asking to get to the heart of the problem.\r\n* How could I be able to tell the problem had been solved? What could I observe or measure?\r\n\r\n"
           }
@@ -5088,7 +5082,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Problem Solving Process"
+        "progression": "Video: Problem Solving Process",
+        "level_keys": [
+          "CSD Problem Solving Process Video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5818,7 +5815,7 @@
   "resources": [
     {
       "name": "Aluminum Boats",
-      "url": "https://studio.code.org/s/csd1-2020/stage/1/puzzle/1",
+      "url": "https://studio.code.org/s/csd1-2021/stage/1/puzzle/1",
       "key": "aluminum-boats-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -5940,7 +5937,7 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://studio.code.org/s/csd1-2020/stage/3/puzzle/1",
+      "url": "https://studio.code.org/s/csd1-2021/stage/3/puzzle/1",
       "key": "solving-problems-exemplar-2020",
       "properties": {
         "type": "Exemplar",
@@ -6003,27 +6000,27 @@
     {
       "name": "What is a Computer (Version B)",
       "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
-      "key": "what-is-a-computer-version-B",
+      "key": "what-is-a-computer-version-b",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "what-is-a-computer-version-B"
+        "resource.key": "what-is-a-computer-version-b"
       }
     },
     {
       "name": "What is a Computer (Version A)",
       "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
-      "key": "what-is-a-computer-version-A",
+      "key": "what-is-a-computer-version-a",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "what-is-a-computer-version-A"
+        "resource.key": "what-is-a-computer-version-a"
       }
     },
     {
@@ -6563,13 +6560,13 @@
     {
       "seeding_key": {
         "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-version-B"
+        "resource.key": "what-is-a-computer-version-b"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-version-A"
+        "resource.key": "what-is-a-computer-version-a"
       }
     },
     {

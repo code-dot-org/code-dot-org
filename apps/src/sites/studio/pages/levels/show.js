@@ -12,10 +12,13 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-level]');
   const config = JSON.parse(script.dataset.level);
-  const ttsAutoplayEnabled = config.tts_autoplay_enabled;
+
+  // this is the common js entry point for level pages
+  // which is why ttsAutoplay is set here
   registerReducers({sectionData});
-  const store = getStore();
-  store.dispatch(setTtsAutoplayEnabled(ttsAutoplayEnabled));
+  const ttsAutoplayEnabled = config.tts_autoplay_enabled;
+  getStore().dispatch(setTtsAutoplayEnabled(ttsAutoplayEnabled));
+
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {
     ReactDOM.render(

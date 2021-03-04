@@ -5348,7 +5348,7 @@ nl:
             csf_digcit:
               display_name: Digitaal Burgerschap
             csf_nested_loops:
-              display_name: Genestelde lussen
+              display_name: Voorwaardelijke instructies
             csf_functions:
               display_name: Functies
         coursef-2021:

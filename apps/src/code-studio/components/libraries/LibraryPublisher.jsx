@@ -64,6 +64,7 @@ export const PublishState = {
   ERROR_PUBLISH: 'error_publish',
   INVALID_INPUT: 'invalid_input',
   PROFANE_INPUT: 'profane_input',
+  TOO_LONG: 'too_long',
   ERROR_UNPUBLISH: 'error_unpublish'
 };
 
@@ -165,7 +166,11 @@ export default class LibraryPublisher extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
-        this.setState({publishState: PublishState.ERROR_PUBLISH});
+        if (error.message.includes('httpStatusCode: 413')) {
+          this.setState({publishState: PublishState.TOO_LONG});
+        } else {
+          this.setState({publishState: PublishState.ERROR_PUBLISH});
+        }
       },
       data => {
         // Write to projects database
@@ -317,6 +322,9 @@ export default class LibraryPublisher extends React.Component {
         break;
       case PublishState.ERROR_PUBLISH:
         errorMessage = i18n.libraryPublishFail();
+        break;
+      case PublishState.TOO_LONG:
+        errorMessage = i18n.libraryTooLongFail();
         break;
       case PublishState.ERROR_UNPUBLISH:
         errorMessage = i18n.libraryUnPublishFail();

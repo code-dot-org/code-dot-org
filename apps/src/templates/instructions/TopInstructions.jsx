@@ -333,7 +333,7 @@ class TopInstructions extends Component {
    * via a call to handleHeightResize from HeightResizer.
    */
   getItemTop = () => {
-    return this.refs.topInstructions.getBoundingClientRect().top;
+    return this.topInstructions.getBoundingClientRect().top;
   };
 
   /**
@@ -375,16 +375,16 @@ class TopInstructions extends Component {
     let element;
     switch (this.state.tabSelected) {
       case TabType.RESOURCES:
-        element = this.refs.helpTab;
+        element = this.helpTab;
         break;
       case TabType.INSTRUCTIONS:
-        element = this.refs.instructions;
+        element = this.instructions;
         break;
       case TabType.COMMENTS:
-        element = this.refs.commentTab;
+        element = this.commentTab;
         break;
       case TabType.TEACHER_ONLY:
-        element = this.refs.teacherOnlyTab;
+        element = this.teacherOnlyTab;
         break;
     }
     const maxNeededHeight =
@@ -597,7 +597,11 @@ class TopInstructions extends Component {
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
     return (
-      <div style={mainStyle} className="editor-column" ref="topInstructions">
+      <div
+        style={mainStyle}
+        className="editor-column"
+        ref={ref => (this.topInstructions = ref)}
+      >
         <PaneHeader
           hasFocus={false}
           teacherOnly={teacherOnly}
@@ -611,6 +615,7 @@ class TopInstructions extends Component {
                 <InlineAudio
                   src={ttsUrl}
                   style={this.props.isRtl ? audioStyleRTL : audioStyle}
+                  autoplayTriggerElementId="codeApp"
                 />
               )}
             {this.props.documentationUrl &&
@@ -699,11 +704,21 @@ class TopInstructions extends Component {
             ]}
             id="scroll-container"
           >
-            <div ref="instructions">
+            <div
+              ref={ref => {
+                if (ref) {
+                  this.instructions = ref;
+                }
+              }}
+            >
               {this.props.hasContainedLevels && (
                 <div>
                   <ContainedLevel
-                    ref="instructions"
+                    ref={ref => {
+                      if (ref) {
+                        this.instructions = ref;
+                      }
+                    }}
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
                 </div>
@@ -712,7 +727,11 @@ class TopInstructions extends Component {
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <InstructionsCSF
-                    ref="instructions"
+                    ref={ref => {
+                      if (ref) {
+                        this.instructions = ref;
+                      }
+                    }}
                     handleClickCollapser={this.handleClickCollapser}
                     adjustMaxNeededHeight={this.adjustMaxNeededHeight}
                     isEmbedView={this.props.isEmbedView}
@@ -726,7 +745,11 @@ class TopInstructions extends Component {
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
                     <Instructions
-                      ref="instructions"
+                      ref={ref => {
+                        if (ref) {
+                          this.instructions = ref;
+                        }
+                      }}
                       longInstructions={this.props.longInstructions}
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
@@ -736,7 +759,7 @@ class TopInstructions extends Component {
             </div>
             {this.state.tabSelected === TabType.RESOURCES && (
               <HelpTabContents
-                ref="helpTab"
+                ref={ref => (this.helpTab = ref)}
                 videoData={videoData}
                 mapReference={this.props.mapReference}
                 referenceLinks={this.props.referenceLinks}
@@ -752,7 +775,7 @@ class TopInstructions extends Component {
                   !this.state.teacherViewingStudentWork
                 }
                 rubric={this.state.rubric}
-                ref="commentTab"
+                ref={ref => (this.commentTab = ref)}
                 latestFeedback={this.state.feedbacks}
                 token={this.state.token}
               />
@@ -762,12 +785,15 @@ class TopInstructions extends Component {
                 <div>
                   {this.props.hasContainedLevels && (
                     <ContainedLevelAnswer
-                      ref="teacherOnlyTab"
+                      ref={ref => (this.teacherOnlyTab = ref)}
                       hidden={this.state.tabSelected !== TabType.TEACHER_ONLY}
                     />
                   )}
                   {this.state.tabSelected === TabType.TEACHER_ONLY && (
-                    <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+                    <TeacherOnlyMarkdown
+                      ref={ref => (this.teacherOnlyTab = ref)}
+                      content={this.props.teacherMarkdown}
+                    />
                   )}
                 </div>
               )}

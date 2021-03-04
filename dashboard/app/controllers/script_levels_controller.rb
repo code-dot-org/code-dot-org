@@ -79,7 +79,9 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
-    @tts_autoplay_enabled = current_user&.sections_as_student&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
+
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id

@@ -25,15 +25,15 @@ export const PUZZLE_PAGE_NONE = -1;
  */
 const levelWithoutStatusShape = {
   id: PropTypes.string.isRequired,
+  levelNumber: PropTypes.number,
+  bubbleText: PropTypes.string,
+  kind: PropTypes.string,
   url: PropTypes.string,
   name: PropTypes.string,
-  bubbleText: PropTypes.string,
   icon: PropTypes.string,
   isUnplugged: PropTypes.bool,
-  levelNumber: PropTypes.number,
   isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
-  kind: PropTypes.string,
   pageNumber: PropTypes.number
   /** sublevels: PropTypes.array */ // See below
 };
@@ -78,7 +78,8 @@ const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
   paired: PropTypes.bool.isRequired,
-  timeSpent: PropTypes.number
+  timeSpent: PropTypes.number.isRequired,
+  lastTimestamp: PropTypes.number.isRequired
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition

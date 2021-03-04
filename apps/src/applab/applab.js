@@ -66,6 +66,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import project from '../code-studio/initApp/project';
@@ -86,6 +87,7 @@ import {setExportGeneratedProperties} from '../code-studio/components/exportDial
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 /**
  * Create a namespace for the application.
@@ -676,6 +678,7 @@ Applab.init = function(config) {
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
     librariesEnabled: !!config.level.librariesEnabled,
+    aiEnabled: !!config.level.aiEnabled,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
@@ -689,6 +692,13 @@ Applab.init = function(config) {
   });
 
   config.dropletConfig = dropletConfig;
+
+  if (config.level.aiEnabled && experiments.isEnabled(experiments.APPLAB_ML)) {
+    config.dropletConfig = utils.deepMergeConcatArrays(
+      config.dropletConfig,
+      aiConfig
+    );
+  }
 
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
@@ -973,7 +983,8 @@ Applab.render = function() {
     isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
-    handleVersionHistory: Applab.handleVersionHistory
+    handleVersionHistory: Applab.handleVersionHistory,
+    autogenerateML: autogenerateML
   });
   ReactDOM.render(
     <Provider store={getStore()}>

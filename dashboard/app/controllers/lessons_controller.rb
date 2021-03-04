@@ -11,14 +11,19 @@ class LessonsController < ApplicationController
   # them with the new lessons editor.
   def disallow_legacy_script_levels
     return unless @lesson.script_levels.reject(&:activity_section).any?
-    raise CanCan::AccessDenied.new(
-      "cannot edit lesson #{@lesson.id} because it contains legacy script levels"
-    )
+    return render :forbidden
   end
 
-  # GET /lessons/1
+  # GET /s/script-name/lessons/1
   def show
-    raise CanCan::AccessDenied.new("cannot view lesson #{@lesson.id} because it does not have a lesson plan") unless @lesson.has_lesson_plan
+    script = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless script.is_migrated
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
@@ -35,9 +40,13 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   def update
     if params[:originalLessonData]
-      current_lesson_data = JSON.generate(@lesson.summarize_for_lesson_edit)
-      old_lesson_data = params[:originalLessonData]
-      if old_lesson_data != current_lesson_data
+      current_lesson_data = @lesson.summarize_for_lesson_edit
+      old_lesson_data = JSON.parse(params[:originalLessonData])
+      current_lesson_data[:vocabularies]&.map! {|v| v[:id]}
+      old_lesson_data['vocabularies']&.map! {|v| v['id']}
+      current_lesson_data[:resources]&.map! {|v| v[:id]}
+      old_lesson_data['resources']&.map! {|v| v['id']}
+      if old_lesson_data.to_json != current_lesson_data.to_json
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
         raise msg
       end
@@ -61,10 +70,12 @@ class LessonsController < ApplicationController
         msg = "The last level in a lockable lesson must be a LevelGroup and an assessment."
         raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
       end
+
+      @lesson.script.prevent_duplicate_levels
+      @lesson.script.fix_lesson_positions
     end
 
     if Rails.application.config.levelbuilder_mode
-      @lesson.script.fix_lesson_positions
       @lesson.script.reload
 
       # This endpoint will only be hit from the lesson edit page, which is only

@@ -148,11 +148,17 @@ it:
     il nostro piano di studi.
   hoc_live: L'Ora del Codice dal vivo
   hoc_live_sign_up_title: Iscriviti a l'Ora del Codice dal vivo
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Impara in tempo reale insieme a ospiti speciali! Gli studenti
     di tutte le età e abilità, compresi quelli senza computer, sono i benvenuti. Iscriviti
     alla nostra mailing list per ricevere le registrazioni degli episodi e le risorse
     per continuare ad imparare a casa.
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Unisciti a noi
+  hoc_live_learn_more: Scopri di più
   hoc_overview_oceans_tutorial_header: L'Intelligenza Artificiale per il mare
   hoc_overview_oceans_tutorial_desc: Scopri l'Intelligenza Artificiale (AI), l'apprendimento
     automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni

@@ -82,6 +82,20 @@ const styles = {
   }
 };
 
+// pulled from the example here https://developers.google.com/web/updates/2018/11/web-audio-autoplay
+const AUDIO_ENABLING_DOM_EVENTS = [
+  'click',
+  'contextmenu',
+  'auxclick',
+  'dblclick',
+  'mousedown',
+  'mouseup',
+  'pointerup',
+  'touchend',
+  'keydown',
+  'keyup'
+];
+
 class InlineAudio extends React.Component {
   static propTypes = {
     assetUrl: PropTypes.func.isRequired,
@@ -91,6 +105,10 @@ class InlineAudio extends React.Component {
     message: PropTypes.string,
     style: PropTypes.object,
     ttsAutoplayEnabled: PropTypes.bool,
+
+    // when we need to wait for DOM event to trigger audio autoplay
+    // this is the element ID that we'll be listening to
+    autoplayTriggerElementId: PropTypes.string,
 
     // Provided by redux
     // To Log TTS usage
@@ -108,10 +126,20 @@ class InlineAudio extends React.Component {
     autoplayed: false
   };
 
+  constructor(props) {
+    super(props);
+    this.autoplayAudio = this.autoplayAudio.bind(this);
+    this.autoplayTriggerElement = null;
+  }
+
   componentDidMount() {
     this.getAudioElement();
     if (this.props.ttsAutoplayEnabled && !this.state.autoplayed) {
-      this.setState({autoplayed: true});
+      const {autoplayTriggerElementId} = this.props;
+      this.autoplayTriggerElement = autoplayTriggerElementId
+        ? document.getElementById(autoplayTriggerElementId)
+        : document;
+
       this.playAudio();
     }
   }
@@ -158,7 +186,8 @@ class InlineAudio extends React.Component {
 
     audio.addEventListener('ended', e => {
       this.setState({
-        playing: false
+        playing: false,
+        autoplayed: this.props.ttsAutoplayEnabled
       });
     });
 
@@ -199,9 +228,7 @@ class InlineAudio extends React.Component {
     this.state.playing ? this.pauseAudio() : this.playAudio();
   };
 
-  playAudio() {
-    this.getAudioElement().play();
-    this.setState({playing: true});
+  recordPlayEvent() {
     firehoseClient.putRecord({
       study: 'tts-play',
       study_group: 'v1',
@@ -214,6 +241,49 @@ class InlineAudio extends React.Component {
         csfStyleInstructions: this.props.isOnCSFPuzzle
       })
     });
+  }
+
+  // adds event listeners to the DOM which trigger audio
+  // when a significant enough user interaction has happened
+  addAudioAutoplayTrigger() {
+    AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
+      this.autoplayTriggerElement.addEventListener(event, this.autoplayAudio);
+    });
+  }
+
+  removeAudioAutoplayTrigger() {
+    AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
+      this.autoplayTriggerElement.removeEventListener(
+        event,
+        this.autoplayAudio
+      );
+    });
+  }
+
+  playAudio() {
+    return this.getAudioElement()
+      .play()
+      .then(() => {
+        this.setState({playing: true});
+        this.recordPlayEvent();
+      })
+      .catch(err => {
+        const shouldAutoPlay =
+          this.props.ttsAutoplayEnabled && !this.state.autoplayed;
+
+        // there wasn't significant enough user interaction to play audio automatically
+        // for more information about this issue on Chrome, see
+        // https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+        if (err instanceof DOMException && shouldAutoPlay) {
+          this.addAudioAutoplayTrigger();
+        } else {
+          throw err;
+        }
+      });
+  }
+
+  autoplayAudio() {
+    this.playAudio().then(() => this.removeAudioAutoplayTrigger());
   }
 
   pauseAudio() {

@@ -1171,6 +1171,8 @@
   "notApplicable": "Nie dotyczy",
   "notCompleted": "Nieukończone",
   "notSaved": "Nie zapisane",
+  "notSignedInHeader": "Jesteś zalogowany",
+  "notSignedInBody": "Nie potrzebujesz konta do pracy nad tą lekcją, ale jeśli chcesz zapisać swoją pracę, pamiętaj, aby zalogować się lub utworzyć konto, zanim zaczniesz.",
   "notStarted": "Nierozpoczęte",
   "nPoints": "{numPoints, plural, one {1 punkt} few {# punkty} other {# punktów}}",
   "numMatchCorrect": "# poprawne dopasowanie",

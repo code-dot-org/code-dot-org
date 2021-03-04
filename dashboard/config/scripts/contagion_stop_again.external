@@ -1,0 +1,22 @@
+name 'contagion_stop_again'
+title 'Contagion: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Stop Again!
+
+## This time make sure you have enough data from Model 3
+
+
+<div style="display: inline-block">
+<img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:left; width:30%">
+
+![](https://images.code.org/a63d951212fbe5bd2f2490099a8bab58-image-1613001013755.50.10 PM.png)
+![](https://images.code.org/d1cf3eb126de5aac573772e43000ecf1-image-1613001200482.53.15 PM.png)
+
+Ready to move on? Click `Continue`. 
+
+</div>
+
+
+MARKDOWN

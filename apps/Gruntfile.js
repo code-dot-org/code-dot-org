@@ -77,6 +77,7 @@ describe('entry tests', () => {
     'eval',
     'fish',
     'flappy',
+    'javalab',
     'gamelab',
     'spritelab',
     'jigsaw',
@@ -566,8 +567,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-    'java_ide/index': './src/sites/studio/pages/java_ide/index.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
   };
 
   var internalEntries = {

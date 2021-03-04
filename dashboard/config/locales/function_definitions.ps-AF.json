@@ -22,6 +22,13 @@
               "repeat": "تکرار"
             }
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
         }
       }
     }
