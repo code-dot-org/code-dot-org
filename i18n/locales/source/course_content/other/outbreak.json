@@ -162,14 +162,6 @@
         "display_name": "Standard Toolbox",
         "short_instructions": "Make any changes or improvements to your project that you would like. ",
         "long_instructions": "# Free Play\r\n\r\n<div style=\"display:inline-block\">\r\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\r\n\r\n*Great job! You've been a huge help to all of the residents of Monster Town. We hope you will share what you've learned with others.*\r\n\r\n</div>\r\n\r\nYou finished the tutorial! Make any changes or improvements to your project that you would like. Press the \"Share\" button at the top of the page to send your project to your friends and family.\r\n",
-        "block_categories": {
-          "World": "World",
-          "Sprites": "Sprites",
-          "Actions": "Actions",
-          "Events": "Events",
-          "Logic": "Logic",
-          "Math": "Math"
-        },
         "behavior_names": {
           "recovering": "recovering",
           "wandering": "wandering",
@@ -191,20 +183,6 @@
         "display_name": "Expanded Toolbox",
         "short_instructions": "Make any changes or improvements to your project that you would like. ",
         "long_instructions": "# Free Play\r\n\r\n<div style=\"display:inline-block\">\r\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\r\n\r\n*Great job! You've been a huge help to all of the residents of Monster Town. We hope you will share what you've learned with others.*\r\n\r\n</div>\r\n\r\nYou finished the tutorial! Make any changes or improvements to your project that you would like. Press the \"Share\" button at the top of the page to send your project to your friends and family. The toolbox has been expanded greatly.\r\n\r\n",
-        "block_categories": {
-          "World": "World",
-          "Sprites": "Sprites",
-          "Actions": "Actions",
-          "Behaviors": "Behaviors",
-          "Events": "Events",
-          "Locations": "Locations",
-          "Logic": "Logic",
-          "Loops": "Loops",
-          "Math": "Math",
-          "Variables": "Variables",
-          "Functions": "Functions",
-          "Comments": "Comments"
-        },
         "behavior_names": {
           "recovering": "recovering",
           "wandering": "wandering",
