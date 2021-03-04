@@ -1,0 +1,26 @@
+nn:
+  data:
+    variable_names:
+      actor: spelar
+      cats: kattar
+      counter: teljar
+      dogs: hundar
+      height: høgd
+      honey: honning
+      i: i
+      left: venstre
+      length: lengde
+      name: namn
+      nectar: nektar
+      points: poeng
+      random: tilfeldig
+      repeat: gjenta
+      right: høgre
+      score: poengsum
+      sides: Sider
+      size: størrelse
+      speed: fart
+      variable: variabel
+      width: breidde
+      wizard: trollmann
+      x: x
