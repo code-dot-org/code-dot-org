@@ -27,6 +27,13 @@
     = f.label :start_libraries,'User-Created Toolbox Libraries (make sure that Enable Libraries ^ is checked)'
     = f.text_area :start_libraries, value: @level.start_libraries
 
+  - if @level.is_a? Applab
+    %h1.control-legend{data: {toggle: "collapse", target: "#ai"}}
+      A.I.
+
+    #ai.in.collapse
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_enabled, description: "Enable A.I. tools"}
+
 %h1.control-legend{data: {toggle: "collapse", target: "#starter-code"}}
   Starter Code
 
