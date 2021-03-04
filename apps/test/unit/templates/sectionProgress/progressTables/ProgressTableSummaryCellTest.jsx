@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import color from '@cdo/apps/util/color';
 import sinon from 'sinon';
@@ -12,15 +12,23 @@ const DEFAULT_PROPS = {
     isStarted: true,
     completedPercent: 100,
     imperfectPercent: 0,
-    incompletePercent: 0
+    incompletePercent: 0,
+    timeSpent: 0,
+    lastTimestamp: 0
   },
   isAssessmentLesson: false,
   onSelectDetailView: () => {}
 };
 
 const setUp = (overrideProps = {}) => {
-  const props = _.merge(DEFAULT_PROPS, overrideProps);
-  return shallow(<ProgressTableSummaryCell {...props} />);
+  const props = _.merge(_.cloneDeep(DEFAULT_PROPS), overrideProps);
+  return (
+    mount(<ProgressTableSummaryCell {...props} />)
+      // <BorderedBox>
+      .childAt(0)
+      // styled <div>
+      .childAt(0)
+  );
 };
 
 const getStyle = (wrapper, styleName) => {
@@ -28,6 +36,12 @@ const getStyle = (wrapper, styleName) => {
 };
 
 describe('ProgressTableSummaryCell', () => {
+  it('displays as not started when missing progress data', () => {
+    const wrapper = setUp({studentLessonProgress: null});
+    const borderColor = getStyle(wrapper, 'borderColor');
+    expect(borderColor).to.equal(color.light_gray);
+  });
+
   it('calls onSelectDetailView when clicked', () => {
     const onClickSpy = sinon.spy();
     const wrapper = setUp({onSelectDetailView: onClickSpy});

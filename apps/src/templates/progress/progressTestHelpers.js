@@ -7,7 +7,10 @@
 
 import _ from 'lodash';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {levelProgressFromStatus} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  levelProgressFromStatus,
+  lessonProgressForSection
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {createStore} from 'redux';
 import Immutable from 'immutable';
 
@@ -171,6 +174,10 @@ export const fakeProgressTableReduxInitialState = (
   if (!scriptData) {
     scriptData = fakeScriptData({stages});
   }
+  const levelProgressData = fakeStudentLevelProgress(
+    scriptData.stages[0].levels,
+    students
+  );
 
   return {
     progress: {
@@ -185,9 +192,12 @@ export const fakeProgressTableReduxInitialState = (
     sectionProgress: {
       scriptDataByScript: {[scriptData.id]: scriptData},
       studentLevelProgressByScript: {
-        [scriptData.id]: fakeStudentLevelProgress(
-          scriptData.stages[0].levels,
-          students
+        [scriptData.id]: levelProgressData
+      },
+      studentLessonProgressByScript: {
+        [scriptData.id]: lessonProgressForSection(
+          levelProgressData,
+          scriptData.stages
         )
       },
       studentLastUpdateByScript: fakeStudentLastUpdateByScript(
