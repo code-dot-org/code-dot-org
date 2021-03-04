@@ -37,7 +37,6 @@
  * @property {?} authoredHintsUsedIds
  * @property {number} serverLevelId
  * @property {number} serverProjectLevelId
- * @property {number} serverScriptLevelId
  * @property {string} gameDisplayName
  * @property {boolean} publicCaching
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,

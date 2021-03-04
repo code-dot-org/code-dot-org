@@ -17,6 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 17:35:08 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -1196,7 +1197,7 @@
       "key": "888e973b-48f4-480c-8573-2654a891a669",
       "position": 3,
       "properties": {
-        "description": "[slide] **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp innovation sim guide]\r\n\r\n\r\n[slide] **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
+        "description": "[slide] **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp_innovation_simulation_project_guide]\r\n\r\n\r\n[slide] **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
         "name": "Innovation Simulation Project\r"
       },
       "seeding_key": {
@@ -1260,7 +1261,7 @@
       "key": "81816452-79fb-4c66-83a2-a12c6ce6e6a4",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the purpose of a computing innovation?\n\n**Discussion Goal:** A computing innovation is designed to solve a problem. \n\n"
+        "description": "[slide]  **Discuss:** *What is the purpose of a computing innovation?*\n\n**Discussion Goal:** A computing innovation is designed to solve a problem. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "81816452-79fb-4c66-83a2-a12c6ce6e6a4",
@@ -1328,7 +1329,7 @@
       "key": "760b65f1-e52c-4674-a6df-ad9d6c322b58",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   \t* help schools run more efficiently\n   \t* help certain groups gain a voice and be heard\n   \t* make learning more fun!\n   \t* save time and money\n\n"
+        "description": "[slide]  **Discuss:** *Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?*\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   \t* help schools run more efficiently\n   \t* help certain groups gain a voice and be heard\n   \t* make learning more fun!\n   \t* save time and money\n\n"
       },
       "seeding_key": {
         "activity_section.key": "760b65f1-e52c-4674-a6df-ad9d6c322b58",
@@ -1350,7 +1351,7 @@
       "key": "70903625-0b45-4ea3-b71d-f7dc0be240ba",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Which of your computing innovations would bring the most positive change to the school community? Share with your group. \r\n\r\n**Discuss:** With your group and then with the whole class discuss the common characteristics of these computing innovations that would bring the most positive change. \r\n\r\n---"
+        "description": "[slide] **Discuss:** *Which of your computing innovations would bring the most positive change to the school community? Share with your group. *\n\nWith your group and then with the whole class discuss the common characteristics of these computing innovations that would bring the most positive change. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "70903625-0b45-4ea3-b71d-f7dc0be240ba",
@@ -1384,7 +1385,7 @@
       "key": "77490cce-8681-49e2-bc16-ddc092ef40b0",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Which of the following pieces of information would you consider to be \"personal\", as in you wouldn't want it shared with just anyone.",
+        "description": "[slide]  **Discuss:** *Which of the following pieces of information would you consider to be \"personal\", as in you wouldn't want it shared with just anyone.*",
         "name": "What Information is Private?\r"
       },
       "seeding_key": {
@@ -1396,7 +1397,7 @@
       "key": "5bf7ffcf-0e5d-4e23-8972-757d00500943",
       "position": 2,
       "properties": {
-        "description": "1. Your full name\n2. Your social security number\n3. Your favorite musician / band\n4. A picture of your face\n5. Your fingerprint\n6. Your birthdate\n7. Your address\n8. Where you go after school\n9. Your phone number\n10. Your medical information\n11. Who your best friends are\n12. Your racial / ethnic identity\n13. A list of everything you've bought this month\n14. A list of recordings of your voice\n15. Your IP address\n16. A video of you singing\n17. Your academic history / report card\n18. The town or city you live in\n\n\n**Discuss:** Have students brainstorm silently at their tables, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This prompt sets up the rest of the lesson where students will be exploring instances where many of the pieces of information on this list are used by the services they use every day. Aim to push students to think about what it means to say that something is \"personal\" or \"private\". This is a lens they should take into the lesson.\n\nAlso, point out to students the items on this list that are biometric data: a picture of your face, your fingerprint, and voice/video recordings. Are these considered any more private or personal than the other items? Why or why not? \n\n"
+        "description": "1. Your full name\n2. Your social security number\n3. Your favorite musician / band\n4. A picture of your face\n5. Your fingerprint\n6. Your birthdate\n7. Your address\n8. Where you go after school\n9. Your phone number\n10. Your medical information\n11. Who your best friends are\n12. Your racial / ethnic identity\n13. A list of everything you've bought this month\n14. A list of recordings of your voice\n15. Your IP address\n16. A video of you singing\n17. Your academic history / report card\n18. The town or city you live in\n\n\nHave students brainstorm silently at their tables, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion sets up the rest of the lesson where students will be exploring instances where many of the pieces of information on this list are used by the services they use every day. Aim to push students to think about what it means to say that something is \"personal\" or \"private\". This is a lens they should take into the lesson.\n\nAlso, point out to students the items on this list that are biometric data: a picture of your face, your fingerprint, and voice/video recordings. Are these considered any more private or personal than the other items? Why or why not? \n\n"
       },
       "seeding_key": {
         "activity_section.key": "5bf7ffcf-0e5d-4e23-8972-757d00500943",
@@ -1521,7 +1522,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "tip!!!tip-0 **Move Quickly to the Main Activity:** An optional prompt is provided but otherwise move quickly into watching and reviewing the videos so that students will have enough time to complete their activity guides.\r\n"
+            "markdown": "**Move Quickly to the Main Activity:** An optional prompt is provided but otherwise move quickly into watching and reviewing the videos so that students will have enough time to complete their activity guides.\n"
           }
         ]
       },
@@ -1534,7 +1535,7 @@
       "key": "c3e69cb7-9108-48b9-9758-db87f0bd38b2",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** As students walk in give them copies of their [r data-policies-activity-guide] which they began filling out in the previous lesson.\r\n    \r\n\r\n[slide] **Prompt:** Review your activity guide from last class. Remind yourself what your privacy concerns were for the app / website you chose."
+        "description": "**Distribute:** As students walk in give them copies of their [r data-policies-activity-guide] which they began filling out in the previous lesson.\n    "
       },
       "seeding_key": {
         "activity_section.key": "c3e69cb7-9108-48b9-9758-db87f0bd38b2",
@@ -1542,10 +1543,22 @@
       }
     },
     {
+      "key": "315af453-4dbd-4c59-b372-dbff0be7df39",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "Review your activity guide from last class. Remind yourself what your privacy concerns were for the app / website you chose."
+      },
+      "seeding_key": {
+        "activity_section.key": "315af453-4dbd-4c59-b372-dbff0be7df39",
+        "lesson_activity.key": "07b20577-bb08-4d7c-812b-9bc48907c0ae"
+      }
+    },
+    {
       "key": "98bd233e-f176-45a9-be50-e153c6118595",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "name": "Convenience vs Privacy - Facial Recognition - 10 mins\r"
       },
       "seeding_key": {
@@ -1567,7 +1580,7 @@
       "key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** As we watch the following video on facial recognition takes notes on:\n\ndiscussion!!!discussion-0 **Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\n[slide] **Discuss:** *Do you think the benefits outweigh the privacy concerns?*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "name": "Security vs Privacy - Should the Government Need a Warrant? - 10 mins\r"
       },
       "seeding_key": {
@@ -1579,7 +1592,7 @@
       "key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
       "position": 4,
       "properties": {
-        "description": "* What are the benefits of the technology? What does it make more convenient / fun?\r\n* What are the privacy concerns that arise?\r\n* Why would governments or businesses be interested in this technology?\r\n\r\nAfterwards we'll discuss whether we think the benefits outweigh the privacy concerns.\r\n\r\n\r\n[slide] **Display:** Show the video about facial recognition technology.\r\n\r\n\r\n[slide] **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class."
+        "description": "\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*"
       },
       "seeding_key": {
         "activity_section.key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
@@ -1587,28 +1600,11 @@
       }
     },
     {
-      "key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
+      "key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** Individually fill in the last page of your activity guide.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Developing an Informed Opinion:** This lesson has asked students to hold off on weighing in on the innovations they researched in the previous class to develop a more nuanced and informed opinion about the tradeoffs between innovation, privacy, and security. As students move to this last activity, remind them of the more nuanced opinion they've developed, and ask them to reflect on how the different examples they've seen impact their overall opinions on this tradeoff.\r\n\r\n"
-          }
-        ],
-        "name": "Privacy Tradeoffs - Your Innovation - 15 mins\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
-        "lesson_activity.key": "1a1d6e24-9883-459b-81ce-1e1661033a65"
-      }
-    },
-    {
-      "key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
-      "position": 6,
-      "properties": {
-        "description": "**Discuss:** Students are given a good chunk of class time to complete this activity. Ask students to reflect quietly but as individuals or groups finish they should begin discussing with one another. If most students finish early you could begin a full-class discussion."
+        "description": "Students are given a good chunk of class time to complete this activity. Ask students to reflect quietly but as individuals or groups finish they should begin discussing with one another. If most students finish early you could begin a full-class discussion.\n\nIndividually fill in the last page of your activity guide.",
+        "name": "Privacy Tradeoffs - Your Innovation - 15 mins"
       },
       "seeding_key": {
         "activity_section.key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
@@ -1616,10 +1612,26 @@
       }
     },
     {
+      "key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Developing an Informed Opinion:** This lesson has asked students to hold off on weighing in on the innovations they researched in the previous class to develop a more nuanced and informed opinion about the tradeoffs between innovation, privacy, and security. As students move to this last activity, remind them of the more nuanced opinion they've developed, and ask them to reflect on how the different examples they've seen impact their overall opinions on this tradeoff.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
+        "lesson_activity.key": "1a1d6e24-9883-459b-81ce-1e1661033a65"
+      }
+    },
+    {
       "key": "eed7e47d-72a8-4cb6-85ca-d36a05ae8830",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Based on the discussions we had today, which of the following best describes your overall feelings with sharing private data in order to power innovations or ensure security.\n\n"
+        "description": "[slide]  **Discuss:** *Based on the discussions we had today, which of the following best describes your overall feelings with sharing private data in order to power innovations or ensure security.*\n\n"
       },
       "seeding_key": {
         "activity_section.key": "eed7e47d-72a8-4cb6-85ca-d36a05ae8830",
@@ -1630,7 +1642,7 @@
       "key": "f9aa9a91-fcde-466a-ac9c-331e5b063af6",
       "position": 2,
       "properties": {
-        "description": "* 1: Totally Comfortable: \"Have my data! It makes the technology I love work and I have nothing to hide!\"\n* 2: Mostly Comfortable: \"I want tech innovations and stronger security. Let's make sure we take care of the most damaging privacy concerns.\"\n* 3: Mixed: \"There's a lot of this that makes me uncomfortable, but I'm still going to use technology.\"\n* 4: Mostly Uncomfortable: \"Privacy is more important than empowering innovations or ensuring security. I would give up on some tech innovations to ensure my privacy\"\n* 5: Totally Uncomfortable: \"I'd give up most technology and would like to see much stronger limits on what kind of data can be collected and stored, even if it limits the introduction of new technology\"\n\n**Discuss:** Have a few people from each end of the spectrum share their reasoning.\n\n**Discussion Goal:** Use this discussion to do some classwide synthesis of today's discussions about the tradeoffs between privacy and empowering new technology or ensuring security. The goal here is to move individual students to think broadly about their opinions, not force every student to have the same opinion. It's not necessary that students agree, but prompt them to think critically about this important question posed by modern technology. Some ways to do this:\n\n* Ask them why they hold their opinions and ask them to tie them to today's lesson\n* Ask them to give specific examples\n* Ask students who disagree to politely debate their opinions\n* Ask students to tie their opinions to their own experiences\n\n\n\n[slide] **Review:** Review the key takeaways at the end of the lesson."
+        "description": "* 1: Totally Comfortable: \"Have my data! It makes the technology I love work and I have nothing to hide!\"\n* 2: Mostly Comfortable: \"I want tech innovations and stronger security. Let's make sure we take care of the most damaging privacy concerns.\"\n* 3: Mixed: \"There's a lot of this that makes me uncomfortable, but I'm still going to use technology.\"\n* 4: Mostly Uncomfortable: \"Privacy is more important than empowering innovations or ensuring security. I would give up on some tech innovations to ensure my privacy\"\n* 5: Totally Uncomfortable: \"I'd give up most technology and would like to see much stronger limits on what kind of data can be collected and stored, even if it limits the introduction of new technology\"\n\nHave a few people from each end of the spectrum share their reasoning.\n\n**Discussion Goal:** Use this discussion to do some classwide synthesis of today's discussions about the tradeoffs between privacy and empowering new technology or ensuring security. The goal here is to move individual students to think broadly about their opinions, not force every student to have the same opinion. It's not necessary that students agree, but prompt them to think critically about this important question posed by modern technology. Some ways to do this:\n\n* Ask them why they hold their opinions and ask them to tie them to today's lesson\n* Ask them to give specific examples\n* Ask students who disagree to politely debate their opinions\n* Ask students to tie their opinions to their own experiences\n\n\n\n[slide] **Review:** Review the key takeaways at the end of the lesson."
       },
       "seeding_key": {
         "activity_section.key": "f9aa9a91-fcde-466a-ac9c-331e5b063af6",
@@ -1703,7 +1715,7 @@
       "key": "156d0a00-00f7-42fe-bae6-ccf7e2a941a8",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Ensure students have access to their copies of the [\tCSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/)\n\n[slide] **Prompt:** Remind yourself of your character’s goals and motivations. What can your character’s perspectives and goals bring to the table? How can you help avoid some of the unintended consequences of your innovations?"
+        "description": "**Distribute:** Ensure students have access to their copies of the [\tCSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/)\n\n[slide] **Discuss:** *Remind yourself of your character’s goals and motivations. What can your character’s perspectives and goals bring to the table? How can you help avoid some of the unintended consequences of your innovations?*"
       },
       "seeding_key": {
         "activity_section.key": "156d0a00-00f7-42fe-bae6-ccf7e2a941a8",
@@ -1748,7 +1760,7 @@
       "key": "4604dc0d-cc95-46b4-ad6d-6292e2beaec4",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?\n\n**Discussion Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \n\nThings that might make you suspicious:\n\n* Mispellings of the person's name, email, or company\n* Something that seems to good to be true (\"Free Vacations for a year!\")\n* Asking for personal information\n* A flashy link they want you to click on\n\n"
+        "description": "[slide]  **Discuss:** *Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?*\n\n**Discussion Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \n\nThings that might make you suspicious:\n\n* Mispellings of the person's name, email, or company\n* Something that seems to good to be true (\"Free Vacations for a year!\")\n* Asking for personal information\n* A flashy link they want you to click on\n\n"
       },
       "seeding_key": {
         "activity_section.key": "4604dc0d-cc95-46b4-ad6d-6292e2beaec4",
@@ -1818,7 +1830,7 @@
       "key": "cabaffa7-c899-4e4a-902f-09ec3897861c",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Discuss (5 mins):** Bring the class back together and ask for a volunteer from each of the topics to share their slide with the class and give a one minute overview.",
+        "description": "[slide]  **Discuss (5 mins):** *Bring the class back together and ask for a volunteer from each of the topics to share their slide with the class and give a one minute overview.*",
         "tips": [
           {
             "type": "teachingTip",
@@ -1956,7 +1968,7 @@
       "key": "ca22849e-3ce5-45fc-a2f1-ce78e9f7a112",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Prompt:** What information does Equifax store? Why should I care?\n\n**Prompt #1:** Equifax stores information on everyone who has a credit score. This information includes private data like social security numbers and whether or not you pay your bills on time. This information is often used when consumers want to make purchases and determines whether or not they are eligible and how high interest rates will be for loans. This can affect your family's ability to buy a house or a car.\n\n\n\n"
+        "description": "[slide]  **Discuss:** *What information does Equifax store? Why should I care?*\n\n**Prompt #1:** Equifax stores information on everyone who has a credit score. This information includes private data like social security numbers and whether or not you pay your bills on time. This information is often used when consumers want to make purchases and determines whether or not they are eligible and how high interest rates will be for loans. This can affect your family's ability to buy a house or a car.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ca22849e-3ce5-45fc-a2f1-ce78e9f7a112",
@@ -1967,7 +1979,7 @@
       "key": "9231a94f-3dd5-455f-8018-faf0dbb7f44e",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** As a computing innovation what are the benefits of Equifax? What are the potential harms? \n\n**Prompt #2:** *Benefits:* companies are able to use data to make decisions when deciding who to lend money to or how much a person can be trusted to pay back a loan. With this system, we can purchase large items on loan like cars or houses, which would be out of reach for many people if they had to pay outright. *Harms:* Decisions made are not always fair or equitable. In addition, sometimes information is incorrect and difficult to get changed. A lot of trust is put in a small number of companies who are making a profit making these decisions. \n\n[slide] **Prompt:** What are the security risks?\n\n**Prompt #3:** Data that Equifax stores can be hacked and distributed for malicious purposes. With the personal information that Equifax stores, hackers can commit identity theft and make purchases, drain bank accounts, or ruin people's financial history. "
+        "description": "[slide]  **Discuss:** *As a computing innovation what are the benefits of Equifax? What are the potential harms?* \n\n**Prompt #2:** *Benefits:* companies are able to use data to make decisions when deciding who to lend money to or how much a person can be trusted to pay back a loan. With this system, we can purchase large items on loan like cars or houses, which would be out of reach for many people if they had to pay outright. *Harms:* Decisions made are not always fair or equitable. In addition, sometimes information is incorrect and difficult to get changed. A lot of trust is put in a small number of companies who are making a profit making these decisions. \n\n[slide] **Discuss:** *What are the security risks?*\n\n**Prompt #3:** Data that Equifax stores can be hacked and distributed for malicious purposes. With the personal information that Equifax stores, hackers can commit identity theft and make purchases, drain bank accounts, or ruin people's financial history. "
       },
       "seeding_key": {
         "activity_section.key": "9231a94f-3dd5-455f-8018-faf0dbb7f44e",
@@ -1990,7 +2002,7 @@
       "key": "14c480b2-e641-4213-ae32-811b3e95af03",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Discuss:** What rules or regulations would you recommend be put in place to control how data is collected and shared? What role (if any) should the government play?",
+        "description": "[slide]  **Discuss:** *What rules or regulations would you recommend be put in place to control how data is collected and shared? What role (if any) should the government play?*",
         "tips": [
           {
             "type": "teachingTip",
@@ -2076,7 +2088,7 @@
       "key": "6fe9b2ee-f1c2-4ee8-9c8d-053587d45387",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give students back [r csp innovation sim guide] if they don't already have them on hand.\r\n\r\n\r\n[slide] **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
+        "description": "**Distribute:** Give students back [r csp_innovation_simulation_project_guide] if they don't already have them on hand.\r\n\r\n\r\n[slide] **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
       },
       "seeding_key": {
         "activity_section.key": "6fe9b2ee-f1c2-4ee8-9c8d-053587d45387",
@@ -2099,7 +2111,7 @@
       "key": "a8366f16-9c44-4a43-a66b-d08cd48396cd",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** Explain how a computing innovation can have an impact beyond its intended purpose. How can rapid sharing of a computing innovation affect these impacts?\n\n**Discussion Goal:** Pull out these general ideas from the discussion:\n\n* Computing Innovations can have a harmful impact on society, economy or culture - even when the creator did not intend for this to happen.\n* Responsible creators of innovations should consider potential beneficial and harmful effects and how their innovations may be used in unintended ways, given that not all potential uses can be known ahead of time.\n* Sometimes computing innovations lead to benefits in other fields.\n* Rapid sharing of computing innovations can lead to a greater number of users which can in turn lead to more significant impacts. Consider a social media platform with thousands of users vs. millions. \n"
+        "description": "**Discuss:** *Explain how a computing innovation can have an impact beyond its intended purpose. How can rapid sharing of a computing innovation affect these impacts?*\n\n**Discussion Goal:** Pull out these general ideas from the discussion:\n\n* Computing Innovations can have a harmful impact on society, economy or culture - even when the creator did not intend for this to happen.\n* Responsible creators of innovations should consider potential beneficial and harmful effects and how their innovations may be used in unintended ways, given that not all potential uses can be known ahead of time.\n* Sometimes computing innovations lead to benefits in other fields.\n* Rapid sharing of computing innovations can lead to a greater number of users which can in turn lead to more significant impacts. Consider a social media platform with thousands of users vs. millions. \n"
       },
       "seeding_key": {
         "activity_section.key": "a8366f16-9c44-4a43-a66b-d08cd48396cd",
@@ -2213,7 +2225,7 @@
       "key": "a1140614-eb5b-4738-ad1d-483d8d50a0f9",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** How does the widget work? What steps would you take to crack the code?",
+        "description": "[slide]  **Discuss:** *How does the widget work? What steps would you take to crack the code?*",
         "tips": [
           {
             "type": "teachingTip",
@@ -2264,7 +2276,7 @@
       "key": "61683c04-9510-4d98-a132-5e5caefec1ae",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the difference between symmetric encryption and asymmetric (public key) encryption?\n\n**Discussion Goal:** This is the main takeaway. Students need to understand that symmetric encryption involves one key that is shared between the encoder and decoder. Asymmetric (public key) encryption uses two keys - a public and a private one. The encoder and the decoder never need to meet to exchange a key. The modern Internet is built around pulic key encryption. \n"
+        "description": "[slide]  **Discuss:** *What is the difference between symmetric encryption and asymmetric (public key) encryption?*\n\n**Discussion Goal:** This is the main takeaway. Students need to understand that symmetric encryption involves one key that is shared between the encoder and decoder. Asymmetric (public key) encryption uses two keys - a public and a private one. The encoder and the decoder never need to meet to exchange a key. The modern Internet is built around pulic key encryption. \n"
       },
       "seeding_key": {
         "activity_section.key": "61683c04-9510-4d98-a132-5e5caefec1ae",
@@ -2338,7 +2350,7 @@
       "key": "e2a30e77-2c5f-43e0-af8e-e133afe2bd6d",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** What strategies do you use when creating a good password?\n\nStudents should discuss good password management, building off of their knowledge from earlier in the  unit. The following slide contains best practices, but your students may have some more concrete suggestions for how they craft complex but memorable passwords. \n"
+        "description": "[slide]  **Discuss:** *What strategies do you use when creating a good password?*\n\nStudents should discuss good password management, building off of their knowledge from earlier in the  unit. The following slide contains best practices, but your students may have some more concrete suggestions for how they craft complex but memorable passwords. \n"
       },
       "seeding_key": {
         "activity_section.key": "e2a30e77-2c5f-43e0-af8e-e133afe2bd6d",
@@ -2449,7 +2461,7 @@
       "key": "7d0c7b33-e434-4de2-827a-07084a826510",
       "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:** Discuss with a partner how you plan to protect your data.\n\nIf students are struggling with answering this question, prompt them with more specific questions:\n\n* How will you decide on your next password?\n* Will you use two-factor or multifactor authentication when you have the opportunity?\n* How often do you update your software?\n* How up to date is the software on your devices?\n \n\n\n\n"
+        "description": "[slide] **Discuss:** *Discuss with a partner how you plan to protect your data.*\n\nIf students are struggling with answering this question, prompt them with more specific questions:\n\n* How will you decide on your next password?\n* Will you use two-factor or multifactor authentication when you have the opportunity?\n* How often do you update your software?\n* How up to date is the software on your devices?\n \n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "7d0c7b33-e434-4de2-827a-07084a826510",
@@ -3309,50 +3321,50 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Innovation Simulation Nameplates",
       "url": "https://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/",
-      "key": "csp innovation sim nameplates",
+      "key": "csp_innovation_simulation_nameplates",
       "properties": {
         "type": "Handout",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim nameplates"
+        "resource.key": "csp_innovation_simulation_nameplates"
       }
     },
     {
       "name": "CSP Innovation Simulation Badges",
       "url": "https://drive.google.com/file/d/1iTYcQ-Jqe-aCQ3Jcq0Td0xZEgreNdGVp/",
-      "key": "csp innovation sim badges",
+      "key": "csp_innovation_simulation_badges",
       "properties": {
         "type": "Handout",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim badges"
+        "resource.key": "csp_innovation_simulation_badges"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3371,38 +3383,26 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
-      }
-    },
-    {
-      "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
-      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3421,13 +3421,13 @@
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3441,6 +3441,18 @@
       },
       "seeding_key": {
         "resource.key": "data-policies-activity-guide"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
+      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3459,50 +3471,38 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
-      }
-    },
-    {
-      "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
-      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3519,6 +3519,18 @@
       }
     },
     {
+      "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
+      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
       "name": "CSP Unit 10 Project Overview",
       "url": "https://docs.google.com/document/d/105rBn4_ylOlRWmgxvQdMjo8v0Iwrg3Aw-9vPIVsAYpc/edit?usp=sharing",
       "key": "csp-unit-10-project-overview",
@@ -3534,50 +3546,38 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
-      }
-    },
-    {
-      "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
-      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3594,41 +3594,15 @@
       }
     },
     {
-      "name": "CSP Unit 10 Project Overview",
-      "url": "https://docs.google.com/document/d/105rBn4_ylOlRWmgxvQdMjo8v0Iwrg3Aw-9vPIVsAYpc/edit?usp=sharing",
-      "key": "csp-unit-10-project-overview",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp-unit-10-project-overview"
-      }
-    },
-    {
-      "name": "CSP Innovation Simulation Project Guide",
-      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp innovation sim guide"
-      }
-    },
-    {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3647,26 +3621,26 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3685,38 +3659,76 @@
     {
       "name": "CSP Innovation Simulation Project Guide",
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
-      "key": "csp innovation sim guide",
+      "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "name": "CSP Unit 10 Project Overview",
+      "url": "https://docs.google.com/document/d/105rBn4_ylOlRWmgxvQdMjo8v0Iwrg3Aw-9vPIVsAYpc/edit?usp=sharing",
+      "key": "csp-unit-10-project-overview",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp-unit-10-project-overview"
+      }
+    },
+    {
+      "name": "CSP Innovation Simulation Project Guide",
+      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
+      "key": "csp_innovation_simulation_project_guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
       "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
-      "key": "csp U10 presentation",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
+      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
+      "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     }
   ],
@@ -3742,25 +3754,25 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp innovation sim nameplates"
+        "resource.key": "csp_innovation_simulation_nameplates"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp innovation sim badges"
+        "resource.key": "csp_innovation_simulation_badges"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3772,19 +3784,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "resource.key": "csp U10 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Policies and Privacy",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3795,14 +3801,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Value of Privacy",
-        "resource.key": "csp U10 presentation"
+        "lesson.key": "Data Policies and Privacy",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Value of Privacy",
         "resource.key": "data-policies-activity-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Value of Privacy",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3814,25 +3826,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Security Risks Part 1",
-        "resource.key": "csp U10 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3843,6 +3849,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 4",
         "resource.key": "csp-unit-10-project-overview"
       }
@@ -3850,25 +3862,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 4",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 4",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Protecting Data Part 1",
-        "resource.key": "csp U10 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3879,6 +3885,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 5",
         "resource.key": "csp-unit-10-project-overview"
       }
@@ -3886,13 +3898,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 5",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 5",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3904,13 +3916,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 6",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 6",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
@@ -3922,19 +3934,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 7",
-        "resource.key": "csp innovation sim guide"
+        "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Innovation Simulation Part 7",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 14: Unit Assessment Day",
-        "resource.key": "csp U10 presentation"
+        "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
       }
     }
   ],
