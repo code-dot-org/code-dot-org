@@ -1,0 +1,16 @@
+pt:
+  data:
+    parameter_names:
+      actor: personagem
+      color: cor
+      counter: contador
+      height: altura
+      honey: mel
+      left: para esquerda
+      length: comprimento
+      min: min
+      points: pontos
+      size: tamanho
+      speed: velocidade
+      theGuess: o palpite
+      width: largura
