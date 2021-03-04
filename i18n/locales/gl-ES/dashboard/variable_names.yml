@@ -1,0 +1,20 @@
+gl:
+  data:
+    variable_names:
+      actor: actor
+      counter: contador
+      height: altura
+      honey: mel
+      left: esquerda
+      length: lonxitude
+      name: nome
+      nectar: néctar
+      points: puntos
+      random: aleatorio
+      repeat: repetir
+      right: dereita
+      score: puntuación
+      size: tamaño
+      speed: velocidade
+      variable: variable
+      wizard: mago
