@@ -19831,7 +19831,7 @@ tr:
             Semester Hackathon Part 5:
               name: Dönem Hackathon Kısım 5
             'Lesson 18: Assessment Day':
-              name: 'Ders 18: Değerlendirme Günü'
+              name: 'Ders 15: Değerlendirme Günü'
             Unit 5 STUDENT Survey:
               name: Ünite 5 ÖĞRENCİ Anketi
             Unit 5 TEACHER Survey:
@@ -19864,7 +19864,7 @@ tr:
             Project - Make a Library Part 3:
               name: Proje - Bir Kütüphane Yapma Kısım 3
             Assessment Day:
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
             Unit 7 STUDENT Survey:
               name: Ünite 7 ÖĞRENCİ Anketi
             Unit 7 TEACHER Survey:
@@ -19872,7 +19872,7 @@ tr:
             Variables Make Demo:
               name: Değişkenleri Yapma Demo
             'Lesson 11: Assessment Day':
-              name: 'Ders 11: Değerlendirme Günü'
+              name: 'Ders 15: Değerlendirme Günü'
         csd2-projects-temp:
           title: CSD Ağ Projeleri - TEMP
           description: CSD Ağ Geliştirme için yeni mini-projeleri tutacak geçici yer
@@ -23313,7 +23313,7 @@ tr:
             Project - Digital Information Dilemmas Part 2:
               name: Proje - Dijital Bilgi İkilemleri Kısım 2
             'Lesson 14: Assessment Day':
-              name: 'Ders 14: Ünite Değerlendirme'
+              name: 'Ders 15: Değerlendirme Günü'
             CS Principles Pre-survey:
               name: Bilgisayar Bilimi ilkeleri ön anket
         csp2-2020:
@@ -23341,7 +23341,7 @@ tr:
             Project - Internet Dilemmas Part 2:
               name: Proje - İnternet İkilemleri Kısım 2
             'Lesson 9: Assessment Day':
-              name: 'Ders 9: Değerlendirme Günü'
+              name: 'Ders 15: Değerlendirme Günü'
         csp3-2020:
           title: CSP Ünite 3 - Uygulama Tasarımına Giriş ('20-'21)
           lesson_groups:
@@ -23369,7 +23369,7 @@ tr:
             Project - Designing an App Part 5:
               name: Proje - Bir Uygulama Tasarlama Kısım 5
             'Lesson 11: Assessment Day':
-              name: 'Ders 11: Değerlendirme Günü'
+              name: 'Ders 15: Değerlendirme Günü'
         csp6-2020:
           title: CSP Ünite 6 -Algoritmalar ('20-'21)
           lesson_groups:
@@ -23389,7 +23389,7 @@ tr:
             Parallel and Distributed Algorithms:
               name: Paralel ve Dağıtılmış Algoritmalar
             'Lesson 6: Assessment Day':
-              name: 'Ders 6: Değerlendirme Günü'
+              name: 'Ders 15: Değerlendirme Günü'
         csp8-2020:
           title: CSP Ünite 8 - Performans Görevi Hazırlığı Oluşturma ('20-'21)
           lessons:
@@ -23426,7 +23426,7 @@ tr:
             Project - Tell a Data Story - Part 2:
               name: Proje - Bir Veri Hikayesi Anlat - Kısım 2
             'Lesson 9: Assessment Day':
-              name: 'Ders 9: Değerlendirme Günü'
+              name: 'Ders 15: Değerlendirme Günü'
         csp10-2020:
           title: CSP Ünite 10 - Siber güvenlik ve Küresel Etkiler ('20-'21)
           lesson_groups:
@@ -24793,36 +24793,140 @@ tr:
             What is a Computer?:
               key: Bilgisayar nedir?
               name: Bilgisayar nedir?
+              description_teacher: Bu derste öğrenciler bir bilgisayar tanımı geliştirir.
+                Dersin başında, bir bilgisayarın olası tanımlarıyla ilgili beyin fırtınası
+                yapar ve beyin fırtınası sonuçlarını panoya yerleştirirler. Sonra,
+                öğrenciler gruplar halinde çalışma ile resimleri  "bu bir bilgisayar"
+                veya "bu bir bilgisayar değil" şeklinde poster kağıdının üzerine sınıflandıracak.
+                Gruplar posterlerini odanın etrafına yerleştirecek ve gruplama yaparken
+                en çok hangilerinde zorlandıklarını kısaca açıklayacaklar. Öğretmen
+                daha sonra bilgisayarın tanımını yapacak ve öğrencilerin yeni tanıma
+                göre kendi posterlerini gözden geçirmeleri için imkân verecek.
             Input and Output:
               key: Girdiler ve çıktılar
               name: Girdiler ve çıktılar
             Processing:
               key: İşleme
               name: İşleme
+              description_teacher: Öğrenciler, işlemenin anlamını ve problem çözme
+                ile ilişkisini keşfetmeleri için iki tane bağımsız kart sıralama etkinliği
+                yaparlar. İlk etkinlikte az kısıtlama vardır ve işlemenin üst düzey
+                bir tanımını öğretmek için kullanılır. Sonraki etkinlikte öğrencileri,
+                kartları her zaman başarılı bir şekilde işleyen bir algoritma geliştirmeye
+                zorlayan daha çok kısıtlama vardır. Öğrenciler sürekli olarak algoritmalarını
+                geliştirir, test eder ve sınıf arkadaşlarıyla paylaşır. Kapanış tartışması,
+                öğrencilerin bu etkinliklerde kullandıkları farklı problem çözme türleri
+                ve bir problemi çözmek için bir algoritma üretmenin değeri üzerine
+                derinlemesine düşünmelerini sağlar.
             Storage:
               key: Depolama
               name: Depolama
             Project - Propose an App:
               key: Proje - bir uygulama önermek
               name: Proje - bir uygulama önermek
+              description_teacher: Problem çözme süreci ve bir bilgisayarın girdi/çıktı/depolama/işleme
+                modeli üzerine çalışmalarını bitirmek için öğrenciler bir gerçek hayat
+                sorununu çözen bir uygulama sunarlar. Bu proje günlere yayılarak tamamlanacaktır
+                ve öğrenciler uygulamalarının özelliklerini vurgulayan bir poster
+                oluşturup sınıf arkadaşlarına sunarak proje sonuçlanacaktır. Bir proje
+                rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
+                organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
+                tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
             Post-Project Test:
               key: Proje Sonrası Test
               name: Proje Sonrası Test
             Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
               key: Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)
               name: Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)
+              description_student: "**Günün Sorusu: Bir takım olarak birlikte çalışmak
+                ve problemleri çözmek için bize ne yardımcı olur?**\r\n\r\nSınıf,
+                mümkün olduğunca fazla kitabı destekleyecek gazete tablolarını tasarlamak
+                için gruplar halinde çalışır. Dersin sonunda gruplar, aktivite ile
+                ilgili deneyimlerine kafa yorar ve kursun geri kalanında yapacakları
+                problem çözme yöntemleri ile bağlantı kurar. "
+              description_teacher: "**Günün Sorusu: Bir takım olarak birlikte çalışmak
+                ve problemleri çözmek için bize ne yardımcı olur?**\r\n\r\n\r\nBu
+                derste öğrenciler, mümkün olduğunca fazla kitabı bulunduracak gazete
+                tablolarını tasarlamak için gruplar halinde çalışır. Gruplar, birinci
+                turdakinden daha fazla kitabı bulundurmak amacıyla tablolarında iki
+                tur halinde çalışırlar. Aktivitenin yapısı, öğrencilerin sonraki derste
+                daha ayrıntılı olarak görecekleri problem çözme sürecine dair farklı
+                adımları önceden gösterir. Dersin sonunda öğrenciler, aktivite ile
+                ilgili deneyimlerine kafa yorar ve kursun geri kalanında yapacakları
+                problem çözme yöntemleri ile bağlantı kurar.\r\n\r\n**Bu Problem Çözmeye
+                Giriş- Alüminyum Botlar](../1/) için alternatif bir aktivitedir**"
             Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
               key: Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)
               name: Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)
+              description_teacher: "**Günün Sorusu: Bir takım olarak birlikte çalışmak
+                ve problemleri çözmek için bize ne yardımcı olur?**\r\n\r\n\r\nBu
+                derste öğrenciler, mümkün olduğunca fazla kitabı destekleyecek spagetti
+                köprülerini tasarlamak için gruplar halinde çalışır. Gruplar, 1. Turdakinden
+                daha fazla kitabı bulundurmaya çalışmak için köprülerinde çalışmak
+                üzere iki tur oynar. Aktivitenin yapısı, sonraki derste öğrencilerin
+                daha ayrıntılı bir şekilde öğreneceği farklı problem çözme adımlarını
+                önceden gösterir. Dersin sonunda öğrenciler, aktivite ile  ilgili
+                deneyimlerini yansıtır ve kursun geri kalanında yapacakları problem
+                çözme yöntemleriyle bağlantı kurar.\r\n\r\n**Bu aktivite,  [Problem
+                Çözmeye Giriş - Alüminyum Tekneler](../1/) için alternatif bir aktivitedir**"
             Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
               key: Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)
               name: Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)
+              description_student: "**Günün Sorusu: Bir takım olarak birlikte çalışmak
+                ve problemleri çözmek için bize ne yardımcı olur?**\r\n\r\nSınıf,
+                mümkün olduğunca uzun kağıt kuleleri tasarlamak için gruplar halinde
+                çalışır. Dersin sonunda gruplar, aktivite ile ilgili deneyimlerini
+                yansıtır ve kursun geri kalanında yapacakları problem çözme yöntemleri
+                ile bağlantı kurar. "
+              description_teacher: "**Günün Sorusu: Bir takım olarak birlikte çalışmak
+                ve problemleri çözmek için bize ne yardımcı olur?**\r\n\r\n\r\nBu
+                derste öğrenciler, mümkün olduğunca yüksek olacak kağıt kuleleri tasarlamak
+                için gruplar halinde çalışır. Gruplar, 1. turdakinden daha yüksek
+                yapmak amacıyla kulelerinde iki tur halinde çalışırlar. Aktivitenin
+                yapısı, öğrencilerin sonraki derste daha ayrıntılı olarak görecekleri
+                problem çözme sürecine dair farklı adımları önceden gösterir. Dersin
+                sonunda öğrenciler, aktivite ile ilgili deneyimlerini yansıtır ve
+                kursun geri kalanında yapacakları problem çözme yöntemleri ile bağlantı
+                kurar.\r\n\r\n**Bu [Problem Çözmeye Giriş- Alüminyum Botlar](../1/)
+                için alternatif bir aktivitedir**"
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               key: Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)
               name: Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)
+              description_teacher: "**Günün Sorusu: Problem çözme sürecini birçok
+                farklı problem çözme türüne nasıl uygulayabiliriz?**\r\n\r\nBu derste
+                öğrenciler, her adımın değerini daha iyi anlamak için problem çözme
+                sürecini üç farklı probleme uygulayacaktır. Bir labirenti çözecekler,
+                mümkün olduğunca hızlı koşacak bir takım kuracaklar ve bir oyun tasarlayacaklar.
+                Problemler giderek daha da karmaşıklaşır ve problem çözme sürecinin
+                özellikle bu tür problemlerle başa çıkarken ne kadar faydalı olduğunu
+                vurgulamak için yetersiz bir şekilde tanımlanmıştır. Ders, öğrencilerin
+                problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonlanır.
+                Öğrenciler, her adımın dahil edilmesinin doğru olduğu kanısına varacaklar
+                ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları
+                veya stratejileri beyin fırtınası yaparak inceleyeceklerdir, ki bu
+                çoğunlukla en kritik adımdır.\r\n\r\nBu ders büyük olasılıkla iki
+                ders saatinde veya daha fazla saatte tamamlanacaktır. İlk iki problem
+                tek bir derse sığabilir, ancak üçüncü problemin, ikinci bir güde de
+                olması gerekecektir."
             Exploring Problem Solving - Games Theme (Alternate Lesson 3):
               key: Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)
               name: Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)
+              description_teacher: "**Günün Sorusu: Problem çözme sürecini birçok
+                farklı problem çözme türüne nasıl uygulayabiliriz?**\r\n\r\nBu derste
+                öğrenciler, her adımın değerini daha iyi anlamak için problem çözme
+                sürecini üç farklı probleme uygulayacaktır. Tangramları çözecekler,
+                birkaç kişi için bir evcil hayvan seçecekler ve bir evcil hayvan sahiplenme
+                olayını planlayacaklar. Problemler giderek daha da karmaşıklaşır ve
+                problem çözme sürecinin özellikle bu tür problemlerle başa çıkarken
+                \ ne kadar faydalı olduğunu vurgulamak için yetersiz bir şekilde tanımlanmıştır.
+                Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla
+                sonlanır. Öğrenciler, her adımın dahil edilmesinin doğru olduğu kanısına
+                varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak
+                soruları veya stratejileri beyin fırtınası yaparak inceleyeceklerdir,
+                ki bu çoğunlukla en kritik adımdır.\r\n\r\nBu ders büyük olasılıkla
+                iki ders saatinde veya daha fazla saatte tamamlanacaktır. İlk iki
+                problem tek bir derse sığabilir, ancak üçüncü problemin, ikinci bir
+                güde de olması gerekecektir."
           lesson_groups:
             cspSurvey:
               display_name: Anket
@@ -24869,6 +24973,13 @@ tr:
             Styling Text with CSS:
               key: CSS ile Metin Biçimlendirme
               name: CSS ile Metin Biçimlendirme
+              description_teacher: Bu derste, web sayfasındaki öğeleri biçimlendirmenin
+                bir yolu olan CSS tanıtılır. Öğrenciler temel CSS söz dizimi kurallarını
+                öğrenir sonra HTML metin öğelerini etkileyen özellikleri keşfederler.
+                Öğrenciler Guinness Rekorlar Kitabı hakkkındaki bir HTML sayfası üzerinde
+                çalışırlar, bu sayfadaki metinlere kendi stillerini uygularlar. Son
+                aşamada, öğrenciler, kendi kişisel web sayfalarındaki metinlere öğrendikleri
+                stil özelliklerini uygularlar.
             'Mini-Project: Your Personal Style':
               key: 'Mini-Proje: Kişisel Stiliniz'
               name: 'Mini-Proje: Kişisel Stiliniz'
@@ -24884,6 +24995,13 @@ tr:
             Styling Elements with CSS:
               key: CSS ile Stil Öğeleri
               name: CSS ile Stil Öğeleri
+              description_teacher: Bu ders, CSS stil özelliklerine, daha çok metin
+                olmayan öğelere odaklanarak devam eder. Öğrenciler, bu derse, Dünyanın
+                Tatlıları hakkında bir web sitesini inceleyerek başlarlar. Bu web
+                sitesindeki yeni CSS stillerini inceler ve düzenlerler, sayfaya kendi
+                stilleri eklerler. Tatlılar sayfasında çalıştıktan sonra, öğrenciler,
+                yeni CSS özellikleri hakkındaki bilgilerini, kendi web sitelerini
+                daha fazla biçimlendirmek için kullanırlar.
             Your Web Page - Prepare:
               key: Web Sayfanız - Hazırla
               name: Web Sayfanız - Hazırla
@@ -24899,9 +25017,26 @@ tr:
             Sources and Research:
               key: Kaynaklar ve Araştırma
               name: Kaynaklar ve Araştırma
+              description_teacher: "**Günün Sorusu: İnternette alakalı ve güvenilir
+                bilgiyi nasıl buluruz?**\r\n\r\nBu ders, öğrencilerin çevrimiçi alakalı
+                ve güvenilir bilginin nasıl bulunacağı konusunda daha fazla düşünmelerini
+                teşvik ederr. Arama motorlarının nasıl çalıştığına dair bir video
+                izlendikten ve tartışıldıktan sonra öğrenciler, alanları ile alakalı
+                bilgiyi araştıracaktır. Sonra hangilerinin kendi internet sitelerinde
+                kullanım için uygun olduğuna karar vermek için bu siteleri güvenilirlik
+                bakımından analiz etmeleri gerekecektir."
             CSS Classes:
               key: CSS Sınıfları
               name: CSS Sınıfları
+              description_teacher: "**Günün Sorusu:  Aynı türden öge için farklı stilleri
+                nasıl oluşturabiliriz?**\r\n\r\nBu ders, ağ geliştiricilerinin, istediğiniz
+                öge grubuna aynı türden diğer ögelerden farklı bir stilde davranmasına
+                olanak sağlayan, derslere girerek öğrencilerin halihazırda öğrendiği
+                CSS'yi genişletir. Öğrenciler, öncelikle çeşitli sayfalarda sınıfları
+                araştırır ve değiştirir, sonra kendi sınıflarını oluşturur ve sayfalarının
+                görünümünü daha iyi kontrol etmek için bunları kullanır. Sonra takımlarının
+                internet sitelerini geliştirmek için bu beceriyi nasıl kullanabileceğine
+                dair kafa yorar."
             Planning a Multi-page Website:
               key: Çok sayfalı bir Web sitesi planlama
               name: Çok sayfalı bir Web sitesi planlama
@@ -24947,15 +25082,34 @@ tr:
             Programming for Entertainment:
               key: Eğlence için programlama
               name: Eğlence için programlama
+              description_student: Sınıfın, can sıkıntısı ve kendini ifade etme "sorunlarını"
+                göz önünde bulundurması ve bu sorunlara kendi yaşamlarında nasıl yaklaştıkları
+                üzerine düşünmesi istendi. Buradan, genel olarak Bilgisayar Bilimleri'nin
+                ve özellikle programlamanın belirli bir eğlence biçiminde veya kendini
+                ifade etme aracı olarak nasıl bir rol oynadığını keşfedecekler.
             Plotting Shapes:
               key: Şekiller çizme
               name: Şekiller çizme
             Drawing in Game Lab:
               key: Game Lab' da Çizim
               name: Game Lab' da Çizim
+              description_teacher: Sınıf, bu bölüm için programlama ortamı olan Game
+                Lab ile tanıştırılır ve ekrandaki şekillerin pozisyonları kullanmakla
+                başlar. Öğrenciler basit bir kaç komutla hata ayıklama ve sıralamanın
+                temellerini öğrenirler. Dersin sonunda, öğrenciler, önceki derste
+                çizim aracı ile yaptıkları resmin bir benzerini yapabileceklerdir.
             Shapes and Parameters:
               key: Şekiller ve Parametreler
               name: Şekiller ve Parametreler
+              description_teacher: "**Günün Sorusu: Bilgisayara daha spesifik talimatlar
+                vermek için parametreleri nasıl kullanabiliriz?**\r\n\r\nBu derste
+                öğrenciler çizim için kullandıkları şekillerin genişliğini ve yüksekliğini
+                değiştirerek Oyun Laboratuvarı ile benzerlik geliştirmeye devam ederler.
+                Ders, daha fazla blok girdisi veya \"parametre\" gerektirerek genişletişmiş
+                blok işlevlerini (örneğin farklı boyutta şekiller) bağlayan bir tartışma
+                ile başlar. Öğrenciler, parametrelerin genişliğini ve yüksekliğini
+                içeren 'ellipse()' ve 'rect()' versiyonlarını çizmeyi öğrenir. Ayrıca
+                'background()' bloğunu kullanmayı öğrenirler."
             Variables:
               key: Değişkenler
               name: Değişkenler
@@ -24977,6 +25131,17 @@ tr:
             The Draw Loop:
               key: Döngü çiz
               name: Döngü çiz
+              description_teacher: Bu derste öğrenciler Oyun Laboratuvarındaki çekirdek
+                programlama paradigmalarından biri olan döngü halkasını tanırlar.
+                Ders başlangıcında öğrenciler, farklı görüntülere sahip birçok çerçeveye
+                sahip olduklarını görmek için bazı fiziksel animasyon defterlerine
+                bakar; hareket izlenimi yaratır. Öğrenciler daha sonra, Oyun Laboratuvarındaki
+                döngü halkasının programlarında aynı izlenimi yaratmada nasıl yardımcı
+                olduğunu açıklayan bir video izlerler. Öğrenciler noktalarla ve ardından
+                hareketli nesne ile bazı basit animasyonları düzenlemek için çizim
+                döngüsünü rastgele sayılarla birleştirirler. Ders sonunda öğrenciler
+                önceki dersin hareketli nesne sahnesini güncellemek için öğrendiklerini
+                kullanırlar.
             Sprite Movement:
               key: Hareketli Nesnelerin Hareketi
               name: Hareketli Nesnelerin Hareketi
@@ -24998,6 +25163,12 @@ tr:
             Velocity:
               key: Hız
               name: Hız
+              description_teacher: Önceki derslerde öğrencilerin hareketli nesneleri
+                sayaç deseni ile nasıl hareket ettirdikleriyle ilgili kısa bir bilgilendirmeden
+                sonra, öğrencilere nesnelerin dönme hızlarının ve süratlarinin doğrudan
+                nasıl ayarlanacağını anlatılır. Öğrenciler, bu yeni özellikleri faklı
+                yollarla kullanırken, ihtiyaç duydukları basit bir oyun kaydırma çubuğunu
+                oluştururken becerilerini geliştirirler.
             Collision Detection:
               key: Çarpışmanın algılanması
               name: Çarpışmanın algılanması
@@ -25016,6 +25187,17 @@ tr:
             Functions:
               key: Fonksiyonlar
               name: Fonksiyonlar
+              description_teacher: Öğrenciler, tekrar eden kod bloklarını kaldırmak,
+                kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için ifonksiyonları
+                nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması,
+                duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı
+                olduğunu araştırır. Öğrenciler, daha soyut adımları ve daha yüksek
+                seviyeleri kolaylaştırmak için adımları detaylıca düşünmeyi ve anlamayı
+                öğrenirler. Daha sonra öğrenciler Game Lab' da fonksiyonlar oluşturmayı
+                öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak
+                ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için fonksiyonları
+                kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek
+                ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar.
             The Game Design Process:
               key: Oyun tasarım süreci
               name: Oyun tasarım süreci
@@ -25059,6 +25241,18 @@ tr:
             Analysis of Design:
               key: Tasarım analizi
               name: Tasarım analizi
+              description_teacher: Grup problem çözme ve diğer kullanıcılar için ürün
+                geliştirmeye ayrılan bir üniteye başlamak için öğrenciler çeşitli
+                çaydanlıkların tasarımını inceleyerek başlarlar. Öğrenciler, belirli
+                kullanıcı ihtiyaçlarının, tasarımını nasıl bildirilebileceğini tanımlamaya
+                uğraşırken her çaydanlığı analiz ederler. Bu tasarım seçeneklerini
+                düşünürken ve her çaydanlığı bir potansiyel kullanıcı ile eşleştirmeye
+                uğraşırken öğrenciler, ürünlerin tasarımında kullanıcı odaklı bir
+                yaklaşım izlemenin bu ürünleri nasıl daha kullanışlı ve faydalı hale
+                getirebileceğini (hem fiziksel hem de dijital) görmeye başlayabilirler.
+                Etkinliği sonuçlandırmak için, öğrencilerden demliklerden bir tanesini
+                daha kullanışlı ve yararlı hale getirecek bazı değişiklik önerileri
+                istenir.
             Understanding Your User:
               key: Kullanıcınızı anlama
               name: Kullanıcınızı anlama
@@ -25071,6 +25265,11 @@ tr:
             Feedback and Testing:
               key: Geri bildirim ve Test
               name: Geri bildirim ve Test
+              description_student: Kullanıcılar bir uygulamayı test ediyor ve geliştiriciye
+                bir çok geri bildirimde bulunuyorlar. Sınıfın bütün bu geri bildirimleri
+                sıralaması, ortak temaları ve ihtiyaçları belirlemesi ve prototipi
+                gözden geçirerek kullanıcıların ihtiyaçlarına göre daha iyi hale getirmesi
+                gerekir.
             Identifying User Needs:
               key: Kullanıcı İhtiyaçlarını Tanımlama
               name: Kullanıcı İhtiyaçlarını Tanımlama
@@ -25083,6 +25282,15 @@ tr:
             Market Research:
               key: Pazar araştırması
               name: Pazar araştırması
+              description_teacher: Bu derste öğrenciler, kullanıcılarının ihtiyaçlarını
+                daha iyi anlayabilmek için yaratmaya niyetlendikleri uygulamalara
+                benzer uygulamalar araştırırlar. Öğrenciler, Internet'te diğer uygulamalar
+                için arama yapmak için takımlarıyla çalışırlar, daha sonra ilginç
+                bulduklarını değerlendirirler. Dersin sonuna kadar her takım, oluşturmak
+                istedikleri uygulama türü hakkında daha net fikirlere sahip olacak
+                ve hedef kullanıcıların kimler olduğunu daha da belirgin hale getireceklerdir.
+                Her takım, final sunumlarında kullanmak üzere inceledikleri tüm uygulamalar
+                için alıntıların bir listesini tutacaktır.
             Paper Prototypes:
               key: Kağıt Prototipler
               name: Kağıt Prototipler
@@ -25135,6 +25343,27 @@ tr:
             CS Discoveries Post Course survey:
               key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
               name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+            Build a Digital Prototype:
+              description_student: Geliştirilen, test edilen ve geri bildirim alınan
+                kağıt üzerindeki prototip, şimdi de takımlar tarafından uygulamalarında
+                bir sonraki yinelemeleri yapmak üzere uygulama laboratuvarına taşınır.
+                Sürükle-ve-bırak Tasarım modunu kullanarak, her takım üyesi takım
+                uygulamasının en az bir sayfasını oluşturur, önceki test turunda alınan
+                geri bildirime yanıt verilir.
+            Events In AppLab:
+              description_student: Önceki derste sınıf tarafından tasarlanan ekranlar
+                kuruluyor, takımlar ekranları tek bir uygulamada birleştiriyor. Düğme
+                tıklamalarının uygun ekranda değiştirilebilmesi için basit kod eklendi.
+            Bugs and Features:
+              description_student: Testin son aşamasındaki geri bildirimi kullanarak
+                takımlar kullanıcıların ihtiyaçlarını karşılayan değişiklikleri uygularlar.
+                Her takım eklemek istedikleri özellikleri ve düzeltmeye ihtiyaç duyulan
+                hataları izler ve öncelik sırasına göre yerleştirir.
+            Updating Your Prototype:
+              description_student: Testin son aşamasındaki geri bildirimi kullanarak
+                takımlar kullanıcıların ihtiyaçlarını karşılayan değişiklikleri uygularlar.
+                Her takım eklemek istedikleri özellikleri ve düzeltmeye ihtiyaç duyulan
+                hataları izler ve öncelik sırasına göre yerleştirir.
             Build a Paper Prototype:
               name: Kağıt Prototipler
           lesson_groups:
@@ -25184,6 +25413,12 @@ tr:
             Keeping Data Secret:
               key: Verileri Gizli Tutmak
               name: Verileri Gizli Tutmak
+              description_teacher: Öğrenciler, kişisel veriler için istedikleri farklı
+                güvenlik seviyeleri hakkında bir tartışmaya sahip olurlar. Sınıf gizliliğin
+                önemi hakkında bir anlayış geliştirdikten sonra, ortak için bir not
+                şifrelemek ve ortağın notunu çözerek bilgi şifreleme sürecini öğrenirler.
+                Ders, fiziksel ve dijital güvenliğin önemi hakkında bir tartışma ile
+                sonuçlanır.
             Combining Representations:
               key: İfadeleri birleştirme
               name: İfadeleri birleştirme
@@ -25211,6 +25446,18 @@ tr:
             Project - Make a Recommendation:
               key: Proje - Bir Öneri Yapın
               name: Proje - Bir Öneri Yapın
+              description_teacher: Bu birimi sonuçlandırmak için öğrenciler sınıf
+                arkadaşlarından topladıkları ve analiz ettikleri veriye bağlı olarak
+                bir öneri motoru tasarlarlar. Bir öneri uygulamasına baktıktan sonra
+                öğrenciler bu birden çok günlük aktiviteyi tamamlamak için bir proje
+                rehberi takip ederler. İlk birkaç adımda öğrenciler kullanıcının yapmasına  yardım
+                etmek için ne seçeneğini istediklerini, tavsiye etmek için hangi verilere
+                ihtiyaçları olduğunu, bir anket hazırlamayı ve sınıf arkadaşlarının
+                verileri hakkında bilgi toplamayı seçerler. Daha sonra veriyi yorumluyorlar
+                ve öneri aligoritmasını oluşturmak için öğrendiklerini kullanıyorlar.
+                En sonunda birkaç sınıf arkadaşına tavsiyelerde bulunmak için algoritmalarını
+                kullanıyorlar. Öğrenciler sınıfa sunum hazırlamadan önce bir akran
+                değerlendirmesi ve projeleri için gerekli güncellemeleri yaparlar.
             Post-Project Test:
               key: Proje Sonrası Test
               name: Proje Sonrası Test
@@ -25242,51 +25489,170 @@ tr:
             Innovations in Computing:
               key: Bilişimdeki Yenilikler
               name: Bilişimdeki Yenilikler
+              description_teacher: Bu dersin son bölümünü başlatmak için, öğrenciler
+                bilgisayarlarda ilginç yenilikler konusunda biraz araştırma yapacaklardır.
+                Bu ders öğrencileri bilgisayarlardan etkilenen alanlar ve bilgisayar
+                form faktörlerinden daha geniş bir kitleye (bir bilgisayarın nasıl
+                göründüğü) açıklayacak. Daha sonra bu birimde öğrenciler kendi fiziki
+                bilgi işlem cihazlarını geliştirdikçe bu derste karşılaştıkları cihazlara
+                bakacaklardır.
             Designing Screens with Code:
               key: Kod ile Ekranlar Tasarlama
               name: Kod ile Ekranlar Tasarlama
+              description_teacher: Ünite 4'te öğrenciler, Uygulama Laboratuvarı'nda
+                birçok etkileşim için ayrı bir ekran gerektiren çok basit bir uygulama
+                geliştirme yaklaşımını öğrendi. Öğrencilerin yapabilecekleri uygulamaları
+                çeşitlendirmek ve kullanıcıların uygulamalar ile nasıl etkileşim kurduğu
+                konusunda yeni yollarla düşünmeye teşvik etmek için `setProperty()`
+                bloğunu tanıtmaktayız. Bu komut, yineleme ekranlarını manüel olarak
+                oluşturmak yerine, öğrencilerin bir tek ekranda bilgileri güncelleyen
+                programları yazmasına olanak sağlayan, çeşitli kullanıcı arayüzü ögelerinin
+                içeriğini ve özelliklerini ayarlamak üzere kullanılabilmektedir. Bu
+                derste öğrenciler, içeriği `setProperty()` kullanılarak değiştirilen,
+                yalnızca tek bir ekran gerektiren basit uygulamalar oluşturmaktadır.
             The Circuit Playground:
               key: Çember Oyun Alanı
               name: Çember Oyun Alanı
+              description_teacher: Bu derste öğrenciler, Devre Oyun Alanını kullanan
+                programları ilk kez yazma fırsatını bulurlar. Önce kartı görsel olarak
+                inceledikten ve olası işlevlere dair varsayımda bulunduktan sonra
+                öğrenciler bir LED'i kontrol eden uygulamaları yazmayı öğrenecekleri
+                ortama çevrimiçi geçer. Öğrenciler Uygulama Laboratuvarı ekranlarını
+                Devre Oyun Alanları ile birleştirerek, kullanıcı girişi için Uygulama
+                Laboratuvarı'na güvenirken yavaş yavaş kart ögelerini bir çıkış cihazı
+                olarak entegre etmeye başlayabilirler.
             Input Unplugged:
               key: Bağımsız (Unplugged) Girdi
               name: Bağımsız (Unplugged) Girdi
+              description_teacher: Uygulama Laboratuvarı ile programlamaya daha derinlemesine
+                inme hazırlığında, öğrenciler, hem Oyun Laboratuvarında hem de Uygulama
+                Laboratuvarında yazılan az miktardaki farklı programların kullanıcılardan
+                girdi almayı nasıl ele aldığını keşfedecekler. Örnek uygulamalarda
+                gördükleri yaklaşımların benzer ve farklı yönlerini kıyasladıktan
+                sonra, öğrenciler, nasıl çalıştıklarına dair daha iyi bir anlayış
+                kazanmak adına girdi için (sonsuz ve eş zamansız etkinliklerde koşullar)
+                iki farklı modeli canlandırmak üzere toplanırlar.
             Board Events:
               key: Kurul Etkinlikleri
               name: Kurul Etkinlikleri
+              description_teacher: Bu ders, Öğrencileri Devre Oyun Sahası'nı, hem
+                girdi hem de çıktı için bir araç olarak kullanmaya doğru kesinlikle
+                bir çıkış aracı olarak düşünmeye çevirir. Donanım düğmelerinden ve
+                anahtarından başlayarak, donanım düğmelerini ve anahtarı söyleyerek,
+                öğrenciler Devre Oyun Alanlarından girdiyi almak için `onEvent ()`benzeri
+                olarak `onBoardEvent ()` i kullanmayı öğrenirler.
             Getting Properties:
               key: Özelikleri Alma
               name: Özelikleri Alma
+              description_teacher: Bu ders, kod ile farklı ögelerin özelliklerine
+                erişmelerine olanak sağlayan `getProperty` bloğunu öğrencilere tanıtmaktadır.
+                Öğrenciler, öncelikle kullanıcının çeşitli kullanıcı arayüzü ögelerine
+                neyi girdiğini belirlemek için blok kullanarak pratik yapar. Sonrasında
+                öğrenciler, ögeleri ekran boyunca hareket ettirmek için sayaç deseni
+                ile birlikte `getProperty` ve `setProperty`yi kullanır. Yeni bir ekran
+                ögesi, kaydırıcı ve yeni bir olay tetikleyici, `onChange` de tanıtılır.
             Analog Input:
               key: Analog girdi
               name: Analog girdi
+              description_teacher: Bu derste öğrenciler, ortamdaki değişikliklere
+                cevap veren programlar yazmak için üç analog sensörün (ses, ışık ve
+                sıcaklık) nasıl kullanılabileceğini keşfederler. Bu sensörlerin kullanımı,
+                kullanıcıların bir programla nasıl etkileşime girdiğiyle ilgili bir
+                geçiş işaretler. Sensörleri bir girdi olarak kullanarak, uygulamanın
+                kullanıcısının kendisiyle doğrudan etkileşime girmesi gerekmez veya
+                bunu gerçekte fark etmeden etkileşime girebilir.
             The Program Design Process:
               key: Program Tasarım Süreci
               name: Program Tasarım Süreci
+              description_teacher: Bu ders, öğrencilerin, ünite boyunca kendi programlarını
+                tasarlamak için kullanacakları süreci tanıtmaktadır. Bu süreç, öğrencilerin
+                programlamaya başlamadan önce öğrencilerden ekranlarını tasarlamasını,
+                kullanılacak Çember Oyun Alanı ögelerini tanımlamasını, değişkenleri
+                belirlemesini ve olayları açıklamasını isteyen bir proje kılavuzuna
+                dayanır. Bu süreç, Ünite 3'te kullandığımız Oyun Tasarımı Süreci ile
+                benzerdir. Bu derste öğrenciler, kodun gizli olduğu halat çekme tarzı
+                bir oyun oynayarak başlar. Program yapmak için hangi kart bileşenleri,
+                olaylar ve değişkenlerin gerekli olabileceğini düşündüklerini tartışır.
+                Sonrasında, projeyi uygulamak için bir yol gösteren tamamlanmış bir
+                proje kılavuzu verilir. Sonra öğrenciler bu süreç boyunca dizi seviyede
+                ilerler. Bu dersin sonunda öğrenciler, kendi programlarını yapmak
+                için programı geliştirme olanağına sahip olur.
             'Project: Make a Game':
               key: 'Proje: Bir Oyun Yap'
               name: 'Proje: Bir Oyun Yap'
+              description_teacher: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
+                alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından
+                bir uygulama geliştiriyorlar.
             Arrays and Color LEDs:
               key: Diziler ve Renkli LED'ler
               name: Diziler ve Renkli LED'ler
+              description_teacher: Bir dizi, genellikle aynı türden nesnelerin sıralı
+                bir koleksiyonudur. Bu derste öğrenciler, indeksini kullanarak bir
+                listeden spesifik ya da gelişigüzel bir değere ulaşma yollarını öğrenir.
+                Sonra, Çember Oyun Alanındaki LED'lerin renk davranışını kontrol eden
+                renkli LED dizisine nasıl ulaşacaklarını öğrenir. Öğrenciler, her
+                bir LED'in rengini ve yoğunluğunu kontrol eder, sonra Çember Oyun
+                Alanlarında bir ışık gösterisi oluşturmak için ışık desenlerini programlamaya
+                yönelik öğrendiklerini kullanır.
             Making Music:
               key: Müzik yapma
               name: Müzik yapma
             Arrays and For Loops:
               key: Diziler ve For Döngüleri
               name: Diziler ve For Döngüleri
+              description_teacher: Bir dizideki ögelerin hepsinde tekrarlamak için
+                bir _for loop_ kullanımı, birçok programlama dilinde gerçekten yararlı
+                bir yapıdır. Bu derste öğrenciler, kodu yinelemek için bir _for loop_
+                temellerinin nasıl kullanılabileceğini öğrenir ve sonra, bir dizideki
+                tüm ögeleri işleyen programları yazmaya yönelik diziler ile ilgili
+                olarak halihazırda öğrendikleri ile bunu birleştirir. Öğrenciler,
+                her bir öge için kod yazmaya gerke kalmadan tek seferde bir listedeki
+                her bir ögeye göz atmak için döngülerden faydalanır. Bu dersin sonuna
+                doğru öğrenciler, bir düğmeye her tıklandığında LED'lerin hepsini
+                değiştiren bir uygulama oluşturmak için karttaki  `colorLed` listesi
+                ile bunu uygulayacaktır.
             Accelerometer:
               key: İvme Ölçer
               name: İvme Ölçer
+              description_student: Bu derste öğrenciler, ivmeölçer ve kabiliyetlerini
+                keşfedecektir. Bunun olayları ve özelliklerini öğrenecekler ve ayrıca
+                gerçek dünya uygulamalarında muhtemel olarak karşılaştıklarına benzer
+                ivmeölçer kullanarak çoklu programlar oluşturacaklar.
+              description_teacher: Bu derste öğrenciler, ivmeölçer ve kabiliyetlerini
+                keşfedecektir. Bunun olayları ve özelliklerini öğrenecekler ve ayrıca
+                gerçek dünya uygulamalarında muhtemel olarak karşılaştıklarına benzer
+                ivmeölçer kullanarak çoklu programlar oluşturacaklar.
             Functions with Parameters:
               key: Fonksiyon parametreleri
               name: Fonksiyon parametreleri
+              description_teacher: Ders, öğrencilerin son zamanlarda gördüğü Uygulama
+                Laboratuvarı blokları kapsamında parametrelerin hızlı bir şekilde
+                incelenmesi ile başlar. Sonrasında öğrenciler, Uygulama Laboratuvarında
+                kullanıcı tarafından oluşturulmuş fonksiyonlar içerisinde parametre
+                örneklerine bakar ve bir ekran üzerinde çoklu ögeleri kontrol etmek
+                için bunları kullanarak, kendileri için parametreler ile fonksiyonlar
+                oluşturur ve çağırır. Daha sonra öğrenciler, her bir ögeyi bir fonksiyona
+                geçirerek bir diziyi tekrarlamak için döngülerden faydalanır. Son
+                olarak öğrenciler,  yıldız yakalama oyununu oluşturmak için öğrendiklerini
+                kullanır.
             Circuits and Physical Prototypes:
               key: Devreler ve Fiziksel Prototipler
               name: Devreler ve Fiziksel Prototipler
+              description_teacher: Bu bölümün final projesine hazırlık olarak öğrenciler,
+                bir Çember Oyun Alanını içeren fiziksel bir nesnenin bir prototipini
+                nasıl geliştireceğini öğrenecektir. Modelli bir proje planlama kılavuzu
+                kullanarak öğrenciler, karton ve izole bant gibi ucuz ve kolayca bulunan
+                malzemeleri kullanarak, bir çift basit devreyi nasıl bağlayacağını
+                ve bir ürünün hedeflenen tasarımını iletebilecek prototipleri nasıl
+                oluşturacağını öğrenecektir.
             'Project: Prototype an Innovation':
               key: 'Proje: Bir yenilik prototiple'
               name: 'Proje: Bir yenilik prototiple'
+              description_teacher: 'Kursun bu son projesinde, öğrenci ekibi Devre
+                Oyun Alanına dayalı yenilikçi bilgisayar cihazı için bir prototip
+                geliştirir ve test eder. Panodaki mevcut giriş ve çıkışları kullanarak,
+                gruplar ilginç ve özgün kullanıcı etkileşimleri sağlayan programlar
+                oluşturacaklardır. '
             Post-Project Test:
               key: Proje Sonrası Test
               name: Proje Sonrası Test
@@ -25350,7 +25716,7 @@ tr:
               name: Proje - Dijital Bilgi İkilemleri Kısım 2
             'Lesson 14: Assessment Day':
               key: 'Ders 14: Ünite Değerlendirme'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             cspSurvey:
               display_name: Anket
@@ -25385,7 +25751,7 @@ tr:
               name: Proje - İnternet İkilemleri Kısım 2
             'Lesson 9: Assessment Day':
               key: 'Ders 9: Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Ünite 2: Internet'
@@ -25421,7 +25787,7 @@ tr:
               name: Proje - Bir Uygulama Tasarlama Kısım 5
             'Lesson 11: Assessment Day':
               key: 'Ders 11: Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Ünite 3: Uygulama Tasarımına Giriş'
@@ -25476,7 +25842,7 @@ tr:
               name: Proje - Karar Verici Uygulama Kısım 3
             'Lesson 15: Assessment Day':
               key: 'Ders 15: Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_variables:
               display_name: Değişkenler
@@ -25542,7 +25908,7 @@ tr:
               name: Dönem Hackathon Kısım 5
             'Lesson 18: Assessment Day':
               key: 'Ders 18: Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_lists:
               display_name: Listeler
@@ -25572,7 +25938,7 @@ tr:
               name: Paralel ve Dağıtılmış Algoritmalar
             'Lesson 6: Assessment Day':
               key: 'Ders 6: Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Ünite 6: Algoritmalar'
@@ -25610,7 +25976,7 @@ tr:
               name: Proje - Bir Kütüphane Yapma Kısım 3
             'Lesson 11: Assessment Day':
               key: 'Ders 11: Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametreler ve Dönüş Değerleri
@@ -25657,7 +26023,7 @@ tr:
               name: Proje - Bir Veri Hikayesi Anlat - Kısım 2
             'Lesson 9: Assessment Day':
               key: 'Ders 9: Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Ünite 9: Veriler'
@@ -25700,12 +26066,14 @@ tr:
             'Project: Innovation Simulation Part 6':
               key: 'Proje: Yenilik Simülasyonu Kısım 6'
               name: 'Proje: Yenilik Simülasyonu Kısım 6'
+              description_student: Derse Genel Bakış
             'Project: Innovation Simulation Part 7':
               key: 'Proje: Yenilik Simülasyonu Kısım 7'
               name: 'Proje: Yenilik Simülasyonu Kısım 7'
+              description_student: Derse Genel Bakış
             'Lesson 14: Unit Assessment Day':
               key: 'Ders 14: Ünite Değerlendirme Günü'
-              name: Değerlendirme Günü
+              name: 'Ders 15: Değerlendirme Günü'
           lesson_groups:
             csp_unit10_2020:
               display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
@@ -25720,39 +26088,107 @@ tr:
             Safety in My Online Neighborhood:
               key: Çevrimiçi Mahallemde Güvenlik
               name: Çevrimiçi Mahallemde Güvenlik
+              description_student: Çevrimiçi bir yerlere güvenli bir şekilde nasıl
+                gidileceğini öğrenin.
             Learn to Drag and Drop:
               key: Sürükleyip Bırakmayı Öğrenin
               name: Sürükleyip Bırakmayı Öğrenin
+              description_student: Bulmacaları tamamlamak için tıklayıp sürükleyin.
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında
+                oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir.
+                Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa
+                bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
+                içi bulmacaları tamamlayarak ilerleyecekler.
             'Programming: Happy Maps':
               key: 'Programlama: Mutlu Haritalar'
               name: Mutlu Haritalar
+              description_student: Flurb'u meyveye ulaştırmak için talimatlar yazın.
+              description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi
+                uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya
+                köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve
+                yazma deneyim kazanmalarına yardımcı olacaktır.
             Sequencing with Scrat:
               key: Scrat ile Sıralama
               name: Scrat ile Sıralama
+              description_student: Meşe palamuduna ulaşması için Scrat'i programlayın.
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında
+                oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir.
+                Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa
+                bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
+                içi bulmacaları tamamlayarak ilerleyecekler.
             Programming in Ice Age:
               key: Buz Devrinde Programlama
               name: Scrat ile programlama
+              description_student: Scrat'in meşe palamuduna ulaşması için programları
+                yaz.
+              description_teacher: Buz Devri oyununun karakterlerini kullanarak öğrenciler,
+                bir Scrat'i labirentin bir tarafından diğer taraftaki meşe palamuduna
+                ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak
+                için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek,
+                böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.
             Programming with Rey and BB-8:
               key: Rey ve BB-8 ile programlama
               name: Rey ve BB-8 ile programlama
+              description_student: BB-8'e hurda metal toplamada yardım edin.
+              description_teacher: Bu derste öğrenciler, BB-8 ile çetrefil bir kursu
+                yönlendirmek için daha karmaşık biçimlerde yeni bulunmuş programlama
+                becerilerini kullanacaktır.
             'Loops: Happy Loops':
               key: 'Döngüler: Mutlu Döngüler'
               name: 'Döngüler: Mutlu Döngüler'
+              description_student: Döngüleri kullanarak Flurb'a daha büyük problemleri
+                çözmede yardım edin.
+              description_teacher: Döngüler programlamada çok yardımcı ve güçlü birer
+                araçtır. Döngülerin nasıl yardımcı olduğu anlamaları için öğrenciler,
+                sıradan problemleri çözmek için en kolay yolu bulmaları gerekecek.
             Loops in Ice Age:
               key: Buz Devrindeki Döngüler
               name: Scrat ile Döngüler
+              description_student: Döngüleri kullanarak Scrat'in daha fazla yol katetmesine
+                yardım edin.
+              description_teacher: '"Mutlu Döngüler"den talimatların tekrarlanması
+                kavramına dayanarak bu aşama, Code.org''da meşe palamaduna daha etkili
+                bir şekilde ulaşmak için öğrencilerin döngüleri kullanmasını sağlayacaktır.'
             Loops in Collector:
               key: Toplayıcıda Döngüler
               name: Toplayıcıda Döngüler
+              description_student: Maceracı Laurel'e yeraltındaki hazineyi toplamada
+                yardım edin.
+              description_teacher: Bu derste öğrenciler, döngüler kavramını öğrenmeye
+                devam eder. Önceki derste bir labirentte hareket ederek ve mısır toplayarak
+                öğrencilere döngüler öğretilmiştir. Burada döngüler, açık mağara alanlarında
+                hazine toplamak için kullanılır.
             Ocean Scene with Loops:
               key: Sanatçıların Döngüleri
               name: Sanatçıların Döngüleri
+              description_student: Resimleri tamamlamak için döngüleri ve desenleri
+                kullanın.
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat
+                dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı
+                olan derste, bir labirentten geçip hazineyi toplamak için ilmekler
+                kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda
+                öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
+                verilecek.
             'Events: The Big Event':
               key: 'Olaylar: Büyük Olay'
               name: Büyük Olay Jr.
+              description_student: 'Öğretmenleriniz uzaktan düğmelere bastığında hareket
+                edip seslenin.
+
+'
+              description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik
+                eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı
+                istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar
+                işte bunun içindir.
             Events in Play Lab:
               key: Play Lab' da Olaylar
               name: Play Lab' da Olaylar
+              description_student: Kendi oyununuzu veya hikayenizi oluşturun.
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'
+                da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar.
+                Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin
+                tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın
+                ve yaratıcı olmanın zamanı!
           lesson_groups:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
@@ -25777,39 +26213,116 @@ tr:
             Digital Trails:
               key: Dijital İzler
               name: Dijital İzler
+              description_student: 'Dijital ayak izinizi ve web sitelerini ziyaret
+                ederken nasıl güvenli kalacağınızı öğrenin. '
             Move It, Move It:
               key: Çabuk, Çabuk Taşı
               name: Çabuk, Çabuk Taşı
+              description_student: Sınıf arkadaşlarının bir yerden bir yere dikkatli
+                bir şekilde ilerlemesi için programla.
+              description_teacher: Bu ders, bu kursun süresi boyunca kodlama egzersizleri
+                için öğrencileri zihinsel olarak hazırlamaya çalışacaktır. Öğrenciler,
+                küçük takımlar halinde, bir hedefe ulaşılana kadar sınıf arkadaşlarının
+                bir yerden bir yere dikkatli bir şekilde ilerlemesi için programlamak
+                üzere fiziksel aktiviteyi kullanacaktır.
             Sequencing in Maze:
               key: Labirentte Sıralama
               name: Angry Birds ile Dizileme
+              description_student: Kırmızı Angry Bird'ün yaramaz domuza giden yolu
+                takip etmesine yardım et.
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında
+                oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir.
+                Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa
+                bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
+                içi bulmacaları tamamlayarak ilerleyecekler.
             Programming in Maze:
               key: Labirentte Programlama
               name: Labirentte Programlama
+              description_student: Angry Bird'ün labirentten ilerlemesine yardım etmek
+                için programlar oluşturun.
+              description_teacher: Angry Birds oyununun karakterlerini kullanarak
+                öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza
+                götürmek için sıralı algoritmalar geliştireceklerdir. Bunu yapmak
+                için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek.
             Programming in Harvester:
               key: Hasatçıda Programlama
               name: Hasatçı ile Programlama
+              description_student: Hasatçının bir yol boyunca sebzeleri toplamasına
+                yardım et.
+              description_teacher: 'Öğrenciler, öğrendikleri programlama kavramlarını
+                Hasatçı ortamına uygulayacaktır. Şimdi, karakterin yalnızca hedefe
+                ulaşması yerine, öğrencilerin, yeni bir blok kullanarak mısır toplaması
+                gerekir. Öğrenciler, sıralı algoritma becerilerini geliştirmeye devam
+                edecektir ve hata ayıklama sürecini kullanmaya başlayacaktır. '
             'Loops: Getting Loopy':
               key: 'Döngüler: Loopy Başlarken'
               name: Döngüselleşme
+              description_student: Bu derste tekrarla döngülerini kullanarak bir dans
+                partisi yapacağız.
+              description_teacher: Daha uzun ve daha ilginç programlar yazmaya başladıkça
+                kodumuz genelde birçok tekrarlama içerir. Bu derste öğrenciler, bir
+                dansta tekrarlanan hareket desenlerine bakarak birçok tekrarı olan
+                talimatları daha kolay bir şekilde iletmek için döngülerin nasıl kullanılabileceğini
+                öğrenecektir.
             Loops in Harvester:
               key: Hasatçıdaki Döngüler
               name: Hasatçı ile Döngüler
+              description_student: Döngüleri kullanarak Hasatçının daha fazla toplamasına
+                yardım et!
+              description_teacher: '"Loopy''ye Başlarken" sonrasında tekrarlama talimatları
+                kavramına dayanarak bu aşama, öğrencilerin, Code.org''da daha etkili
+                bir şekilde mısır toplamak için döngüleri kullanmasını sağlayacaktır.'
             Loops in Collector:
               key: Toplayıcıda Döngüler
               name: Toplayıcıda Döngüler
+              description_student: Maceracı Laurel'in açık bir mağarada hazine toplaması
+                için programla.
+              description_teacher: Bu derste öğrenciler, döngü kavramlarını öğrenmeye
+                devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine
+                toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında
+                ona yardım etmek için getirilir.
             Loops in Artist:
               key: Sanatçı- Döngüler
               name: Sanatçıların Döngüleri
+              description_student: Resimleri bitirmek için desenleri ve döngüleri
+                kullanın.
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat
+                dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı
+                olan derste, bir labirentten geçip hazineyi toplamak için ilmekler
+                kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda
+                öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
+                verilecek.
             The Right App:
               key: Doğru Uygulama
               name: Doğru Uygulama
+              description_student: Kendi akıllı telefonu uygulamanızın taslağını çizin.
+              description_teacher: Bu ders, öğrencilerin, bilgisayar biliminin gerçek
+                yaşamda insanlara yardım edebileceğinin farkında olmalarını sağlar.
+                Öncelikle öğrenciler, kendi ihtiyaçlarını yönlendiren "doğru uygulamayı"
+                bulmalarına yardım etmesi için birkaç kurgusal akıllı telefon kullanıcıları
+                ile empati kurar. Sonrasında öğrenciler, bir ilave kullanıcının gereksinimlerini
+                yönlendiren kendi akıllı telefon uygulamalarının taslağını çizmek
+                için empati ve yaratıcılığını geliştirir.
             'Events: The Big Event':
               key: 'Olaylar: Büyük Olay'
               name: Büyük Olay Jr.
+              description_student: 'Öğretmeniniz uzaktan düğmelere bastığında hareket
+                edin veya seslenin.
+
+'
+              description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik
+                eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı
+                istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar
+                işte bunun içindir.
             Events in Play Lab:
               key: Play Lab' da Olaylar
               name: Play Lab' da Olaylar
+              description_student: Bir hikaye oluşturmak veya etkileşimli bir oyun
+                yapmak için olayları kullanın.
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da
+                etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
+                kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
+                için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
           lesson_groups:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
@@ -25837,56 +26350,164 @@ tr:
             Putting a STOP to Online Meanness:
               key: Çevrimiçi Kötülüğe bir DUR deme
               name: Çevrimiçi Kötülüğe bir DUR deme
+              description_student: Bu derste, kötülüğün ne olduğunu ve bununla çevrimiçi
+                ortamda karşılaşırsanız ne yapacağınızı öğreneceksiniz.
             Password Power-Up:
               key: Şifre Güçlendirme
               name: Şifre Güçlendirme
             'Programming: My Robotic Friends':
               key: 'Programlama: Robot dostlarım'
               name: 'Programlama: Robot dostlarım'
+              description_student: Bu derste, sınıf arkadaşlarınız robotmuş gibi davranacaksınız
+                ve istiflenmiş kupa desenleri oluşturmaları için onları programlayacaksınız.
+              description_teacher: Kod yerine bir dizi sembol kullanarak öğrenciler,
+                kupaları farklı desenlerde istiflemesi için bir "robot"a talimat vermek
+                üzere algoritmalar tasarlayacak. Öğrenciler, sırayla robot olarak
+                katılacak ve yalnızca akranları tarafından tanımlanan yanıt verecek.
+                Bu kısım, öğrencilere, semboller ve eylemler arasındaki bağlantıyı,
+                bir algoritma ve bir program arasındaki farkı ve değerli hata ayıklama
+                becerisini öğretecektir.
             Programming in Maze:
               key: Labirentte Programlama
               name: Labirentte Programlama
+              description_student: Angry Birds ile sıraları ve algoritmaları öğrenin.
+              description_teacher: Angry Birds oyununun karakterlerini kullanarak
+                öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza
+                ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak
+                için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek,
+                böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.
             Debugging in Maze:
               key: Labirentte Hata Ayıklama
               name: Labirentte Hata Ayıklama
+              description_student: Bulmacalardaki problemleri bulun ve hata ayıklama
+                becerilerinizi uygulayın.
+              description_teacher: Hata ayıklama, program öğrenmenin esas bir ögesidir.
+                Bu derste öğrenciler, yanlış bir şekilde çözülmüş bulmacalar ile karşılaşacaktır.
+                Yanlış döngüler, eksik bloklar, ekstra bloklar ve düzensiz bloklar
+                da dahil olmak üzere hataları belirlemek için var olan kodu girmeleri
+                gerekecek.
             Programming in Collector:
               key: Koleksiyoncu programlama
               name: Koleksiyoncu programlama
+              description_student: Maceracı Laurel'in bir sürü değerli taş toplamasına
+                yardım etmek için algoritmalar yazın!
+              description_teacher: Bu bulmaca serisinde öğrenciler, algoritmaları
+                ve hata ayıklamayı daha da anlamaya devam edecektir. Yeni bir karakter,
+                Maceracı Laurel ile öğrenciler, bir yolda yürürken Laurel'in hazine
+                toplamasını sağlamak için sıralı algoritmalar oluşturacaktır.
             Programming in Artist:
               key: Sanatçı Programlama
               name: Sanatçı Programlama
+              description_student: Sanatçıyı programlayarak güzel resimler oluşturun.
+              description_teacher: Bu derste öğrenciler, ekrandaki çizimleri tamamlaması
+                için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin,
+                '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları
+                kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak
+                sağlayacaktır.
             Binary Bracelets:
               key: İkilik Bileklikler
               name: İkilik Bileklikler
+              description_student: Bizzat kendi ikili bileziğinizi oluşturun ve bilgisayarların
+                bilgileri nasıl hatırladığını öğrenin!
+              description_teacher: İkili sistem, bilgisayar dünyasında son derece
+                önemlidir. Bilgisayarların çoğu bugün her türlü bilgiyi ikili biçimde
+                saklarlar. Bu ders, bir şeyi gerçek hayattan nasıl alabileceğinizi
+                ve onu bir dizi açık ve kapalı alana nasıl çevirebileceğinizi göstermede
+                yardımcı olmaktadır.
             'Loops: My Loopy Robotic Friends':
               key: 'Döngüler: Loopy robot dostlarım'
               name: 'Döngüler: Loopy robot dostlarım'
+              description_student: Bu derste, yine sınıf arkadaşlarınızı programlayacaksınız
+                ancak döngüler kullanarak daha büyük ve daha karmaşık problemleri
+                çözebileceksiniz.
+              description_teacher: Başlangıçtaki "Robot Arkadaşlarım" aktivitesini
+                geliştirerek öğrenciler, daha büyük ve daha karmaşık tasarımların
+                üstesinden gelir. Bu daha büyük tasarımları tamamlamak için kendi
+                "robotlarını" programlamak amacıyla öğrencilerin, bir döngü ile değiştirilebilen
+                talimatlarındaki tekrarlı desenleri tanımlaması gerekecektir.
             Loops with Rey and BB-8:
               key: Rey ve BB-8 ile döngüler
               name: Rey ve BB-8 ile döngüler
+              description_student: 'Döngüleri kullanarak BB-8''in labirentten geçmesine
+                yardım edin! '
+              description_teacher: '"Loopy''ye Başlarken" sonrasında tekrarlama talimatları
+                kavramına dayanarak bu aşama, öğrencilerin, BB-8''in öncekinden daha
+                etkili bir şekilde bir labirentten geçmesine yardım etmek için döngüleri
+                kullanmasını sağlayacaktır.'
             Loops in Harvester:
               key: Hasatçıdaki Döngüler
               name: Döngüler ile Ürünleri Hasat Etme
+              description_student: Hasatçının biraz sebze toplamasına yardım etmek
+                için döngüleri kullanalım!
             Looking Ahead:
               key: Geleceğe bakış
               name: Geleceğe bakış
+              description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları
+                öğrenmeye başlayacaksınız.
+              description_teacher: Bu ders, aslında Minecraft takımında Kod Saati
+                için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri
+                pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!
             Sticker Art with Loops:
               key: Sanatçıların Döngüleri
               name: Sanatçıların Döngüleri
+              description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler
+                yapmayı kolaylaştırır.
+              description_teacher: Az sayıda blok ve dijital etiketleri kullanarak
+                kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine
+                bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir
+                ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite,
+                portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek
+                için mükemmeldir.
             'Events: The Big Event':
               key: 'Olaylar: Büyük Olay'
               name: Büyük Olay
+              description_student: 'Etkinlikleri öğrenmek için eğlenceli bir oyun
+                oynayın. '
+              description_teacher: Öğrenciler, etkinliklerin, önceden yazılmış bir
+                algoritmaya çeşitlilik eklemenin harika bir yolu olduğunu öğrenecektir.
+                Bazen programınızın tam olarak kullanıcı istediği zamanda ona yanıt
+                verebilmesini istersiniz. Etkinlikler, programınızı daha ilgi çekici
+                ve etkileşimli hale getirebilir.
             Build a Flappy Game:
               key: Bir Kanat Çırpma Oyunu Oluşturmak
               name: Bir Kanat Çırpma Oyunu Oluşturmak
+              description_student: Her nasıl istiyorsan kendi Flappy Bird oyununu
+                yap, sonra bunu arkadaşlarınla paylaş!
+              description_teacher: "Bu özel aşamada öğrenciler, fare tıklamalarını
+                ve nesne çarpışmalarını tespit etmek için olay yöneticileri kullanarak
+                kendi Flappy Bird oyununu yapabilir. Bu seviyenin sonunda öğrenciler,
+                görselleri veya kuralları değiştirerek oyunlarını kişiselleştirebilecek.
+                \n"
             Events in Play Lab:
               key: Play Lab' da Olaylar
               name: Play Lab' da Olaylar
+              description_student: Yaratıcı olmanın ve Oyun Laboratuvarında bir oyun
+                yapmanın zamanı geldi!
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da
+                etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
+                kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
+                için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
             Picturing Data:
               key: Verilerin Resmedilmesi
               name: Verilerin Resmedilmesi
+              description_student: Veriler, öğrencilerin kendi dünyalarını anlamasına
+                ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir.
+                Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak
+                ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.
+              description_teacher: Veriler, öğrencilerin kendi dünyalarını anlamasına
+                ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir.
+                Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak
+                ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.
             'End of Course Project: Create a Play Lab Game':
               name: Ders Projesinin Sonu
+              description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya
+                başlamanın zamanı geldi.
+              description_teacher: 'Bu bitirme dersi, öğrencileri kendi Oyun Laboratuvarı
+                projelerini tasarlama, geliştirme ve sergileme süreçlerinden geçirir!
+                Bu sürecin sorunsuzca ilerlemesini sağlamak için, kağıtta planlamadan
+                internet sitemizde kodlamaya kadar olan süreçleri öğrencilerin takip
+                etmesi için adım adım yapı halinde sağladık. Ek olarak finali kolaylaştırmada
+                öğretmenlere yardım etmek için fikirler sunarız. '
           lesson_groups:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
@@ -25919,64 +26540,199 @@ tr:
             'Algorithms: Graph Paper Programming':
               key: 'Algoritma: Grafik Kağıdı ile Programlama'
               name: Grafik Kağıdı Programlama
+              description_student: Bu derste, resimleri çizmesi için sınıf arkadaşınızı
+                programlayacaksınız!
+              description_teacher: 'Resim çizmesi için bir başkasını "programlayarak",
+                öğrenciler programlamanın ana kavramlarından bazılarını eğlenceli
+                ve ulaşılabilir bir şekilde deneyimleme fırsatını bulur. Öğrencilerin,
+                önceden oluşturulmuş bir resmi yeniden üretmeye gayret ederek grafik
+                kağıt üzerindeki kareleri boyamak üzere birbirlerini yönlendirmek
+                üzere sembolleri kullanmasıyla sınıf başlayacaktır. Eğer vaktiniz
+                olursa, ders öğrencilerin kendi oluşturacakları resimlerle tamamlanabilir.  '
             Introduction to Online Puzzles:
               key: Online Bulmacalara Giriş
               name: Online Bulmacalara Giriş
+              description_student: Bu ders, bu kursta ihtiyacınız olan becerilere
+                çalışmanızı sağlayacak.
+              description_teacher: 'Bu bulmaca setinde, öğrenciler Code.org''un çevrimiçi
+                çalışma alanına giriş (veya sınıf tecrübesine göre inceleme) ile başlayacaklar.
+                Çalışma alanının, `Çalıştır'','' Sıfırla'', ve ''Adım'' düğmeleri
+                gibi temel işlevselliğine işaret eden videolar olacaktır. Ayrıca bu
+                videolarda da tartışılmıştır: Blockly bloklarını sürükleme, Blockly
+                bloklarını silme ve Blockly bloklarını bağlama. Sonra, öğrenciler
+                labirentte _sequencing_ ve _debug_ becerilerini uygulayacaklardır.
+                Oradan, öğrenciler _loops_''un temellerini öğrendiğinde Koleksiyoner,
+                Sanatçı ve Biçerdöver gibi yeni bulmaca türlerini görecekler.'
             Relay Programming:
               key: Röle Programlama
               name: Röle Programlama
+              description_student: Kod ile çizimler yaptığınız kursun başını hatırlayın.
+                Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!
+              description_teacher: Bu aktivite, hata ayıklama ve sebat ile başlayacaktır,
+                sonra öğrenciler ekiplere girdiğinde ve bir defada bir programa bir
+                talimat yazması için birlikte çalıştığında hızlı bir şekilde zamana
+                karşı yarışacaktır.
             Debugging in Collector:
               key: Toplayıcıda Hata Ayıklama
               name: Toplayıcıda Hata Ayıklama
+              description_student: Kodlama esnasında hiç problem yaşadınız mı? Bu
+                ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki
+                hataları bulma ve düzeltme sürecidir.
+              description_teacher: Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı'
+                ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar,
+                döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma
+                ve düzenleme alıştırması yapacaklar.
             Events in Bounce:
               key: Sıçrama Olayları
               name: Sıçrama Olayları
+              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz
+                mi? Bu derste kendi oyununuzu oluşturacaksınız!
+              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların
+                ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları
+                nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine
+                basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar.
+                Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
+                kullanabilecekleri fırsatları olacak.
             Build a Star Wars Game:
               key: Star Wars oyunu oluştur
               name: Star Wars oyunu oluştur
+              description_student: Bu derste kendi Star Wars oyununu kurarken gücünü
+                hissedin.
+              description_teacher: Bu derste öğrenciler, olayları kullanarak çevrimiçi
+                olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star
+                Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek
+                ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
             Dance Party:
               key: Dans Partisi
               name: Dans Partisi
+              description_student: Kutlama zamanı! Bu derste kendi etkileşimli dans
+                partinizi programlayacaksınız.
+              description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini
+                programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan
+                dolayı bu aktivite ses gerektirir.
             Loops in Ice Age:
               key: Buz Devrindeki Döngüler
               name: Buz Devrindeki Döngüler
+              description_student: Bu derste Scrat'in mümkün olduğunca etkili bir
+                şekilde meşe palamuduna ulaşmasına yardım etmek için tekrar bloğunu
+                kullanacaksınız.
+              description_teacher: Döngüleri kullanmaya yönelik hızlı bir güncelleme
+                (veya giriş) olarak bu aşama, Scrat'in meşe palamuduna daha etkili
+                bir şekilde ulaşmasını sağlamak için öğrencilerin 'tekrarla' bloğunu
+                kullanmasını sağlayacaktır.
             Loops in Artist:
               key: Sanatçı- Döngüler
               name: Sanatçıların Döngüleri
+              description_student: Bu derste döngüler, Sanatçı ile süper resimler
+                yapmayı kolaylaştırır.
+              description_teacher: Bu ders, önceki derslerden döngülerin anlaşılmasına
+                katkıda bulunur ve öğrenciye tam anlamıyla yaratıcı olma şansını verir.
+                Bu aktivite, ekstra problem-çözme pratiği için bir hata ayıklama egzersizi
+                olarak da kullanılır.
             Nested Loops in Bee:
               key: Arı -içiçe döngüler
               name: Labirentte İçiçe Döngüler
+              description_student: Döngülerin içindeki döngülerin içindeki döngüler.
+                Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda
+                ne olacağını öğretecektir.
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını
+                yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler
+                vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün
+                içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde
+                de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini
+                anlamaya teşvik edilecekler.
             Conditionals with Cards:
               key: Kartlarla Koşullu Önermeler
               name: Kartlarla Koşullu Önermeler
+              description_student: Yalnızca kesin şartlar altında puan kazanacağınız
+                bir oyunu oynama zaman geldi!
+              description_teacher: Bu ders, bir programı belirli bilgilere uyarlamak
+                için koşulların nasıl kullanılabileceğini göstermektedir. Bir program
+                yazarken bize lazım olan her bilgiye sahip olamayız. Bazen, kodunuz
+                çalıştığında hangi durumun geçerli olacağını bilmeseniz de, bir durumda
+                başka bir şeyden farklı bir şeyler yapmak isteyeceksinizdir. Koşullar,
+                koşulların verildiği yerdir. Koşullar, bir bilgisayarın, kodunuz çalıştırıldığında
+                her zaman doğru olan bilgiye dayalı olarak bir karar vermesine izin
+                verir.
             Conditionals in Bee:
               key: Koşullar-Arı
               name: Koşullar-Arı
+              description_student: 'Şimdi koşulları anladığınıza göre, nektar ve balı
+                toplaması için arıyı programlama zamanı. '
+              description_teacher: Bu noktaya kadar öğrenciler her çalıştırıldığında
+                aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir.
+                Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın
+                karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod
+                yazmalarına izin verecektir.
             While Loops in Farmer:
               key: Çiftçi Döngüleri
               name: Çiftçi Döngüleri
+              description_student: 'Döngüler kodlama için oldukça kullanışlıdır. Bu
+                ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!'
             Until Loops in Maze:
               key: Labirentte Bitiş Döngüleri
               name: Labirentte Bitiş Döngüleri
+              description_student: "'E kadar' döngülerini kullandığınızda inanılmaz
+                şeyler yapabilirsiniz!"
+              description_teacher: Bu derste öğrenciler, 'e kadar' döngülerini öğrenecektir.
+                Öğrenciler, ana karakterin istenilen durma noktasına varana 'kadar'
+                hareketlerine devam ettiği programları yapacaktır.
             Conditionals & Loops in Harvester:
               key: Hasatçıda Koşullar & Döngüler
               name: Koşullarla Hasat Etme
+              description_student: Hangi koşulun kullanılacağı her açık net değildir.
+                Bu ders ne yapmanız gerektiğine karar vermenize yardımcı olacak.
+              description_teacher: Öğrenciler, süresince döngüleri (while loops) '-e
+                kadar' döngüleri (until loops) ve 'eğer/değilse' (if / else) ifadelerine
+                çalışacaklar. Bu blokların tamamı koşullar için kullanılır. Bu üç
+                koşul ifadesine çalıştıktan sonra, öğrenciler, daha karmaşık ve esnek
+                kod yazmayı öğrenecekler.
             'Unplugged: Binary':
               key: 'Bağımsız: İkili Taban (Binary)'
               name: İkili Sistemle Resimler
+              description_student: Bilgisayarların, yalnızca iki seçeneğe sahip bir
+                dil kullanarak resimleri nasıl depoladığını öğrenin.
+              description_teacher: Birçok kişi ikili dosyayı tamamen sıfırlar ve sıfırlar
+                olarak düşünse de, öğrencilere bilginin çeşitli ikili seçeneklerle
+                temsil edilebileceği fikri tanıtılacaktır. Bu ders, bu konsepti bir
+                adım daha ileri götürüyor, çünkü bir bilgisayarın (görüntüler ve renkler
+                gibi) daha karmaşık bilgileri nasıl ikili olarak depolayabileceğini
+                de gösteriyor.
             Artist Binary:
               key: Sanaçtı İkili Taban
               name: Sanaçtı İkili Taban
+              description_student: Bu derste, yalnızca 0s ve 1 s kullanarak nasıl
+                resim yapacağınızı öğreneceksiniz.
+              description_teacher: Bu çevrimiçi ders dizisi, öğrencilerin açık ve
+                kapalı alan kullanarak resimler yapmayı öğrenmelerini sağlayacaktır.
             Be A Super Digital Citizen:
               key: Süper Bir Dijital Vatandaş Olun
               name: Süper Bir Dijital Vatandaş Olun
+              description_student: Siber zorbalığa şahit olduğunuzda nasıl karşı çıkabileceğinizi
+                öğrenin.
             End of Course Project:
               key: Ders Projesinin Sonu
               name: Ders Projesinin Sonu
+              description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya
+                başlamanın zamanı geldi.
+              description_teacher: Bu bitirme dersi, öğrencileri kendi projelerini
+                tasarlama, geliştirme ve sergileme süreçlerinden geçirir.
             lesson-6:
               name: Geleceğe bakış
+              description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları
+                öğrenmeye başlayacaksınız.
+              description_teacher: Bu ders, aslında Minecraft takımında Kod Saati
+                için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri
+                pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!
             lesson-5:
               name: Şifre Güçlendirme
+              description_student: Bu derste, şifrelerinizin bilgilerinizi nasıl koruduğunu
+                ve nasıl iyi bir şifre oluşturulacağını öğreneceksiniz.
+            lesson-1:
+              name: Kelimelerin gücü
+              description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
+                çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış
+                olduğunu öğretecektir.
           lesson_groups:
             csf_sequencing:
               display_name: Sıralama
@@ -25992,6 +26748,8 @@ tr:
               display_name: Sayısal Vatandaşlık
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+            lessonGroup-6:
+              display_name: Sayısal Vatandaşlık
           student_description: Öğrenciler; döngüler, koşullar ve olaylara dair anlayışlarını
             geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık ile
             ilgili bilgi edinecektir.
@@ -26007,60 +26765,205 @@ tr:
             Sequencing in the Maze:
               key: Labirentte Sıralama
               name: Labirentte Sıralama
+              description_student: Bu derste, bizzat kendi programlarınızı nasıl yazacağınızı
+                öğreneceksiniz!
+              description_teacher: "Bu bulmaca dizisinde öğrenciler, Code.org'un çevrimiçi
+                çalışma alanına giriş (veya sınıf tecrübesine göre inceleme) ile başlayacaklar.
+                Çalışma alanının, `Çalıştır',' Sıfırla', ve 'Adım' düğmeleri gibi
+                temel işlevselliğine işaret eden videolar olacaktır. Ayrıca bu videolarda
+                şunlar tartışılmıştır: Blockly blokları sürükleme, Blockly blokları
+                silme ve Blockly blokları bağlama. Sonra, öğrenciler labirentte _sequencing_
+                ve _debugging_ becerilerini uygulayacaklardır. \r\nHata ayıklama,
+                programlamayı öğrenmeye dair esas bir ögedir. Öğrenciler, yanlış bir
+                şekilde çözülmüş bazı bulmacalar ile karşılaşacaktır. Yanlış döngüler,
+                eksik bloklar, ekstra bloklar ve düzensiz bloklar dahil olmak üzere
+                hataları tanımlamak için var olan kod vasıtasıyla durdurmaları gerekecektir."
             Programming and Loops with the Artist:
               key: Sanatçı ile Programlama ve Döngüler
               name: Döngüler ile çizim
+              description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler
+                yapmayı kolaylaştırır.
+              description_teacher: Az sayıda blok ve dijital etiketleri kullanarak
+                kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine
+                bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir
+                ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite,
+                portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek
+                için mükemmeldir.
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft''ta Koşullar: Su Yolculuğu'
               name: 'Minecraft''ta Koşullar: Su Yolculuğu'
+              description_student: Burada Minecraft dünyasındaki koşulları öğreneceksiniz.
+              description_teacher: Bu ders, aslında Minecraft takımında Kod Saati
+                için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri
+                pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!
             Conditionals:
               key: Koşullar
               name: Çiftçi Koşulları
+              description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında
+                bilgisayara ne yapacağını söyleyeceksin.
+              description_teacher: Bu ders öğrencilere `while` döngüleri ve` if /
+                else` ifadeleri tanıtır. _ While loops_, koşullar doğru olduğu sürece
+                komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam
+                olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı
+                döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması
+                gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir
+                şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde
+                bu döngüler başka bir şey çalıştırır.
             Simon Says:
               key: Simon Diyor ki
-              name: Simon Diyor ki
+              description_student: Bir oyun oynayın ve doğru sonu elde etmek için
+                hangi komutların gerektiğini düşünün.
+              description_teacher: Bu derste öğrenciler, doğru sonucu elde etmek için
+                oluşturulacak komutların ne şekil verilmesi gerektiği ile ilgili düşünmelerini
+                sağlamayı hedefleyen bir oyun oynayacak. Bu, öğrencilerin, sonraki
+                derslerde Hareketli Nesne Laboratuvarına daha kolay şekilde devam
+                etmelerine yardımcı olacaktır.
             Learning Sprites with Sprite Lab:
               key: Hareketli Nesne Laboratuvarı ile Hareketli Nesneleri Öğrenme
               name: Hareketli Nesne Laboratuvarı ile Yüzen Balık
+              description_student: Hareketli nesneleri nasıl oluşturacağını ve düzenleyeceğini
+                öğren.
+              description_teacher: 'Bu derste öğrenciler, Hareketli Nesne Laboratuvarı
+                merkezindeki iki kavramı öğrenecektir: hareketli nesneler ve davranışları.
+                Hareketli nesneler, öğrencilerin taşıyabildiği, değiştirebildiği ve
+                işleyebildiği ekrandaki karakterler veya nesnelerdir. Davranışlar,
+                hareketli nesneler durdurulana kadar kesintisiz olarak devam eden
+                eylemlerdir.'
             Alien Dance Party with Sprite Lab:
               key: Hareketli Nesne Laboratuvarı ile Uzaylı Dans Partisi
               name: Hareketli Nesne Laboratuvarı ile Uzaylı Dans Partisi
+              description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje
+                oluşturun.
+              description_teacher: 'Bu ders, öğrencilerin kendi etkileşimli animasyonlarını
+                ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını
+                içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans
+                partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
+                edecektir.  '
             Private and Personal Information:
               key: Özel ve Kişisel Bilgiler
               name: Özel ve Kişisel Bilgiler
+              description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende
+                kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi
+                ile özel bilgi arasındaki farkı öğretecek.
             About Me:
               key: Hakkımda
               name: Ben ve Hareketli Nesne Laboratuvarı Hakkında
+              description_student: 'Hareketli Nesne Laboratuvarı ile etkileşimli bir
+                poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma
+                anlayışını uygulayacaklar.
+
+'
+              description_teacher: "Hareketli Nesne Laboratuvarı ile etkileşimli bir
+                poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma
+                anlayışını uygulayacaklar.\r\n"
             Digital Sharing:
               key: Dijital Paylaşım
               name: Dijital Paylaşım
+              description_student: "Bu derste, sahiplik ve telif hakkına dair zorlukları
+                ve faydaları öğreneceksiniz. \n"
+              description_teacher: Telif Hakkı konusunda ekip  tarafından verilen
+                Bilgisayar Bilimi Temellerine borçlu olarak bu ders, özellikle dijital
+                ortamlarda sahiplik ve telif hakkına saygı göstermenin zorluklarını
+                ve faydalarını öğrencilerin anlamasına yardım etmek için bulunur.
+                Öğrenciler, etik bir dijital vatandaş olmanın önemli bir kısmı olarak
+                sanatçıların haklarına saygı göstermesi için teşvik edilmelidir.
             Nested Loops in Bee:
               key: Arı -içiçe döngüler
               name: Labirentte İçiçe Döngüler
+              description_student: Döngüler içinde döngüler içinde döngüler. Bu ne
+                anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü
+                yerleştirdiğinizde ne olduğunu öğretecek.
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını
+                yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler
+                vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün
+                içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde
+                de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini
+                anlamaya teşvik edilecekler.
             Nested Loops in Artist:
               key: Sanatçıların İç İçe Döngüleri
               name: Sanatçıların İç İçe Döngüleri
+              description_student: Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle
+                biraz İLGİNÇ çizimler yapacaksınız.
             Nested Loops in Frozen:
               key: Frozen'da İç İçe Döngüler
               name: Frozen ile İçiçe Döngüler
+              description_student: Anna ve Elsa'nın mükemmel buz pateni yapma becerileri
+                var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var.
+                Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın.
+              description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe
+                yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler.
+                Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini
+                kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi
+                alıştırma yapmalarını sağlayacak!
             'Functions: Songwriting':
               key: 'Fonksiyonlar: şarkı yazma'
               name: Şarkı yazma
+              description_student: Müzik yıldızı için bile programlama yeteneği gerektirir.
+                Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
+              description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan
+                birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz)
+                asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini
+                programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun
+                içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı
+                olacaktır.
             Functions in Minecraft:
               key: " Minecraft Fonksiyonları"
               name: " Minecraft Fonksiyonları"
+              description_student: En etkili kod için fonksiyonları nasıl kullanacağını
+                çözebildin mi?
+              description_teacher: Öğrenciler, bu eğlenceli ve etkileşimli Minecraft
+                macerasında hangi fonksiyonların yardımcı olabileceğini anlamaya başlayacaktır.
             Functions in Harvester:
               key: Hasatçı Fonksiyonları
               name: Hasatçı Fonksiyonları
+              description_student: Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar
+                da sizi işlerin çoğunda kurtarır!
+              description_teacher: Öğrenciler, Sanatçıda etkileyici tasarımlar oluşturma
+                ve Arıda labirentlerde gezinmede pratik yapmıştır ama bugün Hasatçıda
+                ürünleri hasat etmek için fonksiyonları kullanacaktır. Bu ders, `süresince`
+                döngüleri ve `eğer / değilse` ifadeleri ile bunları birleştirerek
+                öğrencilerin bu fonksiyonları yeni şekillerde kullanmasını sağlayacaktır.
             Functions in Artist:
               key: Sanatçı- Fonksiyonlar
               name: Sanatçı- Fonksiyonlar
+              description_student: Fonksiyonlar ile daha karmaşık çizimleri daha kolay
+                yapın!
+              description_teacher: Öğrenciler Code.org' da fonksiyonları kullanmayı
+                öğrenirler. Aktörler içinde fonksiyonları kullanarak muhteşem görüntüler
+                oluşturacak ve düzenleyecekler. Daha karmaşık desenler için, öğrenciler,
+                bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler.
             Designing for Accessibility:
               key: Erişilebilirlik için Tasarlama
               name: Erişilebilirlik için Tasarlama
+              description_student: Bu derste öğrenciler, varsayımsal uygulamalar üzerinden
+                erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları
+                tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
+              description_teacher: Bu derste öğrenciler, varsayımsal uygulamalar üzerinden
+                erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları
+                tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
             End of Course Project:
               key: Ders Projesinin Sonu
               name: Ders Projesinin Sonu
+              description_student: Bu kadar büyük projeler zaman alır ve bir sürü
+                planlama gerektirir. İlhamını bul, bir plan geliştir ve yaratıcılığını
+                serbest bırak!
+              description_teacher: "Bir sonraki dört ders öğrencilerin kodlama becerilerini
+                bir bitirme projesinde kullanmalarına imkan sağlar. Bu proje kişilerin
+                kodlamayla ilgili tecrübe kazanmalarına yardımcı olacak ve akranları
+                ve sevdikleri ile paylaşmaları için bir örnek oluşturacaktır. Birden
+                fazla derslik veya birden fazla haftalık bir deneyim olması planlanmıştır,
+                öğrenciler beyin fırtınasını keşfederek, tasarım sürecini öğrenerek,
+                bitirme çalışmalarını oluşturup sunarak vakit geçirecekler. \r\n\r\nKeşfetme
+                aşamasında öğrenciler ilham almak için hem Sanatçı hem de Hareketli
+                Nesne Laboratuvarında önceden hazırlanmış projelerin örnekleri ile
+                oynayacak. Sonrasında öğrenciler tasarım sürecini ve bunu kendi projelerinde
+                nasıl uygulayacaklarını öğrenecekler. Sonrasında kendi projelerini
+                Sanatçı, Hareketli Nesne Laboratuvarı veya bildikleri başka bir arayüzde
+                oluşturmak için öğrencilere alan verilecektir (bu muhtemelen projenin
+                en uzun aşamasıdır). En sonunda öğrenciler bitmiş çalışmalarını akranlarına
+                sunabilecekler."
+            lesson-4:
+              name: Süper Bir Dijital Vatandaş Olun
           lesson_groups:
             ramp_up:
               display_name: Arttır
@@ -26094,34 +26997,111 @@ tr:
             Functions in Minecraft:
               key: " Minecraft Fonksiyonları"
               name: " Minecraft Fonksiyonları"
+              description_student: En etkili kod için fonksiyonları nasıl kullanacağını
+                çözebildin mi?
+              description_teacher: Öğrenciler, bu eğlenceli ve etkileşimli Minecraft
+                macerasında hangi fonksiyonların yardımcı olabileceğini anlamaya başlayacaktır.
             Learning Sprites with Sprite Lab:
               key: Hareketli Nesne Laboratuvarı ile Hareketli Nesneleri Öğrenme
               name: Hareketli Nesne Laboratuvarı ile Yüzen Balık
+              description_student: Hareketli nesneleri nasıl oluşturacağını ve düzenleyeceğini
+                öğren.
+              description_teacher: 'Bu derste öğrenciler, Hareketli Nesne Laboratuvarı
+                merkezindeki iki kavramı öğrenecektir: hareketli nesneler ve davranışları.
+                Hareketli nesneler, öğrencilerin taşıyabildiği, değiştirebildiği ve
+                işleyebildiği ekrandaki karakterler veya nesnelerdir. Davranışlar,
+                hareketli nesneler durdurulana kadar kesintisiz olarak devam eden
+                eylemlerdir.'
             Events with Sprite Lab:
               name: Hareketli Nesne Laboratuvarı ile Uzaylı Dans Partisi
+              description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje
+                oluşturun.
+              description_teacher: Bu ders, öğrencilerin kendi etkileşimli animasyonlarını
+                ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını
+                içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans
+                partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
+                edecektir.
             Loops with the Artist:
               name: Döngüler ile çizim
+              description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler
+                yapmayı kolaylaştırır.
+              description_teacher: Az sayıda blok ve dijital etiketleri kullanarak
+                kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine
+                bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir
+                ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite,
+                portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek
+                için mükemmeldir.
             Nested Loops in the Maze:
               key: Labirentte İçiçe Döngüler
               name: Labirentte İçiçe Döngüler
+              description_student: Döngüler içinde döngüler içinde döngüler. Bu ne
+                anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü
+                yerleştirdiğinizde ne olduğunu öğretecek.
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını
+                yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler
+                vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün
+                içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde
+                de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini
+                anlamaya teşvik edilecekler.
             The Power of Words:
               key: Kelimelerin gücü
               name: Kelimelerin gücü
+              description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
+                çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış
+                olduğunu öğretecektir.
             Envelope Variables:
               key: Zarf değişkenleri
               name: Zarf değişkenleri
+              description_student: 'Zarflar ve değişkenlerin ortak bir yönü var: ikisi
+                de değerli şeyleri tutarlar. Burada değişkenlerin ne olduğunu ve onların
+                yapabileceği harika şeyleri öğreneceksiniz.'
+              description_teacher: Değişkenler sayılar ya da sözcükler gibi değerler
+                için yer tutucu olarak kullanılır. Değişkenler programlamada çok fazla
+                özgürlüğe izin verir. Bir ifadeyi defalarca yazmak veya belirsiz bir
+                numarayı hatırlamak yerine, bilgisayar bilimcileri değişkenleri kendilerine
+                referans olarak kullanabilir. Bu ders değişkenlerin ne olduğunu ve
+                bunları farklı şekillerde nasıl kullanabileceğimizin açıklamada yardımcı
+                olur. Değişkenler fikri kavramak için kolay bir görüş değil bu yüzden
+                dersin sonunda tartışma için bol bol vakit ayırmanızı öneririz.
             Variables as Constant in Artist:
               key: Sanatçıda Sabit Değişkenler
               name: Sanatçı ile Değişkenler
+              description_student: Sınıfa yaratıcılık getirmeyi unutmayın! Bu bulmacalarda
+                değişkenleri kullanarak muhteşem çizimler yapacaksınız.
+              description_teacher: Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri
+                kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler.
+                Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay
+                hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecektir.
             Variables that Change in Bee:
               key: Arıda Değişen Değişkenler
               name: Arı ile Değişkenleri Değiştirme
+              description_student: Bu arı, değişkenleri sever!
+              description_teacher: Bu ders, kod çalışırken değerlerin değişmesini
+                sağlayarak hangi değişkenlerin programları daha güçlü hale getireceğini
+                göstermede yardımcı olacaktır.
             Variables that Change in Artist:
               key: Sanatçıda Değişen Değişkenler
               name: Sanatçı ile Değişkenleri Değiştirme
+              description_student: Bu derste, program çalışırken değişen değişkenleri
+                kullanarak çizimler yapacaksınız.
+              description_teacher: Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri
+                kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler.
+                Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay
+                hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek.
+                Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek
+                ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde
+                sona ereceklerdir.
             Simulating Experiments:
               key: Deneyleri Benzetme
               name: Deneyleri Benzetme
+              description_student: Değişkenleri değiştirerek deney ve bilgisayarda
+                simülasyonları çalıştır.
+              description_teacher: Hareketli Nesne Laboratuvarında basit bir simülasyonu
+                çalıştırarak öğrenciler, trendleri ve desenleri tanımlayan veriyi
+                toplamak için bilişimin nasıl kullanılabileceğini görecekler. Simülasyonu
+                birçok kere çalıştırdıktan sonra öğrenciler, simülasyonda bir değişkenin
+                değiştirilmesinin, sonucu nasıl etkileyebileceğine dair bir tahminde
+                bulunma ve sonrasında bu hipotezi test etme fırsatını bulacaktır.
             AI for Oceans:
               key: 'Okyanuslar için Yapay Zeka
 
@@ -26129,26 +27109,117 @@ tr:
               name: 'Okyanuslar için Yapay Zeka
 
 '
+              description_student: 'Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri
+                kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak
+                sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait
+                olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir.
+                Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş
+                balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir.
+                Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen
+                bir makine öğrenim modeli için kullanılır.'
+              description_teacher: "**Ders Özeti**: Öncelikle öğrenciler, okyanustan
+                çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\"
+                olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini
+                suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi
+                gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana
+                getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini
+                seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri
+                etiketleyebilen bir makine öğrenim modeli için kullanılır.\r\n\r\n\r\n**Doğruluğunu
+                Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde
+                tamamlayıp tamamlamadıklarını gösterecektir. Aktivitenin farklı kısımlarını
+                hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme,
+                talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin.
+                Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\r"
             Internet:
               key: İnternet
               name: İnternet
+              description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini
+                hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl
+                çalıştığının temellerini öğretecek.
+              description_teacher: Birçok kişi interneti her gün kullanıyor olmasına
+                rağmen, çok fazla insan nasıl çalıştığını bilmiyor. Bu derste, öğrenciler
+                bağlantıları, URL'ler, IP Adresleri ve DNS hakkında bilgi edinecek
+                ve internet üzerinden akmaya devam edeceklerini iddia edeceklerdir.
             For Loop Fun:
               key: Şununla Say Döngüsü Eğlencesi
               name: Şununla Say Döngüsü Eğlencesi
+              description_student: "`for` döngülerini öğrenmek için eğlenceli şeyler
+                bulacaksınız!"
+              description_teacher: 'Döngüler, bazı şeyleri tekrar tekrar yapmamıza
+                izin veriyor biliyoruz, fakat şimdi ekstra yapıların inşa edildiği
+                döngülerin nasıl kullanılacağını öğreneceğiz. Bu yeni yapılar, öğrencilerin
+                daha güçlü ve dinamik kodlar oluşturmalarını sağlayacak. '
             For Loops in Bee:
               key: Arı - şununla say döngüleri
               name: Arı - şununla say döngüleri
+              description_student: Vızıltı vızıltı. Bu bulmacalarda, `için` döngülerini
+                kullanarak bir arıyı nektar ve bala yönlendireceksiniz.
+              description_teacher: Arı özelliğiyle bu ders, döngüler ve daha karmaşık
+                bulmacaları çözmek için artan bir değişken kullanmaya odaklanıyor.
+                Öğrenciler önceki derslerdeki döngüleri inceleyerek başlayacak, ardından
+                döngüleri kullanarak karmaşık problemleri daha etkili bir şekilde
+                çözmeye başlayacak.
             For Loops in Artist:
               key: Sanatçı-Şununla say Döngüleri
               name: Sanatçı-Şununla say Döngüleri
+              description_student: Sonraki şaheserinizi yapmak için hazırlanın. Burada
+                biraz dudak uçuklatan resimler yapmak için `için` döngülerini kullanacaksınız.
+              description_teacher: Bu derste öğrenciler, döngülerde pratik yapmaya
+                devam ediyor, bu kez sanatçı ile. Öğrenciler değişkenlerin, döngülerin
+                ve döngülerin karmaşık tasarımlar oluşturması için bulmaca tamamlayacaklar.
+                En sonunda, serbest oyunda kendi sanatlarını oluşturma şansına sahip
+                olacaklar.
             Editing Behaviors:
               key: Davranışları Düzeltme
               name: Hareketli Nesne Laboratuvarındaki Davranışlar
+              description_student: Kendi hareketli nesne laboratuvarını programlamayı
+                öğrenin!
+              description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak
+                için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
               name: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
+              description_student: Bu derste öğrenciler, istedikleri gibi görünen
+                ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
+                kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
+                Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında,
+                evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları,
+                davranışları ve diğer kavramları kullanacaktır.
+              description_teacher: Bu derste öğrenciler, istedikleri gibi görünen
+                ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
+                kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
+                Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında,
+                evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları,
+                davranışları ve diğer kavramları kullanacaktır.
             End of Course Project:
               key: Ders Projesinin Sonu
               name: Ders Projesinin Sonu
+              description_student: Bu kadar büyük projeler zaman alır ve bir sürü
+                planlama gerektirir. İlhamını bul, bir plan geliştir ve yaratıcılığını
+                serbest bırak!
+              description_teacher: "Sonraki beş ders, öğrencilere kodlama becerilerini
+                bir bitirme projesinde kullanmalarına olanak sağlar. Bu proje, bireylere,
+                kodlama tecrübesi kazanmalarında ve akranları ve sevdikleri ile paylaşacakları
+                bir model üretmelerinde yardımcı olacak. Bu, öğrencilerin beyin fırtınası
+                yapmaları, tasarım sürecini öğrenmeleri, nihai çalışmalarını oluşturmaları
+                ve sonrasında sunmalarına zaman harcadığı çok dersli veya çok haftalı
+                bir proje olması için planlanmaktadır. \n\nKeşif aşamasında, öğrenciler
+                esinlenmek için önceden hazırlanmış hem Sanatçı hem de Hareketli Nesne
+                Laboratuvarı programları ile oynayacak. Sonrasında, öğrenciler, tasarım
+                sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını öğrenecekler.
+                Ardından, onlara, kendi projelerini ya Sanatçı ya Hareketli Nesne
+                Laboratuvarı ya da rahatlıkla sağlayabileceğiniz herhangi başka bir
+                arayüzde oluşturmaları için alan verilecek (Bu, muhtemelen projenin
+                en uzun aşamasıdır). Test etme ve akran incelemesinden sonra öğrenciler,
+                kodlarını gözden geçirip düzeltecek. Son olarak, öğrenciler, bitirmiş
+                oldukları çalışmayı sınıf arkadaşlarına sunabilecek."
+            lesson-1:
+              name: Erişilebilirlik için Tasarlama
+              description_student: Bu derste öğrenciler, varsayımsal uygulamalar üzerinden
+                erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları
+                tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
+              description_teacher: Bu derste öğrenciler, varsayımsal uygulamalar üzerinden
+                erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları
+                tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
           lesson_groups:
             ramp_up:
               display_name: Arttır
@@ -26164,6 +27235,8 @@ tr:
               display_name: Hareketli Nesneler
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+            lessonGroup-8:
+              display_name: Bilgisayarın Etkileri
           student_description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları
             kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek
             ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin
@@ -26181,87 +27254,270 @@ tr:
             Dance Party:
               key: Dans Partisi
               name: Dans Partisi
+              description_student: Bu derste öğrenciler, kendi etkileşimli dans partisini
+                programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan
+                dolayı bu aktivite ses gerektirir.
+              description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini
+                programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan
+                dolayı bu aktivite ses gerektirir.
             Programming with Angry Birds:
               key: Labirentte Programlama
               name: Labirentte Programlama
+              description_student: Angry Birds ile sıraları ve algoritmaları öğrenin.
+              description_teacher: Angry Birds oyununun karakterlerini kullanarak
+                öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza
+                ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak
+                için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek,
+                böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.
             Debugging with Scrat:
               key: Scrat ile Hata Ayıklama
               name: Scrat ile Hata Ayıklama
+              description_student: Bulmacalardaki problemleri bulun ve hata ayıklama
+                becerilerinizi uygulayın.
+              description_teacher: Hata ayıklama, program öğrenmenin esas bir ögesidir.
+                Bu derste öğrenciler, yanlış bir şekilde çözülmüş bulmacalar ile karşılaşacaktır.
+                Yanlış döngüler, eksik bloklar, ekstra bloklar ve düzensiz bloklar
+                da dahil olmak üzere hataları belirlemek için var olan kodu girmeleri
+                gerekecek.
             Collecting Treasure with Laurel:
               key: Koleksiyoncu programlama
               name: Koleksiyoncu programlama
+              description_student: Maceracı Laurel'in bir sürü değerli taş toplamasına
+                yardım etmek için algoritmalar yazın!
+              description_teacher: Bu bulmaca serisinde öğrenciler, algoritmaları
+                ve hata ayıklamayı daha da anlamaya devam edecektir. Yeni bir karakter,
+                Maceracı Laurel ile öğrenciler, bir yolda yürürken Laurel'in hazine
+                toplamasını sağlamak için sıralı algoritmalar oluşturacaktır.
             Creating Art with Code:
               key: Sanatçı Programlama
               name: Sanatçı Programlama
+              description_student: Sanatçıyı programlayarak güzel resimler oluşturun.
+              description_teacher: Bu derste öğrenciler, ekrandaki çizimleri tamamlaması
+                için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin,
+                '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları
+                kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak
+                sağlayacaktır.
             Loops with Rey and BB-8:
               key: Rey ve BB-8 ile döngüler
               name: Rey ve BB-8 ile döngüler
+              description_student: 'Döngüleri kullanarak BB-8''in labirentten geçmesine
+                yardım edin! '
+              description_teacher: '"Loopy''ye Başlarken" sonrasında tekrarlama talimatları
+                kavramına dayanarak bu aşama, öğrencilerin, BB-8''in öncekinden daha
+                etkili bir şekilde bir labirentten geçmesine yardım etmek için döngüleri
+                kullanmasını sağlayacaktır.'
             Sticker Art with Loops:
               key: Sanatçıların Döngüleri
               name: Sanatçıların Döngüleri
+              description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler
+                yapmayı kolaylaştırır.
+              description_teacher: Az sayıda blok ve dijital etiketleri kullanarak
+                kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine
+                bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir
+                ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite,
+                portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek
+                için mükemmeldir.
             Nested Loops in Maze:
               key: Labirentte İçiçe Döngüler
               name: Labirentte İçiçe Döngüler
+              description_student: Döngülerin içindeki döngülerin içindeki döngüler.
+                Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda
+                ne olacağını öğretecektir.
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını
+                yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler
+                vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün
+                içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde
+                de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini
+                anlamaya teşvik edilecekler.
             Snowflakes with Anna and Elsa:
               key: Frozen'da İç İçe Döngüler
               name: Frozen'da İç İçe Döngüler
+              description_student: Anna ve Elsa'nın mükemmel buz pateni yapma becerileri
+                var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var.
+                Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın.
+              description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe
+                yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler.
+                Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini
+                kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi
+                alıştırma yapmalarını sağlayacak!
             'Looking Ahead with Minecraft ':
               key: Minecraft ile Geleceğe Bakma
               name: Geleceğe bakış
+              description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları
+                öğreneceksiniz.
+              description_teacher: Bu ders, aslında Minecraft takımında Kod Saati
+                için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri
+                pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!
             If/Else with Bee:
               key: Koşullar-Arı
               name: Koşullar-Arı
+              description_student: 'Şimdi koşulları anladığınıza göre, nektar ve balı
+                toplaması için arıyı programlama zamanı. '
+              description_teacher: Bu noktaya kadar öğrenciler her çalıştırıldığında
+                aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir.
+                Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın
+                karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod
+                yazmalarına izin verecektir.
             While Loops with the Farmer:
               key: Çiftçi Döngüleri
               name: Çiftçi Döngüleri
+              description_student: 'Döngüler kodlama için oldukça kullanışlıdır. Bu
+                ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!'
+              description_teacher: "Öğrenciler bu dersi aldıklarında 'tekrarlama'
+                döngülerini kullanarak çoktan pratiğe sahip olmalılar, bu yüzden şimdi
+                işleri karıştırmanın zamanı geldi. \n\n_Döngüler_ şartlar karşılanırken
+                komutları tekrarlamaya devam eden döngülerdir. Programcılar komutların
+                kaç kez tekrar edilmesi gerektiğini tam olarak bilmediğinde döngüler
+                kullanılırken, döngünün tekrarlamaya devam etmesi için hangi koşulun
+                doğru olması gerektiğini bilir. Örneğin öğrenciler Çiftçinin deliklerini
+                doldurmak ve kirleri kazmak için çalışacaklar. Deliklerin boyutlarını
+                veya kir dağlarının yüksekliğini bilmeyeceklerdir, ancak öğrenciler
+                zemini düz olmadığı sürece delikleri doldurmaya ve kiri kazmaya ihtiyaç
+                duyacaklarını bilecektir."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft''ta Koşullar: Su Yolculuğu'
               name: 'Minecraft''ta Koşullar: Su Yolculuğu'
+              description_student: Burada Minecraft dünyasındaki koşulları öğreneceksiniz.
+              description_teacher: Bu ders, aslında Minecraft takımında Kod Saati
+                için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri
+                pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!
             Until Loops in Maze:
               key: Labirentte Bitiş Döngüleri
               name: Labirentte Bitiş Döngüleri
+              description_student: "'E kadar' döngülerini kullandığınızda inanılmaz
+                şeyler yapabilirsiniz!"
+              description_teacher: Bu derste öğrenciler, 'e kadar' döngülerini öğrenecektir.
+                Öğrenciler, ana karakterin istenilen durma noktasına varana 'kadar'
+                hareketlerine devam ettiği programları yapacaktır.
             Harvesting with Conditionals:
               key: Koşullarla Hasat Etme
               name: Koşullarla Hasat Etme
+              description_student: Hangi koşulun kullanılacağı her açık net değildir.
+                Bu ders ne yapmanız gerektiğine karar vermenize yardımcı olacak.
+              description_teacher: Öğrenciler, süresince döngüleri (while loops) '-e
+                kadar' döngüleri (until loops) ve 'eğer/değilse' (if / else) ifadelerine
+                çalışacaklar. Bu blokların tamamı koşullar için kullanılır. Bu üç
+                koşul ifadesine çalıştıktan sonra, öğrenciler, daha karmaşık ve esnek
+                kod yazmayı öğrenecekler.
             Functions in Minecraft:
               key: " Minecraft Fonksiyonları"
               name: " Minecraft Fonksiyonları"
+              description_student: En etkili kod için fonksiyonları nasıl kullanacağını
+                çözebildin mi?
+              description_teacher: Öğrenciler, bu eğlenceli ve etkileşimli Minecraft
+                macerasında hangi fonksiyonların yardımcı olabileceğini anlamaya başlayacaktır.
             Functions with Harvester:
               key: Hasatçı Fonksiyonları
               name: Hasatçı Fonksiyonları
+              description_student: Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar
+                da sizi işlerin çoğunda kurtarır!
+              description_teacher: Öğrenciler, Sanatçıda etkileyici tasarımlar oluşturma
+                ve Arıda labirentlerde gezinmede pratik yapmıştır ama bugün Hasatçıda
+                ürünleri hasat etmek için fonksiyonları kullanacaktır. Bu ders, `süresince`
+                döngüleri ve `eğer / değilse` ifadeleri ile bunları birleştirerek
+                öğrencilerin bu fonksiyonları yeni şekillerde kullanmasını sağlayacaktır.
             Functions with Artist:
               key: Sanatçı- Fonksiyonlar
               name: Sanatçı- Fonksiyonlar
+              description_student: Fonksiyonlar ile daha karmaşık çizimleri daha kolay
+                yapın!
+              description_teacher: Öğrenciler Code.org' da fonksiyonları kullanmayı
+                öğrenirler. Aktörler içinde fonksiyonları kullanarak muhteşem görüntüler
+                oluşturacak ve düzenleyecekler. Daha karmaşık desenler için, öğrenciler,
+                bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler.
             Variables with Artist:
               key: Sanatçı ile Değişkenler
               name: Sanatçı ile Değişkenler
+              description_student: Sınıfa yaratıcılık getirmeyi unutmayın! Bu bulmacalarda
+                değişkenleri kullanarak muhteşem çizimler yapacaksınız.
+              description_teacher: Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri
+                kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler.
+                Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay
+                hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecektir.
             Changing Variables with Bee:
               key: Arı ile Değişkenleri Değiştirme
               name: Arı ile Değişkenleri Değiştirme
+              description_student: Bu arı, değişkenleri sever!
+              description_teacher: Bu ders, kod çalışırken değerlerin değişmesini
+                sağlayarak hangi değişkenlerin programları daha güçlü hale getireceğini
+                göstermede yardımcı olacaktır.
             Changing Variables with Artist:
               key: Sanatçı ile Değişkenleri Değiştirme
               name: Sanatçı ile Değişkenleri Değiştirme
+              description_student: Bu derste, program çalışırken değişen değişkenleri
+                kullanarak çizimler yapacaksınız.
+              description_teacher: Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri
+                kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler.
+                Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay
+                hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek.
+                Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek
+                ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde
+                sona ereceklerdir.
             For Loops with Bee:
               key: Arı - şununla say döngüleri
               name: Arı - şununla say döngüleri
+              description_student: Vızıltı vızıltı. Bu bulmacalarda, `için` döngülerini
+                kullanarak bir arıyı nektar ve bala yönlendireceksiniz.
+              description_teacher: Arı özelliğiyle bu ders, döngüler ve daha karmaşık
+                bulmacaları çözmek için artan bir değişken kullanmaya odaklanıyor.
+                Öğrenciler önceki derslerdeki döngüleri inceleyerek başlayacak, ardından
+                döngüleri kullanarak karmaşık problemleri daha etkili bir şekilde
+                çözmeye başlayacak.
             For Loops with Artist:
               key: Sanatçı-Şununla say Döngüleri
               name: Sanatçı-Şununla say Döngüleri
+              description_student: Sonraki şaheserinizi yapmak için hazırlanın. Burada
+                biraz dudak uçuklatan resimler yapmak için `için` döngülerini kullanacaksınız.
+              description_teacher: Bu derste öğrenciler, döngülerde pratik yapmaya
+                devam ediyor, bu kez sanatçı ile. Öğrenciler değişkenlerin, döngülerin
+                ve döngülerin karmaşık tasarımlar oluşturması için bulmaca tamamlayacaklar.
+                En sonunda, serbest oyunda kendi sanatlarını oluşturma şansına sahip
+                olacaklar.
             Swimming Fish in Sprite Lab:
               key: Hareketli Nesne Laboratuvarında Yüzen Balık
               name: Hareketli Nesne Laboratuvarında Yüzen Balık
+              description_student: Hareketli nesneleri nasıl oluşturacağını ve düzenleyeceğini
+                öğren.
+              description_teacher: 'Bu derste öğrenciler, Hareketli Nesne Laboratuvarı
+                merkezindeki iki kavramı öğrenecektir: hareketli nesneler ve davranışları.
+                Hareketli nesneler, öğrencilerin taşıyabildiği, değiştirebildiği ve
+                işleyebildiği ekrandaki karakterler veya nesnelerdir. Davranışlar,
+                hareketli nesneler durdurulana kadar kesintisiz olarak devam eden
+                eylemlerdir.'
             Alien Dance Party:
               key: Uzaylı Dans Partisi
               name: Uzaylı Dans Partisi
+              description_student: Arkadaşlarınızla ve ailenizle paylaşmak için oyun
+                hazırlama alıştırması.
             Behaviors in Sprite Lab:
               key: Hareketli Nesne Laboratuvarındaki Davranışlar
               name: Hareketli Nesne Laboratuvarındaki Davranışlar
+              description_student: Kendi hareketli nesne laboratuvarını programlamayı
+                öğrenin!
+              description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak
+                için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet with Sprite Lab:
               key: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
               name: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
+              description_student: Bu derste öğrenciler, istedikleri gibi görünen
+                ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
+                kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
+                Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında,
+                evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları,
+                davranışları ve diğer kavramları kullanacaktır.
+              description_teacher: Bu derste öğrenciler, istedikleri gibi görünen
+                ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
+                kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
+                Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında,
+                evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları,
+                davranışları ve diğer kavramları kullanacaktır.
             End of Course Project:
               key: Ders Projesinin Sonu
               name: Ders Projesinin Sonu
+              description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya
+                başlamanın zamanı geldi.
+              description_teacher: Bu bitirme dersi, öğrencileri kendi projelerini
+                tasarlama, geliştirme ve sergileme süreçlerinden geçirir.
           lesson_groups:
             csf_sequencing:
               display_name: Sıralama
@@ -26294,36 +27550,83 @@ tr:
             Learn to Drag and Drop:
               key: Sürükleyip Bırakmayı Öğrenin
               name: Sürükleyip Bırakmayı Öğrenin
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında
+                oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir.
+                Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa
+                bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
+                içi bulmacaları tamamlayarak ilerleyecekler.
             Sequencing with Scrat:
               key: Scrat ile Sıralama
               name: Scrat ile Sıralama
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında
+                oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir.
+                Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa
+                bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
+                içi bulmacaları tamamlayarak ilerleyecekler.
             Programming in with Angry Birds:
               key: Angry Birds ile Programlama
               name: Labirentte Programlama
+              description_teacher: Angry Birds oyununun karakterlerini kullanarak
+                öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza
+                götürmek için sıralı algoritmalar geliştireceklerdir. Bunu yapmak
+                için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek.
             Programming with Rey and BB-8:
               key: Rey ve BB-8 ile programlama
               name: Rey ve BB-8 ile programlama
+              description_teacher: Bu derste öğrenciler, BB-8 ile çetrefil bir kursu
+                yönlendirmek için daha karmaşık biçimlerde yeni bulunmuş programlama
+                becerilerini kullanacaktır.
             Programming in Harvester:
               key: Hasatçıda Programlama
               name: Hasatçı ile Programlama
+              description_teacher: 'Öğrenciler, öğrendikleri programlama kavramlarını
+                Hasatçı ortamına uygulayacaktır. Şimdi, karakterin yalnızca hedefe
+                ulaşması yerine, öğrencilerin, yeni bir blok kullanarak mısır toplaması
+                gerekir. Öğrenciler, sıralı algoritma becerilerini geliştirmeye devam
+                edecektir ve hata ayıklama sürecini kullanmaya başlayacaktır. '
             Loops with Scrat:
               key: Scrat ile Döngüler
               name: Scrat ile Döngüler
             Loops with Laurel:
               key: Toplayıcıda Döngüler
               name: Toplayıcıda Döngüler
+              description_teacher: Bu derste öğrenciler, döngü kavramlarını öğrenmeye
+                devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine
+                toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında
+                ona yardım etmek için getirilir.
             Ocean Scene with Loops:
               key: Sanatçıların Döngüleri
               name: Sanatçıların Döngüleri
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat
+                dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı
+                olan derste, bir labirentten geçip hazineyi toplamak için ilmekler
+                kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda
+                öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
+                verilecek.
             Drawing Gardens with Loops:
               key: Sanatçıların Döngüleri
               name: Sanatçıların Döngüleri
+              description_teacher: Döngülere geri dönen öğrenciler, basit talimat
+                dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı
+                olan derste, bir labirentten geçip hazineyi toplamak için ilmekler
+                kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda
+                öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
+                verilecek.
             On the Move with Events:
               key: Play Lab' da Olaylar
               name: Play Lab' da Olaylar
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'
+                da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar.
+                Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin
+                tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın
+                ve yaratıcı olmanın zamanı!
             A Royal Battle with Events:
               key: Play Lab' da Olaylar
               name: Play Lab' da Olaylar
+              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da
+                etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
+                kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
+                için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
           lesson_groups:
             csf_sequencing:
               display_name: Sıralama
@@ -26977,3 +28280,59 @@ tr:
               name: Ders 14
             lesson15:
               name: Ders 15
+        k5-onlinepd-2021:
+          description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar
+            Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
+            öğrenin!
+          student_description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un
+            Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
+            öğrenin!
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: '"Bilgisayar Bilimi Temelleri Öğretimine" Hoşgeldiniz'
+              name: '"Bilgisayar Bilimi Temelleri Öğretimine" Hoşgeldiniz'
+            Understanding the Computer Science Fundamentals Courses:
+              key: Bilgisayar Bilimi Temelleri Derslerinin Anlaşılması
+              name: Bilgisayar Bilimi Temelleri Derslerinin Anlaşılması
+            Sequencing:
+              key: Sıralama
+              name: Sıralama
+            Loops:
+              key: Döngüler
+              name: Döngüler
+            Events:
+              key: Olaylar
+              name: Olaylar
+            Conditionals:
+              key: Koşullar
+              name: Koşullar
+            End of Course projects:
+              key: Kurs Sonu projeleri
+              name: Kurs Sonu projeleri
+            Functions:
+              key: Fonksiyonlar
+              name: Fonksiyonlar
+            Variables:
+              key: Değişkenler
+              name: Değişkenler
+            For Loops:
+              key: For Döngüleri
+              name: For Döngüleri
+            Sprite Lab:
+              key: Kukla Laboratuvarı
+              name: Kukla Laboratuvarı
+            Reviewing your reflections:
+              key: Yansımalarınızı Gözden Geçirme
+              name: Yansımalarınızı Gözden Geçirme
+            Next steps:
+              key: Sonraki adımlar
+              name: Sonraki adımlar
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: İlk adım
+            k5_basic_concepts_1:
+              display_name: Temel Kodlama Kavramları ve Öğretme Pratikleri
+            k5_diving_deeper_1:
+              display_name: 'Derinlemesine Dalma: Dersler E ve F'
+            k5_next_steps_1:
+              display_name: Sonraki Adımlar
