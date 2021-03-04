@@ -765,10 +765,11 @@ cs-CZ:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 drawSprites placement match:
@@ -2670,7 +2671,7 @@ cs-CZ:
         markdown: |
           # Sleduj digitální stopu
 
-          ## Jaké informace můžeš zanechávat ve svojí digitální stopě?
+          ## Jaké informace můžeš zanechávat ve své digitální stopě?
       csf_safety_in_my_online_neighborhood:
         markdown: |
           # Mé online sousedství
