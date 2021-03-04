@@ -1,0 +1,16 @@
+---
+ro:
+  data:
+    parameter_names:
+      actor: actor
+      color: culoare
+      counter: numărător
+      height: înălțime
+      honey: miere
+      left: stânga
+      length: lungime
+      min: min
+      points: puncte
+      size: dimensiune
+      speed: viteză
+      width: lăţime
