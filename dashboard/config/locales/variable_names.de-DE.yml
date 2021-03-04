@@ -1,0 +1,33 @@
+---
+de:
+  data:
+    variable_names:
+      Blue: Blau
+      Green: Grün
+      Red: Rot
+      actor: Figur
+      armlength: Armlänge
+      bodylength: Körperlänge
+      cats: alle Katzen
+      color: Farbe
+      counter: Zähler
+      dogs: alle Hunde
+      height: Höhe
+      honey: Honig
+      i: i
+      left: links
+      length: Länge
+      name: Name
+      nectar: Nektar
+      points: Punkte
+      random: zufällig
+      repeat: wiederhole
+      right: rechts
+      score: Punktestand
+      sides: Kanten
+      size: Größe
+      speed: Geschwindigkeit
+      variable: Variable
+      width: Breite
+      wizard: Zauberer
+      x: x
