@@ -38,7 +38,6 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
 
     @lesson_data = @lesson.summarize_for_student_lesson_plan
-    render 'lessons/student_lesson_plan'
   end
 
   # GET /lessons/1/edit
