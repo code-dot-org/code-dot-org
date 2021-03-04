@@ -1,1 +1,1 @@
-{"func":"isPressed","category":"micro:bit","modeOptionName":"*.isPressed","type":"readonlyproperty","tipPrefix":"[Button]."}
+{"func":"isPressed","category":"Circuit","modeOptionName":"*.isPressed","type":"readonlyproperty","tipPrefix":"[Button]."}
