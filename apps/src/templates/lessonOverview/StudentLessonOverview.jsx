@@ -4,8 +4,9 @@ import i18n from '@cdo/locale';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
@@ -34,7 +35,8 @@ class StudentLessonOverview extends Component {
     lesson: studentLessonShape.isRequired,
 
     // from redux
-    announcements: PropTypes.arrayOf(announcementShape)
+    announcements: PropTypes.arrayOf(announcementShape),
+    isSignedIn: PropTypes.bool.isRequired
   };
 
   linkWithQueryParams = link => {
@@ -76,7 +78,7 @@ class StudentLessonOverview extends Component {
   );
 
   render() {
-    const {lesson, announcements} = this.props;
+    const {lesson, announcements, isSignedIn} = this.props;
     return (
       <div>
         <div className="lesson-overview-header">
@@ -90,11 +92,13 @@ class StudentLessonOverview extends Component {
             <LessonNavigationDropdown lesson={lesson} />
           </div>
         </div>
-        <Announcements
-          announcements={announcements}
-          width={styleConstants['content-width']}
-          viewAs={ViewType.Student}
-        />
+        {isSignedIn && (
+          <Announcements
+            announcements={announcements}
+            width={styleConstants['content-width']}
+            viewAs={ViewType.Student}
+          />
+        )}
         <h1>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
@@ -104,7 +108,10 @@ class StudentLessonOverview extends Component {
         {lesson.overview && (
           <div>
             <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
-            <SafeMarkdown markdown={lesson.overview} />
+            <EnhancedSafeMarkdown
+              markdown={lesson.overview}
+              expandableImages={true}
+            />
           </div>
         )}
         {lesson.vocabularies.length > 0 && (
@@ -141,5 +148,6 @@ class StudentLessonOverview extends Component {
 export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 
 export default connect(state => ({
-  announcements: state.announcements || []
+  announcements: state.announcements || [],
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn
 }))(StudentLessonOverview);
