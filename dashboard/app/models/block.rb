@@ -66,7 +66,6 @@ class Block < ApplicationRecord
   end
 
   def self.properties_from_file(path, content)
-    return nil if ['weblab', 'gamelab', 'applab'].include? File.basename(File.dirname(path))
     block_config = JSON.parse(content)
     js_path = Pathname.new(path).sub_ext('.js')
     helper_code = File.exist?(js_path) ? File.read(js_path) : nil
