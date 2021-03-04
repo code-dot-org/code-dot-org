@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-02-27 20:46:23 UTC",
+    "serialized_at": "2021-03-01 22:40:18 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -342,7 +342,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.",
+        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the lesson.",
         "student_overview": "More nested loops! This time, you get to make some AMAZING drawing with nested loops.",
         "purpose": "In this online activity, students will create designs in Artist that they can proudly share with their loved ones.  \r\n\r\nThe purpose of this activity is to utilize nested loops as a way to inspire students with artistic minds to see coding as another creative outlet. This set of puzzles was built to develop critical thinking skills, an understanding of elementary geometry, and creativity -- all within the scope of nested loops!",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.\r\n - Consider what supports your students might need with turns and angles. ",
@@ -357,7 +357,7 @@
     {
       "key": "Nested Loops in Frozen",
       "name": "Nested Loops with Frozen",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -377,7 +377,7 @@
     {
       "key": "Functions: Songwriting",
       "name": "Songwriting",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
@@ -398,7 +398,7 @@
     {
       "key": "Functions in Minecraft",
       "name": "Functions in Minecraft",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
@@ -418,7 +418,7 @@
     {
       "key": "Functions in Harvester",
       "name": "Functions with Harvester",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
@@ -438,7 +438,7 @@
     {
       "key": "Functions in Artist",
       "name": "Functions with Artist",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
@@ -458,7 +458,7 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 18,
@@ -2999,7 +2999,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Little Bunny Foo Foo is being used here as an example only.  If your students know this song, feel free to use it.  Otherwise, choose an appropriate song that they might be more familiar with (either from music class or the radio.)\r\n\r\n  "
+            "markdown": "Baby Shark is being used here as an example only.  If your students know this song, feel free to use it.  Otherwise, choose an appropriate song that they might be more familiar with (either from music class or the radio.)\n\n**Key Gestures:**\n\n**Baby shark:** make a shark mouth with finger and thumb.\n\n**Mommy shark:** make a mouth with both hands, opening at the wrist.\n\n**Daddy shark:** make a big mouth with both of your arms.\n\n**Grandma shark:** like mama shark, but with fingers curled in.\n\n**Grandpa shark:** like papa shark, but with fingers curled in.\n\n**Hungry shark:** one hand on head like a fin, rubbing tummy with the other hand.\n\n**Little fish:** both hands together with fingers pointing forward, move from side to side.\n\n**Swim away:** pretend to swim.\n\n**Safe at last:** wipe forehead, and flick hand like removing sweat.\n\n\n\n\n  "
           }
         ]
       },
@@ -3012,7 +3012,7 @@
       "key": "f92bd484-5bb9-411e-ba94-98b2513e0d54",
       "position": 4,
       "properties": {
-        "description": "***Chorus:***\n\nLittle bunny Foo Foo<br/>\nHopping through the forest<br/>\nScooping up the field mice<br/>\nAnd bopping ‘em on the head<br/>\nDown came the Fairy<br/>\nAnd she said<br/>\n“Little bunny Foo Foo<br/>\nI don’t wanna see you<br/>\nScooping up the field mice<br/>\nAnd bopping ‘em on the head”*<br/>\n\n***Song:***\n\n*Chorus*\n\n*I’ll give you 3 chances.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*I’ll give you 2 chances.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*I’ll give you 1 chance.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*\"I gave you two chances.<br/>\nNow I’ll turn you into a goon!”<br/>\n(POOF!)<br/>\nAnd the moral of the story is:<br/>\nHare today, goon tomorrow!*\n\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\n\t- Stop the song once that happens, and explicitly highlight what just happened.\n\t\t- You defined the chorus.\n\t\t- You called the chorus.\n\t\t- They sang the chorus.\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
+        "description": "***Chorus:***\n\n*doo doo, doo doo doo doo*\n\n***Song:***\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n(Continuing on, if time permits, with \"Grandma shark\", \"Grandpa shark\", \"Hungry shark\", \"Little fish\", \"Swim away\", \"Swim faster\", \"Safe at last\".)\n\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\n\t- Stop the song once that happens, and explicitly highlight what just happened.\n\t\t- You defined the chorus.\n\t\t- You called the chorus.\n\t\t- They sang the chorus.\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
       },
       "seeding_key": {
         "activity_section.key": "f92bd484-5bb9-411e-ba94-98b2513e0d54",
@@ -3026,7 +3026,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To hit this point home, you can look up the lyrics for some popular songs on the Internet. Show the students that the standard for repeating lyrics is to define the chorus at the top and call it from within the body of the song.\r\n"
+            "markdown": "Call out the difference between a function (“doo doo”) and a loop (“baby shark doo doo” x 3) - or ask your students if they can tell you the difference between them.\n\nTo hit this point home, you can look up the lyrics for some popular songs on the Internet. Show the students that the standard for repeating lyrics is to define the chorus at the top and call it from within the body of the song.\n"
           }
         ]
       },
@@ -3079,7 +3079,7 @@
       "key": "88cccb48-efc0-4649-886d-c649589769b3",
       "position": 2,
       "properties": {
-        "description": "\n**Directions:**\n\n- Divide into groups of 4, 5, or 6.\n- Give each group several copies of the **Songwriting Worksheet**.\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\n- Challenge the class to identify (and write down) the chorus.\n- Compare results from each group.\n\nDid everyone get the same thing?\nSing your choruses together to find out!\nPlay this game over and over until the class has little trouble identifying the choruses.\n\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
+        "description": "\n**Directions:**\n\n- Divide into groups of 4, 5, or 6.\n- Give each group several copies of the ***Songwriting Worksheet**.\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\n- Challenge the class to identify (and write down) the chorus.\n- Compare results from each group.\n\nDid everyone get the same thing?\nSing your choruses together to find out!\nPlay this game over and over until the class has little trouble identifying the choruses.\n\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
       },
       "seeding_key": {
         "activity_section.key": "88cccb48-efc0-4649-886d-c649589769b3",
@@ -3096,7 +3096,7 @@
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.\r\n"
           }
         ],
-        "name": "Flash Chat/Journaling"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "06b4ee77-0a27-48bc-9dca-d55b530d1ce6",
@@ -3129,7 +3129,7 @@
       "key": "0abea6de-f093-42f4-a3de-e84fba11870e",
       "position": 1,
       "properties": {
-        "description": "Hand out the **Songwriting Assessment worksheet** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "Hand out the ***Songwriting Assessment worksheet** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "0abea6de-f093-42f4-a3de-e84fba11870e",
@@ -3523,7 +3523,7 @@
       "key": "4c5a950e-1fc0-4ec3-9eda-a4a8e7631801",
       "position": 1,
       "properties": {
-        "description": "Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the **Final Project Design Worksheet** and the **CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \n\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Final Project Design Worksheet** and the ***CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \n\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -3562,7 +3562,7 @@
       "key": "281f3680-418c-4e9f-b18f-dedc11afe3f2",
       "position": 1,
       "properties": {
-        "description": "Students will use this day to build an initial version of their project.\n\nEquipped with their **End of Course Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their **End of Course Project Guide** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own **End of Course Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "Students will use this day to build an initial version of their project.\n\nEquipped with their ***End of Course Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their ***End of Course Project Guide** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***End of Course Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3603,7 +3603,7 @@
       "key": "943225fd-17d1-40af-884c-76370ba25b32",
       "position": 3,
       "properties": {
-        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like **Google Slides**. For other presentation ideas, visit [72 Creative Ways for Your Students to Show What They Know](http://minds-in-bloom.com/72-creative-ways-for-students-to-show/) - Website.\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present:\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
+        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like **Google Slides**. For other presentation ideas, visit ***72 Creative Ways for Your Students to Show What They Know** - Website.\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present:\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
       },
       "seeding_key": {
         "activity_section.key": "943225fd-17d1-40af-884c-76370ba25b32",
@@ -5738,7 +5738,7 @@
       "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5764,7 +5764,7 @@
       "chapter": 81,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5790,7 +5790,7 @@
       "chapter": 82,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Nested Loops",
         "level_keys": [
@@ -5816,7 +5816,7 @@
       "chapter": 83,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5842,7 +5842,7 @@
       "chapter": 84,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5868,7 +5868,7 @@
       "chapter": 85,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5894,7 +5894,7 @@
       "chapter": 86,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5920,7 +5920,7 @@
       "chapter": 87,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5946,7 +5946,7 @@
       "chapter": 88,
       "position": 9,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5972,7 +5972,7 @@
       "chapter": 89,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5999,7 +5999,7 @@
       "chapter": 90,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6025,7 +6025,7 @@
       "chapter": 91,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6051,7 +6051,7 @@
       "chapter": 92,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6077,7 +6077,7 @@
       "chapter": 93,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6103,7 +6103,7 @@
       "chapter": 94,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6363,7 +6363,7 @@
       "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Songwriting - Functions Unplugged Activity",
         "level_keys": [
@@ -7457,7 +7457,7 @@
       "chapter": 146,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example Projects",
         "level_keys": [
@@ -7483,7 +7483,7 @@
       "chapter": 147,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -9591,6 +9591,18 @@
       "seeding_key": {
         "resource.key": "design-process"
       }
+    },
+    {
+      "name": "72 Creative Ways for Your Students to Show What They Know",
+      "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
+      "key": "72_creative_ways_for_your_students_to_show_what_they_know",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "72_creative_ways_for_your_students_to_show_what_they_know"
+      }
     }
   ],
   "lessons_resources": [
@@ -9748,6 +9760,12 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "design-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "72_creative_ways_for_your_students_to_show_what_they_know"
       }
     }
   ],

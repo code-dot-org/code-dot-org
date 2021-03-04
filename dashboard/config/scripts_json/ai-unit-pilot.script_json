@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-01 17:59:37 UTC",
+    "serialized_at": "2021-03-03 16:42:17 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -732,23 +732,23 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Which Pixar Character Are You?",
+        "progression": "What is your Ideal Vacation?",
         "level_keys": [
-          "ml-models in applab-example app"
+          "ml-models in applab-vacation example"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-example app"
+          "ml-models in applab-vacation example"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       },
       "level_keys": [
-        "ml-models in applab-example app"
+        "ml-models in applab-vacation example"
       ]
     },
     {
@@ -1282,6 +1282,56 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "What Is Your Net Worth?",
+        "level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "csd-unit-5-goldilocks-principle-app-lab"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "What Is Your Net Worth?",
+        "level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "csd-unit-5-goldilocks-principle-ai-lab"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Medical Priority App (external app)",
         "level_keys": [
           "ml-model cards-medical app"
@@ -1302,7 +1352,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1495,9 +1545,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-example app",
+        "level.key": "ml-models in applab-vacation example",
         "script_level.level_keys": [
-          "ml-models in applab-example app"
+          "ml-models in applab-vacation example"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -1731,6 +1781,28 @@
           "ml-use model card-example2E"
         ],
         "lesson.key": "lesson11",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-unit-5-goldilocks-principle-app-lab",
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-unit-5-goldilocks-principle-ai-lab",
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab"
+        ],
+        "lesson.key": "lesson16",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
