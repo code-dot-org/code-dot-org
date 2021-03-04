@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-03 19:06:39 UTC",
+    "serialized_at": "2021-03-04 21:11:46 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -345,7 +345,7 @@
     {
       "key": "Events: The Big Event",
       "name": "The Big Event",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -365,7 +365,7 @@
     {
       "key": "Build a Flappy Game",
       "name": "Build a Flappy Game",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -385,7 +385,7 @@
     {
       "key": "Events in Play Lab",
       "name": "Chase Game with Events",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
@@ -405,7 +405,7 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
@@ -425,7 +425,7 @@
     {
       "key": "End of Course Project: Create a Play Lab Game",
       "name": "End of Course Project",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
@@ -3843,7 +3843,7 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging with the Step Button",
         "level_keys": [
@@ -3869,7 +3869,7 @@
       "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3895,7 +3895,7 @@
       "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3921,7 +3921,7 @@
       "chapter": 19,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3947,7 +3947,7 @@
       "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3973,7 +3973,7 @@
       "chapter": 21,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3999,7 +3999,7 @@
       "chapter": 22,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4025,7 +4025,7 @@
       "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4052,7 +4052,7 @@
       "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -4078,7 +4078,7 @@
       "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4104,7 +4104,7 @@
       "chapter": 26,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4130,7 +4130,7 @@
       "chapter": 27,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -8528,8 +8528,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
@@ -8754,8 +8754,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
