@@ -294,7 +294,7 @@ vi:
       project_gallery: "Dự án"
       sections: "Mục"
       help_support: "Giúp đỡ và hỗ trợ"
-      report_bug: "Báo lỗi"
+      report_bug: "Báo cáo sự cố"
       teacher_community: "Cộng đồng giáo viên"
       professional_learning: "Học tập nâng cao chuyên môn"
       documentation: "Tài liệu"
@@ -322,7 +322,7 @@ vi:
       learn: "Học"
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
-      about: "Thông tin"
+      about: "về chúng tôi"
       legal_privacy: "Chính sách riêng tư"
       legal_tos: "Các điều khoản của Code.org"
     user:
@@ -334,7 +334,7 @@ vi:
       settings: 'Cài đặt tài khoản'
       logout: 'Đăng xuất'
       signin: 'Đăng nhập'
-      signup: 'Tạo tài khoản'
+      signup: 'Tạo một tài khoản'
       already_registered: 'Đã đăng ký?'
       pair_programming: 'Lập trình theo cặp'
       team: 'Nhóm'
@@ -352,7 +352,7 @@ vi:
       eval: 'Eval'
       flappy: 'Flappy bird'
       frozen: 'Bộ phim Frozen'
-      gamelab: 'Kho Trò chơi'
+      gamelab: 'Phòng thí nghiệm trò chơi'
       gamelab_jr: 'Kho Trò chơi (beta)'
       gumball: 'Thế giới kì diệu của Gumball'
       iceage: 'Kỉ băng hà'
@@ -364,6 +364,7 @@ vi:
       scratch: 'Scratch'
       starwars: 'Cuộc Chiến Giữa Các Vì Sao'
       weblab: 'Kho Web'
+      view_all: 'Xem tất cả các dự án ...'
     popup:
       progress_for_user: "Tiến trình của %{name}"
       progress: 'Qua trình của bạn'
@@ -598,7 +599,7 @@ vi:
       title: "Bộ sưu tập"
       body: "Xem một bộ sưu tập các ứng dụng và họa sĩ thiết kế hình ảnh được tạo bởi người dùng của chúng tôi"
     gamelab:
-      title: "Kho Trò chơi"
+      title: "Phòng thí nghiệm trò chơi"
       body: "Game Lab là một môi trường lập trình, nơi bạn có thể tạo các hình động và trò chơi đơn giản với các đối tượng và các nhân vật tương tác với nhau."
       audience: "13 tuổi trở lên"
       cta: "Học cách làm"
@@ -907,7 +908,7 @@ vi:
         opt_in_yes: 'Đồng ý'
         opt_in_no: 'Không'
   cookie_banner:
-    accept: 'Tôi đồng ý'
+    accept: 'tôi đồng ý'
   copy: 'Sao chép'
   parent_email_banner:
     text: "**Bạn là cha mẹ hay người giám hộ?** Hãy liên kết email của bạn với tài khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"

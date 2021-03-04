@@ -278,9 +278,11 @@ sk-SK:
         - text: _____ je _____ _____.
         - text: Eugene je _____ mesto.
         questions:
-        - text: Seattle je veľké mesto.<br/>Eugene je stredne veľké mesto<br/>Hillview
-            je malé mesto.
+        - text: "Seattle je veľké mesto.  \nEugene je stredne veľké mesto.  \nHillview
+            je malé mesto.  "
         title: Vyber správnu odpoveď
+        content1: Tu sú tri vety. Ktoré z nižšie uvedených šablón správne zodpovedajú
+          rovnakému vzoru , ako majú tri vety?
       4-5 Crowdsourcing Multi 1:
         answers:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
@@ -929,15 +931,15 @@ sk-SK:
           * [Pracovný zošit](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
       CSD U3 Lesson Overview 11:
         markdown: "# Prehľad\n\nV tejto lekcii použijeme logické výrazy na porovnanie
-          aktuálnej hodnoty vlastnosti „sprite“ objektu s jej cieľovou hodnotou. Toto
-          porovnanie použijeme na určenie toho, či „sprite“ dosiahol určený bod na
-          obrazovke, narástol do definovanej veľkosti alebo dosiahol inú hodnotu.
-          Nakoniec pridáme podmienkové výroky, \"if\", v ktorých logické výrazy použíjeme
+          aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou.
+          Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený
+          bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu.
+          Nakoniec pridáme podmienkové výroky, \"ak\", v ktorých logické výrazy použijeme
           ako základ pre rozhodovanie\n\n## Slovník\n\n* **Logický výraz** - v programovaní
           ide o výraz, ktorý hodnotí, či ide o pravdu alebo nepravdu. \n* **Podmienkový
-          výrok („If“ výrok)** - bežný programovací nástroj, ktorý definuje podmienky.\n\n##
+          výrok („Ak“ výrok)** - bežný programovací nástroj, ktorý definuje podmienky.\n\n##
           Nový kód\n\n* [If statement](//studio.code.org/docs/gamelab/ifBlock/) –
-          „if“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
+          „ak“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
           – znamienko „menší ako“\n* [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)
           – znamienko „nerovná sa“\n* [Less than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
           – znamienko „menší alebo rovný ako“\n* [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)
@@ -1078,7 +1080,7 @@ sk-SK:
           [Vytvor svoju vlastnú hru - Spätná väzba](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)\n"
       CSD U3 SFLP Velocity:
         markdown: "# Prehľad\n\nPo krátkom zopakovaní toho, ako sa kód pre počítanie
-          používa na nastavenie pohybu „sprite“ objektu, spoznáš  vlastnosti, ktoré
+          používa na nastavenie pohybu  objektu „postava“, spoznáš  vlastnosti, ktoré
           priamo určujú jeho rýchlosť a spôsob otáčania sa. Používaním týchto vlastností
           sa naučíš všetko potrebné na vytvorenie jednoduchej plošinovky. \n\n## Nový
           kód\n* [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)\n*
@@ -3636,7 +3638,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018:
@@ -3655,7 +3657,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -3674,7 +3676,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018_2019_2020:
@@ -3693,7 +3695,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_fwp2_predict1:

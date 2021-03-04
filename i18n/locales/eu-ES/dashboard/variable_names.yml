@@ -1,0 +1,23 @@
+eu:
+  data:
+    variable_names:
+      actor: aktore
+      cats: katu guztiak
+      counter: kontagailua
+      dogs: txakur guztiak
+      height: Altuera
+      honey: eztia
+      left: ezkerrera
+      length: luzera
+      name: izena
+      nectar: nektar
+      points: puntuak
+      random: ausazkoa
+      repeat: errepikatu
+      right: eskuinera
+      score: markagailua
+      size: tamaina
+      speed: abiadura
+      variable: aldagaia
+      wizard: aztia
+      x: x
