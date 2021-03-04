@@ -217,7 +217,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test 'lesson edit summary does not preprocess markdown' do
     lesson = create :lesson, lesson_group: create(:lesson_group)
-    Services::MarkdownPreprocessor.expects(:process).never
+    Services::MarkdownPreprocessor.expects(:process!).never
     lesson.summarize_for_lesson_edit
   end
 
