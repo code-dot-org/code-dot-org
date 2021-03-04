@@ -1246,6 +1246,18 @@
         "frozen line": {
           "run": "Dasturingizni sinab ko'rish uchun \"Ishga tushirish\" tugmachasini bosing!",
           "move_elsa_forward": "Elzani oldinga siljitish uchun \"Move Forward\" (\"Oldinga siljitish\") blokini torting va \"When Run\" (\"Ishga tushirilganda\") blokining ostiga qo‘ying"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Ekran yashil rangda bo'ldimi? Agar shunday bo'lsa, \"Finish\" tugmasini bosing. Agar yo'q bo'lsa, 'Reset'  tugmachasini bosing, kodingizni o'zgartiring va yana \"Ishga tushirish\" tugmasini bosing."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Siz endi dizayn rejimidasiz"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Tayyor bo'lgach, dasturingizni sinab ko'rish uchun \"Ishga tushirish\" tugmasini bosing."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Harakatni boshlash uchun \"Ishga tushirish\" (Run) tugmachasini bosing."
         }
       }
     }
