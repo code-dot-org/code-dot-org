@@ -1,0 +1,13 @@
+hy:
+  data:
+    parameter_names:
+      actor: դերասան
+      counter: counter
+      height: բարձրություն
+      honey: մեղր
+      left: ձախ
+      length: length
+      min: րոպե
+      points: կետեր
+      size: չափ
+      speed: արագություն
