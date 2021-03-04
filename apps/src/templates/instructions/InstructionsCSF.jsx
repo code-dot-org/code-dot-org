@@ -725,8 +725,6 @@ export default connect(
     return {
       overlayVisible: state.instructions.overlayVisible,
 
-      skinId: state.pageConstants.skinId,
-
       aniGifURL: state.pageConstants.aniGifURL,
 
       inputOutputTable: state.pageConstants.inputOutputTable,

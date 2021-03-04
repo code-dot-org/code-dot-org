@@ -125,6 +125,7 @@ class LevelDetailsDialog extends Component {
             this.setState({maxHeight})
           }
           unconnected={true}
+          skinId={level.skin}
         />
       );
     }

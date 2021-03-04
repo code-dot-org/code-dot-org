@@ -189,7 +189,8 @@ class TopInstructions extends Component {
     isCSF: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
-    resizable: PropTypes.bool
+    resizable: PropTypes.bool,
+    skinId: PropTypes.string
   };
 
   static defaultProps = {
@@ -771,7 +772,7 @@ class TopInstructions extends Component {
                     setInstructionsRenderedHeight={
                       this.props.setInstructionsRenderedHeight
                     }
-                    skinId={'iceage'}
+                    skinId={this.props.skinId}
                     hideOverlay={() => {}}
                     showNextHint={() => {}}
                     collapsible={this.props.collapsible}
@@ -882,7 +883,8 @@ export default connect(
     shortInstructions2: state.instructions.shortInstructions2,
     isRtl: state.isRtl,
     widgetMode: state.pageConstants.widgetMode,
-    unconnected: false
+    unconnected: false,
+    skinId: state.pageConstants.skinId,
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
