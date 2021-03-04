@@ -117,6 +117,28 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
                               params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
 
+  # limit access to student lesson plans in pilots
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              name: 'signed out user cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :student,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :teacher,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              name: 'teacher without pilot access cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_student},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot student lesson plan'
+
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {
