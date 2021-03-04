@@ -1,0 +1,7 @@
+{
+  "category": "Sprites",
+  "config": {
+    "docFunc": "codestudio_spriteName",
+    "func": "sprite_variables_get"
+  }
+}
