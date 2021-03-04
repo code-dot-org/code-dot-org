@@ -1045,12 +1045,17 @@ class Script < ApplicationRecord
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-      # More all lessons into the last lesson group so that we do not delete
+      # More all lessons into a temporary lesson group so that we do not delete
       # the lesson entries unless the lesson has been entirely removed from the
       # script
-      last_lesson_group = script.lesson_groups.last
+      temp_lg = LessonGroup.create!(
+        key: 'temp-will-be-deleted',
+        script: script,
+        user_facing: false,
+        position: script.lesson_groups.length
+      )
       script.lessons.each do |l|
-        l.lesson_group = last_lesson_group
+        l.lesson_group = temp_lg
         l.save!
       end
 
