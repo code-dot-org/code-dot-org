@@ -1,0 +1,35 @@
+is:
+  data:
+    variable_names:
+      Blue: Blár
+      Green: Grænn
+      Red: Rauður
+      actor: leikmaður
+      armlength: armlengd
+      binary: tvíund
+      bodylength: líkamslengd
+      cats: allir kettir
+      color: litur
+      counter: teljari
+      direction: stefna
+      dogs: allir hundar
+      height: hæð
+      honey: hunang
+      i: i
+      left: vinstri
+      length: lengd
+      name: heiti
+      nectar: blómasafi
+      nectars: blómasafar
+      points: stig
+      random: eitthvað
+      repeat: endurtaka
+      right: hægri
+      score: stig
+      sides: hliðar
+      size: stærð
+      speed: hraða
+      variable: breyta
+      width: breidd
+      wizard: galdrakarl
+      x: x
