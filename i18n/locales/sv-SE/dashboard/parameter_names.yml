@@ -1,0 +1,15 @@
+sv:
+  data:
+    parameter_names:
+      actor: aktör
+      color: färg
+      counter: räknare
+      height: höjd
+      honey: honung
+      left: vänster
+      length: längd
+      min: min
+      points: poäng
+      size: storlek
+      speed: hastighet
+      width: bredd
