@@ -1,0 +1,17 @@
+sk:
+  data:
+    parameter_names:
+      actor: postava
+      color: farba
+      counter: počítadlo
+      height: výška
+      honey: med
+      left: vľavo
+      length: dĺžka
+      min: min
+      points: body
+      radius: polomer
+      sides: Strany
+      size: veľkosť
+      speed: rýchlosť
+      width: šírka
