@@ -1,0 +1,21 @@
+---
+ne:
+  data:
+    variable_names:
+      actor: नायक
+      counter: counter
+      height: height
+      honey: honey
+      left: बाँया
+      length: length
+      name: name
+      nectar: nectar
+      points: points
+      repeat: दोहोरिएको
+      right: दाँया
+      score: score
+      size: size
+      speed: speed
+      variable: चल
+      wizard: wizard
+      x: x
