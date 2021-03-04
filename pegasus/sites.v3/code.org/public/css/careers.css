@@ -1,0 +1,305 @@
+.careers-header {
+  border: 1px solid rgba(0, 173, 178, 0.25); /* gives the illusion of < 1px */
+  border-left: 0;
+  border-right: 0;
+  padding: 24px 0;
+}
+
+.careers__banner,
+.careers__banner--faq {
+  align-items: center;
+  background: url('/images/careers-at-code/jobs-banner.jpg') top right/contain no-repeat #00adbc;
+  display: flex;
+  margin-bottom: 32px;
+  padding: 18px 24px;
+}
+
+.careers__banner h1,
+.careers__banner--faq h2,
+.careers__banner--faq h3 {
+  color: #ffffff;
+  margin: 0;
+  width: 70%;
+}
+
+.careers__banner--faq a:link,
+.careers__banner--faq a:visited {
+  color: #ffffff;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+.careers__banner--faq i {
+  color: #ffffff;
+  font-size: 72px;
+  padding-right: 24px;
+}
+
+.careers__intro-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.careers__intro-text p {
+  color: #000000;
+  font-weight: bold;
+}
+
+.careers__explore {
+  align-self: center;
+}
+
+.careers__explore-button {
+  font-family: 'Gotham 7r', sans-serif;
+  font-size: 16px;
+  padding: 6px 24px;
+}
+
+.careers__values-icon {
+  height: 65px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.careers__values-group {
+  display: flex;
+  float: left;
+  height: 260px;
+  max-width: 388px;
+}
+
+.careers__section-container {
+  min-height: 100px;
+  overflow: hidden;
+}
+
+.careers__values-tile {
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 900;
+  float: left;
+  height: 250px;
+  overflow-wrap: anywhere;
+  width: 100%;
+  color: white;
+  margin: 4px;
+  padding: 7px;
+  background: linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.26) 0%,
+    rgba(255, 255, 255, 0) 34.9%
+  );
+}
+
+.careers__benefits-container {
+  min-height: 100px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.careers__benefits-tile-container {
+  margin: 4px;
+  max-width: 380px;
+  float: left;
+  height: 80px;
+  display: flex;
+  width: 100%;
+}
+
+.careers__benefits-tile {
+  color: white;
+  font-weight: 900;
+  font-size: 17px;
+  width: 100%;
+  height: 80px;
+  padding: 19px;
+}
+
+.careers__benefits-decorator {
+  color: white;
+  float: left;
+  width: 80px;
+  height: 80px;
+  padding: 15px;
+  position: relative;
+}
+
+.careers__benefits-icon {
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.careers__benefits-left {
+  margin-right: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(243, 243, 243, 0) 100%
+  );
+}
+
+.careers__benefits-right {
+  margin-left: 8px;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(243, 243, 243, 0) 100%
+  );
+}
+
+.careers__teal {
+  background-color: #00adbc;
+}
+
+.careers__purple {
+  background-color: #7665a0;
+}
+
+.careers__orange {
+  background-color: #ffa400;
+}
+
+.careers__cyan {
+  background-color: #0094ca;
+}
+
+.careers__green {
+  background-color: #b9bf15;
+}
+
+.careers__dark-gray {
+  background-color: #4d575f;
+}
+
+#lever-jobs-container {
+  columns: 2;
+  column-width: auto;
+}
+
+.lever-team {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.lever-team:nth-of-type(1n) .lever-team-title { color: #0094CA; }
+.lever-team:nth-of-type(2n) .lever-team-title { color: #B9BF15; }
+.lever-team:nth-of-type(3n) .lever-team-title { color: #01AEBC; }
+.lever-team:nth-of-type(4n) .lever-team-title { color: #FFA400; }
+
+.lever-team[data-team="Future Openings"] {
+  display: none;
+}
+
+.lever-team ul {
+  margin: 0;
+}
+
+ul.lever-team li {
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.lever-team-title {
+  font-size: 18px;
+}
+
+.lever-job {
+  padding-left: 0;
+  text-indent: 0;
+  padding: 10px 0;
+}
+
+.lever-job-tag {
+  color: #737373;
+  display: block;
+}
+
+ul li:before {
+  content: "";
+}
+
+.careers__future {
+  margin: 10px 0;
+  margin-bottom: 0;
+}
+
+.careers__team-photos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 24px 0;
+}
+
+.careers__team-photos img {
+  max-height: 198px;
+  max-width: 100%;
+  margin: 12px 0;
+}
+
+.careers__team-photos img:first-of-type {
+  margin-right: 12px;
+}
+
+@media screen and (max-width: 970px) {
+
+  .careers__banner {
+    background-position-x: 125%;
+  }
+
+  .careers__banner h1 {
+    width: 55%;
+  }
+
+  .careers__banner--faq {
+    background-position: top right;
+  }
+
+  .careers__banner--faq h2,
+  .careers__banner--faq h3 {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 600px) and (min-width: 470px) {
+
+  .careers__banner {
+    background-position: top right;
+  }
+
+  .careers__banner h1 {
+    max-width: 70%;
+    min-width: 60%;
+    width: auto;
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+
+  .careers__banner--faq {
+    background: #00adbc;
+  }
+
+  .careers__banner--faq h2,
+  .careers__banner--faq h3 {
+    width: 100%;
+  }
+
+  #lever-jobs-container {
+    columns: 1;
+  }
+
+}
+
+@media screen and (max-width: 475px) {
+
+  .careers__banner {
+    padding: 12px;
+  }
+
+} 
