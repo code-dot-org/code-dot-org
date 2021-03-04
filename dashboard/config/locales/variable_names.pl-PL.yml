@@ -1,0 +1,38 @@
+---
+pl:
+  data:
+    variable_names:
+      Blue: Niebieska/Niebieskie
+      Green: Zielona/Zielone
+      Red: Czerwona/Czerwone
+      actor: postać
+      armlength: armlength
+      binary: binarny
+      birds: ptaki
+      bodylength: bodylength
+      cats: koty
+      color: kolor
+      counter: licznik
+      direction: kierunek
+      dogs: psy
+      height: wysokość
+      honey: miód
+      i: i
+      left: w lewo
+      length: długość
+      name: nazwa
+      nectar: nektar
+      nectars: nektary
+      points: punkty
+      random: losowy
+      repeat: powtarzaj
+      right: w prawo
+      score: wynik
+      shout: krzyczeć
+      sides: boki
+      size: rozmiar
+      speed: prędkość
+      variable: zmienna
+      width: szerokość
+      wizard: kreator
+      x: x
