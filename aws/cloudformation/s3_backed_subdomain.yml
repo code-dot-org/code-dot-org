@@ -61,6 +61,8 @@ Resources:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
+        Aliases:
+          - !Sub '${Subdomain}.${Domain}'
         Enabled: true
         DefaultCacheBehavior:
           # Use the Managed-CachingOptimized policy from
