@@ -1081,15 +1081,15 @@
         },
         "outbreak1": {
           "wandering": "movimento casuale",
-          "recovering": "recupero"
+          "recovering": "guarigione"
         },
         "outbreak2": {
           "wandering": "movimento casuale",
-          "recovering": "recupero"
+          "recovering": "guarigione"
         },
         "outbreak3": {
           "wandering": "movimento casuale",
-          "recovering": "recupero"
+          "recovering": "guarigione"
         },
         "outbreak4": {
           "wandering": "movimento casuale",
@@ -1104,16 +1104,16 @@
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
           "patrolling": "pattugliamento",
-          "recovering": "recupero",
-          "moving with arrow keys": "muovendosi con i tasti freccia"
+          "recovering": "guarigione",
+          "moving with arrow keys": "movimento con tasti freccia"
         },
         "outbreak5": {
           "wandering": "movimento casuale",
-          "recovering": "recupero"
+          "recovering": "guarigione"
         },
         "outbreak6": {
           "wandering": "movimento casuale",
-          "recovering": "recupero"
+          "recovering": "guarigione"
         },
         "outbreak7": {
           "wandering": "movimento casuale",
@@ -1127,9 +1127,9 @@
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
           "patrolling": "pattugliamento",
-          "recovering": "recupero",
-          "moving left and right": "spostarsi a sinistra e a destra",
-          "moving with arrow keys": "muovendosi con i tasti freccia"
+          "recovering": "guarigione",
+          "moving left and right": "movimento sinistra-destra",
+          "moving with arrow keys": "movimento con tasti freccia"
         },
         "outbreak8": {
           "wandering": "movimento casuale",
@@ -1143,9 +1143,9 @@
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
           "patrolling": "pattugliamento",
-          "recovering": "recupero",
-          "moving left and right": "spostarsi a sinistra e a destra",
-          "moving with arrow keys": "muovendosi con i tasti freccia"
+          "recovering": "guarigione",
+          "moving left and right": "movimento sinistra-destra",
+          "moving with arrow keys": "movimento con tasti freccia"
         },
         "outbreak_freeplay": {
           "wandering": "movimento casuale",
@@ -1159,9 +1159,9 @@
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
           "patrolling": "pattugliamento",
-          "recovering": "recupero",
-          "moving left and right": "spostarsi a sinistra e a destra",
-          "moving with arrow keys": "muovendosi con i tasti freccia"
+          "recovering": "guarigione",
+          "moving left and right": "movimento sinistra-destra",
+          "moving with arrow keys": "movimento con tasti freccia"
         },
         "CourseE_Project_SpriteLab_2020": {
           "wandering": "movimento casuale",
@@ -1192,7 +1192,7 @@
           "wandering": "movimento casuale"
         },
         "outbreak_freeplay_basic": {
-          "recovering": "recupero",
+          "recovering": "guarigione",
           "wandering": "movimento casuale",
           "moving east": "spostamento verso est",
           "spinning left": "rotazione anti-oraria",
@@ -1200,12 +1200,12 @@
           "shrinking": "contrazione",
           "growing": "crescita",
           "moving south": "spostamento verso sud",
-          "moving left and right": "spostarsi a sinistra e a destra",
+          "moving left and right": "movimento sinistra-destra",
           "moving north": "spostamento verso nord",
           "jittering": "pulsazione",
           "moving west": "spostamento verso ovest",
           "patrolling": "pattugliamento",
-          "moving with arrow keys": "muovendosi con i tasti freccia"
+          "moving with arrow keys": "movimento con tasti freccia"
         }
       }
     }
