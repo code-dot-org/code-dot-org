@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-01 18:16:15 UTC",
+    "serialized_at": "2021-03-03 16:59:21 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -1867,7 +1867,7 @@
       "key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
       "position": 3,
       "properties": {
-        "description": "If students are not working in pairs they should still discuss the discuss with a neighbor.\n\n[slide] **Discuss:** \n\n\n* How many lists do you think are needed to make this app work?\n\t* Only one list is needed. It stores all of the reminders.\n\n* What programming patterns with lists do you think you'll need to use? \n\t* This app uses the List Scrolling pattern. \n"
+        "description": "If students are not working in pairs they should still discuss the discuss with a neighbor.\n\n[slide] **Discuss:** \n\n\n* *How many lists do you think are needed to make this app work?*\n\t* Only one list is needed. It stores all of the reminders.\n\n* *What programming patterns with lists do you think you'll need to use?* \n\t* This app uses the List Scrolling pattern. \n"
       },
       "seeding_key": {
         "activity_section.key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
@@ -2152,7 +2152,7 @@
       "key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
       "position": 6,
       "properties": {
-        "description": "[slide] \n **Discuss:** How does a loop help when running similar simulations?*\n\n**Discussion Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
+        "description": "[slide] \n **Discuss:** *How does a loop help when running similar simulations?*\n\n**Discussion Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
@@ -2187,7 +2187,7 @@
       "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
       "position": 9,
       "properties": {
-        "description": "[slide] **Discuss:** Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
+        "description": "[slide] **Discuss:** *Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
       },
       "seeding_key": {
         "activity_section.key": "c862e5d9-df4a-4504-94b6-dd974574b589",
@@ -2210,7 +2210,7 @@
       "key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
       "position": 2,
       "properties": {
-        "description": "[slide] \n **Discuss:** *What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
+        "description": "[slide] \n **Discuss:** *What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
@@ -2218,19 +2218,8 @@
       }
     },
     {
-      "key": "3e39fb67-ced6-448c-ba71-4266b8df6b2e",
-      "position": 3,
-      "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
-      },
-      "seeding_key": {
-        "activity_section.key": "3e39fb67-ced6-448c-ba71-4266b8df6b2e",
-        "lesson_activity.key": "8329da4e-675d-4656-836c-21f1fabac747"
-      }
-    },
-    {
       "key": "3b1b3598-d91e-4630-88ac-d0adbdc3946a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Working with for loops can be a little tricky. We'll have more opportunities to practice combining loops and lists together to make even more powerful apps.",
         "remarks": true
@@ -2242,7 +2231,7 @@
     },
     {
       "key": "c7718389-7ce6-41d2-82e8-be19806ee631",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -2253,7 +2242,7 @@
     },
     {
       "key": "9865749b-36a9-44b1-bb53-8364b24782f7",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think back on the Font Tester App. Can you think of an example of another app or feature of an app which would use a loop to control different elements on a screen?",
         "name": "Assessment: Check For Understanding\r"
@@ -2545,7 +2534,7 @@
       "key": "cdaee7b6-c2a4-405d-9ec3-2b4ef0f2ed11",
       "position": 3,
       "properties": {
-        "description": "* Where (if at all) do you think this app is using a loop?  \t\n* Where (if at all) do you think this app is using a list?\n\n**Discussion Goals:**\n\nWhere (if at all) do you think this app is using a list?\n\n* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\n\nWhere (if at all) do you think this app is using a loop?\n\n* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\n",
+        "description": "* *Where (if at all) do you think this app is using a loop?*\n* *Where (if at all) do you think this app is using a list?*\n\n**Discussion Goals:**\n\nWhere (if at all) do you think this app is using a list?\n\n* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\n\nWhere (if at all) do you think this app is using a loop?\n\n* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\n",
         "progression_name": "Try the Lock Screen Maker"
       },
       "seeding_key": {
