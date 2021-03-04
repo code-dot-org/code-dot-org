@@ -112,8 +112,8 @@ export default class UploadImageDialog extends React.Component {
           />
           <HelpTip>
             <p>
-              Click if you want the image to be able to be enlarged in a dialog
-              over the page.
+              Check if you want the image to be able to be enlarged in a dialog
+              over the page when clicked.
             </p>
           </HelpTip>
         </label>
