@@ -9,6 +9,15 @@ Description:
   2. CloudFront distribution with the domain of the S3 Bucket as origin (ie, cdo-tts.s3.amazonaws.com)
   3. S3 Bucket with a BucketPolicy which grants global read access (ie, cdo-tts)
  
+  Notes:
+
+  - The resources provisioned by this template are not environment-specific;
+    each subdomain should be provisioned once and then used by all
+    environments, including test and development.
+  - Changes to this template are not automatically applied by our Continuous
+    Integration / Deployment process, and will need to be manually applied to
+    each stack that's using it.
+
   For more, see:
  
   https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
