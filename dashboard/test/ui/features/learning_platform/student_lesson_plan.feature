@@ -40,3 +40,6 @@ Feature: Student Lesson Plan
     And I wait until element "a:contains(All the Migrated Things)" is visible
     And I click selector "a:contains(All the Migrated Things)"
     And I wait until I am on "http://studio.code.org/s/allthemigratedthings?no_redirect=true"
+    And I wait until element "#ui-test-lesson-resources" is visible
+    And I click selector "#ui-test-lesson-resources"
+    Then I wait until I am on "http://localhost-studio.code.org:3000/s/allthemigratedthings?no_redirect=true"
