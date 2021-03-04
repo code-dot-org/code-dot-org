@@ -693,7 +693,13 @@
   dashboard_students_no_email: "ប្រសិន​បើ​សិស្ស​របស់​អ្នក​មិនមានអ៊ីម៉ែល ​ឬ​អ្នក​ចង់​បង្កើត​គណនី​សម្រាប់​ពួកគេ​ សូម​ប្តូរ​ប្រភេទ​សម្ងាត់នៃ​ថ្នាក់​នេះ​ទៅ​ជា​ <b> ពាក្យសម្ងាត់គូ </b> ឬ <b> រូបភាព </b> ។"
   dashboard_students_print_page: "ព្រីនទំព័រ​នេះ"
   dashboard_students_signin_card: "សូមចូលមក​ %{join_url} រួចបញ្ចូលលេខកូដថ្នាក់សិក្សា %{section_code}"
+  dashboard_students_url: "តំណផ្ទាល់"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">ចុចទីនេះ</a> សម្រាប់​ឯកសារ​ឯកជនភាព​របស់​យើង​ដែល​អាច​ចែក​រំលែក​ឬបោះពុម្ព​សម្រាប់​សិស្សរបស់អ្នក។"
+  dashboard_curriculum_k5_title: "ធនធាន​សម្រាប់​អ្នកអប់រំ​សិស្សមត្តេយ្យ និងបឋម"
+  dashboard_curriculum_middle_title: "ធនធាន​សម្រាប់​អ្នកអប់រំ​សិស្សអនុវិទ្យាល័យ"
+  dashboard_curriculum_high_title: "ធនធាន​សម្រាប់​អ្នកអប់រំ​សិស្សវិទ្យាល័យ"
+  dashboard_lesson_plans: "ផែនការ​មេរៀន"
+  dashboard_view_all_lesson_plans: "ទាញ​យក​កម្មវិធី​សិក្សា​សម្រាប់វគ្គ​សិក្សាទី១ ដល់ទី៤"
   dashboard_course1: 'វគ្គ ១៖'
   dashboard_course2: 'វគ្គ ២៖'
   dashboard_course3: 'វគ្គ ៣៖'
