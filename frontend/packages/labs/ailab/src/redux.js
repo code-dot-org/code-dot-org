@@ -911,6 +911,14 @@ export function getShowSelectTrainer(state) {
   return !(state.mode && state.mode.hideSelectTrainer);
 }
 
+export function getPredictAvailable(state) {
+  return (
+    Object.keys(state.testData).filter(
+      value => state.testData[value] && state.testData[value] !== ""
+    ).length === state.selectedFeatures.length
+  );
+}
+
 /*
 const panelList = [
   { id: "selectDataset", label: "Import" },
