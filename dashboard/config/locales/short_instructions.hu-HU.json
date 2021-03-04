@@ -521,10 +521,10 @@
         "bounce_12": "Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.",
         "bounce_12_basketball": "Készítsd el a saját kosárlabda játékod! Változtathatsz a szabályokon. Ha elkészültél, nyomj a Kész-re, hogy a barátaid is kipróbálhassák a telefonjaikon.",
         "bounce_12_sports": "Hozza létre saját játékát! Itt van a felelősség: megváltoztathatja az összes szabályt, összekeverheti és illesztheti a sportokat, legyen kreatív! Ha elkészült, kattintson a Befejezés gombra, hogy a barátai kipróbálhassák a játékokat a telefonjukon.",
-        "bounce_1_basketball": "Adj egy blokkon a \"ha van balra nyíl\" blokkhoz, és kattints a \"futtatás\"-ra. Mozgasd a kezet a bal nyíllal, hogy elérd a célt.",
+        "bounce_1_basketball": "Adj egy blokkon a \"balra nyíl megnyomásakor\" blokkhoz, és kattints a \"futtatás\"-ra. Mozgasd a kezet a bal nyíllal, hogy elérd a célt.",
         "bounce_1_sports": "Szerezd meg a zászlót! Csatlakoztass egy blokkot a \"amikor balra nyíl\" blokkhoz, és nyomd meg a \"Futtatás\" gombot, hogy a játékost a zászlóhoz mozgassa.",
         "bounce_2": "Csatolj egy blokkot  a \"jobbra nyíl megnyomásakor\" és a \"balra nyíl megnyomásakor\" blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.",
-        "bounce_2_basketball": "Húzz egy-egy blokkot a \"ha van balra nyíl\" és a \"ha van jobbra nyíl\" blokkokhoz. Mozgasd a kezet, hogy mind a két célt elérd.",
+        "bounce_2_basketball": "Húzz egy-egy blokkot a \"balra nyíl megnyomásakor\" és a \"jobbra nyíl megnyomásakor\" blokkokhoz. Mozgasd a kezet, hogy mind a két célt elérd.",
         "bounce_2_sports": "Most már két zászló van! Csatlakoztasson egy blokkot a \"amikor balra nyíl\" és az \"amikor jobb nyíl\" blokkokhoz, hogy a játékos két irányban mozogjon.",
         "bounce_3": "Most próbálj meg valami hasonlót  a \"felfelé nyíl megnyomásakor\" blokkal.  Mozgasd az ütőt, hogy elérd a fenti célt.",
         "bounce_4": "Itt az idő, hogy bevezessünk négy új blokkot. Mozgasd az ütőt mind a négy irányba, hogy megoldd ezt a feladatot.",
@@ -1061,7 +1061,8 @@
         "courseD_artist_project4a": "Próbálj játszani azzal, amit most csináltál. Rajzolj, amit csak szeretnél!\n\n-   Mi történik, ha más szögeket használsz a lépcsőfokokhoz? \n-   Mi lesz, ha a gyémánt alakzatodat hosszabb vagy rövidebb oldalakkal rajzolod meg?\n-   Hogy néz ki, ha két hópelyhet rajzolsz egymásra? ",
         "courseD_artist_project4a_2018": "Próbálj játszani azzal, amit most csináltál. Rajzolj, amit csak szeretnél!\n\n-   Mi történik, ha más szögeket használsz a lépcsőfokokhoz? \n-   Mi lesz, ha a gyémánt alakzatodat hosszabb vagy rövidebb oldalakkal rajzolod meg?\n-   Hogy néz ki, ha két hópelyhet rajzolsz egymásra? ",
         "courseD_artist_project4a_2019": "Próbálj játszani azzal, amit most csináltál. Rajzolj, amit csak szeretnél!\n\n-   Mi történik, ha más szögeket használsz a lépcsőfokokhoz? \n-   Mi lesz, ha a gyémánt alakzatodat hosszabb vagy rövidebb oldalakkal rajzolod meg?\n-   Hogy néz ki, ha két hópelyhet rajzolsz egymásra? ",
-        "courseD_artist_project4a_2020": "Próbálj játszani azzal, amit most csináltál. Rajzolj, amit csak szeretnél!\n\n-   Mi történik, ha más szögeket használsz a lépcsőfokokhoz? \n-   Mi lesz, ha a gyémánt alakzatodat hosszabb vagy rövidebb oldalakkal rajzolod meg?\n-   Hogy néz ki, ha két hópelyhet rajzolsz egymásra? "
+        "courseD_artist_project4a_2020": "Próbálj játszani azzal, amit most csináltál. Rajzolj, amit csak szeretnél!\n\n-   Mi történik, ha más szögeket használsz a lépcsőfokokhoz? \n-   Mi lesz, ha a gyémánt alakzatodat hosszabb vagy rövidebb oldalakkal rajzolod meg?\n-   Hogy néz ki, ha két hópelyhet rajzolsz egymásra? ",
+        "courseD_scrat_ramp1": "Csak csatold össze ezeket a blokkokat, és kattints a \"Futtatás\" gombra!"
       }
     }
   }
