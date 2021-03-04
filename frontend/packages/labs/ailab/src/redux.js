@@ -2,7 +2,7 @@ import {
   availableTrainers,
   getRegressionTrainers,
   getClassificationTrainers,
-  getMLType
+  getMLType,
 } from "./train.js";
 
 import {
@@ -17,10 +17,15 @@ import {
   continuousColumnsHaveOnlyNumbers,
   trainerSelected,
   compatibleLabelAndTrainer,
-  namedModel
+  namedModel,
 } from "./validate.js";
 
-import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
+import {
+  ColumnTypes,
+  MLTypes,
+  TestDataLocations,
+  ResultsGrades,
+} from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
@@ -92,7 +97,7 @@ export function setKValue(kValue) {
 export const setColumnsByDataType = (column, dataType) => ({
   type: SET_COLUMNS_BY_DATA_TYPE,
   column,
-  dataType
+  dataType,
 });
 
 export function setSelectedFeatures(selectedFeatures) {
@@ -217,6 +222,7 @@ const initialState = {
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
+  accuracyCheckGrades: [],
   testData: {},
   prediction: {},
   modelSize: undefined,
@@ -224,7 +230,7 @@ const initialState = {
   trainedModelDetails: {},
   currentPanel: "selectDataset",
   currentColumn: undefined,
-  resultsPhase: undefined
+  resultsPhase: undefined,
 };
 
 // Reducer
@@ -232,37 +238,37 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_MODE) {
     return {
       ...state,
-      mode: action.mode
+      mode: action.mode,
     };
   }
   if (action.type === SET_SELECTED_NAME) {
     return {
       ...state,
-      name: action.name
+      name: action.name,
     };
   }
   if (action.type === SET_SELECTED_CSV) {
     return {
       ...state,
-      csvfile: action.csvfile
+      csvfile: action.csvfile,
     };
   }
   if (action.type === SET_SELECTED_JSON) {
     return {
       ...state,
-      jsonfile: action.jsonfile
+      jsonfile: action.jsonfile,
     };
   }
   if (action.type === SET_IMPORTED_DATA) {
     return {
       ...state,
-      data: action.data
+      data: action.data,
     };
   }
   if (action.type === SET_IMPORTED_METADATA) {
     var newState = {
       ...state,
-      metadata: action.metadata
+      metadata: action.metadata,
     };
 
     if (
@@ -279,13 +285,13 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_SELECTED_TRAINER) {
     return {
       ...state,
-      selectedTrainer: action.selectedTrainer
+      selectedTrainer: action.selectedTrainer,
     };
   }
   if (action.type === SET_K_VALUE) {
     return {
       ...state,
-      kValue: action.kValue
+      kValue: action.kValue,
     };
   }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
@@ -293,21 +299,21 @@ export default function rootReducer(state = initialState, action) {
       ...state,
       columnsByDataType: {
         ...state.columnsByDataType,
-        [action.column]: action.dataType
-      }
+        [action.column]: action.dataType,
+      },
     };
   }
   if (action.type === SET_SELECTED_FEATURES) {
     return {
       ...state,
-      selectedFeatures: action.selectedFeatures
+      selectedFeatures: action.selectedFeatures,
     };
   }
 
   if (action.type === ADD_SELECTED_FEATURE) {
     return {
       ...state,
-      selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
+      selectedFeatures: [...state.selectedFeatures, action.selectedFeature],
     };
   }
 
@@ -315,100 +321,100 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       selectedFeatures: state.selectedFeatures.filter(
-        item => item !== action.selectedFeature
-      )
+        (item) => item !== action.selectedFeature
+      ),
     };
   }
 
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
-      labelColumn: action.labelColumn
+      labelColumn: action.labelColumn,
     };
   }
   if (action.type === SET_FEATURE_NUMBER_KEY) {
     return {
       ...state,
-      featureNumberKey: action.featureNumberKey
+      featureNumberKey: action.featureNumberKey,
     };
   }
   if (action.type === SET_TRAINING_EXAMPLES) {
     return {
       ...state,
-      trainingExamples: action.trainingExamples
+      trainingExamples: action.trainingExamples,
     };
   }
   if (action.type === SET_TRAINING_LABELS) {
     return {
       ...state,
-      trainingLabels: action.trainingLabels
+      trainingLabels: action.trainingLabels,
     };
   }
   if (action.type === SET_PERCENT_DATA_TO_RESERVE) {
     return {
       ...state,
-      percentDataToReserve: action.percentDataToReserve
+      percentDataToReserve: action.percentDataToReserve,
     };
   }
   if (action.type === SET_RESERVE_LOCATION) {
     return {
       ...state,
-      reserveLocation: action.reserveLocation
+      reserveLocation: action.reserveLocation,
     };
   }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
     return {
       ...state,
-      accuracyCheckExamples: action.accuracyCheckExamples
+      accuracyCheckExamples: action.accuracyCheckExamples,
     };
   }
   if (action.type === SET_ACCURACY_CHECK_LABELS) {
     return {
       ...state,
-      accuracyCheckLabels: action.accuracyCheckLabels
+      accuracyCheckLabels: action.accuracyCheckLabels,
     };
   }
   if (action.type === SET_ACCURACY_CHECK_PREDICTED_LABELS) {
     return {
       ...state,
-      accuracyCheckPredictedLabels: action.predictedLabels
+      accuracyCheckPredictedLabels: action.predictedLabels,
     };
   }
   if (action.type === SET_TEST_DATA) {
     return {
       ...state,
-      testData: action.testData
+      testData: action.testData,
     };
   }
   if (action.type === SET_PREDICTION) {
     return {
       ...state,
-      prediction: action.prediction
+      prediction: action.prediction,
     };
   }
   if (action.type === RESET_STATE) {
     return {
       ...initialState,
       selectedTrainer: state.mode && state.mode.hideSelectTrainer,
-      mode: state.mode
+      mode: state.mode,
     };
   }
   if (action.type === SET_MODEL_SIZE) {
     return {
       ...state,
-      modelSize: action.modelSize
+      modelSize: action.modelSize,
     };
   }
   if (action.type === SET_TRAINED_MODEL) {
     return {
       ...state,
-      trainedModel: action.trainedModel
+      trainedModel: action.trainedModel,
     };
   }
   if (action.type === SET_TRAINED_MODEL_DETAILS) {
     return {
       ...state,
-      trainedModelDetails: action.trainedModelDetails
+      trainedModelDetails: action.trainedModelDetails,
     };
   }
   if (action.type === SET_TRAINED_MODEL_DETAIL) {
@@ -419,7 +425,7 @@ export default function rootReducer(state = initialState, action) {
         trainedModelDetails.columns = [];
       }
 
-      const column = trainedModelDetails.columns.find(column => {
+      const column = trainedModelDetails.columns.find((column) => {
         return column.id === action.field;
       });
 
@@ -428,7 +434,7 @@ export default function rootReducer(state = initialState, action) {
       } else {
         trainedModelDetails.columns.push({
           id: action.field,
-          description: action.value
+          description: action.value,
         });
       }
     } else {
@@ -437,14 +443,14 @@ export default function rootReducer(state = initialState, action) {
 
     return {
       ...state,
-      ...trainedModelDetails
+      ...trainedModelDetails,
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
     return {
       ...state,
       currentPanel: action.currentPanel,
-      currentColumn: undefined
+      currentColumn: undefined,
     };
   }
   if (action.type === SET_CURRENT_COLUMN) {
@@ -460,7 +466,7 @@ export default function rootReducer(state = initialState, action) {
         return {
           ...state,
           labelColumn: action.currentColumn,
-          currentColumn: action.currentColumn
+          currentColumn: action.currentColumn,
         };
       } else {
         return state;
@@ -470,15 +476,15 @@ export default function rootReducer(state = initialState, action) {
         return {
           ...state,
           selectedFeatures: state.selectedFeatures.filter(
-            item => item !== action.currentColumn
+            (item) => item !== action.currentColumn
           ),
-          currentColumn: undefined
+          currentColumn: undefined,
         };
       } else if (action.currentColumn !== state.labelColumn) {
         return {
           ...state,
           selectedFeatures: [...state.selectedFeatures, action.currentColumn],
-          currentColumn: action.currentColumn
+          currentColumn: action.currentColumn,
         };
       } else {
         return state;
@@ -488,7 +494,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_RESULTS_PHASE) {
     return {
       ...state,
-      resultsPhase: action.phase
+      resultsPhase: action.phase,
     };
   }
   return state;
@@ -500,7 +506,7 @@ export function getFeatures(state) {
 
 function filterColumnsByType(state, columnType) {
   return Object.keys(state.columnsByDataType).filter(
-    column => state.columnsByDataType[column] === columnType
+    (column) => state.columnsByDataType[column] === columnType
   );
 }
 
@@ -512,7 +518,7 @@ function isColumnReadOnly(state, column) {
   const metadataColumnType =
     state.metadata &&
     state.metadata.fields &&
-    state.metadata.fields.find(field => {
+    state.metadata.fields.find((field) => {
       return field.id === column;
     }).type;
   return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
@@ -521,8 +527,8 @@ function isColumnReadOnly(state, column) {
 export function getSelectedColumns(state) {
   return state.selectedFeatures
     .concat(state.labelColumn)
-    .filter(column => column !== undefined && column !== "")
-    .map(columnId => {
+    .filter((column) => column !== undefined && column !== "")
+    .map((columnId) => {
       return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
     });
 }
@@ -539,19 +545,19 @@ export function getCurrentColumnData(state) {
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
     range: getRange(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
-    description: getColumnDescription(state, state.currentColumn)
+    description: getColumnDescription(state, state.currentColumn),
   };
 }
 
 export function getSelectedCategoricalColumns(state) {
   let intersection = getCategoricalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
+    (x) => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
 
 export function getSelectedCategoricalFeatures(state) {
-  let intersection = getCategoricalColumns(state).filter(x =>
+  let intersection = getCategoricalColumns(state).filter((x) =>
     state.selectedFeatures.includes(x)
   );
   return intersection;
@@ -559,13 +565,13 @@ export function getSelectedCategoricalFeatures(state) {
 
 export function getSelectedContinuousColumns(state) {
   let intersection = getContinuousColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
+    (x) => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
 
 export function getSelectedContinuousFeatures(state) {
-  let intersection = getContinuousColumns(state).filter(x =>
+  let intersection = getContinuousColumns(state).filter((x) =>
     state.selectedFeatures.includes(x)
   );
   return intersection;
@@ -576,16 +582,16 @@ export function getContinuousColumns(state) {
 }
 
 export function getSelectableFeatures(state) {
-  return getFeatures(state).filter(column => column !== state.labelColumn);
+  return getFeatures(state).filter((column) => column !== state.labelColumn);
 }
 
 export function getSelectableLabels(state) {
-  return getFeatures(state).filter(x => !state.selectedFeatures.includes(x));
+  return getFeatures(state).filter((x) => !state.selectedFeatures.includes(x));
 }
 
 export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column]))).filter(
-    option => option !== undefined && option !== ""
+  return Array.from(new Set(state.data.map((row) => row[column]))).filter(
+    (option) => option !== undefined && option !== ""
   );
 }
 
@@ -604,7 +610,7 @@ export function getOptionFrequencies(state, column) {
 export function getOptionFrequenciesByColumn(state) {
   let optionFrequenciesByColumn = {};
   getSelectedCategoricalColumns(state).map(
-    column =>
+    (column) =>
       (optionFrequenciesByColumn[column] = getOptionFrequencies(state, column))
   );
   return optionFrequenciesByColumn;
@@ -613,7 +619,8 @@ export function getOptionFrequenciesByColumn(state) {
 export function getUniqueOptionsByColumn(state) {
   let uniqueOptionsByColumn = {};
   getSelectedCategoricalColumns(state).map(
-    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
+    (column) =>
+      (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
   );
   return uniqueOptionsByColumn;
 }
@@ -621,23 +628,23 @@ export function getUniqueOptionsByColumn(state) {
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
   getContinuousColumns(state).map(
-    column => (rangesByColumn[column] = getRange(state, column))
+    (column) => (rangesByColumn[column] = getRange(state, column))
   );
   return rangesByColumn;
 }
 
 export function getRange(state, column) {
   let range = {};
-  range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
-  range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
+  range.max = Math.max(...state.data.map((row) => parseFloat(row[column])));
+  range.min = Math.min(...state.data.map((row) => parseFloat(row[column])));
   return range;
 }
 
 export function getSelectedColumnDescriptions(state) {
-  return getSelectedColumns(state).map(column => {
+  return getSelectedColumns(state).map((column) => {
     return {
       id: column.id,
-      description: getColumnDescription(state, column.id)
+      description: getColumnDescription(state, column.id),
     };
   });
 }
@@ -647,14 +654,14 @@ export function getColumnDescription(state, column) {
     return null;
   }
 
-  const field = state.metadata.fields.find(field => {
+  const field = state.metadata.fields.find((field) => {
     return field.id === column;
   });
   return field.description;
 }
 
 function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value);
+  return Object.keys(object).find((key) => object[key] === value);
 }
 
 function isEmpty(object) {
@@ -701,7 +708,7 @@ export function getConvertedPredictedLabel(state) {
 }
 
 export function getConvertedLabels(state, rawLabels) {
-  return rawLabels.map(label => getConvertedLabel(state, label));
+  return rawLabels.map((label) => getConvertedLabel(state, label));
 }
 
 export function getCompatibleTrainers(state) {
@@ -719,8 +726,22 @@ export function getCompatibleTrainers(state) {
   return compatibleTrainers;
 }
 
+export function isRegression(state) {
+  const mlType = getMLType(state.selectedTrainer);
+  return mlType === MLTypes.REGRESSION;
+}
+
+export function getAccuracyGrades(state) {
+  const grades = isRegression(state)
+    ? getAccuracyRegression(state).grades
+    : getAccuracyClassification(state).grades;
+  return grades;
+}
+
 export function getAccuracyClassification(state) {
+  let accuracy = {};
   let numCorrect = 0;
+  let grades = [];
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
@@ -728,13 +749,22 @@ export function getAccuracyClassification(state) {
       state.accuracyCheckPredictedLabels[i].toString()
     ) {
       numCorrect++;
+      grades.push(ResultsGrades.CORRECT);
+    } else {
+      grades.push(ResultsGrades.INCORRECT);
     }
   }
-  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
+    2
+  );
+  accuracy.grades = grades;
+  return accuracy;
 }
 
 export function getAccuracyRegression(state) {
+  let accuracy = {};
   let numCorrect = 0;
+  let grades = [];
   const maxMin = getRange(state, state.labelColumn);
   const range = Math.abs(maxMin.max - maxMin.min);
   const errorTolerance = range * 0.03;
@@ -745,9 +775,16 @@ export function getAccuracyRegression(state) {
     );
     if (diff <= errorTolerance) {
       numCorrect++;
+      grades.push(ResultsGrades.CORRECT);
+    } else {
+      grades.push(ResultsGrades.INCORRECT);
     }
   }
-  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
+    2
+  );
+  accuracy.grades = grades;
+  return accuracy;
 }
 
 export function getSummaryStat(state) {
@@ -755,11 +792,11 @@ export function getSummaryStat(state) {
   const mlType = getMLType(state.selectedTrainer);
   if (mlType === MLTypes.REGRESSION) {
     summaryStat.type = MLTypes.REGRESSION;
-    summaryStat.stat = getAccuracyRegression(state);
+    summaryStat.stat = getAccuracyRegression(state).percentCorrect;
   }
   if (mlType === MLTypes.CLASSIFICATION) {
     summaryStat.type = MLTypes.CLASSIFICATION;
-    summaryStat.stat = getAccuracyClassification(state);
+    summaryStat.stat = getAccuracyClassification(state).percentCorrect;
   }
   return summaryStat;
 }
@@ -770,39 +807,39 @@ export function validationMessages(state) {
     panel: "dataDisplay",
     readyToTrain: datasetUploaded(state),
     errorString: "There is not enough data to train a model.",
-    successString: `There are ${state.data.length} rows of data.`
+    successString: `There are ${state.data.length} rows of data.`,
   };
   validationMessages["columnNames"] = {
     panel: "dataDisplay",
     readyToTrain: uniqueColumnNames(state),
     errorString:
       "Each column must have a name, and column names must be unique.",
-    successString: "Each column has a unique name."
+    successString: "Each column has a unique name.",
   };
   validationMessages["emptyCells"] = {
     panel: "dataDisplay",
     readyToTrain: noEmptyCells(state),
     errorString: "There can't be any empty cells.",
-    successString: "Each cell has a value!"
+    successString: "Each cell has a value!",
   };
   validationMessages["selectLabel"] = {
     panel: "selectFeatures",
     readyToTrain: oneLabelSelected(state),
     errorString: "Please designate one column as the label column.",
-    successString: "Label column has been selected."
+    successString: "Label column has been selected.",
   };
   validationMessages["selectFeatures"] = {
     panel: "selectFeatures",
     readyToTrain: minOneFeatureSelected(state),
     errorString: "Please select at least one feature to train.",
-    successString: "At least one feature is selected."
+    successString: "At least one feature is selected.",
   };
   validationMessages["columnUsage"] = {
     panel: "selectFeatures",
     readyToTrain: uniqLabelFeaturesSelected(state),
     errorString:
       "A column can not be selected as a both a feature and a label.",
-    successString: "Label and feature(s) columns are unique."
+    successString: "Label and feature(s) columns are unique.",
   };
   validationMessages["columnData"] = {
     panel: "selectFeatures",
@@ -810,32 +847,32 @@ export function validationMessages(state) {
     errorString:
       "Feature and label columns must contain only continuous or categorical data.",
     successString:
-      "Selected features and label contain continuous or categorical data"
+      "Selected features and label contain continuous or categorical data",
   };
   validationMessages["continuousNumbers"] = {
     panel: "selectFeatures",
     readyToTrain: continuousColumnsHaveOnlyNumbers(state),
     errorString: "Continuous columns should contain only numbers.",
-    successString: "Continuous columns contain only numbers."
+    successString: "Continuous columns contain only numbers.",
   };
   validationMessages["training"] = {
     panel: "selectTrainer",
     readyToTrain: trainerSelected(state),
     errorString: "Please select a training algorithm.",
-    successString: "Training algorithm selected."
+    successString: "Training algorithm selected.",
   };
   validationMessages["compatibleLabel"] = {
     panel: "selectTrainer",
     readyToTrain: compatibleLabelAndTrainer(state),
     errorString:
       "The label datatype must be compatible with the training algorithm.",
-    successString: "The label datatype and training algorithm are compatible."
+    successString: "The label datatype and training algorithm are compatible.",
   };
   validationMessages["nameModel"] = {
     panel: "saveModel",
     readyToTrain: namedModel(state),
     errorString: "Please name your model.",
-    successString: "Your model is named."
+    successString: "Your model is named.",
   };
   return validationMessages;
 }
@@ -849,7 +886,7 @@ export function readyToTrain(state) {
 }
 
 export function getEmptyCellDetails(state) {
-  const emptyCellLocations = emptyCellFinder(state).map(cellDetails => {
+  const emptyCellLocations = emptyCellFinder(state).map((cellDetails) => {
     return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
   });
   return emptyCellLocations;
@@ -867,7 +904,7 @@ export function getTrainedModelDataToSave(state) {
     for (const columnDescription of getSelectedColumnDescriptions(state)) {
       dataToSave.columns.push({
         id: columnDescription.id,
-        description: columnDescription.description
+        description: columnDescription.description,
       });
     }
   } else {
@@ -1104,14 +1141,14 @@ export function getCrossTabData(state) {
     var featureValues = [];
     featureValues.push(row[state.currentColumn]);
 
-    var existingEntry = results.find(result => {
+    var existingEntry = results.find((result) => {
       return areArraysEqual(result.featureValues, featureValues);
     });
 
     if (!existingEntry) {
       existingEntry = {
         featureValues,
-        labelCounts: { [row[state.labelColumn]]: 1 }
+        labelCounts: { [row[state.labelColumn]]: 1 },
       };
       results.push(existingEntry);
     } else {
@@ -1148,7 +1185,7 @@ export function getCrossTabData(state) {
     results,
     uniqueLabelValues,
     featureNames: [state.currentColumn],
-    labelName: state.labelColumn
+    labelName: state.labelColumn,
   };
 }
 
