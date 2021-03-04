@@ -1,0 +1,215 @@
+{
+  "script": {
+    "name": "ai-classroom-test",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-03-04 19:33:38 UTC",
+    "seeding_key": {
+      "script.name": "ai-classroom-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "introai",
+      "name": "Introduction to AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Shoe Recommender",
+        "level_keys": [
+          "ml-models-shoes random"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models-shoes random"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-models-shoes random"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Improved Shoe Recommender",
+        "level_keys": [
+          "ml-models-shoes decision tree"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models-shoes decision tree"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-models-shoes decision tree"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Ultimate Shoe Recommender",
+        "level_keys": [
+          "ml-models-shoes data"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models-shoes data"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-models-shoes data"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Ultimate Shoe Recommender",
+        "level_keys": [
+          "ml-models-shoes points"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models-shoes points"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-models-shoes points"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ml-models-shoes random",
+        "script_level.level_keys": [
+          "ml-models-shoes random"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models-shoes decision tree",
+        "script_level.level_keys": [
+          "ml-models-shoes decision tree"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models-shoes data",
+        "script_level.level_keys": [
+          "ml-models-shoes data"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models-shoes points",
+        "script_level.level_keys": [
+          "ml-models-shoes points"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
+  ]
+}

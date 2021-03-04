@@ -112,7 +112,7 @@ class LessonOverview extends Component {
   render() {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
-      <div>
+      <div className="lesson-overview">
         <div className="lesson-overview-header">
           <div style={styles.header}>
             <a
