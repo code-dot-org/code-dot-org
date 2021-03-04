@@ -15,7 +15,7 @@ const sampleModes = {
   "preload-metadata": {
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
-    hideChooseReserve: true,
+    hideChooseReserve: true
   },
 
   "load-foods": { datasets: ["foods"] },
@@ -63,9 +63,17 @@ const sampleModes = {
 let parameters = queryString.parse(location.search);
 const mode = parameters["mode"] ? sampleModes[parameters["mode"]] : null;
 
+function onContinueStub() {
+  console.log("This would continue to the next level.");
+}
+
 function saveTrainedModelStub(data) {
   console.log("This would save a trained model.", data);
 }
 
 // Initialize the app.
-initAll({ mode: mode, saveTrainedModel: saveTrainedModelStub });
+initAll({
+  mode: mode,
+  onContinue: onContinueStub,
+  saveTrainedModel: saveTrainedModelStub
+});

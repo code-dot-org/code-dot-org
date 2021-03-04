@@ -21,7 +21,20 @@ class PanelButtons extends Component {
   static propTypes = {
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func
+    setCurrentPanel: PropTypes.func,
+    onContinue: PropTypes.func
+  };
+
+  onClickPrev = () => {
+    this.props.setCurrentPanel(this.props.panelButtons.prev.panel);
+  };
+
+  onClickNext = () => {
+    if (this.props.panelButtons.next.panel === "continue") {
+      this.props.onContinue();
+    } else {
+      this.props.setCurrentPanel(this.props.panelButtons.next.panel);
+    }
   };
 
   render() {
@@ -34,7 +47,7 @@ class PanelButtons extends Component {
             <button
               type="button"
               style={styles.navButton}
-              onClick={() => setCurrentPanel(panelButtons.prev.panel)}
+              onClick={this.onClickPrev}
             >
               &#9664; &nbsp;
               {panelButtons.prev.text}
@@ -47,7 +60,7 @@ class PanelButtons extends Component {
             <button
               type="button"
               style={styles.navButton}
-              onClick={() => setCurrentPanel(panelButtons.next.panel)}
+              onClick={this.onClickNext}
             >
               {panelButtons.next.text}
               &nbsp; &#9654;
@@ -101,6 +114,7 @@ class App extends Component {
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
+    onContinue: PropTypes.func,
     saveTrainedModel: PropTypes.func,
     resultsPhase: PropTypes.number
   };
@@ -110,6 +124,7 @@ class App extends Component {
       panelButtons,
       currentPanel,
       setCurrentPanel,
+      onContinue,
       saveTrainedModel,
       resultsPhase
     } = this.props;
@@ -192,6 +207,7 @@ class App extends Component {
           panelButtons={panelButtons}
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
+          onContinue={onContinue}
         />
       </div>
     );

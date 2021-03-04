@@ -19,13 +19,18 @@ export const store = createStore(rootReducer);
 export const initAll = function(options) {
   // Handle an optional mode.
   const mode = options && options.mode;
+  const onContinue = options && options.onContinue;
   const saveTrainedModel = options && options.saveTrainedModel;
   store.dispatch(setMode(mode));
   processMode(mode);
 
   ReactDOM.render(
     <Provider store={store}>
-      <App mode={mode} saveTrainedModel={saveTrainedModel} />
+      <App
+        mode={mode}
+        onContinue={onContinue}
+        saveTrainedModel={saveTrainedModel}
+      />
     </Provider>,
     document.getElementById("root")
   );

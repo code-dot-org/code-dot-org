@@ -1039,10 +1039,12 @@ export function getPanelButtons(state) {
     }
   } else if (state.currentPanel === "results") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
-    next = { panel: "saveModel", text: "Continue" };
+    next = isPanelEnabled(state, "saveModel")
+      ? { panel: "saveModel", text: "Continue" }
+      : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = null;
+    next = { panel: "continue", text: "Continue" };
   }
 
   return { prev, next };
