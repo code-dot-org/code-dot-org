@@ -58,7 +58,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     end
   end
 
-  test 'regular method returns and does not modifiy' do
+  test 'regular method returns and does not modify' do
     input = "[r first-resource]"
     result = Services::MarkdownPreprocessor.sub_resource_links(input)
     assert_equal "[r first-resource]", input
