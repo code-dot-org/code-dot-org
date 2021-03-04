@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import UploadImageDialog from './lesson-editor/UploadImageDialog';
+import FindResourceDialog from './lesson-editor/FindResourceDialog';
 
 const styles = {
   container: {
@@ -17,8 +18,16 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0
+  },
+  icon: {
+    marginRight: 7
   }
 };
+
+export const markdownFeaturesShape = PropTypes.shape({
+  imageUpload: PropTypes.bool,
+  resourceLink: PropTypes.bool
+});
 
 export default class MarkdownEnabledTextarea extends React.Component {
   static propTypes = {
@@ -26,9 +35,7 @@ export default class MarkdownEnabledTextarea extends React.Component {
     name: PropTypes.string,
     inputRows: PropTypes.number,
     handleMarkdownChange: PropTypes.func.isRequired,
-    features: PropTypes.shape({
-      imageUpload: PropTypes.bool
-    })
+    features: markdownFeaturesShape
   };
 
   static defaultProps = {
@@ -37,23 +44,39 @@ export default class MarkdownEnabledTextarea extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {};
+  }
 
-    this.state = {
-      uploadImageOpen: false
-    };
+  changeMarkdown(newMarkdown) {
+    let e = {target: {value: newMarkdown}};
+    this.props.handleMarkdownChange(e);
   }
 
   handleOpenUploadImage = () => {
     this.setState({uploadImageOpen: true});
   };
 
+  handleOpenAddResourceLink = () => {
+    this.setState({addResourceLinkOpen: true});
+  };
+
   handleCloseUploadImage = () => {
     this.setState({uploadImageOpen: false});
   };
 
+  handleCloseAddResourceLink = () => {
+    this.setState({addResourceLinkOpen: false});
+  };
+
+  handleConfirmAddResourceLink = resourceKey => {
+    if (resourceKey) {
+      this.changeMarkdown(this.props.markdown + `\n\n[r ${resourceKey}]`);
+    }
+    this.handleCloseAddResourceLink();
+  };
+
   handleUploadImage = url => {
-    let e = {target: {value: this.props.markdown + `\n\n![](${url})`}};
-    this.props.handleMarkdownChange(e);
+    this.changeMarkdown(this.props.markdown + `\n\n![](${url})`);
   };
 
   render() {
@@ -62,27 +85,44 @@ export default class MarkdownEnabledTextarea extends React.Component {
         <div style={{margin: 5}}>
           <textarea
             name={this.props.name}
-            value={this.props.markdown}
+            onChange={this.props.handleMarkdownChange}
             rows={this.props.inputRows || 5}
             style={styles.input}
-            onChange={this.props.handleMarkdownChange}
+            value={this.props.markdown}
           />
           {this.props.features.imageUpload && (
             <button
-              onMouseDown={this.handleOpenUploadImage}
               className="btn"
+              onClick={this.handleOpenUploadImage}
               type="button"
             >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              <i style={styles.icon} className="fa fa-plus-circle" />
               Image
+            </button>
+          )}
+          {this.props.features.resourceLink && (
+            <button
+              className="btn"
+              onClick={this.handleOpenAddResourceLink}
+              type="button"
+            >
+              <i style={styles.icon} className="fa fa-plus-circle" />
+              Resource
             </button>
           )}
         </div>
         {this.props.features.imageUpload && (
           <UploadImageDialog
-            isOpen={this.state.uploadImageOpen}
             handleClose={this.handleCloseUploadImage}
+            isOpen={!!this.state.uploadImageOpen}
             uploadImage={this.handleUploadImage}
+          />
+        )}
+        {this.props.features.resourceLink && (
+          <FindResourceDialog
+            isOpen={!!this.state.addResourceLinkOpen}
+            handleConfirm={this.handleConfirmAddResourceLink}
+            handleClose={this.handleCloseAddResourceLink}
           />
         )}
       </div>
