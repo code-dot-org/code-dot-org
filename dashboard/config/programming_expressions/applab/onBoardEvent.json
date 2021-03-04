@@ -1,1 +1,1 @@
-{"func":"onBoardEvent","category":"micro:bit","paletteParams":["component","event","callback"],"params":["buttonA","\"down\"","function(event) {\n  \n}"],"allowFunctionDrop":{"2":true}}
+{"func":"onBoardEvent","category":"Circuit","paletteParams":["component","event","callback"],"params":["buttonA","\"down\"","function(event) {\n  \n}"],"allowFunctionDrop":{"2":true}}
