@@ -1,0 +1,23 @@
+ca:
+  data:
+    variable_names:
+      actor: actor
+      cats: tots els gats
+      counter: comptador
+      dogs: tots els gossos
+      height: alçcada
+      honey: mel
+      left: esquerra
+      length: longitud
+      name: nom
+      nectar: nèctar
+      points: punts
+      random: atzar
+      repeat: repeteix
+      right: dret
+      score: puntuació
+      size: mida
+      speed: velocitat
+      variable: variable
+      width: amplada
+      x: x
