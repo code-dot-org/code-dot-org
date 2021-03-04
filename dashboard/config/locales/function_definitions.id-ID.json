@@ -1706,6 +1706,47 @@
           "collect": {
             "name": "kumpulkan"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "gambar bintang",
+            "parameters": {
+              "points": "poin",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "Gambar sebuah lingkaran"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
         }
       }
     }

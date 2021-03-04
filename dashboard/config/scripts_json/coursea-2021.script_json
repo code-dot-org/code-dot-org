@@ -137,7 +137,7 @@
         "overview": "This unplugged lesson brings together teams with a simple task: get the \"flurb\" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.",
         "student_overview": "Write instructions to get the Flurb to the fruit.",
         "purpose": "The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.",
-        "preparation": " - Print one **Happy Map Cards - Worksheet** and one **Happy Map Game Pieces - Manipulatives** per group of 2-3.\r\n - Make sure each student has a **Think Spot Journal - Reflection Journal**.",
+        "preparation": " - Print one ***Happy Map Cards** and one ***Happy Map Game Pieces** per group of 2-3.\n - Make sure each student has a ***Think Spot Journal - Reflection Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -158,7 +158,7 @@
         "overview": "Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
         "student_overview": "Program Scrat to reach the acorn.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Cut out direction blocks from **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** to use with the Happy Maps bridging activity.\r\n - Make sure each student has a journal.",
+        "preparation": " - Cut out direction blocks from ***Unplugged Blockly Blocks (Grades K-1)** to use with the Happy Maps bridging activity.\n - Make sure each student has a journal - such as ***Think Spot Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -178,7 +178,7 @@
         "overview": "Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
         "student_overview": "Write programs to help Scrat reach the acorn.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Make sure each student has a **Think Spot Journal - Reflection Journal**.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a ***Think Spot Journal - Reflection Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -259,7 +259,7 @@
         "overview": "In this lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze and picking corn. Here, loops are used to collect treasure in open cave spaces.",
         "student_overview": "Help Laurel the adventurer collect the treasure underground.",
         "purpose": "This lesson gives students more practice with loops and introduces a new block, `get treasure`. The block works just like `pick corn` did in Harvester. These puzzles are more open, giving students more flexibility for their final solutions.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review [CSF Lesson Recommendations](https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing)\n - Make sure each student has a [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY).",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**\n - Make sure each student has a ***Think Spot Journal**",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -279,7 +279,7 @@
         "overview": "Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.",
         "student_overview": "Use loops and patterns to finish the images.",
         "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of  `repeat` loops.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review [CSF Lesson Recommendations](https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing).\n - Make sure each student has a [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY).",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure each student has a ***Think Spot Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -320,7 +320,7 @@
         "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
         "student_overview": "Create your own game or story.",
         "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review [CSF Lesson Recommendations](https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing).\n - Make sure every student has a [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY).",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure every student has a ***Think Spot Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -739,18 +739,6 @@
       }
     },
     {
-      "key": "a0e91760-8ca0-42c5-9c06-e10fde3039bc",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a0e91760-8ca0-42c5-9c06-e10fde3039bc",
-        "lesson.key": "Programming with Rey and BB-8",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
       "key": "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740",
       "position": 1,
       "properties": {
@@ -806,22 +794,10 @@
       }
     },
     {
-      "key": "6914b10b-6065-47c4-a825-5baa17f1cb99",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6914b10b-6065-47c4-a825-5baa17f1cb99",
-        "lesson.key": "Loops: Happy Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
       "key": "e0f98e02-d388-4fa9-8f14-0774fe44df3b",
       "position": 1,
       "properties": {
-        "name": "Warm Up - The Unplugged Foundation",
+        "name": "Warm Up",
         "duration": 10
       },
       "seeding_key": {
@@ -846,20 +822,8 @@
       }
     },
     {
-      "key": "d1f46a61-b509-4db9-8fbf-5acb2ff0b4ca",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d1f46a61-b509-4db9-8fbf-5acb2ff0b4ca",
-        "lesson.key": "Loops in Ice Age",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
       "key": "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Main Activity",
         "duration": 30
@@ -873,7 +837,7 @@
     },
     {
       "key": "647827d3-b6a3-4697-9cb8-fec35c819d12",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": " Wrap Up",
         "duration": 5
@@ -887,7 +851,7 @@
     },
     {
       "key": "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -900,7 +864,7 @@
     },
     {
       "key": "92c5197c-d135-4891-9504-ba1393dd8ca6",
-      "position": 7,
+      "position": 6,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -1076,18 +1040,6 @@
       }
     },
     {
-      "key": "88379846-285e-45ff-970c-ddadf655d59a",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "88379846-285e-45ff-970c-ddadf655d59a",
-        "lesson.key": "Events: The Big Event",
-        "lesson_group.key": "csf_events",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
       "key": "2b650fd5-765d-4989-8e47-e21de2cdd0d5",
       "position": 1,
       "properties": {
@@ -1228,8 +1180,8 @@
       "key": "5cd698e0-d82e-4e9d-af4f-1923b453d12b",
       "position": 1,
       "properties": {
-        "description": "*Goal:* This discussion will teach students what to expect and how to behave when they enter the computer lab.",
-        "name": "Behaving in the Computer Lab"
+        "description": "####Behaving in the Computer Lab\n\n**Goal:** This discussion will teach students what to expect and how to behave when they enter the computer lab.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "5cd698e0-d82e-4e9d-af4f-1923b453d12b",
@@ -1243,7 +1195,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the [20/20/20 Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n - How to deal with the [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) every 20-30 minutes (requires a free login on GoNoodle). every 20-30 minutes (requires a free login on GoNoodle)\n - Ask your partner before you ask the teacher\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n\n"
+            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the ***20/20/20 Rule** - How to Prevent Eye Strain\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle). \n - Ask your partner before you ask the teacher\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n\n"
           }
         ]
       },
@@ -1256,7 +1208,7 @@
       "key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
       "position": 3,
       "properties": {
-        "description": "\n*Discuss:*\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?"
+        "description": "\n**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - *Is running in the computer lab okay?*\n - *How loudly should we walk when we are in the computer lab?*\n - *What should you do if you get stuck on a puzzle?*\n - *If you get frustrated, will it help to hit the computer?*\n - *When we're about to go to the computer lab, how should we get ready?*"
       },
       "seeding_key": {
         "activity_section.key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
@@ -1278,7 +1230,7 @@
       "key": "e1c4af11-08ae-4ddd-90dc-da28738444fb",
       "position": 1,
       "properties": {
-        "description": "*Goal:* This will teach students how to use Code.org to complete online puzzles.\r\n\r\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.",
+        "description": "**Goal:** This will teach students how to use Code.org to complete online puzzles.\n\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.",
         "name": "Learn to Drag and Drop\r"
       },
       "seeding_key": {
@@ -1294,7 +1246,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "Considering having students break down the steps of dragging and dropping and record them on the board. For example: \r\n\r\n1. Move the arrow to the block. \r\n2. Click and hold the mouse button. \r\n3. Move the mouse. \r\n4. Let go of the button.\r\n\r\nDoing this will give students practice with creating an *algorithm*, which is a concept that will be explored in upcoming lessons.\r\n"
+            "markdown": "Consider having students break down the steps of dragging and dropping and record them on the board. For example: \n\n1. Move the arrow to the block. \n2. Click and hold the mouse button. \n3. Move the mouse. \n4. Let go of the button.\n\nDoing this will give students practice with creating an **algorithm**, which is a concept that will be explored in upcoming lessons.\n"
           }
         ]
       },
@@ -1307,7 +1259,7 @@
       "key": "46a16121-b405-44e1-9bfa-6391362b12f0",
       "position": 3,
       "properties": {
-        "description": "Place kids in pairs and have them watch the [Pair Programming Video](https://www.youtube.com/watch?v=vgkahOzFH2Q) as a class or at their stations.  This should help students start off in the right direction.\n"
+        "description": "Place kids in pairs and have them watch the ***Pair Programming Video** as a class or at their stations.  This should help students start off in the right direction.\n"
       },
       "seeding_key": {
         "activity_section.key": "46a16121-b405-44e1-9bfa-6391362b12f0",
@@ -1335,7 +1287,7 @@
       "key": "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa",
       "position": 5,
       "properties": {
-        "description": "- Utilize pair programming whenever possible during the activity.\r\n - Encourage students with questions/challenges to start by asking their partner.\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+        "description": "- Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. *What is it supposed to do? What does it do? What does that tell you?*\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa",
@@ -1357,8 +1309,8 @@
       "key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
       "position": 1,
       "properties": {
-        "description": "*Goal:* Help students reflect on the things they learned in this lesson\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\nJournal prompts could include:\n\n-  Draw one of the [Feeling Faces Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\n*Goal:* Help students reflect on the things they learned in this lesson\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n####Journal prompts\n\n-  Draw one of the ***Feeling Faces Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
@@ -1369,7 +1321,7 @@
       "key": "902cde98-a6eb-4a14-b992-43ba04b6c522",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n- If students complete the puzzles early, have them spend some time trying to come up with their own puzzles in their journal.\n\n- [Rhyme With That](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#).\n-Rhyme With That is an optional activity aligned to Common Core ELA and Math standards, written by our teacher community. Students will use the computer mouse to drag and drop a letter to form CVC words, match rhyming words and count."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n- If students complete the puzzles early, have them spend some time trying to come up with their own puzzles in their journal.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "902cde98-a6eb-4a14-b992-43ba04b6c522",
@@ -1391,8 +1343,8 @@
       "key": "1a3b430e-95cd-4425-b5d7-953dfae5e5d2",
       "position": 1,
       "properties": {
-        "description": "This warm-up is meant to get the class thinking about how to break a big problem down into a list of individual steps.\n\n    \n*Model:* Start by asking the class for step-by-step directions on how to get to the chalkboard. Make sure that you ask students to break apart any large instructions, like \"Walk to the chalkboard,\" into smaller instructions like \"Step forward.\"\n\nWhen you reach the board, ask for instructions to draw a smiley face and try to get them to keep their instructions equally small.",
-        "name": "Step-by-Step\r"
+        "description": "This warm-up is meant to get the class thinking about how to break a big problem down into a list of individual steps.\n\n    \n**Model:** Start by asking the class for step-by-step directions on how to get to the chalkboard. Make sure that you ask students to break apart any large instructions, like \"Walk to the chalkboard,\" into smaller instructions like \"Step forward.\"\n\nWhen you reach the board, ask for instructions to draw a smiley face and try to get them to keep their instructions equally small.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "1a3b430e-95cd-4425-b5d7-953dfae5e5d2",
@@ -1403,7 +1355,7 @@
       "key": "d62f31be-e1c0-4384-a410-e8a8f1b84d7b",
       "position": 2,
       "properties": {
-        "description": "*Say:* Well done!  You just gave me a list of steps to finish a task.  In computer science, that's called an Algorithm!\n[Follow up with your typical method of introducing vocabulary: word wall, repeat-after-me, etc.]",
+        "description": "**Say:** Well done!  You just gave me a list of steps to finish a task.  In computer science, that's called an Algorithm!\n(Follow up with your typical method of introducing vocabulary: word wall, repeat-after-me, etc.)",
         "tips": [
           {
             "type": "teachingTip",
@@ -1420,7 +1372,7 @@
       "key": "7719a51a-42d9-41f0-bc30-c5475b18af7c",
       "position": 1,
       "properties": {
-        "progression_name": "Video: Unplugged - Happy Maps",
+        "progression_name": "Happy Maps Video - Unplugged Activity",
         "name": "Happy Maps Programming"
       },
       "seeding_key": {
@@ -1454,8 +1406,8 @@
       "key": "a6b03761-2c05-45cd-be08-78c966e2f444",
       "position": 1,
       "properties": {
-        "description": "\n*Discuss:* When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (code) has been encoded in a way that can be run by a machine (or a kindergartener!)\n\n- Do you think that someone who speaks another language would be able to run your program? \n- Why or why not?\n\n\n\n",
-        "name": "Flash Chat"
+        "description": "####Flash Chat\n**Discuss:** When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (*code*) has been encoded in a way that can be run by a machine (or a kindergartener!)\n\n- *Do you think that someone who speaks another language would be able to run your program?* \n- *Why or why not?*\n\n\n\n",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "a6b03761-2c05-45cd-be08-78c966e2f444",
@@ -1466,8 +1418,7 @@
       "key": "59165939-4781-4c64-a90d-a18f29826646",
       "position": 2,
       "properties": {
-        "name": "Journaling",
-        "description": "Students should be encouraged to capture their thoughts in their journals after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)\n that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw your own flurb map?  \n - What would the code be to solve your map?"
+        "description": "\n####Journaling\n\nStudents should be encouraged to capture their thoughts in their journals after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image**\n that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw your own flurb map?  \n - What would the code be to solve your map?"
       },
       "seeding_key": {
         "activity_section.key": "59165939-4781-4c64-a90d-a18f29826646",
@@ -1504,10 +1455,10 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Some possible things to cover:**\n\n- Use calm bodies in the lab.\n - Remember not to chew gum or candy.\n - Sanitize your hands.\n - Sit with your partner at one computer.\n - Make sure that the first \"driver\" can reach the mouse.\n - When you get frustrated, don't hit or shake the computer or monitor.\n - Follow the [20/20/20 Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n - How to deal with the [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher.\n - Keep volume down so everyone else can hear their partners.\n - Use your journal for keeping track of feelings and solutions.\n\n"
+            "markdown": "**Some possible things to cover:**\n\n- Use calm bodies in the lab.\n - Remember not to chew gum or candy.\n - Sanitize your hands.\n - Sit with your partner at one computer.\n - Make sure that the first \"driver\" can reach the mouse.\n - When you get frustrated, don't hit or shake the computer or monitor.\n - Follow the ***20/20/20 Rule**\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher.\n - Keep volume down so everyone else can hear their partners.\n - Use your journal for keeping track of feelings and solutions.\n\n"
           }
         ],
-        "description": "*Discuss:*\n\nHave a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?"
+        "description": "**Discuss:** Have a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?"
       },
       "seeding_key": {
         "activity_section.key": "fadfd6a5-099f-427c-aa1f-345ee17ca150",
@@ -1529,7 +1480,7 @@
       "key": "d3d96ea6-986d-49e8-b48a-521536592847",
       "position": 2,
       "properties": {
-        "description": "\n\nProject one of the maps from the \"Happy Maps\" activity and display it for the students to see. On a projector or in front of the class, put some direction blocks from the **Unplugged Blockly Blocks** in random order and practice \"dragging and dropping\" by pressing your finger on one of the paper pieces and moving it across the screen. Explain that you can \"click\" to select this block by tapping your finger on it, or you can \"drag\" the block by pressing your finger on it and moving it. To \"drop\" the block, release your finger.\n\nAfter showing this to the class, ask for volunteers to create an algorithm for the Happy Map by \"dragging and dropping\" the necessary blocks.\n\n\n####-or-",
+        "description": "\n\nProject one of the maps from the \"Happy Maps\" activity and display it for the students to see. On a projector or in front of the class, put some direction blocks from the ***Unplugged Blockly Blocks** in random order and practice \"dragging and dropping\" by pressing your finger on one of the paper pieces and moving it across the screen. Explain that you can \"click\" to select this block by tapping your finger on it, or you can \"drag\" the block by pressing your finger on it and moving it. To \"drop\" the block, release your finger.\n\nAfter showing this to the class, ask for volunteers to create an algorithm for the Happy Map by \"dragging and dropping\" the necessary blocks.\n\n\n####-or-",
         "name": "Dragging and Dropping Algorithms"
       },
       "seeding_key": {
@@ -1571,7 +1522,7 @@
             "markdown": "**Show the students the right way to help classmates:**\n\n - Don’t sit in the classmate’s chair.\n - Don’t use the classmate’s keyboard.\n - Don’t touch  the classmate’s mouse.\n - Make sure the classmate can describe the solution to you out loud before you walk away.\n"
           }
         ],
-        "description": "###Online Puzzles\n\nThis will teach students how to use Code.org to complete online puzzles.\n\nWatch the **Pair Programming - Student Video** with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+        "description": "###Online Puzzles\n\nThis will teach students how to use Code.org to complete online puzzles.\n\nWatch the ***Pair Programming - Student Video** with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "30ab6f6d-deb2-4b1c-8974-136be2f6852e",
@@ -1593,8 +1544,8 @@
       "key": "a7d5f389-5e34-4cbf-91e8-e2d934992246",
       "position": 1,
       "properties": {
-        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day.\n\n#### Journal Prompts:\n\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)\n that shows how you felt about today's lesson in the corner of your journal page.",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n#### Journal Prompts:\n\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n - Draw one of the ***Feeling Faces - Emotion Image**\n that shows how you felt about today's lesson in the corner of your journal page.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "a7d5f389-5e34-4cbf-91e8-e2d934992246",
@@ -1605,7 +1556,7 @@
       "key": "2e0974bb-0444-4738-84dc-e49bf6f27770",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\nIf students complete the puzzles from this lesson early, have them spend some time trying to come up with their own puzzles in their **Think Spot Journal**."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\nIf students complete the puzzles from this lesson early, have them spend some time trying to come up with their own puzzles in their ***Think Spot Journal**."
       },
       "seeding_key": {
         "activity_section.key": "2e0974bb-0444-4738-84dc-e49bf6f27770",
@@ -1634,7 +1585,7 @@
       "key": "8b694201-2213-4aea-84a2-9cf901afa9c9",
       "position": 2,
       "properties": {
-        "description": "*Display:* Show students map from the \"Happy Maps\" exercise that they completed in the lessons prior to this one. \n\n*Discuss:* Ask students to recall the symbols used in \"Happy Maps.\"    \n\n- What happens when the flurb reads the \"North\" arrow?\n- What happens when the flurb reads the \"East\" arrow?\n- What would happen if we made a mistake when programming the flurb?  What if there was a \"bug\" in our program?  Would we throw the whole thing away and start over?\n\nEncourage students to think about the debugging tips:\n\n- Was everything right at the first step?\n- How about the second?\n- Where did it go wrong?\n\n\n*Transition:* Once you are satisfied that your students remember \"Happy Maps\" and \"Unspotted Bugs\", you can move into the Bridging Activity.\n\n###Online Foundation: Preview Programming in Maze (3 minutes)\nTo prepare students, preview an online puzzle (or two) as a class.\n\n*Model:* Reveal an entire online puzzle from the progression to come.  We recommend Lesson 5, Puzzle 5.  Point out the \"Play Area\" with Scrat, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that students will be using to get Scrat to the acorn.  Do they see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. \n\n*Transition:* Students should now be ready to transition to computers to complete online puzzles on their own."
+        "description": "**Display:** Show students the map from the \"Happy Maps\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Happy Maps.\"    \n\n- *What happens when the flurb reads the \"North\" arrow?*\n- *What happens when the flurb reads the \"East\" arrow?*\n- *What would happen if we made a mistake when programming the flurb?  What if there was a \"bug\" in our program?  Would we throw the whole thing away and start over?*\n\nEncourage students to think about the debugging tips:\n\n- *Was everything right at the first step?*\n- *How about the second?*\n- *Where did it go wrong?*\n\n\n**Transition:** Once you are satisfied that your students remember \"Happy Maps\" and \"Unspotted Bugs\", you can move into the Bridging Activity.\n\n###Online Foundation: Preview Programming in Maze (3 minutes)\nTo prepare students, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 5, Puzzle 5.  Point out the \"Play Area\" with *Scrat*, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that students will be using to get *Scrat* to the acorn.  Do they see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that *Scrat* (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
       },
       "seeding_key": {
         "activity_section.key": "8b694201-2213-4aea-84a2-9cf901afa9c9",
@@ -1646,7 +1597,7 @@
       "position": 1,
       "properties": {
         "name": "Programming With Scrat",
-        "description": "If you are looking for some extra puzzles to cover with your class, here are some \"prediction\" puzzles that will allow you to walk through existing code with your students to predict what Scrat will do.  It is a good idea to cover them together before letting students loose on their own machines.\n\nPrediction Levels:\n\n - [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n - [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
+        "description": "If you are looking for some extra puzzles to cover with your class, here are some \"prediction\" puzzles that will allow you to walk through existing code with your students to predict what Scrat will do.  It is a good idea to cover them together before letting students loose on their own machines.\n\n####Prediction Levels:\n\n - [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n - [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
       },
       "seeding_key": {
         "activity_section.key": "82d24278-d63c-4e22-921d-b92f4f1f8cd8",
@@ -1750,7 +1701,7 @@
       "key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
       "position": 9,
       "properties": {
-        "description": "*Circulate:* Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize **Pair Programming - Student Video** whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own"
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming - Student Video** whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own"
       },
       "seeding_key": {
         "activity_section.key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
@@ -1761,8 +1712,8 @@
       "key": "5703506b-9469-4b74-bbe0-14b169229f01",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw Scrat and an acorn somewhere on your paper.  Can you write a program to get Scrat to the acorn?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw *Scrat* and an acorn somewhere on your paper.  Can you write a program to get Scrat to the acorn?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "5703506b-9469-4b74-bbe0-14b169229f01",
@@ -1795,7 +1746,7 @@
       "key": "2ded9602-0160-439c-8830-204047d30796",
       "position": 1,
       "properties": {
-        "description": "Ask the students how they felt about the last lesson. \r\n\r\n - Which puzzles were too hard or too easy? \r\n - Which puzzles were frustrating or a lot of fun?\r\n - If they were to teach the lesson to a friend, which part of the lesson would they want to review?\r\n\r\nUse these questions to form a brief review of programming and debugging. If you think the class could benefit from it, you can go over the vocabulary words and definitions from the last lesson.\r\n\r\nIf you feel comfortable, also give a brief introduction to BB-8 from Star Wars. Many students may already be familiar with the lovable robot, but the introduction will surely build excitement.",
+        "description": "Ask the students how they felt about the last lesson. \n\n - *Which puzzles were too hard or too easy?* \n - *Which puzzles were frustrating or a lot of fun?*\n - If they were to teach the lesson to a friend, which part of the lesson would they want to review?\n\nUse these questions to form a brief review of programming and debugging. If you think the class could benefit from it, you can go over the vocabulary words and definitions from the last lesson.\n\nIf you feel comfortable, also give a brief introduction to *BB-8* from \"Star Wars\". Many students may already be familiar with the lovable robot, but the introduction will surely build excitement.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1852,7 +1803,7 @@
       "key": "4aebed84-fb26-4d7b-97e8-6bcee3dbb701",
       "position": 5,
       "properties": {
-        "description": "As we mentioned in the last lesson, we highly recommend viewing and using **Pair Programming - Student Video** as a class. Pair programming stimulates a discussion that can answer questions, review basic concepts, and build confidence with the subject."
+        "description": "As we mentioned in the last lesson, we highly recommend viewing and using ***Pair Programming - Student Video** as a class. Pair programming stimulates a discussion that can answer questions, review basic concepts, and build confidence with the subject."
       },
       "seeding_key": {
         "activity_section.key": "4aebed84-fb26-4d7b-97e8-6bcee3dbb701",
@@ -1863,22 +1814,12 @@
       "key": "09d28d61-e268-4516-b6a4-56ab1f2ae0d8",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)\n that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a picture of BB-8 you guided through the maze today and add a list of the commands that you used.",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image**\n that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a picture of how you guided *BB-8* through the maze today and add a list of the commands that you used.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "09d28d61-e268-4516-b6a4-56ab1f2ae0d8",
         "lesson_activity.key": "f589d41f-0064-4e89-bc57-b6815763792f"
-      }
-    },
-    {
-      "key": "ec54a452-8d6c-4f80-846e-cff353b037f6",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ec54a452-8d6c-4f80-846e-cff353b037f6",
-        "lesson_activity.key": "a0e91760-8ca0-42c5-9c06-e10fde3039bc"
       }
     },
     {
@@ -1897,7 +1838,7 @@
       "key": "8c303a82-3674-4b12-bb78-bcd85a423249",
       "position": 1,
       "properties": {
-        "progression_name": "Happy Loops Unplugged"
+        "progression_name": "Happy Loops Unplugged Activity"
       },
       "seeding_key": {
         "activity_section.key": "8c303a82-3674-4b12-bb78-bcd85a423249",
@@ -1919,7 +1860,7 @@
       "key": "cebdc037-d1ad-4064-a828-29e7da520632",
       "position": 3,
       "properties": {
-        "description": "*Discuss*\nThe point of this discussion is to get students to see that, sometimes, many symbols are repeated and they can lump all of those movements into a single icon. \n\nGive students the opportunity to brainstorm shorter ways to relay the code that they’re creating.  (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nIdeally, students will land on a method that looks like this one:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.38.png)\n\nWhich can be reduced even further to this:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.47.png)\n\nEventually, students can write programs like this on the fly:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.19.06.png)\n\n**Define:** Once students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” will be used interchangeably in Code Studio.\n\n---"
+        "description": "**Discuss**\nThe point of this discussion is to get students to see that, sometimes, many symbols are repeated and they can lump all of those movements into a single icon. \n\nGive students the opportunity to brainstorm shorter ways to relay the code that they’re creating.  (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nIdeally, students will land on a method that looks like this one:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.38.png)\n\nWhich can be reduced even further to this:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.47.png)\n\nEventually, students can write programs like this on the fly:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.19.06.png)\n\n**Define:** Once students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” will be used interchangeably in Code Studio.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "cebdc037-d1ad-4064-a828-29e7da520632",
@@ -1930,7 +1871,7 @@
       "key": "bc754cb3-3c14-4d5a-a1a7-098abbd6cd87",
       "position": 4,
       "properties": {
-        "description": "Now that students are familiar with the ability to repeat lots of code using a single loop, select an XL map and let them help you write code for the situation.  Do this as many times together as a class as you need, then set students off in groups to solve some problems on their own. You may also need to add the [r happy-map-game-pieces-bonus-pack] to adapt this activity for loops.\r\n\r\n**Circulate:** Make sure to walk around and have students run through their code with you watching.  Are there any bugs?  Use the debugging questions to help them find a solution.\r\n\r\n - What does it do?\r\n - What is it supposed to do?\r\n - What does that tell you?\r\n - Does it work at the first step?\r\n - Does it work at the second step?\r\n - Where does it stop working",
+        "description": "Now that students are familiar with the ability to repeat lots of code using a single loop, select an XL map and let them help you write code for the situation.  Do this as many times together as a class as you need, then set students off in groups to solve some problems on their own. You may also need to add the ***Happy Map Game Pieces Bonus Pack** to adapt this activity for loops.\n\n**Circulate:** Make sure to walk around and have students run through their code with you watching.  Are there any bugs?  Use the debugging questions to help them find a solution.\n\n - *What does it do?*\n - *What is it supposed to do?*\n - *What does that tell you?*\n - *Does it work at the first step?*\n - *Does it work at the second step?*\n - *Where does it stop working?*",
         "name": "Happy Loops\r"
       },
       "seeding_key": {
@@ -1942,8 +1883,8 @@
       "key": "e3639b33-cf35-4cc9-9d0d-616eb5ee7278",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - Draw one of the [r feeling-faces-image] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Have the students write or draw something in their journal that will remind them later what loops are. Prompts include:\r\n    - What does \"repeat\" mean to you?\r\n    - Draw a picture of you repeating something.",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n\n - Draw one of the ***Feeling Faces Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Have the students write or draw something in their journal that will remind them later what loops are. Prompts include:\n    - What does \"repeat\" mean to you?\n    - Draw a picture of you repeating something.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "e3639b33-cf35-4cc9-9d0d-616eb5ee7278",
@@ -1972,7 +1913,7 @@
             "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
         ],
-        "name": "Review Unplugged Activity\r"
+        "name": "The Unplugged Foundation"
       },
       "seeding_key": {
         "activity_section.key": "cb522975-96ad-44b4-942c-601fc373771c",
@@ -1983,7 +1924,7 @@
       "key": "1557cb99-47ef-444c-bf08-6aa33be91fb2",
       "position": 2,
       "properties": {
-        "description": "**Display:** Show students map from the \"Happy Loops\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Happy Loops.\"    \n\n- What happens when \"East\" arrow is circled with the number 3? (It moves E 3 times)\n- What is it called when we circle an arrow and add a number? `repeat`\n**Transition:** Once you are satisfied that your students remember \"Happy Loops\", you can move into the Bridging Activity."
+        "description": "**Display:** Show students map from the \"Happy Loops\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Happy Loops.\"    \n\n- What happens when \"East\" arrow is circled with the number 3? (It moves E 3 times)\n- What is it called when we circle an arrow and add a number? `repeat`\n\n**Transition:** Once you are satisfied that your students remember \"Happy Loops\", you can move into the Bridging Activity."
       },
       "seeding_key": {
         "activity_section.key": "1557cb99-47ef-444c-bf08-6aa33be91fb2",
@@ -1994,7 +1935,6 @@
       "key": "c0b4b26a-834e-40ae-a8e6-661b95fa1b1c",
       "position": 1,
       "properties": {
-        "description": "Choose *one* of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "c0b4b26a-834e-40ae-a8e6-661b95fa1b1c",
@@ -2021,7 +1961,7 @@
       "key": "d1bd79aa-b64e-4e66-b7e5-657d5b990a60",
       "position": 3,
       "properties": {
-        "description": "\nSelect an empty Flurb map from the **Happy Map Cards - Worksheet** and give students **Unplugged Blockly Blocks (Grades K-1) - Manipulatives** prefilled with the `collect` command, a `repeat` loop, and the cardinal commands like `E →` (East) and `W ←` (West). Now, have the students program the Flurb from their desks using the paper Blockly blocks to get the Flurbs to collect the fruit.  Make sure that they understand that the blocks need to go from top to bottom and they all need to touch!",
+        "description": "\nSelect an empty Flurb map from the ***Happy Map Cards - Worksheet** and give students ***Unplugged Blockly Blocks (Grades K-1) - Manipulatives** prefilled with the `collect` command, a `repeat` loop, and the cardinal commands like `E →` (East) and `W ←` (West). Now, have the students program the Flurb from their desks using the paper Blockly blocks to get the Flurbs to collect the fruit.  Make sure that they understand that the blocks need to go from top to bottom and they all need to touch!\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -2033,7 +1973,7 @@
       "key": "62d22669-d8bd-4e18-a767-8269aa7322f8",
       "position": 4,
       "properties": {
-        "description": "\n\nPull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows from the **Happy Map Game Pieces - Manipulatives** and **Happy Map Game Pieces Bonus Pack - Manipulatives**, have students lay out a pattern that they think will get the Harvester to pick all the corn. Ask the students to share. See how many other students had the same answer!",
+        "description": "Pull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows from the **Happy Map Game Pieces - Manipulatives** and **Happy Map Game Pieces Bonus Pack - Manipulatives**, have students lay out a pattern that they think will get the Harvester to pick all the corn. Ask the students to share. See how many other students had the same answer!",
         "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
@@ -2046,7 +1986,7 @@
       "position": 1,
       "properties": {
         "name": "Online Foundation - Preview Loops in Ice Age",
-        "description": "\nTo finish the connection, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 8, Puzzle 5.  Point out the \"Play Area\" with Scrat and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help Scrat get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
+        "description": "\nTo finish the connection, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 8, Puzzle 5.  Point out the \"Play Area\" with *Scrat* and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help *Scrat* get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that *Scrat* (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
       },
       "seeding_key": {
         "activity_section.key": "bce76535-3424-40bc-a71b-acafda6a3b62",
@@ -2140,7 +2080,7 @@
       "key": "45ebca0d-233a-4082-8d6e-5cf11640c93e",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize **Pair Programming** whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming** whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "45ebca0d-233a-4082-8d6e-5cf11640c93e",
@@ -2151,8 +2091,8 @@
       "key": "319c51aa-b894-422b-8d4e-e6d3b2bd9a35",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw Scrat and an acorn.\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw *Scrat* and an acorn.\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "319c51aa-b894-422b-8d4e-e6d3b2bd9a35",
@@ -2185,7 +2125,7 @@
       "key": "dacbc9c3-1382-49f8-856d-5bce1247ebb4",
       "position": 1,
       "properties": {
-        "description": "Quickly review the definition of a loop, the action of doing something over and over again.\r\n\r\n- What are loops?\r\n- Why do we use them?",
+        "description": "Quickly review the definition of a loop, the action of doing something over and over again.\n\n- *What are loops?*\n- *Why do we use them?*",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2324,8 +2264,8 @@
       "key": "a79a0dff-fe81-486d-9961-8198b65bdb8c",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - How did loops make your program easier to write?\n - Draw something that uses loops.",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - How did loops make your program easier to write?\n - Draw something that uses loops.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "a79a0dff-fe81-486d-9961-8198b65bdb8c",
@@ -2462,7 +2402,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online - Video](https://www.youtube.com/watch?v=rgbZAWnOWOo).\n"
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online - Video**"
           }
         ]
       },
@@ -2475,8 +2415,8 @@
       "key": "75843546-1fa3-4171-b034-3c14d8d9d5a4",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw some stairs. Imagine the loop needed to draw this.\n - Draw something else in your life that uses loops.",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw some stairs. Imagine the loop needed to draw this.\n - Draw something else in your life that uses loops.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "75843546-1fa3-4171-b034-3c14d8d9d5a4",
@@ -2498,7 +2438,7 @@
       "key": "ac847e89-ccab-4f15-8585-b06d61723c4c",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n - **Event** - Say it with me: *E-vent.* \n\nAn event is an action that causes something to happen."
+        "description": "####Vocabulary\nThis lesson has one new and important vocabulary word:\n\n - **Event** - Say it with me: *E-vent.* \n\nAn event is an action that causes something to happen."
       },
       "seeding_key": {
         "activity_section.key": "ac847e89-ccab-4f15-8585-b06d61723c4c",
@@ -2509,7 +2449,7 @@
       "key": "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6",
       "position": 2,
       "properties": {
-        "description": "####A Series of Events####\n\nLet’s see if we can find a pattern here:\n\n- When you flip a switch, the lights turn on.\n- When you tap on a device, an app starts.\n- When the alarm goes off, you get out of bed.\n- When *(event)*, *(action)*.\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is “event”.    Normally when we hear “event” we think of:\n- Field trip\n- Competition\n- Birthday Party\n\nWe’re learning a new meaning for the word event today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.\n"
+        "description": "####A Series of Events####\n\nLet’s see if we can find a pattern here:\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is “event”.    Normally when we hear “event” we think of:\n- Field trip\n- Competition\n- Birthday Party\n\nWe’re learning a new meaning for the word event today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.\n"
       },
       "seeding_key": {
         "activity_section.key": "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6",
@@ -2549,7 +2489,7 @@
       "key": "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd",
       "position": 3,
       "properties": {
-        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- Project [**The Big Event (Courses A, B) - Controller Image**](https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs) onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
+        "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- \n**Project** [**The Big Event (Courses A, B) - Controller Image**](https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs) onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven."
       },
       "seeding_key": {
         "activity_section.key": "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd",
@@ -2560,7 +2500,7 @@
       "key": "40978575-9e16-4760-a200-0678f187ff4c",
       "position": 1,
       "properties": {
-        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- What did we learn?\n- What are some examples of events?\n\n####Journal:####\n In their [Think Spot Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY), ask students to write and draw with the following questions in mind: \n\n- What was today’s lesson about?\n- Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit) that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
+        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- What did we learn?\n- What are some examples of events?\n\n####Journal:####\n In their ***Think Spot Journal**, ask students to write and draw with the following questions in mind: \n\n- What was today’s lesson about?\n- Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
         "name": "Reflection\r",
         "duration": "10",
         "tips": [
@@ -2642,7 +2582,7 @@
       "key": "9126c997-86b1-4d78-9eaf-3d07e06c6355",
       "position": 3,
       "properties": {
-        "description": "\nUsing the remote from the **The Big Event (Courses A, B) - Controller Image** and blocks from **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class \"when the teal button is pushed, what do we do?\" then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.",
+        "description": "\nUsing the remote from the **The Big Event (Courses A, B) - Controller Image** and blocks from **Unplugged Blockly Blocks (Grades K-1) - Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class \"when the teal button is pushed, what do we do?\" then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -2733,8 +2673,8 @@
       "key": "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the [Feeling Faces - Emotion Image](https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit\n) that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001",
@@ -2786,10 +2726,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:1"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2812,10 +2752,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:2"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2838,10 +2778,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:3"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2864,10 +2804,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:4"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2890,10 +2830,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:5"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2916,10 +2856,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:6"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2942,10 +2882,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:7"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2968,10 +2908,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:8"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -2994,10 +2934,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:9"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3020,10 +2960,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:10"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3046,10 +2986,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:11"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3072,10 +3012,10 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "blockly:Jigsaw:12"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3098,10 +3038,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Happy Maps Video - Unplugged Activity",
         "level_keys": [
           "HappyMaps-Unplugged_2021"
-        ],
-        "progression": "Video: Unplugged - Happy Maps"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3124,10 +3064,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Video: Programming with Blocks",
         "level_keys": [
           "courseAB_video_NewIntro_2021"
-        ],
-        "progression": "Video: Programming with Blocks"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3150,10 +3090,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3176,10 +3116,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3202,10 +3142,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp3a_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3228,10 +3168,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp3b_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3254,10 +3194,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp4a_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3280,10 +3220,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_Scrat_ramp5a_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3306,10 +3246,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Pair Programming Video",
         "level_keys": [
           "elementary_video_pairProgramming_2021"
-        ],
-        "progression": "Pair Programming Video"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3332,10 +3272,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3358,10 +3298,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3384,10 +3324,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3410,10 +3350,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3436,10 +3376,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Debugging with the Step Button",
         "level_keys": [
           "courseAB_video_debugging_2021"
-        ],
-        "progression": "Debugging with the Step Button"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3462,10 +3402,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3488,10 +3428,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3514,11 +3454,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_maze_seq9_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3541,10 +3481,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3567,10 +3507,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3593,10 +3533,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq12_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3671,10 +3611,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Programming with Rey and BB-8",
         "level_keys": [
           "bb8_skinOverview_K-1_video_2021"
-        ],
-        "progression": "Programming with Rey and BB-8"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3697,10 +3637,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3723,10 +3663,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3749,10 +3689,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3775,10 +3715,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3801,10 +3741,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3827,10 +3767,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3853,10 +3793,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3879,11 +3819,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_starWars_prog8_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3906,10 +3846,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3932,10 +3872,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3958,10 +3898,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -3984,10 +3924,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Happy Loops Unplugged Activity",
         "level_keys": [
           "HappyLoops-Unplugged_2021"
-        ],
-        "progression": "Happy Loops Unplugged"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4010,10 +3950,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4036,10 +3976,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4062,10 +4002,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Ice Age Loops",
         "level_keys": [
           "courseB_iceage_loops_video_2021"
-        ],
-        "progression": "Ice Age Loops"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4088,10 +4028,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4114,10 +4054,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4140,10 +4080,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4166,10 +4106,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4192,10 +4132,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4218,10 +4158,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops9_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4244,11 +4184,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseB_iceage_loops10_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4271,10 +4211,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4297,10 +4237,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops12_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4323,10 +4263,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "The Collector",
         "level_keys": [
           "courseAB_video_collector_2021"
-        ],
-        "progression": "The Collector"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4349,10 +4289,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4375,10 +4315,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4401,10 +4341,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Using the Repeat Block",
         "level_keys": [
           "courseA_video_Loops_2021"
-        ],
-        "progression": "Using the Repeat Block"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4427,10 +4367,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4453,10 +4393,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4479,10 +4419,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops5_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4505,10 +4445,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4531,10 +4471,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4557,10 +4497,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4583,11 +4523,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_collector_loops9_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4610,10 +4550,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4636,10 +4576,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4662,10 +4602,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops12_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4740,10 +4680,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "The Artist in Code Studio",
         "level_keys": [
           "courseB_video_ArtistIntro_2021"
-        ],
-        "progression": "The Artist in Code Studio"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4766,10 +4706,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4792,10 +4732,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4818,10 +4758,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops3_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4844,10 +4784,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_video_loops1_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4870,10 +4810,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops4_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4896,10 +4836,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Repeat Blocks with the Artist",
         "level_keys": [
           "courseA_artist_loops5_2021"
-        ],
-        "progression": "Repeat Blocks with the Artist"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4922,10 +4862,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops6_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4948,10 +4888,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops7_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4974,10 +4914,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops8_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5000,11 +4940,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "courseA_artist_loops9_2021"
-        ],
-        "challenge": true,
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5027,10 +4967,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops10_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5053,10 +4993,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops11_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5079,10 +5019,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Play",
         "level_keys": [
           "courseA_artist_loops12_2021"
-        ],
-        "progression": "Free Play"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5157,10 +5097,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "The Big Event - Unplugged Activity",
         "level_keys": [
           "BigEvent-Unplugged_2021"
-        ],
-        "progression": "The Big Event - Unplugged Activity"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5183,10 +5123,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Create a Story",
         "level_keys": [
           "courseA_video_events_2021"
-        ],
-        "progression": "Create a Story"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5209,10 +5149,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Play",
         "level_keys": [
           "courseA_playLab_events1_2021"
-        ],
-        "progression": "Free Play"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5235,10 +5175,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "courseA_playLab_events2_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5261,10 +5201,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events3_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5287,10 +5227,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events4_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5313,10 +5253,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events5_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5339,10 +5279,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events6_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5365,10 +5305,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events7_2021"
-        ],
-        "progression": "Mini-project: Jorge the Dog"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6741,6 +6681,42 @@
       }
     },
     {
+      "name": "20/20/20 Rule",
+      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+      "key": "20_20_20_rule",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "name": "Wiggles-Go Noodle",
+      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+      "key": "wiggles-go_noodle",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "wiggles-go_noodle"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion"
+      }
+    },
+    {
       "name": "Happy Maps",
       "url": "https://youtu.be/hrnhiKAQ1_k",
       "key": "unplugged-video-happy-maps",
@@ -6793,6 +6769,18 @@
       }
     },
     {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
@@ -6814,6 +6802,42 @@
       },
       "seeding_key": {
         "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "name": "20/20/20 Rule",
+      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+      "key": "20_20_20_rule_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "20_20_20_rule_1"
+      }
+    },
+    {
+      "name": "Wiggles - GoNoodle",
+      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+      "key": "wiggles_-_gonoodle",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "wiggles_-_gonoodle"
+      }
+    },
+    {
+      "name": "Think Spot Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_journal",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_journal"
       }
     },
     {
@@ -6842,6 +6866,30 @@
       }
     },
     {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "name": "Think Spot Journal - Reflection Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_journal_-_reflection_journal",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_journal_-_reflection_journal"
+      }
+    },
+    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
@@ -6851,6 +6899,18 @@
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image_1"
       }
     },
     {
@@ -6903,6 +6963,30 @@
       },
       "seeding_key": {
         "resource.key": "happy-map-game-pieces-bonus-pack"
+      }
+    },
+    {
+      "name": "Think Spot Journal - Reflection Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_journal_-_reflection_journal_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_journal_-_reflection_journal_1"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image_1"
       }
     },
     {
@@ -6995,6 +7079,42 @@
       }
     },
     {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image_2"
+      }
+    },
+    {
+      "name": "CSF Lesson Recommendations",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf_lesson_recommendations",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csf_lesson_recommendations"
+      }
+    },
+    {
+      "name": "Think Spot Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_journal_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_journal_1"
+      }
+    },
+    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "common-sense-media-pause-think",
@@ -7004,6 +7124,42 @@
       },
       "seeding_key": {
         "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image_3",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image_3"
+      }
+    },
+    {
+      "name": "CSF Lesson Recommendations",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf_lesson_recommendations_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csf_lesson_recommendations_1"
+      }
+    },
+    {
+      "name": "Think Spot Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_journal_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_journal_2"
       }
     },
     {
@@ -7022,14 +7178,14 @@
     {
       "name": "The Big Event (Courses A, B)",
       "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "csf-the-big-event-activity-worksheet-AB",
+      "key": "the_big_event_courses_a_b_",
       "properties": {
         "type": "Controller Image",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7059,6 +7215,30 @@
       }
     },
     {
+      "name": "Think Spot Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_journal_3",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_journal_3"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image_2"
+      }
+    },
+    {
       "name": "Unplugged Blockly Blocks (Grades K-1)",
       "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
       "key": "course-ab-blockly-blocks",
@@ -7085,14 +7265,14 @@
     {
       "name": "The Big Event (Courses A, B)",
       "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "csf-the-big-event-activity-worksheet-AB",
+      "key": "the_big_event_courses_a_b_",
       "properties": {
         "type": "Controller Image",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7100,12 +7280,47 @@
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
       "key": "csf-lesson-recommend",
       "properties": {
-        "type": "Lesson Recommendations",
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image_3",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image_3"
+      }
+    },
+    {
+      "name": "Think Spot Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_journal_4",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_journal_4"
+      }
+    },
+    {
+      "name": "CSF Lesson Recommendations",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf_lesson_recommendations_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csf_lesson_recommendations_2"
       }
     }
   ],
@@ -7142,6 +7357,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "wiggles-go_noodle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "feeling_faces_emotion"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Programming: Happy Maps",
         "resource.key": "unplugged-video-happy-maps"
       }
@@ -7166,6 +7399,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "pair-programming-vid"
       }
@@ -7174,6 +7413,24 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "20_20_20_rule_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "wiggles_-_gonoodle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "think_spot_journal"
       }
     },
     {
@@ -7190,8 +7447,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "resource.key": "think_spot_journal_-_reflection_journal"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
         "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "feeling_faces_-_emotion_image_1"
       }
     },
     {
@@ -7216,6 +7491,18 @@
       "seeding_key": {
         "lesson.key": "Loops: Happy Loops",
         "resource.key": "happy-map-game-pieces-bonus-pack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "resource.key": "think_spot_journal_-_reflection_journal_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "resource.key": "feeling_faces_emotion_image_1"
       }
     },
     {
@@ -7262,8 +7549,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "resource.key": "feeling_faces_emotion_image_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "resource.key": "csf_lesson_recommendations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "resource.key": "think_spot_journal_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
         "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "feeling_faces_emotion_image_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "csf_lesson_recommendations_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "think_spot_journal_2"
       }
     },
     {
@@ -7275,7 +7598,7 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7288,6 +7611,18 @@
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
         "resource.key": "assessment-answer-big-event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "think_spot_journal_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "feeling_faces_-_emotion_image_2"
       }
     },
     {
@@ -7305,13 +7640,31 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "feeling_faces_-_emotion_image_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "think_spot_journal_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "csf_lesson_recommendations_2"
       }
     }
   ],

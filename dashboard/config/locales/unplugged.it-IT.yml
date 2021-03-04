@@ -305,7 +305,7 @@ it:
           programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
           / "Per la scuola primaria"'
       deeper learning description:
-        desc: 'traduzione mancante: en-US.data.unplugged.desc'
+        desc: " "
       courseAB_unplugged_plantASeed:
         title: Pianta un seme
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
@@ -541,8 +541,8 @@ it:
         title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
       BuildingAFoundation_2019:
-        title: 'traduzione mancante: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'traduzione mancante: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: " "
+        desc: " "
       courseB_unplugged_loopyMRF_2019:
         title: I miei ciclici amici robotici
       Conditionals_2019:
@@ -551,14 +551,14 @@ it:
           carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
           e "SE estraggo una carta nera tu ottieni un punto".
       courseF_unplugged_powerOfWords_2019:
-        title: 'traduzione mancante: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'traduzione mancante: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: " "
+        desc: " "
       EnvelopeVariables_2019:
-        title: 'traduzione mancante: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'traduzione mancante: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: " "
+        desc: " "
       ForLoopFun_2019:
-        title: 'traduzione mancante: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'traduzione mancante: en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: " "
+        desc: " "
       GraphPaperProgramming_2019:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando
@@ -589,8 +589,8 @@ it:
           tra informazioni sicure da condividere online e informazioni che non lo
           sono.
       SongwritingParameters_2019:
-        title: 'traduzione mancante: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'traduzione mancante: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: " "
+        desc: " "
       courseE_unplugged_CnC_2019:
         title: Condivisione digitale
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
@@ -599,11 +599,11 @@ it:
           digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti
           degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       Internet_2019:
-        title: 'traduzione mancante: en-US.data.unplugged.Internet_2018.title'
-        desc: 'traduzione mancante: en-US.data.unplugged.Internet_2018.desc'
+        title: " "
+        desc: " "
       Crowdsourcing_2019:
-        title: 'traduzione mancante: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'traduzione mancante: en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: " "
+        desc: " "
       GettingLoopy_2019:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo

@@ -1158,7 +1158,54 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "recovering": "recuperando-se",
+          "moving left and right": "movimentação para a esquerda e para a direita",
+          "moving with arrow keys": "utilizando as setas"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
           "patrolling": "patrulhando"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "wandering": "vagando"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "recuperando-se",
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving left and right": "movimentação para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas"
         }
       }
     }

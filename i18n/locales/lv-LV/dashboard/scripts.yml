@@ -2179,6 +2179,8 @@ lv:
               display_name: Binārie
             csf_digcit:
               display_name: Digitālā pilsonība
+            lessonGroup-6:
+              display_name: Digitālā pilsonība
         coursee-2021:
           lessons:
             Conditionals:
@@ -2186,10 +2188,12 @@ lv:
             'Functions: Songwriting':
               name: Dziesmu rakstīšana
           lesson_groups:
+            ramp_up:
+              display_name: Cikli
             csf_digcit:
               display_name: Digitālā pilsonība
             csf_nested_loops:
-              display_name: Cikls ciklā
+              display_name: Sazarojumi
             csf_functions:
               display_name: Funkcijas
         coursef-2021:
@@ -2234,3 +2238,23 @@ lv:
               display_name: Ievads
             lessonGroup-3:
               display_name: Mainīgie
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Cikli
+              name: Cikli
+            Events:
+              key: Pasākumi
+              name: Pasākumi
+            Conditionals:
+              key: Sazarojumi
+              name: Sazarojumi
+            Functions:
+              key: Funkcijas
+              name: Funkcijas
+            Variables:
+              key: Mainīgie
+              name: Mainīgie
+            For Loops:
+              key: '"par" cikli'
+              name: '"par" cikli'

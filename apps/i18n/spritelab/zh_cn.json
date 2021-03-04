@@ -1,6 +1,8 @@
 {
   "clicked": "已点击 ",
   "clickedSprite": "点击精灵图",
+  "new": "新建",
+  "newSprite": "新建角色",
   "subject": "物品",
   "subjectSprite": "精灵主体",
   "object": "对象 ",
@@ -44,5 +46,7 @@
   "outbreakCostumeTab": "点击游戏区域上方的“服装”标签，将一个新的精灵图服装添加到项目中。",
   "outbreakUseCostume": "你的新精灵服装没有在你的模拟中显示。如果你需要提示，请点击灯泡。",
   "outbreakReplaySuccess": "在继续之前，请确保重复模拟多次！",
-  "outbreakSuccess": "你已完成级别。当你准备好进行下一个挑战时，请按继续。"
+  "outbreakSuccess": "你已完成级别。当你准备好进行下一个挑战时，请按继续。",
+  "noSprites": "你需要先创建角色。",
+  "noBehavior": "你的角色需要有相应的行为"
 }

@@ -299,7 +299,15 @@
         "outbreak_freeplay": {
           "recovering": "recuperación",
           "moving left and right": "moverse de izquierda a derecha",
-          "moving with arrow keys": "moverse con las teclas de flecha"
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
         },
         "CourseE_Project_SpriteLab": {
           "wandering": "deambulando",
@@ -839,6 +847,39 @@
           "moving north": "moviéndose al norte",
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "wandering": "deambulando"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "recuperación",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "moving south": "moviéndose al sur",
+          "moving left and right": "moverse de izquierda a derecha",
+          "moving north": "moviéndose al norte",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha"
         }
       }
     }

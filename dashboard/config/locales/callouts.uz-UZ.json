@@ -786,11 +786,11 @@
           "Infinity_move_collide_callout": "Ushbu hodisa yuz berganda tovush chiqsin."
         },
         "Infinity_move_directions": {
-          "Infinity_move_directions_callout": "Yuqoriga o'q bosilganda qaysi blok Baymaksni siljitladi?",
-          "Infinity_move_directions_callout_arrow": "Rul bilan boshqarish uchun ushbu o'qlardan foydalaning"
+          "Infinity_move_directions_callout": "Yuqoriga o‘q bosilganda qaysi blok Baymaksni siljitladi?",
+          "Infinity_move_directions_callout_arrow": "Rul bilan boshqarish uchun ushbu o‘qlardan foydalaning"
         },
         "Infinity_move_right": {
-          "Infinity_move_right_runbutton": "Bu yerga siljitish blokini qo'shing"
+          "Infinity_move_right_runbutton": "Bu yerga siljitish blokini qo‘shing"
         },
         "Infinity_repeat": {
           "Infinity_repeat_callout": "\"Move\" bloklarini bu yerda joylashtiring"
@@ -863,14 +863,14 @@
           "courseC_collector_prog1_1": "Asboblar qutisidagi ba'zi yangi bloklarni ko'ryapsizmi? Xavotir olmang, biz ularni boshqa darsda qanday ishlatishni ko'rsatamiz."
         },
         "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "\"Doira yaratish\" blokidan foydalaning va o'lchamini o'zgartiring."
+          "frozen_circle_function_with_parameter_circle": "\"Doira yaratish\" blokidan foydalaning va o‘lchamini o‘zgartiring."
         },
         "frozen cross": {
-          "repeat_blocks_1": "(1) Ushbu blokdan foydalaning va uni ish joyidagi kulrang bloklar atrofiga qo'ying",
-          "repeat_blocks_2": "(2) \"Takrorlash\" blokini bu yerga ko'chiring va ichiga kulrang bloklarni joylashtiring"
+          "repeat_blocks_1": "(1) Ushbu blokdan foydalaning va uni ish joyidagi kulrang bloklar atrofiga qo‘ying",
+          "repeat_blocks_2": "(2) \"Takrorlash\" blokini bu yerga ko‘chiring va ichiga kulrang bloklarni joylashtiring"
         },
         "frozen cross rotate": {
-          "replace_questions_degree": "\"???\" o'rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
+          "replace_questions_degree": "\"???\" o‘rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
         },
         "frozen diamond": {
           "frozen_diamond_repeat": "Ushbu shaklni yaratish uchun takroriy blokdan foydalaning."
@@ -888,16 +888,16 @@
           "frozen_snowflake_branch": "\"Snowflake shoxini yaratish\" blokidan foydalaning"
         },
         "frozen square iterative": {
-          "frozen_create_square": "Kvadrat yaratish uchun bu yerga ko'proq bloklarni ulang"
+          "frozen_create_square": "Kvadrat yaratish uchun bu yerga ko‘proq bloklarni ulang"
         },
         "frozen square loop": {
-          "replace_questions": "\"???\" o'rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
+          "replace_questions": "\"???\" o‘rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
         },
         "frozen square loop 3x": {
-          "replace_questions": "\"???\" o'rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
+          "replace_questions": "\"???\" o‘rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
         },
         "frozen square snowflake": {
-          "replace_questions": "\"???\" o'rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
+          "replace_questions": "\"???\" o‘rnini raqam bilan almashtirish uchun dropdaun menyudan foydalaning."
         },
         "outbreak2": {
           "minitoolbox": "Blokni kengaytirish uchun shu yerni bosing.",
@@ -1242,6 +1242,22 @@
         },
         "courseA_collector_preLoops1": {
           "courseA_collector_preLoops1_1": "Kodning ishlashini ko'rish uchun bu yerni bosing!"
+        },
+        "frozen line": {
+          "run": "Dasturingizni sinab ko'rish uchun \"Ishga tushirish\" tugmachasini bosing!",
+          "move_elsa_forward": "Elzani oldinga siljitish uchun \"Move Forward\" (\"Oldinga siljitish\") blokini torting va \"When Run\" (\"Ishga tushirilganda\") blokining ostiga qo‘ying"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Ekran yashil rangda bo'ldimi? Agar shunday bo'lsa, \"Finish\" tugmasini bosing. Agar yo'q bo'lsa, 'Reset'  tugmachasini bosing, kodingizni o'zgartiring va yana \"Ishga tushirish\" tugmasini bosing."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Siz endi dizayn rejimidasiz"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Tayyor bo'lgach, dasturingizni sinab ko'rish uchun \"Ishga tushirish\" tugmasini bosing."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Harakatni boshlash uchun \"Ishga tushirish\" (Run) tugmachasini bosing."
         }
       }
     }

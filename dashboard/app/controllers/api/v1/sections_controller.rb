@@ -50,7 +50,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id]) ?
           params[:course_id].to_i : nil,
         stage_extras: params['lesson_extras'] || false,
-        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
+        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
+        tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled]
       }
     )
     render head :bad_request unless section
@@ -95,6 +96,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
     fields[:stage_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
+    fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
 
     section.update!(fields)

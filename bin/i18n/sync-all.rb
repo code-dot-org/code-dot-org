@@ -146,7 +146,7 @@ class I18nSync
     when /^i18n-sync/
       # If we're on an i18n sync branch, only return to staging if the branch
       # has been merged.
-      return unless GitUtils.current_branch_merged_into? "staging"
+      return unless GitUtils.current_branch_merged_into? "origin/staging"
     else
       # If we're on some other branch, then we're in some kind of weird state,
       # so error out.

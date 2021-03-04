@@ -6555,9 +6555,12 @@ is:
         csd3-2021:
           description_short: "Forritun"
           lessons:
+            Programming for Entertainment:
+              description_student: "Hópurinn er beðinn að skoða \"vandamálin\" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum."
             Drawing in Game Lab:
               key: Teikning í Leikjasmiðju
               name: Teikning í Leikjasmiðju
+              description_teacher: "Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan."
             Variables:
               key: Breytur
               name: Breytur
@@ -6579,6 +6582,7 @@ is:
             Velocity:
               key: Hraði
               name: Hraði
+              description_teacher: "Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller)."
             Collision Detection:
               key: Skynjun árekstra
               name: Skynjun árekstra
@@ -6591,6 +6595,7 @@ is:
             Functions:
               key: Föll
               name: Föll
+              description_teacher: "Nemendur læra að búa til föll til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum. Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni. Þeir munu læra að nota föll í stað langra runa af endurteknum kóða, sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til."
             The Game Design Process:
               key: Ferli leikjahönnunar
               name: Ferli leikjahönnunar
@@ -6710,6 +6715,7 @@ is:
               name: Krúttleg kort
             'Loops: Happy Loops':
               name: Lukkulegar lykkjur
+              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
             Loops in Ice Age:
               key: Lykkjur í Ísöld
             Loops in Collector:
@@ -6800,6 +6806,10 @@ is:
             Artist Binary:
               key: 'Listamaður: Tvíundir'
               name: 'Listamaður: Tvíundir'
+            lesson-6:
+              name: Horft fram á við
+            lesson-1:
+              name: Afl orða
           lesson_groups:
             csf_sequencing:
               display_name: Skipanaröð
@@ -6812,6 +6822,8 @@ is:
             csf_binary:
               display_name: Tvíundir
             csf_digcit:
+              display_name: Stafrænn borgari
+            lessonGroup-6:
               display_name: Stafrænn borgari
         coursee-2021:
           description_audience: 'Aldur: 8 - 12'
@@ -6828,7 +6840,7 @@ is:
             csf_digcit:
               display_name: Stafrænn borgari
             csf_nested_loops:
-              display_name: Innri lykkjur
+              display_name: Skilyrði
             csf_functions:
               display_name: Föll
         coursef-2021:
@@ -6851,6 +6863,9 @@ is:
               key: Frá-lykkjur með Býflugu
             For Loops in Artist:
               key: Frá-lykkjur með Listamanni
+            Virtual Pet:
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
           lesson_groups:
             ramp_up:
               display_name: Efling
@@ -6872,6 +6887,9 @@ is:
               name: Danspartý
             'Looking Ahead with Minecraft ':
               name: Horft fram á við
+            Virtual Pet with Sprite Lab:
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!
           lesson_groups:
             csf_sequencing:
               display_name: Skipanaröð
@@ -6909,6 +6927,8 @@ is:
           lessons:
             Course F Introduction:
               name: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
           lesson_groups:
             ramp_up:
               display_name: Kynning
@@ -6962,3 +6982,38 @@ is:
               name: Kennslustund 14
             lesson15:
               name: Kennslustund 15
+        k5-onlinepd-2021:
+          lessons:
+            Sequencing:
+              key: Skipanaröð
+              name: Skipanaröð
+            Loops:
+              key: Lykkjur
+              name: Lykkjur
+            Events:
+              key: Atvik
+              name: Atvik
+            Conditionals:
+              key: Skilyrði
+              name: Skilyrði
+            Functions:
+              key: Föll
+              name: Föll
+            Variables:
+              key: Breytur
+              name: Breytur
+            For Loops:
+              key: Frá lykkjur
+              name: Frá lykkjur
+            Sprite Lab:
+              key: Kvikasmiðjan
+              name: Kvikasmiðjan
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Fyrstu skrefin
+            k5_basic_concepts_1:
+              display_name: Grunnhugtök forritunar og framkvæmd kennslu
+            k5_diving_deeper_1:
+              display_name: 'Kafað dýpra: Námskeið E og F'
+            k5_next_steps_1:
+              display_name: Næstu skref

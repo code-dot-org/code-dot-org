@@ -3993,6 +3993,7 @@ ga:
             Relay Programming:
               key: Códáil Sealaíochta
               name: Códáil Sealaíochta
+              description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiaidh treorach.
             Dance Party:
               key: Cóisir Dhamhsa
               name: Cóisir Dhamhsa
@@ -4021,6 +4022,8 @@ ga:
               display_name: Dénártha
             csf_digcit:
               display_name: Saoránacht Dhigiteach
+            lessonGroup-6:
+              display_name: Saoránacht Dhigiteach
         coursee-2021:
           lessons:
             Conditionals:
@@ -4033,6 +4036,8 @@ ga:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
             About Me:
               name: Maidir Liomsa i Saotharlann na Sprideanna
+            Digital Sharing:
+              description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
             'Functions: Songwriting':
               name: Ceapadh Ceoil
           lesson_groups:
@@ -4043,7 +4048,7 @@ ga:
             csf_digcit:
               display_name: Saoránacht Dhigiteach
             csf_nested_loops:
-              display_name: Lúba Neadaithe
+              display_name: Coinníollacha
             csf_functions:
               display_name: Feidhmeanna
         coursef-2021:
@@ -4128,6 +4133,8 @@ ga:
               name: Éisc ar snámh i Saotharlann na Sprideanna
             Course F Introduction:
               name: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
           lesson_groups:
             ramp_up:
               display_name: Réamhrá
@@ -4155,3 +4162,34 @@ ga:
               display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
             cspSurvey:
               display_name: Suirbhé
+        k5-onlinepd-2021:
+          lessons:
+            Sequencing:
+              key: Seicheamhú
+              name: Seicheamhú
+            Loops:
+              key: Lúba
+              name: Lúba
+            Events:
+              key: Teagmhais
+              name: Teagmhais
+            Conditionals:
+              key: Coinníollacha
+              name: Coinníollacha
+            Functions:
+              key: Feidhmeanna
+              name: Feidhmeanna
+            Variables:
+              key: Athróga
+              name: Athróga
+            For Loops:
+              key: Lúba "Do Gach"
+              name: Lúba "Do Gach"
+            Sprite Lab:
+              key: Saotharlann na Sprideanna
+              name: Saotharlann na Sprideanna
+          lesson_groups:
+            k5_basic_concepts_1:
+              display_name: Bunchoincheapa Códála agus Cleachtadh Múinteoireachta
+            k5_diving_deeper_1:
+              display_name: 'Níos Doimhne: Cúrsaí E agus F'

@@ -121,7 +121,7 @@ es-MX:
     not_linked: "Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}. Tendrás que escribir tu contraseña debajo para iniciar sesión."
     use_clever: "Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}. Por favor, inicia sesión a través de tu Portal Clever."
     invalid_provider: "Disculpe, Las cuentas de %{provider} no pueden ser ligadas a cuentas de Code.org."
-    migration_required: "Disculpe, no podemos conectar o desconectar cuentas que aun estén usando la versión antigua de cuentas. Por favor, actualice a la nueva experiencia de cuenta."
+    migration_required: "Disculpe, no podemos conectar o desconectar cuentas que aún estén usando la versión antigua de cuentas. Por favor, actualice a la nueva experiencia de cuenta."
     unable_to_connect_provider: "No se pudo conectar tu cuenta de Code.org a tu %{provider}. Por favor, inténtalo de nuevo."
     disconnect_successful: "¡Éxito!, Hemos desconectado la cuenta externa de su cuenta de Code.org."
     already_in_use: "Tu %{provider} ya está conectado a otra cuenta de Code.org."
@@ -177,8 +177,8 @@ es-MX:
     email_preference_yes: "Sí"
     email_preference_no: "No"
     email_preference_required: "Debes especificar una preferencia de correo electrónico."
-    parent_account_checkbox: "Soy padre o tutor registrándome en lugar de mi hijo"
-    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones ocasionales para el progreso y proyectos de tus hijos, y actualizaciones sobre sus cursos de ciencias de la computación?"
+    parent_account_checkbox: "Soy padre o tutor registrándose en lugar de mi hijo"
+    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones ocasionales del progreso y proyectos de tus hijos, y actualizaciones sobre sus cursos de ciencias de la computación? [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: "Correo electrónico del padre o tutor"
   school_info:
     title: 'Información de la escuela (opcional)'
@@ -1053,9 +1053,9 @@ es-MX:
       intro: "Gracias por tomarte el tiempo de conocer el plan de estudios de Code.org. Nuestra misión de enseñar ciencias de la computación a cada niño de cada escuela alrededor del mundo no sería posible sin ti."
       instructions: "Completa el formulario a continuación para indicar que 1) asististe a un taller a cargo de uno de los socios internacionales de Code.org, y 2) estás de acuerdo en compartir tu información con nuestros socios internacionales en tu país, para que puedan ayudarte en tu viaje como docente de ciencias de la computación."
       thanks_markdown: "¡Gracias por enviarnos tu solicitud! Esperamos acompañarte mientras conoces el plan de estudios y las herramientas de Code.org. Si quieres compartir tus dudas y sugerencias con nosotros, ¡puedes escribirnos a [support@code.org](%{support_email_url}) o publicar en el [foro de docentes](%{teacher_forum_url})!"
-      facilitator_not_listed: "Mi facilitados no está listado"
+      facilitator_not_listed: "Mi facilitador no está enlistado/a"
       facilitator_not_applicable: "No Aplicable"
-      organizer_not_listed: "Mi organizador no estpa listado"
+      organizer_not_listed: "Mi organizador/a no esta enlistado/a"
     logged_out:
       heading: '¡Gracias por tu interés en el Programa de Aprendizaje Profesional!'
       body: 'Para empezar, necesitas iniciar sesión en tu cuenta de Code.org. Si quieres obtener más información acerca del programa antes de iniciar tu solicitud, echa un vistazo al <a href="%{url}">Programa de Aprendizaje Internacional</a>.'
@@ -1074,6 +1074,7 @@ es-MX:
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."
   page_not_found_button: "Volver a la página de inicio"
   copy: 'Copiar'
+  confirm: 'Confirmar'
   maker:
     google_oauth:
       login_with_google: 'Inicia sesión en la aplicación Maker con Google'

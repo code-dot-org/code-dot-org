@@ -4,7 +4,9 @@ require 'pdf/conversion'
 
 module Services
   # Contains all code related to the generation, storage, and
-  # retrieval of Lesson Plan PDFs
+  # retrieval of Lesson Plan PDFs.
+  #
+  # Also see lesson_plan_pdfs.rake for some associated logic
   module LessonPlanPdfs
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
@@ -41,7 +43,7 @@ module Services
       end
     end
 
-    # Simple helper for comparing serialized_at and seeded_at values. Because
+    # Simple helper for comparing serialized_at and seeded_from values. Because
     # these values sometimes come from json and sometimes come from the
     # database, we want to do some normalization to make our inequality
     # comparison more consistent.
@@ -73,8 +75,11 @@ module Services
       return false unless script_data['properties'].fetch('is_migrated', false)
       return false if DCDO.get('disable_lesson_plan_pdf_generation', false)
 
+      script = Script.find_by(name: script_data['name'])
+      return false unless script.present?
+
       new_timestamp = script_data['serialized_at']
-      existing_timestamp = Script.find_by(name: script_data['name']).seeded_at
+      existing_timestamp = script.seeded_from
       !timestamps_equal(new_timestamp, existing_timestamp)
     end
 
@@ -122,8 +127,8 @@ module Services
     # Expect this to look something like
     # <Pathname:csp1-2021/20210216001309/Welcome to CSP.pdf>
     def self.get_pathname(lesson)
-      return nil unless lesson&.script&.seeded_at
-      version_number = Time.parse(lesson.script.seeded_at).to_s(:number)
+      return nil unless lesson&.script&.seeded_from
+      version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
       filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
       return Pathname.new(File.join(lesson.script.name, version_number, filename))
     end
@@ -133,6 +138,11 @@ module Services
       return nil unless pathname.present?
 
       File.join(get_base_url, pathname)
+    end
+
+    def self.pdf_exists_for?(lesson)
+      pathname = get_pathname(lesson)
+      AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
     end
 
     def self.generate_lesson_pdf(lesson, directory="/tmp/")

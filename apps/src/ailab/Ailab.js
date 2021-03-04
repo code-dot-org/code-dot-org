@@ -125,13 +125,23 @@ Ailab.prototype.onContinue = function() {
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
-  const saveTrainedModel = dataToSave => {
-    $.ajax({
-      method: 'POST',
-      url: '/api/v1/ml_models/save',
-      type: 'json',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToSave)
+  const saveTrainedModel = (dataToSave, callback) => {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        method: 'POST',
+        url: '/api/v1/ml_models/save',
+        type: 'json',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify(dataToSave)
+      })
+        .then(response => {
+          callback(response);
+          return resolve();
+        })
+        .fail((jqHXhr, status) => {
+          callback(JSON.stringify({status: 'failure'}));
+          return reject();
+        });
     });
   };
 

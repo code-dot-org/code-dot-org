@@ -22,8 +22,8 @@ vi:
         course1:
           title: Khóa học 1
           description: Bắt đầu với Khoá học 1 cho trẻ mới biết đọc. Học viên sẽ được thiết kế các chương trình máy tính có thể giúp họ học cách hợp tác với người khác, phát triển các kỹ năng giải quyết vấn đề, và nỗ lực vượt qua các việc khó. Học viên sẽ có thể tạo ra một trò chơi hoặc câu chuyện riêng mà họ có thể chia sẻ. Phù hợp cho lớp K-1 (6 tuổi).
-          description_short: Khóa học 1 được thiết kế cho trẻ mới biết đọc.
-          description_audience: 4-6 tuổi
+          description_short: Giới thiệu về khoa học máy tính cho người đọc sớm.
+          description_audience: Tuổi từ 4-6
           lessons:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
@@ -65,8 +65,8 @@ vi:
         course2:
           title: Khóa học 2
           description: Khóa học 2 được thiết kế cho người biết đọc và không có kinh nghiệm lập trình. Trong khóa học này, học viên sẽ tạo ra các chương trình để giải quyết vấn đề và phát triển các trò chơi tương tác hoặc chia sẻ những mẩu chuyện. Khuyến khích cho học sinh từ lớp 2 đến lớp 5.
-          description_short: Khóa học 2 được thiết kế dành cho những sinh viên có khả năng đọc.
-          description_audience: Lứa tuổi 6 + (yêu cầu biết đọc)
+          description_short: Giới thiệu về khoa học máy tính cho học sinh có thể đọc.
+          description_audience: 6 tuổi trở lên (yêu cầu đọc)
           lessons:
             'Artist: Debugging':
               name: 'Nghệ sĩ: gỡ lỗi'
@@ -2354,7 +2354,7 @@ vi:
             Contained Levels:
               name: Các cấp độ có chứa
             Game Lab:
-              name: Kho Trò chơi
+              name: Phòng thí nghiệm trò chơi
         cspunit1-support-test:
           lessons:
             Unit 1 Overview:
@@ -5375,7 +5375,7 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         gamelab:
-          title: Kho Trò chơi
+          title: Phòng thí nghiệm trò chơi
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -6944,6 +6944,7 @@ vi:
             Styling Text with CSS:
               key: Tạo phong cách cho văn bản với CSS
               name: Tạo phong cách cho văn bản với CSS
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Intellectual Property:
               key: Sở hữu trí tuệ
               name: Sở hữu trí tuệ
@@ -6959,6 +6960,7 @@ vi:
             Drawing in Game Lab:
               key: Bản vẽ trong Kho trò chơi
               name: Bản vẽ trong Kho trò chơi
+              description_teacher: "Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó."
             Variables:
               key: Các biến
               name: Các biến
@@ -6971,6 +6973,8 @@ vi:
             Project - Interactive Card:
               key: 'Dự án: Thẻ tương tác'
               name: 'Dự án: Thẻ tương tác'
+            Velocity:
+              description_teacher: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
             Collision Detection:
               key: Phát hiện va chạm
               name: Phát hiện va chạm
@@ -7092,6 +7096,7 @@ vi:
             Sequencing with Scrat:
               key: Học về chuỗi tuần tự cùng sóc Scrat
               name: Học về chuỗi tuần tự cùng sóc Scrat
+              description_student: Viết chương trình để Scrat tìm đến hạt sồi.
             Programming with Rey and BB-8:
               key: Lập trình cùng Rey và robot BB-8
               name: Lập trình cùng Rey và robot BB-8
@@ -7172,6 +7177,8 @@ vi:
             Artist Binary:
               key: Nghệ sĩ nhị phân
               name: Nghệ sĩ nhị phân
+            lesson-6:
+              name: Nhìn về phía trước
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -7185,6 +7192,8 @@ vi:
               display_name: Nhị phân
             csf_digcit:
               display_name: Công dân số
+            lessonGroup-6:
+              display_name: Công dân số
         coursee-2021:
           lessons:
             Sequencing in the Maze:
@@ -7197,10 +7206,12 @@ vi:
             'Functions: Songwriting':
               name: Sáng tác với tham số
           lesson_groups:
+            ramp_up:
+              display_name: Vòng lặp
             csf_digcit:
               display_name: Công dân số
             csf_nested_loops:
-              display_name: Vòng lặp lồng nhau
+              display_name: Điều kiện
             csf_functions:
               display_name: Các hàm
         coursef-2021:
@@ -7323,3 +7334,31 @@ vi:
               name: Bài học 14
             lesson15:
               name: Bài học 15
+        k5-onlinepd-2021:
+          lessons:
+            Sequencing:
+              key: Chuỗi tuần tự
+              name: Chuỗi tuần tự
+            Loops:
+              key: Vòng lặp
+              name: Vòng lặp
+            Events:
+              key: Các sự kiện
+              name: Các sự kiện
+            Conditionals:
+              key: Điều kiện
+              name: Điều kiện
+            Functions:
+              key: Các hàm
+              name: Các hàm
+            Variables:
+              key: Các biến
+              name: Các biến
+            For Loops:
+              key: Cho vòng lặp
+              name: Cho vòng lặp
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Bắt đầu
+            k5_next_steps_1:
+              display_name: Bước tiếp theo

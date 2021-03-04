@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import TextareaWithImageUpload from '@cdo/apps/lib/levelbuilder/TextareaWithImageUpload';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
@@ -24,15 +25,6 @@ const styles = {
     marginBottom: 0,
     border: '1px solid ' + color.lighter_gray,
     padding: 10
-  },
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
   }
 };
 
@@ -61,12 +53,11 @@ export default class TextareaWithMarkdownPreview extends React.Component {
         <div style={styles.wrapper}>
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Markdown:</div>
-            <textarea
+            <TextareaWithImageUpload
+              markdown={this.props.markdown}
               name={this.props.name}
-              value={this.props.markdown}
-              rows={this.props.inputRows || 5}
-              style={styles.input}
-              onChange={this.props.handleMarkdownChange}
+              inputRows={this.props.inputRows || 5}
+              handleMarkdownChange={this.props.handleMarkdownChange}
             />
           </div>
           <div style={styles.container}>

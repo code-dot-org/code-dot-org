@@ -109,23 +109,47 @@ describe('UnitCard', () => {
     expect(wrapper.find('LessonToken')).to.have.lengthOf(4);
     expect(wrapper.find('textarea')).to.have.lengthOf(4);
 
-    expect(wrapper.find('button')).to.have.lengthOf(3);
+    expect(wrapper.find('button')).to.have.lengthOf(7);
     expect(
       wrapper
         .find('button')
         .at(0)
         .text()
-    ).to.include('Lesson');
+    ).to.include('Image');
     expect(
       wrapper
         .find('button')
         .at(1)
         .text()
-    ).to.include('Lesson');
+    ).to.include('Image');
     expect(
       wrapper
         .find('button')
         .at(2)
+        .text()
+    ).to.include('Lesson');
+    expect(
+      wrapper
+        .find('button')
+        .at(3)
+        .text()
+    ).to.include('Image');
+    expect(
+      wrapper
+        .find('button')
+        .at(4)
+        .text()
+    ).to.include('Image');
+    expect(
+      wrapper
+        .find('button')
+        .at(5)
+        .text()
+    ).to.include('Lesson');
+    expect(
+      wrapper
+        .find('button')
+        .at(6)
         .text()
     ).to.include('Add Lesson Group');
   });

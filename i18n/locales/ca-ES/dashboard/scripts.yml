@@ -2261,6 +2261,8 @@ ca:
               display_name: Binari
             csf_digcit:
               display_name: Ciutadania digital
+            lessonGroup-6:
+              display_name: Ciutadania digital
         coursee-2021:
           description_audience: 'De 8 a 12 anys'
           lessons:
@@ -2269,10 +2271,12 @@ ca:
             'Functions: Songwriting':
               name: Composició de cançons
           lesson_groups:
+            ramp_up:
+              display_name: Bucles
             csf_digcit:
               display_name: Ciutadania digital
             csf_nested_loops:
-              display_name: Bucles imbricats
+              display_name: Condicionals
             csf_functions:
               display_name: Funcions
         coursef-2021:
@@ -2317,3 +2321,26 @@ ca:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Esdeveniments
+              name: Esdeveniments
+            Conditionals:
+              key: Condicionals
+              name: Condicionals
+            Functions:
+              key: Funcions
+              name: Funcions
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Per bucles
+              name: Per bucles
+            Sprite Lab:
+              key: Laboratori de personatges
+              name: Laboratori de personatges

@@ -1,11 +1,15 @@
 require 'test_helper'
+require 'pdf/conversion'
 
 class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
+  setup do
+    PDF.stubs(:generate_from_url)
+  end
+
   test 'wraps ScriptSeed with PDF generation logic' do
     CDO.stubs(:rack_env).returns(:staging)
     script = create(:script, is_migrated: true, hidden: true)
     seed_hash = JSON.parse(Services::ScriptSeed.serialize_seeding_json(script))
-    puts seed_hash
 
     # Generate PDFs on first seed
     Services::LessonPlanPdfs.expects(:generate_pdfs).once
@@ -20,6 +24,23 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
       Time.parse(seed_hash['script']['serialized_at']) + 1.hour
     Services::LessonPlanPdfs.expects(:generate_pdfs).once
     Services::ScriptSeed.seed_from_hash(seed_hash)
+  end
+
+  test 'gracefully handles nonexistent scripts' do
+    # right now, we just handle nonexistent scripts by doing nothing. This
+    # means that after a script gets added, it will need to be updated in some
+    # way to trigger PDF generation. We could probably instead be more
+    # proactive about generating PDFs for newly created scripts, but since this
+    # feature is still brand new I think it makes sense to be conservative.
+    script_data = {
+      'properties' => {
+        'is_migrated' => true
+      },
+      'serialized_at' => Time.now.getutc,
+      'name' => "Some Script That Doesn't Exist (#{Time.now.to_i})"
+    }
+    assert_nil Script.find_by(name: script_data['name'])
+    refute Services::LessonPlanPdfs.generate_pdfs?(script_data)
   end
 
   test 'timestamp equality can compare Times and Strings' do
@@ -40,7 +61,7 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
 
     assert Services::LessonPlanPdfs.timestamps_equal(
       "20070129123456",
-      Time.at(1_170_102_896)
+      Time.parse("2007-01-29 12:34:56")
     )
   end
 
@@ -58,30 +79,31 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
     script_data = JSON.parse(script_data.to_json)
 
     assert Services::LessonPlanPdfs.generate_pdfs?(script_data)
-    script.update!(seeded_at: script_data['serialized_at'])
+    script.update!(seeded_from: script_data['serialized_at'])
     refute Services::LessonPlanPdfs.generate_pdfs?(script_data)
   end
 
   test 'PDF paths (and urls) are versioned' do
-    script = create(:script, seeded_at: Time.at(123_456_789))
+    script = create(:script, seeded_from: Time.at(123_456_789))
     lesson = create(:lesson, script: script)
     original_pathname = Services::LessonPlanPdfs.get_pathname(lesson)
     unmodified_pathname = Services::LessonPlanPdfs.get_pathname(lesson)
     assert_equal original_pathname, unmodified_pathname
 
-    script.update!(seeded_at: Time.at(234_567_890))
+    script.update!(seeded_from: Time.at(234_567_890))
     new_pathname = Services::LessonPlanPdfs.get_pathname(lesson)
     refute_equal original_pathname, new_pathname
   end
 
   test 'Lesson PDFs are generated into the given directory' do
-    script = create(:script, seeded_at: Time.now)
+    script = create(:script, seeded_from: Time.now)
     lesson = create(:lesson, script: script)
     Dir.mktmpdir('lesson_plan_pdfs_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
+      url = Rails.application.routes.url_helpers.script_lesson_url(script, lesson)
+      filename = File.join(tmpdir, Services::LessonPlanPdfs.get_pathname(lesson))
+      PDF.expects(:generate_from_url).with(url, filename)
       Services::LessonPlanPdfs.generate_lesson_pdf(lesson, tmpdir)
-      assert_equal 1, Dir.glob(File.join(tmpdir, '**/*.pdf')).count
-      assert File.exist? File.join(tmpdir, Services::LessonPlanPdfs.get_pathname(lesson))
     end
   end
 

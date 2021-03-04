@@ -11,15 +11,19 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   def save
     model_id = generate_id
     metadata = params["ml_model"].except(:trainedModel, :featureNumberKey)
-    UserMlModel.create!(
-      user_id: current_user.id,
+    @user_ml_model = UserMlModel.create!(
+      user_id: current_user&.id,
       model_id: model_id,
       name: params["ml_model"]["name"],
       metadata: metadata.to_json
     )
-    upload_to_s3(model_id, params["ml_model"].to_json)
-
-    render json: {id: model_id}
+    if @user_ml_model.persisted?
+      s3_filename = upload_to_s3(model_id, params["ml_model"].to_json)
+      status = s3_filename ? "success" : "failure"
+      render json: {id: model_id, status: status}
+    else
+      render json: {id: model_id, status: "failure"}
+    end
   end
 
   # GET api/v1/ml_models/names
@@ -32,7 +36,8 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/metadata/:model_id
   # Retrieve a trained ML model's metadata
   def user_ml_model_metadata
-    metadata = UserMlModel.where(user_id: current_user&.id, model_id: params[:model_id]).first.metadata
+    metadata = UserMlModel.where(user_id: current_user&.id, model_id: params[:model_id])&.first&.metadata
+    return render_404 unless metadata
     render json: JSON.parse(metadata)
   end
 

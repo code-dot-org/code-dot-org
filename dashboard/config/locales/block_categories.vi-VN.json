@@ -1,0 +1,72 @@
+{
+  "vi-VN": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "hành động",
+          "Brushes": "Bàn chải",
+          "Loops": "Vòng lặp",
+          "Math": "thuật toán",
+          "Logic": "Logic",
+          "Functions": "Các hàm",
+          "Variables": "Các biến"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Thế giới",
+          "Dancers": "Vũ công",
+          "Properties": "Thuộc tính",
+          "Events": "Các sự kiện",
+          "Numbers": "Các con số",
+          "Logic": "Logic"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "hành động",
+          "Events": "Các sự kiện",
+          "Loops": "Vòng lặp",
+          "Math": "thuật toán",
+          "Logic": "Logic",
+          "Games/Score": "Trò chơi/Điểm"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Thế giới",
+          "Actions": "hành động",
+          "Events": "Các sự kiện",
+          "Behaviors": "Hành vi"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Thế giới",
+          "Locations": "Địa điểm",
+          "Actions": "hành động",
+          "Events": "Các sự kiện",
+          "Behaviors": "Hành vi",
+          "Variables": "Các biến",
+          "Math": "thuật toán",
+          "Logic": "Logic",
+          "Functions": "Các hàm",
+          "Text": "Văn bản",
+          "Comments": "Bình luận"
+        },
+        "outbreak_freeplay": {
+          "World": "Thế giới",
+          "Actions": "hành động",
+          "Behaviors": "Hành vi",
+          "Events": "Các sự kiện",
+          "Locations": "Địa điểm",
+          "Logic": "Logic",
+          "Loops": "Vòng lặp",
+          "Math": "thuật toán",
+          "Variables": "Các biến",
+          "Functions": "Các hàm",
+          "Comments": "Bình luận"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Thế giới",
+          "Actions": "hành động",
+          "Events": "Các sự kiện",
+          "Logic": "Logic",
+          "Math": "thuật toán"
+        }
+      }
+    }
+  }
+}

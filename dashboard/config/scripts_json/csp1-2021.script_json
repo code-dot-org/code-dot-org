@@ -23,6 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-02 01:14:44 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -167,7 +168,7 @@
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r FlippyDo Template]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -254,7 +255,7 @@
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
         "student_overview": "Learn how computers represent black and white images using bits.",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r bw sampling activity guide] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
+        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -283,7 +284,7 @@
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
         "student_overview": "Learn how computers represent color images using bits.",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
-        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r CSP Unit 1 Presentation]\t\r\n",
+        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information]\t\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -341,7 +342,7 @@
         "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost.",
         "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
-        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r CSP Unit 1 Presentation] ready for the discussion towards the end of the lesson\r\n",
+        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information] ready for the discussion towards the end of the lesson\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -600,19 +601,6 @@
       }
     },
     {
-      "key": "e09790ac-b548-45d9-898e-dbe3317f563c",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e09790ac-b548-45d9-898e-dbe3317f563c",
-        "lesson.key": "Representing Information",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
       "key": "f939f4f7-916c-42a6-9d49-4012a09eb267",
       "position": 1,
       "properties": {
@@ -658,7 +646,6 @@
       "key": "3ca8b4be-0a1a-45f3-9f81-71905178394e",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "3ca8b4be-0a1a-45f3-9f81-71905178394e",
@@ -704,19 +691,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a9d4e34c-bb8b-41b6-922d-a025c4043449",
-        "lesson.key": "Binary Numbers",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "key": "0d1cbf20-4041-40bd-b99f-aaa4d78dd76c",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0d1cbf20-4041-40bd-b99f-aaa4d78dd76c",
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021"
@@ -807,19 +781,6 @@
       }
     },
     {
-      "key": "333c60ec-8d4c-4294-ae03-a3765ee7ee64",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "333c60ec-8d4c-4294-ae03-a3765ee7ee64",
-        "lesson.key": "Representing Text",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
       "key": "a3a205b3-b5f0-41b3-90ba-406bd2c0ad98",
       "position": 1,
       "properties": {
@@ -865,7 +826,6 @@
       "key": "a50bcd72-7f45-4043-a6eb-449b77e59256",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "a50bcd72-7f45-4043-a6eb-449b77e59256",
@@ -1223,7 +1183,6 @@
       "key": "b5b8b677-320b-4e6b-a3ff-2f6a2080d222",
       "position": 3,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "b5b8b677-320b-4e6b-a3ff-2f6a2080d222",
@@ -1259,7 +1218,7 @@
       "key": "c59591f1-d97f-40b3-8051-f163351f5eea",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n\n[pull-right]\n\n![](https://images.code.org/30bd74ce97a3d5cf661d5529d2640050-image-1611866929814.png)\n\n[/pull-right]\n\n* To check if you have access:\n\n\t1. Navigate to the [Unit 1 overview page](https://studio.code.org/s/csp1)\n\t2. Do you see the CS Principles Pre-course Survey at the top of the unit overview page?\n\t3. If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n[pull-right]\n\n![](https://images.code.org/e69e38888ac07fc0ce5f479c8d71ec8f-image-1611866998474.png)\n\n[/pull-right]\n\n* You can either...\n\n\t* Go to the [r how_to_videos_1] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.",
+        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n\n[pull-right]\n\n![](https://images.code.org/0989bbfe1f2ee63670754387f9e3b523-pre-survey-screencap.png)\n\n[/pull-right]\n\n* To check if you have access:\n\n\t1. Navigate to the [Unit 1 overview page](https://studio.code.org/s/csp1)\n\t2. Do you see the CS Principles Pre-course Survey at the top of the unit overview page?\n\t3. If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n[pull-right]\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n[/pull-right]\n\n* You can either...\n\n\t* Go to the [r how_to_videos_1] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
         "name": "Before your first class\r"
       },
       "seeding_key": {
@@ -1294,13 +1253,7 @@
       "key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
       "position": 5,
       "properties": {
-        "description": "[slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \r\n"
-          }
-        ]
+        "description": "[slide]  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join."
       },
       "seeding_key": {
         "activity_section.key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
@@ -1311,7 +1264,13 @@
       "key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
       "position": 6,
       "properties": {
-        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey"
+        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The slide icon [slide] indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
@@ -1643,32 +1602,14 @@
       }
     },
     {
-      "key": "007c5d5d-0099-418f-85ae-ff4a5b1ba117",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** More important than writing a formal definition of information is getting students discussing the term and its diverse forms. If students struggle with defining \"information,\" modify the prompt by asking them to provide examples of information in their world such as texts, books, videos, music, conversations, etc.\r\n\r\n\r\n\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "007c5d5d-0099-418f-85ae-ff4a5b1ba117",
-        "lesson_activity.key": "8bb6f729-5453-41ac-93af-ff05eb74f13c"
-      }
-    },
-    {
       "key": "6beaa96b-d6d0-41aa-8780-0992ea0b07a7",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide]   discussion!!!discussion-0  **Prompt:** What is your definition of information?",
         "tips": [
           {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Reminder:** A slide icon ![](https://curriculum.code.org/media/uploads/singleslide.svg)  indicates there is a corresponding slide in the unit slide deck. \r\n\r\n"
+            "type": "discussionGoal",
+            "markdown": "**Goal:** More important than writing a formal definition of information is getting students discussing the term and its diverse forms. If students struggle with defining \"information,\" modify the prompt by asking them to provide examples of information in their world such as texts, books, videos, music, conversations, etc.\n\n\n\n"
           }
         ]
       },
@@ -1679,7 +1620,7 @@
     },
     {
       "key": "7c9fad77-bef7-42a6-8946-1003b5cf014b",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "**Discuss:** Have students silently write their own definition, then share with a partner, and finally have some volunteers share with the room."
       },
@@ -1690,10 +1631,16 @@
     },
     {
       "key": "b9a01469-016b-47de-aff8-bb3bd25fc4c8",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "* There are many ways we can think about the word “information,” but one possible definition we’ll explore today is that information is the answer to a question. \r\n* We're going to investigate what it takes to send that information back and forth to one another.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reminder:** A slide icon ![](https://curriculum.code.org/media/uploads/singleslide.svg)  indicates there is a corresponding slide in the unit slide deck. \n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b9a01469-016b-47de-aff8-bb3bd25fc4c8",
@@ -1729,13 +1676,6 @@
       "position": 3,
       "properties": {
         "description": "[slide]  **Journal:** Write down a question that has two possible answers.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Challenge 1 - Question with 2 Answers:** In this activity, avoid the urge to give students a pre-written question or answers without allowing them time to struggle with the challenge. Encourage students to write down in their journal how their device works. \r\n\r\n* Example Question: Do you like strawberry or vanilla ice cream?\r\n* Answer: strawberry (move my pencil up and down), vanilla (move my pencil side to side)\r\n\r\n**Challenge 2 - Question with 4 Answers:** Some students may add new ways of answering a question. Others may notice that they can reuse their previous responses, sending those responses in sequences that produce new messages. Avoid the urge to tell them to reuse the device, instead allowing them to explore their own ideas.\r\n\r\n**Challenge 3 - Question with 8 or More Answers:** At this point, students may start to realize that the way their device communicates information is not practical and could not be scaled up if there were for example, a thousand or a million possible answers.\r\n"
-          }
-        ],
         "name": "Challenge #1:\r"
       },
       "seeding_key": {
@@ -1771,7 +1711,13 @@
       "position": 6,
       "properties": {
         "description": "[slide] **Journal:** Modify the answers to your question so there are now eight possible choices. \r\n\r\n[slide] **Do This:** Update your device to communicate one of eight possible answers to your question.\r\n\r\n* Consider: \r\n\r\n\t* Should you modify your device?\r\n\t* Can you use it in a different way?\r\n\t* Should you make a new device?\r\n\r\n[slide] **Demo:** Do a final demonstration of devices before ending the activity.",
-        "name": "Challenge #3:\r"
+        "name": "Challenge #3:\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Challenge 1 - Question with 2 Answers:** In this activity, avoid the urge to give students a pre-written question or answers without allowing them time to struggle with the challenge. Encourage students to write down in their journal how their device works. \n\n* Example Question: Do you like strawberry or vanilla ice cream?\n* Answer: strawberry (move my pencil up and down), vanilla (move my pencil side to side)\n\n**Challenge 2 - Question with 4 Answers:** Some students may add new ways of answering a question. Others may notice that they can reuse their previous responses, sending those responses in sequences that produce new messages. Avoid the urge to tell them to reuse the device, instead allowing them to explore their own ideas.\n\n**Challenge 3 - Question with 8 or More Answers:** At this point, students may start to realize that the way their device communicates information is not practical and could not be scaled up if there were for example, a thousand or a million possible answers.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c67d6c4a-d902-45b5-ba7a-7daaf3b05bcf",
@@ -1797,7 +1743,6 @@
         "description": "[slide]  **Prompt:** Think back to your simple two-option device from Challenge #1. Instead of changing your device and adding more options every time you added more answers, how could you simply modify the way you use your device with only two options?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Focus the discussion on why some groups created devices using unique options for each additional message, while other groups devised plans in which they reused the same device to create new combinations of the original two options. \r\n\r\nUltimately, groups begin to notice that, for example: instead of bending a straw in four different directions, they could simply bend the straw the same two ways multiple times.\r\n\r\n* Sample Question: Do you like strawberry, chocolate, vanilla, or peanut butter ice cream?\r\n* Answers: strawberry (bend straw forward once), chocolate (bend straw forward twice), vanilla (bend straw backwards once), peanut butter (bend straw backwards twice)\r\n\r\n\r\n"
           }
@@ -1824,7 +1769,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Recall when you built your information sending device. Why did we decide to send a message as a sequence of two options rather than modifying our devices to represent more options? \r\n\r\nFor example: \r\nModifications with two options \r\n\r\n* bend straw forward once\r\n* bend straw backwards once\r\n* bend straw forwards twice\r\n* bend straw backwards twice\r\n\r\nvs.\r\n\r\nFour options\r\n\r\n* bend straw forward\r\n* bend straw backwards\r\n* bend straw to the left\r\n* bend straw to the right",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "83e87ac1-edd5-4a28-81b9-159e23af1586",
@@ -1832,29 +1778,10 @@
       }
     },
     {
-      "key": "f09a6214-7303-487c-ac8d-aa15166a159f",
-      "position": 1,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "f09a6214-7303-487c-ac8d-aa15166a159f",
-        "lesson_activity.key": "e09790ac-b548-45d9-898e-dbe3317f563c"
-      }
-    },
-    {
       "key": "13d49ef5-25cc-4562-8d3b-3c684b3db236",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How many ways can you represent 7?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Introduce the idea that the numeral '7' is just one commonly used symbol to represent the number seven. There are many ways to communicate this same number that may use different symbols or representations, all of which are valid. Sharing the variety of responses helps motivate the following activity that asks students to discover a system for using the circles and squares to represent numbers, including the number 7.\r\n\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** How many ways can you represent 7?"
       },
       "seeding_key": {
         "activity_section.key": "13d49ef5-25cc-4562-8d3b-3c684b3db236",
@@ -1865,7 +1792,13 @@
       "key": "57af4210-a7e7-4745-a53e-9d742e1bd16b",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm individually before sharing in small groups. It is important to allow ample brainstorming time - students may generate familiar responses at first, but may stretch their thinking and get more creative with additional time. Some examples may include:\r\n\r\n* Linguistic examples - \"seven\", \"siete\" (spanish), \"sept\" (french), \"sieben\" (german), etc\r\n* Picture examples - dots, tallys, emojis, etc\r\n* Math & Geometry examples - 5 + 2, 8 - 1, a seven-sided shape, etc\r\n\r\nAfter a short time, ask students to share some responses with the whole class. Use these responses to quickly generate a wide variety of representations."
+        "description": "**Discuss:** Students should brainstorm individually before sharing in small groups. It is important to allow ample brainstorming time - students may generate familiar responses at first, but may stretch their thinking and get more creative with additional time. Some examples may include:\r\n\r\n* Linguistic examples - \"seven\", \"siete\" (spanish), \"sept\" (french), \"sieben\" (german), etc\r\n* Picture examples - dots, tallys, emojis, etc\r\n* Math & Geometry examples - 5 + 2, 8 - 1, a seven-sided shape, etc\r\n\r\nAfter a short time, ask students to share some responses with the whole class. Use these responses to quickly generate a wide variety of representations.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Introduce the idea that the numeral '7' is just one commonly used symbol to represent the number seven. There are many ways to communicate this same number that may use different symbols or representations, all of which are valid. Sharing the variety of responses helps motivate the following activity that asks students to discover a system for using the circles and squares to represent numbers, including the number 7.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "57af4210-a7e7-4745-a53e-9d742e1bd16b",
@@ -1936,14 +1869,7 @@
       "key": "9af01f17-2448-4830-af2a-907d2aa7dccb",
       "position": 5,
       "properties": {
-        "description": "**Challenge #2:** Students describe the rules or strategy they used to create their list. They are aiming for clear directions that can be followed by another group to reproduce their same list in the same order.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Manipulatives:** Students are given manipulatives to help visualize any rules they are using to move from one element of the list to the next. You might see students use all their manipulatives at once to create the different patterns, then discuss how to arrange them into an ordered list. You might see students representing one pattern at a time, then discussing the rules for “replacing” shapes to generate each of the next patterns. Students might not use the manipulatives at all, using pen & paper or whiteboards instead.\r\n\r\n**Many Possible Answers:** It is okay for different groups to come up with different orders for their lists of patterns - this will help with the share-out discussion as you highlight different strategies.\r\n\r\n**Facilitating With Groups:** You should act as a facilitator during this part of the activity, guiding students in describing the rules & strategies that they used to create their list. These strategies may be implicit and unconscious to the student, but you can ask questions to help students realize their own thinking that went into generating their list. Aim to help students clarify their thinking to make it easier for other groups to follow.\r\n\r\n**Group Dynamics:** Be mindful of groups that appear to be dominated by a single student.  Asking each student individually about their strategy can help bring students back together and reinforce the collaborative aspect of this activity.\r\n"
-          }
-        ]
+        "description": "**Challenge #2:** Students describe the rules or strategy they used to create their list. They are aiming for clear directions that can be followed by another group to reproduce their same list in the same order."
       },
       "seeding_key": {
         "activity_section.key": "9af01f17-2448-4830-af2a-907d2aa7dccb",
@@ -1954,7 +1880,13 @@
       "key": "92b0360d-4d6a-4636-b088-929636bd838a",
       "position": 6,
       "properties": {
-        "description": "**Challenge #3:** Students extend their rules to generate all possible four place value patterns. This challenge has 2 parts: discovering all possible four place value combinations (there are 16) and extending the rules from the previous challenge so they work here as well. Most groups will need to change or add to their rules in order to accomplish Challenge #3."
+        "description": "**Challenge #3:** Students extend their rules to generate all possible four place value patterns. This challenge has 2 parts: discovering all possible four place value combinations (there are 16) and extending the rules from the previous challenge so they work here as well. Most groups will need to change or add to their rules in order to accomplish Challenge #3.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Manipulatives:** Students are given manipulatives to help visualize any rules they are using to move from one element of the list to the next. You might see students use all their manipulatives at once to create the different patterns, then discuss how to arrange them into an ordered list. You might see students representing one pattern at a time, then discussing the rules for “replacing” shapes to generate each of the next patterns. Students might not use the manipulatives at all, using pen & paper or whiteboards instead.\n\n**Many Possible Answers:** It is okay for different groups to come up with different orders for their lists of patterns - this will help with the share-out discussion as you highlight different strategies.\n\n**Facilitating With Groups:** You should act as a facilitator during this part of the activity, guiding students in describing the rules & strategies that they used to create their list. These strategies may be implicit and unconscious to the student, but you can ask questions to help students realize their own thinking that went into generating their list. Aim to help students clarify their thinking to make it easier for other groups to follow.\n\n**Group Dynamics:** Be mindful of groups that appear to be dominated by a single student.  Asking each student individually about their strategy can help bring students back together and reinforce the collaborative aspect of this activity.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "92b0360d-4d6a-4636-b088-929636bd838a",
@@ -1968,7 +1900,6 @@
         "description": "[slide]  **Discuss:** Select a few groups to share out their rules, highlighting groups with different strategies and rules they used for their lists. Emphasize the 7th item in each list, connecting it back to the warm-up activity as another way to represent the number 7.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Goal:** There are many ways to structure this discussion, especially if you have your own established share-out routines. Here are a few that could work for this particular discussion:\r\n\r\n* Have each group trade with another group, and each group tries to re-create the original group's list. This strategy is useful if you have more class time than expected during the wrap-up.\r\n* A group reads their rules while you and the rest of the class try to recreate the list\r\n* A group reveals their list and the class tries to predict what the rules are, then the group shares their rules with the class\r\n* You can name different strategies you’ve seen from groups as you’ve been circulating, then ask groups to give a thumbs-up if their rules involved that particular pattern. This strategy is useful if you’re running short on time before the next part of the lesson.\r\n"
           }
@@ -1998,7 +1929,6 @@
         "description": "[slide]  **Prompt:** How is counting in this circle/square system similar to how we count in our regular lives? How is it different?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Similar:\r\n\r\n* It follows agreed upon rules\r\n\r\nDifferent:\r\n\r\n* Uses shapes rather than numbers\r\n"
           }
@@ -2025,7 +1955,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How would you explain a number system to someone who had never seen numbers before?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "07fbe30e-c822-41f4-be76-d95c01097b6d",
@@ -2033,14 +1964,12 @@
       }
     },
     {
-      "key": "906361f1-8032-4aec-bd5f-e2a0cd0254a8",
+      "key": "e3dff1d3-bce4-42cf-9259-5ae76289c7bc",
       "position": 1,
       "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "906361f1-8032-4aec-bd5f-e2a0cd0254a8",
+        "activity_section.key": "e3dff1d3-bce4-42cf-9259-5ae76289c7bc",
         "lesson_activity.key": "3ca8b4be-0a1a-45f3-9f81-71905178394e"
       }
     },
@@ -2051,7 +1980,6 @@
         "description": "[slide]  **Prompt:** Yesterday, you created your own number system using circles and squares.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** In previous lessons, students represented information using two options.  This is a quick thinking question to tap into students’ prior knowledge and experiences.  Once students have mentioned a few of the points below, they can move on.\n\n* The answer to a yes/no or true/false question\n* Flipping a switch on/off\n* Combinations of yes/no answers by using multiple symbols in a row\n* We can keep adding more of the same symbols, so the only limit is how much space we have to write or store those symbols\n"
           }
@@ -2077,7 +2005,7 @@
       "key": "46eccac1-8239-4e4a-b1c7-5d5361ad3dea",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Use the activity slides for this lesson to introduce students to the binary number system.  Use the presenter notes as a guide to explaining how the shapes we used in the previous lesson relate to binary numbers. These slides use a lot of animations. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: <img src=\"https://curriculum.code.org/media/uploads/animation_CBj3Vf5.png\" style=\"width:30px\">. Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information0_ZTRvGAG.svg) |  **Say:** Today we are going to explore how Binary Numbers work.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-01_D8Nnv9y.svg) | **Say:** With only one place value, we only have two possible patterns: circle or square. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation**<br><br> **Say:** I started with circle, but we could have easily started with square instead.   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information2.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** With two place values, we can make two sets of the previous patterns. Then, insert circles in front of the first set and squares in front of the second set. This makes four possible patterns.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information3.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** For three place value patterns, we can make two copies of the two place value patterns. Then, just like we did before, fill in the first set with circles in front and the second set with squares in front. This makes 8 arrangements. <br><br> **Note:** Computer scientists like to start counting at 0! |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information4.svg) | **Say:** Instead of two shapes, what if we had 10 shapes? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-00.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** We could use more geometric shapes, or we could use letters, but the shapes we are used to are the numbers 0 through 9. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information6.svg) | **Say:** With two places, we have one hundred 2-shape patterns. These are the numbers 00 through 99. ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** | \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information7.svg) | **Say:** What happens when we count up to the last shape? <br><br> **Do This:** Quick quiz! What comes after this number? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information8.svg) | **Say:** 100! When we run up to the last shape, 9, we roll over back to 0 and add one in the next place to the left. This is the place value that we have used all our lives. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information9.svg) | **Say:** Where is this heading? ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information10.svg) | **Say:** Binary is a number system with two shapes. ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information11.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Instead of shapes, we use 0's and 1's. In this example, each pattern maps to a decimal number from 0 to 7.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information12.svg) | **Say:** For today's activity, you will be creating your own Flippy Do. This is a tool that will allow you to quickly and easily translate between the decimal number base we are used to as humans and the binary number base that computers use. <br><br> **Distribute:** Hand out the Flippy Do templates - one per student. <br><br> **Do This:** Lead students through completing their Flippy Do's using the slide as a guide.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information16.svg) | **Say:** Each place value represents one \"bit\" which is short for \"binary digit\". A binary digit can be a zero or a one. Your flippy do has eight \"bits\". <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Together, eight place values, or \"bits\", makes up one \"byte\". Since computers represent information digitally, the lowest level components of information are bits. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information14.svg) | **Do This:** Use your Flippy Do to try out these six problems. <br><br> **Note:** It may be necessary to demonstrate how values can be calculated by flipping up a “1” for each value required to arrive at the sum of values equal to the decimal number.<br><br>For example, To convert the decimal number 10, I would flip up a one in the 8's position, because eight can fit in 10 (The next bit to the left is 16, which is too big). Then I have 2 left. I flip up a one in the 2's position. This gives me the binary number \"1010\", which means 10 in decimal.<br><br>If students are having a difficult time understanding the rules of the system, remind them of the concept of place value and relate to base 10. <br><br>| ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see answers.**\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information15.svg) | **Say:** Let's continue to practice with our own two number bases, decimal and binary. After you finish each of the four parts of the Activity Guide, I want you to check your work with your partner. Feel free to use your Flippy Do as you work. <br><br>**Distribute:** Activity Guide <br><br>**Note:** Encourage students to use their Flippy Do as a resource. <br><br><ul><li> **Challenge 1 - All 4-bit Numbers:** Students should produce all binary numbers with a length of 4 bits, from 0000 to 1111. They should see that all odd numbers end in 1 and even numbers end in 0. Students may also notice that the binary digits increasingly “roll-over” to 1’s (from right to left) as numbers become larger and larger.</li><li> **Challenge 2 - Binary Numbers with Exactly One 1:**  The goal here is for students to systematically find all binary numbers that have all zeros, except for one bit. Students should notice that the resulting decimal values are all powers of 2.</li><li>**Challenge 3 - Conversion Practice:** This section gives students more practice converting between number bases. The last two decimal numbers, 256 and 513, are too big to represent using the Flippy Do, however students should make the connection that more bits could be added to the left of the Flippy Do using increasing powers of 2.</li><li> **Challenge 4 - Putting it all Together:**   The last four questions on the Activity Guide ask students to apply their understanding to new situations. The first two questions ask students to describe what happens to the value when 0’s are added to the left or right of a binary number. The last two questions ask students to think about how many bits are required to represent specific values in binary.</li></ul> <br><br> **Note:** As you circulate, take an opportunity to be a Lead Learner. Help students discover the items below using the suggested questions:<br><br><ul><li>**Reading a number vs. Placing a Number:** Do we fill in the places on the Flippy Do starting on the left or right? Does it matter? (Yes. If we have a 5-bit number, we actually use the 5 bits on the far right. If we were to use the bits on the far left, this changes the value of the number. This is similar to adding more zeros to a decimal number.)</li><li>**Highest value possible with a given number of bits:** What is the largest number we can make with 4 bits? Is the last number we can make always odd? (A meaningful pattern is that we can count as high as one less than the next bit on the left. If we have four bits, we can count up to the number 15, because the next bit has a value of 16.) </li><li>**Number of numbers we can make:** How many total unique numbers are possible with 4 bits? (This is a base 2 number system. With each new bit, we double the amount of unique numbers we can make. With four bits, we can make the decimal numbers 0 to 15 (0000 to 1111), for a total of 16 unique numbers.)</li></ul>    |"
+        "description": "[slide] **Display:** Use the activity slides for this lesson to introduce students to the binary number system.  Use the presenter notes as a guide to explaining how the shapes we used in the previous lesson relate to binary numbers. These slides use a lot of animations. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information0_ZTRvGAG.svg) |  **Say:** Today we are going to explore how Binary Numbers work.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-01_D8Nnv9y.svg) | **Say:** With only one place value, we only have two possible patterns: circle or square. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> **Say:** I started with circle, but we could have easily started with square instead.   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information2.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** With two place values, we can make two sets of the previous patterns. Then, insert circles in front of the first set and squares in front of the second set. This makes four possible patterns.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information3.svg) |![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** For three place value patterns, we can make two copies of the two place value patterns. Then, just like we did before, fill in the first set with circles in front and the second set with squares in front. This makes 8 arrangements. <br><br> **Note:** Computer scientists like to start counting at 0! |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information4.svg) | **Say:** Instead of two shapes, what if we had 10 shapes? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-00.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** We could use more geometric shapes, or we could use letters, but the shapes we are used to are the numbers 0 through 9. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information6.svg) | **Say:** With two places, we have one hundred 2-shape patterns. These are the numbers 00 through 99. ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** | \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information7.svg) | **Say:** What happens when we count up to the last shape? <br><br> **Do This:** Quick quiz! What comes after this number? |\n| ![](![](https://images.code.org/b5bd1b6994a0a376858cfd8231ed8260-CSP-Unit-1-1.png) | **Say:** 100! When we run up to the last shape, 9, we roll over back to 0 and add one in the next place to the left. This is the place value that we have used all our lives. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information9.svg) | **Say:** Where is this heading? ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information10.svg) | **Say:** Binary is a number system with two shapes. ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information11.svg) | ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** Instead of shapes, we use 0's and 1's. In this example, each pattern maps to a decimal number from 0 to 7.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information12.svg) | **Say:** For today's activity, you will be creating your own Flippy Do. This is a tool that will allow you to quickly and easily translate between the decimal number base we are used to as humans and the binary number base that computers use. <br><br> **Distribute:** Hand out the Flippy Do templates - one per student. <br><br> **Do This:** Lead students through completing their Flippy Do's using the slide as a guide.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information16.svg) | **Say:** Each place value represents one \"bit\" which is short for \"binary digit\". A binary digit can be a zero or a one. Your flippy do has eight \"bits\". <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Together, eight place values, or \"bits\", makes up one \"byte\". Since computers represent information digitally, the lowest level components of information are bits. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information14.svg) | **Do This:** Use your Flippy Do to try out these six problems. <br><br> **Note:** It may be necessary to demonstrate how values can be calculated by flipping up a “1” for each value required to arrive at the sum of values equal to the decimal number.<br><br>For example, To convert the decimal number 10, I would flip up a one in the 8's position, because eight can fit in 10 (The next bit to the left is 16, which is too big). Then I have 2 left. I flip up a one in the 2's position. This gives me the binary number \"1010\", which means 10 in decimal.<br><br>If students are having a difficult time understanding the rules of the system, remind them of the concept of place value and relate to base 10. <br><br>| ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation to see answers.**\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information15.svg) | **Say:** Let's continue to practice with our own two number bases, decimal and binary. After you finish each of the four parts of the Activity Guide, I want you to check your work with your partner. Feel free to use your Flippy Do as you work. <br><br>**Distribute:** Activity Guide <br><br>**Note:** Encourage students to use their Flippy Do as a resource. <br><br><ul><li> **Challenge 1 - All 4-bit Numbers:** Students should produce all binary numbers with a length of 4 bits, from 0000 to 1111. They should see that all odd numbers end in 1 and even numbers end in 0. Students may also notice that the binary digits increasingly “roll-over” to 1’s (from right to left) as numbers become larger and larger.</li><li> **Challenge 2 - Binary Numbers with Exactly One 1:**  The goal here is for students to systematically find all binary numbers that have all zeros, except for one bit. Students should notice that the resulting decimal values are all powers of 2.</li><li>**Challenge 3 - Conversion Practice:** This section gives students more practice converting between number bases. The last two decimal numbers, 256 and 513, are too big to represent using the Flippy Do, however students should make the connection that more bits could be added to the left of the Flippy Do using increasing powers of 2.</li><li> **Challenge 4 - Putting it all Together:**   The last four questions on the Activity Guide ask students to apply their understanding to new situations. The first two questions ask students to describe what happens to the value when 0’s are added to the left or right of a binary number. The last two questions ask students to think about how many bits are required to represent specific values in binary.</li></ul> <br><br> **Note:** As you circulate, take an opportunity to be a Lead Learner. Help students discover the items below using the suggested questions:<br><br><ul><li>**Reading a number vs. Placing a Number:** Do we fill in the places on the Flippy Do starting on the left or right? Does it matter? (Yes. If we have a 5-bit number, we actually use the 5 bits on the far right. If we were to use the bits on the far left, this changes the value of the number. This is similar to adding more zeros to a decimal number.)</li><li>**Highest value possible with a given number of bits:** What is the largest number we can make with 4 bits? Is the last number we can make always odd? (A meaningful pattern is that we can count as high as one less than the next bit on the left. If we have four bits, we can count up to the number 15, because the next bit has a value of 16.) </li><li>**Number of numbers we can make:** How many total unique numbers are possible with 4 bits? (This is a base 2 number system. With each new bit, we double the amount of unique numbers we can make. With four bits, we can make the decimal numbers 0 to 15 (0000 to 1111), for a total of 16 unique numbers.)</li></ul>   \n"
       },
       "seeding_key": {
         "activity_section.key": "46eccac1-8239-4e4a-b1c7-5d5361ad3dea",
@@ -2091,7 +2019,6 @@
         "description": "[slide]  It's important to know the differences between binary and decimal number systems. As a review, the decimal number system is base-10. There are ten different symbols used to represent numbers (0-9). The binary numbers system is base-2. There are two different symbols used to represent numbers (0-1). Using our Flippy Do, we can convert between Binary and Decimal number systems.While it is easier for humans to use the decimal number system in our everyday lives, we will see later in this unit how electrical signals inside computers can be best represented by using the the binary number system.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Number Bases:**\r\n\r\nNumber bases help us express data and reason about quantities.  With ten digits on our hands and feet, the decimal (base 10) number base was natural for humans to develop.  The ten symbols we use for this number base are the digits 0-9.   For a computer, however, it makes more sense that data be represented in binary (base 2), as this can easily be interpreted with electrical switches set to two states: ON or OFF.  The two symbols we use for this number base are the digits 0 and 1.\r\n\r\nBoth number bases take advantage of the concept of place value.  In decimal, numbers are composed of powers of 10, increasing in value from right to left.  Binary is similar, however we use powers of 2 (1, 2, 4, 8, 16, etc.).  Expressed in binary, these values are 1, 10, 100, 1000, 10000, and so on.  These make up the incremental place values in the binary number system.\r\n\r\n**Why Binary?**\r\n\r\nStudents will see in a later lesson how computers use binary numbers as a representation of electrical signals on a wire. The wire is always set to one of two different options: on or off. Off can be reprsented with a 0 and on with a 1. \r\n"
           }
@@ -2104,25 +2031,8 @@
       }
     },
     {
-      "key": "d6afaded-7d1f-40c6-9d21-68d4f664dcef",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this exercise to help assess what students learned and what needs to be clarified.  Some misconceptions can be visually clarified using the Binary Odometer Widget in the next lesson.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d6afaded-7d1f-40c6-9d21-68d4f664dcef",
-        "lesson_activity.key": "a9d4e34c-bb8b-41b6-922d-a025c4043449"
-      }
-    },
-    {
       "key": "0c9193f0-bccb-49c0-81fc-f778672464ef",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide]  **Prompt:** Now that we’ve had a chance to practice, let’s find out what we’ve learned and what we still have questions about.  Write down:\r\n\r"
       },
@@ -2133,7 +2043,7 @@
     },
     {
       "key": "527bac24-61d2-426d-84dd-76dedc4bddc4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "* 3 things you learned today\r\n* 2 things you found interesting\r\n* 1 question you still have.\r\n\r\n**Journal:** Add to your journal the vocab definitions for bit and byte. \r\n\r\n---"
       },
@@ -2144,26 +2054,21 @@
     },
     {
       "key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How many bits would be needed to count all of the students in class today?\r\n\r\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\r\n\r\n**Question:** What are the similarities and differences between the binary and decimal systems?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Use this exercise to help assess what students learned and what needs to be clarified.  Some misconceptions can be visually clarified using the Binary Odometer Widget in the next lesson.\n"
+          }
+        ],
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469",
         "lesson_activity.key": "a9d4e34c-bb8b-41b6-922d-a025c4043449"
-      }
-    },
-    {
-      "key": "0aa85546-def3-4106-b635-65b18b991671",
-      "position": 1,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671",
-        "lesson_activity.key": "0d1cbf20-4041-40bd-b99f-aaa4d78dd76c"
       }
     },
     {
@@ -2279,7 +2184,7 @@
       "key": "a71aae55-6d99-498d-a6fa-4c729901e49e",
       "position": 8,
       "properties": {
-        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy do pro]",
+        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy_do_pro]",
         "remarks": true,
         "name": "Flippy Do Pro"
       },
@@ -2439,24 +2344,8 @@
       }
     },
     {
-      "key": "377471a7-6e8a-479e-ac06-ba45c3ea42bd",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Each item in the list represents a non-denominational holiday - New Years Day, Valentine’s Day, Independence Day, and Halloween. Students should be initially puzzled by what this list represents - it may be helpful to point out the format of the list (two numbers) and that this list happens throughout the year.\r\n\r\n**Alternate Discussion:** This example could be adapted to fit your classroom or school environment in order to better help your students predict what the list represents. For example: a list of room numbers in your school that students can relate to, or a list of street addresses that have meaning to students. If you decide to adapt this example, make sure it still addresses the larger concept that this warm-up introduces: that numbers can be used to represent different types of information.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "377471a7-6e8a-479e-ac06-ba45c3ea42bd",
-        "lesson_activity.key": "93ede618-3e5f-4adf-b72a-315289705034"
-      }
-    },
-    {
       "key": "b99a33f5-3a63-4563-a96c-5d40be3fddd7",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "This list secretly represents four things we experience every year. This list is not complete - there are others that we could add to it.",
         "remarks": true
@@ -2468,9 +2357,15 @@
     },
     {
       "key": "52b6817e-87e3-4d7f-a34e-7f6252bbb4ba",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:** Brainstorm with your neighbor what you think this list represents. When you think you have an idea, come up with another item to add to this list and be ready to explain why it belongs.\r\n\r\n* 1 1\r\n* 2 14\r\n* 7 4\r\n* 10 31"
+        "description": "[slide] **Prompt:** Brainstorm with your neighbor what you think this list represents. When you think you have an idea, come up with another item to add to this list and be ready to explain why it belongs.\r\n\r\n* 1 1\r\n* 2 14\r\n* 7 4\r\n* 10 31",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Each item in the list represents a non-denominational holiday - New Years Day, Valentine’s Day, Independence Day, and Halloween. Students should be initially puzzled by what this list represents - it may be helpful to point out the format of the list (two numbers) and that this list happens throughout the year.\n\n**Alternate Discussion:** This example could be adapted to fit your classroom or school environment in order to better help your students predict what the list represents. For example: a list of room numbers in your school that students can relate to, or a list of street addresses that have meaning to students. If you decide to adapt this example, make sure it still addresses the larger concept that this warm-up introduces: that numbers can be used to represent different types of information.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "52b6817e-87e3-4d7f-a34e-7f6252bbb4ba",
@@ -2522,12 +2417,6 @@
       "position": 4,
       "properties": {
         "description": "[slide]  **Do This:**",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The four challenges are designed to test the limits of the students' systems. For each challenge, after one partner has put their head down, click through to reveal the challenge to the the other partner. \n\nAfter the partner has translated the message to numbers, they hand the sticky note to the other partner and put their head down. The other partner translates back to English. \n\nAfter the challenge is done, give students a few minutes to update their systems as needed. \n\nBe on the lookout for cheats in a system - students cannot use spaces (aside from between two numbers to differentiate that where one number stops and the other starts) or symbols - only numbers one after the other. \n\n"
-          }
-        ],
         "name": "Challenge #1 - Spaces"
       },
       "seeding_key": {
@@ -2600,8 +2489,12 @@
         "description": "**Discuss:** Have groups compare with each other, then move to a full group discussion. Ask groups to share out what they discussed about their systems.",
         "tips": [
           {
+            "type": "teachingTip",
+            "markdown": "The four challenges are designed to test the limits of the students' systems. For each challenge, after one partner has put their head down, click through to reveal the challenge to the the other partner. \n\nAfter the partner has translated the message to numbers, they hand the sticky note to the other partner and put their head down. The other partner translates back to English. \n\nAfter the challenge is done, give students a few minutes to update their systems as needed. \n\nBe on the lookout for cheats in a system - students cannot use spaces (aside from between two numbers to differentiate that where one number stops and the other starts) or symbols - only numbers one after the other. \n\n"
+          },
+          {
             "type": "discussionGoal",
-            "markdown": "* There's many possible systems and there's usually not a \"right\" one so long as everyone agrees.\n* Adding more possibilities increases the risk of having too many characters to represent and not enough bits to do it. This is a practical example of the overflow and rounding issues from the previous lesson.\n"
+            "markdown": "* There's many possible systems and there's usually not a \"right\" one so long as everyone agrees.\n* Adding more possibilities increases the risk of having too many characters to represent and not enough bits to do it. This is a practical example of the overflow and rounding issues from the previous lesson."
           }
         ]
       },
@@ -2627,13 +2520,7 @@
       "key": "e5a7cae0-b8fd-45db-85c2-78dbc598715c",
       "position": 12,
       "properties": {
-        "description": "[slide]  **Distribute:** Hand out copies of the [r ascii-reference-sheet] or project it. Quickly read the overview text at the beginning of the sheet.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**How familiar with ASCII?:** Students should be aware that ASCII exists and see how its development mirrors their own experiences in the previous activity, but they are not required to memorize the ASCII table. If your students are able to quickly recognize the point of the ASCII table feel free to move on to the wrap up.\n"
-          }
-        ]
+        "description": "[slide]  **Distribute:** Hand out copies of the [r ascii-reference-sheet] or project it. Quickly read the overview text at the beginning of the sheet."
       },
       "seeding_key": {
         "activity_section.key": "e5a7cae0-b8fd-45db-85c2-78dbc598715c",
@@ -2644,7 +2531,13 @@
       "key": "3f2d8fb2-9ef7-418b-a70e-487937ded4e6",
       "position": 13,
       "properties": {
-        "description": "**Prompt:** Compare ASCII to the system you developed.\n\n* What's the same as the systems you created?\n* What's different?\n* What is most interesting or surprising about this system?\n\n**Discuss:** Briefly discuss these prompts as a class. At this point the main features of the system should be familiar but use this discussion to reinforce previous points."
+        "description": "**Prompt:** Compare ASCII to the system you developed.\n\n* What's the same as the systems you created?\n* What's different?\n* What is most interesting or surprising about this system?\n\n**Discuss:** Briefly discuss these prompts as a class. At this point the main features of the system should be familiar but use this discussion to reinforce previous points.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How familiar with ASCII?:** Students should be aware that ASCII exists and see how its development mirrors their own experiences in the previous activity, but they are not required to memorize the ASCII table. If your students are able to quickly recognize the point of the ASCII table feel free to move on to the wrap up.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3f2d8fb2-9ef7-418b-a70e-487937ded4e6",
@@ -2667,13 +2560,7 @@
       "key": "41b0a1c4-e765-4b4c-9200-027efff57922",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:**",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Answers:** \r\n\r\n* Students should identify they were trying to send text messages.\r\n\r\n* Students were using decimal numbers instead of binary numbers or AB patterns\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:**"
       },
       "seeding_key": {
         "activity_section.key": "41b0a1c4-e765-4b4c-9200-027efff57922",
@@ -2684,7 +2571,13 @@
       "key": "ee135379-855c-42a8-88fb-d2cdcf84273c",
       "position": 3,
       "properties": {
-        "description": "* What problem were we trying to solve today?\r\n* What detail from the last few lessons was hidden or out of focus?"
+        "description": "* What problem were we trying to solve today?\r\n* What detail from the last few lessons was hidden or out of focus?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Answers:** \n\n* Students should identify they were trying to send text messages.\n\n* Students were using decimal numbers instead of binary numbers or AB patterns\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ee135379-855c-42a8-88fb-d2cdcf84273c",
@@ -2736,7 +2629,8 @@
       "position": 7,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** \"The binary pattern `01000001` represents the number 65.\" Write a brief response explaining whether or not you believe this statement is always true. Explain your reasoning.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0d34d7f2-d741-4f61-b7db-32a742eff92c",
@@ -2744,28 +2638,9 @@
       }
     },
     {
-      "key": "af1432f2-3e68-4ae1-b085-c0458c4164f3",
-      "position": 1,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "af1432f2-3e68-4ae1-b085-c0458c4164f3",
-        "lesson_activity.key": "333c60ec-8d4c-4294-ae03-a3765ee7ee64"
-      }
-    },
-    {
       "key": "e013fc58-74c1-4062-b972-19a9db053c6f",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. \r\n\r\n"
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "e013fc58-74c1-4062-b972-19a9db053c6f",
@@ -2799,7 +2674,13 @@
       "position": 4,
       "properties": {
         "description": "Thank you for sharing your insights.  It seems to depend on the situation.  Sometimes we want to take a reading of the location more frequently.  Today, we’re actually learning about how images are represented in computers, but let’s keep in mind these ideas about how often to take a reading or measurement.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. \n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cc866225-659a-4f8e-8b49-daf0bf1e7f11",
@@ -2811,14 +2692,8 @@
       "position": 1,
       "properties": {
         "description": "[slide]  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Note:** The video displays an old version of the Pixelation Widget. In the version your students will use, they no longer need to set the width and height using binary numbers - they can use the slider at the top. They may also note that the width and height is not displayed in their work space in binary numbers. \r\n\r\nAlso, while the video uses the word \"metadata\" to describe this information, students do not need to leave this lesson understanding metadata.  Metadata will be covered in a later lesson. \r\n"
-          }
-        ],
-        "name": "Intro to the Pixelation Widget (10 mins)\r"
+        "name": "Intro to the Pixelation Widget (10 mins)\r",
+        "progression_name": "Pixelation Widget Video "
       },
       "seeding_key": {
         "activity_section.key": "69b3138b-1d10-476a-9142-eca8dcb65a34",
@@ -2826,27 +2701,10 @@
       }
     },
     {
-      "key": "b0b99153-7ae1-4d24-bd6a-028dd2d58065",
+      "key": "5061b1dd-350a-4087-92ff-d554ba5e7689",
       "position": 2,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Getting Familiar with the Pixelation Widget:** Once most of the class has finished levels 3 and 4, you can move on.  Encourage students who are finished to help those who haven’t.  The point of these two levels is to get students familiar with the tool and practice entering the bits.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b0b99153-7ae1-4d24-bd6a-028dd2d58065",
-        "lesson_activity.key": "170eb106-b3d2-4843-a3b6-bacd73a3e9b1"
-      }
-    },
-    {
-      "key": "5061b1dd-350a-4087-92ff-d554ba5e7689",
-      "position": 3,
-      "properties": {
-        "description": "[slide]  **Level 3:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\r\n\r"
+        "description": "[slide]  **Level 2:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5061b1dd-350a-4087-92ff-d554ba5e7689",
@@ -2855,12 +2713,33 @@
     },
     {
       "key": "fac44189-98c2-4812-82ca-01c532e51a14",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "**Level 4:**  Students must find and delete the extra bit that is causing the image to be distorted."
+        "description": "**Level 3:**  Students must find and delete the extra bit that is causing the image to be distorted.",
+        "progression_name": "Pixelation Widget: B&W"
       },
       "seeding_key": {
         "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14",
+        "lesson_activity.key": "170eb106-b3d2-4843-a3b6-bacd73a3e9b1"
+      }
+    },
+    {
+      "key": "1c880ccb-f360-4455-8a34-5fdb6a7cab7c",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note:** The video displays an old version of the Pixelation Widget. In the version your students will use, they no longer need to set the width and height using binary numbers - they can use the slider at the top. They may also note that the width and height is not displayed in their work space in binary numbers. \n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Getting Familiar with the Pixelation Widget:** Once most of the class has finished levels 3 and 4, you can move on.  Encourage students who are finished to help those who haven’t.  The point of these two levels is to get students familiar with the tool and practice entering the bits.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1c880ccb-f360-4455-8a34-5fdb6a7cab7c",
         "lesson_activity.key": "170eb106-b3d2-4843-a3b6-bacd73a3e9b1"
       }
     },
@@ -2878,27 +2757,10 @@
       }
     },
     {
-      "key": "1c880ccb-f360-4455-8a34-5fdb6a7cab7c",
+      "key": "6a7f6a14-c3c7-4531-8526-59bfd13e0967",
       "position": 6,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Questions to Ask as Your Circulate:** Having students work from paper copies of the Activity Guide will reinforce the concept of taking readings from an analog image and make it easier to transcribe the bits into the widget.  As students work, circulate the room and ask pairs of students questions about their process:\r\n\r\n* How are you deciding whether each square should be black or white?\r\n* Do you think this process will give a good representation of the image?  Why or why not?\r\n* What would you change about the sampling process to produce a better representation of the image?\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "1c880ccb-f360-4455-8a34-5fdb6a7cab7c",
-        "lesson_activity.key": "170eb106-b3d2-4843-a3b6-bacd73a3e9b1"
-      }
-    },
-    {
-      "key": "6a7f6a14-c3c7-4531-8526-59bfd13e0967",
-      "position": 7,
-      "properties": {
-        "description": " **Distribute:**  [r bw sampling activity guide]"
+        "description": " **Distribute:**  [r u1l7_black_and_white_images]"
       },
       "seeding_key": {
         "activity_section.key": "6a7f6a14-c3c7-4531-8526-59bfd13e0967",
@@ -2907,10 +2769,16 @@
     },
     {
       "key": "023cfb5f-090b-4067-901b-beccd96141de",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "[slide] **Do This:** \r\n\r\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\r\n* After Challenge A, answer the questions on the activity guide\r\n* Repeat for Challenge B.\r\n* Answer the questions in the activity guide after each challenge.\r\n\r\n**Regroup:** After students have finished Challenge A & Challenge B, discuss the challenges they encountered while completing the challenges.  Then direct students on to Challenge C.",
-        "name": "Challenges A & B\r"
+        "name": "Challenges A & B\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Questions to Ask as Your Circulate:** Having students work from paper copies of the Activity Guide will reinforce the concept of taking readings from an analog image and make it easier to transcribe the bits into the widget.  As students work, circulate the room and ask pairs of students questions about their process:\n\n* How are you deciding whether each square should be black or white?\n* Do you think this process will give a good representation of the image?  Why or why not?\n* What would you change about the sampling process to produce a better representation of the image?\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "023cfb5f-090b-4067-901b-beccd96141de",
@@ -2919,9 +2787,9 @@
     },
     {
       "key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27",
-      "position": 9,
+      "position": 8,
       "properties": {
-        "description": "[slide] **Do This:**  \r\n\r\n* Select your favorite company logo\r\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\r\n* Recreate the logo in the Pixelation Widget on Level 7.\r\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
+        "description": "[slide] **Do This:**  \n\n* Select your favorite company logo\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 6.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
         "name": "Challenge C\r"
       },
       "seeding_key": {
@@ -2930,25 +2798,8 @@
       }
     },
     {
-      "key": "a769774b-31b0-4d6b-a0e3-c3f9084c2108",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\r\n\r\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\r\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\r\n\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a769774b-31b0-4d6b-a0e3-c3f9084c2108",
-        "lesson_activity.key": "a11b3d5c-48db-4d9d-9dfd-ee837ad0236f"
-      }
-    },
-    {
       "key": "1bb195ce-7010-4e8e-969a-8c5182c4915b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "[slide]  **Prompt:**  In Challenges A and B, you and your partner practiced sampling the same image twice.  The second time, we did a more frequent sampling by using smaller squares.\r\n\r"
       },
@@ -2959,7 +2810,7 @@
     },
     {
       "key": "096102c4-39a8-41f7-9c95-4c115797c27d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "* What are the pros and cons of sampling an image more frequently?\r\n\r\n**Discuss:**  Allow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class."
       },
@@ -2970,7 +2821,7 @@
     },
     {
       "key": "cbb2fd98-aae2-4df3-a45e-624e031c05b5",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Thank you for sharing.  It looks like there are several advantages and disadvantages when it comes to sampling more frequently by using smaller squares.  We get a better approximation of the analog image when we do more frequent sampling and it was a little easier to decide whether each square should be set to black or white.  However, it took longer and we needed a lot more bits.  We still got an image that didn’t represent the image accurately enough, though.\r\n\r\nFortunately, a computer does this process much more quickly than we can, and it can store thousands or even millions of bits to represent an analog image.\r\n\r\nBy this point, we've used bits to represent numbers, text, and images. The same sequence of bits can represent different types of data depending on the context. It all comes down to 0s and 1s!",
         "remarks": true
@@ -2982,9 +2833,15 @@
     },
     {
       "key": "8f4a6604-d6f0-40b2-88e0-70b8e2e48b1f",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "[slide] **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---"
+        "description": "[slide] **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8f4a6604-d6f0-40b2-88e0-70b8e2e48b1f",
@@ -2993,10 +2850,11 @@
     },
     {
       "key": "0296ad0d-e598-4946-8ae2-74a2152173cf",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels) that were encoded after sampling an image. Choose the two statements that are true. \r\n\r\n**Question:** Which of the following would result in a better digital approximation of an analog black and white image?\r\n\r\n**Question:** Your computer science teacher asks you to sample a black and white image that is 4\"x6\". How would you sample the image to provide a good digital approximation using the pixelation widget? What sample size would you use? How would your decision affect the digital representation?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf",
@@ -3004,38 +2862,12 @@
       }
     },
     {
-      "key": "a4196ef0-7423-47b0-b730-47a05a0e3b9d",
+      "key": "f00743a1-a145-4205-8393-e7767b9f04b2",
       "position": 1,
       "properties": {
-        "name": "Video: Intro to Pixelation Encoding B&W",
-        "progression_name": "Video: Intro to Pixelation Encoding B&W"
       },
       "seeding_key": {
-        "activity_section.key": "a4196ef0-7423-47b0-b730-47a05a0e3b9d",
-        "lesson_activity.key": "a50bcd72-7f45-4043-a6eb-449b77e59256"
-      }
-    },
-    {
-      "key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe",
-      "position": 2,
-      "properties": {
-        "name": "Pixelation Widget: B&W",
-        "progression_name": "Pixelation Widget: B&W"
-      },
-      "seeding_key": {
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe",
-        "lesson_activity.key": "a50bcd72-7f45-4043-a6eb-449b77e59256"
-      }
-    },
-    {
-      "key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1",
+        "activity_section.key": "f00743a1-a145-4205-8393-e7767b9f04b2",
         "lesson_activity.key": "a50bcd72-7f45-4043-a6eb-449b77e59256"
       }
     },
@@ -3087,7 +2919,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**In Levels 3, 5, and 6:** The directions are written in so that students who are color-blind do not need to be able to distinguish between colors to be able to complete the task.  That being said, students who are color-blind may not be able to visually check their work in the same way as other students.  You can suggest that students who are color-blind ask a partner to check their work at the end of each of these levels.\n\n**In Level 8:**It is recommended that students who are color-blind do the black and white gradient image which is the option in the lower right hand corner of the pop-up in Level 8, which looks like this:\n![](https://curriculum.code.org/media/uploads/BW_gradient.png)\n\n"
+            "markdown": "**In Levels 3, 5, and 6:** The directions are written in so that students who are color-blind do not need to be able to distinguish between colors to be able to complete the task.  That being said, students who are color-blind may not be able to visually check their work in the same way as other students.  You can suggest that students who are color-blind ask a partner to check their work at the end of each of these levels.\n\n**In Level 8:**It is recommended that students who are color-blind do the black and white gradient image which is the option in the lower right hand corner of the pop-up in Level 8, which looks like this:\n\n\n\n\n![](https://images.code.org/85a2cbdd606247c9d6f242cd91db81a9-BW_gradient.png)"
           }
         ]
       },
@@ -4628,9 +4460,8 @@
         "description": "[slide]  **Do This:** Administer the Unit 1 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics1.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)"
           }
         ]
       },
@@ -4643,7 +4474,8 @@
       "key": "7ab177e4-9d74-4037-aa10-4c039dd6e736",
       "position": 1,
       "properties": {
-        "description": "Review the answers to the assessment with the class. Discuss any questions that come up and take note of topics where students may need extra review."
+        "description": "Review the answers to the assessment with the class. Discuss any questions that come up and take note of topics where students may need extra review.",
+        "progression_name": "Unit 1 Exam"
       },
       "seeding_key": {
         "activity_section.key": "7ab177e4-9d74-4037-aa10-4c039dd6e736",
@@ -4651,14 +4483,12 @@
       }
     },
     {
-      "key": "24ee63a2-c20b-45b6-a171-7b3a0f27fc5c",
+      "key": "f2679aa2-7cf9-4350-b1a8-8daa1c197ff7",
       "position": 1,
       "properties": {
-        "name": "Unit 1 Exam",
-        "progression_name": "Unit 1 Exam"
       },
       "seeding_key": {
-        "activity_section.key": "24ee63a2-c20b-45b6-a171-7b3a0f27fc5c",
+        "activity_section.key": "f2679aa2-7cf9-4350-b1a8-8daa1c197ff7",
         "lesson_activity.key": "b5b8b677-320b-4e6b-a3ff-2f6a2080d222"
       }
     }
@@ -4747,6 +4577,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding",
         "level_keys": [
           "U1L3 CFU Sending Complex Messages_2021"
         ],
@@ -4761,7 +4592,7 @@
         "lesson.key": "Representing Information",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f09a6214-7303-487c-ac8d-aa15166a159f"
+        "activity_section.key": "83e87ac1-edd5-4a28-81b9-159e23af1586"
       },
       "level_keys": [
         "U1L3 CFU Sending Complex Messages_2021"
@@ -4773,6 +4604,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding",
         "level_keys": [
           "CSP U1L4 CYU3_2021"
         ],
@@ -4787,7 +4619,7 @@
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "906361f1-8032-4aec-bd5f-e2a0cd0254a8"
+        "activity_section.key": "07fbe30e-c822-41f4-be76-d95c01097b6d"
       },
       "level_keys": [
         "CSP U1L4 CYU3_2021"
@@ -4799,6 +4631,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding",
         "level_keys": [
           "U1L5 CFU how many bits_2021"
         ],
@@ -4813,7 +4646,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       },
       "level_keys": [
         "U1L5 CFU how many bits_2021"
@@ -4825,6 +4658,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding",
         "level_keys": [
           "U1L5 CFU adding bits_2021"
         ],
@@ -4839,7 +4673,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       },
       "level_keys": [
         "U1L5 CFU adding bits_2021"
@@ -4851,6 +4685,7 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding",
         "level_keys": [
           "U1L5 CFU bin dec similarities_2021"
         ],
@@ -4865,7 +4700,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       },
       "level_keys": [
         "U1L5 CFU bin dec similarities_2021"
@@ -4955,6 +4790,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding",
         "level_keys": [
           "U1L8 Reflection Multiple Representations CSP_2021"
         ],
@@ -4969,7 +4805,7 @@
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "af1432f2-3e68-4ae1-b085-c0458c4164f3"
+        "activity_section.key": "0d34d7f2-d741-4f61-b7db-32a742eff92c"
       },
       "level_keys": [
         "U1L8 Reflection Multiple Representations CSP_2021"
@@ -4979,12 +4815,9 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1 L9 Introduction to Pixelation_2021"
-        ],
-        "progression": "Video: Intro to Pixelation Encoding B&W"
+        "progression": "Pixelation Widget Video "
       },
       "named_level": null,
       "bonus": null,
@@ -4995,7 +4828,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "a4196ef0-7423-47b0-b730-47a05a0e3b9d"
+        "activity_section.key": "69b3138b-1d10-476a-9142-eca8dcb65a34"
       },
       "level_keys": [
         "U1 L9 Introduction to Pixelation_2021"
@@ -5005,11 +4838,8 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation - Make the Letter A_2021"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
       "named_level": null,
@@ -5021,7 +4851,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       },
       "level_keys": [
         "U1L9 Pixelation - Make the Letter A_2021"
@@ -5031,11 +4861,8 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget Fix bit offset_2021"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
       "named_level": null,
@@ -5047,7 +4874,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       },
       "level_keys": [
         "U1L9 Pixelation Widget Fix bit offset_2021"
@@ -5057,11 +4884,8 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge a_2021"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
       "named_level": null,
@@ -5073,7 +4897,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge a_2021"
@@ -5083,11 +4907,8 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge B_2021"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
       "named_level": null,
@@ -5099,7 +4920,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge B_2021"
@@ -5109,11 +4930,8 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge C_2021"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
       "named_level": null,
@@ -5125,7 +4943,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge C_2021"
@@ -5137,9 +4955,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 CFU pixel data_2021"
-        ],
         "progression": "Check For Understanding"
       },
       "named_level": null,
@@ -5151,7 +4966,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1"
+        "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf"
       },
       "level_keys": [
         "U1L9 CFU pixel data_2021"
@@ -5163,9 +4978,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 Multiple Choice Digital Analog_2021"
-        ],
         "progression": "Check For Understanding"
       },
       "named_level": null,
@@ -5177,7 +4989,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1"
+        "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf"
       },
       "level_keys": [
         "U1L9 Multiple Choice Digital Analog_2021"
@@ -5189,9 +5001,6 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 CFU Sampling_2021"
-        ],
         "progression": "Check For Understanding"
       },
       "named_level": null,
@@ -5203,7 +5012,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1"
+        "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf"
       },
       "level_keys": [
         "U1L9 CFU Sampling_2021"
@@ -5213,7 +5022,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U1L10 RGB_2021"
@@ -5239,7 +5048,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 1_2021"
@@ -5265,7 +5074,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U1L10 More Shades of Color_2021"
@@ -5291,7 +5100,7 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 2_2021"
@@ -5317,7 +5126,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 3_2021"
@@ -5343,7 +5152,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U1L10 Color Sampling_2021"
@@ -5369,7 +5178,7 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 4_2021"
@@ -5735,9 +5544,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 AP-Style Assessment _2021"
-        ],
         "progression": "Unit 1 Exam"
       },
       "named_level": null,
@@ -5749,7 +5555,7 @@
         "lesson.key": "Lesson 14: Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "24ee63a2-c20b-45b6-a171-7b3a0f27fc5c"
+        "activity_section.key": "7ab177e4-9d74-4037-aa10-4c039dd6e736"
       },
       "level_keys": [
         "CSP Unit 1 AP-Style Assessment _2021"
@@ -5802,7 +5608,7 @@
         "lesson.key": "Representing Information",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f09a6214-7303-487c-ac8d-aa15166a159f"
+        "activity_section.key": "83e87ac1-edd5-4a28-81b9-159e23af1586"
       }
     },
     {
@@ -5814,7 +5620,7 @@
         "lesson.key": "Circle Square Patterns",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "906361f1-8032-4aec-bd5f-e2a0cd0254a8"
+        "activity_section.key": "07fbe30e-c822-41f4-be76-d95c01097b6d"
       }
     },
     {
@@ -5826,7 +5632,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       }
     },
     {
@@ -5838,7 +5644,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       }
     },
     {
@@ -5850,7 +5656,7 @@
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "0aa85546-def3-4106-b635-65b18b991671"
+        "activity_section.key": "a7d65a33-813f-40ac-95c3-ecc7a0c74469"
       }
     },
     {
@@ -5898,7 +5704,7 @@
         "lesson.key": "Representing Text",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "af1432f2-3e68-4ae1-b085-c0458c4164f3"
+        "activity_section.key": "0d34d7f2-d741-4f61-b7db-32a742eff92c"
       }
     },
     {
@@ -5910,7 +5716,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "a4196ef0-7423-47b0-b730-47a05a0e3b9d"
+        "activity_section.key": "69b3138b-1d10-476a-9142-eca8dcb65a34"
       }
     },
     {
@@ -5922,7 +5728,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       }
     },
     {
@@ -5934,7 +5740,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       }
     },
     {
@@ -5946,7 +5752,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       }
     },
     {
@@ -5958,7 +5764,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       }
     },
     {
@@ -5970,7 +5776,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "93b5ef61-56b6-4fb5-8035-044c2494c7fe"
+        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
       }
     },
     {
@@ -5982,7 +5788,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1"
+        "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf"
       }
     },
     {
@@ -5994,7 +5800,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1"
+        "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf"
       }
     },
     {
@@ -6006,7 +5812,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "9380d11d-b550-40ef-be39-73fcfc7b1ad1"
+        "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf"
       }
     },
     {
@@ -6258,23 +6064,11 @@
         "lesson.key": "Lesson 14: Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "24ee63a2-c20b-45b6-a171-7b3a0f27fc5c"
+        "activity_section.key": "7ab177e4-9d74-4037-aa10-4c039dd6e736"
       }
     }
   ],
   "resources": [
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
-      }
-    },
     {
       "name": "Code Studio Teacher Dashboard Video Tutorial",
       "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be",
@@ -6351,25 +6145,25 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6401,87 +6195,87 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "name": "CSP Unit 1 - Digital Information",
+      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
+      "key": "csp_unit_1_-_digital_information",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "U1 L4 Flippy Do",
       "url": "https://drive.google.com/a/code.org/file/d/1ZrO6gBcLYrj2_scYsbxA78ZuQyGdHOjC/view?usp=sharing",
-      "key": "FlippyDo Template",
+      "key": "u1_l4_flippy_do",
       "properties": {
         "type": "Template",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "FlippyDo Template"
+        "resource.key": "u1_l4_flippy_do"
       }
     },
     {
       "name": "U1 L4 How to Make a FlippyDo",
       "url": "https://docs.google.com/document/d/1ecO5-Vg8eQVVvpjIUX8P0dAVX2Mi1-QW7zfIMFWeqgY/edit?usp=sharing",
-      "key": "FlippyDo Directions",
+      "key": "u1_l4_how_to_make_a_flippydo",
       "properties": {
         "type": "Teacher Guide",
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "FlippyDo Directions"
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
       }
     },
     {
       "name": "U1 L4 Flippy Do Pt 1 - Activity Guide",
       "url": "https://docs.google.com/document/d/1DmzViCZqIJTEPZQ2-aVa4Z-8_3PmzgRIS_XzzPbxXsU/edit?usp=sharing",
-      "key": "Number Conversions Activity Guide",
+      "key": "u1_l4_flippy_do_pt_1_-_activity_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "Number Conversions Activity Guide"
+        "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "Flippy Do Pro",
       "url": "https://drive.google.com/a/code.org/file/d/1VpZH4E2c5fR-g2fBMggd4-pz8GNRxxwZ/view?usp=sharing",
-      "key": "flippy do pro",
+      "key": "flippy_do_pro",
       "properties": {
         "type": "Template",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "flippy do pro"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "flippy_do_pro"
       }
     },
     {
@@ -6499,13 +6293,13 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6522,28 +6316,28 @@
       }
     },
     {
+      "name": "CSP Unit 1 - Digital Information",
+      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
+      "key": "csp_unit_1_-_digital_information",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
       "name": "U1L7 Black and White Images",
       "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
-      "key": "bw sampling activity guide",
+      "key": "u1l7_black_and_white_images",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "bw sampling activity guide"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "u1l7_black_and_white_images"
       }
     },
     {
@@ -6562,13 +6356,13 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6587,25 +6381,25 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6623,13 +6417,13 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6671,48 +6465,54 @@
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "name": "CSP Unit 1 - Digital Information",
+      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
+      "key": "csp_unit_1_-_digital_information",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "name": "CSP Unit 1 Project Rubric",
       "url": "https://docs.google.com/document/d/14rAnNQCTjhGgWCqnVo4XczoNEDFM-oYLNqhJvLW-88Q/edit?usp=sharing",
-      "key": "CSP U1 Project Rubric",
+      "key": "csp_unit_1_project_rubric",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U1 Project Rubric"
+        "resource.key": "csp_unit_1_project_rubric"
       }
     },
     {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "CSP Unit 1 Presentation",
+      "key": "csp_unit_1_-_digital_information",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "CSP Unit 1 Presentation"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
@@ -6751,14 +6551,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Representing Information",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Representing Information",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6775,44 +6575,44 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Binary Numbers",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "FlippyDo Template"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "FlippyDo Directions"
+        "resource.key": "u1_l4_flippy_do"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "Number Conversions Activity Guide"
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Overflow and Rounding",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Overflow and Rounding",
-        "resource.key": "flippy do pro"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "flippy_do_pro"
       }
     },
     {
@@ -6823,8 +6623,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Representing Text",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6836,13 +6636,13 @@
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "bw sampling activity guide"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Color Images",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Black and White Images",
+        "resource.key": "u1l7_black_and_white_images"
       }
     },
     {
@@ -6853,8 +6653,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Color Images",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6865,14 +6665,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Lossless Compression",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Lossy Compression",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6883,8 +6683,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 1",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Intellectual Property",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6907,20 +6707,26 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "CSP Unit 1 Presentation"
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "CSP U1 Project Rubric"
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "csp_unit_1_project_rubric"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 14: Assessment Day",
-        "resource.key": "CSP Unit 1 Presentation"
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     }
   ],

@@ -2578,6 +2578,8 @@ hy:
               display_name: երկուական
             csf_digcit:
               display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: Digital Citizenship
         coursee-2021:
           lessons:
             Conditionals:
@@ -2585,10 +2587,12 @@ hy:
             'Functions: Songwriting':
               name: songwriting
           lesson_groups:
+            ramp_up:
+              display_name: loops
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
-              display_name: nested Loops
+              display_name: conditionals
             csf_functions:
               display_name: գործառույթները
         coursef-2021:
@@ -2633,3 +2637,23 @@ hy:
               display_name: ներածություն
             lessonGroup-3:
               display_name: փոփոխականների
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: loops
+              name: loops
+            Events:
+              key: Իրադարձություններ
+              name: Իրադարձություններ
+            Conditionals:
+              key: conditionals
+              name: conditionals
+            Functions:
+              key: գործառույթները
+              name: գործառույթները
+            Variables:
+              key: փոփոխականների
+              name: փոփոխականների
+            For Loops:
+              key: For Loops
+              name: For Loops

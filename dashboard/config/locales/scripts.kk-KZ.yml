@@ -2615,6 +2615,8 @@ kk:
               display_name: Бинарлы
             csf_digcit:
               display_name: Сандық Азаматтық
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
         coursee-2021:
           lessons:
             Conditionals:
@@ -2622,10 +2624,12 @@ kk:
             'Functions: Songwriting':
               name: Ән Жазу
           lesson_groups:
+            ramp_up:
+              display_name: Ілмек
             csf_digcit:
               display_name: Сандық Азаматтық
             csf_nested_loops:
-              display_name: Кіріккен Циклдер
+              display_name: Шарттар
             csf_functions:
               display_name: Функциялар
         coursef-2021:
@@ -2670,3 +2674,23 @@ kk:
               display_name: Кіріспе
             lessonGroup-3:
               display_name: Айнымалылар
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Ілмек
+              name: Ілмек
+            Events:
+              key: Шаралар
+              name: Шаралар
+            Conditionals:
+              key: Шарттар
+              name: Шарттар
+            Functions:
+              key: Функциялар
+              name: Функциялар
+            Variables:
+              key: Айнымалылар
+              name: Айнымалылар
+            For Loops:
+              key: For ілмектері
+              name: For ілмектері

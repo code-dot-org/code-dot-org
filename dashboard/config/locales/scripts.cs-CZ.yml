@@ -4157,6 +4157,7 @@ cs:
             Programming with Rey and BB-8:
               key: Programování s Rey a BB-8
               name: Programování s Rey a BB-8
+              description_student: Pomoz BB-8 posbírat šrot!
             Loops in Ice Age:
               key: Cykly v Době ledové
           lesson_groups:
@@ -4201,6 +4202,10 @@ cs:
               name: Odstraňujeme chyby v bludišti
             Programming in Collector:
               name: Sbíráme poklady s Laurel
+              description_teacher: V těchto úlohách si studenti rozšíří porozumění
+                algoritmů a ladění kódu. S novou postavičkou - dobrodružnou Laurel
+                studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel
+                získat poklad na cestě.
             Programming in Artist:
               name: Malujeme s pomocí kódu
             Binary Bracelets:
@@ -4212,6 +4217,7 @@ cs:
             Loops with Rey and BB-8:
               key: Cykly s Rey a BB-8
               name: Cykly s Rey a BB-8
+              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
             Loops in Harvester:
               name: Sběr úrody s cykly
             Looking Ahead:
@@ -4247,49 +4253,120 @@ cs:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programování na čtverečkovaném papíru
+              description_teacher: Začněme formou "programování", kde bude jeden žák
+                programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost
+                zažít některé ze základních principů programování zábavnou a přístupnou
+                cestou. V této lekci žáci začnou tím, že se naučí používat symboly,
+                aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců
+                na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny
+                zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.
             Introduction to Online Puzzles:
               key: Představení online úloh
               name: Představení online úloh
             Relay Programming:
               key: Štafetové programování
               name: Štafetové programování
+              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti,
+                pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí
+                do týmů a budou spolupracovat na napsání programu postupně po jednom
+                pokynu.
             Debugging in Collector:
               name: Ladění s Laurel
+              description_teacher: V této online aktivitě si studenti procvičí ladění
+                kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu
+                kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými
+                cykly.
             Events in Bounce:
               key: Události s Bounce
               name: Události s Bounce
+              description_teacher: V této online aktivitě se studenti naučí, co jsou
+                události a jak je počítače využívají v programech jako jsou video
+                hry. Studenti budou pracovat na úlohách, které přimějí program reagovat
+                na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy
+                dostanou studenti příležitost přizpůsobit si svou hru různými stupni
+                rychlosti a zvuky.
             Build a Star Wars Game:
               key: Vytvoř Star Wars hru
               name: Vytvoř Star Wars hru
+              description_teacher: V této hodině si studenti procvičí události vystavěním
+                hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars
+                pomohou studentům projít událostmi. Studenti pak dostanou prostor
+                pro vytvoření své vlastní hry.
             Dance Party:
               key: Taneční večírek
               name: Taneční večírek
+              description_teacher: V této lekci studenti naprogramují svůj vlastní
+                interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
+                tento nástroj byl vytvořený tak, aby reagoval na hudbu.
             Loops in Ice Age:
               key: Cykly v Době ledové
               name: Cykly v Době ledové
+              description_teacher: Pro krátké opakování (nebo představení) používání
+                cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji
+                dostali Scrata k žaludu.
             Loops in Artist:
               name: Kreslení tvarů s cykly
+              description_teacher: Tato lekce staví na pochopení cyklů z předchozí
+                lekce a dává studentům možnost být opravdu kreativní. Tato aktivita
+                se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli
+                svoje schopnosti řešit problémy.
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost
+                posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
+                nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Conditionals with Cards:
               key: Podmínky s kartami
               name: Podmínky s kartami
+              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité
+                pro úpravu programu pro konkrétní informaci. Když píšeme program,
+                nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít
+                udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která
+                situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují
+                počítači rozhodnout se podle informace, která platí v čase, kdy kód
+                poběží.\r\n\r "
             Conditionals in Bee:
               name: Pokud/jinak se včelkou
+              description_teacher: Dosud psali studenti kód, který fungoval pořád
+                stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní.
+                V této lekci začne vaše třída programovat s podmínkami, což jim umožní
+                napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž
+                se program setká.
             While Loops in Farmer:
               key: Cykly pokud (while) s farmářkou
               name: Cykly pokud (while) s farmářkou
             Until Loops in Maze:
               key: Cykly dokud (until) v bludišti
               name: Cykly dokud (until) v bludišti
+              description_student: Když použij cykly `dokud`, můžeš udělat úžasné
+                věci!
+              description_teacher: V této lekci se studenti naučí o cyklech `opakuj
+                dokud nenastane` (until). Studenti budou stavět programy, v nichž
+                hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného
+                bodu.
             Conditionals & Loops in Harvester:
               name: Zahradničení s podmínkami
+              description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud`
+                (until) a příkazy `když / jinak`. Všechny tyto bloky využívají podmínky.
+                Procvičováním všech tří se studenti naučí psát komplexní a flexibilní
+                kód.
             'Unplugged: Binary':
               key: 'Nezapojené: binární'
               name: Binární obrázky
+              description_teacher: Přestože si hodně lidí myslí, že binární znamená
+                výhradně nuly a jedničky, studenti se naučí, že informace lze znázornit
+                v různých binárních možnostech. Tato lekce posune celý koncept ještě
+                dále, když znázorní, jak počítač může binárně ukládat i ještě složitější
+                informace (jako jsou obrázky a barvy).
             Artist Binary:
               key: Binární umělec
               name: Binární obrázky s umělcem
+              description_teacher: Tato série online lekcí naučí studenty, jak vytvářet
+                obrázky jen zapnutím a vypnutím.
+            lesson-6:
+              name: Pohled do budoucna s Minecraftem
           lesson_groups:
             csf_sequencing:
               display_name: Sekvence
@@ -4303,31 +4380,51 @@ cs:
               display_name: Binární
             csf_digcit:
               display_name: Digitální občanství
+            lessonGroup-6:
+              display_name: Digitální občanství
           student_description: Studenti se naučí chápat cykly, podmínky a události
             (events). Kromě programování se studenti naučí o digitálním občanství.
         coursee-2021:
           title: Kurz E (2019)
           lessons:
+            Sequencing in the Maze:
+              description_teacher: "V této sadě úloh studenti začnou se seznámením
+                se (případně podle stupně pokročilosti třídy se zopakováním si) s
+                online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu
+                pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve
+                videích se také probírá přetahování, mazání a spojování Blockly bloků.
+                Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti
+                v bludišti. \r\nLadění kodu (debugging) je základním kamenem učení
+                se programovat. Studenti se setkají s několika úlohami, které byly
+                vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili
+                chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky,
+                které nefungují.  "
             Programming and Loops with the Artist:
               name: Kreslení s cykly
             Conditionals:
               key: Podmínky
             Simon Says:
               key: Kuba řekl
-              name: Kuba řekl
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost
+                posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
+                nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             'Functions: Songwriting':
               name: Skládání písniček
             Functions in Harvester:
               name: Funkce s farmářkou
           lesson_groups:
+            ramp_up:
+              display_name: Cykly
             csf_sprites:
               display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
             csf_nested_loops:
-              display_name: Vnořené cykly
+              display_name: Podmínky
             csf_functions:
               display_name: Funkce
         coursef-2021:
@@ -4338,6 +4435,11 @@ cs:
             Nested Loops in the Maze:
               key: Vnořené cykly v bludišti
               name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost
+                posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
+                nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Envelope Variables:
               key: Obálkové proměnné
               name: Obálkové proměnné
@@ -4365,24 +4467,40 @@ cs:
             Dance Party:
               key: Taneční večírek
               name: Taneční večírek
+              description_student: V této lekci studenti naprogramují svůj vlastní
+                interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
+                tento nástroj byl vytvořený tak, aby reagoval na hudbu.
+              description_teacher: V této lekci studenti naprogramují svůj vlastní
+                interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
+                tento nástroj byl vytvořený tak, aby reagoval na hudbu.
             Programming with Angry Birds:
               key: Programujeme s Angry Birds
               name: Programujeme s Angry Birds
             Collecting Treasure with Laurel:
               key: Sbíráme poklady s Laurel
               name: Sbíráme poklady s Laurel
+              description_teacher: V těchto úlohách si studenti rozšíří porozumění
+                algoritmů a ladění kódu. S novou postavičkou - dobrodružnou Laurel
+                studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel
+                získat poklad na cestě.
             Creating Art with Code:
               key: Malujeme s pomocí kódu
               name: Malujeme s pomocí kódu
             Loops with Rey and BB-8:
               key: Cykly s Rey a BB-8
               name: Cykly s Rey a BB-8
+              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
             Sticker Art with Loops:
               key: Razítka v cyklech
               name: Razítka v cyklech
             Nested Loops in Maze:
               key: Vnořené cykly v bludišti
               name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost
+                posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
+                nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Snowflakes with Anna and Elsa:
               key: Vločky s Annou a Elsou
               name: Vločky s Annou a Elsou
@@ -4391,15 +4509,40 @@ cs:
             If/Else with Bee:
               key: Pokud/jinak se včelkou
               name: Pokud/jinak se včelkou
+              description_teacher: Dosud psali studenti kód, který fungoval pořád
+                stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní.
+                V této lekci začne vaše třída programovat s podmínkami, což jim umožní
+                napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž
+                se program setká.
             While Loops with the Farmer:
               key: Cykly pokud (while) s farmářkou
               name: Cykly pokud (while) s farmářkou
+              description_teacher: "Když se studenti dostanou k této lekci, měli by
+                už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu
+                ztížit. \r\n\r\n_Cykly pokud (while)_ jsou cykly, které opakují příkazy,
+                když je podmínka splněna. Cykly `pokud` se využívají, když programátor
+                neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky
+                musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka
+                budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou
+                znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí
+                pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud
+                nebude země rovná."
             Until Loops in Maze:
               key: Cykly dokud (until) v bludišti
               name: Cykly dokud (until) v bludišti
+              description_student: Když použij cykly `dokud`, můžeš udělat úžasné
+                věci!
+              description_teacher: V této lekci se studenti naučí o cyklech `opakuj
+                dokud nenastane` (until). Studenti budou stavět programy, v nichž
+                hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného
+                bodu.
             Harvesting with Conditionals:
               key: Zahradničení s podmínkami
               name: Zahradničení s podmínkami
+              description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud`
+                (until) a příkazy `když / jinak`. Všechny tyto bloky využívají podmínky.
+                Procvičováním všech tří se studenti naučí psát komplexní a flexibilní
+                kód.
             Functions with Harvester:
               key: Funkce s farmářkou
               name: Funkce s farmářkou
@@ -4459,3 +4602,32 @@ cs:
           description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
           description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
           student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+        k5-onlinepd-2021:
+          lessons:
+            Sequencing:
+              key: Sekvence
+              name: Sekvence
+            Loops:
+              key: Cykly
+              name: Cykly
+            Events:
+              key: Události
+              name: Události
+            Conditionals:
+              key: Podmínky
+              name: Podmínky
+            End of Course projects:
+              key: Projekty k ukončení kurzu
+              name: Projekty k ukončení kurzu
+            Functions:
+              key: Funkce
+              name: Funkce
+            Variables:
+              key: Proměnné
+              name: Proměnné
+            For Loops:
+              key: Cykly "For"
+              name: Cykly "For"
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Začínáme

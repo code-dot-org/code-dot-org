@@ -1205,6 +1205,46 @@
           "collect": {
             "name": "சேகரி"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a circle": {
+            "name": "ஒரு வட்டத்தை வரையவும்"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி"
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          }
         }
       }
     }

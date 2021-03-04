@@ -1225,6 +1225,47 @@
           "collect": {
             "name": "uzta bildu"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "marraztu izar bat",
+            "parameters": {
+              "points": "puntuak",
+              "length": "luzera"
+            }
+          },
+          "draw a circle": {
+            "name": "marraztu zirkulu bat"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "luzera",
+              "repeat": "errepikatu"
+            }
+          },
+          "draw a triangle": {
+            "name": "marraztu triangelu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a house": {
+            "name": "marraztu etxe bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a square": {
+            "name": "marraztu karratu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          }
         }
       }
     }

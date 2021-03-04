@@ -1760,6 +1760,10 @@ az:
             Conditionals:
               key: Şərti ifadələr
           lesson_groups:
+            ramp_up:
+              display_name: dövrlər
+            csf_nested_loops:
+              display_name: Şərti ifadələr
             csf_functions:
               display_name: Funksiyalar
         coursef-2021:
@@ -1802,3 +1806,20 @@ az:
               name: Dərs 14
             lesson15:
               name: Dərs 15
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: dövrlər
+              name: dövrlər
+            Events:
+              key: Hadisələr
+              name: Hadisələr
+            Conditionals:
+              key: Şərti ifadələr
+              name: Şərti ifadələr
+            Functions:
+              key: Funksiyalar
+              name: Funksiyalar
+            Variables:
+              key: dəyişənlər
+              name: dəyişənlər

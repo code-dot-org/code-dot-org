@@ -1158,7 +1158,54 @@
           "moving north": "nach Norden gehend",
           "jittering": "zitternd",
           "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving left and right": "rechts und links bewegen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "swimming left and right": "links und rechts schwimmend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "swimming left and right": "links und rechts schwimmend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "wandering": "wandernd"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "Wiederherstellen",
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving left and right": "rechts und links bewegen",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten"
         }
       }
     }

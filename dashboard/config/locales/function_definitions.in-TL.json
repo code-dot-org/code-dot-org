@@ -3667,6 +3667,56 @@
           "collect": {
             "name": "crwdns2453318:0crwdne2453318:0"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "crwdns2481174:0crwdne2481174:0",
+            "description": "crwdns2481176:0crwdne2481176:0",
+            "parameters": {
+              "points": "crwdns2481178:0crwdne2481178:0",
+              "length": "crwdns2481180:0crwdne2481180:0"
+            }
+          },
+          "draw a circle": {
+            "name": "crwdns2481182:0crwdne2481182:0",
+            "description": "crwdns2481184:0crwdne2481184:0",
+            "parameters": {
+              "radius": "crwdns2481186:0crwdne2481186:0"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "crwdns2481188:0crwdne2481188:0",
+            "parameters": {
+              "sides": "crwdns2481190:0crwdne2481190:0",
+              "length": "crwdns2481192:0crwdne2481192:0",
+              "repeat": "crwdns2481194:0crwdne2481194:0"
+            }
+          },
+          "draw a triangle": {
+            "name": "crwdns2481196:0crwdne2481196:0",
+            "parameters": {
+              "length": "crwdns2481198:0crwdne2481198:0"
+            }
+          },
+          "draw a shape": {
+            "name": "crwdns2481200:0crwdne2481200:0",
+            "parameters": {
+              "sides": "crwdns2481202:0crwdne2481202:0",
+              "length": "crwdns2481204:0crwdne2481204:0"
+            }
+          },
+          "draw a house": {
+            "name": "crwdns2481206:0crwdne2481206:0",
+            "parameters": {
+              "length": "crwdns2481208:0crwdne2481208:0"
+            }
+          },
+          "draw a square": {
+            "name": "crwdns2481210:0crwdne2481210:0",
+            "parameters": {
+              "length": "crwdns2481212:0crwdne2481212:0"
+            }
+          }
         }
       }
     }

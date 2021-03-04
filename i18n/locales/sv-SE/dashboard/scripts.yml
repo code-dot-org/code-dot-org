@@ -3222,6 +3222,8 @@ sv:
               display_name: Binära
             csf_digcit:
               display_name: Digitalt medborgarskap
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
         coursee-2021:
           lessons:
             Conditionals:
@@ -3229,10 +3231,12 @@ sv:
             'Functions: Songwriting':
               name: Låtskrivande
           lesson_groups:
+            ramp_up:
+              display_name: loopar
             csf_digcit:
               display_name: Digitalt medborgarskap
             csf_nested_loops:
-              display_name: Kapslade slingor(loopar)
+              display_name: Villkor
             csf_functions:
               display_name: funktioner
         coursef-2021:
@@ -3307,3 +3311,26 @@ sv:
               name: Lektion 14
             lesson15:
               name: Lektion 15
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: loopar
+              name: loopar
+            Events:
+              key: Händelser
+              name: Händelser
+            Conditionals:
+              key: Villkor
+              name: Villkor
+            Functions:
+              key: funktioner
+              name: funktioner
+            Variables:
+              key: variabler
+              name: variabler
+            For Loops:
+              key: '''För'' loopar'
+              name: '''För'' loopar'
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Nästa steg

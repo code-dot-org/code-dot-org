@@ -28,6 +28,13 @@ For high schools, we offer two years computer science courses for beginners: Com
 <br>
 <hr>
 
+<%@show_csa = DCDO.get('courses_show_csa', CDO.default_courses_show_csa)%>
+<% if @show_csa %>
+# Computer Science A (coming in 2022)
+<%=view :csa_information %>
+<hr>
+<% end %>
+
 # Computer Science Fundamentals - Express
 
 <div class="col-40" style="padding-right: 10px;">
@@ -45,18 +52,6 @@ For a lightweight option that can be integrated as a unit in an existing technol
 [/col-60]
 
 <div style="clear: both;"></div>
-
-<br>
-<hr>
-
-<a name="apcsa"></a>
-# AP Computer Science A in Java
-
-There are two AP computer science offerings, and students can take either course in any order. The AP Computer Science A course and exam focuses on computing skills related to programming in Java. The AP Computer Science Principles course complements AP Computer Science A as it aims to broaden participation in the study of computer science.
-
-While Code.org does not have an AP Computer Science A curriculum, we have recommendations for a number of great curricula and programs available to teachers and students.
-
-[<button>Learn about AP CS A resources</button>](/educate/curriculum/apcsa)
 
 <br>
 <hr>

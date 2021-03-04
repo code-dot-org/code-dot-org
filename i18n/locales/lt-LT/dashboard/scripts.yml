@@ -2681,6 +2681,8 @@ lt:
               display_name: Dvejetainis
             csf_digcit:
               display_name: Virtuali pilietybė
+            lessonGroup-6:
+              display_name: Virtuali pilietybė
         coursee-2021:
           lessons:
             Conditionals:
@@ -2688,10 +2690,12 @@ lt:
             'Functions: Songwriting':
               name: Dainų rašymas
           lesson_groups:
+            ramp_up:
+              display_name: Kartojimas
             csf_digcit:
               display_name: Virtuali pilietybė
             csf_nested_loops:
-              display_name: Kartojimas kartojime
+              display_name: Sąlyginiai sakiniai
             csf_functions:
               display_name: Komandų kūrimas
         coursef-2021:
@@ -2736,3 +2740,26 @@ lt:
               name: 14 pamoka
             lesson15:
               name: 15 pamoka
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Kartojimas
+              name: Kartojimas
+            Events:
+              key: Įvykiai
+              name: Įvykiai
+            Conditionals:
+              key: Sąlyginiai sakiniai
+              name: Sąlyginiai sakiniai
+            Functions:
+              key: Komandų kūrimas
+              name: Komandų kūrimas
+            Variables:
+              key: Kintamieji
+              name: Kintamieji
+            For Loops:
+              key: Kartojimas
+              name: Kartojimas
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Kiti žingsniai

@@ -442,7 +442,6 @@
         "CSD What Makes a Computer a Computer Video": "Video: Čo robí počítač počítačom?",
         "CSD What Makes a Computer a Computer Video_2018": "Video: Čo robí počítač počítačom?",
         "CSD What Makes a Computer a Computer Video_2019": "Video: Čo robí počítač počítačom?",
-        "outbreak_freeplay": "Voľná hra",
         "outbreak1": "Simulácia vírusu",
         "outbreak2": "Simulácia vírusu",
         "outbreak3": "Simulácia vírusu",
@@ -458,7 +457,9 @@
         "CSD U4 Design Mode Map_2019": "Predstavenie dizajnového módu",
         "CSDU4 Design Mode Video": "Úvod do dizajnového módu",
         "CSDU4 Design Mode Video_2018": "Úvod do dizajnového módu",
-        "CSDU4 Design Mode Video_2019": "Úvod do dizajnového módu"
+        "CSDU4 Design Mode Video_2019": "Úvod do dizajnového módu",
+        "outbreak_freeplay": "Rozšírený panel nástrojov",
+        "outbreak_freeplay_basic": "Štandardný panel nástrojov"
       }
     }
   }

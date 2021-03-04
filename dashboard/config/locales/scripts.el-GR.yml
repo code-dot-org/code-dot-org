@@ -3110,6 +3110,8 @@ el:
               display_name: Δυαδικό
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-6:
+              display_name: Ψηφιακή υπηκοότητα
         coursee-2021:
           lessons:
             Conditionals:
@@ -3117,12 +3119,14 @@ el:
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
           lesson_groups:
+            ramp_up:
+              display_name: Βρόχοι
             csf_sprites:
               display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_nested_loops:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Συνθήκες
             csf_functions:
               display_name: Συναρτήσεις
         coursef-2021:
@@ -3173,6 +3177,8 @@ el:
           lessons:
             Virus Simulation for Code Bytes:
               name: Κωδικοποίηση μίας προσομοίωσης
+            Sprites in Action:
+              name: Χαρακτήρες σε Δράση
           lesson_groups:
             ramp_up:
               display_name: Εισαγωγή
@@ -3199,3 +3205,26 @@ el:
             μια προσομοίωση από μία έξαρση ιού.
           student_description: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε
             μια προσομοίωση από μία έξαρση ιού.
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Βρόχοι
+              name: Βρόχοι
+            Events:
+              key: Συμβάντα
+              name: Συμβάντα
+            Conditionals:
+              key: Συνθήκες
+              name: Συνθήκες
+            Functions:
+              key: Συναρτήσεις
+              name: Συναρτήσεις
+            Variables:
+              key: Μεταβλητές
+              name: Μεταβλητές
+            For Loops:
+              key: Βρόχοι Για
+              name: Βρόχοι Για
+            Sprite Lab:
+              key: Sprite Lab
+              name: Sprite Lab

@@ -334,6 +334,17 @@ img.video_thumbnail {
   #signin_button .header_button {
     margin-top: 6px;
   }
+
+  #sign_in_or_user {
+    &.z_index_above_modal {
+      z-index: 1050;
+
+      // Usually transparent, so adding teal allows button to render in front
+      .header_user {
+        background-color: $teal;
+      }
+    }
+  }
 }
 
 #language_dir.rtl #pageheader-wrapper {
@@ -2061,6 +2072,12 @@ a.download-video {
     &.with-google_oauth2 {
       background-color: $google_red;
       border: 1px solid $google_red;
+      &:disabled {
+        border: 1px solid $lighter_gray;
+        background-color: $lighter_gray;
+        @include box-shadow(none);
+        cursor: not-allowed;
+      }
     }
 
     &.with-facebook {

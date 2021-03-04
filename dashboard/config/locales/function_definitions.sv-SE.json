@@ -1280,6 +1280,47 @@
           "collect": {
             "name": "samla in"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "rita en stjärna",
+            "parameters": {
+              "points": "poäng",
+              "length": "längd"
+            }
+          },
+          "draw a circle": {
+            "name": "rita en circel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "längd",
+              "repeat": "upprepa"
+            }
+          },
+          "draw a triangle": {
+            "name": "rita en triangel",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a house": {
+            "name": "rita ett hus",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a square": {
+            "name": "rita en kvadrat",
+            "parameters": {
+              "length": "längd"
+            }
+          }
         }
       }
     }

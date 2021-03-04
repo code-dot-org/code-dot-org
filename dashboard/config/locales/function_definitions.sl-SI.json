@@ -1414,6 +1414,47 @@
           "draw square": {
             "name": "nariši kvadrat"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "nariši zvezdo",
+            "parameters": {
+              "points": "točk",
+              "length": "dolžina"
+            }
+          },
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "dolžina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a house": {
+            "name": "nariši hišo",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
         }
       }
     }

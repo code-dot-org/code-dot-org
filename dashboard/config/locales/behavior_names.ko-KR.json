@@ -1129,6 +1129,60 @@
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "배회",
+          "moving east": "동쪽으로 이동",
+          "spinning left": "왼쪽으로 회전",
+          "spinning right": "오른쪽으로 회전",
+          "shrinking": "감소",
+          "growing": "성장",
+          "moving south": "남쪽으로 이동",
+          "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
+          "moving north": "북쪽으로 이동",
+          "jittering": "지터링",
+          "moving west": "서쪽으로 이동",
+          "patrolling": "순찰"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "동쪽으로 이동",
+          "spinning left": "왼쪽으로 회전",
+          "spinning right": "오른쪽으로 회전",
+          "shrinking": "감소",
+          "growing": "성장",
+          "moving south": "남쪽으로 이동",
+          "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
+          "moving north": "북쪽으로 이동",
+          "jittering": "지터링",
+          "moving west": "서쪽으로 이동",
+          "patrolling": "순찰",
+          "wandering": "배회"
+        },
+        "outbreak_freeplay": {
+          "wandering": "배회",
+          "moving east": "동쪽으로 이동",
+          "spinning left": "왼쪽으로 회전",
+          "spinning right": "오른쪽으로 회전",
+          "shrinking": "감소",
+          "growing": "성장",
+          "moving south": "남쪽으로 이동",
+          "moving north": "북쪽으로 이동",
+          "jittering": "지터링",
+          "moving west": "서쪽으로 이동",
+          "patrolling": "순찰"
+        },
+        "outbreak_freeplay_basic": {
+          "wandering": "배회",
+          "moving east": "동쪽으로 이동",
+          "spinning left": "왼쪽으로 회전",
+          "spinning right": "오른쪽으로 회전",
+          "shrinking": "감소",
+          "growing": "성장",
+          "moving south": "남쪽으로 이동",
+          "moving north": "북쪽으로 이동",
+          "jittering": "지터링",
+          "moving west": "서쪽으로 이동",
+          "patrolling": "순찰"
         }
       }
     }

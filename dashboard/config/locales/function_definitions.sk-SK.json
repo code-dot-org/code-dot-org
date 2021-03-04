@@ -3772,6 +3772,56 @@
           "draw bit": {
             "name": "nakresli bit"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "nakresli hviezdu",
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán",
+            "parameters": {
+              "points": "body",
+              "length": "dĺžka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnicu",
+            "description": "nakresli kruh s daným polomerom",
+            "parameters": {
+              "radius": "polomer"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli veterník",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojuholník",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dom",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli štvorec",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          }
         }
       }
     }

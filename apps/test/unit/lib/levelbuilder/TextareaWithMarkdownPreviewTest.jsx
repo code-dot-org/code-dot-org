@@ -20,8 +20,8 @@ describe('TextareaWithMarkdownPreview', () => {
   it('has correct markdown for preview of unit description', () => {
     const wrapper = mount(<TextareaWithMarkdownPreview {...defaultProps} />);
     expect(wrapper.contains('Section Name')).to.be.true;
-    expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('textarea').prop('value')).to.equal(
+    expect(wrapper.find('TextareaWithImageUpload').length).to.equal(1);
+    expect(wrapper.find('TextareaWithImageUpload').props().markdown).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
     expect(wrapper.find('SafeMarkdown').length).to.equal(1);
@@ -30,9 +30,6 @@ describe('TextareaWithMarkdownPreview', () => {
     );
 
     expect(wrapper.find('HelpTip').length).to.equal(1);
-
-    wrapper.find('textarea').simulate('change', {target: {value: '## Title'}});
-    expect(handleMarkdownChange).to.have.been.calledOnce;
   });
 
   it('has no HelpTip if none passed in to props', () => {

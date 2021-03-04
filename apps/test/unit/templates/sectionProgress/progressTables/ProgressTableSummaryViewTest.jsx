@@ -10,7 +10,7 @@ import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
 import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
 import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
-import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/summary/SummaryViewLegend';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
 import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import * as Sticky from 'reactabular-sticky';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';

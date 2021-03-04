@@ -1,11 +1,59 @@
 require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 require 'uri'
+require 'active_support/core_ext/numeric/time'
+require 'active_support/core_ext/numeric/bytes'
+require 'active_support/number_helper'
 
+# We want to know what strings we are using on the site and where they are being used. To get this data, this class was
+# created to log the association of string-keys and URLs to a database (through the AWS service Firehose).
+# This i18n string usage data is buffered and sent periodically to Firehose. We can then query the data on Redshift and
+# create lists of which strings are used on which pages.
 class I18nStringUrlTracker
   include Singleton
 
+  # DCDO key for turning this feature on or off.
   I18N_STRING_TRACKING_DCDO_KEY = 'i18n_string_tracking'.freeze
+
+  # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
+  # TODO: increase this interval to 12.hours once we verify everything is working.
+  FLUSH_INTERVAL = 1.hour
+
+  MAX_BUFFER_SIZE = 250.megabytes
+
+  def initialize
+    super
+    # A buffer of all the given i18n string tracking data. It will be flushed periodically.
+    # It will be in the following form:
+    # {
+    #   <url>: {
+    #     <string_key>: [<source>, ...],
+    #     ...
+    #   },
+    #   ...
+    # }
+    #
+    # Example:
+    # {
+    #   "https://code.org": {
+    #     "header.my_dashboard": ["common_json", ...],
+    #     "header.course_catalog" ["common_json", ...],
+    #     ...
+    #   },
+    #   ...
+    # }
+    #
+    # We want to buffer the data before we send it to Firehose because we can de-dupe data.
+    # There is a lot of duplicate data, so this will result in a considerable cost savings.
+    @buffer = {}
+    @buffer.extend(MonitorMixin) # Adds synchronization
+    # Roughly tracks the size of the buffer in bytes. This should never exceed @buffer_size_max
+    @buffer_size = 0
+    @buffer_size_max = MAX_BUFFER_SIZE
+
+    # Flushes the buffer in a loop which executes at the given interval
+    @task = Concurrent::TimerTask.execute(execution_interval: FLUSH_INTERVAL) {flush}
+  end
 
   # Records the given string_key and URL so we can analyze later what strings are present on what pages.
   # @param string_key [String] The key used to review the translated string from our i18n system.
@@ -19,16 +67,70 @@ class I18nStringUrlTracker
     url = normalize_url(url)
     return unless string_key && url && source
 
-    # record the string : url association.
-    FirehoseClient.instance.put_record(
-      :i18n,
-      {url: url, string_key: string_key, source: source}
-    )
+    add_to_buffer(string_key, url, source)
   end
 
   private
 
-  # Paths where everything everything will after it will be aggregated.
+  # Records the log data to a buffer which will eventually be flushed
+  def add_to_buffer(string_key, url, source)
+    data = {url => {string_key => Set[source]}}
+    # make sure this is the only thread modifying @buffer
+    @buffer.synchronize do
+      # update the buffer size if we are adding any new data to it
+      # duplicate data will not increase the buffer size
+      size = 0
+      size += url.bytesize unless @buffer.dig(url)
+      size += string_key.bytesize unless @buffer.dig(url, string_key)
+      size += source.bytesize unless @buffer.dig(url, string_key)&.include?(source)
+      @buffer_size += size
+      # add the new data to the buffer
+      @buffer.deep_merge!(data)
+    end
+
+    # if the buffer is too large, trigger an early flush
+    if @buffer_size > @buffer_size_max
+      message = "The I18n string usage tracker is has reached its memory limit so data will be flushed early. Investigate whether there is an issue or if the limit should be increased."
+      Honeybadger.notify(
+        name: 'I18n Usage Tracker buffer reached max memory limits.',
+        message: message,
+        context: {
+          current_buffer_size: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size).to_s,
+          buffer_size_max: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size_max).to_s
+        }
+      )
+      flush
+    end
+  end
+
+  # Sends the buffered i18n string usage data to Firehose.
+  def flush
+    buffer = nil
+
+    # Capture the current data and start a new buffer
+    # Use .synchronize to make sure this is the only thread modifying @buffer
+    @buffer.synchronize do
+      buffer = @buffer
+      @buffer = {}
+      @buffer.extend(MonitorMixin) # Adds synchronization
+      @buffer_size = 0
+    end
+
+    # log every <string_key>:<url>:<source> combination to Firehose
+    buffer&.each_key do |url|
+      buffer[url].each_key do |string_key|
+        buffer[url][string_key].each do |source|
+          # record the string : url association.
+          FirehoseClient.instance.put_record(
+            :i18n,
+            {url: url, string_key: string_key, source: source}
+          )
+        end
+      end
+    end
+  end
+
+  # Paths where everything after it will be aggregated.
   # You can also add single pages which don't need aggregation as well e.g. /home
   SIMPLE_PATHS = %w(home teacher_dashboard courses users).freeze
 
@@ -126,5 +228,30 @@ class I18nStringUrlTracker
     end
 
     parsed_url.to_s
+  end
+
+  # Clear the buffer and stop the periodic upload of i18n usage data.
+  # This should only be used by unit tests.
+  def shutdown
+    @buffer = {}
+    @buffer_size = 0
+    @buffer_size_max = MAX_BUFFER_SIZE
+    @buffer.extend(MonitorMixin) # Adds synchronization
+    @task.shutdown
+  end
+
+  # Sets the interval at which data should be flushed.
+  # This should only be used by unit tests.
+  def set_flush_interval(interval)
+    # stop the existing TimerTask if one is currently running
+    @task.shutdown
+    # Start a new flush interval
+    @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
+  end
+
+  # Sets the max size (bytes) of the buffer.
+  # This should only be used by unit tests.
+  def set_buffer_size_max(max)
+    @buffer_size_max = max
   end
 end

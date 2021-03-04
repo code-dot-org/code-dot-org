@@ -13125,8 +13125,7 @@ pl:
               name: Ukończ Dział  Przemyślenia na temat pogłębionej nauki [Deeper
                 Learning Reflections]
             Complete Explore Deeper Learning Reflections:
-              name: Ukończ eksplorowanie przemyśleń na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ przemyślenia na temat badania pogłębionej nauki
           student_description: 'To jest Dział "Eksploruj AP"  "Planu pogłębionej nauki"
             dla prowadzących "Zasady informatyki" Code.org w trakcie szkolenia. Tutaj
             znajdziesz podpowiedzi i wytyczne wynikające z przemyśleń umożliwiających
@@ -13135,8 +13134,7 @@ pl:
             tej strony dostępne są pozycje do weryfikacji przez rówieśników po przedłożeniu
             przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
         csp-create-dlp-18:
-          title: '"Zasady informatyki''  kreują "Pogłębioną naukę" [CS Principles
-            Deeper Learning] 2018-2019'
+          title: Kurs Zasady informatyki kreuje pogłębioną naukę 2018-2019
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
             2018-2019 [CS Principles Facilitators in Training 2019]
           description_short: Materiały do "Pogłębionej nauki" przeznaczone dla prowadzących
@@ -13157,8 +13155,7 @@ pl:
             Deeper Learning Overview:
               name: Omówienie głębokiego uczenia
             Complete Create Deeper Learning Reflections:
-              name: Ukończ tworzenie przemyśleń na temat pogłębionej nauki [Deeper
-                Learning Reflections]
+              name: Ukończ tworzenie przemyśleń na temat pogłębionej nauki
           student_description: 'To jest Dział "Twórz AP"  "Planu pogłębionej nauki"
             dla prowadzących "Zasady informatyki" Code.org w trakcie szkolenia. Tutaj
             znajdziesz podpowiedzi i wytyczne wynikające z przemyśleń umożliwiających
@@ -13168,7 +13165,7 @@ pl:
             przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
         csd-post-survey:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
-          description_audience: Uczniowie CSD
+          description_audience: Uczniowie kursu CSD
           description_short: CSD Ankieta dla uczniów po odbyciu kursu
           description: Witamy w ankiecie po ukończeniu kursu poświęconego "Odkryciom
             informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi
@@ -13238,7 +13235,7 @@ pl:
             osobistego, pięciodniowego warsztatu letniego. Te pytania będą podstawą
             pracy, którą realizujemy na "Weekendzie szkoleniowym dla prowadzących".
         csd-apprentice-18:
-          title: Przemyślenia stażysty "Odkrycia CS" 2018-2019
+          title: Refleksje stażysty kursu Odkrycia Informatyki 2018-2019
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia
             2019 [CS Discoveries Facilitators in Training 2019]
           description_short: Materiały do przemyśleń stażysty przeznaczone dla prowadzących
@@ -13280,7 +13277,7 @@ pl:
             osobistego, pięciodniowego warsztatu letniego. Te pytania będą podstawą
             pracy, którą realizujemy na "Weekendzie szkoleniowym dla prowadzących".
         csp-novice-18:
-          title: Przemyślenia nowicjusza "Zasady informatyki" 2018-2019
+          title: Przemyślenia nowicjusza kursu Zaady informatyki 2018-2019
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
             2018-2019 [CS Principles Facilitators in Training 2019]
           description_short: Materiały do przemyśleń nowicjusza przeznaczone dla prowadzących
@@ -13322,7 +13319,7 @@ pl:
             Twojego osobistego, pięciodniowego warsztatu letniego. Te pytania będą
             podstawą pracy, którą realizujemy na "Weekendzie szkoleniowym dla prowadzących".
         csp-apprentice-18:
-          title: Przemyślenia stażysty "Zasady informatyki" 2018-2019
+          title: Przemyślenia stażysty kursu zZasady informatyki 2018-2019
           description_audience: Prowadzący "Zasady informatyki" w procesie szkolenia
             2018-2019 [CS Principles Facilitators in Training 2019]
           description_short: Materiały do przemyśleń stażysty przeznaczone dla prowadzących
@@ -14672,6 +14669,7 @@ pl:
             swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
             w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
             gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          name: express-2019
         csd1-2019:
           title: CSD Jednostka 1 - Rozwiązywanie problemów i informatyka ('19- '20)
           description: "\"Rozwiązywanie problemów i informatyka\" stanowi niezwykle
@@ -15512,6 +15510,7 @@ pl:
             swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
             w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz
             gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
+          name: pre-express-2019
         removed19:
           title: Usunięto z CSF dla 2019
           lessons:
@@ -18209,7 +18208,7 @@ pl:
               name: Pętle z Rey i BB-8
         csd-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
-          description_audience: Uczniowie CSD
+          description_audience: Uczniowie kursu CSD
           description_short: Ankieta dla uczniów po odbyciu kursu CSD 2018
           description: "Ankieta po kursie Odkrycia informatyki stanowi ważne narzędzie,
             którego używamy do uzyskania od Ciebie informacji zwrotnej oraz wprowadzenia
@@ -20392,7 +20391,7 @@ pl:
             Semester Hackathon Part 5:
               name: Semestralny Hackathon - Część 5
             'Lesson 18: Assessment Day':
-              name: 'Lekcja  18: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
             Unit 5 STUDENT Survey:
               name: Jednostka  5 Ankieta dla UCZNIA
             Unit 5 TEACHER Survey:
@@ -20426,7 +20425,7 @@ pl:
             Project - Make a Library Part 3:
               name: Projekt - Utwórz bibliotekę Część 3
             Assessment Day:
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
             Unit 7 STUDENT Survey:
               name: Jednostka 7 Ankieta dla UCZNIA
             Unit 7 TEACHER Survey:
@@ -20434,7 +20433,7 @@ pl:
             Variables Make Demo:
               name: Pokaz tworzenia zmiennych
             'Lesson 11: Assessment Day':
-              name: 'Lekcja 11: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
           name: csp7-2020
         csd2-projects-temp:
           title: CSD Projekty internetowe - TYMCZASOWE
@@ -24107,7 +24106,7 @@ pl:
             Project - Digital Information Dilemmas Part 2:
               name: Projekt - Dylematy związane z informacją cyfrową, Część 2
             'Lesson 14: Assessment Day':
-              name: 'Lekcja 14: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
             CS Principles Pre-survey:
               name: Ankieta wstępna dotyczące zasad informatyki
           name: csp1-2020
@@ -24136,7 +24135,7 @@ pl:
             Project - Internet Dilemmas Part 2:
               name: Projekt - Dylematy z Internetem Część 2
             'Lesson 9: Assessment Day':
-              name: 'Lekcja 9: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
           name: csp2-2020
         csp3-2020:
           title: Część 3 CSP - Wprowadzenie do projektowania aplikacji ('20-'21)
@@ -24165,7 +24164,7 @@ pl:
             Project - Designing an App Part 5:
               name: Projekt - Projektowanie aplikacji Część 5
             'Lesson 11: Assessment Day':
-              name: 'Lekcja 11: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
           name: csp3-2020
         csp6-2020:
           title: CSP Jednostka 6 - Algorytmy ('20-'21)
@@ -24186,7 +24185,7 @@ pl:
             Parallel and Distributed Algorithms:
               name: Algorytmy równoległe i rozproszone
             'Lesson 6: Assessment Day':
-              name: 'Lekcja 6: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
           name: csp6-2020
         csp8-2020:
           title: CSP Jednostka 8 - Utwórz przygotowanie PT ('20-'21)
@@ -24225,7 +24224,7 @@ pl:
             Project - Tell a Data Story - Part 2:
               name: Projekt - Opowiedz historię o danych - Część 2
             'Lesson 9: Assessment Day':
-              name: 'Lekcja 9: Dzień sprawdzianu'
+              name: 'Lekcja 15: Dzień sprawdzianu'
           name: csp9-2020
         csp10-2020:
           title: CSP Jednostka 10 - Cyberbezpieczeństwo i oddziaływanie globalne ('20-'21)
@@ -25549,6 +25548,7 @@ pl:
               name: Moduł 8
           title: Wirtualne Profesjonalne Kształcenie w zakresie Odkrywania Informatyki
             w latach 2020-2021
+          name: vpl-csd-2020
         vpl-csp-2020:
           lessons:
             Module 1:
@@ -25586,6 +25586,8 @@ pl:
               name: Kurs E/F
             CS Discoveries:
               name: Odkrycia informatyki
+            contagions:
+              name: 'Integracja treści: Zarażenia '
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
@@ -25593,6 +25595,7 @@ pl:
           description_audience: Wewnętrzne
           description_short: Poziomy, które są bezpośrednio powiązane z planami lekcji,
             ale nie pojawiają się w innych skryptach.
+          name: curriculum na poziomach piaskownicy
         virustest:
           lessons:
             Virus Simulation for Code Bytes:
@@ -25681,7 +25684,9 @@ pl:
             appendix:
               name: Appendix
             intro-categorical:
-              name: Lekcja 6
+              name: Lekcja 5
+            model-cards:
+              name: Plac zabaw dla modeli kart
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
@@ -25735,6 +25740,32 @@ pl:
               name: Duszki w akcji
             lesson-3-ci:
               name: Utwórz bot Haiku
+            video:
+              name: Filmy Sprite Lab
+            blank space stories:
+              name: Historie pustej przestrzeni
+            how things spread:
+              name: Jak się rozprzestrzeniają
+            contagion simulator setup:
+              name: Konfiguracja symulatora zakażeń
+            sometimes but not always:
+              name: Czasem, ale nie zawsze
+            modifying your model:
+              name: Modyfikujc Twój model
+            telling a data story:
+              name: Opowiadanie historii o danych
+            how things spread gp:
+              name: Praktyka z przewodnikiem dotyczącym, jak rozpowszechnia się zarażanie
+            contagion simulator gp:
+              name: Symulator zarażenia - praktyka z przewodnikiem
+            sometimes not always gp:
+              name: Czasami, nie zawsze - ćwiczenia
+            modifying your simulator gp:
+              name: Modyfikowanie Twojego symulatora - praktyka z przewodnikiem
+            collecting data gp:
+              name: Gromadzenie danych - praktyka z przewodnikiem
+            Haiku Bot:
+              name: Bot Haiku
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -25749,6 +25780,14 @@ pl:
                 ekscytujące interaktywne projekty!
             outbreak:
               display_name: Symulowanie przerwania
+            Loom Levels:
+              display_name: Poziomy krosna
+            contagion:
+              display_name: Zakażenie
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
+            haiku bot:
+              display_name: Bot Haiku
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
@@ -25773,6 +25812,26 @@ pl:
             Intro to Problem Solving:
               key: Wprowadzenie do rozwiązywania problemów
               name: Wprowadzenie do rozwiązywania problemów
+              description_student: "**Pytanie dnia: Co może nam pomóc we wspólnej
+                pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
+                w grupach projektując łódki z folii aluminiowej tak, aby utrzymały
+                jak najwięcej drobnych monet. Pod koniec lekcji grupy zastanawiają
+                się nad swoimi doświadczeniami zebranymi w trakcie zajęć i dokonają
+                powiązań z rodzajami rozwiązywanych problemów, którymi będą się zajmować
+                do końca kursu."
+              description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
+                pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nNa tej lekcji
+                uczniowie pracują w grupach projektując łódki z folii aluminiowej
+                tak, aby utrzymały jak najwięcej drobnych monet. Grupy odbywają dwie
+                rundy prac nad łódkami, a celem jest próba utrzymania większej liczby
+                drobnych monet niż w rundzie 1. Struktura zajęć przewiduje różne działania
+                w procesie rozwiązywania problemów, do których uczniowie zostaną wprowadzeni
+                bardziej szczegółowo na kolejnej lekcji. Pod koniec lekcji grupy zastanawiają
+                się nad swoimi doświadczeniami zebranymi w trakcie zajęć i dokonają
+                powiązań z rodzajami rozwiązywanych problemów, którymi będą się zajmować
+                do końca kursu.\n\n\r\n\r\n**Dostępne są również alternatywne wersje
+                tej lekcji.** \r\n\r\n* [Stolik prasowy](./4/)\r\n* [Makaronowy most](./5/)\r\n*
+                [Papierowa wieża](./6/)\n"
             The Problem Solving Process:
               key: Proces rozwiązywania problemów
               name: Proces rozwiązywania problemów
@@ -25782,18 +25841,58 @@ pl:
             What is a Computer?:
               key: Czym jest komputer?
               name: Czym jest komputer?
+              description_student: "**Pytanie dnia: Co to jest komputer?**\r\n\r\nW
+                trakcie tej lekcji klasa opracowuje wstępną definicję komputera. Po
+                przeprowadzenia burzy mózgów na temat potencjalnych definicji komputera,
+                klasa pracuje w grupach dzieląc ilustracje na \"jest komputerem\"
+                lub \"nie jest komputerem\" na plakacie i uzasadnia wybór najtrudniejszych
+                do skategoryzowania ilustracji. Następnie nauczyciel wprowadza definicję
+                komputera i pozwala grupom zweryfikować ich plakaty według nowej definicji."
+              description_teacher: "**Pytanie dnia: Co to jest komputer?**\r\n\r\nW
+                trakcie tej lekcji klasa opracowuje wstępną definicję komputera. Na
+                początku lekcji klasa przeprowadza burzę mózgów na temat potencjalnych
+                definicji komputera i umieszcza wyniki burzy mózgów na tablicy. Potem
+                uczniowie będą pracować w grupach dzieląc obrazy na \"jest komputerem\"
+                lub \"nie jest komputerem\" na papierze plakatowym. Grupy umieszczą
+                plakaty w całej sali i krótko wyjaśnią motywujące ich czynniki wyboru
+                elementów najtrudniejszych do skategoryzowania. najtrudniejszych kategoryzacji.
+                Nauczyciel wprowadza definicję komputera i pozwala grupom zweryfikować
+                ich plakaty według nowej definicji.\r"
             Input and Output:
               key: Wejście i Wyjście
               name: Wejście i Wyjście
             Processing:
               key: Przetwarzanie
               name: Przetwarzanie
+              description_teacher: "**Pytanie dnia: Jakie są różne sposoby, na jakie
+                komputery mogą przetwarzać informacje?**\r\n\r\nNa tej lekcji  wprowadza
+                się uczniów w cztery rodzaje przetwarzania: jeśli/ wówczas (instrukcje
+                warunkowe), znajdywanie pasującego elementu (wyszukiwania), liczenie
+                i porównywanie. Uczniów wprowadza się najpierw w rodzaje przetwarzania
+                na przykładzie kilku aplikacji. Później poznają więcej aplikacji,
+                aby stwierdzić, jakiego rodzaju przetwarzania używa się w każdym z
+                nich. Później zastanawiają się nad swoimi własnym aplikacjami i decydują,
+                jakie rodzaje przetwarzania musiałyby na nich działać. Na koniec klasa
+                przeprowadzają burzę mózgów poświęconą większej ilości rodzajów przetwarzania
+                w aplikacjach, które byłoby przydatne, ale nie zostały uwzględnione
+                w głównych lekcjach."
             Storage:
               key: Pamięć
               name: Pamięć
             Project - Propose an App:
               key: Projekt - Zaproponuj aplikację
               name: Projekt - Zaproponuj aplikację
+              description_teacher: "**Pytanie dnia:  W jaki sposób model IOSP może
+                nam pomóc w zaprojektowaniu aplikacji, która rozwiązuje problem?**\r\n\r\nAby
+                zakończyć proces badania przez nich procesu rozwiązywania problemów
+                oraz modelu elementów wejściowych/ wyjściowych/ przechowywania/ procesu
+                komputera, uczniowie będą proponować aplikacje przeznaczone do rozwiązywania
+                problemów realnego świata.  Ten projekt realizowany jest przez wiele
+                dni i doprowadzi do tego, że uczniowie będą tworzyć plakat podkreślający
+                cechy każdej aplikacji, który przedstawią kolegom z klasy. Przewodnik
+                po projekcie zapewnia uczniom instrukcje krok-po-kroku i pomaga im
+                uporządkować przemyślenia. Projekt jest zaprojektowany tak, aby był
+                zrealizowany w parach, chociaż może być zrealizowany indywidualnie."
             Post-Project Test:
               key: Testy po realizacji projektu
               name: Testy po realizacji projektu
@@ -25802,26 +25901,108 @@ pl:
                 lekcja 1)
               name: Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna
                 lekcja 1)
+              description_student: "**Pytanie dnia: Co może nam pomóc we wspólnej
+                pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
+                w grupach projektując stoły prasowe tak, aby utrzymały jak najwięcej
+                książek. Pod koniec lekcji grupa przedstawi swoje przemyślenia dotyczące
+                doświadczeń zebranych w trakcie zajęć oraz dokona powiązań z rodzajami
+                rozwiązania problemów, którymi będą się zajmować do końca kursu.\n\n"
+              description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
+                pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
+                w grupach projektując stoły prasowe tak, aby utrzymały jak najwięcej
+                książek. Grupy odbywają dwie rundy prac nad stołami, a celem jest
+                próba utrzymania większej liczby książek niż w rundzie 1. Konstrukcja
+                zajęć zapowiada różne działania w procesie rozwiązywania problemu,
+                do których uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym
+                na kolejnej lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami
+                zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań
+                problemów, którymi będą się zajmować do końca kursu.\r\n\r\n**To jest
+                ćwiczenie zamienne względem [Wprowadzenie do rozwiązywania problemów
+                - Łódki z aluminium](./1/)**"
             Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
               key: Wprowadzenie do rozwiązywania problemów - Spaghetti Most (Alternatywna
                 lekcja 1)
               name: Wprowadzenie do rozwiązywania problemów - Spaghetti Most (Alternatywna
                 lekcja 1)
+              description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
+                pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
+                w grupach projektując mosty z makaronu tak, aby utrzymały jak najwięcej
+                książek. Grupy odbywają dwie rundy prac nad mostami, a celem jest
+                próba utrzymania większej liczby książek niż w rundzie 1. Konstrukcja
+                zajęć zapowiada różne działania w procesie rozwiązywania problemu,
+                do których uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym
+                na kolejnej lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami
+                zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań
+                problemów, którymi będą się zajmować do końca kursu.\r\n\r\n**To jest
+                ćwiczenie zamienne względem [Wprowadzenie do rozwiązywania problemów
+                - Łódki z aluminium](./1/)**"
             Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
               key: Wprowadzenie do rozwiązywania problemów - Papierowa wieża (Alternatywna
                 lekcja 1)
               name: Wprowadzenie do rozwiązywania problemów - Papierowa wieża (Alternatywna
                 lekcja 1)
+              description_student: "**Pytanie dnia: Co może nam pomóc we wspólnej
+                pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
+                w grupach projektując wieże z papieru tak, aby były jak najwyższe.
+                Pod koniec lekcji grupa przedstawi swoje przemyślenia dotyczące doświadczeń
+                zebranych w trakcie zajęć oraz dokona powiązań z rodzajami rozwiązania
+                problemów, którymi będą się zajmować do końca kursu.\n\n"
+              description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
+                pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nNa tej lekcji
+                uczniowie pracują w grupach projektując wieże z papieru tak, aby były
+                jak najwyższe. Grupy odbywają dwie rundy prac nad wieżami a celem
+                jest próba zbudowania wieży wyższej niż w rundzie 1. Konstrukcja zajęć
+                zapowiada różne działania w procesie rozwiązywania problemu, do których
+                uczniowie zostaną wprowadzeni w stopniu bardziej szczegółowym na kolejnej
+                lekcji. Pod koniec lekcji grupy zastanowią się nad doświadczeniami
+                zebranymi w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań
+                problemów, którymi będą się zajmować do końca kursu.\r\n\r\n**To jest
+                ćwiczenie zamienne względem [Wprowadzenie do rozwiązywania problemów
+                - Łódki z aluminium](./1/)**"
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               key: Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna
                 lekcja 3)
               name: Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna
                 lekcja 3)
+              description_teacher: "**Pytanie dnia: Jak możemy stosować proces rozwiązywania
+                problemów do wielu różnych rodzajów problemów?**\r\n\r\nNa tej lekcji
+                uczniowie będą stosować proces rozwiązywania problemów do trzech różnych
+                zagadnień tak, by lepiej zrozumieć na czym polega wartość każdego
+                z działań. Będą przechodzić przez labirynt, organizować jak najszybsze
+                wyścigi oraz projektować grę. Te kwestie stają się coraz bardziej
+                złożone i zbyt słabo zdefiniowane, aby przedstawić, dlaczego proces
+                rozwiązywania problemów jest szczególnie pomocny w zmaganiach z wyzwaniami
+                tego typu.Lekcja kończy się przedstawieniem przez uczniów swoich przemyśleń
+                wynikających z doświadczenia w zakresie procesu rozwiązywania problemów.
+                Będą uzasadniać uwzględnienie każdego kroku oraz przeprowadzą burzę
+                mózgów w zakresie pytań czy strategii, które mogą im pomóc lepiej
+                zdefiniować problemy otwarte, ponieważ często jest najważniejszy krok.
+                \r\n\r\nPrzeprowadzenie tej lekcji najprawdopodobniej wymagać będzie
+                przynajmniej dwóch godzin lekcyjnych. Pierwsze dwa problemy mogą zostać
+                rozstrzygnięte w trakcie jednej lekcji, natomiast trzeci będzie musiał
+                być przeniesiony na drugi dzień."
             Exploring Problem Solving - Games Theme (Alternate Lesson 3):
               key: Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna
                 lekcja 3)
               name: Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna
                 lekcja 3)
+              description_teacher: "**Pytanie dnia: Jak możemy stosować proces rozwiązywania
+                problemów do wielu różnych rodzajów problemów?**\r\n\rNa tej lekcji
+                uczniowie będą stosować proces rozwiązywania problemów do trzech różnych
+                zagadnień tak, by lepiej zrozumieć na czym polega wartość każdego
+                z działań. Będą rozwiązywać tangramy, wybierać zwierzątko dla wielu
+                osób, planować adopcję zwierzęcia. Te kwestie stają się coraz bardziej
+                złożone i zbyt słabo zdefiniowane, aby przedstawić, dlaczego proces
+                rozwiązywania problemów jest szczególnie pomocny w zmaganiach z wyzwaniami
+                tego typu.Lekcja kończy się przedstawieniem przez uczniów swoich przemyśleń
+                wynikających z doświadczenia w zakresie procesu rozwiązywania problemów.
+                Będą uzasadniać uwzględnienie każdego kroku oraz przeprowadzą burzę
+                mózgów w zakresie pytań czy strategii, które mogą im pomóc lepiej
+                zdefiniować problemy otwarte, ponieważ często jest najważniejszy krok.
+                \n\nPrzeprowadzenie tej lekcji najprawdopodobniej wymagać będzie przynajmniej
+                dwóch godzin lekcyjnych. Pierwsze dwa problemy mogą zostać rozstrzygnięte
+                w trakcie jednej lekcji, natomiast trzeci będzie musiał być przeniesiony
+                na drugi dzień."
           lesson_groups:
             cspSurvey:
               display_name: Ankieta
@@ -25892,6 +26073,13 @@ pl:
             Styling Text with CSS:
               key: Ustalanie stylu tekstu przy użyciu CSS
               name: Ustalanie stylu tekstu przy użyciu CSS
+              description_teacher: "**Pytanie dnia: Jak można wyrazić swój styl osobisty
+                na stronie internetotej?**\r\n\r\nNa tej lekcji wprowadza się pojęcie
+                CSS jako sposobu stylizowania elementów na stronie. Uczniowie poznają
+                podstawową składnię dla zestawów reguł CSS, a następnie eksplorują
+                cechy, które mają wpływ na elementy tekstu HTML. Pracują na stronie
+                HTML poświęconej zdobywcom rekordu Guinnessa, dodając swój własny
+                styl do podanej strony. "
             'Mini-Project: Your Personal Style':
               key: 'Mini-Projekt: Twój osobisty styl'
               name: 'Mini-Projekt: Twój osobisty styl'
@@ -25907,6 +26095,16 @@ pl:
             Styling Elements with CSS:
               key: Stylizowanie elementów przy pomocy CSS
               name: Stylizowanie elementów przy pomocy CSS
+              description_teacher: "**Pytanie dnia: W jaki sposób możemy stylizować
+                obrazki i układy naszych stron?**\r\n\r\nTa lekcja stanowi kontynuację
+                wprowadzenia do cech stylu CSS, przy czym tym razem nacisk położony
+                jest na elementy nietekstowe. Uczniowie rozpoczynają tę lekcję od
+                przyjrzenia się stronie internetotej na temat \"Deserów świata\" [Desserts
+                of the World]. Analizują i modyfikują nowe style CSS na tej stronie
+                dodając swoje własne style do strony. Po wykonaniu pracy na stronie
+                \"Desery świata\" [Desserts of the World] uczniowie wykorzystują nowo
+                nabytą wiedzę w zakresie właściwości CSS do swoich prywatnych stron
+                internetowych. "
             Your Web Page - Prepare:
               key: Twoja strona internetowa - Przygotuj
               name: Twoja strona internetowa - Przygotuj
@@ -25922,9 +26120,27 @@ pl:
             Sources and Research:
               key: Źródła i badanie
               name: Źródła i badanie
+              description_teacher: "**Pytanie dnia: Jak znajduje się merytoryczne
+                i wiarygodne informacje w Internecie?**\r\n\r\nW trakcie tej lekcji
+                zachęca się uczniów do zastanowienia się, jak znajduje się merytoryczne
+                i wiarygodne informacje w Internecie. Po obejrzeniu i omówieniu filmu
+                wideo na temat zasady działania wyszukiwarek internetowych, uczniowie
+                będą szukać informacji odpowiednich dla ich strony. Będą musieli przeanalizować
+                znalezione strony pod kątem rzetelności, aby zdecydować, co jest odpowiednie
+                do zastosowania na ich własnych stronach internetowych."
             CSS Classes:
               key: Klasy CSS
               name: Klasy CSS
+              description_teacher: "**Pytane dnia:  W jaki sposób możemy tworzyć różne
+                style dla tego samego rodzaju elementu?**\r\n\r\nNa tej lekcji omawia
+                się szerzej zagadnienie CSS, o którym uczniowie uczyli się już na
+                zajęciach wprowadzających, co umożliwia projektantom stron internetowych
+                obróbkę grup elementów, które chcą, aby były wystylizowane inaczej
+                niż inne elementy tego samego typu. Uczniowie najpierw badają i modyfikują
+                klasy na różnych stronach, następnie tworzy swoje własne klasy i używa
+                ich do lepszego kontrolowania wyglądu tych stron. Zastanawiają się
+                potem, jak mogą używać tej umiejętności do doskonalenia swoich stron
+                internetowych. "
             Planning a Multi-page Website:
               key: Planowanie wielostronicotej witryny internetotej
               name: Planowanie wielostronicotej witryny internetotej
@@ -25993,12 +26209,37 @@ pl:
             Programming for Entertainment:
               key: Programowanie dla rozrywki
               name: Programowanie dla rozrywki
+              description_student: "**Pytanie dnia: W jaki sposób informatyka jest
+                używana do celów rozrywkowych?**\r\n\r\nKlasa jest poproszona o przemyślenie
+                \"problemów\" nudy i samoekspresji oraz podzielenia się spostrzeżeniami,
+                jak podchodzą do tych problemów w swoim własnym życiu. Od tego momentu
+                będą badać rolę, jaką informatyka w ujęciu ogólnym, a programowanie
+                w wymiarze szczególnym, odgrywają w konkretnej formie rozrywki lub
+                jako nośniki samoekspresji."
             Plotting Shapes:
               key: Rysowanie kształtów
               name: Rysowanie kształtów
             Drawing in Game Lab:
               key: Rysowanie w Game Lab
               name: Rysowanie w Game Lab
+              description_teacher: "**Pytanie dnia: W jaki sposób możemy przekazać
+                komputerowi, jak rysować kształty na ekranie?**\r\n\r\nUczniów wprowadza
+                się w Game Lab, środowisko programowania na potrzeby tej części. Zaczynają
+                go używać do ustawiania kształtów na ekranie. Lekcja poświęcona jest
+                podstawom sekwencjonowania i debugowania, jak również kilku prostym
+                komendom. Pod koniec lekcji uczniowie będą w stanie programować obrazy
+                takie, jak te, które stworzyli przy pomocy narzędzia do rysowania
+                \ na poprzedniej lekcji."
+            Shapes and Parameters:
+              description_teacher: "**Pytanie dnia:  W jaki sposób używamy parametrów,
+                aby udzielić komputerowi konkretnych instrukcji?**\r\n\r\nNa tej lekcji
+                uczniowie kontynuują pogłębianie znajomości środowiska Game Lab manipulując
+                szerokością i wysokością kształtów, które kiedyś rysowali. Lekcja
+                rozpoczyna się od dyskusji, która łączy poszerzoną funkcjonalność
+                bloków (np. kształty różnego rozmiaru) z zapotrzebowaniem na więcej
+                danych bloku lub \"parametrów\". Uczniowie uczą się rysować przy pomocy
+                wersji elipsy()' i 'prostokąta()', z uwzględnieniem parametrów szerokości
+                i wysokości. Uczą się również używania bloku 'tła()'. "
             Variables:
               key: Zmienne
               name: Zmienne
@@ -26017,6 +26258,17 @@ pl:
             'Mini-Project: Captioned Scenes':
               key: 'Mini-Projekt: Sceny z napisami'
               name: 'Mini-Projekt: Sceny z napisami'
+            The Draw Loop:
+              description_teacher: "**Pytane dnia: Jak możemy animować nasze obrazki
+                w Game Lab?**\r\n\r\nW trakcie tej lekcji uczniom zostanie wprowadzona
+                koncepcja pętli ryzowania, jeden z podstawowych paradygmatów programowania
+                w Game Lab. Na początku lekcji uczniowie przeglądają pewną fizyczną
+                publikację typu \"flipbook\", aby przekonać się, że posiadanie wielu
+                klatek z różnymi obrazkami daje wrażenie ruchu. Potem uczniowie oglądają
+                film wyjaśniający, w jaki sposób pętla rysowania w Game Lab pozwala
+                stworzyć takiego samo wrażenie w ich programach. Uczniowie łączą pętlę
+                rysowania z losową liczbą, aby pobawić się pewnymi prostymi animacjami
+                przy pomocy kropek, a następnie z duszkami. "
             Sprite Movement:
               key: Ruch duszka
               name: Ruch duszka
@@ -26038,6 +26290,15 @@ pl:
             Velocity:
               key: Prędkość
               name: Prędkość
+              description_teacher: "**Pytanie dnia:  W jaki sposób języki programowania
+                ukrywają skomplikowane wzorce tak, aby łatwiej było programować?**\r\n\r\nPo
+                krótkiej powtórce na temat tego, w jaki sposób użyli  wzorca licznika
+                w celu przemieszczania duszków na poprzednich lekcjach, uczniom wprowadza
+                się koncepcję ukrywania tych wzorców w jednym bloku, co może pomóc
+                radzić sobie ze złożonością programów. Później uczniowie udają się
+                do \"Studia kodowania\", aby wypróbować nowe bloki, które ustalają
+                bezpośrednio prędkość duszków i poznają różne sposoby, które umożliwiają
+                im kodowanie bardziej skomplikowanych zachowań ich duszków."
             Collision Detection:
               key: Wykrywanie kolizji
               name: Wykrywanie kolizji
@@ -26056,6 +26317,15 @@ pl:
             Functions:
               key: Funkcje
               name: Funkcje
+              description_teacher: "**Pytanie dnia: W jaki sposób programiści używają
+                funkcji, aby tworzyć własne abstrakcje?**\r\n\r\nUczniowie uczą się,
+                jak tworzyć funkcje tak, by porządkować swój kod, zwiększać jego czytelność
+                oraz usuwać powtórzone bloki kodu. Najpierw uczniowie zastanawiają
+                się jakiego rodzaju nowe bloki chcieliby mieć w Game Lab, oraz jaki
+                kod te bloki powinny w sobie zawierać. Następnie uczniowie uczą się
+                tworzyć funkcje w Game Lab. Będą używać funkcji do usuwania długich
+                bloków kodu ze swoich pętli rysowania oraz wymiany powtórzonych fragmentów
+                kodu pojedynczą funkcją."
             The Game Design Process:
               key: Proces projektowania gry
               name: Proces projektowania gry
@@ -26123,6 +26393,20 @@ pl:
             Analysis of Design:
               key: Analiza Projektu
               name: Analiza Projektu
+              description_teacher: Aby wystartować z realizacją działu poświęconego
+                rozwiązywaniu problemów grupowych oraz opracowywaniu produktów dla
+                innych użytkowników, uczniowie rozpoczynają od zbadania wzornictwa
+                różnych czajniczków do herbaty. Uczniowie analizują każdy czajniczek
+                w ramach próby identyfikacji, w jaki sposób konkretne potrzeby użytkownika
+                zostały uwzględnione w przyjętym wzorze. Poprzez rozpatrywanie wyborów
+                takiego wzoru oraz próbie dopasowania każdego czajniczka do potencjalnego
+                użytkownika uczniowie mogą zacząć zauważać, w jaki sposób przyjęcie
+                podejścia skoncentrowanego na użytkowniku w procesie projektowania
+                produktów (zarówno w trybie fizycznym, jak i cyfrowym) może zwiększyć
+                użyteczność i przydatność użytkową tych produktów. Przy podsumowaniu
+                zajęć uczniowie zostaną poproszeni o zaproponowanie kilku zmian do
+                jednego z czajniczków, które zwiększyłyby ich użyteczność i przydatność
+                użytkową.
             Understanding Your User:
               key: Zrozumienie twojego użytkownika
               name: Zrozumienie twojego użytkownika
@@ -26135,6 +26419,10 @@ pl:
             Feedback and Testing:
               key: Informacje zwrotne i testowanie
               name: Informacje zwrotne i testowanie
+              description_student: Użytkownicy testowali aplikację i mają całe mnóstwo
+                informacji zwrotnych od twórcy. Klasa musi je wszystkie uporządkować,
+                określając wspólne tematy i potrzeby oraz rozpocząć weryfikację prototypu
+                tak, aby lepiej zaspokajał potrzeby użytkowników.
             Identifying User Needs:
               key: Identyfikowanie potrzeb użytkownika
               name: Identyfikowanie potrzeb użytkownika
@@ -26147,6 +26435,15 @@ pl:
             Market Research:
               key: Badania rynku
               name: Badania rynku
+              description_teacher: Na tej lekcji uczniowie badają aplikacje podobne
+                do tej, którą zamierzają utworzyć, celem lepszego zrozumienia potrzeb
+                swoich użytkowników. Uczniowie pracują w swoich zespołach, aby przeszukiwać
+                Internet pod kątem innych aplikacji, a następnie dokonać oceny tych,
+                które uznają za interesujące. Do końca lekcji każdy zespół zdobędzie
+                lepsze rozeznanie w zakresie rodzaju aplikacji, którą chce utworzyć
+                i dopracuje charakterystyki swoich użytkowników końcowych. Każdy zespół
+                będzie posiadać listę odwołań dla wszystkich aplikacji, które badał,
+                do wykorzystania w jego prezentacji końcowej.
             Paper Prototypes:
               key: Prototypy na papierze
               name: Prototypy na papierze
@@ -26208,12 +26505,30 @@ pl:
               name: Odkrywanie elementów interfejsu użytkownika (UI)
             Build a Digital Prototype:
               name: Zbuduj cyfrowy prototyp
+              description_student: Po opracowaniu, przetestowaniu i zebraniu informacji
+                zwrotnych na temat prototypu papierowego, zespoły przechodzą teraz
+                do App Lab, aby budować następną iterację ich aplikacji. Przy użyciu
+                "Trybu projektowania przeciągnij-i-upuść", każdy członek zespołu buduje
+                przynajmniej jedną stroną aplikacji ich zespołu, reagując na informacje
+                zwrotne otrzymane w poprzedniej rundzie testowania.
             Events In AppLab:
               name: Zdarzenia w AppLab
+              description_student: Budując na ekranach, które klasa zaprojektowała
+                na poprzedniej lekcji, zespoły łączą ekrany w jedną aplikację. Można
+                dodać pojedynczy kod może być dodany, aby sprawić, by kliknięcia przycisków
+                zmieniły się w odpowiedni ekran.
             Bugs and Features:
               name: Błędy i właściwości
+              description_student: Na podstawie informacji zwrotnych z ostatniej rundy
+                testowania, zespoły wdrażają zamiany, aby uwzględnić potrzeby ich
+                użytkowników. Każdy zespół śledzi i określa priorytety w zakresie
+                cech, które chce dodać oraz błędy, które trzeba wyeliminować.
             Updating Your Prototype:
               name: Aktualizacja Twojego prototypu
+              description_student: Na podstawie informacji zwrotnych z ostatniej rundy
+                testowania, zespoły wdrażają zamiany, aby uwzględnić potrzeby ich
+                użytkowników. Każdy zespół śledzi i określa priorytety w zakresie
+                cech, które chce dodać oraz błędy, które trzeba wyeliminować.
             Build a Paper Prototype:
               name: Prototypy na papierze
           lesson_groups:
@@ -26290,6 +26605,12 @@ pl:
             Keeping Data Secret:
               key: Zachowywanie danych w tajemnicy
               name: Zachowywanie danych w tajemnicy
+              description_teacher: Uczniowie prowadzą dyskusję o różnych poziomach
+                bezpieczeństwa, jakie chcieliby zapewnić swoim danym osobowym. Gdy
+                klasa zrozumie już znaczenie prywatności, poznaje proces szyfrowania
+                informacji poprzez zaszyfrowanie notki o swoim partnerze i odszyfrowanie
+                notki tego partnera. Zajęcia kończą się rozmową na temat znaczenia
+                bezpieczeństwa zarówno w wymiarze fizycznym, jak i cyfrowym.
             Combining Representations:
               key: Łączenie reprezentacji
               name: Łączenie reprezentacji
@@ -26317,6 +26638,20 @@ pl:
             Project - Make a Recommendation:
               key: Projekt - zarekomenduj
               name: Projekt - zarekomenduj
+              description_teacher: W celu skończenia przerabiania materiału tego działu
+                uczniowie projektują wyszukiwarkę zaleceń w oparciu o zbierane i analizowane
+                dane pochodzące od ich kolegów z klasy. Po przyjrzeniu się przykładom
+                aplikacji na potrzeby dokonywania zaleceń, uczniowie kierują się przewodnikiem
+                po projekcie, aby skończyć tę wielodniową pracę. W ramach pierwszych
+                działań uczniowie podejmują decyzję, w dokonaniu jakiego pierwszego
+                wyboru chcą pomóc użytkownikowi, jakie dane są im potrzebne do udzielenia
+                zalecenia, tworzą ankietę i zbierają informacje na temat decyzji swoich
+                kolegów z klasy. Następnie dokonują interpretacji danych oraz wykorzystują
+                nabytą wiedzę do utworzenia algorytmu rekomendacji. W końcu używają
+                algorytmów do udzielenia rekomendacji kilku kolegom z klasy. Uczniowie
+                przeprowadzają weryfikację wśród rówieśników i wprowadzają stosowne
+                aktualizacje do swoich projektów przed opracowaniem prezentacji dla
+                klasy.
             Post-Project Test:
               key: Testy po realizacji projektu
               name: Testy po realizacji projektu
@@ -26383,48 +26718,174 @@ pl:
             Innovations in Computing:
               key: Innowacje w informatyce
               name: Innowacje w informatyce
+              description_teacher: Celem rozpoczęcia przerabiania ostatniego działu
+                tego kursu, uczniowie wykonają pewne badania w zakresie ciekawych
+                innowacji w informatyce. Na tej lekcji uczniowie skonfrontują się
+                z szerszym zakresem informatycznych czynników kształtujących (jak
+                wygląda komputer) oraz pól, na które oddziałuje informatyka. W dalszej
+                części tego działu, będą znów oglądać urządzenia, które poznali na
+                tej lekcji, w trakcie tworzenia swoich własnych urządzeń informatycznych.
+            Designing Screens with Code:
+              description_teacher: W dziale 4 uczniowie uczą się prostej metody tworzenia
+                aplikacji w App Lab, do której potrzebują osobnego ekranu dla większości
+                interakcji. Celem poszerzenia rodzajów aplikacji, które uczniowie
+                mogą tworzyć oraz zachęcenia ich do przemyślenia nowych sposobów prowadzenia
+                interakcji użytkowników z aplikacjami, wprowadzamy blok "ustawWłaściwość()".
+                Te komendy, które można stosować do ustawiania treści i właściwości
+                w różnych elementach UI, pozwalając uczniom pisać programy, które
+                aktualizują informacje na temat osobnego ekranu zamiast ręcznego tworzenia
+                ekranów zduplikowanych. Na tej lekcji uczniowie budują proste aplikacje,
+                które wymagają jedynie pojedynczego ekranu, którego treść zmienia
+                się wraz z użyciem "ustawWłaściwość()".
             The Circuit Playground:
               key: Circuit Playground
               name: Circuit Playground
+              description_teacher: Na tej lekcji uczniowie mają swoją pierwszą okazję
+                do napisania programów, które korzystają z Circuit Playground. Po
+                pierwszych oględzinach płytki oraz stworzeniu hipotezy o możliwych
+                funkcjonalnościach, uczniowie poruszają się online tam, gdzie będą
+                się uczyć pisania aplikacji, które sterują LED. Poprzez scalenie ekranów
+                App Lab z Circuit Playgrounds uczniowie mogą stopniowo włączać elementy
+                płytki jako urządzenia wyjściowego, korzystając przy tym z App Lab
+                do pozyskania danych wejściowych użytkownika.
             Input Unplugged:
               key: Dane wejściowe dla bez komputera
               name: Dane wejściowe dla bez komputera
+              description_teacher: Przygotowują się do bardziej wnikliwego zgłębiania
+                programowania przy pomocy App Lab, uczniowie będą badać, jak kilka
+                różnych programów napisanych zarówno w Game Lab i App Lab obsługuje
+                informacje wejściowe od użytkownika. Po porównaniu i przeciwstawieniu
+                dobie podejść, które zobaczyli w przykładowych aplikacjach, uczniowie
+                dzielą się na grupy, oby odegrać dwa różne modele informacji wejściowych
+                (wyrażenia warunkowe w pętli nieskończonej oraz zdarzenia asynchroniczne),
+                aby lepiej zrozumieć zasady ich działania.
             Board Events:
               key: Zdarzenia na tablicy
               name: Zdarzenia na tablicy
+              description_teacher: Na tej lekcji uczniów przenosi się z rozważenia
+                Circuit Playground jako urządzenia całkowicie wyjściowego w kierunku
+                używania go jako narzędzia na potrzeby zarówno wejścia, jak i wyjścia.
+                Rozpoczynając od przycisków i wyłącznika sprzętu uczniowie uczą się
+                używać "ZdarzenianaTablicy()", analogicznie do "Zdarzeniana()" w celu
+                przyjęcia danych wejściowych z Circuit Playgrounds.
             Getting Properties:
               key: Właściwości getterów
               name: Właściwości getterów
+              description_teacher: Na tej lekcji wprowadza się uczniom blok "pobierzWłaściwość",
+                co pozwala im na uzyskanie dostępu do właściwości różnych elementów
+                kodu. Uczniowie ćwiczą najpierw używanie bloku w celu określenia,
+                jakie dane wejściowe użytkownik wprowadził w różne elementy interfejsu
+                użytkownika. Uczniowie później używają "pobierzWłaściwość" i "ustawWłaściwość"
+                razem z wzorcem licznika, aby sprawić, by elementy poruszały się po
+                ekranie. Wprowadzony jest również nowy element ekranu, suwak oraz
+                wyzwalacz zdarzenia "naZmianę".
             Analog Input:
               key: Wejście analogowe
               name: Wejście analogowe
+              description_teacher: Na tej lekcji uczniowie będą badać, jak można używać
+                trzech czujników analogowych (dźwięku, światła i temperatury) do pisania
+                programów, które stanowią odpowiedź na zmiany w środowisku. Użycie
+                tych trzech programów zaznacza przejście w kontekście interakcji pomiędzy
+                użytkownikami a programem. Używając czujników jako wejścia, użytkownik
+                aplikacji wcale nie musi wchodzić z nią w bezpośrednią interakcję
+                lub może wchodzić w interakcję nie zdając sobie tak naprawdę sprawy,
+                że to robi.
             The Program Design Process:
               key: Proces projektowania programu
               name: Proces projektowania programu
+              description_teacher: Na tej lekcji uczniowie wprowadzani są w proces,
+                z którego będą korzystać do projektowania własnych programów przez
+                pozostały czas przerabiania materiału tego działu. Ten proces skupia
+                się wokół przewodnika po projekcie, w którym prosi się uczniów o naszkicowanie
+                swoich ekranów, określenia elementów Circuit Playground do używania,
+                zdefiniowanie zmiennych oraz opisania zdarzeń przed przystąpieniem
+                do programowania. Ten proces przypomina "Proces projektowania gry",
+                z którego korzystaliśmy w dziale 3. W ramach tych zajęć uczniowie
+                na początku grają w grę typu "przeciąganie liny", w której ukryty
+                jest kod. Rozmawiają o tym, jakie, ich zdaniem, muszą  być elementy
+                płytki, zdarzenia i zmienne, aby zrobić program. Otrzymują pełny przewodnik
+                po projekcie, w którym przedstawia się jeden sposób realizacji projektu.
+                Uczniów przeprowadza się następnie przez proces na różnych poziomach.
+                Pod koniec lekcji mają możliwość doskonalenia programu w taki sposób,
+                aby uczynić go swoim własnym.
             'Project: Make a Game':
               key: 'Projekt: Stwórz grę'
               name: 'Projekt: Stwórz grę'
+              description_teacher: Uczniowie korzystają z ego, co poznali w rozdziale
+                pierwszy oraz opracowują aplikację według własnej koncepcji, w której
+                korzysta się z tablicy do tworzenia informacji wynikowych.
             Arrays and Color LEDs:
               key: Tablice i kolorowe LEDy
               name: Tablice i kolorowe LEDy
+              description_teacher: Tablica jest zamówionym zestawem przedmiotów, zwykle
+                tego samego rodzaju. Na tej lekcji uczniowie uczą się sposobów uzyskania
+                dostępu albo do konkretnej albo do losowej wartości z listy, korzystając
+                z indeksu. Później mogą się nauczyć, jak uzyskać dostęp do tablicy
+                LEDówkolorowych, która steruje zachowaniem kolorowych na LEDach na
+                Circuit Playground. Uczniowie będą sterować kolorem i intensywnością
+                każdego LEDa, a następnie korzystają z tego, czego się nauczyli, do
+                programowania wzorców światła do tworzenia pokazu świetlnego na Circuit
+                Playground.
             Making Music:
               key: Tworzenie muzyki
               name: Tworzenie muzyki
             Arrays and For Loops:
               key: Tablice i pętle "dla"
               name: Tablice i pętle "dla"
+              description_teacher: Używanie  _pętli "dla"_ do iteracji wszystkich
+                elementów na tablicy jest naprawdę przydatnym konstruktem w większości
+                języków programowania. Na tej lekcji uczniowie poznają podstawy  tego,
+                jak można użyć _pętli "dla"_ do powtarzania kodu, a następnie scalać
+                to z tym, czego się już nauczyli na temat tablic do pisania programów,
+                które przetwarzają wszystkie elementy na tablicy. Uczniowie używają
+                pętli "dla", aby przejść przez każdy element na liście raz na jakiś
+                czas bez konieczności pisania kodu dla każdego elementu. Pod koniec
+                lekcji uczniowie będą to stosować wraz z listą "LEDkolorowy" na płytce,
+                aby utworzyć aplikację, która zmienia wszystkie LEDy za każdym naciśnięciem
+                przycisku.
             Accelerometer:
               key: Akcelerometr
               name: Akcelerometr
+              description_student: Na tej lekcji uczniowie będą badać przyspieszeniomierz
+                i jego możliwości. Zapoznają się z jego zdarzeniami i właściwościami,
+                jak również będą tworzyć liczne programy z użyciem przyspieszeniomierza
+                podobnie do tych, które najprawdopodobniej napotkają w aplikacjach
+                w prawdziwym świecie.
+              description_teacher: Na tej lekcji uczniowie będą badać przyspieszeniomierz
+                i jego możliwości. Zapoznają się z jego zdarzeniami i właściwościami,
+                jak również będą tworzyć liczne programy z użyciem przyspieszeniomierza
+                podobnie do tych, które najprawdopodobniej napotkają w aplikacjach
+                w prawdziwym świecie.
             Functions with Parameters:
               key: Funkcje z parametrami
               name: Funkcje z parametrami
+              description_teacher: Lekcja zaczyna się od szybkiej powtórki dotyczącej
+                parametrów w kontekście bloków App Lab, które uczniowie widzieli ostatnio.
+                Uczniowie oglądają potem przykłady parametrów w funkcjach stworzonych
+                przez użytkownika w App Lab i tworzą i wywołują funkcje z parametrami
+                dla siebie, używając ich do sterowania wielu elementów na ekranie.
+                Potem uczniowie używają pętli "dla" do iteracji na tablicy, przekazując
+                każdy element do funkcji. W końcu uczniowie korzystają z tego, czego
+                się nauczyli, w celu tworzenia gry polegającej na łapaniu gwiazdki.
             Circuits and Physical Prototypes:
               key: Obwody i prototypy fizyczne
               name: Obwody i prototypy fizyczne
+              description_teacher: W przygotowaniu do projektu końcowego w ramach
+                tego rozdziału uczniowie będą się uczyć, jak tworzyć prototyp fizycznego
+                przedmiotu, który uwzględnia Circuit Playground. Używając przewodnika
+                po planowaniu modelowanego projektu uczniowie uczą się instalowania
+                przewodów w kilku prostych obwodach i budowania prototypów, przy pomocy
+                którego można przekazać przewidywaną konstrukcję produktu, z wykorzystaniem
+                tanich i łatwych do znalezienia materiałów takich jak karton i taśma
+                klejąca.
             'Project: Prototype an Innovation':
               key: Projekt - Zbuduj prototyp rozwiązania innowacyjnego
               name: Projekt - Zbuduj prototyp rozwiązania innowacyjnego
+              description_teacher: W tym projekcie końcowym uczniowie dzielą się na
+                zespoły, aby opracować i przetestować prototyp innowacyjnego urządzenia
+                informatycznego w oparciu o Circuit Playground. Używając danych wejściowych
+                i wyników wyjściowych dostępnych na tablicy grupy będą tworzyć programy,
+                które umożliwią ciekawe i niepowtarzalne interakcje z użytkownikiem.
             Post-Project Test:
               key: Testy po realizacji projektu
               name: Testy po realizacji projektu
@@ -26521,12 +26982,16 @@ pl:
             Project - Digital Information Dilemmas Part 1:
               key: Projekt - Dylematy związane z informacją cyfrową, Część 1
               name: Projekt - Dylematy związane z informacją cyfrową, Część 1
+              description_student: Przeczytaj o bieżącym wydarzeniu lub społecznym
+                wyzwaniu stworzonym przez cyfryzację informacji.
             Project - Digital Information Dilemmas Part 2:
               key: Projekt - Dylematy związane z informacją cyfrową, Część 2
               name: Projekt - Dylematy związane z informacją cyfrową, Część 2
             'Lesson 14: Assessment Day':
               key: 'Lekcja 14: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
+              description_teacher: 'Uczniowie przystępują do testu wielokrotnego wyboru,
+                który obejmuje zagadnienia jednostki. '
           lesson_groups:
             cspSurvey:
               display_name: Ankieta
@@ -26562,7 +27027,7 @@ pl:
               name: Projekt - Dylematy z Internetem Część 2
             'Lesson 9: Assessment Day':
               key: 'Lekcja 9: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
@@ -26599,7 +27064,7 @@ pl:
               name: Projekt - Projektowanie aplikacji Część 5
             'Lesson 11: Assessment Day':
               key: 'Lekcja 11: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
@@ -26651,7 +27116,7 @@ pl:
               name: Projekt - Aplikacja dla decydenta - Część 3
             'Lesson 15: Assessment Day':
               key: 'Lekcja 15: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             csp_variables:
               display_name: Zmienne
@@ -26718,7 +27183,7 @@ pl:
               name: Semestralny Hackathon - Część 5
             'Lesson 18: Assessment Day':
               key: 'Lekcja  18: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             csp_lists:
               display_name: Listy
@@ -26749,7 +27214,7 @@ pl:
               name: Algorytmy równoległe i rozproszone
             'Lesson 6: Assessment Day':
               key: 'Lekcja 6: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Jednistka 6: Algorytmy'
@@ -26788,7 +27253,11 @@ pl:
               name: Projekt - Utwórz bibliotekę Część 3
             'Lesson 11: Assessment Day':
               key: 'Lekcja 11: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
+              description_student: 'Uczniowie przystępują do testu wielokrotnego wyboru,
+                który obejmuje zagadnienia jednostki. '
+              description_teacher: 'Uczniowie przystępują do testu wielokrotnego wyboru,
+                który obejmuje zagadnienia jednostki. '
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametry i wartości zwracane
@@ -26837,7 +27306,11 @@ pl:
               name: Projekt - Opowiedz historię o danych - Część 2
             'Lesson 9: Assessment Day':
               key: 'Lekcja 9: Dzień sprawdzianu'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
+              description_student: 'Uczniowie przystępują do testu wielokrotnego wyboru,
+                który obejmuje zagadnienia jednostki. '
+              description_teacher: 'Uczniowie przystępują do testu wielokrotnego wyboru,
+                który obejmuje zagadnienia jednostki. '
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
@@ -26881,12 +27354,14 @@ pl:
             'Project: Innovation Simulation Part 6':
               key: 'Projekt: Symulacja innowacji Część 6'
               name: 'Projekt: Symulacja innowacji Część 6'
+              description_student: Przegląd lekcji
             'Project: Innovation Simulation Part 7':
               key: 'Projekt: Symulacja innowacji Część 7'
               name: 'Projekt: Symulacja innowacji Część 7'
+              description_student: Przegląd lekcji
             'Lesson 14: Unit Assessment Day':
               key: 'Lekcja 14: Dzień sprawdzianu Jednostki'
-              name: Dzień sprawdzianu
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
@@ -26902,39 +27377,101 @@ pl:
             Safety in My Online Neighborhood:
               key: Bezpieczeństwo w moim otoczeniu online
               name: Bezpieczeństwo w moim otoczeniu online
+              description_student: Dowiedz się, jak bezpiecznie przechodzić do miejsc
+                w Internecie.
             Learn to Drag and Drop:
               key: Nauka metody przeciągać i upuszczać
               name: Nauka metody przeciągać i upuszczać
+              description_student: Kliknij i przeciągnij, by ukończyć łamigłówki.
+              description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
+                po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
+                dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym,
+                a następnie przechodzą oni do korzystania z komputera, aby ukończyć
+                łamigłówki online.
             'Programming: Happy Maps':
               key: 'Programowanie: Szczęśliwe mapy'
               name: Szczęśliwe Mapy (Happy Maps)
+              description_student: Napisz instrukcje prowadzące Flurba do owocu.
+              description_teacher: 'Ta lekcja bez komputerów połączy zespoły nad prostym
+                zadaniem: zdobądź "flurb" do owoców. Uczniowie będą ćwiczyć pisanie
+                precyzyjnych instrukcji przekładając instrukcje na podane symbole.
+                Jeśli pojawią się problemy w kodzie, uczniowie powinni również wspólnie
+                pracować nad wykryciem błędów i tworzeniem rozwiązań.'
             Sequencing with Scrat:
               key: Tworzenie sekwencji ze Scratem
               name: Tworzenie sekwencji ze Scratem
+              description_student: Zaprogramuj Scrata tak, aby doszedł do żołędzia.
+              description_teacher: Przy pomocy Scrata z franszyzy "Epoka lodowcowa"
+                [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić
+                wiewiórkę z jednej strony labiryntu do żołędzia po drugiej stronie.
+                W tym celu układają bloki kodu w porządku liniowym.
             Programming in Ice Age:
               key: Programowanie w Epoce lodowcotej
               name: Programowanie ze Scratem
+              description_student: Napisz programy, aby pomóc Scratowi dojść do żołędzia.
+              description_teacher: Przy pomocy postaci z gry "Epoki lodowcotej" [Ice
+                Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić ptaka
+                z jednej strony labiryntu do świnki po drugiej stronie. W tym celu
+                układają bloki kodu w porządku liniowym, przez co postaci poruszają
+                się prosto, skręcają w lewo lub w prawo.
             Programming with Rey and BB-8:
               key: Programowanie z Reyem i BB-8
               name: Programowanie z Reyem i BB-8
+              description_student: Pomóż BB-8 zebrać złom.
+              description_teacher: Na tej lekcji uczniowie będą używać nowo nabytych
+                umiejętności programowania w bardziej skomplikowane sposoby, aby nawigować
+                po trudnej trasie z BB-8.
             'Loops: Happy Loops':
               key: 'Pętle: Szczęśliwe pętle'
               name: Szczęśliwe pętle
+              description_student: Pomóż Flurbowi rozwiązać większe problemy używając
+                pętli.
+              description_teacher: Te zajęcia są powrotem do Happy Maps. Tym razem
+                uczniowie będą rozwiązywać większe, dłuższe łamigłówki za pomocą swojego
+                kodu, dzięki czemu będą mogli poznać narzędzia strukturalne, które
+                pozwolą im łatwiej napisać dłuższy kod.
             Loops in Ice Age:
               key: Pętle w Epoce Lodowcowej
               name: Pętle ze Scratem
+              description_student: Pomóż Scratowi objąć więcej terenu używając pętli.
+              description_teacher: Opierając się na koncepcji powtarzania instrukcji
+                z "Happy Loops", na tym etapie uczniowie będą używać pętli do bardziej
+                efektywnego zbierania żołędzi na Code.org.
             Loops in Collector:
               key: Pętle w interfejsie Collector
               name: Pętle z Laurel
+              description_student: Pomóż poszukiwaczce przygód Laurel zebrać podziemny
+                skarb.
+              description_teacher: Na tej lekcji uczniowie kontynuują poznawanie koncepcji
+                pętli. Na poprzedniej lekcji uczniowie zostali wprowadzeni w pętle
+                w formie przechodzenia przez labirynt i zbierania kukurydzy. Tutaj
+                pętli używa się do zbierania skarbu w miejscach otwartych jaskiń.
             Ocean Scene with Loops:
               key: Scena oceanu z pętlami
               name: Scena oceanu z pętlami
+              description_student: Używaj pętli i wzorców, aby ukończyć ilustracje.
+              description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
+                powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
+                pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
+                pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość
+                tworzenia własnych obrazów za pomocą pętli.
             'Events: The Big Event':
               key: 'Zdarzenia: Wielkie zdarzenie'
               name: Wielkie Zdarzenie Jr.
+              description_student: Idź i krzycz, gdy Twoi nauczyciele naciskają przyciski
+                na wielkim pilocie.
+              description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie
+                napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był
+                w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie.
+                Właśnie do tego służą zdarzenia.
             Events in Play Lab:
               key: Zdarzenia w Play Lab
               name: W drodze ze zdarzeniami
+              description_student: Twórz swoją własną grę lub historyjkę.
+              description_teacher: W ramach tych zajęć online uczniowie będą mieli
+                okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
+                wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną
+                grę. Czas na kreatywność i utworzenie historyjki w Play Lab!
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -26960,39 +27497,109 @@ pl:
             Digital Trails:
               key: Cyfrowe szlaki
               name: Cyfrowe szlaki
+              description_student: Dowiedz się o swoim śladzie cyfrowym oraz jak zachowywać
+                bezpieczeństwo przy wchodzeniu na strony internetowe.
             Move It, Move It:
               key: Przenieść go, przenieść go
               name: Przenieść go, przenieść go
+              description_student: Zaprogramuj swoich kolegów z klasy, aby uważnie
+                przechodzili z miejsca na miejsce.
+              description_teacher: Ta lekcja ma na celu przygotowanie mentalne uczniów
+                do ćwiczeń w kodowaniu, na które natką się w trakcie kursu. W niewielkich
+                zespołach uczniowie będą korzystać z fizycznego ćwiczenia do zaprogramowania  swoich
+                kolegów z klasy tak, by przechodzili ostrożnie z miejsca na miejsce,
+                aż do osiągnięcia celu.
             Sequencing in Maze:
               key: Sekwencje w labiryncie
               name: Tworzenie sekwencji z Angry Birds
+              description_student: Pomóż Czerwonemu Angry Bird iść ścieżką do niegrzecznej
+                świnki.
+              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
+                opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
+                strony labiryntu do świnki po drugiej stronie. W tym celu układają
+                bloki kodu w porządku liniowym.
             Programming in Maze:
               key: Programowanie w labiryncie
               name: Programowanie z Angry Birds
+              description_student: Twórz programy, aby pomóc Angry Bird przejść przez
+                labirynt.
+              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
+                opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
+                strony labiryntu do świnki po drugiej stronie. W tym celu układają
+                bloki kodu w porządku liniowym.
             Programming in Harvester:
               key: Programowanie ze żniwiarką
               name: Programowanie przy pomocy interfejsu Harvester
+              description_student: Pomóż żniwiarce zebrać po drodze warzywa.
+              description_teacher: Uczniowie będą stosować poznane koncepcje programowania
+                do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci
+                do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie
+                będą kontynuować rozwijanie sekwencyjnych umiejętności sekwencyjnych
+                i zaczną korzystać z procesu debugowania.
             'Loops: Getting Loopy':
               key: 'Pętle: Poznając pętle'
               name: Poznając pętle
+              description_student: Na tej lekcji będziemy mieć potańcówkę używając
+                pętli powtarzania!
+              description_teacher: W miarę, gdy zaczynamy pisać dłuższe i ciekawsze
+                programy,, nasz kod często zawiera wiele powtórzeń. Na tej lekcji
+                uczniowie nauczą się, jak można używać pętli, aby łatwiej przekazywać
+                instrukcje, które mają mnóstwo powtórzonych wzorców ruchu w tańcu.
             Loops in Harvester:
               key: Pętle ze żniwiarką
               name: Pętle z interfejsem Harvester
+              description_student: Pomóż żniwiarce zebrać nawet więcej, używając pętli!
+              description_teacher: Opierając się na koncepcji powtarzania instrukcji
+                z "Zapętlania [Getting Loopy]", na tym etapie uczniowie będą używać
+                pętli, aby bardziej efektywnie zbierać kukurydzę na Code. org.
             Loops in Collector:
               key: Pętle w interfejsie Collector
               name: Pętle z Laurel
+              description_student: Pomóż poszukiwaczce przygód Laurel zebrać skarb
+                w otwartej jaskini.
+              description_teacher: Na tej lekcji uczniowie będą nadal poznawać koncepcję
+                pętli. Tutaj, poszukiwaczka przygód, Laurel, używa pętli, aby zebrać
+                skarb w miejscach otwartych jaskiń. Wprowadza się nowy blok "zdobądź
+                skarb", aby pomóc jej w podróży.
             Loops in Artist:
               key: Pętle z Artystą
               name: Rysowanie ogrodów z pętlami
+              description_student: Używaj wzorców i pętli, aby ukończyć obrazki.
+              description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
+                powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
+                pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
+                uczniowie używają pętli do tworzenia wzorców. Pod koniec tego etapu
+                uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą
+                pętli.
             The Right App:
               key: Odpowiednia aplikacja
               name: Odpowiednia aplikacja
+              description_student: Utwórz szkice swoj własnej aplikacji na smartfona.
+              description_teacher: Na tej lekcji uczniowie będą stwierdzać, że informatyka
+                może pomóc ludziom w prawdziwym życiu.  Najpierw uczniowie wykazują
+                empatię względem kilku fikcyjnych użytkowników smartfona, aby pomóc
+                im znaleźć "właściwą aplikację", które stanowi odpowiedź na ich potrzeby.
+                Wówczas uczniowie okazują empatię i kreatywność, aby naszkicować swoją
+                własną aplikacje na smartfona, która stanowi odpowiedź na potrzeby
+                jednego dodatkowego użytkownika.
             'Events: The Big Event':
               key: 'Zdarzenia: Wielkie zdarzenie'
               name: Wielkie Zdarzenie Jr.
+              description_student: Idź i krzycz, gdy Twój nauczyciel naciska przyciski
+                na wielkim pilocie.
+              description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie
+                napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był
+                w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie.
+                Właśnie do tego służą zdarzenia.
             Events in Play Lab:
               key: Zdarzenia w Play Lab
               name: Królewska bitwa ze zdarzeniami
+              description_student: Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną
+                grę.
+              description_teacher: W ramach tych zajęć online uczniowie będą mieli
+                okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
+                wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną
+                grę. Czas na kreatywność i utworzenie gry w Play Lab!
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -27021,57 +27628,166 @@ pl:
             Putting a STOP to Online Meanness:
               key: Stawianie STOP świństwom online
               name: Stawianie STOP świństwom online
+              description_student: Na tej lekcji dowiesz się, czym jest złośliwość
+                oraz co robić, jeśli spotka Cię ona w Internecie.
             Password Power-Up:
               key: Włączenie na hasło
               name: Włączenie na hasło
             'Programming: My Robotic Friends':
               key: 'Programowanie: Moi robotyczni przyjaciele'
               name: Moi robotyczni przyjaciele Jr.
+              description_student: Na tej lekcji będziesz udawać, że koledzy z klasy
+                są robotami i zaprogramujesz ich tak, aby budowali wzorce piramid
+                z kubeczków.
+              description_teacher: Używając zbioru symboli zamiast kodu uczniowie
+                będą projektować algorytmy, aby instruować "robota", jak ma ustawiać
+                kubeczki według różnych wzorców. Uczniowie będą po kolei wcielać się
+                w rolę robota, reagując tylko na algorytmy zdefiniowane przez rówieśników.
+                W tym segmencie uczniom przedstawia się połączenia pomiędzy symbolami
+                a działaniami, różnicę pomiędzy algorytmem a programem oraz cenną
+                umiejętność debugowania.
             Programming in Maze:
               key: Programowanie w labiryncie
               name: Programowanie z Angry Birds
+              description_student: Ucz się o sekwencjach i algorytmach z Angry Birds.
+              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
+                opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
+                strony labiryntu do świnki po drugiej stronie. W tym celu układają
+                bloki kodu w porządku liniowym, przez co postaci poruszają się prosto,
+                skręcają w lewo lub w prawo.
             Debugging in Maze:
               key: Debugowanie w labiryncie
               name: Debugowanie w labiryncie
+              description_student: Znajdź problemy w łamigłówkach i ćwicz umiejętność
+                debugowania.
+              description_teacher: Debugowanie jest  podstawowym elementem nauki programowania.
+                Na tej lekcji uczniowie będą się konfrontować z łamigłówkami, które
+                zostały rozwiązane nieprawidłowo. Będą musiały przejść przez obecny
+                kod, aby zidentyfikować błędy, w tym niewłaściwe pętle, brakujące
+                bloki, zbyteczne bloki oraz zepsute bloki.
             Programming in Collector:
               key: Programowanie w interfejsie Collector
               name: Zbieranie skarbów z Laurel
+              description_student: Napisz algorytmy aby pomóc poszukiwaczce przygód,
+                Laurek, zebrać mnóstwo klejnotów!
+              description_teacher: W tej serii łamigłówek uczniowie będą kontynuować
+                wzbogacanie swojego zrozumienia algorytmów i debugowania. Przy pomocy
+                notej postaci, poszukiwaczce przygód Laurel, uczniowie będą tworzyć
+                algorytmy sekwencyjne, aby sprawić, by Laurel zbierała skarb w trakcie
+                przechodzenia ścieżki.
             Programming in Artist:
               key: Programowanie z Artistą
               name: Tworzenie grafiki przy pomocy kodu
+              description_student: Twórz piękne obrazki programując Artystę.
+              description_teacher: Na tej lekcji uczniowie przejmą sterowania Artystą,
+                aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom
+                tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych
+                bloków takich jak "idź do przodu o 100 pikseli" oraz "skręć w prawo
+                o 90 stopni".
             Binary Bracelets:
               key: Binarne bransoletki
               name: Binarne bransoletki
+              description_student: Utwórz własną bransoletkę binarną i dowiedz się,
+                w jaki sposób komputery zapamiętują informacje!
+              description_teacher: W świecie komputerów system binarny jest niezwykle
+                ważny. Większość komputerów obecnie przechowywać informacji wszelkiego
+                rodzaju w formie binarnej. Ta lekcja pomaga przedstawić sposób w jaki
+                można przełożyć coś z realnego życia na serię włączeń i wyłączeń.
             'Loops: My Loopy Robotic Friends':
               key: 'Pętle: Moi zapętleni robotyczni przyjaciele'
               name: Moi zapętleni robotyczni przyjaciele Jr.
+              description_student: Na tej lekcji będziesz ponownie programować swoich
+                kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe
+                i bardziej złożone problemy.
+              description_teacher: Tworząc wstępną wersję zajęć "Moi robotyczni przyjaciele",
+                uczniowie zajmują się większymi i bardziej skomplikowanymi projektami.
+                W celu zaprojektowanie swoich "robotów", aby ukończyć większe konstrukcje,
+                uczniowie będą musieli identyfikować wzorce powtórzone w swoich instrukcjach,
+                które można zastąpić pętlą.
             Loops with Rey and BB-8:
               key: Pętle z Rey i BB-8
               name: Pętle z Rey i BB-8
+              description_student: Pomóż BB-8 przejść przez labirynty używając pętli!
+              description_teacher: Opierając się na koncepcji powtarzania instrukcji
+                z "Zapętlania [Getting Loopy]", na tym etapie uczniowie będą używać
+                pętli, aby pomóc BB-6 przejść labirynt skuteczniej niż wcześniej.
             Loops in Harvester:
               key: Pętle ze żniwiarką
               name: Żniwa z użyciem pętli
+              description_student: Użyjmy pętli, aby pomóc żniwiarce zebrać trochę
+                warzyw!
             Looking Ahead:
               key: Patrząc w przyszłość
               name: Patrząc w przyszłość z Minecraftem
+              description_student: Unikaj lawy! Teraz zaczniesz uczyć się o instrukcjach
+                warunkowych w świecie gry Minecraft.
+              description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
+                Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
+                będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
+                jak również zerknąć na instrukcje warunkowe!
             Sticker Art with Loops:
               key: Grafika naklejek przy pomocy pętli
               name: Grafika naklejek przy pomocy pętli
+              description_student: Na tej lekcji przekonasz się, że dzięki pętlom
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
+              description_teacher: Patrz jak twarze uczniów rozpromieniają się na
+                widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
+                liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
+                zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie
+                uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są
+                fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub
+                na wywiadówki.
             'Events: The Big Event':
               key: 'Zdarzenia: Wielkie zdarzenie'
               name: Wielkie wydarzenie
+              description_student: 'Zagraj w grę, aby dowiedzieć się o zdarzeniach. '
+              description_teacher: Uczniowie  wkrótce dowiedzą się, że zdarzenia są
+                świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu.
+                Czasami chcesz, aby Twój program stanowił reakcję na działanie użytkownika
+                dokładnie wtedy, gdy użytkownik tego chce. Dzięki zdarzeniom Twój
+                program staje się ciekawszy i bardziej interaktywny.
             Build a Flappy Game:
               key: Zbuduj grę z Flappym
               name: Zbuduj grę z Flappym
+              description_student: Buduj własną grę "Flappy Bird" tak, jak chcesz,
+                a potem udostępnij go znajomym!
+              description_teacher: Na tym szczególnym etapie, uczniowie muszą zbudować
+                swoją własną grę "Flappy Bird" używając procedury obsługi zdarzeń,
+                aby wykrywać kliknięcia myszki oraz kolizje obiektów. Pod koniec poziomu
+                uczniowie będą w stanie nadać grze własny styl poprzez zmianę elementów
+                wizualnych i zasad.
             Events in Play Lab:
               key: Zdarzenia w Play Lab
               name: Gra w berka ze zdarzeniami
+              description_student: Czas na twórcze działanie lub utworzenie gry w
+                Play Lab!
+              description_teacher: W ramach tych zajęć online uczniowie będą mieli
+                okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
+                wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną
+                grę. Czas na kreatywność i utworzenie gry w Play Lab!
             Picturing Data:
               key: Zobrazowanie Danych
               name: Zobrazowanie Danych
+              description_student: Danych można użyć, aby pomogły uczniom zrozumieć
+                ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji
+                uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać
+                ich wizualizację z użyciem różnego rodzaju wykresów.
+              description_teacher: Danych można użyć, aby pomogły uczniom zrozumieć
+                ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji
+                uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać
+                ich wizualizację z użyciem różnego rodzaju wykresów.
             'End of Course Project: Create a Play Lab Game':
               key: 'Projekt na koniec kursu: Utwórz grę Play Lab'
               name: Koniec projektu kursu
+              description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć
+                budowanie swojego projektu.
+              description_teacher: W trakcie tej lekcji podsumowującej uczniowie przechodzą
+                proces projektowania, tworzenia i przedstawiania swoich własnych projektów
+                Play Lab! W celu uzyskania pewności, że proces toczy się gładko, zapewniliśmy
+                strukturę krok-po-kroku do wykorzystania przez uczniów, od planowania
+                na papierze po kodowanie na swojej stronie internetowej. W dodatku
+                podsuwamy pomysły, które mają pomóc nauczycielom w doprowadzeniu do
+                wzorcowego finału!
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -27102,60 +27818,205 @@ pl:
             'Algorithms: Graph Paper Programming':
               key: 'Algorytmy: Programowanie na papierze milimetrowym'
               name: Programowanie na papierze milimetrowym
+              description_student: Na tej lekcji będziesz programować swoich kolegów
+                z klasy tak, by rysowali obrazki!
+              description_teacher: '"Programując" się wzajemnie na rysowanie obrazków
+                uczniowie uzyskują możliwość zdobycia doświadczeń w zakresie pewnych
+                kluczowych koncepcji programowania w przyjemny i dostępny sposób.
+                Zajęcia rozpoczną się od polecenia uczniom użycia symboli do wzajemnego
+                poinstruowania się, jak pokolorować kwadraciki na papierze milimetrowym,
+                starając się odtworzyć istniejące rysunki.  Jeśli jest czas, lekcja
+                może się zakończyć prezentacją rysunków, które uczniowie utworzyli
+                samodzielnie.  '
             Introduction to Online Puzzles:
               key: Wprowadzenie do Puzzli Online
               name: Wprowadzenie do Puzzli Online
+              description_student: Ta lekcja da Ci możliwość ćwiczenia umiejętności,
+                których będziesz potrzebować na tym kursie.
+              description_teacher: 'W tym zestawie łamigłówek uczniowie rozpoczną
+                od wprowadzanie (lub powtórki, w zależności od doświadczenia Twojej
+                klasy) internetowego obszaru roboczego Code.org. Będą filmy wideo
+                pokazujące podstawową funkcjonalność obszaru roboczego z uwzględnieniem
+                przycisków "Uruchom", "Resetuj" i "Krok". Na tych filmach omówione
+                zostaną następujące kwestie: przeciąganie bloków Blockly, usuwanie
+                bloków Blockly i łączenie bloków Blockly. Później uczniowie będą ćwiczyć
+                swoje umiejętności _tworzenia sekwencji_ i _debugowania_ w labiryncie.
+                Od tego momentu uczniowie będą poznawać nowe rodzaje łamigłówek takie
+                jak Collector, Artist i Harvester, gdy będą się uczyć podstaw _pętli_.'
             Relay Programming:
               key: Sztafeta programowania
               name: Sztafeta programowania
+              description_student: Pamiętaj na początku kursu, gdy tworzysz rysunki
+                z kodem? Na tej lekcji będziesz pracować z zespołem, aby robić coś
+                bardzo podobnego!
+              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą
+                debugowaniu i wytrwałości, a następnie szybko przejdzie w wyścig z
+                czasem, gdy uczniowie dobiorą się w zespoły i będą pracować razem
+                nad programem instrukcja po instrukcji.
             Debugging in Collector:
               key: Debugowanie w interfejsie Collector
               name: Debugowanie z Laurel
+              description_student: Czy w trakcie kodowania kiedykolwiek wystąpiły
+                jakieś problemy? Na tej lekcji będziesz się uczyć sekretów debugowania.
+                Debugowanie jest procesem wynajdywania i eliminowania problemów występujących
+                w Twoim kodzie.
+              description_teacher: Na tych zajęciach online uczniowie będą ćwiczyć
+                debugowanie w środowisku "kolekcjonerka". Uczniowie będą ćwiczyć czytanie
+                i edytowanie kodu, aby naprawiać łamigłówki przy pomocy prostych algorytmów,
+                pętli i pętli zagnieżdżonych.
             Events in Bounce:
               key: Zdarzenia w Bounce
               name: Zdarzenia w Bounce
+              description_student: Czy kiedykolwiek chciałeś grać w szkole w gry wideo?
+                Na tej lekcji będziesz tworzyć swoje własne!
+              description_teacher: Na tych zajęciach internetowych uczniowie będą
+                się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają
+                w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami
+                sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy
+                ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość
+                spersonalizowano grę przy pomocy różnych prędkości i dźwięków.
             Build a Star Wars Game:
               key: Zbuduj grę Star Wars
               name: Zbuduj grę Star Wars
+              description_student: Poczuj moc w trakcie budowania swojej własnej gry
+                Star Wars na tej lekcji.
+              description_teacher: Na tej lekcji uczniowie będą ćwiczyć używanie zdarzeń
+                do budowania gry, którą mogą udostępniać online. Z R2-D2 oraz innymi
+                postaciami z Gwiezdnych Wojen w rolach głównych, uczniowie będą przeprowadzani
+                przez zdarzenia, a następnie dostaną czas na utworzenie swojej własnej
+                gry.
             Dance Party:
               key: Potańcówka
               name: Potańcówka
+              description_student: Czas na świętowanie! Na tej lekcji będziesz programować
+                swoją własną, interaktywną potańcówkę.
+              description_teacher: Na tej lekcji uczniowie będą programować swoją
+                własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk,
+                gdyż narzędzie zbudowano tak, aby reagowało na muzykę.
             Loops in Ice Age:
               key: Pętle w Epoce Lodowcowej
               name: Pętle w Epoce Lodowcowej
+              description_student: Na tej lekcji będziesz używać bloku powtarzania,
+                aby pomóc Scratowi dojść do żołędzia w jak najbardziej wydajny sposób.
+              description_teacher: W ramach szybkiej aktualizacji (lub wprowadzenia)
+                do używania pętli, na tym etapie uczniowie będą używać bloku "powtarzaj",
+                aby w jak najbardziej wydajny sposób doprowadzić Scrata do żołędzia.
             Loops in Artist:
               key: Pętle z Artystą
               name: Rysowanie kształtów przy pomocy pętli
+              description_student: Na tej lekcji przekonasz się, że dzięki pętlom
+                łatwiej jest tworzyć fajne obrazki przy pomocy interfejsu Artist!
+              description_teacher: Ta lekcja ma na celu budowanie zrozumienia zagadnienia
+                pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania
+                się prawdziwą kreatywnością. Te zajęcia niosą ze sobą podwójną korzyść
+                jako ćwiczenie w debugowaniu na potrzeby dodatkowej praktyki w zakresie
+                rozwiązywania problemów.
             Nested Loops in Bee:
               key: Zagnieżdżone pętle z pszczółką
               name: Zagnieżdżone pętle w labiryncie
+              description_student: Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy?
+                Na tej lekcji dowiesz się, co się dzieje, gdy utworzysz pętlę zagnieżdżoną.
+              description_teacher: Na tych zajęciach internetowych uczniowie będą
+                mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie
+                nowy poziom. Rozgrywając grę "Pszczółka i rośliny kontra zombie" [Bee
+                and Plants vs Zombies], uczniowie będą się uczyć, jak programować
+                pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia
+                sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program,
+                gdy klikają "Uruchom".
             Conditionals with Cards:
               key: Warunkowe z kartami
               name: Warunkowe z kartami
+              description_student: Czas rozegrać grę, w której zbierasz punkty tylko
+                w określonych warunkach!
+              description_teacher: "Ta lekcja pokazuje, w jaki sposób można użyć wyrażeń
+                warunkowych, aby dostosować program do konkretnych informacji. Nie
+                zawsze mamy wszystkie informacje, które są potrzebne do napisania
+                programu. Czasem będziesz chcieć czego innego w jednej sytuacji, niż
+                chciałeś w innej nawet, jeśli nie wiesz, jaka sytuacja będzie prawdziwa
+                po uruchomieniu kodu. I wówczas do głosu dochodzą wyrażenia warunkowe.
+                Wyrażenia warunkowe pozwalają komputerowi podejmować decyzje na podstawie
+                informacji, które są prawdziwe zawsze, gdy jest uruchomiony Twój kod.
+                \r\n\r\n"
             Conditionals in Bee:
               key: Wyrażenie warunkowe z Pszczółką
               name: '"jeśli/w przeciwnym razie" z Pszczółką'
+              description_student: Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować
+                pszczółkę tak, aby użyć jej przy zbieraniu miodu i nektaru.
+              description_teacher: Do tego momentu uczniowie pisali kod, który realizuje
+                się dokładnie tak samo po każdym uruchomieniu - wiarygodny, ale niezbyt
+                elastyczny. Na tej lekcji Twoja klasa rozpocznie kodować przy pomocy
+                wyrażeń warunkowych, pozwalając im na pisanie kodu, który funkcjonuje
+                inaczej, w zależności od konkretnych warunków, na które napotyka program.
             While Loops in Farmer:
               key: Pętle "dopóki" z Rolnikiem
               name: Pętle "dopóki" z Rolnikiem
+              description_student: 'Pętle są przydatne do kodowania. Na tej lekcji
+                nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
             Until Loops in Maze:
               key: Pętle "dopóki" w labiryncie
               name: Pętle "dopóki" w labiryncie
+              description_student: Możesz robić pewne niesamowite rzeczy, gdy używasz
+                pętli "dopóki".
+              description_teacher: Na tej lekcji uczniowie będą się uczyć o pętlach
+                "dopóki". Uczniowie będą budować programy, które sprawiają, że główna
+                postać powtarza czynności "dopóki" dojdą do pożądanego punktu zatrzymania.
             Conditionals & Loops in Harvester:
               key: Instrukcje warunkowe i pętle ze żniwiarką
               name: Żniwa z wyrażeniami warunkowymi
+              description_student: Nie jest dokładnie jasne, kiedy należy używać każdego
+                wyrażenia warunkowego. Ta lekcja pomoże Ci uzyskać praktykę w podejmowaniu
+                decyzji, co robić.
+              description_teacher: Uczniowie będą ćwiczyć pętle "dopóki", pętle "aż
+                do" oraz instrukcje "jeśli/ w przeciwnym razie". We wszystkich tych
+                blokach używa się wyrażeń warunkowych. Ćwicząc wszystkie trzy, uczniowie
+                będą się uczyć pisania złożonych i elastycznych kodów.
             'Unplugged: Binary':
               key: 'Bez komputera: Binarny'
               name: Binarne obrazy (Binary Images)
+              description_student: Ucz się, jak komputery przechowują obrazki używając
+                języka z tylko dwoma opcjami.
+              description_teacher: Chociaż wiele osób sądzi, że binarne są tylko zera
+                i jedynki, uczniom zostanie wprowadzona koncepcja, że informacje mogą
+                być reprezentowane na różne binarne sposoby.  Na tej lekcji to pojęcie
+                jest rozwijane jeszcze dalej i ilustruje, jak komputer może również
+                przechowywać bardziej złożone informacje (takie jak obrazy i kolory)
+                w postaci binarnej.
             Artist Binary:
               key: 'Artysta: Binarny'
               name: Binarne obrazy z Artystą
+              description_student: Na tej lekcji będziesz się uczyć, jak tworzyć obrazki
+                używając tylko zer i jedynek.
+              description_teacher: Na tej serii lekcji internetowych uczniowie będą
+                się uczyć, jak tworzyć obrazki z użyciem włączania i wyłączania.
             Be A Super Digital Citizen:
               key: Bądź Super Cyfrowym Obywatelem
               name: Bądź Super Cyfrowym Obywatelem
+              description_student: Dowiesz się, jak możesz się przeciwstawiać, gdy
+                jesteś świadkiem cybernękania.
             End of Course Project:
               key: Koniec projektu kursu
               name: Koniec projektu kursu
+              description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć
+                budowanie swojego projektu.
+              description_teacher: W trakcie tej lekcji podsumowującej uczniowie przechodzą
+                proces projektowania, tworzenia i przedstawiania swoich własnych projektów!
+            lesson-6:
+              name: Patrząc w przyszłość z Minecraftem
+              description_student: Unikaj lawy! Teraz zaczniesz uczyć się o instrukcjach
+                warunkowych w świecie gry Minecraft.
+              description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
+                Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
+                będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
+                jak również zerknąć na instrukcje warunkowe!
+            lesson-5:
+              name: Włączenie na hasło
+              description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje
+                informacje oraz jak utworzyć dobre hasło.
+            lesson-1:
+              name: Moc słów
+              description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma
+                Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy,
+                które mówi się w Internecie.
           lesson_groups:
             csf_sequencing:
               display_name: Sekwencjonowanie
@@ -27171,6 +28032,8 @@ pl:
               display_name: Cyfrowe obywatelstwo
             end_of_course_project:
               display_name: Koniec projektu kursu
+            lessonGroup-6:
+              display_name: Cyfrowe obywatelstwo
           name: coursed-2021
           student_description: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli,
             wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie
@@ -27188,60 +28051,209 @@ pl:
             Sequencing in the Maze:
               key: Tworzenie sekwencji w labiryncie
               name: Tworzenie sekwencji w labiryncie
+              description_student: Na tej lekcji nauczysz się pisać swoje własne programy!
+              description_teacher: "W tym zestawie łamigłówek uczniowie rozpoczną
+                od wprowadzanie (lub powtórki, w zależności od doświadczenia Twojej
+                klasy) internetowego obszaru roboczego Code.org. Będą filmy wideo
+                pokazujące podstawową funkcjonalność obszaru roboczego z uwzględnieniem
+                przycisków \"Uruchom\", \"Resetuj\" i \"Krok\". Na tych filmach omówione
+                zostaną następujące kwestie: przeciąganie bloków Blockly, usuwanie
+                bloków Blockly i łączenie bloków Blockly. Później uczniowie będą ćwiczyć
+                swoje umiejętności _tworzenia sekwencji_ i _debugowania_ w labiryncie.
+                \r\nDebugowanie stanowi podstawowy element programu nauczania. Uczniowie
+                trafią na pewne łamigłówki, które zostały rozwiązane nieprawidłowo.
+                Będą musieli przejść przez istniejący kod, aby zidentyfikować błędy,
+                z uwzględnieniem nieprawidłowych pętli, brakujących bloków, dodatkowych
+                bloków i zepsutych bloków. "
             Programming and Loops with the Artist:
               key: Programowanie i pętle z Artystą
               name: Rysowanie przy pomocy pętli
+              description_student: Na tej lekcji przekonasz się, że dzięki pętlom
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
+              description_teacher: Patrz jak twarze uczniów rozpromieniają się na
+                widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
+                liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
+                zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie
+                uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są
+                fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub
+                na wywiadówki.
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
               name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+              description_student: Tutaj nauczysz się o wyrażeniach warunkowych w
+                świecie gry Minecraft.
+              description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
+                Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
+                będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
+                jak również zerknąć na instrukcje warunkowe!
             Conditionals:
               key: Zdania z warunkami
               name: Wyrażenia warunkowe z interfejsem Farmer
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
+                warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
+              description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
+                instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
+                które nieustannie powtarzają komendy, gdy spełniony jest warunek.
+                Pętli "dopóki" używa się, gdy programista nie zna dokładnej liczby
+                komend, które trzeba wykonać, ale wie, że warunek musi być spełniony,
+                aby pętla kontynuowała zapętlanie. Instrukcje "jeśli/ w przeciwnym
+                razie" zapewniają elastyczność w programowaniu poprzez uruchamianie
+                wszystkich sekcji kodu tylko, jeśli coś jest prawdziwe, w przeciwnym
+                razie uruchamia się coś innego.
             Simon Says:
               key: Simon mówi
-              name: Simon mówi
+              description_student: Zagraj w grę i pomyśl, jakie komendy są potrzebne,
+                aby uzyskać właściwy wynik.
+              description_teacher: Na tej lekcji uczniowie zagrają w grę służącą do
+                tego, by skłonić ich do myślenia o sposobie wydawania komend, aby
+                uzyskać właściwy wynik. To pomoże im łatwiej przenieść się do Sprite
+                Lab w nadchodzących lekcjach.
             Learning Sprites with Sprite Lab:
               key: Uczące się duszki w Sprite Lab
               name: Pływająca ryba w Sprite Lab
+              description_student: Naucz się tworzyć i edytować duszki.
+              description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dwóch
+                koncepcjach stanowiących serce interfejsu Sprite Lab: duszkach i zachowaniach.
+                Duszki są postaciami na ekranie, które uczniowie mogą przemieszczać,
+                zmieniać lub którymi mogą manipulować. Zachowania są działaniami,
+                które duszki podejmują w trybie ciągłym do momentu ich zatrzymania.'
             Alien Dance Party with Sprite Lab:
               key: Wydarzenia z Sprite Lab
               name: Wydarzenia z Sprite Lab
+              description_student: Twórz projekt interaktywny, który możesz udostępnić
+                kolegom z klasy.
+              description_teacher: 'Na tej lekcji wykorzystuje się interfejs Sprite
+                Lab, platformy, na której uczniowie mogą tworzyć swoje własne interaktywne
+                animacje i gry. W uzupełnieniu do zachowań, obecni uczniowie mogą
+                wbudowywać dane użytkownika jako wydarzenia do utworzenia "potańcówki
+                ufoludków". '
             Private and Personal Information:
               key: Informacje prywatne i osobowe
               name: Informacje prywatne i osobowe
+              description_student: Internet niesie rozrywkę i radość, ale ważne jest
+                to, aby przebywając w nim, zachowywać bezpieczeństwo. Ta lekcja jest
+                poświęcona różnicy pomiędzy informacjami, które są bezpieczne do udostępniania
+                online a informacjami, które takie nie są.
             About Me:
               key: O mnie
               name: O mnie ze Sprite Lab
+              description_student: Tworząc interaktywny plakat przy pomocy SpriteLab,
+                uczniowie będą stosować zasady udostępniania informacji o charakterze
+                osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.
+              description_teacher: "Tworząc interaktywny plakat przy pomocy SpriteLab,
+                uczniowie będą stosować zasady udostępniania informacji o charakterze
+                osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.\r"
             Digital Sharing:
               key: Udostępnianie cyfrowe
               name: Udostępnianie cyfrowe
+              description_student: Na tej lekcji będziesz się uczyć o wyzwaniach i
+                korzyściach wynikających z własności i praw autorskich.
+              description_teacher: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki"
+                przez zespół "Prawa autorskie i kreatywność", ma na celu pomóc uczniom
+                zrozumieć istotę wyzwań i korzyści wynikających z poszanowania praw
+                własności i praw autorskich, w szczególności w środowiskach cyfrowych.
+                Uczniowie powinni być zachęcani do przestrzegania praw artystów jako
+                istotnego elementu bycia etycznym obywatelem cyfrowym.
             Nested Loops in Bee:
               key: Zagnieżdżone pętle z pszczółką
               name: Zagnieżdżone pętle w labiryncie
+              description_student: Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy?
+                Na tej lekcji dowiesz się, co się dzieje, gdy wstawisz pętlę do innej
+                pętli.
+              description_teacher: Na tych zajęciach internetowych uczniowie będą
+                mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie
+                nowy poziom. Rozgrywając grę "Pszczółka i rośliny kontra zombie" [Bee
+                and Plants vs Zombies], uczniowie będą się uczyć, jak programować
+                pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia
+                sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program,
+                gdy klikają "Uruchom".
             Nested Loops in Artist:
               key: Zagnieżdżone pętle z Artistą
               name: Wymyślne kształty z użyciem pętli zagnieżdżonych
+              description_student: Więcej pętli zagnieżdżonych! Tym razem będziesz
+                tworzyć pewien NIESAMOWITY obrazek przy pomocy pętli zagnieżdżonych.
             Nested Loops in Frozen:
               key: Zagnieżdżone pętle w Krainie Lodu
               name: Zagnieżdżone pętle w Krainie Lodu
+              description_student: Anna i Elsa umieją świetnie jeździć na łyżwach,
+                ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj
+                pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO.
+              description_teacher: Teraz uczniowie uczą się, jak układać pętle warstwowo,
+                mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają
+                serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio
+                korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!
             'Functions: Songwriting':
               key: 'Funkcje: Pisanie piosenki'
               name: Pisanie piosenek
+              description_student: Nawet gwiazdy rocka potrzebują umiejętności programowania.
+                na tej lekcji będziesz się uczyć o funkcjach, korzystając ze słów
+                piosenek.
+              description_teacher: Jedną z najwspanialszych struktur w informatyce
+                jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami,
+                które można wielokrotnie używać wewnątrz większych programów. Ta lekcja
+                pomoże uczniom intuicyjnie zrozumieć, dlaczego połączenie fragmentów
+                kodu w funkcje może być tak dobrą praktyką.
             Functions in Minecraft:
               key: Funkcje w Minecrafcie
               name: Funkcje w Minecrafcie
+              description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
+                aby uzyskać jak najskuteczniejszy kod?
+              description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions in Harvester:
               key: Funkcje w interfejsie Harvester
               name: Funkcje ze żniwiarką
+              description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy
+                w trakcie pomocy udzielanej farmerce przy żniwach.
+              description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów
+                w interfejsie Artist oraz przechodzenia przez labirynty w interfejsie
+                Bee, ale dzisiaj będą używać funkcji do zbierania plonów w interfejsie
+                Farmer. Na tej lekcji uczniowie będą zmuszeni do używania funkcji
+                na nowe sposoby łącząc je z pętlami "dopóki" i wyrażeniami "jeśli/w
+                przeciwnym razie".
             Functions in Artist:
               key: Funkcje z Arystą
               name: Funkcje z Artistą
+              description_student: Twórz skomplikowane rysunki w  sposób łatwiejszy
+                przy pomocy funkcji!
+              description_teacher: Uczniowie zostaną wprowadzeni w używanie funkcji
+                przy pomocy Artysty. Zostaną utworzone i modyfikowane wspaniałe obrazki.
+                Na potrzeby bardziej skomplikowanych wzorców, uczniowie będą się uczyć
+                o zagnieżdżaniu funkcji poprzez wywoływanie jednej funkcji z wnętrza
+                innej.
             Designing for Accessibility:
               key: Projektowanie pod kątem dostępności
               name: Projektowanie pod kątem dostępności
+              description_student: 'Na tej lekcji uczniowie będą się uczyć o dostępności
+                i wartości empatii za pomocą burzy mózgów i projektowania dostępnych
+                rozwiązań na aplikacje hipotetyczne. '
+              description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dostępności
+                i wartości empatii za pomocą burzy mózgów i projektowania dostępnych
+                rozwiązań na aplikacje hipotetyczne. '
             End of Course Project:
               key: Koniec projektu kursu
               name: Koniec projektu kursu
+              description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
+                czasu i planowania. Znajdź dla siebie inspirację, opracuj plan i wyzwól
+                swoją kreatywność!
+              description_teacher: "W ciągu czterech kolejnych lekcji uczniowie będą
+                mieli możliwość wykorzystania swoich umiejętności kodowania w projekcie
+                podsumowującym. Ten projekt pomoże osobom zdobyć doświadczenie w zakresie
+                kodowania i budowania przykładu, który można udostępnić rówieśnikom
+                i kochanym osobom.  Zgodnie z zamierzeniami doświadczenie zdobywane
+                będzie w ramach wielu lekcji lub wielu tygodni, a uczniowie będą spędzać
+                czas poznając zasady prowadzenia burzy mózgów, nauki procesu projektowania,
+                budowania i przedstawiania swojej finałowej pracy. \r\n\r\nNa etapie
+                eksploracji uczniowie będą bawić się zbudowanymi wcześniej przykładami
+                projektów zarówno w Artist, jak i w Sprite Lab celem uzyskania inspiracji.
+                Potem uczniowie będą poznawać proces projektowania i dowiadywać się
+                jak wdrażać go we własnych projektach.  Następnie zostanie im udostępniona
+                przestrzeń do stworzenia własnego projektu w Artist, Sprite Lab lub
+                innym interfejsie, który poznali (najprawdopodobniej będzie to najdłuższy
+                etap projektu) Na koniec uczniowie będą mogli zaprezentować ukończoną
+                pracę rówieśnikom."
+            lesson-4:
+              name: Lekcja kontekstowa
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -27250,13 +28262,15 @@ pl:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
             csf_nested_loops:
-              display_name: Zagnieżdżające się  pętle
+              display_name: Zdania z warunkami
             csf_functions:
               display_name: Funkcje
             csf_impacts:
               display_name: Wplywy informatyki
             end_of_course_project:
               display_name: Koniec projektu kursu
+            lessonGroup-8:
+              display_name: Usunięto
           name: coursee-2021
           student_description: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń
             warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej
@@ -27276,60 +28290,233 @@ pl:
             Functions in Minecraft:
               key: Funkcje w Minecrafcie
               name: Funkcje w Minecrafcie
+              description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
+                aby uzyskać jak najskuteczniejszy kod?
+              description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Learning Sprites with Sprite Lab:
               key: Uczące się duszki w Sprite Lab
               name: Pływająca ryba w Sprite Lab
+              description_student: Naucz się tworzyć i edytować duszki.
+              description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dwóch
+                koncepcjach stanowiących serce interfejsu Sprite Lab: duszkach i zachowaniach.
+                Duszki są postaciami na ekranie, które uczniowie mogą przemieszczać,
+                zmieniać lub którymi mogą manipulować. Zachowania są działaniami,
+                które duszki podejmują w trybie ciągłym do momentu ich zatrzymania.'
             Events with Sprite Lab:
               key: Zdarzenia z Sprite Lab
               name: Wydarzenia z Sprite Lab
+              description_student: Twórz projekt interaktywny, który możesz udostępnić
+                kolegom z klasy.
+              description_teacher: 'Na tej lekcji wykorzystuje się interfejs Sprite
+                Lab, platformy, na której uczniowie mogą tworzyć swoje własne interaktywne
+                animacje i gry. W uzupełnieniu do zachowań, obecni uczniowie mogą
+                wbudowywać dane użytkownika jako wydarzenia do utworzenia "potańcówki
+                ufoludków". '
             Loops with the Artist:
               key: Pętle z Artystą
               name: Rysowanie przy pomocy pętli
+              description_student: Na tej lekcji przekonasz się, że dzięki pętlom
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
+              description_teacher: Patrz jak twarze uczniów rozpromieniają się na
+                widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
+                liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
+                zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie
+                uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są
+                fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub
+                na wywiadówki.
             Nested Loops in the Maze:
               key: Zagnieżdżone pętle w labiryncie
               name: Zagnieżdżone pętle w labiryncie
+              description_student: Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy?
+                Na tej lekcji dowiesz się, co się dzieje, gdy wstawisz pętlę do innej
+                pętli.
+              description_teacher: Na tych zajęciach internetowych uczniowie będą
+                mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie
+                nowy poziom. Rozgrywając grę "Pszczółka i rośliny kontra zombie" [Bee
+                and Plants vs Zombies], uczniowie będą się uczyć, jak programować
+                pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia
+                sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program,
+                gdy klikają "Uruchom".
             The Power of Words:
               key: Moc słów
               name: Moc słów
+              description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma
+                Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy,
+                które mówi się w Internecie.
             Envelope Variables:
               key: Zmienne w kopertach
               name: Zmienne w kopertach
+              description_student: 'Koperty i zmienne mają coś wspólnego: w obu przechowuje
+                się wartościowe rzeczy. Teraz będziecie się uczyć o tym, czym są zmienne
+                i jakie wspaniałe rzeczy są w stanie robić.'
+              description_teacher: Zmiennych  używa się jako symboli zastępczych dla
+                wartości takich jak liczby czy słowa. Zmienne pozwalają na spory zakres
+                swobody projektowania. Zamiast wielokrotnego wpisywania frazy lub
+                zapamiętywania trudnych liczb, informatycy mogą używać zmiennych do
+                nawiązywania do nich. Ta lekcja pomaga w wyjaśnieniu czym są zmienne
+                oraz w jaki sposób możemy je zastosować na wiele różnych sposobów.
+                Nie jest łatwo zrozumieć koncepcję zmiennych, zalecamy zatem, aby
+                przeznaczyć sporo czasu na omówienie tego zagadnienia na końcu lekcji.
             Variables as Constant in Artist:
               key: Zmienne jako stałe z Artystą
               name: Zmienne z Artystą
+              description_student: Nie zapomnij o wnoszeniu kreatywności do zajęć!
+                W ramach tych łamigłówek będziesz tworzyć fantastyczne rysunki używając
+                zmiennych.
+              description_teacher: Na tej lekcji uczniowie będą zgłębiać tworzenie
+                powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie
+                dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu
+                i czytanie, nawet, gdy wartości nie zmieniają się w czasie uruchomienia.
             Variables that Change in Bee:
               key: Zmienne, które się zmieniają z pszczółką
               name: Zmienianie zmiennych z Pszczółką
+              description_student: Ta pszczółka uwielbia zmienne!
+              description_teacher: Ta lekcja pomoże przedstawić, jak zmienne mogą
+                sprawiać, by programy skuteczniej działały pozwalając na zmianę wartości
+                w trakcie uruchomionego kodu.
             Variables that Change in Artist:
               key: Zmienne, które się zmieniają z Artystą
               name: Zmienianie zmiennych z Artistą
+              description_student: Na tej lekcji będziesz wykonywać rysunki z użyciem
+                zmiennych, które zmieniają się w trakcie uruchomienia kodu.
+              description_teacher: Na tej lekcji uczniowie będą zgłębiać tworzenie
+                powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie
+                dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu
+                i czytanie. Po przejściu łamigłówek w trybie "z przewodnikiem" uczniowie
+                zakończą na poziomie czasu na zabawę, aby wykazać się tym, czego się
+                nauczyli i tworzyć własne wzory.
             Simulating Experiments:
               key: Symulowanie eksperymentów
               name: Symulowanie eksperymentów
+              description_student: Uruchom symulacje na komputerze i eksperymentuj
+                zmieniając wartości zmiennych.
+              description_teacher: Dzięki prostej symulacji w Sprite Lab, uczniowie
+                zdobywają doświadczenia w zakresie korzystania z informatyki do zbierania
+                danych, które identyfikują trendy lub wzorce. Po wielokrotnym przeprowadzeniu
+                symulacji, uczniowie będą mieli okazję do sformułowania prognozy,
+                jak zmiana zmiennej w symulacji może wpływać na wynik, a następnie
+                przetestowania tej hipotezy.
             AI for Oceans:
               key: AI dla oceanów
               name: AI dla oceanów
+              description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują
+                przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu.
+                Następnie będą musieli poszerzyć zakres swoich danych treningowych
+                tak, aby uwzględnić stworzenia morskie, które należą do środowiska
+                wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje
+                własne etykiety do zastosowania w obrazkach losowo wygenerowanych
+                ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia
+                maszynowego, który powinien potem być w stanie oznaczać nowe obrazy
+                we własnym zakresie.'
+              description_teacher: "**Podsumowanie samouczka**: Najpierw uczniowie
+                klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując usunć
+                śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych
+                treningowych tak, aby uwzględnić stworzenia morskie, które należą
+                do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać
+                swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych
+                ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia
+                maszynowego, który powinien potem być w stanie oznaczać nowe obrazy
+                we własnym zakresie.\r\n\r\n\r\n**Sprawdzanie poprawności:** W ramach
+                tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli
+                poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części
+                ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji
+                oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą
+                przestawić swoje wnioski Tobie lub komuś z klasy.\r"
             Internet:
               key: Internet
               name: Internet
+              description_student: Czy kiedykolwiek zastanawiałeś się nad tym, jak
+                informacje podróżują po internecie? To nie magia. Na tej lekcji będziesz
+                się uczyć podstaw zasad funkcjonowania internetu.
+              description_teacher: Mimo tego, że wiele osób korzysta codziennie z
+                Internetu, niewiele spośród nich wie, jak on działa. Na tej lekcji
+                uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się
+                o połączeniach, URL, adresach sieciowych IP i DNS.
             For Loop Fun:
               key: Zabawa z pętlą "dla"
               name: Zabawa z pętlą "dla"
+              description_student: Będziesz się świetnie bawić ucząc się o pętlach
+                "dla"!
+              description_teacher: Wiemy, że pętle służą do wykonywania tych samych
+                rzeczy w kółko, ale teraz mamy zamiar dowiedzieć się, jak stosować
+                pętle z wbudowanymi w nie dodatkowymi strukturami. Te struktury będą
+                pozwalać uczniom tworzyć kod, który będzie mocniejszy i bardziej dynamiczny.
             For Loops in Bee:
               key: Pętle for z Pszczółką
               name: Pętle "for" z Pszczółką
+              description_student: Bzz bzz. W tych łamigłówkach będziesz prowadzić
+                pszczółkę do nektaru i miodu używając pętli "dla"!
+              description_teacher: Z pszczółką w roli głównej na tej lekcji skupimy
+                się na pętlach "dla" i użyciu rosnących skokowo zmiennych do rozwiązywania
+                bardziej skomplikowanych łamigłówek. Uczniowie rozpoczną od powtórki
+                poświęconej pętlom z poprzednich lekcji, a następnie przejdą przez
+                wprowadzenie do pętli "dla", tak, aby mogli bardziej skutecznie rozwiązywać
+                skomplikowane problemy.
             For Loops in Artist:
               key: Pętle for z Artystą
               name: Pętle "for" z Artystą
+              description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
+                będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
+                odbiorcom opadnie szczęka.
+              description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
+                pętli "dla", ale tym razem korzystając z interfejsu Artist. Uczniowie
+                będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
+                pętli "dla" tak, aby utworzyć złożone projekty. Na koniec będą mieli
+                okazję tworzyć własną grafikę na poziomie czasu na zabawę.
             Editing Behaviors:
               key: Edytowanie zachowań
               name: Zachowania w interfejsie Sprite Lab
+              description_student: Naucz się programować zachowania Twoich własnych
+                duszków!
+              description_teacher: Teraz uczniowie będą używać Sprite Lab do tworzenia
+                swoich zindywidualizowanych zachowań.
             Virtual Pet:
               key: Wirtualny zwierzak
               name: Wirtualny zwierzak z Sprite Lab
+              description_student: Na tej lekcji uczniowie będą tworzyć interaktywne
+                "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak,
+                jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab
+                "Kostiumy", aby zindywidualizować wygląd ich zwierzątka. Potem będą
+                używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby
+                nadać zwierzątku własnego życia!
+              description_teacher: Na tej lekcji uczniowie będą tworzyć interaktywne
+                "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak,
+                jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab
+                "Kostiumy", aby zindywidualizować wygląd ich zwierzątka. Potem będą
+                używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby
+                nadać zwierzątku własnego życia!
             End of Course Project:
               key: Koniec projektu kursu
               name: Koniec projektu kursu
+              description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
+                czasu i planowania. Znajdź dla siebie inspirację, opracuj plan i wyzwól
+                swoją kreatywność!
+              description_teacher: "W ciągu pięciu kolejnych lekcji uczniowie będą
+                mieli możliwość wykorzystania swoich umiejętności kodowania w projekcie
+                podsumowującym. Ten projekt pomoże osobom zdobyć doświadczenie w zakresie
+                kodowania i budowania przykładu, który można udostępnić rówieśnikom
+                i kochanym osobom.  Zgodnie z zamierzeniami projekt realizowany będzie
+                w ramach wielu lekcji lub wielu tygodni, a uczniowie będą spędzać
+                czas poznając zasady prowadzenia burzy mózgów, nauki procesu projektowania,
+                budowania i przedstawiania swojej finałowej pracy. \r\n\r\nNa etapie
+                \"Eksploruj\" uczniowie będą bawić się zbudowanymi wcześniej przykładami
+                projektów zarówno w Artist, jak i w Sprite Lab celem uzyskania inspiracji.
+                Potem uczniowie będą poznawać proces projektowania i dowiadywać się
+                jak wdrażać go we własnych projektach.  Następnie zostanie im udostępniona
+                przestrzeń do stworzenia własnego projektu w Artist, Sprite Lab lub
+                innym interfejsie, który wygodnie jest Ci udostępnić. (Najprawdopodobniej
+                będzie to najdłuższy etap projektu). Uczniowie będą potem sprawdzać
+                swój kod po przetestowaniu i weryfikacji przez rówieśników. Na koniec
+                uczniowie będą mogli zaprezentować ukończoną pracę kolegom z klasy."
+            lesson-1:
+              name: Projektowanie pod kątem dostępności
+              description_student: 'Na tej lekcji uczniowie będą się uczyć o dostępności
+                i wartości empatii za pomocą burzy mózgów i projektowania dostępnych
+                rozwiązań na aplikacje hipotetyczne. '
+              description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dostępności
+                i wartości empatii za pomocą burzy mózgów i projektowania dostępnych
+                rozwiązań na aplikacje hipotetyczne. '
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -27343,6 +28530,8 @@ pl:
               display_name: Duszki
             end_of_course_project:
               display_name: Koniec projektu kursu
+            lessonGroup-8:
+              display_name: Wplywy informatyki
           name: coursef-2021
           student_description: Naucz się używać różnych rodzajów pętli, wydarzeń,
             funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
@@ -27362,87 +28551,278 @@ pl:
             Dance Party:
               key: Potańcówka
               name: Potańcówka
+              description_student: Na tej lekcji uczniowie będą programować swoją
+                własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk,
+                gdyż narzędzie zbudowano tak, aby reagowało na muzykę.
+              description_teacher: Na tej lekcji uczniowie będą programować swoją
+                własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk,
+                gdyż narzędzie zbudowano tak, aby reagowało na muzykę.
             Programming with Angry Birds:
               key: Programowanie z Angry Birds
               name: Programowanie z Angry Birds
+              description_student: Ucz się o sekwencjach i algorytmach z Angry Birds.
+              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
+                opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
+                strony labiryntu do świnki po drugiej stronie. W tym celu układają
+                bloki kodu w porządku liniowym, przez co postaci poruszają się prosto,
+                skręcają w lewo lub w prawo.
             Debugging with Scrat:
               key: Debugwanie ze Scratem
               name: Debugwanie ze Scratem
+              description_student: Znajdź problemy w łamigłówkach i ćwicz umiejętność
+                debugowania.
+              description_teacher: Debugowanie jest  podstawowym elementem nauki programowania.
+                Na tej lekcji uczniowie będą się konfrontować z łamigłówkami, które
+                zostały rozwiązane nieprawidłowo. Będą musiały przejść przez obecny
+                kod, aby zidentyfikować błędy, w tym niewłaściwe pętle, brakujące
+                bloki, zbyteczne bloki oraz zepsute bloki.
             Collecting Treasure with Laurel:
               key: Zbieranie skarbów z Laurel
               name: Zbieranie skarbów z Laurel
+              description_student: Napisz algorytmy aby pomóc poszukiwaczce przygód,
+                Laurek, zebrać mnóstwo klejnotów!
+              description_teacher: W tej serii łamigłówek uczniowie będą kontynuować
+                wzbogacanie swojego zrozumienia algorytmów i debugowania. Przy pomocy
+                notej postaci, poszukiwaczce przygód Laurel, uczniowie będą tworzyć
+                algorytmy sekwencyjne, aby sprawić, by Laurel zbierała skarb w trakcie
+                przechodzenia ścieżki.
             Creating Art with Code:
               key: Tworzenie grafiki przy pomocy kodu
               name: Tworzenie grafiki przy pomocy kodu
+              description_student: Twórz piękne obrazki programując Artystę.
+              description_teacher: Na tej lekcji uczniowie przejmą sterowania Artystą,
+                aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom
+                tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych
+                bloków takich jak "idź do przodu o 100 pikseli" oraz "skręć w prawo
+                o 90 stopni".
             Loops with Rey and BB-8:
               key: Pętle z Rey i BB-8
               name: Pętle z Rey i BB-8
+              description_student: Pomóż BB-8 przejść przez labirynty używając pętli!
+              description_teacher: Opierając się na koncepcji powtarzania instrukcji
+                z "Zapętlania [Getting Loopy]", na tym etapie uczniowie będą używać
+                pętli, aby pomóc BB-6 przejść labirynt skuteczniej niż wcześniej.
             Sticker Art with Loops:
               key: Grafika naklejek przy pomocy pętli
               name: Grafika naklejek przy pomocy pętli
+              description_student: Na tej lekcji przekonasz się, że dzięki pętlom
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
+              description_teacher: Patrz jak twarze uczniów rozpromieniają się na
+                widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
+                liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
+                zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie
+                uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są
+                fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub
+                na wywiadówki.
             Nested Loops in Maze:
               key: Zagnieżdżone pętle w labiryncie
               name: Zagnieżdżone pętle w labiryncie
+              description_student: Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy?
+                Na tej lekcji dowiesz się, co się dzieje, gdy utworzysz pętlę zagnieżdżoną.
+              description_teacher: Na tych zajęciach internetowych uczniowie będą
+                mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie
+                nowy poziom. Rozgrywając grę "Pszczółka i rośliny kontra zombie" [Bee
+                and Plants vs Zombies], uczniowie będą się uczyć, jak programować
+                pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia
+                sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program,
+                gdy klikają "Uruchom".
             Snowflakes with Anna and Elsa:
               key: Płatki śniegu z Anną i Elzą
               name: Płatki śniegu z Anną i Elzą
+              description_student: Anna i Elsa umieją świetnie jeździć na łyżwach,
+                ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj
+                pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO.
+              description_teacher: Teraz uczniowie uczą się, jak układać pętle warstwowo,
+                mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają
+                serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio
+                korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!
             'Looking Ahead with Minecraft ':
               key: Patrząc w przyszłość z Minecraftem
               name: Patrząc w przyszłość z Minecraftem
+              description_student: Unikaj lawy! Teraz będziesz się uczyć o wyrażeniach
+                warunkowych w świecie Minecrafta.
+              description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
+                Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
+                będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
+                jak również zerknąć na instrukcje warunkowe!
             If/Else with Bee:
               key: '"jeśli/w przeciwnym razie" z Pszczółką'
               name: '"jeśli/w przeciwnym razie" z Pszczółką'
+              description_student: Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować
+                pszczółkę tak, aby użyć jej przy zbieraniu miodu i nektaru.
+              description_teacher: Do tego momentu uczniowie pisali kod, który realizuje
+                się dokładnie tak samo po każdym uruchomieniu - wiarygodny, ale niezbyt
+                elastyczny. Na tej lekcji Twoja klasa rozpocznie kodować przy pomocy
+                wyrażeń warunkowych, pozwalając im na pisanie kodu, który funkcjonuje
+                inaczej, w zależności od konkretnych warunków, na które napotyka program.
             While Loops with the Farmer:
               key: Pętle "dopóki" przy pomocy interfejsu Farmer
               name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              description_student: 'Pętle są przydatne do kodowania. Na tej lekcji
+                nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
+              description_teacher: "Do momentu, gdy uczniowie dojdą do tej lekcji,
+                powinni już mieć dużą praktykę w używaniu pętli \"powtórz\", zatem
+                nadszedł czas, aby połączyć ze sobą różne elementy. \r\n\r\n_Pętle
+                \"dopóki\"_ są pętlami, które nieustannie powtarzają komendy, gdy
+                spełniony jest warunek. Pętli \"dopóki\" używa się, gdy programista
+                nie zna dokładnej liczby powtórzeń, które trzeba wykonać, ale wie,
+                że warunek musi być spełniony, aby pętla wykonywała powtarzanie. Na
+                przykład uczniowie będą zajmować zasypywaniem dziur i wykopywaniem
+                błota w interfejsie Farmer. Nie będą znali wielkości dziur ani wysokości
+                stert błota, ale będą wiedzieli, że muszą zasypywać dziury i kopać
+                błoto tak długo, aż teren nie stanie się płaski."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
               name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+              description_student: Tutaj nauczysz się o wyrażeniach warunkowych w
+                świecie gry Minecraft.
+              description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
+                Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
+                będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
+                jak również zerknąć na instrukcje warunkowe!
             Until Loops in Maze:
               key: Pętle "dopóki" w labiryncie
               name: Pętle "dopóki" w labiryncie
+              description_student: Możesz robić pewne niesamowite rzeczy, gdy używasz
+                pętli "dopóki".
+              description_teacher: Na tej lekcji uczniowie będą się uczyć o pętlach
+                "dopóki". Uczniowie będą budować programy, które sprawiają, że główna
+                postać powtarza czynności "dopóki" dojdą do pożądanego punktu zatrzymania.
             Harvesting with Conditionals:
               key: Żniwa z wyrażeniami warunkowymi
               name: Żniwa z wyrażeniami warunkowymi
+              description_student: Nie jest dokładnie jasne, kiedy należy używać każdego
+                wyrażenia warunkowego. Ta lekcja pomoże Ci uzyskać praktykę w podejmowaniu
+                decyzji, co robić.
+              description_teacher: Uczniowie będą ćwiczyć pętle "dopóki", pętle "aż
+                do" oraz instrukcje "jeśli/ w przeciwnym razie". We wszystkich tych
+                blokach używa się wyrażeń warunkowych. Ćwicząc wszystkie trzy, uczniowie
+                będą się uczyć pisania złożonych i elastycznych kodów.
             Functions in Minecraft:
               key: Funkcje w Minecrafcie
               name: Funkcje w Minecrafcie
+              description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
+                aby uzyskać jak najskuteczniejszy kod?
+              description_teacher: Uczniowie zaczną rozumieć, jak pomocne mogą być
+                funkcje w tej wesołej i interaktywnej przygodzie Minecraft!
             Functions with Harvester:
               key: Funkcje ze żniwiarką
               name: Funkcje ze żniwiarką
+              description_student: Dzięki funkcjom będziesz oszczędzać mnóstwo pracy
+                w trakcie pomocy udzielanej farmerce przy żniwach.
+              description_teacher: Uczniowie ćwiczyli tworzenie efektownych projektów
+                w interfejsie Artist oraz przechodzenia przez labirynty w interfejsie
+                Bee, ale dzisiaj będą używać funkcji do zbierania plonów w interfejsie
+                Farmer. Na tej lekcji uczniowie będą zmuszeni do używania funkcji
+                na nowe sposoby łącząc je z pętlami "dopóki" i wyrażeniami "jeśli/w
+                przeciwnym razie".
             Functions with Artist:
               key: Funkcje z Artistą
               name: Funkcje z Artistą
+              description_student: Twórz skomplikowane rysunki w  sposób łatwiejszy
+                przy pomocy funkcji!
+              description_teacher: Uczniowie zostaną wprowadzeni w używanie funkcji
+                na Code.org. W interfejsie Artist zostaną utworzone i modyfikowane
+                wspaniałe obrazki. Na potrzeby bardziej skomplikowanych wzorców, uczniowie
+                będą się uczyć o zagnieżdżaniu funkcji poprzez wywoływanie jednej
+                funkcji z wnętrza innej.
             Variables with Artist:
               key: Zmienne z Artystą
               name: Zmienne z Artystą
+              description_student: Nie zapomnij o wnoszeniu kreatywności do zajęć!
+                W ramach tych łamigłówek będziesz tworzyć fantastyczne rysunki używając
+                zmiennych.
+              description_teacher: Na tej lekcji uczniowie będą zgłębiać tworzenie
+                powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie
+                dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu
+                i czytanie, nawet, gdy wartości nie zmieniają się w czasie uruchomienia.
             Changing Variables with Bee:
               key: Zmienianie zmiennych z Pszczółką
               name: Zmienianie zmiennych z Pszczółką
+              description_student: Ta pszczółka uwielbia zmienne!
+              description_teacher: Ta lekcja pomoże przedstawić, jak zmienne mogą
+                sprawiać, by programy skuteczniej działały pozwalając na zmianę wartości
+                w trakcie uruchomionego kodu.
             Changing Variables with Artist:
               key: Zmienianie zmiennych z Artistą
               name: Zmienianie zmiennych z Artistą
+              description_student: Na tej lekcji będziesz wykonywać rysunki z użyciem
+                zmiennych, które zmieniają się w trakcie uruchomienia kodu.
+              description_teacher: Na tej lekcji uczniowie będą zgłębiać tworzenie
+                powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie
+                dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu
+                i czytanie. Po przejściu łamigłówek w trybie "z przewodnikiem" uczniowie
+                zakończą na poziomie czasu na zabawę, aby wykazać się tym, czego się
+                nauczyli i tworzyć własne wzory.
             For Loops with Bee:
               key: Pętle "for" z Pszczółką
               name: Pętle "for" z Pszczółką
+              description_student: Bzz bzz. W tych łamigłówkach będziesz prowadzić
+                pszczółkę do nektaru i miodu używając pętli "dla"!
+              description_teacher: Z pszczółką w roli głównej na tej lekcji skupimy
+                się na pętlach "dla" i użyciu rosnących skokowo zmiennych do rozwiązywania
+                bardziej skomplikowanych łamigłówek. Uczniowie rozpoczną od powtórki
+                poświęconej pętlom z poprzednich lekcji, a następnie przejdą przez
+                wprowadzenie do pętli "dla", tak, aby mogli bardziej skutecznie rozwiązywać
+                skomplikowane problemy.
             For Loops with Artist:
               key: Pętle "for" z Artystą
               name: Pętle "for" z Artystą
+              description_student: Przygotuj się na stworzenie kolejnego dzieła. Teraz
+                będziesz używać pętli "dla", aby tworzyć takie obrazki, na widok których
+                odbiorcom opadnie szczęka.
+              description_teacher: Na tej lekcji uczniowie będą kontynuować ćwiczenie
+                pętli "dla", ale tym razem korzystając z interfejsu Artist. Uczniowie
+                będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz
+                pętli "dla" tak, aby utworzyć złożone projekty. Na koniec będą mieli
+                okazję tworzyć własną grafikę na poziomie czasu na zabawę.
             Swimming Fish in Sprite Lab:
               key: Pływająca ryba w Sprite Lab
               name: Pływająca ryba w Sprite Lab
+              description_student: Naucz się tworzyć i edytować duszki.
+              description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dwóch
+                koncepcjach stanowiących serce interfejsu Sprite Lab: duszkach i zachowaniach.
+                Duszki są postaciami na ekranie, które uczniowie mogą przemieszczać,
+                zmieniać lub którymi mogą manipulować. Zachowania są działaniami,
+                które duszki podejmują w trybie ciągłym do momentu ich zatrzymania.'
             Alien Dance Party:
               key: Potańcówka ufoludków
               name: Potańcówka ufoludków
+              description_student: Ćwicz tworzenie gier, aby udostępniać je znajomym
+                i rodzinie.
+              description_teacher: Na tej lekcji wykorzystuje się interfejs Sprite
+                Lab, platformę, na której uczniowie mogą tworzyć swoją własną potańcówkę
+                ufoludków z interakcjami między postaciami i danych użytkownika. Uczniowie
+                będą posługiwać się zdarzeniami, aby kontrolować grę.
             Behaviors in Sprite Lab:
               key: Zachowania w interfejsie Sprite Lab
               name: Zachowania w interfejsie Sprite Lab
+              description_student: Naucz się programować zachowania Twoich własnych
+                duszków!
+              description_teacher: Teraz uczniowie będą używać Sprite Lab do tworzenia
+                swoich zindywidualizowanych zachowań.
             Virtual Pet with Sprite Lab:
               key: Wirtualny zwierzak z Sprite Lab
               name: Wirtualny zwierzak z Sprite Lab
+              description_student: Na tej lekcji uczniowie będą tworzyć interaktywne
+                "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak,
+                jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab
+                "Kostiumy", aby zindywidualizować wygląd ich zwierzątka. Potem będą
+                używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby
+                nadać zwierzątku własnego życia!
+              description_teacher: Na tej lekcji uczniowie będą tworzyć interaktywne
+                "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak,
+                jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab
+                "Kostiumy", aby zindywidualizować wygląd ich zwierzątka. Potem będą
+                używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby
+                nadać zwierzątku własnego życia!
             End of Course Project:
               key: Koniec projektu kursu
               name: Koniec projektu kursu
+              description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć
+                budowanie swojego projektu.
+              description_teacher: W trakcie tej lekcji podsumowującej uczniowie przechodzą
+                proces projektowania, tworzenia i przedstawiania swoich własnych projektów!
           lesson_groups:
             csf_warmup:
               display_name: Rozgrzewka
@@ -27481,36 +28861,80 @@ pl:
             Learn to Drag and Drop:
               key: Nauka metody przeciągać i upuszczać
               name: Nauka metody przeciągać i upuszczać
+              description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
+                po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
+                dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym,
+                a następnie przechodzą oni do korzystania z komputera, aby ukończyć
+                łamigłówki online.
             Sequencing with Scrat:
               key: Tworzenie sekwencji ze Scratem
               name: Tworzenie sekwencji ze Scratem
+              description_teacher: Przy pomocy Scrata z franszyzy "Epoka lodowcowa"
+                [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić
+                wiewiórkę z jednej strony labiryntu do żołędzia po drugiej stronie.
+                W tym celu układają bloki kodu w porządku liniowym.
             Programming in with Angry Birds:
               key: Programowanie z Angry Birds
               name: Programowanie z Angry Birds
+              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
+                opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
+                strony labiryntu do świnki po drugiej stronie. W tym celu układają
+                bloki kodu w porządku liniowym.
             Programming with Rey and BB-8:
               key: Programowanie z Reyem i BB-8
               name: Programowanie z Reyem i BB-8
+              description_teacher: Na tej lekcji uczniowie będą używać nowo nabytych
+                umiejętności programowania w bardziej skomplikowane sposoby, aby nawigować
+                po trudnej trasie z BB-8.
             Programming in Harvester:
               key: Programowanie ze żniwiarką
               name: Programowanie przy pomocy interfejsu Harvester
+              description_teacher: Uczniowie będą stosować poznane koncepcje programowania
+                do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci
+                do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie
+                będą kontynuować rozwijanie sekwencyjnych umiejętności sekwencyjnych
+                i zaczną korzystać z procesu debugowania.
             Loops with Scrat:
               key: Pętle ze Scratem
               name: Pętle ze Scratem
             Loops with Laurel:
               key: Pętle z Laurel
               name: Pętle z Laurel
+              description_teacher: Na tej lekcji uczniowie będą nadal poznawać koncepcję
+                pętli. Tutaj, poszukiwaczka przygód, Laurel, używa pętli, aby zebrać
+                skarb w miejscach otwartych jaskiń. Wprowadza się nowy blok "zdobądź
+                skarb", aby pomóc jej w podróży.
             Ocean Scene with Loops:
               key: Scena oceanu z pętlami
               name: Scena oceanu z pętlami
+              description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
+                powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
+                pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
+                pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość
+                tworzenia własnych obrazów za pomocą pętli.
             Drawing Gardens with Loops:
               key: Rysowanie ogrodów z pętlami
               name: Rysowanie ogrodów z pętlami
+              description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
+                powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
+                pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
+                uczniowie używają pętli do tworzenia wzorców. Pod koniec tego etapu
+                uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą
+                pętli.
             On the Move with Events:
               key: W drodze ze zdarzeniami
               name: W drodze ze zdarzeniami
+              description_teacher: W ramach tych zajęć online uczniowie będą mieli
+                okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
+                wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną
+                grę. Czas na kreatywność i utworzenie historyjki w Play Lab!
             A Royal Battle with Events:
               key: Królewska bitwa ze zdarzeniami
               name: Królewska bitwa ze zdarzeniami
+              description_teacher: W ramach tych zajęć online uczniowie będą mieli
+                okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
+                wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną
+                grę. Czas na kreatywność i utworzenie gry w Play Lab!
           lesson_groups:
             csf_sequencing:
               display_name: Sekwencjonowanie
@@ -27545,10 +28969,16 @@ pl:
               name: Utwórz grę Kolekcjonera
             Making Sprites:
               name: Tworzenie duszków
+            Sprites in Action:
+              name: Duszki w akcji
             variables-in-spritelab:
               name: Przechowywanie i przetwarzanie tekstu - wkrótce!
             chatbot:
               name: Tworzenie Chat-Bota - już wkrótce!
+            blank space stories:
+              name: Historie pustej przestrzeni
+            texts-and-prompts:
+              name: Przechowywanie i przetwarzanie tekstu
           lesson_groups:
             ramp_up:
               display_name: Wstęp
@@ -28270,11 +29700,25 @@ pl:
               name: Modyfikujc Twój model
             telling a data story:
               name: Opowiadanie historii o danych
+            how things spread gp:
+              name: Praktyka z przewodnikiem dotyczącym, jak rozpowszechnia się zarażanie
+            contagion simulator gp:
+              name: Symulator zarażenia - praktyka z przewodnikiem
+            sometimes not always gp:
+              name: Czasami, nie zawsze - ćwiczenia
+            modifying your simulator gp:
+              name: Modyfikowanie Twojego symulatora - praktyka z przewodnikiem
+            collecting data gp:
+              name: Gromadzenie danych - praktyka z przewodnikiem
+            Haiku Bot:
+              name: Bot Haiku
           lesson_groups:
             lesson group:
               display_name: wyświetlana nazwa grupy lekcji
             contagion:
               display_name: Zakażenie
+            haiku bot:
+              display_name: Bot Haiku
           name: pilotaż zakażenia
           title: Symulator zakażeń
           description_short: Użyj Sprite Lab, aby zaprogramować symulację epidemii
@@ -28286,6 +29730,14 @@ pl:
           lessons:
             how things spread gp:
               name: Praktyka z przewodnikiem dotyczącym, jak rozpowszechnia się zarażanie
+            contagion simulator gp:
+              name: Symulator zarażenia - praktyka z przewodnikiem
+            sometimes not always gp:
+              name: Czasami, nie zawsze - ćwiczenia
+            modifying your simulator gp:
+              name: Modyfikowanie Twojego symulatora - praktyka z przewodnikiem
+            collecting data gp:
+              name: Gromadzenie danych - praktyka z przewodnikiem
           lesson_groups:
             lesson group:
               display_name: Praktyka z przewodnikiem dotyczącym zarażania
@@ -28348,3 +29800,104 @@ pl:
           name: Pilotaż jednostki AI
           title: Pilotaż Jednostki AI
           description_short: Pilotaż Jednostki AI w CSD
+        csa1-pilot:
+          lessons:
+            lesson-1:
+              name: Lekcja 1
+          name: csa1-pilotaż
+        csa2-pilot:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+          lesson_groups:
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
+          name: csa2-pilotaż
+        csa3-pilot:
+          name: csa3-pilotaż
+        csa4-pilot:
+          name: csa4-pilotaż
+        csa5-pilot:
+          name: csa5-pilotaż
+        csa6-pilot:
+          name: csa6-pilotaż
+        csa7-pilot:
+          name: csa7-pilotaż
+        csa8-pilot:
+          name: csa8-pilotaż
+        csa9-pilot:
+          name: csa9-pilotaż
+        k5-onlinepd-2021:
+          description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki
+            Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego
+            we własnym tempie.
+          student_description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw
+            Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego
+            we własnym tempie.
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Witamy na "Podstawach Nauczania Informatyki"
+              name: Witamy na "Podstawach Nauczania Informatyki"
+            Understanding the Computer Science Fundamentals Courses:
+              key: Rozumienie kursów Podstaw Informatyki
+              name: Rozumienie kursów Podstaw Informatyki
+            Sequencing:
+              key: Sekwencjonowanie
+              name: Sekwencjonowanie
+            Loops:
+              key: Pętle
+              name: Pętle
+            Events:
+              key: Zdarzenia
+              name: Zdarzenia
+            Conditionals:
+              key: Zdania z warunkami
+              name: Zdania z warunkami
+            End of Course projects:
+              key: Projekty na koniec kursu
+              name: Projekty na koniec kursu
+            Functions:
+              key: Funkcje
+              name: Funkcje
+            Variables:
+              key: Zmienne
+              name: Zmienne
+            For Loops:
+              key: Pętle dla (for)
+              name: Pętle dla (for)
+            Sprite Lab:
+              key: Sprite Lab
+              name: Sprite Lab
+            Reviewing your reflections:
+              key: Przeglądanie Twoich refleksji
+              name: Przeglądanie Twoich refleksji
+            Next steps:
+              key: Następne kroki
+              name: Następne kroki
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Pierwsze kroki
+            k5_basic_concepts_1:
+              display_name: Podstawowe pojęcia kodowania oraz praktyki edukacyjne
+            k5_diving_deeper_1:
+              display_name: 'Zgłębiaj bardziej: Kursy E i F'
+            k5_next_steps_1:
+              display_name: Następne Kroki
+          name: k5-onlinepd-2021
+        haikubot-pilot:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+            haiku_prototype_choice:
+              name: Prototyp Haiku
+            Haiku Bot:
+              name: Bot Haiku
+          lesson_groups:
+            haiku bot:
+              display_name: Bot Haiku
+          name: haikubot-pilot
+          title: Bot Haiku
+          description_short: 'W tym module uczniowie utworzą generator haiku w stylu
+            Mad Libs, wykorzystując to, co wiedzą o poezji, dykcji i kodowaniu ze
+            zmiennymi. '
+          student_description: Wykorzystaj Sprite Lab, aby utworzyć Bot Haiku!

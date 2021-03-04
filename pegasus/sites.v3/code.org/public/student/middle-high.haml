@@ -61,8 +61,14 @@ To see what's available in your language, visit our
 %br/
 = view :csp_information
 %br/
+%br/
+- @show_csa = DCDO.get('courses_show_csa', CDO.default_courses_show_csa)
+- if @show_csa
+  %h2 Computer Science A (coming in 2022)
+  %br/
+  = view :csa_information
+  %br/
 
 %hr/
-
 %h1 Courses from 3rd parties
 = view :learn_carousels, variation:'middle_high'
