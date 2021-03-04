@@ -1,12 +1,17 @@
 export const ColumnTypes = {
   CATEGORICAL: "categorical",
   CONTINUOUS: "continuous",
-  OTHER: "other"
+  OTHER: "other",
 };
 
 export const MLTypes = {
   CLASSIFICATION: "classification",
-  REGRESSION: "regression"
+  REGRESSION: "regression",
+};
+
+export const ResultsGrades = {
+  CORRECT: "correct",
+  INCORRECT: "incorrect",
 };
 
 export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
@@ -14,13 +19,13 @@ export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
 export const TestDataLocations = {
   BEGINNING: "beginning",
   END: "end",
-  RANDOM: "random"
+  RANDOM: "random",
 };
 
 export const saveMessages = {
   success: "Your model was saved!",
   failure: "There was an error. Your model did not save.",
-  name: "Please name your model."
+  name: "Please name your model.",
 };
 
 const labelColor = "rgb(254, 96, 3)"; // was 186
@@ -29,25 +34,25 @@ const featureColor = "rgb(75, 155, 213)";
 
 export const colors = {
   feature: "rgb(70, 186, 168)",
-  label: "rgb(186, 168, 70)"
+  label: "rgb(186, 168, 70)",
 };
 
 export const styles = {
   app: {
     userSelect: "none",
-    height: "100%"
+    height: "100%",
   },
 
   bold: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
 
   error: {
-    color: "#e51f68"
+    color: "#e51f68",
   },
   ready: {
     color: "#73be73",
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
 
   panelContainer: {
@@ -55,16 +60,16 @@ export const styles = {
     position: "relative",
     float: "left",
     width: "70%",
-    height: "100%"
+    height: "100%",
   },
 
   panelContainerLeft: {
-    width: "70%"
+    width: "70%",
   },
 
   panelContainerRight: {
     marginLeft: 10,
-    width: "calc(30% - 10px)"
+    width: "calc(30% - 10px)",
   },
 
   panelContainerFullWidth: {
@@ -72,28 +77,28 @@ export const styles = {
     position: "relative",
     float: "left",
     width: "100%",
-    height: "100%"
+    height: "100%",
   },
 
   bodyContainer: {
     height: "100%",
     boxSizing: "border-box",
-    paddingBottom: 100
+    paddingBottom: 100,
   },
 
   largeText: {
     fontSize: 24,
-    marginBottom: 10
+    marginBottom: 10,
   },
 
   mediumText: {
     fontSize: 18,
-    marginBottom: 8
+    marginBottom: 8,
   },
 
   smallText: {
     fontSize: 12,
-    marginBottom: 8
+    marginBottom: 8,
   },
 
   panel: {
@@ -104,35 +109,35 @@ export const styles = {
     height: "100%",
     boxSizing: "border-box",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
   },
 
   scrollableContents: {
-    overflow: "hidden"
+    overflow: "hidden",
   },
 
   scrollableContentsTinted: {
     overflow: "hidden",
     borderRadius: 5,
-    backgroundColor: "rgb(206, 206, 206)"
+    backgroundColor: "rgb(206, 206, 206)",
   },
 
   scrollingContents: {
     padding: 15,
     overflow: "scroll",
     height: "100%",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
   },
 
   contents: {
     borderRadius: 5,
     backgroundColor: "rgb(206, 206, 206)",
-    padding: 15
+    padding: 15,
   },
 
   panelContentLeft: {
     float: "left",
-    width: "80%"
+    width: "80%",
   },
 
   validationMessages: {
@@ -142,7 +147,7 @@ export const styles = {
     width: "calc(30% - 20px)",
     padding: 20,
     backgroundColor: "rgba(0,0,0,0.8)",
-    borderRadius: 5
+    borderRadius: 5,
   },
 
   validationMessagesLight: {
@@ -158,11 +163,11 @@ export const styles = {
     boxSizing: "border-box",
     overflow: "scroll",
     marginTop: 59,
-    position: "relative"
+    position: "relative",
   },
 
   rightPanel: {
-    fontSize: 13
+    fontSize: 13,
   },
 
   selectDatasetItem: {
@@ -172,26 +177,26 @@ export const styles = {
     boxSizing: "border-box",
     border: "solid 4px rgba(0,0,0,0)",
     borderRadius: 10,
-    height: 240
+    height: 240,
   },
 
   selectDatasetItemSelected: {
-    border: "solid 4px white"
+    border: "solid 4px white",
   },
 
   selectDatasetImage: {
-    width: "100%"
+    width: "100%",
   },
 
   specifyColumnsItem: {
     display: "inline-block",
-    width: "20%"
+    width: "20%",
   },
 
   dataDisplayTable: {
     whiteSpace: "nowrap",
     borderSpacing: 0,
-    width: "100%"
+    width: "100%",
   },
 
   finePrint: {
@@ -201,78 +206,78 @@ export const styles = {
     padding: 10,
     boxSizing: "border-box",
     borderRadius: 5,
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
 
   dataDisplayHeader: {
     paddingLeft: 20,
-    textAlign: "right"
+    textAlign: "right",
   },
   dataDisplayHeaderLabelSelected: {
     backgroundColor: labelColor,
-    color: "yellow"
+    color: "yellow",
   },
   dataDisplayHeaderFeatureSelected: {
     backgroundColor: featureColor,
-    color: "yellow"
+    color: "yellow",
   },
   dataDisplayHeaderSelected: {
     color: "yellow",
-    backgroundColor: "black"
+    backgroundColor: "black",
   },
   dataDisplayHeaderLabelUnselected: {
     backgroundColor: labelColor,
-    color: "white"
+    color: "white",
   },
   dataDisplayHeaderFeatureUnselected: {
     backgroundColor: featureColor,
-    color: "white"
+    color: "white",
   },
   dataDisplayHeaderUnselected: {
     backgroundColor: "black",
-    color: "white"
+    color: "white",
   },
 
   dataDisplayCell: {
     paddingLeft: 20,
-    textAlign: "right"
+    textAlign: "right",
   },
   dataDisplayCellLabelSelected: {
     backgroundColor: labelColorSemi,
-    color: "yellow"
+    color: "yellow",
   },
   dataDisplayCellFeatureSelected: {
     backgroundColor: featureColor,
-    color: "yellow"
+    color: "yellow",
   },
   dataDisplayCellSelected: {
     color: "yellow",
-    backgroundColor: "grey"
+    backgroundColor: "grey",
   },
   dataDisplayCellLabelUnselected: {
-    backgroundColor: labelColorSemi
+    backgroundColor: labelColorSemi,
   },
   dataDisplayCellFeatureUnselected: {
-    backgroundColor: featureColor
+    backgroundColor: featureColor,
   },
   dataDisplayCellUnselected: {},
   crossTabCell0: {
-    backgroundColor: "rgba(255,100,100, 0)"
+    backgroundColor: "rgba(255,100,100, 0)",
   },
   crossTabCell1: {
-    backgroundColor: "rgba(255,100,100, 0.2)"
+    backgroundColor: "rgba(255,100,100, 0.2)",
   },
   crossTabCell2: {
-    backgroundColor: "rgba(255,100,100, 0.4)"
+    backgroundColor: "rgba(255,100,100, 0.4)",
   },
   crossTabCell3: {
-    backgroundColor: "rgba(255,100,100, 0.6)"
+    backgroundColor: "rgba(255,100,100, 0.6)",
   },
   crossTabCell4: {
-    backgroundColor: "rgba(255,100,100, 0.8)"
+    backgroundColor: "rgba(255,100,100, 0.8)",
   },
   crossTabCell5: {
-    backgroundColor: "rgba(255,100,100, 1)"
+    backgroundColor: "rgba(255,100,100, 1)",
   },
 
   previousButton: {
@@ -280,7 +285,7 @@ export const styles = {
     left: 20,
     bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
   },
 
   nextButton: {
@@ -288,7 +293,7 @@ export const styles = {
     right: 20,
     bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
   },
 
   navButton: {
@@ -298,36 +303,36 @@ export const styles = {
     fontSize: 24,
     border: "initial",
     padding: "10px 20px 10px 20px",
-    cursor: "pointer"
+    cursor: "pointer",
   },
 
   statement: {
-    fontSize: 36
+    fontSize: 36,
   },
 
   statementLabel: {
     color: labelColor,
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
   },
 
   statementFeature: {
     color: featureColor,
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
   },
 
   selectLabelText: {
-    color: labelColor
+    color: labelColor,
   },
 
   selectFeaturesText: {
-    color: featureColor
+    color: featureColor,
   },
 
   trainBot: {
     position: "relative",
-    width: "20%"
+    width: "20%",
   },
   trainBotHead: {
     transition: "transform 500ms",
@@ -335,28 +340,28 @@ export const styles = {
     width: "43%",
     top: "0%",
     position: "absolute",
-    direction: "ltr"
+    direction: "ltr",
   },
   trainBotOpen: {
     transform: "rotate(90deg)",
     transformOrigin: "bottom right",
-    direction: "ltr"
+    direction: "ltr",
   },
   trainBotBody: {
     width: "49%",
     marginTop: "30%",
-    direction: "ltr"
+    direction: "ltr",
   },
 
   cardRow: {
     marginTop: 5,
-    marginBottom: 5
+    marginBottom: 5,
   },
 
   regularButton: { width: "20%" },
 
   floatLeft: {
     float: "left",
-    margin: 20
-  }
+    margin: 20,
+  },
 };

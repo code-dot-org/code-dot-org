@@ -20,7 +20,12 @@ import {
   namedModel
 } from "./validate.js";
 
-import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
+import {
+  ColumnTypes,
+  MLTypes,
+  TestDataLocations,
+  ResultsGrades
+} from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
@@ -217,6 +222,7 @@ const initialState = {
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
+  accuracyCheckGrades: [],
   testData: {},
   prediction: {},
   modelSize: undefined,
@@ -720,8 +726,22 @@ export function getCompatibleTrainers(state) {
   return compatibleTrainers;
 }
 
+export function isRegression(state) {
+  const mlType = getMLType(state.selectedTrainer);
+  return mlType === MLTypes.REGRESSION;
+}
+
+export function getAccuracyGrades(state) {
+  const grades = isRegression(state)
+    ? getAccuracyRegression(state).grades
+    : getAccuracyClassification(state).grades;
+  return grades;
+}
+
 export function getAccuracyClassification(state) {
+  let accuracy = {};
   let numCorrect = 0;
+  let grades = [];
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
@@ -729,13 +749,22 @@ export function getAccuracyClassification(state) {
       state.accuracyCheckPredictedLabels[i].toString()
     ) {
       numCorrect++;
+      grades.push(ResultsGrades.CORRECT);
+    } else {
+      grades.push(ResultsGrades.INCORRECT);
     }
   }
-  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
+    2
+  );
+  accuracy.grades = grades;
+  return accuracy;
 }
 
 export function getAccuracyRegression(state) {
+  let accuracy = {};
   let numCorrect = 0;
+  let grades = [];
   const maxMin = getRange(state, state.labelColumn);
   const range = Math.abs(maxMin.max - maxMin.min);
   const errorTolerance = range * 0.03;
@@ -746,9 +775,16 @@ export function getAccuracyRegression(state) {
     );
     if (diff <= errorTolerance) {
       numCorrect++;
+      grades.push(ResultsGrades.CORRECT);
+    } else {
+      grades.push(ResultsGrades.INCORRECT);
     }
   }
-  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
+    2
+  );
+  accuracy.grades = grades;
+  return accuracy;
 }
 
 export function getSummaryStat(state) {
@@ -756,11 +792,11 @@ export function getSummaryStat(state) {
   const mlType = getMLType(state.selectedTrainer);
   if (mlType === MLTypes.REGRESSION) {
     summaryStat.type = MLTypes.REGRESSION;
-    summaryStat.stat = getAccuracyRegression(state);
+    summaryStat.stat = getAccuracyRegression(state).percentCorrect;
   }
   if (mlType === MLTypes.CLASSIFICATION) {
     summaryStat.type = MLTypes.CLASSIFICATION;
-    summaryStat.stat = getAccuracyClassification(state);
+    summaryStat.stat = getAccuracyClassification(state).percentCorrect;
   }
   return summaryStat;
 }
