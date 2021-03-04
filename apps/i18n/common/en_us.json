@@ -785,7 +785,7 @@
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "exampleSolution": "Example Solution {number}",
-  "explainTtsAutoplay": "For Chrome, Internet Explorer, and Edge browsers only: When Automatic Instruction Playback is on, the instructions will be automatically read when a student opens a level. This gives students still learning to read or with difficulty reading the opportunity to participate in the lessons.",
+  "explainTtsAutoplay": "For Chrome, Internet Explorer, and Edge browsers only: When Automatic Instruction Playback is on, the instructions will be automatically read when a student opens a level. This makes it easier for students who are not yet fluent readers to complete the lessons.",
   "explainLessonExtras": "When Lesson Extras is on, students will end each lesson with some bonus challenges and creative projects rather than being automatically advanced to the next lesson. This feature gives students the opportunity to expand their knowledge and further practice, without getting ahead of their classmates.",
   "explainLessonExtrasLearnMore": "Learn more about Lesson Extras.",
   "explainPairProgramming": "When pair programming is turned on, students can choose to work with a classmate at the same computer. Turn this setting on if you want students to be able to work together while sharing progress.",
