@@ -683,8 +683,9 @@ describe('teacherSectionsRedux', () => {
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
     });
 
-    // TODO: add this test when tts autoplay is enabled by default for pre-reader scripts
-    it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
+    it('switching script assignment to pre-reader course turns on autoplay if teacher is on Chrome', () => {
+      const userAgentStub = sinon.stub(navigator, 'userAgent').value('Chrome');
+
       let state = reducer(
         editingNewSectionState,
         setPreReaderScriptIds(preReaderScripts)
@@ -697,6 +698,29 @@ describe('teacherSectionsRedux', () => {
 
       state = reducer(state, editSectionProperties({scriptId: 208}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
+
+      userAgentStub.restore();
+    });
+
+    it('switching script assignment to pre-reader course does not turn on autoplay if teacher is not on Chrome, IE or Edge', () => {
+      const userAgentStub = sinon
+        .stub(navigator, 'userAgent')
+        .value('fake agent');
+
+      let state = reducer(
+        editingNewSectionState,
+        setPreReaderScriptIds(preReaderScripts)
+      );
+      state = reducer(state, editSectionProperties({scriptId: 2}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+
+      state = reducer(state, editSectionProperties({scriptId: 37}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+
+      state = reducer(state, editSectionProperties({scriptId: 208}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+
+      userAgentStub.restore();
     });
   });
 
