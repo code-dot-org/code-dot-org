@@ -5,7 +5,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
@@ -104,7 +104,10 @@ class StudentLessonOverview extends Component {
         {lesson.overview && (
           <div>
             <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
-            <SafeMarkdown markdown={lesson.overview} />
+            <EnhancedSafeMarkdown
+              markdown={lesson.overview}
+              expandableImages={true}
+            />
           </div>
         )}
         {lesson.vocabularies.length > 0 && (
