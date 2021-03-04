@@ -148,3 +148,8 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+        k5-onlinepd-2021:
+          lessons:
+            Events:
+              key: ఈవెంట్లు
+              name: ఈవెంట్లు
