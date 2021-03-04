@@ -21,7 +21,7 @@ import _ from 'lodash';
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
-export function loadScript(scriptId, sectionId) {
+export function loadScriptProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().sectionData.section;
 

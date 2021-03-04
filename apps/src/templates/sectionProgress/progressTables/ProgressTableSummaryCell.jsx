@@ -89,3 +89,7 @@ export default class ProgressTableSummaryCell extends React.Component {
     );
   }
 }
+
+export const unitTestExports = {
+  BorderedBox
+};
