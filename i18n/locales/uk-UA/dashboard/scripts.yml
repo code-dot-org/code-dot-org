@@ -4925,6 +4925,12 @@ uk:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+        csp10-2021:
+          lessons:
+            'Project: Innovation Simulation Part 6':
+              description_student: Огляд уроку
+            'Project: Innovation Simulation Part 7':
+              description_student: Огляд уроку
         coursea-2021:
           title: Курс А (2020)
           description_audience: 'Вік: 4-7'
@@ -5014,6 +5020,8 @@ uk:
             Artist Binary:
               key: 'Художник: двійкова система'
               name: 'Художник: двійкова система'
+            lesson-1:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
           lesson_groups:
             csf_sequencing:
               display_name: Послідовність дій
@@ -5026,6 +5034,8 @@ uk:
             csf_binary:
               display_name: Двійкова система
             csf_digcit:
+              display_name: Цифрове громадянство
+            lessonGroup-6:
               display_name: Цифрове громадянство
         coursee-2021:
           title: Курс Е (2020)
@@ -5057,6 +5067,8 @@ uk:
           lessons:
             Loops with the Artist:
               key: Петлі з художником
+            The Power of Words:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
             Envelope Variables:
               key: Конвертні змінні
               name: Конвертні змінні
@@ -5177,3 +5189,36 @@ uk:
               name: Урок 14
             lesson15:
               name: Урок 15
+        k5-onlinepd-2021:
+          title: Викладання основ інформатики
+          description_short: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі.
+          lessons:
+            Sequencing:
+              key: Послідовність дій
+              name: Послідовність дій
+            Loops:
+              key: Цикли
+              name: Цикли
+            Events:
+              key: Події
+              name: Події
+            Conditionals:
+              key: Умови
+              name: Умови
+            Functions:
+              key: Функції
+              name: Функції
+            Variables:
+              key: Змінні
+              name: Змінні
+            For Loops:
+              key: Цикли For
+              name: Цикли For
+            Next steps:
+              key: Наступні кроки
+              name: Наступні кроки
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Починаємо
+            k5_next_steps_1:
+              display_name: Наступні Кроки
