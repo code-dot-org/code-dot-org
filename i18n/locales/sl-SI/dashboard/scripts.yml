@@ -2110,6 +2110,8 @@ sl:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno državljanstvo
+            lessonGroup-6:
+              display_name: Digitalno državljanstvo
         coursee-2021:
           lessons:
             Conditionals:
@@ -2163,3 +2165,20 @@ sl:
               display_name: Uvod
             lessonGroup-3:
               display_name: Spremenljivke
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Zanke
+              name: Zanke
+            Events:
+              key: Dogodki
+              name: Dogodki
+            Conditionals:
+              key: Pogoji
+              name: Pogoji
+            Functions:
+              key: Funkcije
+              name: Funkcije
+            Variables:
+              key: Spremenljivke
+              name: Spremenljivke
