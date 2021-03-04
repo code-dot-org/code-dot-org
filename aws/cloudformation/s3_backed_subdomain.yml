@@ -55,11 +55,7 @@ Resources:
           - Effect: Allow
             Principal: '*'
             Action: 's3:GetObject'
-            Resource: !Join
-              - ''
-              - - 'arn:aws:s3:::'
-                - !Ref Bucket
-                - /*
+            Resource: !Sub 'arn:aws:s3:::${Bucket}/*'
 
   BucketBackedDistribution:
     Type: AWS::CloudFront::Distribution
@@ -70,20 +66,11 @@ Resources:
           # Use the Managed-CachingOptimized policy from
           # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
           CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
-          TargetOriginId: !Join
-              - '-'
-              - - 's3'
-                - !Ref BucketName
+          TargetOriginId: !Sub 's3-${BucketName}'
           ViewerProtocolPolicy: https-only
         Origins:
-          - DomainName: !Join
-              - '.'
-              - - !Ref BucketName
-                - 's3.amazonaws.com'
-            Id: !Join
-              - '-'
-              - - 's3'
-                - !Ref BucketName
+          - DomainName: !Sub '${BucketName}.s3.amazonaws.com'
+            Id: !Sub 's3-${BucketName}'
             S3OriginConfig:
               OriginAccessIdentity: ""
         ViewerCertificate:
@@ -97,14 +84,8 @@ Resources:
   SubdomainRecord:
     Type: AWS::Route53::RecordSet
     Properties:
-      HostedZoneName: !Join
-        - ''
-        - - !Ref Domain
-          - '.'
-      Name: !Join
-        - '.'
-        - - !Ref Subdomain
-          - !Ref Domain
+      HostedZoneName: !Sub '${Domain}.'
+      Name: !Sub '${Subdomain}.${Domain}'
       Type: A
       AliasTarget:
         DNSName: !GetAtt
