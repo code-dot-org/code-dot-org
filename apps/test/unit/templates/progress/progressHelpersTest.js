@@ -11,7 +11,7 @@ import {
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
-  progressForLesson,
+  lessonProgressForSection,
   isLevelAssessment,
   lessonIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
@@ -255,17 +255,33 @@ describe('progressHelpers', () => {
     });
   });
 
-  describe('progressForLesson', () => {
+  describe('lessonProgressForSection', () => {
     /**
      * Note: this function is only used by section progress tables, which have
      * been refactored to expect the `status` value to be in a sepaparate
      * `studentLevelProgressType` object rather than the `levelType` object.
      */
+    const STUDENT_ID = 11;
+    const LESSON_ID = 111;
+
+    // helper function to get lesson progress for a single student
+    const getStudentLessonProgress = (studentLevelProgress, levels) => {
+      const lesson = {id: LESSON_ID, levels: levels};
+      const sectionLevelProgress = {[STUDENT_ID]: studentLevelProgress};
+      const sectionLessonProgress = lessonProgressForSection(
+        sectionLevelProgress,
+        [lesson]
+      );
+      return sectionLessonProgress[STUDENT_ID][LESSON_ID];
+    };
 
     it('summarizes all untried levels', () => {
       const levels = fakeLevels(3);
       const studentProgress = fakeProgressForLevels(levels);
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.deepEqual(studentLessonProgress, {
         isStarted: false,
         incompletePercent: 100,
@@ -283,7 +299,10 @@ describe('progressHelpers', () => {
       studentProgress[2].status = LevelStatus.submitted;
       studentProgress[3].status = LevelStatus.readonly;
 
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.deepEqual(studentLessonProgress, {
         isStarted: true,
         incompletePercent: 0,
@@ -300,7 +319,10 @@ describe('progressHelpers', () => {
         levels,
         LevelStatus.attempted
       );
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.deepEqual(studentLessonProgress, {
         isStarted: true,
         incompletePercent: 100,
@@ -322,7 +344,10 @@ describe('progressHelpers', () => {
       studentProgress[6].status = LevelStatus.locked;
       studentProgress[7].status = 'other';
 
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.deepEqual(studentLessonProgress, {
         isStarted: true,
         incompletePercent: 50,
@@ -339,7 +364,10 @@ describe('progressHelpers', () => {
       studentProgress[1].status = LevelStatus.perfect;
       levels[0].bonus = true;
 
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.deepEqual(studentLessonProgress, {
         isStarted: false,
         incompletePercent: 100,
@@ -352,11 +380,14 @@ describe('progressHelpers', () => {
 
     it('returns null if all levels are bonus', () => {
       const levels = fakeLevels(2);
-      const studentProgress = fakeProgressForLevels(levels);
       levels[0].bonus = true;
       levels[1].bonus = true;
+      const studentProgress = fakeProgressForLevels(levels);
 
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.equal(studentLessonProgress, null);
     });
 
@@ -369,7 +400,10 @@ describe('progressHelpers', () => {
       studentProgress[1].timeSpent = 1;
       studentProgress[2].timeSpent = 2;
 
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.deepEqual(studentLessonProgress, {
         isStarted: true,
         incompletePercent: 100,
@@ -389,7 +423,10 @@ describe('progressHelpers', () => {
       studentProgress[1].lastTimestamp = 2;
       studentProgress[2].lastTimestamp = 1;
 
-      const studentLessonProgress = progressForLesson(studentProgress, levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
       assert.deepEqual(studentLessonProgress, {
         isStarted: true,
         incompletePercent: 100,
