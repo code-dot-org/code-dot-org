@@ -8,7 +8,7 @@ import {
   getSummaryStat,
   setResultsPhase
 } from "../redux";
-import { styles, MLTypes } from "../constants";
+import { styles } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import ResultsTable from "./ResultsTable";
@@ -45,7 +45,7 @@ class Results extends Component {
         <div style={styles.largeText}>Results</div>
 
         {this.props.resultsPhase === 0 && (
-          <div style={{...styles.trainBot, margin: '0 auto'}}>
+          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
             <img
               src={aiBotHead}
               style={{
@@ -81,29 +81,16 @@ class Results extends Component {
             </p>
           )}
           <div>
-            {this.props.summaryStat.type === MLTypes.REGRESSION &&
-              !isNaN(this.props.summaryStat.stat) && (
-                <div>
-                  <div>
-                    The average difference between expected and predicted labels
-                    is:
-                  </div>
-                  <div style={styles.contents}>
-                    {this.props.summaryStat.stat}
-                  </div>
+            {!isNaN(this.props.summaryStat.stat) && (
+              <div>
+                <div style={styles.mediumText}>
+                  The calculated accuracy of this model is:
                 </div>
-              )}
-            {this.props.summaryStat.type === MLTypes.CLASSIFICATION &&
-              !isNaN(this.props.summaryStat.stat) && (
-                <div>
-                  <div style={styles.mediumText}>
-                    The calculated accuracy of this model is:
-                  </div>
-                  <div style={styles.contents}>
-                    {this.props.summaryStat.stat}%
-                  </div>
+                <div style={styles.contents}>
+                  {this.props.summaryStat.stat}%
                 </div>
-              )}
+              </div>
+            )}
           </div>
         </div>
       </div>

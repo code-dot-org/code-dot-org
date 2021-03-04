@@ -9,6 +9,11 @@ export const MLTypes = {
   REGRESSION: "regression"
 };
 
+export const ResultsGrades = {
+  CORRECT: "correct",
+  INCORRECT: "incorrect"
+};
+
 export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
 
 export const TestDataLocations = {
