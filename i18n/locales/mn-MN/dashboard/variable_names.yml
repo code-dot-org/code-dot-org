@@ -1,0 +1,25 @@
+mn:
+  data:
+    variable_names:
+      actor: жүжигчин
+      cats: муур
+      color: өнгө
+      counter: тоологч
+      dogs: нохой
+      height: өндөр
+      honey: зөгийн бал
+      i: i
+      left: зүүн
+      length: урт
+      name: нэр
+      nectar: шүүс
+      points: цэгүүд
+      repeat: давтах
+      right: баруун
+      score: оноо
+      size: хэмжээ
+      speed: хурд
+      variable: хувьсагч
+      width: өргөн
+      wizard: шидтэн
+      x: x
