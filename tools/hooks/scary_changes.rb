@@ -87,6 +87,22 @@ class ScaryChangeDetector
     EOS
   end
 
+  def detect_migration_causing_db_performance_risk
+    changes = @all.grep(/^dashboard\/db\/migrate\//)
+    return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("add_index") || @changed_lines.include?("change_column"))
+
+    puts red <<-EOS
+
+        Looks like you are adding a column, changing a column or adding an index in this migration:
+        #{changes.join("\n")}
+        Making these types of changes on a large table (>10M rows) needs to be reviewed and
+        tested with the Infrastructure cabal to avoid negatively impacting production database performance.
+        The may cause MySQL to rebuild the entire table.
+        For more information see https://dev.mysql.com/doc/refman/5.7/en/innodb-online-ddl-operations.html#online-ddl-column-operations.
+
+    EOS
+  end
+
   def detect_missing_yarn_lock
     changed_package_json = @all.include? 'apps/package.json'
     changed_yarn_lock = @all.include? 'apps/yarn.lock'
