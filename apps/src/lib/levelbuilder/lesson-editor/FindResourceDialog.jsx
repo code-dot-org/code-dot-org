@@ -56,6 +56,12 @@ class FindResourceDialog extends Component {
             ))}
           </select>
         </label>
+        <p>
+          <strong>Note:</strong> Resource Links render as raw syntax (ie,{' '}
+          <code>[r resource-key]</code>) in the markdown preview here in the
+          editor, but will render as fully-realized links in the actual lesson
+          view.
+        </p>
         <DialogFooter rightAlign>
           <Button
             text={'Close and Add'}
