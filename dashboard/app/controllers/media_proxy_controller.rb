@@ -21,6 +21,8 @@ class MediaProxyController < ApplicationController
       'image/x-windows-bmp',
       'image/gif',
       'image/jpeg',
+      # image/jpg is not a valid content type but is used by some content providers, so we are supporting it.
+      'image/jpg',
       'image/png',
       'image/svg+xml',
       'audio/basic',
