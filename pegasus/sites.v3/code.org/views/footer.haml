@@ -2,7 +2,11 @@
   .content
     .left{:style=>"float:left; max-width: 80%;"}
       %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400;"}
-        !=I18n.t(:footer_privacy_policy)
+        - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
+        - if @privacy_updated
+          !=I18n.t(:footer_privacy_policy_updated)
+        - else
+          !=I18n.t(:footer_privacy_policy)
       .dim &nbsp; | &nbsp;
       %a.whitefooterlink{:href=>"/about"}
         !=I18n.t(:footer_about)
