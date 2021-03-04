@@ -1,0 +1,17 @@
+---
+ko:
+  data:
+    parameter_names:
+      actor: 캐릭터
+      color: 색깔
+      counter: counter
+      height: '높이:'
+      honey: 꿀
+      left: 왼쪽으로
+      length: length
+      min: 최소
+      points: 점수
+      size: 크기
+      speed: 스피드
+      theGuess: 추측
+      width: 너비
