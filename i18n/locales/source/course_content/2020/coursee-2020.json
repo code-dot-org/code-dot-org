@@ -1803,9 +1803,6 @@
     "function_definitions": {
       "my design": {
         "name": "my design"
-      },
-      "do something": {
-        "name": "do something"
       }
     }
   },
@@ -1822,9 +1819,6 @@
     "function_definitions": {
       "my design": {
         "name": "my design"
-      },
-      "do something": {
-        "name": "do something"
       }
     }
   },
@@ -1847,13 +1841,6 @@
     "sublevels": {
       "CourseE_Project_SpriteLab_2020": {
         "display_name": "Create a Sprite Lab project",
-        "block_categories": {
-          "World": "World",
-          "Sprites": "Sprites",
-          "Actions": "Actions",
-          "Events": "Events",
-          "Behaviors": "Behaviors"
-        },
         "behavior_names": {
           "wandering": "wandering",
           "moving east": "moving east",
