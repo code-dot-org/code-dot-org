@@ -109,9 +109,7 @@ const buildOptionNumberKey = (state, feature) => {
 
 const buildOptionNumberKeysByFeature = state => {
   let optionsMappedToNumbersByFeature = {};
-  const categoricalColumnsToConvert = getSelectedCategoricalColumns(
-    state
-  ).concat(state.labelColumn);
+  const categoricalColumnsToConvert = getSelectedCategoricalColumns(state);
   categoricalColumnsToConvert.forEach(
     feature =>
       (optionsMappedToNumbersByFeature[feature] = buildOptionNumberKey(
