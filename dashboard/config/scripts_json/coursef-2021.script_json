@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-02 19:48:40 UTC",
+    "serialized_at": "2021-03-03 19:16:33 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -61,21 +61,9 @@
       }
     },
     {
-      "key": "csf_digcit",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Digital Citizenship"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
       "key": "csf_variables",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Variables"
       },
@@ -87,7 +75,7 @@
     {
       "key": "csf_data",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Data"
       },
@@ -99,7 +87,7 @@
     {
       "key": "csf_for_loops",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "For Loops"
       },
@@ -111,7 +99,7 @@
     {
       "key": "csf_sprites",
       "user_facing": true,
-      "position": 7,
+      "position": 6,
       "properties": {
         "display_name": "Sprites"
       },
@@ -123,7 +111,7 @@
     {
       "key": "end_of_course_project",
       "user_facing": true,
-      "position": 8,
+      "position": 7,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -255,33 +243,12 @@
       }
     },
     {
-      "key": "The Power of Words",
-      "name": "The Power of Words To be Removed",
+      "key": "Envelope Variables",
+      "name": "Envelope Variables",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
-      "properties": {
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAs kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.",
-        "student_overview": "Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.",
-        "purpose": "Common Sense Education created this lesson to teach students what they should do when someone uses mean or hurtful language on the internet.",
-        "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Prepare a long string (or rope) and paper for class.",
-        "creative_commons_license": "Creative Commons BY-NC-ND",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "Envelope Variables",
-      "name": "Envelope Variables",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 8,
       "properties": {
         "overview": "Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.",
         "student_overview": "Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.",
@@ -299,10 +266,10 @@
     {
       "key": "Variables as Constant in Artist",
       "name": "Variables with Artist",
-      "absolute_position": 9,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.",
         "student_overview": "Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using **variables**.",
@@ -319,10 +286,10 @@
     {
       "key": "Variables that Change in Bee",
       "name": "Changing Variables with Bee",
-      "absolute_position": 10,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. ",
         "student_overview": "This bee loves **variables**!",
@@ -339,10 +306,10 @@
     {
       "key": "Variables that Change in Artist",
       "name": "Changing Variables with Artist",
-      "absolute_position": 11,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
         "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs.",
@@ -359,10 +326,10 @@
     {
       "key": "Simulating Experiments",
       "name": "Simulating Experiments",
-      "absolute_position": 12,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
         "overview": "By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.",
         "student_overview": "Run simulations on the computer and experiment by changing variables.",
@@ -379,10 +346,10 @@
     {
       "key": "AI for Oceans",
       "name": "AI For Oceans",
-      "absolute_position": 13,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "overview": "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n",
         "student_overview": "Tutorial Summary: First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
@@ -398,10 +365,10 @@
     {
       "key": "Internet",
       "name": "The Internet",
-      "absolute_position": 14,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "overview": "Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.",
         "student_overview": "Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.",
@@ -419,10 +386,10 @@
     {
       "key": "For Loop Fun",
       "name": "For Loop Fun",
-      "absolute_position": 15,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "overview": "We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. ",
         "student_overview": "You're going to have loads of fun learning about `for` loops!",
@@ -440,10 +407,10 @@
     {
       "key": "For Loops in Bee",
       "name": "For Loops with Bee",
-      "absolute_position": 16,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
         "overview": "Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
         "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!",
@@ -460,10 +427,10 @@
     {
       "key": "For Loops in Artist",
       "name": "For Loops with Artist",
-      "absolute_position": 17,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "overview": "In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.",
         "student_overview": "Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.",
@@ -480,10 +447,10 @@
     {
       "key": "Editing Behaviors",
       "name": "Behaviors in Sprite Lab",
-      "absolute_position": 18,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
         "overview": "Here, students will use Sprite Lab to create their own customized behaviors.",
         "student_overview": "Learn to program your own sprite behaviors!",
@@ -500,10 +467,10 @@
     {
       "key": "Virtual Pet",
       "name": "Virtual Pet with Sprite Lab",
-      "absolute_position": 19,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
@@ -520,10 +487,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 20,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 19,
       "properties": {
         "overview": "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates.",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
@@ -800,88 +767,6 @@
         "lesson_activity.key": "5b85f708-3324-4be8-9184-35ab0e2098fb",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "08eaa4b6-b1e7-4297-8e84-11de65aca4a4",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up: Same Word. Different Meaning.",
-        "duration": 5
-      },
-      "seeding_key": {
-        "lesson_activity.key": "08eaa4b6-b1e7-4297-8e84-11de65aca4a4",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "92d208e9-6adc-40cc-82c1-6cc90f7cffb5",
-      "position": 2,
-      "properties": {
-        "name": "Watch: The Power of Words",
-        "duration": 35
-      },
-      "seeding_key": {
-        "lesson_activity.key": "92d208e9-6adc-40cc-82c1-6cc90f7cffb5",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "57e6878b-214d-464a-84b8-79b91dcf3685",
-      "position": 3,
-      "properties": {
-        "name": "Investigate: What's the Problem?",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "57e6878b-214d-464a-84b8-79b91dcf3685",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "128b4c8e-8f8a-4e4f-a42e-6cf1cd63a7e0",
-      "position": 4,
-      "properties": {
-        "name": "Wrap Up: Crossing the Line",
-        "duration": 10
-      },
-      "seeding_key": {
-        "lesson_activity.key": "128b4c8e-8f8a-4e4f-a42e-6cf1cd63a7e0",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "817b12ea-6721-4b60-ad0f-558e5f064675",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "817b12ea-6721-4b60-ad0f-558e5f064675",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "03478f6d-3ec2-4eb9-b5f9-82787a5f75fe",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "03478f6d-3ec2-4eb9-b5f9-82787a5f75fe",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
         "script.name": "coursef-2021"
       }
     },
@@ -1372,6 +1257,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f6c99d2f-9ec7-4706-8a77-71513d31db13",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "22f02104-4519-48dd-aa08-c532f9e080c9",
+      "position": 7,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22f02104-4519-48dd-aa08-c532f9e080c9",
         "lesson.key": "For Loop Fun",
         "lesson_group.key": "csf_for_loops",
         "script.name": "coursef-2021"
@@ -2248,72 +2146,6 @@
       "seeding_key": {
         "activity_section.key": "a71a9085-b8a7-4028-8108-c16df08ead15",
         "lesson_activity.key": "5b85f708-3324-4be8-9184-35ab0e2098fb"
-      }
-    },
-    {
-      "key": "da72ce16-38f7-4889-b06b-3a67eabcb22d",
-      "position": 1,
-      "properties": {
-        "description": "* **empathy**: to imagine the feelings that someone else is experiencing\r\n* **interpret**: to understand something based on our point of view\r\n\r\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\r\n\r\n**Project** [Slide 4](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_1_0) and ask students: *Imagine when you walked in, I said to you* [in a friendly tone, with a big smile] *\"Hello!\" Which emoji would fit?*\r\n\r\nHave students show their answer by holding up fingers (1, 2, 3, or 4). If anyone holds up a number other than 1, ask them to share out why.\r\n\r\n**Repeat** this two more times, saying *Hello* differently each time: once with an angry tone and a scowl, and once with a nervous or scared tone.\r\n\r\n**Project** [Slide 5](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_2_13) and ask: *What about if you're just reading it? How does it make you feel now?*\r\n\r\nPoint out how when something is just in text, it can be even more difficult to interpret what someone means. Explain that their responses might be different depending on who they are because we all interpret the world a little differently. Clarify that interpret means *to understand something based on our point of view.* ([Slide 6](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_4))\r\n\r\n**Say**: *Because words can be interpreted differently by different people, it's important to think about the words we use and how they affect people. We might say something just to be funny, but someone might take it seriously, and it might hurt their feelings. This can happen in person, and it can also happen online. It may even happen more online, because the words are just text -- we're not actually face-to-face with other people.*",
-        "name": "Key Vocabulary\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "da72ce16-38f7-4889-b06b-3a67eabcb22d",
-        "lesson_activity.key": "08eaa4b6-b1e7-4297-8e84-11de65aca4a4"
-      }
-    },
-    {
-      "key": "b4bf1656-12bf-4181-b9a2-3d85ef2ea00f",
-      "position": 1,
-      "properties": {
-        "description": "**Ask**: *Who has heard of the saying \"Sticks and stones may break my bones, but words can never hurt me\"?*\r\n\r\nInvite students to respond. Answers will vary. Follow up by asking students if they think the saying is true.\r\n\r\n**Project** [Slide 7](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_117) and say: *We're going to watch a video now called \"The Power of Words.\" As we watch, continue to think about whether that statement is true or not.*\r\n\r\nShow the video [The Power of Words](https://www.commonsense.org/education/videos/the-power-of-words) and then call on students to share out what it says about whether the statement is true or not. Emphasize that sometimes it is hard to ignore what someone is saying when it's a mean name. Names CAN make you feel sad or hurt.\r\n\r\n**Ask**: *Why do you think those other players said those things to Guts?* ([Slide 8](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_0))\r\n\r\nInvite students to respond. Answers will vary, but possible reasons include *they were trying to joke around* or *they feel badly themselves and are taking it out on someone*.\r\n\r\n**Ask**: *What does Guts do in response to the mean words?*\r\n\r\nInvite students to respond and clarify that Guts talked to someone he trusted, who was able to empathize with him and give him some good advice. Define empathy as *imagining the feelings that someone else is experiencing*. ([Slide 9](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_109))\r\n\r\n**Project** [Slide 10](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_157) and review the acronym S-T-O-P for responding to mean words online."
-      },
-      "seeding_key": {
-        "activity_section.key": "b4bf1656-12bf-4181-b9a2-3d85ef2ea00f",
-        "lesson_activity.key": "92d208e9-6adc-40cc-82c1-6cc90f7cffb5"
-      }
-    },
-    {
-      "key": "1537cdc9-3376-4cdc-abb3-1149651d8f63",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute** the [Words Can Hurt Student Handout](https://drive.google.com/open?id=1G7urBAgM9G3D4zI4KVRgN-yX-Q4qAyb_HWEHsnREl3M) and read the directions aloud. Allow pairs five minutes to complete the activity.\r\n\r\n**Invite** pairs to share their answers. Refer to the [Teacher Version](https://drive.google.com/open?id=1kAcaaYor5vegqj2cncK5FOgFOeg2PtKUXWw-muodELE) for possible responses."
-      },
-      "seeding_key": {
-        "activity_section.key": "1537cdc9-3376-4cdc-abb3-1149651d8f63",
-        "lesson_activity.key": "57e6878b-214d-464a-84b8-79b91dcf3685"
-      }
-    },
-    {
-      "key": "2d041abf-782e-4a02-b1fb-4af1ebc2001a",
-      "position": 1,
-      "properties": {
-        "description": "**Place** a string across the length of the classroom. Mark one half of the room \"OK.\" Mark the other half \"Not OK.\" Have students all stand on the OK side of the line.\r\n\r\n**Project** [Slide 11](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_106) and read the directions aloud.\r\n\r\n**Have** students read the statements on [Slides 12-15](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_14). After each statement, allow time for students to move or stay. Call on students to explain their thinking. If possible, choose students from each side to debate reasons why the statement is or isn't okay.\r\n\r\nFor the examples where students say it's Not OK, follow-up by asking them what they could do if they received that message from someone.\r\n\r\n**Review** that kids like to go online to chat, watch videos, send messages, play games, and do homework. Sometimes people say mean or scary things. Messages that make people feel bad cross the line.\r\n\r\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy)."
-      },
-      "seeding_key": {
-        "activity_section.key": "2d041abf-782e-4a02-b1fb-4af1ebc2001a",
-        "lesson_activity.key": "128b4c8e-8f8a-4e4f-a42e-6cf1cd63a7e0"
-      }
-    },
-    {
-      "key": "4fa937e0-743e-403b-b043-7903cdbc8f80",
-      "position": 1,
-      "properties": {
-        "description": "Here are additional resources you can provide students to enhance their learning:\r\n\r\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw) \r\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\r\n* **Prepare** slips of paper with comments that say mildly unkind things, like:\r\n\r\n    * I can't believe you like superhero shows. Only first-graders do.\r\n    * You are weird.\r\n    * Why are you wearing THAT shirt?\r\n\r\n    <br>\r\n\r\n    Pass out one slip to each student and pair them up. Have students trade slips and read them silently. Then have them trade back and take turns saying the comment aloud to the other person. Ask them what the difference was between writing something not-so-nice and being accountable for what they were saying to someone's face. Emphasize that people sometimes hide behind the anonymity of their online activity. Remind students that if they wouldn't say something to another person's face, it's not OK to say it in their online activities."
-      },
-      "seeding_key": {
-        "activity_section.key": "4fa937e0-743e-403b-b043-7903cdbc8f80",
-        "lesson_activity.key": "817b12ea-6721-4b60-ad0f-558e5f064675"
-      }
-    },
-    {
-      "key": "ab55abdb-0510-46c5-96b2-401a2ab2f664",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ab55abdb-0510-46c5-96b2-401a2ab2f664",
-        "lesson_activity.key": "03478f6d-3ec2-4eb9-b5f9-82787a5f75fe"
       }
     },
     {
@@ -3333,6 +3165,17 @@
       }
     },
     {
+      "key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
+      "position": 1,
+      "properties": {
+        "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n*Standards Addressed:*\n- **MD** - Measurement And Data\n\n - **2.MD.10:** - Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put- together, take-apart, and compare problems4 using information presented in a bar graph."
+      },
+      "seeding_key": {
+        "activity_section.key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
+        "lesson_activity.key": "22f02104-4519-48dd-aa08-c532f9e080c9"
+      }
+    },
+    {
       "key": "2e172722-51c4-49c9-8a05-4447b2627ab3",
       "position": 1,
       "properties": {
@@ -3989,7 +3832,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4015,7 +3858,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4041,7 +3884,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4067,7 +3910,7 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4093,7 +3936,7 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4119,7 +3962,7 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4145,7 +3988,7 @@
       "chapter": 7,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4171,7 +4014,7 @@
       "chapter": 8,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4197,7 +4040,7 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4223,7 +4066,7 @@
       "chapter": 10,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4249,7 +4092,7 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": 11,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4275,7 +4118,7 @@
       "chapter": 12,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4301,7 +4144,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introducing Sprite Lab",
         "level_keys": [
@@ -4327,7 +4170,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4353,7 +4196,7 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4379,7 +4222,7 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4405,7 +4248,7 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4431,7 +4274,7 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "How to Make a Sprite",
         "level_keys": [
@@ -4457,7 +4300,7 @@
       "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -4483,7 +4326,7 @@
       "chapter": 20,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -4509,7 +4352,7 @@
       "chapter": 21,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4535,7 +4378,7 @@
       "chapter": 22,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4561,7 +4404,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4587,7 +4430,7 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video-Sprites in Action",
         "level_keys": [
@@ -4613,7 +4456,7 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4639,7 +4482,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4665,7 +4508,7 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4691,7 +4534,7 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4717,7 +4560,7 @@
       "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -4743,7 +4586,7 @@
       "chapter": 30,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -4769,7 +4612,7 @@
       "chapter": 31,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -4795,7 +4638,7 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Artist Intro with JR Hildebrande",
         "level_keys": [
@@ -4821,7 +4664,7 @@
       "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4847,7 +4690,7 @@
       "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4873,7 +4716,7 @@
       "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Loops with the Artist",
         "level_keys": [
@@ -4899,7 +4742,7 @@
       "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4925,7 +4768,7 @@
       "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4951,7 +4794,7 @@
       "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4978,7 +4821,7 @@
       "chapter": 39,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5005,7 +4848,7 @@
       "chapter": 40,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5031,7 +4874,7 @@
       "chapter": 41,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5057,7 +4900,7 @@
       "chapter": 42,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5084,7 +4927,7 @@
       "chapter": 43,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5110,7 +4953,7 @@
       "chapter": 44,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5136,7 +4979,7 @@
       "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5162,7 +5005,7 @@
       "chapter": 46,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5188,7 +5031,7 @@
       "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Nested Loops with the Bee",
         "level_keys": [
@@ -5214,7 +5057,7 @@
       "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5240,7 +5083,7 @@
       "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5266,7 +5109,7 @@
       "chapter": 50,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5292,7 +5135,7 @@
       "chapter": 51,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5318,7 +5161,7 @@
       "chapter": 52,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5344,7 +5187,7 @@
       "chapter": 53,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5370,7 +5213,7 @@
       "chapter": 54,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5397,7 +5240,7 @@
       "chapter": 55,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5423,7 +5266,7 @@
       "chapter": 56,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5449,7 +5292,7 @@
       "chapter": 57,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5475,7 +5318,7 @@
       "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Designing for Accessibility - Unplugged Activity",
         "level_keys": [
@@ -5483,7 +5326,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2021"
@@ -5501,37 +5344,12 @@
       "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "PowerOfWords-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PowerOfWords-Unplugged_2021"
-        ],
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021",
-        "activity_section.key": "ab55abdb-0510-46c5-96b2-401a2ab2f664"
-      },
-      "level_keys": [
-        "PowerOfWords-Unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 60,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
+        "progression": "Envelope Variables - Unplugged Activity",
         "level_keys": [
           "EnvelopeVariables-Unplugged_2021"
-        ],
-        "progression": "Envelope Variables - Unplugged Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5549,10 +5367,10 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5575,10 +5393,10 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5601,10 +5419,10 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Artist: Variables Video",
         "level_keys": [
@@ -5627,10 +5445,10 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5653,10 +5471,10 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5679,10 +5497,10 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5705,10 +5523,10 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5731,10 +5549,10 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5757,10 +5575,10 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5783,10 +5601,10 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5809,10 +5627,10 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5835,10 +5653,10 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5861,10 +5679,10 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5887,10 +5705,10 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5913,10 +5731,10 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5940,10 +5758,10 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5966,10 +5784,10 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5992,10 +5810,10 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6018,10 +5836,10 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6044,10 +5862,10 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6070,10 +5888,10 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6096,10 +5914,10 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6122,10 +5940,10 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6148,7 +5966,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6174,7 +5992,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6200,7 +6018,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6225,10 +6043,10 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Machine_Learning_2021"
@@ -6250,10 +6068,10 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_FishVTrash_2021"
@@ -6275,10 +6093,10 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrashDemo_2021"
@@ -6300,10 +6118,10 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrash_2021"
@@ -6325,10 +6143,10 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Training_Data_2021"
@@ -6350,10 +6168,10 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Short_2021"
@@ -6375,10 +6193,10 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Societal_Implications_2021"
@@ -6400,10 +6218,10 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Long_2021"
@@ -6425,7 +6243,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6451,10 +6269,10 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loop Fun - Unplugged Activity",
         "level_keys": [
@@ -6477,7 +6295,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6503,7 +6321,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6529,7 +6347,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6555,7 +6373,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -6581,7 +6399,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6607,7 +6425,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -6633,7 +6451,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 3,
       "assessment": null,
@@ -6659,7 +6477,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 4,
       "assessment": null,
@@ -6685,7 +6503,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 5,
       "assessment": null,
@@ -6711,7 +6529,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 6,
       "assessment": null,
@@ -6737,7 +6555,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 106,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -6764,7 +6582,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 107,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6790,7 +6608,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 108,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6816,7 +6634,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 109,
       "position": 14,
       "activity_section_position": 2,
       "assessment": null,
@@ -6842,7 +6660,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6868,7 +6686,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6894,7 +6712,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6920,7 +6738,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 113,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -6946,7 +6764,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 114,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -6972,7 +6790,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 115,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -6998,7 +6816,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 116,
       "position": 7,
       "activity_section_position": 5,
       "assessment": null,
@@ -7024,7 +6842,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 117,
       "position": 8,
       "activity_section_position": 6,
       "assessment": null,
@@ -7050,7 +6868,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 118,
       "position": 9,
       "activity_section_position": 7,
       "assessment": null,
@@ -7076,7 +6894,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 119,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -7102,7 +6920,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 120,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -7128,7 +6946,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 121,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -7154,7 +6972,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 122,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -7180,7 +6998,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 123,
       "position": 14,
       "activity_section_position": 2,
       "assessment": null,
@@ -7206,7 +7024,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7232,7 +7050,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 125,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7258,7 +7076,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 126,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -7284,7 +7102,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 127,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -7310,7 +7128,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 128,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -7336,7 +7154,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 129,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -7362,7 +7180,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 130,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -7388,7 +7206,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 131,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -7413,7 +7231,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 132,
       "position": 9,
       "activity_section_position": 2,
       "assessment": null,
@@ -7438,7 +7256,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7464,7 +7282,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7490,7 +7308,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -7516,7 +7334,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -7542,7 +7360,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -7568,7 +7386,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 138,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -7594,7 +7412,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 139,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -7620,7 +7438,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 140,
       "position": 8,
       "activity_section_position": 7,
       "assessment": null,
@@ -7646,10 +7464,10 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 141,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Example projects",
         "level_keys": [
@@ -7672,10 +7490,10 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 142,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -8393,18 +8211,6 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021",
         "activity_section.key": "915a19f9-e3fd-4869-b1a2-ddbfa5029c23"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PowerOfWords-Unplugged_2021",
-        "script_level.level_keys": [
-          "PowerOfWords-Unplugged_2021"
-        ],
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021",
-        "activity_section.key": "ab55abdb-0510-46c5-96b2-401a2ab2f664"
       }
     },
     {
@@ -9454,68 +9260,6 @@
       }
     },
     {
-      "name": "The Power of Words: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so",
-      "key": "the-power-of-words-lesson-slides",
-      "properties": {
-        "type": "Slide Deck",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-lesson-slides"
-      }
-    },
-    {
-      "name": "The Power of Words: The Power of Words",
-      "url": "https://www.commonsense.org/education/videos/the-power-of-words",
-      "key": "the-power-of-words-the-power-of-words",
-      "properties": {
-        "type": "Lesson Video",
-        "audience": "Teacher",
-        "download_url": "https://www.commonsense.org/education/video-download/4141366"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-the-power-of-words"
-      }
-    },
-    {
-      "name": "The Power of Words: Words Can Hurt",
-      "url": "https://drive.google.com/open?id=1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw",
-      "key": "the-power-of-words-words-can-hurt",
-      "properties": {
-        "type": "Student Handout",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-words-can-hurt"
-      }
-    },
-    {
-      "name": "The Power of Words: Lesson Quiz",
-      "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
-      "key": "the-power-of-words-lesson-quiz",
-      "properties": {
-        "type": "Form",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-lesson-quiz"
-      }
-    },
-    {
-      "name": "The Power of Words: Lesson Quiz Answer Key",
-      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/grade-3-the-power-of-words-lesson-quiz-answers",
-      "key": "the-power-of-words-lesson-quiz-answer-key",
-      "properties": {
-        "type": "Website",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-lesson-quiz-answer-key"
-      }
-    },
-    {
       "name": "Variables in Envelopes",
       "url": "https://youtu.be/DI7DprN4FtE",
       "key": "unplugged-video-envelope-variables",
@@ -9879,36 +9623,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "types_of_disabilities"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-lesson-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-the-power-of-words"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-words-can-hurt"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-lesson-quiz"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-lesson-quiz-answer-key"
       }
     },
     {
@@ -10651,36 +10365,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "87370389-db79-4ed7-85b6-d1c80715ef7f"
-      }
-    },
-    {
-      "key": "97b5d61f-a36f-4766-a314-50bb7a7dc4b7",
-      "properties": {
-        "description": "Understand that it's important to think about the words we use, because everyone interprets things differently."
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "objective.key": "97b5d61f-a36f-4766-a314-50bb7a7dc4b7"
-      }
-    },
-    {
-      "key": "42ddea47-40d2-4d03-8b1e-29bdafa03199",
-      "properties": {
-        "description": "Identify ways to respond to mean words online, using S-T-O-P."
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "objective.key": "42ddea47-40d2-4d03-8b1e-29bdafa03199"
-      }
-    },
-    {
-      "key": "8abf0ea0-c230-4bfb-85d4-c58396e56831",
-      "properties": {
-        "description": "Decide what kinds of statements are OK to say online and which are not."
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "objective.key": "8abf0ea0-c230-4bfb-85d4-c58396e56831"
       }
     },
     {

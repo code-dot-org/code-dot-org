@@ -16307,6 +16307,7 @@ en:
               description_student: ''
               description_teacher: ''
           student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+          name: csd4-2020
         csd5-2020:
           title: CSD Unit 5 - Data and Society ('20-'21)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -18875,6 +18876,18 @@ en:
               name: Modifying Your model
             telling a data story:
               name: Telling a Data Story
+            how things spread gp:
+              name: How Things Spread  - Guided Practice
+            contagion simulator gp:
+              name: Contagion Simulator - Guided Practice
+            sometimes not always gp:
+              name: Sometimes, Not Always - Practice
+            modifying your simulator gp:
+              name: Modifying Your Simulator - Guided Practice
+            collecting data gp:
+              name: Collecting Data Guided Practice
+            Haiku Bot:
+              name: Haiku Bot
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18890,6 +18903,10 @@ en:
               display_name: Loom Levels
             contagion:
               display_name: Contagion
+            lesson group:
+              display_name: Contagion-Guided-Practice
+            haiku bot:
+              display_name: Haiku Bot
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -20953,7 +20970,7 @@ en:
               description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             The Power of Words:
               key: The Power of Words
-              name: The Power of Words To be Removed
+              name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: |2-
                  [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
@@ -21590,11 +21607,25 @@ en:
               name: Modifying Your model
             telling a data story:
               name: Telling a Data Story
+            how things spread gp:
+              name: How Things Spread  - Guided Practice
+            contagion simulator gp:
+              name: Contagion Simulator - Guided Practice
+            sometimes not always gp:
+              name: Sometimes, Not Always - Practice
+            modifying your simulator gp:
+              name: Modifying Your Simulator - Guided Practice
+            collecting data gp:
+              name: Collecting Data Guided Practice
+            Haiku Bot:
+              name: Haiku Bot
           lesson_groups:
             lesson group:
-              display_name: lesson group display name
+              display_name: Contagion-Guided-Practice
             contagion:
               display_name: Contagion
+            haiku bot:
+              display_name: Haiku Bot
           name: contagion-pilot
           title: 'Contagion Simulator '
           description_audience: Grade 5

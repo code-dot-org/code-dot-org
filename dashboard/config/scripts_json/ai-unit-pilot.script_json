@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-02 19:30:52 UTC",
+    "serialized_at": "2021-03-03 16:42:17 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -732,23 +732,23 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Which Pixar Character Are You?",
+        "progression": "What is your Ideal Vacation?",
         "level_keys": [
-          "ml-models in applab-example app"
+          "ml-models in applab-vacation example"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-example app"
+          "ml-models in applab-vacation example"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       },
       "level_keys": [
-        "ml-models in applab-example app"
+        "ml-models in applab-vacation example"
       ]
     },
     {
@@ -1545,9 +1545,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-example app",
+        "level.key": "ml-models in applab-vacation example",
         "script_level.level_keys": [
-          "ml-models in applab-example app"
+          "ml-models in applab-vacation example"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",

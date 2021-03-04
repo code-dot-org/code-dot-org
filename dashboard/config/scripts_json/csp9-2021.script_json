@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-02 16:41:13 UTC",
+    "serialized_at": "2021-03-03 17:23:26 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -995,7 +995,7 @@
       "key": "1647b824-48c7-4f01-8a38-30287439d4cb",
       "position": 5,
       "properties": {
-        "description": "[slide] **Display:** Show the slide explaining why some bar charts are not useful.\n\n[slide] **Discuss:** *In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20. *\n\n* Which of these makes it easier to understand the data? \n* What do you think the \"histogram\" is doing to visualize the data differently?",
+        "description": "[slide] **Display:** Show the slide explaining why some bar charts are not useful.\n\n[slide] **Discuss:** *In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.*\n\n* Which of these makes it easier to understand the data? \n* What do you think the \"histogram\" is doing to visualize the data differently?",
         "name": "Reading a Histogram\r"
       },
       "seeding_key": {
