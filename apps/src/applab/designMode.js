@@ -1043,6 +1043,13 @@ designMode.onInsertEvent = function(code) {
   Applab.scrollToEnd();
 };
 
+designMode.onInsertAICode = function(code) {
+  Applab.appendToEditor(code);
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.DESIGN));
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
+  Applab.scrollToEnd();
+};
+
 /**/
 designMode.serializeToLevelHtml = function() {
   var designModeViz = $('#designModeViz');
