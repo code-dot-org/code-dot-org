@@ -34,7 +34,8 @@ class LevelDetailsDialog extends Component {
     scriptLevel: PropTypes.object.isRequired,
     handleClose: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isCSF: PropTypes.bool.isRequired
+    isCSF: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -99,7 +100,7 @@ class LevelDetailsDialog extends Component {
           noVisualization={true}
           isMinecraft={false}
           isBlockly={false}
-          isRtl={false}
+          isRtl={this.props.isRtl}
           longInstructions={level.longInstructions || level.long_instructions}
           shortInstructions={level.shortInstructions}
           noInstructionsWhenCollapsed={true}
@@ -234,5 +235,6 @@ class LevelDetailsDialog extends Component {
 export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
 
 export default connect(state => ({
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  isRtl: state.isRtl
 }))(LevelDetailsDialog);
