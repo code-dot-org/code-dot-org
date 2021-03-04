@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {loadScript} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import {loadScriptProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import * as redux from '@cdo/apps/redux';
@@ -240,7 +240,7 @@ describe('sectionProgressLoader.loadScript', () => {
         };
       }
     });
-    expect(loadScript(0)).to.be.undefined;
+    expect(loadScriptProgress(0)).to.be.undefined;
     expect(startLoadingProgressStub).to.have.not.been.called;
     expect(startRefreshingProgressStub).to.have.not.been.called;
   });
@@ -292,7 +292,7 @@ describe('sectionProgressLoader.loadScript', () => {
         })
       });
 
-      loadScript(0, 0);
+      loadScriptProgress(0, 0);
       expect(startLoadingProgressStub).to.have.not.been.called;
       expect(startRefreshingProgressStub).to.have.been.calledOnce;
       expect(addDataByScriptStub).to.have.been.calledOnce;
@@ -337,7 +337,7 @@ describe('sectionProgressLoader.loadScript', () => {
           then: sinon.stub().callsArgWith(0, secondServerProgressResponse)
         })
       });
-      loadScript(123, 0);
+      loadScriptProgress(123, 0);
       expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
     });
@@ -371,7 +371,7 @@ describe('sectionProgressLoader.loadScript', () => {
           })
         });
 
-        loadScript(0, 0);
+        loadScriptProgress(0, 0);
         expect(startLoadingProgressStub).to.have.been.calledOnce;
         expect(startRefreshingProgressStub).to.have.not.been.called;
         expect(addDataByScriptStub).to.have.been.calledOnce;
@@ -414,7 +414,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, {})
           })
         });
-        loadScript(0, 0);
+        loadScriptProgress(0, 0);
         expect(addDataByScriptStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -432,7 +432,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, serverProgressResponse)
           })
         });
-        loadScript(123, 0);
+        loadScriptProgress(123, 0);
         expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });

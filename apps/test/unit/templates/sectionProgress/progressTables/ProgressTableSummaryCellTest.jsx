@@ -1,7 +1,9 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
+import ProgressTableSummaryCell, {
+  unitTestExports
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import color from '@cdo/apps/util/color';
 import sinon from 'sinon';
 import _ from 'lodash';
@@ -22,12 +24,8 @@ const DEFAULT_PROPS = {
 
 const setUp = (overrideProps = {}) => {
   const props = _.merge(_.cloneDeep(DEFAULT_PROPS), overrideProps);
-  return (
-    mount(<ProgressTableSummaryCell {...props} />)
-      // <BorderedBox>
-      .childAt(0)
-      // styled <div>
-      .childAt(0)
+  return mount(<ProgressTableSummaryCell {...props} />).find(
+    unitTestExports.BorderedBox
   );
 };
 
@@ -38,8 +36,7 @@ const getStyle = (wrapper, styleName) => {
 describe('ProgressTableSummaryCell', () => {
   it('displays as not started when missing progress data', () => {
     const wrapper = setUp({studentLessonProgress: null});
-    const borderColor = getStyle(wrapper, 'borderColor');
-    expect(borderColor).to.equal(color.light_gray);
+    expect(wrapper.props().borderColor).to.equal(color.light_gray);
   });
 
   it('calls onSelectDetailView when clicked', () => {
@@ -52,22 +49,19 @@ describe('ProgressTableSummaryCell', () => {
   it('displays border as color.light_gray when a lesson has not been started', () => {
     const studentLessonProgress = {isStarted: false};
     const wrapper = setUp({studentLessonProgress});
-    const borderColor = getStyle(wrapper, 'borderColor');
-    expect(borderColor).to.equal(color.light_gray);
+    expect(wrapper.props().borderColor).to.equal(color.light_gray);
   });
 
   it('displays border as color.level_perfect when a lesson has been started and not isAssessmentLesson', () => {
     const studentLessonProgress = {isStarted: true};
     const wrapper = setUp({isAssessmentLesson: false, studentLessonProgress});
-    const borderColor = getStyle(wrapper, 'borderColor');
-    expect(borderColor).to.equal(color.level_perfect);
+    expect(wrapper.props().borderColor).to.equal(color.level_perfect);
   });
 
   it('displays border as color.level_submitted when a lesson has been started and is isAssessmentLesson', () => {
     const studentLessonProgress = {isStarted: true};
     const wrapper = setUp({isAssessmentLesson: true, studentLessonProgress});
-    const borderColor = getStyle(wrapper, 'borderColor');
-    expect(borderColor).to.equal(color.level_submitted);
+    expect(wrapper.props().borderColor).to.equal(color.level_submitted);
   });
 
   it('displays incomplete portion as a percent in color.level_not_tried', () => {
@@ -78,7 +72,7 @@ describe('ProgressTableSummaryCell', () => {
       incompletePercent: 75
     };
     const wrapper = setUp({studentLessonProgress});
-    const incompletePortion = wrapper.childAt(0);
+    const incompletePortion = wrapper.childAt(0).childAt(0);
 
     const backgroundColor = getStyle(incompletePortion, 'backgroundColor');
     expect(backgroundColor).to.equal(color.level_not_tried);
@@ -95,7 +89,7 @@ describe('ProgressTableSummaryCell', () => {
       incompletePercent: 50
     };
     const wrapper = setUp({studentLessonProgress});
-    const imperfectPortion = wrapper.childAt(1);
+    const imperfectPortion = wrapper.childAt(0).childAt(1);
 
     const backgroundColor = getStyle(imperfectPortion, 'backgroundColor');
     expect(backgroundColor).to.equal(color.level_passed);
@@ -112,7 +106,7 @@ describe('ProgressTableSummaryCell', () => {
       incompletePercent: 50
     };
     const wrapper = setUp({isAssessmentLesson: true, studentLessonProgress});
-    const completedPortion = wrapper.childAt(2);
+    const completedPortion = wrapper.childAt(0).childAt(2);
 
     const backgroundColor = getStyle(completedPortion, 'backgroundColor');
     expect(backgroundColor).to.equal(color.level_submitted);
@@ -129,7 +123,7 @@ describe('ProgressTableSummaryCell', () => {
       incompletePercent: 50
     };
     const wrapper = setUp({isAssessmentLesson: false, studentLessonProgress});
-    const completedPortion = wrapper.childAt(2);
+    const completedPortion = wrapper.childAt(0).childAt(2);
 
     const backgroundColor = getStyle(completedPortion, 'backgroundColor');
     expect(backgroundColor).to.equal(color.level_perfect);

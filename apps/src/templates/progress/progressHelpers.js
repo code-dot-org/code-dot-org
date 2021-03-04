@@ -148,41 +148,34 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     LevelStatus.readonly
   ];
 
-  const aggregates = {
-    attempted: 0,
-    imperfect: 0,
-    completed: 0,
-    timeSpent: 0,
-    lastTimestamp: 0
-  };
+  let attempted = 0;
+  let imperfect = 0;
+  let completed = 0;
+  let timeSpent = 0;
+  let lastTimestamp = 0;
 
   filteredLevels.forEach(level => {
     const levelProgress = studentLevelProgress[level.id];
     if (levelProgress) {
-      aggregates.attempted += levelProgress.status === LevelStatus.attempted;
-      aggregates.imperfect += levelProgress.status === LevelStatus.passed;
-      aggregates.completed += completedStatuses.includes(levelProgress.status);
-      aggregates.timeSpent += levelProgress.timeSpent;
-      aggregates.lastTimestamp = Math.max(
-        aggregates.lastTimestamp,
-        levelProgress.lastTimestamp
-      );
+      attempted += levelProgress.status === LevelStatus.attempted;
+      imperfect += levelProgress.status === LevelStatus.passed;
+      completed += completedStatuses.includes(levelProgress.status);
+      timeSpent += levelProgress.timeSpent;
+      lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp);
     }
   });
 
-  const incomplete =
-    filteredLevels.length - aggregates.completed - aggregates.imperfect;
-  const isLessonStarted =
-    aggregates.attempted + aggregates.imperfect + aggregates.completed > 0;
+  const incomplete = filteredLevels.length - completed - imperfect;
+  const isLessonStarted = attempted + imperfect + completed > 0;
 
   const getPercent = count => (100 * count) / filteredLevels.length;
   return {
     isStarted: isLessonStarted,
     incompletePercent: getPercent(incomplete),
-    imperfectPercent: getPercent(aggregates.imperfect),
-    completedPercent: getPercent(aggregates.completed),
-    timeSpent: aggregates.timeSpent,
-    lastTimestamp: aggregates.lastTimestamp
+    imperfectPercent: getPercent(imperfect),
+    completedPercent: getPercent(completed),
+    timeSpent: timeSpent,
+    lastTimestamp: lastTimestamp
   };
 }
 
@@ -196,19 +189,25 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
  * An object containing lesson progress data for each student in a section
  */
 export function lessonProgressForSection(sectionLevelProgress, lessons) {
-  const studentLessonProgress = {};
+  // create empty "dictionary" to store lesson progress for each student
+  const sectionLessonProgress = {};
   Object.entries(sectionLevelProgress).forEach(
+    // key: studentId, value: "dictionary" of level progress for that student
     ([studentId, studentLevelProgress]) => {
-      studentLessonProgress[studentId] = {};
+      // create empty "dictionary" to store per-lesson progress for student
+      const studentLessonProgress = {};
+      // for each lesson, summarize student's progress based on level progress
       lessons.forEach(lesson => {
-        studentLessonProgress[studentId][lesson.id] = lessonProgressForStudent(
+        studentLessonProgress[lesson.id] = lessonProgressForStudent(
           studentLevelProgress,
           lesson.levels
         );
       });
+      // add student progress to section progress
+      sectionLessonProgress[studentId] = studentLessonProgress;
     }
   );
-  return studentLessonProgress;
+  return sectionLessonProgress;
 }
 
 /**
