@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import {levelType} from './progressTypes';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
+import i18n from '@cdo/locale';
 
 const styles = {
   table: {
@@ -64,21 +65,36 @@ class ProgressLevelSet extends React.Component {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    onBubbleClick: PropTypes.func
   };
 
   render() {
-    const {name, levels, disabled, selectedSectionId} = this.props;
+    const {
+      name,
+      levels,
+      disabled,
+      selectedSectionId,
+      onBubbleClick
+    } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
 
-    let pillText;
+    let pillText, icon;
+    let progressStyle = false;
     if (levels[0].isUnplugged || levels[levels.length - 1].isUnplugged) {
       // We explicitly don't want any text in this case
-      pillText = '';
+      if (multiLevelStep) {
+        pillText = '';
+        icon = getIconForLevel(levels[0]);
+      } else {
+        pillText = i18n.unpluggedActivity();
+        progressStyle = true;
+      }
     } else {
       pillText = levels[0].levelNumber.toString();
+      icon = getIconForLevel(levels[0]);
       if (multiLevelStep) {
         pillText += `-${levels[levels.length - 1].levelNumber}`;
       }
@@ -91,10 +107,12 @@ class ProgressLevelSet extends React.Component {
             <td style={styles.col1}>
               <ProgressPill
                 levels={levels}
-                icon={getIconForLevel(levels[0])}
+                icon={icon}
                 text={pillText}
                 disabled={disabled}
                 selectedSectionId={selectedSectionId}
+                progressStyle={progressStyle}
+                onSingleLevelClick={onBubbleClick}
               />
             </td>
             <td style={styles.col2}>
@@ -117,6 +135,7 @@ class ProgressLevelSet extends React.Component {
                   levels={levels}
                   disabled={disabled}
                   selectedSectionId={selectedSectionId}
+                  onBubbleClick={onBubbleClick}
                 />
               </td>
             </tr>

@@ -411,6 +411,7 @@ class Level < ApplicationRecord
     'Flappy', # no ideal solution
     'Gamelab', # freeplay
     'GoBeyond', # unknown
+    'Javalab', # no ideal solution
     'Level', # base class
     'LevelGroup', # dsl defined, covered in dsl
     'Map', # no user submitted content
@@ -736,6 +737,11 @@ class Level < ApplicationRecord
 
   def age_13_required?
     false
+  end
+
+  def show_help_and_tips_in_level_editor?
+    (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab)) &&
+    !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
   end
 
   def localized_teacher_markdown

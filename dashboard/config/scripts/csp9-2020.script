@@ -55,7 +55,7 @@ lesson 'Project - Tell a Data Story - Part 2', display_name: 'Project - Tell a D
 level 'CSP U9L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9 Data Story Day 2', progression: 'Data Story Workspace', assessment: true
 
-lesson 'Lesson 9: Assessment Day', display_name: 'Lesson 9: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 9: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP U9L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 9 AP-Style Assessment _2020', progression: 'Unit 9 Exam', assessment: true
 

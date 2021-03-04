@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_024416) do
+ActiveRecord::Schema.define(version: 2021_02_26_215944) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1527,7 +1527,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_024416) do
     t.boolean "pairing_allowed", default: true, null: false
     t.boolean "sharing_disabled", default: false, null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
     t.boolean "hidden", default: false, null: false
-    t.boolean "autoplay_enabled", default: false, null: false
+    t.boolean "tts_autoplay_enabled", default: false, null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"
@@ -1673,6 +1673,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_024416) do
     t.integer "script_level_id"
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
+    t.integer "analytics_section_id"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
@@ -1934,6 +1935,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_024416) do
     t.integer "course_version_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "properties"
     t.index ["key", "course_version_id"], name: "index_vocabularies_on_key_and_course_version_id", unique: true
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end

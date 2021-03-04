@@ -18,6 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 16:03:36 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -740,13 +741,7 @@
       "key": "db76aff3-322c-4677-90d9-b7ca42131f09",
       "position": 1,
       "properties": {
-        "description": "[slide]    **Prompt:**  We’ve learned to represent images, text, and sound digitally - but, we haven’t discussed what we do with all this digital data. How do you see people sharing this kind of data in the real world? Who do they want to share it with and why?”",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion can be open-ended and feel like a brainstorm to help setup the transition from Unit 1 into Unit 2. It is important to draw on students’ personal experiences with sharing data on the internet, social media websites & apps, and connected devices. \r\n\r\nThinking about this unit as a whole, it is helpful to validate ideas that consider the motivations and consequences of how digital information is shared. These can be important points to return to at the end of the unit when introducing the Internet Dilemma’s project.\r\n"
-          }
-        ]
+        "description": "[slide]    **Discuss:**  *We’ve learned to represent images, text, and sound digitally - but, we haven’t discussed what we do with all this digital data. How do you see people sharing this kind of data in the real world? Who do they want to share it with and why?*\n\n**Discussion Goal:** This discussion can be open-ended and feel like a brainstorm to help setup the transition from Unit 1 into Unit 2. It is important to draw on students’ personal experiences with sharing data on the internet, social media websites & apps, and connected devices. \n\nThinking about this unit as a whole, it is helpful to validate ideas that consider the motivations and consequences of how digital information is shared. These can be important points to return to at the end of the unit when introducing the Internet Dilemma’s project.\n"
       },
       "seeding_key": {
         "activity_section.key": "db76aff3-322c-4677-90d9-b7ca42131f09",
@@ -766,17 +761,28 @@
       }
     },
     {
-      "key": "1b0af819-cb8a-49e2-ab3d-14bbfeb379b3",
+      "key": "1503cf7b-6cf0-4aad-8883-a86412b2cd07",
       "position": 1,
       "properties": {
-        "description": "[slide] \n**Prompt (10 mins):** Answer each of these prompts in your journal:\n\n* What is the Internet?\n* What questions do you have about how the Internet works?",
+        "name": "What is the Internet?",
+        "duration": "20",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Give students 10 minutes to write in their journals. It's ok if there are some awkward silences. We want students to have the time to really think deeply about what they know and don't know.\r\n\r\nIf students are struggling to come up with things to write down, consider asking the following:\r\n\r\n* When you enter a web address in a browser and hit enter, what happens? At some point you see the web page in the browser, but what happens in between? What are all the steps?\r\n* Write down the series of things that you think (or have heard) happen right after you hit Enter. What happens first, second, third and so on. \r\n* Don’t worry if you don’t know all the pieces or how they all fit together. If you don't know a step, or you are fuzzy on some details, or there's a gap, that's okay. Just write down the parts that you know.\r\n\r\n"
+            "markdown": "Give students 10 minutes to write in their journals. It's ok if there are some awkward silences. We want students to have the time to really think deeply about what they know and don't know.\n\nIf students are struggling to come up with things to write down, consider asking the following:\n\n* When you enter a web address in a browser and hit enter, what happens? At some point you see the web page in the browser, but what happens in between? What are all the steps?\n* Write down the series of things that you think (or have heard) happen right after you hit Enter. What happens first, second, third and so on. \n* Don’t worry if you don’t know all the pieces or how they all fit together. If you don't know a step, or you are fuzzy on some details, or there's a gap, that's okay. Just write down the parts that you know.\n\n"
           }
-        ],
-        "name": "What is the Internet? (20 mins)\r"
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1503cf7b-6cf0-4aad-8883-a86412b2cd07",
+        "lesson_activity.key": "d0400f34-8c9c-472a-8bed-b69c4c6dbe4c"
+      }
+    },
+    {
+      "key": "1b0af819-cb8a-49e2-ab3d-14bbfeb379b3",
+      "position": 2,
+      "properties": {
+        "description": "[slide] \n<span style=\"background-color: #FFFF00\">**Discuss (10 mins):** *Answer each of these prompts in your journal:*</span>\n\n* What is the Internet?\n* What questions do you have about how the Internet works?"
       },
       "seeding_key": {
         "activity_section.key": "1b0af819-cb8a-49e2-ab3d-14bbfeb379b3",
@@ -785,15 +791,9 @@
     },
     {
       "key": "a759638c-aa9f-4293-8f10-f1d1290e709b",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "**Discuss:** Ask a few students to share their answers with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Ask for a few volunteers to share what they know about the Internet. It's ok if answers are light or even incorrect! This is the starting place for the unit. \r\n\r\n"
-          }
-        ]
+        "description": "Ask a few students to share their answers with the class.\n\n**Discussion Goal:** Ask for a few volunteers to share what they know about the Internet. It's ok if answers are light or even incorrect! This is the starting place for the unit. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "a759638c-aa9f-4293-8f10-f1d1290e709b",
@@ -802,7 +802,7 @@
     },
     {
       "key": "5ec0f064-b813-46bd-8439-02993fa3086d",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "It's ok if you have a lot of questions about the Internet or aren't sure how it works. You are not alone!",
         "remarks": true
@@ -814,7 +814,7 @@
     },
     {
       "key": "a77802fb-45f0-48dc-8455-2d6ef8e4a255",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "[slide] \r\n**Do This:** Direct students to take two sticky notes and choose one response or question to put on each sticky note. Post the sticky notes on a poster in the front of the room to refer back to throughout the unit as questions are answered."
       },
@@ -825,7 +825,7 @@
     },
     {
       "key": "0eb22a0a-92c3-407f-8115-f11e642ade02",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "[slide] \r\n**Video:** Play \"What is the Internet\". Stop at 1:30.",
         "tips": [
@@ -842,7 +842,7 @@
     },
     {
       "key": "1146f67d-830d-4036-9ef1-a08cef582b5c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "In this unit, we are going to use a tool to understand how the Internet works, layer by layer. Just like when we talked about layers of abstraction in representing digital information, there are layers to the Internet. \r\n\r\nThis tool is called the Internet Simulator. Let's check it out!",
         "remarks": true,
@@ -855,7 +855,7 @@
     },
     {
       "key": "e82a3a35-f14a-4ec7-926e-bfd76533c68c",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Group:** Pair up students.\r\n\r\n\r\n[slide] \r\n**Do This:** Direct students to Level 2 on Code Studio. Students should join their partners following the instructions on the slide."
       },
@@ -866,7 +866,7 @@
     },
     {
       "key": "eda6bba0-b935-4f5f-ac2f-33d237017e6e",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "[slide] Take five minutes to explore the tool and see what you can do with it. What are the limitations?",
         "remarks": true
@@ -878,7 +878,7 @@
     },
     {
       "key": "ba0e735e-8301-4590-a110-949519e94883",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Do This:** After five minutes are done, join the Internet Simulator yourself (as a teacher) and join a volunteer student. Model how the widget works. \r\n\r\n* Call out the different sections of the widget: \r\n\t* Received Message Log\r\n    * Sent Message Log\r\n    * Send a Message\r\n* Show students the \"My Device\" tab and demonstrate how you can turn on or off the layers of abstraction (binary, decimal, ASCII).\r\n* Talk about what the graphic represents - a direct line between you and your partner."
       },
@@ -889,15 +889,9 @@
     },
     {
       "key": "d25e79d0-2d8e-45da-b114-fe10597d29a6",
-      "position": 10,
+      "position": 11,
       "properties": {
-        "description": "**Prompt:** How is the Internet Simulator similar to the Internet? How is it different?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Encourage students to speak from their own experience of using the Internet. Here are some things they may bring up:\r\n\r\n* Similar to the Internet:\r\n\t* I can send information to another person\r\n\t* It all comes back to zeroes and ones\r\n\r\n* Different from the Internet:\r\n    * I can only send text \r\n    * It takes a couple seconds to send a text instead of instantly\r\n"
-          }
-        ]
+        "description": "**Discuss:** *How is the Internet Simulator similar to the Internet? How is it different?*\n\n**Discussion Goal:** Encourage students to speak from their own experience of using the Internet. Here are some things they may bring up:\n\n* Similar to the Internet:\n\t* I can send information to another person\n\t* It all comes back to zeroes and ones\n\n* Different from the Internet:\n    * I can only send text \n    * It takes a couple seconds to send a text instead of instantly\n"
       },
       "seeding_key": {
         "activity_section.key": "d25e79d0-2d8e-45da-b114-fe10597d29a6",
@@ -906,7 +900,7 @@
     },
     {
       "key": "5ad11dce-ef4f-4c1a-8407-e9bab74c4ab5",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "One of the key things you may have noticed is that this version of the Internet Simulator only allows us to connect to one person! This will change as we explore new versions on the Internet Simulator while learning about how the Internet works.",
         "remarks": true,
@@ -989,13 +983,7 @@
       "key": "18c22a2d-ffd5-48d9-b156-e4e43524b310",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** In the previous lesson, we explored the Internet Simulator, where each of you were connected to one other person by a single wire. What are the potential problems with this setup?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Direct the conversation towards the need to be able to talk to multiple people and the need to have a backup if that wire is damaged or unable to transmit information. \r\n\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *In the previous lesson, we explored the Internet Simulator, where each of you were connected to one other person by a single wire. What are the potential problems with this setup?*\n\n**Discussion Goal:** Direct the conversation towards the need to be able to talk to multiple people and the need to have a backup if that wire is damaged or unable to transmit information. \n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "18c22a2d-ffd5-48d9-b156-e4e43524b310",
@@ -1075,13 +1063,7 @@
       "key": "a56e4211-b399-41c1-9b4a-2309d805e5f0",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** Thinking about our 3 guidelines, what is a strength of the network your group created? What is a weakness for the network your group created?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "There are many possible answers to Challenge 4 so its important for students to think critically about why they made the choices that they did. They can think of Challenge 1 and Challenge 2 as the two extremes - too well connected and not connected enough - and their network finds a balance somewhere in the middle.\r\n\r\nYou may choose to have groups draw their networks on a sheet of paper and write their responses along with their network drawing. This can help students process their thinking, and can act as an artifact for reference throughout the unit.\r\n\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Thinking about our 3 guidelines, what is a strength of the network your group created? What is a weakness for the network your group created?*\n\n**Discussion Goal:** There are many possible answers to Challenge 4 so its important for students to think critically about why they made the choices that they did. They can think of Challenge 1 and Challenge 2 as the two extremes - too well connected and not connected enough - and their network finds a balance somewhere in the middle.\n\nYou may choose to have groups draw their networks on a sheet of paper and write their responses along with their network drawing. This can help students process their thinking, and can act as an artifact for reference throughout the unit.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "a56e4211-b399-41c1-9b4a-2309d805e5f0",
@@ -1115,13 +1097,7 @@
       "key": "9cac2d0e-d978-458f-81d5-31f52f6dac8b",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** How would you use these words to describe today’s activity?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should discuss in pairs how to describe today's activity using the new vocabulary from this unit. They should make the following connections between these words and this activity:\r\n\r\n* Each individual person was acting as a computing device\r\n* The strings were the paths between devices. If two people aren’t directly connected, then a path may require multiple strings to communicate\r\n* The entire system - devices and paths - make up a computer network\r\n* A computing network is a type of a computing system. \r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *How would you use these words to describe today’s activity?*\n\n**Discussion Goal:** Students should discuss in pairs how to describe today's activity using the new vocabulary from this unit. They should make the following connections between these words and this activity:\n\n* Each individual person was acting as a computing device\n* The strings were the paths between devices. If two people aren’t directly connected, then a path may require multiple strings to communicate\n* The entire system - devices and paths - make up a computer network\n* A computing network is a type of a computing system. \n"
       },
       "seeding_key": {
         "activity_section.key": "9cac2d0e-d978-458f-81d5-31f52f6dac8b",
@@ -1178,13 +1154,7 @@
       "key": "6f7fdeb6-f8fa-46d3-9723-74de3dfe5649",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Imagine you were in a room with 5 other people, all with the same name as you.  What might happen when you start communicating? How could you solve these problems?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt is meant to foreshadow some of the issues students will face when they use the Internet Simulator.  Key points to draw out:\r\n\r\n* There might be confusion about who the person is trying to talk to because everyone has the same name.\r\n* Multiple people might be talking at once, making it hard to tell what people are talking about.\r\n* People may stop communicating because of the confusion.\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Imagine you were in a room with 5 other people, all with the same name as you.  What might happen when you start communicating? How could you solve these problems?*\n\n**Discussion Goal:** This discussion is meant to foreshadow some of the issues students will face when they use the Internet Simulator.  Key points to draw out:\n\n* There might be confusion about who the person is trying to talk to because everyone has the same name.\n* Multiple people might be talking at once, making it hard to tell what people are talking about.\n* People may stop communicating because of the confusion.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6f7fdeb6-f8fa-46d3-9723-74de3dfe5649",
@@ -1195,7 +1165,7 @@
       "key": "a925bf8c-99f1-423d-85f0-c7547e8481b9",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently, then discuss with a neighbor, and finally share with the whole class."
+        "description": "Have students brainstorm silently, then discuss with a neighbor, and finally share with the whole class."
       },
       "seeding_key": {
         "activity_section.key": "a925bf8c-99f1-423d-85f0-c7547e8481b9",
@@ -1247,7 +1217,7 @@
       "key": "7b2dcf08-1e71-40bc-a75a-4311eec1f480",
       "position": 3,
       "properties": {
-        "description": "[slide] **Do This:** With your group follow the directions given in the box for Week 1\r\n\r\n* If you are a group of 5, everyone cross out Sunday\r\n* If you are a group of 4, everyone cross out Sunday and Saturday\r\n* Before starting to schedule each week, choose a random day of that week when you’re busy and cross it out\r\n\r\n\r\n[slide] \r\n **Run Week 1:** Have students work on filling out their schedules, agreeing with one another on the days when they will meet. This should take 3 - 5 minutes for all groups to finish. When they're done ask students to quickly check that their schedules actually line up.\r\n\r\n\r\n[slide] \r\n **Prompt:** With your group check that everyone's schedules match. Then discuss what worked well, what made this tricky, if there's anything you want to try differently in Week 2.\r\n\r\n**Discuss:** Students do not need to share out their conversations with the class but circulate the room and listen as they discuss."
+        "description": "[slide] **Do This:** With your group follow the directions given in the box for Week 1\n\n* If you are a group of 5, everyone cross out Sunday\n* If you are a group of 4, everyone cross out Sunday and Saturday\n* Before starting to schedule each week, choose a random day of that week when you’re busy and cross it out\n\n\n[slide] \n **Run Week 1:** Have students work on filling out their schedules, agreeing with one another on the days when they will meet. This should take 3 - 5 minutes for all groups to finish. When they're done ask students to quickly check that their schedules actually line up.\n\n\n[slide] \n **Discuss:** *With your group check that everyone's schedules match. Then discuss what worked well, what made this tricky, if there's anything you want to try differently in Week 2.*\n\nStudents do not need to share out their conversations with the class but circulate the room and listen as they discuss."
       },
       "seeding_key": {
         "activity_section.key": "7b2dcf08-1e71-40bc-a75a-4311eec1f480",
@@ -1289,7 +1259,7 @@
       "key": "8e7705c9-9ece-4227-a90e-25295a07cb34",
       "position": 6,
       "properties": {
-        "description": "\n\n\n[slide] \n **Do This:** Login and join a room with your group mates. Once everyone is in the room complete Week 2 on the simulator only, no talking!\n\n\n[slide] \n **Prompt:** Fill out the table on the back side of your sheet. What problems did you have when communicating on the Internet Simulator this time around? What solutions did you create or would you like to try for Week 3?\n\n **Discuss:** Have students share out some of the challenges they encountered and ways they're going to try to address them the second time around."
+        "description": "\n\n\n[slide] \n **Do This:** Login and join a room with your group mates. Once everyone is in the room complete Week 2 on the simulator only, no talking!\n\n\n[slide] \n **Discuss:** *Fill out the table on the back side of your sheet. What problems did you have when communicating on the Internet Simulator this time around? What solutions did you create or would you like to try for Week 3?*\n\n Have students share out some of the challenges they encountered and ways they're going to try to address them the second time around."
       },
       "seeding_key": {
         "activity_section.key": "8e7705c9-9ece-4227-a90e-25295a07cb34",
@@ -1312,13 +1282,7 @@
       "key": "e84bea36-4411-431b-ad86-1346e2520a5e",
       "position": 8,
       "properties": {
-        "description": "**Discuss:** Have a few volunteers share the rules that their group developed.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use the share out to highlight common features across multiple sets of rules. Namely that:\r\n\r\n* Regardless of the rule, it needs to be clear and everyone needs to agree to them\r\n* The sender and receiver need to be included in all messages to be understood\r\n\r\nThe goal of this discussion should be to set up the wrap up discussion where students connect their experiences in this lesson to computer science concepts that will be introduced.\r\n"
-          }
-        ]
+        "description": "**Discuss:** *Have a few volunteers share the rules that their group developed.*\n\n**Discussion Goal:** Use the share out to highlight common features across multiple sets of rules. Namely that:\n\n* Regardless of the rule, it needs to be clear and everyone needs to agree to them\n* The sender and receiver need to be included in all messages to be understood\n\nThe goal of this discussion should be to set up the wrap up discussion where students connect their experiences in this lesson to computer science concepts that will be introduced.\n"
       },
       "seeding_key": {
         "activity_section.key": "e84bea36-4411-431b-ad86-1346e2520a5e",
@@ -1341,7 +1305,7 @@
       "key": "88d04e61-58ab-4032-b9fc-eb983afc249d",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Display:**  [r the-internet-ip-addresses-and-dns-1].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS.\r\n\r\n\r\n\r\n[slide]  **Prompt:** What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?"
+        "description": "[slide]  **Display:**  [r the-internet-ip-addresses-and-dns-1].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS.\n"
       },
       "seeding_key": {
         "activity_section.key": "88d04e61-58ab-4032-b9fc-eb983afc249d",
@@ -1352,13 +1316,7 @@
       "key": "5222f55e-d41b-40bc-9122-178610927d9a",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students share their responses with a neighbor before discussing with the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\r\n\r\n* All devices and computers on the Internet use IP to connect and communicate with each other.\r\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\r\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\r\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communiate over networks.\r\n"
-          }
-        ]
+        "description": "[slide] **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communiate over networks.\n"
       },
       "seeding_key": {
         "activity_section.key": "5222f55e-d41b-40bc-9122-178610927d9a",
@@ -1437,13 +1395,7 @@
       "key": "50af7093-2fd3-40d0-b658-db7d137bf0c9",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** At the end of class yesterday, we saw that the Internet uses the Internet Protocol and IP Addresses to communicate across the shared Internet. How is this system similar to how we send letters in the mail? How is it different?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students will probably identify that both systems involve a numerical address that helps identify where the letter should go, and that both a 'to' and 'from' address are needed. \r\n\r\nHowever, something that may be less obvious is that our postal system has several intermediary steps before it reaches the destination - it is picked up by a postal worker, sorted in a postal center, and eventually directed to the recipient. This point is helpful in foreshadowing how today's lesson builds on yesterday's activity and the introduction of routers. \r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *At the end of class yesterday, we saw that the Internet uses the Internet Protocol and IP Addresses to communicate across the shared Internet. How is this system similar to how we send letters in the mail? How is it different?*\n\n**DIscussion Goal:** Students will probably identify that both systems involve a numerical address that helps identify where the letter should go, and that both a 'to' and 'from' address are needed. \n\nHowever, something that may be less obvious is that our postal system has several intermediary steps before it reaches the destination - it is picked up by a postal worker, sorted in a postal center, and eventually directed to the recipient. This point is helpful in foreshadowing how today's lesson builds on yesterday's activity and the introduction of routers. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "50af7093-2fd3-40d0-b658-db7d137bf0c9",
@@ -1574,13 +1526,7 @@
       "key": "bdef3c5d-2ba0-4483-a28b-b04736a3a06a",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** Can you predict why some messages are appearing multiple times?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should notice that each copy of their message is identical except for the ‘Logged By’ column. This column shows which routers the message is passing through as it travels through the network. This shows that the messages are not taking a direct route to the destination - it may pass through multiple routers before getting to the final destination.\r\n\r\nIt may be helpful to draw a network diagram on the board (similar to the activity from the second lesson) - even though each user is directly connected to a centralized router (as you can see in the Internet Simulator), the routers are connected to each other and pass messages along the way. \r\n\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Can you predict why some messages are appearing multiple times?*\n\n\n**Discussion Goal:** Students should notice that each copy of their message is identical except for the ‘Logged By’ column. This column shows which routers the message is passing through as it travels through the network. This shows that the messages are not taking a direct route to the destination - it may pass through multiple routers before getting to the final destination.\n\nIt may be helpful to draw a network diagram on the board (similar to the activity from the second lesson) - even though each user is directly connected to a centralized router (as you can see in the Internet Simulator), the routers are connected to each other and pass messages along the way. \n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "bdef3c5d-2ba0-4483-a28b-b04736a3a06a",
@@ -1614,13 +1560,7 @@
       "key": "db5ff682-ecc6-4ea6-8d2a-bd5c1950668e",
       "position": 11,
       "properties": {
-        "description": "[slide]   **Prompt:** What did you notice about the messages you sent in the router logs? Did they always take the same path from your router to the other router?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should notice that their messages are taking different paths between routers to get to their destination - one message may take a certain path, while the next message takes a different path. Once this observation is made, the discussion can move to the wrap-up prompt.\r\n"
-          }
-        ]
+        "description": "[slide]   **Discuss:** *What did you notice about the messages you sent in the router logs? Did they always take the same path from your router to the other router?*\n\n**Discussion Goal:** Students should notice that their messages are taking different paths between routers to get to their destination - one message may take a certain path, while the next message takes a different path. Once this observation is made, the discussion can move to the wrap-up prompt.\n"
       },
       "seeding_key": {
         "activity_section.key": "db5ff682-ecc6-4ea6-8d2a-bd5c1950668e",
@@ -1642,13 +1582,7 @@
       "key": "81d65117-8b2e-47dd-95ef-c8211f99e1f6",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\r\n\r\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message long a different path.\r\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\r\n\r\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message long a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n"
       },
       "seeding_key": {
         "activity_section.key": "81d65117-8b2e-47dd-95ef-c8211f99e1f6",
@@ -1704,13 +1638,7 @@
       "key": "863340cb-353c-4b99-99f3-6a846dc807a9",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:**  Suppose our school library is moving to a new building on campus and the librarian has asked for your help.\n\n* What approach would you take if you just needed to clear out the space by the end of the day?\n* How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\r\n\r\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\r\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\r\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\r\n\r\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:**  *Suppose our school library is moving to a new building on campus and the librarian has asked for your help.*\n\n* *What approach would you take if you just needed to clear out the space by the end of the day?*\n* *How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move\n?*\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\n\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\n"
       },
       "seeding_key": {
         "activity_section.key": "863340cb-353c-4b99-99f3-6a846dc807a9",
@@ -1733,7 +1661,7 @@
       "key": "25774a9d-55d5-49ec-acf8-f971694c01c6",
       "position": 1,
       "properties": {
-        "description": "[slide] **Do This:** Direct students to level 2 of the lesson on Code Studio.\r\n\r\n**Group:**  Place students in pairs.  Each student should log into the Internet Simulator.\r\n\r\n[slide] **Prompt:** Follow the steps below to get familiar with this new version of the Internet Simulator.\r\n\r\n* Join a different router than your partner\r\n* Ask your partner for their IP address.\r\n* Using only the simulator, have a conversation about one of these topics: Your favorite movie, Your favorite band/artist, The one superpower you wish you had\r\n* Try to discover every way the simulator is different than last time.",
+        "description": "[slide] **Do This:** Direct students to level 2 of the lesson on Code Studio.\n\n**Group:**  Place students in pairs.  Each student should log into the Internet Simulator.\n\n[slide] **Discuss:** *Follow the steps below to get familiar with this new version of the Internet Simulator.*\n\n* Join a different router than your partner\n* Ask your partner for their IP address.\n* Using only the simulator, have a conversation about one of these topics: Your favorite movie, Your favorite band/artist, The one superpower you wish you had\n* Try to discover every way the simulator is different than last time.",
         "name": "New Version of the Internet Simulator (5 mins)\r"
       },
       "seeding_key": {
@@ -1762,7 +1690,7 @@
       "key": "b47645fb-b05a-45d3-9db2-d3ea86299434",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** Briefly discuss as a class the changes they've seen in the Internet Simulator. The main things they should notice are\r\n\r\n* A single message can be made up of many “packets” which you can add with the “Add Packet” button\r\n* Packets can only be 80 bits long. 16 bits are already used for packet metadata, data added to help route the messages. You only have 64 bits, or 8 ASCII characters free for each of your messages\r\n* When you send the message, all packets appear to be sent at once, but may arrive out of order.",
+        "description": "[slide]  **Discuss:** *Briefly discuss as a class the changes they've seen in the Internet Simulator. The main things they should notice are*\n\n* A single message can be made up of many “packets” which you can add with the “Add Packet” button\n* Packets can only be 80 bits long. 16 bits are already used for packet metadata, data added to help route the messages. You only have 64 bits, or 8 ASCII characters free for each of your messages\n* When you send the message, all packets appear to be sent at once, but may arrive out of order.",
         "progression_name": "Internet Simulator"
       },
       "seeding_key": {
@@ -1774,7 +1702,7 @@
       "key": "71be40d8-3125-4c8a-8102-e65ad79ee322",
       "position": 4,
       "properties": {
-        "description": "[slide] **Distribute:**  [r u2l04-packets]\t\r\n\r\n**Why Packets:** Read the paragraph explaining why messages are divided into packets.\r\n\r\n[slide] **Protocol 1 - Just Send All the Packets:** Guide students through creating a single multi-packet message to send to their partner. They should aim for roughly 5 - 10 packets to increase the likelihood of some packets dropping or arriving out of order.\r\n\r\n[slide] **Read the Traffic:** Instruct students to read the router logs so they can watch their messages travel through the network. They should then answer the two questions provided. Students may need help narrowing down the logs to just their traffic. If they find their packets are taking the same route or none or dropping then make sure they're connected to different routers. They may also just get lucky and need to send a second message.\r\n\r\n[slide] **Discuss:** Briefly discuss responses to the [r u2l04-packets]. Have a few different groups share out. See if you can find the examples students share in the router logs and display them at the front of the class. Focus on the following points:\r\n\r\n* Packets can take different paths from one another, just like messages\r\n* Packets can be dropped, just like messages in the previous lesson\r\n* As a result, messages may arrive out of order or incomplete\r\n* While a human might be able to understand the original message based on context, a computer would not, the message would simply be lost",
+        "description": "[slide] **Distribute:**  [r u2l04-packets]\t\n\n**Why Packets:** Read the paragraph explaining why messages are divided into packets.\n\n[slide] **Protocol 1 - Just Send All the Packets:** Guide students through creating a single multi-packet message to send to their partner. They should aim for roughly 5 - 10 packets to increase the likelihood of some packets dropping or arriving out of order.\n\n[slide] **Read the Traffic:** Instruct students to read the router logs so they can watch their messages travel through the network. They should then answer the two questions provided. Students may need help narrowing down the logs to just their traffic. If they find their packets are taking the same route or none or dropping then make sure they're connected to different routers. They may also just get lucky and need to send a second message.\n\n[slide] **Discuss:** *Briefly discuss responses to the [r u2l04-packets]. Have a few different groups share out. See if you can find the examples students share in the router logs and display them at the front of the class. Focus on the following points:*\n\n* Packets can take different paths from one another, just like messages\n* Packets can be dropped, just like messages in the previous lesson\n* As a result, messages may arrive out of order or incomplete\n* While a human might be able to understand the original message based on context, a computer would not, the message would simply be lost",
         "name": "Activity Guide - Packets - (25 mins)\r"
       },
       "seeding_key": {
@@ -1987,7 +1915,7 @@
       "key": "ac79fecd-ef22-42e9-ad7d-233514e52cb5",
       "position": 4,
       "properties": {
-        "description": "**Circulate:**  As students are working, circulate quietly through the room.\r\n\r\n* Approach a student and silently take their IP address slip away from them.\r\n* Give that person a new IP address slip (or a re-used IP address).\r\n* Repeat the above two steps as many times as you can, as you circulate the room.\r\n\r\n[slide] **Prompt:**  Discuss with your classmates the following prompts\r\n\r\n* Why do you think I was switching IP addresses?\r\n* If IP addresses can change, is there a better way for everyone to know everyone else’s IP address?"
+        "description": "**Circulate:**  As students are working, circulate quietly through the room.\n\n* Approach a student and silently take their IP address slip away from them.\n* Give that person a new IP address slip (or a re-used IP address).\n* Repeat the above two steps as many times as you can, as you circulate the room.\n\n[slide] **Discuss:**  *Discuss with your classmates the following prompts*\n\n* *Why do you think I was switching IP addresses?*\n* *If IP addresses can change, is there a better way for everyone to know everyone else’s IP address?*"
       },
       "seeding_key": {
         "activity_section.key": "ac79fecd-ef22-42e9-ad7d-233514e52cb5",
@@ -1998,13 +1926,7 @@
       "key": "47e2a0c1-135f-4224-9373-d3f1918cc322",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** Discuss responses to these questions with students, using the discussion goal to guide the conversation.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Main takeaways should include\r\n\r\n* Devices are joining and leaving the Internet all the time. IP addresses don't stay constant. If you go to a coffee shop or restart your browser your device might be assigned a new IP address.\r\n* If IP addresses are switching, it's very hard for each computer to keep an accurate list.\r\n* It would make more sense if there were one system that kept track of all that information.\r\n"
-          }
-        ]
+        "description": " Discuss responses to these questions with students, using the discussion goal to guide the conversation.\n\n**Discussion Goal:** Main takeaways should include\n\n* Devices are joining and leaving the Internet all the time. IP addresses don't stay constant. If you go to a coffee shop or restart your browser your device might be assigned a new IP address.\n* If IP addresses are switching, it's very hard for each computer to keep an accurate list.\n* It would make more sense if there were one system that kept track of all that information.\n"
       },
       "seeding_key": {
         "activity_section.key": "47e2a0c1-135f-4224-9373-d3f1918cc322",
@@ -2027,7 +1949,7 @@
       "key": "83465a75-6362-4cd1-93a4-153870f5ee23",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** As we watch the following video take notes on:\r\n\r\n* How does the DNS solve the problem of translating domain names like example.com into IP addresses?\r\n* How does the DNS help the Internet scale?\r\n\r\n[slide] **Display:** Show [r the-internet-ip-addresses-and-dns-video] on DNS, which explains how it works.  Video will automatically start playing at the introduction of DNS.",
+        "description": "<span style=\"background-color: #FFFF00\">[slide] **Discuss:** *As we watch the following video take notes on:*</span>\n\n* *How does the DNS solve the problem of translating domain names like example.com into IP addresses?*\n* *How does the DNS help the Internet scale?*\n\n[slide] **Display:** Show [r the-internet-ip-addresses-and-dns-video] on DNS, which explains how it works.  Video will automatically start playing at the introduction of DNS.",
         "name": "DNS - Video - 8 mins\r"
       },
       "seeding_key": {
@@ -2039,7 +1961,7 @@
       "key": "8c80a6e7-3123-4685-ba2c-ee3a7a5cb79d",
       "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:** Discuss the following prompts with a partner:\r\n\r\n* How does the DNS solve the problem of translating domain names like example.com into IP addresses? \r\n* How does the DNS help the Internet scale?"
+        "description": "[slide] <span style=\"background-color: #FFFF00\">**Discuss:** *Discuss the following prompts with a partner:*</span>\n\n* How does the DNS solve the problem of translating domain names like example.com into IP addresses? \n* How does the DNS help the Internet scale?"
       },
       "seeding_key": {
         "activity_section.key": "8c80a6e7-3123-4685-ba2c-ee3a7a5cb79d",
@@ -2050,13 +1972,7 @@
       "key": "e024e866-a433-48f6-a1d0-8588d8438d91",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have students discuss responses with their partners, then share out with the class. Focus on the main takeaways in the discussion goal.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The main takeaways from this video should be:\r\n\r\n* The DNS is a network of servers that track the IP addresses of different domain names like example.com\r\n* When you visit a website you first ask the DNS for the IP address of the domain you want to visit. The first server to ask may have to ask other servers for this information. \r\n* This system allows billions of devices to get added to the network without putting pressure on any one computer or server to know all the IP addresses in the world. \r\n"
-          }
-        ]
+        "description": "Have students discuss responses with their partners, then share out with the class. Focus on the main takeaways in the discussion goal.\n\n**Discussion Goal:** The main takeaways from this video should be:\n\n* The DNS is a network of servers that track the IP addresses of different domain names like example.com\n* When you visit a website you first ask the DNS for the IP address of the domain you want to visit. The first server to ask may have to ask other servers for this information. \n* This system allows billions of devices to get added to the network without putting pressure on any one computer or server to know all the IP addresses in the world. \n"
       },
       "seeding_key": {
         "activity_section.key": "e024e866-a433-48f6-a1d0-8588d8438d91",
@@ -2133,13 +2049,7 @@
       "key": "4ffb5c13-ec43-4ec8-80ab-13d601a46e39",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Prompt:** Review these questions with a partner about HTTP",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Here are the most important points for students to take away about HTTP and the way it works\r\n\r\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\r\n* Your computer and that server communicate using a protocol called HTTP. \r\n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\r\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\r\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\r\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss** <span style=\"background-color: #FFFF00\">Review these questions with a partner about HTTP</span>\n\n**Discussion Goal:** Here are the most important points for students to take away about HTTP and the way it works\n\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\n* Your computer and that server communicate using a protocol called HTTP. \n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\n"
       },
       "seeding_key": {
         "activity_section.key": "4ffb5c13-ec43-4ec8-80ab-13d601a46e39",
@@ -2150,7 +2060,7 @@
       "key": "9944e558-9432-4171-a070-0aa174467115",
       "position": 10,
       "properties": {
-        "description": "* What problem is HTTP solving?\r\n* What is a GET request and what are your requesting?\r\n* How does HTTP rely on the other layers of the Internet?\r\n* Why are SSL/TLS, and HTTPS necessary?\r\n* What do certificate authorities do and why are they necessary?\r\n\r\n**Discuss:** Have students share out their responses with the class to make sure students understand the key takeaways about HTTP.",
+        "description": "* What problem is HTTP solving?\n* What is a GET request and what are your requesting?\n* How does HTTP rely on the other layers of the Internet?\n* Why are SSL/TLS, and HTTPS necessary?\n* What do certificate authorities do and why are they necessary?\n\n**Discuss:** <span style=\"background-color: #FFFF00\">Have students share out their responses with the class to make sure students understand the key takeaways about HTTP.</span>",
         "progression_name": "Internet Simulator"
       },
       "seeding_key": {
@@ -2162,7 +2072,7 @@
       "key": "403095cd-3360-4bcf-bf54-d52d48303b3e",
       "position": 1,
       "properties": {
-        "description": "[slide] **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\r\n\r\n\r\n\r\n**Distribute:** Give students a copy of the [r layers-of-the-internet-activity-guide]\r\n\r\n[slide] **Prompt:**  Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?"
+        "description": "[slide] **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\n\n\n\n**Distribute:** Give students a copy of the [r layers-of-the-internet-activity-guide]\n\n[slide] **Discuss:**  *Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?*"
       },
       "seeding_key": {
         "activity_section.key": "403095cd-3360-4bcf-bf54-d52d48303b3e",
@@ -2173,13 +2083,7 @@
       "key": "e1910615-a244-4ed8-9a26-210ad5517985",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Use this final prompt as a review of everything covered in both today's lesson and those that came before. You'll actually probably want to start with the bottom of your review guide.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this final discussion to review not just this lesson but every protocol / layer of the Internet students have learned so far. You'd aim to see responses like the following \r\n\r\n* When you type in code.org, your browser will contact the DNS to find Code.org's IP address\r\n* When you receive the address you'll send an HTTP GET request to code.org to send you its homepage\r\n* Code.org's server will respond with the HTML code that makes up its web page\r\n* All of the communications above happen on the Internet which means TCP or UDP will break the message into packets and then send them. If TCP is used, error checking will occur.\r\n* IP will route the packets back and forth between your computer and the server\r\n* All of this information is sent over the physical wires, cable, wifi networks, and routers that make up the physical network of the internet.\r\n\r\n"
-          }
-        ]
+        "description": "Use this final prompt as a review of everything covered in both today's lesson and those that came before. You'll actually probably want to start with the bottom of your review guide.\n\n**Discussion Goal:** Use this final discussion to review not just this lesson but every protocol / layer of the Internet students have learned so far. You'd aim to see responses like the following \n\n* When you type in code.org, your browser will contact the DNS to find Code.org's IP address\n* When you receive the address you'll send an HTTP GET request to code.org to send you its homepage\n* Code.org's server will respond with the HTML code that makes up its web page\n* All of the communications above happen on the Internet which means TCP or UDP will break the message into packets and then send them. If TCP is used, error checking will occur.\n* IP will route the packets back and forth between your computer and the server\n* All of this information is sent over the physical wires, cable, wifi networks, and routers that make up the physical network of the internet.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e1910615-a244-4ed8-9a26-210ad5517985",
@@ -2259,10 +2163,9 @@
       "key": "bdd08ff4-f657-4d3f-85c8-9f48144309ab",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** Select a few sticky notes and read them to the class. Address any misconceptions.",
+        "description": "[slide]  **Discuss:** *Select a few sticky notes and read them to the class. Address any misconceptions.*",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Keep track of time! Students need the majority of class to work on their projects. The goal here isn't for every outstanding question to be answered, but instead to remind students how much they have learned and point out how they can continue learning.\r\n\r\n"
           }
@@ -2304,7 +2207,6 @@
         "description": "[slide]   **Distribute:** Give students copies of [r internet-dilemmas-2021]",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Role of the Assessment:** In this lesson, students begin a two day project where they will demonstrate their understanding of key issues surrounding the Internet. This project is designed to be used in tandem with the Unit 2 Assessment to evaluate student progress in Unit 2 content. \n"
           }
@@ -2345,7 +2247,6 @@
         "description": "[slide]  **Journal:** Students add to their journal the definition for digital divide.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Why is Digital Divide the only vocabulary word?** \r\nDigital Divide is a term covered in the AP CSP Conceptual Framework. We want to make sure all students - even those who don't choose it as a Digital Dilemma understand the meaning of the phrase. \r\n"
           }

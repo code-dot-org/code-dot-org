@@ -184,7 +184,7 @@ ja-JP:
   personalize_certificate: 証明書のカスタマイズする
   print_batch_certificates: 証明書のバッチを印刷する
   print_certificates: 証明書を印刷する
-  certificate_sponsor_message: "%{Sponsor_name} は学習をサポートするために多大な支援をしてくれました。"
+  certificate_sponsor_message: "%{sponsor_name} は学習をサポートするために多大な支援をしてくれました。"
   print_ice_art_from_frozen: フローズンのチュートリアルからアイスアートを印刷する
   want_a_blank_certificate_template: 生徒の名前を書き込むための空欄の証明書テンプレートが必要ですか？
   landscape_recommended_certificates: 証明書を印刷するときは、**横向き** を選択することをお勧めします。

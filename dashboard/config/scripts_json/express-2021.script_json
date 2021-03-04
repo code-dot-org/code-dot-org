@@ -16827,14 +16827,14 @@
     {
       "name": "Variables",
       "url": "https://youtu.be/DI7DprN4FtE",
-      "key": "variablesVideo",
+      "key": "variables",
       "properties": {
         "type": "Student Video",
         "audience": "Student",
         "download_url": "http://videos.code.org/2015/course4/C4-Variables-in-envelopes-JIE-2015_720.mp4"
       },
       "seeding_key": {
-        "resource.key": "variablesVideo"
+        "resource.key": "variables"
       }
     },
     {
@@ -17089,7 +17089,7 @@
     {
       "seeding_key": {
         "lesson.key": "Changing Variables with Artist",
-        "resource.key": "variablesVideo"
+        "resource.key": "variables"
       }
     },
     {

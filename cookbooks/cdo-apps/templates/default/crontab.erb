@@ -94,6 +94,8 @@
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
       cronjob at:'30 */2 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
+      # [Clare] Disabled so that we can do the first run manually on production-daemon, to update credentials.
+      # cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'csf_workshop_attendance_to_gdrive')
       cronjob at:'0 7 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
@@ -103,6 +105,7 @@
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
       cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
+      cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')

@@ -78,7 +78,8 @@ const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
   paired: PropTypes.bool.isRequired,
-  timeSpent: PropTypes.number
+  timeSpent: PropTypes.number.isRequired,
+  lastTimestamp: PropTypes.number.isRequired
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition

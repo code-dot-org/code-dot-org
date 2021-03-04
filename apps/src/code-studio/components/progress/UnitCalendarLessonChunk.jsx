@@ -38,8 +38,14 @@ const styles = {
   isNotStart: {
     borderLeftStyle: 'dashed'
   },
+  isStart: {
+    borderLeftStyle: 'solid'
+  },
   isNotEnd: {
     borderRightStyle: 'dashed'
+  },
+  isEnd: {
+    borderRightStyle: 'solid'
   },
   titleText: {
     width: '100%'
@@ -96,8 +102,8 @@ class UnitCalendarLessonChunk extends Component {
         : isHover
         ? styles.instructionalHover
         : styles.instructional),
-      ...(!isStart && styles.isNotStart),
-      ...(!isEnd && styles.isNotEnd)
+      ...(isStart ? styles.isStart : styles.isNotStart),
+      ...(isEnd ? styles.isEnd : styles.isNotEnd)
     };
 
     return (

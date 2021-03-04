@@ -1,0 +1,12 @@
+name 'OPD-K5 for loops intro_2021'
+title 'For Loops Intro'
+description 'description here'
+markdown <<MARKDOWN
+# Overview: For Loops
+
+<img src="https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg" class="level-image">
+
+## Advanced coding concepts: For loops
+- Understand that for loops are a loop with a predetermined beginning, end, and increment (step interval)
+- Practice using for loops
+MARKDOWN

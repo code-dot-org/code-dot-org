@@ -2551,9 +2551,6 @@
     "function_definitions": {
       "my design": {
         "name": "my design"
-      },
-      "do something": {
-        "name": "do something"
       }
     }
   },
@@ -2570,9 +2567,6 @@
     "function_definitions": {
       "my design": {
         "name": "my design"
-      },
-      "do something": {
-        "name": "do something"
       }
     }
   },
@@ -3796,47 +3790,16 @@
       "CourseD_EOC_dance": {
         "display_name": "Create a dance",
         "short_instructions": "Create your own dance!",
-        "long_instructions": "Create your own dance!",
-        "block_categories": {
-          "World": "World",
-          "Dancers": "Dancers",
-          "Properties": "Properties",
-          "Events": "Events",
-          "Numbers": "Numbers",
-          "Logic": "Logic"
-        }
+        "long_instructions": "Create your own dance!"
       },
       "Course F: Artist Project_2020": {
-        "display_name": "Create an Artist project",
-        "block_categories": {
-          "Actions": "Actions",
-          "Brushes": "Brushes",
-          "Loops": "Loops",
-          "Math": "Math",
-          "Logic": "Logic",
-          "Functions": "Functions",
-          "Variables": "Variables"
-        }
+        "display_name": "Create an Artist project"
       },
       "Course E: Frozen Project_2020": {
         "display_name": "Create a Frozen project"
       },
       "CourseF_Project_SpriteLab_2020": {
         "display_name": "Create a Sprite Lab project",
-        "block_categories": {
-          "World": "World",
-          "Sprites": "Sprites",
-          "Locations": "Locations",
-          "Actions": "Actions",
-          "Events": "Events",
-          "Behaviors": "Behaviors",
-          "Variables": "Variables",
-          "Math": "Math",
-          "Logic": "Logic",
-          "Functions": "Functions",
-          "Text": "Text",
-          "Comments": "Comments"
-        },
         "behavior_names": {
           "moving east": "moving east",
           "spinning left": "spinning left",

@@ -114,6 +114,16 @@ class Script < ApplicationRecord
 
   validate :set_is_migrated_only_for_migrated_scripts
 
+  def prevent_duplicate_levels
+    reload
+
+    unless levels.count == levels.uniq.count
+      levels_by_key = levels.map(&:key).group_by {|key| key}
+      duplicate_keys = levels_by_key.select {|_key, values| values.count > 1}.keys
+      raise "duplicate levels detected: #{duplicate_keys.to_json}"
+    end
+  end
+
   include SerializedProperties
 
   after_save :generate_plc_objects
@@ -171,7 +181,7 @@ class Script < ApplicationRecord
   #   CourseOffering version.  Used during seeding to create the appropriate
   #   CourseVersion and CourseOffering objects. For example, this should be
   #   true for CourseA-CourseF .script files.
-  # seeded_at - a timestamp indicating when this object was seeded from
+  # seeded_from - a timestamp indicating when this object was seeded from
   #   its script_json file, as determined by the serialized_at value within
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
@@ -201,8 +211,9 @@ class Script < ApplicationRecord
     background
     show_calendar
     weekly_instructional_minutes
+    include_student_lesson_plans
     is_migrated
-    seeded_at
+    seeded_from
   )
 
   def self.twenty_hour_script
@@ -267,6 +278,14 @@ class Script < ApplicationRecord
 
   def self.maker_unit_scripts
     visible_scripts.select {|s| s.family_name == 'csd6'}
+  end
+
+  def self.text_to_speech_script_ids
+    all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
+  end
+
+  def self.pre_reader_script_ids
+    all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -874,6 +893,25 @@ class Script < ApplicationRecord
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
+  def pre_reader_tts_level?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::PRE_READER_EXPRESS_NAME,
+      Script::COURSEA_2018_NAME,
+      Script::COURSEB_2018_NAME,
+      Script::PRE_READER_EXPRESS_2018_NAME,
+      Script::COURSEA_2019_NAME,
+      Script::COURSEB_2019_NAME,
+      Script::PRE_READER_EXPRESS_2019_NAME,
+      Script::COURSEA_2020_NAME,
+      Script::COURSEB_2020_NAME,
+      Script::PRE_READER_EXPRESS_2020_NAME,
+    ].include?(name)
+  end
+
   def text_to_speech_enabled?
     tts?
   end
@@ -1007,10 +1045,20 @@ class Script < ApplicationRecord
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
+      # More all lessons into the last lesson group so that we do not delete
+      # the lesson entries unless the lesson has been entirely removed from the
+      # script
+      last_lesson_group = script.lesson_groups.last
+      script.lessons.each do |l|
+        l.lesson_group = last_lesson_group
+        l.save!
+      end
+
       temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
       script.reload
       script.lesson_groups = temp_lgs
       script.save!
+      script.prevent_legacy_script_levels_in_migrated_scripts
 
       script.generate_plc_objects
 
@@ -1044,6 +1092,13 @@ class Script < ApplicationRecord
     end
   end
 
+  def prevent_legacy_script_levels_in_migrated_scripts
+    if is_migrated && script_levels.reject(&:activity_section).any?
+      lesson_names = lessons.all.select {|l| l.script_levels.reject(&:activity_section).any?}.map(&:name)
+      raise "Legacy script levels are not allowed in migrated scripts. Problem lessons: #{lesson_names.to_json}"
+    end
+  end
+
   # Script levels unfortunately have 3 position values:
   # 1. chapter: position within the Script
   # 2. position: position within the Lesson
@@ -1052,9 +1107,8 @@ class Script < ApplicationRecord
   # values of position and chapter on all script levels in the script.
   def fix_script_level_positions
     reload
-    if script_levels.reject(&:activity_section).any?
-      raise "cannot fix position of legacy script levels"
-    end
+    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
+    prevent_legacy_script_levels_in_migrated_scripts
 
     chapter = 0
     lessons.each do |lesson|
@@ -1384,7 +1438,8 @@ class Script < ApplicationRecord
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
-      weeklyInstructionalMinutes: weekly_instructional_minutes
+      weeklyInstructionalMinutes: weekly_instructional_minutes,
+      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1395,6 +1450,7 @@ class Script < ApplicationRecord
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
+    summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
 
     summary
   end
@@ -1427,7 +1483,8 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
-      age_13_required: logged_out_age_13_required?
+      age_13_required: logged_out_age_13_required?,
+      is_csf: csf?
     }
   end
 
@@ -1578,7 +1635,8 @@ class Script < ApplicationRecord
       :tts,
       :is_course,
       :show_calendar,
-      :is_migrated
+      :is_migrated,
+      :include_student_lesson_plans
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path

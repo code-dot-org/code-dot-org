@@ -1,0 +1,143 @@
+{
+  "script": {
+    "name": "haikubot-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "haikubot-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "haiku bot",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Haiku Bot"
+      },
+      "seeding_key": {
+        "lesson_group.key": "haiku bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Haiku Bot",
+      "name": "Haiku Bot",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Prompt 1",
+        "level_keys": [
+          "haiku_prompt1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "haiku_prompt1"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "haiku_prompt1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Haiku Prototype",
+        "level_keys": [
+          "haiku_prototype_choice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "haiku_prototype_choice"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "haiku_prototype_choice"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "haiku_prompt1",
+        "script_level.level_keys": [
+          "haiku_prompt1"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "haiku_prototype_choice",
+        "script_level.level_keys": [
+          "haiku_prototype_choice"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
+  ]
+}

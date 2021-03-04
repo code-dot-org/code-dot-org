@@ -99,23 +99,21 @@ describe('LessonGroupCard', () => {
     expect(wrapper.find('LessonToken')).to.have.lengthOf(2);
     expect(wrapper.find('button')).to.have.lengthOf(1);
     expect(wrapper.find('input')).to.have.lengthOf(1);
-    expect(wrapper.find('textarea')).to.have.lengthOf(2);
+    expect(wrapper.find('TextareaWithImageUpload')).to.have.lengthOf(2);
 
     expect(wrapper.contains('Lesson Group Name:')).to.be.true;
-    expect(wrapper.contains('Big Questions')).to.be.true;
-    expect(wrapper.contains('Description')).to.be.true;
 
     expect(
       wrapper
-        .find('textarea')
+        .find('TextareaWithImageUpload')
         .at(0)
-        .props().value
+        .props().markdown
     ).to.equal('Lesson group description');
     expect(
       wrapper
-        .find('textarea')
+        .find('TextareaWithImageUpload')
         .at(1)
-        .props().value
+        .props().markdown
     ).to.equal('Big questions');
   });
 
@@ -128,7 +126,7 @@ describe('LessonGroupCard', () => {
     expect(wrapper.find('LessonToken')).to.have.lengthOf(2);
     expect(wrapper.find('button')).to.have.lengthOf(1);
     expect(wrapper.find('input')).to.have.lengthOf(0);
-    expect(wrapper.find('textarea')).to.have.lengthOf(0);
+    expect(wrapper.find('TextareaWithImageUpload')).to.have.lengthOf(0);
 
     expect(wrapper.contains('Lesson Group Name:')).to.be.false;
     expect(wrapper.contains('Big Questions')).to.be.false;
@@ -147,29 +145,5 @@ describe('LessonGroupCard', () => {
 
     expect(addLesson).to.have.been.calledOnce;
     window.prompt.restore();
-  });
-
-  it('edit lesson group description', () => {
-    const wrapper = shallow(<LessonGroupCard {...defaultProps} />);
-
-    const textArea = wrapper.find('textarea').at(0);
-    textArea.simulate('change', {target: {value: 'New Description'}});
-    expect(updateLessonGroupField).to.have.been.calledWith(
-      1,
-      'description',
-      'New Description'
-    );
-  });
-
-  it('edit lesson group big questions', () => {
-    const wrapper = shallow(<LessonGroupCard {...defaultProps} />);
-
-    const textArea = wrapper.find('textarea').at(1);
-    textArea.simulate('change', {target: {value: 'New Big Questions'}});
-    expect(updateLessonGroupField).to.have.been.calledWith(
-      1,
-      'bigQuestions',
-      'New Big Questions'
-    );
   });
 });

@@ -3,13 +3,16 @@
 # This script deletes hoc_activity.name from all rows between the given start
 # and end ids.
 #
-# This script is the step 1 in a two-step process to ensure that student names
+# This script is step 1 of a two-step process to ensure that student names
 # stored in pegasus.hoc_activity are deleted after 3 months. This script will
 # be run once in production to remove names from all older rows in the table.
 # After this script is run, bin/cron/hoc_student_name_cleanup will be used to
 # delete names based on hoc_activity.finished_at. This two-step process is
 # necessary because while recent rows with names all have a finished_at value,
 # older rows do not.
+#
+# This script was run on production from 2021-02-17 5:00pm to 2021-02-18 2:48am PST
+# with the following parameters: --start-id=0 --end_id=1000000000 --sleep=0
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/db'

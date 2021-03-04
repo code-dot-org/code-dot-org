@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-02-18T20:09:02.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "tts_long_instructions_override": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "instructions_important": "false",
+    "short_instructions": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "# What's your plan?\r\n\r\nThroughout the course, you will be asked to write reflections on what you have learned. Once you submit your response, it will save, and you can always come back to it. We will revisit it at the end of this online course.\r\n\r\nTake a moment now to reflect. How and when will you complete this online course to make ensure you get the most benefit from the experience? ",
+    "parent_level_id": 23354,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:36:42 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:37:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-08 17:52:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"}]"
+}]]></config>
+</FreeResponse>

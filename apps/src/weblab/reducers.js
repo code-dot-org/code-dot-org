@@ -35,8 +35,32 @@ function showError(state, action) {
   }
 }
 
+function maxProjectCapacity(state, action) {
+  state = state || -1;
+
+  switch (action.type) {
+    case ActionType.CHANGE_MAX_PROJECT_CAPACITY:
+      return action.bytes;
+    default:
+      return state;
+  }
+}
+
+function projectSize(state, action) {
+  state = state || -1;
+
+  switch (action.type) {
+    case ActionType.CHANGE_PROJECT_SIZE:
+      return action.bytes;
+    default:
+      return state;
+  }
+}
+
 export default {
   fullScreenPreviewOn,
   inspectorOn,
-  showError
+  showError,
+  maxProjectCapacity,
+  projectSize
 };

@@ -5,6 +5,7 @@
     "hidden": true,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSA"
     },
     "new_name": null,
     "family_name": null,

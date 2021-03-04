@@ -18,6 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 16:48:37 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -1102,18 +1103,6 @@
       }
     },
     {
-      "key": "b771511b-b20d-4e0c-bbe7-e4495ba20adc",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b771511b-b20d-4e0c-bbe7-e4495ba20adc",
-        "lesson.key": "Project - Decision Maker App Part 2",
-        "lesson_group.key": "csp_project",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
       "key": "6f1686af-cd1b-48c7-a08b-91c574b5664f",
       "position": 1,
       "properties": {
@@ -1220,13 +1209,7 @@
       "key": "3f56591b-6048-4a63-a8c6-0cd2a41f728e",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.*\n\n**Discussion Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
       },
       "seeding_key": {
         "activity_section.key": "3f56591b-6048-4a63-a8c6-0cd2a41f728e",
@@ -1383,13 +1366,7 @@
       "key": "23f77e06-84ca-4eb8-babf-ecaa982de927",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** Let's do a quick review. How does a baggy represent a variable?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Let's do a quick review. How does a baggy represent a variable?*\n\n**Discussion Goal:** The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "23f77e06-84ca-4eb8-babf-ecaa982de927",
@@ -1424,13 +1401,7 @@
       "key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
       "position": 3,
       "properties": {
-        "description": "*  Class Discussion: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Here are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an `onEvent` is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an `onEvent` is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
-          }
-        ]
+        "description": "*  Class Discussion: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an `onEvent` is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an `onEvent` is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
       },
       "seeding_key": {
         "activity_section.key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
@@ -1465,13 +1436,7 @@
       "key": "ef38364e-197a-4084-b26b-b08343577d3a",
       "position": 6,
       "properties": {
-        "description": "*  Class Discussion: Ask a few students to explain what's happening on line 3 with `Math.round`.\r\n* Modify the Code: Change the code so that no space displays between the temperature and the unit description (\"F\" or \"C\").",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "On line 3, the Fahrenheit temperature is converted to Celsius. `Math.round` rounds a given value to the nearest integer. \r\n"
-          }
-        ]
+        "description": "*  Class Discussion: Ask a few students to explain what's happening on line 3 with `Math.round`.\n* Modify the Code: Change the code so that no space displays between the temperature and the unit description (\"F\" or \"C\").\n\n**Discussion Goal:** On line 3, the Fahrenheit temperature is converted to Celsius. `Math.round` rounds a given value to the nearest integer. \n"
       },
       "seeding_key": {
         "activity_section.key": "ef38364e-197a-4084-b26b-b08343577d3a",
@@ -1506,13 +1471,7 @@
       "key": "1fb1a060-1dac-4532-9f75-5164cb18de16",
       "position": 9,
       "properties": {
-        "description": "*  Class Discussion: Look at line 40. How does `getText()` work? What is it doing?\r\n* Modify the Code: Add an explanation point `\"!\"` to the end of the string stored in `userName`.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "`getText` gets the string of text that is found in the element with the given id. In this case, the id is `\"nameInput\"`. In our app, the name written in the `\"nameInput\"` element is concatenated with \"Hi\" and then stored in the variable `myName`. \r\n"
-          }
-        ]
+        "description": "*  Class Discussion: Look at line 40. How does `getText()` work? What is it doing?\n* Modify the Code: Add an explanation point `\"!\"` to the end of the string stored in `userName`.\n\n**Discussion Goal:**`getText` gets the string of text that is found in the element with the given id. In this case, the id is `\"nameInput\"`. In our app, the name written in the `\"nameInput\"` element is concatenated with \"Hi\" and then stored in the variable `myName`. \n"
       },
       "seeding_key": {
         "activity_section.key": "1fb1a060-1dac-4532-9f75-5164cb18de16",
@@ -1547,13 +1506,7 @@
       "key": "283921b8-736a-4710-a00d-f8dca0f42cca",
       "position": 12,
       "properties": {
-        "description": "**Prompt:** With a partner, discuss the following:",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should step through each line of the pattern, explaining what's happening. \r\n\r\nCounter Pattern with Event:\r\n\r\n* myVar gets the value 0\r\n* When the event is triggered, myVar is updated getting the current value of myVar and adding 1.\r\n\r\nThe **Counter Pattern with Event** might be used to update a score in a game when an item is clicked.\r\n"
-          }
-        ]
+        "description": "**Discuss:** *With a partner, discuss the following:*\n\n**Discussion Goal:** Students should step through each line of the pattern, explaining what's happening. \n\nCounter Pattern with Event:\n\n* myVar gets the value 0\n* When the event is triggered, myVar is updated getting the current value of myVar and adding 1.\n\nThe **Counter Pattern with Event** might be used to update a score in a game when an item is clicked.\n"
       },
       "seeding_key": {
         "activity_section.key": "283921b8-736a-4710-a00d-f8dca0f42cca",
@@ -1587,13 +1540,7 @@
       "key": "55b83c45-4852-4653-9233-4f394b2d4e52",
       "position": 15,
       "properties": {
-        "description": "[slide]  **Display:** Talk through the pattern with students.\n\n**Prompt:** Explain to a partner how the \"Variable with String Concatenation Pattern\" works.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \r\n\r\n* myString gets the value \"rock\"\r\n* myOtherStrings gets the value \"roll\"\r\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\r\n* myStory now stores the value: \"rock and roll\"\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\"\n\n"
       },
       "seeding_key": {
         "activity_section.key": "55b83c45-4852-4653-9233-4f394b2d4e52",
@@ -1616,13 +1563,7 @@
       "key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Answers:** What can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
-          }
-        ]
+        "description": "[slide]  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Goal Answers:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
       },
       "seeding_key": {
         "activity_section.key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
@@ -1692,7 +1633,7 @@
       "key": "4c23d91b-569a-48e0-b46c-01c7885a75e1",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussion prompts. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\r\n\r\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.",
         "name": "Practice Time\r"
       },
       "seeding_key": {
@@ -1802,13 +1743,7 @@
       "key": "30356bfd-701e-492c-b96e-64c78f98fecc",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
-          }
-        ],
+        "description": "[slide]  **Discuss:** *What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n",
         "name": "Synthesizing Discussion\r"
       },
       "seeding_key": {
@@ -1912,7 +1847,7 @@
       "key": "186a5f67-e29f-4ec7-baf0-1b1cc95c5e04",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n[slide] **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
         "name": "Build the Photo Liker\r"
       },
       "seeding_key": {
@@ -1935,7 +1870,7 @@
       "key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
       "position": 3,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* What does this app do?\n  * It lets a user \"like\" an image and add comments to it. \n* What are the inputs?\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* What are the outputs?\n  * The number showing how many thumbs up the image has. \n* What's one piece of information that might be stored in a variable?\n  * The number of likes and all the comments added so far. "
+        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n[slide] **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. "
       },
       "seeding_key": {
         "activity_section.key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
@@ -1974,7 +1909,7 @@
       "key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac",
       "position": 6,
       "properties": {
-        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n[slide] **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Photo Liker app"
       },
       "seeding_key": {
@@ -2037,7 +1972,7 @@
       "key": "36a7c7a0-5fac-40d7-8fb7-839dddddfd07",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Imagine you want to make a decision about what to wear to an event. Name two pieces of information you'd want. How would you use them in your decision?",
+        "description": "[slide] **Discuss:** *Imagine you want to make a decision about what to wear to an event. Name two pieces of information you'd want. How would you use them in your decision?*",
         "name": "Preview Conditionals\r"
       },
       "seeding_key": {
@@ -2141,13 +2076,7 @@
       "key": "84400ab9-232d-46ee-8fc1-3a0e959f3042",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** A water park will let a visitor on a ride if they are 48 or more inches tall OR they are 14 years old or older. Make a flowchart for this decision. Make sure to use comparison operators (`<`, `>`, `==`, etc. ) and logical operators (`&&`, `||`, `!`) when you write your Boolean expression.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Optional Warmup Prompt:** This prompt is optional and helpful further synthesize key points from the previous lesson. If you are able to quickly move to the main activity and believe your class does not need this revew consider skipping this prompt.\r\n"
-          }
-        ],
+        "description": "[slide]  **Discuss:** *A water park will let a visitor on a ride if they are 48 or more inches tall OR they are 14 years old or older. Make a flowchart for this decision. Make sure to use comparison operators (`<`, `>`, `==`, etc. ) and logical operators (`&&`, `||`, `!`) when you write your Boolean expression.*\n\n**Optional Warmup Discussion:** This discussion is optional and helpful further synthesize key points from the previous lesson. If you are able to quickly move to the main activity and believe your class does not need this revew consider skipping this discussion.\n\nHave partners share their responses at their tables. Then discuss answers briefly as a class.\n",
         "name": "Preview the Lesson\r"
       },
       "seeding_key": {
@@ -2156,19 +2085,8 @@
       }
     },
     {
-      "key": "73515981-c410-4f8b-bb63-7a2351557705",
-      "position": 2,
-      "properties": {
-        "description": "**Discuss:** Have partners share their responses at their tables. Then discuss answers briefly as a class."
-      },
-      "seeding_key": {
-        "activity_section.key": "73515981-c410-4f8b-bb63-7a2351557705",
-        "lesson_activity.key": "bd1cdef5-5320-4a28-9ebf-f1f2cfc1eeb9"
-      }
-    },
-    {
       "key": "85ebbbf7-a9fa-4f3a-bdfe-04cbf8202068",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "[slide] In everyday conversation it is common to switch between using the words \"when\" and \"if\". Here's some examples of what this looks like\r\n\r\n* \"When the user clicks the button...\"\r\n* \"If the user clicks the button...\"\r\n* \"When the user has more than 100 points...\"\r\n* \"If the user has more than 100 points...\"\r\n\r\nToday we want to be careful about how we use these words. To make things simple, we're going to use the following rules.\r\n\r\n* \"when\": Means there is an `onEvent` to respond to user input. The app does something \"when\" the user clicks.\r\n* \"if\": Means there is a conditional statement that decides what pieces of code to run. The app does something \"if\" a boolean expression evaluates to true.\r\n\r\nWe'll talk more about this later but for now keep an eye out for the difference between \"when\" and \"if\".",
         "remarks": true
@@ -2240,7 +2158,7 @@
       "key": "8f5b07e2-c4d1-4a0d-9f85-3b9be3dcb5e3",
       "position": 5,
       "properties": {
-        "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n  * **The goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
+        "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: *Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.*\n  * **The goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
       },
       "seeding_key": {
         "activity_section.key": "8f5b07e2-c4d1-4a0d-9f85-3b9be3dcb5e3",
@@ -2365,13 +2283,7 @@
       "key": "07b9bce1-e52d-406b-8d8b-b43ea6a3ca76",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** What is the difference between an if-statement, an if-else statement, and an if-else-if statement? How are they similar?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Some key points to call out in this discussion.\r\n\r\n* These statements are more the same than different. They all use boolean expressions to decide whether to run certain pieces of code.\r\n* if-statements check if one boolean expression is true. If it is, a piece of code is run. Otherwise the code runs as normally.\r\n* if-else statements add the functionality that if the condition is false it can still run some code before returning to running the program as normal\r\n* if-else-if statements can check more than one boolean expression. They will only run the code for the first boolean expression that evaluates to true.\r\n\r\n"
-          }
-        ]
+        "description": "[slide] **Discussion:** *What is the difference between an if-statement, an if-else statement, and an if-else-if statement? How are they similar?*\n\n**Discussion Goal:** Some key points to call out in this discussion.\n\n* These statements are more the same than different. They all use boolean expressions to decide whether to run certain pieces of code.\n* if-statements check if one boolean expression is true. If it is, a piece of code is run. Otherwise the code runs as normally.\n* if-else statements add the functionality that if the condition is false it can still run some code before returning to running the program as normal\n* if-else-if statements can check more than one boolean expression. They will only run the code for the first boolean expression that evaluates to true.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "07b9bce1-e52d-406b-8d8b-b43ea6a3ca76",
@@ -2447,7 +2359,7 @@
       "key": "5b134614-44e0-4d4f-b32a-2d26a770d77c",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussion prompts. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n[slide] **Do This:** Direct students to Code Studio, Lesson 3 Level 2. Then briefly remind students about debugging skills that they will be using in today's activity.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n[slide] **Do This:** Direct students to Code Studio, Lesson 3 Level 2. Then briefly remind students about debugging skills that they will be using in today's activity.",
         "name": "Practice Time"
       },
       "seeding_key": {
@@ -2554,13 +2466,7 @@
       "key": "53096640-f36f-41dc-8526-46403f7f9466",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What aspects of working with conditionals do you feel like clicked today? What do you still feel like you have trouble with?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Discuss:** *What aspects of working with conditionals do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "53096640-f36f-41dc-8526-46403f7f9466",
@@ -2646,7 +2552,7 @@
       "key": "ec96799e-59da-4205-8c28-5065461fba5a",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Level 2 - Explore:** Have students explore the working Museum Ticket Generator App in Level 2. If students are not working in pairs they should still discuss the prompts with a neighbor.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n[slide] **Level 2 - Explore:** Have students explore the working Museum Ticket Generator App in Level 2. If students are not working in pairs they should still discuss with a neighbor.",
         "name": "Try the Museum Ticket Generator"
       },
       "seeding_key": {
@@ -2658,7 +2564,7 @@
       "key": "0762e48d-f16c-4caa-b03a-8c935ee87352",
       "position": 2,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** \n\n* What does this app do?\n\t* Generates a ticket to a museum based on input data from the user.\n* What are the inputs?\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* What are the outputs?\n\t* The ticket generated at the bottom of the screen\t\n* What variables do you think would be necessary for this app to work?\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* What kinds of conditional logic do you think are necessary to make it work?\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
+        "description": "[slide] **Discuss:** \n\n* *What does this app do?*\n\t* Generates a ticket to a museum based on input data from the user.\n* *What are the inputs?*\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* *What are the outputs?*\n\t* The ticket generated at the bottom of the screen\t\n* *What variables do you think would be necessary for this app to work?*\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* *What kinds of conditional logic do you think are necessary to make it work?*\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
         "progression_name": "Try to the Museum Ticket Generator App"
       },
       "seeding_key": {
@@ -2699,7 +2605,7 @@
       "key": "e58c2bc4-3d07-44c0-9c63-bfdaea8cad37",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n[slide] **Do This:** Direct students to level three where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Museum Ticket Generator App"
       },
       "seeding_key": {
@@ -2774,7 +2680,7 @@
       "key": "0cd588ef-22a1-4fb1-bd83-65136c8ac23c",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:**\n\n\n"
+        "description": "[slide]  **Discuss:**\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0cd588ef-22a1-4fb1-bd83-65136c8ac23c",
@@ -2785,7 +2691,7 @@
       "key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
       "position": 3,
       "properties": {
-        "description": "* In Style 1, what line of the song do you sing after line 09? What about in Style 2?\n* Style 2 uses fewer lines to write. Are there fewer lyrics to sing?\n* What are the benefits of writing a song in Style 2? \n\n**Discuss:** Have students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
+        "description": "* *In Style 1, what line of the song do you sing after line 09? What about in Style 2?*\n* *Style 2 uses fewer lines to write. Are there fewer lyrics to sing?*\n* *What are the benefits of writing a song in Style 2?*\n\nHave students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Discussion Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
@@ -2867,7 +2773,7 @@
       "key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
       "position": 2,
       "properties": {
-        "description": "[slide]   **Prompt:** Reflecting on today's lesson about functions:\n\n**Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n "
+        "description": "[slide]   **Discuss:** *Reflecting on today's lesson about functions:*\n\n**Discussion Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n "
       },
       "seeding_key": {
         "activity_section.key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
@@ -2971,7 +2877,7 @@
       "key": "c712f72c-3683-46b8-86e0-e3c691007619",
       "position": 2,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussion prompts. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2"
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2"
       },
       "seeding_key": {
         "activity_section.key": "c712f72c-3683-46b8-86e0-e3c691007619",
@@ -2982,7 +2888,7 @@
       "key": "bec79917-faa2-4bf2-a142-cdc76b8c87cc",
       "position": 3,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussion prompts. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2\n\nToday you're mostly going to practice what we've learned about programming with functions. I'm here to help you when you need, and you can put this cup on your computer when you need help. However, I first want to remind you of the following:\n\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck.\n* Talk to your partner! That's what they're there for!\n* Hover over blocks to read the documentation about how they work.\n* Read the resources in the Help & Tips tab \n* Talk to the group next to you. If another group asks for help make sure to take some time to talk it through with them.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2\n\nToday you're mostly going to practice what we've learned about programming with functions. I'm here to help you when you need, and you can put this cup on your computer when you need help. However, I first want to remind you of the following:\n\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck.\n* Talk to your partner! That's what they're there for!\n* Hover over blocks to read the documentation about how they work.\n* Read the resources in the Help & Tips tab \n* Talk to the group next to you. If another group asks for help make sure to take some time to talk it through with them.",
         "remarks": true
       },
       "seeding_key": {
@@ -3089,7 +2995,7 @@
       "key": "0a280b61-a5d6-4525-a042-ac90042ab129",
       "position": 1,
       "properties": {
-        "description": "[slide]   **Prompt:** What aspects of working with functions clicked today? What do you still feel like you have trouble with?\n\n**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
+        "description": "[slide]   **Discuss:** *What aspects of working with functions clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
       },
       "seeding_key": {
         "activity_section.key": "0a280b61-a5d6-4525-a042-ac90042ab129",
@@ -3163,7 +3069,7 @@
       "key": "a1304aea-d070-4d7a-a800-4c325232b0a3",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\r\n\r\n\r\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Quote Maker App in Level 1.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n[slide] **Do This:** Have students explore the working Quote Maker App in Level 1.",
         "name": "Build the Quote Maker App\r"
       },
       "seeding_key": {
@@ -3175,7 +3081,7 @@
       "key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be",
       "position": 2,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* What does this app do?\n\t* Display a quote with user-defined fonts and background colors.\n* What are the inputs?\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* What are the outputs?\n\t* The fully designed quote displayed at the bottom of the screen\t\n* How could a function be used in this app?\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
+        "description": "If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n[slide] **Discuss:**\n\n* *What does this app do?*\n\t* Display a quote with user-defined fonts and background colors.\n* *What are the inputs?*\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* *What are the outputs?*\n\t* The fully designed quote displayed at the bottom of the screen\t\n* *How could a function be used in this app?*\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
         "progression_name": "Quote Maker App"
       },
       "seeding_key": {
@@ -3215,7 +3121,7 @@
       "key": "6af09862-3230-4627-a5b9-8af30923ade8",
       "position": 5,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level two where they complete the Quote Maker App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "[slide] **Do This:** Direct students to level two where they complete the Quote Maker App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Quote Maker App"
       },
       "seeding_key": {
@@ -3330,7 +3236,7 @@
       "key": "93ab2341-2bf1-49be-9c6e-4ef96c81b71d",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** For each app, discuss the following:"
+        "description": "[slide]  **Discuss:** *For each app, discuss the following:*"
       },
       "seeding_key": {
         "activity_section.key": "93ab2341-2bf1-49be-9c6e-4ef96c81b71d",
@@ -3341,7 +3247,7 @@
       "key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
       "position": 4,
       "properties": {
-        "description": "* What does this app do?\r\n* What are the inputs?\r\n* What are the outputs?\r\n* What variables do you think would be necessary for this app to work?\r\n* What kinds of conditional logic do you think are necessary to make it work?\r\n* How could a function be used in this app?\r\n\r\n\r\n[slide] **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
+        "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n[slide] **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
@@ -3364,7 +3270,7 @@
       "key": "aea1fc82-3282-4d72-90ab-53201913cb05",
       "position": 6,
       "properties": {
-        "description": "[slide] **Discuss:** Review the app requirements in the Planning Guide."
+        "description": "Review the app requirements in the Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "aea1fc82-3282-4d72-90ab-53201913cb05",
@@ -3534,50 +3440,6 @@
       "seeding_key": {
         "activity_section.key": "db3027af-a3c9-4d13-96c0-ebcf7ec637b3",
         "lesson_activity.key": "072e440f-e53e-4bad-bf13-98809d5cf7ac"
-      }
-    },
-    {
-      "key": "7de46787-93d6-42bf-b8a3-ab9dab48bdc2",
-      "position": 1,
-      "properties": {
-        "progression_name": "Create the Screens"
-      },
-      "seeding_key": {
-        "activity_section.key": "7de46787-93d6-42bf-b8a3-ab9dab48bdc2",
-        "lesson_activity.key": "b771511b-b20d-4e0c-bbe7-e4495ba20adc"
-      }
-    },
-    {
-      "key": "f7e1ea44-e78b-4d7d-935e-dcc791fc8490",
-      "position": 2,
-      "properties": {
-        "progression_name": "Create the Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "f7e1ea44-e78b-4d7d-935e-dcc791fc8490",
-        "lesson_activity.key": "b771511b-b20d-4e0c-bbe7-e4495ba20adc"
-      }
-    },
-    {
-      "key": "af523a11-2be5-482b-96b4-bb89ef5e5929",
-      "position": 3,
-      "properties": {
-        "progression_name": "Create the Function"
-      },
-      "seeding_key": {
-        "activity_section.key": "af523a11-2be5-482b-96b4-bb89ef5e5929",
-        "lesson_activity.key": "b771511b-b20d-4e0c-bbe7-e4495ba20adc"
-      }
-    },
-    {
-      "key": "14f66402-e4b0-419a-92d9-ff46e0680e40",
-      "position": 4,
-      "properties": {
-        "progression_name": "Add onEvents"
-      },
-      "seeding_key": {
-        "activity_section.key": "14f66402-e4b0-419a-92d9-ff46e0680e40",
-        "lesson_activity.key": "b771511b-b20d-4e0c-bbe7-e4495ba20adc"
       }
     },
     {
@@ -5464,7 +5326,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps"
+        "progression": "Sample Apps",
+        "level_keys": [
+          "U4 L12 Practice PT 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5487,7 +5352,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps"
+        "progression": "Sample Apps",
+        "level_keys": [
+          "U4 L12 Practice PT 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5510,7 +5378,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create the Screens"
+        "progression": "Create the Screens",
+        "level_keys": [
+          "U4 L13 Practice PT 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5533,7 +5404,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create the Variables"
+        "progression": "Create the Variables",
+        "level_keys": [
+          "U4 L13 Practice PT 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5556,7 +5430,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create the Function"
+        "progression": "Create the Function",
+        "level_keys": [
+          "U4 L13 Practice PT 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5579,7 +5456,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Add onEvents"
+        "progression": "Add onEvents",
+        "level_keys": [
+          "U4 L13 Practice PT 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5602,7 +5482,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test Your Decision Maker App"
+        "progression": "Test Your Decision Maker App",
+        "level_keys": [
+          "U4 L14 Practice PT 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5625,7 +5508,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit Your Decision Maker App"
+        "progression": "Submit Your Decision Maker App",
+        "level_keys": [
+          "U4 L14 Practice PT 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5648,7 +5534,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 4 Exam"
+        "progression": "Unit 4 Exam",
+        "level_keys": [
+          "CSP 20-21 Unit 4 Assessment_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6582,30 +6471,6 @@
   ],
   "resources": [
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
-      }
-    },
-    {
-      "name": "EIPM: A Short Introduction",
-      "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
-      "key": "EIPM One Pager",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "EIPM One Pager"
-      }
-    },
-    {
       "name": "Guide to EIPM Lessons",
       "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
       "key": "guide_to_eipm_lessons",
@@ -6632,25 +6497,25 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "name": "EIPM: A Short Introduction",
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
-      "key": "EIPM One Pager",
+      "key": "eipm_a_short_introduction",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "EIPM One Pager"
+        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -6680,25 +6545,25 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "name": "EIPM: A Short Introduction",
       "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
-      "key": "EIPM One Pager",
+      "key": "eipm_a_short_introduction",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "EIPM One Pager"
+        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -6740,13 +6605,25 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "name": "EIPM: A Short Introduction",
+      "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
+      "key": "eipm_a_short_introduction",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -6789,13 +6666,13 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6837,13 +6714,13 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6861,13 +6738,13 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6897,13 +6774,13 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6922,13 +6799,13 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6983,13 +6860,13 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7007,26 +6884,13 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
-      }
-    },
-    {
-      "name": "CSP Functions Make - Quote Maker App",
-      "url": "https://docs.google.com/document/d/1K_0TbgCTNsO52Nm4rzy_o3P0X80SI8nx0KwHhHpFfrk/edit?usp=sharing",
-      "key": "csp functions make",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp functions make"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7044,143 +6908,156 @@
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "name": "CSP Functions Make - Quote Maker App",
+      "url": "https://docs.google.com/document/d/1K_0TbgCTNsO52Nm4rzy_o3P0X80SI8nx0KwHhHpFfrk/edit?usp=sharing",
+      "key": "csp_functions_make",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_functions_make"
+      }
+    },
+    {
+      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
+      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "name": "CSP U4 Practice PT Rubric",
       "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
-      "key": "CSP U4 Practice PT Rubric",
+      "key": "csp_u4_practice_pt_rubric",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U4 Practice PT Rubric"
+        "resource.key": "csp_u4_practice_pt_rubric"
       }
     },
     {
       "name": "CSP U4 Practice PT Planning Guide",
       "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
-      "key": "CSP U4 Practice PT Planning Guide",
+      "key": "csp_u4_practice_pt_planning_guide",
       "properties": {
         "type": "Planning Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U4 Practice PT Planning Guide"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "name": "CSP U4 Practice PT Rubric",
       "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
-      "key": "CSP U4 Practice PT Rubric",
+      "key": "csp_u4_practice_pt_rubric",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U4 Practice PT Rubric"
+        "resource.key": "csp_u4_practice_pt_rubric"
       }
     },
     {
       "name": "CSP U4 Practice PT Planning Guide",
       "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
-      "key": "CSP U4 Practice PT Planning Guide",
+      "key": "csp_u4_practice_pt_planning_guide",
       "properties": {
         "type": "Planning Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U4 Practice PT Planning Guide"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "name": "CSP U4 Practice PT Rubric",
       "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
-      "key": "CSP U4 Practice PT Rubric",
+      "key": "csp_u4_practice_pt_rubric",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U4 Practice PT Rubric"
+        "resource.key": "csp_u4_practice_pt_rubric"
       }
     },
     {
       "name": "CSP U4 Practice PT Planning Guide",
       "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
-      "key": "CSP U4 Practice PT Planning Guide",
+      "key": "csp_u4_practice_pt_planning_guide",
       "properties": {
         "type": "Planning Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "CSP U4 Practice PT Planning Guide"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
       "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp unit 4 presentation",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "resource.key": "csp unit 4 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "resource.key": "EIPM One Pager"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Variables Explore",
@@ -7195,14 +7072,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Variables Explore",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "resource.key": "EIPM One Pager"
+        "lesson.key": "Variables Explore",
+        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -7219,14 +7096,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Variables Investigate",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "EIPM One Pager"
+        "lesson.key": "Variables Investigate",
+        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -7249,8 +7126,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Make",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Variables Practice",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -7273,8 +7156,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Explore",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Variables Make",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7297,8 +7180,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Conditionals Explore",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7309,8 +7192,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Conditionals Investigate",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7327,8 +7210,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditional Make",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7339,8 +7222,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Explore / Investigate",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Conditional Make",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7369,8 +7252,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Practice",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Functions Explore / Investigate",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7381,14 +7264,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Make",
-        "resource.key": "csp unit 4 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions Make",
-        "resource.key": "csp functions make"
+        "lesson.key": "Functions Practice",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -7399,62 +7276,74 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Decision Maker App Part 1",
-        "resource.key": "csp unit 4 presentation"
+        "lesson.key": "Functions Make",
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "resource.key": "csp_functions_make"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 1",
-        "resource.key": "CSP U4 Practice PT Rubric"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 1",
-        "resource.key": "CSP U4 Practice PT Planning Guide"
+        "resource.key": "csp_u4_practice_pt_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 2",
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 2",
-        "resource.key": "CSP U4 Practice PT Rubric"
+        "resource.key": "csp_u4_practice_pt_rubric"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 2",
-        "resource.key": "CSP U4 Practice PT Planning Guide"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 3",
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 3",
-        "resource.key": "CSP U4 Practice PT Rubric"
+        "resource.key": "csp_u4_practice_pt_rubric"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 3",
-        "resource.key": "CSP U4 Practice PT Planning Guide"
+        "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 15: Assessment Day",
-        "resource.key": "csp unit 4 presentation"
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     }
   ],

@@ -1,0 +1,5 @@
+lesson_group 'haiku bot', display_name: 'Haiku Bot'
+lesson 'Haiku Bot', display_name: 'Haiku Bot', has_lesson_plan: false
+level 'haiku_prompt1', progression: 'Prompt 1'
+level 'haiku_prototype_choice', progression: 'Haiku Prototype'
+

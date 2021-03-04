@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'pdf/conversion'
 
 # When adding a new model, update the following:
 # - serialize_seeding_json
@@ -14,6 +15,7 @@ module Services
   class ScriptSeedTest < ActiveSupport::TestCase
     setup do
       Game.game_cache = nil
+      PDF.stubs(:generate_from_url)
     end
 
     # Tests serialization of a "full Script tree" - a Script with all of the associated models under it populated.
@@ -38,12 +40,12 @@ module Services
       assert_equal expected, actual
     end
 
-    test 'seeded_at property is not serialized' do
+    test 'seeded_from property is not serialized' do
       script = create(:script)
-      script.seeded_at = Time.now
+      script.seeded_from = Time.now
       result = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json
       assert result.key? :properties
-      refute result[:properties].key? 'seeded_at'
+      refute result[:properties].key? 'seeded_from'
     end
 
     test 'seed new script' do
@@ -565,19 +567,19 @@ module Services
       )
     end
 
-    test 'import_script sets seeded_at from serialized_at' do
+    test 'import_script sets seeded_from from serialized_at' do
       script = create(:script, is_migrated: true, hidden: true)
-      assert script.seeded_at.nil?
+      assert script.seeded_from.nil?
 
       serialized = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json.stringify_keys
       assert serialized['serialized_at'].present?
 
       ScriptSeed.import_script(serialized)
       script.reload
-      assert script.seeded_at.present?
+      assert script.seeded_from.present?
       # minitest is a bit weird about Time equality, so normalize both values
       # to integers for easy comparison
-      assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_at).to_i
+      assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_from).to_i
     end
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
@@ -637,7 +639,8 @@ module Services
 
     def assert_scripts_equal(script1, script2)
       assert_attributes_equal(script1, script2, ['properties'])
-      assert_equal script1.properties.except('seeded_at'), script2.properties.except('seeded_at')
+      assert_equal script1.properties.except('seeded_from'),
+        script2.properties.except('seeded_from')
     end
 
     def assert_lesson_groups_equal(lesson_groups1, lesson_groups2)

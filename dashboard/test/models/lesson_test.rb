@@ -243,6 +243,36 @@ class LessonTest < ActiveSupport::TestCase
     assert levels_data.last[:bonus]
   end
 
+  test 'summarize uses unplugged property' do
+    script = create :script, is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
+
+    levels_data = lesson.summarize
+    assert levels_data[:unplugged]
+  end
+
+  test 'summarize_for_calendar adds durations of all activities' do
+    script = create :script, is_migrated: false, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
+    activity1 = create :lesson_activity, lesson: lesson, duration: 20
+    section1 = create :activity_section, lesson_activity: activity1
+    level1 = create :level
+    create :script_level, script: script, lesson: lesson, activity_section: section1, activity_section_position: 1, levels: [level1]
+    activity2 = create :lesson_activity, lesson: lesson, duration: 10
+    section2 = create :activity_section, lesson_activity: activity2
+    level2 = create :level
+    create :script_level, script: script, lesson: lesson, activity_section: section2, activity_section_position: 2, levels: [level2]
+    activity3 = create :lesson_activity, lesson: lesson, duration: nil
+    section3 = create :activity_section, lesson_activity: activity3
+    level3 = create :level
+    create :script_level, script: script, lesson: lesson, activity_section: section3, activity_section_position: 3, levels: [level3]
+
+    levels_data = lesson.summarize_for_calendar
+    assert_equal 30, levels_data[:duration]
+  end
+
   test 'raises error when creating invalid lockable lessons' do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -335,12 +365,16 @@ class LessonTest < ActiveSupport::TestCase
     script = create :script, name: 'dummy-script'
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, key: 'dummy-key', name: 'Dummy Name'
+    lesson.student_overview = 'student overview'
+    lesson.overview = 'teacher overview'
 
     expected_i18n = {
       'dummy-script' => {
         'lessons' => {
           'dummy-key' => {
-            'name' => 'Dummy Name'
+            'name' => 'Dummy Name',
+            'description_student' => 'student overview',
+            'description_teacher' => 'teacher overview'
           }
         }
       }
@@ -626,10 +660,10 @@ class LessonTest < ActiveSupport::TestCase
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.lesson_plan_pdf_url)
 
-    script.seeded_at = Time.now.to_s
+    script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://cdo-lesson-plans.s3.amazonaws.com/#{script.name}/#{Time.parse(script.seeded_at).to_s(:number)}/Some Verbose Lesson Name.pdf"
+      "https://cdo-lesson-plans.s3.amazonaws.com/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/Some Verbose Lesson Name.pdf"
     )
   end
 

@@ -733,50 +733,24 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'add script level via lesson update' do
     sign_in @levelbuilder
-
-    activity = @lesson.lesson_activities.create(
-      name: 'activity name',
-      position: 1,
-      key: 'activity-key'
-    )
-    section = activity.activity_sections.create(
-      name: 'section name',
-      position: 1,
-      key: 'section-key'
-    )
-
+    activity = create :lesson_activity, lesson: @lesson
+    section = create :activity_section, lesson_activity: activity
     level_to_add = create :maze, name: 'level-to-add'
 
-    @update_params['activities'] = [
-      {
-        id: activity.id,
-        name: 'activity name',
-        position: 1,
-        activitySections: [
-          {
-            id: section.id,
-            name: 'section name',
-            position: 1,
-            duration: 10,
-            progressionName: 'progression name',
-            scriptLevels: [
-              activitySectionPosition: 1,
-              activeId: level_to_add.id,
-              assessment: true,
-              levels: [
-                {
-                  id: level_to_add.id,
-                  name: level_to_add.name
-                }
-              ]
-            ]
-          }
-        ]
-      }
-    ].to_json
+    @lesson.reload
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    section_data = activities_data.first[:activitySections].first
+    section_data[:progressionName] = 'progression name'
+    section_data[:scriptLevels].push(
+      activitySectionPosition: 1,
+      activeId: level_to_add.id,
+      assessment: true,
+      levels: [{id: level_to_add.id, name: level_to_add.name}]
+    )
 
+    @update_params['activities'] = activities_data.to_json
     put :update, params: @update_params
-
+    assert_response :success
     @lesson.reload
 
     assert_equal activity, @lesson.lesson_activities.first
@@ -788,6 +762,33 @@ class LessonsControllerTest < ActionController::TestCase
     refute script_level.bonus
     assert_equal 'progression name', script_level.progression
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
+  end
+
+  test 'cannot add duplicate level via lesson update' do
+    sign_in @levelbuilder
+    activity = create :lesson_activity, lesson: @lesson
+    create :activity_section, lesson_activity: activity
+
+    activity2 = create :lesson_activity, lesson: @lesson2
+    section2 = create :activity_section, lesson_activity: activity2
+    existing_level = create :maze, name: 'existing-level'
+    create :script_level, activity_section: section2, activity_section_position: 1, lesson: @lesson2, script: @script, levels: [existing_level]
+
+    @lesson.reload
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    activities_data.first[:activitySections].first[:scriptLevels].push(
+      activitySectionPosition: 1,
+      activeId: existing_level.id,
+      assessment: true,
+      levels: [{id: existing_level.id, name: existing_level.name}]
+    )
+
+    @update_params['activities'] = activities_data.to_json
+
+    error = assert_raises do
+      put :update, params: @update_params
+    end
+    assert_includes error.message, 'duplicate levels detected'
   end
 
   test 'add anonymous survey level via lesson update' do
