@@ -126,15 +126,19 @@ export function lessonIsAllAssessment(levels) {
 
 /**
  * Computes summary of a student's progress in a lesson's levels.
- * @param {{id:studentLevelProgressType}} studentLevelProgress An object keyed by
- * level id containing objects representing the student's progress in that level
+ * @param {{id: studentLevelProgressType}} studentLevelProgress
+ * An object keyed by level id containing objects representing the student's
+ * progress in that level
  * @param {levelType[]} levels An array of levels
- * @returns {studentLessonProgressType} An object representing student's progress
- * in the lesson
+ * @returns {studentLessonProgressType}
+ * An object representing student's progress in the lesson
  */
-export function progressForLesson(studentLevelProgress, levels) {
+function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   // Filter any bonus levels as they do not count toward progress.
-  const filteredLevels = levels.filter(level => !level.bonus);
+  const filteredLevels = lessonLevels.filter(level => !level.bonus);
+  if (!filteredLevels.length) {
+    return null;
+  }
 
   const completedStatuses = [
     LevelStatus.perfect,
@@ -174,17 +178,43 @@ export function progressForLesson(studentLevelProgress, levels) {
   const getPercent = count => (100 * count) / filteredLevels.length;
   return {
     isStarted: isLessonStarted,
+    incompletePercent: getPercent(incomplete),
     imperfectPercent: getPercent(aggregates.imperfect),
     completedPercent: getPercent(aggregates.completed),
-    incompletePercent: getPercent(incomplete),
     timeSpent: aggregates.timeSpent,
     lastTimestamp: aggregates.lastTimestamp
   };
 }
 
 /**
- * The level object passed down to use via the server (and stored in stage.stages.levels)
- * contains more data than we need. This filters to the parts our views care about.
+ * Computes studentLessonProgressType objects for each lesson from the provided
+ * level progress data for each student.
+ * @param {studentId: {levelId: studentLevelProgressType}} sectionLevelProgress
+ * An object keyed by student id all the student's level progress data
+ * @param {lessonType[]} lessons An array of lessons
+ * @returns {studentId: {lessonId: studentLessonProgressType}}
+ * An object containing lesson progress data for each student in a section
+ */
+export function lessonProgressForSection(sectionLevelProgress, lessons) {
+  const studentLessonProgress = {};
+  Object.entries(sectionLevelProgress).forEach(
+    ([studentId, studentLevelProgress]) => {
+      studentLessonProgress[studentId] = {};
+      lessons.forEach(lesson => {
+        studentLessonProgress[studentId][lesson.id] = lessonProgressForStudent(
+          studentLevelProgress,
+          lesson.levels
+        );
+      });
+    }
+  );
+  return studentLessonProgress;
+}
+
+/**
+ * The level object passed down to use via the server (and stored in
+ * script.stages.levels) contains more data than we need. This parses the parts
+ * we care about to conform to our `levelType` oject.
  */
 export const processedLevel = level => {
   return {

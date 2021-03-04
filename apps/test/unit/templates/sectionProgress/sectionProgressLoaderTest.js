@@ -12,7 +12,7 @@ const serverScriptResponse = {
   hasStandards: false,
   id: 123,
   path: 'test/url',
-  lessons: [{levels: []}],
+  lessons: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
   title: 'Course B',
   version_year: '2020'
 };
@@ -25,13 +25,13 @@ const serverProgressResponse = {
     total_pages: 1
   },
   student_last_updates: {
-    '100': null,
-    '101': timeInSeconds,
-    '102': timeInSeconds + 1
+    100: null,
+    101: timeInSeconds,
+    102: timeInSeconds + 1
   },
   student_progress: {
-    '100': {},
-    '101': {
+    100: {},
+    101: {
       '2000': {
         status: 'locked',
         result: 1001,
@@ -47,7 +47,7 @@ const serverProgressResponse = {
         last_progress_at: 12345
       }
     },
-    '102': {
+    102: {
       '2000': {
         status: 'perfect',
         result: 100,
@@ -66,12 +66,12 @@ const firstServerProgressResponse = {
     total_pages: 2
   },
   student_last_updates: {
-    '100': null,
-    '101': timeInSeconds
+    100: null,
+    101: timeInSeconds
   },
   student_progress: {
-    '100': {},
-    '101': {
+    100: {},
+    101: {
       '2000': {
         status: 'locked',
         result: 1001,
@@ -97,10 +97,10 @@ const secondServerProgressResponse = {
     total_pages: 2
   },
   student_last_updates: {
-    '102': timeInSeconds + 1
+    102: timeInSeconds + 1
   },
   student_progress: {
-    '102': {
+    102: {
       '2000': {
         status: 'perfect',
         result: 100,
@@ -121,7 +121,7 @@ const fullExpectedResult = {
       hasStandards: false,
       id: 123,
       path: 'test/url',
-      stages: [{levels: []}],
+      stages: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
       title: 'Course B',
       version_year: '2020'
     }
@@ -153,6 +153,40 @@ const fullExpectedResult = {
           status: 'perfect',
           result: 100,
           paired: false,
+          timeSpent: 6789,
+          lastTimestamp: 6789
+        }
+      }
+    }
+  },
+  studentLessonProgressByScript: {
+    123: {
+      100: {
+        11: {
+          isStarted: false,
+          incompletePercent: 100,
+          imperfectPercent: 0,
+          completedPercent: 0,
+          timeSpent: 0,
+          lastTimestamp: 0
+        }
+      },
+      101: {
+        11: {
+          isStarted: true,
+          incompletePercent: 50,
+          imperfectPercent: 0,
+          completedPercent: 50,
+          timeSpent: 12345,
+          lastTimestamp: 12345
+        }
+      },
+      102: {
+        11: {
+          isStarted: true,
+          incompletePercent: 50,
+          imperfectPercent: 0,
+          completedPercent: 50,
           timeSpent: 6789,
           lastTimestamp: 6789
         }
@@ -272,6 +306,7 @@ describe('sectionProgressLoader.loadScript', () => {
           return {
             sectionProgress: {
               studentLevelProgressByScript: [],
+              studentLessonProgressByScript: [],
               scriptDataByScript: [],
               currentView: 0
             },
@@ -285,7 +320,7 @@ describe('sectionProgressLoader.loadScript', () => {
         dispatch: () => {}
       });
 
-      sinon.stub(progressHelpers, 'processedLevel');
+      sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
       addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
       fetchStub.onCall(0).returns({
         then: sinon.stub().returns({
@@ -365,6 +400,7 @@ describe('sectionProgressLoader.loadScript', () => {
             }
           },
           studentLevelProgressByScript: {'0': {}},
+          studentLessonProgressByScript: {'0': {}},
           studentLastUpdateByScript: {'0': {}}
         };
 
@@ -384,7 +420,7 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       it('transforms the data provided by the server', () => {
-        sinon.stub(progressHelpers, 'processedLevel');
+        sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
         addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({

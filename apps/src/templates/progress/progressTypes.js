@@ -118,12 +118,16 @@ export const lessonType = PropTypes.shape({
  * @property {number} incompletePercent
  * @property {number} imperfectPercent
  * @property {number} completedPercent
+ * @property {number} timeSpent
+ * @property {number} lastTimestamp
  */
 export const studentLessonProgressType = PropTypes.shape({
   isStarted: PropTypes.bool.isRequired,
   incompletePercent: PropTypes.number.isRequired,
   imperfectPercent: PropTypes.number.isRequired,
-  completedPercent: PropTypes.number.isRequired
+  completedPercent: PropTypes.number.isRequired,
+  timeSpent: PropTypes.number.isRequired,
+  lastTimestamp: PropTypes.number.isRequired
 });
 
 /**
