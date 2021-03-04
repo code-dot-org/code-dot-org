@@ -10,21 +10,6 @@ is_course true
 is_migrated true
 
 lesson_group 'ramp_up', display_name: 'Loops'
-lesson 'Sequencing in the Maze', display_name: 'Sequencing in the Maze', has_lesson_plan: true
-level 'courseD_video_ramp1_2021', progression: 'Maze Intro: Programming with Blocks'
-level 'courseD_maze_ramp1_2021', progression: 'Practice'
-level 'courseD_maze_ramp2_2021', progression: 'Practice'
-level 'courseC_maze_debugging9_copy_2021', progression: 'Practice'
-level 'courseD_maze_ramp3_2021', progression: 'Practice'
-level 'courseC_video_debugging_2021', progression: 'Debugging with the Step Button'
-level 'courseC_maze_debugging2_2021', progression: 'Practice'
-level 'courseD_maze_ramp4_2021', progression: 'Practice'
-level 'courseC_maze_debugging4_2021', progression: 'Practice'
-level 'courseC_maze_debugging6_2021', progression: 'Practice'
-level 'courseC_maze_debugging7_2021', progression: 'Challenge', challenge: true
-level 'courseD_maze_ramp5a_2021', progression: 'Practice'
-level 'courseD_maze_ramp5c_2021', progression: 'Practice'
-
 lesson 'Programming and Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2021', progression: 'Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_2021', progression: 'Practice'
