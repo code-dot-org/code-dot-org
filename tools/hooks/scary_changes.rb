@@ -163,6 +163,7 @@ class ScaryChangeDetector
     detect_new_models
     detect_new_table_or_new_column
     detect_column_rename
+    detect_migration_causing_db_performance_risk
     detect_missing_yarn_lock
     detect_special_files
     detect_dropbox_conflicts
