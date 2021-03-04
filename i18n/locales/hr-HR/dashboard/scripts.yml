@@ -2269,6 +2269,8 @@ hr:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno građanstvo
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
         coursee-2021:
           lessons:
             Conditionals:
@@ -2323,3 +2325,23 @@ hr:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Petlje
+              name: Petlje
+            Events:
+              key: Događaji
+              name: Događaji
+            Conditionals:
+              key: Uvjeti
+              name: Uvjeti
+            Functions:
+              key: Funkcije
+              name: Funkcije
+            Variables:
+              key: Varijable
+              name: Varijable
+            For Loops:
+              key: Petlja brojača
+              name: Petlja brojača
