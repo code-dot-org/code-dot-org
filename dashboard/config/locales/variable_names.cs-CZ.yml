@@ -1,0 +1,32 @@
+---
+cs:
+  data:
+    variable_names:
+      Blue: Modrá
+      Green: Zelená
+      Red: Červená
+      actor: postava
+      armlength: armlength
+      bodylength: bodylength
+      cats: všechny kočky
+      color: barva
+      counter: počítadlo
+      dogs: všichni psi
+      height: výška
+      honey: med
+      i: i
+      left: vlevo
+      length: délka
+      name: jméno
+      nectar: nektar
+      points: body
+      random: náhodně
+      repeat: opakuj
+      right: vpravo
+      score: výsledek
+      size: velikost
+      speed: rychlost
+      variable: proměnná
+      width: šířka
+      wizard: čaroděj
+      x: x
