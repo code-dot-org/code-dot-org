@@ -1052,7 +1052,7 @@ class Script < ApplicationRecord
         key: 'temp-will-be-deleted',
         script: script,
         user_facing: false,
-        position: script.lesson_groups.length
+        position: script.lesson_groups.length + 1
       )
       script.lessons.each do |l|
         l.lesson_group = temp_lg
