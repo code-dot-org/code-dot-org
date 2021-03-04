@@ -2532,6 +2532,8 @@ da:
               display_name: Binære
             csf_digcit:
               display_name: Digital statsborgerskab
+            lessonGroup-6:
+              display_name: Digital statsborgerskab
         coursee-2021:
           lessons:
             Conditionals:
@@ -2612,3 +2614,26 @@ da:
           description_short: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
           description: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
           student_description: 'Brug Sprite Lab til at programmere en simulation ud af et virusudbrud. '
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Løkker
+              name: Løkker
+            Events:
+              key: Hændelser
+              name: Hændelser
+            Conditionals:
+              key: Betingelser
+              name: Betingelser
+            Functions:
+              key: Funktioner
+              name: Funktioner
+            Variables:
+              key: Variabler
+              name: Variabler
+            For Loops:
+              key: For Loops
+              name: For Loops
+            Sprite Lab:
+              key: SpriteLab
+              name: SpriteLab
