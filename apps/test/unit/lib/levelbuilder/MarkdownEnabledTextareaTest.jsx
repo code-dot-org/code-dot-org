@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 import sinon from 'sinon';
 
@@ -16,7 +16,7 @@ describe('MarkdownEnabledTextarea', () => {
   });
 
   it('updates markdown', () => {
-    const wrapper = mount(<MarkdownEnabledTextarea {...defaultProps} />);
+    const wrapper = shallow(<MarkdownEnabledTextarea {...defaultProps} />);
     expect(wrapper.find('textarea').length).to.equal(1);
     expect(wrapper.find('textarea').props().value).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
@@ -27,9 +27,18 @@ describe('MarkdownEnabledTextarea', () => {
   });
 
   it('selectively enables features', () => {
-    const wrapper = mount(<MarkdownEnabledTextarea {...defaultProps} />);
+    const wrapper = shallow(<MarkdownEnabledTextarea {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(0);
+
     wrapper.setProps({features: {imageUpload: true}});
     expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('button').text()).to.equal('Image');
+
+    wrapper.setProps({features: {resourceLink: true}});
+    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('button').text()).to.equal('Resource');
+
+    wrapper.setProps({features: {imageUpload: true, resourceLink: true}});
+    expect(wrapper.find('button').length).to.equal(2);
   });
 });

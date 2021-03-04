@@ -120,9 +120,9 @@ export default class MarkdownEnabledTextarea extends React.Component {
         )}
         {this.props.features.resourceLink && (
           <FindResourceDialog
-            isOpen={!!this.state.addResourceLinkOpen}
-            handleConfirm={this.handleConfirmAddResourceLink}
             handleClose={this.handleCloseAddResourceLink}
+            handleConfirm={this.handleConfirmAddResourceLink}
+            isOpen={!!this.state.addResourceLinkOpen}
           />
         )}
       </div>
