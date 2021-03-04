@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 16:42:17 UTC",
+    "serialized_at": "2021-03-04 03:06:56 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -853,6 +853,81 @@
     },
     {
       "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Changing Screens",
+        "level_keys": [
+          "ml-models in applab-screens-2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-screens-2"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models in applab-screens-2"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Changing Screens",
+        "level_keys": [
+          "ml-models in applab-screens-3"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-screens-3"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models in applab-screens-3"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "You Choose: Quiz Apps",
+        "level_keys": [
+          "ml-models in applab-practice choice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-practice choice"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models in applab-practice choice"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -877,7 +952,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -902,7 +977,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -927,7 +1002,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -952,7 +1027,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -977,7 +1052,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1002,7 +1077,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1027,7 +1102,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1052,7 +1127,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1077,7 +1152,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1102,7 +1177,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1127,7 +1202,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1152,7 +1227,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1177,7 +1252,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1202,7 +1277,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1227,7 +1302,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1252,7 +1327,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1277,8 +1352,58 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "What Will Your Final Grade Be?",
+        "level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "What Will Your Final Grade Be?",
+        "level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1302,8 +1427,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 2,
+      "chapter": 44,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1327,7 +1452,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1352,7 +1477,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1600,6 +1725,39 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-models in applab-screens-2",
+        "script_level.level_keys": [
+          "ml-models in applab-screens-2"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models in applab-screens-3",
+        "script_level.level_keys": [
+          "ml-models in applab-screens-3"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models in applab-practice choice",
+        "script_level.level_keys": [
+          "ml-models in applab-practice choice"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-model card-medical app v2",
         "script_level.level_keys": [
           "ml-model card-medical app v2"
@@ -1787,7 +1945,29 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-unit-5-goldilocks-principle-app-lab",
+        "level.key": "csd-unit-5-goldilocks-principle-app-lab-underfitted",
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-unit-5-goldilocks-principle-ai-lab-underfitted",
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-unit-5-goldilocks-principle-app-lab-overfitted",
         "script_level.level_keys": [
           "csd-unit-5-goldilocks-principle-app-lab"
         ],
@@ -1798,7 +1978,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-unit-5-goldilocks-principle-ai-lab",
+        "level.key": "csd-unit-5-goldilocks-principle-ai-lab-overfitted",
         "script_level.level_keys": [
           "csd-unit-5-goldilocks-principle-ai-lab"
         ],
