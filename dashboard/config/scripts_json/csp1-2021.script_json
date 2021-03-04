@@ -4525,10 +4525,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Computer Science is Changing Everything",
         "level_keys": [
           "Computer Science is Changing Everything_2021"
-        ],
-        "progression": "Computer Science is Changing Everything"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4551,10 +4551,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "csp_socialBelonging_control_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4580,8 +4580,7 @@
         "progression": "Check for Understanding",
         "level_keys": [
           "U1L3 CFU Sending Complex Messages_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4607,8 +4606,7 @@
         "progression": "Check for Understanding",
         "level_keys": [
           "CSP U1L4 CYU3_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4634,8 +4632,7 @@
         "progression": "Check for Understanding",
         "level_keys": [
           "U1L5 CFU how many bits_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4661,8 +4658,7 @@
         "progression": "Check for Understanding",
         "level_keys": [
           "U1L5 CFU adding bits_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4688,8 +4684,7 @@
         "progression": "Check for Understanding",
         "level_keys": [
           "U1L5 CFU bin dec similarities_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4712,10 +4707,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Odometer Activity",
         "level_keys": [
           "Widget: Binary Odometer_2021"
-        ],
-        "progression": "Odometer Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4738,10 +4733,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU beyond odometer_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4764,10 +4759,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L6 CFU representing fractions_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4793,8 +4788,7 @@
         "progression": "Check for Understanding",
         "level_keys": [
           "U1L8 Reflection Multiple Representations CSP_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5024,10 +5018,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "RGB Color",
         "level_keys": [
           "CSP U1L10 RGB_2021"
-        ],
-        "progression": "RGB Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5050,10 +5044,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 1_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5076,10 +5070,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "More Shades of Color",
         "level_keys": [
           "CSP U1L10 More Shades of Color_2021"
-        ],
-        "progression": "More Shades of Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5102,10 +5096,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 2_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5128,10 +5122,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 3_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5154,10 +5148,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Color Sampling",
         "level_keys": [
           "CSP U1L10 Color Sampling_2021"
-        ],
-        "progression": "Color Sampling"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5180,10 +5174,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Pixelation Widget: Color",
         "level_keys": [
           "CSP U1L10 Color Pixelation Widget 4_2021"
-        ],
-        "progression": "Pixelation Widget: Color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5206,10 +5200,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5232,10 +5226,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U1L10 CFU Sampling_2021"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5258,10 +5252,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Widget: Text Compression",
         "level_keys": [
           "U1L11 Widget: Text Compression_2021"
-        ],
-        "progression": "Widget: Text Compression"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5284,10 +5278,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Text Compression Widget with Aloe Blacc",
         "level_keys": [
           "U1 L11 Text Compression Widget Aloe Blacc_2021"
-        ],
-        "progression": "Video: Text Compression Widget with Aloe Blacc"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5310,10 +5304,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L11 Multiple Choice lossless compression_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5336,10 +5330,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L11 CFU Compression for Email_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5362,10 +5356,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Lossy Compression Widget",
         "level_keys": [
           "U1 Lossy Compression Widget v1_2021"
-        ],
-        "progression": "Lossy Compression Widget"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5388,10 +5382,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Lossy Compression Widget",
         "level_keys": [
           "U1 Lossy Compression Widget v2_2021"
-        ],
-        "progression": "Lossy Compression Widget"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5414,10 +5408,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L11 CPS CFU Cell Phone_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5440,10 +5434,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L12 CFU Creative Commons_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5466,10 +5460,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L12 CFU Copyright_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5492,10 +5486,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L13 CFU Digital Representation_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5518,10 +5512,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding",
         "level_keys": [
           "U1L14 CSP CFU digital information_2021"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "named_level": null,
       "bonus": null,
