@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-02 16:20:08 UTC",
+    "serialized_at": "2021-03-03 19:06:27 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -1693,7 +1693,7 @@
       "key": "0e8f86c8-2a5e-4aee-82b2-dfb9631c03b6",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** With their partners, students look at the project code and discuss what happens when the button is clicked. After a few minutes, pull the class back together and discuss as a whole.\n\nWhen the button is clicked, the screen is updated by calling several functions from a library which return text and images that is displayed.\n"
+        "description": "[slide]  **Discuss:** *With their partners, students look at the project code and discuss what happens when the button is clicked. After a few minutes, pull the class back together and discuss as a whole.*\n\nWhen the button is clicked, the screen is updated by calling several functions from a library which return text and images that is displayed.\n"
       },
       "seeding_key": {
         "activity_section.key": "0e8f86c8-2a5e-4aee-82b2-dfb9631c03b6",
@@ -1805,7 +1805,7 @@
       "key": "75654951-a699-4901-a210-2989c7bd3f1d",
       "position": 13,
       "properties": {
-        "description": "[slide] Now let's review Procedural Abstraction. In Lesson 2, we learned about Procedural Abstraction, where shared features of functions (also known as procedures) are extracted in order to generalize use. Procedural Abstraction encourages code reuse and manages complexity, because generalized functions can be used to accomplish many different tasks.\r\n\r\nNow let's extend that definition. Procedural Abstraction provides a name for a process and allows the procedure to be used only knowing what it does, and not necessarily how it does it.\r\n\r\nThis is how our libraries work!\r\n\r\nThere's a term for using libraries or other forms of ogranization in a program: Modularity - the subdivision of a computer program into separate subprograms. This is what we are doing when we organize functions into a library and then call them in another program. \r\n\r\nThe end user of the library only needs to know how the functions work, which they can learn through the documentation. This means that the creator of the library can udate the functions for any number of reasons, such as making the functions more efficient, without having to notify the end users, as long as the function documentation does not need to be changed. The end users can expect the library to work as intended.",
+        "description": "[slide] Now let's review Procedural Abstraction. In Lesson 2, we learned about Procedural Abstraction, where shared features of functions (also known as procedures) are extracted in order to generalize use. Procedural Abstraction encourages code reuse and manages complexity, because generalized functions can be used to accomplish many different tasks.\n\nNow let's extend that definition. Procedural Abstraction provides a name for a process and allows the procedure to be used only knowing what it does, and not necessarily how it does it.\n\nThis is how our libraries work!\n\nThere's a term for using libraries or other forms of organization in a program: Modularity - the subdivision of a computer program into separate subprograms. This is what we are doing when we organize functions into a library and then call them in another program. \n\nThe end user of the library only needs to know how the functions work, which they can learn through the documentation. This means that the creator of the library can update the functions for any number of reasons, such as making the functions more efficient, without having to notify the end users, as long as the function documentation does not need to be changed. The end users can expect the library to work as intended.",
         "remarks": true,
         "progression_name": "Pigify App"
       },
@@ -2156,7 +2156,7 @@
       "key": "9fbafaaf-f686-474f-9835-d72735c6b0e7",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Step 2 - Design - 10 mins:** Before students start writing the code for their project they should stend 10 minutes defining the way the different functions in their library should work. This means they'll need to write out the comments that describe the function, the different parameters, and what will be returned.",
+        "description": "[slide]  **Step 2 - Design - 10 mins:** Before students start writing the code for their project they should spend 10 minutes defining the way the different functions in their library should work. This means they'll need to write out the comments that describe the function, the different parameters, and what will be returned.",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2219,7 +2219,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Writing Tests:** Remind students of these important strategies while testing their program code.\r\n\r\n* They should actually call their functions with different inputs\r\n* They should try out values that try out different ways their functions work, or right below, at, and after the cut offs of the conditional statements within their functions\r\n\r\n**Supporting the Feedback Process:** There are a few logistical steps involved in getting students to provide feedback to one another. They'll need to exchange project guides, navigate to a different level from the one they're working in, and import a classmate's library. Once this is done make sure you encourage good processes in testing one another's libraries by asking questions\r\n\r\n* Can you tell what the library is supposed to do?\r\n* Do all the functions work as they're suppoed to? How do you know?\r\n* What are ways the library could be improved?\r\n"
+            "markdown": "**Writing Tests:** Remind students of these important strategies while testing their program code.\n\n* They should actually call their functions with different inputs\n* They should try out values that try out different ways their functions work, or right below, at, and after the cut offs of the conditional statements within their functions\n\n**Supporting the Feedback Process:** There are a few logistical steps involved in getting students to provide feedback to one another. They'll need to exchange project guides, navigate to a different level from the one they're working in, and import a classmate's library. Once this is done make sure you encourage good processes in testing one another's libraries by asking questions\n\n* Can you tell what the library is supposed to do?\n* Do all the functions work as they're supposed to? How do you know?\n* What are ways the library could be improved?\n"
           }
         ],
         "progression_name": "Build Your Library"
