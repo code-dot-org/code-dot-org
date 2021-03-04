@@ -6,7 +6,7 @@ import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
   getAccuracyGrades,
-  isRegression,
+  isRegression
 } from "../redux";
 import { styles, colors, ResultsGrades } from "../constants";
 
@@ -18,7 +18,7 @@ class ResultsTable extends Component {
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
     acccuracyGrades: PropTypes.array,
-    isRegression: PropTypes.bool,
+    isRegression: PropTypes.bool
   };
 
   render() {
@@ -85,7 +85,7 @@ class ResultsTable extends Component {
   }
 }
 
-export default connect((state) => ({
+export default connect(state => ({
   selectedFeatures: state.selectedFeatures,
   labelColumn: state.labelColumn,
   accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
@@ -95,5 +95,5 @@ export default connect((state) => ({
     state.accuracyCheckPredictedLabels
   ),
   acccuracyGrades: getAccuracyGrades(state),
-  isRegression: isRegression(state),
+  isRegression: isRegression(state)
 }))(ResultsTable);

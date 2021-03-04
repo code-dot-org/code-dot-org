@@ -6,7 +6,7 @@ import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
   getSummaryStat,
-  setResultsPhase,
+  setResultsPhase
 } from "../redux";
 import { styles, MLTypes } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
@@ -23,7 +23,7 @@ class Results extends Component {
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
     resultsPhase: PropTypes.number,
-    setResultsPhase: PropTypes.func,
+    setResultsPhase: PropTypes.func
   };
 
   componentDidMount() {
@@ -45,12 +45,12 @@ class Results extends Component {
         <div style={styles.largeText}>Results</div>
 
         {this.props.resultsPhase === 0 && (
-          <div style={{...styles.trainBot, margin: '0 auto'}}>
+          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
             <img
               src={aiBotHead}
               style={{
                 ...styles.trainBotHead,
-                ...(false && styles.trainBotOpen),
+                ...(false && styles.trainBotOpen)
               }}
             />
             <img src={aiBotBody} style={styles.trainBotBody} />
@@ -99,7 +99,7 @@ class Results extends Component {
 }
 
 export default connect(
-  (state) => ({
+  state => ({
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
     summaryStat: getSummaryStat(state),
@@ -110,11 +110,11 @@ export default connect(
       state.accuracyCheckPredictedLabels
     ),
     percentDataToReserve: state.percentDataToReserve,
-    resultsPhase: state.resultsPhase,
+    resultsPhase: state.resultsPhase
   }),
-  (dispatch) => ({
+  dispatch => ({
     setResultsPhase(phase) {
       dispatch(setResultsPhase(phase));
-    },
+    }
   })
 )(Results);

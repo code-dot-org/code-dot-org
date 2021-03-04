@@ -1,7 +1,7 @@
 import {
   getOptionFrequenciesByColumn,
   getRange,
-  getAccuracyRegression,
+  getAccuracyRegression
 } from "../../src/redux.js";
 
 import { ResultsGrades } from "../../src/constants.js";
@@ -13,83 +13,83 @@ const initialState = {
       chocolate: "yes",
       nuts: "no",
       fruity: "no",
-      delicious: "yes",
+      delicious: "yes"
     },
     {
       name: "Peanut M&Ms",
       chocolate: "yes",
       nuts: "yes",
       fruity: "no",
-      delicious: "yes",
+      delicious: "yes"
     },
     {
       name: "Snickers",
       chocolate: "yes",
       nuts: "yes",
       fruity: "no",
-      delicious: "yes",
+      delicious: "yes"
     },
     {
       name: "Almond Joy",
       chocolate: "yes",
       nuts: "yes",
       fruity: "no",
-      delicious: "yes",
+      delicious: "yes"
     },
     {
       name: "Black Licorice",
       chocolate: "no",
       nuts: "no",
       fruity: "no",
-      delicious: "no",
+      delicious: "no"
     },
     {
       name: "Skittles",
       chocolate: "no",
       nuts: "no",
       fruity: "yes",
-      delicious: "yes",
-    },
+      delicious: "yes"
+    }
   ],
   labelColumn: "delicious",
   selectedFeatures: ["chocolate", "nuts"],
   columnsByDataType: {
     chocolate: "categorical",
     nuts: "categorical",
-    delicious: "categorical",
-  },
+    delicious: "categorical"
+  }
 };
 
 const resultsState = {
   data: [
     {
       sun: "high",
-      height: 3.8,
+      height: 3.8
     },
     {
       sun: "high",
-      height: 3.9,
+      height: 3.9
     },
     {
       sun: "medium",
-      height: 2.6,
+      height: 2.6
     },
     {
       sun: "medium",
-      height: 2.5,
+      height: 2.5
     },
     {
       sun: "low",
-      height: 0.9,
+      height: 0.9
     },
     {
       sun: "low",
-      height: 1.6,
-    },
+      height: 1.6
+    }
   ],
   labelColumn: "height",
   accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
-  accuracyCheckLabels: [3.9, 3.8, 2.6, 2.5, 1.6, 0.9],
+  accuracyCheckLabels: [3.9, 3.8, 2.6, 2.5, 1.6, 0.9]
 };
 
 describe("redux functions", () => {
@@ -114,7 +114,7 @@ describe("redux functions", () => {
       ResultsGrades.CORRECT,
       ResultsGrades.CORRECT,
       ResultsGrades.CORRECT,
-      ResultsGrades.INCORRECT,
+      ResultsGrades.INCORRECT
     ]);
     // error tolerance of +/- 0.09, 4/6 correct
     expect(accuracy.percentCorrect).toBe("66.67");
