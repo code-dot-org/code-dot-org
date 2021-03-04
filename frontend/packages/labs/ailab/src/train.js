@@ -8,6 +8,7 @@ import {
   getUniqueOptions,
   getCategoricalColumns,
   getSelectedCategoricalColumns,
+  getSelectedTrainer,
   setFeatureNumberKey,
   setTrainingExamples,
   setTrainingLabels,
@@ -45,6 +46,9 @@ export const availableTrainers = {
     labelType: ColumnTypes.CONTINUOUS
   }
 };
+
+export const defaultRegressionTrainer = "knnRegress";
+export const defaultClassificationTrainer = "knnClassify";
 
 const filterTrainersByType = type => {
   let trainersOfType = {};
@@ -226,7 +230,7 @@ let trainingState = {};
 const init = () => {
   const state = store.getState();
   let trainer;
-  switch (state.selectedTrainer) {
+  switch (getSelectedTrainer(state)) {
     case "binarySvm":
       trainer = new SVMTrainer();
       break;
@@ -236,6 +240,8 @@ const init = () => {
     case "knnRegress":
       trainer = new KNNTrainer();
       break;
+    default:
+      trainer = new KNNTrainer();
   }
   trainingState.trainer = trainer;
   buildOptionNumberKeysByFeature(state);

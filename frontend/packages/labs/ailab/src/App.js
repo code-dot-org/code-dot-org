@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
-import SpecifyColumns from "./UIComponents/SpecifyColumns";
-import SpecifyColumnsInfo from "./UIComponents/SpecifyColumnsInfo";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
 import ScatterPlot from "./UIComponents/ScatterPlot";
 import DataCard from "./UIComponents/DataCard";
-import SelectTrainer from "./UIComponents/SelectTrainer";
+import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
@@ -127,17 +125,6 @@ class App extends Component {
           </BodyContainer>
         )}
 
-        {currentPanel === "specifyColumns" && (
-          <BodyContainer>
-            <ContainerLeft>
-              <SpecifyColumns />
-            </ContainerLeft>
-            <ContainerRight>
-              <SpecifyColumnsInfo />
-            </ContainerRight>
-          </BodyContainer>
-        )}
-
         {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
           <BodyContainer>
             <ContainerLeft>
@@ -154,7 +141,7 @@ class App extends Component {
         {currentPanel === "selectTrainer" && (
           <BodyContainer>
             <ContainerFullWidth>
-              <SelectTrainer />
+              <TrainingSettings />
             </ContainerFullWidth>
           </BodyContainer>
         )}

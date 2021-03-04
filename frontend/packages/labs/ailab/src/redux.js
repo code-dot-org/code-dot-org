@@ -2,7 +2,9 @@ import {
   availableTrainers,
   getRegressionTrainers,
   getClassificationTrainers,
-  getMLType
+  getMLType,
+  defaultRegressionTrainer,
+  defaultClassificationTrainer
 } from "./train.js";
 
 import {
@@ -664,6 +666,17 @@ function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
 
+export function getSelectedTrainer(state) {
+  const trainerForLabel =
+    state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS
+      ? defaultRegressionTrainer
+      : defaultClassificationTrainer;
+  const trainer = state.selectedTrainer
+    ? state.selectedTrainer
+    : trainerForLabel;
+  return trainer;
+}
+
 function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
@@ -789,7 +802,7 @@ export function getAccuracyRegression(state) {
 
 export function getSummaryStat(state) {
   let summaryStat = {};
-  const mlType = getMLType(state.selectedTrainer);
+  const mlType = getMLType(getSelectedTrainer(state));
   if (mlType === MLTypes.REGRESSION) {
     summaryStat.type = MLTypes.REGRESSION;
     summaryStat.stat = getAccuracyRegression(state).percentCorrect;
@@ -882,7 +895,7 @@ export function isDataUploaded(state) {
 }
 
 export function readyToTrain(state) {
-  return uniqLabelFeaturesSelected(state) && compatibleLabelAndTrainer(state);
+  return uniqLabelFeaturesSelected(state);
 }
 
 export function getEmptyCellDetails(state) {
@@ -918,7 +931,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.representSubgroup = !!state.trainedModelDetails.representSubgroup;
   dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
-  dataToSave.selectedTrainer = state.selectedTrainer;
+  dataToSave.selectedTrainer = getSelectedTrainer(state);
   dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.labelColumn = state.labelColumn;
@@ -1047,18 +1060,11 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next = isPanelEnabled(state, "specifyColumns")
-      ? { panel: "specifyColumns", text: "Continue" }
-      : isPanelEnabled(state, "dataDisplayLabel")
+    next = isPanelEnabled(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Continue" }
       : null;
-  } else if (state.currentPanel === "specifyColumns") {
-    prev = { panel: "selectDataset", text: "Back" };
-    next = { panel: "dataDisplayLabel", text: "Continue" };
   } else if (state.currentPanel === "dataDisplayLabel") {
-    prev = isPanelEnabled(state, "specifyColumns")
-      ? { panel: "specifyColumns", text: "Back" }
-      : isPanelEnabled(state, "selectDataset")
+    prev = isPanelEnabled(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
       : null;
     next = isPanelEnabled(state, "dataDisplayFeatures")
