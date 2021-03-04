@@ -194,11 +194,10 @@ export const styles = {
     width: "100%"
   },
 
-  finePrint: {
+  tableParent: {
     overflow: "scroll",
     overflowWrap: "break-word",
     fontSize: 10,
-    padding: 10,
     boxSizing: "border-box",
     borderRadius: 5,
     backgroundColor: "white"
@@ -206,7 +205,9 @@ export const styles = {
 
   dataDisplayHeader: {
     paddingLeft: 20,
-    textAlign: "right"
+    textAlign: "right",
+    position: "sticky",
+    top: 0
   },
   dataDisplayHeaderLabelSelected: {
     backgroundColor: labelColor,
