@@ -22,7 +22,8 @@ class ColumnInspector extends Component {
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
-    setCurrentColumn: PropTypes.func
+    setCurrentColumn: PropTypes.func,
+    hideSpecifyColumns: PropTypes.bool
   };
 
   handleChangeDataType = (event, feature) => {
@@ -78,21 +79,25 @@ class ColumnInspector extends Component {
             <div>
               <label>
                 <div>{currentColumnData.id}</div>
-                <select
-                  onChange={event =>
-                    this.handleChangeDataType(event, currentColumnData.id)
-                  }
-                  value={currentColumnData.dataType}
-                >
-                  {Object.values(ColumnTypes).map((option, index) => {
-                    return (
-                      <option key={index} value={option}>
-                        {option}
-                      </option>
-                    );
-                  })}
-                </select>
-
+                {this.props.hideSpecifyColumns && (
+                  <div> {currentColumnData.dataType} </div>
+                )}
+                {!this.props.hideSpecifyColumns && (
+                  <select
+                    onChange={event =>
+                      this.handleChangeDataType(event, currentColumnData.id)
+                    }
+                    value={currentColumnData.dataType}
+                  >
+                    {Object.values(ColumnTypes).map((option, index) => {
+                      return (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      );
+                    })}
+                  </select>
+                )}
                 {currentColumnData.description && (
                   <div>
                     <br />
@@ -148,7 +153,8 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    rangesByColumn: getRangesByColumn(state)
+    rangesByColumn: getRangesByColumn(state),
+    hideSpecifyColumns: state.mode.hideSpecifyColumns
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
