@@ -1,11 +1,15 @@
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const SET_EDITOR_TEXT = 'javalab/SET_EDITOR_TEXT';
 const SET_FILE_NAME = 'javalab/SET_FILE_NAME';
+const SET_FILES = 'javalab/SET_FILES';
+const SET_FILES_DATA = 'javalab/SET_FILES_DATA';
 
 const initialState = {
   consoleLogs: [],
+  filesData: {},
   editorText: '',
-  fileName: 'MyClass.java'
+  fileName: 'MyClass.java',
+  fileEntries: null
 };
 
 export const appendInputLog = input => ({
@@ -28,6 +32,16 @@ export const setFileName = fileName => ({
   fileName
 });
 
+export const setFileEntries = fileEntries => ({
+  type: SET_FILES,
+  fileEntries
+});
+
+export const setFilesData = filesData => ({
+  type: SET_FILES_DATA,
+  filesData
+});
+
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
     return {
@@ -45,6 +59,18 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       fileName: action.fileName
+    };
+  }
+  if (action.type === SET_FILES) {
+    return {
+      ...state,
+      fileEntries: action.fileEntries
+    };
+  }
+  if (action.type === SET_FILES_DATA) {
+    return {
+      ...state,
+      filesData: action.filesData
     };
   }
   return state;

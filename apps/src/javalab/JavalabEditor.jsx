@@ -33,7 +33,8 @@ class JavalabEditor extends React.Component {
     editorText: PropTypes.string,
     setEditorText: PropTypes.func,
     fileName: PropTypes.string,
-    setFileName: PropTypes.func
+    setFileName: PropTypes.func,
+    fileEntries: PropTypes.array
   };
 
   constructor(props) {
@@ -129,7 +130,8 @@ class JavalabEditor extends React.Component {
 export default connect(
   state => ({
     editorText: state.javalab.editorText,
-    fileName: state.javalab.fileName
+    fileName: state.javalab.fileName,
+    fileEntries: state.javalab.fileEntries
   }),
   dispatch => ({
     setEditorText: editorText => dispatch(setEditorText(editorText)),
