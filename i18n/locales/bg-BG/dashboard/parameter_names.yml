@@ -1,0 +1,13 @@
+bg:
+  data:
+    parameter_names:
+      actor: актьор
+      counter: брояч
+      height: височина
+      honey: мед
+      left: наляво
+      length: дължина
+      min: min
+      points: точки
+      size: размер
+      speed: скорост
