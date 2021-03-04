@@ -1,7 +1,7 @@
 {
   "category": "Logic",
-  "docFunc": "codestudio_andOrOperator",
   "config": {
-    "func": "andOrOperator"
+    "docFunc": "codestudio_andOrOperator",
+    "func": "logic_operation"
   }
 }
