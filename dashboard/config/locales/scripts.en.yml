@@ -21912,7 +21912,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-4:
-              name: Printable Lesson Plans
+              name: Printable
               description_student: 
               description_teacher: This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.
           lesson_groups:
