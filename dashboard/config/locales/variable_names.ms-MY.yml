@@ -1,0 +1,24 @@
+---
+ms:
+  data:
+    variable_names:
+      Blue: Biru
+      Green: Hijau
+      Red: Merah
+      actor: pelakon
+      cats: kucing
+      color: warna
+      counter: Kaunter
+      dogs: anjing
+      height: ketinggian
+      i: i
+      left: kiri
+      length: panjang
+      random: rawak
+      repeat: Ulang
+      right: kanan
+      score: skor
+      size: saiz
+      speed: kelajuan
+      width: lebar
+      x: x

@@ -1,0 +1,13 @@
+lv:
+  data:
+    parameter_names:
+      actor: aktieris
+      counter: cikla mainīgais
+      height: augstums
+      honey: medus
+      left: pa kreisi
+      length: garums
+      min: minimālais
+      points: punkti
+      size: izmērs
+      speed: ātrums

@@ -1,0 +1,17 @@
+ru:
+  data:
+    parameter_names:
+      actor: персонаж
+      color: цвет
+      counter: счетчик
+      height: высота
+      honey: мед
+      left: влево
+      length: длина
+      min: минимум
+      points: очки
+      radius: радиус
+      sides: стороны
+      size: размер
+      speed: скорость
+      width: ширина
