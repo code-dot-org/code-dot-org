@@ -8,7 +8,8 @@ import {
   getSelectedContinuousFeatures,
   getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn,
-  getConvertedPredictedLabel
+  getConvertedPredictedLabel,
+  getPredictAvailable
 } from "../redux";
 import { styles } from "../constants";
 
@@ -21,7 +22,8 @@ class Predict extends Component {
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    confidence: PropTypes.number
+    confidence: PropTypes.number,
+    getPredictAvailable: PropTypes.bool
   };
 
   handleChange = (event, feature) => {
@@ -36,18 +38,18 @@ class Predict extends Component {
 
   render() {
     return (
-      <div id="predict" style={{...styles.panel, ...styles.rightPanel}}>
+      <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
         <div style={styles.largeText}>Test the Model</div>
         <form>
           {this.props.selectedContinuousFeatures.map((feature, index) => {
             return (
               <div key={index}>
                 <label>
-                  {feature}:
-                  &nbsp;
+                  {feature}: &nbsp;
                   <input
-                    type="text"
+                    type="number"
                     onChange={event => this.handleChange(event, feature)}
+                    value={this.props.testData[feature]}
                   />
                 </label>
               </div>
@@ -60,10 +62,10 @@ class Predict extends Component {
             return (
               <div style={styles.cardRow} key={index}>
                 <label>
-                  {feature}:
-                  &nbsp;
+                  {feature}: &nbsp;
                   <select
                     onChange={event => this.handleChange(event, feature)}
+                    value={this.props.testData[feature]}
                   >
                     <option>{""}</option>
                     {this.props.uniqueOptionsByColumn[feature]
@@ -86,6 +88,7 @@ class Predict extends Component {
           type="button"
           style={styles.regularButton}
           onClick={this.onClickPredict}
+          disabled={!this.props.getPredictAvailable}
         >
           Predict!
         </button>
@@ -114,7 +117,8 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedContinuousFeatures: getSelectedContinuousFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
-    uniqueOptionsByColumn: getUniqueOptionsByColumn(state)
+    uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
+    getPredictAvailable: getPredictAvailable(state)
   }),
   dispatch => ({
     setTestData(testData) {

@@ -4,6 +4,8 @@ import {
   getAccuracyRegression
 } from "../../src/redux.js";
 
+import { ResultsGrades } from "../../src/constants.js";
+
 const initialState = {
   data: [
     {
@@ -105,8 +107,16 @@ describe("redux functions", () => {
     const maxMin = getRange(resultsState, resultsState.labelColumn);
     const range = Math.abs(maxMin.max - maxMin.min);
     expect(range).toBe(3);
-    const score = getAccuracyRegression(resultsState);
+    const accuracy = getAccuracyRegression(resultsState);
+    expect(accuracy.grades).toEqual([
+      ResultsGrades.INCORRECT,
+      ResultsGrades.CORRECT,
+      ResultsGrades.CORRECT,
+      ResultsGrades.CORRECT,
+      ResultsGrades.CORRECT,
+      ResultsGrades.INCORRECT
+    ]);
     // error tolerance of +/- 0.09, 4/6 correct
-    expect(score).toBe("66.67");
+    expect(accuracy.percentCorrect).toBe("66.67");
   });
 });

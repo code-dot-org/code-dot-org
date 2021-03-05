@@ -2,7 +2,9 @@ import {
   availableTrainers,
   getRegressionTrainers,
   getClassificationTrainers,
-  getMLType
+  getMLType,
+  defaultRegressionTrainer,
+  defaultClassificationTrainer
 } from "./train.js";
 
 import {
@@ -20,7 +22,12 @@ import {
   namedModel
 } from "./validate.js";
 
-import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
+import {
+  ColumnTypes,
+  MLTypes,
+  TestDataLocations,
+  ResultsGrades
+} from "./constants.js";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
@@ -217,6 +224,7 @@ const initialState = {
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
+  accuracyCheckGrades: [],
   testData: {},
   prediction: {},
   modelSize: undefined,
@@ -658,6 +666,17 @@ function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
 
+export function getSelectedTrainer(state) {
+  const trainerForLabel =
+    state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS
+      ? defaultRegressionTrainer
+      : defaultClassificationTrainer;
+  const trainer = state.selectedTrainer
+    ? state.selectedTrainer
+    : trainerForLabel;
+  return trainer;
+}
+
 function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
@@ -720,8 +739,22 @@ export function getCompatibleTrainers(state) {
   return compatibleTrainers;
 }
 
+export function isRegression(state) {
+  const mlType = getMLType(state.selectedTrainer);
+  return mlType === MLTypes.REGRESSION;
+}
+
+export function getAccuracyGrades(state) {
+  const grades = isRegression(state)
+    ? getAccuracyRegression(state).grades
+    : getAccuracyClassification(state).grades;
+  return grades;
+}
+
 export function getAccuracyClassification(state) {
+  let accuracy = {};
   let numCorrect = 0;
+  let grades = [];
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
@@ -729,13 +762,22 @@ export function getAccuracyClassification(state) {
       state.accuracyCheckPredictedLabels[i].toString()
     ) {
       numCorrect++;
+      grades.push(ResultsGrades.CORRECT);
+    } else {
+      grades.push(ResultsGrades.INCORRECT);
     }
   }
-  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
+    2
+  );
+  accuracy.grades = grades;
+  return accuracy;
 }
 
 export function getAccuracyRegression(state) {
+  let accuracy = {};
   let numCorrect = 0;
+  let grades = [];
   const maxMin = getRange(state, state.labelColumn);
   const range = Math.abs(maxMin.max - maxMin.min);
   const errorTolerance = range * 0.03;
@@ -746,21 +788,28 @@ export function getAccuracyRegression(state) {
     );
     if (diff <= errorTolerance) {
       numCorrect++;
+      grades.push(ResultsGrades.CORRECT);
+    } else {
+      grades.push(ResultsGrades.INCORRECT);
     }
   }
-  return ((numCorrect / numPredictedLabels) * 100).toFixed(2);
+  accuracy.percentCorrect = ((numCorrect / numPredictedLabels) * 100).toFixed(
+    2
+  );
+  accuracy.grades = grades;
+  return accuracy;
 }
 
 export function getSummaryStat(state) {
   let summaryStat = {};
-  const mlType = getMLType(state.selectedTrainer);
+  const mlType = getMLType(getSelectedTrainer(state));
   if (mlType === MLTypes.REGRESSION) {
     summaryStat.type = MLTypes.REGRESSION;
-    summaryStat.stat = getAccuracyRegression(state);
+    summaryStat.stat = getAccuracyRegression(state).percentCorrect;
   }
   if (mlType === MLTypes.CLASSIFICATION) {
     summaryStat.type = MLTypes.CLASSIFICATION;
-    summaryStat.stat = getAccuracyClassification(state);
+    summaryStat.stat = getAccuracyClassification(state).percentCorrect;
   }
   return summaryStat;
 }
@@ -846,7 +895,7 @@ export function isDataUploaded(state) {
 }
 
 export function readyToTrain(state) {
-  return uniqLabelFeaturesSelected(state) && compatibleLabelAndTrainer(state);
+  return uniqLabelFeaturesSelected(state);
 }
 
 export function getEmptyCellDetails(state) {
@@ -882,7 +931,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.representSubgroup = !!state.trainedModelDetails.representSubgroup;
   dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
-  dataToSave.selectedTrainer = state.selectedTrainer;
+  dataToSave.selectedTrainer = getSelectedTrainer(state);
   dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.labelColumn = state.labelColumn;
@@ -909,6 +958,14 @@ export function getShowChooseReserve(state) {
 
 export function getShowSelectTrainer(state) {
   return !(state.mode && state.mode.hideSelectTrainer);
+}
+
+export function getPredictAvailable(state) {
+  return (
+    Object.keys(state.testData).filter(
+      value => state.testData[value] && state.testData[value] !== ""
+    ).length === state.selectedFeatures.length
+  );
 }
 
 /*
@@ -1003,18 +1060,11 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next = isPanelEnabled(state, "specifyColumns")
-      ? { panel: "specifyColumns", text: "Continue" }
-      : isPanelEnabled(state, "dataDisplayLabel")
+    next = isPanelEnabled(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Continue" }
       : null;
-  } else if (state.currentPanel === "specifyColumns") {
-    prev = { panel: "selectDataset", text: "Back" };
-    next = { panel: "dataDisplayLabel", text: "Continue" };
   } else if (state.currentPanel === "dataDisplayLabel") {
-    prev = isPanelEnabled(state, "specifyColumns")
-      ? { panel: "specifyColumns", text: "Back" }
-      : isPanelEnabled(state, "selectDataset")
+    prev = isPanelEnabled(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
       : null;
     next = isPanelEnabled(state, "dataDisplayFeatures")
