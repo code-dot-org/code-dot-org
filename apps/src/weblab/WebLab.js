@@ -436,7 +436,7 @@ WebLab.prototype.changeProjectFile = function(
       callback(null, project.filesVersionId);
     },
     xhr => {
-      console.warn(`WebLab: error file ${filename} not renamed`);
+      console.warn(`WebLab: error file ${filename} not saved`);
       callback(new Error(xhr.status));
     },
     skipPreWriteHook
