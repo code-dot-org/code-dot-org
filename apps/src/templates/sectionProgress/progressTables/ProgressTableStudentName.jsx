@@ -101,6 +101,7 @@ class ProgressTableStudentName extends React.PureComponent {
         aria-describedby={tooltipId}
       >
         {this.props.showSectionProgressDetails && (
+          // TODO: handle onClick to expand and collapse rows
           <CollapserIcon
             isCollapsed={true}
             onClick={() => {}}
