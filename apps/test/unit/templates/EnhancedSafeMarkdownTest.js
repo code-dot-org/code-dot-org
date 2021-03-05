@@ -18,7 +18,7 @@ describe('EnhancedSafeMarkdown', () => {
 
   it('wraps output in enhancements as specified', () => {
     const wrapper = shallow(
-      <EnhancedSafeMarkdown markdown="test" expandableImages={true} />
+      <EnhancedSafeMarkdown markdown="test" expandableImages />
     );
     expect(
       wrapper.equals(
