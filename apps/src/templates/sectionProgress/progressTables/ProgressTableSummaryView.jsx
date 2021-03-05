@@ -32,6 +32,8 @@ class ProgressTableSummaryView extends React.Component {
   constructor(props) {
     super(props);
     this.summaryCellFormatter = this.summaryCellFormatter.bind(this);
+    this.timeSpentCellFormatter = this.timeSpentCellFormatter.bind(this);
+    this.lastUpdatedCellFormatter = this.lastUpdatedCellFormatter.bind(this);
   }
 
   summaryCellFormatter(lesson, student) {
@@ -48,6 +50,14 @@ class ProgressTableSummaryView extends React.Component {
     );
   }
 
+  timeSpentCellFormatter(lesson, student) {
+    return '10';
+  }
+
+  lastUpdatedCellFormatter(lesson, student) {
+    return '1/1';
+  }
+
   render() {
     return (
       <div>
@@ -56,7 +66,11 @@ class ProgressTableSummaryView extends React.Component {
           columnWidths={new Array(this.props.scriptData.stages.length).fill(
             COLUMN_WIDTH
           )}
-          lessonCellFormatter={this.summaryCellFormatter}
+          lessonCellFormatters={[
+            this.summaryCellFormatter,
+            this.timeSpentCellFormatter,
+            this.lastUpdatedCellFormatter
+          ]}
         />
         <SummaryViewLegend showCSFProgressBox={this.props.scriptData.csf} />
       </div>
