@@ -517,6 +517,7 @@
   volunteer_engineer_submission_intro_guide: "Дізнайтеся більше про нашу <a href=\"%{volunteer_guide}\">волонтерську програму тут</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Дізнайтеся більше про нашу [програму волонтерів тут] (%{volunteer_guide}). "
   volunteer_engineer_submission_intro_signup: "Вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span class=\"form-required-field\">*</span> є обов'язковими для заповнення."
+  volunteer_engineer_submission_intro_signup_markdown: "Будь ласка, вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст.  Вам має бути щонайменше 18 років, щоб зареєструватися добровольцем. Зверніть увагу, що всі поля, заповнені в цьому розділі, будуть загальнодоступними для всіх, хто переглядає [карту волонтерів](/добровольців/місцевих). Поля, позначені символом _ * _, є обов’язковими для заповнення. "
   volunteer_engineer_submission_intro_links: "Не шукаєте волонтера? <a href=\"%{learn_more}\">Дізнайтесь більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів на нашій <a href=\"%{volunteer_local}\">карті волонтерів</a>."
   volunteer_engineer_submission_intro_links_markdown: "Ви - вчитель і шукаєте волонтерів? Знайдіть місцевого волонтера на нашій [карті волонтерів](%{volunteer_local}). "
   volunteer_engineer_submission_update_information: "Оновіть свої дані"
@@ -861,6 +862,7 @@
   how_to_teach_hoc: "Як викладати \"Годину коду\""
   more_resources_educators: "Більше ресурсів для вчителів та освітян"
   beyond_submission: "Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте критерії та форму подання."
+  third_party_submission: "Хочете запропонувати навчальний посібник для переліку тут? <a href=\"%{submission_url}\"> Перегляньте критерії та форму подання. </a>"
   participants: "учасники"
   teachers_notes: "Інформація для вчителя"
   teachers_notes_hoc: 'Вчителі: ознайомтесь із вказівками для вчителів'
@@ -1427,6 +1429,7 @@
   user_header_logout: "Вийти"
   user_header_signin: "Увійти"
   user_header_create: 'Творіть '
+  user_header_artist: 'Художник'
   user_header_gamelab: "Ігрова лабораторія"
   user_header_playlab: "Ігрова студія"
   user_header_dance: "Танцювальна вечірка"
@@ -1436,8 +1439,11 @@
   user_header_view_project_gallery: "Переглянути галерею проекту"
   view_section: "Переглянути секцію"
   privacy_doc_explanation: "Клацніть тут, щоб отримати наші документи про конфіденційність, якими можна поділитися або роздрукувати для студентів. "
+  signing_in: "Увійти"
   sign_in_overview: 'Ваші студенти можуть увійти в свої Code.org акаунти, виконавши наступні дії: '
+  sign_in_instruct_website: "Перейти до%{code_org_url}."
   sign_in_instruct_secret: "Виберіть їх секрет %{secret}."
+  sign_in_instruct_button: "Натисніть кнопку «Увійти»."
   reset_student_password: "Скинути паролів учнів"
   syncing_students: "Синхронізація ваших учнів"
   applab_tile_title: "Вступ до App Lab (Вік13+)"

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-02-27 23:09:49 UTC",
+    "serialized_at": "2021-03-03 16:03:36 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -761,17 +761,28 @@
       }
     },
     {
-      "key": "1b0af819-cb8a-49e2-ab3d-14bbfeb379b3",
+      "key": "1503cf7b-6cf0-4aad-8883-a86412b2cd07",
       "position": 1,
       "properties": {
-        "description": "[slide] \n<span style=\"background-color: #FFFF00\">**Discuss (10 mins):** *Answer each of these prompts in your journal:*</span>\n\n* What is the Internet?\n* What questions do you have about how the Internet works?",
+        "name": "What is the Internet?",
+        "duration": "20",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Give students 10 minutes to write in their journals. It's ok if there are some awkward silences. We want students to have the time to really think deeply about what they know and don't know.\r\n\r\nIf students are struggling to come up with things to write down, consider asking the following:\r\n\r\n* When you enter a web address in a browser and hit enter, what happens? At some point you see the web page in the browser, but what happens in between? What are all the steps?\r\n* Write down the series of things that you think (or have heard) happen right after you hit Enter. What happens first, second, third and so on. \r\n* Don’t worry if you don’t know all the pieces or how they all fit together. If you don't know a step, or you are fuzzy on some details, or there's a gap, that's okay. Just write down the parts that you know.\r\n\r\n"
+            "markdown": "Give students 10 minutes to write in their journals. It's ok if there are some awkward silences. We want students to have the time to really think deeply about what they know and don't know.\n\nIf students are struggling to come up with things to write down, consider asking the following:\n\n* When you enter a web address in a browser and hit enter, what happens? At some point you see the web page in the browser, but what happens in between? What are all the steps?\n* Write down the series of things that you think (or have heard) happen right after you hit Enter. What happens first, second, third and so on. \n* Don’t worry if you don’t know all the pieces or how they all fit together. If you don't know a step, or you are fuzzy on some details, or there's a gap, that's okay. Just write down the parts that you know.\n\n"
           }
-        ],
-        "name": "What is the Internet? (20 mins)\r"
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1503cf7b-6cf0-4aad-8883-a86412b2cd07",
+        "lesson_activity.key": "d0400f34-8c9c-472a-8bed-b69c4c6dbe4c"
+      }
+    },
+    {
+      "key": "1b0af819-cb8a-49e2-ab3d-14bbfeb379b3",
+      "position": 2,
+      "properties": {
+        "description": "[slide] \n<span style=\"background-color: #FFFF00\">**Discuss (10 mins):** *Answer each of these prompts in your journal:*</span>\n\n* What is the Internet?\n* What questions do you have about how the Internet works?"
       },
       "seeding_key": {
         "activity_section.key": "1b0af819-cb8a-49e2-ab3d-14bbfeb379b3",
@@ -780,9 +791,9 @@
     },
     {
       "key": "a759638c-aa9f-4293-8f10-f1d1290e709b",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "**Discuss:** *Ask a few students to share their answers with the class.*\n\n**Discussion Goal:** Ask for a few volunteers to share what they know about the Internet. It's ok if answers are light or even incorrect! This is the starting place for the unit. \n\n"
+        "description": "Ask a few students to share their answers with the class.\n\n**Discussion Goal:** Ask for a few volunteers to share what they know about the Internet. It's ok if answers are light or even incorrect! This is the starting place for the unit. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "a759638c-aa9f-4293-8f10-f1d1290e709b",
@@ -791,7 +802,7 @@
     },
     {
       "key": "5ec0f064-b813-46bd-8439-02993fa3086d",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "It's ok if you have a lot of questions about the Internet or aren't sure how it works. You are not alone!",
         "remarks": true
@@ -803,7 +814,7 @@
     },
     {
       "key": "a77802fb-45f0-48dc-8455-2d6ef8e4a255",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "[slide] \r\n**Do This:** Direct students to take two sticky notes and choose one response or question to put on each sticky note. Post the sticky notes on a poster in the front of the room to refer back to throughout the unit as questions are answered."
       },
@@ -814,7 +825,7 @@
     },
     {
       "key": "0eb22a0a-92c3-407f-8115-f11e642ade02",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "[slide] \r\n**Video:** Play \"What is the Internet\". Stop at 1:30.",
         "tips": [
@@ -831,7 +842,7 @@
     },
     {
       "key": "1146f67d-830d-4036-9ef1-a08cef582b5c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "In this unit, we are going to use a tool to understand how the Internet works, layer by layer. Just like when we talked about layers of abstraction in representing digital information, there are layers to the Internet. \r\n\r\nThis tool is called the Internet Simulator. Let's check it out!",
         "remarks": true,
@@ -844,7 +855,7 @@
     },
     {
       "key": "e82a3a35-f14a-4ec7-926e-bfd76533c68c",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Group:** Pair up students.\r\n\r\n\r\n[slide] \r\n**Do This:** Direct students to Level 2 on Code Studio. Students should join their partners following the instructions on the slide."
       },
@@ -855,7 +866,7 @@
     },
     {
       "key": "eda6bba0-b935-4f5f-ac2f-33d237017e6e",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "[slide] Take five minutes to explore the tool and see what you can do with it. What are the limitations?",
         "remarks": true
@@ -867,7 +878,7 @@
     },
     {
       "key": "ba0e735e-8301-4590-a110-949519e94883",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Do This:** After five minutes are done, join the Internet Simulator yourself (as a teacher) and join a volunteer student. Model how the widget works. \r\n\r\n* Call out the different sections of the widget: \r\n\t* Received Message Log\r\n    * Sent Message Log\r\n    * Send a Message\r\n* Show students the \"My Device\" tab and demonstrate how you can turn on or off the layers of abstraction (binary, decimal, ASCII).\r\n* Talk about what the graphic represents - a direct line between you and your partner."
       },
@@ -878,7 +889,7 @@
     },
     {
       "key": "d25e79d0-2d8e-45da-b114-fe10597d29a6",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "**Discuss:** *How is the Internet Simulator similar to the Internet? How is it different?*\n\n**Discussion Goal:** Encourage students to speak from their own experience of using the Internet. Here are some things they may bring up:\n\n* Similar to the Internet:\n\t* I can send information to another person\n\t* It all comes back to zeroes and ones\n\n* Different from the Internet:\n    * I can only send text \n    * It takes a couple seconds to send a text instead of instantly\n"
       },
@@ -889,7 +900,7 @@
     },
     {
       "key": "5ad11dce-ef4f-4c1a-8407-e9bab74c4ab5",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "One of the key things you may have noticed is that this version of the Internet Simulator only allows us to connect to one person! This will change as we explore new versions on the Internet Simulator while learning about how the Internet works.",
         "remarks": true,
@@ -1143,7 +1154,7 @@
       "key": "6f7fdeb6-f8fa-46d3-9723-74de3dfe5649",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *Imagine you were in a room with 5 other people, all with the same name as you.  What might happen when you start communicating? How could you solve these problems?*\n\n**Discussion Goal:** This discussion  is meant to foreshadow some of the issues students will face when they use the Internet Simulator.  Key points to draw out:\n\n* There might be confusion about who the person is trying to talk to because everyone has the same name.\n* Multiple people might be talking at once, making it hard to tell what people are talking about.\n* People may stop communicating because of the confusion.\n\n"
+        "description": "[slide]  **Discuss:** *Imagine you were in a room with 5 other people, all with the same name as you.  What might happen when you start communicating? How could you solve these problems?*\n\n**Discussion Goal:** This discussion is meant to foreshadow some of the issues students will face when they use the Internet Simulator.  Key points to draw out:\n\n* There might be confusion about who the person is trying to talk to because everyone has the same name.\n* Multiple people might be talking at once, making it hard to tell what people are talking about.\n* People may stop communicating because of the confusion.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6f7fdeb6-f8fa-46d3-9723-74de3dfe5649",
@@ -1627,7 +1638,7 @@
       "key": "863340cb-353c-4b99-99f3-6a846dc807a9",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:**  *Suppose our school library is moving to a new building on campus and the librarian has asked for your help.*\n\n* What approach would you take if you just needed to clear out the space by the end of the day?\n* How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move\n?\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\n\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\n"
+        "description": "[slide]  **Discuss:**  *Suppose our school library is moving to a new building on campus and the librarian has asked for your help.*\n\n* *What approach would you take if you just needed to clear out the space by the end of the day?*\n* *How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move\n?*\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\n\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\n"
       },
       "seeding_key": {
         "activity_section.key": "863340cb-353c-4b99-99f3-6a846dc807a9",
@@ -1904,7 +1915,7 @@
       "key": "ac79fecd-ef22-42e9-ad7d-233514e52cb5",
       "position": 4,
       "properties": {
-        "description": "**Circulate:**  As students are working, circulate quietly through the room.\n\n* Approach a student and silently take their IP address slip away from them.\n* Give that person a new IP address slip (or a re-used IP address).\n* Repeat the above two steps as many times as you can, as you circulate the room.\n\n[slide] **Discuss:**  *Discuss with your classmates the following prompts*\n\n* Why do you think I was switching IP addresses?\n* If IP addresses can change, is there a better way for everyone to know everyone else’s IP address?"
+        "description": "**Circulate:**  As students are working, circulate quietly through the room.\n\n* Approach a student and silently take their IP address slip away from them.\n* Give that person a new IP address slip (or a re-used IP address).\n* Repeat the above two steps as many times as you can, as you circulate the room.\n\n[slide] **Discuss:**  *Discuss with your classmates the following prompts*\n\n* *Why do you think I was switching IP addresses?*\n* *If IP addresses can change, is there a better way for everyone to know everyone else’s IP address?*"
       },
       "seeding_key": {
         "activity_section.key": "ac79fecd-ef22-42e9-ad7d-233514e52cb5",
@@ -1938,7 +1949,7 @@
       "key": "83465a75-6362-4cd1-93a4-153870f5ee23",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discuss:** *As we watch the following video take notes on:*\n\n* How does the DNS solve the problem of translating domain names like example.com into IP addresses?\n* How does the DNS help the Internet scale?\n\n[slide] **Display:** Show [r the-internet-ip-addresses-and-dns-video] on DNS, which explains how it works.  Video will automatically start playing at the introduction of DNS.",
+        "description": "<span style=\"background-color: #FFFF00\">[slide] **Discuss:** *As we watch the following video take notes on:*</span>\n\n* *How does the DNS solve the problem of translating domain names like example.com into IP addresses?*\n* *How does the DNS help the Internet scale?*\n\n[slide] **Display:** Show [r the-internet-ip-addresses-and-dns-video] on DNS, which explains how it works.  Video will automatically start playing at the introduction of DNS.",
         "name": "DNS - Video - 8 mins\r"
       },
       "seeding_key": {
@@ -1950,7 +1961,7 @@
       "key": "8c80a6e7-3123-4685-ba2c-ee3a7a5cb79d",
       "position": 2,
       "properties": {
-        "description": "[slide] **Discuss:** *Discuss the following prompts with a partner:*\n\n* How does the DNS solve the problem of translating domain names like example.com into IP addresses? \n* How does the DNS help the Internet scale?"
+        "description": "[slide] <span style=\"background-color: #FFFF00\">**Discuss:** *Discuss the following prompts with a partner:*</span>\n\n* How does the DNS solve the problem of translating domain names like example.com into IP addresses? \n* How does the DNS help the Internet scale?"
       },
       "seeding_key": {
         "activity_section.key": "8c80a6e7-3123-4685-ba2c-ee3a7a5cb79d",

@@ -19,6 +19,8 @@
 #
 
 class Standard < ApplicationRecord
+  belongs_to :framework
+  belongs_to :category, class_name: 'StandardCategory'
   has_and_belongs_to_many :lessons, association_foreign_key: 'stage_id'
 
   def summarize
@@ -38,19 +40,34 @@ class Standard < ApplicationRecord
 
   # @param filename [String] The path to the CSV file.
   # Expected columns:
-  # - organization
-  # - organization_id
+  # - framework_id
+  # - shortcode
   # - description
-  # - concept
+  # - organization (deprecated)
+  # - organization_id (deprecated)
+  # - concept (deprecated)
   def self.seed_from_csv(filename)
     created = 0
     updated = 0
+    # The input file dashboard/config/standards.csv for the existing standards
+    # seed task only contains csta standards. This entire method and that input
+    # file will be removed before standards from any other frameworks can be
+    # added to it, therefore it is safe to hardcode 'csta' here.
+    framework = Framework.find_by!(shortcode: 'csta')
+    categories = StandardCategory.where(framework: framework).all
     CSV.foreach(filename, {headers: true}) do |row|
+      category = categories.find {|c| c.description == row['concept']}
+      raise "category #{row['concept']} not found" unless category
       parsed = {
+        framework: framework,
+        category: category,
+        shortcode: row['organization_id'],
+        description: row['description'],
+
+        # deprecated fields to stop using
         organization: row['organization'],
         organization_id: row['organization_id'],
-        description: row['description'],
-        concept: row['concept']
+        concept: row['concept'],
       }
       loaded = Standard.find_by({organization: parsed[:organization], organization_id: parsed[:organization_id]})
       if loaded.nil?

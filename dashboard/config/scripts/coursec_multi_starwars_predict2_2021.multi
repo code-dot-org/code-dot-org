@@ -3,4 +3,4 @@ question 'Look closely at the code below. What will happen when you click "Run"?
 wrong 'BB-8 will travel too far in the first loop.', feedback: 'Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.'
 right 'BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.', feedback: 'Correct!'
 wrong 'BB-8 will collect all of the scrap metal with no problems.', feedback: 'Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.'
-wrong 'I don\'t know.', feedback: 'The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.'
+wrong 'BB-8 will turn the wrong direction after the first loop.', feedback: 'Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.'

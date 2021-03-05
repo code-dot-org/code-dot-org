@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-02 16:58:44 UTC",
+    "serialized_at": "2021-03-03 17:35:08 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -1558,7 +1558,7 @@
       "key": "98bd233e-f176-45a9-be50-e153c6118595",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discuss:** As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "name": "Convenience vs Privacy - Facial Recognition - 10 mins\r"
       },
       "seeding_key": {
@@ -1580,7 +1580,7 @@
       "key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *As we watch the following video on facial recognition takes notes on:*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\n[slide] **Discuss:** *Do you think the benefits outweigh the privacy concerns?*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "name": "Security vs Privacy - Should the Government Need a Warrant? - 10 mins\r"
       },
       "seeding_key": {
@@ -1592,7 +1592,7 @@
       "key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
       "position": 4,
       "properties": {
-        "description": "* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy concerns.\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*"
+        "description": "\n\n\n[slide] **Display:** Show the video about facial recognition technology.\n\n\n[slide] **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*"
       },
       "seeding_key": {
         "activity_section.key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
@@ -1600,31 +1600,30 @@
       }
     },
     {
-      "key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
+      "key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
       "position": 5,
       "properties": {
-        "description": "Individually fill in the last page of your activity guide.",
+        "description": "Students are given a good chunk of class time to complete this activity. Ask students to reflect quietly but as individuals or groups finish they should begin discussing with one another. If most students finish early you could begin a full-class discussion.\n\nIndividually fill in the last page of your activity guide.",
+        "name": "Privacy Tradeoffs - Your Innovation - 15 mins"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
+        "lesson_activity.key": "1a1d6e24-9883-459b-81ce-1e1661033a65"
+      }
+    },
+    {
+      "key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
+      "position": 6,
+      "properties": {
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Developing an Informed Opinion:** This lesson has asked students to hold off on weighing in on the innovations they researched in the previous class to develop a more nuanced and informed opinion about the tradeoffs between innovation, privacy, and security. As students move to this last activity, remind them of the more nuanced opinion they've developed, and ask them to reflect on how the different examples they've seen impact their overall opinions on this tradeoff.\r\n\r\n"
           }
-        ],
-        "name": "Privacy Tradeoffs - Your Innovation - 15 mins\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
-        "lesson_activity.key": "1a1d6e24-9883-459b-81ce-1e1661033a65"
-      }
-    },
-    {
-      "key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
-      "position": 6,
-      "properties": {
-        "description": "**Discuss:** *Students are given a good chunk of class time to complete this activity. Ask students to reflect quietly but as individuals or groups finish they should begin discussing with one another. If most students finish early you could begin a full-class discussion.*"
-      },
-      "seeding_key": {
-        "activity_section.key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
         "lesson_activity.key": "1a1d6e24-9883-459b-81ce-1e1661033a65"
       }
     },
@@ -2351,7 +2350,7 @@
       "key": "e2a30e77-2c5f-43e0-af8e-e133afe2bd6d",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** What strategies do you use when creating a good password?\n\nStudents should discuss good password management, building off of their knowledge from earlier in the  unit. The following slide contains best practices, but your students may have some more concrete suggestions for how they craft complex but memorable passwords. \n"
+        "description": "[slide]  **Discuss:** *What strategies do you use when creating a good password?*\n\nStudents should discuss good password management, building off of their knowledge from earlier in the  unit. The following slide contains best practices, but your students may have some more concrete suggestions for how they craft complex but memorable passwords. \n"
       },
       "seeding_key": {
         "activity_section.key": "e2a30e77-2c5f-43e0-af8e-e133afe2bd6d",

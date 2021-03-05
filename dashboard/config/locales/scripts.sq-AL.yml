@@ -2804,6 +2804,8 @@ sq:
               display_name: Binare
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            lessonGroup-6:
+              display_name: Shtetësi Dixhitale
         coursee-2021:
           lessons:
             Conditionals:
@@ -2869,3 +2871,26 @@ sq:
               name: Lekcioni 14
             lesson15:
               name: Lekcioni 15
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: cikle
+              name: cikle
+            Events:
+              key: Ngjarje
+              name: Ngjarje
+            Conditionals:
+              key: Kushtet
+              name: Kushtet
+            Functions:
+              key: funksione
+              name: funksione
+            Variables:
+              key: variabla
+              name: variabla
+            For Loops:
+              key: Për Ciklet
+              name: Për Ciklet
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Hapat e ardhshme

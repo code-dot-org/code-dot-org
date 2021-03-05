@@ -2,10 +2,10 @@
   "vi-VN": {
     "data": {
       "display_name": {
-        "App Lab Intro 8 - Video Getting Started": "Video: Bắt đầu lập trình",
-        "AppLab Intro 7 - Change Screen Color": "Thay đổi màu sắc hình nên",
+        "App Lab Intro 8 - Video Getting Started": "Video: Bước Khởi Đầu",
+        "AppLab Intro 7 - Change Screen Color": "Thay Đổi Màu Sắc Hình Nền",
         "AppLab Intro 7 - Change Text 2": "Thay đổi văn bản",
-        "AppLab Intro 7 - Full Text": "2 nút bấm",
+        "AppLab Intro 7 - Full Text": "Hai Nút Bấm",
         "CSD U2 Pair Programming Video": "Lập trình đôi",
         "CSD U2 Pair Programming Video_2018": "Lập trình đôi",
         "CSD U2 Pair Programming Video_2019": "Lập trình đôi",
@@ -99,7 +99,18 @@
         "outbreak4": "Chỉnh sửa mô phỏng của bạn",
         "outbreak6": "Khả năng ngẫu nhiên",
         "outbreak7": "Miễn dịch và Vắc xin",
-        "outbreak8": "Chia sẻ tin nhắn"
+        "outbreak8": "Chia sẻ tin nhắn",
+        "App Lab Intro 8 - Video Design Mode": "Video: Chế độ Thiết kế",
+        "App Lab Intro 8 - Video Images and Sounds": "Video: Hình Ảnh và Âm Thanh",
+        "App Lab Intro 8 - Video Make It Interactive": "Video: Tương Tác Với App",
+        "App Lab Intro 8 - Video Share Your App": "Video: Chia Sẻ Phần Mềm Của Bạn",
+        "AppLab Intro 7 - onEvent intro": "Làm Cho Nút Bấm Hoạt Động",
+        "AppLab Intro 7 - onEvent twoButtons": "Luyện Tập Thêm Về onEvent",
+        "AppLab Intro 7 - playSound": "Dùng playSound",
+        "AppLab Intro 7 - thisOrThatAddButton": "Này Hoặc Kia",
+        "AppLab Intro 7 - thisOrThatAddScreen": "Này Hoặc Kia",
+        "AppLab Intro 7 - thisOrThatPersonalize": "Này Hoặc Kia",
+        "AppLab Intro 7 - thisOrThatSetScreen": "Này Hoặc Kia"
       }
     }
   }

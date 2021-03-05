@@ -5,8 +5,8 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "lesson_extras_available": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "lesson_extras_available": true
     },
     "new_name": null,
     "family_name": null,
@@ -33,6 +33,7 @@
       "name": "Jigsaw",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -47,6 +48,7 @@
       "name": "Maze",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -61,6 +63,7 @@
       "name": "Artist",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -75,6 +78,7 @@
       "name": "Bee",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -89,6 +93,7 @@
       "name": "PlayLab",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -103,6 +108,7 @@
       "name": "Farmer",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -117,6 +123,7 @@
       "name": "Flappy",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -131,6 +138,7 @@
       "name": "Bounce",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -145,6 +153,7 @@
       "name": "Multi",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -159,6 +168,7 @@
       "name": "Multi2",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -173,6 +183,7 @@
       "name": "Match",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
       },
@@ -187,6 +198,7 @@
       "name": "TextMatch",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
       },
@@ -201,6 +213,7 @@
       "name": "CSinA",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
       },
@@ -215,6 +228,7 @@
       "name": "Netsim",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 14,
       "properties": {
       },
@@ -229,6 +243,7 @@
       "name": "Odometer",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 15,
       "properties": {
       },
@@ -243,6 +258,7 @@
       "name": "Text Compression",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 16,
       "properties": {
       },
@@ -257,6 +273,7 @@
       "name": "Pixelation",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 17,
       "properties": {
       },
@@ -271,6 +288,7 @@
       "name": "AppLab",
       "absolute_position": 18,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 18,
       "properties": {
       },
@@ -285,6 +303,7 @@
       "name": "Gamelab",
       "absolute_position": 19,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 19,
       "properties": {
       },
@@ -299,6 +318,7 @@
       "name": "Online PD",
       "absolute_position": 20,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 20,
       "properties": {
       },
@@ -313,6 +333,7 @@
       "name": "Markdown Details",
       "absolute_position": 21,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 21,
       "properties": {
       },
@@ -327,6 +348,7 @@
       "name": "Studio",
       "absolute_position": 22,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 22,
       "properties": {
       },
@@ -341,6 +363,7 @@
       "name": "Multi page assessment",
       "absolute_position": 23,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 23,
       "properties": {
       },
@@ -355,6 +378,7 @@
       "name": "Star wars",
       "absolute_position": 24,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 24,
       "properties": {
       },
@@ -369,6 +393,7 @@
       "name": "Minecraft",
       "absolute_position": 25,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 25,
       "properties": {
       },
@@ -383,6 +408,7 @@
       "name": "Rich long assessment",
       "absolute_position": 26,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 26,
       "properties": {
       },
@@ -397,6 +423,7 @@
       "name": "Free Response",
       "absolute_position": 27,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 27,
       "properties": {
       },
@@ -411,6 +438,7 @@
       "name": "Sample PLC Assessment",
       "absolute_position": 28,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 28,
       "properties": {
       },
@@ -425,6 +453,7 @@
       "name": "Swapped Levels",
       "absolute_position": 29,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 29,
       "properties": {
       },
@@ -439,6 +468,7 @@
       "name": "Anonymous student survey",
       "absolute_position": 30,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 30,
       "properties": {
       },
@@ -453,6 +483,7 @@
       "name": "Anonymous student survey 2",
       "absolute_position": 31,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -467,6 +498,7 @@
       "name": "Public Key Cryptography",
       "absolute_position": 32,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 31,
       "properties": {
       },
@@ -481,6 +513,7 @@
       "name": "Web Lab",
       "absolute_position": 33,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 32,
       "properties": {
       },
@@ -495,6 +528,7 @@
       "name": "Single page assessment",
       "absolute_position": 34,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 33,
       "properties": {
       },
@@ -509,6 +543,7 @@
       "name": "Standalone video",
       "absolute_position": 35,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 34,
       "properties": {
       },
@@ -523,6 +558,7 @@
       "name": "Curriculum Reference",
       "absolute_position": 36,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 35,
       "properties": {
       },
@@ -537,6 +573,7 @@
       "name": "Sprite Lab",
       "absolute_position": 37,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 36,
       "properties": {
       },
@@ -551,6 +588,7 @@
       "name": "Dance Lab",
       "absolute_position": 38,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 37,
       "properties": {
       },
@@ -565,6 +603,7 @@
       "name": "Mini Rubric",
       "absolute_position": 39,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 38,
       "properties": {
       },
@@ -579,6 +618,7 @@
       "name": "Pluralsight Test",
       "absolute_position": 40,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -593,8 +633,10 @@
       "name": "Externals Optionally Displayed as Unplugged",
       "absolute_position": 41,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 39,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Externals Optionally Displayed as Unplugged",
@@ -607,6 +649,7 @@
       "name": "Bubble Choice",
       "absolute_position": 42,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 40,
       "properties": {
       },
@@ -621,6 +664,7 @@
       "name": "Contained Levels",
       "absolute_position": 43,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 41,
       "properties": {
       },
@@ -635,6 +679,7 @@
       "name": "ML Fish",
       "absolute_position": 44,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 42,
       "properties": {
       },
@@ -643,14 +688,39 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "AI Lab",
+      "name": "AI Lab",
+      "absolute_position": 45,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 43,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "AI Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -669,8 +739,12 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "k-1 maze 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -689,8 +763,12 @@
     {
       "chapter": 3,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Loops 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -709,8 +787,12 @@
     {
       "chapter": 4,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -729,8 +811,12 @@
     {
       "chapter": 5,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "4-5 Maze 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -749,8 +835,12 @@
     {
       "chapter": 6,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "4-5 Maze Conditionals 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -769,9 +859,13 @@
     {
       "chapter": 7,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -790,8 +884,12 @@
     {
       "chapter": 8,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings-anigif-instructions"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -810,8 +908,12 @@
     {
       "chapter": 9,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "K-1 Artist1 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -830,8 +932,12 @@
     {
       "chapter": 10,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 1 new"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -850,8 +956,12 @@
     {
       "chapter": 11,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -870,8 +980,12 @@
     {
       "chapter": 12,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "NEW Course 4 Artist Vars 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -890,8 +1004,12 @@
     {
       "chapter": 13,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "NEW Course 4 Artist Functions 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -910,8 +1028,12 @@
     {
       "chapter": 14,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Auto Open Function Editor"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -930,8 +1052,12 @@
     {
       "chapter": 15,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Angle Helper Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -950,8 +1076,12 @@
     {
       "chapter": 16,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings-artist-project-backed"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -970,8 +1100,12 @@
     {
       "chapter": 17,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Artist Autorun Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -990,8 +1124,12 @@
     {
       "chapter": 18,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "K-1 Bee 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1010,8 +1148,12 @@
     {
       "chapter": 19,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1030,8 +1172,12 @@
     {
       "chapter": 20,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 2A"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1050,8 +1196,12 @@
     {
       "chapter": 21,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1070,8 +1220,12 @@
     {
       "chapter": 22,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Bee Recommended Blocks test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1090,8 +1244,12 @@
     {
       "chapter": 23,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:k1_1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1110,8 +1268,12 @@
     {
       "chapter": 24,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:c2_1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1130,8 +1292,12 @@
     {
       "chapter": 25,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Labs For Loops 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1150,8 +1316,12 @@
     {
       "chapter": 26,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Params 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1170,8 +1340,12 @@
     {
       "chapter": 27,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings-playlab-project-backed"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1190,8 +1364,12 @@
     {
       "chapter": 28,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Allthethings Encrypted Play Lab Level"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1210,8 +1388,12 @@
     {
       "chapter": 29,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1230,8 +1412,12 @@
     {
       "chapter": 30,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Farmer for Authored Hint testing"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1250,8 +1436,12 @@
     {
       "chapter": 31,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Farmer for TTS testing"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1270,8 +1460,12 @@
     {
       "chapter": 32,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "flappy_1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1290,8 +1484,12 @@
     {
       "chapter": 33,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "bounce_1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1310,8 +1508,12 @@
     {
       "chapter": 34,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "K-1 Happy Maps Multi 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1330,8 +1532,12 @@
     {
       "chapter": 35,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Multi Horizontal Scroll Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1350,8 +1556,12 @@
     {
       "chapter": 36,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Submittable Multi"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1370,8 +1580,12 @@
     {
       "chapter": 37,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "test questionless single multi"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1390,8 +1604,12 @@
     {
       "chapter": 38,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Choose 2 Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1410,8 +1628,12 @@
     {
       "chapter": 39,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Match 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1430,8 +1652,12 @@
     {
       "chapter": 40,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Blocks to Math 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1450,8 +1676,12 @@
     {
       "chapter": 41,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "PDK5 Strategies O"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1470,8 +1700,12 @@
     {
       "chapter": 42,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval .2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1490,8 +1724,12 @@
     {
       "chapter": 43,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images .2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1510,8 +1748,12 @@
     {
       "chapter": 44,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Eval Contracts F"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1530,8 +1772,12 @@
     {
       "chapter": 45,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Eval Contracts A"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1550,8 +1796,12 @@
     {
       "chapter": 46,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Calc Vars 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1570,8 +1820,12 @@
     {
       "chapter": 47,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Big Game Vars 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1590,8 +1844,12 @@
     {
       "chapter": 48,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Eval Define Funcs 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1610,8 +1868,12 @@
     {
       "chapter": 49,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Eval Booleans 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1630,8 +1892,12 @@
     {
       "chapter": 50,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Sam the Butterfly 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1650,8 +1916,12 @@
     {
       "chapter": 51,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Luigi's Pizza 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1670,8 +1940,12 @@
     {
       "chapter": 52,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Eval Define Funcs Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1690,8 +1964,12 @@
     {
       "chapter": 53,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U1L4 NetSim SendAB"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1710,8 +1988,12 @@
     {
       "chapter": 54,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U2L5 NetSim Classroom Internet"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1730,8 +2012,12 @@
     {
       "chapter": 55,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U2L7 NetSim Need for Packets"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1750,8 +2036,12 @@
     {
       "chapter": 56,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U2L10 NetSim Automatic DNS"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1770,8 +2060,12 @@
     {
       "chapter": 57,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "NetSim_Superuser"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1790,8 +2084,12 @@
     {
       "chapter": 58,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Odometer"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1810,8 +2108,12 @@
     {
       "chapter": 59,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1830,8 +2132,12 @@
     {
       "chapter": 60,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings: Pixelation - Lesson 14 - Make the Letter A"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1850,8 +2156,12 @@
     {
       "chapter": 61,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1870,8 +2180,12 @@
     {
       "chapter": 62,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1890,8 +2204,12 @@
     {
       "chapter": 63,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Pixelation - AllTheThings 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1910,8 +2228,12 @@
     {
       "chapter": 64,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Pixelation - AllTheThings 5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1930,8 +2252,12 @@
     {
       "chapter": 65,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1950,8 +2276,12 @@
     {
       "chapter": 66,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3L03 Define and use turnAround"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1970,8 +2300,12 @@
     {
       "chapter": 67,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3L07 - Starry Night Starter Code"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1990,8 +2324,12 @@
     {
       "chapter": 68,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3L08 - Enchantment Under the Sea"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2010,8 +2348,12 @@
     {
       "chapter": 69,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings Applab - Turtle move with button"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2030,8 +2372,12 @@
     {
       "chapter": 70,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "U3L16 - use images"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2050,8 +2396,12 @@
     {
       "chapter": 71,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Applab test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2070,8 +2420,12 @@
     {
       "chapter": 72,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings data blocks test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2090,8 +2444,12 @@
     {
       "chapter": 73,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings design mode elements"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2110,8 +2468,12 @@
     {
       "chapter": 74,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_template_backed1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2130,8 +2492,12 @@
     {
       "chapter": 75,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_template_backed2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2150,8 +2516,12 @@
     {
       "chapter": 76,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_moviebot"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2170,8 +2540,12 @@
     {
       "chapter": 77,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Applab allthethings onRecordEvent"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2190,8 +2564,12 @@
     {
       "chapter": 78,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Embedded Video Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2210,8 +2588,12 @@
     {
       "chapter": 79,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Test Applab Predictive"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2230,8 +2612,12 @@
     {
       "chapter": 80,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings level dataTables"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2250,8 +2636,12 @@
     {
       "chapter": 81,
       "position": 17,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Applab allthethings goals"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2270,8 +2660,12 @@
     {
       "chapter": 82,
       "position": 18,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Applab AllTheThings ResourcesTab MapReference"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2290,8 +2684,12 @@
     {
       "chapter": 83,
       "position": 19,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Applab AllTheThings ResourcesTab ReferenceLinks"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2310,8 +2708,12 @@
     {
       "chapter": 84,
       "position": 20,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Applab AllTheThings ResourcesTab AllResources"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2330,8 +2732,12 @@
     {
       "chapter": 85,
       "position": 21,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings Applab DesignModeDefault"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2350,8 +2756,12 @@
     {
       "chapter": 86,
       "position": 22,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Applab allthethings Widget Mode"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2370,8 +2780,12 @@
     {
       "chapter": 87,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Gamelab AllTheThings With No Animation Tab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2390,8 +2804,12 @@
     {
       "chapter": 88,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Gamelab AllTheThings With Prepopulated Animation"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2410,8 +2828,12 @@
     {
       "chapter": 89,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Gamelab AllTheThings Embed Level"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2430,8 +2852,12 @@
     {
       "chapter": 90,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "PDK5 Intro C"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2450,8 +2876,12 @@
     {
       "chapter": 91,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "PDK5 Foundations F"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2470,8 +2900,12 @@
     {
       "chapter": 92,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Test External Markdown"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2490,8 +2924,12 @@
     {
       "chapter": 93,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Test embedded Blockly in instructions"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2510,8 +2948,12 @@
     {
       "chapter": 94,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Test embedded K1 Blockly in instructions"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2530,8 +2972,12 @@
     {
       "chapter": 95,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Resizing Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2550,8 +2996,12 @@
     {
       "chapter": 96,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 11"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2570,8 +3020,12 @@
     {
       "chapter": 97,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Test longassessment levelgroup split new"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2590,8 +3044,12 @@
     {
       "chapter": 98,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_two_items"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2610,8 +3068,12 @@
     {
       "chapter": 99,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2630,8 +3092,12 @@
     {
       "chapter": 100,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Overworld Chop Tree - allthethings"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2650,8 +3116,12 @@
     {
       "chapter": 101,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "MC Agent Freeplay"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2670,8 +3140,12 @@
     {
       "chapter": 102,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Craft Aquatic - allthethings"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2690,8 +3164,12 @@
     {
       "chapter": 103,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "PS U3 Assessment1 new"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2710,8 +3188,12 @@
     {
       "chapter": 104,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Sample Free Response"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2730,8 +3212,12 @@
     {
       "chapter": 105,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Sample CSP Assessment"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2750,13 +3236,18 @@
     {
       "chapter": 106,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "2-3 Maze 1": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "2-3 Maze 1",
+          "2-3 Maze 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2777,13 +3268,18 @@
     {
       "chapter": 107,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "2-3 Maze 2": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "2-3 Maze 2",
+          "2-3 Maze 5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2804,13 +3300,18 @@
     {
       "chapter": 108,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "2-3 Maze 3": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "2-3 Maze 3",
+          "2-3 Maze 6"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2831,13 +3332,18 @@
     {
       "chapter": 109,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "2-3 Artist 1 new": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "2-3 Artist 1 new",
+          "ramp_video_artistIntro"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2858,13 +3364,18 @@
     {
       "chapter": 110,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "ramp_video_loopsArtist": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "2-3 Artist Loops 2",
+          "ramp_video_loopsArtist"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2885,13 +3396,18 @@
     {
       "chapter": 111,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "2-3 Artist 3": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "2-3 Artist 3",
+          "2-3 Artist Loops 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2912,13 +3428,18 @@
     {
       "chapter": 112,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "4-5 Maze 4": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "4-5 Maze 1",
+          "4-5 Maze 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2939,13 +3460,18 @@
     {
       "chapter": 113,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "4-5 Maze 5": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "4-5 Maze 2",
+          "4-5 Maze 5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2966,13 +3492,18 @@
     {
       "chapter": 114,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
           "4-5 Maze 6": {
             "active": false
           }
-        }
+        },
+        "level_keys": [
+          "4-5 Maze 3",
+          "4-5 Maze 6"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2993,6 +3524,7 @@
     {
       "chapter": 115,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "variants": {
@@ -3002,29 +3534,37 @@
               "socialBelongingTest"
             ]
           }
-        }
+        },
+        "level_keys": [
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
+        ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
       },
       "level_keys": [
-        "csp_socialBelonging_intervention",
-        "csp_socialBelonging_control"
+        "csp_socialBelonging_control",
+        "csp_socialBelonging_intervention"
       ]
     },
     {
       "chapter": 116,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Test anonymous student survey"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3043,8 +3583,12 @@
     {
       "chapter": 117,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP pre-assessment survey"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3063,8 +3607,12 @@
     {
       "chapter": 118,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings Modulo Clock"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3083,8 +3631,12 @@
     {
       "chapter": 119,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings Public Key Cryptography"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3103,8 +3655,12 @@
     {
       "chapter": 120,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Web Lab 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3123,8 +3679,12 @@
     {
       "chapter": 121,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Test longassessment levelgroup new"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3143,8 +3703,12 @@
     {
       "chapter": 122,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "AllTheThings_StandaloneVideo"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3163,8 +3727,12 @@
     {
       "chapter": 123,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_curriculum_reference"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3183,8 +3751,12 @@
     {
       "chapter": 124,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_map"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3203,8 +3775,12 @@
     {
       "chapter": 125,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_fish_tank"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3223,8 +3799,12 @@
     {
       "chapter": 126,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings HOC Dance 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3243,8 +3823,12 @@
     {
       "chapter": 127,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings HOC Dance 10 Measures"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3263,8 +3847,12 @@
     {
       "chapter": 128,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "allthethings-mini-rubric"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3283,8 +3871,12 @@
     {
       "chapter": 129,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "allthethings-mini-rubric-weblab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3303,8 +3895,12 @@
     {
       "chapter": 130,
       "position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "allthethings-mini-rubric-gamelab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3323,8 +3919,12 @@
     {
       "chapter": 131,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Pluralsight LevelGroup Test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3343,8 +3943,12 @@
     {
       "chapter": 132,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_external_displayed_as_unplugged"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3363,8 +3967,12 @@
     {
       "chapter": 133,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_external_not_displayed_as_unplugged"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3383,8 +3991,12 @@
     {
       "chapter": 134,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings_bubble_choice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3403,8 +4015,12 @@
     {
       "chapter": 135,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "contained_single_multi"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3423,8 +4039,12 @@
     {
       "chapter": 136,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Test GameLab Predictive"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3443,8 +4063,12 @@
     {
       "chapter": 137,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "PS predictive Applab level test"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3463,8 +4087,12 @@
     {
       "chapter": 138,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "contained_applab_choose2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3483,8 +4111,12 @@
     {
       "chapter": 139,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "contained_csf_multi2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3503,8 +4135,12 @@
     {
       "chapter": 140,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "contained_csf_free_response"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3523,8 +4159,12 @@
     {
       "chapter": 141,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Test GameLab Submittable Free Response"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3543,8 +4183,12 @@
     {
       "chapter": 142,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "Video - The Future of Big Data"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3563,8 +4207,12 @@
     {
       "chapter": 143,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "allthethings HOC ML Fish 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3578,6 +4226,54 @@
       },
       "level_keys": [
         "allthethings HOC ML Fish 1"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "allthethings AI Lab 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings AI Lab 1"
+        ],
+        "lesson.key": "AI Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "allthethings AI Lab 1"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "AppLab AI Enabled"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab AI Enabled"
+        ],
+        "lesson.key": "AI Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "AppLab AI Enabled"
       ]
     }
   ],
@@ -4811,18 +5507,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 1 new",
-        "script_level.level_keys": [
-          "2-3 Artist 1 new",
-          "ramp_video_artistIntro"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ramp_video_artistIntro",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
@@ -4835,7 +5519,19 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_loopsArtist",
+        "level.key": "2-3 Artist 1 new",
+        "script_level.level_keys": [
+          "2-3 Artist 1 new",
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Loops 2",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -4847,7 +5543,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 2",
+        "level.key": "ramp_video_loopsArtist",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -4931,7 +5627,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 3",
+        "level.key": "4-5 Maze 6",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
@@ -4943,7 +5639,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 6",
+        "level.key": "4-5 Maze 3",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
@@ -4957,8 +5653,8 @@
       "seeding_key": {
         "level.key": "csp_socialBelonging_control",
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -4969,8 +5665,8 @@
       "seeding_key": {
         "level.key": "csp_socialBelonging_intervention",
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5284,6 +5980,43 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings AI Lab 1",
+        "script_level.level_keys": [
+          "allthethings AI Lab 1"
+        ],
+        "lesson.key": "AI Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab AI Enabled",
+        "script_level.level_keys": [
+          "AppLab AI Enabled"
+        ],
+        "lesson.key": "AI Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
   ]
 }
