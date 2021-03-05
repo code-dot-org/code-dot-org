@@ -71,6 +71,7 @@ namespace :seed do
     '20-hour',
     'algebra',
     'allthehiddenthings',
+    'allthemigratedthings',
     'alltheplcthings',
     'allthethings',
     'allthettsthings',

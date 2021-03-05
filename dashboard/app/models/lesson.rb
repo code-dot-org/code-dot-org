@@ -372,11 +372,25 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_dropdown
+  def summarize_for_student_lesson_plan
+    all_resources = resources_for_lesson_plan(false)
+    {
+      unit: script.summarize_for_lesson_show(true),
+      position: relative_position,
+      key: key,
+      displayName: localized_name,
+      overview: student_overview || '',
+      announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
+      resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show)
+    }
+  end
+
+  def summarize_for_lesson_dropdown(is_student = false)
     {
       key: key,
       displayName: localized_name,
-      link: script_lesson_path(script, self),
+      link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
       position: relative_position
     }
   end

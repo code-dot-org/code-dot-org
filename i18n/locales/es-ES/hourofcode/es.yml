@@ -143,15 +143,15 @@ es:
     estudios.
   hoc_live: Hora del Código En Vivo
   hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
-  hoc_live_learn_title: Learn with Hour of Code Live
+  hoc_live_learn_title: Aprende con la Hora del Código En Vivo
   hoc_live_sign_up_message: "¡Aprende en vivo junto a invitados especiales! Estudiantes
     de todas las edades y habilidades, incluso aquellos sin computadoras, son bienvenidos.
     Únete a nuestra lista de distribución para recibir recordatorios de los episodios
     y recursos para continuar el aprendizaje en casa. Ver episodios anteriores [aquí](%{episodes_url})."
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: "¡Aprende conceptos básicos de la ciencia de computación
+    junto a invitados especiales! Estudiantes de todas las edades y habilidades, incluso
+    aquellos sin computadoras, son bienvenidos a nuestra aula virtual. Continua el
+    aprendizaje en casa a través de nuestros episodios de la Hora del Código En Vivo."
   hoc_live_join_us: Participa
   hoc_live_learn_more: Conoce más
   hoc_overview_oceans_tutorial_header: AI para océanos
