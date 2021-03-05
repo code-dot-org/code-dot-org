@@ -6788,35 +6788,35 @@
   ],
   "vocabularies": [
     {
-      "key": "Computer",
+      "key": "computer",
       "word": "Computer",
       "definition": "A machine that works with information.",
       "seeding_key": {
-        "vocabulary.key": "Computer"
+        "vocabulary.key": "computer"
       }
     },
     {
-      "key": "Input",
+      "key": "input",
       "word": "Input",
       "definition": "the information computers get from users, devices, or other computers",
       "seeding_key": {
-        "vocabulary.key": "Input"
+        "vocabulary.key": "input"
       }
     },
     {
-      "key": "Output",
+      "key": "output",
       "word": "Output",
       "definition": "the information computers give to users, devices, or other computers",
       "seeding_key": {
-        "vocabulary.key": "Output"
+        "vocabulary.key": "output"
       }
     },
     {
-      "key": "Processing",
+      "key": "processing",
       "word": "Processing",
       "definition": "The thinking work computers do to turn input into output.",
       "seeding_key": {
-        "vocabulary.key": "Processing"
+        "vocabulary.key": "processing"
       }
     },
     {
@@ -6832,25 +6832,25 @@
     {
       "seeding_key": {
         "lesson.key": "What is a Computer?",
-        "vocabulary.key": "Computer"
+        "vocabulary.key": "computer"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "vocabulary.key": "Input"
+        "vocabulary.key": "input"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "vocabulary.key": "Output"
+        "vocabulary.key": "output"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Processing",
-        "vocabulary.key": "Processing"
+        "vocabulary.key": "processing"
       }
     },
     {
