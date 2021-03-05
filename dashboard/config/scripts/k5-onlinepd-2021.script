@@ -19,10 +19,16 @@ level 'OPD-K5 GettingStarted_Reflection', progression: 'Getting Started'
 lesson 'Lesson Planning', display_name: 'Lesson Planning', has_lesson_plan: false
 level 'OPD-K5 LessonPlanning1', progression: 'Lesson Planning'
 level 'OPD-K5 LessonPlanning2', progression: 'Lesson Planning'
+level 'OPD-K5 LessonPlanning_Reflection', progression: 'Lesson Planning'
 
-lesson 'CS Teaching and Learning Practices', display_name: 'CS Teaching and Learning Practices', has_lesson_plan: false
+lesson 'CS Teaching and Student Practices', display_name: 'CS Teaching and Student Practices', has_lesson_plan: false
+level 'OPD-K5 CSTeachingLearning1', progression: 'CS Teaching and Student Practices'
+level 'OPD-K5 CSTeachingLearning_Reflection', progression: 'CS Teaching and Student Practices'
+level 'OPD-K5 CSTeachingLearning2', progression: 'CS Teaching and Student Practices'
+level 'OPD-K5 CS_StudentPractices_Reflection', progression: 'CS Teaching and Student Practices'
 
 lesson 'Addressing Implementation Approaches and Barriers', display_name: 'Addressing Implementation Approaches and Barriers', has_lesson_plan: false
+level 'OPD-K5 AddressingImplementationBarriers', progression: 'Addressing Implementation Approaches and Barriers'
 
 lesson_group 'k5_basic_concepts_1', display_name: 'CS Fundamentals Concepts'
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
