@@ -2444,8 +2444,8 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
 
     script = Script.add_script(
-        {name: 'lesson-group-test-script'},
-        ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
     )
 
     assert_equal script.lessons[2].lesson_group_id, lesson_group1.id
