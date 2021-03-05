@@ -33,6 +33,8 @@ class ProgressTableStudentName extends React.PureComponent {
     lastTimestamp: PropTypes.number,
     localeCode: PropTypes.string,
     studentUrl: PropTypes.string.isRequired,
+    onExpandToggle: PropTypes.func.isRequired,
+    isExpanded: PropTypes.bool.isRequired,
 
     // redux provided
     showSectionProgressDetails: PropTypes.bool
@@ -90,7 +92,7 @@ class ProgressTableStudentName extends React.PureComponent {
   }
 
   render() {
-    const {name, studentUrl} = this.props;
+    const {name, studentUrl, onExpandToggle, isExpanded} = this.props;
     const tooltipId = this.tooltipId();
 
     return (
@@ -101,10 +103,9 @@ class ProgressTableStudentName extends React.PureComponent {
         aria-describedby={tooltipId}
       >
         {this.props.showSectionProgressDetails && (
-          // TODO: handle onClick to expand and collapse rows
           <CollapserIcon
-            isCollapsed={true}
-            onClick={() => {}}
+            isCollapsed={!isExpanded}
+            onClick={onExpandToggle}
             collapsedIconClass="fa-caret-right"
             expandedIconClass="fa-caret-down"
             style={styles.collapser}
