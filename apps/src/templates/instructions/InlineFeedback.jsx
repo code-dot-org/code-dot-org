@@ -11,7 +11,9 @@ class InlineFeedback extends Component {
     borderColor: PropTypes.string,
     extra: PropTypes.string,
     message: PropTypes.string.isRequired,
-    styles: PropTypes.object
+    styles: PropTypes.object,
+    isMinecraft: PropTypes.bool,
+    skinId: PropTypes.string
   };
 
   /**
@@ -33,7 +35,12 @@ class InlineFeedback extends Component {
     // easily detect its presence. This class should NOT be used for
     // styling.
     return (
-      <ChatBubble borderColor={borderColor} ttsMessage={message}>
+      <ChatBubble
+        borderColor={borderColor}
+        ttsMessage={message}
+        isMinecraft={this.props.isMinecraft}
+        skinId={this.props.skinId}
+      >
         <div className="uitest-topInstructions-inline-feedback">
           <SafeMarkdown markdown={message} />
         </div>

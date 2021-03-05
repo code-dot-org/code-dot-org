@@ -631,6 +631,7 @@ class TopInstructions extends Component {
                 <InlineAudio
                   src={ttsUrl}
                   style={this.props.isRtl ? audioStyleRTL : audioStyle}
+                  autoplayTriggerElementId="codeApp"
                 />
               )}
             {this.props.documentationUrl &&

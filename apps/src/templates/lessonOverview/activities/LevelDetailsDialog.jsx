@@ -150,26 +150,33 @@ class LevelDetailsDialog extends Component {
     }
   }
 
-  handleBubbleChoiceBubbleClick = level => {
+  handleBubbleChoiceBubbleClick = clickedObject => {
     const previousSelected = this.state.selectedLevel;
     const clonedScriptLevel = _.cloneDeep(this.state.scriptLevel);
+
+    // Reset highlighting
     if (previousSelected.name === clonedScriptLevel.level.name) {
+      // The script level was selected so reset highlighted on the script level
       clonedScriptLevel.highlighted = false;
     } else {
+      // A sublevel was selected - find the sublevel and reset highlighted on it
       const clonedPreviousSelected = clonedScriptLevel.sublevels.find(
         sublevel => sublevel.name === previousSelected.name
       );
       clonedPreviousSelected.highlighted = false;
     }
-    if (level.level) {
+
+    if (clickedObject.level) {
+      // A script level was clicked on so we set highlighted on the cloned script level
       clonedScriptLevel.highlighted = true;
       this.setState({
-        selectedLevel: level.level,
+        selectedLevel: clickedObject.level,
         scriptLevel: clonedScriptLevel
       });
     } else {
+      // A sublevel was clicked so find the cloned version of the sublevel and set highlighted to true
       const clonedNewSelected = clonedScriptLevel.sublevels.find(
-        sublevel => sublevel.name === level.name
+        sublevel => sublevel.name === clickedObject.name
       );
       clonedNewSelected.highlighted = true;
       this.setState({

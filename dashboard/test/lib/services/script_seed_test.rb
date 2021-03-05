@@ -313,7 +313,7 @@ module Services
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
-        lesson.vocabularies.first.update!(word: 'updated word', definition: 'updated definition')
+        lesson.vocabularies.first.update!(definition: 'updated definition')
         lesson.vocabularies.create(
           word: 'new word',
           key: "#{lesson.name}-vocab-3",
@@ -328,7 +328,7 @@ module Services
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal(
-        ['updated word', 'word', 'new word'],
+        ['word', 'word', 'new word'],
         lesson.vocabularies.map(&:word)
       )
       assert_equal(
