@@ -7,6 +7,9 @@ Parameters:
   GoogleDeveloperIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleDeveloperIDs
+  GoogleDataAnalystIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleDataAnalystIDs
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -198,6 +201,51 @@ Resources:
             Action: logs:*
             Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
       ManagedPolicyArns: [!Ref DevPermissions]
+  DataAnalystRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: DataAnalyst
+      Path: /dataanalyst/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref GoogleDataAnalystIDs
+      ManagedPolicyArns: [!Ref DataAnalystPolicy]
+  DataAnalystPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DataAnalystPolicy
+      Path: /dataanalyst/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: DataAnalystTools
+            Effect: Allow
+            Action:
+              - 's3:ListAllMyBuckets'
+              - 'redshift:*'
+              - 'dms:*'
+            Resource: '*'
+          - Sid: DataAnalystS3ImportExportBucket
+            Effect: Allow
+            Action:
+              - 's3:*'
+            Resource:
+              - 'arn:aws:s3:::cdo-data-sharing-internal/*'
+              - 'arn:aws:s3:::cdo-data-sharing-internal'
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
