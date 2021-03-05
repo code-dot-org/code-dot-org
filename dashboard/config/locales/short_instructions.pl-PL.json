@@ -439,7 +439,7 @@
         "K-1 maze debug 1": "Zmień kod, aby doprowadzić mnie do świnki!",
         "MC HOC 2016 Level 10": "Nadszedł czas, abyś zrobił własną grę Minecraft! Wykreuj potwory a następnie spowoduj, by robiły to, co chcesz. Baw się dobrze!",
         "MC HOC 2016 Level 2-2": "Kurczak jest zamrożony. Umieść bloki \"idź\" i \"skręć\" w bloku \"kiedy ożywiony\", by poruszył się.",
-        "MC HOC 2016 Level 3": "Świetnie, kurczak przesunął się! Ale nagle zatrzymał się. W grach, kurczaki chodzą bez przerwy. Użyj pętli \"zawsze\", aby utrzymać kurczaki w ruchu.",
+        "MC HOC 2016 Level 3": "Świetnie, kurczak przesunął się! Ale nagle zatrzymał się. W grach, kurczaki chodzą bez przerwy. Użyj pętli \"powtarzaj bez końca\", aby utrzymać kurczaki w ruchu.",
         "MC HOC 2016 Level 4": "Teraz kurczaki wyglądają dziwnie poruszając się tak samo. Gry korzystają z losowych ruchów, by urzeczywistnić sytuacje. Spowoduj, by kurczaki \"skręcały losowo\".",
         "MC HOC 2016 Level 5": "Te krowy zagubiły się! Poprowadź je na trawę za pomocą bloku \"idź krok w kierunku\" umieszczonym w pętli \"bez końca wykonuj\".",
         "MC HOC 2016 Level 6": "Teraz możesz zrobić zombie. Użyj bloku \"wykreuj\", by utworzyć 3 zombie, gdy zapada zmrok. Spraw, by przemieszczały się w Twoim kierunku. Przetrwaj do rana.",

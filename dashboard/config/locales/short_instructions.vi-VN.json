@@ -477,7 +477,16 @@
         "bounce_6_sports": "Bây giờ lá cờ đang ở góc trên. Bạn cần gắn những khối lệnh và khối \"khi quả bóng chạm ...\" để giải câu đố này.",
         "bounce_7_basketball": "Gắn những khối lệnh vào từng khối \"khi ...\". Nảy quả bóng cho đến khi nó chạm lá cờ.",
         "bounce_7_sports": "Gắn những khối lệnh vào từng khối \"khi ...\". Nảy quả bóng cho đến khi nó chạm lá cờ.",
-        "scrat 16": "Hạt sồi! Hạt sồi! Hạt sồi! Hãy dùng khối \"Nếu\" để giúp tôi tới chỗ đó với số khối lệnh nhỏ nhất."
+        "scrat 16": "Hạt sồi! Hạt sồi! Hạt sồi! Hãy dùng khối \"Nếu\" để giúp tôi tới chỗ đó với số khối lệnh nhỏ nhất.",
+        "Widget: Text Compression": "Hãy tìm mẫu (những từ hoặc cụm lặp lại) trong văn bản. Gõ các mẫu bạn thấy vào từ điển bên phải. Khi bạn nhập các mục vào từ điển, kí hiệu cho các mục đó sẽ được thế chỗ các mẫu trong văn bản.",
+        "bounce_10_basketball": "Bây giờ chúng ta có cái rổ ở phía trên. Gắn khối \"điểm số ghi được\" và \"điểm của đối thủ\" vào các khối \"khi quả bóng vào mục tiêu\" và \"khi quả bóng vượt quá tay\" để tạo thành một trò chơi. Hãy xem bạn sẽ được bao nhiêu điểm trước khi đối thủ của bạn ghi điểm hai lần.",
+        "bounce_12_basketball": "Hãy tạo trò chơi Bóng rổ cho chính bạn. Bạn có thể thay đổi luật chơi. Khi bạn xong, hãy nhấn Hoàn thành để bạn bè của bạn có thể chơi thử trò chơi này trên điện thoại của họ.",
+        "bounce_1_basketball": "Gắn một khối lệnh vào khối \"khi mũi tên chỉ bên trái\" và bấm \"Chạy\". Di chuyển tay bằng cách nhấn phím mũi tên trái để chạm được mục tiêu.",
+        "bounce_2_basketball": "Gắn một khối lệnh vào khối \"khi mũi tên chỉ bên trái\" và bấm \"Chạy\". Di chuyển tay bằng cách nhấn phím để chạm được các mục tiêu khác.",
+        "bounce_5_basketball": "Mình sẽ để chiếc bóng bay đến tay. Gắn một khối lệnh vào khối \"khi quả bóng chạy tay\" để quả bóng bay đến chỗ lá cờ.",
+        "scrat 17": "Ok, hãy cùng nhau làm lại thêm một lần nữa để luyện tập nào - phần này không khác gì nhiều, nhưng hãy cẩn thận với bức tường!",
+        "scrat 18": "Khối lệnh \"Nếu-khác\" sẽ xem xét điều kiện, và thực hiện câu lệnh này HOẶC câu lệnh khác. Để giúp tôi tới chỗ hạt sồi, hãy thử dùng khối lệnh mới này.",
+        "scrat 20": "Chỉ sử dụng 3 khối lệnh, bạn có thể giúp tôi giải quyết mê cung phức tạp này không? Nếu bạn làm đúng, tôi có thể đi một chặng đường ngoằn ngoèo bất chấp cả quãng đường dài. Hãy nhanh lên! Băng đang tan đấy!"
       }
     }
   }

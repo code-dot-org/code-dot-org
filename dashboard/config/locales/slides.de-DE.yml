@@ -3629,7 +3629,7 @@ de:
       7:
         image: notes/mc_2017_agent_intro_7.png
         text: Um die Aufgabe "Hour of Code" abzuschließen, musst du Code schreiben,
-          der den Agenten zu programmiert. Du wirst mit dem Agenten zusammenarbeiten,
+          der den Agenten programmiert. Du wirst mit dem Agenten zusammenarbeiten,
           um alle Hindernisse auf deinem Weg zu beseitigen, damit du die Gegenstände,
           die du für deine Reise benötigst, einsammeln kannst. Nur der Agent kann
           Bausteine platzieren und auflösen, und nur du kannst Gegenstände einsammeln.
@@ -3647,7 +3647,7 @@ de:
         image: notes/mc_2017_agent_intro_10.png
         text: Der Agent kann gehen, sich drehen und Druckplatten aktivieren. Er kann
           auch Bausteine zerstören und Bausteine platzieren. Wenn er den Baustein
-          wie diese Minecart-Schienen platziert, gehen sie von selbst darunter.
+          wie diese Loren-Schienen platziert, gehen sie von selbst darunter.
       11:
         image: notes/mc_2017_agent_intro_11.png
         text: Hast du vergessen, was du in einem Level tun musst, findest du oben
@@ -3698,7 +3698,7 @@ de:
         image: notes/mc_2017_repeat_7.png
         text: Im nächsten Level kannst du eine Schleife verwenden, um den Agenten
           auf dem Pfad zu bewegen. Ziehe den Wiederholungsbaustein in den Arbeitsbereich
-          und platziere den Bausteien „Vorwärtsbewegen“ innerhalb des Wiederholungsbausteins.
+          und platziere den Baustein „Vorwärtsbewegen“ innerhalb des Wiederholungsbausteins.
           Dadurch wird der Computer angewiesen, dasselbe mehrmals hintereinander zu
           tun, ohne einen ganzen Haufen Bausteine in den Arbeitsbereich ziehen zu
           müssen. Du kannst wählen, wie oft du wiederholen möchtest, indem du eine

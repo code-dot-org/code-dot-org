@@ -1,0 +1,21 @@
+---
+az:
+  data:
+    variable_names:
+      actor: personaj
+      counter: sayğac
+      height: hündürlük
+      honey: bal
+      left: sola
+      length: uzunluq
+      name: ad
+      nectar: nektar
+      points: xallar
+      random: təsadüfi
+      repeat: təkrar et
+      right: sağa
+      score: xal
+      size: ölçü
+      speed: sürət
+      wizard: sehrbaz
+      x: x
