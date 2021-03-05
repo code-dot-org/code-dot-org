@@ -95,6 +95,12 @@ export default function sectionProgress(state = initialState, action) {
       lessonOfInterest: action.lessonOfInterest
     };
   }
+  if (action.type === SET_SHOW_SECTION_PROGRESS_DETAILS) {
+    return {
+      ...state,
+      showSectionProgressDetails: action.showSectionProgressDetails
+    };
+  }
   if (action.type === SET_SECTION) {
     // Setting the section is the first action to be called when switching
     // sections, which requires us to reset our state. This might need to change
