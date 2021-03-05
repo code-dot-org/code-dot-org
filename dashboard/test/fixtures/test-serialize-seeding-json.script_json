@@ -838,6 +838,8 @@
       "key": "test-serialize-seeding-json-lg-1-l-1-vocab-1",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-1"
       }
@@ -846,6 +848,8 @@
       "key": "test-serialize-seeding-json-lg-1-l-1-vocab-2",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-2"
       }
@@ -854,6 +858,8 @@
       "key": "test-serialize-seeding-json-lg-1-l-2-vocab-1",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-1"
       }
@@ -862,6 +868,8 @@
       "key": "test-serialize-seeding-json-lg-1-l-2-vocab-2",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-2"
       }

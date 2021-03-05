@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
@@ -68,9 +68,10 @@ export default class TextareaWithMarkdownPreview extends React.Component {
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Preview:</div>
             <div style={styles.preview}>
-              <SafeMarkdown
+              <EnhancedSafeMarkdown
                 openExternalLinksInNewTab={true}
                 markdown={this.props.markdown}
+                expandableImages
               />
             </div>
           </div>

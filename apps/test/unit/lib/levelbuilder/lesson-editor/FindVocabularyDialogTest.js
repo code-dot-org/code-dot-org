@@ -13,8 +13,20 @@ describe('FindVocabularyDialog', () => {
       handleConfirm,
       handleClose: sinon.spy(),
       vocabularies: [
-        {id: 1, key: 'key1', word: 'word1', definition: 'definition1'},
-        {id: 2, key: 'key2', word: 'word2', definition: 'definition2'}
+        {
+          id: 1,
+          key: 'key1',
+          word: 'word1',
+          definition: 'definition1',
+          commonSenseMedia: true
+        },
+        {
+          id: 2,
+          key: 'key2',
+          word: 'word2',
+          definition: 'definition2',
+          commonSenseMedia: true
+        }
       ]
     };
   });
