@@ -108,7 +108,7 @@ export default class UploadImageDialog extends React.Component {
             type="checkbox"
             checked={this.state.expandable}
             style={styles.checkbox}
-            onChange={() => this.setState({expandable: !this.state.expandable})}
+            onChange={e => this.setState({expandable: e.target.checked})}
           />
           <HelpTip>
             <p>

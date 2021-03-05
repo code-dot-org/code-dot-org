@@ -18,11 +18,6 @@ import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 
 $(document).ready(function() {
-  displayLessonEdit();
-  prepareExpandableImageDialog();
-});
-
-function displayLessonEdit() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const searchOptions = getScriptData('searchOptions');
@@ -32,6 +27,7 @@ function displayLessonEdit() {
 
   registerReducers({
     ...reducers,
+    instructionsDialog: instructionsDialog,
     resources: resourcesEditor,
     vocabularies: vocabulariesEditor
   });
@@ -43,32 +39,15 @@ function displayLessonEdit() {
 
   ReactDOM.render(
     <Provider store={store}>
-      <LessonEditor
-        initialObjectives={objectives}
-        relatedLessons={relatedLessons}
-        initialLessonData={lessonData}
-      />
+      <div>
+        <LessonEditor
+          initialObjectives={objectives}
+          relatedLessons={relatedLessons}
+          initialLessonData={lessonData}
+        />
+        <ExpandableImageDialog />
+      </div>
     </Provider>,
     document.getElementById('edit-container')
   );
-}
-
-/**
- * Initialize the DOM Element and React Component which serve as containers to
- * display expandable images.
- *
- * @see @cdo/apps/src/templates/utils/expandableImages
- */
-function prepareExpandableImageDialog() {
-  registerReducers({instructionsDialog});
-
-  const container = document.createElement('div');
-  document.body.appendChild(container);
-
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <ExpandableImageDialog />
-    </Provider>,
-    container
-  );
-}
+});
