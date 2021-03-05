@@ -34,6 +34,8 @@ class ProgressTableDetailView extends React.Component {
     super(props);
     this.levelIconHeaderFormatter = this.levelIconHeaderFormatter.bind(this);
     this.detailCellFormatter = this.detailCellFormatter.bind(this);
+    this.timeSpentCellFormatter = this.timeSpentCellFormatter.bind(this);
+    this.lastUpdatedCellFormatter = this.lastUpdatedCellFormatter.bind(this);
   }
 
   levelIconHeaderFormatter(_, {columnIndex}) {
@@ -57,12 +59,24 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
+  timeSpentCellFormatter(lesson, student) {
+    return '10';
+  }
+
+  lastUpdatedCellFormatter(lesson, student) {
+    return '1/1';
+  }
+
   render() {
     return (
       <div>
         <ProgressTableContainer
           onClickLesson={this.props.onClickLesson}
-          lessonCellFormatter={this.detailCellFormatter}
+          lessonCellFormatters={[
+            this.detailCellFormatter,
+            this.timeSpentCellFormatter,
+            this.lastUpdatedCellFormatter
+          ]}
           includeHeaderArrows={true}
           extraHeaderFormatters={[this.levelIconHeaderFormatter]}
           extraHeaderLabels={[i18n.levelType()]}
