@@ -11,6 +11,7 @@ import scriptSelection, {
 import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
+import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 
 export function wrapTable(table) {
   return (
@@ -79,6 +80,9 @@ function buildSectionProgress(students, scriptData) {
   return {
     scriptDataByScript: {[scriptData.id]: scriptData},
     studentLevelProgressByScript: {[scriptData.id]: progress},
+    studentLessonProgressByScript: {
+      [scriptData.id]: lessonProgressForSection(progress, scriptData.stages)
+    },
     studentLastUpdateByScript: {[scriptData.id]: lastUpdates}
   };
 }
