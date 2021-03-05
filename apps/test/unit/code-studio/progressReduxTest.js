@@ -90,9 +90,7 @@ const stageData = [
     lesson_plan_html_url:
       '//localhost.code.org:3000/curriculum/course3/1/Teacher',
     lesson_plan_pdf_url:
-      '//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf',
-    student_lesson_plan_html_url:
-      '//localhost.code.org:3000/s/fake-course/lessons/1/student'
+      '//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf'
   },
   // stage 2 (hacked to have 3 levels)
   {
