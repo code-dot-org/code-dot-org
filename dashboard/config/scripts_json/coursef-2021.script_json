@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-02-26 22:11:28 UTC",
+    "serialized_at": "2021-03-04 19:50:55 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -61,21 +61,9 @@
       }
     },
     {
-      "key": "csf_digcit",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Digital Citizenship"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
       "key": "csf_variables",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Variables"
       },
@@ -87,7 +75,7 @@
     {
       "key": "csf_data",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Data"
       },
@@ -99,7 +87,7 @@
     {
       "key": "csf_for_loops",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "For Loops"
       },
@@ -111,7 +99,7 @@
     {
       "key": "csf_sprites",
       "user_facing": true,
-      "position": 7,
+      "position": 6,
       "properties": {
         "display_name": "Sprites"
       },
@@ -123,7 +111,7 @@
     {
       "key": "end_of_course_project",
       "user_facing": true,
-      "position": 8,
+      "position": 7,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -255,38 +243,17 @@
       }
     },
     {
-      "key": "The Power of Words",
-      "name": "The Power of Words",
+      "key": "Envelope Variables",
+      "name": "Envelope Variables",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAs kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.",
-        "student_overview": "Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.",
-        "purpose": "Common Sense Education created this lesson to teach students what they should do when someone uses mean or hurtful language on the internet.",
-        "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Prepare a long string (or rope) and paper for class.",
-        "creative_commons_license": "Creative Commons BY-NC-ND",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "Envelope Variables",
-      "name": "Envelope Variables",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 8,
-      "properties": {
         "overview": "Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.",
         "student_overview": "Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.",
         "purpose": "Variables are very helpful in programming. Students will be introduced to this topic using envelopes to represent variables that have been given names. The value of the variable will be written on a card inside of an envelope. This lesson helps students understand how names can be a placeholder for values in the physical world, so that programming with variables will seem less confusing in the virtual world.",
-        "preparation": "- Obtain 6 or more blank envelopes for warm up plus some for the main activity.\r\n- Print one worksheet per student.\r\n- Print one assessment for each student.\r\n- Provide students with envelopes, paper, pens & pencils.\r\n- Make sure every student has a journal.",
+        "preparation": "- Obtain 6 or more blank envelopes for warm up plus some for the main activity.\n- Print one ***worksheet** per student.\n- Print one ***assessment** for each student.\n- Provide students with envelopes, paper, pens & pencils.\n- Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -299,10 +266,10 @@
     {
       "key": "Variables as Constant in Artist",
       "name": "Variables with Artist",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.",
         "student_overview": "Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using **variables**.",
@@ -319,10 +286,10 @@
     {
       "key": "Variables that Change in Bee",
       "name": "Changing Variables with Bee",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. ",
         "student_overview": "This bee loves **variables**!",
@@ -339,10 +306,10 @@
     {
       "key": "Variables that Change in Artist",
       "name": "Changing Variables with Artist",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
         "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs.",
@@ -359,10 +326,10 @@
     {
       "key": "Simulating Experiments",
       "name": "Simulating Experiments",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
         "overview": "By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.",
         "student_overview": "Run simulations on the computer and experiment by changing variables.",
@@ -379,10 +346,10 @@
     {
       "key": "AI for Oceans",
       "name": "AI For Oceans",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "overview": "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n",
         "student_overview": "Tutorial Summary: First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
@@ -398,15 +365,15 @@
     {
       "key": "Internet",
       "name": "The Internet",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
-        "overview": "Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.",
-        "student_overview": "Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.",
-        "purpose": "If you have been doing every lesson in this course, then each student in your classroom has used the internet...but how many know how it works? Learning more about the internet will help students develop a better understanding of its endless possibilities.",
-        "preparation": "- Watch the [Internet - Teacher Video](https://www.youtube.com/watch?v=Z6CEAOFZRRk).\n- Print enough [IPAddress Cards and Delivery Type Cards - Manipulatives]( https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit) for each group.\n- Print one [Internet Assessment](https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit) for each student.\n- Access to the internet (such as [get-site-ip.com](http://get-site-ip.com/)).\n- Make sure every student has a [Think Spot Journal -Reflection Journal](https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY).",
+        "overview": "Even though many people use the **internet** daily, not very many know how it works. In this lesson, students will pretend to flow through the **internet**, all the while learning about connections, **URLs**, **IP Addresses**, and the **DNS**.",
+        "student_overview": "Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.",
+        "purpose": "If you have been doing every lesson in this course, then each student in your classroom has used the **internet**... but how many know how it works? Learning more about the **internet** will help students develop a better understanding of its endless possibilities.",
+        "preparation": "- Watch the ***Internet** - Teacher Video.\n- Print enough ***IP Address Cards and Delivery Type Cards** - Manipulatives for each group.\n- Print one ***Internet** Assessment - for each student.\n- Access to the internet (such as ***get-site-ip.com**.\n- Make sure every student has a ***Think Spot Journal -Reflection Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -419,15 +386,15 @@
     {
       "key": "For Loop Fun",
       "name": "For Loop Fun",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "overview": "We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. ",
         "student_overview": "You're going to have loads of fun learning about `for` loops!",
-        "purpose": "At this point, students have become masters of loops. Today, they will learn about another loop commonly used in programming. The for loop repeats commands a certain number of times, but also keeps track of the values it is iterating over. For example, a for loop that begins at 4, ends with 8, and has a step value of 1 will repeat 4 times, but the values 4, 5, 6, and 7 will also be captured for use elsewhere. Using this structure with variables can create some pretty fantastic programs. Today, students will simply be learning the basics of a for loop before diving into programming with them next time!",
-        "preparation": "- Watch the [r lesson-in-action-for-loop-fun].\r\n- Print one [r csf-for-loop-fun-worksheet] per group.\r\n- Print one [r csf-for-loop-fun-assessment] for each student.\r\n- Make sure every student has a [r think-spot-journal].",
+        "purpose": "At this point, students have become masters of loops. Today, they will learn about another loop commonly used in programming. The **for loop** repeats commands a certain number of times, but also keeps track of the values it is iterating over. For example, a **for loop** that begins at 4, ends with 8, and has a step value of 1 will repeat 4 times, but the values 4, 5, 6, and 7 will also be captured for use elsewhere. Using this structure with variables can create some pretty fantastic programs. Today, students will simply be learning the basics of a **for loop** before diving into programming with them next time!",
+        "preparation": "- Watch the ***Lesson in Action for Loop Fun** - video.\n- Print one ***CSF For Loop Fun** - worksheet per group.\n- Print one ***CSF For Loop Fun** - assessment for each student.\n- Make sure every student has a  journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -440,10 +407,10 @@
     {
       "key": "For Loops in Bee",
       "name": "For Loops with Bee",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
         "overview": "Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
         "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!",
@@ -460,10 +427,10 @@
     {
       "key": "For Loops in Artist",
       "name": "For Loops with Artist",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "overview": "In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.",
         "student_overview": "Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.",
@@ -480,10 +447,10 @@
     {
       "key": "Editing Behaviors",
       "name": "Behaviors in Sprite Lab",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
         "overview": "Here, students will use Sprite Lab to create their own customized behaviors.",
         "student_overview": "Learn to program your own sprite behaviors!",
@@ -500,10 +467,10 @@
     {
       "key": "Virtual Pet",
       "name": "Virtual Pet with Sprite Lab",
-      "absolute_position": 19,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
@@ -520,10 +487,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 20,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 19,
       "properties": {
         "overview": "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates.",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
@@ -804,88 +771,6 @@
       }
     },
     {
-      "key": "08eaa4b6-b1e7-4297-8e84-11de65aca4a4",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up: Same Word. Different Meaning.",
-        "duration": 5
-      },
-      "seeding_key": {
-        "lesson_activity.key": "08eaa4b6-b1e7-4297-8e84-11de65aca4a4",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "92d208e9-6adc-40cc-82c1-6cc90f7cffb5",
-      "position": 2,
-      "properties": {
-        "name": "Watch: The Power of Words",
-        "duration": 35
-      },
-      "seeding_key": {
-        "lesson_activity.key": "92d208e9-6adc-40cc-82c1-6cc90f7cffb5",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "57e6878b-214d-464a-84b8-79b91dcf3685",
-      "position": 3,
-      "properties": {
-        "name": "Investigate: What's the Problem?",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "57e6878b-214d-464a-84b8-79b91dcf3685",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "128b4c8e-8f8a-4e4f-a42e-6cf1cd63a7e0",
-      "position": 4,
-      "properties": {
-        "name": "Wrap Up: Crossing the Line",
-        "duration": 10
-      },
-      "seeding_key": {
-        "lesson_activity.key": "128b4c8e-8f8a-4e4f-a42e-6cf1cd63a7e0",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "817b12ea-6721-4b60-ad0f-558e5f064675",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "817b12ea-6721-4b60-ad0f-558e5f064675",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "03478f6d-3ec2-4eb9-b5f9-82787a5f75fe",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "03478f6d-3ec2-4eb9-b5f9-82787a5f75fe",
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
       "key": "595369b7-e21c-444f-8d41-fea35de5b53d",
       "position": 1,
       "properties": {
@@ -900,11 +785,23 @@
       }
     },
     {
-      "key": "30d33bb7-570e-4fe9-bdf1-8368eb902a81",
+      "key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
+        "lesson.key": "Envelope Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "30d33bb7-570e-4fe9-bdf1-8368eb902a81",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "30d33bb7-570e-4fe9-bdf1-8368eb902a81",
@@ -915,7 +812,7 @@
     },
     {
       "key": "43630383-2d34-4c94-a247-c89980c26d3e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 10
@@ -929,7 +826,7 @@
     },
     {
       "key": "3aacc1a8-90a4-4bc4-8351-e4c6442474b2",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Assessment",
         "duration": 10
@@ -943,10 +840,9 @@
     },
     {
       "key": "5e1b2e68-9eac-4f96-8016-a5d89547aa5a",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "5e1b2e68-9eac-4f96-8016-a5d89547aa5a",
@@ -956,13 +852,13 @@
       }
     },
     {
-      "key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
-      "position": 6,
+      "key": "2824eaf2-a435-4c9d-8d75-7f1d985ed6ea",
+      "position": 7,
       "properties": {
-        "name": "Levels"
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
-        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b",
+        "lesson_activity.key": "2824eaf2-a435-4c9d-8d75-7f1d985ed6ea",
         "lesson.key": "Envelope Variables",
         "lesson_group.key": "csf_variables",
         "script.name": "coursef-2021"
@@ -1367,6 +1263,19 @@
       }
     },
     {
+      "key": "22f02104-4519-48dd-aa08-c532f9e080c9",
+      "position": 7,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22f02104-4519-48dd-aa08-c532f9e080c9",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
       "key": "8362c620-cea5-4a56-b0b4-74a606bf62da",
       "position": 1,
       "properties": {
@@ -1620,7 +1529,7 @@
       "key": "459d00f2-e296-4205-bca6-eab8d4599354",
       "position": 4,
       "properties": {
-        "name": "Day 4 (Recommended for 5th Grade) - Revise Your Project",
+        "name": "Day 4 - Revise Your Project",
         "duration": 45
       },
       "seeding_key": {
@@ -2240,77 +2149,11 @@
       }
     },
     {
-      "key": "da72ce16-38f7-4889-b06b-3a67eabcb22d",
-      "position": 1,
-      "properties": {
-        "description": "* **empathy**: to imagine the feelings that someone else is experiencing\r\n* **interpret**: to understand something based on our point of view\r\n\r\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\r\n\r\n**Project** [Slide 4](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_1_0) and ask students: *Imagine when you walked in, I said to you* [in a friendly tone, with a big smile] *\"Hello!\" Which emoji would fit?*\r\n\r\nHave students show their answer by holding up fingers (1, 2, 3, or 4). If anyone holds up a number other than 1, ask them to share out why.\r\n\r\n**Repeat** this two more times, saying *Hello* differently each time: once with an angry tone and a scowl, and once with a nervous or scared tone.\r\n\r\n**Project** [Slide 5](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_2_13) and ask: *What about if you're just reading it? How does it make you feel now?*\r\n\r\nPoint out how when something is just in text, it can be even more difficult to interpret what someone means. Explain that their responses might be different depending on who they are because we all interpret the world a little differently. Clarify that interpret means *to understand something based on our point of view.* ([Slide 6](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_4))\r\n\r\n**Say**: *Because words can be interpreted differently by different people, it's important to think about the words we use and how they affect people. We might say something just to be funny, but someone might take it seriously, and it might hurt their feelings. This can happen in person, and it can also happen online. It may even happen more online, because the words are just text -- we're not actually face-to-face with other people.*",
-        "name": "Key Vocabulary\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "da72ce16-38f7-4889-b06b-3a67eabcb22d",
-        "lesson_activity.key": "08eaa4b6-b1e7-4297-8e84-11de65aca4a4"
-      }
-    },
-    {
-      "key": "b4bf1656-12bf-4181-b9a2-3d85ef2ea00f",
-      "position": 1,
-      "properties": {
-        "description": "**Ask**: *Who has heard of the saying \"Sticks and stones may break my bones, but words can never hurt me\"?*\r\n\r\nInvite students to respond. Answers will vary. Follow up by asking students if they think the saying is true.\r\n\r\n**Project** [Slide 7](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_117) and say: *We're going to watch a video now called \"The Power of Words.\" As we watch, continue to think about whether that statement is true or not.*\r\n\r\nShow the video [The Power of Words](https://www.commonsense.org/education/videos/the-power-of-words) and then call on students to share out what it says about whether the statement is true or not. Emphasize that sometimes it is hard to ignore what someone is saying when it's a mean name. Names CAN make you feel sad or hurt.\r\n\r\n**Ask**: *Why do you think those other players said those things to Guts?* ([Slide 8](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_0))\r\n\r\nInvite students to respond. Answers will vary, but possible reasons include *they were trying to joke around* or *they feel badly themselves and are taking it out on someone*.\r\n\r\n**Ask**: *What does Guts do in response to the mean words?*\r\n\r\nInvite students to respond and clarify that Guts talked to someone he trusted, who was able to empathize with him and give him some good advice. Define empathy as *imagining the feelings that someone else is experiencing*. ([Slide 9](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_109))\r\n\r\n**Project** [Slide 10](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_157) and review the acronym S-T-O-P for responding to mean words online."
-      },
-      "seeding_key": {
-        "activity_section.key": "b4bf1656-12bf-4181-b9a2-3d85ef2ea00f",
-        "lesson_activity.key": "92d208e9-6adc-40cc-82c1-6cc90f7cffb5"
-      }
-    },
-    {
-      "key": "1537cdc9-3376-4cdc-abb3-1149651d8f63",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute** the [Words Can Hurt Student Handout](https://drive.google.com/open?id=1G7urBAgM9G3D4zI4KVRgN-yX-Q4qAyb_HWEHsnREl3M) and read the directions aloud. Allow pairs five minutes to complete the activity.\r\n\r\n**Invite** pairs to share their answers. Refer to the [Teacher Version](https://drive.google.com/open?id=1kAcaaYor5vegqj2cncK5FOgFOeg2PtKUXWw-muodELE) for possible responses."
-      },
-      "seeding_key": {
-        "activity_section.key": "1537cdc9-3376-4cdc-abb3-1149651d8f63",
-        "lesson_activity.key": "57e6878b-214d-464a-84b8-79b91dcf3685"
-      }
-    },
-    {
-      "key": "2d041abf-782e-4a02-b1fb-4af1ebc2001a",
-      "position": 1,
-      "properties": {
-        "description": "**Place** a string across the length of the classroom. Mark one half of the room \"OK.\" Mark the other half \"Not OK.\" Have students all stand on the OK side of the line.\r\n\r\n**Project** [Slide 11](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_106) and read the directions aloud.\r\n\r\n**Have** students read the statements on [Slides 12-15](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_14). After each statement, allow time for students to move or stay. Call on students to explain their thinking. If possible, choose students from each side to debate reasons why the statement is or isn't okay.\r\n\r\nFor the examples where students say it's Not OK, follow-up by asking them what they could do if they received that message from someone.\r\n\r\n**Review** that kids like to go online to chat, watch videos, send messages, play games, and do homework. Sometimes people say mean or scary things. Messages that make people feel bad cross the line.\r\n\r\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy)."
-      },
-      "seeding_key": {
-        "activity_section.key": "2d041abf-782e-4a02-b1fb-4af1ebc2001a",
-        "lesson_activity.key": "128b4c8e-8f8a-4e4f-a42e-6cf1cd63a7e0"
-      }
-    },
-    {
-      "key": "4fa937e0-743e-403b-b043-7903cdbc8f80",
-      "position": 1,
-      "properties": {
-        "description": "Here are additional resources you can provide students to enhance their learning:\r\n\r\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw) \r\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\r\n* **Prepare** slips of paper with comments that say mildly unkind things, like:\r\n\r\n    * I can't believe you like superhero shows. Only first-graders do.\r\n    * You are weird.\r\n    * Why are you wearing THAT shirt?\r\n\r\n    <br>\r\n\r\n    Pass out one slip to each student and pair them up. Have students trade slips and read them silently. Then have them trade back and take turns saying the comment aloud to the other person. Ask them what the difference was between writing something not-so-nice and being accountable for what they were saying to someone's face. Emphasize that people sometimes hide behind the anonymity of their online activity. Remind students that if they wouldn't say something to another person's face, it's not OK to say it in their online activities."
-      },
-      "seeding_key": {
-        "activity_section.key": "4fa937e0-743e-403b-b043-7903cdbc8f80",
-        "lesson_activity.key": "817b12ea-6721-4b60-ad0f-558e5f064675"
-      }
-    },
-    {
-      "key": "ab55abdb-0510-46c5-96b2-401a2ab2f664",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ab55abdb-0510-46c5-96b2-401a2ab2f664",
-        "lesson_activity.key": "03478f6d-3ec2-4eb9-b5f9-82787a5f75fe"
-      }
-    },
-    {
       "key": "b4ab7a6d-4cd3-4045-a864-451f3510c69f",
       "position": 1,
       "properties": {
-        "description": "This lesson has one important word:\r\n\r\n - **Variable** - Say it with me: Vayr-ee-ah-buhl \r\n\r\nA placeholder for a piece of information that can change.",
-        "name": "Vocabulary\r"
+        "description": "This lesson has one important word:\n\n - **Variable** - *Say it with me: Vayr-ee-ah-buhl* \n\nA placeholder for a piece of information that can change.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "b4ab7a6d-4cd3-4045-a864-451f3510c69f",
@@ -2321,8 +2164,7 @@
       "key": "ba304c03-8de0-4209-b9a6-15b215575186",
       "position": 2,
       "properties": {
-        "description": "Call four volunteers to the front of the room and line them up. Let the students know that you are going to write a poem for each of them.\r\n\r\nOn the board (or under your document camera) write the sentence for your first student (suppose it's Bill):\r\n\r\n\"My student Bill, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nEncourage the students to clap at your abilities and thank Bill for volunteering. Allow Bill to sit down (or go to the back of the line) as you erase the board, then call the next volunteer (we'll say that she's called Annie).\r\n\r\n\"My student Annie, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAgain, accepting applause, erase the board and invite the next volunteer.\r\n\r\n\"My student Jenny, standing proud<br/>\r\nis a fine example for the crowd\"\r\n\r\nAs you call the final volunteer, inquire as to whether everyone in the class would like a poem written about each of them. Maybe the everyone in the whole school? Goodness, that's going to take a while! Pose the question to your students:\r\n\r\n\"How could I do this more quickly?\"\r\n\r\nYour students will likely pick up on the fact that only one word is changing, and that word is simply a person's name. Help them see the location by circling Jenny's name on the board and writing \"firstName\" next to it.\r\n\r\n\"It would take a long time to write a poem for everyone in the school if I couldn't start until I knew who I was writing it about, wouldn't it?\"\r\n\r\n- How long do you think it would take to make a video game if they couldn't start until they knew your username?\r\n- How expensive would video games be if they had to be created separately for each person?\r\n- How do you think we can get around that?\r\n\r\nBy this time, it's quite likely that your class will come up with the idea of having a placeholder. With that, they're most of the way into understanding where this lesson goes.\r\n\r\n- What would we call that placeholder?\r\n\t- We need to call it something that makes sense. We wouldn't want to call it \"age\" if it was a placeholder for their name, right?\r\n\r\nNow, let's add some more volunteers. Give them each a piece of paper to write their name on, and have them tuck it inside individual envelopes labeled firstName.\r\n\r\nThis time, put the poem on the board with a blank space labeled \"firstName\" where the student's name will go. \r\n\r\n- Have the first student in line (likely the last student from the previous example) pull their name from the envelope and that's what you'll write in the space.\r\n- When you erase the board, only erase the portion with the last student's name in it. \r\n- Call the next student to show their variable. \r\n- Repeat as many times as is entertaining\r\n\r\nNow it's time for the main activity.",
-        "name": "Introduction\r"
+        "description": "Call four volunteers to the front of the room and line them up. Let the students know that you are going to write a poem for each of them.\n\nOn the board (or under your document camera) write the sentence for your first student (suppose it's Bill):\n\n\"My student Bill, standing proud<br/>\nis a fine example for the crowd\"\n\nEncourage the students to clap at your abilities and thank Bill for volunteering. Allow Bill to sit down (or go to the back of the line) as you erase the board, then call the next volunteer (we'll say that she's called Annie).\n\n\"My student Annie, standing proud<br/>\nis a fine example for the crowd\"\n\nAgain, accepting applause, erase the board and invite the next volunteer.\n\n\"My student Jenny, standing proud<br/>\nis a fine example for the crowd\"\n\nAs you call the final volunteer, inquire as to whether everyone in the class would like a poem written about each of them. Maybe the everyone in the whole school? Goodness, that's going to take a while! Pose the question to your students:\n\n*\"How could I do this more quickly?\"*\n\nYour students will likely pick up on the fact that only one word is changing, and that word is simply a person's name. Help them see the location by circling Jenny's name on the board and writing \"firstName\" next to it.\n\n*\"It would take a long time to write a poem for everyone in the school if I couldn't start until I knew who I was writing it about, wouldn't it?\"*\n\n- *How long do you think it would take to make a video game if they couldn't start until they knew your username?*\n- *How expensive would video games be if they had to be created separately for each person?*\n- *How do you think we can get around that?*\n\nBy this time, it's quite likely that your class will come up with the idea of having a placeholder. With that, they're most of the way into understanding where this lesson goes.\n\n- *What would we call that placeholder?*\n\t- *We need to call it something that makes sense. We wouldn't want to call it \"age\" if it was a placeholder for their name, right?*\n\nNow, let's add some more volunteers. Give them each a piece of paper to write their name on, and have them tuck it inside individual envelopes labeled firstName.\n\nThis time, put the poem on the board with a blank space labeled \"firstName\" where the student's name will go. \n\n- Have the first student in line (likely the last student from the previous example) pull their name from the envelope and that's what you'll write in the space.\n- When you erase the board, only erase the portion with the last student's name in it. \n- Call the next student to show their variable. \n- Repeat as many times as is entertaining\n\nNow it's time for the main activity."
       },
       "seeding_key": {
         "activity_section.key": "ba304c03-8de0-4209-b9a6-15b215575186",
@@ -2330,11 +2172,22 @@
       }
     },
     {
+      "key": "f5758309-4689-41df-a585-3f3d2e4d657c",
+      "position": 1,
+      "properties": {
+        "name": "Envelope Variables",
+        "progression_name": "Envelope Variables - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5758309-4689-41df-a585-3f3d2e4d657c",
+        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b"
+      }
+    },
+    {
       "key": "de0a05bb-644b-4c90-97d2-f2e44f65d27b",
       "position": 1,
       "properties": {
-        "description": "Once the students understand how the envelopes relate to the sentences, pass out the activity worksheet and let them prepare some variables of their own.\r\n\r\n**Directions:**\r\n\r\n- Divide students into groups of 2-4.\r\n- Have students design (draw) a robot.\r\n- After 10-15 minutes, request that the students fill their envelopes with important details about their robot such as its name, height, and purpose.\r\n- Collect each group's envelopes, then bring them to the front of the room to share.\r\n- Write on the board, \"My robot's name is robotName, it is numUnitsTall tall, and it's purpose is purpose.\"\r\n- Use the envelopes to fill the appropriate variable in the sentence, then ask each group to stand when they hear the sentence that describes their creation.",
-        "name": "[r csf-envelope-variables-worksheet]\r"
+        "description": "Once the students understand how the envelopes relate to the sentences, pass out the ***activity worksheet** and let them prepare some variables of their own.\n\n**Directions:**\n\n- Divide students into groups of 2-4.\n- Have students design (draw) a robot.\n- After 10-15 minutes, request that the students fill their envelopes with important details about their robot such as its name, height, and purpose.\n- Collect each group's envelopes, then bring them to the front of the room to share.\n- Write on the board, \"My robot's name is robotName, it is numUnits tall, and it's purpose is purpose.\"\n- Use the envelopes to fill the appropriate variable in the sentence, then ask each group to stand when they hear the sentence that describes their creation."
       },
       "seeding_key": {
         "activity_section.key": "de0a05bb-644b-4c90-97d2-f2e44f65d27b",
@@ -2345,8 +2198,8 @@
       "key": "de2b5eb5-3fc3-4a9d-a368-4f5750155c50",
       "position": 1,
       "properties": {
-        "description": "- What did we learn today?\r\n- Can you think of anywhere that you have seen variables before?\r\n- There is at least one variable at the top of most homework hand outs? Can you think of what it could be?\r\n- Why do you think that professionals do not put spaces in variable names?\r\n\t- What would happen if there was a variable \"eye\" a variable \"color\" and a variable \"eye color\"?\r\n- Variables can be used to store numbers, too.\r\n\t- Suppose I have envelopes labeled num1 and num2, then I write num1+num2?\r\n\t- What happens if the \"num1\" envelope contains the number 4 and \"num2\" contains the number 5?",
-        "name": "Flash Chat: What did we learn?\r"
+        "description": "####Flash Chat: What did we learn?\n\n- What did we learn today?\n- Can you think of anywhere that you have seen variables before?\n- There is at least one variable at the top of most homework hand outs? Can you think of what it could be?\n- Why do you think that professionals do not put spaces in variable names?\n\t- What would happen if there was a variable \"eye\" a variable \"color\" and a variable \"eye color\"?\n- Variables can be used to store numbers, too.\n\t- Suppose I have envelopes labeled num1 and num2, then I write num1+num2?\n\t- What happens if the \"num1\" envelope contains the number 4 and \"num2\" contains the number 5?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "de2b5eb5-3fc3-4a9d-a368-4f5750155c50",
@@ -2357,8 +2210,7 @@
       "key": "b5955f44-a441-4382-bad6-036ba38e1f49",
       "position": 2,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a variable?\r\n - Why do you think variables are important in programming?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a variable?\n - Why do you think variables are important in programming?"
       },
       "seeding_key": {
         "activity_section.key": "b5955f44-a441-4382-bad6-036ba38e1f49",
@@ -2369,8 +2221,7 @@
       "key": "d0346557-37ff-4de2-9c76-76e6ea1cb5b2",
       "position": 1,
       "properties": {
-        "description": "Allow students enough time to finish this assessment. If you are willing to spare more time, go over the answers as a class.",
-        "name": "[r csf-variables-assessment-worksheet]\t\r"
+        "description": "Allow students enough time to finish this ***assessment.** If you are willing to spare more time, go over the answers as a class."
       },
       "seeding_key": {
         "activity_section.key": "d0346557-37ff-4de2-9c76-76e6ea1cb5b2",
@@ -2389,13 +2240,14 @@
       }
     },
     {
-      "key": "f5758309-4689-41df-a585-3f3d2e4d657c",
+      "key": "94a320fa-f3d5-4f24-916b-1387a5987082",
       "position": 1,
       "properties": {
+        "description": "###Food Chain Variables (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[**Food Chain Variables**](https://docs.google.com/document/d/1RcvvFf8Cjkok6L6KSnJgIwpbC-_bqGK68TE7ykkH1ms/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will identify various values for the variables found in food chains (Example: plants, animals, decomposer, etc.) as they document these values on notecards and show the movement of matter through an environment. Students will also learn about the 10% Rule and further describe energy flow with a writing prompt.\n\n*Standards Addressed:*\n\n - **CCSS.ELA-LITERACY.W.5.2.B:** Develop the topic with facts, definitions, concrete details, quotations, or other information and examples related to the topic.\n- **CCSS.MATH.CONTENT.5.NF.B.7.C:** Solve real world problems involving division of unit fractions by non-zero whole numbers and division of whole numbers by unit fractions, e.g., by using visual fraction models and equations to represent the problem. \n\n - **NGSS.5-LS2-1:** Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment. \n\n"
       },
       "seeding_key": {
-        "activity_section.key": "f5758309-4689-41df-a585-3f3d2e4d657c",
-        "lesson_activity.key": "37b7ce8f-576a-4c90-b79c-20b6673dd35b"
+        "activity_section.key": "94a320fa-f3d5-4f24-916b-1387a5987082",
+        "lesson_activity.key": "2824eaf2-a435-4c9d-8d75-7f1d985ed6ea"
       }
     },
     {
@@ -2411,31 +2263,8 @@
       }
     },
     {
-      "key": "c235919e-e592-4504-8e12-afa00d5fde6a",
-      "position": 1,
-      "properties": {
-        "description": "This activity will help bring the unplugged concepts from \"Envelope Variables\" into the online world that the students are moving into."
-      },
-      "seeding_key": {
-        "activity_section.key": "c235919e-e592-4504-8e12-afa00d5fde6a",
-        "lesson_activity.key": "f4913e86-8a5d-4fba-b65e-919f05bee494"
-      }
-    },
-    {
-      "key": "1318816b-cba9-42dc-9f62-5dd95d775530",
-      "position": 2,
-      "properties": {
-        "description": "**Discuss:** Remember our robot article?  It used each variable only once...but what if I wanted to mention the robot's name several times?\r\n\r\n**Display:** Write a paragraph on the board that refers back to the name of a specific robot several times. Ask the students what happens when you need to make the article about a different robot.\r\n\r\n**Think/Pair:** Ask students to work together to see if they can come up with an idea to make changing the article for each robot easier.  \r\n\r\n**Share:** Work with students until you eventually get to the place where you have defined a variable called **robotName** somewhere before the paragraph, then set **robotName** equal to the robot that you are writing the article about.  Replace all specific naming instances for the previous robot with the variable **robotName**.",
-        "name": "Unplugged Activity Using Variables as Constant\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "1318816b-cba9-42dc-9f62-5dd95d775530",
-        "lesson_activity.key": "f4913e86-8a5d-4fba-b65e-919f05bee494"
-      }
-    },
-    {
       "key": "63b529ee-1e86-4250-bb23-c12ababc3fe5",
-      "position": 3,
+      "position": 1,
       "properties": {
         "description": "**Demo:** Display a puzzle for the class. We recommend the 6th puzzle. Go over the code with the students to make sure they understand what's happening before they help you convert the code to use variables. Can they think of something that might happen that would make them really glad that they used variables instead of hardcoded numbers?\n\n**Transition:** Now it's time for your students to move to their own computers and get started!",
         "name": "Preview of Online Puzzles as a Class\r"
@@ -2449,7 +2278,7 @@
       "key": "e03b685b-6b94-46ff-9eac-e914f21ccfa4",
       "position": 1,
       "properties": {
-        "description": "Notice that this stage first covers the idea of a variable as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.\r\n\r\nWatch out for puzzle #6. It is the first time that students will be expected to set a variable on their own.  This can be tricky if they don't have a true grasp on the concept. If they're having trouble, send them back to the prediction level (#5) and have them explain to their partners why the answer ended up what it was.  Once both partners are convinced, let them continue back to puzzle #6.",
+        "description": "Notice that this stage first covers the idea of a **variable** as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.\n\nWatch out for puzzle #6. It is the first time that students will be expected to set a **variable** on their own.  This can be tricky if they don't have a true grasp on the concept. If they're having trouble, send them back to the prediction level (#5) and have them explain to their partners why the answer ended up what it was.  Once both partners are convinced, let them continue back to puzzle #6.",
         "name": "Variables with Artist"
       },
       "seeding_key": {
@@ -2517,8 +2346,14 @@
       "key": "3d33fa77-1fa9-4e46-921f-fd661884b23f",
       "position": 1,
       "properties": {
-        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-05-16-15.16.20.png\" style=\"max-width: 400px;\">\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  Suppose all of the flowers/honeycomb in this picture had the same amount of nectar/honey. How would you solve this puzzle?\n\n**Share:** Let students share their ideas until you decide on one that the entire class is good with.\n\n**Discuss:**\nNow, imagine that we didn't want to have to write a separate chunk of code for each set of flowers and honeycomb.  How could we use a variable to have our loop do this for us?\n\n*(Eventually, you'll want to get to the place where you initialize a variable to the original value, then change it each time through the loop so that it's ready for the next time.)*",
-        "name": "Introduction"
+        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-05-16-15.16.20.png\" style=\"max-width: 400px;\">\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  Suppose all of the flowers/honeycomb in this picture had the same amount of nectar/honey. How would you solve this puzzle?\n\n**Share:** Let students share their ideas until you decide on one that the entire class is good with.\n\n**Discuss:**\nNow, imagine that we didn't want to have to write a separate chunk of code for each set of flowers and honeycomb.  How could we use a variable to have our loop do this for us?\n\n",
+        "name": "Introduction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Eventually, students will want to get to the place where they initialize a variable to the original value, then change it each time through the loop so that it's ready for the next time."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3d33fa77-1fa9-4e46-921f-fd661884b23f",
@@ -2733,7 +2568,7 @@
       "key": "2c7244e0-80ea-472a-9dbe-051909768cfc",
       "position": 1,
       "properties": {
-        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \r\n\r\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch it as a class and debrief afterwards to help students build connections to the content.",
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.",
         "name": "Build Excitement!\r"
       },
       "seeding_key": {
@@ -2941,7 +2776,7 @@
       "position": 1,
       "properties": {
         "description": "**Open question:** How could artificial intelligence be used to solve a problem in the world?",
-        "name": "Debrief"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "f06209ef-3a44-433c-9f9f-78803376b321",
@@ -2964,7 +2799,7 @@
       "key": "fda34361-ffaa-4440-98c7-a5ab57d1cf17",
       "position": 1,
       "properties": {
-        "description": "\n####Vocabulary:\n\nThis lesson has several new and important words:\n\n - **IP Address** - Say it with me: I-P Add-ress \n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - Say it with me: D-N-S \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - Say it with me: U-R-L \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - Say it with me: In-ter-net \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - Say it with me: Ser-vers \n\nComputers that exist only to provide things to others",
+        "description": "\n####Vocabulary:\n\nThis lesson has several new and important words:\n\n - **IP Address** - *Say it with me: I-P Add-ress.*\n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - *Say it with me: D-N-S.* \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - *Say it with me: U-R-L.* \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - *Say it with me: In-ter-net.* \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - *Say it with me: Ser-vers.* \n\nComputers that exist only to provide things to others",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2979,7 +2814,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a \"see if you can spot these during the day\" type of heads-up.\r\n\r\n - **Fiber Optic Cable** - Say it with me: Fye-ber Op-tic Cay-bl \r\n"
+            "markdown": "A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a \"see if you can spot these during the day\" type of heads-up.\n\n - **Fiber Optic Cable** - *Say it with me: Fye-ber Op-tic Cay-bl*\n"
           }
         ]
       },
@@ -2992,7 +2827,7 @@
       "key": "5633da7c-f971-43ef-a70d-82b08f181ce6",
       "position": 3,
       "properties": {
-        "description": "A connection that uses light to transmit information\r\n\r\n - **Wi-Fi** - Say it with me: Wye-Fye \r\n\r\nA wireless method of sending information using radio waves\r\n\r\n - **DSL/Cable** - Say it with me: D-S-L / Cay-bl \r\n\r\nA method of sending information using telephone or television cables\r\n\r\n - **Packets** - Say it with me: Pack-ets \r\n\r\nSmall chunks of information that have been carefully formed from larger chunks of information"
+        "description": "A connection that uses light to transmit information\n\n - **Wi-Fi** - *Say it with me: Wye-Fye.* \n\nA wireless method of sending information using radio waves\n\n - **DSL/Cable** - *Say it with me: D-S-L / Cay-bl.*\n\nA method of sending information using telephone or television cables\n\n - **Packets** - *Say it with me: Pack-ets.* \n\nSmall chunks of information that have been carefully formed from larger chunks of information"
       },
       "seeding_key": {
         "activity_section.key": "5633da7c-f971-43ef-a70d-82b08f181ce6",
@@ -3019,7 +2854,7 @@
       "key": "2499b5f3-c706-4d1f-9de4-17e97847be41",
       "position": 5,
       "properties": {
-        "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- Ask \"What is the internet?\"\n\t- Is the internet a public place or a private place?\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- How does information get from place to place?\n- Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?\n\t- What do I do as a user?\n\t- What do you think happens inside the internet?\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those \"packets.\" Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\nWhere do you think those packets are headed?\n\n- Even if you're sending messages to another person, they first have to go to at least one \"server.\"\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- Can you figure out why?\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- Can you figure out why not?\n\t- (Radio waves bounce all over the place and can get lost.)"
+        "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- **Ask:** _What is the **internet**?_\n\t- _Is the **internet** a public place or a private place?_\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- _How does information get from place to place?_\n- _Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?_\n\t- _What do I do as a user?_\n\t- _What do you think happens inside the **internet**?_\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those **packets**. **Packets** are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\n_Where do you think those **packets** are headed?_\n\n- Even if you're sending messages to another person, they first have to go to at least one **server**.\n\t- A **server** is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a **server**.\n\t- Even email goes through **servers**.\n\n**Servers** don't have names like you and I do. They're actually addressed using numbers. These numbers are called **IP addresses**, and they look a little strange.\n\n- For example: One of Code.org's **IP addresses** used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be **DSL, Cable, or Fiber Optic**)\n- Or you can connect using radio waves over the air through **Wi-Fi**.\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- *Can you figure out why?*\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- *Can you figure out why not?*\n\t- (Radio waves bounce all over the place and can get lost.)"
       },
       "seeding_key": {
         "activity_section.key": "2499b5f3-c706-4d1f-9de4-17e97847be41",
@@ -3046,7 +2881,7 @@
       "key": "aafa7b15-dba7-459b-8248-89e002860f54",
       "position": 7,
       "properties": {
-        "description": "So, if you're used to sending information to URLs (like [www.code.org](http://www.code.org/)) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\r\n\r\nWith that said, let's try to understand what the DNS does by making a little DNS table ourselves.\r\n\r\nPull out a piece of paper and draw a grid similar to that in the internet activity:\r\n\r\nSample of DNS Table:\r\n\r\n| #  | URL  | IP Address |\r\n| ------------- | ------------- | ------------- |\r\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\r\n| 2  |   |   |\r\n| 3  |   |   |\r\n| 4  |   |   |\r\n| 5  |   |   |\r\n\r\n\r\n<br/>First, we need to fill in this table.\r\n\r\n- Survey the class for their favorite websites and write the URLs in the left column\r\n- Use a site like [get-site-ip.com](http://get-site-ip.com/) to find the IP addresses for those sites and write them in the corresponding rows of the right column.\r\n\r\nNow let's take this DNS Table and pretend to send messages through the internet!"
+        "description": "So, if you're used to sending information to **URLs** (like www.code.org) and the **servers** actually have **IP addresses** for names (like 54.243.71.82) how does the **Internet** change from one to the other? That's what the **DNS** is for. The **DNS** (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\n\nWith that said, let's try to understand what the **DNS** does by making a little **DNS** table ourselves.\n\nPull out a piece of paper and draw a grid similar to that in the internet activity:\n\nSample of **DNS** Table:\n\n| #  | URL  | IP Address |\n| ------------- | ------------- | ------------- |\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\n| 2  |   |   |\n| 3  |   |   |\n| 4  |   |   |\n| 5  |   |   |\n\n\n<br/>First, we need to fill in this table.\n\n- Survey the class for their favorite websites and write the **URLs** in the left column\n- Use a site like ***get-site-ip.com** to find the IP addresses for those sites and write them in the corresponding rows of the right column.\n\nNow let's take this **DNS** Table and pretend to send messages through the internet!"
       },
       "seeding_key": {
         "activity_section.key": "aafa7b15-dba7-459b-8248-89e002860f54",
@@ -3069,7 +2904,7 @@
       "key": "f7944893-91f6-4fa0-bc46-73816c9a88c9",
       "position": 1,
       "properties": {
-        "description": "**Directions:**\r\n\r\n- Create your own DNS table, similar to what is shown above.\r\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like [www.get-site-ip.com](http://get-site-ip.com/).\r\n- Divide into groups of 3 to 5.\r\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\r\n\t- The Message Writer\r\n\t- The Internet\r\n\t- The Server (carries the IP address)\r\n\t- The Return Internet (optional)\r\n\t- The Message Receiver (optional)\r\n- Each group will draw an [r csf-ip-address-cards-and-delivery-type-cards] to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\r\n- The Message Writer will craft a note to send to the server.\r\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\r\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\r\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\r\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\r\n\r\n**Rules:**\r\n\r\n- The Internet must rip the message into exactly four packets.\r\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\r\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\r\n\r\n**Info:**\r\n\r\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\r\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\r\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\r\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\r\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\r\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times."
+        "description": "**Directions:**\n\n- Create your own DNS table, similar to what is shown above.\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like www.get-site-ip.com.\n- Divide into groups of 3 to 5.\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\n\t- The Message Writer\n\t- The Internet\n\t- The Server (carries the IP address)\n\t- The Return Internet (optional)\n\t- The Message Receiver (optional)\n- Each group will draw an ***IP Address Cards and Delivery Type Card** to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\n- The Message Writer will craft a note to send to the server.\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\n\n**Rules:**\n\n- The Internet must rip the message into exactly four packets.\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\n\n**Info:**\n\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times."
       },
       "seeding_key": {
         "activity_section.key": "f7944893-91f6-4fa0-bc46-73816c9a88c9",
@@ -3096,7 +2931,7 @@
       "key": "5ca284ca-3587-4469-8823-f0f43a47acbe",
       "position": 3,
       "properties": {
-        "description": "To play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\r\n\r\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\r\n- Have the everyone else line up across from their server at the other side of the room.\r\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below (in English):\r\n\r\n![](https://code.org/curriculum/course3/18/layout.png)"
+        "description": "To play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\n\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\n- Have the everyone else line up across from their server at the other side of the room.\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:\n\n![](https://code.org/curriculum/course3/18/layout.png)"
       },
       "seeding_key": {
         "activity_section.key": "5ca284ca-3587-4469-8823-f0f43a47acbe",
@@ -3113,7 +2948,7 @@
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.\r\n"
           }
         ],
-        "name": "Flash Chat/Journaling"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "77fd3087-e475-4e92-937b-775e410c6585",
@@ -3146,7 +2981,7 @@
       "key": "6b2de955-080b-4dc9-a71d-ef478aa88b02",
       "position": 1,
       "properties": {
-        "description": "Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "Hand out the ***assessment** worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "6b2de955-080b-4dc9-a71d-ef478aa88b02",
@@ -3157,8 +2992,7 @@
       "key": "5cecb186-d4c0-4846-81f4-d2ca2b02ecb1",
       "position": 1,
       "properties": {
-        "description": "This lesson has one new and important word:\n\n - **For Loop** - Say it with me: For-Loop \n\nLoops that have a predetermined start, stop, and step value.",
-        "name": "Vocabulary"
+        "description": "\n####Vocabulary\n\nThis lesson has one new and important word:\n\n - **For Loop** - *Say it with me: For-Loop*. \n\nLoops that have a predetermined start, stop, and step value."
       },
       "seeding_key": {
         "activity_section.key": "5cecb186-d4c0-4846-81f4-d2ca2b02ecb1",
@@ -3169,7 +3003,7 @@
       "key": "761bf8e6-2303-4c05-a1c3-59046f829e91",
       "position": 2,
       "properties": {
-        "description": "\n####For One and All\n\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- \"for\" loops give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game (example in English)\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
+        "description": "\n####For One and All\n\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- **\"for\" loops** give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
       },
       "seeding_key": {
         "activity_section.key": "761bf8e6-2303-4c05-a1c3-59046f829e91",
@@ -3191,7 +3025,7 @@
       "key": "95417529-72b3-4c15-95d1-7bd479743269",
       "position": 1,
       "properties": {
-        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a \"for\" loop comes in handy. When you use a \"for\" loop, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\r\n\r\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
+        "description": "Sometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. This is where a **\"for\" loop** comes in handy. When you use a **\"for\" loop**, you know right from the start what your beginning value is, what your ending value is, and how much the value changes each time through the loop.\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
       },
       "seeding_key": {
         "activity_section.key": "95417529-72b3-4c15-95d1-7bd479743269",
@@ -3218,7 +3052,7 @@
       "key": "d2e77c7f-eeec-40fd-adc1-68818f2069c7",
       "position": 3,
       "properties": {
-        "description": "\"for\" Loop block (in English)\r\n\r\n**Directions:**"
+        "description": "\n\n###**Directions:**"
       },
       "seeding_key": {
         "activity_section.key": "d2e77c7f-eeec-40fd-adc1-68818f2069c7",
@@ -3245,7 +3079,7 @@
       "key": "f015d285-cf66-41ed-9019-636e8fda2954",
       "position": 5,
       "properties": {
-        "description": "It may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a \"for\" loop.\r\n\r\n- Divide students into pairs\r\n- To start the round, each student rolls three times:\r\n\t- One die to determine the starting value of X\r\n\t- Three dice to determine the stopping value for X\r\n\t- One die to determine the stepping value of X each time through\r\n- Use one of the provided number lines to trace the \"for\" loop that they’ve made\r\n\t- Start at the starting value of X\r\n\t- Count down the number line, circling the numbers at the rolled interval\r\n\t- Stop when you get to the predetermined stopping value\r\n- Add all of the circled values to your score, then let the other player take a turn\r\n- Best 2 out of 3 wins"
+        "description": "It may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a ***\"for\" loop**.\n\n- Divide students into pairs\n- To start the round, each student rolls three times:\n\t- One die to determine the starting value of X\n\t- Three dice to determine the stopping value for X\n\t- One die to determine the stepping value of X each time through\n- Use one of the provided number lines to trace the ***\"for\" loop** that they’ve made\n\t- Start at the starting value of X\n\t- Count down the number line, circling the numbers at the rolled interval\n\t- Stop when you get to the predetermined stopping value\n- Add all of the circled values to your score, then let the other player take a turn\n- Best 2 out of 3 wins"
       },
       "seeding_key": {
         "activity_section.key": "f015d285-cf66-41ed-9019-636e8fda2954",
@@ -3262,7 +3096,7 @@
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.\r\n"
           }
         ],
-        "name": "Flash Chat/Journaling"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "2b2aff9f-1682-4071-a395-c38394654e47",
@@ -3273,7 +3107,7 @@
       "key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
       "position": 2,
       "properties": {
-        "description": "\n####Flash Chat: What did we learn?\n\n- What would your interval need to be if you wanted to count from 4 to 13 by threes?\n- What kinds of things do you think you could do with a for loop?\n- Can you reproduce a normal loop using a for loop?\n- What would you need to do?"
+        "description": "\n####Flash Chat: What did we learn?\n\n- What would your interval need to be if you wanted to count from 4 to 13 by threes?\n- What kinds of things do you think you could do with a **\"for\" loop**?\n- Can you reproduce a normal loop using a **\"for\" loop**?\n- What would you need to do?"
       },
       "seeding_key": {
         "activity_section.key": "6e2f6427-e48e-4a85-bf0a-d218df0381c0",
@@ -3284,8 +3118,7 @@
       "key": "e4880f32-ec01-4be0-a4c3-3b8762d73daa",
       "position": 3,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a \"for\" loop?\r\n - Why would you use a \"for\" loop instead of a \"repeat\" loop or a \"while\" loop?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a **\"for\" loop**?\n - Why would you use a **\"for\" loop** instead of a \"repeat\" loop or a \"while\" loop?"
       },
       "seeding_key": {
         "activity_section.key": "e4880f32-ec01-4be0-a4c3-3b8762d73daa",
@@ -3312,6 +3145,17 @@
       "seeding_key": {
         "activity_section.key": "94a2704e-d539-4fc7-b390-a8e9850c64f5",
         "lesson_activity.key": "f6c99d2f-9ec7-4706-8a77-71513d31db13"
+      }
+    },
+    {
+      "key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
+      "position": 1,
+      "properties": {
+        "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n*Standards Addressed:*\n- **MD** - Measurement And Data\n\n - **2.MD.10:** - Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put- together, take-apart, and compare problems4 using information presented in a bar graph."
+      },
+      "seeding_key": {
+        "activity_section.key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
+        "lesson_activity.key": "22f02104-4519-48dd-aa08-c532f9e080c9"
       }
     },
     {
@@ -3365,7 +3209,8 @@
       "key": "30ee92f3-9378-4f76-acea-3c22d8df60dd",
       "position": 1,
       "properties": {
-        "description": "\n####Online Puzzles\n\nSome students may have a hard time differentiating between `repeat` loops and `for` loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students."
+        "description": "\n####Online Puzzles\n\nSome students may have a hard time differentiating between `repeat` loops and `for` loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students.",
+        "name": "For Loops With Bees"
       },
       "seeding_key": {
         "activity_section.key": "30ee92f3-9378-4f76-acea-3c22d8df60dd",
@@ -3453,8 +3298,8 @@
       "key": "05cdc09c-2fde-45f0-ba51-06b6dc94b8a3",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - How is a `for` loop different from a `repeat` loop?\r\n - Why do you think `for` loops could be useful?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a `for` loop different from a `repeat` loop?\n - Why do you think `for` loops could be useful?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "05cdc09c-2fde-45f0-ba51-06b6dc94b8a3",
@@ -3465,7 +3310,7 @@
       "key": "f44ed624-dfda-4f07-9f36-3c6e1ea15639",
       "position": 1,
       "properties": {
-        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final designs from the Code Studio puzzles associated with this lesson. We recommend one of the following:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nAsk the class how a computer might draw the drawing you displayed.\n\nAfter a few predictions have been said, reply with `for` loops of course!\n\nTell the students they will soon be learning how to create these fine drawings using `for` loops and variables.",
+        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final designs from the Code Studio puzzles associated with this lesson. We recommend one of the following:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nAsk the class how a computer might draw the drawing you displayed.\n\nAfter a few predictions have been said, reply *with `for` loops of course!*\n\nTell the students they will soon be learning how to create these fine drawings using `for` loops and variables.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3556,8 +3401,8 @@
       "key": "266afcf9-1e97-47f3-bb0e-f8fe82181332",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - Draw one of the designs you made today. What was the code needed to create it?\r\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "266afcf9-1e97-47f3-bb0e-f8fe82181332",
@@ -3663,8 +3508,8 @@
       "key": "a0f39351-5c2d-4f41-8258-7f97ef72d686",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other behaviors would you like to give your sprites if you knew how?",
-        "name": "Journaling"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other behaviors would you like to give your sprites if you knew how?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "a0f39351-5c2d-4f41-8258-7f97ef72d686",
@@ -3727,7 +3572,7 @@
       "key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video"
+        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online Video**."
       },
       "seeding_key": {
         "activity_section.key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
@@ -3760,8 +3605,8 @@
       "key": "c2ac88a2-6e26-49e5-a893-c3915816141a",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n    \r\n    \r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What other options would you like to be able to have your pet do?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "c2ac88a2-6e26-49e5-a893-c3915816141a",
@@ -3816,7 +3661,7 @@
       "key": "1008c1d7-2968-4264-9de2-076e0bc0b086",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the **Final Project Design Worksheet** and the **CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \n\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "Goal: Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their review and presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Final Project Design Worksheet** and the ***CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe Final Project Design Worksheet will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their reviews and presentations in the end.  \n\nAs the teacher, you should download a copy of the documents and decide which elements are important to you. Be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -3844,7 +3689,7 @@
       "key": "5a4707ae-6dfd-4612-b953-991e3b180169",
       "position": 3,
       "properties": {
-        "description": "\nNow that the class has their Final Project Design Worksheet in hand, they should start filling out the questions under **Day 1**.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
+        "description": "\nNow that the class has their ***Final Project Design Worksheet** in hand, they should start filling out the questions under **Day 1**.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
       },
       "seeding_key": {
         "activity_section.key": "5a4707ae-6dfd-4612-b953-991e3b180169",
@@ -3855,7 +3700,7 @@
       "key": "556e548d-e34d-419a-8c67-85ccde21b96f",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will use this day to build an initial version of their project.\n\nEquipped with their **Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their **Final Project Design Worksheets** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own **Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "Goal: Students will use this day to build an initial version of their project.\n\nEquipped with their ***Final Project Design Worksheet**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their ***Final Project Design Worksheets** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Final Project Design Worksheet**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3867,7 +3712,7 @@
       "key": "63989a97-d3e6-437f-b08c-d3f0ec592f5e",
       "position": 1,
       "properties": {
-        "description": "Goal: Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Reflect:\n\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the **Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the **Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
+        "description": "Goal: Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Reflect:\n\nFor reflections, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
         "name": "Reflect and Try Again\r"
       },
       "seeding_key": {
@@ -3971,7 +3816,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3997,7 +3842,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4023,7 +3868,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4049,7 +3894,7 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4075,7 +3920,7 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4101,7 +3946,7 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4127,7 +3972,7 @@
       "chapter": 7,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4153,7 +3998,7 @@
       "chapter": 8,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4179,7 +4024,7 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4205,7 +4050,7 @@
       "chapter": 10,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4231,7 +4076,7 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": 11,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4257,7 +4102,7 @@
       "chapter": 12,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4283,7 +4128,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introducing Sprite Lab",
         "level_keys": [
@@ -4309,7 +4154,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4335,7 +4180,7 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4361,7 +4206,7 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4387,7 +4232,7 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4413,7 +4258,7 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "How to Make a Sprite",
         "level_keys": [
@@ -4439,7 +4284,7 @@
       "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -4465,7 +4310,7 @@
       "chapter": 20,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -4491,7 +4336,7 @@
       "chapter": 21,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4517,7 +4362,7 @@
       "chapter": 22,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4543,7 +4388,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4569,7 +4414,7 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video-Sprites in Action",
         "level_keys": [
@@ -4595,7 +4440,7 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4621,7 +4466,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4647,7 +4492,7 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4673,7 +4518,7 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -4699,7 +4544,7 @@
       "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -4725,7 +4570,7 @@
       "chapter": 30,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -4751,7 +4596,7 @@
       "chapter": 31,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -4777,7 +4622,7 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Artist Intro with JR Hildebrande",
         "level_keys": [
@@ -4803,7 +4648,7 @@
       "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4829,7 +4674,7 @@
       "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4855,7 +4700,7 @@
       "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Loops with the Artist",
         "level_keys": [
@@ -4881,7 +4726,7 @@
       "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4907,7 +4752,7 @@
       "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4933,7 +4778,7 @@
       "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4960,7 +4805,7 @@
       "chapter": 39,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4987,7 +4832,7 @@
       "chapter": 40,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5013,7 +4858,7 @@
       "chapter": 41,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5039,7 +4884,7 @@
       "chapter": 42,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5066,7 +4911,7 @@
       "chapter": 43,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5092,7 +4937,7 @@
       "chapter": 44,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5118,7 +4963,7 @@
       "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5144,7 +4989,7 @@
       "chapter": 46,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5170,7 +5015,7 @@
       "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Nested Loops with the Bee",
         "level_keys": [
@@ -5196,7 +5041,7 @@
       "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5222,7 +5067,7 @@
       "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5248,7 +5093,7 @@
       "chapter": 50,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5274,7 +5119,7 @@
       "chapter": 51,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5300,7 +5145,7 @@
       "chapter": 52,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5326,7 +5171,7 @@
       "chapter": 53,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5352,7 +5197,7 @@
       "chapter": 54,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5379,7 +5224,7 @@
       "chapter": 55,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5405,7 +5250,7 @@
       "chapter": 56,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5431,7 +5276,7 @@
       "chapter": 57,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5457,12 +5302,15 @@
       "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Designing for Accessibility - Unplugged Activity"
+        "progression": "Designing for Accessibility - Unplugged Activity",
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2021"
@@ -5482,31 +5330,7 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "level_keys": [
-          "PowerOfWords-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PowerOfWords-Unplugged_2021"
-        ],
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021",
-        "activity_section.key": "ab55abdb-0510-46c5-96b2-401a2ab2f664"
-      },
-      "level_keys": [
-        "PowerOfWords-Unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 60,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
+        "progression": "Envelope Variables - Unplugged Activity",
         "level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ]
@@ -5527,7 +5351,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5553,7 +5377,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5579,7 +5403,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5605,7 +5429,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5631,7 +5455,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5657,7 +5481,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5683,7 +5507,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5709,7 +5533,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5735,7 +5559,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -5761,7 +5585,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5787,7 +5611,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5813,7 +5637,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5839,7 +5663,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5865,7 +5689,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5891,7 +5715,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5918,7 +5742,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5944,7 +5768,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5970,7 +5794,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5996,7 +5820,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6022,7 +5846,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6048,7 +5872,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6074,7 +5898,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6100,7 +5924,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6126,7 +5950,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6152,7 +5976,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6178,7 +6002,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6203,10 +6027,10 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Machine_Learning_2021"
@@ -6228,10 +6052,10 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_FishVTrash_2021"
@@ -6253,10 +6077,10 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrashDemo_2021"
@@ -6278,10 +6102,10 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrash_2021"
@@ -6303,10 +6127,10 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Training_Data_2021"
@@ -6328,10 +6152,10 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Short_2021"
@@ -6353,10 +6177,10 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Societal_Implications_2021"
@@ -6378,10 +6202,10 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Long_2021"
@@ -6403,10 +6227,10 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Internet - Unplugged Activity",
         "level_keys": [
@@ -6429,7 +6253,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6455,10 +6279,10 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6481,10 +6305,10 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6507,10 +6331,10 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "For Loops and Repeat Blocks",
         "level_keys": [
@@ -6533,10 +6357,10 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6559,10 +6383,10 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6585,10 +6409,10 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6611,10 +6435,10 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6637,10 +6461,10 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6663,10 +6487,10 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6689,10 +6513,10 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6715,10 +6539,10 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 106,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6742,10 +6566,10 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 107,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6768,10 +6592,10 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 108,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6794,10 +6618,10 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 109,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6820,10 +6644,10 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Intro to For Loops",
         "level_keys": [
@@ -6846,10 +6670,10 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6872,10 +6696,10 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6898,10 +6722,10 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 113,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6924,10 +6748,10 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 114,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6950,10 +6774,10 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 115,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6976,10 +6800,10 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 116,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7002,10 +6826,10 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 117,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7028,10 +6852,10 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 118,
       "position": 9,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7054,10 +6878,10 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 119,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7080,10 +6904,10 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 120,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7106,10 +6930,10 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 121,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7132,10 +6956,10 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 122,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7158,10 +6982,10 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 123,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7184,10 +7008,10 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7210,10 +7034,10 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 125,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7236,10 +7060,10 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 126,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7262,10 +7086,10 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 127,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7288,10 +7112,10 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 128,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7314,10 +7138,10 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 129,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7340,10 +7164,10 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 130,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7366,10 +7190,10 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 131,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "behaviors 6_2021"
@@ -7391,10 +7215,10 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 132,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "behaviors 7_2021"
@@ -7416,10 +7240,10 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7442,10 +7266,10 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7468,10 +7292,10 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7494,10 +7318,10 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7520,10 +7344,10 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7546,10 +7370,10 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 138,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7572,10 +7396,10 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 139,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7598,10 +7422,10 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 140,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7624,7 +7448,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 141,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7650,7 +7474,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 142,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -8371,18 +8195,6 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021",
         "activity_section.key": "915a19f9-e3fd-4869-b1a2-ddbfa5029c23"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PowerOfWords-Unplugged_2021",
-        "script_level.level_keys": [
-          "PowerOfWords-Unplugged_2021"
-        ],
-        "lesson.key": "The Power of Words",
-        "lesson_group.key": "csf_digcit",
-        "script.name": "coursef-2021",
-        "activity_section.key": "ab55abdb-0510-46c5-96b2-401a2ab2f664"
       }
     },
     {
@@ -9432,68 +9244,6 @@
       }
     },
     {
-      "name": "The Power of Words: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so",
-      "key": "the-power-of-words-lesson-slides",
-      "properties": {
-        "type": "Slide Deck",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-lesson-slides"
-      }
-    },
-    {
-      "name": "The Power of Words: The Power of Words",
-      "url": "https://www.commonsense.org/education/videos/the-power-of-words",
-      "key": "the-power-of-words-the-power-of-words",
-      "properties": {
-        "type": "Lesson Video",
-        "audience": "Teacher",
-        "download_url": "https://www.commonsense.org/education/video-download/4141366"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-the-power-of-words"
-      }
-    },
-    {
-      "name": "The Power of Words: Words Can Hurt",
-      "url": "https://drive.google.com/open?id=1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw",
-      "key": "the-power-of-words-words-can-hurt",
-      "properties": {
-        "type": "Student Handout",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-words-can-hurt"
-      }
-    },
-    {
-      "name": "The Power of Words: Lesson Quiz",
-      "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
-      "key": "the-power-of-words-lesson-quiz",
-      "properties": {
-        "type": "Form",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-lesson-quiz"
-      }
-    },
-    {
-      "name": "The Power of Words: Lesson Quiz Answer Key",
-      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/grade-3-the-power-of-words-lesson-quiz-answers",
-      "key": "the-power-of-words-lesson-quiz-answer-key",
-      "properties": {
-        "type": "Website",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-power-of-words-lesson-quiz-answer-key"
-      }
-    },
-    {
       "name": "Variables in Envelopes",
       "url": "https://youtu.be/DI7DprN4FtE",
       "key": "unplugged-video-envelope-variables",
@@ -9556,19 +9306,6 @@
       },
       "seeding_key": {
         "resource.key": "assessment-answer-envelope-variables"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://youtu.be/DI7DprN4FtE",
-      "key": "variables",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2015/course4/C4-Variables-in-envelopes-JIE-2015_720.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "variables"
       }
     },
     {
@@ -9713,6 +9450,30 @@
       }
     },
     {
+      "name": "Think Spot Journal - Reflection Journal",
+      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
+      "key": "think_spot_-_reflection_journal",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "think_spot_-_reflection_journal"
+      }
+    },
+    {
+      "name": "get-site-ip-com",
+      "url": "http://get-site-ip.com/",
+      "key": "get-site-ip-com",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "get-site-ip-com"
+      }
+    },
+    {
       "name": "For Loop Fun",
       "url": "https://youtu.be/mX857v5B4gE",
       "key": "unplugged-video-for-loop-fun",
@@ -9802,6 +9563,18 @@
       }
     },
     {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "pause_and_think_online",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
       "name": "Design Process",
       "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
       "key": "design-process",
@@ -9861,36 +9634,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-lesson-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-the-power-of-words"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-words-can-hurt"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-lesson-quiz"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "resource.key": "the-power-of-words-lesson-quiz-answer-key"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Envelope Variables",
         "resource.key": "unplugged-video-envelope-variables"
       }
@@ -9922,18 +9665,12 @@
     {
       "seeding_key": {
         "lesson.key": "Variables as Constant in Artist",
-        "resource.key": "variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables as Constant in Artist",
         "resource.key": "course-cf-blockly-blocks"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
+        "lesson.key": "Variables as Constant in Artist",
         "resource.key": "variables"
       }
     },
@@ -9993,6 +9730,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "think_spot_-_reflection_journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "get-site-ip-com"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "For Loop Fun",
         "resource.key": "unplugged-video-for-loop-fun"
       }
@@ -10031,6 +9780,12 @@
       "seeding_key": {
         "lesson.key": "For Loops in Bee",
         "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "resource.key": "pause_and_think_online"
       }
     },
     {
@@ -10629,36 +10384,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "87370389-db79-4ed7-85b6-d1c80715ef7f"
-      }
-    },
-    {
-      "key": "97b5d61f-a36f-4766-a314-50bb7a7dc4b7",
-      "properties": {
-        "description": "Understand that it's important to think about the words we use, because everyone interprets things differently."
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "objective.key": "97b5d61f-a36f-4766-a314-50bb7a7dc4b7"
-      }
-    },
-    {
-      "key": "42ddea47-40d2-4d03-8b1e-29bdafa03199",
-      "properties": {
-        "description": "Identify ways to respond to mean words online, using S-T-O-P."
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "objective.key": "42ddea47-40d2-4d03-8b1e-29bdafa03199"
-      }
-    },
-    {
-      "key": "8abf0ea0-c230-4bfb-85d4-c58396e56831",
-      "properties": {
-        "description": "Decide what kinds of statements are OK to say online and which are not."
-      },
-      "seeding_key": {
-        "lesson.key": "The Power of Words",
-        "objective.key": "8abf0ea0-c230-4bfb-85d4-c58396e56831"
       }
     },
     {
