@@ -5,7 +5,7 @@
   #footer-links
     %ul
       %li#privacy
-        %a{:href=>'/privacy'}
+        %a{:href=>'/privacy', :style=>'color: #ffa400;'}
           - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
           - if @privacy_updated
             !=I18n.t(:footer_privacy_policy_updated)
