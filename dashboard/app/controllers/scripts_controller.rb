@@ -171,7 +171,9 @@ class ScriptsController < ApplicationController
       Script.log_redirect(script_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
     end
 
-    render :no_access unless @script.access_allowed(current_user)
+    if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
+      render :no_access
+    end
   end
 
   def script_params
