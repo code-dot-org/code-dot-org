@@ -422,7 +422,7 @@ class ActivitySectionCard extends Component {
   };
 
   handleUploadImage = (url, expandable) => {
-    let param = expandable ? 'expandable' : '';
+    const param = expandable ? 'expandable' : '';
     this.appendMarkdownSyntax(`\n\n![${param}](${url})`);
   };
 
