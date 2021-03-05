@@ -634,7 +634,7 @@ module Services
     end
 
     class VocabularySerializer < ActiveModel::Serializer
-      attributes :key, :word, :definition, :seeding_key
+      attributes :key, :word, :definition, :properties, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

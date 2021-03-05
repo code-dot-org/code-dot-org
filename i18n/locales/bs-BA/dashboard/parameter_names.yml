@@ -1,0 +1,13 @@
+bs:
+  data:
+    parameter_names:
+      actor: lik
+      counter: brojač
+      height: visina
+      honey: med
+      left: lijevo
+      length: dužina
+      min: min.
+      size: veličina
+      speed: brzina
+      width: širina

@@ -1,0 +1,31 @@
+---
+vi:
+  data:
+    variable_names:
+      Blue: Màu xanh da trời
+      Green: Màu xanh lá
+      Red: Màu đỏ
+      actor: nhân vật
+      cats: mèo
+      color: màu sắc
+      counter: biến đếm
+      dogs: tất cả chó
+      height: chiều cao
+      honey: mật ong
+      i: i
+      left: trái
+      length: chiều dài
+      name: tên
+      nectar: phấn hoa
+      points: điểm
+      random: ngẫu nhiên
+      repeat: lặp lại
+      right: phải
+      score: ghi điểm
+      sides: các cạnh
+      size: kích cỡ
+      speed: tốc độ
+      variable: biến
+      width: chiều rộng
+      wizard: phù thủy
+      x: x

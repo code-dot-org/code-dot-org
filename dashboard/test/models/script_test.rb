@@ -2456,6 +2456,40 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script.script_levels[0].activity_section_id, activity_section.id
   end
 
+  test 'can move last lesson group up' do
+    script = create :script, name: 'lesson-group-test-script'
+    lesson_group1 = create :lesson_group, key: 'lg-1', script: script
+    lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
+    lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
+    activity = create :lesson_activity, lesson: lesson2
+    activity_section = create :activity_section, lesson_activity: activity
+    level1 = create :level
+    script_level = create :script_level, script: script, lesson: lesson2, levels: [level1], activity_section: activity_section, activity_section_position: 1
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
+    lesson3 = create :lesson, key: 'l-3', name: 'Lesson 3', lesson_group: lesson_group2
+
+    new_dsl = <<-SCRIPT
+      lesson_group '#{lesson_group2.key}', display_name: 'Lesson Group 2'
+      lesson '#{lesson3.key}', display_name: '#{lesson3.name}'
+
+      lesson_group '#{lesson_group1.key}', display_name: 'Lesson Group 1'
+      lesson '#{lesson1.key}', display_name: '#{lesson1.name}'
+
+      lesson '#{lesson2.key}', display_name: '#{lesson2.name}'
+      level '#{level1.name}'
+    SCRIPT
+
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+    )
+
+    assert_equal script.lessons[2].lesson_group_id, lesson_group1.id
+    assert_equal script.lessons[2].id, lesson2.id
+    assert_equal script.script_levels[0].id, script_level.id
+    assert_equal script.script_levels[0].activity_section_id, activity_section.id
+  end
+
   test 'can add the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT

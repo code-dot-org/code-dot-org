@@ -1,0 +1,15 @@
+---
+da:
+  data:
+    parameter_names:
+      actor: spiller
+      color: farve
+      counter: tæller
+      height: højde
+      honey: honning
+      left: venstre
+      length: længde
+      min: min
+      points: point
+      size: størrelse
+      speed: hastighed
