@@ -110,8 +110,7 @@ describe('StudentLessonOverview', () => {
   it('displays the student resources', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
-    assert.equal(resourceSection.find('ul').length, 1);
-    assert.equal(resourceSection.find('li').length, 2);
+    assert.equal(resourceSection.find('ResourceList').length, 1);
   });
 
   it('does not display the resources section if there are no student resources', () => {
