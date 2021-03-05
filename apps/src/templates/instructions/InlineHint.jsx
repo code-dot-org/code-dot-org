@@ -19,7 +19,9 @@ class InlineHint extends React.Component {
     video: videoDataShape,
     ttsUrl: PropTypes.string,
     ttsMessage: PropTypes.string,
-    isBlockly: PropTypes.bool
+    isBlockly: PropTypes.bool,
+    isMinecraft: PropTypes.bool,
+    skinId: PropTypes.string
   };
 
   componentDidMount() {
@@ -61,5 +63,7 @@ class InlineHint extends React.Component {
 
 export const StatelessInlineHint = Radium(InlineHint);
 export default connect(state => ({
-  isBlockly: state.pageConstants.isBlockly
+  isBlockly: state.pageConstants.isBlockly,
+  isMinecraft: state.pageConstants.isMinecraft,
+  skinId: state.pageConstants.skinId
 }))(Radium(InlineHint));
