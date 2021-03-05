@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {scriptDataPropType} from '../sectionProgressConstants';
+import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {
   getCurrentScriptData,
   setLessonOfInterest
@@ -23,6 +24,9 @@ class ProgressTableDetailView extends React.Component {
     // redux
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
+    levelProgressByStudent: PropTypes.objectOf(
+      PropTypes.objectOf(studentLevelProgressType)
+    ).isRequired,
     onClickLesson: PropTypes.func.isRequired
   };
 
@@ -40,7 +44,8 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
-  detailCellFormatter(lesson, student, studentProgress) {
+  detailCellFormatter(lesson, student) {
+    const studentProgress = this.props.levelProgressByStudent[student.id];
     return (
       <ProgressTableDetailCell
         studentId={student.id}
@@ -70,7 +75,11 @@ class ProgressTableDetailView extends React.Component {
 export default connect(
   state => ({
     section: state.sectionData.section,
-    scriptData: getCurrentScriptData(state)
+    scriptData: getCurrentScriptData(state),
+    levelProgressByStudent:
+      state.sectionProgress.studentLevelProgressByScript[
+        state.scriptSelection.scriptId
+      ]
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {
