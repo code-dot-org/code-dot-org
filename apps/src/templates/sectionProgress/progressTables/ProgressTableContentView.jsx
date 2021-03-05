@@ -3,7 +3,6 @@ import * as Table from 'reactabular-table';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {scriptDataPropType, scrollbarWidth} from '../sectionProgressConstants';
 import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
@@ -29,9 +28,6 @@ export default class ProgressTableContentView extends React.Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
-    levelProgressByStudent: PropTypes.objectOf(
-      PropTypes.objectOf(studentLevelProgressType)
-    ).isRequired,
     onClickLesson: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number),
     lessonCellFormatter: PropTypes.func.isRequired,
@@ -93,11 +89,9 @@ export default class ProgressTableContentView extends React.Component {
   }
 
   contentCellFormatter(_, {rowData, columnIndex}) {
-    const {scriptData, levelProgressByStudent} = this.props;
     return this.props.lessonCellFormatter(
-      scriptData.stages[columnIndex],
-      rowData,
-      levelProgressByStudent[rowData.id]
+      this.props.scriptData.stages[columnIndex],
+      rowData
     );
   }
 
