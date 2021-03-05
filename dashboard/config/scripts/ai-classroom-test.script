@@ -1,0 +1,8 @@
+login_required true
+
+lesson 'introai', display_name: 'Introduction to AI', has_lesson_plan: false
+level 'ml-models-shoes random', progression: 'Shoe Recommender'
+level 'ml-models-shoes decision tree', progression: 'Improved Shoe Recommender'
+level 'ml-models-shoes data', progression: 'Ultimate Shoe Recommender'
+level 'ml-models-shoes points', progression: 'Ultimate Shoe Recommender'
+

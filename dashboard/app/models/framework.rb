@@ -14,4 +14,12 @@
 #  index_frameworks_on_shortcode  (shortcode) UNIQUE
 #
 class Framework < ApplicationRecord
+  def self.seed_all
+    filename = 'config/standards/frameworks.csv'
+    CSV.foreach(filename, {headers: true}) do |row|
+      framework = Framework.find_or_initialize_by(shortcode: row['framework'])
+      framework.name = row['name']
+      framework.save! if framework.changed?
+    end
+  end
 end

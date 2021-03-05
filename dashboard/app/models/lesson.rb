@@ -393,7 +393,7 @@ class Lesson < ApplicationRecord
     {
       key: key,
       displayName: localized_name,
-      link: is_student ? script_lesson_path(script, self) + '/student' : script_lesson_path(script, self),
+      link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
       position: relative_position
     }
   end
