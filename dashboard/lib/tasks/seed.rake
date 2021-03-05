@@ -184,6 +184,7 @@ namespace :seed do
     :games,
     :custom_levels,
     :dsls,
+    :programming_expressions,
     :blocks,
     :shared_blockly_functions,
     :libraries,
@@ -264,11 +265,6 @@ namespace :seed do
     Block.load_records
   end
 
-  timed_task programming_expressions: :environment do
-    ProgrammingEnvironment.seed_all
-    ProgrammingExpression.seed_all
-  end
-
   timed_task shared_blockly_functions: :environment do
     SharedBlocklyFunction.load_records
   end
@@ -299,6 +295,11 @@ namespace :seed do
     Framework.seed_all
     StandardCategory.seed_all
     Standard.seed
+  end
+
+  timed_task programming_expressions: :environment do
+    ProgrammingEnvironment.seed_all
+    ProgrammingExpression.seed_all
   end
 
   # Seeds the data in school_districts
@@ -424,5 +425,5 @@ namespace :seed do
   timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards]
 
   desc "seed only dashboard data required for tests"
-  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
+  timed_task test: [:videos, :games, :concepts, :programming_expressions, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end
