@@ -1,0 +1,68 @@
+{
+  "card": {
+    "description": "Survey of customers in a bubble tea cafe on whether or not they like certain bubble tea combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Help make recommendations for what kind of bubble tea a new customer should order",
+      "potentialMisuses": "Anything other than bubble tea recommendations"
+    }
+  },
+  "fields": [
+    {
+      "id": "mango jelly",
+      "type": "categorical",
+      "description": "Does the bubble tea have mango jelly add-ins?"
+    },
+    {
+      "id": "regular boba",
+      "type": "categorical",
+      "description": "Does the bubble tea have regular boba add-ins?"
+    },
+    {
+      "id": "lychee",
+      "type": "categorical",
+      "description": "Does the bubble tea have lychee add-ins?"
+    },
+    {
+      "id": "herbal",
+      "type": "categorical",
+      "description": "Does the bubble tea have herbal add-ins?"
+    },
+    {
+      "id": "red beans",
+      "type": "categorical",
+      "description": "Does the bubble tea have red beans add-ins?"
+    },
+    {
+      "id": "crystal boba",
+      "type": "categorical",
+      "description": "Does the bubble tea have crystal boba add-ins?"
+    },
+    {
+      "id": "sea salt cream",
+      "type": "categorical",
+      "description": "Does the bubble tea have sea salt cream add-ins?"
+    },
+    {
+      "id": "vanilla",
+      "type": "categorical",
+      "description": "Does the bubble tea have vanilla add-ins?"
+    },
+    {
+      "id": "banana",
+      "type": "categorical",
+      "description": "Does the bubble tea have banana add-ins?"
+    },
+    {
+      "id": "preference",
+      "type": "categorical",
+      "description": "Did you like it or dislike it?"
+    }
+  ],
+  "defaultLabelColumn": "preference"
+}

@@ -4,3 +4,4 @@
 /.nyc_output
 /.idea
 .DS_Store
+/public/datasets/editing

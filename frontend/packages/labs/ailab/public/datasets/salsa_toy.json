@@ -1,0 +1,68 @@
+{
+  "card": {
+    "description": "Survey of customers in a taco shop on whether or not they like certain salsa combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Help make recommendations for what kind of salsa a new customer should order",
+      "potentialMisuses": "Anything other than salsa recommendations"
+    }
+  },
+  "fields": [
+    {
+      "id": "cilantro",
+      "type": "categorical",
+      "description": "Does the salsa contain cilantro?"
+    },
+    {
+      "id": "onion",
+      "type": "categorical",
+      "description": "Does the salsa contain onion?"
+    },
+    {
+      "id": "cumin",
+      "type": "categorical",
+      "description": "Does the salsa contain cumin?"
+    },
+    {
+      "id": "vinegar",
+      "type": "categorical",
+      "description": "Does the salsa contain vinegar?"
+    },
+    {
+      "id": "avocado",
+      "type": "categorical",
+      "description": "Does the salsa contain avocado?"
+    },
+    {
+      "id": "corn",
+      "type": "categorical",
+      "description": "Does the salsa contain corn?"
+    },
+    {
+      "id": "beans",
+      "type": "categorical",
+      "description": "Does the salsa contain beans?"
+    },
+    {
+      "id": "garlic",
+      "type": "categorical",
+      "description": "Does the salsa contain garlic?"
+    },
+    {
+      "id": "lime",
+      "type": "categorical",
+      "description": "Does the salsa contain lime?"
+    },
+    {
+      "id": "preference",
+      "type": "categorical",
+      "description": "Do you like or dislike the salsa?"
+    }
+  ],
+  "defaultLabelColumn": "preference"
+}
