@@ -31,6 +31,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
+    "serialized_at": "2021-03-04 20:19:16 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -1867,7 +1868,7 @@
       "key": "f1742404-d822-4885-a44e-f05f9bc991f3",
       "position": 2,
       "properties": {
-        "description": "Today we're going to work on finding ways to make giving lots of instructions easier, especially when those instructions repeat themselves a lot. This will be really useful when we go back to the computers and have to write lots of instructions in our programs.",
+        "description": "Today we're going to work on finding ways to make giving lots of instructions easier, especially when those instructions **repeat** themselves a lot. This will be really useful when we go back to the computers and have to write lots of instructions in our programs.",
         "remarks": true
       },
       "seeding_key": {
@@ -1902,7 +1903,7 @@
       "key": "0d345591-6747-4a5e-aeb9-196c42f905cd",
       "position": 3,
       "properties": {
-        "description": "**Say:** Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Getting Loopy - Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
+        "description": "**Say:** Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Getting Loopy - Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that **repeats**, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that **repeat**.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these **loops** on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
         "tips": [
           {
             "type": "teachingTip",
@@ -1930,7 +1931,7 @@
       "key": "5d225181-2af4-4b13-a7ef-96c2af34a7b2",
       "position": 1,
       "properties": {
-        "description": "**Display:** Present the vocab for this lesson, [v loop] Ask the class to point out the main loop that was in the dance. Why do you think we call it a loop?",
+        "description": "**Display:** Present the vocab for this lesson, **loop** Ask the class to point out the main **loop** that was in the dance. Why do you think we call it a **loop**?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -6917,19 +6918,6 @@
       }
     },
     {
-      "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "the_big_event_courses_a_b_",
-      "properties": {
-        "type": "Controller Image",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_courses_a_b_"
-      }
-    },
-    {
       "name": "The Big Event",
       "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
       "key": "csf-the-big-event-assessment",
@@ -6968,6 +6956,19 @@
       }
     },
     {
+      "name": "The Big Event (Courses A, B)",
+      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
+      "key": "the_big_event_courses_a_b_",
+      "properties": {
+        "type": "Controller Image",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
       "name": "Unplugged Blockly Blocks (Grades K-1)",
       "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
       "key": "course-ab-blockly-blocks",
@@ -6993,6 +6994,18 @@
       }
     },
     {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "common-sense-media-pause-think",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
       "name": "The Big Event (Courses A, B)",
       "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
       "key": "the_big_event_courses_a_b_",
@@ -7003,18 +7016,6 @@
       },
       "seeding_key": {
         "resource.key": "the_big_event_courses_a_b_"
-      }
-    },
-    {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "common-sense-media-pause-think",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "common-sense-media-pause-think"
       }
     }
   ],
@@ -7322,12 +7323,6 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "the_big_event_courses_a_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
         "resource.key": "csf-the-big-event-assessment"
       }
     },
@@ -7345,6 +7340,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "course-ab-blockly-blocks"
       }
@@ -7358,13 +7359,13 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "resource.key": "the_big_event_courses_a_b_"
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "resource.key": "common-sense-media-pause-think"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     }
   ],

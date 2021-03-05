@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-04 15:32:45 UTC",
+    "serialized_at": "2021-03-04 21:56:10 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -4842,7 +4842,7 @@
       "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Warm Up",
         "level_keys": [
@@ -4868,7 +4868,7 @@
       "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4894,7 +4894,7 @@
       "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -4920,7 +4920,7 @@
       "chapter": 44,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -4946,7 +4946,7 @@
       "chapter": 45,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -4972,7 +4972,7 @@
       "chapter": 46,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -4998,7 +4998,7 @@
       "chapter": 47,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -5024,7 +5024,7 @@
       "chapter": 48,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -5050,7 +5050,7 @@
       "chapter": 49,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -5076,7 +5076,7 @@
       "chapter": 50,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -5102,7 +5102,7 @@
       "chapter": 51,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -5128,7 +5128,7 @@
       "chapter": 52,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -5154,7 +5154,7 @@
       "chapter": 53,
       "position": 13,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -5180,7 +5180,7 @@
       "chapter": 54,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Wrap-up",
         "level_keys": [
@@ -5206,7 +5206,7 @@
       "chapter": 55,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5232,7 +5232,7 @@
       "chapter": 56,
       "position": 16,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5258,7 +5258,7 @@
       "chapter": 57,
       "position": 17,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7736,7 +7736,7 @@
       "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Power of Words - Unplugged Activity",
         "level_keys": [
@@ -7744,7 +7744,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "PowerOfWords-Unplugged_2021"
