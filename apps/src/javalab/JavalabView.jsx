@@ -65,6 +65,8 @@ const style = {
 class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
+    onSave: PropTypes.func.isRequired,
+    renameFile: PropTypes.func.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -104,7 +106,10 @@ class JavalabView extends React.Component {
               </div>
             </div>
             <div style={style.editorAndConsole}>
-              <JavalabEditor />
+              <JavalabEditor
+                onSave={this.props.onSave}
+                renameFile={this.props.renameFile}
+              />
               <div style={style.consoleAndButtons}>
                 <div style={style.buttons}>
                   <button
