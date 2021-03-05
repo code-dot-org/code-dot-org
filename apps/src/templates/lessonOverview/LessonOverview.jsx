@@ -146,7 +146,7 @@ class LessonOverview extends Component {
                 <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
                 <EnhancedSafeMarkdown
                   markdown={lesson.overview}
-                  expandableImages={true}
+                  expandableImages
                 />
               </div>
             )}
@@ -155,7 +155,7 @@ class LessonOverview extends Component {
                 <h2>{i18n.purpose()}</h2>
                 <EnhancedSafeMarkdown
                   markdown={lesson.purpose}
-                  expandableImages={true}
+                  expandableImages
                 />
               </div>
             )}
@@ -164,7 +164,7 @@ class LessonOverview extends Component {
                 <h2>{i18n.assessmentOpportunities()}</h2>
                 <EnhancedSafeMarkdown
                   markdown={lesson.assessmentOpportunities}
-                  expandableImages={true}
+                  expandableImages
                 />
               </div>
             )}
@@ -190,7 +190,7 @@ class LessonOverview extends Component {
                 <h2>{i18n.preparation()}</h2>
                 <EnhancedSafeMarkdown
                   markdown={lesson.preparation}
-                  expandableImages={true}
+                  expandableImages
                 />
               </div>
             )}
