@@ -1,15 +1,19 @@
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const SET_EDITOR_TEXT = 'javalab/SET_EDITOR_TEXT';
-const SET_FILE_NAME = 'javalab/SET_FILE_NAME';
+const SET_FILENAME = 'javalab/SET_FILENAME';
 const SET_FILES = 'javalab/SET_FILES';
-const SET_FILES_DATA = 'javalab/SET_FILES_DATA';
+const CREATE_UPDATE_FILE = 'javalab/CREATE_UPDATE_FILE';
+const RENAME_FILE = 'javalab/RENAME_FILE';
+const DELETE_FILE = 'javalab/DELETE_FILE';
+const SET_FILES_LOADED = 'javalab/SET_FILES_LOADED';
 
 const initialState = {
   consoleLogs: [],
-  filesData: {},
+  files: {},
   editorText: '',
-  fileName: 'MyClass.java',
-  fileEntries: null
+  filename: 'MyClass.java',
+  fileEntries: null,
+  filesLoaded: false
 };
 
 export const appendInputLog = input => ({
@@ -27,19 +31,36 @@ export const setEditorText = editorText => ({
   editorText
 });
 
-export const setFileName = fileName => ({
-  type: SET_FILE_NAME,
-  fileName
+export const setFileName = filename => ({
+  type: SET_FILENAME,
+  filename
 });
 
-export const setFileEntries = fileEntries => ({
-  type: SET_FILES,
-  fileEntries
-});
+// export const setFileEntries = fileEntries => ({
+//   type: SET_FILES,
+//   fileEntries
+// });
 
-export const setFilesData = filesData => ({
-  type: SET_FILES_DATA,
-  filesData
+// export const createOrUpdateFile = (fileName, fileContent) => ({
+//   type: CREATE_UPDATE_FILE,
+//   fileName,
+//   fileContent
+// });
+
+// export const renameFile = (oldFileName, newFileName) => ({
+//   type: RENAME_FILE,
+//   oldFileName,
+//   newFileName
+// });
+
+// export const deleteFile = fileName => ({
+//   type: DELETE_FILE,
+//   fileName
+// });
+
+export const setFilesLoaded = filesLoaded => ({
+  type: SET_FILES_LOADED,
+  filesLoaded
 });
 
 export default function reducer(state = initialState, action) {
@@ -55,10 +76,10 @@ export default function reducer(state = initialState, action) {
       editorText: action.editorText
     };
   }
-  if (action.type === SET_FILE_NAME) {
+  if (action.type === SET_FILENAME) {
     return {
       ...state,
-      fileName: action.fileName
+      filename: action.filename
     };
   }
   if (action.type === SET_FILES) {
@@ -67,10 +88,39 @@ export default function reducer(state = initialState, action) {
       fileEntries: action.fileEntries
     };
   }
-  if (action.type === SET_FILES_DATA) {
+  if (action.type === CREATE_UPDATE_FILE) {
+    const files = {...state.files};
+    files[action.fileName] = action.fileContent;
     return {
       ...state,
-      filesData: action.filesData
+      files
+    };
+  }
+  if (action.type === RENAME_FILE) {
+    const files = {...state.files};
+    if (action.newFileName === action.oldFileName) {
+      return state;
+    }
+    files[action.newFileName] = files[action.oldFileName];
+    var deleted = delete files[action.oldFileName];
+    console.log('attempted to delete, result was ' + deleted);
+    return {
+      ...state,
+      files
+    };
+  }
+  if (action.type === DELETE_FILE) {
+    const files = {...state.files};
+    delete files[action.fileName];
+    return {
+      ...state,
+      files
+    };
+  }
+  if (action.type === SET_FILES_LOADED) {
+    return {
+      ...state,
+      filesLoaded: action.filesLoaded
     };
   }
   return state;

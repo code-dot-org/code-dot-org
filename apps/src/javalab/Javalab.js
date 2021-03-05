@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '../redux';
 import JavalabView from './JavalabView';
-import javalab, {setFileEntries} from './javalabRedux';
+import javalab, {setFileName, setEditorText} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -68,8 +68,6 @@ Javalab.prototype.init = function(config) {
 
   config.getCode = this.getCode.bind(this);
 
-  this.loadFileEntries();
-
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init().  Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
@@ -101,13 +99,21 @@ Javalab.prototype.init = function(config) {
   });
 
   registerReducers({javalab});
+  const onSave = this.onSave.bind(this);
+  const renameFile = this.renameProjectFile.bind(this);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <JavalabView onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  this.loadFiles(() => {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <JavalabView
+          onMount={onMount}
+          onSave={onSave}
+          renameFile={renameFile}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    );
+  });
 };
 
 // Called by the Javalab app when it wants to go to the next level.
@@ -129,7 +135,8 @@ Javalab.prototype.onContinue = function() {
 };
 
 Javalab.prototype.getCode = function() {
-  return getStore().getState().javalab.editorText;
+  // store the file version as the source, as we do in WebLab
+  return this.getCurrentFilesVersionId();
 };
 
 Javalab.prototype.getCurrentFilesVersionId = function() {
@@ -156,37 +163,22 @@ Javalab.prototype.renameProjectFile = function(
 };
 
 // Called by Javalab when a file has been changed or created
-Javalab.prototype.changeProjectFile = function(
-  filename,
-  fileData
-  //callback,
-  // skipPreWriteHook
-) {
-  filesApi.putFile(
-    filename,
-    fileData
-    // xhr => {
-    //   callback(null, project.filesVersionId);
-    // },
-    // xhr => {
-    //   console.warn(`Javalab: error file ${filename} not changed`);
-    //   callback(new Error(xhr.status));
-    // },
-    // skipPreWriteHook
-  );
+Javalab.prototype.changeProjectFile = function(filename, fileData) {
+  filesApi.putFile(filename, fileData);
 };
 
-Javalab.prototype.saveFiles = function() {
-  const files = getStore().getState().javalab.filesData;
-  for (const filename in files) {
-    this.changeProjectFile(filename, files[filename]);
-  }
+Javalab.prototype.onSave = function() {
+  // TODO: update header
+  // TODO: enable multi-file
+  const filename = getStore().getState().javalab.filename;
+  const editorText = getStore().getState().javalab.editorText;
+  this.changeProjectFile(filename, editorText);
 };
 
 /**
  * Load the file entry list and store it as this.fileEntries
  */
-Javalab.prototype.loadFileEntries = function() {
+Javalab.prototype.loadFiles = function(callback) {
   const onFilesReady = (files, filesVersionId) => {
     assetListStore.reset(files);
     const fileEntries = assetListStore.list().map(fileEntry => ({
@@ -194,7 +186,7 @@ Javalab.prototype.loadFileEntries = function() {
       url: filesApi.basePath(fileEntry.filename),
       versionId: fileEntry.versionId
     }));
-    getStore().dispatch(setFileEntries(fileEntries));
+    this.populateFiles(fileEntries, callback);
     this.initialFilesVersionId = this.initialFilesVersionId || filesVersionId;
 
     if (filesVersionId !== this.initialFilesVersionId) {
@@ -214,11 +206,38 @@ Javalab.prototype.loadFileEntries = function() {
         onFilesReady([], null);
       } else {
         console.error('files API failed, status: ' + xhr.status);
-        getStore().dispatch(setFileEntries(null));
       }
     },
     this.getCurrentFilesVersionId()
   );
 };
+
+Javalab.prototype.populateFiles = function(fileEntries, callback) {
+  if (fileEntries.length === 0) {
+    // TODO: make starter code more customizable
+    getStore.dispatch(setFileName('MyClass.java'));
+    getStore.dispatch(setEditorText(''));
+    callback();
+  } else {
+    // TODO: enable multi-file
+    const fileEntry = fileEntries[0];
+    requestFileEntryAndWrite(fileEntry, callback);
+  }
+};
+
+async function requestFileEntryAndWrite(fileEntry, callback) {
+  // read the data
+  $.ajax(`${fileEntry.url}?version=${fileEntry.versionId}`, {
+    dataType: 'text'
+  })
+    .done(fileContent => {
+      getStore().dispatch(setFileName(fileEntry.name));
+      getStore().dispatch(setEditorText(fileContent));
+      callback();
+    })
+    .fail((jqXHR, textStatus, errorThrown) => {
+      callback();
+    });
+}
 
 export default Javalab;
