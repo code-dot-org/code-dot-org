@@ -291,41 +291,6 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('shows Lesson Resources button when viewing as a student and student_lesson_plan_html_url is not null', () => {
-    let myLesson = defaultProps.lesson;
-    myLesson.student_lesson_plan_html_url = 'test-url';
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={myLesson}
-        viewAs={ViewType.Student}
-      />
-    );
-    assert.equal(wrapper.find('Button').props().href, 'test-url');
-    delete myLesson.student_lesson_plan_html_url;
-  });
-
-  it('does not show Lesson Resources button when viewing as a student and student_lesson_plan_html_url is null', () => {
-    const wrapper = shallow(
-      <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
-    );
-    assert.equal(wrapper.find('Button').length, 0);
-  });
-
-  it('does not show Lesson Resources button when viewing as a teacher and student_lesson_plan_html_url is not null', () => {
-    let myLesson = defaultProps.lesson;
-    myLesson.student_lesson_plan_html_url = 'test-url';
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={myLesson}
-        viewAs={ViewType.Teacher}
-      />
-    );
-    assert.equal(wrapper.find('Button').length, 0);
-    delete myLesson.student_lesson_plan_html_url;
-  });
-
   it('does not lock non-lockable stages, such as peer reviews', () => {
     // Simulate a peer review section, where the levels may be locked, but the lesson
     // itself is not lockable
