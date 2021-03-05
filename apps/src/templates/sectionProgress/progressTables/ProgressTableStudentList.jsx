@@ -32,10 +32,10 @@ export default class ProgressTableStudentList extends React.Component {
   body = null;
   bodyComponent = null;
 
-  cellFormatter(_, {rowData, rowIndex}) {
+  cellFormatter(_, {rowData}) {
     switch (rowData.expansionIndex) {
       case 0:
-        return this.studentNameFormatter(rowData, rowIndex);
+        return this.studentNameFormatter(rowData);
       case 1:
         return this.timeSpentFormatter();
       case 2:
@@ -45,7 +45,7 @@ export default class ProgressTableStudentList extends React.Component {
     }
   }
 
-  studentNameFormatter(rowData, rowIndex) {
+  studentNameFormatter(rowData) {
     const {sectionId, scriptData, studentTimestamps, localeCode} = this.props;
     const studentUrl = scriptUrlForStudent(
       sectionId,
@@ -53,21 +53,19 @@ export default class ProgressTableStudentList extends React.Component {
       rowData.student.id
     );
     return (
-      <div
-        onClick={() => {
-          this.props.onToggleRow(rowData, rowIndex);
+      <ProgressTableStudentName
+        name={rowData.student.name}
+        studentId={rowData.student.id}
+        sectionId={sectionId}
+        scriptId={scriptData.id}
+        lastTimestamp={studentTimestamps[rowData.student.id]}
+        localeCode={localeCode}
+        studentUrl={studentUrl}
+        onExpandToggle={() => {
+          this.props.onToggleRow(rowData);
         }}
-      >
-        <ProgressTableStudentName
-          name={rowData.student.name}
-          studentId={rowData.student.id}
-          sectionId={sectionId}
-          scriptId={scriptData.id}
-          lastTimestamp={studentTimestamps[rowData.student.id]}
-          localeCode={localeCode}
-          studentUrl={studentUrl}
-        />
-      </div>
+        isExpanded={rowData.isExpanded}
+      />
     );
   }
 

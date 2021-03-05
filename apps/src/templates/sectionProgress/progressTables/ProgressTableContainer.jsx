@@ -61,7 +61,7 @@ class ProgressTableContainer extends React.Component {
           id: idForExpansionIndex(student.id, 0),
           student: student,
           expansionIndex: 0,
-          expanded: false
+          isExpanded: false
         };
       })
     };
@@ -103,16 +103,18 @@ class ProgressTableContainer extends React.Component {
     );
   }
 
-  onToggleRow(rowData, rowIndex) {
-    rowData.expanded = !rowData.expanded;
-    if (rowData.expanded) {
-      this.addDetailRows(rowData, rowIndex);
+  onToggleRow(rowData) {
+    const rowIndex = this.state.rows.findIndex(
+      row => row.student === rowData.student
+    );
+    if (!rowData.isExpanded) {
+      this.expandDetailRows(rowData, rowIndex);
     } else {
-      this.removeDetailRows(rowData);
+      this.collapseDetailRows(rowData, rowIndex);
     }
   }
 
-  addDetailRows(rowData, rowIndex) {
+  expandDetailRows(rowData, rowIndex) {
     const detailRows = [];
     for (let i = 1; i <= this.numDetailRows; i++) {
       detailRows.push({
@@ -122,19 +124,20 @@ class ProgressTableContainer extends React.Component {
       });
     }
     const rows = [...this.state.rows];
+    rows[rowIndex].isExpanded = true;
     rows.splice(rowIndex + 1, 0, ...detailRows);
     this.setState({
       rows: rows
     });
   }
 
-  removeDetailRows(rowData) {
+  collapseDetailRows(rowData, rowIndex) {
+    const rows = this.state.rows.filter(row => {
+      return row.student.id !== rowData.student.id || row.expansionIndex === 0;
+    });
+    rows[rowIndex].isExpanded = false;
     this.setState({
-      rows: this.state.rows.filter(row => {
-        return (
-          row.student.id !== rowData.student.id || row.expansionIndex === 0
-        );
-      })
+      rows: rows
     });
   }
 
