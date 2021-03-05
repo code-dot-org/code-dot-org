@@ -69,7 +69,7 @@ class LessonsControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', hidden: true, is_migrated: true
+    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', hidden: true, is_migrated: true, include_student_lesson_plans: true
     pilot_lesson_group = create :lesson_group, script: @pilot_script
     @pilot_lesson = create(
       :lesson,
