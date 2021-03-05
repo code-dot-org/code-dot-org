@@ -5600,3 +5600,13 @@ tr-TR:
           devam edin. Aynı bloklarla çalışmaya devam edebilir veya genişletilmiş bir
           araç kutusu deneyebilirsiniz.
         display_name: Ücretsiz Oyna
+      csf_digital_trails:
+        markdown: |-
+          # Dijital İzi Takip Edin
+
+          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Çevrimiçi Komşum
+
+          ## İnternette güvenli bir şekilde sayfalara nasıl gidersiniz?

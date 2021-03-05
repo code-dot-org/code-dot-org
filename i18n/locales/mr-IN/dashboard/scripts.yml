@@ -152,3 +152,8 @@ mr:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+        k5-onlinepd-2021:
+          lessons:
+            Events:
+              key: ईव्हेंट्स
+              name: ईव्हेंट्स

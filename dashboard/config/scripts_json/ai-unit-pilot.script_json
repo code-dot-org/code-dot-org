@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 16:42:17 UTC",
+    "serialized_at": "2021-03-05 18:36:34 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -239,27 +239,12 @@
       }
     },
     {
-      "key": "lesson14",
-      "name": "Lesson 14",
+      "key": "lesson15",
+      "name": "AI Code of Ethics (Unplugged)",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "key": "lesson15",
-      "name": "AI Code of Ethics (Unplugged)",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -271,10 +256,10 @@
     {
       "key": "lesson16",
       "name": "Goldilocks Principle: Making Models Just Right",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -284,27 +269,12 @@
       }
     },
     {
-      "key": "lesson17",
-      "name": "Lesson 17",
-      "absolute_position": 17,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 17,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson17",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
       "key": "lesson18",
       "name": "Planning Your App",
-      "absolute_position": 18,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -315,11 +285,11 @@
     },
     {
       "key": "lesson19",
-      "name": "Project: App with Real World Data",
-      "absolute_position": 19,
+      "name": "Project: App with Real-World Data",
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -331,10 +301,10 @@
     {
       "key": "lesson20",
       "name": "TEMP LEVELS - DELETE LATER",
-      "absolute_position": 20,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -728,6 +698,31 @@
     },
     {
       "chapter": 16,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "You Choose: Restaurant Recommendations",
+        "level_keys": [
+          "ml-intro categorical-food choices"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro categorical-food choices"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-intro categorical-food choices"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -752,7 +747,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -777,7 +772,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -802,32 +797,32 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Conditionals Video (Dan: delete later)",
+        "progression": "Changing Screens",
         "level_keys": [
-          "ml-import ai-conditionals-video2"
+          "ml-models in applab-screens-2"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-import ai-conditionals-video2"
+          "ml-models in applab-screens-2"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       },
       "level_keys": [
-        "ml-import ai-conditionals-video2"
+        "ml-models in applab-screens-2"
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -852,7 +847,57 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Changing Screens",
+        "level_keys": [
+          "ml-models in applab-screens-3"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-screens-3"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models in applab-screens-3"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "You Choose: Quiz Apps",
+        "level_keys": [
+          "ml-models in applab-practice choice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-practice choice"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-models in applab-practice choice"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -877,7 +922,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -902,7 +947,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -927,7 +972,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -952,7 +997,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -977,7 +1022,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1002,7 +1047,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1027,12 +1072,12 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 1]] App",
+        "progression": "Who Survived the Titanic?",
         "level_keys": [
           "ml-use model card-example1A"
         ]
@@ -1052,12 +1097,12 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 1]] App",
+        "progression": "Who Survived the Titanic?",
         "level_keys": [
           "ml-use model card-example1B"
         ]
@@ -1077,12 +1122,12 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 1]] App",
+        "progression": "Who Survived the Titanic?",
         "level_keys": [
           "ml-use model card-example1C"
         ]
@@ -1102,12 +1147,12 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 1]] App",
+        "progression": "Who Survived the Titanic?",
         "level_keys": [
           "ml-use model card-example1D"
         ]
@@ -1127,12 +1172,12 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 1]] App",
+        "progression": "Who Survived the Titanic?",
         "level_keys": [
           "ml-use model card-example1E"
         ]
@@ -1152,12 +1197,12 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 2]] App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
           "ml-use model card-example2A"
         ]
@@ -1177,12 +1222,12 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 2]] App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
           "ml-use model card-example2B"
         ]
@@ -1202,12 +1247,12 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 2]] App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
           "ml-use model card-example2C"
         ]
@@ -1227,12 +1272,12 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 2]] App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
           "ml-use model card-example2D"
         ]
@@ -1252,12 +1297,12 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "[[Example 2]] App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
           "ml-use model card-example2E"
         ]
@@ -1277,8 +1322,108 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Make An App - AI Lab",
+        "level_keys": [
+          "ml-mini project-ai lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-mini project-ai lab"
+        ],
+        "lesson.key": "lesson13",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-mini project-ai lab"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Make an App - App Lab",
+        "level_keys": [
+          "ml-mini project-app lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-mini project-app lab"
+        ],
+        "lesson.key": "lesson13",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-mini project-app lab"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "What Will Your Final Grade Be?",
+        "level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "What Will Your Final Grade Be?",
+        "level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1302,8 +1447,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 2,
+      "chapter": 46,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1327,7 +1472,82 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "App with Real-World Data - AI Lab",
+        "level_keys": [
+          "ml-planning app-ai lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-planning app-ai lab"
+        ],
+        "lesson.key": "lesson18",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-planning app-ai lab"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "App with Real-World Data - AI Lab",
+        "level_keys": [
+          "ml-final project-ai lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-final project-ai lab"
+        ],
+        "lesson.key": "lesson19",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-final project-ai lab"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "App with Real-World Data - App Lab",
+        "level_keys": [
+          "ml-final project-app lab"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-final project-app lab"
+        ],
+        "lesson.key": "lesson19",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-final project-app lab"
+      ]
+    },
+    {
+      "chapter": 50,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1352,7 +1572,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1545,6 +1765,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-intro categorical-food choices",
+        "script_level.level_keys": [
+          "ml-intro categorical-food choices"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-models in applab-vacation example",
         "script_level.level_keys": [
           "ml-models in applab-vacation example"
@@ -1578,9 +1809,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-import ai-conditionals-video2",
+        "level.key": "ml-models in applab-screens-2",
         "script_level.level_keys": [
-          "ml-import ai-conditionals-video2"
+          "ml-models in applab-screens-2"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -1592,6 +1823,28 @@
         "level.key": "ml-models in applab-screens-1",
         "script_level.level_keys": [
           "ml-models in applab-screens-1"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models in applab-screens-3",
+        "script_level.level_keys": [
+          "ml-models in applab-screens-3"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models in applab-practice choice",
+        "script_level.level_keys": [
+          "ml-models in applab-practice choice"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -1787,7 +2040,51 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-unit-5-goldilocks-principle-app-lab",
+        "level.key": "ml-mini project-ai lab",
+        "script_level.level_keys": [
+          "ml-mini project-ai lab"
+        ],
+        "lesson.key": "lesson13",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-mini project-app lab",
+        "script_level.level_keys": [
+          "ml-mini project-app lab"
+        ],
+        "lesson.key": "lesson13",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-unit-5-goldilocks-principle-app-lab-underfitted",
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-app-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-unit-5-goldilocks-principle-ai-lab-underfitted",
+        "script_level.level_keys": [
+          "csd-unit-5-goldilocks-principle-ai-lab-underfitted"
+        ],
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-unit-5-goldilocks-principle-app-lab-overfitted",
         "script_level.level_keys": [
           "csd-unit-5-goldilocks-principle-app-lab"
         ],
@@ -1798,11 +2095,44 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-unit-5-goldilocks-principle-ai-lab",
+        "level.key": "csd-unit-5-goldilocks-principle-ai-lab-overfitted",
         "script_level.level_keys": [
           "csd-unit-5-goldilocks-principle-ai-lab"
         ],
         "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-planning app-ai lab",
+        "script_level.level_keys": [
+          "ml-planning app-ai lab"
+        ],
+        "lesson.key": "lesson18",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-final project-ai lab",
+        "script_level.level_keys": [
+          "ml-final project-ai lab"
+        ],
+        "lesson.key": "lesson19",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-final project-app lab",
+        "script_level.level_keys": [
+          "ml-final project-app lab"
+        ],
+        "lesson.key": "lesson19",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }

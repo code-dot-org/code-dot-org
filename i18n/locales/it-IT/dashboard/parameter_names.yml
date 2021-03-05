@@ -1,0 +1,23 @@
+it:
+  data:
+    parameter_names:
+      actor: personaggio
+      color: colore
+      counter: contatore
+      dir: dir
+      direction: direzione
+      height: altezza
+      honey: miele
+      left: a sinistra
+      length: lunghezza
+      min: min
+      nectar units: unità di nettare
+      nectars: nettare
+      numOctagons: numOctagons
+      points: punti
+      radius: raggio
+      sides: lati
+      size: dimensione
+      speed: velocità
+      theGuess: risposta
+      width: larghezza

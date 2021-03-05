@@ -1,0 +1,143 @@
+---
+title: Careers at Code.org
+nav: about_nav
+video_player: true
+theme: responsive
+---
+<link rel="stylesheet" type="text/css" rel= "stylesheet" href="/css/careers.css" />
+
+<div class="careers__banner careers__teal">
+ <h1>Help us Change the World, One Student at a Time</h1>
+</div>
+
+<div>
+
+  <div class="col-50" style="padding-right: 18px">
+    <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
+    <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+    <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
+  </div>
+
+  <div class="col-50 careers__intro-text">
+    <p>Code.org is a nonprofit organization dedicated to expanding access to computer science in schools. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra as a part of their core K-12 education.</p>
+    <p>We are especially focused on increasing participation among young women and underrepresented students. Come join our team to help make this vision a reality!</p>
+    <a href="#roles" class="careers__explore"><button class="careers__explore-button">Explore Roles</button></a>
+  </div>
+
+  <div style="clear: both;"></div>
+
+</div>
+
+<h2 class="careers-header">Our Core Values</h2>
+<div class="careers__section-container" >
+  <div class="careers__values-group">
+    <div class="careers__values-tile careers__teal">
+      <img class="careers__values-icon" src="../images/values/ValuesIcon1.png" alt=""/>
+      <p>We believe Computer Science is foundational for all students</p>
+    </div>
+    <div class="careers__values-tile careers__middle careers__purple">
+      <img class="careers__values-icon" src="../images/values/ValuesIcon2.png" alt=""/>
+      <p>We are committed to equity, access, and opportunity</p>
+    </div>
+    <div class="careers__values-tile careers__orange">
+      <img class="careers__values-icon" src="../images/values/ValuesIcon3.png" alt=""/>
+      <p>We believe in the power of a collaborative education community</p>
+    </div>
+  </div>
+  <div class="careers__values-group">
+    <div class="careers__values-tile careers__cyan">
+      <img class="careers__values-icon" src="../images/values/ValuesIcon4.png" alt=""/>
+      <p>We are agile and responsive to feedback</p>
+    </div>
+    <div class="careers__values-tile careers__middle careers__green">
+      <img class="careers__values-icon" src="../images/values/ValuesIcon5.png" alt=""/>
+      <p>We act with integrity and transparency</p>
+    </div>
+    <div class="careers__values-tile careers__dark-gray">
+      <img class="careers__values-icon" src="../images/values/ValuesIcon6.png" alt=""/>
+      <p>We believe broad impact requires thinking big and acting holistically</p>
+    </div>
+  </div>
+</div>
+
+<h2 class="careers-header">Live Your Best Life</h2>
+<div class="careers__section-container" >
+  <div class="careers__benefits-container">
+    <div class="careers__benefits-tile-container">
+      <p class="careers__benefits-tile careers__benefits-left careers__teal">
+        Health Benefits for You and Your Family
+      </p>
+      <div class="careers__benefits-decorator careers__teal">
+        <img class="careers__benefits-icon" src="../images/careers-at-code/benefits-health.png" alt=""/>
+      </div>
+    </div>
+    <div class="careers__benefits-tile-container">
+      <div class="careers__benefits-decorator careers__green">
+        <img class="careers__benefits-icon" src="../images/careers-at-code/benefits-flex.png" alt=""/>
+      </div>
+      <p class="careers__benefits-tile careers__benefits-right careers__green">
+        Flexible, Supportive Work Environment
+      </p>
+    </div>
+    <div class="careers__benefits-tile-container">
+      <p class="careers__benefits-tile careers__benefits-left careers__orange">
+        Generous PTO and Leave Plans
+      </p>
+      <div class="careers__benefits-decorator careers__orange">
+        <img class="careers__benefits-icon" src="../images/careers-at-code/benefits-pto.png" alt=""/>
+      </div>
+    </div>
+    <div class="careers__benefits-tile-container">
+      <div class="careers__benefits-decorator careers__purple">
+        <img class="careers__benefits-icon" src="../images/careers-at-code/benefits-pd.png" alt=""/>
+      </div>
+      <p class="careers__benefits-tile careers__benefits-right careers__purple">
+        Growth and Learning
+      </p>
+    </div>
+  </div>
+
+  <p>
+    We care about our employees and are dedicated to supporting everyone both at work and outside of work. We know that everyone has different needs, which is why we offer a holistic benefits package that will ensure that you (and your family) are taken care of.
+    </p>
+</div>
+
+
+<h2 class="careers-header" id="roles">Come Work with Us</h2>
+
+Code.org is based in Seattle, but many of our team members are remote; remote candidates are welcome and encouraged to apply!
+
+<div id='lever-jobs-container'></div>
+<script type='text/javascript'>
+
+  window.leverJobsOptions = {accountName: 'Code.org'};
+
+</script>
+<script type='text/javascript' src='https://andreasmb.github.io/lever-jobs-embed/index.js'></script>
+
+<div class="careers__future">
+  We're always on the lookout for people who want to help make our vision a reality! Even if we don't have a job posted right now that matches your skills, we'd still love to hear from you via <a href="https://jobs.lever.co/code.org/6ca7d2c4-9965-4cf0-960e-de58e3d0d829">this application</a>.
+</div>
+
+<h2 class="careers-header">Get Involved</h2>
+
+<a href="https://code.org/educate/professional-learning/facilitator">Join the Facilitator Development Program</a><br />
+<a href="https://code.org/volunteer/guide">Volunteer in Classrooms</a><br />
+<a href="https://code.org/translate/course-catalog">Help Translate Courses</a>
+
+<div class="careers__team-photos">
+    <img src="../images/careers-at-code/all-hands-2020.jpg">
+    <img src="../images/careers-at-code/code-pride.jpg">
+</div>
+
+_We embrace diverse perspectives, ideas, and backgrounds at Code.org. We are committed to providing an equal opportunity to all employees and applicants. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability (mental and physical) status._
+
+_We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org_ 
+
+<div class="careers__banner--faq" style="margin-top: 28px">
+  <i class="fa fa-question-circle-o"></i>
+  <div style="width: 100%">
+    <h2>Questions about joining our team?</h2>
+    <h3><a href="/faq">Check out our Frequently Asked Questions page.</a></h3>
+  </div>
+</div>

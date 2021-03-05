@@ -1,0 +1,21 @@
+---
+hr:
+  data:
+    variable_names:
+      actor: lik
+      counter: brojač
+      height: visina
+      honey: med
+      left: lijevo
+      length: duljina
+      name: ime
+      nectar: nektar
+      points: bodovi
+      random: slučajno odabran
+      repeat: ponovi
+      right: desno
+      score: bodovi
+      size: veličina
+      speed: brzina
+      wizard: čarobnjak
+      x: x

@@ -75,8 +75,9 @@ export default class MarkdownEnabledTextarea extends React.Component {
     this.handleCloseAddResourceLink();
   };
 
-  handleUploadImage = url => {
-    this.changeMarkdown(this.props.markdown + `\n\n![](${url})`);
+  handleUploadImage = (url, expandable) => {
+    const param = expandable ? 'expandable' : '';
+    this.changeMarkdown(this.props.markdown + `\n\n![${param}](${url})`);
   };
 
   render() {

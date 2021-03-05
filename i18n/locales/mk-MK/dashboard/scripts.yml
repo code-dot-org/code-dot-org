@@ -321,3 +321,11 @@ mk:
           lesson_groups:
             lessonGroup-3:
               display_name: Променливи
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Лупови
+              name: Лупови
+            Variables:
+              key: Променливи
+              name: Променливи
