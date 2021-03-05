@@ -6,6 +6,17 @@ import PropTypes from 'prop-types';
 export const PUZZLE_PAGE_NONE = -1;
 
 /**
+ * @typedef {Object} Student
+ *
+ * @property {number} id
+ * @property {string} name
+ */
+export const studentType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
+/**
  * @typedef {Object} Level
  *
  * @property {string} id The id of the level. It is intentionally
