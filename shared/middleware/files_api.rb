@@ -18,6 +18,7 @@ class FilesApi < Sinatra::Base
   end
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
+  DISALLOWED_HTML_TAGS = ['script'].freeze
 
   def get_bucket_impl(endpoint)
     case endpoint
@@ -302,6 +303,11 @@ class FilesApi < Sinatra::Base
 
   def html?(headers)
     headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
+  end
+
+  def html_file?(filename)
+    return false unless filename
+    File.extname(filename.downcase) == '.html'
   end
 
   #
@@ -616,6 +622,12 @@ class FilesApi < Sinatra::Base
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+
+    if html_file?(unescaped_filename)
+      # Nokogiri element selector tags must start with //
+      disallowed_tag_selectors = DISALLOWED_HTML_TAGS.map {|tag| '//' + tag}
+      bad_request unless Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    end
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
