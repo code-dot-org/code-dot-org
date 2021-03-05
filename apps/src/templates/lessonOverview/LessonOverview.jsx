@@ -124,7 +124,19 @@ class LessonOverview extends Component {
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <LessonNavigationDropdown lesson={lesson} />
+            <div>
+              {lesson.lessonPlanPdfUrl && (
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.gray}
+                  download
+                  href={lesson.lessonPlanPdfUrl}
+                  style={{marginRight: 10}}
+                  text={i18n.printLessonPlan()}
+                />
+              )}
+              <LessonNavigationDropdown lesson={lesson} />
+            </div>
           </div>
         </div>
         {isSignedIn && (
@@ -209,16 +221,6 @@ class LessonOverview extends Component {
                   </div>
                 )}
               </div>
-            )}
-
-            {lesson.lessonPlanPdfUrl && (
-              <Button
-                __useDeprecatedTag
-                color={Button.ButtonColor.orange}
-                download
-                href={lesson.lessonPlanPdfUrl}
-                text={i18n.printLessonPlan()}
-              />
             )}
 
             {lesson.vocabularies.length > 0 && (
