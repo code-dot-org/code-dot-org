@@ -11,6 +11,7 @@ import {
 import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
+import ProgressTableTextCell from './ProgressTableTextCell';
 
 const COLUMN_WIDTH = 40;
 
@@ -51,11 +52,11 @@ class ProgressTableSummaryView extends React.Component {
   }
 
   timeSpentCellFormatter(lesson, student) {
-    return '10';
+    return <ProgressTableTextCell text="10" />;
   }
 
   lastUpdatedCellFormatter(lesson, student) {
-    return '1/1';
+    return <ProgressTableTextCell text="1/1" />;
   }
 
   render() {
