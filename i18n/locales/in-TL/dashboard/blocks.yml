@@ -1049,6 +1049,8 @@ in:
           UNIT:
             '"seconds"': crwdns2462252:0crwdne2462252:0
             '"frames"': crwdns2462254:0crwdne2462254:0
+      gamelab_hideHaiku:
+        text: crwdns2483930:0crwdne2483930:0
       gamelab_hideTitleScreen:
         text: crwdns169053:0crwdne169053:0
       gamelab_ifVarEquals:
@@ -1192,6 +1194,8 @@ in:
             '"East"': crwdns169104:0crwdne169104:0
             '"South"': crwdns169105:0crwdne169105:0
             '"West"': crwdns169106:0crwdne169106:0
+      gamelab_printHaiku:
+        text: crwdns2483932:0[BREAK]crwdnd2483932:0[0]crwdnd2483932:0[TITLE]crwdnd2483932:0[1]crwdnd2483932:0[AUTHOR]crwdnd2483932:0[2]crwdnd2483932:0[LINE1]crwdnd2483932:0[3]crwdnd2483932:0[LINE2]crwdnd2483932:0[4]crwdnd2483932:0[LINE3]crwdnd2483932:0[5]crwdne2483932:0
       gamelab_printText:
         text: crwdns401078:0[TEXT]crwdnd401078:0[0]crwdne401078:0
       gamelab_randColor:

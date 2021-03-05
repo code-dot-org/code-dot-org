@@ -1467,28 +1467,12 @@
       "CourseD_EOC_starwars": {
         "display_name": "Create a Star Wars game",
         "short_instructions": "Create your own Star Wars game!",
-        "long_instructions": "Create your own Star Wars game!",
-        "block_categories": {
-          "Actions": "Actions",
-          "Events": "Events",
-          "Loops": "Loops",
-          "Math": "Math",
-          "Logic": "Logic",
-          "Games/Score": "Games/Score"
-        }
+        "long_instructions": "Create your own Star Wars game!"
       },
       "CourseD_EOC_dance": {
         "display_name": "Create a dance",
         "short_instructions": "Create your own dance!",
-        "long_instructions": "Create your own dance!",
-        "block_categories": {
-          "World": "World",
-          "Dancers": "Dancers",
-          "Properties": "Properties",
-          "Events": "Events",
-          "Numbers": "Numbers",
-          "Logic": "Logic"
-        }
+        "long_instructions": "Create your own dance!"
       },
       "CourseD_EOC_artist": {
         "display_name": "Create a drawing",

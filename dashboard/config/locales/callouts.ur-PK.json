@@ -107,6 +107,9 @@
         },
         "outbreak7": {
           "costumes_callout": "نیا کاسٹیوم بنانے کے لئے کلک کریں"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "کیا اسکرین سبز ہوگئی؟ اگر ایسا ہے تو ، 'Fisnish' کو دبائیں۔ اگر نہیں تو ، 'Reset' کو دبائیں ، اپنا کوڈ تبدیل کریں ، اور 'Run' کو دوبارہ دبائیں۔"
         }
       }
     }
