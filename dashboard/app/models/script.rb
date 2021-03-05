@@ -1493,11 +1493,11 @@ class Script < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(is_student = false)
     {
       displayName: localized_title,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map(&:summarize_for_lesson_dropdown)
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
   end
 

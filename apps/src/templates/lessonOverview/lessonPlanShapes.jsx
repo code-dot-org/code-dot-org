@@ -91,3 +91,37 @@ export const lessonShape = PropTypes.shape({
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string
 });
+
+export const studentLessonShape = PropTypes.shape({
+  unit: PropTypes.shape({
+    displayName: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    lessons: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        position: PropTypes.number.isRequired,
+        displayName: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired
+      })
+    ).isRequired
+  }).isRequired,
+  position: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  displayName: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  resources: PropTypes.arrayOf(PropTypes.object),
+  vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired
+});
+
+export const navigationLessonShape = PropTypes.shape({
+  unit: PropTypes.shape({
+    lessons: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        position: PropTypes.number.isRequired,
+        displayName: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired
+      })
+    ).isRequired
+  }).isRequired
+});
