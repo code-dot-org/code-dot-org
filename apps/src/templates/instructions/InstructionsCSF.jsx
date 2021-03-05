@@ -597,7 +597,12 @@ class InstructionsCSF extends React.Component {
                   : styles.instructionsWithTips)
             ]}
           >
-            <ChatBubble ttsUrl={ttsUrl}>
+            <ChatBubble
+              ttsUrl={ttsUrl}
+              textToSpeechEnabled={!!ttsUrl}
+              isMinecraft={this.props.isMinecraft}
+              skinId={this.props.skinId}
+            >
               <Instructions
                 ref={c => {
                   this.instructions = c;
@@ -653,6 +658,8 @@ class InstructionsCSF extends React.Component {
                   this.props.isMinecraft ? color.white : color.charcoal
                 }
                 message={this.props.feedback.message}
+                isMinecraft={this.props.isMinecraft}
+                skinId={this.props.skinId}
               />
             )}
             {this.shouldDisplayHintPrompt() && (
@@ -660,6 +667,8 @@ class InstructionsCSF extends React.Component {
                 borderColor={color.yellow}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
+                isMinecraft={this.props.isMinecraft}
+                skinId={this.props.skinId}
               />
             )}
           </div>
