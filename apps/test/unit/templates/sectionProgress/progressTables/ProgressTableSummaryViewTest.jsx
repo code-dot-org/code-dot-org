@@ -24,8 +24,16 @@ import {
   fakeProgressTableReduxInitialState
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-const LESSON_1 = fakeLessonWithLevels({position: 1, levels: fakeLevels(1)});
-const LESSON_2 = fakeLessonWithLevels({position: 2, levels: fakeLevels(2)});
+const LESSON_1 = fakeLessonWithLevels({
+  id: 1,
+  position: 1,
+  levels: fakeLevels(1)
+});
+const LESSON_2 = fakeLessonWithLevels({
+  id: 2,
+  position: 2,
+  levels: fakeLevels(2)
+});
 const STAGES = [LESSON_1, LESSON_2];
 const STUDENTS = fakeStudents(2);
 const SCRIPT_DATA = fakeScriptData({stages: STAGES});
