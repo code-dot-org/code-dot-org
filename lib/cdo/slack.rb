@@ -45,7 +45,7 @@ class Slack
 
     response = Retryable.retryable(on: [Errno::ETIMEDOUT, OpenURI::HTTPError], tries: 2) do
       open(
-        'https://slack.com/api/channels.info'\
+        'https://slack.com/api/conversations.info'\
         "?token=#{SLACK_TOKEN}"\
         "&channel=#{channel_id}"\
       )
@@ -77,7 +77,7 @@ class Slack
     channel_id = get_channel_id(channel_name)
     return false unless channel_id
 
-    response = open('https://slack.com/api/channels.setTopic'\
+    response = open('https://slack.com/api/conversations.setTopic'\
       "?token=#{SLACK_TOKEN}"\
       "&channel=#{channel_id}"\
       "&topic=#{new_topic}"
@@ -180,9 +180,9 @@ class Slack
 
   def self.join_room(name)
     response = open(
-      'https://slack.com/api/channels.join'\
+      'https://slack.com/api/conversations.join'\
       "?token=#{SLACK_TOKEN}"\
-      "&name=#{name}"\
+      "&channel=#{get_channel_id(name)}"
     )
 
     result = JSON.parse(response.read)
@@ -197,7 +197,8 @@ class Slack
   private_class_method def self.get_channel_id(channel_name)
     raise "CDO.slack_token undefined" if SLACK_TOKEN.nil?
     # Documentation at https://api.slack.com/methods/channels.list.
-    slack_api_url = "https://slack.com/api/channels.list?token=#{SLACK_TOKEN}"
+    slack_api_url = "https://slack.com/api/conversations.list"\
+      "?token=#{SLACK_TOKEN}&limit=1000&types=public_channel&exclude_archived=true"
     channels = open(slack_api_url).read
     begin
       parsed_channels = JSON.parse(channels)

@@ -62,7 +62,7 @@ To see what's available in your language, visit our
 = view :csp_information
 %br/
 %br/
-- @show_csa = DCDO.get('courses_show_csa', false)
+- @show_csa = DCDO.get('courses_show_csa', CDO.default_courses_show_csa)
 - if @show_csa
   %h2 Computer Science A (coming in 2022)
   %br/

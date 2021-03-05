@@ -1,0 +1,31 @@
+sk:
+  data:
+    variable_names:
+      Blue: Modrá
+      Green: Zelená
+      Red: Červená
+      actor: postava
+      binary: binárny
+      cats: mačiek
+      color: farba
+      counter: počítadlo
+      dogs: psov
+      height: výška
+      honey: med
+      i: i
+      left: vľavo
+      length: dĺžka
+      name: meno
+      nectar: nektár
+      points: body
+      random: náhodný
+      repeat: opakuj
+      right: vpravo
+      score: skóre
+      sides: Strany
+      size: veľkosť
+      speed: rýchlosť
+      variable: premenná
+      width: šírka
+      wizard: čarodejník
+      x: x

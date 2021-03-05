@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableSummaryCell from './ProgressTableSummaryCell';
-import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/summary/SummaryViewLegend';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
 
 const COLUMN_WIDTH = 40;
 

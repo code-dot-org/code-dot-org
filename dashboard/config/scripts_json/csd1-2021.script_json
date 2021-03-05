@@ -6000,27 +6000,27 @@
     {
       "name": "What is a Computer (Version B)",
       "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
-      "key": "what-is-a-computer-version-B",
+      "key": "what-is-a-computer-version-b",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "what-is-a-computer-version-B"
+        "resource.key": "what-is-a-computer-version-b"
       }
     },
     {
       "name": "What is a Computer (Version A)",
       "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
-      "key": "what-is-a-computer-version-A",
+      "key": "what-is-a-computer-version-a",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "what-is-a-computer-version-A"
+        "resource.key": "what-is-a-computer-version-a"
       }
     },
     {
@@ -6560,13 +6560,13 @@
     {
       "seeding_key": {
         "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-version-B"
+        "resource.key": "what-is-a-computer-version-b"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-version-A"
+        "resource.key": "what-is-a-computer-version-a"
       }
     },
     {

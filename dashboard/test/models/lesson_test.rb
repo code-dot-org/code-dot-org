@@ -477,12 +477,16 @@ class LessonTest < ActiveSupport::TestCase
     script = create :script, name: 'dummy-script'
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, key: 'dummy-key', name: 'Dummy Name'
+    lesson.student_overview = 'student overview'
+    lesson.overview = 'teacher overview'
 
     expected_i18n = {
       'dummy-script' => {
         'lessons' => {
           'dummy-key' => {
-            'name' => 'Dummy Name'
+            'name' => 'Dummy Name',
+            'description_student' => 'student overview',
+            'description_teacher' => 'teacher overview'
           }
         }
       }
@@ -755,6 +759,24 @@ class LessonTest < ActiveSupport::TestCase
     create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
     assert_equal 2, lesson.resources_for_lesson_plan(true)['Teacher'].count
     assert_equal 1, lesson.resources_for_lesson_plan(false)['Teacher'].count
+  end
+
+  test 'lesson_plan_pdf_url supports new lesson plan PDFs' do
+    old_lesson = create :lesson
+    assert_equal(
+      old_lesson.lesson_plan_pdf_url,
+      "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf"
+    )
+
+    script = create :script, is_migrated: true, hidden: true
+    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    assert_nil(new_lesson.lesson_plan_pdf_url)
+
+    script.seeded_from = Time.now.to_s
+    assert_equal(
+      new_lesson.lesson_plan_pdf_url,
+      "https://cdo-lesson-plans.s3.amazonaws.com/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/Some Verbose Lesson Name.pdf"
+    )
   end
 
   def create_swapped_lockable_lesson

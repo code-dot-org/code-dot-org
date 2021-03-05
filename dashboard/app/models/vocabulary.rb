@@ -9,6 +9,7 @@
 #  course_version_id :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  properties        :text(65535)
 #
 # Indexes
 #
@@ -16,11 +17,19 @@
 #  index_vocabularies_on_word_and_definition        (word,definition)
 #
 class Vocabulary < ApplicationRecord
+  include SerializedProperties
+
   has_and_belongs_to_many :lessons, join_table: :lessons_vocabularies
   has_many :lessons_vocabularies
   belongs_to :course_version
 
   before_validation :generate_key, on: :create
+
+  validate :check_readonly_fields, on: :update
+
+  serialized_attrs %w(
+    common_sense_media
+  )
 
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
@@ -44,7 +53,13 @@ class Vocabulary < ApplicationRecord
   end
 
   def summarize_for_lesson_edit
-    {id: id, key: key, word: word, definition: definition}
+    {
+      id: id,
+      key: key,
+      word: word,
+      definition: definition,
+      commonSenseMedia: !!common_sense_media
+    }
   end
 
   def summarize_for_edit
@@ -53,13 +68,14 @@ class Vocabulary < ApplicationRecord
       key: key,
       word: word,
       definition: definition,
-      lessons: lessons.map(&:id)
+      lessons: lessons.map(&:id),
+      commonSenseMedia: !!common_sense_media
     }
   end
 
   def generate_key
     return if key
-    self.key = word
+    self.key = common_sense_media ? "#{word}_csm" : word
   end
 
   private
@@ -70,5 +86,10 @@ class Vocabulary < ApplicationRecord
 
   def display_definition
     definition
+  end
+
+  def check_readonly_fields
+    errors.add(:word, "cannot be updated") if word_changed?
+    errors.add(:definition, "cannot be updated for common sense media vocabulary") if common_sense_media && definition_changed?
   end
 end

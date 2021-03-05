@@ -10,11 +10,6 @@ class AzureTextToSpeechTest < ActionController::TestCase
     CDO.stubs(:azure_speech_service_region).returns(@region)
   end
 
-  teardown do
-    # Some tests access and store data in the cache, so clear between tests to avoid state leakage
-    CDO.shared_cache.clear
-  end
-
   test 'get_token: returns token on success' do
     stub_request(:post, "https://#{@region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
       with(headers: {'Ocp-Apim-Subscription-Key' => @api_key}).
@@ -132,18 +127,15 @@ class AzureTextToSpeechTest < ActionController::TestCase
     assert_nil AzureTextToSpeech.get_voices
   end
 
-  # 02/17/2020 Disabling this test temporarily as it's blocking the build due to flakiness.
-  # TODO: (madelynkasula) Re-enable this test in https://github.com/code-dot-org/code-dot-org/pull/39108
-  #
-  # test 'get_azure_speech_service_voices returns nil on error' do
-  #   AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
-  #   Honeybadger.expects(:notify).once
-  #   stub_request(:get, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/voices/list").
-  #     with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
-  #     to_raise(ArgumentError)
+  test 'get_azure_speech_service_voices returns nil on error' do
+    AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
+    Honeybadger.expects(:notify).once
+    stub_request(:get, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/voices/list").
+      with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
+      to_raise(ArgumentError)
 
-  #   assert_nil AzureTextToSpeech.get_voices
-  # end
+    assert_nil AzureTextToSpeech.get_voices
+  end
 
   test 'get_voice_by: returns voice name if exists for given locale + gender' do
     AzureTextToSpeech.stubs(:get_voices).returns(

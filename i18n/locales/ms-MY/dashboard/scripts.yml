@@ -1042,3 +1042,20 @@ ms:
           description_short: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
           description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
           student_description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Gelung
+              name: Gelung
+            Events:
+              key: Acara-acara
+              name: Acara-acara
+            Conditionals:
+              key: Bersyarat
+              name: Bersyarat
+            Functions:
+              key: Fungsi
+              name: Fungsi
+            Variables:
+              key: Pembolehubah
+              name: Pembolehubah

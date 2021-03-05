@@ -18,6 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 16:59:21 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -1396,7 +1397,7 @@
       "key": "cd2244da-6c7b-4f9d-8f4f-4a8c64f8874e",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** With a partner, brainstorm lists of information that you encounter on a daily basis. Why are lists useful?",
+        "description": "[slide] \n **Discuss:** *With a partner, brainstorm lists of information that you encounter on a daily basis. Why are lists useful?*",
         "name": "Preview Lists\r"
       },
       "seeding_key": {
@@ -1408,7 +1409,7 @@
       "key": "ad81ee6a-1ae7-4fa4-a08e-6475f2e1b2d9",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students discuss with a partner and then have a few students share out their responses.\n\n**Discussion Goal:** \n\n* Lists help us group together like information\n* We can go through a list item by item to check off things we have completed\n* Lists help us stay organized\n\n"
+        "description": "Have students discuss with a partner and then have a few students share out their responses.\n\n**Discussion Goal:** \n\n* Lists help us group together like information\n* We can go through a list item by item to check off things we have completed\n* Lists help us stay organized\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ad81ee6a-1ae7-4fa4-a08e-6475f2e1b2d9",
@@ -1479,7 +1480,7 @@
       "key": "22844107-66ce-4b99-b711-0844a7a2f9d3",
       "position": 1,
       "properties": {
-        "description": "[slide] \n **Prompt:** What are some similarities and differences between variables and lists? How does a list manage complexity in a program?\n\n**Discussion Goal:** Students may bring up the following points:\n\n* Both are used to store information\n* Lists store multiple items, but variables only store one\n* When written in Javascript, both start with the keyword var\n* Lists are written with square brackets around them \n* Lists can store many different types of data\n\nManaging complexity:\n\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\n\n\n"
+        "description": "[slide] \n **Discuss:** *What are some similarities and differences between variables and lists? How does a list manage complexity in a program?*\n\n**Discussion Goal:** Students may bring up the following points:\n\n* Both are used to store information\n* Lists store multiple items, but variables only store one\n* When written in Javascript, both start with the keyword var\n* Lists are written with square brackets around them \n* Lists can store many different types of data\n\nManaging complexity:\n\n* You don't need to know how a list is created in order to use it - all you need is the name. There is a separation between the abstract properties of the data type (list) and the concrete details of its representation.\n* Programs that use lists are easier to read and manage - separate variables are not needed for each  individual element\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "22844107-66ce-4b99-b711-0844a7a2f9d3",
@@ -1508,7 +1509,7 @@
       "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
       "position": 2,
       "properties": {
-        "description": "[slide] \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n[slide] \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n[slide] \n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room."
+        "description": "[slide] \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n[slide] \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n[slide] \n **Discuss:** *Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.*"
       },
       "seeding_key": {
         "activity_section.key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
@@ -1530,7 +1531,7 @@
       "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
       "position": 4,
       "properties": {
-        "description": "[slide] \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n[slide] \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.",
+        "description": "[slide] \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n[slide] \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** *Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.*",
         "name": "Changing Lists\r"
       },
       "seeding_key": {
@@ -1588,7 +1589,7 @@
       "key": "352086b2-e0d2-4ef8-a188-410cbaa1c5fb",
       "position": 3,
       "properties": {
-        "description": "[slide] \n **Prompt:** What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?\n\n**Discussion Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\n\n",
+        "description": "[slide] \n **Discuss:** *What aspects of using lists do you feel you already understand? What questions do you want to dig into more tomorrow during the practice lesson?*\n\n**Discussion Goal:** Use this discussion to identify any points of confusion that will need to be reviewed in coming lessons.\n\n",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -1600,7 +1601,7 @@
       "key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Have students write in their journals, then share with a neighbor, then finally discuss as a class."
+        "description": "Have students write in their journals, then share with a neighbor, then finally discuss as a class."
       },
       "seeding_key": {
         "activity_section.key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
@@ -1757,7 +1758,7 @@
       "key": "9ec7080a-013e-438a-9154-8450fbd6548f",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** What aspects of working with lists do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Discuss:** Have students share with one another before sharing with the whole class.\n\n[slide]  **Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
+        "description": "**Discuss:** *What aspects of working with lists do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n[slide]  **Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9ec7080a-013e-438a-9154-8450fbd6548f",
@@ -1814,7 +1815,7 @@
       "key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Imagine you want to build an app for reminders. What information do you think would be stored in a list?\n\n**Discussion Goal:** Students may struggle with this question. It's ok if they don't get it right away. The goal is to prime their thinking before they look at the sample app. \n\n**Sample Answer:** The reminders could be stored in a list. "
+        "description": "[slide] **Discuss:** *Imagine you want to build an app for reminders. What information do you think would be stored in a list?*\n\n**Discussion Goal:** Students may struggle with this question. It's ok if they don't get it right away. The goal is to prime their thinking before they look at the sample app. \n\n**Sample Answer:** The reminders could be stored in a list. "
       },
       "seeding_key": {
         "activity_section.key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
@@ -1866,7 +1867,7 @@
       "key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
       "position": 3,
       "properties": {
-        "description": "[slide] **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n\n* How many lists do you think are needed to make this app work?\n\t* Only one list is needed. It stores all of the reminders.\n\n* What programming patterns with lists do you think you'll need to use? \n\t* This app uses the List Scrolling pattern. \n"
+        "description": "If students are not working in pairs they should still discuss the discuss with a neighbor.\n\n[slide] **Discuss:** \n\n\n* *How many lists do you think are needed to make this app work?*\n\t* Only one list is needed. It stores all of the reminders.\n\n* *What programming patterns with lists do you think you'll need to use?* \n\t* This app uses the List Scrolling pattern. \n"
       },
       "seeding_key": {
         "activity_section.key": "8bdd1c82-4e75-463a-b3fb-2eee610a0bb4",
@@ -2056,7 +2057,7 @@
       "key": "0213983a-37f2-416d-af62-73a753e7ee20",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Prompt:** Imagine you are interested in finding out how much time it takes on average to walk from one end of your school to the next. You've decided to figure this out on your lunch break, and are able to complete the walk 20 times. What would your algorithm look like? Where could a loop show up? \r\n\r\n* **Note:** You do not need to write your algorithm in a programming language. You can write it out in English or in pseudocode."
+        "description": "[slide] \n **Discuss:** *Imagine you are interested in finding out how much time it takes on average to walk from one end of your school to the next. You've decided to figure this out on your lunch break, and are able to complete the walk 20 times. What would your algorithm look like? Where could a loop show up?*\n\n* **Note:** You do not need to write your algorithm in a programming language. You can write it out in English or in pseudocode."
       },
       "seeding_key": {
         "activity_section.key": "0213983a-37f2-416d-af62-73a753e7ee20",
@@ -2067,7 +2068,7 @@
       "key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Compare your algorithms with a partner and then discuss as a class.\n\n**Discussion Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\n\n* Repeat 20 times:\n\t* Stand at the entry doors to the school.\n\t* Start the timer.\n\t* Walk at a steady pace to the end of the hallway. \n\t* Turn off the timer.\n\t* Record the time in a notebook.\n\t* Walk back to the entry doors.\n\n* Add all times together.\n* Divide by 20 to find the average.\n\n\n"
+        "description": "Compare your algorithms with a partner and then discuss as a class.\n\n**Discussion Goal:** The point of this activity is for students to see the need for a loop. Algorithms might look something like this:\n\n* Repeat 20 times:\n\t* Stand at the entry doors to the school.\n\t* Start the timer.\n\t* Walk at a steady pace to the end of the hallway. \n\t* Turn off the timer.\n\t* Record the time in a notebook.\n\t* Walk back to the entry doors.\n\n* Add all times together.\n* Divide by 20 to find the average.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fad22b5d-5a24-4b6e-b09b-efaf7477d48a",
@@ -2106,7 +2107,7 @@
       "key": "b5c73127-81e0-4658-9e0e-440a67548712",
       "position": 2,
       "properties": {
-        "description": "[slide]\n**Prompt:** The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?\n\n**Discussion Goal:** Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
+        "description": "[slide]\n**Discuss:** *The first app we are going to investigate uses a loops in a simulation. What is a simulation? Why are they useful?*\n\n**Discussion Goal:** Simulations allow us to test solutions or run experiments in a way that is usually cheaper, safer, and often times faster. Simulations are models of the real world that allow the user to investigate hypotheses and draw conclusions. Oftentimes they involve inputting various sets of data or values to demonstrate the changing state of a phenomenon. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b5c73127-81e0-4658-9e0e-440a67548712",
@@ -2151,7 +2152,7 @@
       "key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
       "position": 6,
       "properties": {
-        "description": "[slide] \n **Prompt:** How does a loop help when running similar simulations?\n\n**Discussion Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
+        "description": "[slide] \n **Discuss:** *How does a loop help when running similar simulations?*\n\n**Discussion Goal:** A loop lets us repeat code quickly to determine an answer to a question. \n\nInside the loop we can use random number generation to get a variety of possible answers, similar to what would happen in the real world. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "7afade0d-fee2-441b-9ba3-a3f6c3119f69",
@@ -2186,7 +2187,7 @@
       "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
       "position": 9,
       "properties": {
-        "description": "[slide] \n**Prompt:** Find the four different for loops in the program. What do they each do?\n \n[slide] **Prompt:** Take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
+        "description": "[slide] **Discuss:** *Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n[slide] **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n[slide] **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
       },
       "seeding_key": {
         "activity_section.key": "c862e5d9-df4a-4504-94b6-dd974574b589",
@@ -2209,7 +2210,7 @@
       "key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
       "position": 2,
       "properties": {
-        "description": "[slide] \n **Prompt:** What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
+        "description": "[slide] \n **Discuss:** *What aspects of working with for loops do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "9abbe9df-c5f2-43c2-b2d3-ed8584971997",
@@ -2217,19 +2218,8 @@
       }
     },
     {
-      "key": "3e39fb67-ced6-448c-ba71-4266b8df6b2e",
-      "position": 3,
-      "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
-      },
-      "seeding_key": {
-        "activity_section.key": "3e39fb67-ced6-448c-ba71-4266b8df6b2e",
-        "lesson_activity.key": "8329da4e-675d-4656-836c-21f1fabac747"
-      }
-    },
-    {
       "key": "3b1b3598-d91e-4630-88ac-d0adbdc3946a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Working with for loops can be a little tricky. We'll have more opportunities to practice combining loops and lists together to make even more powerful apps.",
         "remarks": true
@@ -2241,7 +2231,7 @@
     },
     {
       "key": "c7718389-7ce6-41d2-82e8-be19806ee631",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -2252,7 +2242,7 @@
     },
     {
       "key": "9865749b-36a9-44b1-bb53-8364b24782f7",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think back on the Font Tester App. Can you think of an example of another app or feature of an app which would use a loop to control different elements on a screen?",
         "name": "Assessment: Check For Understanding\r"
@@ -2423,7 +2413,7 @@
       "key": "70682325-231d-494d-8aba-f1f9ba4768aa",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What aspects of working with loops do you feel like clicked today? What do you still feel like you have trouble with?\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
+        "description": "**Discuss:** *What aspects of working with loops do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
       },
       "seeding_key": {
         "activity_section.key": "70682325-231d-494d-8aba-f1f9ba4768aa",
@@ -2434,7 +2424,7 @@
       "key": "0d418695-d6f8-47dd-974f-74a26b07b1e1",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share with one another before sharing with the whole class."
+        "description": "Have students share with one another before sharing with the whole class."
       },
       "seeding_key": {
         "activity_section.key": "0d418695-d6f8-47dd-974f-74a26b07b1e1",
@@ -2520,7 +2510,7 @@
       "key": "86b5d792-4084-423d-8997-86aa8f7454fb",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n[slide] **Level 1 - Explore:** Have students explore the working Lock Screen Maker app in Level 1. If students are not working in pairs they should still discuss the prompts with a neighbor.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n[slide] **Level 1 - Explore:** Have students explore the working Lock Screen Maker app in Level 1. If students are not working in pairs they should still discuss with a neighbor.",
         "name": "Build the Lock Screen Maker App\r",
         "progression_name": "Try the Lock Screen Maker"
       },
@@ -2533,7 +2523,7 @@
       "key": "da20ca9e-8fd9-4933-be03-6929cf11e64e",
       "position": 2,
       "properties": {
-        "description": "[slide] **Prompt:**"
+        "description": "[slide] **Discuss:**"
       },
       "seeding_key": {
         "activity_section.key": "da20ca9e-8fd9-4933-be03-6929cf11e64e",
@@ -2544,7 +2534,7 @@
       "key": "cdaee7b6-c2a4-405d-9ec3-2b4ef0f2ed11",
       "position": 3,
       "properties": {
-        "description": "* Where (if at all) do you think this app is using a loop?  \t\n* Where (if at all) do you think this app is using a list?\n\n**Discussion Goals:**\n\nWhere (if at all) do you think this app is using a list?\n\n* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\n\nWhere (if at all) do you think this app is using a loop?\n\n* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\n",
+        "description": "* *Where (if at all) do you think this app is using a loop?*\n* *Where (if at all) do you think this app is using a list?*\n\n**Discussion Goals:**\n\nWhere (if at all) do you think this app is using a list?\n\n* It's more important that students justify their answers. However, students may reconize that the different icons are likely being chosen from a list.\n\nWhere (if at all) do you think this app is using a loop?\n\n* Students will hopefully recognize that with 20 different icons to be updated by each button there is almost certainly a loop being used by each of those button.\n",
         "progression_name": "Try the Lock Screen Maker"
       },
       "seeding_key": {
@@ -3207,7 +3197,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp u5 written response] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
+            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp_u5_written_response] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
           }
         ],
         "name": "Hackathon Prep\r"
@@ -4331,7 +4321,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Loops"
+        "progression": "Introduction to Loops",
+        "level_keys": [
+          "csp_applab_loops_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6187,122 +6180,110 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Lists Make - Reminder App",
       "url": "https://docs.google.com/document/d/1GlcxUvD-czBrwGGq70ZiiItOSB3R77s0JOSL2XvxecM/edit?usp=sharing",
-      "key": "csp lists make",
+      "key": "csp_lists_make_-_reminder_app",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp lists make"
+        "resource.key": "csp_lists_make_-_reminder_app"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "Loops Game Board",
       "url": "https://docs.google.com/document/d/1tvAqNjn1ktrzMROtHAxOZDfHHMOn367Fdpnp9sbWghM/view",
-      "key": "csp loops game board",
+      "key": "loops_game_board",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp loops game board"
+        "resource.key": "loops_game_board"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6321,225 +6302,199 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Lists Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "Traversal Machine",
       "url": "https://docs.google.com/document/d/155CFeFELE2dfoQCip9CwLb6KbJqDeUcvhumCRecCU-Y/view",
-      "key": "csp traversal machine",
+      "key": "traversal_machine",
       "properties": {
         "audience": "Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp traversal machine"
+        "resource.key": "traversal_machine"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP Traversals Make - Random Forecaster App",
       "url": "https://docs.google.com/document/d/1a6MK9hALSWPJ_mHs0uM5dwrGammMAr5IfXGbf7gtczg/edit?usp=sharing",
-      "key": "csp traversals make",
+      "key": "csp_traversals_make_-_random_forecaster_app",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp traversals make"
+        "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Written Response",
       "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
-      "key": "csp u5 written response",
+      "key": "csp_u5_hackathon_project_written_response",
       "properties": {
         "type": "Written Response",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "name": "CSP U5 Hackathon Project Planning Guide",
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
+      "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp u5 planning guide"
-      }
-    },
-    {
-      "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "name": "CSP U5 Hackathon Project Written Response",
-      "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
-      "key": "csp u5 written response",
-      "properties": {
-        "type": "Written Response",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 written response"
-      }
-    },
-    {
-      "name": "CSP U5 Hackathon Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
-      "key": "csp u5 planning guide",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -6558,13 +6513,51 @@
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
       "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
-      "key": "csp u5 presentation",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "type": "Presentation",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "name": "CSP U5 Hackathon Project Written Response",
+      "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
+      "key": "csp_u5_hackathon_project_written_response",
+      "properties": {
+        "type": "Written Response",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_u5_hackathon_project_written_response"
+      }
+    },
+    {
+      "name": "CSP U5 Hackathon Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
+      "key": "csp_u5_hackathon_project_planning_guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Lists Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
+      "key": "csp_unit_5_-_lists_loops_and_traversals",
+      "properties": {
+        "type": "Presentation",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     }
   ],
@@ -6572,61 +6565,55 @@
     {
       "seeding_key": {
         "lesson.key": "Lists Explore",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Practice",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
-        "resource.key": "csp lists make"
+        "resource.key": "csp_lists_make_-_reminder_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Explore",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Explore",
-        "resource.key": "csp loops game board"
+        "resource.key": "loops_game_board"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Practice",
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6637,110 +6624,98 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "resource.key": "csp u5 presentation"
+        "lesson.key": "Loops Make",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Explore",
-        "resource.key": "csp traversal machine"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "resource.key": "traversal_machine"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Practice",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
-        "resource.key": "csp traversals make"
+        "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 written response"
+        "resource.key": "csp_u5_hackathon_project_written_response"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 2",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 2",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 3",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 3",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
-        "resource.key": "csp u5 planning guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 written response"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp u5 planning guide"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -6751,8 +6726,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "csp_u5_hackathon_project_written_response"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 18: Assessment Day",
-        "resource.key": "csp u5 presentation"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     }
   ],
