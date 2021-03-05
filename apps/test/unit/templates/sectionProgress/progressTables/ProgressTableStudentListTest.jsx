@@ -1,6 +1,9 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
+import {Provider} from 'react-redux';
+import {createStore, combineReducers} from 'redux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import * as Sticky from 'reactabular-sticky';
 import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
@@ -31,26 +34,44 @@ const DEFAULT_PROPS = {
   needsGutter: false
 };
 
+const setUp = (overrideProps = {}) => {
+  const store = createStore(
+    combineReducers({
+      sectionProgress
+    }),
+    {
+      sectionProgress: {
+        showSectionProgressDetails: false
+      }
+    }
+  );
+
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return mount(
+    <Provider store={store}>
+      <ProgressTableStudentList {...props} />
+    </Provider>
+  );
+};
+
 describe('ProgressTableStudentList', () => {
   it('displays a header for each header in props.headers', () => {
     const headers = ['Lesson', 'Level Type'];
-    const props = {...DEFAULT_PROPS, headers: headers};
-    const wrapper = shallow(<ProgressTableStudentList {...props} />);
+    const wrapper = setUp({headers});
     const stickyHeaderComponent = wrapper.find(Sticky.Header);
     expect(stickyHeaderComponent.contains(headers[0]));
     expect(stickyHeaderComponent.contains(headers[1]));
   });
 
   it('displays a ProgressTableStudentName for each student', () => {
-    const wrapper = mount(<ProgressTableStudentList {...DEFAULT_PROPS} />);
+    const wrapper = setUp();
     expect(wrapper.find(ProgressTableStudentName)).to.have.length(2);
     expect(wrapper.contains('Joe')).to.be.true;
     expect(wrapper.contains('Jamie')).to.be.true;
   });
 
   it('displays body with overflow scroll if needsGutter is true', () => {
-    const props = {...DEFAULT_PROPS, needsGutter: true};
-    const wrapper = mount(<ProgressTableStudentList {...props} />);
+    const wrapper = setUp({needsGutter: true});
     const virtualizedBodyComponent = wrapper.find(Virtualized.Body);
     expect(virtualizedBodyComponent.props().style.overflowX).to.equal('scroll');
   });
