@@ -25,4 +25,19 @@ class VocabularyTest < ActiveSupport::TestCase
       vocab.save!
     end
   end
+
+  test 'vocabulary sanitizes word when turning it into key' do
+    vocab = create :vocabulary,
+      word: 'Some !! ßtring 123 ,with, "ILLEGAL" _characters_.'
+    assert_equal vocab.key, "Some  tring  with ILLEGAL characters"
+  end
+
+  test 'vocabulary prevents invalid keys' do
+    vocab = create :vocabulary
+    assert vocab.valid?
+    vocab.key = "!!invalid key!!"
+    refute vocab.valid?
+    vocab.key = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz- /"
+    assert vocab.valid?
+  end
 end
