@@ -22,7 +22,7 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
-import CollapserIcon from './CollapserIcon';
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -118,6 +118,33 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
+  }
+};
+
+const collapserIconStyle = {
+  showHideButton: {
+    position: 'absolute',
+    top: 0,
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: color.white
+    }
+  },
+  showHideButtonLtr: {
+    left: 8
+  },
+  showHideButtonRtl: {
+    right: 8
+  },
+  teacherOnlyColor: {
+    color: color.lightest_cyan,
+    ':hover': {
+      cursor: 'pointer',
+      color: color.default_text
+    }
   }
 };
 
@@ -596,6 +623,14 @@ class TopInstructions extends Component {
     const showContainedLevelAnswer =
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
+    const collapserIconStyles = {
+      ...collapserIconStyle.showHideButton,
+      ...(this.props.isRtl
+        ? collapserIconStyle.showHideButtonRtl
+        : collapserIconStyle.showHideButtonLtr),
+      ...(teacherOnly && collapserIconStyle.teacherOnlyColor)
+    };
+
     return (
       <div
         style={mainStyle}
@@ -682,10 +717,9 @@ class TopInstructions extends Component {
             {!this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
-                  collapsed={this.props.collapsed}
+                  isCollapsed={this.props.collapsed}
                   onClick={this.handleClickCollapser}
-                  teacherOnly={teacherOnly}
-                  isRtl={this.props.isRtl}
+                  style={collapserIconStyles}
                 />
               )}
           </div>
