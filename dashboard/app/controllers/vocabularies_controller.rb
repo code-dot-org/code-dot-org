@@ -15,7 +15,8 @@ class VocabulariesController < ApplicationController
     end
     vocabulary = Vocabulary.new(
       word: vocabulary_params[:word],
-      definition: vocabulary_params[:definition]
+      definition: vocabulary_params[:definition],
+      common_sense_media: vocabulary_params[:common_sense_media]
     )
     vocabulary.course_version = course_version
     begin
@@ -52,7 +53,7 @@ class VocabulariesController < ApplicationController
 
   def vocabulary_params
     vp = params.transform_keys(&:underscore)
-    vp = vp.permit(:id, :key, :word, :definition, :course_version_id, :lesson_ids)
+    vp = vp.permit(:id, :key, :word, :definition, :common_sense_media, :course_version_id, :lesson_ids)
     vp[:lesson_ids] = JSON.parse(vp[:lesson_ids]) if vp[:lesson_ids]
     vp
   end
