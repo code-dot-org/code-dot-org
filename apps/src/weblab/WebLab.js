@@ -24,7 +24,7 @@ import {getCurrentId} from '../code-studio/initApp/project';
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
 // HTML tags that are disallowed in WebLab. These tags will be removed from users' projects.
-const DISALLOWED_HTML_TAGS = ['script', 'iframe'];
+const DISALLOWED_HTML_TAGS = ['script'];
 
 /**
  * An instantiable WebLab class
