@@ -20919,6 +20919,13 @@ en:
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             lesson-4:
               name: Be A Super Digital Citizen
+              description_student: Learn how you can be an upstander when you see cyberbullying.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
           lesson_groups:
             ramp_up:
               display_name: Loops
@@ -21883,6 +21890,8 @@ en:
               name: Lesson Planning
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
+            CS Teaching and Student Practices:
+              name: CS Teaching and Student Practices
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
