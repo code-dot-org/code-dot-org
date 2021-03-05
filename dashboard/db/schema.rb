@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_215944) do
+ActiveRecord::Schema.define(version: 2021_03_05_183735) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1478,6 +1478,13 @@ ActiveRecord::Schema.define(version: 2021_02_26_215944) do
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
+  end
+
+  create_table "scripts_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "script_id"
+    t.integer "resource_id"
+    t.index ["resource_id", "script_id"], name: "index_scripts_resources_on_resource_id_and_script_id"
+    t.index ["script_id", "resource_id"], name: "index_scripts_resources_on_script_id_and_resource_id", unique: true
   end
 
   create_table "secret_pictures", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
