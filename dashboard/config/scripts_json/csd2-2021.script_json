@@ -10739,115 +10739,115 @@
   ],
   "vocabularies": [
     {
-      "key": "HTML",
+      "key": "html",
       "word": "HTML",
       "definition": "Hypertext Markup Language, a language used to create web pages",
       "seeding_key": {
-        "vocabulary.key": "HTML"
+        "vocabulary.key": "html"
       }
     },
     {
-      "key": "HTML Element",
+      "key": "html_element",
       "word": "HTML Element",
       "definition": "A piece of a website, marked by a start tag and often closed with an end tag",
       "seeding_key": {
-        "vocabulary.key": "HTML Element"
+        "vocabulary.key": "html_element"
       }
     },
     {
-      "key": "HTML Tag",
+      "key": "html_tag",
       "word": "HTML Tag",
       "definition": "The special set of characters that indicates the start and end of an HTML element and that element's type",
       "seeding_key": {
-        "vocabulary.key": "HTML Tag"
+        "vocabulary.key": "html_tag"
       }
     },
     {
-      "key": "Website Content",
+      "key": "website_content",
       "word": "Website Content",
       "definition": "the text and images on a website",
       "seeding_key": {
-        "vocabulary.key": "Website Content"
+        "vocabulary.key": "website_content"
       }
     },
     {
-      "key": "Website Structure",
+      "key": "website_structure",
       "word": "Website Structure",
       "definition": "how the content of a website is organized",
       "seeding_key": {
-        "vocabulary.key": "Website Structure"
+        "vocabulary.key": "website_structure"
       }
     },
     {
-      "key": "Heading",
+      "key": "heading",
       "word": "Heading",
       "definition": "A title or summary for a document or section of a document.",
       "seeding_key": {
-        "vocabulary.key": "Heading"
+        "vocabulary.key": "heading"
       }
     },
     {
-      "key": "Digital Footprint",
+      "key": "digital_footprint",
       "word": "Digital Footprint",
       "definition": "The collected information about an individual across multiple websites on the Internet.",
       "seeding_key": {
-        "vocabulary.key": "Digital Footprint"
+        "vocabulary.key": "digital_footprint"
       }
     },
     {
-      "key": "CSS",
+      "key": "css",
       "word": "CSS",
       "definition": "Cascading Style Sheets; a language used to describe how HTML elements should be styled",
       "seeding_key": {
-        "vocabulary.key": "CSS"
+        "vocabulary.key": "css"
       }
     },
     {
-      "key": "CSS Selector",
+      "key": "css_selector",
       "word": "CSS Selector",
       "definition": "the part of a CSS rule-set that defines which HTML elements the style should be applied to",
       "seeding_key": {
-        "vocabulary.key": "CSS Selector"
+        "vocabulary.key": "css_selector"
       }
     },
     {
-      "key": "Copyright",
+      "key": "copyright",
       "word": "Copyright",
       "definition": "the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same",
       "seeding_key": {
-        "vocabulary.key": "Copyright"
+        "vocabulary.key": "copyright"
       }
     },
     {
-      "key": "Relevant",
+      "key": "relevant",
       "word": "Relevant",
       "definition": "closely connected to a topic",
       "seeding_key": {
-        "vocabulary.key": "Relevant"
+        "vocabulary.key": "relevant"
       }
     },
     {
-      "key": "Search Engine",
+      "key": "search_engine",
       "word": "Search Engine",
       "definition": "A program that searches for items on the World Wide Web.",
       "seeding_key": {
-        "vocabulary.key": "Search Engine"
+        "vocabulary.key": "search_engine"
       }
     },
     {
-      "key": "Trustworthy",
+      "key": "trustworthy",
       "word": "Trustworthy",
       "definition": "reliable, honest, and truthful ",
       "seeding_key": {
-        "vocabulary.key": "Trustworthy"
+        "vocabulary.key": "trustworthy"
       }
     },
     {
-      "key": "CSS Class",
+      "key": "css_class",
       "word": "CSS Class",
       "definition": "An identifier that allows multiple elements in an HTML document to be styled in the same way",
       "seeding_key": {
-        "vocabulary.key": "CSS Class"
+        "vocabulary.key": "css_class"
       }
     }
   ],
@@ -10855,85 +10855,85 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "HTML"
+        "vocabulary.key": "html"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "HTML Element"
+        "vocabulary.key": "html_element"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "HTML Tag"
+        "vocabulary.key": "html_tag"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "Website Content"
+        "vocabulary.key": "website_content"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "Website Structure"
+        "vocabulary.key": "website_structure"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Headings",
-        "vocabulary.key": "Heading"
+        "vocabulary.key": "heading"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Digital Footprint",
-        "vocabulary.key": "Digital Footprint"
+        "vocabulary.key": "digital_footprint"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
-        "vocabulary.key": "CSS"
+        "vocabulary.key": "css"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
-        "vocabulary.key": "CSS Selector"
+        "vocabulary.key": "css_selector"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "vocabulary.key": "Copyright"
+        "vocabulary.key": "copyright"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "Relevant"
+        "vocabulary.key": "relevant"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "Search Engine"
+        "vocabulary.key": "search_engine"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "Trustworthy"
+        "vocabulary.key": "trustworthy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "CSS Classes",
-        "vocabulary.key": "CSS Class"
+        "vocabulary.key": "css_class"
       }
     }
   ],
