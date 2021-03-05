@@ -3,59 +3,80 @@ import * as Table from 'reactabular-table';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
-import {scriptDataPropType, scrollbarWidth} from '../sectionProgressConstants';
+import {
+  scriptDataPropType,
+  studentTableRowType
+} from '../sectionProgressConstants';
 import ProgressTableStudentName from './ProgressTableStudentName';
 import progressTableStyles from './progressTableStyles.scss';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
-const styles = {
-  gutter: {
-    height: scrollbarWidth
-  }
-};
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
-    section: sectionDataPropType.isRequired,
+    rows: PropTypes.arrayOf(studentTableRowType).isRequired,
+    sectionId: PropTypes.number.isRequired,
     scriptData: scriptDataPropType.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
+    onToggleRow: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
-    this.studentNameFormatter = this.studentNameFormatter.bind(this);
+    this.cellFormatter = this.cellFormatter.bind(this);
   }
 
   header = null;
   body = null;
   bodyComponent = null;
 
-  studentNameFormatter(value, {rowData}) {
-    // Account for scrollbar in content view
-    if (value === 'gutter') {
-      return <div style={styles.gutter} />;
+  cellFormatter(_, {rowData, rowIndex}) {
+    switch (rowData.expansionIndex) {
+      case 0:
+        return this.studentNameFormatter(rowData, rowIndex);
+      case 1:
+        return this.timeSpentFormatter();
+      case 2:
+        return this.lastUpdatedFormatter();
+      default:
+        return null;
     }
+  }
 
-    const {section, scriptData, studentTimestamps, localeCode} = this.props;
+  studentNameFormatter(rowData, rowIndex) {
+    const {sectionId, scriptData, studentTimestamps, localeCode} = this.props;
     const studentUrl = scriptUrlForStudent(
-      section.id,
+      sectionId,
       scriptData.name,
-      rowData.id
+      rowData.student.id
     );
     return (
-      <ProgressTableStudentName
-        name={value}
-        studentId={rowData.id}
-        sectionId={section.id}
-        scriptId={scriptData.id}
-        lastTimestamp={studentTimestamps[rowData.id]}
-        localeCode={localeCode}
-        studentUrl={studentUrl}
-      />
+      <div
+        onClick={() => {
+          this.props.onToggleRow(rowData, rowIndex);
+        }}
+      >
+        <ProgressTableStudentName
+          name={rowData.student.name}
+          studentId={rowData.student.id}
+          sectionId={sectionId}
+          scriptId={scriptData.id}
+          lastTimestamp={studentTimestamps[rowData.student.id]}
+          localeCode={localeCode}
+          studentUrl={studentUrl}
+        />
+      </div>
     );
+  }
+
+  timeSpentFormatter() {
+    return 'Time Spent (mins)';
+  }
+
+  lastUpdatedFormatter() {
+    return 'Last Updated';
   }
 
   render() {
@@ -67,9 +88,7 @@ export default class ProgressTableStudentList extends React.Component {
             row: Virtualized.BodyRow
           }
         }}
-        columns={[
-          {property: 'name', cell: {formatters: [this.studentNameFormatter]}}
-        ]}
+        columns={[{property: 'name', cell: {formatters: [this.cellFormatter]}}]}
       >
         <Sticky.Header
           ref={r => (this.header = r && r.getRef())}
@@ -84,7 +103,7 @@ export default class ProgressTableStudentList extends React.Component {
           ])}
         />
         <Virtualized.Body
-          rows={this.props.section.students}
+          rows={this.props.rows}
           rowKey={'id'}
           style={{
             overflowX: 'scroll',

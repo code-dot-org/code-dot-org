@@ -29,13 +29,18 @@ const styles = {
   }
 };
 
+function idForExpansionIndex(studentId, index) {
+  return `${studentId}.${index}`;
+}
+
 class ProgressTableContainer extends React.Component {
   static propTypes = {
     onClickLesson: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number),
-    lessonCellFormatter: PropTypes.func.isRequired,
+    lessonCellFormatters: PropTypes.arrayOf(PropTypes.func.isRequired),
     extraHeaderFormatters: PropTypes.arrayOf(PropTypes.func),
     extraHeaderLabels: PropTypes.arrayOf(PropTypes.string),
+    includeHeaderArrows: PropTypes.bool,
 
     // redux
     section: sectionDataPropType.isRequired,
@@ -48,6 +53,18 @@ class ProgressTableContainer extends React.Component {
   constructor(props) {
     super(props);
     this.onScroll = this.onScroll.bind(this);
+    this.onToggleRow = this.onToggleRow.bind(this);
+    this.numDetailRows = props.lessonCellFormatters.length - 1;
+    this.state = {
+      rows: props.section.students.map(student => {
+        return {
+          id: idForExpansionIndex(student.id, 0),
+          student: student,
+          expansionIndex: 0,
+          expanded: false
+        };
+      })
+    };
   }
 
   studentList = null;
@@ -84,6 +101,41 @@ class ProgressTableContainer extends React.Component {
     );
   }
 
+  onToggleRow(rowData, rowIndex) {
+    rowData.expanded = !rowData.expanded;
+    if (rowData.expanded) {
+      this.addDetailRows(rowData, rowIndex);
+    } else {
+      this.removeDetailRows(rowData);
+    }
+  }
+
+  addDetailRows(rowData, rowIndex) {
+    const detailRows = [];
+    for (let i = 1; i <= this.numDetailRows; i++) {
+      detailRows.push({
+        id: idForExpansionIndex(rowData.student.id, i),
+        student: rowData.student,
+        expansionIndex: i
+      });
+    }
+    const rows = [...this.state.rows];
+    rows.splice(rowIndex + 1, 0, ...detailRows);
+    this.setState({
+      rows: rows
+    });
+  }
+
+  removeDetailRows(rowData) {
+    this.setState({
+      rows: this.state.rows.filter(row => {
+        return (
+          row.student.id !== rowData.student.id || row.expansionIndex === 0
+        );
+      })
+    });
+  }
+
   render() {
     return (
       <div style={styles.container} className="progress-table">
@@ -91,14 +143,26 @@ class ProgressTableContainer extends React.Component {
           <ProgressTableStudentList
             ref={r => (this.studentList = r)}
             headers={[i18n.lesson(), ...(this.props.extraHeaderLabels || [])]}
-            {...this.props}
+            rows={this.state.rows}
+            sectionId={this.props.section.id}
+            scriptData={this.props.scriptData}
+            studentTimestamps={this.props.studentTimestamps}
+            localeCode={this.props.localeCode}
+            onToggleRow={this.onToggleRow}
           />
         </div>
         <div style={styles.contentView} className="content-view">
           <ProgressTableContentView
             ref={r => (this.contentView = r)}
+            rows={this.state.rows}
             needsGutter={this.needsContentHeaderGutter()}
             onScroll={this.onScroll}
+            scriptData={this.props.scriptData}
+            onClickLesson={this.props.onClickLesson}
+            columnWidths={this.props.columnWidths}
+            lessonCellFormatters={this.props.lessonCellFormatters}
+            extraHeaderFormatters={this.props.extraHeaderFormatters}
+            includeHeaderArrows={this.props.includeHeaderArrows}
             {...this.props}
           />
         </div>
