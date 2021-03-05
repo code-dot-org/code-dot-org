@@ -3,4 +3,4 @@ question 'Look at this code carefully. What do you think will happen when the pr
 wrong 'Laurel will collect 4 pieces of treasure using this code.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'
 right 'Laurel will try to collect treasure where there is not any and it causes an error.', feedback: 'Correct!'
 wrong 'Laurel will collect all of the treasure.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'
-wrong 'I don\'t know.', feedback: 'Laurel tries to collect treasure where there is none and it causes an error.'
+wrong 'Laurel will collect 1 piece of treasure using this code.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'

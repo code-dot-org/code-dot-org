@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-02-27 20:46:23 UTC",
+    "serialized_at": "2021-03-04 20:07:52 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -111,21 +111,21 @@
   ],
   "lessons": [
     {
-      "key": "Sequencing in the Maze",
-      "name": "Sequencing in the Maze",
+      "key": "Conditionals in Minecraft: Voyage Aquatic",
+      "name": "Conditionals in Minecraft: Voyage Aquatic",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in the maze. \r\nDebugging is an essential element of learning to program. Students will encounter some puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
-        "student_overview": "In this lesson, you will learn how to write your very own programs!",
-        "purpose": "We recognize that every classroom has a spectrum of understanding for every subject. Some students in your class may be computer wizards, while others haven't had much experience at all. In order to create an equal playing (and learning) field, we have developed these ramp-up lessons. This can be used as either an introduction or a review of how to use Code.org and basic computer science concepts. \r\nStudents in your class might become frustrated with this lesson because of the essence of debugging. _Debugging_ is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
-        "preparation": " - Play through the puzzles yourself to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a journal.\n - Review ***CSF Debugging** handout with the class.",
+        "overview": "This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
+        "student_overview": "Here you will learn about conditionals in the world of Minecraft.",
+        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
+        "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021"
       }
@@ -151,32 +151,12 @@
       }
     },
     {
-      "key": "Conditionals in Minecraft: Voyage Aquatic",
-      "name": "Conditionals in Minecraft: Voyage Aquatic",
+      "key": "lesson-4",
+      "name": "Be A Super Digital Citizen",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
-      "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
-        "student_overview": "Here you will learn about conditionals in the world of Minecraft.",
-        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
-        "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "Be A Super Digital Citizen",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
       "properties": {
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
         "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
@@ -194,10 +174,10 @@
     {
       "key": "Conditionals",
       "name": "Conditionals with the Farmer",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
         "overview": "This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.",
         "student_overview": "You will get to tell the computer what to do under certain conditions in this fun and challenging series.",
@@ -214,10 +194,10 @@
     {
       "key": "Simon Says",
       "name": "Follow the Algorithm",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
         "overview": "In this lesson, students will play a game intended to get them thinking about the way commands need to be given to produce the right result. This will help them more easily carry over to Sprite Lab in the upcoming lessons. ",
         "student_overview": "Play a game and think about what commands are needed to get the right result.",
@@ -235,12 +215,12 @@
     {
       "key": "Learning Sprites with Sprite Lab",
       "name": "Swimming Fish with Sprite Lab",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
-        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.",
+        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.",
         "student_overview": "Learn how to create and edit sprites.",
         "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
@@ -255,10 +235,10 @@
     {
       "key": "Alien Dance Party with Sprite Lab",
       "name": "Alien Dance Party with Sprite Lab",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
         "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an \"alien dance party\".  ",
         "student_overview": "Create an interactive project that can be shared with classmates.",
@@ -275,10 +255,10 @@
     {
       "key": "Private and Personal Information",
       "name": "Private and Personal Information",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nIt's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.",
         "student_overview": "The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.",
@@ -296,10 +276,10 @@
     {
       "key": "About Me",
       "name": "About Me with Sprite Lab",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.\r\n",
         "student_overview": "By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.",
@@ -316,15 +296,15 @@
     {
       "key": "Digital Sharing",
       "name": "Digital Sharing",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
-        "overview": "Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.",
+        "overview": "Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and **copyright**, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.",
         "student_overview": "In this lesson, you'll learn about the challenges and benefits of ownership and copyright. ",
         "purpose": "Students will soon be creating projects to share and most of these projects will contain either code or imagery that students did not create themselves. This lesson is here to show students the proper way to handle the use of content that is not their own.",
-        "preparation": "- Locate the copyright sharing video at [r digital-sharing-video]\r\n- Download and review the complete [r digital-sharing-lesson] from Copyright and Creativity\r\n- As the teacher, create a piece of art for the lesson (picture, song, slideshow, etc.) \r\n- You will need a tablet or smart phone to replicate the sharing of that item",
+        "preparation": "- Locate the ***Copyright Sharing video** in \"Links\" below\n- Download and review the complete ***Digital Sharing Lesson Plan** from Copyright and Creativity\n- As the teacher, create a piece of art for the lesson (picture, song, slideshow, etc.) \n- You will need a tablet or smart phone to replicate the sharing of that item",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -337,12 +317,12 @@
     {
       "key": "Nested Loops in Artist",
       "name": "Fancy Shapes using Nested Loops",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
-        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.",
+        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the lesson.",
         "student_overview": "More nested loops! This time, you get to make some AMAZING drawing with nested loops.",
         "purpose": "In this online activity, students will create designs in Artist that they can proudly share with their loved ones.  \r\n\r\nThe purpose of this activity is to utilize nested loops as a way to inspire students with artistic minds to see coding as another creative outlet. This set of puzzles was built to develop critical thinking skills, an understanding of elementary geometry, and creativity -- all within the scope of nested loops!",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.\r\n - Consider what supports your students might need with turns and angles. ",
@@ -360,7 +340,7 @@
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "overview": "Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using Anna and Elsa's excellent ice-skating skills!",
         "student_overview": "Anna and Elsa have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
@@ -380,7 +360,7 @@
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "overview": "One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.",
         "student_overview": "Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.",
@@ -401,7 +381,7 @@
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "overview": "Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!",
         "student_overview": "Can you figure out how to use functions for the most efficient code?",
@@ -421,7 +401,7 @@
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
         "overview": "Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.",
         "student_overview": "Functions will save you lots of work as you help the farmer with her harvest!",
@@ -441,7 +421,7 @@
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "overview": "Students will be introduced to using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.",
         "student_overview": "Make complex drawings more easily with functions!",
@@ -461,7 +441,7 @@
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
         "overview": "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers.",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
@@ -478,56 +458,56 @@
   ],
   "lesson_activities": [
     {
-      "key": "38a59b17-efab-4dc2-b4d3-7e50feb358ba",
+      "key": "da87c8ba-9486-43e4-9dde-e6eac223396e",
       "position": 1,
       "properties": {
         "name": "Warm Up",
         "duration": 15
       },
       "seeding_key": {
-        "lesson_activity.key": "38a59b17-efab-4dc2-b4d3-7e50feb358ba",
-        "lesson.key": "Sequencing in the Maze",
+        "lesson_activity.key": "da87c8ba-9486-43e4-9dde-e6eac223396e",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021"
       }
     },
     {
-      "key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097",
+      "key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 30
       },
       "seeding_key": {
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097",
-        "lesson.key": "Sequencing in the Maze",
+        "lesson_activity.key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021"
       }
     },
     {
-      "key": "9792e74a-bb4e-4f22-8051-3e2b867f18b2",
+      "key": "dc47da0d-484b-481e-bfaf-17f9de229688",
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 5
+        "duration": 15
       },
       "seeding_key": {
-        "lesson_activity.key": "9792e74a-bb4e-4f22-8051-3e2b867f18b2",
-        "lesson.key": "Sequencing in the Maze",
+        "lesson_activity.key": "dc47da0d-484b-481e-bfaf-17f9de229688",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021"
       }
     },
     {
-      "key": "d0f3f318-0d7f-456a-b680-8af4fc90f457",
+      "key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf",
       "position": 4,
       "properties": {
         "name": "Extended Learning"
       },
       "seeding_key": {
-        "lesson_activity.key": "d0f3f318-0d7f-456a-b680-8af4fc90f457",
-        "lesson.key": "Sequencing in the Maze",
+        "lesson_activity.key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021"
       }
@@ -583,61 +563,6 @@
       "seeding_key": {
         "lesson_activity.key": "dbad5d87-5c18-4c2a-a15a-6567124b4864",
         "lesson.key": "Programming and Loops with the Artist",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "da87c8ba-9486-43e4-9dde-e6eac223396e",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "da87c8ba-9486-43e4-9dde-e6eac223396e",
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9",
-      "position": 2,
-      "properties": {
-        "name": "Main Activity",
-        "duration": 30
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9",
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "dc47da0d-484b-481e-bfaf-17f9de229688",
-      "position": 3,
-      "properties": {
-        "name": "Wrap Up",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "dc47da0d-484b-481e-bfaf-17f9de229688",
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf",
-      "position": 4,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf",
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021"
       }
@@ -1561,144 +1486,51 @@
   ],
   "activity_sections": [
     {
-      "key": "ad409124-6238-45b4-917c-d9269e7ca6cd",
+      "key": "26475297-6a91-4f8c-a64d-ded841ff0cb9",
       "position": 1,
       "properties": {
-        "description": "Ask students to think about problems they have to solve in everyday life.\n\n - How do you fix something that isn't working?\n - Do you follow a specific series of steps?\n - Some puzzles in this lesson have already been solved for you (yay!), but they don't seem to be working (boo!)\n - We call the problems in these programs \"bugs,\" and it will be your job to \"debug\" them.\n\nStudents will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
-        "name": "Introduction"
+        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code.",
+        "name": "Introduction\r"
       },
       "seeding_key": {
-        "activity_section.key": "ad409124-6238-45b4-917c-d9269e7ca6cd",
-        "lesson_activity.key": "38a59b17-efab-4dc2-b4d3-7e50feb358ba"
+        "activity_section.key": "26475297-6a91-4f8c-a64d-ded841ff0cb9",
+        "lesson_activity.key": "da87c8ba-9486-43e4-9dde-e6eac223396e"
       }
     },
     {
-      "key": "76f4a5c7-5323-4ed5-baad-e5ad5b7504f9",
-      "position": 2,
-      "properties": {
-        "description": "This lesson has four new and important vocabulary words:\n\n - **Program** - *Say it with me: Pro - Gram*\n\nAn algorithm that has been coded into something that can be run by a machine. \n\n - **Programming** - *Say it with me: Pro - Gramm - ing*\n\nThe art of creating a program. \n\n - **Bug** - *Say it with me: Bug*\n\nAn error in a program that prevents the program from running as expected. \n\n - **Debugging** - *Say it with me: De - Bugg - ing*\n\nFinding and fixing errors in programs. \n\n\n#### Say:\n\n*Debugging is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!*\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, *Scrat* from *Ice Age*. If students aren't familiar with *Scrat*, show some video clips of the quirky squirrel running into trouble.",
-        "name": "Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "76f4a5c7-5323-4ed5-baad-e5ad5b7504f9",
-        "lesson_activity.key": "38a59b17-efab-4dc2-b4d3-7e50feb358ba"
-      }
-    },
-    {
-      "key": "117e6e7a-f7d4-4530-92d7-b65156282d97",
+      "key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n\r\n"
-          }
-        ],
-        "name": "Sequencing in the Maze"
+        "name": "Conditionals in Minecraft: Voyage Aquatic",
+        "progression_name": "Practice",
+        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
       "seeding_key": {
-        "activity_section.key": "117e6e7a-f7d4-4530-92d7-b65156282d97",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
+        "lesson_activity.key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9"
       }
     },
     {
-      "key": "818fc335-c987-42f4-b53a-c7bcae191436",
-      "position": 2,
-      "properties": {
-        "description": "\n####Online Puzzles\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming Video** whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\nAs mentioned in the purpose of this lesson, make sure the students are aware that they will face frustrating puzzles. Tell them it is okay to feel frustrated, but it is important to work through the problem and ask for help. As the students work through the puzzles, walk around to make sure no student is feeling so stuck that they aren't willing to continue anymore.\n\n\nBefore letting the students start on the computer, remind them of the advantages of ***Pair Programming Video** and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher."
-      },
-      "seeding_key": {
-        "activity_section.key": "818fc335-c987-42f4-b53a-c7bcae191436",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
-      "key": "d49bf109-2543-40ee-9fce-0c69e13ac185",
-      "position": 3,
-      "properties": {
-        "progression_name": "Maze Intro: Programming with Blocks"
-      },
-      "seeding_key": {
-        "activity_section.key": "d49bf109-2543-40ee-9fce-0c69e13ac185",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
-      "key": "c1a101ad-d674-496e-978e-2fd7bf196022",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
-      "key": "74868c8b-a655-4ea5-a493-d92849957afd",
-      "position": 5,
-      "properties": {
-        "progression_name": "Debugging with the Step Button"
-      },
-      "seeding_key": {
-        "activity_section.key": "74868c8b-a655-4ea5-a493-d92849957afd",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
-      "key": "d64f7ad4-be48-428b-a27f-cb46015a444a",
-      "position": 6,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
-      "key": "1823aca8-b31b-4700-a724-c3f295cdfcb5",
-      "position": 7,
-      "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "1823aca8-b31b-4700-a724-c3f295cdfcb5",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
-      "key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7",
-      "position": 8,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7",
-        "lesson_activity.key": "7070c6cb-0222-43c4-8a0b-2cba8fe0a097"
-      }
-    },
-    {
-      "key": "079b8057-df95-4101-ab81-6300e72ec34e",
+      "key": "c88e1d86-4746-4a47-8721-3e7e07784f19",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this minecraft world.\n - Can you draw a scene where someone is using a conditional?",
         "name": "Reflection"
       },
       "seeding_key": {
-        "activity_section.key": "079b8057-df95-4101-ab81-6300e72ec34e",
-        "lesson_activity.key": "9792e74a-bb4e-4f22-8051-3e2b867f18b2"
+        "activity_section.key": "c88e1d86-4746-4a47-8721-3e7e07784f19",
+        "lesson_activity.key": "dc47da0d-484b-481e-bfaf-17f9de229688"
       }
     },
     {
-      "key": "647f6072-7d40-4dbd-85d0-e406d316cb3a",
+      "key": "b080aea3-3609-4c59-bafa-176865508638",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Planting bugs**\r\n\r\nHave students go back through previous levels, purposefully adding bugs to their solutions. They can then ask other students to debug their work. This can also be done with paper puzzles.\r\n\r\nWhen other students are debugging, make sure that the criticisms are constructive. If this could be a problem for your class, go over respectful debugging before this activity by role playing with another student."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
       },
       "seeding_key": {
-        "activity_section.key": "647f6072-7d40-4dbd-85d0-e406d316cb3a",
-        "lesson_activity.key": "d0f3f318-0d7f-456a-b680-8af4fc90f457"
+        "activity_section.key": "b080aea3-3609-4c59-bafa-176865508638",
+        "lesson_activity.key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf"
       }
     },
     {
@@ -1817,8 +1649,8 @@
       "key": "7f7b2c5d-fcd3-409a-9191-5e8ee587d2ea",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What was the coolest shape or figure you programmed today? Draw it out!\r\n - What is another shape or figure you would like to program? Can you come up with the code to create it?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you would like to program? Can you come up with the code to create it?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "7f7b2c5d-fcd3-409a-9191-5e8ee587d2ea",
@@ -1834,54 +1666,6 @@
       "seeding_key": {
         "activity_section.key": "0993a02e-0b2d-491f-9f50-7feb1183d562",
         "lesson_activity.key": "dbad5d87-5c18-4c2a-a15a-6567124b4864"
-      }
-    },
-    {
-      "key": "26475297-6a91-4f8c-a64d-ded841ff0cb9",
-      "position": 1,
-      "properties": {
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\r\n\r\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \r\n\r\n* while there is a path ahead  \r\n     * walk forward\r\n     * if there is a chair, step over it\r\n* sit down\r\n\r\nTell students they will be using _conditionals_ during this lesson. Give the definition of:\r\n\r\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\r\n - **Conditionals**: Statements that only run under certain conditions.\r\n\r\nOpen up a discussion of when you might use a conditional in your code.",
-        "name": "Introduction\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "26475297-6a91-4f8c-a64d-ded841ff0cb9",
-        "lesson_activity.key": "da87c8ba-9486-43e4-9dde-e6eac223396e"
-      }
-    },
-    {
-      "key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
-      "position": 1,
-      "properties": {
-        "name": "Conditionals in Minecraft: Voyage Aquatic",
-        "progression_name": "Practice",
-        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to apick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
-      },
-      "seeding_key": {
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea",
-        "lesson_activity.key": "c80d72fc-575e-4dc2-bfe7-444acb269cc9"
-      }
-    },
-    {
-      "key": "c88e1d86-4746-4a47-8721-3e7e07784f19",
-      "position": 1,
-      "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - Draw a feeling face to show how you felt during today’s lesson.\r\n - Draw something else you could have built in this minecraft world.\r\n - Can you draw a scene where someone is using a conditional?",
-        "name": "Journaling\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "c88e1d86-4746-4a47-8721-3e7e07784f19",
-        "lesson_activity.key": "dc47da0d-484b-481e-bfaf-17f9de229688"
-      }
-    },
-    {
-      "key": "b080aea3-3609-4c59-bafa-176865508638",
-      "position": 1,
-      "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
-      },
-      "seeding_key": {
-        "activity_section.key": "b080aea3-3609-4c59-bafa-176865508638",
-        "lesson_activity.key": "3f414667-5259-49ac-a7a3-af4a9ef62fdf"
       }
     },
     {
@@ -1969,7 +1753,7 @@
       "properties": {
         "name": "Conditionals with the Farmer",
         "progression_name": "While Loops with the Farmer",
-        "description": "\n####Online Puzzles\n\nThe patterns in these puzzles may not be obvious to every student. We recommend that you play through these levels beforehand to best understand any problem areas for your class. Also, watching and using the techniques from [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video may be helpful for your class."
+        "description": "\n####Online Puzzles\n\nThe patterns in these puzzles may not be obvious to every student. We recommend that you play through these levels beforehand to best understand any problem areas for your class. Also, watching and using the techniques from ***Pause and Think Online** Video may be helpful for your class."
       },
       "seeding_key": {
         "activity_section.key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
@@ -2067,8 +1851,8 @@
       "key": "63757527-5067-4217-9d3b-134aac5a39ab",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a conditional? Why would you program a conditional?\r\n - Give an example of using a conditional during your day? (ex. _If_ I am hungry, I eat some food; _While_ I am walking across the street, I keep an eye out for cars)",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a conditional? Why would you program a conditional?\n - Give an example of using a conditional during your day? (ex. _If_ I am hungry, I eat some food; _While_ I am walking across the street, I keep an eye out for cars)",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "63757527-5067-4217-9d3b-134aac5a39ab",
@@ -2171,8 +1955,8 @@
       "key": "51b3125a-1efe-4f25-a05e-3e5250ceff18",
       "position": 1,
       "properties": {
-        "description": "Think back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
-        "name": "Journaling"
+        "description": "\n####Journaling\n\nThink back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "51b3125a-1efe-4f25-a05e-3e5250ceff18",
@@ -2183,7 +1967,7 @@
       "key": "b75bc492-bca4-410c-8c94-8d1c919597c3",
       "position": 1,
       "properties": {
-        "description": "Today students will learn how to work with sprites in Sprite Lab.\r\n\r\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like Scrat from Ice Age or one of the Angry Birds.\r\n\r\n**Discuss:** Let the students know that this character on the screen is a \"sprite.\"  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own sprites to control.",
+        "description": "Today students will learn how to work with **sprites** in Sprite Lab.\n\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like *Scrat* from \"Ice Age\" or one of the \"Angry Birds.\"\n\n**Discuss:** Let the students know that this character on the screen is a **sprite**.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own **sprites** to control.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2210,7 +1994,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a sprite to begin and start the same behavior won't result in any observable effect because there is no time between each action. \r\n\r\nIf students bring up time, such as making a behavior happen for a set duration, it can be helpful to reframe things by asking \"**When** should the behavior stop?\" Programs like this will rely on events to make things start and stop as desired.\r\n"
+            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a **sprite** to begin and start the same **behavior** won't result in any observable effect because there is no time between each action. \n\nIf students bring up time, such as making a **behavior** happen for a set duration, it can be helpful to reframe things by asking \"*When should the behavior stop?\"* Programs like this will rely on events to make things start and stop as desired.\n"
           }
         ]
       },
@@ -2223,7 +2007,7 @@
       "key": "b26f3740-cbf8-45da-b3d7-4f3701c57df2",
       "position": 3,
       "properties": {
-        "description": "- What blocks would we need to connect to make the tumbleweed spin?\r\n- What would happen if we told the sprite to begin two behaviors at once?\r\n- Will the sprite ever stop these behaviors on its own?\r\n- If we want the sprite to stop a behavior when we click it, how might we do that?\r\n\r\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
+        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the **sprite** to begin two behaviors at once?_\n- _Will the **sprite** ever stop these **behaviors** on its own?_\n- _If we want the **sprite** to stop a **behavior** when we click it, how might we do that?_\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "b26f3740-cbf8-45da-b3d7-4f3701c57df2",
@@ -2340,8 +2124,8 @@
       "key": "c925e7be-2487-4ebe-892b-bfe452625d91",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n    \r\n    \r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - How did it feel to make a scene that was more creative?\r\n - Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to make a scene that was more creative?\n - Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "c925e7be-2487-4ebe-892b-bfe452625d91",
@@ -2352,7 +2136,7 @@
       "key": "aad9aa38-56b3-42ef-b751-03065c308d0e",
       "position": 1,
       "properties": {
-        "description": "Today students will visit _events_ in programming.\r\n\r\n**Demo:** Ask the students to raise their hands in the air.\r\n\r\nWhat you did was declare an event. When you say \"raise your hands in the air\" the students responded by raising their hands. In coding, you would declare this by saying something like \"when I say 'raise your hands,' you raise your hands\".\r\n\r\nYou can also think of cities as declaring events. There are laws that say \"when there is a green light, cars move through the intersection\". \r\n\r\n**Discuss:** Ask the students why they think this is an event.\r\n\r\nToday, students will play in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other.\r\n\r\n**Display:** Begin by showing Puzzle 1 to your students. \r\n\r\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.",
+        "description": "Today students will visit **events** in programming.\n\n**Demo:** Ask the students to raise their hands in the air.\n\nWhat you did was declare an **event**. When you say \"raise your hands in the air\" the students responded by raising their hands. In coding, you would declare this by saying something like \"when I say 'raise your hands,' you raise your hands\".\n\nYou can also think of cities as declaring **events**. There are laws that say \"when there is a green light, cars move through the intersection\". \n\n**Discuss:** Ask the students why they think this is an **event**.\n\nToday, students will play in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.\n\n**Display:** Begin by showing Puzzle 1 to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2364,7 +2148,7 @@
       "key": "9f5b1627-f04c-42a1-8955-17c994ad2b18",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an event is initiated.",
+        "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an **event** is initiated.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2437,8 +2221,8 @@
       "key": "fd74ff7a-4b6f-42d4-99ea-63fdf9036656",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n    \r\n    \r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - How did it feel to have control over what your characters were able to do?\r\n - Did you change the program in any way to make it feel more like your own?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to have control over what your characters were able to do?\n - Did you change the program in any way to make it feel more like your own?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "fd74ff7a-4b6f-42d4-99ea-63fdf9036656",
@@ -2589,8 +2373,8 @@
       "key": "abd54ca8-cb9c-46ad-be0a-814b9eb36162",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n    \r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What else would you like to add to your poster?\r\n\r\n<!-- \r\nAaron: Ideally, I'd rather have kids do this at the end of the lesson, not journal: \r\n\r\nTeachers verify with students that no private information is shared in their interactive posters. If there is time, students can share verified posters in pairs or small groups. Otherwise, teacher can ask a few students to share their exemplars with whole class.\r\n\r\nConclude by reiterating the importance of knowing distinction between personal/private, and that it's still possible to have a lot of fun and be creative online without revealing unsafe information about yourself. \r\n-->",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What else would you like to add to your poster?\n\n<!-- \nAaron: Ideally, I'd rather have kids do this at the end of the lesson, not journal: \n\nTeachers verify with students that no private information is shared in their interactive posters. If there is time, students can share verified posters in pairs or small groups. Otherwise, teacher can ask a few students to share their exemplars with whole class.\n\nConclude by reiterating the importance of knowing distinction between personal/private, and that it's still possible to have a lot of fun and be creative online without revealing unsafe information about yourself. \n-->",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "abd54ca8-cb9c-46ad-be0a-814b9eb36162",
@@ -2612,7 +2396,7 @@
       "key": "9f56b739-e482-4c76-8b68-e903bfe95e65",
       "position": 1,
       "properties": {
-        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://www.youtube.com/watch?v=o_oDsBeBxko) video.\n*You may need to play it two or three times.*"
+        "description": "The following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n**Watch:** Have students watch the one-minute ***Digital Sharing video**.\nYou may need to play it two or three times."
       },
       "seeding_key": {
         "activity_section.key": "9f56b739-e482-4c76-8b68-e903bfe95e65",
@@ -2623,8 +2407,14 @@
       "key": "98d15c5f-c63b-4cf0-8466-e0e349892320",
       "position": 2,
       "properties": {
-        "description": "Ask students to write a character sketch about one or both of the characters in the video. Be as creative as you can. There are no wrong answers. Give these characters a life of their own, whatever you want it to be. \r\n\r\nPrompt with questions:\r\n\r\n- Who is your character?\r\n- What is his/her name?\r\n- Who are his/her friends?\r\n- How long have they known each other?\r\n- Who are the people in his/her family? What are they like?\r\n- What’s his/her backstory?\r\n  - Where does he/she live? \r\n  - Where did he/she used to live? \r\n  - What exciting thing might have happened to them back in kindergarten, ﬁrst grade, etc.?\r\n- What is he/she looking forward to?\r\n- What is he/she afraid of?\r\n\r\n*NOTE: These exercises may also be done orally as a class discussion before the copyright lesson. Write the story or character sketch on the board as students contribute ideas.*",
-        "name": "Write a Character Sketch \r"
+        "description": "**Say**:  *write a character sketch about one or both of the characters in the video. Be as creative as you can. There are no wrong answers. Give these characters a life of their own, whatever you want it to be.* \n\nPrompt with questions:\n\n- *Who is your character?*\n- *What is his/her name?*\n- *Who are his/her friends?*\n- *How long have they known each other?*\n- *Who are the people in his/her family? What are they like?*\n- *What’s his/her backstory?*\n  - *Where does he/she live?* \n  - *Where did he/she used to live?* \n  - *What exciting thing might have happened to them back in kindergarten, ﬁrst grade, etc.?*\n- *What is he/she looking forward to?*\n- *What is he/she afraid of?*\n\n",
+        "name": "Write a Character Sketch \r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These exercises may also be done orally as a class discussion before the copyright lesson. Write the story or character sketch on the board as students contribute ideas."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "98d15c5f-c63b-4cf0-8466-e0e349892320",
@@ -2635,7 +2425,8 @@
       "key": "bba24018-1d90-4a18-b596-eaab2e50567e",
       "position": 1,
       "properties": {
-        "progression_name": "Digital Sharing - Unplugged Activity"
+        "progression_name": "Digital Sharing - Unplugged Activity",
+        "name": "Digital Sharing"
       },
       "seeding_key": {
         "activity_section.key": "bba24018-1d90-4a18-b596-eaab2e50567e",
@@ -2646,8 +2437,7 @@
       "key": "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169",
       "position": 1,
       "properties": {
-        "description": "**Activity:** Have all of your students stand up. Begin reading the list of ways to create content below. Instruct students to sit down as soon as they can answer “Yes” to one of the prompts.\r\n\r\n- Have you ever made a video (on a camera, phone, iPad, or computer) and sent it to a family member or posted it online?\r\n- Have you taken a photo and sent to a family member or posted it online?\r\n- Have you created a piece of art to share with your family and friends?\r\n- Have you made up a song to make your friends laugh? Or a sad song to make them cry?\r\n- Have you written a poem for your mom or dad on their birthday?\r\n\r\n*Keep asking similar questions until the entire class is seated.*\r\n\r\n**Discuss:** \r\n\r\n- How did it feel to produce something creative?\r\n- How did you feel when you were able to share your creation with others?\r\n- How do you feel when you view or listen to other people’s creations?\r\n\r\n*Encourage all responses.*\r\n\r\nHelp students feel the joy of creating something. Creating can be a lot of hard work, but it is one of the most rewarding things we do. Sharing what we create is fun, and it can encourage more creativity and art. As we get older, we have more and more opportunities to share our work and explore media and art that other people have created. We want to make sure we are always fair when using others’ art and creative work.\r\n\r\n**Say:** Remember, copyright protects all kinds of creative work so that artists/creators can get paid for their eﬀort. This includes, original writing (stories), art, photographs, audio, images, music, song lyrics, even the doodle you drew on your napkin at lunch. It doesn't matter if it was created by a famous artist or by you. When you make an original work, you get to decide who can: \r\n\r\n- make copies \r\n- distribute copies\r\n- display or perform the work in public\r\n- make spin‐oﬀs; we call these derivatives (for example, like a book being made into a movie) \r\n\r\nThese rights are given to artists and creators to encourage them to make even more creative work.\r\n\r\n**Think:** Have students think back to the art creation prompt where they first sat down. Inform them that they created an original work with legal protection. Congratulations! \r\n\r\n**Pair:**  \r\n\r\n- How might you know if something is copyrighted? \r\n  - *[The circle © indicates copyright, but copyright protection exists even without the symbol. Creators have ownership over their work, unless they sell it to someone else.]* \r\n- Where have you seen the copyright symbol? \r\n  - [At the front of books, in movies, on images, posters, etc.] \r\n\r\n**Share:** Encourage students to share their answers with the class.\r\n \r\n**Demonstrate:** Show students how to draw a copyright symbol and write the year next to it. When you make something creative like this, it’s automatically protected by copyright, even without the copyright symbol. \r\n\r\n**Discuss:** \r\n\r\n- How does it feel when you share your things with someone else? \r\n- What does it feel like when someone takes your things and shares them without your permission?\r\n\r\nThe same principles of respect and fairness apply when we share our work or someone else’s work online.",
-        "name": "Ethical Sharing"
+        "description": "\n####Ethical Sharing\n\n**Activity:** Have all of your students stand up. Begin reading the list of ways to create content below. Instruct students to sit down as soon as they can answer “Yes” to one of the prompts.\n\n- *Have you ever made a video (on a camera, phone, iPad, or computer) and sent it to a family member or posted it online?*\n- *Have you taken a photo and sent to a family member or posted it online?*\n- *Have you created a piece of art to share with your family and friends?*\n- *Have you made up a song to make your friends laugh? Or a sad song to make them cry?*\n- *Have you written a poem for your mom or dad on their birthday?*\n\nKeep asking similar questions until the entire class is seated.\n\n**Discuss:** \n\n- *How did it feel to produce something creative?*\n- *How did you feel when you were able to share your creation with others?*\n- *How do you feel when you view or listen to other people’s creations?*\n\nEncourage all responses.\n\nHelp students feel the joy of creating something. Creating can be a lot of hard work, but it is one of the most rewarding things we do. Sharing what we create is fun, and it can encourage more creativity and art. As we get older, we have more and more opportunities to share our work and explore media and art that other people have created. We want to make sure we are always fair when using others’ art and creative work.\n\n**Say:** _Remember, **copyright** protects all kinds of creative work so that artists/creators can get paid for their eﬀort. This includes, original writing (stories), art, photographs, audio, images, music, song lyrics, even the doodle you drew on your napkin at lunch. It doesn't matter if it was created by a famous artist or by you. When you make an original work, you get to decide who can:_ \n\n- *make copies* \n- *distribute copies*\n- *display or perform the work in public*\n- *make spin‐oﬀs; we call these derivatives (for example, like a book being made into a movie)* \n\n*These rights are given to artists and creators to encourage them to make even more creative work.*\n\n**Think:** Have students think back to the art creation prompt where they first sat down. Inform them that they created an original work with legal protection. Congratulations! \n\n**Pair:**  \n\n- *How might you know if something is copyrighted?* \n  -  The circle © indicates copyright, but copyright protection exists even without the symbol. Creators have ownership over their work, unless they sell it to someone else.\n- *Where have you seen the copyright symbol?* \n  - At the front of books, in movies, on images, posters, etc.\n\n**Share:** Encourage students to share their answers with the class.\n \n**Demonstrate:** Show students how to draw a copyright symbol and write the year next to it. When you make something creative like this, it’s automatically protected by copyright, even without the copyright symbol. \n\n**Discuss:** \n\n- *How does it feel when you share your things with someone else?* \n- *What does it feel like when someone takes your things and shares them without your permission?*\n\n*The same principles of respect and fairness apply when we share our work or someone else’s work online.*"
       },
       "seeding_key": {
         "activity_section.key": "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169",
@@ -2658,7 +2448,7 @@
       "key": "2bab17fa-7a64-4ae1-a9c3-30d942674dd1",
       "position": 2,
       "properties": {
-        "description": "\n####To Share or Not to Share?\n\n**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.\n\n**Watch:** Have students watch the one-minute [Digital Sharing Ethics](https://www.youtube.com/watch?v=o_oDsBeBxko) video.\n*You may need to play it two or three times.*\n\n**Discussion Goal:** \n###Not Okay to Share\n- Have you ever transferred songs to your friend’s MP3 player? Is that OK? \n    - [If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.]\n- What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie? \n    - [No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.]\n    -  How else could you get an authorized (legal) copy of the movie for your phone? \n        -  [iTunes or Amazon sell movies legally.]\n\n### Okay to Share\n\n- I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair? \n     - [Yes, this is OK to share because I made it — I own the copyright.]\n- What about a song I wrote? Can I share that? . . . Who gets to decide? \n     - [“That’s right, I do.”] \n- What will happen when I share it? \n     - [Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”]\n- Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical? \n     - [Yes.] \n     - Why is this share OK? \n         - [Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” ]\n\n"
+        "description": "\n####To Share or Not to Share?\n\n**Demonstrate:** Pull out the instructor’s creative work: picture, song, story, video, recipe.\n\n**Watch:** Have students watch the one-minute ***Digital Sharing Ethics** video.\n*You may need to play it two or three times.*\n\n**Discussion Goal:** \n###Not Okay to Share\n- *Have you ever transferred songs to your friend’s MP3 player? Is that OK?* \n    - If it’s a song you hear on the radio, it’s most likely protected by copyright and NOT OK to share, copy, and give away.\n- *What if your friend invites you to his house to watch a movie that just came out on DVD? This is one of your favorite movies. You want it on your phone, so you can watch it whenever you want. So, you take out your phone and record the movie. Is this a fair way to get a copy of the movie?* \n    - No. This is not OK to share/copy. Why? Because you don’t own the right to make a copy and give it away.\n    -  *How else could you get an authorized (legal) copy of the movie for your phone?* \n        -  iTunes or Amazon sell movies legally.\n\n### Okay to Share\n\n- *I made this. That means I own it. I think I’m going to share it. I’m going to take out my phone (iPad, camera, etc.) to get a picture. I think I want to share it on my blog where I might make some money advertising on[Use the site of your choice.] Is this fair?* \n     - Yes, this is OK to share because I made it — I own the copyright.\n- *What about a song I wrote? Can I share that? . . . Who gets to decide?* \n     - “That’s right, I do.”\n- *What will happen when I share it?* \n     - Take responses: “It’s fun, . . . I’ll get a bunch of ‘likes’ . . . People will want to use it for mashups.”\n- *Let’s say you draw a picture to sell at a school art show. The money from the art sale will go to buy new library books. Is this a good share . . . is it ethical?* \n     - *Yes.*\n     - *Why is this share OK?* \n         - Take responses: “It’s yours!”, “You made it. You own it. You can choose to share it.” \n\n"
       },
       "seeding_key": {
         "activity_section.key": "2bab17fa-7a64-4ae1-a9c3-30d942674dd1",
@@ -2669,7 +2459,7 @@
       "key": "767262c7-b5ce-4ce9-beda-05e7dc425875",
       "position": 3,
       "properties": {
-        "description": "As we watch the video, decide if the music is OK to share or not.\r\n\r\n**Discuss:** What did you think of that? How do you think you would feel if you wrote a song and people shared it without asking for your permission? When we share digital ﬁles by:\r\n\r\n- sending pictures or songs through email\r\n- copying songs from our MP3 player to our friend’s computer\r\n- copying a movie from a DVD to all our friends’ computers"
+        "description": "As we watch the video, decide if the music is OK to share or not.\n\n**Discuss:** *What did you think of that? How do you think you would feel if you wrote a song and people shared it without asking for your permission? When we share digital ﬁles by:*\n\n- sending pictures or songs through email\n- copying songs from our MP3 player to our friend’s computer\n- copying a movie from a DVD to all our friends’ computers"
       },
       "seeding_key": {
         "activity_section.key": "767262c7-b5ce-4ce9-beda-05e7dc425875",
@@ -2680,7 +2470,7 @@
       "key": "7d8c55c5-c431-4f24-8823-f9c8e13bc085",
       "position": 4,
       "properties": {
-        "description": "That's not just sharing, it's making new copies!",
+        "description": "*That's not just sharing, it's making new copies!*",
         "tips": [
           {
             "type": "teachingTip",
@@ -2697,7 +2487,7 @@
       "key": "ba6837a2-c937-44f6-bc40-996abb3e6ec8",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** If you were one of these characters in the video, what could you do to share fairly? What about other sharing situations? What other ethical considerations are there?\n\n(Some acceptable responses:)\n\n- Send your friend a link to the artist’s YouTube channel where she can listen to the song.\n- Help your friend buy the song from an online store that you can trust because it’s used by a large online community, like iTunes or Amazon.  \n \nAsk yourself: Who owns this? Do I have permission to share? Do I have a right to make a copy? Am I being fair to everyone involved?"
+        "description": "**Discuss:** *If you were one of these characters in the video, what could you do to share fairly? What about other sharing situations? What other ethical considerations are there?*\n\nSome acceptable responses:\n\n- Send your friend a link to the artist’s YouTube channel where she can listen to the song.\n- Help your friend buy the song from an online store that you can trust because it’s used by a large online community, like iTunes or Amazon.  \n \n*Ask yourself: Who owns this? Do I have permission to share? Do I have a right to make a copy? Am I being fair to everyone involved?*"
       },
       "seeding_key": {
         "activity_section.key": "ba6837a2-c937-44f6-bc40-996abb3e6ec8",
@@ -2708,7 +2498,8 @@
       "key": "504e1645-369b-4f38-9e75-ee5f7d5e03cb",
       "position": 1,
       "properties": {
-        "description": "Remember, copyright is a protection given to writers and artists for a limited time to let them receive payment for their work. It’s intended to foster more creativity. As we share and use, we need to respect each other’s work and the laws of copyright. Just because we own a copy of something does not mean we have the right to make more copies to give or sell to other people. Copyright gives us some protection over how our art will be used and shared by others."
+        "description": "Remember, copyright is a protection given to writers and artists for a limited time to let them receive payment for their work. It’s intended to foster more creativity. As we share and use, we need to respect each other’s work and the laws of copyright. Just because we own a copy of something does not mean we have the right to make more copies to give or sell to other people. Copyright gives us some protection over how our art will be used and shared by others.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "504e1645-369b-4f38-9e75-ee5f7d5e03cb",
@@ -2719,8 +2510,7 @@
       "key": "88611b79-3f86-44ac-95fa-54bd59d8ba5a",
       "position": 2,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - Give an example of a way that you have seen other creators share or remix someone's work. Do you believe that was fair?  Why or why not?",
-        "name": "Journaling / Flash Chat\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Give an example of a way that you have seen other creators share or remix someone's work. Do you believe that was fair?  Why or why not?"
       },
       "seeding_key": {
         "activity_section.key": "88611b79-3f86-44ac-95fa-54bd59d8ba5a",
@@ -2771,7 +2561,7 @@
       "key": "2fb800b1-0368-40c0-b46e-99159f10fd02",
       "position": 2,
       "properties": {
-        "description": "\n####Online Puzzles\n\nStudents might benefit from having a puzzle done as a class. If you believe your class could benefit from that, we recommend puzzle 2 of stage 5.\n\nWe highly recommend [Pause and Think Online](https://www.youtube.com/watch?v=rgbZAWnOWOo) Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns."
+        "description": "\n####Online Puzzles\n\nStudents might benefit from having a puzzle done as a class. If you believe your class could benefit from that, we recommend puzzle 2 of stage 5.\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns."
       },
       "seeding_key": {
         "activity_section.key": "2fb800b1-0368-40c0-b46e-99159f10fd02",
@@ -2870,7 +2660,8 @@
       "key": "9ad07175-6454-4905-9366-61b189a9ab7e",
       "position": 1,
       "properties": {
-        "description": "\n###Flash Chat: What did you make today?\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop."
+        "description": "\n###Flash Chat: What did you make today?\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "9ad07175-6454-4905-9366-61b189a9ab7e",
@@ -2881,8 +2672,7 @@
       "key": "cbdc3d01-eba8-41fa-9138-a5aa16a22788",
       "position": 2,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How did you feel during today's lesson?\r\n - Draw something you used nested loops to make.\r\n - How do nested loops help you code complex images?",
-        "name": "Journaling \r"
+        "description": "\n####Journaling \n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel during today's lesson?\n - Draw something you used nested loops to make.\n - How do nested loops help you code complex images?"
       },
       "seeding_key": {
         "activity_section.key": "cbdc3d01-eba8-41fa-9138-a5aa16a22788",
@@ -2917,7 +2707,8 @@
       "position": 1,
       "properties": {
         "name": "Nested Loops with Frozen",
-        "progression_name": "Mini-Project: Snowflake #1"
+        "progression_name": "Mini-Project: Snowflake #1",
+        "description": "####Online Puzzles\n\nThis set of puzzles is set up as a progression. This means every puzzle builds a foundation for the next puzzle. Students will enjoy making more and more interesting designs by making small and simple changes to code they have already written."
       },
       "seeding_key": {
         "activity_section.key": "5d0e32d6-0d8a-4783-92f2-1e20fb8e5ea9",
@@ -2936,22 +2727,11 @@
       }
     },
     {
-      "key": "cb90508f-f052-4582-a37e-88b6abf0b729",
-      "position": 3,
-      "properties": {
-        "description": "\n####Online Puzzles\n\nThis set of puzzles is set up as a progression. This means every puzzle builds a foundation for the next puzzle. Students will enjoy making more and more interesting designs by making small and simple changes to code they have already written."
-      },
-      "seeding_key": {
-        "activity_section.key": "cb90508f-f052-4582-a37e-88b6abf0b729",
-        "lesson_activity.key": "8fecfdd9-352e-4816-8964-e4fa6d36c0aa"
-      }
-    },
-    {
       "key": "47f46b59-d887-4bc5-8f39-c72cd925587a",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - When do you use a loop? When do you use a nested loop?\r\n - Thought exercise: Can you make everything a nested loop can with just a normal loop? Can you draw out an example?\r\n    - Answer: Yes, you can, but it is a lot more difficult. Nested loops make programs simpler.",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - When do you use a loop? When do you use a nested loop?\n - Thought exercise: Can you make everything a nested loop can with just a normal loop? Can you draw out an example?\n    - Answer: Yes, you can, but it is a lot more difficult. Nested loops make programs simpler.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "47f46b59-d887-4bc5-8f39-c72cd925587a",
@@ -2999,7 +2779,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Little Bunny Foo Foo is being used here as an example only.  If your students know this song, feel free to use it.  Otherwise, choose an appropriate song that they might be more familiar with (either from music class or the radio.)\r\n\r\n  "
+            "markdown": "Baby Shark is being used here as an example only.  If your students know this song, feel free to use it.  Otherwise, choose an appropriate song that they might be more familiar with (either from music class or the radio.)\n\n**Key Gestures:**\n\n**Baby shark:** make a shark mouth with finger and thumb.\n\n**Mommy shark:** make a mouth with both hands, opening at the wrist.\n\n**Daddy shark:** make a big mouth with both of your arms.\n\n**Grandma shark:** like mama shark, but with fingers curled in.\n\n**Grandpa shark:** like papa shark, but with fingers curled in.\n\n**Hungry shark:** one hand on head like a fin, rubbing tummy with the other hand.\n\n**Little fish:** both hands together with fingers pointing forward, move from side to side.\n\n**Swim away:** pretend to swim.\n\n**Safe at last:** wipe forehead, and flick hand like removing sweat.\n\n\n\n\n  "
           }
         ]
       },
@@ -3012,7 +2792,7 @@
       "key": "f92bd484-5bb9-411e-ba94-98b2513e0d54",
       "position": 4,
       "properties": {
-        "description": "***Chorus:***\n\nLittle bunny Foo Foo<br/>\nHopping through the forest<br/>\nScooping up the field mice<br/>\nAnd bopping ‘em on the head<br/>\nDown came the Fairy<br/>\nAnd she said<br/>\n“Little bunny Foo Foo<br/>\nI don’t wanna see you<br/>\nScooping up the field mice<br/>\nAnd bopping ‘em on the head”*<br/>\n\n***Song:***\n\n*Chorus*\n\n*I’ll give you 3 chances.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*I’ll give you 2 chances.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*I’ll give you 1 chance.<br/>\nThen I’ll turn you into a goon!<br/>\nThe next day. . .*\n\n*Chorus*\n\n*\"I gave you two chances.<br/>\nNow I’ll turn you into a goon!”<br/>\n(POOF!)<br/>\nAnd the moral of the story is:<br/>\nHare today, goon tomorrow!*\n\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\n\t- Stop the song once that happens, and explicitly highlight what just happened.\n\t\t- You defined the chorus.\n\t\t- You called the chorus.\n\t\t- They sang the chorus.\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
+        "description": "***Chorus:***\n\n*doo doo, doo doo doo doo*\n\n***Song:***\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n(Continuing on, if time permits, with \"Grandma shark\", \"Grandpa shark\", \"Hungry shark\", \"Little fish\", \"Swim away\", \"Swim faster\", \"Safe at last\".)\n\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\n\t- Stop the song once that happens, and explicitly highlight what just happened.\n\t\t- You defined the chorus.\n\t\t- You called the chorus.\n\t\t- They sang the chorus.\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
       },
       "seeding_key": {
         "activity_section.key": "f92bd484-5bb9-411e-ba94-98b2513e0d54",
@@ -3026,7 +2806,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To hit this point home, you can look up the lyrics for some popular songs on the Internet. Show the students that the standard for repeating lyrics is to define the chorus at the top and call it from within the body of the song.\r\n"
+            "markdown": "Call out the difference between a function (“doo doo”) and a loop (“baby shark doo doo” x 3) - or ask your students if they can tell you the difference between them.\n\nTo hit this point home, you can look up the lyrics for some popular songs on the Internet. Show the students that the standard for repeating lyrics is to define the chorus at the top and call it from within the body of the song.\n"
           }
         ]
       },
@@ -3079,7 +2859,7 @@
       "key": "88cccb48-efc0-4649-886d-c649589769b3",
       "position": 2,
       "properties": {
-        "description": "\n**Directions:**\n\n- Divide into groups of 4, 5, or 6.\n- Give each group several copies of the **Songwriting Worksheet**.\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\n- Challenge the class to identify (and write down) the chorus.\n- Compare results from each group.\n\nDid everyone get the same thing?\nSing your choruses together to find out!\nPlay this game over and over until the class has little trouble identifying the choruses.\n\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
+        "description": "\n**Directions:**\n\n- Divide into groups of 4, 5, or 6.\n- Give each group several copies of the ***Songwriting Worksheet**.\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\n- Challenge the class to identify (and write down) the chorus.\n- Compare results from each group.\n\nDid everyone get the same thing?\nSing your choruses together to find out!\nPlay this game over and over until the class has little trouble identifying the choruses.\n\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
       },
       "seeding_key": {
         "activity_section.key": "88cccb48-efc0-4649-886d-c649589769b3",
@@ -3096,7 +2876,7 @@
             "markdown": "Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.\r\n"
           }
         ],
-        "name": "Flash Chat/Journaling"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "06b4ee77-0a27-48bc-9dca-d55b530d1ce6",
@@ -3129,7 +2909,7 @@
       "key": "0abea6de-f093-42f4-a3de-e84fba11870e",
       "position": 1,
       "properties": {
-        "description": "Hand out the **Songwriting Assessment worksheet** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "Hand out the ***Songwriting Assessment worksheet** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "0abea6de-f093-42f4-a3de-e84fba11870e",
@@ -3192,7 +2972,7 @@
           }
         ],
         "name": "Unplugged Activity Using Some Blockly",
-        "description": "Pick a song to play that the students enjoy and print out the lyrics. You can use the same song from \"Functions Unplugged: Songwriting.\" Break your class into groups or pairs. Pass out the printed out lyrics (including the repeated chorus) and the basic function blocks from [Unplugged Blocks](\thttps://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit) to each group or pair of students. See lesson tip for details.\n\nAsk the students to cross out any part of the song that can be made into a function (the chorus is a good example) and put it into the function blocks provided. Students should fill in the function declaration with a function name and the words of the repeated lyrics. Once the function declaration is done, ask the students to fill in the function calls and place them on top of the crossed out lyrics.\n\n"
+        "description": "Pick a song to play that the students enjoy and print out the lyrics. You can use the same song from \"Functions Unplugged: Songwriting.\" Break your class into groups or pairs. Pass out the printed out lyrics (including the repeated chorus) and the basic function blocks from ***Unplugged Blocks** to each group or pair of students. See lesson tip for details.\n\nAsk the students to cross out any part of the song that can be made into a function (the chorus is a good example) and put it into the function blocks provided. Students should fill in the function declaration with a function name and the words of the repeated lyrics. Once the function declaration is done, ask the students to fill in the function calls and place them on top of the crossed out lyrics.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "1df9bd87-1d7e-4073-8ba6-e098abe93672",
@@ -3227,7 +3007,8 @@
       "position": 1,
       "properties": {
         "name": "Functions in Minecraft",
-        "progression_name": "Practice"
+        "progression_name": "Practice",
+        "description": "####Online Puzzles\n\nWe recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles."
       },
       "seeding_key": {
         "activity_section.key": "4130a39a-0232-45ed-b6c7-1f2badada9ee",
@@ -3246,22 +3027,11 @@
       }
     },
     {
-      "key": "9e696711-1000-4f2b-a0c5-b279065d0d19",
-      "position": 3,
-      "properties": {
-        "description": "\n####Online Puzzles\n\nWe recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles."
-      },
-      "seeding_key": {
-        "activity_section.key": "9e696711-1000-4f2b-a0c5-b279065d0d19",
-        "lesson_activity.key": "0da29d00-d95a-4538-ac89-116513fba104"
-      }
-    },
-    {
       "key": "9639ed09-b00f-4186-a5e8-0a1020965a44",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "9639ed09-b00f-4186-a5e8-0a1020965a44",
@@ -3363,8 +3133,8 @@
       "key": "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How did you feel about today's lesson?\r\n - What makes you realize a function could help your program?\r\n - How do `while` loops and `if / else` statements help your program?",
-        "name": "Journaling \r"
+        "description": "\n####Journaling \n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What makes you realize a function could help your program?\n - How do `while` loops and `if / else` statements help your program?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1",
@@ -3466,8 +3236,8 @@
       "key": "c8e5eb74-9ded-4c7c-bfbf-3fb3a144fe3a",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How do you feel about today’s lesson?\r\n - What are some differences between functions and loops?\r\n - Sketch out a drawing you made today. Can you write the code needed to create this?\r\n - Draw a picture you would like to create with code. Try writing or drafting the code that would make that drawing.",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How do you feel about today’s lesson?\n - What are some differences between functions and loops?\n - Sketch out a drawing you made today. Can you write the code needed to create this?\n - Draw a picture you would like to create with code. Try writing or drafting the code that would make that drawing.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "c8e5eb74-9ded-4c7c-bfbf-3fb3a144fe3a",
@@ -3523,7 +3293,7 @@
       "key": "4c5a950e-1fc0-4ec3-9eda-a4a8e7631801",
       "position": 1,
       "properties": {
-        "description": "Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the **Final Project Design Worksheet** and the **CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \n\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "Students will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Final Project Design Worksheet** and the ***CS Fundamentals Final Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \n\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -3562,7 +3332,7 @@
       "key": "281f3680-418c-4e9f-b18f-dedc11afe3f2",
       "position": 1,
       "properties": {
-        "description": "Students will use this day to build an initial version of their project.\n\nEquipped with their **End of Course Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their **End of Course Project Guide** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own **End of Course Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "Students will use this day to build an initial version of their project.\n\nEquipped with their ***End of Course Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\nDon’t let the class forget to fill out their ***End of Course Project Guide** as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***End of Course Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3603,7 +3373,7 @@
       "key": "943225fd-17d1-40af-884c-76370ba25b32",
       "position": 3,
       "properties": {
-        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like **Google Slides**. For other presentation ideas, visit [72 Creative Ways for Your Students to Show What They Know](http://minds-in-bloom.com/72-creative-ways-for-students-to-show/) - Website.\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present:\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
+        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like **Google Slides**. For other presentation ideas, visit ***72 Creative Ways for Your Students to Show What They Know** - Website.\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present:\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
       },
       "seeding_key": {
         "activity_section.key": "943225fd-17d1-40af-884c-76370ba25b32",
@@ -3683,341 +3453,288 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Maze Intro: Programming with Blocks",
+        "progression": "Practice",
         "level_keys": [
-          "courseD_video_ramp1_2021"
+          "CourseE_HOC 2018 Level_1_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_video_ramp1_2021"
+          "CourseE_HOC 2018 Level_1_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d49bf109-2543-40ee-9fce-0c69e13ac185"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseD_video_ramp1_2021"
+        "CourseE_HOC 2018 Level_1_2021"
       ]
     },
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseD_maze_ramp1_2021"
+          "CourseE_HOC 2018 Level_2_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_maze_ramp1_2021"
+          "CourseE_HOC 2018 Level_2_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseD_maze_ramp1_2021"
+        "CourseE_HOC 2018 Level_2_2021"
       ]
     },
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseD_maze_ramp2_2021"
+          "CourseE_HOC 2018 Level_3_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_maze_ramp2_2021"
+          "CourseE_HOC 2018 Level_3_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseD_maze_ramp2_2021"
+        "CourseE_HOC 2018 Level_3_2021"
       ]
     },
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseC_maze_debugging9_copy_2021"
+          "CourseE_HOC 2018 Level_4_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_debugging9_copy_2021"
+          "CourseE_HOC 2018 Level_4_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseC_maze_debugging9_copy_2021"
+        "CourseE_HOC 2018 Level_4_2021"
       ]
     },
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": 5,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseD_maze_ramp3_2021"
+          "CourseE_HOC 2018 Level_5_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_maze_ramp3_2021"
+          "CourseE_HOC 2018 Level_5_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseD_maze_ramp3_2021"
+        "CourseE_HOC 2018 Level_5_2021"
       ]
     },
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Debugging with the Step Button",
+        "progression": "Practice",
         "level_keys": [
-          "courseC_video_debugging_2021"
+          "CourseE_HOC 2018 Level_6_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_video_debugging_2021"
+          "CourseE_HOC 2018 Level_6_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "74868c8b-a655-4ea5-a493-d92849957afd"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseC_video_debugging_2021"
+        "CourseE_HOC 2018 Level_6_2021"
       ]
     },
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 7,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseC_maze_debugging2_2021"
+          "CourseE_HOC 2018 Level_7a_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_debugging2_2021"
+          "CourseE_HOC 2018 Level_7a_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseC_maze_debugging2_2021"
+        "CourseE_HOC 2018 Level_7a_2021"
       ]
     },
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": 8,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseD_maze_ramp4_2021"
+          "CourseE_HOC 2018 Level_8_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_maze_ramp4_2021"
+          "CourseE_HOC 2018 Level_8_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseD_maze_ramp4_2021"
+        "CourseE_HOC 2018 Level_8_2021"
       ]
     },
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 3,
+      "activity_section_position": 9,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseC_maze_debugging4_2021"
+          "CourseE_HOC 2018 Level_9b_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_debugging4_2021"
+          "CourseE_HOC 2018 Level_9b_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseC_maze_debugging4_2021"
+        "CourseE_HOC 2018 Level_9b_2021"
       ]
     },
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 4,
+      "activity_section_position": 10,
       "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseC_maze_debugging6_2021"
+          "CourseE_HOC 2018 Level_10_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_debugging6_2021"
+          "CourseE_HOC 2018 Level_10_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseC_maze_debugging6_2021"
+        "CourseE_HOC 2018 Level_10_2021"
       ]
     },
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": 11,
       "assessment": null,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
+        "progression": "Practice",
         "level_keys": [
-          "courseC_maze_debugging7_2021"
+          "CourseE_HOC 2018 Level_11_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_debugging7_2021"
+          "CourseE_HOC 2018 Level_11_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "1823aca8-b31b-4700-a724-c3f295cdfcb5"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       },
       "level_keys": [
-        "courseC_maze_debugging7_2021"
+        "CourseE_HOC 2018 Level_11_2021"
       ]
     },
     {
       "chapter": 12,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_maze_ramp5a_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_maze_ramp5a_2021"
-        ],
-        "lesson.key": "Sequencing in the Maze",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7"
-      },
-      "level_keys": [
-        "courseD_maze_ramp5a_2021"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_maze_ramp5c_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_maze_ramp5c_2021"
-        ],
-        "lesson.key": "Sequencing in the Maze",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7"
-      },
-      "level_keys": [
-        "courseD_maze_ramp5c_2021"
-      ]
-    },
-    {
-      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4043,7 +3760,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4069,7 +3786,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -4095,7 +3812,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -4121,7 +3838,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -4147,7 +3864,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -4173,7 +3890,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4200,7 +3917,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -4226,7 +3943,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 2,
       "assessment": null,
@@ -4252,7 +3969,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 3,
       "assessment": null,
@@ -4278,7 +3995,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -4305,7 +4022,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -4331,7 +4048,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 13,
       "activity_section_position": 2,
       "assessment": null,
@@ -4357,293 +4074,7 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_1_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_1_2021"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_2_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_2_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_2_2021"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_3_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_3_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_3_2021"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_4_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_4_2021"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_5_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_5_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_5_2021"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_6_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_6_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_6_2021"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_7a_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_7a_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_7a_2021"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_8_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_8_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_8_2021"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_9b_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_9b_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_9b_2021"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_10_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_10_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_10_2021"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "CourseE_HOC 2018 Level_11_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_11_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      },
-      "level_keys": [
-        "CourseE_HOC 2018 Level_11_2021"
-      ]
-    },
-    {
-      "chapter": 38,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4669,7 +4100,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4695,7 +4126,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4721,7 +4152,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -4747,7 +4178,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -4773,7 +4204,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -4799,7 +4230,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -4825,7 +4256,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4851,7 +4282,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -4877,7 +4308,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 2,
       "assessment": null,
@@ -4903,7 +4334,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 3,
       "assessment": null,
@@ -4929,7 +4360,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 36,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -4955,7 +4386,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 37,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -4982,7 +4413,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 38,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -5008,7 +4439,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5034,7 +4465,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5060,7 +4491,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5086,7 +4517,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5112,7 +4543,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -5138,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -5164,7 +4595,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -5190,7 +4621,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -5216,7 +4647,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -5242,7 +4673,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -5268,7 +4699,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 49,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -5294,7 +4725,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5320,7 +4751,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5346,7 +4777,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5372,7 +4803,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -5398,7 +4829,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -5424,7 +4855,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -5450,7 +4881,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 56,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -5476,7 +4907,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 57,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -5502,7 +4933,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 58,
       "position": 9,
       "activity_section_position": 3,
       "assessment": null,
@@ -5528,7 +4959,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5553,7 +4984,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5579,7 +5010,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5605,7 +5036,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -5631,7 +5062,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -5657,7 +5088,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -5683,7 +5114,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -5709,10 +5140,10 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Digital Sharing - Unplugged Activity",
         "level_keys": [
@@ -5735,7 +5166,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5761,7 +5192,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5787,7 +5218,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5813,7 +5244,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5839,7 +5270,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 2,
       "assessment": null,
@@ -5865,7 +5296,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 3,
       "assessment": null,
@@ -5891,7 +5322,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 4,
       "assessment": null,
@@ -5917,7 +5348,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 74,
       "position": 8,
       "activity_section_position": 5,
       "assessment": null,
@@ -5943,7 +5374,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 75,
       "position": 9,
       "activity_section_position": 6,
       "assessment": null,
@@ -5969,7 +5400,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 76,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -5996,7 +5427,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 77,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -6022,7 +5453,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 78,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6048,7 +5479,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 79,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6074,7 +5505,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 80,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -6100,7 +5531,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 81,
       "position": 15,
       "activity_section_position": 2,
       "assessment": null,
@@ -6126,7 +5557,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6152,7 +5583,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6178,7 +5609,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6204,7 +5635,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 85,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6230,7 +5661,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 86,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -6256,7 +5687,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 87,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6282,7 +5713,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 88,
       "position": 7,
       "activity_section_position": 2,
       "assessment": null,
@@ -6308,7 +5739,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 89,
       "position": 8,
       "activity_section_position": 3,
       "assessment": null,
@@ -6334,7 +5765,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 90,
       "position": 9,
       "activity_section_position": 4,
       "assessment": null,
@@ -6360,7 +5791,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6386,7 +5817,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6412,7 +5843,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6438,7 +5869,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 94,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6464,7 +5895,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 95,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6490,7 +5921,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 96,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -6516,7 +5947,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 97,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -6542,7 +5973,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 98,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -6568,7 +5999,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 99,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -6594,7 +6025,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 100,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -6620,7 +6051,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 101,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -6646,7 +6077,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 102,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -6672,7 +6103,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 103,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6698,7 +6129,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6724,7 +6155,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 105,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6750,7 +6181,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 106,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6776,7 +6207,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 107,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6802,7 +6233,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 108,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -6828,7 +6259,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 109,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -6854,7 +6285,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 110,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -6880,7 +6311,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 111,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6906,7 +6337,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 112,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -6932,7 +6363,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 113,
       "position": 10,
       "activity_section_position": 2,
       "assessment": null,
@@ -6958,7 +6389,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 114,
       "position": 11,
       "activity_section_position": 3,
       "assessment": null,
@@ -6984,7 +6415,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 115,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -7011,7 +6442,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 116,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -7037,7 +6468,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 117,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -7063,7 +6494,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 118,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7089,7 +6520,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 119,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7115,7 +6546,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 120,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -7141,7 +6572,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 121,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -7167,7 +6598,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 122,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -7193,7 +6624,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 123,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -7219,7 +6650,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 124,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -7245,7 +6676,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 125,
       "position": 8,
       "activity_section_position": 7,
       "assessment": null,
@@ -7271,7 +6702,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 126,
       "position": 9,
       "activity_section_position": 8,
       "assessment": null,
@@ -7297,7 +6728,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 127,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -7324,7 +6755,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 128,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -7350,7 +6781,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 129,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -7376,7 +6807,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 130,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -7402,7 +6833,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 131,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -7428,7 +6859,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 132,
       "position": 15,
       "activity_section_position": 2,
       "assessment": null,
@@ -7454,7 +6885,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7480,7 +6911,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7509,158 +6940,134 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "courseD_video_ramp1_2021",
+        "level.key": "CourseE_HOC 2018 Level_1_2021",
         "script_level.level_keys": [
-          "courseD_video_ramp1_2021"
+          "CourseE_HOC 2018 Level_1_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d49bf109-2543-40ee-9fce-0c69e13ac185"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseD_maze_ramp1_2021",
+        "level.key": "CourseE_HOC 2018 Level_2_2021",
         "script_level.level_keys": [
-          "courseD_maze_ramp1_2021"
+          "CourseE_HOC 2018 Level_2_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseD_maze_ramp2_2021",
+        "level.key": "CourseE_HOC 2018 Level_3_2021",
         "script_level.level_keys": [
-          "courseD_maze_ramp2_2021"
+          "CourseE_HOC 2018 Level_3_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_debugging9_copy_2021",
+        "level.key": "CourseE_HOC 2018 Level_4_2021",
         "script_level.level_keys": [
-          "courseC_maze_debugging9_copy_2021"
+          "CourseE_HOC 2018 Level_4_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseD_maze_ramp3_2021",
+        "level.key": "CourseE_HOC 2018 Level_5_2021",
         "script_level.level_keys": [
-          "courseD_maze_ramp3_2021"
+          "CourseE_HOC 2018 Level_5_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c1a101ad-d674-496e-978e-2fd7bf196022"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_video_debugging_2021",
+        "level.key": "CourseE_HOC 2018 Level_6_2021",
         "script_level.level_keys": [
-          "courseC_video_debugging_2021"
+          "CourseE_HOC 2018 Level_6_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "74868c8b-a655-4ea5-a493-d92849957afd"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_debugging2_2021",
+        "level.key": "CourseE_HOC 2018 Level_7a_2021",
         "script_level.level_keys": [
-          "courseC_maze_debugging2_2021"
+          "CourseE_HOC 2018 Level_7a_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseD_maze_ramp4_2021",
+        "level.key": "CourseE_HOC 2018 Level_8_2021",
         "script_level.level_keys": [
-          "courseD_maze_ramp4_2021"
+          "CourseE_HOC 2018 Level_8_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_debugging4_2021",
+        "level.key": "CourseE_HOC 2018 Level_9b_2021",
         "script_level.level_keys": [
-          "courseC_maze_debugging4_2021"
+          "CourseE_HOC 2018 Level_9b_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_debugging6_2021",
+        "level.key": "CourseE_HOC 2018 Level_10_2021",
         "script_level.level_keys": [
-          "courseC_maze_debugging6_2021"
+          "CourseE_HOC 2018 Level_10_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "d64f7ad4-be48-428b-a27f-cb46015a444a"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_debugging7_2021",
+        "level.key": "CourseE_HOC 2018 Level_11_2021",
         "script_level.level_keys": [
-          "courseC_maze_debugging7_2021"
+          "CourseE_HOC 2018 Level_11_2021"
         ],
-        "lesson.key": "Sequencing in the Maze",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "1823aca8-b31b-4700-a724-c3f295cdfcb5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_maze_ramp5a_2021",
-        "script_level.level_keys": [
-          "courseD_maze_ramp5a_2021"
-        ],
-        "lesson.key": "Sequencing in the Maze",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_maze_ramp5c_2021",
-        "script_level.level_keys": [
-          "courseD_maze_ramp5c_2021"
-        ],
-        "lesson.key": "Sequencing in the Maze",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "a7f1548f-2d8e-46cb-b3d6-35ef493eeef7"
+        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
@@ -7817,138 +7224,6 @@
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
         "activity_section.key": "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_1_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_1_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_2_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_2_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_3_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_3_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_4_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_4_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_5_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_5_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_6_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_6_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_7a_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_7a_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_8_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_8_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_9b_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_9b_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_10_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_10_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseE_HOC 2018 Level_11_2021",
-        "script_level.level_keys": [
-          "CourseE_HOC 2018 Level_11_2021"
-        ],
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "3b64705c-3a17-44b9-b688-4bbc029ba2ea"
       }
     },
     {
@@ -9274,43 +8549,6 @@
   ],
   "resources": [
     {
-      "name": " Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "course-cf-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "name": "Debugging Recipe",
-      "url": "https://docs.google.com/document/d/1mvczixGJKW6449WNmmc-r3RL3_2PU0yViiQSsRcTTNY/edit?usp=sharing",
-      "key": "csf-debugging-handout",
-      "properties": {
-        "type": "Student Handout",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-debugging-handout"
-      }
-    },
-    {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair_programming",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pair_programming"
-      }
-    },
-    {
       "name": "Be A Super Digital Citizen: Lesson Slides",
       "url": "https://drive.google.com/open?id=1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM",
       "key": "be_a_super_digital_citizen_lesson_slides",
@@ -9331,6 +8569,18 @@
       },
       "seeding_key": {
         "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
+      }
+    },
+    {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "common-sense-media-pause-think",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -9440,6 +8690,18 @@
       },
       "seeding_key": {
         "resource.key": "digital-sharing-video"
+      }
+    },
+    {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "common-sense-media-pause-think",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -9591,27 +8853,21 @@
       "seeding_key": {
         "resource.key": "design-process"
       }
+    },
+    {
+      "name": "72 Creative Ways for Your Students to Show What They Know",
+      "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
+      "key": "72_creative_ways_for_your_students_to_show_what_they_know",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "72_creative_ways_for_your_students_to_show_what_they_know"
+      }
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "resource.key": "csf-debugging-handout"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "resource.key": "pair_programming"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -9622,6 +8878,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -9676,6 +8938,12 @@
       "seeding_key": {
         "lesson.key": "Digital Sharing",
         "resource.key": "digital-sharing-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -9749,39 +9017,29 @@
         "lesson.key": "End of Course Project",
         "resource.key": "design-process"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "72_creative_ways_for_your_students_to_show_what_they_know"
+      }
     }
   ],
   "vocabularies": [
     {
-      "key": "Bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
+      "key": "Condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "Condition"
       }
     },
     {
-      "key": "Debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
+      "key": "Conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
       "seeding_key": {
-        "vocabulary.key": "Debugging"
-      }
-    },
-    {
-      "key": "Program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "seeding_key": {
-        "vocabulary.key": "Program"
-      }
-    },
-    {
-      "key": "Programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "seeding_key": {
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "Conditionals"
       }
     },
     {
@@ -9798,22 +9056,6 @@
       "definition": "To do something again.",
       "seeding_key": {
         "vocabulary.key": "Repeat"
-      }
-    },
-    {
-      "key": "Condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "seeding_key": {
-        "vocabulary.key": "Condition"
-      }
-    },
-    {
-      "key": "Conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "seeding_key": {
-        "vocabulary.key": "Conditionals"
       }
     },
     {
@@ -9972,26 +9214,14 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "vocabulary.key": "Bug"
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "vocabulary.key": "Condition"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "vocabulary.key": "Debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "vocabulary.key": "Program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "vocabulary.key": "Programming"
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "vocabulary.key": "Conditionals"
       }
     },
     {
@@ -10004,18 +9234,6 @@
       "seeding_key": {
         "lesson.key": "Programming and Loops with the Artist",
         "vocabulary.key": "Repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "vocabulary.key": "Condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "vocabulary.key": "Conditionals"
       }
     },
     {
@@ -10135,63 +9353,23 @@
   ],
   "objectives": [
     {
-      "key": "b4e8f362-da15-48c9-98ab-ea7a3f586810",
+      "key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91",
       "properties": {
-        "description": "Order movement commands as sequential steps in a program."
+        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
       },
       "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "objective.key": "b4e8f362-da15-48c9-98ab-ea7a3f586810"
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "objective.key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91"
       }
     },
     {
-      "key": "8c110aa8-a76d-40c1-a41e-339849dc5171",
+      "key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870",
       "properties": {
-        "description": "Modify an existing program to solve errors."
+        "description": "Determine whether a conditional is met based on criteria."
       },
       "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "objective.key": "8c110aa8-a76d-40c1-a41e-339849dc5171"
-      }
-    },
-    {
-      "key": "f1df5faa-7cb9-48fc-926e-19e4aae090e6",
-      "properties": {
-        "description": "Break down a long sequence of instructions into the largest repeatable sequence."
-      },
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "objective.key": "f1df5faa-7cb9-48fc-926e-19e4aae090e6"
-      }
-    },
-    {
-      "key": "acd1314e-9c58-439c-9538-64547e431aa3",
-      "properties": {
-        "description": "Predict where a program will fail."
-      },
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "objective.key": "acd1314e-9c58-439c-9538-64547e431aa3"
-      }
-    },
-    {
-      "key": "55f1f73f-199d-4e78-bc5b-fd14d4cebaeb",
-      "properties": {
-        "description": "Modify an existing program to solve errors."
-      },
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "objective.key": "55f1f73f-199d-4e78-bc5b-fd14d4cebaeb"
-      }
-    },
-    {
-      "key": "1a705813-8f58-4e30-a479-bc681e56a392",
-      "properties": {
-        "description": "Reflect on the debugging process in an age-appropriate way."
-      },
-      "seeding_key": {
-        "lesson.key": "Sequencing in the Maze",
-        "objective.key": "1a705813-8f58-4e30-a479-bc681e56a392"
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "objective.key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870"
       }
     },
     {
@@ -10212,26 +9390,6 @@
       "seeding_key": {
         "lesson.key": "Programming and Loops with the Artist",
         "objective.key": "c94bf0ed-de3d-428d-b6af-f3d9283d6b81"
-      }
-    },
-    {
-      "key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "objective.key": "e23e9b8a-cb10-4ec2-ac46-516d6a538d91"
-      }
-    },
-    {
-      "key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "objective.key": "fa7e3e31-19dd-47cb-b3f3-fdf47765b870"
       }
     },
     {

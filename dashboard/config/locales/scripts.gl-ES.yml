@@ -2391,6 +2391,8 @@ gl:
               display_name: Binario
             csf_digcit:
               display_name: Cidadanía dixital
+            lessonGroup-6:
+              display_name: Cidadanía dixital
         coursee-2021:
           lessons:
             Conditionals:
@@ -2448,3 +2450,23 @@ gl:
               display_name: Introdución
             lessonGroup-3:
               display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Eventos
+              name: Eventos
+            Conditionals:
+              key: Condicionais
+              name: Condicionais
+            Functions:
+              key: Funcións
+              name: Funcións
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Bucles "Para" (For)
+              name: Bucles "Para" (For)
