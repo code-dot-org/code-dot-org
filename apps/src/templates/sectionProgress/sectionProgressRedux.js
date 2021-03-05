@@ -1,11 +1,3 @@
-import {
-  NAME_COLUMN_WIDTH,
-  PROGRESS_BUBBLE_WIDTH,
-  DIAMOND_BUBBLE_WIDTH,
-  PILL_BUBBLE_WIDTH,
-  MIN_COLUMN_WIDTH
-} from './multiGridConstants';
-import {SMALL_DOT_SIZE} from '@cdo/apps/templates/progress/progressStyles';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
@@ -155,37 +147,4 @@ export const getCurrentScriptData = state => {
   return state.sectionProgress.scriptDataByScript[
     state.scriptSelection.scriptId
   ];
-};
-
-/**
- * Calculate the width of each column in the detail view based on types of levels
- * @returns {Array} array of integers indicating the length of each column
- */
-export const getColumnWidthsForDetailView = state => {
-  let columnLengths = [NAME_COLUMN_WIDTH];
-  const stages = getCurrentScriptData(state).stages;
-
-  for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
-    const levels = stages[stageIndex].levels;
-    // Left and right padding surrounding bubbles
-    let width = 10;
-    for (let levelIndex = 0; levelIndex < levels.length; levelIndex++) {
-      if (levels[levelIndex].isUnplugged) {
-        // Pill shaped bubble
-        width = width + PILL_BUBBLE_WIDTH;
-      } else if (levels[levelIndex].is_concept_level) {
-        // Diamond shaped bubble
-        width = width + DIAMOND_BUBBLE_WIDTH;
-      } else {
-        // Circle bubble
-        width = width + PROGRESS_BUBBLE_WIDTH;
-      }
-      if (levels[levelIndex].sublevels) {
-        width =
-          width + levels[levelIndex].sublevels.length * SMALL_DOT_SIZE * 2;
-      }
-    }
-    columnLengths.push(Math.max(width, MIN_COLUMN_WIDTH));
-  }
-  return columnLengths;
 };

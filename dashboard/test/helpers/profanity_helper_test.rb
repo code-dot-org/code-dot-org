@@ -1,11 +1,6 @@
 require 'test_helper'
 
 class ProfanityHelperTest < ActionView::TestCase
-  teardown do
-    # Some tests access and store data in the cache, so clear between tests to avoid state leakage
-    CDO.shared_cache.clear
-  end
-
   test 'throttled_find_profanities: yields profanities if cached' do
     CDO.shared_cache.expects(:exist?).returns(true)
     expected_profanities = ['bad']

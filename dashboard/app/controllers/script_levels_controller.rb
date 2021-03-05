@@ -80,6 +80,9 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
+
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
@@ -163,21 +166,9 @@ class ScriptLevelsController < ApplicationController
     if params[:chapter]
       script.get_script_level_by_chapter(params[:chapter])
     elsif params[:stage_position]
-      if  (['csp2-2020', 'csp3-2020', 'csp4-2020', 'csp5-2020', 'csp6-2020', 'csp7-2020', 'csp9-2020', 'csp10-2020'].include? script.name) && script.lessons.last.absolute_position == params[:stage_position].to_i
-        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
-      elsif script.name == 'csp1-2020' && script.lessons.last.absolute_position - 1 == params[:stage_position].to_i
-        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
-      else
-        script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
-      end
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
     elsif params[:lockable_stage_position]
-      if  (['csp2-2020', 'csp3-2020', 'csp4-2020', 'csp5-2020', 'csp6-2020', 'csp7-2020', 'csp9-2020', 'csp10-2020'].include? script.name) && script.lessons.last.absolute_position == params[:stage_position].to_i
-        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
-      elsif script.name == 'csp1-2020' && script.lessons.last.absolute_position - 1 == params[:stage_position].to_i
-        script.get_script_level_by_absolute_position_and_puzzle_position(script.lessons.last.absolute_position, params[:id])
-      else
-        script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
-      end
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
     else
       script.get_script_level_by_id(params[:id])
     end

@@ -12,6 +12,8 @@
 
 module Services
   module ScriptSeed
+    prepend LessonPlanPdfs::ScriptSeed
+
     # Holds data that we've already retrieved from the database. Used to look up
     # associations of objects without making additional queries.
     # Storing this data together in a "data object" makes it easier to pass around.
@@ -198,7 +200,8 @@ module Services
     # Internal methods and classes below
 
     def self.import_script(script_data)
-      script_to_import = Script.new(script_data.except('seeding_key'))
+      script_to_import = Script.new(script_data.except('seeding_key', 'serialized_at'))
+      script_to_import.seeded_from = script_data['serialized_at']
       script_to_import.is_migrated = true
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
@@ -495,8 +498,26 @@ module Services
         :properties,
         :new_name,
         :family_name,
+        :serialized_at,
         :seeding_key
       )
+
+      # The "seeded_from" property is set by the seeding process; we don't need
+      # to include it in the serialization.
+      attribute :properties do
+        object.properties.except("seeded_from")
+      end
+
+      # A simple field to track when the script was most recently serialized.
+      # This will be set by levelbuilder whenever the script is saved, and then
+      # read by the seeding process on other environments and persisted to the
+      # `seeded_from` property on Script objects. Currently used by the PDF
+      # generation logic to identify when a script is actually being updated,
+      # but could easily be used by other business logic that has similar
+      # versioning concerns.
+      def serialized_at
+        Time.now.getutc
+      end
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
@@ -613,7 +634,7 @@ module Services
     end
 
     class VocabularySerializer < ActiveModel::Serializer
-      attributes :key, :word, :definition, :seeding_key
+      attributes :key, :word, :definition, :properties, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

@@ -28,7 +28,7 @@ For high schools, we offer two years computer science courses for beginners: Com
 <br>
 <hr>
 
-<%@show_csa = DCDO.get('courses_show_csa', false)%>
+<%@show_csa = DCDO.get('courses_show_csa', CDO.default_courses_show_csa)%>
 <% if @show_csa %>
 # Computer Science A (coming in 2022)
 <%=view :csa_information %>

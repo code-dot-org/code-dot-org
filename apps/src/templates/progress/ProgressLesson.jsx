@@ -234,8 +234,10 @@ class ProgressLesson extends React.Component {
                 <span style={styles.buttonStyle}>
                   <Button
                     __useDeprecatedTag
+                    id="ui-test-lesson-resources"
                     href={lesson.student_lesson_plan_html_url}
                     text={i18n.lessonResources()}
+                    disabled={locked}
                     icon="file-text"
                     color="purple"
                     target="_blank"

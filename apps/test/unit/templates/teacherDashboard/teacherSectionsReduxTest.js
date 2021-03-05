@@ -12,6 +12,7 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
+  setPreReaderScriptIds,
   setSections,
   selectSection,
   removeSection,
@@ -65,6 +66,7 @@ const sections = [
     grade: '2',
     code: 'PMTKVH',
     lesson_extras: false,
+    tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: null,
@@ -81,6 +83,7 @@ const sections = [
     grade: '11',
     code: 'DWGMFX',
     lesson_extras: false,
+    tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: {
@@ -100,6 +103,7 @@ const sections = [
     grade: '10',
     code: 'WGYXTR',
     lesson_extras: true,
+    tts_autoplay_enabled: false,
     pairing_allowed: false,
     sharing_disabled: false,
     script: {
@@ -245,6 +249,8 @@ const students = [
     sharingDisabled: false
   }
 ];
+
+const preReaderScripts = [37, 208];
 
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
@@ -548,6 +554,7 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         providerManaged: false,
         stageExtras: true,
+        ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
         studentCount: 0,
@@ -573,6 +580,7 @@ describe('teacherSectionsRedux', () => {
         providerManaged: false,
         code: 'DWGMFX',
         stageExtras: false,
+        ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
         scriptId: 36,
@@ -662,6 +670,34 @@ describe('teacherSectionsRedux', () => {
       state = reducer(state, editSectionProperties({scriptId: 37}));
       expect(state.sectionBeingEdited.stageExtras).to.equal(true);
     });
+
+    it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
+      let state = reducer(
+        editingNewSectionState,
+        setPreReaderScriptIds(preReaderScripts)
+      );
+      state = reducer(state, editSectionProperties({scriptId: 2}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+
+      state = reducer(state, editSectionProperties({scriptId: 37}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+    });
+
+    // TODO: add this test when tts autoplay is enabled by default for pre-reader scripts
+    it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
+      let state = reducer(
+        editingNewSectionState,
+        setPreReaderScriptIds(preReaderScripts)
+      );
+      state = reducer(state, editSectionProperties({scriptId: 2}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+
+      state = reducer(state, editSectionProperties({scriptId: 37}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
+
+      state = reducer(state, editSectionProperties({scriptId: 208}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
+    });
   });
 
   describe('cancelEditingSection', () => {
@@ -684,6 +720,7 @@ describe('teacherSectionsRedux', () => {
       grade: undefined,
       providerManaged: false,
       lesson_extras: false,
+      tts_autoplay_enabled: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -831,6 +868,7 @@ describe('teacherSectionsRedux', () => {
           grade: '3',
           providerManaged: false,
           stageExtras: false,
+          ttsAutoplayEnabled: false,
           pairingAllowed: true,
           sharingDisabled: undefined,
           studentCount: undefined,
@@ -887,6 +925,7 @@ describe('teacherSectionsRedux', () => {
       grade: undefined,
       providerManaged: false,
       lesson_extras: false,
+      tts_autoplay_enabled: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -1134,6 +1173,10 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
       assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
+      assert.strictEqual(
+        section.tts_autoplay_enabled,
+        serverSection.ttsAutoplayEnabled
+      );
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(
         section.sharing_disabled,

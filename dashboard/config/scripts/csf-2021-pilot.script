@@ -37,7 +37,14 @@ lesson_group_description 'Store values in variables and retrieve them later in y
 lesson 'blank space stories', display_name: 'Blank Space Stories', has_lesson_plan: false, unplugged: true
 level 'EnvelopeVariables-Unplugged_2021', progression: 'Video: Variables in Envelopes'
 
-lesson 'variables-in-spritelab', display_name: 'Text and Prompts - coming soon!', has_lesson_plan: false
-
-lesson 'chatbot', display_name: 'Create a Chat-Bot - coming soon!', has_lesson_plan: false
+lesson 'texts-and-prompts', display_name: 'Text and Prompts', has_lesson_plan: false
+level 'courseF_variables_predict', progression: 'Prediction'
+level 'courseF_pilotVideo_prompts', progression: 'Video: Text and Prompts'
+level 'courseF_text_review', progression: 'Skill Building'
+level 'courseF_text_print', progression: 'Skill Building'
+level 'courseF_text_events', progression: 'Skill Building'
+level 'courseF_text_prompts', progression: 'Skill Building'
+level 'courseF_text_answer', progression: 'Skill Building'
+level 'courseF_text_concat', progression: 'Skill Building'
+level 'courseF_text_practice', progression: 'Practice'
 

@@ -17,6 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 17:23:26 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -749,7 +750,7 @@
       "key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** What time of year do people tend to search online for chocolate? How could you check your guess?\n\n**Discussion Goal:** Student answers will vary, but they may include major holidays like Valentine's Day. Students may also have several different ideas for how those answers could be checked, and ultimately you will want to guide your students towards the idea of using a search tool. \n"
+        "description": "[slide]  **Discuss:** *What time of year do people tend to search online for chocolate? How could you check your guess?*\n\n**Discussion Goal:** Student answers will vary, but they may include major holidays like Valentine's Day. Students may also have several different ideas for how those answers could be checked, and ultimately you will want to guide your students towards the idea of using a search tool. \n"
       },
       "seeding_key": {
         "activity_section.key": "d99c8fd8-3e58-4552-bff8-47fc0161571f",
@@ -784,7 +785,7 @@
       "key": "4f2ff903-c95e-4c77-bfc9-99b66a8a2f31",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display:** The chart relates to the warm-up question and shows searches for chocolate over the past 5 years.\r\n\r\n[slide] **Prompt:** What pattern do you notice? What could be the reason for that pattern? Does this data support your earlier guesses?"
+        "description": "[slide] **Display:** The chart relates to the warm-up question and shows searches for chocolate over the past 5 years.\n\n[slide] **Discuss:** *What pattern do you notice? What could be the reason for that pattern? Does this data support your earlier guesses?*"
       },
       "seeding_key": {
         "activity_section.key": "4f2ff903-c95e-4c77-bfc9-99b66a8a2f31",
@@ -830,7 +831,7 @@
       "key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Prompt:** What is the metadata for the chart you created in Google Trends?\n\n**Discussion Goal:** Students may bring up the sources of the data (Google Searches) or the dropdowns that control how the chart is built. If students want to dig deeper into the metadata, consider pointing them to the [Google Trends Help Page](https://support.google.com/trends/answer/4355213?hl=en&ref_topic=4365599). \n"
+        "description": "[slide]  **Discuss:** *What is the metadata for the chart you created in Google Trends?*\n\n**Discussion Goal:** Students may bring up the sources of the data (Google Searches) or the dropdowns that control how the chart is built. If students want to dig deeper into the metadata, consider pointing them to the [Google Trends Help Page](https://support.google.com/trends/answer/4355213?hl=en&ref_topic=4365599). \n"
       },
       "seeding_key": {
         "activity_section.key": "af5231ee-f66b-495e-856e-4faa8c87ad15",
@@ -898,7 +899,7 @@
       "key": "ffeddc34-db9a-4586-9fe2-0f2c22cd8472",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Why do people make visualizations out of data?\n\n**Discussion Goal:** This discussion should be a quick prompt to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \n"
+        "description": "[slide]  **Discuss:** *Why do people make visualizations out of data?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should be quick to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "ffeddc34-db9a-4586-9fe2-0f2c22cd8472",
@@ -909,7 +910,6 @@
       "key": "013ca7f4-a88a-4de7-a1e0-0bcfb42a755c",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
       },
       "seeding_key": {
         "activity_section.key": "013ca7f4-a88a-4de7-a1e0-0bcfb42a755c",
@@ -943,7 +943,7 @@
       "key": "537ad5e1-aa16-480a-a686-36dae685fdf5",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Which of these questions does this chart answer? Be ready to discuss with a classmate.\r\n\r\n**Discuss:** Run a short discussion, asking students to share which of the five questions they believe could be answered with the chart. Students should hopefully notice:\r\n\r\n* Only question 1 and 3 could be answered by the chart\r\n* They may have additional questions about how the chart was created or what it means. Hold those questions for the following slide\r\n\r\n[slide] **Display:** Show the following slide introducing bar charts and how they are used",
+        "description": "[slide] **Discuss:** *Which of these questions does this chart answer? Be ready to discuss with a classmate.*\n\nRun a short discussion, asking students to share which of the five questions they believe could be answered with the chart. Students should hopefully notice:\n\n* Only question 1 and 3 could be answered by the chart\n* They may have additional questions about how the chart was created or what it means. Hold those questions for the following slide\n\n[slide] **Display:** Show the following slide introducing bar charts and how they are used",
         "name": "Reading a Bar Chart\r"
       },
       "seeding_key": {
@@ -972,7 +972,7 @@
       "key": "d281781e-c673-4ba4-a6d1-f224ef255a1f",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Distribute: ** Give students access to [Exploring One Column](\thttps://docs.google.com/document/d/11X6ythWM_CSVlE0XrqrMAfHK63QMS8VCysCUiuIfQjw/edit?usp=sharing), ideally in digital form.\n\n[slide] **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n[slide] **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of prompts."
+        "description": "[slide]  **Distribute: ** Give students access to [Exploring One Column](\thttps://docs.google.com/document/d/11X6ythWM_CSVlE0XrqrMAfHK63QMS8VCysCUiuIfQjw/edit?usp=sharing), ideally in digital form.\n\n[slide] **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n[slide] **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of discusssions."
       },
       "seeding_key": {
         "activity_section.key": "d281781e-c673-4ba4-a6d1-f224ef255a1f",
@@ -983,7 +983,7 @@
       "key": "6e279210-ae72-46e2-b9ab-81866203550d",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Optionally discuss the different columns that students chose as useful.\n\n**Discussion Goal:** Use this discussion for two purposes. First, use it to build a shared comfort with what a bar chart shows. Have students share out which charts they think are useful and what pieces of information they read from them. Remind students that bar charts are particularly good at finding how common a value is in a column. The second goal is to prepare students to see the value of a histogram. Many bar charts are not at all useful because they have too many unique values. Using a histogram to group these values can help make more useful charts.\n",
+        "description": "**Discuss:** *Optionally discuss the different columns that students chose as useful.*\n\n**Discussion Goal:** Use this discussion for two purposes. First, use it to build a shared comfort with what a bar chart shows. Have students share out which charts they think are useful and what pieces of information they read from them. Remind students that bar charts are particularly good at finding how common a value is in a column. The second goal is to prepare students to see the value of a histogram. Many bar charts are not at all useful because they have too many unique values. Using a histogram to group these values can help make more useful charts.\n",
         "progression_name": "Making Bar Charts and Histograms"
       },
       "seeding_key": {
@@ -995,7 +995,7 @@
       "key": "1647b824-48c7-4f01-8a38-30287439d4cb",
       "position": 5,
       "properties": {
-        "description": "[slide] **Display:** Show the slide explaining why some bar charts are not useful.\r\n\r\n[slide] **Prompt:** In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20. \r\n\r\n* Which of these makes it easier to understand the data? \r\n* What do you think the \"histogram\" is doing to visualize the data differently?",
+        "description": "[slide] **Display:** Show the slide explaining why some bar charts are not useful.\n\n[slide] **Discuss:** *In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.*\n\n* Which of these makes it easier to understand the data? \n* What do you think the \"histogram\" is doing to visualize the data differently?",
         "name": "Reading a Histogram\r"
       },
       "seeding_key": {
@@ -1007,7 +1007,7 @@
       "key": "406d4303-b933-4860-a1b0-fc0bf5d4d0db",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Discuss how the histogram seems to be displaying the data differently from the bar chart.\n\n**Discussion Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer but wider\" bars in the histogram. They should also notice that values are sorted correctly. This makes the chart overall easier to read.\n"
+        "description": "Discuss how the histogram seems to be displaying the data differently from the bar chart.\n\n**Discussion Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer but wider\" bars in the histogram. They should also notice that values are sorted correctly. This makes the chart overall easier to read.\n"
       },
       "seeding_key": {
         "activity_section.key": "406d4303-b933-4860-a1b0-fc0bf5d4d0db",
@@ -1018,7 +1018,7 @@
       "key": "17ca6b30-8228-4126-9b04-5aa5e8324dca",
       "position": 7,
       "properties": {
-        "description": "[slide] **Display:** Show the slide explaining what a histogram is useful for\r\n\r\n[slide] **Prompt:** Have students complete side 2 of their activity guide."
+        "description": "[slide] **Display:** Show the slide explaining what a histogram is useful for\n\n[slide] **Discuss:** *Have students complete side 2 of their activity guide.*"
       },
       "seeding_key": {
         "activity_section.key": "17ca6b30-8228-4126-9b04-5aa5e8324dca",
@@ -1029,7 +1029,7 @@
       "key": "89beaab5-da12-44b9-9b4b-841b17b671d7",
       "position": 8,
       "properties": {
-        "description": "**Discuss:** Optionally have students share out the results of their work on side 2 of the activity guide.\n\n**Discussion Goal:** Use this discussion to have students share out how they are designing histograms based on the columns in the dogs data set. Things to look for:\n\n* Students are only creating histograms for numeric columns\n* Students are picking columns that have a number of unique values\n* Students are picking good bucket sizes to group their data in a way that makes it possible to interpret\n* Students are correctly reading charts to understand what they are showing\n"
+        "description": "Optionally have students share out the results of their work on side 2 of the activity guide.\n\n**Discussion Goal:** Use this discussion to have students share out how they are designing histograms based on the columns in the dogs data set. Things to look for:\n\n* Students are only creating histograms for numeric columns\n* Students are picking columns that have a number of unique values\n* Students are picking good bucket sizes to group their data in a way that makes it possible to interpret\n* Students are correctly reading charts to understand what they are showing\n"
       },
       "seeding_key": {
         "activity_section.key": "89beaab5-da12-44b9-9b4b-841b17b671d7",
@@ -1040,7 +1040,7 @@
       "key": "747e4eac-14d2-4382-bb32-cd39e2db7080",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** Which steps of the Data Analysis Process did you see in today's activity? Where did you see them?"
+        "description": "[slide] **Discuss:** *Which steps of the Data Analysis Process did you see in today's activity? Where did you see them?*"
       },
       "seeding_key": {
         "activity_section.key": "747e4eac-14d2-4382-bb32-cd39e2db7080",
@@ -1051,7 +1051,7 @@
       "key": "99735004-9d97-415f-a043-1963d95db0f1",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their reflections and lead a quick discussion about where they saw each step.\n\n**Discussion Goal:** This is the first opportunity for students to talk through the Data Analysis Process, a framework they will return to many times throughout this course. Use this discussion to review some key points\n\n* Students in today's lesson may not have \"cleaned and processed\" data but they should've seen every other step.\n* Students answered questions and carefully made conclusions\n* Students created visualization and used them to find patterns.\n* Students chose the datasets that would best answer their question. In other instances they might've gone off to find the data themselves but the Data Library in App Lab helps avoid them needing to do that.\n"
+        "description": "Have students share their reflections and lead a quick discussion about where they saw each step.\n\n**Discussion Goal:** This is the first opportunity for students to talk through the Data Analysis Process, a framework they will return to many times throughout this course. Use this discussion to review some key points\n\n* Students in today's lesson may not have \"cleaned and processed\" data but they should've seen every other step.\n* Students answered questions and carefully made conclusions\n* Students created visualization and used them to find patterns.\n* Students chose the datasets that would best answer their question. In other instances they might've gone off to find the data themselves but the Data Library in App Lab helps avoid them needing to do that.\n"
       },
       "seeding_key": {
         "activity_section.key": "99735004-9d97-415f-a043-1963d95db0f1",
@@ -1141,7 +1141,7 @@
       "key": "c43ef4e6-224b-4a32-b4dd-7e0684e15f91",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** With partners, students discuss the following prompts:\n\n**Discussion Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n",
+        "description": "[slide]  **Discuss:** *With partners, students discuss the following prompts:*\n\n* What problems came up when trying to create these charts?\n* What problems do you see in the data?\n\n**Discussion Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n",
         "progression_name": "Cleaning Data"
       },
       "seeding_key": {
@@ -1153,7 +1153,6 @@
       "key": "fec14414-c2af-4d46-ba45-1aed3feec5f9",
       "position": 3,
       "properties": {
-        "description": "* What problems came up when trying to create these charts?\n* What problems do you see in the data?"
       },
       "seeding_key": {
         "activity_section.key": "fec14414-c2af-4d46-ba45-1aed3feec5f9",
@@ -1199,7 +1198,7 @@
       "key": "02e6793e-4a3f-4316-a6ed-34e0c5b11daf",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Prompt:** What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with low shedding.\n\nGoal: We are building towards the idea of filtering data. Students filtered programmatically in previous units, but don't yet know how to use the Data Visualizer tool to accomplish the same goal. \n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
+        "description": "[slide]  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with low shedding.*\n\nDiscussion Goal: We are building towards the idea of filtering data. Students filtered programmatically in previous units, but don't yet know how to use the Data Visualizer tool to accomplish the same goal. \n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
       },
       "seeding_key": {
         "activity_section.key": "02e6793e-4a3f-4316-a6ed-34e0c5b11daf",
@@ -1257,7 +1256,7 @@
       "key": "e1299f88-aee3-4792-bd41-37a32ec1b5a0",
       "position": 12,
       "properties": {
-        "description": "**Discuss:** Have students share their answers from the Activity Guide and reactions to those findings.\n\n**Discussion Goal:** Use this discussion to help students practice the skill covered in lesson 1, distinguishing between:\n\n- What the data shows\n- Why that might be the case\n"
+        "description": "**Discuss:** *Have students share their answers from the Activity Guide and reactions to those findings.*\n\n**Discussion Goal:** Use this discussion to help students practice the skill covered in lesson 1, distinguishing between:\n\n- What the data shows\n- Why that might be the case\n"
       },
       "seeding_key": {
         "activity_section.key": "e1299f88-aee3-4792-bd41-37a32ec1b5a0",
@@ -1268,7 +1267,7 @@
       "key": "287a0685-4752-42f0-877c-cdbdc5dcec96",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?\n\n**Discussion Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \n"
+        "description": "[slide]  **Discuss:** *Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?*\n\n**Discussion Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \n"
       },
       "seeding_key": {
         "activity_section.key": "287a0685-4752-42f0-877c-cdbdc5dcec96",
@@ -1324,7 +1323,7 @@
       "key": "db4a0963-2b66-4b7b-b2c8-04047556f867",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?\n\n**Discussion Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \n"
+        "description": "[slide]  **Discuss:** *Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \n"
       },
       "seeding_key": {
         "activity_section.key": "db4a0963-2b66-4b7b-b2c8-04047556f867",
@@ -1335,7 +1334,6 @@
       "key": "3155611c-298f-437e-8f05-4e2f4496b155",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
       },
       "seeding_key": {
         "activity_section.key": "3155611c-298f-437e-8f05-4e2f4496b155",
@@ -1358,7 +1356,7 @@
       "key": "412cc3ac-8a29-49d3-82c2-27dbfcc96941",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** How many \"Herding\" breeds live a maximum of 12 years? What is the most common maximum life span for \"Working\" breeds? Which breed group lives the shortest? Which breed group lives the longest? How do you know? How confident are you in your answers?",
+        "description": "[slide] **Discuss:** *How many \"Herding\" breeds live a maximum of 12 years? What is the most common maximum life span for \"Working\" breeds? Which breed group lives the shortest? Which breed group lives the longest? How do you know? How confident are you in your answers?*",
         "name": "Reading Crosstab Charts"
       },
       "seeding_key": {
@@ -1370,7 +1368,7 @@
       "key": "c842367d-d914-4637-bd45-22e134a47bea",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Run a short discussion and help students read the chart together. They will hopefully note the following:\n\n* 4 herding breeds live a maximum of 12 years\n* The most common maximum lifespan of working breeds is 12 years\n* Toy breeds seem to live the longest\n* Working breeds seem to be the shortest\n* Students can see the spread of life expectancies for different breeds but it's not cut and dry.",
+        "description": "Also, run a short discussion and help students read the chart together. They will hopefully note the following:\n\n* 4 herding breeds live a maximum of 12 years\n* The most common maximum lifespan of working breeds is 12 years\n* Toy breeds seem to live the longest\n* Working breeds seem to be the shortest\n* Students can see the spread of life expectancies for different breeds but it's not cut and dry.",
         "progression_name": "Crosstab and Scatter Charts"
       },
       "seeding_key": {
@@ -1428,7 +1426,7 @@
       "key": "02d1de20-a9a6-4bc1-ac7d-c2057f226ce5",
       "position": 6,
       "properties": {
-        "description": "[slide] **Prompt:** Is there a pattern? How can you tell?",
+        "description": "[slide] **Discuss:** *Is there a pattern? How can you tell?*",
         "name": "Reading Scatter Charts"
       },
       "seeding_key": {
@@ -1440,7 +1438,7 @@
       "key": "4444a045-6b6b-4290-883b-f9776277afb4",
       "position": 7,
       "properties": {
-        "description": "**Discuss:** Have students share whether they think there's pattern between the order in which states were admitted and their size.\n\n**Discussion Goal:** Students will hopefully notice later states are relatively larger than earlier added ones. The trend does not necessarily reflect any causation, but there is a slight uptick in state size as more are added.\n"
+        "description": "Have students share whether they think there's pattern between the order in which states were admitted and their size.\n\n**Discussion Goal:** Students will hopefully notice later states are relatively larger than earlier added ones. The trend does not necessarily reflect any causation, but there is a slight uptick in state size as more are added.\n"
       },
       "seeding_key": {
         "activity_section.key": "4444a045-6b6b-4290-883b-f9776277afb4",
@@ -1462,7 +1460,7 @@
       "key": "a70e7635-ab8c-4670-b577-5dfe72bdb555",
       "position": 9,
       "properties": {
-        "description": "[slide] **Prompt:** Have students fill in page 2 of their activity guides practicing making scatter charts.\n\n**Discuss:** Have students share our their responses and talk through their conclusions.",
+        "description": "Have students fill in page 2 of their activity guides practicing making scatter charts.\n\n**Discuss:** *Have students share our their responses and talk through their conclusions*.",
         "name": "Making Scatter Charts",
         "progression_name": "Crosstab and Scatter Charts"
       },
@@ -1494,30 +1492,8 @@
       }
     },
     {
-      "key": "15416f54-0958-443c-a6a9-78ec30eacc14",
-      "position": 1,
-      "properties": {
-        "progression_name": "Crosstab and Scatter Charts"
-      },
-      "seeding_key": {
-        "activity_section.key": "15416f54-0958-443c-a6a9-78ec30eacc14",
-        "lesson_activity.key": "c290da99-dfab-486a-8b26-bb6283554efb"
-      }
-    },
-    {
-      "key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
-      "position": 2,
-      "properties": {
-        "progression_name": "What Type of Chart?"
-      },
-      "seeding_key": {
-        "activity_section.key": "84ec5f15-f8df-44d7-a219-cbba3b2a450b",
-        "lesson_activity.key": "c290da99-dfab-486a-8b26-bb6283554efb"
-      }
-    },
-    {
       "key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb",
-      "position": 3,
+      "position": 1,
       "properties": {
         "progression_name": "Check For Understanding"
       },
@@ -1530,7 +1506,7 @@
       "key": "8db3ee4a-4d99-4d03-a852-4ab788d9ebcd",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** With a partner review the data analysis process and for each step talk through:\n\n"
+        "description": "[slide]  **Discuss:** *With a partner review the data analysis process and for each step talk through:*\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8db3ee4a-4d99-4d03-a852-4ab788d9ebcd",
@@ -1541,7 +1517,7 @@
       "key": "69f2d8b6-9edd-45d5-bc6f-e7d7d6d0ff0f",
       "position": 2,
       "properties": {
-        "description": "* What is this step and why is it important?\n* Where have we done this step together?\n* What could go wrong if you do this step poorly.\n\n\n\n**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This is designed entirely to be a review of concepts students have previously covered and doesn't foreshadow the lesson of the day. If you feel confident your students are comfortable with this process already then quickly move on to the main activity of the day.\n"
+        "description": "* What is this step and why is it important?\n* Where have we done this step together?\n* What could go wrong if you do this step poorly.\n\n\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This is designed entirely to be a review of concepts students have previously covered and doesn't foreshadow the lesson of the day. If you feel confident your students are comfortable with this process already then quickly move on to the main activity of the day.\n"
       },
       "seeding_key": {
         "activity_section.key": "69f2d8b6-9edd-45d5-bc6f-e7d7d6d0ff0f",
@@ -1592,7 +1568,7 @@
       "key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
       "position": 3,
       "properties": {
-        "description": "[slide] **Prompt:** With a partner\n\n* Choose one of the topics\n* Watch the related videos / listen to the podcasts\n* Take notes and be ready to share responses to the questions on your activity guide\n\n[slide] **Discuss:** Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share\n\n* What the topic is\n* The key vocabulary they were responsible for researching\n* How this concept uses or modifies the data analysis process\n* Examples of the problems this technique is being used to solve"
+        "description": "With a partner:\n\n* Choose one of the topics\n* Watch the related videos / listen to the podcasts\n* Take notes and be ready to share responses to the questions on your activity guide\n\n[slide] **Discuss:** *Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share*\n\n* What the topic is\n* The key vocabulary they were responsible for researching\n* How this concept uses or modifies the data analysis process\n* Examples of the problems this technique is being used to solve"
       },
       "seeding_key": {
         "activity_section.key": "3541aa8a-3c4c-4f57-aa10-f423bb64a577",
@@ -1614,7 +1590,7 @@
       "key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** How can machines \"learn\"?\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
+        "description": "[slide]  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
@@ -1625,7 +1601,6 @@
       "key": "e5dbaca4-455d-4a44-a62f-c98c52447330",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room."
       },
       "seeding_key": {
         "activity_section.key": "e5dbaca4-455d-4a44-a62f-c98c52447330",
@@ -1694,7 +1669,7 @@
       "key": "d34af807-f5e0-49e7-b500-402ee7ddc465",
       "position": 4,
       "properties": {
-        "description": "[slide] **Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\r\n\r\n[slide] **Video:** Play the video \"Training Data & Bias\"."
+        "description": "[slide] **Discuss:** *How well did A.I. do? How do you think it decided what to include in the ocean?*\n\n[slide] **Video:** Play the video \"Training Data & Bias\"."
       },
       "seeding_key": {
         "activity_section.key": "d34af807-f5e0-49e7-b500-402ee7ddc465",
@@ -1705,7 +1680,7 @@
       "key": "9fd8c76e-c097-4d0c-b02b-34225e2f7be8",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** How do you think your training data influenced the results that A.I. produced?\n\n**Discussion Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n"
+        "description": "[slide]  **Discuss:** *How do you think your training data influenced the results that A.I. produced?*\n\n**Discussion Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n"
       },
       "seeding_key": {
         "activity_section.key": "9fd8c76e-c097-4d0c-b02b-34225e2f7be8",
@@ -1745,7 +1720,7 @@
       "key": "d0696799-b401-4952-bbb8-a83f2a40cddc",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?\n\n**Discussion Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \n"
+        "description": "[slide]  **Discuss:** *How could biased data result in problems for artificial intelligence? What are ways to address this?*\n\n**Discussion Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \n"
       },
       "seeding_key": {
         "activity_section.key": "d0696799-b401-4952-bbb8-a83f2a40cddc",
@@ -1756,7 +1731,7 @@
       "key": "6deb3f7e-1aae-489c-9435-c2522bb87da1",
       "position": 9,
       "properties": {
-        "description": "[slide] **Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \r\n\r\n[slide] **Prompts:** \r\n\r\n* How can computing innovations which make use of Machine Learning reflect existing human bias?\r\n* How could it be used to discriminate against groups of individuals?\r\n* How can that bias be minimized?"
+        "description": "[slide] **Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \n\n[slide] **Discussions:** \n\n* How can computing innovations which make use of Machine Learning reflect existing human bias?\n* How could it be used to discriminate against groups of individuals?\n* How can that bias be minimized?"
       },
       "seeding_key": {
         "activity_section.key": "6deb3f7e-1aae-489c-9435-c2522bb87da1",
@@ -1801,7 +1776,7 @@
       "key": "973186fb-7622-4f93-8823-9ee1fd5899d6",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Which steps of this process to you think have to be done by humans? Would you be concerned if any of them were automated?",
+        "description": "[slide]  **Discuss:** *Which steps of this process to you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1818,7 +1793,6 @@
       "key": "abe49b9f-c689-4cc3-8fc8-d4d75a99b8cc",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Time may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias."
       },
       "seeding_key": {
         "activity_section.key": "abe49b9f-c689-4cc3-8fc8-d4d75a99b8cc",
@@ -2851,14 +2825,14 @@
     {
       "name": "Filtering Data Unit 9 Lesson 3",
       "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
-      "key": "csp filtering data",
+      "key": "filtering_data_unit_9_lesson_3",
       "properties": {
         "type": "Activity Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp filtering data"
+        "resource.key": "filtering_data_unit_9_lesson_3"
       }
     },
     {
@@ -3020,7 +2994,7 @@
     {
       "seeding_key": {
         "lesson.key": "Filtering and Cleaning Data",
-        "resource.key": "csp filtering data"
+        "resource.key": "filtering_data_unit_9_lesson_3"
       }
     },
     {

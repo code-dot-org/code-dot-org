@@ -1,0 +1,17 @@
+name 'courseF_variables_samples'
+editor_experiment ''
+display_name 'Exploration - Sample Programs'
+description 'You will be creating either a greeting card, a chatbot, or a blank space story. Before you start, explore the example projects below to see what you are interested in creating. Press \"Finish\" when you are ready to start planning your own program.'
+
+sublevels
+level 'courseF_editable_card'
+level 'courseF_editable_chatbot'
+level 'courseF_editable_madlib'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students should look at these projects carefully before deciding what they want to create. You can look at them together as a class or have students explore on their own.
+MARKDOWN
