@@ -45,7 +45,7 @@ export const studentTableRowType = PropTypes.shape({
   id: PropTypes.string.isRequired,
   student: studentType.isRequired,
   expansionIndex: PropTypes.number.isRequired,
-  expanded: PropTypes.bool
+  isExpanded: PropTypes.bool
 });
 
 export const tooltipIdForStudent = studentId =>
