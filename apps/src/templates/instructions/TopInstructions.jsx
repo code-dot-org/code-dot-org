@@ -190,7 +190,8 @@ class TopInstructions extends Component {
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
-    skinId: PropTypes.string
+    skinId: PropTypes.string,
+    preview: PropTypes.bool
   };
 
   static defaultProps = {
@@ -612,6 +613,10 @@ class TopInstructions extends Component {
     const showContainedLevelAnswer =
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
+    const InstructionsCSFComponent = this.props.preview
+      ? UnconnectedInstructionsCSF
+      : InstructionsCSF;
+
     return (
       <div
         style={mainStyle}
@@ -743,7 +748,7 @@ class TopInstructions extends Component {
               {!this.props.hasContainedLevels &&
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
-                  <UnconnectedInstructionsCSF
+                  <InstructionsCSFComponent
                     ref={ref => {
                       if (ref) {
                         this.instructions = ref;
@@ -767,15 +772,10 @@ class TopInstructions extends Component {
                     ttsLongInstructionsUrl={this.props.ttsLongInstructionsUrl}
                     ttsShortInstructionsUrl={this.props.ttsShortInstructionsUrl}
                     noVisualization={this.props.noVisualization}
-                    hints={[]}
-                    hasUnseenHint={false}
-                    hasAuthoredHints={false}
                     setInstructionsRenderedHeight={
                       this.props.setInstructionsRenderedHeight
                     }
                     skinId={this.props.skinId}
-                    hideOverlay={() => {}}
-                    showNextHint={() => {}}
                     collapsible={this.props.collapsible}
                   />
                 )}
@@ -884,8 +884,8 @@ export default connect(
     shortInstructions2: state.instructions.shortInstructions2,
     isRtl: state.isRtl,
     widgetMode: state.pageConstants.widgetMode,
-    unconnected: false,
-    skinId: state.pageConstants.skinId,
+    preview: false,
+    skinId: state.pageConstants.skinId
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

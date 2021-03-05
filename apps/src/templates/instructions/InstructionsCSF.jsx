@@ -134,7 +134,7 @@ class InstructionsCSF extends React.Component {
     isBlockly: PropTypes.bool.isRequired,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
-    hideOverlay: PropTypes.func.isRequired,
+    hideOverlay: PropTypes.func,
     aniGifURL: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     isEmbedView: PropTypes.bool,
@@ -146,10 +146,10 @@ class InstructionsCSF extends React.Component {
         block: PropTypes.object, // XML
         video: PropTypes.string
       })
-    ).isRequired,
-    hasUnseenHint: PropTypes.bool.isRequired,
-    showNextHint: PropTypes.func.isRequired,
-    hasAuthoredHints: PropTypes.bool.isRequired,
+    ),
+    hasUnseenHint: PropTypes.bool,
+    showNextHint: PropTypes.func,
+    hasAuthoredHints: PropTypes.bool,
 
     collapsed: PropTypes.bool.isRequired,
     collapsible: PropTypes.bool.isRequired,
@@ -158,7 +158,7 @@ class InstructionsCSF extends React.Component {
     shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
 
-    clearFeedback: PropTypes.func.isRequired,
+    clearFeedback: PropTypes.func,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
@@ -258,7 +258,8 @@ class InstructionsCSF extends React.Component {
       });
     }
 
-    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
+    const gotNewHint =
+      prevProps.hints && prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
       const images = ReactDOM.findDOMNode(
         this.instructions
@@ -429,9 +430,11 @@ class InstructionsCSF extends React.Component {
   };
 
   showHint = () => {
-    this.dismissHintPrompt();
-    this.props.showNextHint();
-    this.props.clearFeedback();
+    if (this.props.hints) {
+      this.dismissHintPrompt();
+      this.props.showNextHint();
+      this.props.clearFeedback();
+    }
   };
 
   shouldDisplayHintPrompt() {
@@ -491,6 +494,7 @@ class InstructionsCSF extends React.Component {
   }
 
   getAvatar() {
+    console.log(this.props);
     // Show the "sad" avatar if there is failure feedback. Otherwise,
     // show the default avatar.
     return this.props.feedback && this.props.feedback.isFailure
