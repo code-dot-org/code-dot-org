@@ -18,7 +18,6 @@ class FilesApi < Sinatra::Base
   end
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
-  DISALLOWED_HTML_TAGS = ['script'].freeze
 
   def get_bucket_impl(endpoint)
     case endpoint
@@ -625,7 +624,7 @@ class FilesApi < Sinatra::Base
 
     if html_file?(unescaped_filename)
       # Nokogiri element selector tags must start with //
-      disallowed_tag_selectors = DISALLOWED_HTML_TAGS.map {|tag| '//' + tag}
+      disallowed_tag_selectors = DCDO.get('disallowed_html_tags', ['script']).map {|tag| '//' + tag}
       bad_request unless Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
     end
 
