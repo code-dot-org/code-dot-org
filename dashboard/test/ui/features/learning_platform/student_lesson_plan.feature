@@ -2,7 +2,12 @@ Feature: Student Lesson Plan
 
   Scenario: Viewing Student Lesson Plan
     Given I create a student named "Jean"
-    And I am on "http://studio.code.org/s/allthemigratedthings/lessons/1/student?no_redirect=true"
+    And I am on "http://studio.code.org/s/allthemigratedthings?no_redirect=true"
+    And I wait until element "#ui-test-lesson-resources" is visible
+    And I click selector "#ui-test-lesson-resources"
+
+    When I switch tabs
+    Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/1/student"
     And I wait until element "#show-container" is visible
 
     # Check for name of lesson
@@ -32,11 +37,11 @@ Feature: Student Lesson Plan
     And I click ".uitest-lesson-dropdown-nav"
     Then I wait until element "a.navigate:nth(1)" is visible
     And I click selector "a.navigate:nth(1)"
-    Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/2/student?no_redirect=true"
+    Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/2/student"
     And I wait until element "#show-container" is visible
     And I wait until element "h1:contains(Lesson 2: Second Lesson)" is visible
 
     # Navigate to the Unit page
     And I wait until element "a:contains(All the Migrated Things)" is visible
     And I click selector "a:contains(All the Migrated Things)"
-    And I wait until I am on "http://studio.code.org/s/allthemigratedthings?no_redirect=true"
+    And I wait until I am on "http://studio.code.org/s/allthemigratedthings"
