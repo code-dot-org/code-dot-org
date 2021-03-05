@@ -912,7 +912,11 @@ export function getTrainedModelDataToSave(state) {
 
   // If we have column descriptions in metadata, use that, otherwise
   // use what the user has manually entered.
-  if (state.metadata && state.metadata.fields) {
+  if (
+    state.metadata &&
+    state.metadata.fields &&
+    state.metedata.fields[0].description
+  ) {
     dataToSave.columns = [];
     for (const columnDescription of getSelectedColumnDescriptions(state)) {
       dataToSave.columns.push({
