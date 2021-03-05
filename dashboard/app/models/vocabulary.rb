@@ -23,11 +23,11 @@ class Vocabulary < ApplicationRecord
   has_many :lessons_vocabularies
   belongs_to :course_version
 
-  KEY_CHAR_RE = /[A-Za-z\- \/]/
+  KEY_CHAR_RE = /[a-z_]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key,
     with: KEY_RE,
-    message: "must contain only alphabetic characters, spaces, dashes, and forward slashes; got \"%{value}\"."
+    message: "must contain only lowercase alphabetic characters and underscores; got \"%{value}\"."
 
   before_validation :generate_key, on: :create
 
@@ -81,14 +81,16 @@ class Vocabulary < ApplicationRecord
 
   def generate_key
     return if key
-    key = common_sense_media ? "#{word} - csm" : word
+    key = common_sense_media ? "#{word}_csm" : word
     self.key = Vocabulary.sanitize_key(key)
   end
 
-  # Return a copy of the given key with all invalid characters
-  # removed
+  # Return a sanitized copy of the given key with all invalid characters
+  # replaced with valid equivalents.
   def self.sanitize_key(key)
-    key.chars.select {|c| KEY_CHAR_RE.match?(c)}.join
+    key.strip.downcase.chars.map do |character|
+      KEY_CHAR_RE.match(character) ? character : '_'
+    end.join.gsub(/_+/, '_')
   end
 
   private

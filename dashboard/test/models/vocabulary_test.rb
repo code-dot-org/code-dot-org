@@ -26,10 +26,17 @@ class VocabularyTest < ActiveSupport::TestCase
     end
   end
 
-  test 'vocabulary sanitizes word when turning it into key' do
+  test 'vocabulary automatically sanitizes word when turning it into key' do
     vocab = create :vocabulary,
       word: 'Some !! ßtring 123 ,with, "ILLEGAL" _characters_.'
-    assert_equal vocab.key, "Some  tring  with ILLEGAL characters"
+    assert_equal vocab.key, "some_tring_with_illegal_characters_"
+  end
+
+  test 'key sanitization' do
+    assert_equal "case_normalized", Vocabulary.sanitize_key("CaSe NoRmAlIzEd")
+    assert_equal "_special_characters_normalized_", Vocabulary.sanitize_key(":special/characters-normalized!")
+    assert_equal "whitespace_stripped", Vocabulary.sanitize_key("  whitespace stripped  \t  ")
+    assert_equal "consecutive_underscores_compacted", Vocabulary.sanitize_key("Consecutive    underscores:\t\n- compacted")
   end
 
   test 'vocabulary prevents invalid keys' do
@@ -37,7 +44,7 @@ class VocabularyTest < ActiveSupport::TestCase
     assert vocab.valid?
     vocab.key = "!!invalid key!!"
     refute vocab.valid?
-    vocab.key = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz- /"
+    vocab.key = "abcdefghijklmnopqrstuvwxyz_"
     assert vocab.valid?
   end
 end
