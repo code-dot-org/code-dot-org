@@ -279,9 +279,6 @@ class Lesson < ApplicationRecord
       if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
-        if script.include_student_lesson_plans && script.is_migrated
-          lesson_data[:student_lesson_plan_html_url] = script_lesson_student_path(script, self)
-        end
       end
 
       if script.hoc?
@@ -375,25 +372,11 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_student_lesson_plan
-    all_resources = resources_for_lesson_plan(false)
-    {
-      unit: script.summarize_for_lesson_show(true),
-      position: relative_position,
-      key: key,
-      displayName: localized_name,
-      overview: student_overview || '',
-      announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
-      resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show)
-    }
-  end
-
-  def summarize_for_lesson_dropdown(is_student = false)
+  def summarize_for_lesson_dropdown
     {
       key: key,
       displayName: localized_name,
-      link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
+      link: script_lesson_path(script, self),
       position: relative_position
     }
   end
