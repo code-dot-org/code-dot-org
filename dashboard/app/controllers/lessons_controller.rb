@@ -33,16 +33,12 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
-    puts "student lesson plan"
-    puts params
     script = Script.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans && !script_access_not_allowed(script)
-    puts script
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
-    puts @lesson
     raise ActiveRecord::RecordNotFound unless @lesson
 
     @lesson_data = @lesson.summarize_for_student_lesson_plan
