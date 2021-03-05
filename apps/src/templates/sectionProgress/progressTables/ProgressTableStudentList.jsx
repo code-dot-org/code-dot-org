@@ -11,7 +11,7 @@ import ProgressTableStudentName from './ProgressTableStudentName';
 import progressTableStyles from './progressTableStyles.scss';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import ProgressTableTextLabelCell from './ProgressTableTextLabelCell';
+import {ProgressTableTextLabelCell} from './ProgressTableTextCells';
 
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
