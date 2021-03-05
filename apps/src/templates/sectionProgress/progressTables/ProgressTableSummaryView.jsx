@@ -11,7 +11,7 @@ import {
 import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
-import ProgressTableTextCell from './ProgressTableTextCell';
+import {ProgressTableTextCell} from './ProgressTableTextCells';
 
 const COLUMN_WIDTH = 40;
 
