@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import firehoseClient from '../../../lib/util/firehose';
@@ -23,7 +24,7 @@ const styles = {
     verticalAlign: 'middle'
   }
 };
-export default class ProgressTableStudentName extends React.PureComponent {
+class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     studentId: PropTypes.number.isRequired,
@@ -31,7 +32,10 @@ export default class ProgressTableStudentName extends React.PureComponent {
     scriptId: PropTypes.number,
     lastTimestamp: PropTypes.number,
     localeCode: PropTypes.string,
-    studentUrl: PropTypes.string.isRequired
+    studentUrl: PropTypes.string.isRequired,
+
+    // redux provided
+    showSectionProgressDetails: PropTypes.bool
   };
 
   constructor(props) {
@@ -96,13 +100,15 @@ export default class ProgressTableStudentName extends React.PureComponent {
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
-        <CollapserIcon
-          isCollapsed={true}
-          onClick={() => {}}
-          collapsedIconClass="fa-caret-right"
-          expandedIconClass="fa-caret-down"
-          style={styles.collapser}
-        />
+        {this.props.showSectionProgressDetails && (
+          <CollapserIcon
+            isCollapsed={true}
+            onClick={() => {}}
+            collapsedIconClass="fa-caret-right"
+            expandedIconClass="fa-caret-down"
+            style={styles.collapser}
+          />
+        )}
         {this.renderTooltip()}
         <a
           style={styles.link}
@@ -115,3 +121,9 @@ export default class ProgressTableStudentName extends React.PureComponent {
     );
   }
 }
+
+export const UnconnectedProgressTableStudentName = ProgressTableStudentName;
+
+export default connect(state => ({
+  showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
+}))(ProgressTableStudentName);
