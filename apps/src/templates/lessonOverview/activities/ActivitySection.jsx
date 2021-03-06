@@ -80,10 +80,7 @@ export default class ActivitySection extends Component {
                 })
               }}
             >
-              <EnhancedSafeMarkdown
-                markdown={section.text}
-                expandableImages={true}
-              />
+              <EnhancedSafeMarkdown markdown={section.text} expandableImages />
             </div>
           </div>
           <div>

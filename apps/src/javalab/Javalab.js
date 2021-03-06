@@ -67,9 +67,10 @@ Javalab.prototype.init = function(config) {
   config.useFilesApi = true;
 
   config.getCode = this.getCode.bind(this);
+  const onContinue = this.onContinue.bind(this);
 
   const onMount = () => {
-    // NOTE: Most other apps call studioApp.init().  Like WebLab, Ailab, and Fish, we don't.
+    // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
@@ -107,6 +108,7 @@ Javalab.prototype.init = function(config) {
       <Provider store={getStore()}>
         <JavalabView
           onMount={onMount}
+          onContinue={onContinue}
           onSave={onSave}
           renameFile={renameFile}
         />

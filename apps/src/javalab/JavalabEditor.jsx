@@ -14,7 +14,7 @@ import i18n from '@cdo/locale';
 const style = {
   editor: {
     width: '100%',
-    height: 600,
+    height: 400,
     backgroundColor: '#282c34'
   },
   tabs: {
