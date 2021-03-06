@@ -2,47 +2,21 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  setTrainedModelDetail,
-  getTrainedModelDataToSave,
-  getSelectedColumnDescriptions
-} from "../redux";
+import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
 import { styles, saveMessages } from "../constants";
 
 class SaveModel extends Component {
   static propTypes = {
-    saveTrainedModel: PropTypes.func,
     trainedModel: PropTypes.object,
     setTrainedModelDetail: PropTypes.func,
     trainedModelDetails: PropTypes.object,
-    dataToSave: PropTypes.object,
     labelColumn: PropTypes.string,
-    columnDescriptions: PropTypes.array
+    columnDescriptions: PropTypes.array,
+    saveStatus: PropTypes.string
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      saveMessage: null
-    };
-  }
 
   handleChange = (event, field, isColumn) => {
     this.props.setTrainedModelDetail(field, event.target.value, isColumn);
-  };
-
-  catchResponse = response => {
-    this.setState({ saveMessage: saveMessages[response.status] });
-  };
-
-  onClickSave = () => {
-    this.setState({ saveMessage: null });
-    if (this.props.trainedModelDetails.name === undefined) {
-      this.setState({ saveMessage: saveMessages["name"] });
-    } else {
-      this.props.saveTrainedModel(this.props.dataToSave, this.catchResponse);
-    }
   };
 
   getFields = () => {
@@ -122,16 +96,9 @@ class SaveModel extends Component {
           </div>
         </div>
         <div>
-          <button
-            type="button"
-            onClick={this.onClickSave}
-            style={styles.regularButton}
-          >
-            Save Trained Model
-          </button>
-          {this.state.saveMessage && (
+          {this.props.saveStatus && (
             <div style={{ position: "absolute", bottom: 0 }}>
-              {this.state.saveMessage}
+              {saveMessages[this.props.saveStatus]}
             </div>
           )}
         </div>
@@ -144,8 +111,8 @@ export default connect(
   state => ({
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
-    dataToSave: getTrainedModelDataToSave(state),
-    columnDescriptions: getSelectedColumnDescriptions(state)
+    columnDescriptions: getSelectedColumnDescriptions(state),
+    saveStatus: state.saveStatus
   }),
   dispatch => ({
     setTrainedModelDetail(field, value, isColumn) {

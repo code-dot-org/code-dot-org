@@ -67,8 +67,9 @@ function onContinueStub() {
   console.log("This would continue to the next level.");
 }
 
-function saveTrainedModelStub(data) {
+function saveTrainedModelStub(data, response) {
   console.log("This would save a trained model.", data);
+  response({ id: 303, status: "success" });
 }
 
 // Initialize the app.

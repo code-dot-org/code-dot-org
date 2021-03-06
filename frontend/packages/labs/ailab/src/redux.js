@@ -62,6 +62,7 @@ const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
+const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 
 // Action creators
 export function setMode(mode) {
@@ -205,6 +206,10 @@ export function setResultsPhase(phase) {
   return { type: SET_RESULTS_PHASE, phase };
 }
 
+export function setSaveStatus(status) {
+  return { type: SET_SAVE_STATUS, status };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -232,7 +237,8 @@ const initialState = {
   trainedModelDetails: {},
   currentPanel: "selectDataset",
   currentColumn: undefined,
-  resultsPhase: undefined
+  resultsPhase: undefined,
+  saveStatus: undefined
 };
 
 // Reducer
@@ -497,6 +503,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       resultsPhase: action.phase
+    };
+  }
+  if (action.type === SET_SAVE_STATUS) {
+    return {
+      ...state,
+      saveStatus: action.status
     };
   }
   return state;
@@ -1051,6 +1063,12 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
+  if (panelId === "save") {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
+  }
+
   return true;
 }
 
@@ -1094,7 +1112,9 @@ export function getPanelButtons(state) {
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = { panel: "continue", text: "Continue" };
+    next = isPanelEnabled(state, "save")
+      ? { panel: "save", text: "Save" }
+      : null;
   }
 
   return { prev, next };

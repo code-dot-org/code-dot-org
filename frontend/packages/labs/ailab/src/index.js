@@ -8,7 +8,8 @@ import rootReducer, {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setSelectedTrainer
+  setSelectedTrainer,
+  setSaveStatus
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -16,11 +17,14 @@ import { parseJSON } from "./jsonReaderWrapper";
 
 export const store = createStore(rootReducer);
 
+let saveTrainedModel = null;
+let onContinue = null;
+
 export const initAll = function(options) {
   // Handle an optional mode.
   const mode = options && options.mode;
-  const onContinue = options && options.onContinue;
-  const saveTrainedModel = options && options.saveTrainedModel;
+  onContinue = options && options.onContinue;
+  saveTrainedModel = options && options.saveTrainedModel;
   store.dispatch(setMode(mode));
   processMode(mode);
 
@@ -29,7 +33,7 @@ export const initAll = function(options) {
       <App
         mode={mode}
         onContinue={onContinue}
-        saveTrainedModel={saveTrainedModel}
+        startSaveTrainedModel={startSaveTrainedModel}
       />
     </Provider>,
     document.getElementById("root")
@@ -63,4 +67,13 @@ const processMode = mode => {
   } else {
     store.dispatch(setCurrentPanel("selectDataset"));
   }
+};
+
+// Do the asynchronous save of a model.
+const startSaveTrainedModel = dataToSave => {
+  store.dispatch(setSaveStatus("started"));
+  saveTrainedModel(dataToSave, response => {
+    store.dispatch(setSaveStatus(response.status));
+    onContinue();
+  });
 };

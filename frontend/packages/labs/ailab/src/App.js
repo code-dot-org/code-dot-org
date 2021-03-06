@@ -13,14 +13,21 @@ import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import { getPanelButtons, setCurrentPanel, validationMessages } from "./redux";
+import {
+  getPanelButtons,
+  setCurrentPanel,
+  validationMessages,
+  getTrainedModelDataToSave
+} from "./redux";
 
 class PanelButtons extends Component {
   static propTypes = {
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
-    onContinue: PropTypes.func
+    onContinue: PropTypes.func,
+    startSaveTrainedModel: PropTypes.func,
+    dataToSave: PropTypes.object
   };
 
   onClickPrev = () => {
@@ -28,7 +35,9 @@ class PanelButtons extends Component {
   };
 
   onClickNext = () => {
-    if (this.props.panelButtons.next.panel === "continue") {
+    if (this.props.panelButtons.next.panel === "save") {
+      this.props.startSaveTrainedModel(this.props.dataToSave);
+    } else if (this.props.panelButtons.next.panel === "continue") {
       this.props.onContinue();
     } else {
       this.props.setCurrentPanel(this.props.panelButtons.next.panel);
@@ -36,7 +45,7 @@ class PanelButtons extends Component {
   };
 
   render() {
-    const { panelButtons, setCurrentPanel } = this.props;
+    const { panelButtons } = this.props;
 
     return (
       <div>
@@ -113,8 +122,9 @@ class App extends Component {
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
     onContinue: PropTypes.func,
-    saveTrainedModel: PropTypes.func,
-    resultsPhase: PropTypes.number
+    resultsPhase: PropTypes.number,
+    startSaveTrainedModel: PropTypes.func,
+    dataToSave: PropTypes.object
   };
 
   render() {
@@ -123,8 +133,9 @@ class App extends Component {
       currentPanel,
       setCurrentPanel,
       onContinue,
-      saveTrainedModel,
-      resultsPhase
+      resultsPhase,
+      dataToSave,
+      startSaveTrainedModel
     } = this.props;
 
     return (
@@ -185,7 +196,7 @@ class App extends Component {
         {currentPanel === "saveModel" && (
           <BodyContainer>
             <ContainerFullWidth>
-              <SaveModel saveTrainedModel={saveTrainedModel} />
+              <SaveModel />
             </ContainerFullWidth>
           </BodyContainer>
         )}
@@ -195,6 +206,8 @@ class App extends Component {
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
           onContinue={onContinue}
+          startSaveTrainedModel={startSaveTrainedModel}
+          dataToSave={dataToSave}
         />
       </div>
     );
@@ -206,7 +219,8 @@ export default connect(
     panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
     validationMessages: validationMessages(state),
-    resultsPhase: state.resultsPhase
+    resultsPhase: state.resultsPhase,
+    dataToSave: getTrainedModelDataToSave(state)
   }),
   dispatch => ({
     setCurrentPanel(panel) {
