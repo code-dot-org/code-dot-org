@@ -1,0 +1,9 @@
+programming_expression_1:
+  name: "playSound"
+  programming_environment: "applab"
+programming_expression_2:
+  name: "stopSound"
+  programming_environment: "applab"
+programming_expression_3:
+  name: "drawSprites"
+  programming_environment: "gamelab"
