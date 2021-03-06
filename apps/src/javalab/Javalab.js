@@ -215,8 +215,6 @@ Javalab.prototype.loadFiles = function(callback) {
 Javalab.prototype.populateFiles = function(fileEntries, callback) {
   if (fileEntries.length === 0) {
     // TODO: make starter code more customizable
-    getStore.dispatch(setFileName('MyClass.java'));
-    getStore.dispatch(setEditorText(''));
     callback();
   } else {
     // TODO: enable multi-file
