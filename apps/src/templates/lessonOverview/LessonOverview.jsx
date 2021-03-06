@@ -228,7 +228,13 @@ class LessonOverview extends Component {
                 <ul>
                   {lesson.programmingExpressions.map(expression => (
                     <li key={expression.name}>
-                      <a href={studio(expression.link)}>{expression.name}</a>
+                      <a
+                        href={studio(expression.link)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {expression.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
