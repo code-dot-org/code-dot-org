@@ -112,9 +112,9 @@ def main(options)
     end
 
     paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
-    not_numbered_lessons_to_update = script.lessons.select {|l| !l.numbered_lesson?}.reject {|l| paired_lesson_ids.include?(l.id)}
-    not_numbered_lessons_to_update.each do |not_numbered|
-      LessonImportHelper.update_lesson(not_numbered, options.models)
+    lessons_without_lesson_plan_to_update = script.lessons.select {|l| !l.has_lesson_plan?}.reject {|l| paired_lesson_ids.include?(l.id)}
+    lessons_without_lesson_plan_to_update.each do |no_lesson_plan|
+      LessonImportHelper.update_lesson(no_lesson_plan, options.models)
     end
 
     updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
@@ -171,7 +171,7 @@ end
 # Because not all lessons in code studio have lesson plans in
 # Curriculum Builder, there may be a mismatch between the number of lessons in
 # CB and Code Studio. This method does the following:
-# 1. Verifies that every numbered lesson in Code Studio has a lesson plan in CB.
+# 1. Verifies that every lesson with lesson plan in Code Studio has a lesson plan in CB.
 # 2. Verifies that every lesson plan in CB has a corresponding lesson in Code Studio
 # 3. Returns a list of pairs of all Code Studio Lessons with corresponding
 #    CB lesson data to update them with.
@@ -185,13 +185,13 @@ def get_validated_lesson_pairs(script, cb_unit)
 
   cb_lessons = get_cb_lessons(cb_unit)
 
-  # Compare numbered lessons from CB and Code Studio.
-  lessons_numbered = script.lessons.reject {|l| !l.numbered_lesson?}
-  unless lessons_numbered.count == cb_lessons.count
-    raise "mismatched lesson counts for unit #{script.name} CS: #{lessons_numbered.count} CB: #{cb_lessons.count}"
+  # Compare lessons with lesson plans from CB and Code Studio.
+  lessons_with_lesson_plans = script.lessons.reject {|l| !l.has_lesson_plan?}
+  unless lessons_with_lesson_plans.count == cb_lessons.count
+    raise "mismatched lesson counts for unit #{script.name} CS: #{lessons_with_lesson_plans.count} CB: #{cb_lessons.count}"
   end
   mismatched_names = []
-  lessons_numbered.each.with_index do |lesson, index|
+  lessons_with_lesson_plans.each.with_index do |lesson, index|
     cb_lesson = cb_lessons[index]
     position = index + 1
     raise "unexpected position for lesson '#{lesson.name}'" unless lesson.relative_position == position
