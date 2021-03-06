@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import i18n from '@cdo/locale';
 import {scriptDataPropType} from '../sectionProgressConstants';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
@@ -59,12 +60,46 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
+  renderLevelProgressText(levelProgress, fieldName, formatter) {
+    if (!levelProgress) {
+      return '-';
+    }
+    return formatter(levelProgress[fieldName]);
+  }
+
+  renderLessonProgressText(lesson, student, fieldName, formatter) {
+    const studentProgress = this.props.levelProgressByStudent[student.id];
+    return (
+      <div>
+        {lesson.levels.map(level =>
+          this.renderLevelProgressText(
+            studentProgress[level.id],
+            fieldName,
+            formatter
+          )
+        )}
+      </div>
+    );
+  }
+
   timeSpentCellFormatter(lesson, student) {
-    return '10';
+    const formatter = timeSpent => `${Math.round(timeSpent / 60)}`;
+    return this.renderLessonProgressText(
+      lesson,
+      student,
+      'timeSpent',
+      formatter
+    );
   }
 
   lastUpdatedCellFormatter(lesson, student) {
-    return '1/1';
+    const formatter = timestamp => moment(timestamp).calendar();
+    return this.renderLessonProgressText(
+      lesson,
+      student,
+      'lastTimestamp',
+      formatter
+    );
   }
 
   render() {

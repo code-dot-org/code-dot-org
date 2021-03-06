@@ -31,7 +31,6 @@ class ProgressTableStudentName extends React.PureComponent {
     sectionId: PropTypes.number.isRequired,
     scriptId: PropTypes.number,
     lastTimestamp: PropTypes.number,
-    localeCode: PropTypes.string,
     studentUrl: PropTypes.string.isRequired,
     onExpandToggle: PropTypes.func.isRequired,
     isExpanded: PropTypes.bool.isRequired,
@@ -66,13 +65,9 @@ class ProgressTableStudentName extends React.PureComponent {
   }
 
   renderTooltip() {
-    const {lastTimestamp, localeCode} = this.props;
     const id = this.tooltipId();
-    if (localeCode) {
-      moment.locale(localeCode);
-    }
-    const timestamp = lastTimestamp
-      ? moment(lastTimestamp).calendar()
+    const timestamp = this.props.lastTimestamp
+      ? moment(this.props.lastTimestamp).calendar()
       : i18n.none();
     return (
       <ReactTooltip
