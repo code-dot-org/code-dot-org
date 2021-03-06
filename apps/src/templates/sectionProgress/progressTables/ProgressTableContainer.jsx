@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import i18n from '@cdo/locale';
 import {scriptDataPropType} from '../sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -65,6 +66,11 @@ class ProgressTableContainer extends React.Component {
         };
       })
     };
+
+    // set the locale for timestamp formatting in table cells
+    if (props.localeCode) {
+      moment.locale(props.localeCode);
+    }
   }
 
   studentList = null;
