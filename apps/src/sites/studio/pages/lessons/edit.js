@@ -13,6 +13,9 @@ import resourcesEditor, {
 import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import programmingExpressionsEditor, {
+  initprogrammingExpressions
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import {Provider} from 'react-redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
@@ -29,13 +32,17 @@ $(document).ready(function() {
     ...reducers,
     instructionsDialog: instructionsDialog,
     resources: resourcesEditor,
-    vocabularies: vocabulariesEditor
+    vocabularies: vocabulariesEditor,
+    programmingExpressions: programmingExpressionsEditor
   });
   const store = getStore();
 
   store.dispatch(init(activities, searchOptions));
   store.dispatch(initResources(lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
+  store.dispatch(
+    initprogrammingExpressions(lessonData.programmingExpressions || [])
+  );
 
   ReactDOM.render(
     <Provider store={store}>
