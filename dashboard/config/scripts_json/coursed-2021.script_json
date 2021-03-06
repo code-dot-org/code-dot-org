@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-02 19:08:04 UTC",
+    "serialized_at": "2021-03-04 21:56:10 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -2437,7 +2437,9 @@
       "key": "07d81a89-c42f-4e92-90cf-a745cd0196d8",
       "position": 2,
       "properties": {
-        "progression_name": "Warm Up"
+        "progression_name": "Warm Up",
+        "name": "Level by Level Support",
+        "description": "#### Level 1 - Video"
       },
       "seeding_key": {
         "activity_section.key": "07d81a89-c42f-4e92-90cf-a745cd0196d8",
@@ -2448,7 +2450,8 @@
       "key": "09a6a786-084e-4677-a2cf-3306ef1a6e83",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Practice",
+        "description": "#### Level 2\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area."
       },
       "seeding_key": {
         "activity_section.key": "09a6a786-084e-4677-a2cf-3306ef1a6e83",
@@ -2459,7 +2462,8 @@
       "key": "da9ffffb-f192-44c2-86e8-1fe7d4de71c9",
       "position": 4,
       "properties": {
-        "progression_name": "Events"
+        "progression_name": "Events",
+        "description": "#### Level 3 - Video\n\n#### Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n#### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n"
       },
       "seeding_key": {
         "activity_section.key": "da9ffffb-f192-44c2-86e8-1fe7d4de71c9",
@@ -2470,7 +2474,8 @@
       "key": "41bca090-a4b2-4019-b05e-3b3b3b0cca14",
       "position": 5,
       "properties": {
-        "progression_name": "Measures"
+        "progression_name": "Measures",
+        "description": "#### Level 6 - Video\n\n#### Level 7\n\n* Levels 7-8 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Level 8\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Level 9\n\n* Level 9 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n"
       },
       "seeding_key": {
         "activity_section.key": "41bca090-a4b2-4019-b05e-3b3b3b0cca14",
@@ -2481,7 +2486,8 @@
       "key": "d3f08051-43ee-48aa-9154-f8b1f21a486f",
       "position": 6,
       "properties": {
-        "progression_name": "Properties"
+        "progression_name": "Properties",
+        "description": "#### Level 10 - Video\n\n#### Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n"
       },
       "seeding_key": {
         "activity_section.key": "d3f08051-43ee-48aa-9154-f8b1f21a486f",
@@ -2489,52 +2495,8 @@
       }
     },
     {
-      "key": "19a261df-276b-4f57-98db-a694c8dc0b40",
-      "position": 7,
-      "properties": {
-        "progression_name": "Wrap-up"
-      },
-      "seeding_key": {
-        "activity_section.key": "19a261df-276b-4f57-98db-a694c8dc0b40",
-        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
-      }
-    },
-    {
-      "key": "248f398f-18b7-4f09-a251-8d119f3c167d",
-      "position": 8,
-      "properties": {
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "248f398f-18b7-4f09-a251-8d119f3c167d",
-        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
-      }
-    },
-    {
-      "key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
-      "position": 9,
-      "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
-        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
-      }
-    },
-    {
-      "key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
-      "position": 10,
-      "properties": {
-        "description": "\n###Level by Level Support\n\n#### Level 2\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.\n\n#### Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n#### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n\n#### Level 7\n\n* Levels 7-8 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Level 8\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Level 9\n\n* Level 9 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n\n#### Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect."
-      },
-      "seeding_key": {
-        "activity_section.key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
-        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
-      }
-    },
-    {
       "key": "c7bb438d-7dd6-483a-954a-0431f8ece258",
-      "position": 11,
+      "position": 7,
       "properties": {
         "tips": [
           {
@@ -2549,10 +2511,55 @@
       }
     },
     {
+      "key": "19a261df-276b-4f57-98db-a694c8dc0b40",
+      "position": 8,
+      "properties": {
+        "progression_name": "Wrap-up",
+        "description": "#### Level 14 - Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "19a261df-276b-4f57-98db-a694c8dc0b40",
+        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
+      }
+    },
+    {
+      "key": "248f398f-18b7-4f09-a251-8d119f3c167d",
+      "position": 9,
+      "properties": {
+        "progression_name": "Free Play",
+        "description": "#### Level 15\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else!"
+      },
+      "seeding_key": {
+        "activity_section.key": "248f398f-18b7-4f09-a251-8d119f3c167d",
+        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
+      }
+    },
+    {
+      "key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
+      "position": 10,
+      "properties": {
+        "progression_name": "Challenge",
+        "description": "#### Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
+        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
+      }
+    },
+    {
+      "key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
+        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
+      }
+    },
+    {
       "key": "3dbac671-c428-479f-8a2b-301d4a5578e5",
       "position": 12,
       "properties": {
-        "description": "#### Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n\n\n#### Level 15\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else!"
       },
       "seeding_key": {
         "activity_section.key": "3dbac671-c428-479f-8a2b-301d4a5578e5",
@@ -7729,12 +7736,15 @@
       "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Power of Words - Unplugged Activity"
+        "progression": "Power of Words - Unplugged Activity",
+        "level_keys": [
+          "PowerOfWords-Unplugged_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "PowerOfWords-Unplugged_2021"

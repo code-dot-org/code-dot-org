@@ -67,12 +67,17 @@ class JavalabView extends React.Component {
     onMount: PropTypes.func.isRequired,
     onSave: PropTypes.func.isRequired,
     renameFile: PropTypes.func.isRequired,
+    onContinue: PropTypes.func.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func
   };
+
+  componentDidMount() {
+    this.props.onMount();
+  }
 
   run = () => {
     this.props.appendOutputLog('Running program...');
@@ -111,6 +116,26 @@ class JavalabView extends React.Component {
                 renameFile={this.props.renameFile}
               />
               <div style={style.consoleAndButtons}>
+                <div style={style.buttons}>
+                  <button
+                    type="button"
+                    style={style.singleButton}
+                    onClick={() => {}}
+                  >
+                    <FontAwesome icon="stop" className="fa-2x" />
+                    <br />
+                    Stop
+                  </button>
+                  <button
+                    type="button"
+                    style={style.singleButton}
+                    onClick={this.props.onContinue}
+                  >
+                    <FontAwesome icon="check" className="fa-2x" />
+                    <br />
+                    Continue
+                  </button>
+                </div>
                 <div style={style.buttons}>
                   <button
                     type="button"

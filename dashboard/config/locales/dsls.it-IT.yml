@@ -6962,10 +6962,10 @@ it-IT:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\n## Fermare la diffusione\nFortunatamente,
-          dopo aver studiato il virus, i vicini di Monster Town fecero una scoperta
-          un'importante. Si resero conto che avevano meno probabilità di diffondere
-          il virus se indossavano maschere sulla bocca. Con le maschere per il viso,
-          i mostri malati avevano meno probabilità di dare il virus ai mostri sani.\n\n<img
+          dopo aver studiato il virus, i vicini di Monster Town fecero un'importante
+          scoperta. Si resero conto che avevano meno probabilità di diffondere il
+          virus se indossavano delle mascherine. Con le mascherine per il viso, i
+          mostri malati avevano meno probabilità di passare il virus ai mostri sani.\n\n<img
           src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
@@ -6976,11 +6976,10 @@ it-IT:
           e fare previsioni su ciò che accadrà ai vicini di Monster Town.\n\n<img
           src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
           style=\"float:right; width:15%\">\n\n* *Con che velocità si diffonderà il
-          virus?*\n\n* *Si ammaleranno tutti?*\n\n* *In che modo le maschere per il
-          viso saranno d'aiuto?*\n\n\nUna volta terminato, condividi la tua simulazione
-          con gli altri. Condividi il tuo messaggio su cosa pensi che possiamo fare
-          per aiutare a mantenere gli altri in buona salute quando un virus arriva
-          in città. "
+          virus?*\n\n* *Si ammaleranno tutti?*\n\n* *In che modo le mascherine saranno
+          d'aiuto?*\n\n\nUna volta terminato, condividi la tua simulazione con gli
+          altri. Condividi il tuo messaggio su cosa pensi che possiamo fare per aiutare
+          a mantenere gli altri in buona salute quando un virus arriva in città. "
       outbreak_story2:
         content1: descrizione qui
         markdown: "# Epidemia: Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
@@ -7572,3 +7571,93 @@ it-IT:
         content1: Test Markdown Textbook Page
       courseF_project_exemplars_2019_2020:
         content1: Test Markdown Textbook Page
+      'Overview: Design Mode':
+        markdown: |-
+          # Benvenuto alla Modalità di Progettazione dell'App Lab
+          Nella "Modalità di Progettazione" dell'App Lab trascina e rilascia gli elementi dell'Interfaccia Utente nell'app.
+
+          ### Vocabolario
+          * **Interfaccia Utente (UI)** - Come una persona (utente) interagisce con il computer o app.
+          * **Elementi dell'UI** o oggetti, come pulsanti, immagini, caselle di testo, menu a tendina, schermate e così via.
+
+          ## Esempio
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Vedrai una nuova serie di interruttori sull'area dell'app che ti faranno passare tra "Modalità di Progettazione" e "Modalità Codice".</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Aggiungere un elemento è facile come trascinarlo e rilasciarlo nell'app dove preferisci. Una volta che è sulla schermata dell'app puoi riposizionarlo, ridimensionarlo e cambiarne molte altre proprietà.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La scheda <em>Proprietà</em> ti mostra tutto ciò che vuoi modificare sull'aspetto dell'elemento dell'UI.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>L'<strong>ID dell'elemento</strong> è importante perché p come ti riferisci all'elemento nel tuo codice. Discuteremo degli ID dell'elemento più avanti.</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puoi creare il testo che l'utente vede sul testo del pulsante come preferisci.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong> Scorri in giù per vedere altre proprietà per un elemento dell'UI che potrebbero essere "nascoste" in basso.</p>
+          </div>
+
+          <div style="clear: both"></div>
+
+          **Ora prova tu!**
+      'Overview: Images':
+        markdown: "# Immagini\n\n## Inserisci un URL di un'immagine sul web\n\n<img
+          src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nCi sono diversi modi per ottenere
+          l'URL di un'immagine.  \n\nUna tecnica comune (mostrata a destra) è quella
+          di trovare un'immagine che ti piace su una pagina web e poi fare click col
+          destro (o click+ctrl) e scegliere un'opzione che dice qualcosa tipo \"Copia
+          Indirizzo Immagine\" che puoi poi incollare nella casella di testo nell'App
+          Lab.\n\nSe non sei sicuro, puoi anche scegliere un'opzione come \"Apri Immagine
+          in Nuova Scheda\" che isola l'immagine e l'URL sarà mostrato nella barra
+          dell'indirizzo, che puoi copiare/incollare nell'App Lab.\n\n**Errore Comune**:
+          Usare l'URL del *sito web di ricerca di un'immagine* invece che un URL dell'immagine
+          stessa.\n\n* Assicurati di ottenere il percorso al file reale dell'immagine
+          - qualcosa che finisca con **.jpg**, **.gif** o **.png**.\n* Un URL che
+          inizia per: 'https://www.google.com/search?1=cat&espv=2&biw=1497....' è
+          probabilmente errato.\n\n\n## Carica le tue immagini\n\nSe hai immagini
+          salvate sul tuo computer puoi caricarle nel **gestore risorse** dell'app
+          lab. Basta **cliccare Carica File** e seguire le istruzioni su schermo.\n\nPer
+          le immagini il file deve essere di tipo: **.jpg**, **.png**, o **.gif**\n\nUna
+          volta caricata l'immagine devi **Scegliere** di impostare l'immagine in
+          quel file. Se aggiungi immagini multiple le vedrai tutte elencate ogni volta
+          che carichi un file e puoi scegliere di usare *qualsiasi* file che hai già
+          caricato.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          Clicca Continua per provarci!\n\n\n"
+      'Overview: onEvent':
+        markdown: |-
+          # Rispondere all'Input dell'Utente
+
+          Dovrai navigare nella Modalità Codice per farlo realmente rispondere all'utente. L'App Lab attende a rispondere a certi **eventi** che si verificano in un programma. Il blocco 'onEvent' specifica quale elemento dell'UI deve attendere per un evento.
+
+          ## OnEvent
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>Passa alla Modalità Codice</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Trascina un blocco <code>onEvent</code> dagli strumenti nell'area di lavoro.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Usa il menu a tendina per selezionare l'<em>ID</em> dell'elemento dell'UI che vuoi configurare per rispondere a qualche evento. Gli ID di tutti gli elementi dell'UI aggiunti nella modalità progettazione saranno elencati qui.</p><p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Usa il menu a tendina per selezionare il <em>tipo</em> di evento a cui vuoi rispondere. (Usa solo "click" per ora).</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Aggiungi il codice nella funzione che vuoi eseguire <em>quando</em> l'utente innesca l'evento. La funzione sarà eseguita ogni volta che l'utente innesca l'evento specifico.</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica
+      csd-post-survey-levelgroup-2018:
+        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica
