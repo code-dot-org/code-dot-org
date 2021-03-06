@@ -46,6 +46,8 @@ class LessonsController < ApplicationController
       old_lesson_data['vocabularies']&.map! {|v| v['id']}
       current_lesson_data[:resources]&.map! {|v| v[:id]}
       old_lesson_data['resources']&.map! {|v| v['id']}
+      current_lesson_data[:programming_expressions]&.map! {|v| v[:id]}
+      old_lesson_data['programming_expressions']&.map! {|v| v['id']}
       if old_lesson_data.to_json != current_lesson_data.to_json
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
         raise msg
@@ -62,7 +64,8 @@ class LessonsController < ApplicationController
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
       @lesson.vocabularies = vocabularies.compact
-      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :original_lesson_data))
+      @lesson.programming_expressions = programming_expressions.compact
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :programming_expressions, :objectives, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
@@ -118,11 +121,13 @@ class LessonsController < ApplicationController
       :announcements,
       :resources,
       :vocabularies,
+      :programming_expressions,
       :objectives
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
+    lp[:programming_expressions] = JSON.parse(lp[:programming_expressions]) if lp[:programming_expressions]
     lp
   end
 end
