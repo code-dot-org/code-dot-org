@@ -937,6 +937,7 @@
   "instructionsWithColon": "Instructions:",
   "intlAnnouncementSpecial2020Body": "Take a Code Break with us, or see resources for students, parents, and teachers - including videos, fun tutorials, and projects! Most options only available in English.",
   "intlAnnouncementSpecial2020Heading": "More resources for learning at home",
+  "introducedCode": "Introduced Code",
   "invalidDataEntryTypeError": "Value must be boolean, number, string, `undefined`, or `null`. Make sure to include quotes for strings like \"this\". ",
   "invalidRecordTypeError": "You attempted to add a record to the table that included a list or object. The data table can only store booleans, numbers, strings, null, and undefined.",
   "joinASection": "Join a section",

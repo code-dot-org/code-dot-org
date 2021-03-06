@@ -14,6 +14,7 @@ import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   frontPage: {
@@ -216,6 +217,18 @@ class LessonOverview extends Component {
                       <InlineMarkdown
                         markdown={`**${vocab.word}** - ${vocab.definition}`}
                       />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {lesson.programmingExpressions.length > 0 && (
+              <div>
+                <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+                <ul>
+                  {lesson.programmingExpressions.map(expression => (
+                    <li key={expression.name}>
+                      <a href={studio(expression.link)}>{expression.name}</a>
                     </li>
                   ))}
                 </ul>
