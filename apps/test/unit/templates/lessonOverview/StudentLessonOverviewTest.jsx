@@ -58,6 +58,13 @@ describe('StudentLessonOverview', () => {
             word: 'Algorithm',
             definition: 'A list of steps to finish a task.'
           }
+        ],
+        programmingExpressions: [
+          {
+            name: 'playSound',
+            category: 'UI Controls',
+            programmingEnvironment: 'applab'
+          }
         ]
       },
       activities: [],

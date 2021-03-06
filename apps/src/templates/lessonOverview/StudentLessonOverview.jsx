@@ -128,6 +128,18 @@ class StudentLessonOverview extends Component {
             </ul>
           </div>
         )}
+        {lesson.programmingExpressions.length > 0 && (
+          <div>
+            <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+            <ul>
+              {lesson.programmingExpressions.map(expression => (
+                <li key={expression.name}>
+                  <a href={expression.link}>{expression.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         {lesson.resources.length > 0 && (
           <div id="resource-section">
             <h2>Resources</h2>

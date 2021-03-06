@@ -88,6 +88,7 @@ export const lessonShape = PropTypes.shape({
   preparation: PropTypes.string.isRequired,
   resources: PropTypes.object,
   vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string
 });
@@ -110,7 +111,8 @@ export const studentLessonShape = PropTypes.shape({
   displayName: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   resources: PropTypes.arrayOf(PropTypes.object),
-  vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired
+  vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
 export const navigationLessonShape = PropTypes.shape({
