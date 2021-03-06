@@ -64,8 +64,9 @@ module Services
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
       #   4 queries to set up course offering and course version
-      #   21 queries - two for each model, + one extra query each for Lessons,
-      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels, Resources, and Vocabulary.
+      #   23 queries - two for each model, + one extra query each for Lessons,
+      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
+      #     ProgrammingExpression, Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
       #     new/updated entries, and then (3) fetch the result for use by the next
       #     layer down in the hierarchy.
@@ -81,7 +82,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(85) do
+      assert_queries(87) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -127,6 +128,7 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       script.lessons.each {|l| l.resources.destroy_all}
       script.lessons.each {|l| l.vocabularies.destroy_all}
+      script.lessons.each {|l| l.programming_expressions.destroy_all}
       script.freeze
       expected_counts = get_counts
 
@@ -337,6 +339,28 @@ module Services
       )
     end
 
+    test 'seed updates lesson programming expressions' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.programming_expressions.first.update!(name: 'newBlock')
+        lesson.programming_expressions.create(
+          name: 'newBlock',
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal(
+        ['newBlock'],
+        lesson.programming_expressions.map(&:name)
+      )
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
@@ -368,6 +392,7 @@ module Services
       expected_counts['LevelsScriptLevel'] -= 16
       expected_counts['LessonsResource'] -= 4
       expected_counts['LessonsVocabulary'] -= 4
+      expected_counts['LessonsProgrammingExpression'] -= 4
       expected_counts['Objective'] -= 4
       assert_equal expected_counts, get_counts
     end
@@ -400,6 +425,7 @@ module Services
       expected_counts['LevelsScriptLevel'] -= 8
       expected_counts['LessonsResource'] -= 2
       expected_counts['LessonsVocabulary'] -= 2
+      expected_counts['LessonsProgrammingExpression'] -= 2
       expected_counts['Objective'] -= 2
       assert_equal expected_counts, get_counts
     end
@@ -599,7 +625,8 @@ module Services
     def get_counts
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
-        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary, Objective
+        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary,
+        LessonsProgrammingExpression, Objective
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -629,6 +656,10 @@ module Services
         assert_vocabularies_equal(
           s1.lessons.map(&:vocabularies).flatten,
           s2.lessons.map(&:vocabularies).flatten
+        )
+        assert_programming_expressions_equal(
+          s1.lessons.map(&:programming_expressions).flatten,
+          s2.lessons.map(&:programming_expressions).flatten
         )
         assert_objectives_equal(
           s1.lessons.map(&:objectives).flatten,
@@ -689,6 +720,12 @@ module Services
       end
     end
 
+    def assert_programming_expressions_equal(programming_expression1, programming_expression2)
+      programming_expression1.zip(programming_expression2).each do |pe1, pe2|
+        assert_attributes_equal(pe1, pe2)
+      end
+    end
+
     def assert_objectives_equal(objectives1, objectives2)
       objectives1.zip(objectives2).each do |o1, o2|
         assert_attributes_equal(o1, o2, ['lesson_id'])
@@ -710,6 +747,7 @@ module Services
       num_script_levels_per_section: 2,
       num_resources_per_lesson: 2,
       num_vocabularies_per_lesson: 2,
+      num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
       with_unit_group: false
     )
@@ -782,6 +820,11 @@ module Services
         (1..num_vocabularies_per_lesson).each do |v|
           vocab = create :vocabulary, key: "#{lesson.name}-vocab-#{v}", course_version: course_version
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
+        end
+
+        (1..num_programming_expressions_per_lesson).each do
+          programming_expression = create :programming_expression
+          LessonsVocabulary.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
         (1..num_objectives_per_lesson).each do |o|
