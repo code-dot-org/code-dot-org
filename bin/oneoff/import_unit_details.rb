@@ -112,9 +112,9 @@ def main(options)
     end
 
     paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
-    lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
-    lockable_lessons_to_update.each do |lockable|
-      LessonImportHelper.update_lesson(lockable, options.models)
+    not_numbered_lessons_to_update = script.lessons.select {|l| !l.numbered_lesson?}.reject {|l| paired_lesson_ids.include?(l.id)}
+    not_numbered_lessons_to_update.each do |not_numbered|
+      LessonImportHelper.update_lesson(not_numbered, options.models)
     end
 
     updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
@@ -168,12 +168,11 @@ def get_cb_lessons(cb_unit)
   cb_unit['lessons'].presence || cb_unit['chapters'].map {|ch| ch['lessons']}.flatten
 end
 
-# Because not all lockable lessons in code studio have lesson plans in
+# Because not all lessons in code studio have lesson plans in
 # Curriculum Builder, there may be a mismatch between the number of lessons in
 # CB and Code Studio. This method does the following:
-# 1. Verifies that every non-lockable lesson in Code Studio has a lesson plan in CB.
-# 2. Verifies that every lesson plan in CB has a corresponding lesson in Code Studio,
-#    including any lesson plans for lockable lessons.
+# 1. Verifies that every numbered lesson in Code Studio has a lesson plan in CB.
+# 2. Verifies that every lesson plan in CB has a corresponding lesson in Code Studio
 # 3. Returns a list of pairs of all Code Studio Lessons with corresponding
 #    CB lesson data to update them with.
 #
@@ -186,18 +185,13 @@ def get_validated_lesson_pairs(script, cb_unit)
 
   cb_lessons = get_cb_lessons(cb_unit)
 
-  # Compare non-lockable lessons from CB and Code Studio.
-  lessons_nonlockable = script.lessons.reject(&:lockable)
-  # In 2020 on Curriculum Builder, code_studio_url only appears on lesson plans
-  # for lockable lessons in CSP. However, not every CSP 2020 lesson in Code
-  # Studio has a corresponding lesson plan in CB. CSD also has many lockable
-  # lessons, none of which have lesson plans on CB.
-  cb_lessons_nonlockable = cb_lessons.reject {|lesson| lesson['code_studio_url'].present?}
-  unless lessons_nonlockable.count == cb_lessons_nonlockable.count
-    raise "mismatched lesson counts for unit #{script.name} CS: #{lessons_nonlockable.count} CB: #{cb_lessons_nonlockable.count}"
+  # Compare numbered lessons from CB and Code Studio.
+  lessons_numbered = script.lessons.reject {|l| !l.numbered_lesson?}
+  unless lessons_numbered.count == cb_lessons.count
+    raise "mismatched lesson counts for unit #{script.name} CS: #{lessons_numbered.count} CB: #{cb_lessons.count}"
   end
   mismatched_names = []
-  lessons_nonlockable.each.with_index do |lesson, index|
+  lessons_numbered.each.with_index do |lesson, index|
     cb_lesson = cb_lessons[index]
     position = index + 1
     raise "unexpected position for lesson '#{lesson.name}'" unless lesson.relative_position == position
@@ -212,22 +206,6 @@ def get_validated_lesson_pairs(script, cb_unit)
     # exactly, then do not warn, because that's a strong signal that we found
     # the right lesson.
     unless [cb_lesson['stage_name'], cb_lesson['title']].any? {|name| canonicalize(name) == canonicalize(lesson.name)}
-      mismatched_names.push([lesson.name, cb_lesson['title']])
-    end
-  end
-
-  # Compare lockable lessons. Most lockable lessons won't have a lesson plan,
-  # so just make sure we can find the corresponding code studio lesson for any
-  # lesson plan belonging to a lockable lesson.
-  cb_lessons_lockable = cb_lessons.select {|cb_lesson| cb_lesson['code_studio_url'].present?}
-  cb_lessons_lockable.each do |cb_lesson|
-    lockable_position = %r{/s/#{script.name}/lockable/(\d+)/}.match(cb_lesson['code_studio_url'])&.captures&.first
-    unless lockable_position
-      raise "could not parse code_studio_url: #{cb_lesson['code_studio_url']} for cb lesson '#{cb_lesson['title']}' in unit #{script.name}"
-    end
-    lesson = script.lessons.find_by!(lockable: true, relative_position: lockable_position)
-    validated_lesson_pairs.push([lesson, cb_lesson])
-    unless canonicalize(lesson.name) == canonicalize(cb_lesson['title'])
       mismatched_names.push([lesson.name, cb_lesson['title']])
     end
   end
