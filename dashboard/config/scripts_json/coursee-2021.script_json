@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-05 23:05:03 UTC",
+    "serialized_at": "2021-03-08 19:12:03 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -158,9 +158,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.",
+        "overview": "This lesson introduces students to **while loops** and `if / else` statements. **While loops** are loops that continue to repeat commands as long as a **condition** is true. **While loops** are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what **condition** needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.",
         "student_overview": "You will get to tell the computer what to do under certain conditions in this fun and challenging series.",
-        "purpose": "A basic understanding of conditionals is a recommended prerequisite for Course E. We created this introduction to give a review for the students already familiar to conditionals and allow practice for the students that are just learning. If you find that the understanding of conditionals varies widely in your classroom, we recommend a strategic pairing of students when completing this online lesson.",
+        "purpose": "A basic understanding of **conditionals** is a recommended prerequisite for Course E. We created this introduction to give a review for the students already familiar to **conditionals** and allow practice for the students that are just learning. If you find that the understanding of **conditionals** varies widely in your classroom, we recommend a strategic pairing of students when completing this online lesson.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure ever student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -1672,7 +1672,7 @@
       "key": "2a7befee-2eac-4af5-bf1c-6192b24cbad2",
       "position": 1,
       "properties": {
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\r\n\r\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \r\n\r\n* while there is a path ahead  \r\n     * walk forward\r\n     * if there is a chair, step over it\r\n* sit down\r\n\r\nTell students they will be using _conditionals_ to solve this problem on Code.org. Give the definition of:\r\n\r\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\r\n - **Conditionals**: Statements that only run under certain conditions.\r\n\r\nOpen up a discussion of when you might use a conditional in your code.",
+        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain **conditions**.\n\nOpen up a discussion of when you might use a **conditional** in your code.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1705,8 +1705,19 @@
       }
     },
     {
-      "key": "af239dc4-fc39-4765-a761-8d1979ef5e11",
+      "key": "47ed862d-1562-4505-a98c-8c852ba6d936",
       "position": 3,
+      "properties": {
+        "progression_name": "Pre-Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936",
+        "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
+      }
+    },
+    {
+      "key": "af239dc4-fc39-4765-a761-8d1979ef5e11",
+      "position": 4,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1717,9 +1728,9 @@
     },
     {
       "key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "progression_name": "Repeat Until Statements"
+        "progression_name": "Repeat Until Blocks"
       },
       "seeding_key": {
         "activity_section.key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
@@ -1728,7 +1739,7 @@
     },
     {
       "key": "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1739,7 +1750,7 @@
     },
     {
       "key": "37929d1a-a0f2-4700-96e9-7d207a70dc1e",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "\"If/Else\" with the Bee"
       },
@@ -1750,7 +1761,7 @@
     },
     {
       "key": "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -1761,22 +1772,12 @@
     },
     {
       "key": "c6d24990-be45-4b52-b095-48004fcaca4a",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c6d24990-be45-4b52-b095-48004fcaca4a",
-        "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
-      }
-    },
-    {
-      "key": "47ed862d-1562-4505-a98c-8c852ba6d936",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936",
         "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
       }
     },
@@ -4077,7 +4078,7 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loops with the Farmer",
         "level_keys": [
@@ -4103,7 +4104,7 @@
       "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4129,7 +4130,76 @@
       "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
+      "properties": {
+        "progression": "Pre-Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while1_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while1_2021"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Pre-Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while2_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while2_2021"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Pre-Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while3_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while3_2021"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4152,10 +4222,10 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 4,
+      "chapter": 31,
+      "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4178,10 +4248,10 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 5,
+      "chapter": 32,
+      "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4204,10 +4274,10 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 6,
+      "chapter": 33,
+      "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4230,12 +4300,12 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
+      "chapter": 34,
+      "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Repeat Until Statements",
+        "progression": "Repeat Until Blocks",
         "level_keys": [
           "courseD_video_repeatUntil_2021"
         ]
@@ -4256,10 +4326,10 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 8,
+      "chapter": 35,
+      "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4282,10 +4352,10 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 9,
+      "chapter": 36,
+      "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4308,10 +4378,10 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 10,
+      "chapter": 37,
+      "position": 13,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4334,10 +4404,10 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 11,
+      "chapter": 38,
+      "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "\"If/Else\" with the Bee",
         "level_keys": [
@@ -4360,10 +4430,10 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 12,
+      "chapter": 39,
+      "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4387,10 +4457,10 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 13,
+      "chapter": 40,
+      "position": 16,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4413,7 +4483,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4439,7 +4509,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4465,7 +4535,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4491,7 +4561,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -4517,7 +4587,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -4543,7 +4613,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -4569,7 +4639,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -4595,7 +4665,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4621,7 +4691,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -4647,7 +4717,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -4673,7 +4743,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -4699,7 +4769,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4725,7 +4795,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4751,7 +4821,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -4777,7 +4847,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -4803,7 +4873,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -4829,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -4855,7 +4925,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4881,7 +4951,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -4907,7 +4977,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 9,
       "activity_section_position": 3,
       "assessment": null,
@@ -4933,7 +5003,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4959,7 +5029,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4984,7 +5054,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5010,7 +5080,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5036,7 +5106,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -5062,7 +5132,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -5088,7 +5158,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -5114,7 +5184,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -5140,7 +5210,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5166,7 +5236,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5192,7 +5262,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5218,7 +5288,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5244,7 +5314,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5270,7 +5340,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 2,
       "assessment": null,
@@ -5296,7 +5366,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 3,
       "assessment": null,
@@ -5322,7 +5392,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 4,
       "assessment": null,
@@ -5348,7 +5418,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 5,
       "assessment": null,
@@ -5374,7 +5444,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": 6,
       "assessment": null,
@@ -5400,7 +5470,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -5427,7 +5497,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 80,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -5453,7 +5523,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 81,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -5479,7 +5549,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 82,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -5505,7 +5575,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 83,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -5531,7 +5601,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 84,
       "position": 15,
       "activity_section_position": 2,
       "assessment": null,
@@ -5557,7 +5627,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5583,7 +5653,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5609,7 +5679,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5635,7 +5705,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5661,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5687,7 +5757,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -5713,7 +5783,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 2,
       "assessment": null,
@@ -5739,7 +5809,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 3,
       "assessment": null,
@@ -5765,7 +5835,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 4,
       "assessment": null,
@@ -5791,7 +5861,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5817,7 +5887,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5843,7 +5913,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5869,7 +5939,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5895,7 +5965,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5921,7 +5991,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5947,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -5973,7 +6043,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -5999,7 +6069,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -6025,7 +6095,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -6051,7 +6121,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -6077,7 +6147,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -6103,7 +6173,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 106,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6129,7 +6199,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6155,7 +6225,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6181,7 +6251,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6207,7 +6277,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6233,7 +6303,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -6259,7 +6329,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -6285,7 +6355,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -6311,7 +6381,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6337,7 +6407,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 115,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -6363,7 +6433,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 116,
       "position": 10,
       "activity_section_position": 2,
       "assessment": null,
@@ -6389,7 +6459,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 117,
       "position": 11,
       "activity_section_position": 3,
       "assessment": null,
@@ -6415,7 +6485,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 118,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6442,7 +6512,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 119,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6468,7 +6538,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 120,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -6494,7 +6564,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6520,7 +6590,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6546,7 +6616,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6572,7 +6642,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6598,7 +6668,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -6624,7 +6694,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -6650,7 +6720,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -6676,7 +6746,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 7,
       "assessment": null,
@@ -6702,7 +6772,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 8,
       "assessment": null,
@@ -6728,7 +6798,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 130,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -6755,7 +6825,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 131,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -6781,7 +6851,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 132,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6807,7 +6877,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 133,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6833,7 +6903,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 134,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -6859,7 +6929,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 135,
       "position": 15,
       "activity_section_position": 2,
       "assessment": null,
@@ -6885,7 +6955,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6911,7 +6981,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 137,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7252,6 +7322,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseD_farmer_while1_2021",
+        "script_level.level_keys": [
+          "courseD_farmer_while1_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while2_2021",
+        "script_level.level_keys": [
+          "courseD_farmer_while2_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while3_2021",
+        "script_level.level_keys": [
+          "courseD_farmer_while3_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseE_farmer_ramp11a_2021",
         "script_level.level_keys": [
           "courseE_farmer_ramp11a_2021"
@@ -7372,7 +7478,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp12g_2021",
+        "level.key": "courseE_farmer_while1_2021",
         "script_level.level_keys": [
           "courseE_farmer_ramp12g_2021"
         ],
@@ -9030,6 +9136,8 @@
       "key": "Condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Condition"
       }
@@ -9038,6 +9146,8 @@
       "key": "Conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Conditionals"
       }
@@ -9046,6 +9156,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -9054,6 +9166,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -9062,6 +9176,8 @@
       "key": "Condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Condition"
       }
@@ -9070,6 +9186,8 @@
       "key": "Conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Conditionals"
       }
@@ -9078,6 +9196,8 @@
       "key": "While Loop",
       "word": "While Loop",
       "definition": "A loop that continues to repeat while a condition is true.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "While Loop"
       }
@@ -9086,6 +9206,8 @@
       "key": "Behavior",
       "word": "Behavior",
       "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Behavior"
       }
@@ -9094,6 +9216,8 @@
       "key": "Sprite",
       "word": "Sprite",
       "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Sprite"
       }
@@ -9102,6 +9226,8 @@
       "key": "Event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Event"
       }
@@ -9110,6 +9236,8 @@
       "key": "Copyright",
       "word": "Copyright",
       "definition": "the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Copyright"
       }
@@ -9118,6 +9246,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -9126,6 +9256,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -9134,6 +9266,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -9142,6 +9276,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -9150,6 +9286,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9158,6 +9296,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9166,6 +9306,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9174,6 +9316,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9182,6 +9326,8 @@
       "key": "Define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Define"
       }
@@ -9190,6 +9336,8 @@
       "key": "Prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Prepare"
       }
@@ -9198,6 +9346,8 @@
       "key": "Reflect",
       "word": "Reflect",
       "definition": "Carefully think back on something with the intention of improving the outcome in the future",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Reflect"
       }
@@ -9206,6 +9356,8 @@
       "key": "Try",
       "word": "Try",
       "definition": "Attempt to do something",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Try"
       }

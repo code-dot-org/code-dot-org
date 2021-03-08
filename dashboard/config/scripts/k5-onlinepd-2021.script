@@ -26,9 +26,16 @@ level 'OPD-K5 CSTeachingLearning1', progression: 'CS Teaching and Student Practi
 level 'OPD-K5 CSTeachingLearning_Reflection', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 CSTeachingLearning2', progression: 'CS Teaching and Student Practices'
 level 'OPD-K5 CS_StudentPractices_Reflection', progression: 'CS Teaching and Student Practices'
+level 'OPD-K5 DebuggingPairProgramming', progression: 'CS Teaching and Student Practices'
+level 'OPD-K5 DebuggingPairProgramming_Reflection', progression: 'CS Teaching and Student Practices'
 
-lesson 'Addressing Implementation Approaches and Barriers', display_name: 'Addressing Implementation Approaches and Barriers', has_lesson_plan: false
-level 'OPD-K5 AddressingImplementationBarriers', progression: 'Addressing Implementation Approaches and Barriers'
+lesson 'Implementation Approaches and Barriers', display_name: 'Implementation Approaches and Barriers', has_lesson_plan: false
+level 'OPD-K5 AddressingImplementationBarriers', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 AddressingImplementation1', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationBarriers1_Reflection', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Implementation Approaches and Barriers'
+level 'OPD-K5 ImplementationBarriers1', progression: 'Implementation Approaches and Barriers'
 
 lesson_group 'k5_basic_concepts_1', display_name: 'CS Fundamentals Concepts'
 lesson 'Sequencing', display_name: 'Sequencing', has_lesson_plan: false
