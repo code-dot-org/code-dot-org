@@ -47,7 +47,7 @@ export default class ModelCard extends React.Component {
     if (this.props.modelId) {
       this.setState({isImportPending: true});
       $.ajax({
-        url: '/api/v1/ml_models/metadata/' + this.props.modelId,
+        url: '/api/v1/ml_models/' + this.props.modelId + '/metadata',
         method: 'GET',
         dataType: 'json'
       })
