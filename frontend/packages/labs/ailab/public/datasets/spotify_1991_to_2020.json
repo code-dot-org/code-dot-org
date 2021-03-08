@@ -1,0 +1,113 @@
+{
+  "fields": [
+    {
+      "type": "continuous",
+      "id": "positivity",
+      "description": "How positive the song is, from 0 (more negative) to 1 (more positive."
+    },
+    {
+      "type": "continuous",
+      "id": "year",
+      "description": "The year the song was released."
+    },
+    {
+      "type": "continuous",
+      "id": "acousticness",
+      "description": "A measure of how confident Spotify's algorithm is that a track is acoustic, from 0 (not acoustic) to 1 (very confident the song is acoustic)."
+    },
+    {
+      "type": "continuous",
+      "id": "artists",
+      "description": "The artists who performed on the song."
+    },
+    {
+      "type": "continuous",
+      "id": "danceability",
+      "description": "How suitable a track is for dancing from 0 (not danceable) to 1 (most danceable)."
+    },
+    {
+      "type": "continuous",
+      "id": "duration(ms)",
+      "description": "How long the track is in milliseconds."
+    },
+    {
+      "type": "continuous",
+      "id": "energy",
+      "description": "Energy is a measure from 0 to 1 of how intense or active a track is."
+    },
+    {
+      "type": "continuous",
+      "id": "explicit",
+      "description": "Whether a track is explicit (1) or not (0)."
+    },
+    {
+      "type": "continuous",
+      "id": "id",
+      "description": "The Spotify ID for the track."
+    },
+    {
+      "type": "continuous",
+      "id": "instrumentalness",
+      "description": "Confidence interval of whether a track contains no vocals - the closer the value is to 1.0, the more likely it has no vocals."
+    },
+    {
+      "type": "continuous",
+      "id": "key",
+      "description": "The musical key the track is in, using Pitch Class notation(https://en.wikipedia.org/wiki/Pitch_class)."
+    },
+    {
+      "type": "continuous",
+      "id": "liveness",
+      "description": "Higher values represent an increased likelihood that the track was performed live."
+    },
+    {
+      "type": "continuous",
+      "id": "loudness",
+      "description": "The average loudness of the track in decibels."
+    },
+    {
+      "type": "categorical",
+      "id": "mode",
+      "description": "Whether the track is in a major scale (1) or minor scale (0)"
+    },
+    {
+      "type": "categorical",
+      "id": "name",
+      "description": "The name of the track."
+    },
+    {
+      "type": "continuous",
+      "id": "popularity",
+      "description": "How popular the track is on Spotify from 0 to 100, based on number of plays and how recent those plays are."
+    },
+    {
+      "type": "continuous",
+      "id": "speechiness",
+      "description": "The higher the value, the more the track is speech-like (e.g. spoken word poetry, or an audio book)."
+    },
+    {
+      "type": "continuous",
+      "id": "tempo",
+      "description": "The tempo of the track in beats per minute (bpm)."
+    }
+  ],
+  "defaultLabelColumn": "danceability",
+  "card": {
+    "description": "A dataset of 20,000 songs from 1991 to 2020 with features like danceability, loudness, popularity, tempo, and more.",
+    "source": "Kaggle (https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data.csv)",
+    "lastUpdated": "2020",
+    "context": {
+      "createdBy": "Spotify",
+      "preparation": true,
+      "confidentiality": false,
+      "subgroupIdentifiers": false,
+      "potentialUses": "Predict a song's danceability based on its tempo and its positivity.",
+      "potentialMisuses": ""
+    }
+  },
+  "recommendedFeatures": [
+    "positivity",
+    "tempo"
+  ],
+  "recommendedLabel": "danceability"
+}

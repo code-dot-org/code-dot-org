@@ -7,10 +7,7 @@ import {
   setSelectedCSV,
   setSelectedJSON,
   resetState,
-  setColumnsByDataType,
-  setLabelColumn,
-  getSpecifiedDatasets,
-  setSelectedTrainer
+  getSpecifiedDatasets
 } from "../redux";
 import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
@@ -22,9 +19,6 @@ class SelectDataset extends Component {
     setSelectedName: PropTypes.func.isRequired,
     setSelectedCSV: PropTypes.func.isRequired,
     setSelectedJSON: PropTypes.func.isRequired,
-    setColumnsByDataType: PropTypes.func.isRequired,
-    setLabelColumn: PropTypes.func.isRequired,
-    setSelectedTrainer: PropTypes.func.isRequired,
     csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     resetState: PropTypes.func.isRequired,
@@ -166,15 +160,6 @@ export default connect(
     },
     setSelectedJSON(jsonfilePath) {
       dispatch(setSelectedJSON(jsonfilePath));
-    },
-    setColumnsByDataType(column, dataType) {
-      dispatch(setColumnsByDataType(column, dataType));
-    },
-    setLabelColumn(labelColumn) {
-      dispatch(setLabelColumn(labelColumn));
-    },
-    setSelectedTrainer(selectedTrainer) {
-      dispatch(setSelectedTrainer(selectedTrainer));
     }
   })
 )(SelectDataset);

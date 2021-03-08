@@ -25,6 +25,6 @@ const updateData = (result, setColumnsToOther) => {
 
 const setDefaultColumnDataType = data => {
   Object.keys(data[0]).map(column =>
-    store.dispatch(setColumnsByDataType(column, ColumnTypes.OTHER))
+    store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))
   );
 };

@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
-import SpecifyColumns from "./UIComponents/SpecifyColumns";
-import SpecifyColumnsInfo from "./UIComponents/SpecifyColumnsInfo";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
+import ScatterPlot from "./UIComponents/ScatterPlot";
 import DataCard from "./UIComponents/DataCard";
-import SelectTrainer from "./UIComponents/SelectTrainer";
+import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
@@ -137,20 +136,6 @@ class App extends Component {
           </BodyContainer>
         )}
 
-        {currentPanel === "specifyColumns" && (
-          <BodyContainer>
-            <Instructions>
-              Review the column types
-            </Instructions>
-            <ContainerLeft>
-              <SpecifyColumns />
-            </ContainerLeft>
-            <ContainerRight>
-              <SpecifyColumnsInfo />
-            </ContainerRight>
-          </BodyContainer>
-        )}
-
         {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
           <BodyContainer>
             <Instructions>
@@ -169,8 +154,9 @@ class App extends Component {
               <DataDisplay />
             </ContainerLeft>
             <ContainerRight>
-              <ColumnInspector />
-              <CrossTab />
+              {currentPanel === "dataDisplayLabel" && <ColumnInspector />}
+              {currentPanel === "dataDisplayFeatures" && <CrossTab />}
+              {currentPanel === "dataDisplayFeatures" && <ScatterPlot />}
             </ContainerRight>
           </BodyContainer>
         )}
@@ -181,7 +167,7 @@ class App extends Component {
               Select a trainer
             </Instructions>
             <ContainerFullWidth>
-              <SelectTrainer />
+              <TrainingSettings />
             </ContainerFullWidth>
           </BodyContainer>
         )}
@@ -205,11 +191,11 @@ class App extends Component {
               <ContainerLeft>
               <Results />
             </ContainerLeft>
-            {resultsPhase === 3 &&
+            {resultsPhase === 3 && (
               <ContainerRight>
                 <Predict />
               </ContainerRight>
-            }
+            )}
           </BodyContainer>
         )}
 

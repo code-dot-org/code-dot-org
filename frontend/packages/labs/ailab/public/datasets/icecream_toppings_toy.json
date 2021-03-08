@@ -1,47 +1,48 @@
 {
-  "defaultLabelColumn": "Liked",
+  "card": {
+    "description": "Survey of customers in an ice cream shop on whether or not they like certain ice cream combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Help make recommendations for what kind of ice cream a new customer should buy",
+      "potentialMisuses": "Anything other than ice cream recommendations"
+    }
+  },
   "fields": [
     {
       "id": "Hot Fudge",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Was there hot fudge?"
     },
     {
       "id": "Sprinkles",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Were there sprinkles?"
     },
     {
       "id": "Whipped Cream",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Was there whipped cream?"
     },
     {
       "id": "Cherry",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Was there a cherry?"
     },
     {
       "id": "Waffle Cone",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Was there a waffle cone?"
     },
     {
-      "id": "Liked",
+      "id": "Preference",
       "type": "categorical",
-      "values": {
-        "categories": ["Yes", "No"]
-      }
+      "description": "Did you like the ice cream cone?"
     }
-  ]
+  ],
+  "defaultLabelColumn": "Preference"
 }

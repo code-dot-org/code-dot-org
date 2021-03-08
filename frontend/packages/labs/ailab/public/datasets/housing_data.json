@@ -71,24 +71,25 @@
       "description": "Median home value in $1000s."
     }
   ],
+  "defaultLabelColumn": "Median home value",
   "card": {
     "description": "A widely used, small dataset on housing in the Boston, Masachusetts area.",
     "source": "University of Toronto (https://www.cs.toronto.edu/~delve/data/boston/desc.html)",
-    "last_updated": "1978",
+    "lastUpdated": "1978",
     "context": {
       "created_by": "US Census Service",
-      "preparation": "Yes",
-      "confidentiality": "No",
-      "subgroup_identifiers": "No",
-	  "representative": "No",
-      "potential_uses": "Predict median home value based on Black population and parent teacher ratio.",
-      "potential_misuses": "This is an old dataset, so it's unlikely to reflect contemporary home values. This is also a dataset that reflects racial and economic biases: is it right or fair that home values tended to be higher in areas where the population was more wealthy, or less Black?"
+      "preparation": true,
+      "confidentiality": false,
+      "subgroup_identifiers": false,
+	  "representative": false,
+      "potentialUses": "Predict median home value based on Black population and parent teacher ratio.",
+      "potentialMisuses": "This is an old dataset, so it's unlikely to reflect contemporary home values. This is also a dataset that reflects racial and economic biases: is it right or fair that home values tended to be higher in areas where the population was more wealthy, or less Black?"
     }
   },
-  "recommended_features": [
+  "recommendedFeatures": [
     "GDP per capita",
     "Student-teacher ratio",
     "Lower status population"
   ],
-  "recommended_label": "Median home value"
+  "recommendedLabel": "Median home value"
 }

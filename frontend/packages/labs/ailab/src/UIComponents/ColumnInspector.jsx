@@ -12,7 +12,36 @@ import {
   setCurrentColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
-import Histogram from "react-chart-histogram";
+import { Bar } from "react-chartjs-2";
+
+const barData = {
+  labels: [],
+  datasets: [
+    {
+      label: "",
+      backgroundColor: "rgba(255,99,132,0.2)",
+      borderColor: "rgba(255,99,132,1)",
+      borderWidth: 1,
+      hoverBackgroundColor: "rgba(255,99,132,0.4)",
+      hoverBorderColor: "rgba(255,99,132,1)",
+      data: []
+    }
+  ]
+};
+
+const chartOptions = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true
+        }
+      }
+    ]
+  },
+  legend: { display: false },
+  maintainAspectRatio: false
+};
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -22,7 +51,8 @@ class ColumnInspector extends Component {
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
-    setCurrentColumn: PropTypes.func
+    setCurrentColumn: PropTypes.func,
+    hideSpecifyColumns: PropTypes.bool
   };
 
   handleChangeDataType = (event, feature) => {
@@ -53,16 +83,15 @@ class ColumnInspector extends Component {
   render() {
     const { currentColumnData, rangesByColumn } = this.props;
 
-    let labels, data, options;
     if (
       currentColumnData &&
       currentColumnData.dataType === ColumnTypes.CATEGORICAL
     ) {
-      labels = Object.values(currentColumnData.uniqueOptions);
-      data = labels.map(option => {
+      barData.labels = Object.values(currentColumnData.uniqueOptions);
+      barData.datasets[0].data = barData.labels.map(option => {
         return currentColumnData.frequencies[option];
       });
-      options = { fillColor: "#000", strokeColor: "#000" };
+      barData.datasets[0].label = currentColumnData.id;
     }
 
     const maxLabelsInHistogram = 4;
@@ -77,10 +106,26 @@ class ColumnInspector extends Component {
           <form>
             <div>
               <label>
-                <div>
-                  {currentColumnData.id}: {currentColumnData.dataType}
-                </div>
-
+                <div>{currentColumnData.id}</div>
+                {this.props.hideSpecifyColumns && (
+                  <div> {currentColumnData.dataType} </div>
+                )}
+                {!this.props.hideSpecifyColumns && (
+                  <select
+                    onChange={event =>
+                      this.handleChangeDataType(event, currentColumnData.id)
+                    }
+                    value={currentColumnData.dataType}
+                  >
+                    {Object.values(ColumnTypes).map((option, index) => {
+                      return (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      );
+                    })}
+                  </select>
+                )}
                 {currentColumnData.description && (
                   <div>
                     <br />
@@ -90,15 +135,14 @@ class ColumnInspector extends Component {
               </label>
 
               {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
-                labels.length <= maxLabelsInHistogram && (
+                barData.labels.length <= maxLabelsInHistogram && (
                   <div>
                     <br />
-                    <Histogram
-                      xLabels={labels}
-                      yValues={data}
-                      width="300"
-                      height="150"
-                      options={options}
+                    <Bar
+                      data={barData}
+                      width={100}
+                      height={150}
+                      options={chartOptions}
                     />
                   </div>
                 )}
@@ -117,6 +161,8 @@ class ColumnInspector extends Component {
                           min: {rangesByColumn[currentColumnData.id].min}
                           <br />
                           max: {rangesByColumn[currentColumnData.id].max}
+                          <br />
+                          range: {rangesByColumn[currentColumnData.id].range}
                         </div>
                       )}
                     </div>
@@ -136,7 +182,8 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    rangesByColumn: getRangesByColumn(state)
+    rangesByColumn: getRangesByColumn(state),
+    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

@@ -1,74 +1,98 @@
 {
-  "defaultLabelColumn": "Name",
+  "card": {
+    "description": "Information about different video games and how well they sold in the US and other regions",
+    "source": "Kaggle - https://www.kaggle.com/kashnitsky/mlcourse?select=video_games_sales.csv",
+    "lastUpdated": "2019",
+    "context": {
+      "createdBy": "Unknown",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Try to predict popularity of a video game",
+      "potentialMisuses": "Some of the data for foreign markets is blank, so it may be difficult to use this for popularity outside the US"
+    }
+  },
   "fields": [
-  	{
-  		"id": "Name",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "Platform",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "Year_of_Release",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "Genre",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "Publisher",
-  		"type": "categorical"
-  	},
-  	{
-  		"id": "NA_Sales",
-  		"type": "continuous"
-  	},
-  	{
-  		"id": "EU_Sales",
-  		"type": "continuous"
-  	},
-  	{
-  		"id": "JP_Sales",
-  		"type": "continuous"
-  	},
-  	{
-  		"id": "Other_Sales",
-  		"type": "continuous"
-  	},
-  	{
-  		"id": "Global_Sales",
-  		"type": "continuous"
-  	},
-  	{
-  		"id": "Critic_Score",
-  		"type": "continuous"
-  	},
+    {
+      "id": "Name",
+      "type": "categorical",
+      "description": "Name of the video game"
+    },
+    {
+      "id": "Platform",
+      "type": "categorical",
+      "description": "Which platform the game was released on"
+    },
+    {
+      "id": "Year_of_Release",
+      "type": "continuous",
+      "description": "Year the game was released"
+    },
+    {
+      "id": "Genre",
+      "type": "categorical",
+      "description": "The genre of the game"
+    },
+    {
+      "id": "Publisher",
+      "type": "categorical",
+      "description": "Who published the game"
+    },
+    {
+      "id": "NA_Sales",
+      "type": "continuous",
+      "description": "Number of games sold in North America, in millions"
+    },
+    {
+      "id": "EU_Sales",
+      "type": "continuous",
+      "description": "Number of games sold in Europe, in millions"
+    },
+    {
+      "id": "JP_Sales",
+      "type": "continuous",
+      "description": "Number of games sold in Japan, in millions"
+    },
+    {
+      "id": "Other_Sales",
+      "type": "continuous",
+      "description": "Number of games sold in other markets, in millions"
+    },
+    {
+      "id": "Global_Sales",
+      "type": "continuous",
+      "description": "Number of games sold globally, in millions"
+    },
+    {
+      "id": "Critic_Score",
+      "type": "continuous",
+      "description": "Average reviewer score, out of 100"
+    },
     {
       "id": "Critic_Count",
       "type": "continuous",
-      "name": "Name"
+      "description": "Number of reviewers of the game"
     },
     {
       "id": "User_Score",
       "type": "continuous",
-      "name": "Name"
+      "description": "Average user score, out of 100"
     },
     {
       "id": "User_Count",
       "type": "continuous",
-      "name": "Name"
+      "description": "Number of user reviewers of the game"
     },
     {
       "id": "Developer",
       "type": "categorical",
-      "name": "Name"
+      "description": "Developer of the game"
     },
     {
       "id": "Rating",
       "type": "categorical",
-      "name": "Name"
+      "description": "Rating of the game"
     }
-  ]
+  ],
+  "defaultLabelColumn": "NA_Sales"
 }

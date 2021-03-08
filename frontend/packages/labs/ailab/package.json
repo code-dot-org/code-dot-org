@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-playground",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
@@ -75,7 +75,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
+    "chart.js": "^2.9.4",
     "ml-svm": "^2.1.2",
-    "react-chart-histogram": "^0.2.4"
+    "react-chartjs-2": "^2.11.1"
   }
 }

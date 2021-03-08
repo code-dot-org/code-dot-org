@@ -1,0 +1,1001 @@
+describe,personality,pet,meal,school,character
+silly,introvert,hamster,dinner,biology,Remy
+clever,extrovert,hamster,dessert,history,Remy
+ambitious,introvert,fish,none,drama,Nemo
+ambitious,extrovert,cat,lunch,biology,Buzz Lightyear
+outgoing,extrovert,cat,lunch,biology,Buzz Lightyear
+clever,extrovert,hamster,none,math,Wall-E
+ambitious,extrovert,cat,breakfast,english,Elastigirl
+silly,extrovert,hamster,dessert,english,Remy
+clever,extrovert,dog,none,english,Buzz Lightyear
+clever,extrovert,fish,dinner,biology,Nemo
+ambitious,extrovert,fish,breakfast,spanish,Elastigirl
+ambitious,introvert,hamster,lunch,math,Remy
+ambitious,extrovert,hamster,lunch,biology,Remy
+silly,extrovert,cat,dessert,history,Elastigirl
+outgoing,extrovert,fish,none,history,Wall-E
+clever,extrovert,fish,dinner,biology,Buzz Lightyear
+clever,introvert,fish,lunch,history,Nemo
+outgoing,extrovert,fish,none,biology,Wall-E
+clever,introvert,hamster,dinner,biology,Remy
+clever,extrovert,fish,dessert,drama,Buzz Lightyear
+outgoing,introvert,cat,breakfast,math,Elastigirl
+outgoing,extrovert,dog,lunch,spanish,Elastigirl
+silly,introvert,hamster,lunch,history,Remy
+outgoing,introvert,hamster,none,english,Wall-E
+silly,extrovert,fish,breakfast,english,Elastigirl
+clever,extrovert,fish,dinner,math,Nemo
+clever,introvert,hamster,dessert,biology,Remy
+silly,extrovert,hamster,dinner,english,Elastigirl
+silly,extrovert,hamster,lunch,biology,Buzz Lightyear
+clever,extrovert,fish,none,biology,Buzz Lightyear
+outgoing,introvert,fish,none,biology,Wall-E
+ambitious,extrovert,dog,dinner,biology,Buzz Lightyear
+outgoing,introvert,dog,none,english,Wall-E
+outgoing,extrovert,fish,none,spanish,Wall-E
+silly,introvert,dog,breakfast,spanish,Elastigirl
+silly,extrovert,dog,breakfast,english,Elastigirl
+silly,introvert,hamster,lunch,biology,Remy
+clever,extrovert,fish,none,biology,Buzz Lightyear
+silly,introvert,dog,lunch,history,Buzz Lightyear
+silly,extrovert,fish,dinner,biology,Buzz Lightyear
+silly,introvert,hamster,breakfast,biology,Remy
+clever,introvert,hamster,breakfast,english,Remy
+silly,extrovert,cat,lunch,english,Elastigirl
+silly,extrovert,dog,none,biology,Buzz Lightyear
+outgoing,introvert,dog,breakfast,biology,Nemo
+outgoing,extrovert,hamster,none,drama,Wall-E
+silly,extrovert,cat,breakfast,history,Elastigirl
+outgoing,extrovert,hamster,none,math,Wall-E
+outgoing,extrovert,fish,lunch,math,Buzz Lightyear
+silly,introvert,hamster,breakfast,math,Remy
+silly,introvert,fish,dinner,biology,Nemo
+clever,extrovert,dog,none,history,Buzz Lightyear
+clever,introvert,dog,dessert,history,Nemo
+clever,extrovert,cat,dinner,english,Elastigirl
+outgoing,extrovert,fish,none,biology,Wall-E
+outgoing,introvert,dog,none,math,Wall-E
+clever,extrovert,fish,breakfast,english,Elastigirl
+outgoing,introvert,hamster,lunch,biology,Remy
+outgoing,introvert,cat,breakfast,english,Elastigirl
+ambitious,extrovert,cat,lunch,drama,Elastigirl
+silly,extrovert,hamster,lunch,english,Remy
+clever,extrovert,hamster,none,drama,Wall-E
+clever,extrovert,hamster,dessert,history,Remy
+clever,extrovert,cat,dinner,biology,Buzz Lightyear
+outgoing,extrovert,fish,none,history,Wall-E
+outgoing,introvert,fish,lunch,drama,Nemo
+clever,extrovert,hamster,breakfast,math,Elastigirl
+clever,extrovert,hamster,none,spanish,Wall-E
+clever,extrovert,dog,breakfast,spanish,Elastigirl
+silly,extrovert,hamster,dessert,history,Remy
+ambitious,extrovert,dog,breakfast,history,Elastigirl
+silly,introvert,cat,none,drama,Buzz Lightyear
+ambitious,introvert,hamster,none,english,Wall-E
+silly,extrovert,hamster,lunch,math,Remy
+outgoing,introvert,hamster,dessert,biology,Remy
+silly,introvert,fish,none,math,Nemo
+outgoing,introvert,dog,lunch,spanish,Elastigirl
+outgoing,extrovert,dog,dessert,drama,Buzz Lightyear
+outgoing,extrovert,dog,dessert,math,Buzz Lightyear
+ambitious,extrovert,hamster,none,drama,Wall-E
+outgoing,extrovert,cat,dessert,english,Elastigirl
+clever,extrovert,dog,dinner,english,Elastigirl
+silly,extrovert,dog,dinner,spanish,Elastigirl
+clever,introvert,cat,dinner,math,Elastigirl
+ambitious,extrovert,cat,dessert,drama,Buzz Lightyear
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,introvert,hamster,breakfast,math,Remy
+silly,introvert,hamster,lunch,biology,Remy
+ambitious,introvert,dog,breakfast,history,Elastigirl
+silly,introvert,hamster,dinner,english,Remy
+silly,extrovert,hamster,lunch,history,Remy
+clever,introvert,hamster,breakfast,history,Remy
+ambitious,extrovert,cat,dinner,english,Elastigirl
+clever,extrovert,hamster,none,math,Wall-E
+outgoing,extrovert,dog,dinner,english,Buzz Lightyear
+outgoing,extrovert,dog,none,drama,Wall-E
+ambitious,extrovert,fish,dinner,math,Elastigirl
+clever,extrovert,dog,dinner,biology,Buzz Lightyear
+outgoing,extrovert,fish,none,history,Wall-E
+clever,extrovert,hamster,none,math,Wall-E
+outgoing,extrovert,dog,dessert,history,Buzz Lightyear
+outgoing,introvert,hamster,none,math,Wall-E
+clever,introvert,fish,lunch,english,Nemo
+ambitious,extrovert,fish,none,drama,Wall-E
+ambitious,extrovert,fish,dinner,biology,Buzz Lightyear
+silly,introvert,dog,breakfast,spanish,Nemo
+ambitious,introvert,hamster,dessert,english,Remy
+ambitious,introvert,hamster,dessert,english,Remy
+outgoing,introvert,hamster,dessert,biology,Remy
+clever,extrovert,cat,dessert,biology,Buzz Lightyear
+clever,extrovert,hamster,none,biology,Wall-E
+ambitious,introvert,fish,dessert,english,Nemo
+silly,extrovert,cat,breakfast,spanish,Elastigirl
+silly,extrovert,dog,breakfast,spanish,Elastigirl
+clever,introvert,cat,lunch,math,Elastigirl
+clever,extrovert,cat,lunch,english,Elastigirl
+silly,extrovert,dog,dessert,spanish,Nemo
+clever,introvert,hamster,breakfast,spanish,Elastigirl
+silly,extrovert,fish,dinner,history,Buzz Lightyear
+ambitious,extrovert,hamster,none,math,Wall-E
+clever,introvert,fish,dessert,drama,Nemo
+silly,extrovert,dog,breakfast,math,Elastigirl
+clever,introvert,hamster,breakfast,history,Remy
+outgoing,extrovert,dog,breakfast,english,Elastigirl
+silly,extrovert,hamster,breakfast,english,Remy
+silly,introvert,fish,dinner,biology,Nemo
+silly,introvert,hamster,dessert,history,Remy
+ambitious,introvert,hamster,none,biology,Wall-E
+ambitious,extrovert,fish,lunch,history,Nemo
+clever,introvert,hamster,dessert,biology,Remy
+clever,extrovert,hamster,none,drama,Wall-E
+clever,extrovert,fish,breakfast,english,Buzz Lightyear
+clever,introvert,fish,dinner,drama,Nemo
+silly,extrovert,hamster,dinner,biology,Remy
+outgoing,extrovert,dog,lunch,biology,Buzz Lightyear
+silly,extrovert,hamster,dinner,math,Remy
+clever,extrovert,cat,breakfast,english,Buzz Lightyear
+ambitious,extrovert,fish,breakfast,math,Buzz Lightyear
+clever,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,cat,breakfast,biology,Elastigirl
+clever,introvert,cat,breakfast,biology,Elastigirl
+ambitious,introvert,hamster,lunch,biology,Remy
+outgoing,introvert,hamster,none,english,Wall-E
+silly,extrovert,fish,dessert,english,Nemo
+silly,extrovert,dog,dinner,english,Nemo
+outgoing,extrovert,dog,dinner,history,Elastigirl
+ambitious,extrovert,fish,lunch,english,Elastigirl
+clever,extrovert,cat,dinner,math,Buzz Lightyear
+outgoing,extrovert,hamster,none,math,Wall-E
+silly,extrovert,dog,lunch,english,Elastigirl
+outgoing,extrovert,hamster,none,biology,Wall-E
+ambitious,extrovert,fish,none,biology,Buzz Lightyear
+silly,extrovert,cat,dinner,english,Elastigirl
+ambitious,extrovert,fish,dinner,biology,Buzz Lightyear
+clever,extrovert,dog,dinner,english,Buzz Lightyear
+ambitious,extrovert,fish,dinner,english,Nemo
+clever,extrovert,dog,breakfast,biology,Nemo
+outgoing,extrovert,cat,breakfast,english,Elastigirl
+ambitious,extrovert,fish,dessert,biology,Buzz Lightyear
+outgoing,extrovert,fish,none,drama,Wall-E
+ambitious,introvert,fish,dessert,biology,Nemo
+ambitious,extrovert,dog,none,spanish,Wall-E
+clever,extrovert,hamster,dessert,english,Remy
+outgoing,introvert,fish,dinner,history,Nemo
+silly,introvert,hamster,lunch,history,Remy
+outgoing,introvert,dog,breakfast,english,Elastigirl
+clever,extrovert,fish,dinner,spanish,Elastigirl
+outgoing,introvert,fish,breakfast,biology,Nemo
+silly,extrovert,hamster,lunch,biology,Remy
+clever,extrovert,fish,none,biology,Buzz Lightyear
+silly,introvert,fish,none,drama,Nemo
+silly,introvert,hamster,lunch,biology,Remy
+clever,introvert,hamster,dessert,history,Remy
+outgoing,introvert,dog,dinner,english,Nemo
+silly,extrovert,dog,breakfast,history,Elastigirl
+silly,extrovert,dog,lunch,drama,Nemo
+outgoing,introvert,hamster,none,spanish,Wall-E
+silly,introvert,fish,none,spanish,Nemo
+clever,extrovert,fish,dinner,english,Nemo
+silly,extrovert,cat,breakfast,math,Elastigirl
+outgoing,extrovert,fish,dinner,spanish,Elastigirl
+outgoing,introvert,fish,lunch,biology,Nemo
+silly,extrovert,fish,dinner,spanish,Nemo
+outgoing,introvert,fish,breakfast,history,Nemo
+outgoing,extrovert,fish,breakfast,spanish,Elastigirl
+ambitious,extrovert,fish,dinner,biology,Nemo
+silly,extrovert,dog,lunch,biology,Nemo
+ambitious,extrovert,hamster,none,history,Wall-E
+clever,extrovert,hamster,none,spanish,Wall-E
+ambitious,extrovert,fish,breakfast,drama,Buzz Lightyear
+silly,introvert,fish,breakfast,spanish,Nemo
+clever,extrovert,cat,breakfast,spanish,Elastigirl
+silly,introvert,dog,breakfast,history,Elastigirl
+ambitious,extrovert,dog,dinner,drama,Buzz Lightyear
+clever,introvert,fish,none,spanish,Nemo
+clever,introvert,hamster,dinner,biology,Remy
+outgoing,extrovert,fish,none,math,Wall-E
+ambitious,extrovert,fish,none,math,Wall-E
+ambitious,extrovert,dog,dinner,english,Elastigirl
+clever,extrovert,cat,dinner,history,Elastigirl
+outgoing,extrovert,fish,breakfast,biology,Buzz Lightyear
+silly,extrovert,fish,breakfast,biology,Nemo
+ambitious,extrovert,dog,none,biology,Wall-E
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,hamster,none,history,Wall-E
+outgoing,extrovert,dog,none,english,Wall-E
+silly,introvert,fish,dinner,spanish,Elastigirl
+silly,introvert,dog,breakfast,biology,Nemo
+ambitious,extrovert,cat,breakfast,history,Elastigirl
+ambitious,introvert,fish,lunch,english,Nemo
+silly,extrovert,dog,breakfast,spanish,Elastigirl
+silly,extrovert,cat,lunch,history,Elastigirl
+silly,extrovert,fish,lunch,english,Nemo
+silly,extrovert,fish,dessert,spanish,Nemo
+ambitious,introvert,dog,none,drama,Wall-E
+silly,introvert,fish,none,history,Buzz Lightyear
+outgoing,introvert,cat,dinner,history,Elastigirl
+outgoing,extrovert,dog,lunch,history,Elastigirl
+silly,introvert,hamster,dinner,biology,Remy
+outgoing,extrovert,dog,none,biology,Wall-E
+silly,introvert,fish,lunch,english,Nemo
+silly,introvert,hamster,dessert,math,Remy
+silly,introvert,fish,dessert,english,Nemo
+outgoing,introvert,cat,lunch,english,Elastigirl
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,hamster,none,biology,Wall-E
+clever,introvert,fish,dinner,biology,Nemo
+outgoing,extrovert,dog,dessert,biology,Elastigirl
+silly,extrovert,cat,breakfast,english,Elastigirl
+outgoing,extrovert,fish,none,biology,Wall-E
+silly,introvert,fish,breakfast,drama,Nemo
+outgoing,introvert,hamster,lunch,english,Remy
+clever,introvert,dog,none,math,Buzz Lightyear
+ambitious,introvert,fish,breakfast,math,Nemo
+outgoing,introvert,fish,breakfast,history,Elastigirl
+clever,extrovert,hamster,lunch,biology,Buzz Lightyear
+outgoing,extrovert,dog,dinner,biology,Buzz Lightyear
+silly,extrovert,cat,breakfast,english,Elastigirl
+ambitious,extrovert,fish,dinner,biology,Nemo
+ambitious,extrovert,dog,lunch,math,Buzz Lightyear
+clever,introvert,hamster,breakfast,math,Remy
+clever,introvert,fish,breakfast,drama,Nemo
+clever,introvert,dog,lunch,biology,Nemo
+silly,introvert,dog,dinner,english,Elastigirl
+outgoing,extrovert,fish,breakfast,history,Nemo
+silly,extrovert,fish,breakfast,english,Nemo
+ambitious,extrovert,cat,lunch,drama,Buzz Lightyear
+clever,extrovert,fish,lunch,biology,Nemo
+clever,introvert,dog,dinner,biology,Nemo
+ambitious,extrovert,cat,breakfast,history,Elastigirl
+clever,extrovert,hamster,none,history,Wall-E
+silly,introvert,hamster,dessert,history,Remy
+ambitious,extrovert,dog,lunch,drama,Buzz Lightyear
+clever,introvert,fish,dinner,spanish,Elastigirl
+clever,extrovert,hamster,none,math,Wall-E
+outgoing,introvert,cat,dinner,biology,Elastigirl
+clever,extrovert,hamster,lunch,biology,Remy
+silly,extrovert,hamster,lunch,english,Nemo
+ambitious,extrovert,hamster,lunch,biology,Buzz Lightyear
+silly,introvert,hamster,lunch,english,Remy
+ambitious,introvert,hamster,dinner,spanish,Elastigirl
+outgoing,extrovert,hamster,dessert,history,Remy
+ambitious,extrovert,cat,dessert,drama,Buzz Lightyear
+silly,extrovert,dog,dinner,history,Nemo
+ambitious,extrovert,dog,breakfast,biology,Buzz Lightyear
+clever,introvert,hamster,dessert,history,Remy
+clever,extrovert,dog,breakfast,english,Elastigirl
+silly,extrovert,fish,lunch,math,Nemo
+outgoing,extrovert,dog,breakfast,biology,Buzz Lightyear
+outgoing,introvert,hamster,none,spanish,Wall-E
+outgoing,extrovert,hamster,none,history,Wall-E
+silly,introvert,cat,dessert,drama,Elastigirl
+ambitious,extrovert,fish,none,english,Buzz Lightyear
+ambitious,introvert,dog,none,spanish,Wall-E
+clever,introvert,cat,dinner,spanish,Elastigirl
+outgoing,extrovert,hamster,none,english,Wall-E
+ambitious,introvert,hamster,breakfast,history,Remy
+silly,introvert,fish,dessert,english,Nemo
+clever,extrovert,cat,dinner,spanish,Elastigirl
+silly,introvert,dog,breakfast,history,Elastigirl
+outgoing,extrovert,cat,dinner,drama,Elastigirl
+outgoing,introvert,cat,dessert,english,Elastigirl
+clever,introvert,dog,dessert,drama,Nemo
+outgoing,extrovert,dog,lunch,history,Buzz Lightyear
+ambitious,extrovert,cat,breakfast,spanish,Elastigirl
+ambitious,extrovert,fish,breakfast,drama,Buzz Lightyear
+ambitious,extrovert,fish,lunch,history,Buzz Lightyear
+ambitious,extrovert,dog,none,math,Wall-E
+clever,extrovert,fish,none,math,Buzz Lightyear
+silly,introvert,fish,dinner,english,Nemo
+outgoing,extrovert,cat,lunch,biology,Buzz Lightyear
+outgoing,extrovert,hamster,none,biology,Wall-E
+clever,extrovert,dog,dessert,math,Nemo
+outgoing,extrovert,hamster,none,spanish,Wall-E
+clever,extrovert,fish,lunch,english,Buzz Lightyear
+ambitious,introvert,hamster,lunch,biology,Remy
+ambitious,introvert,hamster,none,history,Wall-E
+silly,introvert,hamster,dinner,math,Remy
+silly,extrovert,dog,dinner,english,Elastigirl
+outgoing,extrovert,cat,dinner,math,Buzz Lightyear
+silly,extrovert,cat,lunch,math,Elastigirl
+outgoing,extrovert,dog,dinner,biology,Elastigirl
+silly,introvert,cat,dessert,english,Elastigirl
+clever,extrovert,cat,dessert,drama,Buzz Lightyear
+ambitious,extrovert,cat,dinner,spanish,Elastigirl
+clever,introvert,fish,none,english,Nemo
+outgoing,introvert,hamster,none,math,Wall-E
+outgoing,extrovert,hamster,lunch,math,Elastigirl
+outgoing,extrovert,dog,none,history,Wall-E
+clever,extrovert,hamster,none,math,Wall-E
+silly,extrovert,cat,dessert,english,Elastigirl
+clever,extrovert,fish,lunch,math,Nemo
+silly,extrovert,hamster,breakfast,biology,Elastigirl
+outgoing,extrovert,cat,dinner,history,Elastigirl
+outgoing,extrovert,hamster,dessert,biology,Remy
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,extrovert,dog,none,spanish,Wall-E
+clever,introvert,hamster,none,drama,Wall-E
+outgoing,extrovert,fish,none,drama,Buzz Lightyear
+clever,extrovert,hamster,lunch,math,Remy
+outgoing,extrovert,cat,breakfast,history,Elastigirl
+silly,introvert,hamster,breakfast,biology,Remy
+silly,extrovert,fish,breakfast,biology,Buzz Lightyear
+clever,extrovert,hamster,none,spanish,Wall-E
+outgoing,extrovert,fish,breakfast,english,Elastigirl
+outgoing,extrovert,hamster,dinner,english,Buzz Lightyear
+outgoing,introvert,fish,none,math,Wall-E
+clever,introvert,hamster,lunch,drama,Nemo
+clever,introvert,dog,dessert,drama,Nemo
+silly,introvert,dog,dessert,drama,Nemo
+ambitious,extrovert,hamster,dessert,math,Buzz Lightyear
+ambitious,extrovert,hamster,none,history,Wall-E
+clever,extrovert,dog,none,biology,Buzz Lightyear
+outgoing,introvert,dog,breakfast,history,Elastigirl
+clever,extrovert,hamster,dinner,english,Remy
+silly,extrovert,fish,dinner,drama,Nemo
+silly,extrovert,fish,dessert,biology,Buzz Lightyear
+ambitious,extrovert,dog,breakfast,english,Buzz Lightyear
+clever,introvert,fish,dessert,english,Nemo
+ambitious,extrovert,fish,none,drama,Wall-E
+clever,extrovert,hamster,lunch,math,Remy
+clever,introvert,hamster,dessert,english,Remy
+clever,extrovert,fish,lunch,biology,Buzz Lightyear
+outgoing,extrovert,fish,none,english,Wall-E
+ambitious,introvert,fish,dinner,spanish,Nemo
+outgoing,extrovert,hamster,none,drama,Wall-E
+silly,extrovert,dog,dessert,spanish,Nemo
+clever,extrovert,fish,dessert,english,Nemo
+outgoing,extrovert,hamster,dinner,biology,Buzz Lightyear
+clever,extrovert,hamster,dinner,history,Remy
+ambitious,extrovert,dog,none,math,Wall-E
+clever,extrovert,fish,none,spanish,Wall-E
+outgoing,introvert,dog,none,english,Wall-E
+silly,extrovert,dog,breakfast,drama,Buzz Lightyear
+ambitious,introvert,fish,breakfast,history,Nemo
+outgoing,introvert,fish,dessert,drama,Buzz Lightyear
+ambitious,extrovert,fish,breakfast,spanish,Elastigirl
+ambitious,introvert,hamster,breakfast,history,Remy
+clever,introvert,hamster,dinner,drama,Elastigirl
+silly,introvert,hamster,dessert,english,Nemo
+ambitious,extrovert,cat,none,drama,Buzz Lightyear
+outgoing,extrovert,cat,dinner,biology,Elastigirl
+silly,introvert,dog,dinner,math,Nemo
+clever,extrovert,dog,none,english,Wall-E
+ambitious,extrovert,dog,breakfast,history,Elastigirl
+ambitious,extrovert,hamster,none,drama,Wall-E
+clever,introvert,dog,none,drama,Buzz Lightyear
+outgoing,introvert,fish,lunch,english,Nemo
+silly,introvert,hamster,dessert,english,Remy
+silly,introvert,fish,none,biology,Nemo
+clever,introvert,hamster,dessert,english,Remy
+silly,introvert,hamster,dessert,math,Remy
+outgoing,introvert,hamster,none,history,Wall-E
+clever,introvert,hamster,none,english,Wall-E
+clever,extrovert,hamster,dinner,spanish,Elastigirl
+silly,extrovert,cat,dinner,spanish,Elastigirl
+ambitious,extrovert,dog,dinner,english,Elastigirl
+ambitious,extrovert,hamster,none,english,Wall-E
+outgoing,extrovert,fish,none,math,Wall-E
+outgoing,extrovert,hamster,none,biology,Wall-E
+silly,extrovert,fish,lunch,biology,Buzz Lightyear
+clever,extrovert,hamster,dinner,english,Elastigirl
+outgoing,extrovert,hamster,none,math,Wall-E
+outgoing,extrovert,hamster,dessert,english,Remy
+ambitious,introvert,dog,dinner,history,Elastigirl
+clever,introvert,hamster,breakfast,math,Remy
+clever,extrovert,fish,none,drama,Wall-E
+ambitious,extrovert,fish,dinner,history,Buzz Lightyear
+clever,extrovert,dog,dinner,history,Elastigirl
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,extrovert,fish,dinner,history,Nemo
+ambitious,extrovert,hamster,none,math,Wall-E
+clever,introvert,fish,dessert,biology,Nemo
+outgoing,introvert,hamster,dessert,biology,Remy
+silly,extrovert,cat,dinner,english,Elastigirl
+clever,introvert,fish,none,biology,Wall-E
+clever,extrovert,fish,dinner,drama,Buzz Lightyear
+silly,extrovert,dog,none,history,Nemo
+clever,extrovert,cat,lunch,biology,Buzz Lightyear
+clever,extrovert,dog,dessert,english,Elastigirl
+outgoing,extrovert,hamster,dinner,history,Elastigirl
+clever,extrovert,fish,dessert,drama,Nemo
+silly,introvert,hamster,dessert,history,Remy
+outgoing,extrovert,dog,none,biology,Wall-E
+outgoing,extrovert,cat,lunch,biology,Buzz Lightyear
+ambitious,introvert,hamster,none,math,Wall-E
+outgoing,extrovert,dog,dinner,spanish,Elastigirl
+outgoing,introvert,hamster,none,english,Wall-E
+ambitious,extrovert,hamster,lunch,english,Remy
+ambitious,extrovert,hamster,lunch,english,Remy
+outgoing,extrovert,dog,none,spanish,Wall-E
+silly,introvert,hamster,breakfast,biology,Remy
+ambitious,extrovert,cat,lunch,biology,Buzz Lightyear
+outgoing,extrovert,hamster,dinner,english,Elastigirl
+ambitious,extrovert,fish,lunch,biology,Buzz Lightyear
+outgoing,extrovert,hamster,none,english,Wall-E
+ambitious,extrovert,cat,dinner,biology,Buzz Lightyear
+ambitious,introvert,hamster,breakfast,english,Remy
+silly,extrovert,cat,lunch,drama,Elastigirl
+outgoing,extrovert,fish,none,biology,Wall-E
+outgoing,extrovert,hamster,none,biology,Wall-E
+clever,introvert,hamster,lunch,history,Remy
+outgoing,introvert,fish,none,spanish,Wall-E
+clever,introvert,hamster,dessert,math,Remy
+ambitious,extrovert,fish,dinner,biology,Buzz Lightyear
+outgoing,introvert,dog,breakfast,biology,Elastigirl
+clever,extrovert,dog,none,math,Nemo
+clever,introvert,fish,none,math,Wall-E
+silly,introvert,dog,lunch,history,Buzz Lightyear
+outgoing,extrovert,dog,none,biology,Wall-E
+ambitious,extrovert,cat,dinner,history,Elastigirl
+silly,introvert,fish,dessert,english,Nemo
+silly,introvert,hamster,dinner,math,Remy
+outgoing,extrovert,dog,dessert,drama,Buzz Lightyear
+outgoing,extrovert,fish,dinner,spanish,Nemo
+silly,extrovert,dog,breakfast,history,Elastigirl
+silly,introvert,dog,breakfast,spanish,Elastigirl
+ambitious,introvert,dog,lunch,english,Elastigirl
+clever,extrovert,fish,dessert,math,Buzz Lightyear
+outgoing,extrovert,dog,lunch,math,Buzz Lightyear
+ambitious,introvert,dog,breakfast,math,Elastigirl
+outgoing,introvert,hamster,none,math,Wall-E
+clever,introvert,hamster,none,math,Wall-E
+outgoing,extrovert,cat,dinner,history,Elastigirl
+outgoing,extrovert,hamster,none,biology,Buzz Lightyear
+outgoing,extrovert,dog,dessert,drama,Buzz Lightyear
+silly,introvert,dog,dinner,history,Elastigirl
+outgoing,extrovert,fish,none,spanish,Wall-E
+outgoing,introvert,dog,lunch,math,Buzz Lightyear
+clever,extrovert,fish,dinner,biology,Buzz Lightyear
+ambitious,extrovert,dog,none,history,Wall-E
+silly,introvert,hamster,breakfast,biology,Remy
+outgoing,extrovert,hamster,none,math,Wall-E
+silly,introvert,hamster,dessert,biology,Remy
+outgoing,introvert,cat,dinner,english,Elastigirl
+ambitious,extrovert,hamster,dinner,history,Buzz Lightyear
+ambitious,extrovert,cat,none,math,Buzz Lightyear
+outgoing,extrovert,dog,lunch,math,Nemo
+clever,introvert,hamster,breakfast,biology,Remy
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,dog,dinner,spanish,Elastigirl
+outgoing,extrovert,fish,none,math,Wall-E
+outgoing,extrovert,fish,none,english,Wall-E
+outgoing,extrovert,hamster,none,drama,Wall-E
+clever,extrovert,fish,dessert,math,Buzz Lightyear
+ambitious,extrovert,fish,lunch,history,Buzz Lightyear
+ambitious,extrovert,fish,none,math,Buzz Lightyear
+outgoing,extrovert,fish,none,biology,Nemo
+silly,extrovert,fish,dinner,history,Elastigirl
+outgoing,extrovert,cat,dinner,spanish,Elastigirl
+outgoing,introvert,fish,dessert,drama,Nemo
+silly,extrovert,cat,dessert,drama,Buzz Lightyear
+outgoing,introvert,fish,breakfast,english,Buzz Lightyear
+clever,introvert,cat,dinner,biology,Buzz Lightyear
+ambitious,extrovert,fish,lunch,biology,Buzz Lightyear
+clever,introvert,hamster,dinner,biology,Remy
+silly,extrovert,hamster,breakfast,history,Elastigirl
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,extrovert,dog,dinner,spanish,Elastigirl
+outgoing,introvert,dog,dinner,history,Elastigirl
+silly,introvert,fish,breakfast,english,Nemo
+clever,introvert,hamster,lunch,biology,Remy
+outgoing,extrovert,dog,none,biology,Wall-E
+silly,extrovert,hamster,breakfast,english,Buzz Lightyear
+clever,introvert,cat,breakfast,spanish,Elastigirl
+clever,introvert,hamster,dinner,math,Remy
+outgoing,introvert,fish,none,history,Wall-E
+silly,extrovert,dog,dinner,english,Elastigirl
+silly,introvert,fish,dessert,biology,Nemo
+ambitious,extrovert,hamster,none,drama,Wall-E
+ambitious,extrovert,hamster,none,math,Wall-E
+clever,extrovert,hamster,none,math,Wall-E
+clever,extrovert,hamster,lunch,biology,Remy
+silly,introvert,cat,dessert,history,Elastigirl
+clever,introvert,fish,dinner,spanish,Nemo
+outgoing,extrovert,dog,none,math,Buzz Lightyear
+clever,extrovert,hamster,none,biology,Buzz Lightyear
+outgoing,extrovert,fish,none,english,Buzz Lightyear
+outgoing,introvert,cat,dinner,english,Elastigirl
+outgoing,extrovert,hamster,none,math,Wall-E
+outgoing,extrovert,fish,none,spanish,Wall-E
+outgoing,extrovert,dog,breakfast,spanish,Elastigirl
+ambitious,introvert,dog,breakfast,spanish,Elastigirl
+outgoing,extrovert,dog,dinner,history,Elastigirl
+outgoing,extrovert,hamster,none,english,Wall-E
+clever,extrovert,dog,none,english,Wall-E
+ambitious,extrovert,cat,breakfast,biology,Buzz Lightyear
+ambitious,extrovert,fish,dessert,english,Nemo
+silly,introvert,dog,dinner,math,Elastigirl
+silly,introvert,cat,dessert,english,Elastigirl
+clever,introvert,hamster,breakfast,math,Remy
+clever,extrovert,hamster,none,english,Wall-E
+silly,extrovert,hamster,dessert,math,Remy
+silly,introvert,dog,dinner,english,Elastigirl
+ambitious,introvert,fish,lunch,biology,Nemo
+outgoing,extrovert,dog,none,biology,Wall-E
+clever,extrovert,hamster,none,math,Wall-E
+silly,introvert,fish,breakfast,drama,Nemo
+outgoing,extrovert,cat,dinner,biology,Buzz Lightyear
+outgoing,extrovert,dog,dinner,math,Elastigirl
+outgoing,introvert,hamster,breakfast,english,Remy
+silly,extrovert,hamster,lunch,english,Remy
+clever,extrovert,hamster,none,drama,Buzz Lightyear
+outgoing,extrovert,cat,breakfast,history,Elastigirl
+silly,introvert,fish,dinner,spanish,Nemo
+clever,extrovert,dog,breakfast,english,Elastigirl
+clever,introvert,fish,dessert,biology,Nemo
+outgoing,extrovert,fish,dessert,math,Buzz Lightyear
+ambitious,extrovert,dog,lunch,history,Elastigirl
+clever,introvert,hamster,dessert,history,Remy
+silly,extrovert,hamster,dinner,biology,Remy
+clever,introvert,hamster,lunch,biology,Remy
+silly,introvert,fish,none,spanish,Nemo
+outgoing,introvert,hamster,dessert,history,Remy
+clever,introvert,hamster,lunch,biology,Remy
+clever,extrovert,cat,breakfast,english,Elastigirl
+clever,introvert,hamster,dinner,history,Remy
+outgoing,extrovert,cat,lunch,history,Elastigirl
+clever,introvert,dog,breakfast,biology,Nemo
+silly,introvert,fish,breakfast,biology,Nemo
+clever,extrovert,hamster,lunch,history,Remy
+outgoing,extrovert,dog,dinner,math,Buzz Lightyear
+silly,introvert,hamster,breakfast,biology,Remy
+clever,extrovert,fish,breakfast,english,Buzz Lightyear
+clever,extrovert,hamster,lunch,english,Remy
+clever,introvert,fish,dessert,english,Nemo
+silly,extrovert,fish,lunch,drama,Nemo
+clever,introvert,hamster,dessert,math,Remy
+ambitious,extrovert,fish,dinner,biology,Buzz Lightyear
+ambitious,extrovert,fish,breakfast,biology,Buzz Lightyear
+outgoing,introvert,hamster,none,spanish,Wall-E
+outgoing,introvert,dog,breakfast,history,Elastigirl
+clever,extrovert,fish,none,drama,Wall-E
+clever,extrovert,dog,lunch,drama,Nemo
+clever,extrovert,dog,lunch,biology,Buzz Lightyear
+outgoing,introvert,fish,lunch,drama,Nemo
+clever,extrovert,hamster,none,english,Wall-E
+ambitious,extrovert,hamster,dinner,history,Elastigirl
+outgoing,extrovert,fish,none,history,Wall-E
+outgoing,introvert,dog,breakfast,english,Elastigirl
+clever,extrovert,fish,dinner,english,Buzz Lightyear
+ambitious,extrovert,fish,lunch,drama,Buzz Lightyear
+ambitious,extrovert,hamster,dinner,math,Buzz Lightyear
+ambitious,extrovert,fish,breakfast,biology,Buzz Lightyear
+ambitious,extrovert,hamster,breakfast,english,Elastigirl
+clever,extrovert,hamster,lunch,history,Remy
+silly,extrovert,hamster,dessert,biology,Remy
+silly,extrovert,fish,lunch,english,Nemo
+silly,introvert,hamster,dessert,history,Remy
+outgoing,introvert,cat,breakfast,spanish,Elastigirl
+silly,introvert,hamster,breakfast,biology,Remy
+outgoing,introvert,hamster,breakfast,biology,Remy
+outgoing,extrovert,cat,breakfast,history,Elastigirl
+silly,introvert,hamster,lunch,english,Remy
+ambitious,extrovert,dog,none,drama,Buzz Lightyear
+clever,extrovert,hamster,breakfast,biology,Remy
+outgoing,introvert,fish,none,english,Nemo
+silly,introvert,dog,breakfast,drama,Nemo
+silly,introvert,dog,lunch,biology,Nemo
+clever,extrovert,hamster,none,biology,Nemo
+outgoing,extrovert,cat,breakfast,english,Elastigirl
+ambitious,introvert,hamster,dinner,math,Remy
+outgoing,extrovert,dog,none,biology,Wall-E
+clever,extrovert,fish,dessert,drama,Buzz Lightyear
+clever,extrovert,hamster,lunch,math,Remy
+clever,introvert,hamster,lunch,history,Remy
+ambitious,extrovert,dog,none,math,Wall-E
+clever,introvert,hamster,dinner,math,Remy
+clever,extrovert,hamster,dinner,biology,Remy
+ambitious,introvert,dog,lunch,history,Nemo
+clever,extrovert,dog,none,history,Wall-E
+clever,extrovert,hamster,dessert,history,Remy
+silly,introvert,fish,lunch,drama,Nemo
+silly,introvert,hamster,dinner,biology,Remy
+silly,introvert,hamster,dinner,english,Remy
+clever,extrovert,dog,none,biology,Wall-E
+clever,introvert,hamster,dinner,math,Remy
+clever,extrovert,cat,dinner,english,Buzz Lightyear
+clever,extrovert,fish,lunch,biology,Buzz Lightyear
+outgoing,introvert,dog,dinner,english,Elastigirl
+clever,extrovert,hamster,none,math,Wall-E
+outgoing,extrovert,dog,none,history,Wall-E
+silly,extrovert,cat,dinner,english,Buzz Lightyear
+ambitious,extrovert,fish,none,history,Wall-E
+clever,extrovert,cat,dessert,spanish,Elastigirl
+outgoing,extrovert,cat,none,math,Buzz Lightyear
+clever,introvert,hamster,dinner,biology,Remy
+outgoing,extrovert,dog,none,english,Wall-E
+silly,extrovert,hamster,lunch,history,Remy
+outgoing,extrovert,cat,dinner,history,Buzz Lightyear
+outgoing,introvert,hamster,lunch,biology,Remy
+outgoing,extrovert,dog,none,spanish,Wall-E
+outgoing,introvert,fish,none,biology,Wall-E
+silly,introvert,fish,lunch,drama,Nemo
+silly,extrovert,dog,dessert,english,Elastigirl
+silly,introvert,fish,breakfast,history,Nemo
+outgoing,introvert,fish,breakfast,biology,Nemo
+clever,introvert,fish,breakfast,drama,Nemo
+clever,extrovert,cat,none,biology,Buzz Lightyear
+outgoing,introvert,hamster,none,math,Wall-E
+clever,extrovert,fish,none,biology,Wall-E
+outgoing,extrovert,dog,breakfast,biology,Buzz Lightyear
+outgoing,introvert,fish,dinner,spanish,Elastigirl
+outgoing,introvert,dog,breakfast,drama,Nemo
+ambitious,extrovert,hamster,dinner,biology,Remy
+outgoing,introvert,fish,none,english,Buzz Lightyear
+clever,extrovert,fish,lunch,english,Buzz Lightyear
+ambitious,extrovert,fish,dinner,drama,Nemo
+outgoing,introvert,hamster,breakfast,history,Remy
+outgoing,extrovert,dog,dinner,history,Elastigirl
+silly,introvert,hamster,lunch,biology,Remy
+clever,extrovert,hamster,breakfast,biology,Remy
+outgoing,extrovert,cat,breakfast,english,Elastigirl
+clever,extrovert,hamster,none,spanish,Wall-E
+clever,extrovert,fish,dinner,biology,Buzz Lightyear
+outgoing,extrovert,hamster,none,drama,Wall-E
+outgoing,extrovert,cat,dinner,english,Elastigirl
+clever,introvert,hamster,breakfast,biology,Remy
+silly,introvert,hamster,dessert,biology,Remy
+clever,extrovert,hamster,dessert,math,Remy
+silly,extrovert,fish,dinner,english,Elastigirl
+outgoing,introvert,hamster,none,english,Wall-E
+clever,extrovert,dog,dinner,english,Nemo
+clever,extrovert,fish,breakfast,biology,Buzz Lightyear
+silly,extrovert,hamster,dessert,history,Remy
+silly,extrovert,cat,lunch,spanish,Elastigirl
+silly,extrovert,dog,breakfast,history,Elastigirl
+clever,extrovert,hamster,none,biology,Wall-E
+outgoing,introvert,cat,breakfast,english,Elastigirl
+clever,extrovert,cat,dinner,math,Buzz Lightyear
+outgoing,introvert,dog,dinner,spanish,Elastigirl
+clever,extrovert,hamster,breakfast,history,Remy
+outgoing,extrovert,fish,dinner,biology,Buzz Lightyear
+silly,extrovert,cat,breakfast,spanish,Elastigirl
+silly,introvert,hamster,dinner,english,Remy
+clever,extrovert,dog,breakfast,biology,Buzz Lightyear
+clever,introvert,fish,lunch,history,Nemo
+silly,introvert,hamster,dessert,history,Remy
+silly,introvert,hamster,lunch,history,Remy
+silly,introvert,hamster,breakfast,spanish,Elastigirl
+clever,extrovert,fish,breakfast,math,Elastigirl
+ambitious,extrovert,hamster,dessert,math,Elastigirl
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,introvert,fish,dinner,history,Nemo
+clever,extrovert,fish,none,math,Wall-E
+ambitious,extrovert,cat,lunch,english,Elastigirl
+outgoing,extrovert,fish,dinner,biology,Nemo
+silly,introvert,hamster,dessert,biology,Remy
+ambitious,extrovert,cat,none,biology,Buzz Lightyear
+outgoing,introvert,hamster,none,drama,Wall-E
+silly,extrovert,dog,breakfast,math,Elastigirl
+clever,introvert,hamster,dessert,biology,Remy
+silly,extrovert,fish,breakfast,spanish,Nemo
+outgoing,introvert,fish,breakfast,history,Elastigirl
+silly,introvert,cat,dinner,history,Elastigirl
+ambitious,extrovert,hamster,none,history,Wall-E
+outgoing,extrovert,dog,none,math,Wall-E
+outgoing,extrovert,fish,none,math,Wall-E
+clever,introvert,fish,lunch,english,Nemo
+silly,extrovert,hamster,dinner,history,Remy
+clever,introvert,hamster,dinner,english,Remy
+silly,extrovert,dog,breakfast,drama,Buzz Lightyear
+clever,extrovert,hamster,dinner,spanish,Elastigirl
+silly,introvert,hamster,lunch,english,Remy
+silly,extrovert,hamster,breakfast,biology,Remy
+ambitious,introvert,fish,breakfast,english,Nemo
+ambitious,introvert,hamster,breakfast,history,Remy
+silly,extrovert,fish,dinner,history,Nemo
+outgoing,extrovert,dog,none,drama,Buzz Lightyear
+silly,introvert,cat,dessert,english,Elastigirl
+ambitious,extrovert,fish,dinner,english,Elastigirl
+silly,introvert,hamster,breakfast,biology,Remy
+clever,introvert,fish,breakfast,history,Nemo
+outgoing,introvert,fish,breakfast,english,Nemo
+clever,extrovert,fish,breakfast,history,Nemo
+clever,introvert,dog,none,math,Wall-E
+silly,introvert,fish,dessert,drama,Nemo
+clever,introvert,fish,dessert,history,Nemo
+clever,introvert,dog,dinner,english,Elastigirl
+ambitious,extrovert,fish,none,history,Buzz Lightyear
+outgoing,extrovert,dog,dinner,english,Elastigirl
+silly,introvert,hamster,lunch,biology,Remy
+clever,introvert,hamster,dinner,spanish,Nemo
+clever,extrovert,hamster,none,history,Wall-E
+clever,extrovert,dog,lunch,biology,Buzz Lightyear
+ambitious,introvert,dog,lunch,biology,Buzz Lightyear
+outgoing,extrovert,fish,dessert,history,Nemo
+outgoing,introvert,dog,none,math,Wall-E
+silly,extrovert,dog,dessert,spanish,Elastigirl
+clever,extrovert,dog,dessert,history,Elastigirl
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,hamster,none,english,Wall-E
+outgoing,extrovert,dog,none,spanish,Wall-E
+clever,introvert,dog,dinner,history,Elastigirl
+silly,introvert,fish,dessert,drama,Nemo
+clever,extrovert,hamster,lunch,history,Remy
+clever,extrovert,hamster,dinner,biology,Remy
+outgoing,extrovert,hamster,breakfast,math,Elastigirl
+clever,extrovert,hamster,dessert,math,Remy
+outgoing,extrovert,dog,dinner,english,Elastigirl
+silly,extrovert,fish,none,english,Nemo
+ambitious,extrovert,dog,lunch,drama,Buzz Lightyear
+outgoing,extrovert,hamster,breakfast,math,Remy
+ambitious,extrovert,cat,lunch,spanish,Elastigirl
+silly,extrovert,cat,breakfast,history,Elastigirl
+outgoing,extrovert,dog,breakfast,spanish,Elastigirl
+clever,introvert,hamster,dinner,math,Remy
+outgoing,extrovert,dog,dinner,history,Elastigirl
+ambitious,extrovert,cat,dinner,history,Buzz Lightyear
+clever,introvert,fish,none,biology,Wall-E
+clever,extrovert,fish,none,math,Nemo
+clever,extrovert,cat,none,english,Buzz Lightyear
+ambitious,extrovert,cat,breakfast,drama,Buzz Lightyear
+ambitious,extrovert,fish,lunch,biology,Nemo
+clever,extrovert,dog,dinner,math,Buzz Lightyear
+ambitious,extrovert,fish,none,math,Wall-E
+silly,extrovert,hamster,breakfast,english,Remy
+clever,introvert,fish,none,spanish,Nemo
+clever,introvert,hamster,breakfast,history,Remy
+silly,extrovert,hamster,breakfast,drama,Elastigirl
+silly,introvert,hamster,lunch,english,Remy
+clever,extrovert,hamster,breakfast,biology,Buzz Lightyear
+clever,introvert,fish,dinner,history,Nemo
+clever,introvert,hamster,none,english,Wall-E
+clever,extrovert,dog,breakfast,biology,Elastigirl
+ambitious,extrovert,hamster,none,spanish,Wall-E
+outgoing,extrovert,fish,none,english,Nemo
+ambitious,extrovert,fish,lunch,drama,Buzz Lightyear
+silly,extrovert,fish,none,english,Nemo
+ambitious,extrovert,fish,breakfast,drama,Buzz Lightyear
+outgoing,extrovert,hamster,dessert,biology,Remy
+silly,introvert,hamster,dinner,history,Elastigirl
+clever,introvert,fish,dinner,english,Nemo
+outgoing,introvert,fish,dessert,biology,Nemo
+ambitious,introvert,dog,none,math,Wall-E
+ambitious,introvert,dog,dessert,biology,Buzz Lightyear
+outgoing,extrovert,hamster,none,math,Wall-E
+outgoing,introvert,hamster,none,math,Wall-E
+silly,introvert,cat,dinner,spanish,Elastigirl
+clever,introvert,hamster,lunch,history,Remy
+clever,introvert,fish,dessert,spanish,Nemo
+clever,extrovert,fish,none,spanish,Wall-E
+clever,introvert,hamster,dessert,biology,Remy
+clever,extrovert,fish,dessert,drama,Buzz Lightyear
+silly,extrovert,dog,dessert,history,Elastigirl
+outgoing,extrovert,hamster,none,spanish,Wall-E
+clever,introvert,hamster,lunch,english,Remy
+silly,introvert,hamster,dinner,english,Remy
+silly,extrovert,dog,dessert,drama,Buzz Lightyear
+silly,extrovert,dog,none,drama,Buzz Lightyear
+outgoing,introvert,hamster,none,spanish,Wall-E
+outgoing,extrovert,dog,none,math,Wall-E
+clever,extrovert,hamster,lunch,math,Remy
+silly,extrovert,dog,dinner,spanish,Elastigirl
+clever,introvert,hamster,dinner,biology,Remy
+outgoing,extrovert,hamster,dinner,english,Remy
+clever,introvert,dog,none,math,Wall-E
+ambitious,introvert,hamster,none,drama,Wall-E
+clever,extrovert,cat,breakfast,drama,Buzz Lightyear
+silly,introvert,hamster,dinner,biology,Remy
+ambitious,introvert,dog,breakfast,english,Nemo
+outgoing,extrovert,dog,dinner,english,Elastigirl
+silly,extrovert,dog,lunch,history,Elastigirl
+outgoing,extrovert,cat,dinner,biology,Buzz Lightyear
+silly,introvert,hamster,dinner,biology,Remy
+silly,extrovert,dog,none,english,Buzz Lightyear
+ambitious,introvert,fish,dinner,english,Nemo
+silly,extrovert,dog,lunch,english,Buzz Lightyear
+clever,introvert,fish,none,drama,Wall-E
+ambitious,extrovert,cat,dessert,drama,Buzz Lightyear
+clever,introvert,hamster,breakfast,english,Remy
+clever,introvert,fish,none,math,Buzz Lightyear
+silly,introvert,fish,dessert,biology,Nemo
+outgoing,extrovert,hamster,dinner,biology,Remy
+clever,extrovert,hamster,breakfast,math,Remy
+clever,introvert,hamster,breakfast,history,Remy
+silly,extrovert,fish,breakfast,history,Buzz Lightyear
+outgoing,introvert,hamster,dinner,history,Elastigirl
+ambitious,introvert,cat,lunch,drama,Elastigirl
+clever,extrovert,hamster,none,biology,Wall-E
+silly,introvert,hamster,dessert,biology,Remy
+silly,introvert,hamster,dinner,english,Remy
+silly,introvert,hamster,dessert,history,Remy
+clever,extrovert,hamster,lunch,english,Remy
+ambitious,extrovert,fish,dinner,drama,Buzz Lightyear
+ambitious,extrovert,dog,dessert,biology,Buzz Lightyear
+clever,extrovert,fish,lunch,biology,Buzz Lightyear
+silly,introvert,dog,none,english,Nemo
+clever,introvert,fish,breakfast,biology,Nemo
+outgoing,introvert,hamster,dinner,biology,Buzz Lightyear
+outgoing,introvert,fish,dinner,english,Nemo
+outgoing,extrovert,dog,dessert,biology,Buzz Lightyear
+outgoing,extrovert,cat,dinner,spanish,Elastigirl
+clever,introvert,hamster,lunch,history,Remy
+clever,introvert,hamster,dinner,english,Remy
+silly,introvert,hamster,breakfast,biology,Remy
+silly,extrovert,fish,lunch,biology,Buzz Lightyear
+ambitious,extrovert,hamster,none,biology,Wall-E
+ambitious,extrovert,hamster,lunch,spanish,Elastigirl
+clever,introvert,hamster,dinner,english,Remy
+outgoing,introvert,hamster,dinner,biology,Remy
+silly,introvert,hamster,dessert,biology,Remy
+silly,introvert,fish,dinner,english,Buzz Lightyear
+ambitious,introvert,hamster,breakfast,math,Remy
+clever,introvert,fish,dessert,drama,Nemo
+clever,introvert,hamster,dessert,math,Remy
+clever,introvert,cat,breakfast,biology,Elastigirl
+ambitious,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,hamster,dinner,math,Elastigirl
+ambitious,introvert,hamster,none,history,Wall-E
+silly,extrovert,dog,breakfast,spanish,Elastigirl
+outgoing,extrovert,cat,dinner,drama,Elastigirl
+ambitious,extrovert,dog,lunch,biology,Buzz Lightyear
+clever,introvert,dog,none,drama,Nemo
+outgoing,introvert,fish,none,biology,Wall-E
+clever,extrovert,cat,lunch,biology,Elastigirl
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,introvert,fish,lunch,english,Nemo
+outgoing,extrovert,cat,breakfast,history,Elastigirl
+outgoing,extrovert,hamster,none,english,Wall-E
+clever,introvert,cat,dessert,biology,Elastigirl
+outgoing,introvert,cat,breakfast,math,Elastigirl
+silly,introvert,hamster,lunch,history,Remy
+silly,introvert,fish,dessert,math,Nemo
+ambitious,extrovert,cat,lunch,math,Elastigirl
+ambitious,introvert,fish,dessert,biology,Buzz Lightyear
+outgoing,introvert,cat,dessert,english,Elastigirl
+silly,introvert,fish,dinner,history,Nemo
+outgoing,introvert,hamster,breakfast,history,Remy
+ambitious,introvert,hamster,lunch,english,Remy
+clever,introvert,fish,none,drama,Wall-E
+silly,extrovert,dog,dinner,history,Buzz Lightyear
+outgoing,extrovert,hamster,none,biology,Wall-E
+silly,introvert,dog,none,biology,Nemo
+outgoing,introvert,hamster,none,spanish,Nemo
+outgoing,extrovert,fish,dinner,biology,Buzz Lightyear
+ambitious,extrovert,cat,breakfast,math,Elastigirl
+silly,extrovert,hamster,breakfast,biology,Remy
+clever,introvert,dog,breakfast,english,Nemo
+silly,extrovert,dog,breakfast,history,Elastigirl
+clever,introvert,hamster,lunch,history,Remy
+ambitious,extrovert,fish,none,math,Buzz Lightyear
+outgoing,introvert,fish,lunch,drama,Buzz Lightyear
+silly,introvert,hamster,breakfast,biology,Remy
+silly,introvert,fish,lunch,math,Nemo
+silly,introvert,hamster,breakfast,math,Remy
+silly,extrovert,dog,dessert,english,Elastigirl
+ambitious,introvert,hamster,dinner,spanish,Elastigirl
+silly,extrovert,dog,dinner,english,Elastigirl
+clever,introvert,hamster,breakfast,math,Remy
+clever,introvert,fish,none,history,Nemo
+ambitious,extrovert,dog,dinner,spanish,Elastigirl
+silly,introvert,hamster,dessert,biology,Remy
+ambitious,extrovert,dog,dessert,biology,Buzz Lightyear
+ambitious,introvert,hamster,none,drama,Wall-E
+silly,extrovert,fish,lunch,history,Nemo
+outgoing,introvert,dog,breakfast,drama,Nemo
+outgoing,extrovert,fish,none,drama,Wall-E
+silly,introvert,hamster,breakfast,biology,Remy
+ambitious,extrovert,hamster,lunch,drama,Nemo
+outgoing,extrovert,hamster,none,math,Wall-E
+outgoing,introvert,hamster,none,spanish,Wall-E
+clever,extrovert,dog,none,math,Wall-E
+clever,introvert,hamster,dessert,biology,Remy
+silly,extrovert,dog,breakfast,history,Elastigirl
+silly,introvert,hamster,breakfast,math,Remy
+clever,extrovert,hamster,dinner,biology,Buzz Lightyear
+ambitious,extrovert,dog,none,biology,Wall-E
+outgoing,extrovert,hamster,none,math,Wall-E
+silly,introvert,fish,none,math,Buzz Lightyear
+clever,extrovert,hamster,dinner,math,Nemo
+clever,introvert,hamster,lunch,history,Remy
+clever,introvert,hamster,breakfast,english,Remy
+outgoing,extrovert,hamster,none,drama,Wall-E
+clever,extrovert,fish,dessert,biology,Buzz Lightyear
+ambitious,extrovert,cat,dessert,english,Buzz Lightyear
+silly,introvert,fish,dessert,spanish,Nemo
+silly,introvert,fish,breakfast,spanish,Nemo
+silly,extrovert,cat,dinner,drama,Buzz Lightyear
+outgoing,extrovert,hamster,none,english,Wall-E
+outgoing,extrovert,fish,none,biology,Wall-E
+clever,introvert,fish,none,biology,Nemo
+ambitious,extrovert,fish,lunch,biology,Buzz Lightyear
+clever,introvert,dog,lunch,spanish,Nemo
+silly,extrovert,cat,breakfast,history,Elastigirl
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,extrovert,fish,dessert,drama,Buzz Lightyear
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,dog,none,biology,Wall-E
+clever,introvert,hamster,breakfast,math,Remy
+ambitious,introvert,dog,none,biology,Wall-E
+ambitious,extrovert,fish,lunch,english,Buzz Lightyear
+outgoing,introvert,hamster,dessert,english,Remy
+clever,extrovert,dog,dessert,biology,Nemo
+outgoing,introvert,hamster,dessert,history,Remy
+clever,introvert,dog,none,math,Wall-E
+silly,introvert,fish,lunch,biology,Nemo
+ambitious,extrovert,hamster,none,math,Wall-E
+silly,extrovert,cat,breakfast,history,Elastigirl
+ambitious,extrovert,hamster,none,math,Wall-E
+ambitious,extrovert,cat,lunch,math,Buzz Lightyear
+silly,introvert,dog,dinner,english,Elastigirl
+outgoing,introvert,hamster,none,english,Wall-E
+clever,extrovert,hamster,dinner,history,Remy
+outgoing,extrovert,fish,dessert,english,Nemo
+outgoing,extrovert,hamster,none,biology,Wall-E
+ambitious,extrovert,dog,dinner,biology,Buzz Lightyear
+silly,introvert,dog,dessert,drama,Nemo
+clever,extrovert,dog,lunch,biology,Nemo
+silly,introvert,hamster,dessert,math,Remy
+clever,extrovert,hamster,lunch,biology,Elastigirl
+outgoing,extrovert,fish,none,biology,Nemo
+clever,introvert,hamster,lunch,biology,Remy
+ambitious,introvert,hamster,lunch,history,Remy
+ambitious,extrovert,fish,none,biology,Buzz Lightyear
+outgoing,introvert,hamster,breakfast,english,Remy
+outgoing,extrovert,cat,none,math,Buzz Lightyear
+outgoing,extrovert,cat,lunch,biology,Buzz Lightyear
+clever,introvert,hamster,dessert,history,Nemo
+outgoing,introvert,dog,breakfast,english,Elastigirl
+silly,introvert,hamster,lunch,biology,Remy
+clever,extrovert,fish,none,biology,Buzz Lightyear
+ambitious,extrovert,cat,none,math,Buzz Lightyear
+outgoing,introvert,dog,dinner,spanish,Elastigirl
+silly,extrovert,hamster,dinner,biology,Remy
+silly,extrovert,hamster,breakfast,history,Remy
+clever,extrovert,hamster,none,drama,Wall-E
+outgoing,introvert,fish,breakfast,biology,Nemo
+ambitious,extrovert,hamster,none,math,Wall-E
+outgoing,introvert,hamster,dessert,english,Elastigirl
+ambitious,extrovert,cat,none,math,Buzz Lightyear
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,extrovert,hamster,dessert,spanish,Elastigirl
+clever,extrovert,fish,dessert,spanish,Nemo
+silly,extrovert,cat,breakfast,history,Elastigirl
+ambitious,extrovert,cat,dinner,history,Elastigirl
+outgoing,extrovert,hamster,none,spanish,Wall-E
+clever,introvert,hamster,lunch,biology,Remy
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,hamster,none,biology,Wall-E
+outgoing,extrovert,fish,breakfast,history,Buzz Lightyear
+outgoing,introvert,fish,lunch,english,Nemo
+outgoing,introvert,hamster,none,spanish,Wall-E
+outgoing,extrovert,cat,breakfast,biology,Buzz Lightyear
+ambitious,extrovert,dog,dinner,math,Buzz Lightyear
+outgoing,extrovert,hamster,none,math,Wall-E
+clever,extrovert,fish,dessert,history,Buzz Lightyear
+clever,introvert,hamster,breakfast,math,Remy
+clever,extrovert,cat,breakfast,biology,Buzz Lightyear
+outgoing,extrovert,fish,dinner,english,Buzz Lightyear
+clever,extrovert,fish,breakfast,drama,Buzz Lightyear
+clever,introvert,hamster,dessert,english,Remy
+outgoing,extrovert,hamster,none,english,Wall-E
+clever,introvert,fish,dinner,biology,Nemo
+clever,introvert,fish,dessert,spanish,Nemo
+clever,extrovert,fish,none,biology,Wall-E
+clever,introvert,hamster,breakfast,math,Remy
+silly,introvert,fish,dinner,drama,Nemo
+silly,introvert,hamster,dinner,english,Remy
+outgoing,extrovert,hamster,none,biology,Wall-E
+clever,introvert,hamster,none,history,Wall-E
+outgoing,introvert,hamster,dessert,history,Remy
+ambitious,introvert,dog,breakfast,biology,Elastigirl
+silly,introvert,hamster,dinner,english,Remy
+ambitious,extrovert,hamster,dinner,biology,Remy
+outgoing,extrovert,fish,lunch,biology,Buzz Lightyear
+ambitious,extrovert,fish,lunch,drama,Buzz Lightyear
+outgoing,introvert,hamster,dinner,english,Remy
+ambitious,introvert,dog,lunch,english,Nemo
+clever,introvert,hamster,none,math,Wall-E
+ambitious,introvert,hamster,none,spanish,Wall-E
+outgoing,extrovert,hamster,none,math,Wall-E
+outgoing,extrovert,hamster,none,biology,Wall-E
+clever,introvert,hamster,lunch,math,Remy
+ambitious,extrovert,fish,dinner,biology,Buzz Lightyear
+outgoing,extrovert,fish,none,drama,Nemo
+silly,introvert,dog,breakfast,english,Nemo
+silly,extrovert,hamster,dinner,english,Elastigirl
