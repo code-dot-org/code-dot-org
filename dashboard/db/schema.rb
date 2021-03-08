@@ -1281,7 +1281,7 @@ ActiveRecord::Schema.define(version: 2021_03_08_190316) do
     t.bigint "programming_environment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "key"
+    t.string "key", null: false
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
