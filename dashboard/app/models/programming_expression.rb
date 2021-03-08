@@ -34,7 +34,8 @@ class ProgrammingExpression < ApplicationRecord
 
     if environment_name == 'spritelab'
       {
-        name: expression_config['config']['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
+        key: expression_config['config']['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
+        name: expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         display_name: expression_config['config']['blockText'] || expression_config['config']['func'] || expression_config['config']['name'],
@@ -42,7 +43,8 @@ class ProgrammingExpression < ApplicationRecord
       }
     else
       {
-        name: expression_config['docFunc'] || expression_config['func'],
+        key: expression_config['docFunc'] || expression_config['func'],
+        name: expression_config['func'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         display_name: expression_config['func'],
@@ -108,7 +110,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def self.seed_record(file_path)
     properties = properties_from_file(file_path, File.read(file_path))
-    record = ProgrammingExpression.find_or_initialize_by(name: properties[:name], category: properties[:category], programming_environment_id: properties[:programming_environment_id])
+    record = ProgrammingExpression.find_or_initialize_by(key: properties[:key], category: properties[:category], programming_environment_id: properties[:programming_environment_id])
     record.update! properties
     record.name
   end
