@@ -4,8 +4,8 @@
     .row
       .span8{style: (full_width ? 'max-width: 80%;' : '')}
         - piped_spaces = full_width ? ' | ' : '&nbsp; | &nbsp;'
-        - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-        - if @privacy_updated
+        - privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
+        - if privacy_updated
           = link_to t('footer.privacy_updated'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
         - else
           = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
