@@ -1272,7 +1272,10 @@ en:
               name: ML Fish
             AI Lab:
               name: AI Lab
+            Java Lab:
+              name: Java Lab
           student_description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
+          name: allthethings
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
