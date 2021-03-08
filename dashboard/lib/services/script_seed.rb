@@ -484,15 +484,9 @@ module Services
         )
       end
 
-      # destroy_outdated_objects won't work on LessonsVocabulary objects because
-      # they do not have an id field. Work around this by inefficiently deleting
-      # all LessonsVocabularies using 1 query per lesson, and then re-importing all
-      # LessonsVocabularies in a single query. It may be possible to eliminate
-      # these extra queries by adding an id column to the LessonsVocabularies model.
-      seed_context.lessons.each {|l| l.vocabularies = []}
-
+      existing_programming_expressions = LessonsProgrammingExpression.joins(:lesson).where('stages.script_id' => seed_context.script.id)
       LessonsProgrammingExpression.import! lesson_programming_expressions_to_import, on_duplicate_key_update: get_columns(LessonsProgrammingExpression)
-      LessonsProgrammingExpression.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      destroy_outdated_objects(LessonsProgrammingExpression, existing_programming_expressions, lesson_programming_expressions_to_import, seed_context)
     end
 
     def self.import_objectives(objectives_data, seed_context)
