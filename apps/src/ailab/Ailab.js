@@ -8,7 +8,11 @@ import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 import $ from 'jquery';
 
-import {setCustomInstructions} from '../redux/instructions';
+import {
+  setCustomInstructions,
+  setAllowInstructionsResize,
+  setInstructionsRenderedHeight
+} from '../redux/instructions';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -126,6 +130,8 @@ Ailab.prototype.onContinue = function() {
 
 Ailab.prototype.setInstructions = function(instructions) {
   getStore().dispatch(setCustomInstructions(instructions));
+  getStore().dispatch(setInstructionsRenderedHeight(80));
+  getStore().dispatch(setAllowInstructionsResize(false));
 };
 
 Ailab.prototype.initMLActivities = function() {
