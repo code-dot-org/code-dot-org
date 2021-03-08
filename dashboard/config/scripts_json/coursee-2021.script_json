@@ -4464,14 +4464,14 @@
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseE_farmer_ramp12g_2021"
+          "courseE_farmer_while1_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseE_farmer_ramp12g_2021"
+          "courseE_farmer_while1_2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
@@ -4479,7 +4479,7 @@
         "activity_section.key": "c6d24990-be45-4b52-b095-48004fcaca4a"
       },
       "level_keys": [
-        "courseE_farmer_ramp12g_2021"
+        "courseE_farmer_while1_2021"
       ]
     },
     {
@@ -7480,7 +7480,7 @@
       "seeding_key": {
         "level.key": "courseE_farmer_while1_2021",
         "script_level.level_keys": [
-          "courseE_farmer_ramp12g_2021"
+          "courseE_farmer_while1_2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
