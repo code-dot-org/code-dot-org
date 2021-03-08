@@ -3,6 +3,7 @@
 
 $scrollbar-height: 15px;
 $row-height: 42px;
+$expanded-row-height: 30px;
 $max-rows: 14;
 $max-height: $max-rows * $row-height + $scrollbar-height;
 $student-list-width: 170px;
@@ -19,7 +20,7 @@ $content-view-width: $content-width - $student-list-width;
     color: $charcoal;
     border-width: 0px 1px 2px 0px;
     border-color: $border-gray;
-    height: inherit;
+    height: $row-height;
   }
   th,
   td {
@@ -32,9 +33,18 @@ $content-view-width: $content-width - $student-list-width;
     }
   }
   tr {
-    height: $row-height;
-    &:nth-child(even) {
-      background-color: $background_gray;
+    .primary-row {
+      height: $row-height;
+      display: flex;
+    }
+    .expanded-row {
+      height: $expanded-row-height;
+      border-width: 0px 0px 1px 0px;
+      border-style: solid;
+      border-color: $border-gray;
+    }
+    .first-expanded-row {
+      border-width: 1px 0px;
     }
   }
   .student-list {
@@ -52,6 +62,9 @@ $content-view-width: $content-width - $student-list-width;
         height: inherit;
       }
     }
+  }
+  .dark-row {
+    background-color: $background_gray;
   }
   .content-view {
     thead,
