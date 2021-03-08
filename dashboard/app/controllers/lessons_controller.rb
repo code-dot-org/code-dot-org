@@ -17,7 +17,7 @@ class LessonsController < ApplicationController
   # GET /s/script-name/lessons/1
   def show
     script = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless script.is_migrated && script.access_allowed(current_user)
+    return render :forbidden unless script.is_migrated && can?(:read, script)
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:position].to_i
@@ -30,7 +30,7 @@ class LessonsController < ApplicationController
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
     script = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless script.is_migrated && script.include_student_lesson_plans && script.access_allowed(current_user)
+    return render :forbidden unless script.is_migrated && script.include_student_lesson_plans && can?(:read, script)
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i

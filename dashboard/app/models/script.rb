@@ -1813,10 +1813,6 @@ class Script < ApplicationRecord
     return feedback
   end
 
-  def access_allowed(current_user)
-    !pilot? || (current_user && has_pilot_access?(current_user))
-  end
-
   def pilot?
     !!pilot_experiment
   end
