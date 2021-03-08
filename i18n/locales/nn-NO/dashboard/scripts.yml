@@ -4394,6 +4394,8 @@ nn:
               name: Leksjon 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduksjon
             Sequencing:
               key: Sekvensiering
               name: Sekvensiering
@@ -4416,9 +4418,13 @@ nn:
               key: For-løkker
               name: For-løkker
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduksjon
             k5_basic_concepts_1:
               display_name: Grunnleggande kodekonsept og lærestrategiar
             k5_diving_deeper_1:
               display_name: 'Djupdykk: Kurs E og F'
             k5_next_steps_1:
               display_name: Neste steg
+            Introduction:
+              display_name: Introduksjon

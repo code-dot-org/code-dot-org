@@ -3313,6 +3313,8 @@ sv:
               name: Lektion 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduktion
             Loops:
               key: loopar
               name: loopar
@@ -3332,5 +3334,9 @@ sv:
               key: '''För'' loopar'
               name: '''För'' loopar'
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduktion
             k5_next_steps_1:
               display_name: Nästa steg
+            Introduction:
+              display_name: Introduktion

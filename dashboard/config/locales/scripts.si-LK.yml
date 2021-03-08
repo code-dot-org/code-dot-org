@@ -2714,6 +2714,8 @@ si:
               display_name: විචල්‍යන්
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: හැදින්වීම
             Loops:
               key: ලූපයන්
               name: ලූපයන්
@@ -2733,5 +2735,9 @@ si:
               key: ලූපයන් සඳහා
               name: ලූපයන් සඳහා
           lesson_groups:
+            k5_getting_started_1:
+              display_name: හැදින්වීම
             k5_next_steps_1:
               display_name: ඉදිරි පියවර
+            Introduction:
+              display_name: හැදින්වීම

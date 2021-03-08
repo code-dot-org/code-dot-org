@@ -11851,6 +11851,8 @@ fil:
               name: Araling 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Panimula
             Loops:
               key: Mga loop
               name: Mga loop
@@ -11869,8 +11871,12 @@ fil:
             For Loops:
               key: For Loops
               name: For Loops
+            Getting Started:
+              name: Pagsisimula
           lesson_groups:
             k5_getting_started_1:
-              display_name: Pagsisimula
+              display_name: Panimula
             k5_next_steps_1:
               display_name: Mga susunod na Hakbang
+            Introduction:
+              display_name: Panimula
