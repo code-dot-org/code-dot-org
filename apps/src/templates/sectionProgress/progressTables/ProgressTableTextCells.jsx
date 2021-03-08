@@ -9,8 +9,12 @@ const styles = {
   label: {
     display: 'flex',
     justifyContent: 'flex-end',
-    height: '100%',
     padding: '10px'
+  },
+  group: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    padding: '5px'
   }
 };
 
@@ -28,4 +32,18 @@ export function ProgressTableTextLabelCell({text}) {
 
 ProgressTableTextLabelCell.propTypes = {
   text: PropTypes.string.isRequired
+};
+
+export function ProgressTableTextCellGroup({texts}) {
+  return (
+    <div style={styles.group}>
+      {texts.map((text, i) => (
+        <ProgressTableTextCell text={text} key={`${text}-${i}`} />
+      ))}
+    </div>
+  );
+}
+
+ProgressTableTextCellGroup.propTypes = {
+  texts: PropTypes.array.isRequired
 };
