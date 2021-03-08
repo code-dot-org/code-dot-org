@@ -3,6 +3,7 @@ require 'uri'
 require 'cgi'
 require 'open-uri'
 require 'logger'
+require 'cdo/aws/metrics'
 
 VAAS_URL = "http://vaas.acapela-group.com/Services/Synthesizer".freeze
 VAAS_HASH = {
@@ -12,7 +13,7 @@ VAAS_HASH = {
   cl_pwd: CDO.acapela_storage_password
 }.freeze
 
-def acapela_text_to_audio_url(text, voice="rosie22k", speed=180, shape=100)
+def acapela_text_to_audio_url(text, voice="rosie22k", speed=180, shape=100, context=nil)
   params = {
     req_voice: voice,
     req_text: text,
@@ -23,6 +24,18 @@ def acapela_text_to_audio_url(text, voice="rosie22k", speed=180, shape=100)
 
   request = VAAS_HASH.merge(params)
   response = Net::HTTP.post_form(URI.parse(VAAS_URL), request)
+
+  metrics = [
+    {
+      metric_name: :AcapelaAPICall,
+      dimensions: [
+        {name: "Environment", value: CDO.rack_env},
+        {name: "Context", value: context}
+      ],
+      value: 1
+    }
+  ]
+  Cdo::Metrics.push 'TTS', metrics
 
   Rails.logger.info "TTS: response with status code #{response.code}"
   if response.code == '200'
