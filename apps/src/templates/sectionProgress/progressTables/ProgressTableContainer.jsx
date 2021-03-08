@@ -57,12 +57,13 @@ class ProgressTableContainer extends React.Component {
     this.onToggleRow = this.onToggleRow.bind(this);
     this.numDetailRows = props.lessonCellFormatters.length - 1;
     this.state = {
-      rows: props.section.students.map(student => {
+      rows: props.section.students.map((student, index) => {
         return {
           id: idForExpansionIndex(student.id, 0),
           student: student,
           expansionIndex: 0,
-          isExpanded: false
+          isExpanded: false,
+          isOdd: index % 2 === 1
         };
       })
     };
