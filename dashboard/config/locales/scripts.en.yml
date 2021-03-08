@@ -1272,7 +1272,10 @@ en:
               name: ML Fish
             AI Lab:
               name: AI Lab
+            Java Lab:
+              name: Java Lab
           student_description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
+          name: allthethings
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -20724,7 +20727,7 @@ en:
               key: Conditionals with Cards
               name: Conditionals with Cards
               description_student: It's time to play a game where you earn points only under certain conditions!
-              description_teacher: "This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.\r\n\r\n"
+              description_teacher: "This lesson demonstrates how **conditionals** can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where **conditionals** come in. **Conditionals** allow a computer to make a decision, based on the information that is true any time your code is run.\n\n"
             Conditionals in Bee:
               key: Conditionals in Bee
               name: If/Else with Bee
@@ -20734,7 +20737,7 @@ en:
               key: While Loops in Farmer
               name: While Loops in Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n_While loops_ are loops that continue to repeat commands while a condition is met. `While` loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
+              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n**While loops** are loops that continue to **repeat** commands while a **condition** is met. **While loops** are used when the programmer doesn't know the exact number of times commands need to be **repeated**, but does know what **condition** needs to be true in order for the **loop** to continue **repeating**. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             Until Loops in Maze:
               key: Until Loops in Maze
               name: Until Loops in Maze
@@ -20773,7 +20776,7 @@ en:
             lesson-6:
               name: Looking Ahead with Minecraft
               description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             lesson-5:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
@@ -20836,7 +20839,7 @@ en:
               key: Conditionals
               name: Conditionals with the Farmer
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
-              description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
+              description_teacher: This lesson introduces students to **while loops** and `if / else` statements. **While loops** are loops that continue to repeat commands as long as a **condition** is true. **While loops** are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what **condition** needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Simon Says:
               key: Simon Says
               name: Follow the Algorithm
@@ -20919,6 +20922,13 @@ en:
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             lesson-4:
               name: Be A Super Digital Citizen
+              description_student: Learn how you can be an upstander when you see cyberbullying.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
           lesson_groups:
             ramp_up:
               display_name: Loops
@@ -21007,8 +21017,11 @@ en:
             AI for Oceans:
               key: AI for Oceans
               name: AI For Oceans
-              description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
-              description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n"
+              description_student: Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: |
+                Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+
+                This lesson will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.
             Internet:
               key: Internet
               name: The Internet
@@ -21878,11 +21891,15 @@ en:
             What is Code.org:
               name: What is Code.org?
             Addressing Implementation Approaches and Barriers:
-              name: Addressing Implementation Approaches and Barriers
+              name: Implementation Approaches and Barriers
             Lesson Planning:
               name: Lesson Planning
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
+            CS Teaching and Student Practices:
+              name: CS Teaching and Student Practices
+            Implementation Approaches and Barriers:
+              name: Implementation Approaches and Barriers
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
