@@ -130,22 +130,30 @@ class ColumnInspector extends Component {
                   <div>
                     <br />
                     <div>{currentColumnData.description}</div>
+                    <br />
                   </div>
                 )}
               </label>
 
-              {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
-                barData.labels.length <= maxLabelsInHistogram && (
-                  <div>
-                    <br />
+              {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                <div>
+                  {barData.labels.length <= maxLabelsInHistogram && (
                     <Bar
                       data={barData}
                       width={100}
                       height={150}
                       options={chartOptions}
                     />
-                  </div>
-                )}
+                  )}
+                  {barData.labels.length > maxLabelsInHistogram && (
+                    <div>
+                      {barData.labels.length} values were found in this column.
+                      A graph is only shown when there are{" "}
+                      {maxLabelsInHistogram} or fewer.
+                    </div>
+                  )}
+                </div>
+              )}
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>
