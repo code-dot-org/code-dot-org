@@ -216,5 +216,6 @@ level 'courseD_project_exemplars_2021', progression: 'Example projects'
 level 'courseD_EOC_2021', progression: 'Create your project'
 
 lesson_group 'lessonGroup-6', display_name: 'Digital Citizenship'
-lesson 'lesson-1', display_name: 'The Power of Words', has_lesson_plan: true
+lesson 'lesson-1', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
+level 'PowerOfWords-Unplugged_2021', progression: 'Power of Words - Unplugged Activity'
 

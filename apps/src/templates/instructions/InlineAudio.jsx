@@ -365,6 +365,7 @@ export default connect(function propsFromStore(state) {
     locale: state.pageConstants.locale,
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
-    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed
+    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
+    ttsAutoplayEnabled: state.sectionData.section.ttsAutoplayEnabled
   };
 })(StatelessInlineAudio);

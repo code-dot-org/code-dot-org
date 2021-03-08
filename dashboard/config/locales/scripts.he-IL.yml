@@ -6183,6 +6183,13 @@ he:
           student_description: " "
         csd1-2021:
           description_audience: " "
+          lessons:
+            CS Discoveries Pre-survey:
+              description_student: " "
+              description_teacher: " "
+            Post-Project Test:
+              description_student: " "
+              description_teacher: " "
           lesson_groups:
             cspSurvey:
               display_name: סקר
@@ -6192,6 +6199,13 @@ he:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
         csd2-2021:
           description_audience: " "
+          lessons:
+            Post-Project Test:
+              description_student: " "
+              description_teacher: " "
+            CS Discoveries Post Course survey:
+              description_student: " "
+              description_teacher: " "
           lesson_groups:
             cspSurvey:
               display_name: סקר
@@ -6216,6 +6230,12 @@ he:
             Functions:
               key: פונקציות
               name: פונקציות
+            Post-Project Test:
+              description_student: " "
+              description_teacher: " "
+            CS Discoveries Post Course survey:
+              description_student: " "
+              description_teacher: " "
           lesson_groups:
             csd3_1:
               display_name: 'פרק 1: תמונות ואנימציות'
@@ -6226,6 +6246,9 @@ he:
         csd4-2021:
           description_audience: " "
           lessons:
+            Post-Project Test:
+              description_student: " "
+              description_teacher: " "
             CS Discoveries Post Course survey:
               description_student: " "
               description_teacher: " "
@@ -6244,6 +6267,9 @@ he:
             ASCII and Binary Representation:
               key: ייצוג ASCII וייצוג בינארי
               name: ייצוג ASCII וייצוג בינארי
+            Post-Project Test:
+              description_student: " "
+              description_teacher: " "
             CS Discoveries Post Course survey:
               description_student: " "
               description_teacher: " "
@@ -6263,6 +6289,12 @@ he:
             Functions with Parameters:
               key: פונקציות ופרמטרים
               name: פונקציות ופרמטרים
+            Post-Project Test:
+              description_student: " "
+              description_teacher: " "
+            CS Discoveries Post Course survey:
+              description_student: " "
+              description_teacher: " "
           lesson_groups:
             csd6_1:
               display_name: 'פרק 1: תכנות עם חומרה'
@@ -6272,6 +6304,10 @@ he:
               display_name: סקר
         csp1-2021:
           description_audience: " "
+          lessons:
+            CS Principles Pre-survey:
+              description_student: " "
+              description_teacher: " "
           lesson_groups:
             cspSurvey:
               display_name: סקר
@@ -6316,6 +6352,15 @@ he:
             Loops in Ice Age:
               key: לולאות בעידן הקרח
               name: לולאות עם סקראט
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
+                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
+                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
+                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Events in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -6367,9 +6412,19 @@ he:
             Introduction to Online Puzzles:
               key: היכרות עם חידות מבוכים
               name: היכרות עם חידות מבוכים
+              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או
+                חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org.
+                יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל
+                הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים,
+                מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב
+                _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של
+                חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             Relay Programming:
               key: הרץ פעולה בשנית
               name: הרץ פעולה בשנית
+              description_teacher: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות,
+                אח"כ נעבור בזריזות למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו
+                יחד כדי לתכנת הוראה אחת בכל פעם.
             Debugging in Collector:
               name: ניפוי שגיאות עם לורל
             Dance Party:
@@ -6388,6 +6443,10 @@ he:
               name: לולאות "עד" במבוך
             'Unplugged: Binary':
               name: תמונות בינאריות
+              description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק
+                אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת
+                מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה
+                כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
               key: אמן בינארי
               name: אמן בינארי
@@ -6407,6 +6466,12 @@ he:
           lessons:
             Conditionals:
               key: תנאים
+              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'.
+                _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם
+                מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים
+                הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים
+                בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי
+                הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
             'Functions: Songwriting':
@@ -6475,11 +6540,38 @@ he:
               display_name: דמויות
         pre-express-2021:
           lessons:
+            Learn to Drag and Drop:
+              description_student: " "
+            Sequencing with Scrat:
+              description_student: " "
             Programming in with Angry Birds:
               name: תכנות עם ציפורים כועסות
+              description_student: " "
+            Programming with Rey and BB-8:
+              description_student: " "
+            Programming in Harvester:
+              description_student: " "
             Loops with Scrat:
               key: לולאות עם סקראט
               name: לולאות עם סקראט
+              description_student: " "
+            Loops with Laurel:
+              description_student: " "
+            Ocean Scene with Loops:
+              description_student: " "
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
+                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
+                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
+                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            Drawing Gardens with Loops:
+              description_student: " "
+            On the Move with Events:
+              description_student: " "
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            A Royal Battle with Events:
+              description_student: " "
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -6550,4 +6642,127 @@ he:
         ai-unit-pilot:
           description_audience: " "
           description: " "
+          student_description: " "
+        csa1-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa2-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa3-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa4-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa5-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa6-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa7-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa8-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        csa9-pilot:
+          title: " "
+          description_audience: " "
+          description_short: " "
+          description: " "
+          student_description: " "
+        k5-onlinepd-2021:
+          description_audience: " "
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              description_student: " "
+              description_teacher: " "
+            Understanding the Computer Science Fundamentals Courses:
+              description_student: " "
+              description_teacher: " "
+            Sequencing:
+              description_student: " "
+              description_teacher: " "
+            Loops:
+              key: חזרות
+              name: חזרות
+              description_student: " "
+              description_teacher: " "
+            Events:
+              key: אירועים
+              name: אירועים
+              description_student: " "
+              description_teacher: " "
+            Conditionals:
+              key: תנאים
+              name: תנאים
+              description_student: " "
+              description_teacher: " "
+            End of Course projects:
+              description_student: " "
+              description_teacher: " "
+            Functions:
+              key: פונקציות
+              name: פונקציות
+              description_student: " "
+              description_teacher: " "
+            Variables:
+              key: משתנים
+              name: משתנים
+              description_student: " "
+              description_teacher: " "
+            For Loops:
+              key: בשביל לולאות
+              name: בשביל לולאות
+              description_student: " "
+              description_teacher: " "
+            Sprite Lab:
+              description_student: " "
+              description_teacher: " "
+            Reviewing your reflections:
+              description_student: " "
+              description_teacher: " "
+            Next steps:
+              description_student: " "
+              description_teacher: " "
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: השלבים הבאים
+        allthemigratedthings:
+          lessons:
+            lesson-2:
+              description_student: " "
+              description_teacher: " "
+            lesson-3:
+              description_student: " "
+              description_teacher: " "
+          description_audience: " "
+          description_short: " "
+        fancygeometry-pilot:
           student_description: " "

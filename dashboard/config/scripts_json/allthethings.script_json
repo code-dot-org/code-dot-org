@@ -5,11 +5,12 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
-      "lesson_extras_available": true
+      "lesson_extras_available": true,
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-04 21:07:16 UTC",
     "seeding_key": {
       "script.name": "allthethings"
     }
@@ -700,6 +701,21 @@
       },
       "seeding_key": {
         "lesson.key": "AI Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 46,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 44,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Java Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
@@ -4275,6 +4291,54 @@
       "level_keys": [
         "AppLab AI Enabled"
       ]
+    },
+    {
+      "chapter": 146,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab 1"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab 1"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab 2"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab 2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5483,18 +5547,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 3",
-        "script_level.level_keys": [
-          "2-3 Maze 3",
-          "2-3 Maze 6"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "2-3 Maze 6",
         "script_level.level_keys": [
           "2-3 Maze 3",
@@ -5507,7 +5559,19 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_artistIntro",
+        "level.key": "2-3 Maze 3",
+        "script_level.level_keys": [
+          "2-3 Maze 3",
+          "2-3 Maze 6"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist 1 new",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
@@ -5519,7 +5583,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 1 new",
+        "level.key": "ramp_video_artistIntro",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
           "ramp_video_artistIntro"
@@ -5627,7 +5691,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 6",
+        "level.key": "4-5 Maze 3",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
@@ -5639,7 +5703,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 3",
+        "level.key": "4-5 Maze 6",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
@@ -5999,6 +6063,28 @@
           "AppLab AI Enabled"
         ],
         "lesson.key": "AI Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab 1",
+        "script_level.level_keys": [
+          "Allthethings Java Lab 1"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab 2",
+        "script_level.level_keys": [
+          "Allthethings Java Lab 2"
+        ],
+        "lesson.key": "Java Lab",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
