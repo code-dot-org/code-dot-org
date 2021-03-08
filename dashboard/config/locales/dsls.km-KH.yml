@@ -2664,3 +2664,74 @@ km-KH:
         title: CS ស្វែងយល់ពីការស្ទង់មតិមុនវគ្គសិក្សារបស់និស្សិត
       csd-pre-survey-levelgroup_2019:
         title: CS ស្វែងយល់ពីការស្ទង់មតិមុនវគ្គសិក្សារបស់និស្សិត
+      Dance_Party_extras_intro:
+        markdown: |
+          # តោះរាំបន្តទៀត!
+
+          សម្រាប់ផ្នែកទី ២ អ្នកនឹងបង្កើតប្រូជែកដោយខ្លួនឯង។ នៅទីនេះគ្មានចំណោទអោយឆ្លើយនោះទេ គឺគ្រាន់តែមានប្រូជែកមួយចំនួនដែលបង្ហាញអ្នកពីរបៀបបង្កើតក្បាច់រាំអោយកាន់តែស្មុគស្មាញតែប៉ុណ្ណោះ។
+
+          អ្នកអាចចូលមើលវគ្គទាំងនេះ _តាមលំដាប់ណាក៏បានដែរ_. ផ្លោះពីវគ្គមួយទៅវគ្គមួយទៀតដើម្បីមើលរបៀបធ្វើអ្វីមួយនៅវគ្គមុន ឬក៏បូកបញ្ចូលគំនិតរវាងវគ្គនាៗក៏បាន។ សាកអោយបានគ្រប់វគ្គ ហើយរើសយកតែកន្លែងដែលខ្លួនពេញចិត្តមកកែច្នៃបន្ថែមដើម្បីបង្ហាញពីចំណូលចិត្តផ្ទាល់ខ្លួន។
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">បន្ទាប់</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          សម្រាក! ប្រុង! តម្រង់ជួរ!
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          តើគេទៅណាអស់ទៅ?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          ក្រុមរាំ
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          រង្វាស់ ១ ភាគ ៤
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          ខ្ពស់ កណ្ដាល ទាប
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          ជាន់ហ្គែរ ចាប់ហ្វ្រាំង
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>

@@ -17243,8 +17243,6 @@ ja:
               key: デジタル共有
               name: デジタル共有
               description_student: このレッスンでは、所有権と著作権の課題と利点について学びます。
-              description_teacher: このレッスンは、コンピューター サイエンス入門で使うために著作権および創造性チームから借り受けたもので、特にデジタル環境において、所有権と著作権を尊重することの課題と利点を生徒が理解するのに役立ちます。生徒には、倫理的なデジタル
-                シティズンでいることの重要な部分として、アーティストの権利を尊重するような姿勢が必要です。
             Nested Loops in Bee:
               key: みつばちでの入れ子のループ
               name: 迷路で学ぶ入れ子のループ
@@ -17884,10 +17882,14 @@ ja:
           description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター サイエンスを教える方法を学びましょう！
           student_description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター
             サイエンスを教える方法を学びましょう！
+          description_short: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター
+            サイエンスを教える方法を学びましょう！
+          description_audience: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター
+            サイエンスを教える方法を学びましょう！
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: "「コンピュータ サイエンスを教える」へようこそ"
-              name: "「コンピュータ サイエンスを教える」へようこそ"
+              name: はじめに
             Understanding the Computer Science Fundamentals Courses:
               key: コンピューター サイエンス入門コースを理解する
               name: コンピューター サイエンス入門コースを理解する
@@ -17921,12 +17923,22 @@ ja:
             Next steps:
               key: 次の手順
               name: 次の手順
+            Module 1:
+              name: モジュール1
+            Getting Started:
+              name: 使用開始
+            What is Code.org:
+              name: コンピューター サイエンス入門コースを理解する
+            Lesson Planning:
+              name: レッスンプラン
           lesson_groups:
             k5_getting_started_1:
-              display_name: 使用開始
+              display_name: はじめに
             k5_basic_concepts_1:
               display_name: 基本的なプログラミングの概念と教授法
             k5_diving_deeper_1:
               display_name: '発展: コースEおよびF'
             k5_next_steps_1:
               display_name: 次の手順
+            Introduction:
+              display_name: はじめに

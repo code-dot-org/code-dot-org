@@ -1063,6 +1063,8 @@ pl:
               name: Ryba ML
             AI Lab:
               name: AI Lab
+            Java Lab:
+              name: Java Lab
           student_description: Wszystkie typy poziomów dla testowania UI
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
@@ -12502,6 +12504,7 @@ pl:
               name: 'Krok 1: Rozwijaj zrozumienie'
             'Step 2: Demonstrate Understanding':
               name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp19-csp-mod-w2
         dlp19-csp-mod-w3:
           title: Zasady informatyki Głębokie uczenie Moduł dla Warsztatu 3
           lesson_groups:
@@ -13723,6 +13726,7 @@ pl:
             CS Discoveries Post Course survey:
               name: Odkrycia informatyki Ankieta po kursie
           student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
+          name: csd4-2020
         csd5-2020:
           title: CSD Jednostka 5 - Dane a społeczeństwo ('20- '21)
           description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie danych są używane do rozwiązywania problemów i jak komputery pomagają w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem, jak proces rozwiązywania problemu z danym może być stosowany w wybranym przez siebie obszarze.
@@ -15875,7 +15879,7 @@ pl:
             lesson-2:
               name: Przechowywanie i przetwarzanie tekstu
             lesson-3:
-              name: Utwórz Chat-Bot
+              name: 'Utwórz Chat-Bot'
             lesson-4:
               name: Obliczenia ze zmiennymi
             lesson-5:
@@ -17376,7 +17380,6 @@ pl:
               key: Udostępnianie cyfrowe
               name: Udostępnianie cyfrowe
               description_student: 'Na tej lekcji będziesz się uczyć o wyzwaniach i korzyściach wynikających z własności i praw autorskich.'
-              description_teacher: Ta lekcja, wypożyczona na potrzeby "Podstaw informatyki" przez zespół "Prawa autorskie i kreatywność", ma na celu pomóc uczniom zrozumieć istotę wyzwań i korzyści wynikających z poszanowania praw własności i praw autorskich, w szczególności w środowiskach cyfrowych. Uczniowie powinni być zachęcani do przestrzegania praw artystów jako istotnego elementu bycia etycznym obywatelem cyfrowym.
             Nested Loops in Bee:
               key: Zagnieżdżone pętle z pszczółką
               name: Zagnieżdżone pętle w labiryncie
@@ -18199,12 +18202,14 @@ pl:
         csa9-pilot:
           name: csa9-pilotaż
         k5-onlinepd-2021:
-          description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie. 
-          student_description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie. 
+          description: "Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie. "
+          student_description: 'Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie. '
+          description_short: 'Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie. '
+          description_audience: 'Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie. '
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Witamy na "Podstawach Nauczania Informatyki"
-              name: Witamy na "Podstawach Nauczania Informatyki"
+              name: Wstęp
             Understanding the Computer Science Fundamentals Courses:
               key: Rozumienie kursów Podstaw Informatyki
               name: Rozumienie kursów Podstaw Informatyki
@@ -18241,15 +18246,25 @@ pl:
             Next steps:
               key: Następne kroki
               name: Następne kroki
+            Module 1:
+              name: Moduł 1
+            Getting Started:
+              name: Pierwsze kroki
+            What is Code.org:
+              name: Rozumienie kursów Podstaw Informatyki
+            Lesson Planning:
+              name: Planowanie lekcji
           lesson_groups:
             k5_getting_started_1:
-              display_name: Pierwsze kroki
+              display_name: Wstęp
             k5_basic_concepts_1:
               display_name: Podstawowe pojęcia kodowania oraz praktyki edukacyjne
             k5_diving_deeper_1:
               display_name: 'Zgłębiaj bardziej: Kursy E i F'
             k5_next_steps_1:
               display_name: Następne Kroki
+            Introduction:
+              display_name: Wstęp
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -18266,3 +18281,37 @@ pl:
           title: Bot Haiku
           description_short: 'W tym module uczniowie utworzą generator haiku w stylu Mad Libs, wykorzystując to, co wiedzą o poezji, dykcji i kodowaniu ze zmiennymi. '
           student_description: Wykorzystaj Sprite Lab, aby utworzyć Bot Haiku!
+        allthemigratedthings:
+          lessons:
+            lesson-1:
+              name: Pierwsza lekcja
+              description_student: Omówienie lekcji przez ucznia 
+              description_teacher: Omówienie lekcji przez nauczyciela
+            lesson-2:
+              name: Druga lekcja
+            lesson-3:
+              name: Trzecia lekcja
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Grupa lekcji 1
+              big_questions: |-
+                * Kto?
+                * Co?
+                * Gdzie?
+              description: Grupa lekcji 1 opis
+            lessonGroup-3:
+              display_name: Grupa lekcji 2
+          name: wszystkie przeniesione rzeczy
+          title: Wszystkie przeniesione rzeczy 
+          description: Omówienie jednostki przez nauczyciela
+          student_description: Omówienie jednostki przez ucznia 
+        fancygeometry-pilot:
+          lessons:
+            Fancy Geometry:
+              name: Zabawna geometria
+          lesson_groups:
+            Fancy Geometry:
+              display_name: Zabawna geometria
+          name: zabawna geometria - pilotaż
+          title: Zabawna geometria
+          description: "**Przegląd**\nNarzędzie Artysty to szczególnie odkrywcza i kreatywna platforma do tworzenia i dekomponowania skomplikowanych wzorów geometrycznych. Standardy matematyczne czwartej klasy koncentrują się na rozwijaniu biegłości uczniów w geometrii, zachęcając ich do odkrywania zależności między kątami, bokami i długościami różnych kształtów. Z Artystą, nauczyciele mogą łatwo ożywić te geometryczne zależności. "

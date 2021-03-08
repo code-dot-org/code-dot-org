@@ -2224,6 +2224,8 @@ sl:
               display_name: Spremenljivke
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Uvod
             Loops:
               key: Zanke
               name: Zanke
@@ -2239,3 +2241,8 @@ sl:
             Variables:
               key: Spremenljivke
               name: Spremenljivke
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Uvod
+            Introduction:
+              display_name: Uvod

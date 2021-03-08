@@ -2873,6 +2873,8 @@ sq:
               name: Lekcioni 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Hyrja
             Loops:
               key: cikle
               name: cikle
@@ -2892,5 +2894,9 @@ sq:
               key: Për Ciklet
               name: Për Ciklet
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Hyrja
             k5_next_steps_1:
               display_name: Hapat e ardhshme
+            Introduction:
+              display_name: Hyrja

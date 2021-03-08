@@ -1271,7 +1271,10 @@ in:
               name: crwdns2427428:0crwdne2427428:0
             AI Lab:
               name: crwdns2471920:0crwdne2471920:0
+            Java Lab:
+              name: crwdns2484104:0crwdne2484104:0
           student_description: crwdns2477570:0crwdne2477570:0
+          name: crwdns2484106:0crwdne2484106:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: 'crwdns38831:0crwdne38831:0'
@@ -17788,6 +17791,7 @@ in:
             Module 7:
               name: crwdns2461786:0crwdne2461786:0
           student_description: 'crwdns2478348:0crwdne2478348:0'
+          name: crwdns2484108:0crwdne2484108:0
         csd2-virtual:
           title: crwdns2367188:0crwdne2367188:0
           description: crwdns2367190:0crwdne2367190:0
@@ -18772,7 +18776,7 @@ in:
             lesson-2:
               name: crwdns2478394:0crwdne2478394:0
             lesson-3:
-              name: crwdns2478396:0crwdne2478396:0
+              name: 'crwdns2478396:0crwdne2478396:0'
             lesson-4:
               name: crwdns2478398:0crwdne2478398:0
             lesson-5:
@@ -21665,9 +21669,9 @@ in:
           student_description: 'crwdns2483438:0crwdne2483438:0'
         k5-onlinepd-2021:
           title: crwdns2483440:0crwdne2483440:0
-          description: crwdns2483442:0crwdne2483442:0
-          student_description: crwdns2483444:0crwdne2483444:0
-          description_short: crwdns2483446:0crwdne2483446:0
+          description: "crwdns2483442:0crwdne2483442:0"
+          student_description: 'crwdns2483444:0crwdne2483444:0'
+          description_short: 'crwdns2483446:0crwdne2483446:0'
           description_audience: 'crwdns2483448:0crwdne2483448:0'
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -21735,6 +21739,18 @@ in:
               name: crwdns2483548:0crwdne2483548:0
               description_student: 'crwdns2483550:0crwdne2483550:0'
               description_teacher: 'crwdns2483552:0crwdne2483552:0'
+            Module 1:
+              name: crwdns2484110:0crwdne2484110:0
+            Getting Started:
+              name: crwdns2484112:0crwdne2484112:0
+            What is Code.org:
+              name: crwdns2484114:0crwdne2484114:0
+            Addressing Implementation Approaches and Barriers:
+              name: crwdns2484116:0crwdne2484116:0
+            Lesson Planning:
+              name: crwdns2484118:0crwdne2484118:0
+            CS Teaching and Learning Practices:
+              name: crwdns2484120:0crwdne2484120:0
           lesson_groups:
             k5_getting_started_1:
               display_name: crwdns2483554:0crwdne2483554:0
@@ -21744,6 +21760,10 @@ in:
               display_name: 'crwdns2483558:0crwdne2483558:0'
             k5_next_steps_1:
               display_name: crwdns2483560:0crwdne2483560:0
+            Introduction:
+              display_name: crwdns2484122:0crwdne2484122:0
+            Implementing and Teaching CS:
+              display_name: crwdns2484124:0crwdne2484124:0
           name: crwdns2483562:0crwdne2483562:0
         haikubot-pilot:
           lessons:
@@ -21776,6 +21796,10 @@ in:
               name: crwdns2483712:0crwdne2483712:0
               description_student: crwdns2483714:0crwdne2483714:0
               description_teacher: crwdns2483716:0crwdne2483716:0
+            lesson-4:
+              name: crwdns2484126:0crwdne2484126:0
+              description_student: crwdns2484128:0crwdne2484128:0
+              description_teacher: crwdns2484130:0crwdne2484130:0
           lesson_groups:
             lessonGroup-2:
               display_name: crwdns2483718:0crwdne2483718:0
@@ -21784,6 +21808,9 @@ in:
               description: crwdns2483722:0crwdne2483722:0
             lessonGroup-3:
               display_name: crwdns2483724:0crwdne2483724:0
+            lessonGroup-4:
+              display_name: crwdns2484132:0crwdne2484132:0
+              description: crwdns2484134:0crwdne2484134:0
           name: crwdns2483726:0crwdne2483726:0
           title: crwdns2483728:0crwdne2483728:0
           description_audience: 'crwdns2483730:0crwdne2483730:0'
@@ -21803,3 +21830,16 @@ in:
           description_short: "crwdns2483748:0crwdne2483748:0"
           description: "crwdns2483750:0crwdne2483750:0"
           student_description: 'crwdns2483752:0crwdne2483752:0'
+        ai-classroom-test:
+          lessons:
+            introai:
+              name: crwdns2484136:0crwdne2484136:0
+            ailab-explore:
+              name: crwdns2484138:0crwdne2484138:0
+          lesson_groups: { }
+          name: crwdns2484140:0crwdne2484140:0
+          title: crwdns2484142:0crwdne2484142:0
+          description_audience: 'crwdns2484144:0crwdne2484144:0'
+          description_short: crwdns2484146:0crwdne2484146:0
+          description: crwdns2484148:0crwdne2484148:0
+          student_description: crwdns2484150:0crwdne2484150:0

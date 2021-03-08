@@ -3492,6 +3492,8 @@
               display_name: Undersøkelse
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduksjon
             Loops:
               key: Løkker
               name: Løkker
@@ -3511,5 +3513,9 @@
               key: For-løkker
               name: For-løkker
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduksjon
             k5_next_steps_1:
               display_name: De Neste Trinnene
+            Introduction:
+              display_name: Introduksjon

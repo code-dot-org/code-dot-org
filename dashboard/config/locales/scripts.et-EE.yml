@@ -3265,6 +3265,8 @@ et:
               name: Õppetund 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Sissejuhatus
             Loops:
               key: Tsüklid
               name: Tsüklid
@@ -3284,5 +3286,9 @@ et:
               key: For tsükkel
               name: For tsükkel
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Sissejuhatus
             k5_next_steps_1:
               display_name: Järgmised sammud
+            Introduction:
+              display_name: Sissejuhatus
