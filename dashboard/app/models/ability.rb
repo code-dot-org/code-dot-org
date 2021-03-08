@@ -198,14 +198,6 @@ class Ability
         user.persisted? || !script.login_required?
       end
     end
-    can :student_lesson_plan, Lesson do |lesson|
-      script = lesson.script
-      if script.pilot?
-        script.has_pilot_access?(user)
-      else
-        true
-      end
-    end
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
       if script.pilot?

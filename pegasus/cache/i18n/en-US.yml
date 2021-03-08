@@ -1736,6 +1736,7 @@
   codebytes_skinny_banner_english_only: "English-only"
   codebytes_skinny_banner_learn: "Learn more at [code.org/codebytes](%{code_bytes_url})."
   footer_privacy_policy: "Privacy Policy"
+  footer_privacy_policy_updated: "Privacy Policy (updated)"
   footer_about: "About"
   footer_partners: "Partners"
   footer_blog: "Blog"

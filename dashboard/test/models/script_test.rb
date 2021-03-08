@@ -896,42 +896,6 @@ class ScriptTest < ActiveSupport::TestCase
     # only includes lessons with lesson plans
     assert_equal 1, summary[:lessons].count
     assert_equal 'lesson-1', summary[:lessons][0][:key]
-    assert_equal '/s/my-script/lessons/1', summary[:lessons][0][:link]
-  end
-
-  test 'can summarize script for student lesson plan' do
-    script = create :script, name: 'my-script'
-    lesson_group = create :lesson_group, script: script
-    create(
-      :lesson,
-      lesson_group: lesson_group,
-      script: script,
-      name: 'Lesson 1',
-      key: 'lesson-1',
-      has_lesson_plan: true,
-      lockable: false,
-      relative_position: 1,
-      absolute_position: 1
-    )
-    create(
-      :lesson,
-      lesson_group: lesson_group,
-      script: script,
-      name: 'Lesson 2',
-      key: 'lesson-2',
-      has_lesson_plan: false,
-      lockable: false,
-      relative_position: 2,
-      absolute_position: 2
-    )
-
-    summary = script.summarize_for_lesson_show(true)
-    assert_equal '/s/my-script', summary[:link]
-    # only includes lessons with lesson plans
-    assert_equal 1, summary[:lessons].count
-    assert_equal 'lesson-1', summary[:lessons][0][:key]
-    # lesson links end with /student
-    assert_equal '/s/my-script/lessons/1/student', summary[:lessons][0][:link]
   end
 
   class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase

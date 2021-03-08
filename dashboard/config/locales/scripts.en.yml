@@ -1272,7 +1272,10 @@ en:
               name: ML Fish
             AI Lab:
               name: AI Lab
+            Java Lab:
+              name: Java Lab
           student_description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
+          name: allthethings
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -17859,6 +17862,7 @@ en:
             Module 7:
               name: Module 7
           student_description: ''
+          name: jess-test-script
         csd2-virtual:
           title: Self Paced Introduction to Web Lab
           description: You’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet.
@@ -21696,7 +21700,7 @@ en:
             lesson18:
               name: Planning Your App
             lesson19:
-              name: 'Project: App with Real World Data'
+              name: 'Project: App with Real-World Data'
             lesson20:
               name: TEMP LEVELS - DELETE LATER
           lesson_groups:
@@ -21799,20 +21803,20 @@ en:
           description: ''
           student_description: ''
         k5-onlinepd-2021:
-          title: Teaching Computer Science Fundamentals
-          description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
-          student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
-          description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
-          description_audience: ''
+          title: Implementing and Teaching CS Fundamentals
+          description: "Welcome to Code.org’s free online educator course for CS Fundamentals! \n"
+          student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_short: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Welcome to "Teaching Computer Science Fundamentals"
-              name: Welcome to "Teaching Computer Science Fundamentals"
+              name: Introduction
               description_student: ''
               description_teacher: ''
             Understanding the Computer Science Fundamentals Courses:
               key: Understanding the Computer Science Fundamentals Courses
-              name: Understanding the Computer Science Fundamentals Courses
+              name: What is Code.org?
               description_student: ''
               description_teacher: ''
             Sequencing:
@@ -21870,15 +21874,31 @@ en:
               name: Next steps
               description_student: ''
               description_teacher: ''
+            Module 1:
+              name: Module 1
+            Getting Started:
+              name: Getting Started
+            What is Code.org:
+              name: What is Code.org?
+            Addressing Implementation Approaches and Barriers:
+              name: Addressing Implementation Approaches and Barriers
+            Lesson Planning:
+              name: Lesson Planning
+            CS Teaching and Learning Practices:
+              name: CS Teaching and Learning Practices
           lesson_groups:
             k5_getting_started_1:
-              display_name: Getting Started
+              display_name: Introduction
             k5_basic_concepts_1:
-              display_name: Basic Coding Concepts and Teaching Practices
+              display_name: CS Fundamentals Concepts
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
               display_name: Next Steps
+            Introduction:
+              display_name: Introduction
+            Implementing and Teaching CS:
+              display_name: Implementing and Teaching CS
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -21951,6 +21971,8 @@ en:
           lessons:
             introai:
               name: Introduction to AI
+            ailab-explore:
+              name: Explore AI Lab
           lesson_groups: {}
           name: ai-classroom-test
           title: AI Lab Classroom Test

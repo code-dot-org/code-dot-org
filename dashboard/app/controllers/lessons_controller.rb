@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
 
   # Script levels which are not in activity sections will not show up on the
@@ -25,19 +25,6 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
 
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
-  end
-
-  # GET /s/script-name/lessons/1/student
-  def student_lesson_plan
-    script = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
-
-    @lesson = script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
-    end
-    raise ActiveRecord::RecordNotFound unless @lesson
-
-    @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
 
   # GET /lessons/1/edit
