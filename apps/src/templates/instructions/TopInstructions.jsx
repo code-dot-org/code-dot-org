@@ -161,6 +161,7 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
+    customInstructions: PropTypes.string,
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -750,9 +751,9 @@ class TopInstructions extends Component {
                         }
                       }}
                       longInstructions={this.props.longInstructions}
+                      customInstructions={this.props.customInstructions}
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
-                      showSubset={this.props.showSubset}
                     />
                   </div>
                 )}
@@ -840,7 +841,7 @@ export default connect(
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
     widgetMode: state.pageConstants.widgetMode,
-    showSubset: state.instructions.showSubset
+    customInstructions: state.instructions.customInstructions
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

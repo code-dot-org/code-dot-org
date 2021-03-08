@@ -8,7 +8,7 @@ import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 import $ from 'jquery';
 
-import {setShowSubset} from '../redux/instructions';
+import {setCustomInstructions} from '../redux/instructions';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -124,14 +124,14 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
-Ailab.prototype.setInstructionSubset = function(subset) {
-  getStore().dispatch(setShowSubset(subset));
+Ailab.prototype.setInstructions = function(instructions) {
+  getStore().dispatch(setCustomInstructions(instructions));
 };
 
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
-  const setInstructionSubset = this.setInstructionSubset.bind(this);
+  const setInstructions = this.setInstructions.bind(this);
   const saveTrainedModel = (dataToSave, callback) => {
     return new Promise((resolve, reject) => {
       $.ajax({
@@ -160,7 +160,7 @@ Ailab.prototype.initMLActivities = function() {
   initAll({
     mode,
     onContinue,
-    setInstructionSubset,
+    setInstructions,
     i18n: ailabMsg,
     saveTrainedModel
   });
