@@ -824,7 +824,7 @@ module Services
 
         (1..num_programming_expressions_per_lesson).each do
           programming_expression = create :programming_expression
-          LessonsVocabulary.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
+          LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
         (1..num_objectives_per_lesson).each do |o|
