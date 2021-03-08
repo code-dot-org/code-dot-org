@@ -46,8 +46,11 @@ export default class TextareaWithImageUpload extends React.Component {
     this.setState({uploadImageOpen: false});
   };
 
-  handleUploadImage = url => {
-    let e = {target: {value: this.props.markdown + `\n\n![](${url})`}};
+  handleUploadImage = (url, expandable) => {
+    const param = expandable ? 'expandable' : '';
+    const e = {
+      target: {value: this.props.markdown + `\n\n![${param}](${url})`}
+    };
     this.props.handleMarkdownChange(e);
   };
 
