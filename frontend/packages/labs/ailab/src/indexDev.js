@@ -15,7 +15,7 @@ const sampleModes = {
   "preload-metadata": {
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
-    hideChooseReserve: true,
+    hideChooseReserve: true
   },
 
   "load-foods": { datasets: ["foods"] },
@@ -67,5 +67,13 @@ function saveTrainedModelStub(data) {
   console.log("This would save a trained model.", data);
 }
 
+function setInstructionsStub(instructions) {
+  document.getElementById("instructions").innerText = instructions;
+}
+
 // Initialize the app.
-initAll({ mode: mode, saveTrainedModel: saveTrainedModelStub });
+initAll({
+  mode: mode,
+  saveTrainedModel: saveTrainedModelStub,
+  setInstructions: setInstructionsStub
+});
