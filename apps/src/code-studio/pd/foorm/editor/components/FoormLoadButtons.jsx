@@ -1,7 +1,3 @@
-// Main page for Foorm Editor interface. Will initially show a choice
-// between loading an existing configuration or an empty configuration.
-// After that choice is made, will render FoormEditor with the chosen configuration.
-
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -13,6 +9,7 @@ import {
   setLastSavedQuestions
 } from '../foormEditorRedux';
 
+// This should probably be functional -- no state.
 class FoormLoadButtons extends React.Component {
   static propTypes = {
     resetCodeMirror: PropTypes.func,
