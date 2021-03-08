@@ -14,6 +14,7 @@ import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLevelIcon from './ProgressTableLevelIcon';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+import {ProgressTableTextCellGroup} from './ProgressTableTextCells';
 
 // This component displays progress bubbles for all levels in all lessons
 // for each student in the section. It combines detail-specific components such as
@@ -69,17 +70,14 @@ class ProgressTableDetailView extends React.Component {
 
   renderLessonProgressText(lesson, student, fieldName, formatter) {
     const studentProgress = this.props.levelProgressByStudent[student.id];
-    return (
-      <div>
-        {lesson.levels.map(level =>
-          this.renderLevelProgressText(
-            studentProgress[level.id],
-            fieldName,
-            formatter
-          )
-        )}
-      </div>
+    const progressTexts = lesson.levels.map(level =>
+      this.renderLevelProgressText(
+        studentProgress[level.id],
+        fieldName,
+        formatter
+      )
     );
+    return <ProgressTableTextCellGroup texts={progressTexts} />;
   }
 
   timeSpentCellFormatter(lesson, student) {
