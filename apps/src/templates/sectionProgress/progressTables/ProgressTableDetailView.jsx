@@ -91,7 +91,7 @@ class ProgressTableDetailView extends React.Component {
   }
 
   lastUpdatedCellFormatter(lesson, student) {
-    const formatter = timestamp => moment(timestamp).calendar();
+    const formatter = timestamp => moment(timestamp).format('M/D');
     return this.renderLessonProgressText(
       lesson,
       student,
