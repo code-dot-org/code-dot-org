@@ -104,6 +104,7 @@ Javalab.prototype.init = function(config) {
   const onSave = this.onSave.bind(this);
   const renameFile = this.renameProjectFile.bind(this);
 
+  // only render Java Lab once files have been loaded.
   this.loadFiles(() => {
     ReactDOM.render(
       <Provider store={getStore()}>
