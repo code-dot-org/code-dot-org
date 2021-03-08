@@ -16986,7 +16986,6 @@ id:
               key: Berbagi Secara Digital
               name: Berbagi Secara Digital
               description_student: 'Dalam pelajaran ini, Anda akan belajar tentang tantangan dan manfaat kepemilikan dan hak cipta. '
-              description_teacher: Meminjam Dasar-Dasar Ilmu Komputer dari tim di bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu siswa memahami tantangan dan manfaat menghargai hak milik dan hak cipta, terutama di lingkungan digital. Para siswa perlu didorong untuk menghargai hak-hak artis sebagai unsur penting menjadi seorang warga digital yang beretika.
             Nested Loops in Bee:
               key: Nested Loop dalam Lebah
               name: Nested Loop dalam Labirin
@@ -17610,12 +17609,14 @@ id:
             lesson15:
               name: Pelajaran ke- 15
         k5-onlinepd-2021:
-          description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!
-          student_description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!
+          description: "Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!"
+          student_description: 'Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!'
+          description_short: 'Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!'
+          description_audience: 'Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!'
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
-              name: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+              name: Pendahuluan
             Understanding the Computer Science Fundamentals Courses:
               key: Memahami Kursus Dasar Ilmu Komputer
               name: Memahami Kursus Dasar Ilmu Komputer
@@ -17652,12 +17653,22 @@ id:
             Next steps:
               key: Langkah berikutnya
               name: Langkah berikutnya
+            Module 1:
+              name: Modul 1
+            Getting Started:
+              name: Dapat Dimulai
+            What is Code.org:
+              name: Memahami Kursus Dasar Ilmu Komputer
+            Lesson Planning:
+              name: Perencanaan Pelajaran
           lesson_groups:
             k5_getting_started_1:
-              display_name: Dapat Dimulai
+              display_name: Pendahuluan
             k5_basic_concepts_1:
               display_name: Konsep Coding Dasar dan Praktik Pengajaran
             k5_diving_deeper_1:
               display_name: 'Pendalaman: Kursus E dan F'
             k5_next_steps_1:
               display_name: Langkah berikutnya
+            Introduction:
+              display_name: Pendahuluan
