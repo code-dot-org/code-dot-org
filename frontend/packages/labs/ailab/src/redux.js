@@ -62,7 +62,7 @@ const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
-const SET_INSTRUCTIONS_SUBSET_CALLBACK = "SET_INSTRUCTIONS_SUBSET_CALLBACK";
+const SET_INSTRUCTIONS_CALLBACK = "SET_INSTRUCTIONS_CALLBACK";
 
 // Action creators
 export function setMode(mode) {
@@ -194,8 +194,8 @@ export function setTrainedModelDetail(field, value, isColumn) {
   return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
 
-export function setInstructionSubsetCallback(instructionSubsetCallback) {
-  return { type: SET_INSTRUCTIONS_SUBSET_CALLBACK, instructionSubsetCallback };
+export function setInstructionsCallback(instructionsCallback) {
+  return { type: SET_INSTRUCTIONS_CALLBACK, instructionsCallback };
 }
 
 export function setCurrentPanel(currentPanel) {
@@ -235,7 +235,7 @@ const initialState = {
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
-  instructionSubsetCallback: undefined,
+  instructionCallback: undefined,
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined
@@ -454,12 +454,12 @@ export default function rootReducer(state = initialState, action) {
       ...trainedModelDetails
     };
   }
-  if (action.type === SET_INSTRUCTIONS_SUBSET_CALLBACK) {
-    state.instructionSubsetCallback = action.instructionSubsetCallback;
+  if (action.type === SET_INSTRUCTIONS_CALLBACK) {
+    state.instructionsCallback = action.instructionsCallback;
   }
   if (action.type === SET_CURRENT_PANEL) {
-    if (state.instructionSubsetCallback) {
-      state.instructionSubsetCallback(action.currentPanel);
+    if (state.instructionsCallback) {
+      state.instructionsCallback(getInstructionsForPanel(action.currentPanel));
     }
 
     return {
@@ -1251,4 +1251,18 @@ function areArraysEqual(array1, array2) {
       return value === array2[index];
     })
   );
+}
+
+function getInstructionsForPanel(panel) {
+  var panelInstructions = {
+    selectDataset: "Select the data set you would like to use.",
+    dataDisplayLabel: "Choose one column to predict.",
+    dataDisplayFeatures: "Choose one or more columns that will do the predicting.",
+    selectTrainer: "Set up the training.",
+    trainModel: "Train the model.",
+    results: "Review the results.",
+    saveModel: "Save the trained model for use in App Lab."
+  };
+
+  return panelInstructions[panel];
 }

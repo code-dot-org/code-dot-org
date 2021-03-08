@@ -30,17 +30,8 @@ class TrainModel extends Component {
       <div id="train-model" style={styles.panel}>
         {this.props.readyToTrain && (
           <div>
-            <p>
-              The machine learning algorithm you selected,{" "}
-              {availableTrainers[this.props.selectedTrainer]["name"]}, is going
-              to look for patterns in these features:{" "}
-              {this.props.selectedFeatures.join(", ")} that might help predict
-              the values of the label: {this.props.labelColumn}.
-            </p>
-            {!this.props.modelSize && (
-              <FontAwesomeIcon icon={faSpinner} />
-            )}
-            <div style={{...styles.trainBot, margin: '0 auto'}}>
+            {!this.props.modelSize && <FontAwesomeIcon icon={faSpinner} />}
+            <div style={{ ...styles.trainBot, margin: "0 auto" }}>
               <img
                 src={aiBotHead}
                 style={{

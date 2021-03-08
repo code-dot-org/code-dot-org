@@ -9,7 +9,7 @@ import rootReducer, {
   setSelectedCSV,
   setSelectedJSON,
   setSelectedTrainer,
-  setInstructionSubsetCallback
+  setInstructionsCallback
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -21,7 +21,7 @@ export const initAll = function(options) {
   // Handle an optional mode.
   const mode = options && options.mode;
   const saveTrainedModel = options && options.saveTrainedModel;
-  store.dispatch(setInstructionSubsetCallback(options && options.setInstructionSubset));
+  store.dispatch(setInstructionsCallback(options && options.setInstructions));
   store.dispatch(setMode(mode));
   processMode(mode);
 
@@ -36,6 +36,7 @@ export const initAll = function(options) {
 // Process an optional mode.
 const processMode = mode => {
   const assetPath = global.__ml_playground_asset_public_path__;
+  let panelSet = false;
 
   if (mode) {
     // Load a single dataset immediately.
@@ -51,13 +52,16 @@ const processMode = mode => {
       parseJSON(assetPath + item.metadataPath);
 
       store.dispatch(setCurrentPanel("dataDisplayLabel"));
+      panelSet = true;
     }
 
     // Select a trainer immediately.
     if (mode.hideSelectTrainer) {
       store.dispatch(setSelectedTrainer(mode.hideSelectTrainer));
     }
-  } else {
+  }
+
+  if (!panelSet) {
     store.dispatch(setCurrentPanel("selectDataset"));
   }
 };

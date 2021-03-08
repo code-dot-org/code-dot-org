@@ -80,18 +80,9 @@ export const styles = {
   },
 
   bodyContainer: {
-    height: "calc(100% - 60px)",
+    height: "100%",
     boxSizing: "border-box",
     paddingBottom: 100
-  },
-
-  instructions: {
-    width: "calc(100% - 40px)",
-    backgroundColor: "rgb(206, 206, 206)",
-    color: "white",
-    padding: 20,
-    marginBottom: 10,
-    borderRadius: 5
   },
 
   largeText: {
