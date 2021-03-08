@@ -11,6 +11,7 @@ import ProgressTableStudentName from './ProgressTableStudentName';
 import progressTableStyles from './progressTableStyles.scss';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import ProgressTableTextLabelCell from './ProgressTableTextLabelCell';
 
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
@@ -70,11 +71,11 @@ export default class ProgressTableStudentList extends React.Component {
   }
 
   timeSpentFormatter() {
-    return 'Time Spent (mins)';
+    return <ProgressTableTextLabelCell text={'Time Spent (mins)'} />;
   }
 
   lastUpdatedFormatter() {
-    return 'Last Updated';
+    return <ProgressTableTextLabelCell text={'Last Updated'} />;
   }
 
   render() {
