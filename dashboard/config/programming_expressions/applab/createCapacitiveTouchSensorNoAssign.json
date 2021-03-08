@@ -1,0 +1,3 @@
+{"func":"createCapacitiveTouchSensor","category":"Maker","paletteParams":["pin"],"params":["0"],"type":"either",
+  "docFunc": "createCapacitiveTouchSensorNoAssign"
+}
