@@ -3545,6 +3545,8 @@ th:
           student_description: 'ใช้แลปสไปรท์เพื่อจำลองสถานการณ์การระบาดของไวรัส '
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: บทเกริ่นนำ
             Loops:
               key: ลูป
               name: ลูป
@@ -3563,3 +3565,8 @@ th:
             For Loops:
               key: การวนรอบ
               name: การวนรอบ
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: บทเกริ่นนำ
+            Introduction:
+              display_name: บทเกริ่นนำ
