@@ -114,3 +114,14 @@ use_my_apps: true
 #twilio_sid:
 #twilio_auth:
 #twilio_messaging_service:
+
+# Configuration and secret credentials for getting the Microsoft Immersive
+# Reader feature to work. You should SSH into the staging host
+# dashboard-console and use `CDO.imm_reader_tenant_id` to get the values
+# and then copy them into your locals.yml file.
+# Alternatively, you could create your own Microsoft Azure account and
+# follow the Immersive Reader SDK setup steps, then add the secrets here.
+#imm_reader_tenant_id:     ''
+#imm_reader_client_id:     ''
+#imm_reader_client_secret: ''
+#imm_reader_subdomain:     ''
