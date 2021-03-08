@@ -29,12 +29,12 @@ class Instructions extends React.Component {
     shortInstructions: PropTypes.string,
     instructions2: PropTypes.string,
     longInstructions: PropTypes.string,
+    customInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
-    onResize: PropTypes.func,
-    showSubset: PropTypes.string
+    onResize: PropTypes.func
   };
 
   /**
@@ -78,37 +78,31 @@ class Instructions extends React.Component {
       >
         <ImmersiveReaderButton
           title={this.props.puzzleTitle || i18n.instructions()}
-          text={this.props.longInstructions || this.props.shortInstructions}
+          text={
+            this.props.customInstructions ||
+            this.props.longInstructions ||
+            this.props.shortInstructions
+          }
         />
-        {this.props.showSubset === "selectDataset" && (
-          <div style={{marginTop: 10}}>Choose a data set.</div>
-        )}
-        {this.props.showSubset === "specifyColumns" && (
-          <div style={{marginTop: 10}}>Review the column types.</div>
-        )}
-        {this.props.showSubset === "dataDisplayLabel" && (
-          <div style={{marginTop: 10}}>Choose one column to predict.</div>
-        )}
-        {this.props.showSubset === "dataDisplayFeatures" && (
-          <div style={{marginTop: 10}}>Choose one or more additional columns.</div>
-        )}
-        {this.props.showSubset === "selectTrainer" && (
-          <div style={{marginTop: 10}}>Prepare for training.</div>
+        {this.props.customInstructions && (
+          <div style={{marginTop: 10}}>{this.props.customInstructions}</div>
         )}
 
-        {/*}
-        {this.renderMainBody()}
+        {!this.props.customInstructions && (
+          <div>
+            {this.renderMainBody()}
 
-        {this.props.inputOutputTable && (
-          <InputOutputTable data={this.props.inputOutputTable} />
-        )}
+            {this.props.inputOutputTable && (
+              <InputOutputTable data={this.props.inputOutputTable} />
+            )}
 
-        {this.props.imgURL && !this.props.inTopPane && (
-          <img className="aniGif example-image" src={this.props.imgURL} />
+            {this.props.imgURL && !this.props.inTopPane && (
+              <img className="aniGif example-image" src={this.props.imgURL} />
+            )}
+            {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
+            {this.props.authoredHints}
+          </div>
         )}
-        {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
-        {this.props.authoredHints}
-        */}
       </div>
     );
   }
