@@ -11,6 +11,7 @@ import {
 import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import progressTableStyles from './progressTableStyles.scss';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
+import progressTableRowWrapper from './ProgressTableRowWrapper';
 
 // Extra header column to account for scrollbar in progress tables
 const gutterHeader = {
@@ -92,10 +93,11 @@ export default class ProgressTableContentView extends React.Component {
   }
 
   contentCellFormatter(_, {rowData, columnIndex}) {
-    return this.props.lessonCellFormatters[rowData.expansionIndex](
-      this.props.scriptData.stages[columnIndex],
-      rowData.student
-    );
+    const formattedCell = this.props.lessonCellFormatters[
+      rowData.expansionIndex
+    ](this.props.scriptData.stages[columnIndex], rowData.student);
+
+    return progressTableRowWrapper(rowData, formattedCell);
   }
 
   /**

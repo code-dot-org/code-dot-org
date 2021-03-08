@@ -7,6 +7,7 @@ const styles = {
   container: {
     height: 20,
     margin: 10,
+    width: '100%',
     boxSizing: 'border-box',
     borderWidth: 1,
     borderStyle: 'solid'
