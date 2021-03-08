@@ -915,7 +915,7 @@ export function getTrainedModelDataToSave(state) {
   if (
     state.metadata &&
     state.metadata.fields &&
-    state.metedata.fields[0].description
+    state.metadata.fields[0].description
   ) {
     dataToSave.columns = [];
     for (const columnDescription of getSelectedColumnDescriptions(state)) {
