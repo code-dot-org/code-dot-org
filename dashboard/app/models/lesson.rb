@@ -359,16 +359,16 @@ class Lesson < ApplicationRecord
       lockable: lockable,
       key: key,
       displayName: localized_name,
-      overview: overview || '',
+      overview: Services::MarkdownPreprocessor.process(overview || ''),
       announcements: announcements,
-      purpose: purpose || '',
-      preparation: preparation || '',
+      purpose: Services::MarkdownPreprocessor.process(purpose || ''),
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
-      assessmentOpportunities: assessment_opportunities,
+      assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url
     }
   end
