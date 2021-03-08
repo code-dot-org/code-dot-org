@@ -48,6 +48,9 @@ $content-view-width: $content-width - $student-list-width;
         display: block;
         width: 100%;
       }
+      td {
+        height: inherit;
+      }
     }
   }
   .content-view {
