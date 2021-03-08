@@ -3073,6 +3073,8 @@ fi:
               display_name: Kysely
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Johdanto
             Loops:
               key: Silmukat
               name: Silmukat
@@ -3091,3 +3093,8 @@ fi:
             For Loops:
               key: Silmukat
               name: Silmukat
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Johdanto
+            Introduction:
+              display_name: Johdanto
