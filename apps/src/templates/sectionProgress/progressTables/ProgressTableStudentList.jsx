@@ -12,6 +12,7 @@ import progressTableStyles from './progressTableStyles.scss';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {ProgressTableTextLabelCell} from './ProgressTableTextCells';
+import progressTableRowWrapper from './ProgressTableRowWrapper';
 
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
@@ -34,6 +35,11 @@ export default class ProgressTableStudentList extends React.Component {
   bodyComponent = null;
 
   cellFormatter(_, {rowData}) {
+    const formattedRow = this.rowTypeFormatter(rowData);
+    return progressTableRowWrapper(rowData, formattedRow);
+  }
+
+  rowTypeFormatter(rowData) {
     switch (rowData.expansionIndex) {
       case 0:
         return this.studentNameFormatter(rowData);

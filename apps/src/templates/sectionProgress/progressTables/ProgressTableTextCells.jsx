@@ -4,7 +4,8 @@ import React from 'react';
 const styles = {
   text: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    minWidth: '30px'
   },
   label: {
     display: 'flex',
