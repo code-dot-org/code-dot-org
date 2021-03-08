@@ -8063,7 +8063,6 @@ it:
             Digital Sharing:
               key: Condivisione digitale
               name: Condivisione digitale
-              description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
             Nested Loops in Bee:
               key: Cicli Annidati con l'Ape
               name: Cicli annidati nel labirinto
@@ -8441,13 +8440,14 @@ it:
               name: Lezione 1
         k5-onlinepd-2021:
           title: Fondamenti di Informatica - Corso per insegnanti
-          description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
+          description: "Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org \"Fondamenti di informatica\" (titolo originale: CSF - Computer Science Fundamentals)."
           student_description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           description_short: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
+          description_audience: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
-              name: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
+              name: Introduzione
             Understanding the Computer Science Fundamentals Courses:
               key: Introduzione ai corsi di Fondamenti di informatica (CSF)
               name: Introduzione ai corsi di Fondamenti di informatica (CSF)
@@ -8484,12 +8484,20 @@ it:
             Next steps:
               key: Passi successivi
               name: Passi successivi
+            Getting Started:
+              name: Per cominciare
+            What is Code.org:
+              name: Introduzione ai corsi di Fondamenti di informatica (CSF)
+            Lesson Planning:
+              name: Pianificazione Lezione
           lesson_groups:
             k5_getting_started_1:
-              display_name: Per cominciare
+              display_name: Introduzione
             k5_basic_concepts_1:
               display_name: Concetti base di informatica e relative tecniche di insegnamento
             k5_diving_deeper_1:
               display_name: 'Approfondimenti (per i corsi E ed F)'
             k5_next_steps_1:
               display_name: Passi successivi
+            Introduction:
+              display_name: Introduzione

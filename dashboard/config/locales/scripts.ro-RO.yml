@@ -7588,9 +7588,9 @@ ro:
           description: "[șir gol]"
           student_description: "[șir gol]"
         k5-onlinepd-2021:
-          description_audience: "[șir gol]"
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
+              name: Introducere
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Understanding the Computer Science Fundamentals Courses:
@@ -7643,9 +7643,15 @@ ro:
             Next steps:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Lesson Planning:
+              name: Planificare lecție
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Introducere
             k5_next_steps_1:
               display_name: Pașii următori
+            Introduction:
+              display_name: Introducere
         allthemigratedthings:
           lessons:
             lesson-2:
@@ -7654,7 +7660,11 @@ ro:
             lesson-3:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            lesson-4:
+              description_student: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
         fancygeometry-pilot:
           student_description: "[șir gol]"
+        ai-classroom-test:
+          description_audience: "[șir gol]"
