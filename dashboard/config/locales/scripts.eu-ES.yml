@@ -2490,6 +2490,8 @@ eu:
               display_name: Aldagaiak
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Sarrera
             Loops:
               key: Itzuliak
               name: Itzuliak
@@ -2508,3 +2510,8 @@ eu:
             For Loops:
               key: For begiztak
               name: For begiztak
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Sarrera
+            Introduction:
+              display_name: Sarrera

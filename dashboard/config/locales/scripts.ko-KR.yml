@@ -21672,9 +21672,6 @@ ko:
               key: 디지털 공유
               name: 디지털 공유
               description_student: '이 레슨에서는 소유권과 저작권의 도전과 혜택에 대해 배울 것입니다. '
-              description_teacher: 저작권 및 창의성에서 팀에 의해 컴퓨터 과학 기초를 위해 차용된 이 레슨은 학생들이
-                특히 디지털 환경에서 소유권과 저작권 존중이라는 도전과 혜택을 이해하도록 돕기 위해 존재합니다. 학생들에게 윤리적인 디지털
-                시민이 되는 중요한 부분으로써 예술가의 권리를 존중하도록 권장합니다.
             Nested Loops in Bee:
               key: 벌 내 중첩 루프
               name: 미로 내 중첩 루프
@@ -22720,10 +22717,14 @@ ko:
             과학을 가르치는 방법을 배우세요!
           student_description: 이 무료이며 자기 진도에 맞춰 학습하는 온라인 과정으로 Code.org의 컴퓨터 과학 원리를
             사용해 컴퓨터 과학을 가르치는 방법을 배우세요!
+          description_short: 이 무료이며 자기 진도에 맞춰 학습하는 온라인 과정으로 Code.org의 컴퓨터 과학 원리를 사용해
+            컴퓨터 과학을 가르치는 방법을 배우세요!
+          description_audience: 이 무료이며 자기 진도에 맞춰 학습하는 온라인 과정으로 Code.org의 컴퓨터 과학 원리를
+            사용해 컴퓨터 과학을 가르치는 방법을 배우세요!
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: '"컴퓨터 과학 기초"에 오신 걸 환영합니다'
-              name: '"컴퓨터 과학 기초"에 오신 걸 환영합니다'
+              name: 소개
             Understanding the Computer Science Fundamentals Courses:
               key: 컴퓨터 과학의 기초 과정 이해
               name: 컴퓨터 과학의 기초 과정 이해
@@ -22760,12 +22761,22 @@ ko:
             Next steps:
               key: 다음 단계
               name: 다음 단계
+            Module 1:
+              name: 모듈 1
+            Getting Started:
+              name: 시작하기
+            What is Code.org:
+              name: 컴퓨터 과학의 기초 과정 이해
+            Lesson Planning:
+              name: 레슨 계획
           lesson_groups:
             k5_getting_started_1:
-              display_name: 시작하기
+              display_name: 소개
             k5_basic_concepts_1:
               display_name: 기초 코딩 개념 및 교습 연습
             k5_diving_deeper_1:
               display_name: '심화: 과정 E와 F'
             k5_next_steps_1:
               display_name: 다음 단계
+            Introduction:
+              display_name: 소개

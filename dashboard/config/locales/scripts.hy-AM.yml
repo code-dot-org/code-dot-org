@@ -2695,6 +2695,8 @@ hy:
               display_name: փոփոխականների
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: ներածություն
             Loops:
               key: loops
               name: loops
@@ -2713,3 +2715,8 @@ hy:
             For Loops:
               key: For Loops
               name: For Loops
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: ներածություն
+            Introduction:
+              display_name: ներածություն

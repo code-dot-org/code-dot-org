@@ -16621,7 +16621,6 @@ es-MX:
               key: Colaboración digital
               name: Colaboración digital
               description_student: 'En esta lección, aprenderás sobre los desafíos y los beneficios de la propiedad y los derechos de autor.'
-              description_teacher: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de Autor y Creatividad, tiene el propósito de ayudar a los estudiantes a entender los desafíos y beneficios de respetar la propiedad y los derechos de autor, particularmente en entornos digitales. Los estudiantes deberían ser alentados a respetar los derechos de los artistas como una parte importante de ser un ciudadano digital ético.
             Nested Loops in Bee:
               key: Bucles anidados en Abeja
               name: Bucles anidados en Laberinto
@@ -17245,12 +17244,14 @@ es-MX:
             lesson-1:
               name: Lección 1
         k5-onlinepd-2021:
-          description: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
+          description: "¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
           student_description: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
+          description_short: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
+          description_audience: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Bienvenido a "Cómo enseñar los Fundamentos de Ciencias de la Computación"
-              name: Bienvenido a "Cómo enseñar los Fundamentos de Ciencias de la Computación"
+              name: Introducción
             Understanding the Computer Science Fundamentals Courses:
               key: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
               name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
@@ -17287,12 +17288,22 @@ es-MX:
             Next steps:
               key: Próximos pasos
               name: Próximos pasos
+            Module 1:
+              name: Módulo 1
+            Getting Started:
+              name: Primeros pasos
+            What is Code.org:
+              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            Lesson Planning:
+              name: Planificación de lecciones
           lesson_groups:
             k5_getting_started_1:
-              display_name: Primeros pasos
+              display_name: Introducción
             k5_basic_concepts_1:
               display_name: Conceptos básicos de programación y prácticas de enseñanza
             k5_diving_deeper_1:
               display_name: 'Profundizar: cursos E y F'
             k5_next_steps_1:
               display_name: Próximos pasos
+            Introduction:
+              display_name: Introducción
