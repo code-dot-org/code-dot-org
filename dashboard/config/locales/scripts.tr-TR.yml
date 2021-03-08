@@ -26861,12 +26861,6 @@ tr:
               name: Dijital Paylaşım
               description_student: "Bu derste, sahiplik ve telif hakkına dair zorlukları
                 ve faydaları öğreneceksiniz. \n"
-              description_teacher: Telif Hakkı konusunda ekip  tarafından verilen
-                Bilgisayar Bilimi Temellerine borçlu olarak bu ders, özellikle dijital
-                ortamlarda sahiplik ve telif hakkına saygı göstermenin zorluklarını
-                ve faydalarını öğrencilerin anlamasına yardım etmek için bulunur.
-                Öğrenciler, etik bir dijital vatandaş olmanın önemli bir kısmı olarak
-                sanatçıların haklarına saygı göstermesi için teşvik edilmelidir.
             Nested Loops in Bee:
               key: Arı -içiçe döngüler
               name: Labirentte İçiçe Döngüler
@@ -28287,10 +28281,16 @@ tr:
           student_description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un
             Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
             öğrenin!
+          description_short: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar
+            Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
+            öğrenin!
+          description_audience: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un
+            Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini
+            öğrenin!
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: '"Bilgisayar Bilimi Temelleri Öğretimine" Hoşgeldiniz'
-              name: '"Bilgisayar Bilimi Temelleri Öğretimine" Hoşgeldiniz'
+              name: Giriş
             Understanding the Computer Science Fundamentals Courses:
               key: Bilgisayar Bilimi Temelleri Derslerinin Anlaşılması
               name: Bilgisayar Bilimi Temelleri Derslerinin Anlaşılması
@@ -28327,12 +28327,22 @@ tr:
             Next steps:
               key: Sonraki adımlar
               name: Sonraki adımlar
+            Module 1:
+              name: Modül 1
+            Getting Started:
+              name: İlk adım
+            What is Code.org:
+              name: Bilgisayar Bilimi Temelleri Derslerinin Anlaşılması
+            Lesson Planning:
+              name: Ders Planlanması
           lesson_groups:
             k5_getting_started_1:
-              display_name: İlk adım
+              display_name: Giriş
             k5_basic_concepts_1:
               display_name: Temel Kodlama Kavramları ve Öğretme Pratikleri
             k5_diving_deeper_1:
               display_name: 'Derinlemesine Dalma: Dersler E ve F'
             k5_next_steps_1:
               display_name: Sonraki Adımlar
+            Introduction:
+              display_name: Giriş

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Guia de instruções da Hora do Código para os pais
 layout: wide
 nav: how_to_nav
 ---
@@ -12,7 +12,7 @@ nav: how_to_nav
 
 O pensamento computacional ajuda a desenvolver habilidades de solução de problemas, lógica e criatividade. Além disso, a tecnologia está transformando todas as profissões no mundo. Hoje em dia, os alunos devem aprender a criar tecnologia, não apenas usá-la. Ao começar cedo, eles terão elementos para alcançar o sucesso em qualquer profissão do século XXI.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+A Hora do Código é uma maneira simples e divertida de apresentar às crianças, talvez pela primeira vez, a ciência da computação. Se você quiser ajuda, você pode localizar um [voluntário ]({{ urls/volunteer_local }}) para te ajudar com a Hora do Código.
 
 ### Uma Hora do Código também pode ser realizada remotamente! Para começar, confira as nossas [dicas para realizar um evento Hora do Código virtual](https://hourofcode.com/us/how-to/virtual).
 
@@ -22,21 +22,21 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. Escolha um tutorial
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Oferecemos tutoriais divertidos[, com uma hora de duração]({{ urls/learn }}), criados por diferentes parceiros, para participantes de todas as idades. [Experimente!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Todos os tutoriais da Hora do Código** requerem pouco tempo de preparação e são auto-explicativos, permitindo que os participantes trabalhem no seu próprio ritmo e nível de conhecimento.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Precisa de um planejamento de aula para Hora do Código?** Confira este [ modelo](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promova sua Hora do Código
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Promova sua Hora do Código [com essas ferramentas](%= resolve_url('/promote') %) e estimule outras pessoas a organizar seus próprios eventos.
 
-## 4. Planeje suas necessidades tecnológicas — não é preciso ter computadores
+## 4. Avalie suas necessidades tecnológicas — não é preciso ter computadores
 
-A melhor experiência da Hora do Código inclui computadores conectados à Internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+A melhor experiência da Hora do Código inclui computadores conectados à Internet. Mas você **não** precisa de um computador para cada criança e pode, inclusive, praticar a Hora do Código sem computador nenhum.
 
 Não se esqueça de testar os tutoriais nos computadores ou dispositivos dos alunos para garantir que funcionam bem nos navegadores com som e vídeo. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
