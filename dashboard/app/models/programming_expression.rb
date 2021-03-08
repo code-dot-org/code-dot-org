@@ -17,5 +17,5 @@
 class ProgrammingExpression < ApplicationRecord
   belongs_to :programming_environment
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
-  has_many :lesson_programming_expressions
+  has_many :lessons_programming_expressions
 end

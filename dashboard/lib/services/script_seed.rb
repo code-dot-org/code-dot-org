@@ -20,7 +20,7 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :vocabularies, :lessons_vocabularies, :lesson_programming_expressions,
+      :lessons_resources, :vocabularies, :lessons_vocabularies, :lessons_programming_expressions,
       :objectives, keyword_init: true
     )
 
@@ -47,7 +47,7 @@ module Services
       lessons_resources = script.lessons.map(&:lessons_resources).flatten
       vocabularies = script.lessons.map(&:vocabularies).flatten
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
-      lesson_programming_expressions = script.lessons.map(&:lesson_programming_expressions).flatten
+      lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
       objectives = script.lessons.map(&:objectives).flatten
 
       seed_context = SeedContext.new(
@@ -63,7 +63,7 @@ module Services
         lessons_resources: lessons_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
-        lesson_programming_expressions: lesson_programming_expressions,
+        lessons_programming_expressions: lessons_programming_expressions,
         objectives: objectives
       )
       scope = {seed_context: seed_context}
@@ -80,7 +80,7 @@ module Services
         lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json},
         vocabularies: vocabularies.map {|v| ScriptSeed::VocabularySerializer.new(v, scope: scope).as_json},
         lessons_vocabularies: lessons_vocabularies.map {|lv| ScriptSeed::LessonsVocabularySerializer.new(lv, scope: scope).as_json},
-        lesson_programming_expressions: lesson_programming_expressions.map {|lv| ScriptSeed::LessonsProgrammingExpressionSerializer.new(lv, scope: scope).as_json},
+        lessons_programming_expressions: lessons_programming_expressions.map {|lv| ScriptSeed::LessonsProgrammingExpressionSerializer.new(lv, scope: scope).as_json},
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json}
       }
       JSON.pretty_generate(data)
@@ -157,7 +157,7 @@ module Services
       lessons_resources_data = data['lessons_resources']
       vocabularies_data = data['vocabularies']
       lessons_vocabularies_data = data['lessons_vocabularies']
-      lessons_programming_expressions_data = data['lesson_programming_expressions']
+      lessons_programming_expressions_data = data['lessons_programming_expressions']
       objectives_data = data['objectives']
       seed_context = SeedContext.new
 
@@ -196,7 +196,7 @@ module Services
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
         seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
         seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
-        seed_context.lesson_programming_expressions = import_lesson_programming_expressions(lessons_programming_expressions_data, seed_context)
+        seed_context.lessons_programming_expressions = import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
 
         seed_context.script
@@ -468,10 +468,10 @@ module Services
       LessonsVocabulary.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
-    def self.import_lesson_programming_expressions(lesson_programming_expressions_data, seed_context)
-      return [] if lesson_programming_expressions_data.blank?
+    def self.import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
+      return [] if lessons_programming_expressions_data.blank?
 
-      lesson_programming_expressions_to_import = lesson_programming_expressions_data.map do |lv_data|
+      lessons_programming_expressions_to_import = lessons_programming_expressions_data.map do |lv_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
@@ -485,8 +485,8 @@ module Services
       end
 
       existing_programming_expressions = LessonsProgrammingExpression.joins(:lesson).where('stages.script_id' => seed_context.script.id)
-      LessonsProgrammingExpression.import! lesson_programming_expressions_to_import, on_duplicate_key_update: get_columns(LessonsProgrammingExpression)
-      destroy_outdated_objects(LessonsProgrammingExpression, existing_programming_expressions, lesson_programming_expressions_to_import, seed_context)
+      LessonsProgrammingExpression.import! lessons_programming_expressions_to_import, on_duplicate_key_update: get_columns(LessonsProgrammingExpression)
+      destroy_outdated_objects(LessonsProgrammingExpression, existing_programming_expressions, lessons_programming_expressions_to_import, seed_context)
     end
 
     def self.import_objectives(objectives_data, seed_context)
