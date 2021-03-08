@@ -11154,12 +11154,6 @@ sk:
             Digital Sharing:
               key: Digitálne zdieľanie
               name: Digitálne zdieľanie
-              description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských
-                práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám
-                rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne
-                prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
-                práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
-                občana.
             Nested Loops in Bee:
               key: Vnorené cykly s včelou
               name: Vnorené cykly v bludisku
@@ -11634,6 +11628,8 @@ sk:
               name: Hodina 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Úvod
             Sequencing:
               key: Postupnosť
               name: Postupnosť
@@ -11661,12 +11657,18 @@ sk:
             Sprite Lab:
               key: Sprite Lab
               name: Sprite Lab
+            Getting Started:
+              name: Začíname
+            Lesson Planning:
+              name: Plánovanie hodín
           lesson_groups:
             k5_getting_started_1:
-              display_name: Začíname
+              display_name: Úvod
             k5_basic_concepts_1:
               display_name: Základné programovacie koncepty a učiteľské taktiky
             k5_diving_deeper_1:
               display_name: 'Ponárame sa hlbšie: Kurzy E a F'
             k5_next_steps_1:
               display_name: Ďalšie kroky
+            Introduction:
+              display_name: Úvod
