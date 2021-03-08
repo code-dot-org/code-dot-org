@@ -133,6 +133,7 @@ class LessonOverview extends Component {
                   download
                   href={lesson.lessonPlanPdfUrl}
                   style={{marginRight: 10}}
+                  target="_blank"
                   text={i18n.printLessonPlan()}
                 />
               )}
