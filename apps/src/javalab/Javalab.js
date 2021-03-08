@@ -7,6 +7,7 @@ import javalab, {setFileName, setEditorText} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import header from '@cdo/apps/code-studio/header';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
 
@@ -146,35 +147,45 @@ Javalab.prototype.getCurrentFilesVersionId = function() {
 };
 
 // Called by Javalab when a file has been renamed
-Javalab.prototype.renameProjectFile = function(
-  filename,
-  newFilename,
-  callback
-) {
+Javalab.prototype.renameProjectFile = function(filename, newFilename) {
+  // no need to rename if the name hasn't changed
+  if (filename === newFilename) {
+    return;
+  }
+  header.showProjectSaving();
   filesApi.renameFile(
     filename,
     newFilename,
-    xhr => {
-      callback(null, project.filesVersionId);
+    () => {
+      // at this point project.filesVersionId will be updated and we can save
+      // sources as well.
+      project.save();
     },
-    xhr => {
+    () => {
       console.warn(`Javalab: error file ${filename} not renamed`);
-      callback(new Error(xhr.status));
+      project.showSaveError_();
     }
   );
 };
 
-// Called by Javalab when a file has been changed or created
-Javalab.prototype.changeProjectFile = function(filename, fileData) {
-  filesApi.putFile(filename, fileData);
-};
-
 Javalab.prototype.onSave = function() {
-  // TODO: update header
-  // TODO: enable multi-file
+  header.showProjectSaving();
   const filename = getStore().getState().javalab.filename;
   const editorText = getStore().getState().javalab.editorText;
-  this.changeProjectFile(filename, editorText);
+  // TODO: enable multi-file
+  filesApi.putFile(
+    filename,
+    editorText,
+    () => {
+      // at this point project.filesVersionId will be updated and we can save
+      // sources as well.
+      project.save();
+    },
+    () => {
+      console.warn(`Javalab: error file ${filename} not renamed`);
+      project.showSaveError_();
+    }
+  );
 };
 
 /**
@@ -225,7 +236,7 @@ Javalab.prototype.populateFiles = function(fileEntries, callback) {
   }
 };
 
-async function requestFileEntryAndWrite(fileEntry, callback) {
+function requestFileEntryAndWrite(fileEntry, callback) {
   // read the data
   $.ajax(`${fileEntry.url}?version=${fileEntry.versionId}`, {
     dataType: 'text'

@@ -79,11 +79,7 @@ class JavalabEditor extends React.Component {
 
   renameFileComplete = e => {
     e.preventDefault();
-    this.props.renameFile(
-      this.state.oldFilename,
-      this.props.filename,
-      () => {}
-    );
+    this.props.renameFile(this.state.oldFilename, this.props.filename);
     this.setState({renameFileActive: false});
   };
 
