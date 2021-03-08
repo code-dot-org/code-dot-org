@@ -9,7 +9,6 @@ import PaneHeader, {
 import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState} from '@codemirror/state';
-import i18n from '@cdo/locale';
 
 const style = {
   editor: {
@@ -27,6 +26,11 @@ const style = {
   },
   button: {
     marginLeft: 10
+  },
+  renameForm: {
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -90,8 +94,8 @@ class JavalabEditor extends React.Component {
   displayFileRename() {
     return (
       <div style={style.tabs}>
-        <div style={style.tab}>
-          <form onSubmit={this.renameFileComplete}>
+        <form style={style.renameForm} onSubmit={this.renameFileComplete}>
+          <div style={style.tab}>
             <input
               type="text"
               value={this.props.filename}
@@ -99,9 +103,14 @@ class JavalabEditor extends React.Component {
                 this.props.setFilename(e.target.value);
               }}
             />
-            <input type="submit" value="Save" />
-          </form>
-        </div>
+          </div>
+          <input
+            className="btn btn-default btn-sm"
+            style={style.button}
+            type="submit"
+            value="Save"
+          />
+        </form>
       </div>
     );
   }
@@ -128,17 +137,12 @@ class JavalabEditor extends React.Component {
         <PaneHeader hasFocus={true}>
           <PaneButton
             id="javalab-editor-save"
-            iconClass="fa fa-save"
+            iconClass="fa fa-check-circle"
             onClick={this.props.onSave}
             headerHasFocus={true}
             isRtl={false}
-            label="Save"
+            label="Commit Code"
           />
-          <PaneSection>
-            <span id="workspace-header-span">
-              {i18n.workspaceHeaderShort()}
-            </span>
-          </PaneSection>
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <div>
