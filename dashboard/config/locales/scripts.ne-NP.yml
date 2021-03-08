@@ -2524,6 +2524,8 @@ ne:
               display_name: Variables
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduction
             Loops:
               key: Loops
               name: Loops
@@ -2542,3 +2544,8 @@ ne:
             For Loops:
               key: For Loops
               name: For Loops
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduction
+            Introduction:
+              display_name: Introduction
