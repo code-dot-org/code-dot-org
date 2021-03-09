@@ -9,34 +9,18 @@ import {
   setLastSavedQuestions
 } from '../foormEditorRedux';
 
-// This should probably be functional -- no state.
-class FoormLoadButtons extends React.Component {
-  static propTypes = {
-    resetCodeMirror: PropTypes.func,
-    namesAndVersions: PropTypes.array,
-    resetSelectedData: PropTypes.func,
-    onSelect: PropTypes.func,
-    dropdownOptions: PropTypes.array,
-    showCodeMirror: PropTypes.func,
-
-    // populated by redux
-    setLastSaved: PropTypes.func,
-    setSaveError: PropTypes.func,
-    setHasJSONError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
-  };
-
-  getFormattedConfigurationDropdownOptions() {
-    return this.props.dropdownOptions.map((dropdownOption, i) => {
-      return this.renderMenuItem(
-        () => this.props.onSelect(dropdownOption['id']),
+function FoormLoadButtons(props) {
+  function getFormattedConfigurationDropdownOptions() {
+    return props.dropdownOptions.map((dropdownOption, i) => {
+      return renderMenuItem(
+        () => props.onSelect(dropdownOption['id']),
         dropdownOption['text'],
         i
       );
     });
   }
 
-  renderMenuItem(clickHandler, textToDisplay, key) {
+  function renderMenuItem(clickHandler, textToDisplay, key) {
     return (
       <MenuItem key={key} eventKey={key} onClick={clickHandler}>
         {textToDisplay}
@@ -44,33 +28,44 @@ class FoormLoadButtons extends React.Component {
     );
   }
 
-  // There's gotta be a cleaner way than what I'm doing here
-  // Maybe a general "reset" redux action?
-  initializeEmptyCodeMirror = () => {
-    this.props.resetSelectedData();
-    this.props.showCodeMirror();
-    this.props.resetCodeMirror({});
+  function initializeEmptyCodeMirror() {
+    props.resetSelectedData();
+    props.showCodeMirror();
+    props.resetCodeMirror({});
 
-    // From redux store
-    this.props.setLastSaved(null);
-    this.props.setSaveError(null);
-    this.props.setHasJSONError(false);
-    this.props.setLastSavedQuestions({});
-  };
-
-  render() {
-    return (
-      <div>
-        <DropdownButton id="load_config" title="Load Form..." className="btn">
-          {this.getFormattedConfigurationDropdownOptions()}
-        </DropdownButton>
-        <Button onClick={this.initializeEmptyCodeMirror} className="btn">
-          New Form
-        </Button>
-      </div>
-    );
+    // Reset redux store
+    props.setLastSaved(null);
+    props.setSaveError(null);
+    props.setHasJSONError(false);
+    props.setLastSavedQuestions({});
   }
+
+  return (
+    <div>
+      <DropdownButton id="load_config" title="Load Form..." className="btn">
+        {getFormattedConfigurationDropdownOptions()}
+      </DropdownButton>
+      <Button onClick={() => initializeEmptyCodeMirror()} className="btn">
+        New Form
+      </Button>
+    </div>
+  );
 }
+
+FoormLoadButtons.propTypes = {
+  resetCodeMirror: PropTypes.func,
+  namesAndVersions: PropTypes.array,
+  resetSelectedData: PropTypes.func,
+  onSelect: PropTypes.func,
+  dropdownOptions: PropTypes.array,
+  showCodeMirror: PropTypes.func,
+
+  // populated by redux
+  setLastSaved: PropTypes.func,
+  setSaveError: PropTypes.func,
+  setHasJSONError: PropTypes.func,
+  setLastSavedQuestions: PropTypes.func
+};
 
 export default connect(
   null,
