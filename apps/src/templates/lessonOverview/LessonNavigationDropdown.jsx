@@ -3,7 +3,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import color from '@cdo/apps/util/color';
-import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {navigateToHref} from '@cdo/apps/utils';
 
 const styles = {
@@ -27,7 +27,7 @@ const LESSONS_PER_SECTION = 10;
 
 export default class LessonNavigationDropdown extends Component {
   static propTypes = {
-    lesson: lessonShape.isRequired
+    lesson: navigationLessonShape.isRequired
   };
 
   constructor(props) {

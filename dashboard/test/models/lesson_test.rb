@@ -215,6 +215,107 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal script.summarize_for_lesson_show, summary[:unit]
   end
 
+  test 'can summarize lesson for student lesson plan' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1,
+      properties: {
+        student_overview: 'lesson overview',
+        purpose: 'learning',
+        preparation: 'do things'
+      }
+    )
+
+    summary = lesson.summarize_for_student_lesson_plan
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal 'lesson overview', summary[:overview]
+    assert_equal script.summarize_for_lesson_show(true), summary[:unit]
+  end
+
+  test 'summarize lesson for student lesson plan does not include teacher announcements' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1,
+      properties: {
+        student_overview: 'lesson overview',
+        purpose: 'learning',
+        preparation: 'do things',
+        announcements: [
+          {
+            notice: 'Notice - Teacher',
+            details: 'Teachers are the best',
+            link: '/foo/bar/teacher',
+            type: 'information',
+            visibility: 'Teacher-only'
+          },
+          {
+            notice: 'Notice - Student',
+            details: 'Students are the best',
+            link: '/foo/bar/student',
+            type: 'information',
+            visibility: 'Student-only'
+          },
+          {
+            notice: 'Notice - Student and Teacher',
+            details: 'Students and teachers are the best',
+            link: '/foo/bar/all',
+            type: 'information',
+            visibility: 'Teacher and student'
+          },
+        ]
+      }
+    )
+
+    summary = lesson.summarize_for_student_lesson_plan
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal 'lesson overview', summary[:overview]
+    assert_equal 2, summary[:announcements].length
+    assert_equal script.summarize_for_lesson_show(true), summary[:unit]
+  end
+
+  test 'summarize lesson for student lesson plan combines student and for all resources' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1,
+      properties: {
+        student_overview: 'lesson overview',
+        purpose: 'learning',
+        preparation: 'do things'
+      }
+    )
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    summary = lesson.summarize_for_student_lesson_plan
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal 'lesson overview', summary[:overview]
+    assert_equal 2, summary[:resources].length
+    assert_equal script.summarize_for_lesson_show(true), summary[:unit]
+  end
+
   test 'lesson edit summary does not preprocess markdown' do
     lesson = create :lesson, lesson_group: create(:lesson_group)
     Services::MarkdownPreprocessor.expects(:process!).never
@@ -251,6 +352,17 @@ class LessonTest < ActiveSupport::TestCase
     summary = lesson.summarize_for_lesson_dropdown
     assert_equal 'lesson-1', summary[:key]
     assert_equal "/s/#{script.name}/lessons/#{lesson.relative_position}", summary[:link]
+    assert_equal 1, summary[:position]
+  end
+
+  test 'can summarize lesson for student lesson plan dropdown' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
+
+    summary = lesson.summarize_for_lesson_dropdown(true)
+    assert_equal 'lesson-1', summary[:key]
+    assert_equal "/s/#{script.name}/lessons/#{lesson.relative_position}/student", summary[:link]
     assert_equal 1, summary[:position]
   end
 
