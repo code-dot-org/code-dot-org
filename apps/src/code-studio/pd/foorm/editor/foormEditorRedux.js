@@ -1,8 +1,8 @@
 const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const RESET_AVAILABLE_OPTIONS = 'foormEditor/RESET_AVAILABLE_OPTIONS';
-const ADD_AVAILABLE_OPTION = 'foormEditor/ADD_AVAILABLE_OPTION';
+const RESET_AVAILABLE_ENTITIES = 'foormEditor/RESET_AVAILABLE_ENTITIES';
+const ADD_AVAILABLE_ENTITY = 'foormEditor/ADD_AVAILABLE_ENTITY';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
@@ -27,14 +27,18 @@ export const setHasJSONError = hasJSONError => ({
   hasJSONError
 });
 
-export const resetAvailableOptions = optionsMetadata => ({
-  type: RESET_AVAILABLE_OPTIONS,
-  optionsMetadata
+// "Entities" are the list of forms or libraries from which a user can select to edit
+// in the Foorm form and library editors, respectively.
+export const resetAvailableEntities = entitiesMetadata => ({
+  type: RESET_AVAILABLE_ENTITIES,
+  entitiesMetadata
 });
 
-export const addAvailableOption = optionMetadata => ({
-  type: ADD_AVAILABLE_OPTION,
-  optionMetadata
+// An "entity" (form or library) is added to the list of forms or libraries that can be edited
+// after a new form or library is created.
+export const addAvailableEntity = entityMetadata => ({
+  type: ADD_AVAILABLE_ENTITY,
+  entityMetadata
 });
 
 export const setLastSaved = lastSaved => ({
@@ -55,7 +59,7 @@ export const setLastSavedQuestions = questions => ({
 const initialState = {
   questions: '',
   hasJSONError: false,
-  availableOptions: [],
+  availableEntities: [],
   saveError: null,
   lastSaved: null,
   lastSavedQuestions: '',
@@ -89,18 +93,18 @@ export default function foormEditorRedux(state = initialState, action) {
       formId: action.formData['id']
     };
   }
-  if (action.type === RESET_AVAILABLE_OPTIONS) {
+  if (action.type === RESET_AVAILABLE_ENTITIES) {
     return {
       ...state,
-      availableOptions: action.optionsMetadata
+      availableEntities: action.entitiesMetadata
     };
   }
-  if (action.type === ADD_AVAILABLE_OPTION) {
-    let newOptionList = [...state.availableOptions];
-    newOptionList.push(action.optionMetadata);
+  if (action.type === ADD_AVAILABLE_ENTITY) {
+    let newEntitiesList = [...state.availableEntities];
+    newEntitiesList.push(action.entityMetadata);
     return {
       ...state,
-      availableOptions: newOptionList
+      availableEntities: newEntitiesList
     };
   }
   if (action.type === SET_LAST_SAVED) {
