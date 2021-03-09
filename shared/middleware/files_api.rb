@@ -309,7 +309,7 @@ class FilesApi < Sinatra::Base
     File.extname(filename.downcase) == '.html'
   end
 
-  def valid_html_file?(filename, encrypted_channel_id)
+  def valid_html_file?(encrypted_channel_id, filename, body)
     return false unless html_file?(filename)
 
     # Only validate WebLab HTML files. We need to get the project from the database
@@ -635,7 +635,7 @@ class FilesApi < Sinatra::Base
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
-    bad_request if html_file?(unescaped_filename) && !valid_html_file?(unescaped_filename, encrypted_channel_id)
+    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
