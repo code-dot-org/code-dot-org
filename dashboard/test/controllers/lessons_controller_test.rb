@@ -189,6 +189,73 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes @response.body, section.name
   end
 
+  test 'can not show student lesson plan when lesson is in a non-migrated script' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'unmigrated-course'
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'unmigrated lesson',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response 404
+  end
+
+  test 'can not show student lesson plan when lesson is in a script without student lesson plans' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: false, hidden: true
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'course',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response 404
+  end
+
+  test 'show student lesson plan' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: true, hidden: true
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'course',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response :ok
+    assert_includes @response.body, script2.name
+  end
+
   # only levelbuilders can edit
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
