@@ -9,6 +9,7 @@
 #  programming_environment_id :bigint           not null
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
+#  key                        :string(255)      not null
 #
 # Indexes
 #
