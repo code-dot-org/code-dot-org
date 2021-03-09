@@ -910,8 +910,9 @@ export function getTrainedModelDataToSave(state) {
 
   dataToSave.name = state.trainedModelDetails.name;
 
-  // If we have column descriptions in metadata, use that, otherwise
-  // use what the user has manually entered.
+  // If the first column has a description, assume descriptions are in the
+  // metadata for that dataset and use them; otherwise, use manually entered
+  // column desscriptions.
   if (
     state.metadata &&
     state.metadata.fields &&
