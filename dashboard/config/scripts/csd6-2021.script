@@ -62,7 +62,7 @@ level 'CSDU6 - toggleswitch state setProp_2021', progression: 'Using the Switch'
 level 'CSDU6 - buzzer intro_2021', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration_2021', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration buttons_2021', progression: 'The Buzzer'
-bonus 'CSDU6 - board event challenge_2021'
+bonus 'CSDU6 - board event challenge_2021', progression: 'Extra Challenge: Sound Board'
 
 lesson 'Getting Properties', display_name: 'Getting Properties', has_lesson_plan: true
 level 'CSD U6 getProperty Demo_2021', progression: 'Getting Properties'
@@ -78,7 +78,7 @@ level 'CSD U6 get toggle_2021', progression: 'Change'
 level 'CSD U6 getters debug_2021', progression: 'Change'
 level 'CSD U6 move motorcycle_2021', progression: 'Motorcycle'
 level 'CSD U6 design motorcycle_2021', progression: 'Motorcycle'
-bonus 'CSD U6 challenge motorcycle_2021'
+bonus 'CSD U6 challenge motorcycle_2021', progression: 'Extra Challenge'
 
 lesson 'Analog Input', display_name: 'Analog Input', has_lesson_plan: true
 level 'CSD U6 sensor experiment embedded_2021', progression: 'Sensor Experiment'
@@ -92,7 +92,7 @@ level 'CSD U6 analog threshold_2021', progression: 'Sensor Events'
 level 'CSD U6 analog rbg 1_2021', progression: 'Sensors to Colors'
 level 'CSD U6 analog rbg 2_2021', progression: 'Sensors to Colors'
 level 'CSD U6 analog rgb 3_2021', progression: 'Sensors to Colors', assessment: true
-bonus 'CSD U6 analog challenge_2021'
+bonus 'CSD U6 analog challenge_2021', progression: 'Extra Challenge'
 
 lesson 'The Program Design Process', display_name: 'The Program Design Process', has_lesson_plan: true
 level 'CSD U6 emoji race demo_2021', progression: 'Sample Program'
@@ -154,8 +154,8 @@ level 'CSDU6 play predict code_2021', progression: 'Making Songs'
 level 'CSDU6 play songs_2021', progression: 'Making Songs'
 level 'CSDU6 play null notes_2021', progression: 'Making Songs'
 level 'CDU U6 Playground Sound Board_2021', progression: 'Making Songs', assessment: true
-bonus 'CSDU6 buzzer 2d arrays_2021'
-bonus 'CSDU6 buzzer.stop_2021'
+bonus 'CSDU6 buzzer 2d arrays_2021', progression: 'Extra'
+bonus 'CSDU6 buzzer.stop_2021', progression: 'Extra'
 
 lesson 'Arrays and For Loops', display_name: 'Arrays and For Loops', has_lesson_plan: true
 level 'CSD U6 for loop click predict_2021', progression: 'Programs that Repeat'
