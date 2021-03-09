@@ -12,7 +12,8 @@ describe('LevelDetailsDialogTest', () => {
     handleCloseSpy = sinon.spy();
     defaultProps = {
       handleClose: handleCloseSpy,
-      viewAs: ViewType.Teacher
+      viewAs: ViewType.Teacher,
+      isRtl: false
     };
   });
 
