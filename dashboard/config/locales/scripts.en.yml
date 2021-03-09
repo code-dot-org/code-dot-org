@@ -21226,6 +21226,10 @@ en:
               name: End of Course Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
+            lesson-1:
+              name: Dance Party
+              description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
+              description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
           lesson_groups:
             csf_warmup:
               display_name: Warm Up
@@ -21245,6 +21249,8 @@ en:
               display_name: Sprites
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-9:
+              display_name: Warm Up
           name: express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
         pre-express-2021:
@@ -21351,6 +21357,12 @@ en:
               name: Blank Space Stories
             texts-and-prompts:
               name: Text and Prompts
+            introducing-spritelab:
+              name: Introducing Sprite Lab
+            blank-space-stories:
+              name: Blank Space Stories
+            user-input-programs:
+              name: 'Mini-Project: User Input Programs'
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -21365,6 +21377,9 @@ en:
             Sprites:
               display_name: Sprites
               description: Learn the basics of coding with sprites!
+            variables:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
           name: csf-2021-pilot
           title: CS Fundamentals 2021 Pilot
           description_audience: Upper Elementary
@@ -21674,7 +21689,7 @@ en:
             intro:
               name: Lesson 1
             lesson1:
-              name: 'Lesson 1A: AI for Oceans'
+              name: Introduction to Machine Learning A
             lesson2:
               name: How Computers Learn (Unplugged)
             lesson3:
