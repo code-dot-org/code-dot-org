@@ -5741,12 +5741,6 @@ ru:
             Digital Sharing:
               key: Публикация цифровых произведений
               name: Публикация цифровых произведений
-              description_teacher: Предоставленный курсу "Основы компьютерных наук"
-                сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"),
-                этот урок призван объяснить учащимся проблемы и преимущества уважения
-                права собственности и авторского права, особенно в цифровой среде.
-                Учащимся следует объяснить, что, не уважая прав артистов, невозможно
-                быть этичным цифровым гражданином.
             Nested Loops in Bee:
               key: Вложенные циклы в Пчеле
               name: Вложенные циклы в Лабиринте
@@ -5965,6 +5959,8 @@ ru:
               name: Урок 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Введение
             Sequencing:
               key: Последовательность действий
               name: Последовательность действий
@@ -5989,12 +5985,18 @@ ru:
             Sprite Lab:
               key: Лаборатория Спрайтов
               name: Лаборатория Спрайтов
+            Getting Started:
+              name: Приступить к работе
+            Lesson Planning:
+              name: Планирование урока
           lesson_groups:
             k5_getting_started_1:
-              display_name: Приступить к работе
+              display_name: Введение
             k5_basic_concepts_1:
               display_name: Основы принципов программирования и практики обучения
             k5_diving_deeper_1:
               display_name: 'Погружаемся глубже: курсы E и F'
             k5_next_steps_1:
               display_name: Следующие шаги
+            Introduction:
+              display_name: Введение

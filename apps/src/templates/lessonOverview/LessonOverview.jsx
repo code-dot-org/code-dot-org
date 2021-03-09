@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
@@ -144,19 +145,28 @@ class LessonOverview extends Component {
             {lesson.overview && (
               <div>
                 <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
-                <SafeMarkdown markdown={lesson.overview} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.overview}
+                  expandableImages
+                />
               </div>
             )}
             {lesson.purpose && (
               <div>
                 <h2>{i18n.purpose()}</h2>
-                <SafeMarkdown markdown={lesson.purpose} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.purpose}
+                  expandableImages
+                />
               </div>
             )}
             {lesson.assessmentOpportunities && (
               <div>
                 <h2>{i18n.assessmentOpportunities()}</h2>
-                <SafeMarkdown markdown={lesson.assessmentOpportunities} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.assessmentOpportunities}
+                  expandableImages
+                />
               </div>
             )}
             <h2>{i18n.agenda()}</h2>
@@ -179,7 +189,10 @@ class LessonOverview extends Component {
             {lesson.preparation && (
               <div>
                 <h2>{i18n.preparation()}</h2>
-                <SafeMarkdown markdown={lesson.preparation} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.preparation}
+                  expandableImages
+                />
               </div>
             )}
             {Object.keys(lesson.resources).length > 0 && (

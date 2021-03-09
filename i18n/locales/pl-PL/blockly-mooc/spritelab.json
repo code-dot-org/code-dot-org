@@ -102,5 +102,20 @@
   "titleVariable": "Twój ekran tytułowy nie zawierał tekstu z monitu. ",
   "subtitleVariable": "Podtytuł Twojego ekranu tytułowego nie zawierał tekstu z monitu. ",
   "noVarUse": "Musisz użyć zmiennej z Twojego znaku zachęty w tekście, który umieścisz na ekranie. ",
-  "addText": "Dodaj tekst do ekranu za pomocą bloku do drukowania: \n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>"
+  "addText": "Dodaj tekst do ekranu za pomocą bloku do drukowania: \n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
+  "chatbotTitleVariable": "Wygląda na to, że dodałeś ekran tytułowy do swojego programu, ale nie zawierał on tekstu z monitu.",
+  "chatbotPrintWhenAnswered": "W tej chwili drukujesz tekst tylko raz. Upewnij się, że blok „drukuj” znajduje się pod blokiem „kiedy odpowiedziano”. To będzie wyglądało, jakby chatbot czekał na Twoją odpowiedź, przed reakcją.  \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">nazwa</title></block></value></block></xml>",
+  "chatbotPrintVariable": "Wygląda na to, że chatbot reaguje, ale nie wydrukował tego, co wpisałeś w monicie. Upewnij się, że właściwa etykieta **zmienna** jest połączona z blokiem „drukuj”. ",
+  "chatbotNoSprites": "Twój chatbot działa. Jeśli Twoje zachęty działają tak, jak chciałeś, możesz zacząć dodawać duszki do swojego projektu. Dodaj robota, który będzie reprezentował chatbota, lub wybierz cokolwiek innego. ",
+  "chatbotNoBehavior": "Twój chatbot działa. Jeśli Twoje podpowiedzi działają tak, jak chciałeś, możesz nadać swoim duszkom zachowania, aby ożywić swój projekt. Spróbuj użyć różnych zachowań ze zdarzeniami, aby projekt był bardziej interaktywny. ",
+  "chatbotExplore": "Spełniłeś wymagania projektu, ale kontynuuj, jeśli możesz. Spraw, by chatbot zadawał dodatkowe pytania lub wykazywał kreatywność w zakresie zachowań, tła i dźwięków. Kliknij „Graj dalej”, aby wprowadzić zmiany w kodzie i uruchomić go ponownie. Naciśnij „Kontynuuj”, aby przejść dalej i zakończyć projekt. ",
+  "cardAnswerPrompt": "Nie zapomnij wpisać czegoś w swojej zachęcie! ",
+  "cardTitleVariable": "Wygląda na to, że dodałeś ekran tytułowy do swojego programu, ale nie zawierał on tekstu z monitu. ",
+  "cardPrintWhenAnswered": "W tej chwili drukujesz tekst tylko raz. Upewnij się, że blok „drukuj” znajduje się pod blokiem „kiedy odpowiedziano”. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">nazwa</title></block></value></block></xml>",
+  "cardPrintVariable": "Wygląda na to, że chatbot reaguje, ale nie wydrukował tego, co wpisałeś w monicie. Upewnij się, że właściwa etykieta **zmienna** jest połączona z blokiem „drukuj”. ",
+  "cardNoSprites": "Twój monit działa. Jeśli robi to, czego się spodziewałeś, możesz zacząć dodawać duszki do swojego projektu. Dodaj smaczne przekąski, prezenty lub zabawne zdjęcia z wakacji. ",
+  "madlibAnswerPrompt": "Nie zapomnij wpisać czegoś w swojej zachęcie! ",
+  "madlibTitleVariable": "Wygląda na to, że dodałeś ekran tytułowy do swojego programu, ale nie zawierał on tekstu z monitu. ",
+  "madlibPrintWhenAnswered": "W tej chwili drukujesz tekst tylko raz. Upewnij się, że blok „drukuj” znajduje się pod blokiem „kiedy odpowiedziano”. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">pożywienie</title></block></value></block></xml>",
+  "madlibPrintVariable": "Wygląda na to, że chatbot reaguje, ale nie wydrukował tego, co wpisałeś w monicie. Upewnij się, że właściwa etykieta **zmienna** jest połączona z blokiem „drukuj”. "
 }

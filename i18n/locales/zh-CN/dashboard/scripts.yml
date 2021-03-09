@@ -1072,6 +1072,8 @@ zh-CN:
               name: 机器学习和鱼
             AI Lab:
               name: 人工智能实验室
+            Java Lab:
+              name: Java实验室
         algebraPD2b:
           description: '第二阶段在线：混合的暑期学习'
           description_short: '第二阶段在线：混合的暑期学习'
@@ -16687,7 +16689,6 @@ zh-CN:
               key: 数字共享
               name: 数字共享
               description_student: '这节课中，会学到所有权和版权的挑战和利益。 '
-              description_teacher: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解尊重他人的所有权和版权的益处和挑战，特别是在数字作品领域。鼓励学生们要成为良好的数字公民，尊重艺术家的版权是重要的一部分。
             Nested Loops in Bee:
               key: 蜜蜂里的嵌套循环
               name: 迷宫里的嵌套循环
@@ -17310,12 +17311,14 @@ zh-CN:
             lesson15:
               name: 第 15 课
         k5-onlinepd-2021:
-          description: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
-          student_description: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
+          description: "学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！"
+          student_description: '学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！'
+          description_short: '学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！'
+          description_audience: '学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！'
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: 欢迎来到 "教师的计算机科学基础"
-              name: 欢迎来到 "教师的计算机科学基础"
+              name: 介绍
             Understanding the Computer Science Fundamentals Courses:
               key: 理解计算机科学基础课程
               name: 理解计算机科学基础课程
@@ -17352,12 +17355,22 @@ zh-CN:
             Next steps:
               key: 下一步
               name: 下一步
+            Module 1:
+              name: 模块 1
+            Getting Started:
+              name: 开始
+            What is Code.org:
+              name: 理解计算机科学基础课程
+            Lesson Planning:
+              name: 课程计划
           lesson_groups:
             k5_getting_started_1:
-              display_name: 开始
+              display_name: 介绍
             k5_basic_concepts_1:
               display_name: 基本编程概念和教学策略
             k5_diving_deeper_1:
               display_name: '深入学习：课程 E 和 F'
             k5_next_steps_1:
               display_name: 下一步
+            Introduction:
+              display_name: 介绍

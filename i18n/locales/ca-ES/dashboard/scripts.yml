@@ -2323,6 +2323,8 @@ ca:
               display_name: Variables
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introducció
             Loops:
               key: Bucles
               name: Bucles
@@ -2344,3 +2346,8 @@ ca:
             Sprite Lab:
               key: Laboratori de personatges
               name: Laboratori de personatges
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introducció
+            Introduction:
+              display_name: Introducció

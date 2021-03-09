@@ -3462,6 +3462,26 @@
               "length": "hossza"
             }
           }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "gyorsító"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "gyorsító"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "gyorsító"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "gyorsító"
+          }
         }
       }
     }

@@ -1686,3 +1686,9 @@
   codebytes_skinny_banner_description: 'CodeBytes uchun CS Education Week har kuni kompyuter fanidan 20 daqiqali interaktiv darslarga qo''shiling. Har kuni ikki marta jonli efirda uzatiladigan CodeBytes - bu talabalar uchun virtual #HourOfCode-da ishtirok etishning ajoyib usuli!'
   codebytes_skinny_banner_english_only: "Faqat ingliz tilida"
   codebytes_skinny_banner_learn: "Batafsil: [code.org/codebytes](%{code_bytes_url})."
+  footer_privacy_policy: "Maxfiylik siyosati"
+  footer_about: "Biz haqimizda"
+  footer_partners: "Hamkorlar"
+  footer_donate: "Xayriya qiling"
+  footer_support: "Qo‘llab-quvvatlash"
+  footer_terms: "Shartlar"

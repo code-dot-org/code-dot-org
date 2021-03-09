@@ -467,13 +467,13 @@
           "courseC_maze_debugging5_1": "Ezek a blokkok zárolva vannak és nem törölhetők!"
         },
         "courseC_maze_debugging9_2019": {
-          "courseC_maze_debugging9_2019_1": "Húzza a blokkokat az eszköztárból a munkaterületre."
+          "courseC_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
         },
         "courseC_maze_debugging9_2020": {
-          "courseC_maze_debugging9_2019_1": "Húzza a blokkokat az eszköztárból a munkaterületre."
+          "courseC_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
         },
         "courseC_maze_debugging9_copy_2020": {
-          "courseC_maze_debugging9_2019_1": "Húzza a blokkokat az eszköztárból a munkaterületre."
+          "courseC_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
         },
         "courseC_maze_programming1": {
           "grade2_CaringForNewPet_0_1": "Miután minden blokkot csatlakoztattál, nyomj a futtatásra, hogy elinduljon a program."
@@ -593,10 +593,12 @@
           "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
         },
         "courseD_maze_ramp3": {
-          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat.",
+          "stone_block_2": "A szürke a blokkok kőből vannak, így nem lehet őket kidobni."
         },
         "courseD_maze_ramp3_2018": {
-          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat.",
+          "stone_block_2": "A szürke a blokkok kőből vannak, így nem lehet őket kidobni."
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
@@ -665,7 +667,7 @@
           "courseD_maze_ramp6_1": "Minden kódot, amit ide teszel, annyiszor hajt végre a program, amekkora számot beállítasz hozzá. Ezután folytatódik a program futása."
         },
         "express_maze_debugging9_2019": {
-          "express_maze_debugging9_2019_1": "Húzza a blokkokat az eszköztárból a munkaterületre."
+          "express_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
         },
         "express_maze_debugging9_2020": {
           "express_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
@@ -713,6 +715,33 @@
         },
         "courseC_video_angles": {
           "courseD_maze_ramp6_1": "Minden kódot, amit ide teszel, annyiszor hajt végre a program, amekkora számot beállítasz hozzá. Ezután folytatódik a program futása."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_1": "Látod az új blokkokat az eszköztárban? Ne aggódj, egy másik leckében meg fogjuk mutatni, hogyan használd őket."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_1": "Látod az új blokkokat az eszköztárban? Ne aggódj, egy másik leckében meg fogjuk mutatni, hogyan használd őket."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_1": "Látod az új blokkokat az eszköztárban? Ne aggódj, egy másik leckében meg fogjuk mutatni, hogyan használd őket."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "Több blokkot is kihúzhatsz az eszköztárból, amikre épp szükséged van!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "Több blokkot is kihúzhatsz az eszköztárból, amikre épp szükséged van!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "Több blokkot is kihúzhatsz az eszköztárból, amikre épp szükséged van!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "Több blokkot is kihúzhatsz az eszköztárból, amikre épp szükséged van!"
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "A szürke blokkok nem törölhetők!"
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_1": "Ezek a szürke blokkok zárolva vannak és nem törölhetők!"
         }
       }
     }

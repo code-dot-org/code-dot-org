@@ -1780,6 +1780,8 @@ bn:
               display_name: চলকগুলো
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: ভূমিকা
             Loops:
               key: চক্র
               name: চক্র
@@ -1798,3 +1800,8 @@ bn:
             For Loops:
               key: ফর লুপ
               name: ফর লুপ
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: ভূমিকা
+            Introduction:
+              display_name: ভূমিকা
