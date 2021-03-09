@@ -6,6 +6,7 @@ import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
+import _ from 'lodash';
 
 describe('StudentLessonOverview', () => {
   let defaultProps;
@@ -126,5 +127,19 @@ describe('StudentLessonOverview', () => {
     myProps.lesson.resources = [];
     const wrapper = shallow(<StudentLessonOverview {...myProps} />);
     assert.equal(wrapper.find('#resource-section').length, 0);
+  });
+
+  it('displays the introduced code', () => {
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
+    const codeSection = wrapper.find('#unit-test-introduced-code');
+    expect(codeSection.containsMatchingElement(<a>playSound</a>)).to.be.true;
+  });
+
+  it('does not display the introduced code if no code', () => {
+    const newDefaultProps = _.cloneDeep(defaultProps);
+    newDefaultProps.lesson.programmingExpressions = [];
+
+    const wrapper = shallow(<StudentLessonOverview {...newDefaultProps} />);
+    assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
   });
 });
