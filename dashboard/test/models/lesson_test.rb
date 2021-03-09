@@ -314,6 +314,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'lesson overview', summary[:overview]
     assert_equal 2, summary[:resources].length
     assert_equal script.summarize_for_lesson_show(true), summary[:unit]
+  end
 
   test 'lesson edit summary does not preprocess markdown' do
     lesson = create :lesson, lesson_group: create(:lesson_group)
