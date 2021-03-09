@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {Provider} from 'react-redux';
-import weblabMsg from '@cdo/weblab/locale';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
@@ -301,11 +300,19 @@ WebLab.prototype.init = function(config) {
     document.getElementById(config.containerId)
   );
 
-  window.onbeforeunload = evt => {
-    if (project.hasOwnerChangedProject()) {
-      return weblabMsg.confirmExitWithUnsavedChanges();
-    }
-  };
+  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
+
+WebLab.prototype.beforeUnload = function(event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = '';
+  } else {
+    delete event.returnValue;
+  }
 };
 
 WebLab.prototype.reportResult = function(submit, validated) {

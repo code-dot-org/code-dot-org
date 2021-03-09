@@ -215,6 +215,34 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal script.summarize_for_lesson_show, summary[:unit]
   end
 
+  test 'lesson edit summary does not preprocess markdown' do
+    lesson = create :lesson, lesson_group: create(:lesson_group)
+    Services::MarkdownPreprocessor.expects(:process!).never
+    lesson.summarize_for_lesson_edit
+  end
+
+  test 'lesson show summary preprocesses markdown' do
+    lesson = create(
+      :lesson,
+      assessment_opportunities: 'example assessment opportunities',
+      lesson_group: create(:lesson_group),
+      overview: 'example overview',
+      preparation: 'example preparation',
+      purpose: 'example purpose'
+    )
+
+    Services::MarkdownPreprocessor.expects(:process).
+      with(lesson.overview)
+    Services::MarkdownPreprocessor.expects(:process).
+      with(lesson.purpose)
+    Services::MarkdownPreprocessor.expects(:process).
+      with(lesson.preparation)
+    Services::MarkdownPreprocessor.expects(:process).
+      with(lesson.assessment_opportunities)
+
+    lesson.summarize_for_lesson_show(create(:user))
+  end
+
   test 'can summarize lesson for lesson plan dropdown' do
     script = create :script
     lesson_group = create :lesson_group, script: script

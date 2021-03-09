@@ -14,7 +14,7 @@ nav: how_to_nav
 ## Conéctate con aulas y voluntarios locales para la Hora del Código
 Con Code.org, tus empleados pueden [conectarse]({{ urls/volunteer }}) con las aulas locales que imparten la Hora del Código, compartir su experiencia profesional en tecnología e inspirar a los estudiantes a aprender ciencias de la computación.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Regístrese como voluntario</button>]({{ urls/volunteer }})
 <br>
 <br>
 
@@ -29,32 +29,32 @@ Para obtener más instrucciones sobre cómo alentar a tus empleados y conectarlo
 
 # Cómo organizar un evento de la Hora de Código con estudiantes
 
-## 1. Promueve tu Hora del Código
+## 1. Promociona tu Hora de Código
 - Promueve tu [Hora del Código]({{ urls/promote }}) y anima a otros a que organicen una.
-- Alienta a los ingenieros de software de tu empresa a visitar un aula local para ayudar a conducir una Hora del Código e inspirar a los estudiantes a aprender ciencias de la computación. Pueden [inscribirse]({{ urls/volunteer_engineer }}) para conectarse con un aula.
+- Aliente a los ingenieros de software de su empresa a visitar un aula local para ayudar a dirigir una Hora del Código e inspirar a los estudiantes a estudiar informática. Pueden [inscribirse]({{ urls/volunteer_engineer }}) para conectarse con un aula.
 
 ## 2. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 3. Choose an activity
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+## 3. Selecciona una actividad
+Ofrecemos una variedad de [actividades divertidas](%= resolve_url('/learn') %), de una hora de duración para participantes de todas las edades, creadas por una variedad de socios. [Try them out!]({{ urls/learn }})
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**Todas las actividades de la Hora del Código** requieren un tiempo de preparación mínimo y son auto guiadas, lo que permite a los participantes trabajar a su propio ritmo y capacidad.
 
 [<img src="/images/fit-700/tutorials.png
 " />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4. 4. Planifica tus necesidades tecnológicas, las computadoras son opcionales
 
-Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero **no** se necesita una computadora para cada niño y es se puede hacer la Hora del Código incluso sin computadoras.
 
-**Plan Ahead!** Do the following before your event starts:
+**¡Planifica con anticipación!** Haz lo siguiente antes de iniciar el evento:
 
 - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
 - Entrega auriculares, o pide a los participantes que traigan los suyos, si es mejor que la actividad tenga sonido.
 - **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Al formar equipos, los participantes se ayudan entre sí y dependen menos del organizador. Además se dan cuenta que en las Ciencias de la Computación son una actividad social y colaborativa.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **¿Tienes un ancho de banda limitado?** Muestra los videos a toda la clase para que los estudiantes no tengan que descargarlos. O prueba las actividades sin conexión.
 
-## 5.  Start your Hour of Code off with an inspiring video
+## 5.  Comienza tu Hora del Código con un video inspirador
 Empiece su Hora del Código inspirando a los participantes y comentando cómo las Ciencias de la Computación tienen impacto en cada parte de nuestras vidas. Comparte más acerca de lo que te inspiró para dedicarte a las ciencias de la computación y tu papel en tu empresa.
 
 **Muestra un video inspirador:**
@@ -85,13 +85,13 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 
 **¿Qué hacer si alguien termina antes?**
 
-- Puedes probar otra actividad de la Hora del Código en hourofcode.com/learn.
+- Ellos pueden probar otra actividad de Hora de Código en hourofcode.com/learn.
 - O pídeles que ayuden a un amigo que tenga dificultades para resolver la actividad.
 
 ## 7) Celebre
 
 - [Imprime certificados]({{ urls/certificates }}) para los participantes y estudiantes.
-- [Imprime etiquetas adhesivas de "¡Yo hice una Hora del Código!"]({{ promote/resources_stickers }}).
+- [Imprime etiquetas adhesivas de "¡Yo hice una Hora del Código!"]({{ promote/resources_stickers }}) para tus estudiantes.
 - [Pide camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para tus empleados.
 - Comparte fotos y videos de tu evento de la Hora del Código en las redes sociales. ¡Usa #HourOfCode y @codeorg para que también podamos destacar tu éxito!
 
