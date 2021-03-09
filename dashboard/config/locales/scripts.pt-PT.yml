@@ -3778,6 +3778,8 @@ pt:
               name: Lição 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introdução
             Sequencing:
               key: Sequenciação
               name: Sequenciação
@@ -3800,5 +3802,9 @@ pt:
               key: Ciclos "for"
               name: Ciclos "for"
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Introdução
             k5_next_steps_1:
               display_name: Próximos Passos
+            Introduction:
+              display_name: Introdução

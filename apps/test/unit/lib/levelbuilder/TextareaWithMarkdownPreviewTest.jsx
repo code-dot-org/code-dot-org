@@ -20,8 +20,8 @@ describe('TextareaWithMarkdownPreview', () => {
   it('has correct markdown for preview of unit description', () => {
     const wrapper = shallow(<TextareaWithMarkdownPreview {...defaultProps} />);
     expect(wrapper.contains('Section Name')).to.be.true;
-    expect(wrapper.find('TextareaWithImageUpload').length).to.equal(1);
-    expect(wrapper.find('TextareaWithImageUpload').props().markdown).to.equal(
+    expect(wrapper.find('MarkdownEnabledTextarea').length).to.equal(1);
+    expect(wrapper.find('MarkdownEnabledTextarea').props().markdown).to.equal(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
     expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(1);

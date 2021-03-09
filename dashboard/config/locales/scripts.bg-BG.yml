@@ -3942,6 +3942,8 @@ bg:
               name: Урок 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Въведение
             Loops:
               key: Повторения
               name: Повторения
@@ -3961,5 +3963,9 @@ bg:
               key: За циклите
               name: За циклите
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Въведение
             k5_next_steps_1:
               display_name: Следващи стъпки
+            Introduction:
+              display_name: Въведение

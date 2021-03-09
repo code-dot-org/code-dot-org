@@ -3370,6 +3370,8 @@ bs:
               name: Lekcija 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Uvod
             Loops:
               key: Petlje
               name: Petlje
@@ -3389,5 +3391,9 @@ bs:
               key: Od-Do-Za Petlje
               name: Od-Do-Za Petlje
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Uvod
             k5_next_steps_1:
               display_name: Slijedeći Koraci
+            Introduction:
+              display_name: Uvod
