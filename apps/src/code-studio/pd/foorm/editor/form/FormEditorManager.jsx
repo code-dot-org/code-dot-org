@@ -124,12 +124,12 @@ class FormEditorManager extends React.Component {
     });
   };
 
-  updateFormData = formData => {
+  updateFormData(formData) {
     this.props.setFormData(formData);
     this.props.setHasJSONError(false);
     this.props.setLastSavedFormQuestions(formData['questions']);
     this.props.resetCodeMirror(formData['questions']);
-  };
+  }
 
   // use debounce to only call once per second
   fillFormWithLibraryItems = _.debounce(
