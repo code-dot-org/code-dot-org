@@ -19,7 +19,7 @@ import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setFormData,
-  addAvailableOption,
+  addAvailableEntity,
   setLastSaved,
   setSaveError,
   setLastSavedQuestions
@@ -421,7 +421,7 @@ export default connect(
   dispatch => ({
     setFormData: formData => dispatch(setFormData(formData)),
     addAvailableForm: formMetadata =>
-      dispatch(addAvailableOption(formMetadata)),
+      dispatch(addAvailableEntity(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLastSavedFormQuestions: formQuestions =>
