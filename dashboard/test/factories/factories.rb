@@ -819,7 +819,8 @@ FactoryGirl.define do
 
   factory :vocabulary do
     association :course_version
-    sequence(:word, 'a') {|n| "word \"#{n}\""}
+    sequence(:key, 'a') {|char| "vocab_#{char}"}
+    word 'word'
     definition 'definition'
   end
 
