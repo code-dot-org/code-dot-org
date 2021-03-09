@@ -47,6 +47,11 @@ Feature: Teacher Lesson Plan
     # Check for Teaching Guide
     And I wait until element "h2:contains(Teaching Guide)" is visible
     And I wait until element "h2:contains(Activity 1)" is visible
+    And I wait until element ".uitest-ProgressPill" is visible
+    And I wait until element ".unit-test-tip-tab" is visible
+    And I wait until element "p:contains(Get students to talk)" is visible
+    And I click selector ".unit-test-tip-tab"
+    And I wait until element "p:contains(Get students to talk)" is not visible
 
     # Navigate between lesson plans
     Then I wait until element ".uitest-lesson-dropdown-nav" is visible
