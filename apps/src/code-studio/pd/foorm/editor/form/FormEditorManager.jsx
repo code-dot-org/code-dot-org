@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEditor from '../components/FoormEditor';
 import {
-  resetAvailableEntities,
   setLastSaved,
   setSaveError,
   setFormData,
@@ -43,7 +42,6 @@ class FormEditorManager extends React.Component {
     formName: PropTypes.string,
     formVersion: PropTypes.number,
     isFormPublished: PropTypes.bool,
-    resetAvailableForms: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
@@ -258,8 +256,6 @@ export default connect(
     isFormPublished: state.foorm.isFormPublished
   }),
   dispatch => ({
-    resetAvailableForms: formsMetadata =>
-      dispatch(resetAvailableEntities(formsMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setFormData: formData => dispatch(setFormData(formData)),
