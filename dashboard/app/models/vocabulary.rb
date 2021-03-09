@@ -82,7 +82,9 @@ class Vocabulary < ApplicationRecord
   def generate_key
     return if key
     key = common_sense_media ? "#{word}_csm" : word
-    self.key = Vocabulary.sanitize_key(key)
+    key = Vocabulary.sanitize_key(key)
+    key = Vocabulary.uniquify_key(key, course_version.id)
+    self.key = key
   end
 
   # Return a sanitized copy of the given key with all invalid characters
@@ -91,6 +93,23 @@ class Vocabulary < ApplicationRecord
     key.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
     end.join.gsub(/_+/, '_')
+  end
+
+  # Return a version of the given key which does not conflict
+  # with any existing key for the given CourseVersion. We
+  # achieve this through basic guess-and-check; simply append an
+  # arbitrary incrementable value, and increment it until we
+  # find one that works.
+  def self.uniquify_key(key, course_version_id)
+    new_key = key.dup
+    suffix = 'a'
+
+    while Vocabulary.exists?(key: new_key, course_version_id: course_version_id)
+      new_key = "#{key}_#{suffix}"
+      suffix = suffix.next
+    end
+
+    new_key
   end
 
   private
