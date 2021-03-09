@@ -1,7 +1,7 @@
 const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const RESET_AVAILABLE_ENTITIES = 'foormEditor/RESET_AVAILABLE_ENTITIES';
+const SET_AVAILABLE_ENTITIES = 'foormEditor/SET_AVAILABLE_ENTITIES';
 const ADD_AVAILABLE_ENTITY = 'foormEditor/ADD_AVAILABLE_ENTITY';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
@@ -29,8 +29,8 @@ export const setHasJSONError = hasJSONError => ({
 
 // "Entities" are the list of forms or libraries from which a user can select to edit
 // in the Foorm form and library editors, respectively.
-export const resetAvailableEntities = entitiesMetadata => ({
-  type: RESET_AVAILABLE_ENTITIES,
+export const setAvailableEntities = entitiesMetadata => ({
+  type: SET_AVAILABLE_ENTITIES,
   entitiesMetadata
 });
 
@@ -93,7 +93,7 @@ export default function foormEditorRedux(state = initialState, action) {
       formId: action.formData['id']
     };
   }
-  if (action.type === RESET_AVAILABLE_ENTITIES) {
+  if (action.type === SET_AVAILABLE_ENTITIES) {
     return {
       ...state,
       availableEntities: action.entitiesMetadata

@@ -34,7 +34,6 @@ class FormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
-    namesAndVersions: PropTypes.array,
     categories: PropTypes.array,
 
     // populated by redux
@@ -61,8 +60,6 @@ class FormEditorManager extends React.Component {
       forceRerenderKey: 0,
       previewQuestions: null
     };
-
-    this.props.resetAvailableForms(this.props.namesAndVersions);
   }
 
   getFormattedConfigurationDropdownOptions() {

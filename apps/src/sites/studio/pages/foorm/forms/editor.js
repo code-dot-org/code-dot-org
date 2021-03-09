@@ -7,7 +7,8 @@ import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import FormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FormEditorManager';
 import foorm, {
   setQuestions,
-  setHasJSONError
+  setHasJSONError,
+  setAvailableEntities
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 import _ from 'lodash';
 
@@ -18,12 +19,17 @@ let codeMirror = null;
 $(document).ready(function() {
   registerReducers({foorm});
   const store = getStore();
+
+  const scriptData = getScriptData('props');
+  const namesAndVersions = scriptData.namesAndVersions;
+  getStore().dispatch(setAvailableEntities(namesAndVersions));
+
   ReactDOM.render(
     <Provider store={store}>
       <FormEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
-        {...getScriptData('props')}
+        categories={scriptData.categories}
       />
     </Provider>,
     document.getElementById('editor-container')
