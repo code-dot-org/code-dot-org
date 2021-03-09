@@ -36,12 +36,12 @@ class SaveModel extends Component {
     fields.push({
       id: "potentialUses",
       text: "How can this model be used?",
-      placeholder: "Write a brief description"
+      placeholder: "Write a brief description."
     });
     fields.push({
       id: "potentialMisuses",
       text: "How can this model be potentially misused?",
-      placeholder: "Write a brief description"
+      placeholder: "Write a brief description."
     });
     fields.push({
       id: "identifySubgroup",
