@@ -8,6 +8,8 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+#
+# @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
