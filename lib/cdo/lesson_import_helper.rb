@@ -118,7 +118,7 @@ module LessonImportHelper
       programming_environment = ProgrammingEnvironment.find_by(name: cb_block['parent_slug'])
       block = ProgrammingExpression.find_by(
         programming_environment_id: programming_environment.id,
-        name: cb_block['slug']
+        key: cb_block['slug']
       )
       block
     end
