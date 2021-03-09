@@ -305,8 +305,7 @@ class FilesApi < Sinatra::Base
   end
 
   def html_file?(filename)
-    return false unless filename
-    File.extname(filename.downcase) == '.html'
+    File.extname(filename&.downcase) == '.html'
   end
 
   def valid_html_file?(encrypted_channel_id, filename, body)
