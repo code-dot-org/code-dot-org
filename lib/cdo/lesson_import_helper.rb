@@ -120,7 +120,6 @@ module LessonImportHelper
         programming_environment_id: programming_environment.id,
         name: cb_block['slug']
       )
-      log "Could not find #{cb_block['slug']} for #{cb_block['parent_slug']}" unless block
       block
     end
   end
