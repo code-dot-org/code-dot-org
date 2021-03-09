@@ -360,8 +360,12 @@ WebLab.prototype.getCodeAsync = function() {
   return new Promise((resolve, reject) => {
     if (this.brambleHost !== null) {
       this.brambleHost.syncFiles(err => {
-        // store our filesVersionId as the "sources"
-        resolve(this.getCurrentFilesVersionId() || '');
+        if (err) {
+          reject(err);
+        } else {
+          // store our filesVersionId as the "sources"
+          resolve(this.getCurrentFilesVersionId() || '');
+        }
       });
     } else {
       // Bramble not installed yet - we have no code to return
