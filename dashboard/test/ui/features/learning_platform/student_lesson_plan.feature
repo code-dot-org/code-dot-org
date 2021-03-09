@@ -1,3 +1,5 @@
+@no_ie
+@no_mobile
 Feature: Student Lesson Plan
 
   Scenario: Viewing Student Lesson Plan
