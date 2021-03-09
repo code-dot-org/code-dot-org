@@ -60,6 +60,9 @@ module LessonImportHelper
       if models_to_import.include?('Vocabulary')
         lesson.vocabularies = create_lesson_vocabularies(cb_lesson_data['vocab'], course_version_id)
       end
+      if models_to_import.include?('ProgrammingExpression')
+        lesson.programming_expressions = find_lesson_programming_expressions(cb_lesson_data['blocks'])
+      end
     end
   end
 
@@ -105,6 +108,19 @@ module LessonImportHelper
         end
       vocab.save! if vocab.changed?
       vocab
+    end
+  end
+
+  def self.find_lesson_programming_expressions(cb_blocks)
+    return [] if cb_blocks.blank?
+    cb_blocks.map do |cb_block|
+      raise unless cb_block['slug'] && cb_block['parent_slug']
+      programming_environment = ProgrammingEnvironment.find_by(name: cb_block['parent_slug'])
+      block = ProgrammingExpression.find_by(
+        programming_environment_id: programming_environment.id,
+        key: cb_block['slug']
+      )
+      block
     end
   end
 
