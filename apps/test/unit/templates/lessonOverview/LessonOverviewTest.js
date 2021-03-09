@@ -95,15 +95,17 @@ describe('LessonOverview', () => {
 
     expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
 
-    const safeMarkdowns = wrapper.find('SafeMarkdown');
-    expect(safeMarkdowns.at(0).props().markdown).to.contain('Lesson Overview');
-    expect(safeMarkdowns.at(1).props().markdown).to.contain(
+    const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
+    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
+      'Lesson Overview'
+    );
+    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
       'The purpose of the lesson is for people to learn'
     );
-    expect(safeMarkdowns.at(2).props().markdown).to.contain(
+    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain(
       'Assessment Opportunities Details'
     );
-    expect(safeMarkdowns.at(3).props().markdown).to.contain('- One');
+    expect(enhancedSafeMarkdowns.at(3).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 
