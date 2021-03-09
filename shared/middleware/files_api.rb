@@ -320,7 +320,7 @@ class FilesApi < Sinatra::Base
 
     # Nokogiri element selector tags must start with //
     disallowed_tag_selectors = DCDO.get('disallowed_html_tags', ['script']).map {|tag| '//' + tag}
-    return false unless Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
   end
 
   #
