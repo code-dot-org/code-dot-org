@@ -130,7 +130,7 @@ class StudentLessonOverview extends Component {
           </div>
         )}
         {lesson.programmingExpressions.length > 0 && (
-          <div>
+          <div id="unit-test-introduced-code">
             <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
             <ul>
               {lesson.programmingExpressions.map(expression => (
