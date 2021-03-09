@@ -106,7 +106,7 @@ class ColumnInspector extends Component {
           <form>
             <div>
               <label>
-                <div>{currentColumnData.id}</div>
+                <div>Data type:</div>
                 {this.props.hideSpecifyColumns && (
                   <div> {currentColumnData.dataType} </div>
                 )}
