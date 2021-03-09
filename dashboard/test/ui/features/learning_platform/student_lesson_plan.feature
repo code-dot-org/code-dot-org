@@ -1,4 +1,3 @@
-# We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
 Feature: Student Lesson Plan
 
