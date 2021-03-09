@@ -8,11 +8,10 @@ import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEditor from '../components/FoormEditor';
 import {
-  resetAvailableForms,
   setLastSaved,
   setSaveError,
   setFormData,
-  setHasError,
+  setHasJSONError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
 import _ from 'lodash';
@@ -34,23 +33,20 @@ class FormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
-    namesAndVersions: PropTypes.array,
     categories: PropTypes.array,
 
     // populated by redux
-    hasError: PropTypes.bool,
-    formQuestions: PropTypes.object,
+    hasJSONError: PropTypes.bool,
     availableForms: PropTypes.array,
-    resetAvailableForms: PropTypes.func,
+    questions: PropTypes.object,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number,
+    isFormPublished: PropTypes.bool,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setFormData: PropTypes.func,
-    setHasError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func,
-    questions: PropTypes.object,
-    name: PropTypes.string,
-    version: PropTypes.number,
-    isPublished: PropTypes.bool
+    setHasJSONError: PropTypes.func,
+    setLastSavedFormQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -62,8 +58,6 @@ class FormEditorManager extends React.Component {
       forceRerenderKey: 0,
       previewQuestions: null
     };
-
-    this.props.resetAvailableForms(this.props.namesAndVersions);
   }
 
   getFormattedConfigurationDropdownOptions() {
@@ -128,12 +122,12 @@ class FormEditorManager extends React.Component {
     });
   };
 
-  updateFormData = formData => {
+  updateFormData(formData) {
     this.props.setFormData(formData);
-    this.props.setHasError(false);
-    this.props.setLastSavedQuestions(formData['questions']);
+    this.props.setHasJSONError(false);
+    this.props.setLastSavedFormQuestions(formData['questions']);
     this.props.resetCodeMirror(formData['questions']);
-  };
+  }
 
   // use debounce to only call once per second
   fillFormWithLibraryItems = _.debounce(
@@ -170,7 +164,7 @@ class FormEditorManager extends React.Component {
   listPreviewErrors() {
     let errors = [];
 
-    if (this.props.hasError) {
+    if (this.props.hasJSONError) {
       errors.push(
         'There is a parsing error in the JSON configuration. Errors are noted on the left side of the editor.'
       );
@@ -189,14 +183,20 @@ class FormEditorManager extends React.Component {
   // bind this instead of using arrow function?
   renderHeaderTitle() {
     return (
-      <div>
-        <h2 style={styles.surveyTitle}>
-          {`Form Name: ${this.props.name}, version ${this.props.version}`}
-        </h2>
-        <h3 style={styles.surveyState}>
-          {`Form State: ${this.props.isPublished ? 'Published' : 'Draft'}`}
-        </h3>
-      </div>
+      this.props.formName && (
+        <div>
+          <h2 style={styles.surveyTitle}>
+            {`Form Name: ${this.props.formName}, version ${
+              this.props.formVersion
+            }`}
+          </h2>
+          <h3 style={styles.surveyState}>
+            {`Form State: ${
+              this.props.isFormPublished ? 'Published' : 'Draft'
+            }`}
+          </h3>
+        </div>
+      )
     );
   }
 
@@ -249,21 +249,18 @@ class FormEditorManager extends React.Component {
 export default connect(
   state => ({
     questions: state.foorm.questions || {},
-    formQuestions: state.foorm.formQuestions || {},
-    availableForms: state.foorm.availableForms || [],
-    hasError: state.foorm.hasError,
-    name: state.foorm.name,
-    version: state.foorm.version,
-    isPublished: state.foorm.isPublished
+    availableForms: state.foorm.availableEntities || [],
+    hasJSONError: state.foorm.hasJSONError,
+    formName: state.foorm.formName,
+    formVersion: state.foorm.formVersion,
+    isFormPublished: state.foorm.isFormPublished
   }),
   dispatch => ({
-    resetAvailableForms: formMetadata =>
-      dispatch(resetAvailableForms(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setFormData: formData => dispatch(setFormData(formData)),
-    setHasError: hasError => dispatch(setHasError(hasError)),
-    setLastSavedQuestions: formQuestions =>
+    setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+    setLastSavedFormQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
 )(FormEditorManager);
