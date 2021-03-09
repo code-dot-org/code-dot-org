@@ -7336,6 +7336,8 @@ vi:
               name: Bài học 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Giới thiệu
             Sequencing:
               key: Chuỗi tuần tự
               name: Chuỗi tuần tự
@@ -7357,8 +7359,12 @@ vi:
             For Loops:
               key: Cho vòng lặp
               name: Cho vòng lặp
+            Getting Started:
+              name: Bắt đầu
           lesson_groups:
             k5_getting_started_1:
-              display_name: Bắt đầu
+              display_name: Giới thiệu
             k5_next_steps_1:
               display_name: Bước tiếp theo
+            Introduction:
+              display_name: Giới thiệu

@@ -5191,8 +5191,9 @@ uk:
               name: Урок 15
         k5-onlinepd-2021:
           title: Викладання основ інформатики
-          description_short: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі.
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Вступ
             Sequencing:
               key: Послідовність дій
               name: Послідовність дій
@@ -5217,8 +5218,14 @@ uk:
             Next steps:
               key: Наступні кроки
               name: Наступні кроки
+            Getting Started:
+              name: Починаємо
+            Lesson Planning:
+              name: Планування уроку
           lesson_groups:
             k5_getting_started_1:
-              display_name: Починаємо
+              display_name: Вступ
             k5_next_steps_1:
               display_name: Наступні Кроки
+            Introduction:
+              display_name: Вступ

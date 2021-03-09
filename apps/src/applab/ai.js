@@ -62,7 +62,7 @@ function generateCodeDesignElements(modelId, modelData) {
       setText("${predictionId}", value);
     });
   });`;
-  designMode.onInsertEvent(predictOnClick);
+  designMode.onInsertAICode(predictOnClick);
 }
 
 export default function autogenerateML(modelId) {
