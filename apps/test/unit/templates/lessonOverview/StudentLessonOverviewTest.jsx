@@ -63,8 +63,7 @@ describe('StudentLessonOverview', () => {
         programmingExpressions: [
           {
             name: 'playSound',
-            category: 'UI Controls',
-            programmingEnvironment: 'applab'
+            link: '/docs/applab/playSound'
           }
         ]
       },
