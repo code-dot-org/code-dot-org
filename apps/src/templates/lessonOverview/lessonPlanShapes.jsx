@@ -90,7 +90,8 @@ export const lessonShape = PropTypes.shape({
   vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
   programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
-  assessmentOpportunities: PropTypes.string
+  assessmentOpportunities: PropTypes.string,
+  lessonPlanPdfUrl: PropTypes.string
 });
 
 export const studentLessonShape = PropTypes.shape({
