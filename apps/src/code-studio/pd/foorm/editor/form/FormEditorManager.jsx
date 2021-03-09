@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import FoormEditor from '../components/FoormEditor';
 import FoormLoadButtons from '../components/FoormLoadButtons';
 import {
-  resetAvailableOptions,
+  resetAvailableEntities,
   setLastSaved,
   setSaveError,
   setFormData,
@@ -34,7 +34,6 @@ class FormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
-    namesAndVersions: PropTypes.array,
     categories: PropTypes.array,
 
     // populated by redux
@@ -61,8 +60,6 @@ class FormEditorManager extends React.Component {
       forceRerenderKey: 0,
       previewQuestions: null
     };
-
-    this.props.resetAvailableForms(this.props.namesAndVersions);
   }
 
   // For loading buttons
@@ -126,12 +123,12 @@ class FormEditorManager extends React.Component {
   }
 
   // For loading buttons
-  updateFormData = formData => {
+  updateFormData(formData) {
     this.props.setFormData(formData);
     this.props.setHasJSONError(false);
     this.props.setLastSavedFormQuestions(formData['questions']);
     this.props.resetCodeMirror(formData['questions']);
-  };
+  }
 
   // for preview
   // use debounce to only call once per second
@@ -256,7 +253,7 @@ class FormEditorManager extends React.Component {
 export default connect(
   state => ({
     questions: state.foorm.questions || {},
-    availableForms: state.foorm.availableOptions || [],
+    availableForms: state.foorm.availableEntities || [],
     hasJSONError: state.foorm.hasJSONError,
     formName: state.foorm.formName,
     formVersion: state.foorm.formVersion,
@@ -264,7 +261,7 @@ export default connect(
   }),
   dispatch => ({
     resetAvailableForms: formsMetadata =>
-      dispatch(resetAvailableOptions(formsMetadata)),
+      dispatch(resetAvailableEntities(formsMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setFormData: formData => dispatch(setFormData(formData)),
