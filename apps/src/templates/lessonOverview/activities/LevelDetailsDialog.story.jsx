@@ -8,7 +8,8 @@ const defaultProps = {
   handleClose: () => {
     console.log('closed');
   },
-  viewAs: ViewType.Teacher
+  viewAs: ViewType.Teacher,
+  isRtl: false
 };
 
 const standaloneVideoScriptLevel = {
@@ -154,6 +155,18 @@ export default storybook => {
         <Provider store={getStore()}>
           <LevelDetailsDialog
             {...defaultProps}
+            scriptLevel={levelWithInstructions}
+          />
+        </Provider>
+      )
+    },
+    {
+      name: 'TopInstructions RTL',
+      story: () => (
+        <Provider store={getStore()}>
+          <LevelDetailsDialog
+            {...defaultProps}
+            isRtl
             scriptLevel={levelWithInstructions}
           />
         </Provider>
