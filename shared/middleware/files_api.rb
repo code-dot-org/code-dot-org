@@ -316,7 +316,7 @@ class FilesApi < Sinatra::Base
     # in order to check whether or not the file belongs to a WebLab project.
     project = StorageApps.new(get_storage_id).get(encrypted_channel_id)
     return false unless project
-    return true unless project[:projectType] == 'weblab'
+    return true unless project[:projectType]&.downcase == 'weblab'
 
     # Nokogiri element selector tags must start with //
     disallowed_tag_selectors = DCDO.get('disallowed_html_tags', ['script']).map {|tag| '//' + tag}
