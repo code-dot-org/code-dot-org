@@ -780,7 +780,10 @@ module Services
         end
 
         (1..num_vocabularies_per_lesson).each do |v|
-          vocab = create :vocabulary, key: "#{lesson.name}-vocab-#{v}", course_version: course_version
+          key = "#{lesson.name}-vocab-#{v}"
+          key = Vocabulary.sanitize_key(key)
+          key = Vocabulary.uniquify_key(key, course_version.id)
+          vocab = create :vocabulary, key: key, course_version: course_version
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
         end
 
