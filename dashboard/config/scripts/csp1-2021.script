@@ -17,15 +17,15 @@ level 'Computer Science is Changing Everything_2021', progression: 'Computer Sci
 level 'csp_socialBelonging_control_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Representing Information', display_name: 'Representing Information', has_lesson_plan: true
-level 'U1L3 CFU Sending Complex Messages_2021', progression: 'Check For Understanding', assessment: true
+level 'U1L3 CFU Sending Complex Messages_2021', progression: 'Check for Understanding', assessment: true
 
 lesson 'Circle Square Patterns', display_name: 'Circle Square Patterns', has_lesson_plan: true
-level 'CSP U1L4 CYU3_2021', progression: 'Check For Understanding', assessment: true
+level 'CSP U1L4 CYU3_2021', progression: 'Check for Understanding', assessment: true
 
 lesson 'Binary Numbers', display_name: 'Binary Numbers', has_lesson_plan: true
-level 'U1L5 CFU how many bits_2021', progression: 'Check For Understanding', assessment: true
-level 'U1L5 CFU adding bits_2021', progression: 'Check For Understanding', assessment: true
-level 'U1L5 CFU bin dec similarities_2021', progression: 'Check For Understanding', assessment: true
+level 'U1L5 CFU how many bits_2021', progression: 'Check for Understanding', assessment: true
+level 'U1L5 CFU adding bits_2021', progression: 'Check for Understanding', assessment: true
+level 'U1L5 CFU bin dec similarities_2021', progression: 'Check for Understanding', assessment: true
 
 lesson 'Overflow and Rounding', display_name: 'Overflow and Rounding', has_lesson_plan: true
 level 'Widget: Binary Odometer_2021', progression: 'Odometer Activity'
@@ -33,10 +33,10 @@ level 'U1L6 CFU beyond odometer_2021', progression: 'Check For Understanding', a
 level 'U1L6 CFU representing fractions_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Representing Text', display_name: 'Representing Text', has_lesson_plan: true
-level 'U1L8 Reflection Multiple Representations CSP_2021', progression: 'Check For Understanding', assessment: true
+level 'U1L8 Reflection Multiple Representations CSP_2021', progression: 'Check for Understanding', assessment: true
 
 lesson 'Black and White Images', display_name: 'Black and White Images', has_lesson_plan: true
-level 'U1 L9 Introduction to Pixelation_2021', progression: 'Video: Intro to Pixelation Encoding B&W'
+level 'U1 L9 Introduction to Pixelation_2021', progression: 'Pixelation Widget Video '
 level 'U1L9 Pixelation - Make the Letter A_2021', progression: 'Pixelation Widget: B&W'
 level 'U1L9 Pixelation Widget Fix bit offset_2021', progression: 'Pixelation Widget: B&W'
 level 'U1L9 Pixelation Widget challenge a_2021', progression: 'Pixelation Widget: B&W'
@@ -54,8 +54,8 @@ level 'CSP U1L10 Color Pixelation Widget 2_2021', progression: 'Pixelation Widge
 level 'CSP U1L10 Color Pixelation Widget 3_2021', progression: 'Pixelation Widget: Color'
 level 'CSP U1L10 Color Sampling_2021', progression: 'Color Sampling'
 level 'CSP U1L10 Color Pixelation Widget 4_2021', progression: 'Pixelation Widget: Color'
-level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Assessment: Check For Understanding', assessment: true
-level 'U1L10 CFU Sampling_2021', progression: 'Assessment: Check For Understanding', assessment: true
+level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Assessment: Check For Understanding', assessment: true
+level 'U1L10 CFU Sampling_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Lossless Compression', display_name: 'Lossless Compression', has_lesson_plan: true
 level 'U1L11 Widget: Text Compression_2021', progression: 'Widget: Text Compression'
