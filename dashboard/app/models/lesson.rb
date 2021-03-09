@@ -383,7 +383,8 @@ class Lesson < ApplicationRecord
       overview: student_overview || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show)
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show)
     }
   end
 
