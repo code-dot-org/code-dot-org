@@ -11,7 +11,7 @@ import {
 import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import progressTableStyles from './progressTableStyles.scss';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
-import progressTableRowWrapper from './ProgressTableRowWrapper';
+import {progressTableRowWrapper} from './progressTableHelpers';
 
 // Extra header column to account for scrollbar in progress tables
 const gutterHeader = {

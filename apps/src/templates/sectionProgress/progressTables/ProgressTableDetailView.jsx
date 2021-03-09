@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import i18n from '@cdo/locale';
 import {scriptDataPropType} from '../sectionProgressConstants';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
@@ -15,6 +14,7 @@ import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLevelIcon from './ProgressTableLevelIcon';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {ProgressTableTextCellGroup} from './ProgressTableTextCells';
+import {lastUpdatedFormatter, timeSpentFormatter} from './progressTableHelpers';
 
 // This component displays progress bubbles for all levels in all lessons
 // for each student in the section. It combines detail-specific components such as
@@ -48,8 +48,12 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
+  studentProgress(student) {
+    return this.props.levelProgressByStudent[student.id];
+  }
+
   detailCellFormatter(lesson, student) {
-    const studentProgress = this.props.levelProgressByStudent[student.id];
+    const studentProgress = this.studentProgress(student);
     return (
       <ProgressTableDetailCell
         studentId={student.id}
@@ -61,43 +65,20 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
-  renderLevelProgressText(levelProgress, fieldName, formatter) {
-    if (!levelProgress) {
-      return '-';
-    }
-    return formatter(levelProgress[fieldName]);
-  }
-
-  renderLessonProgressText(lesson, student, fieldName, formatter) {
-    const studentProgress = this.props.levelProgressByStudent[student.id];
+  timeSpentCellFormatter(lesson, student) {
+    const studentProgress = this.studentProgress(student);
     const progressTexts = lesson.levels.map(level =>
-      this.renderLevelProgressText(
-        studentProgress[level.id],
-        fieldName,
-        formatter
-      )
+      timeSpentFormatter(studentProgress[level.id])
     );
     return <ProgressTableTextCellGroup texts={progressTexts} />;
   }
 
-  timeSpentCellFormatter(lesson, student) {
-    const formatter = timeSpent => `${Math.round(timeSpent / 60)}`;
-    return this.renderLessonProgressText(
-      lesson,
-      student,
-      'timeSpent',
-      formatter
-    );
-  }
-
   lastUpdatedCellFormatter(lesson, student) {
-    const formatter = timestamp => moment(timestamp).format('M/D');
-    return this.renderLessonProgressText(
-      lesson,
-      student,
-      'lastTimestamp',
-      formatter
+    const studentProgress = this.studentProgress(student);
+    const lastUpdatedTexts = lesson.levels.map(level =>
+      lastUpdatedFormatter(studentProgress[level.id])
     );
+    return <ProgressTableTextCellGroup texts={lastUpdatedTexts} />;
   }
 
   render() {

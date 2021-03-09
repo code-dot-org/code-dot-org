@@ -12,6 +12,7 @@ import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
 import {ProgressTableTextCell} from './ProgressTableTextCells';
+import {lastUpdatedFormatter, timeSpentFormatter} from './progressTableHelpers';
 
 const COLUMN_WIDTH = 40;
 
@@ -37,14 +38,15 @@ class ProgressTableSummaryView extends React.Component {
     this.lastUpdatedCellFormatter = this.lastUpdatedCellFormatter.bind(this);
   }
 
+  lessonProgress(lesson, student) {
+    return this.props.lessonProgressByStudent[student.id][lesson.id];
+  }
+
   summaryCellFormatter(lesson, student) {
-    const studentLessonProgress = this.props.lessonProgressByStudent[
-      student.id
-    ][lesson.id];
     return (
       <ProgressTableSummaryCell
         studentId={student.id}
-        studentLessonProgress={studentLessonProgress}
+        studentLessonProgress={this.lessonProgress(lesson, student)}
         isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
         onSelectDetailView={() => this.props.onClickLesson(lesson.position)}
       />
@@ -52,11 +54,13 @@ class ProgressTableSummaryView extends React.Component {
   }
 
   timeSpentCellFormatter(lesson, student) {
-    return <ProgressTableTextCell text="10" />;
+    const progress = this.lessonProgress(lesson, student);
+    return <ProgressTableTextCell text={timeSpentFormatter(progress)} />;
   }
 
   lastUpdatedCellFormatter(lesson, student) {
-    return <ProgressTableTextCell text="1/1" />;
+    const progress = this.lessonProgress(lesson, student);
+    return <ProgressTableTextCell text={lastUpdatedFormatter(progress)} />;
   }
 
   render() {
