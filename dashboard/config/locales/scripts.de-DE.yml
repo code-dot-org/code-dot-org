@@ -30266,14 +30266,6 @@ de:
               name: Digitale Teilhabe
               description_student: In dieser Lektion lernen Sie mehr über die Probleme
                 und Vorteile von geistigem Eigentum und Urheberrecht.
-              description_teacher: 'Diese Lektion wurde dem Computer Science Fundamentals
-                Team vom Copyright and Creativity Team leihweise zur Verfügung gestellt
-                und soll den SchülerInnen helfen, den kreativen Prozess von Teilen
-                und Inspiration zu verstehen. Damit einher geht die Förderung des
-                kreativen Ausdrucks und die Notwendigkeit, angemessen mit der kreativen
-                Arbeit umzugehen.
-
-'
             Nested Loops in Bee:
               key: Eingebettete Schleifen bei der Biene
               name: Eingebettete Schleifen im Labyrinth
@@ -31890,11 +31882,16 @@ de:
           student_description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium,
             wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org
             Informatik unterrichtet!
-          description_audience: " "
+          description_short: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium,
+            wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org
+            Informatik unterrichtet!
+          description_audience: Lernen Sie mit diesem kostenlosen Online-Kurs zum
+            Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“
+            von Code.org Informatik unterrichtet!
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Willkommen bei "Grundlagen der Informatik unterrichten"
-              name: Willkommen bei "Grundlagen der Informatik unterrichten"
+              name: Einführung
               description_student: " "
               description_teacher: " "
             Understanding the Computer Science Fundamentals Courses:
@@ -31957,15 +31954,25 @@ de:
               name: Nächste Schritte
               description_student: " "
               description_teacher: " "
+            Module 1:
+              name: Modul 1
+            Getting Started:
+              name: Erste Schritte
+            What is Code.org:
+              name: Grundlagen der Informatik-Grundkurse verstehen
+            Lesson Planning:
+              name: Unterrichtsplanung
           lesson_groups:
             k5_getting_started_1:
-              display_name: Erste Schritte
+              display_name: Einführung
             k5_basic_concepts_1:
               display_name: Grundlegende Kodierungskonzepte und Unterrichtsmethoden
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
               display_name: Nächste Schritte
+            Introduction:
+              display_name: Einführung
         allthemigratedthings:
           lessons:
             lesson-2:
@@ -31974,7 +31981,11 @@ de:
             lesson-3:
               description_student: " "
               description_teacher: " "
+            lesson-4:
+              description_student: " "
           description_audience: " "
           description_short: " "
         fancygeometry-pilot:
           student_description: " "
+        ai-classroom-test:
+          description_audience: " "

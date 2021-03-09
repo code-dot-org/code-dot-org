@@ -2452,6 +2452,8 @@ gl:
               display_name: Variables
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introdución
             Loops:
               key: Bucles
               name: Bucles
@@ -2470,3 +2472,8 @@ gl:
             For Loops:
               key: Bucles "Para" (For)
               name: Bucles "Para" (For)
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introdución
+            Introduction:
+              display_name: Introdución

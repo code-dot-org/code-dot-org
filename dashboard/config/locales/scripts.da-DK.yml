@@ -2697,6 +2697,8 @@ da:
             af et virusudbrud. '
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduktion
             Loops:
               key: Løkker
               name: Løkker
@@ -2718,3 +2720,8 @@ da:
             Sprite Lab:
               key: SpriteLab
               name: SpriteLab
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduktion
+            Introduction:
+              display_name: Introduktion

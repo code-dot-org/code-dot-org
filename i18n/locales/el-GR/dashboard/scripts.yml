@@ -3089,6 +3089,8 @@ el:
           student_description: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Εισαγωγή
             Loops:
               key: Βρόχοι
               name: Βρόχοι
@@ -3110,3 +3112,10 @@ el:
             Sprite Lab:
               key: Sprite Lab
               name: Sprite Lab
+            Lesson Planning:
+              name: Σχεδιασμός μαθημάτων
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Εισαγωγή
+            Introduction:
+              display_name: Εισαγωγή

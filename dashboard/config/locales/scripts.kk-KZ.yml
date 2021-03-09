@@ -2676,6 +2676,8 @@ kk:
               display_name: Айнымалылар
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Кіріспе
             Loops:
               key: Ілмек
               name: Ілмек
@@ -2694,3 +2696,8 @@ kk:
             For Loops:
               key: For ілмектері
               name: For ілмектері
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Кіріспе
+            Introduction:
+              display_name: Кіріспе
