@@ -475,7 +475,7 @@ module Services
         lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
-        programming_expression_id = seed_context.programming_expressions.select {|pe| pe.key == lv_data['seeding_key']['programming_expression.key']}.first&.id
+        programming_expression_id = ProgrammingExpression.find_by(key: lv_data['seeding_key']['programming_expression.key']).id
         raise 'No programming expression found' if programming_expression_id.nil?
 
         LessonsProgrammingExpression.new(
