@@ -1,6 +1,6 @@
 - full_width = local_assigns[:full_width]
 .navbar-static-top.footer
-  .container{ style: 'padding: 10px;' + (full_width ? 'margin-left: auto; margin-right: auto' : '') }
+  .container{ style: 'padding: 10px;' + (full_width ? 'margin: auto' : '') }
     .row
       .span8{style: (full_width ? 'max-width: 80%;' : '')}
         - piped_spaces = full_width ? ' | ' : '&nbsp; | &nbsp;'
