@@ -26,7 +26,7 @@ module Services
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
-      # File.write(filename, ScriptSeed.serialize_seeding_json(script))
+      File.write(filename, ScriptSeed.serialize_seeding_json(script))
 
       expected = JSON.parse(File.read(filename))
       actual = JSON.parse(ScriptSeed.serialize_seeding_json(script))
@@ -346,7 +346,9 @@ module Services
         lesson = script.lessons.first
         lesson.programming_expressions.first.update!(name: 'newBlock')
         lesson.programming_expressions.create(
+          key: 'newBlock',
           name: 'newBlock',
+          programming_environment_id: 1
         )
       end
 
@@ -357,7 +359,7 @@ module Services
       lesson = script.lessons.first
       assert_equal(
         ['newBlock'],
-        lesson.programming_expressions.map(&:name)
+        lesson.programming_expressions.map(&:key)
       )
     end
 
@@ -822,8 +824,8 @@ module Services
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
         end
 
-        (1..num_programming_expressions_per_lesson).each do
-          programming_expression = create :programming_expression
+        (1..num_programming_expressions_per_lesson).each do |pe|
+          programming_expression = create :programming_expression, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
           LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
