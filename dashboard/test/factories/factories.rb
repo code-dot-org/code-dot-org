@@ -830,7 +830,8 @@ FactoryGirl.define do
 
   factory :programming_expression do
     association :programming_environment
-    sequence(:name) {|n| "programming-expression-#{n}"}
+    sequence(:name) {|n| "programming expression #{n}"}
+    sequence(:key) {|n| "programming-expression-#{n}"}
   end
 
   factory :callout do
