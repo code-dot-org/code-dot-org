@@ -283,25 +283,6 @@ img.video_thumbnail {
       background-color: $orange;
     }
   }
-  .user_menu, .create_menu {
-    box-shadow: none;
-    // button:active in this file uses !important for a styling scheme that doesn't
-    // match this button. We use !important here to override that scheme for only this
-    // specific button.
-    &:active {
-      border: 2px solid $white !important;
-    }
-  }
-
-  .create_menu {
-    box-shadow: none;
-    // button:active in this file uses !important for a styling scheme that doesn't
-    // match this button. We use !important here to override that scheme for only this
-    // specific button.
-    &:active {
-      border: 2px solid $white !important;
-    }
-  }
 
   .user_menu, .create_menu, .help_button {
     margin-top: 6px;
@@ -352,6 +333,17 @@ img.video_thumbnail {
 
   #signin_button .header_button {
     margin-top: 6px;
+  }
+
+  #sign_in_or_user {
+    &.z_index_above_modal {
+      z-index: 1050;
+
+      // Usually transparent, so adding teal allows button to render in front
+      .header_user {
+        background-color: $teal;
+      }
+    }
   }
 }
 
@@ -2080,6 +2072,12 @@ a.download-video {
     &.with-google_oauth2 {
       background-color: $google_red;
       border: 1px solid $google_red;
+      &:disabled {
+        border: 1px solid $lighter_gray;
+        background-color: $lighter_gray;
+        @include box-shadow(none);
+        cursor: not-allowed;
+      }
     }
 
     &.with-facebook {

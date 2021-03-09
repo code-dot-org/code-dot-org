@@ -32,6 +32,16 @@
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
           "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
           "moving north": "เคลื่อนที่ไปทางเหนือ"
+        },
+        "outbreak_freeplay": {
+          "recovering": "การรักษาตัว",
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "การรักษาตัว",
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         }
       }
     }

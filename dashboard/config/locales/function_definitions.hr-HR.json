@@ -1230,6 +1230,47 @@
           "collect": {
             "name": "prikupi"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu",
+            "parameters": {
+              "points": "bodovi",
+              "length": "duljina"
+            }
+          },
+          "draw a circle": {
+            "name": "nacrtaj krug"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "duljina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nacrtaj trokut",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a house": {
+            "name": "nacrtaj kuću",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a square": {
+            "name": "nacrtaj kvadrat",
+            "parameters": {
+              "length": "duljina"
+            }
+          }
         }
       }
     }

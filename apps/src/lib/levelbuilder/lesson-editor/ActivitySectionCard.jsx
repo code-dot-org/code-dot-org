@@ -43,7 +43,8 @@ const styles = {
   },
   activitySectionCardHeader: {
     color: '#5b6770',
-    marginBottom: 15
+    marginBottom: 15,
+    overflow: 'hidden'
   },
   labelAndCheckbox: {
     fontSize: 13,
@@ -420,8 +421,9 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  handleUploadImage = url => {
-    this.appendMarkdownSyntax(`\n\n![](${url})`);
+  handleUploadImage = (url, expandable) => {
+    const param = expandable ? 'expandable' : '';
+    this.appendMarkdownSyntax(`\n\n![${param}](${url})`);
   };
 
   render() {

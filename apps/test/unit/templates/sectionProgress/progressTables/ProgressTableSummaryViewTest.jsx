@@ -10,7 +10,7 @@ import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
 import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
 import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
-import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/summary/SummaryViewLegend';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
 import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import * as Sticky from 'reactabular-sticky';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
@@ -24,8 +24,16 @@ import {
   fakeProgressTableReduxInitialState
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-const LESSON_1 = fakeLessonWithLevels({position: 1, levels: fakeLevels(1)});
-const LESSON_2 = fakeLessonWithLevels({position: 2, levels: fakeLevels(2)});
+const LESSON_1 = fakeLessonWithLevels({
+  id: 1,
+  position: 1,
+  levels: fakeLevels(1)
+});
+const LESSON_2 = fakeLessonWithLevels({
+  id: 2,
+  position: 2,
+  levels: fakeLevels(2)
+});
 const STAGES = [LESSON_1, LESSON_2];
 const STUDENTS = fakeStudents(2);
 const SCRIPT_DATA = fakeScriptData({stages: STAGES});

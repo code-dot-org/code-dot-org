@@ -765,10 +765,11 @@ cs-CZ:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 drawSprites placement match:
@@ -2670,7 +2671,7 @@ cs-CZ:
         markdown: |
           # Sleduj digitální stopu
 
-          ## Jaké informace můžeš zanechávat ve svojí digitální stopě?
+          ## Jaké informace můžeš zanechávat ve své digitální stopě?
       csf_safety_in_my_online_neighborhood:
         markdown: |
           # Mé online sousedství
@@ -2875,3 +2876,34 @@ cs-CZ:
           se o svou simulaci s ostatními. A šiřte zprávu o tom, co podle vás můžeme
           udělat, abychom ochránili zdraví ostatních obyvatel, až virus dorazí k nám
           do města. \n"
+      CSD U3 Entertainment:
+        markdown: |-
+          # Začni své hledání
+
+          Aby jsi nalez více o tom jakou roli hraje počítačová věda a programování v zábavě, musíš provést malý průzkum. Zkus vyhledat "Počítačová věda a &#95;&#95;&#95;&#95;&#95;&#95;", vyzkoušej vyhledání pro různé typy zábavy jako je film, televize, hudba, hry, animace, móda, atd.
+      CSD U3 Entertainment_2018_2019:
+        markdown: |-
+          # Začni své hledání
+
+          Aby jsi nalez více o tom jakou roli hraje počítačová věda a programování v zábavě, musíš provést malý průzkum. Zkus vyhledat "Počítačová věda a &#95;&#95;&#95;&#95;&#95;&#95;", vyzkoušej vyhledání pro různé typy zábavy jako je film, televize, hudba, hry, animace, móda, atd.
+        teacher_markdown: "Zde je několik webových stánek, kde mohou studenti začít.
+          Tyto stránky jsou obecně vhodné pro školy, ale jjich obsah se mění velice
+          často, proto **výrazně doporučujeme aby jste zkontrolovali každou stránku
+          na nevhodný obsah než ji budete sdílet se studenty**.\n\n[key]\n\n## Inside
+          the Magic - [insidethemagic.net](http://www.insidethemagic.net)\n\n### Přehled\n\nThis
+          site is focused on news about Disney, but you might be surprised by the
+          large role that CS plays in all of their different forms of entertainment.
+          Because this isn't a CS focused site, you'll need to use the search function
+          to find relevant articles.\n\n### Relevantní oblasti\n\n* Film/TV\n* Animace\n*
+          Robotika/Animatronika\n* Hry\n\n## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)\n\n###
+          Přehled\n\nVidea představující řadu lidí pracujících v různých oblastech
+          herního průmyslu a hovořících o tom, co dělají.\n\n### Relevantní oblasti\n\n*
+          Hry\n* Animace\n* Umění\n\n## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)\n\n###
+          Přehled\n\nMusic Think Tank je blog zaměřený na lidi pracující v hudebním
+          průmyslu. Není to stránka zaměřená na CS, ale vyhledáním hesla \"computer
+          science\" nebo \"programming\" si můžete najít zajímavé články.\n\n### Relevantní
+          oblasti\n\n* Hudba\n\n## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)\n\n###
+          Přehled\n\nI když tento podcast příliš nepředstavuje běžné profesionální
+          programování (stejně jako lidi, kteří se tím živí), je skvělým zdrojem informací
+          o různých způsobech, jak si amatéři hrají s programováním. \n\n### Relevantní
+          oblasti\n\n* Vše\n\n[/key]\n"

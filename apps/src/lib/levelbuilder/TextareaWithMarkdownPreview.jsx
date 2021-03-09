@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+
+import MarkdownEnabledTextarea, {
+  markdownFeaturesShape
+} from './MarkdownEnabledTextarea';
 
 const styles = {
   wrapper: {
@@ -24,15 +28,6 @@ const styles = {
     marginBottom: 0,
     border: '1px solid ' + color.lighter_gray,
     padding: 10
-  },
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
   }
 };
 
@@ -46,7 +41,8 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     name: PropTypes.string,
     inputRows: PropTypes.number,
     helpTip: PropTypes.string,
-    handleMarkdownChange: PropTypes.func.isRequired
+    handleMarkdownChange: PropTypes.func.isRequired,
+    features: markdownFeaturesShape
   };
 
   render() {
@@ -61,20 +57,21 @@ export default class TextareaWithMarkdownPreview extends React.Component {
         <div style={styles.wrapper}>
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Markdown:</div>
-            <textarea
+            <MarkdownEnabledTextarea
+              markdown={this.props.markdown}
               name={this.props.name}
-              value={this.props.markdown}
-              rows={this.props.inputRows || 5}
-              style={styles.input}
-              onChange={this.props.handleMarkdownChange}
+              inputRows={this.props.inputRows || 5}
+              handleMarkdownChange={this.props.handleMarkdownChange}
+              features={this.props.features}
             />
           </div>
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Preview:</div>
             <div style={styles.preview}>
-              <SafeMarkdown
+              <EnhancedSafeMarkdown
                 openExternalLinksInNewTab={true}
                 markdown={this.props.markdown}
+                expandableImages
               />
             </div>
           </div>

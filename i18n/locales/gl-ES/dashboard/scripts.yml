@@ -2307,6 +2307,8 @@ gl:
               display_name: Binario
             csf_digcit:
               display_name: Cidadanía dixital
+            lessonGroup-6:
+              display_name: Cidadanía dixital
         coursee-2021:
           lessons:
             Conditionals:
@@ -2314,10 +2316,12 @@ gl:
             'Functions: Songwriting':
               name: Composición
           lesson_groups:
+            ramp_up:
+              display_name: Bucles
             csf_digcit:
               display_name: Cidadanía dixital
             csf_nested_loops:
-              display_name: Bucles aniñados
+              display_name: Condicionais
             csf_functions:
               display_name: Funcións
         coursef-2021:
@@ -2362,3 +2366,30 @@ gl:
               display_name: Introdución
             lessonGroup-3:
               display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introdución
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Eventos
+              name: Eventos
+            Conditionals:
+              key: Condicionais
+              name: Condicionais
+            Functions:
+              key: Funcións
+              name: Funcións
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Bucles "Para" (For)
+              name: Bucles "Para" (For)
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introdución
+            Introduction:
+              display_name: Introdución

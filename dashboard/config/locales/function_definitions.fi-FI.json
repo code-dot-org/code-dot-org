@@ -1275,6 +1275,47 @@
           "collect": {
             "name": "kerätä"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "piirrä tähti",
+            "parameters": {
+              "points": "pisteet",
+              "length": "pituus"
+            }
+          },
+          "draw a circle": {
+            "name": "piirrä ympyrä"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pituus",
+              "repeat": "toista"
+            }
+          },
+          "draw a triangle": {
+            "name": "piirrä kolmio",
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a house": {
+            "name": "piirrä talo",
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a square": {
+            "name": "piirrä neliö",
+            "parameters": {
+              "length": "pituus"
+            }
+          }
         }
       }
     }

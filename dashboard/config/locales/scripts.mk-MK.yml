@@ -299,6 +299,10 @@ mk:
           lesson_groups:
             csf_loops:
               display_name: Лупови
+        coursee-2021:
+          lesson_groups:
+            ramp_up:
+              display_name: Лупови
         coursef-2021:
           lesson_groups:
             csf_variables:
@@ -317,3 +321,11 @@ mk:
           lesson_groups:
             lessonGroup-3:
               display_name: Променливи
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Лупови
+              name: Лупови
+            Variables:
+              key: Променливи
+              name: Променливи

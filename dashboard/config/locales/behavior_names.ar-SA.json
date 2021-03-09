@@ -136,6 +136,16 @@
           "spinning right": "الدوران ناحية اليمين",
           "moving left and right": "تحرك إلى اليسار وإلى اليمين",
           "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "outbreak_freeplay": {
+          "recovering": "التعافي",
+          "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "التعافي",
+          "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
         }
       }
     }

@@ -1330,6 +1330,10 @@ pt-BR:
         - text: A extensão do arquivo (.jpg) está faltando no endereço da imagem
         - text: O endereço da imagem não se dá como um atributo 'src'
         - text: Há um espaço no nome do arquivo
+        teacher_markdown: Embora este nível possa ser utilizado para avaliar a compreensão
+          do estudante sobre a sintaxe da tag `<img>`, seu principal objetivo é conscientizar
+          os estudantes sobre os tipos mais comuns de erros que podem encontrar ao
+          adicionar imagens a páginas da web.
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27

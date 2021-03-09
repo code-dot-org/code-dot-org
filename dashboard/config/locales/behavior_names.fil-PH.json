@@ -30,6 +30,16 @@
           "recovering": "nagpapagaling",
           "moving left and right": "paggalaw sa kaliwa at kanan",
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "outbreak_freeplay": {
+          "recovering": "nagpapagaling",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "nagpapagaling",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
         }
       }
     }

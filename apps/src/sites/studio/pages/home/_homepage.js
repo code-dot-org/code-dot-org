@@ -13,6 +13,8 @@ import {
   setAuthProviders,
   setPageType,
   setStageExtrasScriptIds,
+  setTextToSpeechScriptIds,
+  setPreReaderScriptIds,
   setValidGrades
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
@@ -34,6 +36,8 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.lessonExtrasScriptIds));
+  store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
+  store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
@@ -78,6 +82,7 @@ function showHomepage() {
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}
             donorBannerName={homepageData.donorBannerName}
+            donorName={homepageData.donorName}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}

@@ -3,7 +3,6 @@ import * as Table from 'reactabular-table';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {scriptDataPropType, scrollbarWidth} from '../sectionProgressConstants';
 import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
@@ -29,11 +28,8 @@ export default class ProgressTableContentView extends React.Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
-    levelProgressByStudent: PropTypes.objectOf(
-      PropTypes.objectOf(studentLevelProgressType)
-    ).isRequired,
     onClickLesson: PropTypes.func.isRequired,
-    columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
+    columnWidths: PropTypes.arrayOf(PropTypes.number),
     lessonCellFormatter: PropTypes.func.isRequired,
     extraHeaderFormatters: PropTypes.arrayOf(PropTypes.func),
     needsGutter: PropTypes.bool.isRequired,
@@ -79,6 +75,7 @@ export default class ProgressTableContentView extends React.Component {
         ref={r => (this.lessonRefs[lesson.position] = r)}
       >
         <ProgressTableLessonNumber
+          id={lesson.id}
           name={lesson.name}
           number={lesson.relative_position}
           lockable={lesson.lockable}
@@ -92,19 +89,30 @@ export default class ProgressTableContentView extends React.Component {
   }
 
   contentCellFormatter(_, {rowData, columnIndex}) {
-    const {scriptData, levelProgressByStudent} = this.props;
     return this.props.lessonCellFormatter(
-      scriptData.stages[columnIndex],
-      rowData,
-      levelProgressByStudent[rowData.id]
+      this.props.scriptData.stages[columnIndex],
+      rowData
     );
   }
 
+  /**
+   * `columnWidths` is an optional prop. When it's provided, we explicitly
+   * constrain column widths to the provided values. When it's absent, the
+   * columns will size themselves based on their content.
+   *
+   * Note: Due to the nuances of reactabular's implementation, header cells
+   * are unable to base their width on the content of body cells, nor
+   * vice versa. Consequently, for headers to properly align with their body
+   * columns when explicit column widths are not provided, the max content
+   * width of header cells must match the max content width of body cells.
+   */
   columnWidthStyle(index) {
     const {columnWidths} = this.props;
-    return {
-      style: {minWidth: columnWidths[index], maxWidth: columnWidths[index]}
-    };
+    return columnWidths
+      ? {
+          style: {minWidth: columnWidths[index], maxWidth: columnWidths[index]}
+        }
+      : {};
   }
 
   render() {
@@ -165,7 +173,8 @@ export default class ProgressTableContentView extends React.Component {
           rowKey={'id'}
           onScroll={this.props.onScroll}
           style={{
-            overflow: 'auto',
+            overflowX: 'scroll',
+            overflowY: 'auto',
             maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
           }}
           ref={r => {

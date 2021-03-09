@@ -5508,6 +5508,8 @@ nl:
               display_name: Binaire
             csf_digcit:
               display_name: Digitaal Burgerschap
+            lessonGroup-6:
+              display_name: Digitaal Burgerschap
         coursee-2021:
           description_audience: 'Leeftijden: 8-12'
           lessons:
@@ -5517,6 +5519,12 @@ nl:
               key: Over mij
             'Functions: Songwriting':
               name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica
+                wereld is de functie. Functies (soms procedures genoemd) zijn mini
+                programma's die telkens opnieuw kunnen gebruikt worden binnen het
+                grotere geheel van je programma. Deze les helpt leerlingen intuïtief
+                te begrijpen waarom brokken code samenvoegen in functies een nuttige
+                praktijk is.
           lesson_groups:
             ramp_up:
               display_name: Inleiding
@@ -5525,7 +5533,7 @@ nl:
             csf_digcit:
               display_name: Digitaal Burgerschap
             csf_nested_loops:
-              display_name: Genestelde lussen
+              display_name: Voorwaardelijke instructies
             csf_functions:
               display_name: Functies
         coursef-2021:
@@ -5624,3 +5632,37 @@ nl:
               name: Les 14
             lesson15:
               name: Les 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introductie
+            Loops:
+              key: Lussen
+              name: Lussen
+            Events:
+              key: Gebeurtenissen
+              name: Gebeurtenissen
+            Conditionals:
+              key: Voorwaardelijke instructies
+              name: Voorwaardelijke instructies
+            Functions:
+              key: Functies
+              name: Functies
+            Variables:
+              key: Variabelen
+              name: Variabelen
+            For Loops:
+              key: For-lussen
+              name: For-lussen
+            Next steps:
+              key: Volgende stappen
+              name: Volgende stappen
+            Module 1:
+              name: Module 1
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introductie
+            k5_next_steps_1:
+              display_name: Volgende stappen
+            Introduction:
+              display_name: Introductie

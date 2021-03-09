@@ -11,11 +11,11 @@
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
       ],
-      "pilot_experiment": "contagion-pilot",
-      "peer_reviews_to_complete": 0
+      "pilot_experiment": "contagion-pilot"
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 15:49:16 UTC",
     "seeding_key": {
       "script.name": "contagion-pilot"
     }
@@ -349,7 +349,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Model 2",
+        "progression": "90% Chance",
         "level_keys": [
           "contagion_chance"
         ]
@@ -374,6 +374,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Model 2",
+        "level_keys": [
+          "contagion_more chance"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_more chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      },
+      "level_keys": [
+        "contagion_more chance"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "STOP!",
         "level_keys": [
           "contagion_stop"
@@ -394,8 +419,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 4,
+      "chapter": 13,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -419,8 +444,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 5,
+      "chapter": 14,
+      "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -444,8 +469,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 6,
+      "chapter": 15,
+      "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -469,7 +494,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -599,6 +624,17 @@
         "level.key": "contagion_chance",
         "script_level.level_keys": [
           "contagion_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "contagion-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_more chance",
+        "script_level.level_keys": [
+          "contagion_more chance"
         ],
         "lesson.key": "modifying your model",
         "lesson_group.key": "contagion",

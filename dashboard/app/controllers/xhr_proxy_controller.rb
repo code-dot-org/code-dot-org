@@ -28,6 +28,7 @@ class XhrProxyController < ApplicationController
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     allrecipes.com
     apex.oracle.com
+    api.coinlayer.com
     api.data.gov
     api.datamuse.com
     api.energidataservice.dk

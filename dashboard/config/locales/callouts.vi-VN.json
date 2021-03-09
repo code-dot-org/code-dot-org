@@ -12,7 +12,7 @@
           "4-5_Artist_Patterns_Free_Play_1": "Tất cả các khối yêu thích của bạn bây giờ được sắp xếp vào các mục.  Nhấp chuột vào những từ này để xem tất cả mọi thứ đã đi đâu!"
         },
         "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "Màn hình chuyển sang màu xanh không? Nếu vậy, nhấn 'Hoàn thành'. Còn không, bấm vào 'Thiết lập lại', Thay đổi khối lệnh, rồi sau đó nhấn 'Chạy' lần nữa."
+          "applab_hoc_finish": "Màn hình đã chuyển sang màu xanh lá chưa? Nếu có, nhấn 'Hoàn thành'. Nếu không, bấm vào 'Thiết lập lại', thay đổi mã lập trình, rồi sau đó nhấn 'Chạy' lần nữa."
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Thay đổi số ở đây"
@@ -477,7 +477,8 @@
           "snowflake_dropdown": "Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!"
         },
         "frozen line": {
-          "move_elsa_forward": "Kéo một khối lệnh \"Di chuyển về phía trước\" và gắn nó ngay dưới khối \"Khi chạy\" để làm cho Elsa di chuyển về phía trước"
+          "move_elsa_forward": "Kéo một khối lệnh \"Di chuyển về phía trước\" và gắn nó ngay dưới khối \"Khi chạy\" để làm cho Elsa di chuyển về phía trước",
+          "run": "Nhấn \"Chạy\" để chạy thử chương trình của bạn!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Sử dụng khối \"rẽ\" để làm Elsa rẽ. Số khung bên trong khối xoay sẽ xác định Elsa quay một góc bao nhiêu độ"
@@ -503,6 +504,15 @@
         },
         "outbreak7": {
           "costumes_callout": "Nhấn để tạo trang phục mới"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Bạn đang ở chế độ Thiết kế."
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Khi bạn sẵn sàng, hãy nhấn \"Chạy\" để thử chương trình."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Nhấn \"Chạy\" để bắt đầu di chuyển."
         }
       }
     }

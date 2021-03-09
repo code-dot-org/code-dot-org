@@ -1220,6 +1220,10 @@
       "idea1": "_Need an idea?_\n\n**Who's there?** Make characters appear with random images, so no one knows who's showing up next.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
       "idea2": "_Need an idea?_\n\n**Going on an Adventure** - Change the background, then have the characters talk about where they are now.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
       "idea3": "_Need an idea?_\n\n**Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursec-2020/stage/16/extras?level_name=courseC_PlayLab_events_challenge1_2020": {
@@ -1256,7 +1260,9 @@
       "5b402e6ea05e847a076e03ad74420c45": " birds!",
       "4b23c908b939eaf7918e07142b9e05e0": "A dragon!",
       "7f945c111ba5ea6d7b1547601db6ba0e": " dragons!",
-      "71fc859f3abd22273bad5d0d8eda2173": "Count all the animals!"
+      "71fc859f3abd22273bad5d0d8eda2173": "Count all the animals!",
+      "f62038e77820419cd978f7b722da560a": "How many will appear?",
+      "81a2909a24e4ca3b582ab9ee539c080c": "Count the Pets"
     }
   },
   "https://studio.code.org/s/coursec-2020/stage/18/puzzle/1": {
@@ -1272,6 +1278,10 @@
       "courseE_playLab_scaffold1_a": "The `set actor 1 to ??? image` block can be used to add an actor to the stage.",
       "courseE_playLab_scaffold1_b": "Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.",
       "courseE_playLab_scaffold1_c": "Use `set ??? background` to choose a background for your scene."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursec-2020/stage/18/puzzle/3": {
@@ -1281,6 +1291,10 @@
       "courseE_playLab_scaffold1_a": "Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.",
       "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
       "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursec-2020/stage/18/puzzle/4": {
@@ -1288,6 +1302,10 @@
     "long_instructions": "Let's add some more characters to your game!\n\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
     "callouts": {
       "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursec-2020/stage/18/puzzle/5": {
@@ -1295,14 +1313,26 @@
     "long_instructions": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\n\nUse event blocks like the `when actor touches` to change the score or win the game. Score 5 points or win the game to complete this puzzle.",
     "authored_hints": {
       "courseE_playLab_scaffold4_a": "Use `score point` to add a point, and `remove point` to subtract one."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursec-2020/stage/18/puzzle/6": {
     "short_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want.",
-    "long_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. When you are done, click \"Finish\"!"
+    "long_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. When you are done, click \"Finish\"!",
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    }
   },
   "https://studio.code.org/s/coursec-2020/stage/18/puzzle/7": {
     "short_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
-    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!"
+    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    }
   }
 }

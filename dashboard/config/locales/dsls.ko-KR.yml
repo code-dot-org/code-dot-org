@@ -729,6 +729,11 @@ ko-KR:
           일찍 마친 학생들은 새 컨텐츠를 페이지에 추가하거나 또는 끝낸 컨텐츠를 수정할 수 있습니다.
       CSD U2 L1 Overview:
         content1: 설명 입력
+        markdown: 이 수업은 사용자와 제작자 모두에게 서비스를 제공 할 수있는 목적을 다룹니다. 이 클래스는 미국에서 가장 많이 사용되는
+          웹 사이트를 탐구하고 각 사이트 각각이 사용자에게 유용한 방식과 제작자에게 어떻게 봉사하는지에 대해 설명합니다.
+        teacher_markdown: |-
+          *[웹 사이트의 목적 - 모범]
+          (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))
       CSD U2 L2 Overview:
         content1: 설명 입력
       CSD U2 L3 Overview:
@@ -4949,3 +4954,17 @@ ko-KR:
           * 프로그래머가 타인의 필요를 이해하고 그것을 염두해 두고 설계를 하는 것이 중요합니다!
 
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      CSD U2 Top Websites:
+        markdown: |-
+          # 미국 최고의 웹 사이트
+
+          다음은 미국에서 가장 자주 방문한 웹 사이트입니다. 각각은 웹 사이트의 핵심 기능에 대한 간략한 설명을 포함합니다.
+
+          1. Google.com - 웹 사이트, 그림, 비디오 및 기타 미디어 검색 엔진
+          2. Youtube.com - 사용자 제출 된 비디오 사이트 등급과 의견
+          3. Facebook.com - 사용자가 정보를 친구와 공유 할 수있는 소셜 미디어 커뮤니티
+          4. Amazon.com - 모든 종류의 온라인 쇼핑 사이트
+          5. Yahoo.com - 검색 엔진, 이메일 제공 업체 및 뉴스 소스
+          6. Wikipedia.org - 사용자가 생성 한 콘텐츠가있는 무료 백과 사전
+      csd-pre-survey-2017-levelgroup_2018:
+        title: CS 발견 학생 과정 전 설문 조사

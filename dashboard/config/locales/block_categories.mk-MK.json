@@ -1,0 +1,46 @@
+{
+  "mk-MK": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Акции",
+          "Loops": "Лупови",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Variables": "Променливи"
+        },
+        "CourseD_EOC_dance": {
+          "Logic": "Логика"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Акции",
+          "Loops": "Лупови",
+          "Math": "Математика",
+          "Logic": "Логика"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Акции"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Акции",
+          "Variables": "Променливи",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Text": "Текст"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Акции",
+          "Logic": "Логика",
+          "Loops": "Лупови",
+          "Math": "Математика",
+          "Variables": "Променливи"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Акции",
+          "Logic": "Логика",
+          "Math": "Математика"
+        }
+      }
+    }
+  }
+}

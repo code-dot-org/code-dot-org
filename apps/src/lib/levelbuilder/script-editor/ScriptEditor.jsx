@@ -51,7 +51,7 @@ const styles = {
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
 
 /**
  * Component for editing course scripts.
@@ -95,6 +95,7 @@ class ScriptEditor extends React.Component {
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
+    initialIncludeStudentLessonPlans: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -153,7 +154,8 @@ class ScriptEditor extends React.Component {
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources,
       hasImportedLessonDescriptions: false,
-      oldScriptText: this.props.initialLessonLevelData
+      oldScriptText: this.props.initialLessonLevelData,
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
     };
   }
 
@@ -294,7 +296,8 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      is_migrated: this.props.isMigrated
+      is_migrated: this.props.isMigrated,
+      include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -382,6 +385,7 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({description: e.target.value})
             }
+            features={{imageUpload: true}}
           />
           <TextareaWithMarkdownPreview
             markdown={this.state.studentDescription}
@@ -391,6 +395,7 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({studentDescription: e.target.value})
             }
+            features={{imageUpload: true}}
           />
         </CollapsibleEditorSection>
 
@@ -765,6 +770,29 @@ class ScriptEditor extends React.Component {
               }
             />
           )}
+          {this.props.isMigrated && (
+            <label>
+              Include student-facing lesson plans
+              <input
+                type="checkbox"
+                checked={this.state.includeStudentLessonPlans}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    includeStudentLessonPlans: !this.state
+                      .includeStudentLessonPlans
+                  })
+                }
+              />
+              <HelpTip>
+                <p>
+                  Checking this will automatically generate student-facing
+                  lesson plans for any lesson that is marked as “Has Lesson
+                  Plan”
+                </p>
+              </HelpTip>
+            </label>
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources Settings">
@@ -833,6 +861,7 @@ class ScriptEditor extends React.Component {
               <input
                 value={this.state.weeklyInstructionalMinutes}
                 style={styles.input}
+                disabled={!this.state.showCalendar}
                 onChange={e =>
                   this.setState({
                     weeklyInstructionalMinutes: e.target.value

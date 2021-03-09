@@ -1,0 +1,76 @@
+{
+  "pt-BR": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Ações",
+          "Brushes": "Pincéis",
+          "Loops": "laços",
+          "Math": "Matemática",
+          "Logic": "Lógica",
+          "Functions": "funções",
+          "Variables": "variáveis"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Mundo",
+          "Dancers": "Bailarinos",
+          "Properties": "Propriedades",
+          "Events": "Eventos",
+          "Numbers": "Números",
+          "Logic": "Lógica"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Loops": "laços",
+          "Math": "Matemática",
+          "Logic": "Lógica",
+          "Games/Score": "Jogos/Pontuação"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Sprites": "Sprite",
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Behaviors": "Comportamentos"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Sprites": "Sprite",
+          "Locations": "Localizações",
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Behaviors": "Comportamentos",
+          "Variables": "variáveis",
+          "Math": "Matemática",
+          "Logic": "Lógica",
+          "Functions": "funções",
+          "Text": "Texto",
+          "Comments": "Comentários"
+        },
+        "outbreak_freeplay": {
+          "World": "Mundo",
+          "Sprites": "Sprite",
+          "Actions": "Ações",
+          "Behaviors": "Comportamentos",
+          "Events": "Eventos",
+          "Locations": "Localizações",
+          "Logic": "Lógica",
+          "Loops": "laços",
+          "Math": "Matemática",
+          "Variables": "variáveis",
+          "Functions": "funções",
+          "Comments": "Comentários"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Mundo",
+          "Sprites": "Sprite",
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Logic": "Lógica",
+          "Math": "Matemática"
+        }
+      }
+    }
+  }
+}

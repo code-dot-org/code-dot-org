@@ -1,0 +1,9 @@
+name 'ml-intro ai lab-intro video'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+## [Click Here](https://www.loom.com/share/048a7c1a7d2d4cbf94fef69f1ffc79bf) to watch the video introducing AI Lab and how to use the tool
+
+(as of 2/16)
+MARKDOWN

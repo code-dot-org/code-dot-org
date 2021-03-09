@@ -592,6 +592,89 @@ sk:
           náš blok sa bude správať rovnako. To znamená, ak je vyhlásenie v hornej
           časti pravdivé, vykoná sa prvá sada akcií. Ale ak je vyhlásenie v hornej
           časti nepravdivé, vykoná sa druhá sada akcií.
+    C4_for_loops:
+      1:
+        text: Keď použijete blok opakuj na zacyklenie kódu, ako počítač zistí, kedy
+          sa kód zopakoval dostatočne veľakrát? Blok opakuj v skutočnosti skrýva sofistikovanejší
+          kúsok kódu nazývaný cyklus pre, ktorý počíta od počiatočnej hodnoty po koncovú
+          hodnotu o konkrétny prírastok.
+      2:
+        text: Napríklad, opakovanie 3 blokov počíta od 1 po 3, po jednej. Za každým,
+          keď ráta, spustí kód vo vnútri opakovania. Cyklus vie, koľkokrát už zbehol,
+          vďaka premennej "počítadlo", ktorá je nastavená na počiatočnej hodnote,
+          keď cyklus začína a pridáva si o jedno zakaždým, keď zbehne cyklus. Akonáhle
+          je premenná "počítadlo" väčšia ako konečná hodnota, cyklus sa zastaví.
+      3:
+        text: 'Výhodou použitia ozajstného rátajúceho cyklu, namiesto bloku opakuj
+          je, že vidíme premennú "počítadlo" a používame ju v cykle. Napríklad, keď
+          máme viacero kvetín a prvá z nich má jeden nektár, druhá má dva nektáre
+          a tretia má tri, môžeme použiť rátajúci cyklus, aby včela pozbierala zakaždým
+          "počítadlový počet" nektárov, jeden na prvom kvete, dva na druhom a tri
+          na treťom. '
+      4:
+        text: V rátajúcom cykle môžeme tiež zvyšovať "počítadlo" o iné číslo ako jeden.
+          Vieme napríklad počítať vždy o plus 2, 4 alebo aj hodnotu, ktorá sa zakaždým
+          mení.
+    C4_for_loops_bee:
+      1:
+        text: Keď použijete blok opakuj na zacyklenie kódu, ako počítač zistí, kedy
+          sa kód zopakoval dostatočne veľakrát? Blok opakuj v skutočnosti skrýva sofistikovanejší
+          kúsok kódu nazývaný cyklus pre, ktorý počíta od počiatočnej hodnoty po koncovú
+          hodnotu o konkrétny prírastok.
+      2:
+        text: Napríklad, opakovanie 3 blokov počíta od 1 po 3, po jednej. Za každým,
+          keď ráta, spustí kód vo vnútri opakovania. Cyklus vie, koľkokrát už zbehol,
+          vďaka premennej "počítadlo", ktorá je nastavená na počiatočnej hodnote,
+          keď cyklus začína a pridáva si o jedno zakaždým, keď zbehne cyklus. Akonáhle
+          je premenná "počítadlo" väčšia ako konečná hodnota, cyklus sa zastaví.
+      3:
+        text: 'Výhodou použitia ozajstného rátajúceho cyklu, namiesto bloku opakuj
+          je, že vidíme premennú "počítadlo" a používame ju v cykle. Napríklad, keď
+          máme viacero kvetín a prvá z nich má jeden nektár, druhá má dva nektáre
+          a tretia má tri, môžeme použiť rátajúci cyklus, aby včela pozbierala zakaždým
+          "počítadlový počet" nektárov, jeden na prvom kvete, dva na druhom a tri
+          na treťom. '
+      4:
+        text: V rátajúcom cykle môžeme tiež zvyšovať "počítadlo" o iné číslo ako jeden.
+          Vieme napríklad počítať vždy o plus 2, 4 alebo aj hodnotu, ktorá sa zakaždým
+          mení.
+    C4_for_loops_no_bee:
+      1:
+        text: Keď použijete blok opakuj na zacyklenie kódu, ako počítač zistí, kedy
+          sa kód zopakoval dostatočne veľakrát? Blok opakuj v skutočnosti skrýva sofistikovanejší
+          kúsok kódu nazývaný cyklus pre, ktorý počíta od počiatočnej hodnoty po koncovú
+          hodnotu o konkrétny prírastok.
+      2:
+        text: Napríklad opakovanie troch blokov sa počíta od 1 do 3 po 1. Zakaždým,
+          keď sa počíta, spustí sa kód vnútri cyklu. Cyklus pre vie, koľkokrát sa
+          má spustiť, vďaka premennej počítadlo, ktorá je nastavená na počiatočnú
+          hodnotu na začiatku cyklu, a má k nej pridaný prírastok pri každom spustení
+          cyklu. Akonáhle je premenná počítadla väčšia ako koncová hodnota, cyklus
+          sa zastaví. Výhodou použitia cyklu pre namiesto bloku opakovania je, že
+          skutočne vidíte premennú počítadlo a môžete ju použiť vo svojom cykle.
+    C4_variables_artist:
+      1:
+        text: Premenná je kontajner, do ktorého môžeš ukladať hodnotu. Keď ju použiješ
+          v algoritme, otvorí kontajner a pozrie na hodnotu vo vnútri. To ti dovolí
+          písať šikovnejšie algoritmy, ktoré sa správajú podľa hodnôt uložených v
+          premennej.
+      2:
+        text: Napríklad, ak by som chcela napísať algoritmus "Všetko najlepšie k 10.
+          narodeninám braček" o rok neskôr, spustením programu, by som chcela povedať
+          "Všetko najlepšie k 11. narodeninám"! Mohla by som vytvoriť premennú s názvom
+          vek, ktorou sa uloží bratov vek a napíšem k tomu môj algoritmus, aby som
+          miesto toho povedala "Všetko najlepšie k "vek". narodeninám ". A keďže premenná
+          sa rokom mení, môžem ju aktualizovať ako "vek" plus 1.
+      3:
+        text: V tejto úlohe použijeme premennú, ktorá nastaví dĺžku čiary, ktorú umelec
+          nakreslí. Neskôr v našom kóde bude blok "Posuň sa dopredu" overovať premennú,
+          aby zistil, aká hodnota dĺžky jej bola pridelená.
+    C4_variables_playlab:
+      1:
+        text: Premenná je kontajner, do ktorého môžeš ukladať hodnotu. Keď ju použiješ
+          v algoritme, otvorí kontajner a pozrie na hodnotu vo vnútri. To ti dovolí
+          písať šikovnejšie algoritmy, ktoré sa správajú podľa hodnôt uložených v
+          premennej.
     infinity_playlab_events:
       1:
         text: Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.

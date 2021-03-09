@@ -1,0 +1,17 @@
+fr:
+  data:
+    parameter_names:
+      actor: acteur
+      color: couleur
+      counter: compteur
+      height: hauteur
+      honey: miel
+      left: vers la gauche
+      length: longueur
+      min: min
+      points: points
+      radius: rayon
+      sides: côtés
+      size: taille
+      speed: vitesse
+      width: largeur

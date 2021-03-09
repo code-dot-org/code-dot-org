@@ -1,0 +1,14 @@
+---
+ms:
+  data:
+    parameter_names:
+      actor: pelakon
+      color: warna
+      counter: Kaunter
+      height: ketinggian
+      left: kiri
+      length: panjang
+      min: terkecil
+      size: saiz
+      speed: kelajuan
+      width: lebar

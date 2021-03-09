@@ -1154,7 +1154,54 @@
           "moving north": "движение на север",
           "jittering": "дрожание",
           "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "recovering": "выздоровление",
+          "moving left and right": "перемещение влево и вправо",
+          "moving with arrow keys": "передвижение клавишами со стрелками"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
           "patrolling": "патрулирование"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "wandering": "блуждание"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "выздоровление",
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "moving left and right": "перемещение влево и вправо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками"
         }
       }
     }

@@ -3485,6 +3485,11 @@ pt:
             csp_libraries:
               display_name: Bibliotecas 
         csp10-2021:
+          lessons:
+            'Project: Innovation Simulation Part 6':
+              description_student: Visão geral da aula
+            'Project: Innovation Simulation Part 7':
+              description_student: Visão geral da aula
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidade 10: Ciber Segurança e Impactos Globais'
@@ -3567,23 +3572,27 @@ pt:
               display_name: Binário
             csf_digcit:
               display_name: Cidadania digital
+            lessonGroup-6:
+              display_name: Cidadania digital
         coursee-2021:
           lessons:
             Conditionals:
               key: Condicionais
             Simon Says:
               key: O Rei Manda
-              name: O Rei Manda
             Digital Sharing:
               key: Partilha Digital
               name: Partilha Digital
             'Functions: Songwriting':
               name: Composição
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
           lesson_groups:
+            ramp_up:
+              display_name: Ciclos
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
-              display_name: Laços aninhados
+              display_name: Condicionais
             csf_functions:
               display_name: Funções
         coursef-2021:
@@ -3652,3 +3661,35 @@ pt:
               name: Lição 14
             lesson15:
               name: Lição 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introdução
+            Sequencing:
+              key: Sequenciação
+              name: Sequenciação
+            Loops:
+              key: Ciclos
+              name: Ciclos
+            Events:
+              key: Eventos
+              name: Eventos
+            Conditionals:
+              key: Condicionais
+              name: Condicionais
+            Functions:
+              key: Funções
+              name: Funções
+            Variables:
+              key: Variáveis
+              name: Variáveis
+            For Loops:
+              key: Ciclos "for"
+              name: Ciclos "for"
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introdução
+            k5_next_steps_1:
+              display_name: Próximos Passos
+            Introduction:
+              display_name: Introdução

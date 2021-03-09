@@ -1,0 +1,55 @@
+{
+  "lt-LT": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Komandos",
+          "Loops": "Kartojimas",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Komandų kūrimas",
+          "Variables": "Kintamieji"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "Įvykiai",
+          "Logic": "Logika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Komandos",
+          "Events": "Įvykiai",
+          "Loops": "Kartojimas",
+          "Math": "Matematika",
+          "Logic": "Logika"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Komandos",
+          "Events": "Įvykiai"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Komandos",
+          "Events": "Įvykiai",
+          "Variables": "Kintamieji",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Komandų kūrimas",
+          "Text": "Tekstas"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Komandos",
+          "Events": "Įvykiai",
+          "Logic": "Logika",
+          "Loops": "Kartojimas",
+          "Math": "Matematika",
+          "Variables": "Kintamieji",
+          "Functions": "Komandų kūrimas"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Komandos",
+          "Events": "Įvykiai",
+          "Logic": "Logika",
+          "Math": "Matematika"
+        }
+      }
+    }
+  }
+}

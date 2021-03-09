@@ -108,12 +108,12 @@ export class TeacherFeedback extends Component {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverScriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
-    serverScriptLevelId: PropTypes.number,
     teacher: PropTypes.number,
     verifiedTeacher: PropTypes.bool,
     displayKeyConcept: PropTypes.bool,
     latestFeedback: PropTypes.array,
-    token: PropTypes.string
+    token: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   constructor(props) {
@@ -174,9 +174,9 @@ export class TeacherFeedback extends Component {
       student_id: this.state.studentId,
       script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
-      script_level_id: this.props.serverScriptLevelId,
       teacher_id: this.props.teacher,
-      performance: this.state.performance
+      performance: this.state.performance,
+      analytics_section_id: this.props.selectedSectionId
     };
 
     $.ajax({
@@ -421,7 +421,7 @@ export default connect(state => ({
   viewAs: state.viewAs,
   serverScriptId: state.pageConstants.serverScriptId,
   serverLevelId: state.pageConstants.serverLevelId,
-  serverScriptLevelId: state.pageConstants.serverScriptLevelId,
   teacher: state.pageConstants.userId,
-  verifiedTeacher: state.pageConstants.verifiedTeacher
+  verifiedTeacher: state.pageConstants.verifiedTeacher,
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(TeacherFeedback);

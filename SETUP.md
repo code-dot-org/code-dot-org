@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
+   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
@@ -50,6 +50,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 1. Run the website `bin/dashboard-server`
 1. Visit http://localhost-studio.code.org:3000/ to verify it is running.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
@@ -295,7 +296,7 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 
 ### Ruby
 
-We use [RuboCop](https://docs.rubocop.org/en/latest/) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/en/latest/integration_with_other_tools/) for instructions for your editor of choice.
+We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
 
 ## More Information
 Please also see our other documentation, including our:

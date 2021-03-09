@@ -2610,6 +2610,8 @@ da:
               display_name: Binære
             csf_digcit:
               display_name: Digital statsborgerskab
+            lessonGroup-6:
+              display_name: Digital statsborgerskab
         coursee-2021:
           lessons:
             Conditionals:
@@ -2617,12 +2619,14 @@ da:
             'Functions: Songwriting':
               name: Sangskrivning
           lesson_groups:
+            ramp_up:
+              display_name: Løkker
             csf_sprites:
               display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
             csf_nested_loops:
-              display_name: Indlejret Løkker
+              display_name: Betingelser
             csf_functions:
               display_name: Funktioner
         coursef-2021:
@@ -2691,3 +2695,33 @@ da:
             virusudbrud. '
           student_description: 'Brug Sprite Lab til at programmere en simulation ud
             af et virusudbrud. '
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduktion
+            Loops:
+              key: Løkker
+              name: Løkker
+            Events:
+              key: Hændelser
+              name: Hændelser
+            Conditionals:
+              key: Betingelser
+              name: Betingelser
+            Functions:
+              key: Funktioner
+              name: Funktioner
+            Variables:
+              key: Variabler
+              name: Variabler
+            For Loops:
+              key: For Loops
+              name: For Loops
+            Sprite Lab:
+              key: SpriteLab
+              name: SpriteLab
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduktion
+            Introduction:
+              display_name: Introduktion

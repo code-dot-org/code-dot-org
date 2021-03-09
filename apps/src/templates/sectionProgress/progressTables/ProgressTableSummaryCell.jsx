@@ -13,10 +13,26 @@ const styles = {
   }
 };
 
+function BorderedBox({borderColor, onClick, children}) {
+  const boxStyle = {
+    ...styles.container,
+    borderColor: borderColor
+  };
+  return (
+    <div style={boxStyle} onClick={onClick} className="uitest-summary-cell">
+      {children}
+    </div>
+  );
+}
+BorderedBox.propTypes = {
+  borderColor: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  children: PropTypes.node
+};
 export default class ProgressTableSummaryCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
-    studentLessonProgress: studentLessonProgressType.isRequired,
+    studentLessonProgress: studentLessonProgressType,
     isAssessmentLesson: PropTypes.bool,
     onSelectDetailView: PropTypes.func
   };
@@ -26,16 +42,26 @@ export default class ProgressTableSummaryCell extends React.Component {
   }
 
   render() {
-    const {studentLessonProgress, isAssessmentLesson} = this.props;
+    const {
+      studentLessonProgress,
+      isAssessmentLesson,
+      onSelectDetailView
+    } = this.props;
 
-    const boxStyle = {
-      ...styles.container,
-      borderColor: studentLessonProgress.isStarted
-        ? isAssessmentLesson
-          ? color.level_submitted
-          : color.level_perfect
-        : color.light_gray
-    };
+    if (!studentLessonProgress) {
+      return (
+        <BorderedBox
+          borderColor={color.light_gray}
+          onClick={onSelectDetailView}
+        />
+      );
+    }
+
+    const borderColor = studentLessonProgress.isStarted
+      ? isAssessmentLesson
+        ? color.level_submitted
+        : color.level_perfect
+      : color.light_gray;
 
     const incompleteStyle = {
       backgroundColor: color.level_not_tried,
@@ -55,11 +81,15 @@ export default class ProgressTableSummaryCell extends React.Component {
     };
 
     return (
-      <div style={boxStyle} onClick={this.props.onSelectDetailView}>
+      <BorderedBox borderColor={borderColor} onClick={onSelectDetailView}>
         <div style={incompleteStyle} />
         <div style={imperfectStyle} />
         <div style={completedStyle} />
-      </div>
+      </BorderedBox>
     );
   }
 }
+
+export const unitTestExports = {
+  BorderedBox
+};

@@ -110,9 +110,15 @@ ko:
     더 많은 내용을 가르치기 위한 새로운 여정에서 Code.org의 제일보를 즐기세요.
   hoc_live: 아워오브코드 라이브
   hoc_live_sign_up_title: 아워오브코드 라이브 가입
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: '특별 게스트와 함께 실시간으로 배우세요! 컴퓨터가 없는 학생을 포함하여, 연령과 능력 수준에 상관
     없이 모든 학생을 환영합니다. 가정에서 계속 학습하려면 에피소드 녹화물 및 자료를 수신할 주소를 알려 주십시오.  '
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: 함께 참여하기
+  hoc_live_learn_more: 더보기
   hoc_overview_oceans_tutorial_header: 바다환경을 위한 AI
   hoc_overview_oceans_tutorial_desc: 인공지능 (AI)과 머신러닝, 트레이닝 데이터, 편견에 관해 배우는 한편 윤리 문제를
     탐구하고 AI로 세계적 문제를 어떻게 해결할지 알아보세요.

@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'pdf/conversion'
 
 # When adding a new model, update the following:
 # - serialize_seeding_json
@@ -14,6 +15,7 @@ module Services
   class ScriptSeedTest < ActiveSupport::TestCase
     setup do
       Game.game_cache = nil
+      PDF.stubs(:generate_from_url)
     end
 
     # Tests serialization of a "full Script tree" - a Script with all of the associated models under it populated.
@@ -25,7 +27,25 @@ module Services
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
       # File.write(filename, ScriptSeed.serialize_seeding_json(script))
-      assert_equal File.read(filename), ScriptSeed.serialize_seeding_json(script)
+
+      expected = JSON.parse(File.read(filename))
+      actual = JSON.parse(ScriptSeed.serialize_seeding_json(script))
+
+      # Serialization includes a timestamp, which obviously doesn't play nicely
+      # with the concept of a fixture. So, test that manually and exclude it
+      # from the "full" test.
+      assert actual['script'].key?('serialized_at')
+      actual['script'].delete('serialized_at')
+
+      assert_equal expected, actual
+    end
+
+    test 'seeded_from property is not serialized' do
+      script = create(:script)
+      script.seeded_from = Time.now
+      result = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json
+      assert result.key? :properties
+      refute result[:properties].key? 'seeded_from'
     end
 
     test 'seed new script' do
@@ -293,7 +313,7 @@ module Services
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
-        lesson.vocabularies.first.update!(word: 'updated word', definition: 'updated definition')
+        lesson.vocabularies.first.update!(definition: 'updated definition')
         lesson.vocabularies.create(
           word: 'new word',
           key: "#{lesson.name}-vocab-3",
@@ -308,7 +328,7 @@ module Services
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal(
-        ['updated word', 'word', 'new word'],
+        ['word', 'word', 'new word'],
         lesson.vocabularies.map(&:word)
       )
       assert_equal(
@@ -547,6 +567,21 @@ module Services
       )
     end
 
+    test 'import_script sets seeded_from from serialized_at' do
+      script = create(:script, is_migrated: true, hidden: true)
+      assert script.seeded_from.nil?
+
+      serialized = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json.stringify_keys
+      assert serialized['serialized_at'].present?
+
+      ScriptSeed.import_script(serialized)
+      script.reload
+      assert script.seeded_from.present?
+      # minitest is a bit weird about Time equality, so normalize both values
+      # to integers for easy comparison
+      assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_from).to_i
+    end
+
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Script.transaction do
@@ -572,7 +607,7 @@ module Services
       # Make sure the scripts and their associations are already in memory,
       # because fetching data from the DB could lead to false positive matches.
       assert_queries(0) do
-        assert_attributes_equal s1, s2
+        assert_scripts_equal s1, s2
         assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
         assert_lessons_equal s1.lessons, s2.lessons
         assert_lesson_activities_equal(
@@ -600,6 +635,12 @@ module Services
           s2.lessons.map(&:objectives).flatten
         )
       end
+    end
+
+    def assert_scripts_equal(script1, script2)
+      assert_attributes_equal(script1, script2, ['properties'])
+      assert_equal script1.properties.except('seeded_from'),
+        script2.properties.except('seeded_from')
     end
 
     def assert_lesson_groups_equal(lesson_groups1, lesson_groups2)

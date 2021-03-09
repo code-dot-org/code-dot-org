@@ -53,12 +53,16 @@ mk:
         options:
           KEY:
             '"w"': Запад
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': Запад
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       aalab_starwars_playSound:
         options:
           OPTION:

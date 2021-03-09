@@ -193,7 +193,7 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['true', '"false"', '123', '"456"']);
+      ).to.deep.equal(['123', '"456"', '"false"', 'true']);
     });
 
     it('shows null, undefined, and "" separately', () => {
@@ -204,7 +204,7 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['null', 'undefined', '""']);
+      ).to.deep.equal(['""', 'null', 'undefined']);
     });
 
     it('returns a list of unique values in the column', () => {
@@ -222,7 +222,23 @@ describe('VisualizerModal', () => {
 
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['"xyz"', '"def"', '"123"', 'undefined', '123', 'true']);
+      ).to.deep.equal(['"123"', '123', '"def"', 'true', '"xyz"', 'undefined']);
+    });
+
+    it('sorts numeric values', () => {
+      let records = [
+        {id: 1, col: 123},
+        {id: 2, col: 32},
+        {id: 3, col: 57},
+        {id: 4, col: 0},
+        {id: 5, col: -10}
+      ];
+
+      expect(
+        wrapper
+          .instance()
+          .getValuesForFilterColumn(records, 'col', true /* isNumeric */)
+      ).to.deep.equal(['-10', '0', '32', '57', '123']);
     });
   });
 

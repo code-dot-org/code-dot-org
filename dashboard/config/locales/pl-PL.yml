@@ -1423,3 +1423,4 @@ pl:
   behaviors:
     this_sprite: ten duszek
   unit_prefix: Jednostka %{n}
+  code_org_logo_alt: Strona domowa Code.org

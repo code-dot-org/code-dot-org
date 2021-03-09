@@ -30,6 +30,16 @@
           "recovering": "herstellend",
           "moving left and right": "links en rechts bewegen",
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "outbreak_freeplay": {
+          "recovering": "herstellend",
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "herstellend",
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
         }
       }
     }

@@ -101,8 +101,8 @@ describe('ScriptEditor', () => {
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({initialHidden: false, isMigrated: true});
 
-      expect(wrapper.find('input').length).to.equal(24);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('input').length).to.equal(25);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);

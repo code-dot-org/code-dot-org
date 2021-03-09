@@ -40,7 +40,7 @@ markdown <<MARKDOWN
 
 **Model Accuracy:** 95%
 
-**Dataset Size:** 500 rows
+**Dataset Size:** 1000 rows
 
 **Testing Data:** 10%
 
@@ -52,12 +52,12 @@ markdown <<MARKDOWN
 
 <br />
 
-**Describe the dataset used to create this model:** Data from a month of ER visits at a the Junea, Alaska hospital. It shows information about each patient, the symptoms they had, and how quickly they received help.
+**Describe the dataset used to create this model:** Data from a month of ER visits in a remote hospital in Alaska during winter. It shows information about each patient, the symptoms they had, and how quickly they received help.
 
 **Uses for this model that should be avoided:** This model shouldn't be used in a way that could reduce the care for people entering an emergency room.
 
 **Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
-  - [] Yes
+  - [ ] Yes
   - [x] No
 
 **This model could be used to inform decisions central to human life:**

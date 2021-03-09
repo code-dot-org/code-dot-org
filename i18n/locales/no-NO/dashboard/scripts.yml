@@ -3404,6 +3404,8 @@
               display_name: Binær
             csf_digcit:
               display_name: Digitalt statsborgerskap
+            lessonGroup-6:
+              display_name: Digitalt statsborgerskap
         coursee-2021:
           lessons:
             Conditionals:
@@ -3411,10 +3413,12 @@
             'Functions: Songwriting':
               name: Låtskriving
           lesson_groups:
+            ramp_up:
+              display_name: Løkker
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
-              display_name: Løkker i løkker
+              display_name: Betingelser
             csf_functions:
               display_name: Funksjoner
         coursef-2021:
@@ -3441,6 +3445,8 @@
             Dance Party:
               key: Dansefest
               name: Dansefest
+            'Looking Ahead with Minecraft ':
+              description_student: Unngå lavaen! Her skal du lære om betingelser i Minecraft-verdenen.
           lesson_groups:
             csf_loops:
               display_name: Løkker
@@ -3484,3 +3490,32 @@
               display_name: 'Kapittel 2: Problemløsing med data'
             cspSurvey:
               display_name: Undersøkelse
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduksjon
+            Loops:
+              key: Løkker
+              name: Løkker
+            Events:
+              key: Hendelser
+              name: Hendelser
+            Conditionals:
+              key: Betingelser
+              name: Betingelser
+            Functions:
+              key: Funksjoner
+              name: Funksjoner
+            Variables:
+              key: Variabler
+              name: Variabler
+            For Loops:
+              key: For-løkker
+              name: For-løkker
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduksjon
+            k5_next_steps_1:
+              display_name: De Neste Trinnene
+            Introduction:
+              display_name: Introduksjon

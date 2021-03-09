@@ -3,11 +3,11 @@ title 'Introduction to Machine Learning'
 description ''
 
 markdown <<MARKDOWN
-# Model Card
+# [Name] Model Card
 
-**Name:**
+**Intended Use:**
 
-**Description:**
+**Summary:**
 
 **Date:**
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 ::: details [**Click to Expand**]
 | Name | Type | Description | Possible Values |
 |----------|-------------|--------------------------------------------|---------|
-| Priority | Categorical | How quickly the patient received treatment | Bullets |
+| Name | &nbsp;&nbsp;Type&nbsp;&nbsp; | Description | <ul><li>Value 1</li><li>Value 2</li></ul> |
 :::
 
 ## Features
@@ -24,10 +24,7 @@ markdown <<MARKDOWN
 ::: details [**Click to Expand**]
 | Name | Type | Description | Possible Values |
 |----------|-------------|--------------------------------------------|---------|
-| Name | Type | Description | Possible Values |
-| Name | Type | Description | Possible Values |
-| Name | Type | Description | Possible Values |
-| Name | Type | Description | Possible Values |
+| Name | &nbsp;&nbsp;Type&nbsp;&nbsp; | Description | <ul><li>Value 1</li><li>Value 2</li></ul> |
 
 :::
 
@@ -45,21 +42,13 @@ markdown <<MARKDOWN
 
 :::
 
-## Potential Uses
-
-::: details [**Click to Expand**]
-
-**What was the intended use of this model?**
-
-**What are ways this model should not be used?**
-
-:::
-
 ## Model Disclaimers
 
 ::: details [**Click to Expand**]
 
 **Describe the dataset used to create this model:**
+
+**Uses for this model that should be avoided:**
 
 **Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
   - [ ] Yes

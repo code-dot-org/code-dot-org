@@ -10,6 +10,7 @@
         "playlab",
         "artist"
       ],
+      "has_lesson_plan": true,
       "version_year": "2017",
       "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}",
@@ -19,6 +20,7 @@
         "de-DE",
         "es-ES",
         "es-MX",
+        "fil-PH",
         "fr-FR",
         "hi-IN",
         "id-ID",
@@ -29,9 +31,13 @@
         "pl-PL",
         "pt-BR",
         "pt-PT",
+        "ro-RO",
         "ru-RU",
         "sk-SK",
+        "ta-IN",
+        "th-TH",
         "tr-TR",
+        "ur-PK",
         "uz-UZ",
         "vi-VN",
         "zh-CN",
@@ -42,8 +48,7 @@
       "tts": true,
       "lesson_extras_available": true,
       "hideable_lessons": true,
-      "is_course": true,
-      "peer_reviews_to_complete": 0
+      "is_course": true
     },
     "new_name": "coursed-2017",
     "family_name": "coursed",
@@ -70,8 +75,10 @@
       "name": "Programming: Graph Paper Programming",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Algorithms: Graph Paper Programming",
@@ -84,6 +91,7 @@
       "name": "Introduction to Online Puzzles",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -98,6 +106,7 @@
       "name": "Events in Bounce",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -112,6 +121,7 @@
       "name": "Nested Loops",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -126,6 +136,7 @@
       "name": "Nested Loops in Artist",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -140,6 +151,7 @@
       "name": "Nested Loops in Frozen",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -154,8 +166,10 @@
       "name": "Debugging: Relay Programming",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Algorithms: Relay Programming",
@@ -168,6 +182,7 @@
       "name": "Debugging in Collector",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -182,6 +197,7 @@
       "name": "While Loops in Farmer",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -196,8 +212,10 @@
       "name": "If/Else: Conditionals with Cards",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
@@ -210,6 +228,7 @@
       "name": "Conditionals in Bee",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -224,6 +243,7 @@
       "name": "Conditionals & Loops in Maze",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -238,6 +258,7 @@
       "name": "Conditionals & Loops in Harvester",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -252,8 +273,10 @@
       "name": "Digital Citizenship: Practicing Digital Citizenship",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Digital Citizenship",
@@ -266,6 +289,7 @@
       "name": "Build a Play Lab Game",
       "absolute_position": 15,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
       },
@@ -280,8 +304,10 @@
       "name": "Beyond Programming: Binary Images",
       "absolute_position": 16,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Unplugged: Binary",
@@ -294,6 +320,7 @@
       "name": "Binary in Artist",
       "absolute_position": 17,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
       },

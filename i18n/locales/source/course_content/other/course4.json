@@ -299,11 +299,19 @@
   },
   "https://studio.code.org/s/course4/stage/7/puzzle/6": {
     "short_instructions": "Use the right arrow to throw pie.\n\nIn our game, how should we score points? Add 1 to your \"points\" variable each time Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\" event to trigger an update to your score. You can increment your variable by setting \"points = points + 1.\" Get your score up to 10 (going one at a time!) to pass the level.",
-    "long_instructions": "In our game, how should we score points?\n\n1.  Add 1 to your `points` variable each time Dog hits Cat with a piece of pie.\n\n2.  Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`\n\n3.  Get your score up to 10 to pass the level.\n\n**Note:** Use the right arrow to throw pie!"
+    "long_instructions": "In our game, how should we score points?\n\n1.  Add 1 to your `points` variable each time Dog hits Cat with a piece of pie.\n\n2.  Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`\n\n3.  Get your score up to 10 to pass the level.\n\n**Note:** Use the right arrow to throw pie!",
+    "placeholder_texts": {
+      "f2906a454b9ee96245db295d124807f9": "Press right arrow to throw pie!",
+      "38ef4db866aae5cb50ce847a505b95d1": "Food Fight!"
+    }
   },
   "https://studio.code.org/s/course4/stage/7/puzzle/7": {
     "short_instructions": "Nice, now let's make sure this game isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor 2), you should lose a point. Start with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
-    "long_instructions": "Nice, now let's make sure this game isn't too easy to play!  \n\nAny time Dog (actor 1) gets hit by a sandwich from Cat (actor 2), you should lose a point. \n\nStart with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level."
+    "long_instructions": "Nice, now let's make sure this game isn't too easy to play!  \n\nAny time Dog (actor 1) gets hit by a sandwich from Cat (actor 2), you should lose a point. \n\nStart with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
+    "placeholder_texts": {
+      "f2906a454b9ee96245db295d124807f9": "Press right arrow to throw pie!",
+      "38ef4db866aae5cb50ce847a505b95d1": "Food Fight!"
+    }
   },
   "https://studio.code.org/s/course4/stage/7/puzzle/8": {
     "short_instructions": "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \n\nNotice that there are now so many blocks in our toolbox that they need to be organized!  Here, we've put each piece into an appropriate category.  Take some time to explore everything that is available. When you're done browsing, make a game or story using repeats, variables, and events.  \n\nHint: scroll down to see all the commands in the workspace.",
@@ -323,7 +331,9 @@
       "8292c7cbebf598e875ccd0c008958922": " who?",
       "40f4f24106dde9234f43bf30465647e0": "Knock knock.",
       "3986de660e6560710c546cb2f22c12f3": "Who's there?",
-      "812febf38bfe564d348136e1b9e71bcd": "Megabytes!"
+      "812febf38bfe564d348136e1b9e71bcd": "Megabytes!",
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/course4/stage/8/puzzle/1": {
@@ -506,11 +516,18 @@
   },
   "https://studio.code.org/s/course4/stage/11/puzzle/6": {
     "short_instructions": "Edit this `for` loop to create a game that's fun for you to play! \nPress \"Run\" and click Madame Unicorn as many times as you can.  Can you beat our score of 24? ",
-    "long_instructions": "Now we're going to use `for` loops in a whole different way!\n\nThis game gets hard quickly because the time between disappearances shrinks fast!\n\n<hr/>\n\n**Edit this `for` loop to create a game that's fun for you to play!**  \n\n<hr/>\n\nPress \"Run\" and click Madame Unicorn as many times as you can.  Can you beat our score of 24? "
+    "long_instructions": "Now we're going to use `for` loops in a whole different way!\n\nThis game gets hard quickly because the time between disappearances shrinks fast!\n\n<hr/>\n\n**Edit this `for` loop to create a game that's fun for you to play!**  \n\n<hr/>\n\nPress \"Run\" and click Madame Unicorn as many times as you can.  Can you beat our score of 24? ",
+    "placeholder_texts": {
+      "710ba29e2eed73bc74a520631d0ab520": "Game Over!"
+    }
   },
   "https://studio.code.org/s/course4/stage/11/puzzle/7": {
     "short_instructions": "Freeplay: Use everything you've learned so far to make a game that includes a `for` loop!",
-    "long_instructions": "**Freeplay:** Use everything you've learned so far to make a game that includes a `for` loop!"
+    "long_instructions": "**Freeplay:** Use everything you've learned so far to make a game that includes a `for` loop!",
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
   },
   "https://studio.code.org/s/course4/stage/12/puzzle/1": {
     "short_instructions": "Can you draw a square that is 100 pixels in length, using a repeat loop?",
@@ -1237,6 +1254,10 @@
           "speed": "speed"
         }
       }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/course4/stage/16/puzzle/1": {

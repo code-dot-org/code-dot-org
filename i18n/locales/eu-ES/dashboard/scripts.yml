@@ -2363,6 +2363,8 @@ eu:
               display_name: Bitarra
             csf_digcit:
               display_name: Hiritartasun digitala
+            lessonGroup-6:
+              display_name: Hiritartasun digitala
         coursee-2021:
           lessons:
             Conditionals:
@@ -2370,10 +2372,12 @@ eu:
             'Functions: Songwriting':
               name: Musika idazten
           lesson_groups:
+            ramp_up:
+              display_name: Itzuliak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:
-              display_name: Kabiatutako begiztak
+              display_name: Baldintzak
             csf_functions:
               display_name: Funtzioak
         coursef-2021:
@@ -2420,3 +2424,30 @@ eu:
               display_name: Sarrera
             lessonGroup-3:
               display_name: Aldagaiak
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Sarrera
+            Loops:
+              key: Itzuliak
+              name: Itzuliak
+            Events:
+              key: Gertaerak
+              name: Gertaerak
+            Conditionals:
+              key: Baldintzak
+              name: Baldintzak
+            Functions:
+              key: Funtzioak
+              name: Funtzioak
+            Variables:
+              key: Aldagaiak
+              name: Aldagaiak
+            For Loops:
+              key: For begiztak
+              name: For begiztak
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Sarrera
+            Introduction:
+              display_name: Sarrera

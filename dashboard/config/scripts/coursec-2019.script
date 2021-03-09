@@ -14,14 +14,14 @@ tts true
 is_course true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean', has_lesson_plan: true
+lesson 'Screen Out the Mean', display_name: 'Screen Out the Mean', has_lesson_plan: true, unplugged: true
 level 'ScreenOutTheMean-Unplugged'
 
-lesson 'Powerful Passwords', display_name: 'Powerful Passwords', has_lesson_plan: true
+lesson 'Powerful Passwords', display_name: 'Powerful Passwords', has_lesson_plan: true, unplugged: true
 level 'PowerfulPasswords-Unplugged'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
-lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends Jr.', has_lesson_plan: true
+lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends Jr.', has_lesson_plan: true, unplugged: true
 level 'MyRoboticFriends-Unplugged'
 
 lesson 'Programming in Maze', display_name: 'Programming with Angry Birds', has_lesson_plan: true
@@ -85,11 +85,11 @@ bonus 'courseC_artist_prog_challenge1_2019'
 bonus 'courseC_artist_prog_challenge2a_2019'
 
 lesson_group 'csf_binary', display_name: 'Binary'
-lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets-Unplugged'
 
 lesson_group 'csf_loops', display_name: 'Loops'
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends Jr.', has_lesson_plan: true
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends Jr.', has_lesson_plan: true, unplugged: true
 level 'MyLoopyRoboticFriends-Unplugged'
 
 lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8', has_lesson_plan: true
@@ -155,7 +155,7 @@ level 'courseC_artist_loops7a_2019', progression: 'Mini-project: Sticker Design'
 level 'courseC_artist_loops8a_2019', progression: 'Free Play'
 
 lesson_group 'csf_events', display_name: 'Events'
-lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent-Unplugged'
 
 lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
@@ -187,7 +187,7 @@ level 'courseC_PlayLab_eventsFP_2019', progression: 'Free Play'
 bonus 'courseC_PlayLab_events_challenge1_2019'
 
 lesson_group 'csf_data', display_name: 'Data'
-lesson 'Picturing Data', display_name: 'Picturing Data', has_lesson_plan: true
+lesson 'Picturing Data', display_name: 'Picturing Data', has_lesson_plan: true, unplugged: true
 level 'PicturingData-Unplugged'
 level 'courseC_data wizard'
 

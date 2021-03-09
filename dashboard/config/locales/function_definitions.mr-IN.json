@@ -475,6 +475,13 @@
               "width": "रुंदी"
             }
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "पुन्हा करा"
+            }
+          }
         }
       }
     }

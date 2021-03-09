@@ -18,6 +18,7 @@ const styles = {
   containerReact: {
     position: 'absolute',
     width: '100%',
+    height: '100%',
     margin: '0 auto',
     userSelect: 'none',
     fontFamily: '"Gotham 4r", arial, sans-serif',

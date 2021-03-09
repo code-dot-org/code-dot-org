@@ -1146,6 +1146,66 @@
           "moving west": "crwdns2472212:0crwdne2472212:0",
           "patrolling": "crwdns2472214:0crwdne2472214:0",
           "moving with arrow keys": "crwdns2472216:0crwdne2472216:0"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "crwdns2481226:0crwdne2481226:0",
+          "moving east": "crwdns2481228:0crwdne2481228:0",
+          "spinning left": "crwdns2481230:0crwdne2481230:0",
+          "spinning right": "crwdns2481232:0crwdne2481232:0",
+          "shrinking": "crwdns2481234:0crwdne2481234:0",
+          "growing": "crwdns2481236:0crwdne2481236:0",
+          "moving south": "crwdns2481238:0crwdne2481238:0",
+          "swimming left and right": "crwdns2481240:0crwdne2481240:0",
+          "moving north": "crwdns2481242:0crwdne2481242:0",
+          "jittering": "crwdns2481244:0crwdne2481244:0",
+          "moving west": "crwdns2481246:0crwdne2481246:0",
+          "patrolling": "crwdns2481248:0crwdne2481248:0"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "crwdns2481280:0crwdne2481280:0",
+          "spinning left": "crwdns2481282:0crwdne2481282:0",
+          "spinning right": "crwdns2481284:0crwdne2481284:0",
+          "shrinking": "crwdns2481286:0crwdne2481286:0",
+          "growing": "crwdns2481288:0crwdne2481288:0",
+          "moving south": "crwdns2481290:0crwdne2481290:0",
+          "swimming left and right": "crwdns2481292:0crwdne2481292:0",
+          "moving north": "crwdns2481294:0crwdne2481294:0",
+          "jittering": "crwdns2481296:0crwdne2481296:0",
+          "moving west": "crwdns2481298:0crwdne2481298:0",
+          "patrolling": "crwdns2481300:0crwdne2481300:0",
+          "wandering": "crwdns2481302:0crwdne2481302:0"
+        },
+        "outbreak_freeplay": {
+          "recovering": "crwdns2481012:0crwdne2481012:0",
+          "wandering": "crwdns2481014:0crwdne2481014:0",
+          "moving east": "crwdns2481016:0crwdne2481016:0",
+          "spinning left": "crwdns2481018:0crwdne2481018:0",
+          "spinning right": "crwdns2481020:0crwdne2481020:0",
+          "shrinking": "crwdns2481022:0crwdne2481022:0",
+          "growing": "crwdns2481024:0crwdne2481024:0",
+          "moving south": "crwdns2481026:0crwdne2481026:0",
+          "moving left and right": "crwdns2481028:0crwdne2481028:0",
+          "moving north": "crwdns2481030:0crwdne2481030:0",
+          "jittering": "crwdns2481032:0crwdne2481032:0",
+          "moving west": "crwdns2481034:0crwdne2481034:0",
+          "patrolling": "crwdns2481036:0crwdne2481036:0",
+          "moving with arrow keys": "crwdns2481038:0crwdne2481038:0"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "crwdns2480954:0crwdne2480954:0",
+          "wandering": "crwdns2480956:0crwdne2480956:0",
+          "moving east": "crwdns2480958:0crwdne2480958:0",
+          "spinning left": "crwdns2480960:0crwdne2480960:0",
+          "spinning right": "crwdns2480962:0crwdne2480962:0",
+          "shrinking": "crwdns2480964:0crwdne2480964:0",
+          "growing": "crwdns2480966:0crwdne2480966:0",
+          "moving south": "crwdns2480968:0crwdne2480968:0",
+          "moving left and right": "crwdns2480970:0crwdne2480970:0",
+          "moving north": "crwdns2480972:0crwdne2480972:0",
+          "jittering": "crwdns2480974:0crwdne2480974:0",
+          "moving west": "crwdns2480976:0crwdne2480976:0",
+          "patrolling": "crwdns2480978:0crwdne2480978:0",
+          "moving with arrow keys": "crwdns2480980:0crwdne2480980:0"
         }
       }
     }

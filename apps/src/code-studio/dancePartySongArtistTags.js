@@ -60,6 +60,8 @@ export const SongTitlesToArtistTwitterHandle = {
   rainonme_ladygagaftarianagrande: 'ladygaga',
   savagelove_jasonderulo: 'jasonderulo',
   sayso_dojacat: 'DojaCat',
+  // 2021 Songs
+  aire_jessejoy: 'jesseyjoy',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',

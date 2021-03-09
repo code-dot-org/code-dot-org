@@ -32,7 +32,6 @@ experiments.I18N_TRACKING = 'i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.APPLAB_ML = 'applab-ml';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
-experiments.SPRITELAB_PAUSE = 'spritelabPause';
 experiments.SPECIAL_TOPIC = 'special-topic';
 
 /**

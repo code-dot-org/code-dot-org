@@ -3769,6 +3769,56 @@
           "rowOfNectar": {
             "name": "zbierzRządNektarów"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "narysuj gwiazdę",
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości",
+            "parameters": {
+              "points": "punkty",
+              "length": "długość"
+            }
+          },
+          "draw a circle": {
+            "name": "narysuj okrąg",
+            "description": "narysuj okrąg o danym promieniu",
+            "parameters": {
+              "radius": "promień"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "narysuj rozetę",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość",
+              "repeat": "powtarzaj"
+            }
+          },
+          "draw a triangle": {
+            "name": "narysuj trójkąt",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          },
+          "draw a house": {
+            "name": "narysuj dom",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a square": {
+            "name": "narysuj kwadrat",
+            "parameters": {
+              "length": "długość"
+            }
+          }
         }
       }
     }

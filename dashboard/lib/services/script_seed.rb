@@ -12,6 +12,8 @@
 
 module Services
   module ScriptSeed
+    prepend LessonPlanPdfs::ScriptSeed
+
     # Holds data that we've already retrieved from the database. Used to look up
     # associations of objects without making additional queries.
     # Storing this data together in a "data object" makes it easier to pass around.
@@ -89,7 +91,15 @@ module Services
       seed_from_json(File.read(file_or_path))
     end
 
-    # Creates / updates the objects in the database described by the input JSON.
+    # Convenience wrapper around seed_from_hash. Parses the given content as a json string and then seeds using it.
+    #
+    # @param [String] json_string
+    # @return [Script] the Script created/updated from seeding
+    def self.seed_from_json(json_string)
+      seed_from_hash(JSON.parse(json_string))
+    end
+
+    # Creates / updates the objects in the database described by the input hash.
     #
     # This method is responsible for Script objects and everything "under" them logically in the curriculum data
     # hierarchy. Currently (9/23/2020), this looks like:
@@ -129,26 +139,24 @@ module Services
     #
     # - We try to achieve both simplicity and performance.
     #
-    # @param [String] json_string - The input JSON to seed from.
+    # @param [Hash] data - The input data to seed from.
     # @return [Script] the Script created/updated from seeding
-    def self.seed_from_json(json_string)
+    def self.seed_from_hash(data)
+      script_data = data['script']
+      lesson_groups_data = data['lesson_groups']
+      lessons_data = data['lessons']
+      lesson_activities_data = data['lesson_activities']
+      activity_sections_data = data['activity_sections']
+      script_levels_data = data['script_levels']
+      levels_script_levels_data = data['levels_script_levels']
+      resources_data = data['resources']
+      lessons_resources_data = data['lessons_resources']
+      vocabularies_data = data['vocabularies']
+      lessons_vocabularies_data = data['lessons_vocabularies']
+      objectives_data = data['objectives']
+      seed_context = SeedContext.new
+
       Script.transaction do
-        data = JSON.parse(json_string)
-
-        script_data = data['script']
-        lesson_groups_data = data['lesson_groups']
-        lessons_data = data['lessons']
-        lesson_activities_data = data['lesson_activities']
-        activity_sections_data = data['activity_sections']
-        script_levels_data = data['script_levels']
-        levels_script_levels_data = data['levels_script_levels']
-        resources_data = data['resources']
-        lessons_resources_data = data['lessons_resources']
-        vocabularies_data = data['vocabularies']
-        lessons_vocabularies_data = data['lessons_vocabularies']
-        objectives_data = data['objectives']
-        seed_context = SeedContext.new
-
         # The order of the following import steps is important. If B belongs_to
         # A, then B holds an id field referring to A, and therefore A must be
         # imported before B. For example, LessonsResource belongs to both
@@ -160,9 +168,7 @@ module Services
         # Course version must be set before resources and vocabulary are imported. If the
         # script is in a unit group, we must wait and let the next seed step set
         # the course version on the unit group before resources and vocabulary can be imported.
-        if seed_context.script.is_course
-          CourseOffering.add_course_offering(seed_context.script)
-        end
+        CourseOffering.add_course_offering(seed_context.script) if seed_context.script.is_course
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)
@@ -194,7 +200,8 @@ module Services
     # Internal methods and classes below
 
     def self.import_script(script_data)
-      script_to_import = Script.new(script_data.except('seeding_key'))
+      script_to_import = Script.new(script_data.except('seeding_key', 'serialized_at'))
+      script_to_import.seeded_from = script_data['serialized_at']
       script_to_import.is_migrated = true
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
@@ -491,8 +498,26 @@ module Services
         :properties,
         :new_name,
         :family_name,
+        :serialized_at,
         :seeding_key
       )
+
+      # The "seeded_from" property is set by the seeding process; we don't need
+      # to include it in the serialization.
+      attribute :properties do
+        object.properties.except("seeded_from")
+      end
+
+      # A simple field to track when the script was most recently serialized.
+      # This will be set by levelbuilder whenever the script is saved, and then
+      # read by the seeding process on other environments and persisted to the
+      # `seeded_from` property on Script objects. Currently used by the PDF
+      # generation logic to identify when a script is actually being updated,
+      # but could easily be used by other business logic that has similar
+      # versioning concerns.
+      def serialized_at
+        Time.now.getutc
+      end
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
@@ -609,7 +634,7 @@ module Services
     end
 
     class VocabularySerializer < ActiveModel::Serializer
-      attributes :key, :word, :definition, :seeding_key
+      attributes :key, :word, :definition, :properties, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

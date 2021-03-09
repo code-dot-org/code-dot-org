@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {scriptDataPropType} from '../sectionProgressConstants';
+import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {
   getCurrentScriptData,
   setLessonOfInterest
@@ -23,6 +24,9 @@ class ProgressTableDetailView extends React.Component {
     // redux
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
+    levelProgressByStudent: PropTypes.objectOf(
+      PropTypes.objectOf(studentLevelProgressType)
+    ).isRequired,
     onClickLesson: PropTypes.func.isRequired
   };
 
@@ -30,12 +34,6 @@ class ProgressTableDetailView extends React.Component {
     super(props);
     this.levelIconHeaderFormatter = this.levelIconHeaderFormatter.bind(this);
     this.detailCellFormatter = this.detailCellFormatter.bind(this);
-  }
-
-  getTableWidth(lessons) {
-    return lessons.reduce((totalWidth, lesson) => {
-      return totalWidth + ProgressTableDetailCell.widthForLevels(lesson.levels);
-    }, 0);
   }
 
   levelIconHeaderFormatter(_, {columnIndex}) {
@@ -46,7 +44,8 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
-  detailCellFormatter(lesson, student, studentProgress) {
+  detailCellFormatter(lesson, student) {
+    const studentProgress = this.props.levelProgressByStudent[student.id];
     return (
       <ProgressTableDetailCell
         studentId={student.id}
@@ -59,28 +58,28 @@ class ProgressTableDetailView extends React.Component {
   }
 
   render() {
-    const columnWidths = this.props.scriptData.stages.map(lesson =>
-      ProgressTableDetailCell.widthForLevels(lesson.levels)
-    );
     return (
-      <ProgressTableContainer
-        onClickLesson={this.props.onClickLesson}
-        getTableWidth={lessons => this.getTableWidth(lessons)}
-        columnWidths={columnWidths}
-        lessonCellFormatter={this.detailCellFormatter}
-        includeHeaderArrows={true}
-        extraHeaderFormatters={[this.levelIconHeaderFormatter]}
-        extraHeaderLabels={[i18n.levelType()]}
-      >
+      <div>
+        <ProgressTableContainer
+          onClickLesson={this.props.onClickLesson}
+          lessonCellFormatter={this.detailCellFormatter}
+          includeHeaderArrows={true}
+          extraHeaderFormatters={[this.levelIconHeaderFormatter]}
+          extraHeaderLabels={[i18n.levelType()]}
+        />
         <ProgressLegend excludeCsfColumn={!this.props.scriptData.csf} />
-      </ProgressTableContainer>
+      </div>
     );
   }
 }
 export default connect(
   state => ({
     section: state.sectionData.section,
-    scriptData: getCurrentScriptData(state)
+    scriptData: getCurrentScriptData(state),
+    levelProgressByStudent:
+      state.sectionProgress.studentLevelProgressByScript[
+        state.scriptSelection.scriptId
+      ]
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {

@@ -60,7 +60,8 @@ const styles = {
     ...progressStyles.flex,
     borderRadius: 20,
     padding: '6px 10px',
-    fontSize: 12
+    fontSize: 12,
+    whiteSpace: 'nowrap'
   }
 };
 

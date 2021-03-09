@@ -4366,13 +4366,14 @@ nn:
               display_name: Binær
             csf_digcit:
               display_name: Digitalt statsborgerskap
+            lessonGroup-6:
+              display_name: Digitalt statsborgerskap
         coursee-2021:
           lessons:
             Conditionals:
               key: Betingelser
             Simon Says:
               key: Simon seier
-              name: Simon seier
             Private and Personal Information:
               key: Privat og personleg informasjon
               name: Privat og personleg informasjon
@@ -4387,7 +4388,7 @@ nn:
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
-              display_name: Løkker i løkke
+              display_name: Betingelser
             csf_functions:
               display_name: Funksjonar
         coursef-2021:
@@ -4417,6 +4418,9 @@ nn:
             Dance Party:
               key: Dansefest
               name: Dansefest
+            'Looking Ahead with Minecraft ':
+              description_student: Unngå lavaen! Her skal du lære om betingelser i
+                Minecraft-verdenen.
           lesson_groups:
             csf_sequencing:
               display_name: Sekvensiering
@@ -4477,3 +4481,39 @@ nn:
               name: Leksjon 14
             lesson15:
               name: Leksjon 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introduksjon
+            Sequencing:
+              key: Sekvensiering
+              name: Sekvensiering
+            Loops:
+              key: Løkker
+              name: Løkker
+            Events:
+              key: Hendingar
+              name: Hendingar
+            Conditionals:
+              key: Betingelser
+              name: Betingelser
+            Functions:
+              key: Funksjonar
+              name: Funksjonar
+            Variables:
+              key: Variablar
+              name: Variablar
+            For Loops:
+              key: For-løkker
+              name: For-løkker
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduksjon
+            k5_basic_concepts_1:
+              display_name: Grunnleggande kodekonsept og lærestrategiar
+            k5_diving_deeper_1:
+              display_name: 'Djupdykk: Kurs E og F'
+            k5_next_steps_1:
+              display_name: Neste steg
+            Introduction:
+              display_name: Introduksjon

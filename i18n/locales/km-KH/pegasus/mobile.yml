@@ -27,9 +27,13 @@
   twentyhours_text: "បានបញ្ចប់កម្មវិធី Hour of Code ជាលើកដំបូង? សិក្សាបន្ថែមអំពីចំណុចសំខាន់នៃវិទ្យាសាស្រ្តកុំព្យូទ័រ និងមូលដ្ឋានគ្រឹះនៃការសរសេរកម្មវិធី នៅក្នុងមេរៀនបន្ទាប់។"
   og_title: 'Code.org: អ្នកគ្រប់គ្នាអាចរៀន'
   og_title_soon: "កម្មវិធី Hour of Code នឹងមកដល់ក្នុងពេលឆាប់ៗនេះ"
+  og_title_here: "កម្មវិធី The Hour of Code គឺ នៅទីនេះ!"
   og_description: "សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ។"
+  og_description_celeb: "សាកល្បងមើលវីដេអូណែនាំថ្មី ឈ្នះការជជែកជាលក្ខណៈវីដេអូឆាតជាមួយតារាល្បីសម្រាប់ខ្លួនអ្នក ឬថ្នាក់របស់អ្នក!"
   csedweek_og_title: "សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
   csedweek_og_description: "វិទ្យាសាស្រ្តកុំព្យូទ័រ គឺជាមូលដ្ឋានគ្រឹះសម្រាប់ការសិក្សារបស់សិស្សទាំងអស់។"
+  csedweek_og_description_soon: "កម្មវិធី The Hour of Code នឹងមកដល់ថ្ងៃទី ៣-៩ ខែធ្នូ ឆ្នាំ២០១៨។ វិទ្យាសាស្ត្រកុំព្យូទ័រ ជាមូលដ្ឋានគ្រឹះសម្រាប់សិស្សគ្រប់រូបសិក្សា។​"
+  csedweek_og_description_here: "កម្មវិធី The Hour of Code គឺនៅទីនេះ។ វិទ្យាសាស្រ្តកុំព្យូទ័រ គឺជាមូលដ្ឋានគ្រឹះសម្រាប់សិស្សគ្រប់រូបសិក្សា។"
   hoc2014_heading: "ចូលរួម<a href=\"http://hourofcode.com\">កម្មវិធី Hour of Code</a><br/>នៅថ្ងៃទី៨ ដល់ថ្ងៃទី១៤ ខែធ្នូ ឆ្នាំ២០១៤<br/>"
   hoc2014_students: "សិស្ស"
   hoc2014_try: "សាកល្បង"
@@ -689,7 +693,13 @@
   dashboard_students_no_email: "ប្រសិន​បើ​សិស្ស​របស់​អ្នក​មិនមានអ៊ីម៉ែល ​ឬ​អ្នក​ចង់​បង្កើត​គណនី​សម្រាប់​ពួកគេ​ សូម​ប្តូរ​ប្រភេទ​សម្ងាត់នៃ​ថ្នាក់​នេះ​ទៅ​ជា​ <b> ពាក្យសម្ងាត់គូ </b> ឬ <b> រូបភាព </b> ។"
   dashboard_students_print_page: "ព្រីនទំព័រ​នេះ"
   dashboard_students_signin_card: "សូមចូលមក​ %{join_url} រួចបញ្ចូលលេខកូដថ្នាក់សិក្សា %{section_code}"
+  dashboard_students_url: "តំណផ្ទាល់"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">ចុចទីនេះ</a> សម្រាប់​ឯកសារ​ឯកជនភាព​របស់​យើង​ដែល​អាច​ចែក​រំលែក​ឬបោះពុម្ព​សម្រាប់​សិស្សរបស់អ្នក។"
+  dashboard_curriculum_k5_title: "ធនធាន​សម្រាប់​អ្នកអប់រំ​សិស្សកម្រិត K-5"
+  dashboard_curriculum_middle_title: "ធនធាន​សម្រាប់​អ្នកអប់រំ​សិស្សអនុវិទ្យាល័យ"
+  dashboard_curriculum_high_title: "ធនធាន​សម្រាប់​អ្នកអប់រំ​សិស្សវិទ្យាល័យ"
+  dashboard_lesson_plans: "ផែនការ​មេរៀន"
+  dashboard_view_all_lesson_plans: "ទាញ​យក​កម្មវិធី​សិក្សា​សម្រាប់វគ្គ​សិក្សាទី១ ដល់ទី៤"
   dashboard_course1: 'វគ្គ ១៖'
   dashboard_course2: 'វគ្គ ២៖'
   dashboard_course3: 'វគ្គ ៣៖'
@@ -1070,3 +1080,9 @@
   hoc2020_mc_available_code_org: "អាចរកបានលើគេហទំព័រ Code.org"
   hoc2020_mc_available_mee: 'អាចរកបាននៅក្នុង Minecraft: Education Edition'
   footer_built_on_github: "បង្កើតឡើងលើ GitHub ដោយ Microsoft"
+  footer_privacy_policy: "គោលការណ៍ឯកជនភាព"
+  footer_about: "អំពី"
+  footer_partners: "ដៃគូ"
+  footer_donate: "បរិច្ចាគ"
+  footer_support: "ការ​គាំទ្រ"
+  footer_terms: "លក្ខណ"

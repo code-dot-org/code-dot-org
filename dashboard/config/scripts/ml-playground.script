@@ -1,5 +1,9 @@
 login_required true
 
+lesson 'bug-bash', display_name: 'Bug Bash Playground', has_lesson_plan: false
+level 'ml-ai lab template', progression: 'AI Lab Bash'
+level 'ml-app lab template', progression: 'App Lab Import Bash'
+
 lesson 'model-cards', display_name: 'Model Cards Playground', has_lesson_plan: false
 level 'ml-model card-template', progression: 'Model Card Template'
 level 'ml-model card-medical-1', progression: 'Medical Dataset Model Cards'

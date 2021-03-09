@@ -709,6 +709,13 @@ FactoryGirl.define do
         csp_script.save
       end
     end
+
+    factory :csa_script do
+      after(:create) do |csa_script|
+        csa_script.curriculum_umbrella = 'CSA'
+        csa_script.save
+      end
+    end
   end
 
   factory :featured_project do
@@ -773,6 +780,7 @@ FactoryGirl.define do
 
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
+    display_name(&:key)
     script
 
     position do |lesson_group|
@@ -814,6 +822,15 @@ FactoryGirl.define do
     sequence(:key) {|n| "vocab-#{n}"}
     word 'word'
     definition 'definition'
+  end
+
+  factory :programming_environment do
+    sequence(:name) {|n| "programming-environment-#{n}"}
+  end
+
+  factory :programming_expression do
+    association :programming_environment
+    sequence(:name) {|n| "programming-expression-#{n}"}
   end
 
   factory :callout do

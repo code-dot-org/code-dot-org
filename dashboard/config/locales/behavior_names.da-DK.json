@@ -69,6 +69,16 @@
           "moving west": "bevæger sig vestpå",
           "patrolling": "patruljerer",
           "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "outbreak_freeplay": {
+          "recovering": "kommer sig",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "kommer sig",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
         }
       }
     }

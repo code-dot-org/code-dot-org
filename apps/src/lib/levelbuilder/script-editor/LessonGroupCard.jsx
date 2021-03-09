@@ -17,6 +17,7 @@ import {
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 const styles = {
   checkbox: {
@@ -291,28 +292,30 @@ class LessonGroupCard extends Component {
             <div>
               <label>
                 Description
-                <textarea
-                  value={this.props.lessonGroup.description}
-                  rows={Math.max(
+                <MarkdownEnabledTextarea
+                  markdown={this.props.lessonGroup.description}
+                  name={'description'}
+                  inputRows={Math.max(
                     this.props.lessonGroup.description.split(/\r\n|\r|\n/)
                       .length + 1,
                     2
                   )}
-                  style={styles.input}
-                  onChange={this.handleChangeDescription}
+                  handleMarkdownChange={this.handleChangeDescription}
+                  features={{imageUpload: true}}
                 />
               </label>
               <label>
                 Big Questions
-                <textarea
-                  value={this.props.lessonGroup.bigQuestions}
-                  rows={Math.max(
+                <MarkdownEnabledTextarea
+                  markdown={this.props.lessonGroup.bigQuestions}
+                  name={'big_questions'}
+                  inputRows={Math.max(
                     this.props.lessonGroup.bigQuestions.split(/\r\n|\r|\n/)
                       .length + 1,
                     2
                   )}
-                  style={styles.input}
-                  onChange={this.handleChangeBigQuestions}
+                  handleMarkdownChange={this.handleChangeBigQuestions}
+                  features={{imageUpload: true}}
                 />
               </label>
             </div>

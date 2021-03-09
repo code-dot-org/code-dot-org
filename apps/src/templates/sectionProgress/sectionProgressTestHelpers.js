@@ -11,6 +11,7 @@ import scriptSelection, {
 import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
+import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 
 export function wrapTable(table) {
   return (
@@ -37,7 +38,7 @@ export function createStore(numStudents, numLessons) {
     stageExtras: false
   };
   for (let i = 0; i < numStudents; i++) {
-    section.students.push({id: i, name: 'Student' + i});
+    section.students.push({id: i, name: 'Student' + i + ' Long Lastname'});
   }
   try {
     registerReducers({
@@ -79,6 +80,9 @@ function buildSectionProgress(students, scriptData) {
   return {
     scriptDataByScript: {[scriptData.id]: scriptData},
     studentLevelProgressByScript: {[scriptData.id]: progress},
+    studentLessonProgressByScript: {
+      [scriptData.id]: lessonProgressForSection(progress, scriptData.stages)
+    },
     studentLastUpdateByScript: {[scriptData.id]: lastUpdates}
   };
 }
@@ -92,28 +96,32 @@ function randomProgress() {
         status: LevelStatus.perfect,
         result: TestResults.MINIMUM_OPTIMAL_RESULT,
         paired: paired,
-        time_spent: 5
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
     case 1:
       return {
         status: LevelStatus.attempted,
         result: TestResults.LEVEL_STARTED,
         paired: paired,
-        time_spent: 3
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
     case 2:
       return {
         status: LevelStatus.passed,
         result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
-        time_spent: 3
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
     default:
       return {
         status: LevelStatus.not_tried,
         result: TestResults.NO_TESTS_RUN,
         paired: paired,
-        time_spent: 0
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
   }
 }
@@ -814,7 +822,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1559',
+        id: 1559,
         position: 5,
         relative_position: 5,
         name: 'Variables',
@@ -1034,7 +1042,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1560',
+        id: 1560,
         position: 6,
         relative_position: 6,
         name: 'Random Numbers',
@@ -1240,7 +1248,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1561',
+        id: 1561,
         position: 7,
         relative_position: 7,
         name: 'Sprites',
@@ -1508,7 +1516,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1562',
+        id: 1562,
         position: 8,
         relative_position: 8,
         name: 'Sprite Properties',
@@ -1668,7 +1676,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1563',
+        id: 1563,
         position: 9,
         relative_position: 9,
         name: 'Text',
@@ -2172,7 +2180,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1566',
+        id: 1566,
         position: 12,
         relative_position: 12,
         name: 'Sprite Movement',
@@ -2390,7 +2398,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1567',
+        id: 1567,
         position: 13,
         relative_position: 13,
         name: 'Mini-Project: Animation',
@@ -2528,7 +2536,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1568',
+        id: 1568,
         position: 14,
         relative_position: 14,
         name: 'Conditionals',
@@ -2752,7 +2760,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1569',
+        id: 1569,
         position: 15,
         relative_position: 15,
         name: 'Keyboard Input',
@@ -2942,7 +2950,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1570',
+        id: 1570,
         position: 16,
         relative_position: 16,
         name: 'Mouse Input',
@@ -3168,7 +3176,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1571',
+        id: 1571,
         position: 17,
         relative_position: 17,
         name: 'Project - Interactive Card',
@@ -3320,7 +3328,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1572',
+        id: 1572,
         position: 18,
         relative_position: 18,
         name: 'Velocity',
@@ -3536,7 +3544,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1573',
+        id: 1573,
         position: 19,
         relative_position: 19,
         name: 'Collision Detection',
@@ -3732,7 +3740,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1574',
+        id: 1574,
         position: 20,
         relative_position: 20,
         name: 'Mini-Project: Side Scroller',
@@ -3884,7 +3892,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1575',
+        id: 1575,
         position: 21,
         relative_position: 21,
         name: 'Complex Sprite Movement',
@@ -4066,7 +4074,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1576',
+        id: 1576,
         position: 22,
         relative_position: 22,
         name: 'Collisions',
@@ -4286,7 +4294,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1577',
+        id: 1577,
         position: 23,
         relative_position: 23,
         name: 'Mini-Project: Flyer Game',
@@ -4438,7 +4446,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1578',
+        id: 1578,
         position: 24,
         relative_position: 24,
         name: 'Functions',
@@ -4670,7 +4678,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1579',
+        id: 1579,
         position: 25,
         relative_position: 25,
         name: 'The Game Design Process',
@@ -4926,7 +4934,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1580',
+        id: 1580,
         position: 26,
         relative_position: 26,
         name: 'Using the Game Design Process',
@@ -5292,7 +5300,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1581',
+        id: 1581,
         position: 27,
         relative_position: 27,
         name: 'Project - Design a Game',
@@ -5500,7 +5508,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1582',
+        id: 1582,
         position: 28,
         relative_position: 1,
         name: 'Post-Project Test',
@@ -5533,7 +5541,7 @@ function getScriptData(numLessons) {
         script_id: 162,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
-        id: '1583',
+        id: 1583,
         position: 29,
         relative_position: 2,
         name: 'CS Discoveries Post Course survey',

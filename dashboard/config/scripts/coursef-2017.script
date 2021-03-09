@@ -8,13 +8,13 @@ new_name 'coursef-2017'
 family_name 'coursef'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "sl-SI", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fil-PH", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sl-SI", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 is_course true
 
 lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
-lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF'
 
 lesson 'Sequence in Maze', display_name: 'Sequence in Maze', has_lesson_plan: true
@@ -29,7 +29,7 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 
 lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: true
@@ -58,7 +58,7 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
 lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
@@ -101,50 +101,50 @@ level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
 lesson_group 'csf_f_2', display_name: 'Course F Content'
-lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: true
+lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: true, unplugged: true
 level 'TangramAlgorithms'
 
 lesson 'Introduction', display_name: 'Introduction to Online Puzzles', has_lesson_plan: true
 level 'courseE_video_ramp1'
 variants
-  level 'courseD_scrat_ramp1'
   level 'courseF_maze_ramp1', active: false
+  level 'courseD_scrat_ramp1'
 endvariants
 variants
-  level 'courseD_scrat_ramp2'
   level 'courseF_maze_ramp2', active: false
+  level 'courseD_scrat_ramp2'
 endvariants
 variants
-  level 'courseD_scrat_ramp3'
   level 'coursef_maze_ramp3', active: false
+  level 'courseD_scrat_ramp3'
 endvariants
 variants
-  level 'courseD_scrat_ramp4'
   level 'courseF_maze_ramp4', active: false
+  level 'courseD_scrat_ramp4'
 endvariants
 variants
-  level 'courseD_scrat_ramp5'
   level 'courseF_maze_ramp5', active: false
+  level 'courseD_scrat_ramp5'
 endvariants
 variants
-  level 'courseD_scrat_predict1'
   level 'courseF_maze_ramp6', active: false
+  level 'courseD_scrat_predict1'
 endvariants
 variants
-  level 'courseD_video_ScratLoops'
   level 'courseF_artist_video1', active: false
+  level 'courseD_video_ScratLoops'
 endvariants
 variants
-  level 'courseD_scrat_ramp6'
   level 'courseF_artist_ramp8', active: false
+  level 'courseD_scrat_ramp6'
 endvariants
 variants
   level 'courseC_video_angles', active: false
   level 'courseD_scrat_ramp7'
 endvariants
 variants
-  level 'courseD_scrat_ramp8'
   level 'courseF_artist_ramp9', active: false
+  level 'courseD_scrat_ramp8'
 endvariants
 variants
   level 'courseF_artist_predict1', active: false
@@ -155,15 +155,15 @@ variants
   level 'courseE_artist_ramp8'
 endvariants
 variants
-  level 'courseC_video_angles2'
   level 'courseF_artist_ramp10', active: false
+  level 'courseC_video_angles2'
 endvariants
 variants
   level 'courseE_artist_ramp9'
   level 'courseF_farmer_ramp11', active: false
 endvariants
 
-lesson 'The Power of Words', display_name: 'Digital Citizenship: The Power of Words', has_lesson_plan: true
+lesson 'The Power of Words', display_name: 'Digital Citizenship: The Power of Words', has_lesson_plan: true, unplugged: true
 level 'courseF_unplugged_powerOfWords'
 
 lesson 'Ice Age Play Lab', display_name: 'Events in Ice Age', has_lesson_plan: true
@@ -195,7 +195,7 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-lesson 'Envelope Variables', display_name: 'Variables: Envelope Variables', has_lesson_plan: true
+lesson 'Envelope Variables', display_name: 'Variables: Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables'
 
 lesson 'Variables in Artist', display_name: 'Variables in Artist', has_lesson_plan: true
@@ -231,7 +231,7 @@ level 'courseF_playlab_variables7b'
 bonus 'courseF_playlab_variables_challenge1'
 bonus 'courseF_playlab_variables_challenge2'
 
-lesson 'For Loop Fun', display_name: 'For Loops: For Loop Fun', has_lesson_plan: true
+lesson 'For Loop Fun', display_name: 'For Loops: For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun'
 
 lesson 'For Loops in Bee', display_name: 'For Loops in Bee', has_lesson_plan: true
@@ -266,7 +266,7 @@ level 'courseF_artist_for10'
 bonus 'courseF_artist_for_challenge1'
 bonus 'courseF_artist_for_challenge2'
 
-lesson 'Songwriting with Parameters', display_name: 'Functions: Songwriting with Parameters', has_lesson_plan: true
+lesson 'Songwriting with Parameters', display_name: 'Functions: Songwriting with Parameters', has_lesson_plan: true, unplugged: true
 level 'SongwritingWithParameters'
 
 lesson 'Functions in Bee', display_name: 'Functions in Bee', has_lesson_plan: true

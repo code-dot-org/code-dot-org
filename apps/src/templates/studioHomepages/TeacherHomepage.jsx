@@ -18,7 +18,9 @@ import NpsSurveyBlock from './NpsSurveyBlock';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
+import AmazonTeacherOfYearBanner from '@cdo/apps/templates/AmazonTeacherOfYearBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const styles = {
   clear: {
@@ -26,6 +28,8 @@ const styles = {
     height: 30
   }
 };
+
+const hideAmazonTeacherOfYearBannerKey = 'hideAmazonTeacherOfYearBanner';
 
 export class UnconnectedTeacherHomepage extends Component {
   static propTypes = {
@@ -47,12 +51,21 @@ export class UnconnectedTeacherHomepage extends Component {
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
     specialAnnouncement: shapes.specialAnnouncement,
-    beginGoogleImportRosterFlow: PropTypes.func
+    beginGoogleImportRosterFlow: PropTypes.func,
+    donorName: PropTypes.string
   };
+
+  constructor(props) {
+    super(props);
+    this.hideAmazonTeacherOfYearBanner = this.hideAmazonTeacherOfYearBanner.bind(
+      this
+    );
+  }
 
   state = {
     showCensusBanner: this.props.showCensusBanner,
-    donorBannerName: this.props.donorBannerName
+    hideAmazonTeacherOfYearBanner:
+      tryGetLocalStorage(hideAmazonTeacherOfYearBannerKey, 'false') === 'true'
   };
 
   bindCensusBanner = banner => {
@@ -130,6 +143,11 @@ export class UnconnectedTeacherHomepage extends Component {
     this.hideCensusBanner();
   };
 
+  hideAmazonTeacherOfYearBanner() {
+    trySetLocalStorage(hideAmazonTeacherOfYearBannerKey, true);
+    this.setState({hideAmazonTeacherOfYearBanner: true});
+  }
+
   postponeCensusBanner() {
     $.ajax({
       url: `/api/v1/users/${this.props.teacherId}/postpone_census_banner`,
@@ -176,7 +194,9 @@ export class UnconnectedTeacherHomepage extends Component {
       teacherEmail,
       canViewAdvancedTools,
       isEnglish,
-      specialAnnouncement
+      specialAnnouncement,
+      donorBannerName,
+      donorName
     } = this.props;
 
     // Whether we show the regular announcement/notification
@@ -189,6 +209,14 @@ export class UnconnectedTeacherHomepage extends Component {
 
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
+
+    const showDonorBanner =
+      isEnglish && donorBannerName && this.state.hideAmazonTeacherOfYearBanner;
+
+    const showAmazonTeacherOfYearBanner =
+      isEnglish &&
+      !this.state.hideAmazonTeacherOfYearBanner &&
+      donorName === 'Amazon';
 
     return (
       <div>
@@ -204,6 +232,7 @@ export class UnconnectedTeacherHomepage extends Component {
           {isEnglish && specialAnnouncement && (
             <SpecialAnnouncementActionBlock
               announcement={specialAnnouncement}
+              marginBottom="30px"
             />
           )}
           {announcement && showAnnouncement && (
@@ -258,11 +287,19 @@ export class UnconnectedTeacherHomepage extends Component {
               <br />
             </div>
           )}
-          {isEnglish && this.state.donorBannerName && (
+          {showDonorBanner && (
             <div>
               <DonorTeacherBanner
                 showPegasusLink={true}
                 source="teacher_home"
+              />
+              <div style={styles.clear} />
+            </div>
+          )}
+          {showAmazonTeacherOfYearBanner && (
+            <div>
+              <AmazonTeacherOfYearBanner
+                handleCloseBanner={this.hideAmazonTeacherOfYearBanner}
               />
               <div style={styles.clear} />
             </div>

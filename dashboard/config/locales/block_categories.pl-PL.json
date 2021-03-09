@@ -1,0 +1,76 @@
+{
+  "pl-PL": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Działania",
+          "Brushes": "Pędzle",
+          "Loops": "Pętle",
+          "Math": "Matematyka",
+          "Logic": "Logika",
+          "Functions": "Funkcje",
+          "Variables": "Zmienne"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Świat",
+          "Dancers": "Tancerze",
+          "Properties": "Właściwości",
+          "Events": "Zdarzenia",
+          "Numbers": "Liczby",
+          "Logic": "Logika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Działania",
+          "Events": "Zdarzenia",
+          "Loops": "Pętle",
+          "Math": "Matematyka",
+          "Logic": "Logika",
+          "Games/Score": "Gry/Punkty"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Świat",
+          "Sprites": "Duszki",
+          "Actions": "Działania",
+          "Events": "Zdarzenia",
+          "Behaviors": "Zachowanie"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Świat",
+          "Sprites": "Duszki",
+          "Locations": "Położenie",
+          "Actions": "Działania",
+          "Events": "Zdarzenia",
+          "Behaviors": "Zachowanie",
+          "Variables": "Zmienne",
+          "Math": "Matematyka",
+          "Logic": "Logika",
+          "Functions": "Funkcje",
+          "Text": "Tekst",
+          "Comments": "Komentarze"
+        },
+        "outbreak_freeplay": {
+          "World": "Świat",
+          "Sprites": "Duszki",
+          "Actions": "Działania",
+          "Behaviors": "Zachowanie",
+          "Events": "Zdarzenia",
+          "Locations": "Położenie",
+          "Logic": "Logika",
+          "Loops": "Pętle",
+          "Math": "Matematyka",
+          "Variables": "Zmienne",
+          "Functions": "Funkcje",
+          "Comments": "Komentarze"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Świat",
+          "Sprites": "Duszki",
+          "Actions": "Działania",
+          "Events": "Zdarzenia",
+          "Logic": "Logika",
+          "Math": "Matematyka"
+        }
+      }
+    }
+  }
+}

@@ -491,6 +491,36 @@
           "moving left and right": "рух ліворуч та праворуч",
           "patrolling": "патрулювання",
           "moving with arrow keys": "рух за стрілками"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння"
+        },
+        "outbreak_freeplay": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
         }
       }
     }

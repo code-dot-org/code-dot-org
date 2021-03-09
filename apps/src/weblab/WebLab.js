@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {Provider} from 'react-redux';
-import weblabMsg from '@cdo/weblab/locale';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
@@ -23,12 +22,18 @@ import {getCurrentId} from '../code-studio/initApp/project';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
+// HTML tags that are disallowed in WebLab. These tags will be removed from users' projects.
+const DISALLOWED_HTML_TAGS = ['script'];
+
 /**
  * An instantiable WebLab class
  */
 
 // Global singleton
 let webLab_ = null;
+
+// The max size in bytes for a WebLab project. 20 megabytes == 20971520 bytes
+const MAX_PROJECT_CAPACITY = 20971520;
 
 const WebLab = function() {
   this.skin = null;
@@ -79,6 +84,8 @@ WebLab.prototype.init = function(config) {
   this.level = config.level;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
+  this.disallowedHtmlTags = DISALLOWED_HTML_TAGS;
+  getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
 
@@ -293,11 +300,19 @@ WebLab.prototype.init = function(config) {
     document.getElementById(config.containerId)
   );
 
-  window.onbeforeunload = evt => {
-    if (project.hasOwnerChangedProject()) {
-      return weblabMsg.confirmExitWithUnsavedChanges();
-    }
-  };
+  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
+
+WebLab.prototype.beforeUnload = function(event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = '';
+  } else {
+    delete event.returnValue;
+  }
 };
 
 WebLab.prototype.reportResult = function(submit, validated) {
@@ -341,6 +356,14 @@ WebLab.prototype.onFinish = function(submit) {
   } else {
     this.reportResult(submit, true /* validated */);
   }
+};
+
+WebLab.prototype.getMaxProjectCapacity = function() {
+  return getStore().getState().maxProjectCapacity;
+};
+
+WebLab.prototype.setProjectSize = function(bytes) {
+  getStore().dispatch(actions.changeProjectSize(bytes));
 };
 
 WebLab.prototype.getCodeAsync = function() {

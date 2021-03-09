@@ -11,6 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-02-26 22:10:24 UTC",
     "seeding_key": {
       "script.name": "dlp19-csp-mod-w2"
     }
@@ -47,6 +48,7 @@
       "name": "Deeper Learning Overview",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -61,6 +63,7 @@
       "name": "Step 1: Develop Understanding",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -75,6 +78,7 @@
       "name": "Step 2: Demonstrate Understanding",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -85,13 +89,23 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Background"
+        "progression": "Background",
+        "level_keys": [
+          "dlp19_overview1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -110,9 +124,13 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Process"
+        "progression": "Process",
+        "level_keys": [
+          "dlp19_overview2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -131,9 +149,13 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Preparation"
+        "progression": "Preparation",
+        "level_keys": [
+          "dlp19_overview3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -152,9 +174,13 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Evaluation"
+        "progression": "Evaluation",
+        "level_keys": [
+          "dlp19_overview4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -173,9 +199,13 @@
     {
       "chapter": 5,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Due Dates"
+        "progression": "Due Dates",
+        "level_keys": [
+          "dlp19_overview5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -194,8 +224,12 @@
     {
       "chapter": 6,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-prework-mod2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -214,8 +248,12 @@
     {
       "chapter": 7,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-mod2-q1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -234,8 +272,12 @@
     {
       "chapter": 8,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-mod2-q2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -254,8 +296,12 @@
     {
       "chapter": 9,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-mod2-q3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -372,5 +418,20 @@
         "script.name": "dlp19-csp-mod-w2"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
   ]
 }

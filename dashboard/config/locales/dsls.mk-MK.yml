@@ -1087,64 +1087,64 @@ mk-MK:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
+        - text: А
+        - text: Б
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Д
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
+        - text: А
+        - text: Б
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Д
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
+        - text: А
+        - text: Б
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Д
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
+        - text: А
+        - text: Б
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Д
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - {}
-        - {}
+        - text: А
+        - text: Б
         - {}
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: А
+        - text: Б
         - {}
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: А
+        - text: Б
         - {}
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: А
+        - text: Б
         - {}
         - {}
         questions:
@@ -1773,3 +1773,64 @@ mk-MK:
         - {}
         questions:
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |-
+          # Преглед
+
+          Во оваа лекција ќе научите за различните типови на влезни и излезни уреди што ги користат компјутерите и видовите на информации што ги испраќаат и примаат.
+
+          ## Вокабулар
+
+          * ** Влез ** - Уред или компонента што дозволува давање информации на компјутер
+          * ** Излез ** - Секој уред или компонента што прима информации од компјутер
+
+
+          ## Ресурси
+
+          * [Влез и излез - Водич за активност] (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Преглед\n\nЧасот се работи во групи за да  се дизајнираат чамци
+          од алуминиумска фолија што ќе поддржат што повеќе монети. На крајот од лекцијата,
+          групите размислуваат за своите искуства од активноста и прават врски со
+          видовите на решавање проблеми што ќе ги прават за остатокот од курсот.\n\n\n##
+          Ресурси\n\n* [Алуминиумски чамци] "
+        teacher_markdown: |
+          * [Алуминиумски чамци - примерок]
+          https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Водич кон активноста ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          # Преглед
+
+          Во оваа лекција ќе научите формален процес на решавање проблеми што ќе ви помогне да го структурирате пристапот кон широкот спектар на проблеми.
+
+
+          ## Ресурси
+
+          * [Процес на решавање на проблеми - Водич за активност] (https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [Процес на решавање на проблеми] (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXXGayRpY/)
+          - Водич за активност ([PDF] (https://docs.google.com/Compler/Vocual+++++++++++++++++++++++++++++++
+          ? format = pdf) | [DOCX] (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
+      Unit 1 Lesson 3 Overview:
+        markdown: |-
+          # Преглед
+          Во оваа лекција ќе го примените процесот на решавање на проблеми на различни проблеми за да истражите како секој чекор ви помага да развивате и да ги подобрувате решенијата за проблемите.
+
+          ## Ресурси
+
+          * [Решавање проблеми - Водич за активност] (https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[Клуч за решавање на проблеми] (https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Водич за активност ([PDF] (https://docs.google.com/document/dw/ShwYwYxYwYxYwYwYwYwYjYwYwYjYwYwYjYwYjYwYwYjYwYjYwYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuYuSuYuSuYu)
+          / извоз? формат = pdf) | [DOCX] (https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
+      Unit 1 Lesson 4 Overview:
+        markdown: |-
+          # Преглед
+
+          Во оваа лекција ќе започнете да размислувате како компјутерите помагаат да се решат одредени видови проблеми и ќе ги научите клучните карактеристики на секој компјутер.
+
+          ## Ресурси
+
+          * [Што е компјутер - Водич за активност] (https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: "[Што е компјутер - примерок] (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Водич за активност ([PDF] (https://document.google.com/ / d / 19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0
+          / експорт? формат = pdf) | [DOCX] (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPyPoYoYoYo)))))))))))))))))))))
+          v VyzActYoYoYaaVoYoYoYoYaaVoYoYoVoYoVoYoVoYoVoPoZoPoNoPoNoPoNoYo))"

@@ -301,6 +301,19 @@
           "collect": {
             "name": "كۆبكەوە/خركەوە"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          }
         }
       }
     }
