@@ -2742,6 +2742,8 @@ lt:
               name: 15 pamoka
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Įvadas
             Loops:
               key: Kartojimas
               name: Kartojimas
@@ -2761,5 +2763,9 @@ lt:
               key: Kartojimas
               name: Kartojimas
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Įvadas
             k5_next_steps_1:
               display_name: Kiti žingsniai
+            Introduction:
+              display_name: Įvadas

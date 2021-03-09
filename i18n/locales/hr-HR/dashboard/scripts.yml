@@ -2327,6 +2327,8 @@ hr:
               display_name: Varijable
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Uvod
             Loops:
               key: Petlje
               name: Petlje
@@ -2345,3 +2347,8 @@ hr:
             For Loops:
               key: Petlja brojača
               name: Petlja brojača
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Uvod
+            Introduction:
+              display_name: Uvod

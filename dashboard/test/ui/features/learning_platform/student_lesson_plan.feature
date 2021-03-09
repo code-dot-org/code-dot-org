@@ -1,3 +1,4 @@
+@no_ie
 Feature: Student Lesson Plan
 
   Scenario: Viewing Student Lesson Plan
