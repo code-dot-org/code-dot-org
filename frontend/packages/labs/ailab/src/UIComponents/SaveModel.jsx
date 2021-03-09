@@ -33,7 +33,7 @@ class SaveModel extends Component {
       });
     }
 
-    fields.push({ 
+    fields.push({
       id: "potentialUses",
       text: "How can this model be used?",
       placeholder: "Write a brief description"
