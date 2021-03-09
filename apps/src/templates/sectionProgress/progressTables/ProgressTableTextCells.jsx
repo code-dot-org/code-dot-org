@@ -5,12 +5,16 @@ const styles = {
   text: {
     display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
     minWidth: '30px'
   },
   label: {
     display: 'flex',
     justifyContent: 'flex-end',
-    padding: '10px'
+    alignItems: 'center',
+    height: '100%',
+    paddingRight: '10px'
   },
   group: {
     display: 'flex',
@@ -24,7 +28,7 @@ export function ProgressTableTextCell({text}) {
 }
 
 ProgressTableTextCell.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
 };
 
 export function ProgressTableTextLabelCell({text}) {
