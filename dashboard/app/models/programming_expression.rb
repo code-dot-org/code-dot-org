@@ -22,7 +22,6 @@ class ProgrammingExpression < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
 
   serialized_attrs %w(
-    display_name
     color
   )
 
@@ -38,7 +37,6 @@ class ProgrammingExpression < ApplicationRecord
         name: expression_config['config']['func'] || expression_config['config']['name'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
-        display_name: expression_config['config']['blockText'] || expression_config['config']['func'] || expression_config['config']['name'],
         color: expression_config['config']['color']
       }
     else
@@ -47,7 +45,6 @@ class ProgrammingExpression < ApplicationRecord
         name: expression_config['func'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
-        display_name: expression_config['func'],
         color: ProgrammingExpression.get_category_color(expression_config['category'])
       }
     end
@@ -110,7 +107,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def self.seed_record(file_path)
     properties = properties_from_file(file_path, File.read(file_path))
-    record = ProgrammingExpression.find_or_initialize_by(key: properties[:key], category: properties[:category], programming_environment_id: properties[:programming_environment_id])
+    record = ProgrammingExpression.find_or_initialize_by(key: properties[:key], programming_environment_id: properties[:programming_environment_id])
     record.update! properties
     record.name
   end
