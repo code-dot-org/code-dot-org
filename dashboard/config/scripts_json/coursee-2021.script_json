@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-08 19:12:03 UTC",
+    "serialized_at": "2021-03-08 20:03:52 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -1681,10 +1681,21 @@
       }
     },
     {
-      "key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
+      "key": "47ed862d-1562-4505-a98c-8c852ba6d936",
       "position": 1,
       "properties": {
-        "name": "Conditionals with the Farmer",
+        "progression_name": "Practice",
+        "name": "Conditionals with the Farmer"
+      },
+      "seeding_key": {
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936",
+        "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
+      }
+    },
+    {
+      "key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
+      "position": 2,
+      "properties": {
         "progression_name": "While Loops with the Farmer",
         "description": "\n####Online Puzzles\n\nThe patterns in these puzzles may not be obvious to every student. We recommend that you play through these levels beforehand to best understand any problem areas for your class. Also, watching and using the techniques from ***Pause and Think Online** Video may be helpful for your class."
       },
@@ -1695,23 +1706,12 @@
     },
     {
       "key": "22826fb5-5cdf-4918-970d-680d9ba82f88",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "22826fb5-5cdf-4918-970d-680d9ba82f88",
-        "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
-      }
-    },
-    {
-      "key": "47ed862d-1562-4505-a98c-8c852ba6d936",
-      "position": 3,
-      "properties": {
-        "progression_name": "Pre-Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936",
         "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
       }
     },
@@ -4080,6 +4080,75 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while1_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while1_2021"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while2_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while2_2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while3_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while3_2021"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "While Loops with the Farmer",
         "level_keys": [
           "courseD_video_whileIntro_2021"
@@ -4101,8 +4170,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 2,
+      "chapter": 29,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4124,75 +4193,6 @@
       },
       "level_keys": [
         "courseD_farmer_while4_predict1_2021"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Pre-Practice"
-      },
-      "named_level": null,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_farmer_while1_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
-      },
-      "level_keys": [
-        "courseD_farmer_while1_2021"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Pre-Practice"
-      },
-      "named_level": null,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_farmer_while2_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
-      },
-      "level_keys": [
-        "courseD_farmer_while2_2021"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Pre-Practice"
-      },
-      "named_level": null,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_farmer_while3_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
-      },
-      "level_keys": [
-        "courseD_farmer_while3_2021"
       ]
     },
     {
@@ -7298,30 +7298,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_video_whileIntro_2021",
-        "script_level.level_keys": [
-          "courseD_video_whileIntro_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_farmer_while4_predict1_2021",
-        "script_level.level_keys": [
-          "courseD_farmer_while4_predict1_2021"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021",
-        "activity_section.key": "22826fb5-5cdf-4918-970d-680d9ba82f88"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseD_farmer_while1_2021",
         "script_level.level_keys": [
           "courseD_farmer_while1_2021"
@@ -7354,6 +7330,30 @@
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
         "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_whileIntro_2021",
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while4_predict1_2021",
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "22826fb5-5cdf-4918-970d-680d9ba82f88"
       }
     },
     {

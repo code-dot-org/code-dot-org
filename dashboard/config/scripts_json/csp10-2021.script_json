@@ -13,11 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 17:35:08 UTC",
+    "serialized_at": "2021-03-09 02:48:42 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -2795,7 +2797,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L01 CFU innovations_2021"
@@ -2821,7 +2823,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L02 CFU innovations part 2_2021"
@@ -2847,7 +2849,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L3 CFU Why Collect PII_2021"
@@ -2865,7 +2867,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keylogging",
         "level_keys": [
@@ -2873,7 +2875,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Keylogging_2021"
@@ -2891,14 +2893,14 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CSP 20-21 Phishing_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Phishing_2021"
@@ -2916,7 +2918,7 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Malware",
         "level_keys": [
@@ -2924,7 +2926,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Rogue Access Points_2021"
@@ -2950,7 +2952,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L07 CFU security risks_2021"
@@ -2976,7 +2978,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L08 CFU security risks_2021"
@@ -2994,7 +2996,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Encryption Widgets",
         "level_keys": [
@@ -3002,7 +3004,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2021"
@@ -3020,7 +3022,7 @@
       "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Encryption Widgets",
         "level_keys": [
@@ -3028,7 +3030,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack Random Substitution_2021"
@@ -3054,7 +3056,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L9 CFU public key_2021"
@@ -3080,7 +3082,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L10 CFU MFA_2021"
@@ -3106,7 +3108,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Unit 10 Assessment_2021"
