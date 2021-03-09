@@ -4604,6 +4604,8 @@ cs:
           student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Úvod
             Sequencing:
               key: Sekvence
               name: Sekvence
@@ -4628,6 +4630,12 @@ cs:
             For Loops:
               key: Cykly "For"
               name: Cykly "For"
+            Getting Started:
+              name: Začínáme
+            Lesson Planning:
+              name: Plánování hodiny
           lesson_groups:
             k5_getting_started_1:
-              display_name: Začínáme
+              display_name: Úvod
+            Introduction:
+              display_name: Úvod

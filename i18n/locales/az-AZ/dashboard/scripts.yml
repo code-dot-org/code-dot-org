@@ -1808,6 +1808,8 @@ az:
               name: Dərs 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Giriş
             Loops:
               key: dövrlər
               name: dövrlər
@@ -1823,3 +1825,8 @@ az:
             Variables:
               key: dəyişənlər
               name: dəyişənlər
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Giriş
+            Introduction:
+              display_name: Giriş

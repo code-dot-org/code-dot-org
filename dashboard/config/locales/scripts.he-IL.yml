@@ -6698,9 +6698,9 @@ he:
           description: " "
           student_description: " "
         k5-onlinepd-2021:
-          description_audience: " "
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
+              name: מבוא
               description_student: " "
               description_teacher: " "
             Understanding the Computer Science Fundamentals Courses:
@@ -6752,8 +6752,12 @@ he:
               description_student: " "
               description_teacher: " "
           lesson_groups:
+            k5_getting_started_1:
+              display_name: מבוא
             k5_next_steps_1:
               display_name: השלבים הבאים
+            Introduction:
+              display_name: מבוא
         allthemigratedthings:
           lessons:
             lesson-2:
@@ -6762,7 +6766,11 @@ he:
             lesson-3:
               description_student: " "
               description_teacher: " "
+            lesson-4:
+              description_student: " "
           description_audience: " "
           description_short: " "
         fancygeometry-pilot:
           student_description: " "
+        ai-classroom-test:
+          description_audience: " "

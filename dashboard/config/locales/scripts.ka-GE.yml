@@ -9166,6 +9166,8 @@ ka:
               name: გაკვეთილი 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: შესავალი
             Loops:
               key: ციკლები
               name: ციკლები
@@ -9184,8 +9186,12 @@ ka:
             For Loops:
               key: '"მიზნისთვის" ციკლები'
               name: '"მიზნისთვის" ციკლები'
+            Getting Started:
+              name: დაწყება
           lesson_groups:
             k5_getting_started_1:
-              display_name: დაწყება
+              display_name: შესავალი
             k5_next_steps_1:
               display_name: მომდევნო ნაბიჯები
+            Introduction:
+              display_name: შესავალი

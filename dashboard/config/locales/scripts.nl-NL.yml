@@ -5634,6 +5634,8 @@ nl:
               name: Les 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introductie
             Loops:
               key: Lussen
               name: Lussen
@@ -5655,6 +5657,12 @@ nl:
             Next steps:
               key: Volgende stappen
               name: Volgende stappen
+            Module 1:
+              name: Module 1
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Introductie
             k5_next_steps_1:
               display_name: Volgende stappen
+            Introduction:
+              display_name: Introductie

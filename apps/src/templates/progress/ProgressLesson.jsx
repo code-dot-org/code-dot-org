@@ -16,7 +16,6 @@ import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
-import Button from '../Button';
 
 const styles = {
   outer: {
@@ -43,15 +42,7 @@ const styles = {
   heading: {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  headingText: {
-    cursor: 'pointer',
-    flexGrow: 1
-  },
-  buttonStyle: {
-    marginLeft: 'auto'
+    cursor: 'pointer'
   },
   hiddenOrLocked: {
     borderStyle: 'dashed',
@@ -180,53 +171,36 @@ class ProgressLesson extends React.Component {
               styles.translucent)
           }}
         >
-          <div style={styles.heading}>
-            <div style={styles.headingText} onClick={this.toggleCollapsed}>
-              <FontAwesome icon={caret} style={styles.caret} />
-              {hiddenForStudents && (
-                <FontAwesome icon="eye-slash" style={styles.icon} />
-              )}
-              {showLockIcon && lesson.lockable && locked && (
-                <FontAwesome icon="lock" style={styles.icon} />
-              )}
-              {showLockIcon && lesson.lockable && !locked && (
-                <span data-tip data-for={tooltipId}>
-                  <FontAwesome
-                    icon="unlock"
-                    style={{
-                      ...styles.icon,
-                      ...styles.unlockedIcon
-                    }}
-                  />
-                  {viewAs === ViewType.Teacher && (
-                    <ReactTooltip
-                      id={tooltipId}
-                      role="tooltip"
-                      wrapper="span"
-                      effect="solid"
-                    >
-                      {i18n.lockAssessmentLong()}
-                    </ReactTooltip>
-                  )}
-                </span>
-              )}
-              <span>{title}</span>
-            </div>
-            {viewAs === ViewType.Student &&
-              lesson.student_lesson_plan_html_url && (
-                <span style={styles.buttonStyle}>
-                  <Button
-                    __useDeprecatedTag
-                    id="ui-test-lesson-resources"
-                    href={lesson.student_lesson_plan_html_url}
-                    text={i18n.lessonResources()}
-                    disabled={locked}
-                    icon="file-text"
-                    color="purple"
-                    target="_blank"
-                  />
-                </span>
-              )}
+          <div style={styles.heading} onClick={this.toggleCollapsed}>
+            <FontAwesome icon={caret} style={styles.caret} />
+            {hiddenForStudents && (
+              <FontAwesome icon="eye-slash" style={styles.icon} />
+            )}
+            {showLockIcon && lesson.lockable && locked && (
+              <FontAwesome icon="lock" style={styles.icon} />
+            )}
+            {showLockIcon && lesson.lockable && !locked && (
+              <span data-tip data-for={tooltipId}>
+                <FontAwesome
+                  icon="unlock"
+                  style={{
+                    ...styles.icon,
+                    ...styles.unlockedIcon
+                  }}
+                />
+                {viewAs === ViewType.Teacher && (
+                  <ReactTooltip
+                    id={tooltipId}
+                    role="tooltip"
+                    wrapper="span"
+                    effect="solid"
+                  >
+                    {i18n.lockAssessmentLong()}
+                  </ReactTooltip>
+                )}
+              </span>
+            )}
+            <span>{title}</span>
           </div>
           {!this.state.collapsed && (
             <ProgressLessonContent

@@ -16304,7 +16304,6 @@ fr:
               key: Partage Numérique
               name: Partage Numérique
               description_student: 'Dans cette leçon, tu découvriras les défis et les avantages de la propriété et du droit d''auteur. '
-              description_teacher: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les étudiants devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
             Nested Loops in Bee:
               key: Les Boucles Imbriquées dans l'Abeille
               name: Les Boucles Imbriquées dans le Labyrinthe
@@ -16905,12 +16904,14 @@ fr:
             lesson15:
               name: Leçon 15
         k5-onlinepd-2021:
-          description: Apprenez à enseigner l'informatique en utilisant les Principes Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !
-          student_description: Apprenez à enseigner l'informatique en utilisant les Principes Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !
+          description: "Apprenez à enseigner l'informatique en utilisant les Principes Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !"
+          student_description: 'Apprenez à enseigner l''informatique en utilisant les Principes Fondamentaux de l''Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !'
+          description_short: 'Apprenez à enseigner l''informatique en utilisant les Principes Fondamentaux de l''Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !'
+          description_audience: 'Apprenez à enseigner l''informatique en utilisant les Principes Fondamentaux de l''Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !'
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique »
-              name: Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique »
+              name: Introduction
             Understanding the Computer Science Fundamentals Courses:
               key: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
               name: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
@@ -16947,12 +16948,22 @@ fr:
             Next steps:
               key: Prochaines étapes
               name: Prochaines étapes
+            Module 1:
+              name: Module 1
+            Getting Started:
+              name: La Mise en Route
+            What is Code.org:
+              name: Comprendre les Cours sur les Principes Fondamentaux de l'Informatique
+            Lesson Planning:
+              name: Planifier la Leçon
           lesson_groups:
             k5_getting_started_1:
-              display_name: La Mise en Route
+              display_name: Introduction
             k5_basic_concepts_1:
               display_name: Concepts de Codage de Base et Pratiques D'enseignement
             k5_diving_deeper_1:
               display_name: 'Immersion Totale : Cours E et F'
             k5_next_steps_1:
               display_name: Prochaines étapes
+            Introduction:
+              display_name: Introduction
