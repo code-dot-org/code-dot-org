@@ -22,21 +22,26 @@ class SaveModel extends Component {
   getFields = () => {
     var fields = [];
 
-    fields.push({ id: "name", text: "Name" });
+    fields.push({ id: "name", text: "What will you name the model?" });
 
     for (const columnDescription of this.props.columnDescriptions) {
       fields.push({
         id: columnDescription.id,
         isColumn: true,
-        text: "Describe " + columnDescription.id,
+        text: "Description for: " + columnDescription.id,
         answer: columnDescription.description
       });
     }
 
-    fields.push({ id: "potentialUses", text: "How can this model be used?" });
+    fields.push({ 
+      id: "potentialUses",
+      text: "How can this model be used?",
+      placeholder: "Write a brief description"
+    });
     fields.push({
       id: "potentialMisuses",
-      text: "How can this model be potentially misused?"
+      text: "How can this model be potentially misused?",
+      placeholder: "Write a brief description"
     });
     fields.push({
       id: "identifySubgroup",
@@ -61,7 +66,7 @@ class SaveModel extends Component {
   render() {
     return (
       <div style={styles.panel}>
-        <div style={styles.largeText}>Save the Trained Model</div>
+        <div style={styles.largeText}>Model Details</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             {this.getFields().map(field => {
@@ -83,6 +88,7 @@ class SaveModel extends Component {
                         onChange={event =>
                           this.handleChange(event, field.id, field.isColumn)
                         }
+                        placeholder={field.placeholder}
                       />
                     </div>
                   )}

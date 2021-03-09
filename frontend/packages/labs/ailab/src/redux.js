@@ -1113,7 +1113,7 @@ export function getPanelButtons(state) {
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
     next = isPanelEnabled(state, "save")
-      ? { panel: "save", text: "Save" }
+      ? { panel: "save", text: "Finish" }
       : null;
   }
 
