@@ -45,6 +45,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # Retrieve a trained ML model from S3
   def get_trained_model
     model = download_from_s3(params[:model_id])
+    return render_404 unless model
     render json: model
   end
 
