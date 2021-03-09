@@ -48,6 +48,8 @@ Feature: Teacher Lesson Plan
     And I wait until element "h2:contains(Teaching Guide)" is visible
     And I wait until element "h2:contains(Activity 1)" is visible
     And I wait until element ".uitest-ProgressPill" is visible
+
+    # Discussion goal is collapsible
     And I wait until element ".unit-test-tip-tab" is visible
     And I wait until element "p:contains(Get students to talk)" is visible
     And I click selector ".unit-test-tip-tab"
