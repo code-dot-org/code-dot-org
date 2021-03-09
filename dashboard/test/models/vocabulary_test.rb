@@ -39,6 +39,34 @@ class VocabularyTest < ActiveSupport::TestCase
     assert_equal "consecutive_underscores_compacted", Vocabulary.sanitize_key("Consecutive    underscores:\t\n- compacted")
   end
 
+  test 'vocabulary automatically uniquifies keys' do
+    course_version = create :course_version
+    first = create :vocabulary, word: "Word", course_version: course_version
+    second = create :vocabulary, word: "Word", course_version: course_version
+    assert_equal "word", first.key
+    assert_equal "word_a", second.key
+  end
+
+  test 'key uniqueness' do
+    vocab = create :vocabulary, key: "unique"
+
+    # basic uniqueness
+    assert_equal "unique_a",  Vocabulary.uniquify_key(vocab.key, vocab.course_version.id)
+
+    # uniqueness is per-course version
+    assert_equal "unique",  Vocabulary.uniquify_key(vocab.key, nil)
+
+    # we might increment more than once
+    create :vocabulary, key: "unique_a", course_version: vocab.course_version
+    assert_equal "unique_b",  Vocabulary.uniquify_key(vocab.key, vocab.course_version.id)
+
+    # we might increment a LOT more than once
+    ('b'..'z').each do |character|
+      create :vocabulary, key: "unique_#{character}", course_version: vocab.course_version
+    end
+    assert_equal "unique_aa",  Vocabulary.uniquify_key(vocab.key, vocab.course_version.id)
+  end
+
   test 'vocabulary prevents invalid keys' do
     vocab = create :vocabulary
     assert vocab.valid?
