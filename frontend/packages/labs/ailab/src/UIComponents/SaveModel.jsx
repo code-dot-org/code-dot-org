@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
-import { styles, saveMessages } from "../constants";
+import { styles, saveMessages, ModelNameMaxLength } from "../constants";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -75,6 +75,13 @@ class SaveModel extends Component {
                   )}
 
                   <label>{field.text}</label>
+
+                  {field.id === "name" && this.props.trainedModelDetails.name &&
+                  this.props.trainedModelDetails.name.length >= ModelNameMaxLength && (
+                    <div style={{...styles.smallText, ...styles.error}}>
+                      {saveMessages["nameLength"]}
+                    </div>
+                  )}
 
                   {field.type !== "checkbox" && !field.answer && (
                     <div>
