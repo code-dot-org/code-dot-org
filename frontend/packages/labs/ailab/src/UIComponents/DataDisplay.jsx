@@ -86,49 +86,47 @@ class DataDisplay extends Component {
             </span>
           )}
         </div>
-        {this.state.showRawData && (
-          <div style={styles.tableParent}>
-            <table style={styles.dataDisplayTable}>
-              <thead>
-                <tr>
-                  {data.length > 0 &&
-                    Object.keys(data[0]).map(key => {
-                      return (
-                        <th
-                          key={key}
-                          style={this.getColumnHeaderStyle(key)}
-                          onClick={() => setCurrentColumn(key)}
-                        >
-                          {key}
-                        </th>
-                      );
-                    })}
-                </tr>
-              </thead>
-              <tbody>
+        <div style={styles.tableParent}>
+          <table style={styles.dataDisplayTable}>
+            <thead>
+              <tr>
                 {data.length > 0 &&
-                  data.map((row, index) => {
+                  Object.keys(data[0]).map(key => {
                     return (
-                      <tr key={index}>
-                        {data.length > 0 &&
-                          Object.keys(row).map(key => {
-                            return (
-                              <td
-                                key={key}
-                                style={this.getColumnCellStyle(key)}
-                                onClick={() => setCurrentColumn(key)}
-                              >
-                                {row[key]}
-                              </td>
-                            );
-                          })}
-                      </tr>
+                      <th
+                        key={key}
+                        style={this.getColumnHeaderStyle(key)}
+                        onClick={() => setCurrentColumn(key)}
+                      >
+                        {key}
+                      </th>
                     );
                   })}
-              </tbody>
-            </table>
-          </div>
-        )}
+              </tr>
+            </thead>
+            <tbody>
+              {data.length > 0 &&
+                data.map((row, index) => {
+                  return (
+                    <tr key={index}>
+                      {data.length > 0 &&
+                        Object.keys(row).map(key => {
+                          return (
+                            <td
+                              key={key}
+                              style={this.getColumnCellStyle(key)}
+                              onClick={() => setCurrentColumn(key)}
+                            >
+                              {row[key]}
+                            </td>
+                          );
+                        })}
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
         <div style={styles.mediumText}>
           There are {this.props.data.length} rows of data.
         </div>
