@@ -2240,6 +2240,8 @@ lv:
               display_name: Mainīgie
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Ievads
             Loops:
               key: Cikli
               name: Cikli
@@ -2258,3 +2260,8 @@ lv:
             For Loops:
               key: '"par" cikli'
               name: '"par" cikli'
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Ievads
+            Introduction:
+              display_name: Ievads

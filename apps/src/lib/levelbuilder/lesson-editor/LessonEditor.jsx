@@ -309,6 +309,7 @@ class LessonEditor extends Component {
             handleMarkdownChange={e =>
               this.setState({overview: e.target.value})
             }
+            features={{imageUpload: true, resourceLink: true}}
           />
           <TextareaWithMarkdownPreview
             markdown={studentOverview}
@@ -320,6 +321,7 @@ class LessonEditor extends Component {
             handleMarkdownChange={e =>
               this.setState({studentOverview: e.target.value})
             }
+            features={{imageUpload: true}}
           />
         </CollapsibleEditorSection>
         {hasLessonPlan && (
@@ -344,6 +346,7 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({purpose: e.target.value})
                 }
+                features={{imageUpload: true, resourceLink: true}}
               />
               <TextareaWithMarkdownPreview
                 markdown={preparation}
@@ -352,6 +355,7 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({preparation: e.target.value})
                 }
+                features={{imageUpload: true, resourceLink: true}}
               />
             </CollapsibleEditorSection>
 
@@ -367,6 +371,7 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({assessmentOpportunities: e.target.value})
                 }
+                features={{imageUpload: true, resourceLink: true}}
               />
             </CollapsibleEditorSection>
 

@@ -14499,7 +14499,7 @@ uz:
             Learning Sprites with Sprite Lab:
               name: Sprite Lab bilan dasturlash
             lesson-3:
-              name: Chat-Bot yaratish
+              name: 'Chat-Bot yaratish'
             lesson-4:
               name: Oʻzgaruvchilar bilan sanash
             lesson-5:
@@ -15695,7 +15695,6 @@ uz:
               key: Raqamli Ulashish
               name: Raqamli Ulashish
               description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
-              description_teacher: Mualliflik huquqi va ijodkorlik bo'yicha guruh tomonidan kompyuter fanlari asoslariga berilgan bu dars talabalarga, ayniqsa raqamli muhitda, mulk va mualliflik huquqini namoyish qilishning foydali jihatlari va qiyinchiliklarini tushunishga yordam beradi. Talabalar axloqiy raqamli fuqaro bo‘lishning muhim qismi sifatida San’atkorlarning huqularini hurmat qilishi uchun rag‘batlantirilishi kerak.
             Nested Loops in Bee:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
@@ -16383,9 +16382,13 @@ uz:
             lesson-1:
               name: 1-dars
         k5-onlinepd-2021:
-          description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!
-          student_description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!
+          description: "Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning \"Kompyuter savodxonligi asoslari\" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!"
+          student_description: 'Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!'
+          description_short: 'Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!'
+          description_audience: 'Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!'
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Kirish
             Sequencing:
               key: Sequencing
               name: Sequencing
@@ -16410,3 +16413,12 @@ uz:
             Sprite Lab:
               key: Sprite Lab
               name: Sprite Lab
+            Module 1:
+              name: Modul 1
+            Lesson Planning:
+              name: Darsni rejalashtirish
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Kirish
+            Introduction:
+              display_name: Kirish

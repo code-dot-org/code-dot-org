@@ -67,6 +67,26 @@ class LessonsControllerTest < ActionController::TestCase
     }
 
     @levelbuilder = create :levelbuilder
+
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', hidden: true, is_migrated: true, include_student_lesson_plans: true
+    pilot_lesson_group = create :lesson_group, script: @pilot_script
+    @pilot_lesson = create(
+      :lesson,
+      script_id: @pilot_script.id,
+      lesson_group: pilot_lesson_group,
+      name: 'Pilot Lesson 1',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+      properties: {
+        overview: 'lesson overview',
+        student_overview: 'student overview'
+      }
+    )
+    @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
+    @pilot_student = create(:follower, section: @pilot_section).student_user
   end
 
   # anyone can show lesson with lesson plan
@@ -74,6 +94,50 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :success
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
+
+  # limit access to lesson plans in pilots
+  test_user_gets_response_for :show, response: :not_found, user: nil,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
+                              name: 'signed out user cannot view pilot lesson'
+
+  test_user_gets_response_for :show, response: :not_found, user: :student,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot lesson'
+
+  test_user_gets_response_for :show, response: :not_found, user: :teacher,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
+                              name: 'teacher without pilot access cannot view pilot lesson'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot lesson'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot lesson'
+
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
+
+  # limit access to student lesson plans in pilots
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              name: 'signed out user cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :student,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :teacher,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              name: 'teacher without pilot access cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_student},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot student lesson plan'
 
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do
@@ -187,6 +251,73 @@ class LessonsControllerTest < ActionController::TestCase
 
     assert_includes @response.body, activity.name
     assert_includes @response.body, section.name
+  end
+
+  test 'can not show student lesson plan when lesson is in a non-migrated script' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'unmigrated-course'
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'unmigrated lesson',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response 404
+  end
+
+  test 'can not show student lesson plan when lesson is in a script without student lesson plans' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: false, hidden: true
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'course',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response 404
+  end
+
+  test 'show student lesson plan' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: true, hidden: true
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'course',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response :ok
+    assert_includes @response.body, script2.name
   end
 
   # only levelbuilders can edit

@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-04 20:07:52 UTC",
+    "serialized_at": "2021-03-08 20:03:52 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -151,37 +151,16 @@
       }
     },
     {
-      "key": "lesson-4",
-      "name": "Be A Super Digital Citizen",
+      "key": "Conditionals",
+      "name": "Conditionals with the Farmer",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
-        "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
-        "unplugged": true,
-        "creative_commons_license": "Creative Commons BY-NC-ND",
-        "purpose": "Common Sense Education created this lesson to teach students how they can be upstanders when they see cyberbullying.",
-        "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare colored pencils or markers for students."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "Conditionals",
-      "name": "Conditionals with the Farmer",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
-      "properties": {
-        "overview": "This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.",
+        "overview": "This lesson introduces students to **while loops** and `if / else` statements. **While loops** are loops that continue to repeat commands as long as a **condition** is true. **While loops** are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what **condition** needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.",
         "student_overview": "You will get to tell the computer what to do under certain conditions in this fun and challenging series.",
-        "purpose": "A basic understanding of conditionals is a recommended prerequisite for Course E. We created this introduction to give a review for the students already familiar to conditionals and allow practice for the students that are just learning. If you find that the understanding of conditionals varies widely in your classroom, we recommend a strategic pairing of students when completing this online lesson.",
+        "purpose": "A basic understanding of **conditionals** is a recommended prerequisite for Course E. We created this introduction to give a review for the students already familiar to **conditionals** and allow practice for the students that are just learning. If you find that the understanding of **conditionals** varies widely in your classroom, we recommend a strategic pairing of students when completing this online lesson.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure ever student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -194,10 +173,10 @@
     {
       "key": "Simon Says",
       "name": "Follow the Algorithm",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students will play a game intended to get them thinking about the way commands need to be given to produce the right result. This will help them more easily carry over to Sprite Lab in the upcoming lessons. ",
         "student_overview": "Play a game and think about what commands are needed to get the right result.",
@@ -215,10 +194,10 @@
     {
       "key": "Learning Sprites with Sprite Lab",
       "name": "Swimming Fish with Sprite Lab",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
         "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.",
         "student_overview": "Learn how to create and edit sprites.",
@@ -235,10 +214,10 @@
     {
       "key": "Alien Dance Party with Sprite Lab",
       "name": "Alien Dance Party with Sprite Lab",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
         "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an \"alien dance party\".  ",
         "student_overview": "Create an interactive project that can be shared with classmates.",
@@ -249,6 +228,27 @@
       "seeding_key": {
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Be A Super Digital Citizen",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
+        "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
+        "unplugged": true,
+        "creative_commons_license": "Creative Commons BY-NC-ND",
+        "purpose": "Common Sense Education created this lesson to teach students how they can be upstanders when they see cyberbullying.",
+        "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare colored pencils or markers for students."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2021"
       }
     },
@@ -568,87 +568,6 @@
       }
     },
     {
-      "key": "1a64d92c-82ce-45e6-a188-a7d88086efd8",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up: Secret Superhero",
-        "duration": 5
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1a64d92c-82ce-45e6-a188-a7d88086efd8",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "f642093a-def9-467e-a8cc-8950b21d62c8",
-      "position": 2,
-      "properties": {
-        "name": "Learn: Being an Upstander",
-        "duration": 10
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f642093a-def9-467e-a8cc-8950b21d62c8",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "80d3bd1c-5d30-4abd-85d9-38e445a6068b",
-      "position": 3,
-      "properties": {
-        "name": "Create: Your Digital Citizen Superhero",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "80d3bd1c-5d30-4abd-85d9-38e445a6068b",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "7d491d29-d496-450c-aece-a776f7fbd3d3",
-      "position": 4,
-      "properties": {
-        "name": "Wrap Up: Save the Day! Comic Strip",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7d491d29-d496-450c-aece-a776f7fbd3d3",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "8335f8cb-a189-4f98-bb1c-817ac9264bd5",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8335f8cb-a189-4f98-bb1c-817ac9264bd5",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
-      "key": "119b7f69-7d84-475a-8c6f-8ae063b46232",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "119b7f69-7d84-475a-8c6f-8ae063b46232",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursee-2021"
-      }
-    },
-    {
       "key": "82c8173b-040e-41ec-b6ca-f1369b308268",
       "position": 1,
       "properties": {
@@ -851,6 +770,87 @@
         "lesson_activity.key": "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8",
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "1a64d92c-82ce-45e6-a188-a7d88086efd8",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up: Secret Superhero",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a64d92c-82ce-45e6-a188-a7d88086efd8",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "f642093a-def9-467e-a8cc-8950b21d62c8",
+      "position": 2,
+      "properties": {
+        "name": "Learn: Being an Upstander",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f642093a-def9-467e-a8cc-8950b21d62c8",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "80d3bd1c-5d30-4abd-85d9-38e445a6068b",
+      "position": 3,
+      "properties": {
+        "name": "Create: Your Digital Citizen Superhero",
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80d3bd1c-5d30-4abd-85d9-38e445a6068b",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "7d491d29-d496-450c-aece-a776f7fbd3d3",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up: Save the Day! Comic Strip",
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d491d29-d496-450c-aece-a776f7fbd3d3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "8335f8cb-a189-4f98-bb1c-817ac9264bd5",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8335f8cb-a189-4f98-bb1c-817ac9264bd5",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "119b7f69-7d84-475a-8c6f-8ae063b46232",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "119b7f69-7d84-475a-8c6f-8ae063b46232",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
         "script.name": "coursee-2021"
       }
     },
@@ -1669,77 +1669,10 @@
       }
     },
     {
-      "key": "fe0cef4a-d3fd-446e-9874-8270ccda6a52",
-      "position": 1,
-      "properties": {
-        "name": "Key Vocabulary",
-        "description": "* **cyberbullying**: using digital devices, sites, and apps to intimidate, harm, and upset someone\n* **digital citizen**: someone who uses technology responsibly to learn, create, and participate\n* **upstander**: a person who supports and stands up for someone else\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _Do you have a favorite superhero? If so, who is it and why? If not, why not? Take turns sharing with your partner._ ([Slide 4](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_16))\n\nInvite students to share out. Follow up by asking students to name specific super powers from their favorite superhero. Point out that one thing that all superheroes have in common is that they use their powers to help other people.\n\n**Say**: _Today we're going to talk about how we can all be superheroes and help others. We're going to watch a video about being super digital citizens. As we watch, think about the question, \"What does a super digital citizen do?\"_\n\n**Show** the video [Super Digital Citizen](https://www.commonsense.org/education/videos/super-digital-citizen) on [Slide 5](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_18).\n\n**Invite** students to share out their responses. Their answers should be based on what the Super Digital Citizen helps Guts do:\n\n* _Changes his password to be secure._\n* _Protects his tablet with a case and carries it in his backpack so that it won't break._\n* _Asks permission from Heart first before sharing a photo of her online._\n\n**Ask**: _You might have noticed that Guts became a superhero too. How did he do that?_\n\nInvite students to respond. Explain that Guts became a superhero because he took steps to help himself and others be responsible online. Define **digital citizen** as _someone who uses technology responsibly to learn, create, and participate._ ([Slide 6](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_30))"
-      },
-      "seeding_key": {
-        "activity_section.key": "fe0cef4a-d3fd-446e-9874-8270ccda6a52",
-        "lesson_activity.key": "1a64d92c-82ce-45e6-a188-a7d88086efd8"
-      }
-    },
-    {
-      "key": "7e360811-1e9b-4495-b285-e2c0f955383a",
-      "position": 1,
-      "properties": {
-        "description": "**Say**: _One situation a super digital citizen might see online is cyberbullying. **Cyberbullying** is when someone uses digital devices, sites, or apps to intimidate, harm, or upset someone._ ([Slide 7](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_43))\n\nExplain that cyberbullying can take many forms, including:\n\n* Someone making fun of or pressuring someone else repeatedly\n* Comments, memes, private messages, or chatting\n* The person being bullied not knowing everyone who's doing the bullying (as people can hide their identity online)\n* A group of people ganging up on someone\n\n**Ask**: _So if you saw someone being cyberbullied, what's something you could do to stop it? Take turns sharing with your partner._\n\nInvite students to respond. Point out three ways that cyberbullying can be addressed:\n\n* Defending or supporting the person being bullied\n* Telling a trusted adult\n* Addressing it directly with the bully\n\n**Explain** to students that doing any of these things makes you an upstander. An **upstander** is _a person who supports and stands up for someone else._ ([Slide 8](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_124))\n\n**Distribute** the [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) to each student and have a student read the directions for Part 1 aloud. Allow students five minutes to complete the activity. ([Slide 9](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_0_0))"
-      },
-      "seeding_key": {
-        "activity_section.key": "7e360811-1e9b-4495-b285-e2c0f955383a",
-        "lesson_activity.key": "f642093a-def9-467e-a8cc-8950b21d62c8"
-      }
-    },
-    {
-      "key": "f5c5daf1-2eb7-48dc-900b-5a97b914ac0b",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute** colored pencils or markers and tell students: _You're going to create your own digital citizen superhero, who will help people like Guts to become super digital citizens._\n\n**Distribute** the [Digital Citizen Superhero Student Handout](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) and read the directions aloud. ([Slide 10](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g410938bbc1_132_0))\n\n**Optional**: Have students use [Marvel's Create Your Own Superhero](https://www.marvelhq.com/create-your-own-super-hero), save the image, and paste the image into the handout.\n\n**Allow** students 10 minutes to work on their superheroes. If time permits, have students share out their superheroes with the class, or have them on display for a gallery walk."
-      },
-      "seeding_key": {
-        "activity_section.key": "f5c5daf1-2eb7-48dc-900b-5a97b914ac0b",
-        "lesson_activity.key": "80d3bd1c-5d30-4abd-85d9-38e445a6068b"
-      }
-    },
-    {
-      "key": "b9be51e8-d7f3-4be9-977b-de93c09c9a67",
-      "position": 1,
-      "properties": {
-        "description": "**Have** students go back to their [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) and go to Part 2. Have a student read the directions aloud before students create their comic strip stories. ([Slide 11](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_1_0))\n\n**Optional**: Have students use a digital comic creation tool. See our recommendations: [Classroom-Friendly Websites and Apps for Making Comics](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
-      },
-      "seeding_key": {
-        "activity_section.key": "b9be51e8-d7f3-4be9-977b-de93c09c9a67",
-        "lesson_activity.key": "7d491d29-d496-450c-aece-a776f7fbd3d3"
-      }
-    },
-    {
-      "key": "d41c813d-c7c8-45df-82fc-7dfa577689c7",
-      "position": 1,
-      "properties": {
-        "description": "Here are additional resources you can provide students to enhance their learning:\n\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n* Have students brainstorm and write an opinion piece on what the quote \"with great power comes great responsibility\" means in the digital world. How is having access to the internet a \"great power\"? What responsibilities do we have to ourselves and others? Students can post their work to a blog or your class page."
-      },
-      "seeding_key": {
-        "activity_section.key": "d41c813d-c7c8-45df-82fc-7dfa577689c7",
-        "lesson_activity.key": "8335f8cb-a189-4f98-bb1c-817ac9264bd5"
-      }
-    },
-    {
-      "key": "c350027b-7b9e-4782-af88-dc1015043bac",
-      "position": 1,
-      "properties": {
-        "progression_name": "Be a Super Digital Citizen"
-      },
-      "seeding_key": {
-        "activity_section.key": "c350027b-7b9e-4782-af88-dc1015043bac",
-        "lesson_activity.key": "119b7f69-7d84-475a-8c6f-8ae063b46232"
-      }
-    },
-    {
       "key": "2a7befee-2eac-4af5-bf1c-6192b24cbad2",
       "position": 1,
       "properties": {
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\r\n\r\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \r\n\r\n* while there is a path ahead  \r\n     * walk forward\r\n     * if there is a chair, step over it\r\n* sit down\r\n\r\nTell students they will be using _conditionals_ to solve this problem on Code.org. Give the definition of:\r\n\r\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\r\n - **Conditionals**: Statements that only run under certain conditions.\r\n\r\nOpen up a discussion of when you might use a conditional in your code.",
+        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain **conditions**.\n\nOpen up a discussion of when you might use a **conditional** in your code.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1748,10 +1681,21 @@
       }
     },
     {
-      "key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
+      "key": "47ed862d-1562-4505-a98c-8c852ba6d936",
       "position": 1,
       "properties": {
-        "name": "Conditionals with the Farmer",
+        "progression_name": "Practice",
+        "name": "Conditionals with the Farmer"
+      },
+      "seeding_key": {
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936",
+        "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
+      }
+    },
+    {
+      "key": "a63ac211-7ad4-4c28-af4a-cfa489ec8a77",
+      "position": 2,
+      "properties": {
         "progression_name": "While Loops with the Farmer",
         "description": "\n####Online Puzzles\n\nThe patterns in these puzzles may not be obvious to every student. We recommend that you play through these levels beforehand to best understand any problem areas for your class. Also, watching and using the techniques from ***Pause and Think Online** Video may be helpful for your class."
       },
@@ -1762,7 +1706,7 @@
     },
     {
       "key": "22826fb5-5cdf-4918-970d-680d9ba82f88",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Prediction"
       },
@@ -1773,7 +1717,7 @@
     },
     {
       "key": "af239dc4-fc39-4765-a761-8d1979ef5e11",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1784,9 +1728,9 @@
     },
     {
       "key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "progression_name": "Repeat Until Statements"
+        "progression_name": "Repeat Until Blocks"
       },
       "seeding_key": {
         "activity_section.key": "c978158c-f26f-4fe2-ac61-4f383a2fe748",
@@ -1795,7 +1739,7 @@
     },
     {
       "key": "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1806,7 +1750,7 @@
     },
     {
       "key": "37929d1a-a0f2-4700-96e9-7d207a70dc1e",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "\"If/Else\" with the Bee"
       },
@@ -1817,7 +1761,7 @@
     },
     {
       "key": "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -1828,22 +1772,12 @@
     },
     {
       "key": "c6d24990-be45-4b52-b095-48004fcaca4a",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c6d24990-be45-4b52-b095-48004fcaca4a",
-        "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
-      }
-    },
-    {
-      "key": "47ed862d-1562-4505-a98c-8c852ba6d936",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936",
         "lesson_activity.key": "9db395da-6afb-43e0-9115-6e0604f89208"
       }
     },
@@ -2227,6 +2161,73 @@
       "seeding_key": {
         "activity_section.key": "fd74ff7a-4b6f-42d4-99ea-63fdf9036656",
         "lesson_activity.key": "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8"
+      }
+    },
+    {
+      "key": "fe0cef4a-d3fd-446e-9874-8270ccda6a52",
+      "position": 1,
+      "properties": {
+        "name": "Key Vocabulary",
+        "description": "* **cyberbullying**: using digital devices, sites, and apps to intimidate, harm, and upset someone\n* **digital citizen**: someone who uses technology responsibly to learn, create, and participate\n* **upstander**: a person who supports and stands up for someone else\n\n**Before the lesson**: As an optional activity before the lesson, have students play the [E-volve](https://www.digitalpassport.org/evolve.html) game in Digital Passport™ by Common Sense Education. This will help introduce key concepts of this lesson. To see more, check out the [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Ask**: _Do you have a favorite superhero? If so, who is it and why? If not, why not? Take turns sharing with your partner._ ([Slide 4](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_16))\n\nInvite students to share out. Follow up by asking students to name specific super powers from their favorite superhero. Point out that one thing that all superheroes have in common is that they use their powers to help other people.\n\n**Say**: _Today we're going to talk about how we can all be superheroes and help others. We're going to watch a video about being super digital citizens. As we watch, think about the question, \"What does a super digital citizen do?\"_\n\n**Show** the video [Super Digital Citizen](https://www.commonsense.org/education/videos/super-digital-citizen) on [Slide 5](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_18).\n\n**Invite** students to share out their responses. Their answers should be based on what the Super Digital Citizen helps Guts do:\n\n* _Changes his password to be secure._\n* _Protects his tablet with a case and carries it in his backpack so that it won't break._\n* _Asks permission from Heart first before sharing a photo of her online._\n\n**Ask**: _You might have noticed that Guts became a superhero too. How did he do that?_\n\nInvite students to respond. Explain that Guts became a superhero because he took steps to help himself and others be responsible online. Define **digital citizen** as _someone who uses technology responsibly to learn, create, and participate._ ([Slide 6](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_30))"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe0cef4a-d3fd-446e-9874-8270ccda6a52",
+        "lesson_activity.key": "1a64d92c-82ce-45e6-a188-a7d88086efd8"
+      }
+    },
+    {
+      "key": "7e360811-1e9b-4495-b285-e2c0f955383a",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: _One situation a super digital citizen might see online is cyberbullying. **Cyberbullying** is when someone uses digital devices, sites, or apps to intimidate, harm, or upset someone._ ([Slide 7](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3e441b4e86_1_43))\n\nExplain that cyberbullying can take many forms, including:\n\n* Someone making fun of or pressuring someone else repeatedly\n* Comments, memes, private messages, or chatting\n* The person being bullied not knowing everyone who's doing the bullying (as people can hide their identity online)\n* A group of people ganging up on someone\n\n**Ask**: _So if you saw someone being cyberbullied, what's something you could do to stop it? Take turns sharing with your partner._\n\nInvite students to respond. Point out three ways that cyberbullying can be addressed:\n\n* Defending or supporting the person being bullied\n* Telling a trusted adult\n* Addressing it directly with the bully\n\n**Explain** to students that doing any of these things makes you an upstander. An **upstander** is _a person who supports and stands up for someone else._ ([Slide 8](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3d894fa21b_0_124))\n\n**Distribute** the [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) to each student and have a student read the directions for Part 1 aloud. Allow students five minutes to complete the activity. ([Slide 9](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_0_0))"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e360811-1e9b-4495-b285-e2c0f955383a",
+        "lesson_activity.key": "f642093a-def9-467e-a8cc-8950b21d62c8"
+      }
+    },
+    {
+      "key": "f5c5daf1-2eb7-48dc-900b-5a97b914ac0b",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute** colored pencils or markers and tell students: _You're going to create your own digital citizen superhero, who will help people like Guts to become super digital citizens._\n\n**Distribute** the [Digital Citizen Superhero Student Handout](https://drive.google.com/open?id=1N08fwGRYn4kSknNE9avenBRfa71FaKlP9YjWxlEn4J8) and read the directions aloud. ([Slide 10](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g410938bbc1_132_0))\n\n**Optional**: Have students use [Marvel's Create Your Own Superhero](https://www.marvelhq.com/create-your-own-super-hero), save the image, and paste the image into the handout.\n\n**Allow** students 10 minutes to work on their superheroes. If time permits, have students share out their superheroes with the class, or have them on display for a gallery walk."
+      },
+      "seeding_key": {
+        "activity_section.key": "f5c5daf1-2eb7-48dc-900b-5a97b914ac0b",
+        "lesson_activity.key": "80d3bd1c-5d30-4abd-85d9-38e445a6068b"
+      }
+    },
+    {
+      "key": "b9be51e8-d7f3-4be9-977b-de93c09c9a67",
+      "position": 1,
+      "properties": {
+        "description": "**Have** students go back to their [What Would a Super Digital Citizen Do? Student Handout](https://drive.google.com/open?id=11GQK9eBhC4jXhJtcbA8tJmLoN-q1P0r_qR39VIC7PHo) and go to Part 2. Have a student read the directions aloud before students create their comic strip stories. ([Slide 11](https://docs.google.com/presentation/d/1_06f7Ei8vVv-8gkWeEsyX7RrJR7eniDcybvVDanpl2A/edit#slide=id.g3dbf0be0a2_1_0))\n\n**Optional**: Have students use a digital comic creation tool. See our recommendations: [Classroom-Friendly Websites and Apps for Making Comics](https://www.commonsense.org/education/top-picks/classroom-friendly-websites-and-apps-for-making-comics).\n\n**Have** students complete the [Lesson Quiz](https://docs.google.com/forms/d/1n6jk1xkdFm8yGe1wrokxTq5phpauwRPipZgDGoKnEbY/copy)."
+      },
+      "seeding_key": {
+        "activity_section.key": "b9be51e8-d7f3-4be9-977b-de93c09c9a67",
+        "lesson_activity.key": "7d491d29-d496-450c-aece-a776f7fbd3d3"
+      }
+    },
+    {
+      "key": "d41c813d-c7c8-45df-82fc-7dfa577689c7",
+      "position": 1,
+      "properties": {
+        "description": "Here are additional resources you can provide students to enhance their learning:\n\n* [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\n* [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n* Have students brainstorm and write an opinion piece on what the quote \"with great power comes great responsibility\" means in the digital world. How is having access to the internet a \"great power\"? What responsibilities do we have to ourselves and others? Students can post their work to a blog or your class page."
+      },
+      "seeding_key": {
+        "activity_section.key": "d41c813d-c7c8-45df-82fc-7dfa577689c7",
+        "lesson_activity.key": "8335f8cb-a189-4f98-bb1c-817ac9264bd5"
+      }
+    },
+    {
+      "key": "c350027b-7b9e-4782-af88-dc1015043bac",
+      "position": 1,
+      "properties": {
+        "progression_name": "Be a Super Digital Citizen"
+      },
+      "seeding_key": {
+        "activity_section.key": "c350027b-7b9e-4782-af88-dc1015043bac",
+        "lesson_activity.key": "119b7f69-7d84-475a-8c6f-8ae063b46232"
       }
     },
     {
@@ -4077,33 +4078,76 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Be a Super Digital Citizen",
-        "level_keys": [
-          "csf_be_a_super_digital_citizen_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csf_be_a_super_digital_citizen_2021"
+          "courseD_farmer_while1_2021"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c350027b-7b9e-4782-af88-dc1015043bac"
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
       },
       "level_keys": [
-        "csf_be_a_super_digital_citizen_2021"
+        "courseD_farmer_while1_2021"
       ]
     },
     {
       "chapter": 26,
-      "position": 1,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while2_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while2_2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while3_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      },
+      "level_keys": [
+        "courseD_farmer_while3_2021"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loops with the Farmer",
         "level_keys": [
@@ -4126,10 +4170,10 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 2,
+      "chapter": 29,
+      "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4152,10 +4196,10 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 3,
+      "chapter": 30,
+      "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4178,10 +4222,10 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 4,
+      "chapter": 31,
+      "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4204,10 +4248,10 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 5,
+      "chapter": 32,
+      "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4230,10 +4274,10 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 6,
+      "chapter": 33,
+      "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4256,12 +4300,12 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 7,
+      "chapter": 34,
+      "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Repeat Until Statements",
+        "progression": "Repeat Until Blocks",
         "level_keys": [
           "courseD_video_repeatUntil_2021"
         ]
@@ -4282,10 +4326,10 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 8,
+      "chapter": 35,
+      "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4308,10 +4352,10 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 9,
+      "chapter": 36,
+      "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4334,10 +4378,10 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 10,
+      "chapter": 37,
+      "position": 13,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4360,10 +4404,10 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 11,
+      "chapter": 38,
+      "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "\"If/Else\" with the Bee",
         "level_keys": [
@@ -4386,10 +4430,10 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 12,
+      "chapter": 39,
+      "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4413,21 +4457,21 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 13,
+      "chapter": 40,
+      "position": 16,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
-          "courseE_farmer_ramp12g_2021"
+          "courseE_farmer_while1_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseE_farmer_ramp12g_2021"
+          "courseE_farmer_while1_2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
@@ -4435,11 +4479,11 @@
         "activity_section.key": "c6d24990-be45-4b52-b095-48004fcaca4a"
       },
       "level_keys": [
-        "courseE_farmer_ramp12g_2021"
+        "courseE_farmer_while1_2021"
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4465,7 +4509,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4491,7 +4535,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4517,7 +4561,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -4543,7 +4587,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -4569,7 +4613,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -4595,7 +4639,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -4621,7 +4665,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4647,7 +4691,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -4673,7 +4717,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -4699,7 +4743,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -4725,7 +4769,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4751,7 +4795,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4777,7 +4821,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -4803,7 +4847,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -4829,7 +4873,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -4855,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -4881,7 +4925,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4907,7 +4951,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -4933,7 +4977,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 9,
       "activity_section_position": 3,
       "assessment": null,
@@ -4959,7 +5003,33 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Be a Super Digital Citizen",
+        "level_keys": [
+          "csf_be_a_super_digital_citizen_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csf_be_a_super_digital_citizen_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021",
+        "activity_section.key": "c350027b-7b9e-4782-af88-dc1015043bac"
+      },
+      "level_keys": [
+        "csf_be_a_super_digital_citizen_2021"
+      ]
+    },
+    {
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4984,7 +5054,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5010,7 +5080,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5036,7 +5106,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -5062,7 +5132,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -5088,7 +5158,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -5114,7 +5184,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -5140,10 +5210,10 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Digital Sharing - Unplugged Activity",
         "level_keys": [
@@ -5166,7 +5236,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5192,7 +5262,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5218,7 +5288,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5244,7 +5314,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5270,7 +5340,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 2,
       "assessment": null,
@@ -5296,7 +5366,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 3,
       "assessment": null,
@@ -5322,7 +5392,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 4,
       "assessment": null,
@@ -5348,7 +5418,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 5,
       "assessment": null,
@@ -5374,7 +5444,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": 6,
       "assessment": null,
@@ -5400,7 +5470,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -5427,7 +5497,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 80,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -5453,7 +5523,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 81,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -5479,7 +5549,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 82,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -5505,7 +5575,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 83,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -5531,7 +5601,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 84,
       "position": 15,
       "activity_section_position": 2,
       "assessment": null,
@@ -5557,7 +5627,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5583,7 +5653,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5609,7 +5679,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5635,7 +5705,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5661,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5687,7 +5757,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -5713,7 +5783,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 2,
       "assessment": null,
@@ -5739,7 +5809,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 3,
       "assessment": null,
@@ -5765,7 +5835,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 4,
       "assessment": null,
@@ -5791,7 +5861,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5817,7 +5887,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5843,7 +5913,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5869,7 +5939,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5895,7 +5965,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5921,7 +5991,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5947,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -5973,7 +6043,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -5999,7 +6069,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -6025,7 +6095,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -6051,7 +6121,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -6077,7 +6147,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -6103,7 +6173,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 106,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6129,7 +6199,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6155,7 +6225,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6181,7 +6251,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6207,7 +6277,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6233,7 +6303,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -6259,7 +6329,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -6285,7 +6355,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -6311,7 +6381,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6337,7 +6407,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 115,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -6363,7 +6433,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 116,
       "position": 10,
       "activity_section_position": 2,
       "assessment": null,
@@ -6389,7 +6459,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 117,
       "position": 11,
       "activity_section_position": 3,
       "assessment": null,
@@ -6415,7 +6485,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 118,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6442,7 +6512,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 119,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6468,7 +6538,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 120,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -6494,7 +6564,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6520,7 +6590,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6546,7 +6616,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6572,7 +6642,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6598,7 +6668,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -6624,7 +6694,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -6650,7 +6720,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -6676,7 +6746,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 7,
       "assessment": null,
@@ -6702,7 +6772,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 8,
       "assessment": null,
@@ -6728,7 +6798,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 130,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -6755,7 +6825,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 131,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -6781,7 +6851,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 132,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6807,7 +6877,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 133,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6833,7 +6903,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 134,
       "position": 14,
       "activity_section_position": 1,
       "assessment": null,
@@ -6859,7 +6929,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 135,
       "position": 15,
       "activity_section_position": 2,
       "assessment": null,
@@ -6885,7 +6955,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6911,7 +6981,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 137,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7228,14 +7298,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "csf_be_a_super_digital_citizen_2021",
+        "level.key": "courseD_farmer_while1_2021",
         "script_level.level_keys": [
-          "csf_be_a_super_digital_citizen_2021"
+          "courseD_farmer_while1_2021"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
         "script.name": "coursee-2021",
-        "activity_section.key": "c350027b-7b9e-4782-af88-dc1015043bac"
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while2_2021",
+        "script_level.level_keys": [
+          "courseD_farmer_while2_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while3_2021",
+        "script_level.level_keys": [
+          "courseD_farmer_while3_2021"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursee-2021",
+        "activity_section.key": "47ed862d-1562-4505-a98c-8c852ba6d936"
       }
     },
     {
@@ -7384,9 +7478,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp12g_2021",
+        "level.key": "courseE_farmer_while1_2021",
         "script_level.level_keys": [
-          "courseE_farmer_ramp12g_2021"
+          "courseE_farmer_while1_2021"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "ramp_up",
@@ -7632,6 +7726,18 @@
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2021",
         "activity_section.key": "dc08f2e2-dab1-43b0-8349-9ce3161eec83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csf_be_a_super_digital_citizen_2021",
+        "script_level.level_keys": [
+          "csf_be_a_super_digital_citizen_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursee-2021",
+        "activity_section.key": "c350027b-7b9e-4782-af88-dc1015043bac"
       }
     },
     {
@@ -8549,29 +8655,6 @@
   ],
   "resources": [
     {
-      "name": "Be A Super Digital Citizen: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM",
-      "key": "be_a_super_digital_citizen_lesson_slides",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "be_a_super_digital_citizen_lesson_slides"
-      }
-    },
-    {
-      "name": "Be A Super Digital Citizen: Super Digital Citizen",
-      "url": "https://www.commonsense.org/education/videos/super-digital-citizen",
-      "key": "be_a_super_digital_citizen_super_digital_citizen",
-      "properties": {
-        "download_url": "https://www.commonsense.org/education/video-download/4141361",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
-      }
-    },
-    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "common-sense-media-pause-think",
@@ -8593,6 +8676,29 @@
       },
       "seeding_key": {
         "resource.key": "swimming-fish-teacher-sandbox"
+      }
+    },
+    {
+      "name": "Be A Super Digital Citizen: Lesson Slides",
+      "url": "https://drive.google.com/open?id=1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM",
+      "key": "be_a_super_digital_citizen_lesson_slides",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "be_a_super_digital_citizen_lesson_slides"
+      }
+    },
+    {
+      "name": "Be A Super Digital Citizen: Super Digital Citizen",
+      "url": "https://www.commonsense.org/education/videos/super-digital-citizen",
+      "key": "be_a_super_digital_citizen_super_digital_citizen",
+      "properties": {
+        "download_url": "https://www.commonsense.org/education/video-download/4141361",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
       }
     },
     {
@@ -8870,18 +8976,6 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "be_a_super_digital_citizen_lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Conditionals",
         "resource.key": "common-sense-media-pause-think"
       }
@@ -8890,6 +8984,18 @@
       "seeding_key": {
         "lesson.key": "Learning Sprites with Sprite Lab",
         "resource.key": "swimming-fish-teacher-sandbox"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "be_a_super_digital_citizen_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
       }
     },
     {
@@ -9030,6 +9136,8 @@
       "key": "Condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Condition"
       }
@@ -9038,6 +9146,8 @@
       "key": "Conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Conditionals"
       }
@@ -9046,6 +9156,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -9054,6 +9166,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -9062,6 +9176,8 @@
       "key": "Condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Condition"
       }
@@ -9070,6 +9186,8 @@
       "key": "Conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Conditionals"
       }
@@ -9078,6 +9196,8 @@
       "key": "While Loop",
       "word": "While Loop",
       "definition": "A loop that continues to repeat while a condition is true.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "While Loop"
       }
@@ -9086,6 +9206,8 @@
       "key": "Behavior",
       "word": "Behavior",
       "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Behavior"
       }
@@ -9094,6 +9216,8 @@
       "key": "Sprite",
       "word": "Sprite",
       "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Sprite"
       }
@@ -9102,6 +9226,8 @@
       "key": "Event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Event"
       }
@@ -9110,6 +9236,8 @@
       "key": "Copyright",
       "word": "Copyright",
       "definition": "the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Copyright"
       }
@@ -9118,6 +9246,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -9126,6 +9256,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -9134,6 +9266,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -9142,6 +9276,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -9150,6 +9286,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9158,6 +9296,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9166,6 +9306,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9174,6 +9316,8 @@
       "key": "Function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Function"
       }
@@ -9182,6 +9326,8 @@
       "key": "Define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Define"
       }
@@ -9190,6 +9336,8 @@
       "key": "Prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Prepare"
       }
@@ -9198,6 +9346,8 @@
       "key": "Reflect",
       "word": "Reflect",
       "definition": "Carefully think back on something with the intention of improving the outcome in the future",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Reflect"
       }
@@ -9206,6 +9356,8 @@
       "key": "Try",
       "word": "Try",
       "definition": "Attempt to do something",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Try"
       }

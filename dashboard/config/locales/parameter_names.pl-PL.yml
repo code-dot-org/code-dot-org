@@ -2,6 +2,7 @@
 pl:
   data:
     parameter_names:
+      "???": "???"
       actor: postać
       color: kolor
       counter: licznik

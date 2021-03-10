@@ -1043,6 +1043,15 @@ designMode.onInsertEvent = function(code) {
   Applab.scrollToEnd();
 };
 
+// By switchig to design mode, auto-generated design elements (see ai.js) will
+// appear without the user needing to click the "Run" button.
+designMode.onInsertAICode = function(code) {
+  Applab.appendToEditor(code);
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.DESIGN));
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
+  Applab.scrollToEnd();
+};
+
 /**/
 designMode.serializeToLevelHtml = function() {
   var designModeViz = $('#designModeViz');

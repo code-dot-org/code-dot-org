@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-03-04 20:19:16 UTC",
+    "serialized_at": "2021-03-09 21:01:45 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -192,7 +192,7 @@
         "overview": "Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
         "student_overview": "Help the Harvester collect vegetables along a path.",
         "purpose": "In this lesson, students will develop debugging skills and will continue developing their programming skills.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure each student has a ***Think Spot Journal - Reflection Journal**.\n - (Optional) Read ***Stevie and the Big Project** and ***Unspotted Bugs** storybooks with your class beforehand. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure each student has a journal.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1284,7 +1284,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For more on persistence and frustration, try reading ***Stevie and the Big Project** to your students. It will help them spot moments of frustration.  It will also help give them the tools to deal with it.\n\nIf you do not read the book, take a moment to cover tips on frustration and persistence as a class:\n\n##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
+            "markdown": "Take a moment to cover tips on frustration and persistence as a class:\n\n##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
           }
         ]
       },
@@ -7374,6 +7374,8 @@
       "key": "Algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Algorithm"
       }
@@ -7382,6 +7384,8 @@
       "key": "Bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Bug"
       }
@@ -7390,6 +7394,8 @@
       "key": "Debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Debugging"
       }
@@ -7398,6 +7404,8 @@
       "key": "Click",
       "word": "Click",
       "definition": "Press the mouse button",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Click"
       }
@@ -7406,6 +7414,8 @@
       "key": "Double-Click",
       "word": "Double-Click",
       "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Double-Click"
       }
@@ -7414,6 +7424,8 @@
       "key": "Drag",
       "word": "Drag",
       "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Drag"
       }
@@ -7422,6 +7434,8 @@
       "key": "Drop",
       "word": "Drop",
       "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Drop"
       }
@@ -7430,6 +7444,8 @@
       "key": "Algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Algorithm"
       }
@@ -7438,6 +7454,8 @@
       "key": "Program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Program"
       }
@@ -7446,6 +7464,8 @@
       "key": "Programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Programming"
       }
@@ -7454,6 +7474,8 @@
       "key": "Bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Bug"
       }
@@ -7462,6 +7484,8 @@
       "key": "Debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Debugging"
       }
@@ -7470,6 +7494,8 @@
       "key": "Persistence",
       "word": "Persistence",
       "definition": "Trying again and again, even when something is very hard.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Persistence"
       }
@@ -7478,6 +7504,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -7486,6 +7514,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -7494,6 +7524,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -7502,6 +7534,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -7510,6 +7544,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -7518,6 +7554,8 @@
       "key": "Repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Repeat"
       }
@@ -7526,6 +7564,8 @@
       "key": "Loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Loop"
       }
@@ -7534,6 +7574,8 @@
       "key": "Event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Event"
       }
@@ -7542,6 +7584,8 @@
       "key": "Event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Event"
       }
