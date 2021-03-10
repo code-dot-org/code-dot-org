@@ -40,12 +40,12 @@ class VocabularyTest < ActiveSupport::TestCase
     assert_equal "consecutive_underscores_compacted", Vocabulary.sanitize_key("Consecutive    underscores:\t\n- compacted")
   end
 
-  test 'vocabulary automatically uniquifies keys' do
+  test 'vocabulary does not automatically uniquify keys' do
     course_version = create :course_version
-    first = create :vocabulary, word: "Word", key: nil, course_version: course_version
-    second = create :vocabulary, word: "Word", key: nil, course_version: course_version
-    assert_equal "word", first.key
-    assert_equal "word_a", second.key
+    create :vocabulary, word: "Word", key: nil, course_version: course_version
+    assert_raises ActiveRecord::RecordNotUnique do
+      create :vocabulary, word: "Word", key: nil, course_version: course_version
+    end
   end
 
   test 'key uniqueness' do
