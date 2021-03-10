@@ -2321,6 +2321,8 @@ mi:
               display_name: Ngā Taurangi
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Kupu Whakataki
             Loops:
               key: Ngā Koromeke
               name: Ngā Koromeke
@@ -2339,3 +2341,8 @@ mi:
             For Loops:
               key: Mō Ngā Koromeke
               name: Mō Ngā Koromeke
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Kupu Whakataki
+            Introduction:
+              display_name: Kupu Whakataki

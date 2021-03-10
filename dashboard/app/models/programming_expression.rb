@@ -113,4 +113,8 @@ class ProgrammingExpression < ApplicationRecord
     record.update! properties
     record.name
   end
+
+  def summarize_for_lesson_show
+    {name: name, link: "/docs/#{programming_environment.name}/#{key}/"}
+  end
 end

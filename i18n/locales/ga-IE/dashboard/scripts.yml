@@ -4036,8 +4036,6 @@ ga:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
             About Me:
               name: Maidir Liomsa i Saotharlann na Sprideanna
-            Digital Sharing:
-              description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
             'Functions: Songwriting':
               name: Ceapadh Ceoil
           lesson_groups:
@@ -4164,6 +4162,8 @@ ga:
               display_name: Suirbhé
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Réamhrá
             Sequencing:
               key: Seicheamhú
               name: Seicheamhú
@@ -4188,8 +4188,14 @@ ga:
             Sprite Lab:
               key: Saotharlann na Sprideanna
               name: Saotharlann na Sprideanna
+            Lesson Planning:
+              name: Ceachtanna a Phleanáil
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Réamhrá
             k5_basic_concepts_1:
               display_name: Bunchoincheapa Códála agus Cleachtadh Múinteoireachta
             k5_diving_deeper_1:
               display_name: 'Níos Doimhne: Cúrsaí E agus F'
+            Introduction:
+              display_name: Réamhrá
