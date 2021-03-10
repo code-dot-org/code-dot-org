@@ -42,9 +42,10 @@ Feature: Viewing and Printing Standards Progress
     And I wait until element "#teacher-dashboard" contains text "CSTA Standards in"
     And I wait until element "#uitest-standards-view" is visible
     And I wait until element "#uitest-progress-standards-table" is visible
-    And I wait until element "#uitest-progress-standards-table" contains text "Model daily processes by creating and following algorithms (sets of step-by-step instructions) to complete tasks."
-    And I wait until element "#uitest-progress-standards-table" contains text "Available in 1 Lesson:"
-    And I wait until element "#test-how-to-standards" contains text "How to use this information"
+    And element "#uitest-progress-standards-table" contains text "1A-AP-08"
+    And element "#uitest-progress-standards-table" contains text "Model daily processes by creating and following algorithms (sets of step-by-step instructions) to complete tasks."
+    And element "#uitest-progress-standards-table" contains text "Available in 1 Lesson:"
+    And element "#test-how-to-standards" contains text "How to use this information"
 
     # Generate PDF
     And I wait until element ".uitest-standards-generate-report" is visible

@@ -1,0 +1,7 @@
+name 'courseE_swim_fish_behavior_predict1_2021'
+question 'Look closely at the code below. What will happen after you click "Run"?'
+wrong 'Nothing will happen.', feedback: 'Incorrect. The tumbleweed will begin tumbling'
+wrong 'The tumbleweed will float to the top of the screen', feedback: 'Incorrect. The tumbleweed will begin tumbling'
+right 'The tumbleweed will begin tumbling', feedback: 'Correct!'
+wrong 'The tumbleweed will blink on and off.', feedback: 'Incorrect. The tumbleweed will begin tumbling'
+
