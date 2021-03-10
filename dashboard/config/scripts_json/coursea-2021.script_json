@@ -30,6 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
+    "serialized_at": "2021-03-09 20:51:36 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -1585,7 +1586,7 @@
       "key": "8b694201-2213-4aea-84a2-9cf901afa9c9",
       "position": 2,
       "properties": {
-        "description": "**Display:** Show students the map from the \"Happy Maps\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Happy Maps.\"    \n\n- *What happens when the flurb reads the \"North\" arrow?*\n- *What happens when the flurb reads the \"East\" arrow?*\n- *What would happen if we made a mistake when programming the flurb?  What if there was a \"bug\" in our program?  Would we throw the whole thing away and start over?*\n\nEncourage students to think about the debugging tips:\n\n- *Was everything right at the first step?*\n- *How about the second?*\n- *Where did it go wrong?*\n\n\n**Transition:** Once you are satisfied that your students remember \"Happy Maps\" and \"Unspotted Bugs\", you can move into the Bridging Activity.\n\n###Online Foundation: Preview Programming in Maze (3 minutes)\nTo prepare students, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 5, Puzzle 5.  Point out the \"Play Area\" with *Scrat*, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that students will be using to get *Scrat* to the acorn.  Do they see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that *Scrat* (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
+        "description": "**Display:** Show students the map from the \"Happy Maps\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Happy Maps.\"    \n\n- *What happens when the flurb reads the \"North\" arrow?*\n- *What happens when the flurb reads the \"East\" arrow?*\n- *What would happen if we made a mistake when programming the flurb?  What if there was a \"bug\" in our program?  Would we throw the whole thing away and start over?*\n\nEncourage students to think about the debugging tips:\n\n- *Was everything right at the first step?*\n- *How about the second?*\n- *Where did it go wrong?*\n\n\n**Transition:** Once you are satisfied that your students remember \"Happy Maps\", you can move into the Bridging Activity.\n\n###Online Foundation: Preview Programming in Maze (3 minutes)\nTo prepare students, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 5, Puzzle 5.  Point out the \"Play Area\" with *Scrat*, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that students will be using to get *Scrat* to the acorn.  Do they see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that *Scrat* (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
       },
       "seeding_key": {
         "activity_section.key": "8b694201-2213-4aea-84a2-9cf901afa9c9",
@@ -7176,19 +7177,6 @@
       }
     },
     {
-      "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "the_big_event_courses_a_b_",
-      "properties": {
-        "type": "Controller Image",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_courses_a_b_"
-      }
-    },
-    {
       "name": "The Big Event",
       "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
       "key": "csf-the-big-event-assessment",
@@ -7239,6 +7227,19 @@
       }
     },
     {
+      "name": "The Big Event (Courses A, B)",
+      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
+      "key": "the_big_event_courses_a_b_",
+      "properties": {
+        "type": "Controller Image",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
       "name": "Unplugged Blockly Blocks (Grades K-1)",
       "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
       "key": "course-ab-blockly-blocks",
@@ -7260,19 +7261,6 @@
       },
       "seeding_key": {
         "resource.key": "common-sense-media-pause-think"
-      }
-    },
-    {
-      "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "the_big_event_courses_a_b_",
-      "properties": {
-        "type": "Controller Image",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7321,6 +7309,19 @@
       },
       "seeding_key": {
         "resource.key": "csf_lesson_recommendations_2"
+      }
+    },
+    {
+      "name": "The Big Event (Courses A, B)",
+      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
+      "key": "the_big_event_courses_a_b_",
+      "properties": {
+        "type": "Controller Image",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_courses_a_b_"
       }
     }
   ],
@@ -7598,12 +7599,6 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "the_big_event_courses_a_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
         "resource.key": "csf-the-big-event-assessment"
       }
     },
@@ -7627,6 +7622,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "course-ab-blockly-blocks"
       }
@@ -7635,12 +7636,6 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "common-sense-media-pause-think"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
@@ -7666,6 +7661,12 @@
         "lesson.key": "Events in Play Lab",
         "resource.key": "csf_lesson_recommendations_2"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "the_big_event_courses_a_b_"
+      }
     }
   ],
   "vocabularies": [
@@ -7673,6 +7674,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -7681,6 +7684,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -7689,6 +7694,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -7697,6 +7704,8 @@
       "key": "click",
       "word": "Click",
       "definition": "Press the mouse button",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "click"
       }
@@ -7705,6 +7714,8 @@
       "key": "double_click",
       "word": "Double-Click",
       "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "double_click"
       }
@@ -7713,6 +7724,8 @@
       "key": "drag",
       "word": "Drag",
       "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "drag"
       }
@@ -7721,6 +7734,8 @@
       "key": "drop",
       "word": "Drop",
       "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "drop"
       }
@@ -7729,6 +7744,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -7737,6 +7754,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -7745,6 +7764,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -7753,6 +7774,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -7761,6 +7784,8 @@
       "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "programming"
       }
@@ -7769,6 +7794,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -7777,6 +7804,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -7785,6 +7814,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -7793,6 +7824,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -7801,6 +7834,8 @@
       "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "programming"
       }
@@ -7809,6 +7844,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7817,6 +7854,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -7825,6 +7864,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7833,6 +7874,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -7841,6 +7884,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7849,6 +7894,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -7857,6 +7904,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7865,6 +7914,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -7873,6 +7924,8 @@
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "event"
       }
@@ -7881,6 +7934,8 @@
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "event"
       }
