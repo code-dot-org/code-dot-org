@@ -25674,12 +25674,6 @@ pt:
               name: Compartilhamento Digital
               description_student: 'Nesta lição, você aprenderá sobre os desafios
                 e benefícios da propriedade e dos direitos autorais. '
-              description_teacher: Emprestado para os Fundamentos de Ciência da Computação
-                pelo time em Direitos Autorais e Criatividade, esta lição existe para
-                ajudar os estudantes a entenderem os desafios e benefícios de respeitar
-                posse e direitos autorais, particularmente em ambientes digitais.
-                Estudantes deveriam ser encorajados a respeitar os direitos dos artistas
-                como uma parte importante de ser um cidadão digital ético.
             Nested Loops in Bee:
               key: Laços Aninhados na abelha
               name: Laços Aninhados no Labirinto
@@ -27077,10 +27071,16 @@ pt:
           student_description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
             individualizado!
+          description_short: Aprenda a ensinar ciência da computação usando os Fundamentos
+            de Ciência da Computação da Code.org com este curso on-line gratuito e
+            individualizado!
+          description_audience: Aprenda a ensinar ciência da computação usando os
+            Fundamentos de Ciência da Computação da Code.org com este curso on-line
+            gratuito e individualizado!
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Bem-vindo ao "Ensinando os Fundamentos da Ciência da Computação"
-              name: Bem-vindo ao "Ensinando os Fundamentos da Ciência da Computação"
+              name: Introdução
             Understanding the Computer Science Fundamentals Courses:
               key: Compreendendo os cursos de Fundamentos de Ciência da Computação
               name: Compreendendo os cursos de Fundamentos de Ciência da Computação
@@ -27117,12 +27117,22 @@ pt:
             Next steps:
               key: Próximos passos
               name: Próximos passos
+            Module 1:
+              name: Módulo 1
+            Getting Started:
+              name: Iniciando
+            What is Code.org:
+              name: Compreendendo os cursos de Fundamentos de Ciência da Computação
+            Lesson Planning:
+              name: Planejamento de aula
           lesson_groups:
             k5_getting_started_1:
-              display_name: Iniciando
+              display_name: Introdução
             k5_basic_concepts_1:
               display_name: Conceitos Básicos de Programação e Prática de Ensino
             k5_diving_deeper_1:
               display_name: 'Aprofundamento: Cursos E e F'
             k5_next_steps_1:
               display_name: Próximas etapas
+            Introduction:
+              display_name: Introdução

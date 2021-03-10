@@ -13,11 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 19:06:27 UTC",
+    "serialized_at": "2021-03-09 02:48:20 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -2403,7 +2405,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L1 CFU Return_2021"
@@ -2421,7 +2423,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Investigation",
         "level_keys": [
@@ -2429,7 +2431,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock_2021"
@@ -2447,7 +2449,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Investigation",
         "level_keys": [
@@ -2455,7 +2457,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Investigate Poetry App_2021"
@@ -2481,7 +2483,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L2 CSP CFU Param and Return_2021"
@@ -2499,7 +2501,7 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "console.log Practice",
         "level_keys": [
@@ -2507,7 +2509,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 1_2021"
@@ -2525,7 +2527,7 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "console.log Practice",
         "level_keys": [
@@ -2533,7 +2535,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 2_2021"
@@ -2551,7 +2553,7 @@
       "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "console.log Practice",
         "level_keys": [
@@ -2559,7 +2561,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 4_2021"
@@ -2577,7 +2579,7 @@
       "chapter": 8,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "console.log Practice",
         "level_keys": [
@@ -2585,7 +2587,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 3_2021"
@@ -2603,7 +2605,7 @@
       "chapter": 9,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "console.log Practice",
         "level_keys": [
@@ -2611,7 +2613,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 5_2021"
@@ -2629,7 +2631,7 @@
       "chapter": 10,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Practice",
         "level_keys": [
@@ -2637,7 +2639,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Investigate Calculator App_2021"
@@ -2655,7 +2657,7 @@
       "chapter": 11,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Practice",
         "level_keys": [
@@ -2663,7 +2665,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Practice App 2_2021"
@@ -2681,7 +2683,7 @@
       "chapter": 12,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "MOD Practice",
         "level_keys": [
@@ -2689,7 +2691,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice MOD_2021"
@@ -2715,7 +2717,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U73 CFU Param Return AP_2021"
@@ -2733,7 +2735,7 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Try the Rock Paper Scissors App",
         "level_keys": [
@@ -2741,7 +2743,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App_2021"
@@ -2767,7 +2769,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App Project_2021"
@@ -2793,7 +2795,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 L04 Exit Ticket_2021"
@@ -2811,7 +2813,7 @@
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "States App",
         "level_keys": [
@@ -2819,7 +2821,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L6 States App Investigation_2021"
@@ -2837,7 +2839,7 @@
       "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pigify App",
         "level_keys": [
@@ -2845,7 +2847,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L6 Pigify App Investigation_2021"
@@ -2871,7 +2873,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L6 CSP CFU Libraries_2021"
@@ -2889,7 +2891,7 @@
       "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using Libraries",
         "level_keys": [
@@ -2897,7 +2899,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 3_2021"
@@ -2915,7 +2917,7 @@
       "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using Libraries",
         "level_keys": [
@@ -2923,7 +2925,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 5_2021"
@@ -2941,7 +2943,7 @@
       "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Testing Libraries",
         "level_keys": [
@@ -2949,7 +2951,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 2_2021"
@@ -2967,7 +2969,7 @@
       "chapter": 23,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Testing Libraries",
         "level_keys": [
@@ -2975,7 +2977,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 1_2021"
@@ -2993,7 +2995,7 @@
       "chapter": 24,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Testing Libraries",
         "level_keys": [
@@ -3001,7 +3003,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 4_2021"
@@ -3027,7 +3029,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U77 CFU Libraries AP_2021"
@@ -3045,7 +3047,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build Your Library",
         "level_keys": [
@@ -3053,7 +3055,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Part 1_2021"
@@ -3071,7 +3073,7 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build Your Library",
         "level_keys": [
@@ -3079,7 +3081,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Part 2_2021"
@@ -3097,7 +3099,7 @@
       "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Test a Classmate's Library",
         "level_keys": [
@@ -3105,7 +3107,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Test a Library_2021"
@@ -3131,7 +3133,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Part 3_2021"
@@ -3157,7 +3159,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 7 AP-Style Assessment _2021"

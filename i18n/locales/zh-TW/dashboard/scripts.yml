@@ -16743,7 +16743,6 @@ zh-TW:
               key: 數位分享
               name: 數位分享
               description_student: '在本課堂中，你會學到所有權與著作權方面的挑戰與優點。'
-              description_teacher: 本課堂由「著作權與創意」團隊借予電腦科學基礎。提供本課堂之目的，是協助學生瞭解尊重所有權與著作權的挑戰和優點，尤其是在數位環境中。教師應鼓勵學生，我們是遵守道德的數位公民，重點之一是尊重藝術家的權利。
             Nested Loops in Bee:
               key: 蜜蜂裡的巢狀迴圈（Nested Loops）
               name: 迷宮裡的巢狀迴圈（Nested Loops）
@@ -17368,12 +17367,14 @@ zh-TW:
               name: 第 15 課
         k5-onlinepd-2021:
           title: 計算機科學基礎的教授
-          description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！
-          student_description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！
+          description: "使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！"
+          student_description: '使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！'
+          description_short: '使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！'
+          description_audience: '使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！'
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: 歡迎來到「教授計算機科學基礎」
-              name: 歡迎來到「教授計算機科學基礎」
+              name: 介紹
             Understanding the Computer Science Fundamentals Courses:
               key: 瞭解計算機科學基礎課程
               name: 瞭解計算機科學基礎課程
@@ -17410,12 +17411,22 @@ zh-TW:
             Next steps:
               key: 下一步
               name: 下一步
+            Module 1:
+              name: 模組 1
+            Getting Started:
+              name: 新手上路
+            What is Code.org:
+              name: 瞭解計算機科學基礎課程
+            Lesson Planning:
+              name: 教學計畫
           lesson_groups:
             k5_getting_started_1:
-              display_name: 新手上路
+              display_name: 介紹
             k5_basic_concepts_1:
               display_name: 基本編程概念和教學練習
             k5_diving_deeper_1:
               display_name: '深造：課程 E 和 F'
             k5_next_steps_1:
               display_name: 下一步
+            Introduction:
+              display_name: 介紹

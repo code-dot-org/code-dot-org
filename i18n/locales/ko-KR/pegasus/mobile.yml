@@ -1677,3 +1677,9 @@
   codebytes_skinny_banner_description: '20분 분량의 인터랙티브 컴퓨터 과학 레슨인 CodeBytes를 위한 CS 교육 주간에 위해 저희에게 신청하세요. 매일 두 차례 라이브로 스트리밍되는 CodeBytes은 학생들이 가상 #HourOfCode에 참가할 수 있는 좋은 기회입니다!'
   codebytes_skinny_banner_english_only: "영어로만 제공"
   codebytes_skinny_banner_learn: "[code.org/codebytes](%{code_bytes_url})에서 더 자세히 알아보세요."
+  footer_privacy_policy: "개인정보보호 정책"
+  footer_about: "소개"
+  footer_partners: "파트너"
+  footer_donate: "기부하기"
+  footer_support: "지원"
+  footer_terms: "약관"
