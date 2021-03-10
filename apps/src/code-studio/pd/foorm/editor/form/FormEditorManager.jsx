@@ -15,7 +15,6 @@ import {
   setHasJSONError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
-import _ from 'lodash';
 
 const styles = {
   surveyTitle: {
@@ -129,38 +128,31 @@ class FormEditorManager extends React.Component {
   }
 
   // Callback for FoormEditorPreview
-  // use debounce to only call once per second
   fillFormWithLibraryItems() {
-    return _.debounce(
-      () => {
-        $.ajax({
-          url: '/api/v1/pd/foorm/forms/form_with_library_items',
-          type: 'post',
-          contentType: 'application/json',
-          processData: false,
-          data: JSON.stringify({
-            form_questions: this.props.questions
-          })
-        })
-          .done(result => {
-            this.setState({
-              forceRerenderKey: this.state.forceRerenderKey + 1,
-              previewQuestions: result,
-              libraryError: false,
-              libraryErrorMessage: null
-            });
-          })
-          .fail(result => {
-            this.setState({
-              libraryError: true,
-              libraryErrorMessage:
-                (result.responseJSON && result.responseJSON.error) || 'unknown'
-            });
-          });
-      },
-      1000,
-      {leading: true}
-    );
+    $.ajax({
+      url: '/api/v1/pd/foorm/forms/form_with_library_items',
+      type: 'post',
+      contentType: 'application/json',
+      processData: false,
+      data: JSON.stringify({
+        form_questions: this.props.questions
+      })
+    })
+      .done(result => {
+        this.setState({
+          forceRerenderKey: this.state.forceRerenderKey + 1,
+          previewQuestions: result,
+          libraryError: false,
+          libraryErrorMessage: null
+        });
+      })
+      .fail(result => {
+        this.setState({
+          libraryError: true,
+          libraryErrorMessage:
+            (result.responseJSON && result.responseJSON.error) || 'unknown'
+        });
+      });
   }
 
   getPreviewErrors() {
@@ -233,7 +225,7 @@ class FormEditorManager extends React.Component {
             populateCodeMirror={this.props.populateCodeMirror}
             categories={this.props.categories}
             resetCodeMirror={this.props.resetCodeMirror}
-            preparePreview={() => this.fillFormWithLibraryItems()()}
+            preparePreview={() => this.fillFormWithLibraryItems()}
             previewQuestions={this.state.previewQuestions}
             previewErrors={this.getPreviewErrors()}
             forceRerenderKey={this.state.forceRerenderKey}
