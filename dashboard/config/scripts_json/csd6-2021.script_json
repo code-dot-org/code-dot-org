@@ -31,6 +31,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
+    "serialized_at": "2021-03-09 02:50:20 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -3456,7 +3457,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Innovation Research",
         "level_keys": [
@@ -3482,7 +3483,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Setting Properties",
         "level_keys": [
@@ -3508,7 +3509,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Setting Properties",
         "level_keys": [
@@ -3560,7 +3561,7 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events and Properties",
         "level_keys": [
@@ -3586,7 +3587,7 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events and Properties",
         "level_keys": [
@@ -3612,7 +3613,7 @@
       "chapter": 7,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events and Properties",
         "level_keys": [
@@ -3664,7 +3665,7 @@
       "chapter": 9,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Emotion Machine Example",
         "level_keys": [
@@ -3690,7 +3691,7 @@
       "chapter": 10,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Building an App",
         "level_keys": [
@@ -3716,7 +3717,7 @@
       "chapter": 11,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Building an App",
         "level_keys": [
@@ -3742,7 +3743,7 @@
       "chapter": 12,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Building an App",
         "level_keys": [
@@ -3794,7 +3795,7 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Hardware and Software",
         "level_keys": [
@@ -3820,7 +3821,7 @@
       "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3846,7 +3847,7 @@
       "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3872,7 +3873,7 @@
       "chapter": 17,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3898,7 +3899,7 @@
       "chapter": 18,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3924,7 +3925,7 @@
       "chapter": 19,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3976,7 +3977,7 @@
       "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -4002,7 +4003,7 @@
       "chapter": 22,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -4028,7 +4029,7 @@
       "chapter": 23,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -4054,7 +4055,7 @@
       "chapter": 24,
       "position": 11,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -4106,7 +4107,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Input Examples",
         "level_keys": [
@@ -4132,7 +4133,7 @@
       "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Input Examples",
         "level_keys": [
@@ -4158,7 +4159,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Board Events",
         "level_keys": [
@@ -4184,7 +4185,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Board Events",
         "level_keys": [
@@ -4236,7 +4237,7 @@
       "chapter": 31,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4262,7 +4263,7 @@
       "chapter": 32,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4288,7 +4289,7 @@
       "chapter": 33,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4314,7 +4315,7 @@
       "chapter": 34,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4340,7 +4341,7 @@
       "chapter": 35,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4366,7 +4367,7 @@
       "chapter": 36,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4392,12 +4393,12 @@
       "chapter": 37,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Extra Challenge: Sound Board",
         "level_keys": [
           "CSDU6 - board event challenge_2021"
-        ],
-        "progression": "Extra Challenge: Sound Board"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4418,7 +4419,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Getting Properties",
         "level_keys": [
@@ -4444,7 +4445,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Getting Properties",
         "level_keys": [
@@ -4470,7 +4471,7 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Getting Properties",
         "level_keys": [
@@ -4496,7 +4497,7 @@
       "chapter": 41,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Getting Properties",
         "level_keys": [
@@ -4548,7 +4549,7 @@
       "chapter": 43,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sliders",
         "level_keys": [
@@ -4574,7 +4575,7 @@
       "chapter": 44,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sliders",
         "level_keys": [
@@ -4600,7 +4601,7 @@
       "chapter": 45,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sliders",
         "level_keys": [
@@ -4626,7 +4627,7 @@
       "chapter": 46,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Change",
         "level_keys": [
@@ -4652,7 +4653,7 @@
       "chapter": 47,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Change",
         "level_keys": [
@@ -4678,7 +4679,7 @@
       "chapter": 48,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Change",
         "level_keys": [
@@ -4704,7 +4705,7 @@
       "chapter": 49,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Motorcycle",
         "level_keys": [
@@ -4730,7 +4731,7 @@
       "chapter": 50,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Motorcycle",
         "level_keys": [
@@ -4756,12 +4757,12 @@
       "chapter": 51,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Extra Challenge",
         "level_keys": [
           "CSD U6 challenge motorcycle_2021"
-        ],
-        "progression": "Extra Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4782,7 +4783,7 @@
       "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sensor Experiment",
         "level_keys": [
@@ -4808,7 +4809,7 @@
       "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Reading Sensors",
         "level_keys": [
@@ -4834,7 +4835,7 @@
       "chapter": 54,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Reading Sensors",
         "level_keys": [
@@ -4860,7 +4861,7 @@
       "chapter": 55,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Reading Sensors",
         "level_keys": [
@@ -4886,7 +4887,7 @@
       "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sensor Events",
         "level_keys": [
@@ -4912,7 +4913,7 @@
       "chapter": 57,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sensor Events",
         "level_keys": [
@@ -4938,7 +4939,7 @@
       "chapter": 58,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sensor Events",
         "level_keys": [
@@ -4964,7 +4965,7 @@
       "chapter": 59,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sensor Events",
         "level_keys": [
@@ -4990,7 +4991,7 @@
       "chapter": 60,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sensors to Colors",
         "level_keys": [
@@ -5016,7 +5017,7 @@
       "chapter": 61,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sensors to Colors",
         "level_keys": [
@@ -5068,12 +5069,12 @@
       "chapter": 63,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Extra Challenge",
         "level_keys": [
           "CSD U6 analog challenge_2021"
-        ],
-        "progression": "Extra Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5094,7 +5095,7 @@
       "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Program",
         "level_keys": [
@@ -5120,7 +5121,7 @@
       "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Plan Your Project",
         "level_keys": [
@@ -5146,7 +5147,7 @@
       "chapter": 66,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5172,7 +5173,7 @@
       "chapter": 67,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5198,7 +5199,7 @@
       "chapter": 68,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5224,7 +5225,7 @@
       "chapter": 69,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finishing Functions",
         "level_keys": [
@@ -5250,7 +5251,7 @@
       "chapter": 70,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finishing Functions",
         "level_keys": [
@@ -5276,7 +5277,7 @@
       "chapter": 71,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finishing Functions",
         "level_keys": [
@@ -5302,7 +5303,7 @@
       "chapter": 72,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Checking for a Winner",
         "level_keys": [
@@ -5328,7 +5329,7 @@
       "chapter": 73,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Checking for a Winner",
         "level_keys": [
@@ -5354,7 +5355,7 @@
       "chapter": 74,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Checking for a Winner",
         "level_keys": [
@@ -5406,7 +5407,7 @@
       "chapter": 76,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Make it Your Own",
         "level_keys": [
@@ -5432,7 +5433,7 @@
       "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo - Bug Grab",
         "level_keys": [
@@ -5458,7 +5459,7 @@
       "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Plan Your Project",
         "level_keys": [
@@ -5484,7 +5485,7 @@
       "chapter": 79,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5510,7 +5511,7 @@
       "chapter": 80,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -5536,7 +5537,7 @@
       "chapter": 81,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -5562,7 +5563,7 @@
       "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Functions",
         "level_keys": [
@@ -5588,7 +5589,7 @@
       "chapter": 83,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Functions",
         "level_keys": [
@@ -5614,7 +5615,7 @@
       "chapter": 84,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -5666,7 +5667,7 @@
       "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Introduction to Arrays",
         "level_keys": [
@@ -5692,7 +5693,7 @@
       "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introduction to Arrays",
         "level_keys": [
@@ -5718,7 +5719,7 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introduction to Arrays",
         "level_keys": [
@@ -5744,7 +5745,7 @@
       "chapter": 89,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introduction to Arrays",
         "level_keys": [
@@ -5770,7 +5771,7 @@
       "chapter": 90,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Introduction to Arrays",
         "level_keys": [
@@ -5848,7 +5849,7 @@
       "chapter": 93,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Color LEDs",
         "level_keys": [
@@ -5874,7 +5875,7 @@
       "chapter": 94,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Color LEDs",
         "level_keys": [
@@ -5900,7 +5901,7 @@
       "chapter": 95,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Color LEDs",
         "level_keys": [
@@ -5926,7 +5927,7 @@
       "chapter": 96,
       "position": 11,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Color LEDs",
         "level_keys": [
@@ -5952,7 +5953,7 @@
       "chapter": 97,
       "position": 12,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Color LEDs",
         "level_keys": [
@@ -5978,7 +5979,7 @@
       "chapter": 98,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Light Show",
         "level_keys": [
@@ -6030,7 +6031,7 @@
       "chapter": 100,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge Levels",
         "level_keys": [
@@ -6056,7 +6057,7 @@
       "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Playing Notes",
         "level_keys": [
@@ -6082,7 +6083,7 @@
       "chapter": 102,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Playing Notes",
         "level_keys": [
@@ -6108,7 +6109,7 @@
       "chapter": 103,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Playing Notes",
         "level_keys": [
@@ -6134,7 +6135,7 @@
       "chapter": 104,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Playing Notes",
         "level_keys": [
@@ -6160,7 +6161,7 @@
       "chapter": 105,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Musical Arrays",
         "level_keys": [
@@ -6186,7 +6187,7 @@
       "chapter": 106,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Musical Arrays",
         "level_keys": [
@@ -6238,7 +6239,7 @@
       "chapter": 108,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Making Songs",
         "level_keys": [
@@ -6264,7 +6265,7 @@
       "chapter": 109,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Making Songs",
         "level_keys": [
@@ -6290,7 +6291,7 @@
       "chapter": 110,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Making Songs",
         "level_keys": [
@@ -6342,12 +6343,12 @@
       "chapter": 112,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Extra",
         "level_keys": [
           "CSDU6 buzzer 2d arrays_2021"
-        ],
-        "progression": "Extra"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -6368,12 +6369,12 @@
       "chapter": 113,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Extra",
         "level_keys": [
           "CSDU6 buzzer.stop_2021"
-        ],
-        "progression": "Extra"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -6394,7 +6395,7 @@
       "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Programs that Repeat",
         "level_keys": [
@@ -6420,7 +6421,7 @@
       "chapter": 115,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Programs that Repeat",
         "level_keys": [
@@ -6446,7 +6447,7 @@
       "chapter": 116,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: For Loops",
         "level_keys": [
@@ -6472,7 +6473,7 @@
       "chapter": 117,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops",
         "level_keys": [
@@ -6498,7 +6499,7 @@
       "chapter": 118,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops",
         "level_keys": [
@@ -6524,7 +6525,7 @@
       "chapter": 119,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops",
         "level_keys": [
@@ -6550,7 +6551,7 @@
       "chapter": 120,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops",
         "level_keys": [
@@ -6576,7 +6577,7 @@
       "chapter": 121,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops",
         "level_keys": [
@@ -6602,7 +6603,7 @@
       "chapter": 122,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops and Color LEDs",
         "level_keys": [
@@ -6628,7 +6629,7 @@
       "chapter": 123,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops and Color LEDs",
         "level_keys": [
@@ -6654,7 +6655,7 @@
       "chapter": 124,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops and Color LEDs",
         "level_keys": [
@@ -6706,7 +6707,7 @@
       "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Orientation",
         "level_keys": [
@@ -6732,7 +6733,7 @@
       "chapter": 127,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Orientation",
         "level_keys": [
@@ -6758,7 +6759,7 @@
       "chapter": 128,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Orientation",
         "level_keys": [
@@ -6784,7 +6785,7 @@
       "chapter": 129,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Orientation",
         "level_keys": [
@@ -6810,7 +6811,7 @@
       "chapter": 130,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Accelerometer Events",
         "level_keys": [
@@ -6836,7 +6837,7 @@
       "chapter": 131,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Accelerometer Events",
         "level_keys": [
@@ -6888,7 +6889,7 @@
       "chapter": 133,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Accelerometer Events",
         "level_keys": [
@@ -6914,7 +6915,7 @@
       "chapter": 134,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Accelerometer Events",
         "level_keys": [
@@ -6940,7 +6941,7 @@
       "chapter": 135,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -6966,7 +6967,7 @@
       "chapter": 136,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -6992,7 +6993,7 @@
       "chapter": 137,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7018,7 +7019,7 @@
       "chapter": 138,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7044,7 +7045,7 @@
       "chapter": 139,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7070,7 +7071,7 @@
       "chapter": 140,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7096,7 +7097,7 @@
       "chapter": 141,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7122,7 +7123,7 @@
       "chapter": 142,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7148,7 +7149,7 @@
       "chapter": 143,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7174,7 +7175,7 @@
       "chapter": 144,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7200,7 +7201,7 @@
       "chapter": 145,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7226,7 +7227,7 @@
       "chapter": 146,
       "position": 12,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7252,7 +7253,7 @@
       "chapter": 147,
       "position": 13,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7304,7 +7305,7 @@
       "chapter": 149,
       "position": 15,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7330,7 +7331,7 @@
       "chapter": 150,
       "position": 16,
       "activity_section_position": 8,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7356,7 +7357,7 @@
       "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Circuits and Logic",
         "level_keys": [
@@ -7382,7 +7383,7 @@
       "chapter": 152,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7408,7 +7409,7 @@
       "chapter": 153,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7434,7 +7435,7 @@
       "chapter": 154,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7460,7 +7461,7 @@
       "chapter": 155,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7486,7 +7487,7 @@
       "chapter": 156,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Smart Bike - Blinkers",
         "level_keys": [
@@ -7538,7 +7539,7 @@
       "chapter": 158,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Smart Bike - Blinkers",
         "level_keys": [
@@ -7564,7 +7565,7 @@
       "chapter": 159,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Button Circuits",
         "level_keys": [
@@ -7590,7 +7591,7 @@
       "chapter": 160,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finish the Prototype",
         "level_keys": [
@@ -7616,7 +7617,7 @@
       "chapter": 161,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finish the Prototype",
         "level_keys": [
@@ -7668,7 +7669,7 @@
       "chapter": 163,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Design Your Prototype",
         "level_keys": [
@@ -7694,7 +7695,7 @@
       "chapter": 164,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "User Interface",
         "level_keys": [
@@ -7720,7 +7721,7 @@
       "chapter": 165,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "User Interface",
         "level_keys": [
@@ -7746,7 +7747,7 @@
       "chapter": 166,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Board Input and Output",
         "level_keys": [
@@ -7772,7 +7773,7 @@
       "chapter": 167,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Board Input and Output",
         "level_keys": [
@@ -7798,7 +7799,7 @@
       "chapter": 168,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -7824,7 +7825,7 @@
       "chapter": 169,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -10316,6 +10317,8 @@
       "key": "Innovation",
       "word": "Innovation",
       "definition": "A new or improved idea, device, product, etc, or the development thereof",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Innovation"
       }
@@ -10324,6 +10327,8 @@
       "key": "Analog",
       "word": "Analog",
       "definition": "Any continuously changing signal that is not restricted to finite set of values. For example, the wave forms of spoken words are an analog signal.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Analog"
       }
@@ -10332,6 +10337,8 @@
       "key": "Digital",
       "word": "Digital",
       "definition": "Data or signals represented by a finite number of values. Analog signals (which can have infinite values) must be converted to digital in order to be computed with.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Digital"
       }
@@ -10340,6 +10347,8 @@
       "key": "Array",
       "word": "Array",
       "definition": "A data structure in JavaScript used to represent a list.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Array"
       }
@@ -10348,6 +10357,8 @@
       "key": "Array",
       "word": "Array",
       "definition": "A data structure in JavaScript used to represent a list.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Array"
       }
@@ -10356,6 +10367,8 @@
       "key": "For Loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "For Loop"
       }
@@ -10364,6 +10377,8 @@
       "key": "Parameter",
       "word": "Parameter",
       "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Parameter"
       }
@@ -10372,6 +10387,8 @@
       "key": "Prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Prototype"
       }
@@ -10380,6 +10397,8 @@
       "key": "Circuit",
       "word": "Circuit",
       "definition": "A device that provides a path for an electric current to flow, often modifying that current. In computers, circuits allow for simple logical and mathematical operations using electricity.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "Circuit"
       }

@@ -26,9 +26,13 @@ class Standard < ApplicationRecord
   def summarize
     {
       id: id,
+      shortcode: shortcode,
+      category_description: category.description,
+      description: description,
+
+      # deprecated fields
       organization: organization,
       organization_id: organization_id,
-      description: description,
       concept: concept
     }
   end
