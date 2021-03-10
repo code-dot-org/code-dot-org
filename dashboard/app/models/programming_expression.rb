@@ -110,7 +110,8 @@ class ProgrammingExpression < ApplicationRecord
   def self.seed_record(file_path)
     properties = properties_from_file(file_path, File.read(file_path))
     record = ProgrammingExpression.find_or_initialize_by(key: properties[:key], programming_environment_id: properties[:programming_environment_id])
-    record.update! properties
+    record.assign_attributes(properties)
+    record.save! if record.changed?
     record.name
   end
 
