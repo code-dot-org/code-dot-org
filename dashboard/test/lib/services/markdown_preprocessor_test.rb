@@ -11,7 +11,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   test 'process method invokes both resource and vocab substitutions' do
     input = "A string containing both a Resource link [r first-resource] and a Vocab link [v first_vocab]"
     result = Services::MarkdownPreprocessor.process(input)
-    expected = "A string containing both a Resource link [First Resource](example.com/first) and a Vocab link [v first_vocab]"
+    expected = "A string containing both a Resource link [First Resource](example.com/first) and a Vocab link <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span>"
     assert_equal expected, result
   end
 
@@ -53,26 +53,26 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     end
 
     # verify that the cache can be skipped
-    assert_queries 1 do
+    assert_queries 2 do
       Services::MarkdownPreprocessor.process(input, cache_options: {force: true})
     end
   end
 
-  test 'regular method returns and does not modify' do
+  test 'regular method sub_resource_links returns and does not modify' do
     input = "[r first-resource]"
     result = Services::MarkdownPreprocessor.sub_resource_links(input)
     assert_equal "[r first-resource]", input
     assert_equal "[First Resource](example.com/first)", result
   end
 
-  test 'bang method modifies and returns' do
+  test 'bang method sub_resource_links! modifies and returns' do
     input = "[r first-resource]"
     result = Services::MarkdownPreprocessor.sub_resource_links!(input)
     assert_equal "[First Resource](example.com/first)", input
     assert_equal "[First Resource](example.com/first)", result
   end
 
-  test 'can substitute a basic resource link' do
+  test 'sub_resource_links can substitute a basic resource link' do
     input = "this string has a resource [r first-resource] link. And a [regular](link)"
     expected = "this string has a resource [First Resource](example.com/first) link. And a [regular](link)"
 
@@ -80,7 +80,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     assert_equal expected, result
   end
 
-  test 'can handle multiple resource links in a single string' do
+  test 'sub_resource_links can handle multiple resource links in a single string' do
     input = "this string has [r second-resource] two resource [r first-resource] links"
     expected = "this string has [Second Resource](example.com/second) two resource [First Resource](example.com/first) links"
 
@@ -88,7 +88,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     assert_equal expected, result
   end
 
-  test 'can handle complex markdown strings' do
+  test 'sub_resource_links can handle complex markdown strings' do
     input = <<~MARKDOWN
       This is some more complex markdown content.
 
@@ -128,7 +128,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     assert_equal expected, result
   end
 
-  test 'ignores unmatched resource keys' do
+  test 'sub_resource_links ignores unmatched resource keys' do
     input = "this string has a resource [r nonexistent-resource] link. And a [regular](link)"
     result = Services::MarkdownPreprocessor.sub_resource_links(input)
     assert_equal input, result
