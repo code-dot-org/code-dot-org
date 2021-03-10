@@ -1,12 +1,12 @@
-// Main page for Foorm Editor interface. Will initially show a choice
+// Parent component for editing Foorm forms. Will initially show a choice
 // between loading an existing configuration or an empty configuration.
-// After that choice is made, will render FoormEditor with the chosen configuration.
+// After that choice is made, will render FoormEntityEditor with the chosen configuration to allow editing that form.
 
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import FoormEditor from '../components/FoormEditor';
-import FoormLoadButtons from '../components/FoormLoadButtons';
+import FoormEntityEditor from '../components/FoormEntityEditor';
+import FoormEntityLoadButtons from '../components/FoormEntityLoadButtons';
 import {
   setLastSaved,
   setSaveError,
@@ -28,7 +28,7 @@ const styles = {
   }
 };
 
-class FormEditorManager extends React.Component {
+class FoormFormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
@@ -207,7 +207,7 @@ class FormEditorManager extends React.Component {
           </a>{' '}
           to get started.
         </p>
-        <FoormLoadButtons
+        <FoormEntityLoadButtons
           resetCodeMirror={this.props.resetCodeMirror}
           setSelectedData={this.props.setFormData}
           resetSelectedData={() => this.resetSelectedData()}
@@ -219,7 +219,7 @@ class FormEditorManager extends React.Component {
           <div style={styles.loadError}>Could not load the selected form.</div>
         )}
         {this.state.showCodeMirror && (
-          <FoormEditor
+          <FoormEntityEditor
             populateCodeMirror={this.props.populateCodeMirror}
             categories={this.props.categories}
             resetCodeMirror={this.props.resetCodeMirror}
@@ -254,4 +254,4 @@ export default connect(
     setLastSavedFormQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
-)(FormEditorManager);
+)(FoormFormEditorManager);
