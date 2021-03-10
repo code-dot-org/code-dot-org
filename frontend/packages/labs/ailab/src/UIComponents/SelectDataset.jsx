@@ -93,7 +93,7 @@ class SelectDataset extends Component {
 
     return (
       <div id="select-dataset" style={styles.panel}>
-        <div style={styles.largeText}>Which dataset would you like to use?</div>
+        <div style={styles.largeText}>Choose a Dataset</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div>Select a dataset from the collection</div>
@@ -134,7 +134,7 @@ class SelectDataset extends Component {
             />
             <p />
             <button type="button" onClick={this.handleUpload}>
-              Upload now!
+              Upload
             </button>
           </div>
         )}

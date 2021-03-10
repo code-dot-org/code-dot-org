@@ -39,7 +39,7 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
-        <div style={styles.largeText}>Test the Model</div>
+        <div style={styles.largeText}>Test The Model</div>
         <form>
           {this.props.selectedContinuousFeatures.map((feature, index) => {
             return (
@@ -90,7 +90,7 @@ class Predict extends Component {
           onClick={this.onClickPredict}
           disabled={!this.props.getPredictAvailable}
         >
-          Predict!
+          Predict
         </button>
         <p />
         {this.props.predictedLabel && (

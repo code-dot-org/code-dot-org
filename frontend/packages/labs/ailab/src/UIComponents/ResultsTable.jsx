@@ -33,7 +33,7 @@ class ResultsTable extends Component {
                 Features
               </th>
               <th>
-                <span style={styles.largeText}>{"A.I. Bot's Guess"}</span>
+                <span style={styles.largeText}>{"A.I. Prediction"}</span>
               </th>
               <th>
                 <span style={styles.largeText}>{"Actual"}</span>
