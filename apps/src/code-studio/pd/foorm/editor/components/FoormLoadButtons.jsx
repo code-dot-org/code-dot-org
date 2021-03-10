@@ -42,9 +42,7 @@ class FoormLoadButtons extends React.Component {
     );
   }
 
-  // There's gotta be a cleaner way than what I'm doing here
-  // Maybe a general "reset" redux action?
-  initializeEmptyCodeMirror = () => {
+  initializeEmptyCodeMirror() {
     this.props.resetSelectedData();
     this.props.showCodeMirror();
     this.props.resetCodeMirror({});
@@ -54,7 +52,7 @@ class FoormLoadButtons extends React.Component {
     this.props.setSaveError(null);
     this.props.setHasJSONError(false);
     this.props.setLastSavedQuestions({});
-  };
+  }
 
   render() {
     return (
@@ -62,7 +60,10 @@ class FoormLoadButtons extends React.Component {
         <DropdownButton id="load_config" title="Load Form..." className="btn">
           {this.getFormattedConfigurationDropdownOptions()}
         </DropdownButton>
-        <Button onClick={this.initializeEmptyCodeMirror} className="btn">
+        <Button
+          onClick={() => this.initializeEmptyCodeMirror()}
+          className="btn"
+        >
           New Form
         </Button>
       </div>
