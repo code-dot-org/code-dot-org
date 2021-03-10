@@ -8,7 +8,7 @@ import _ from 'lodash';
 
 let codeMirror;
 
-function populateCodeMirror() {
+export function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
 
   const updateQuestions = questions => {
@@ -32,14 +32,14 @@ function populateCodeMirror() {
   });
 }
 
-function resetCodeMirror(json) {
+export function resetCodeMirror(json) {
   if (codeMirror) {
     codeMirror.setValue(JSON.stringify(json, null, 2));
     getStore().dispatch(setHasJSONError(false));
   }
 }
 
-const confirmNoUnsavedChanges = evt => {
+export function confirmNoUnsavedChanges(evt) {
   let storeState = getStore().getState().foorm;
   if (
     storeState.hasJSONError ||
@@ -47,6 +47,4 @@ const confirmNoUnsavedChanges = evt => {
   ) {
     return 'Are you sure you want to exit? You may have unsaved changes.';
   }
-};
-
-export {populateCodeMirror, resetCodeMirror, confirmNoUnsavedChanges};
+}
