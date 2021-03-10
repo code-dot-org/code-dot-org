@@ -13,11 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 17:21:37 UTC",
+    "serialized_at": "2021-03-09 02:48:26 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -798,7 +800,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Tech Setup and Tools for Create PT",
         "level_keys": [
@@ -806,7 +808,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2021"
@@ -824,7 +826,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Create PT Coding Workspace",
         "level_keys": [
@@ -832,7 +834,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Create PT Workspace 2020_2021"

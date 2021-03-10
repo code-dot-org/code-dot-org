@@ -8,17 +8,20 @@ en:
         csd_2018_category_name: CS Discoveries ('18-'19)
         csd_2019_category_name: CS Discoveries ('19-'20)
         csd_2020_category_name: CS Discoveries ('20-'21)
+        csd_2021_category_name: CS Discoveries ('21-'22)
         csd_pilot_category_name: CS Discoveries Pilot
         csf_category_name: CS Fundamentals
         csf_2018_category_name: CS Fundamentals ('18-'19)
         csf_2019_category_name: CS Fundamentals ('19-'20)
         csf_2020_category_name: CS Fundamentals ('20-'21)
+        csf_2021_category_name: CS Fundamentals ('21-'22)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
         csp_category_name: CS Principles ('15-'16)
         csp_2018_category_name: CS Principles ('18-'19)
         csp_2019_category_name: CS Principles ('19-'20)
         csp_2020_category_name: CS Principles ('20-'21)
+        csp_2021_category_name: CS Principles ('21-'22)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Full Courses
@@ -21226,6 +21229,10 @@ en:
               name: End of Course Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
+            lesson-1:
+              name: Dance Party
+              description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
+              description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
           lesson_groups:
             csf_warmup:
               display_name: Warm Up
@@ -21245,6 +21252,8 @@ en:
               display_name: Sprites
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-9:
+              display_name: Warm Up
           name: express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
         pre-express-2021:
@@ -21351,6 +21360,12 @@ en:
               name: Blank Space Stories
             texts-and-prompts:
               name: Text and Prompts
+            introducing-spritelab:
+              name: Introducing Sprite Lab
+            blank-space-stories:
+              name: Blank Space Stories
+            user-input-programs:
+              name: 'Mini-Project: User Input Programs'
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -21365,6 +21380,9 @@ en:
             Sprites:
               display_name: Sprites
               description: Learn the basics of coding with sprites!
+            variables:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
           name: csf-2021-pilot
           title: CS Fundamentals 2021 Pilot
           description_audience: Upper Elementary
@@ -21674,7 +21692,7 @@ en:
             intro:
               name: Lesson 1
             lesson1:
-              name: 'Lesson 1A: AI for Oceans'
+              name: Introduction to Machine Learning A
             lesson2:
               name: How Computers Learn (Unplugged)
             lesson3:
