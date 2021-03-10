@@ -21063,6 +21063,8 @@ en:
               description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
             lesson-6:
               name: Introducing Sprite Lab
+              description_student: 
+              description_teacher: Students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.
             lesson-7:
               name: Making Sprites
             lesson-8:
@@ -21144,8 +21146,8 @@ en:
             'Looking Ahead with Minecraft ':
               key: 'Looking Ahead with Minecraft '
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             If/Else with Bee:
               key: If/Else with Bee
               name: If/Else with Bee
@@ -21155,7 +21157,7 @@ en:
               key: While Loops with the Farmer
               name: While Loops with the Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \r\n\r\n_While loops_ are loops that continue to repeat commands while a condition is met. `While` loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
+              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n**While loops** are loops that continue to **repeat** commands while a **condition** is met. **While loops** are used when the programmer doesn't know the exact number of times commands need to be **repeated**, but does know what **condition** needs to be true in order for the **loop** to continue **repeating**. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditionals in Minecraft: Voyage Aquatic'
               name: 'Conditionals in Minecraft: Voyage Aquatic'
