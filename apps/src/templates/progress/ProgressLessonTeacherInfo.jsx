@@ -37,6 +37,7 @@ class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
     lessonUrl: PropTypes.string,
+    onClickStudentLessonPlan: PropTypes.func,
 
     // redux provided
     section: sectionShape,
@@ -131,6 +132,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               color="purple"
               target="_blank"
               style={styles.button}
+              onClick={this.props.onClickStudentLessonPlan}
             />
           </div>
         )}

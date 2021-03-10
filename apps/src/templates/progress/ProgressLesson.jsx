@@ -6,6 +6,7 @@ import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import {levelType, lessonType} from './progressTypes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
 import {
   lessonIsVisible,
@@ -83,6 +84,7 @@ class ProgressLesson extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
+    scriptId: PropTypes.number,
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -118,6 +120,21 @@ class ProgressLesson extends React.Component {
     this.setState({
       collapsed: !this.state.collapsed
     });
+
+  onClickStudentLessonPlan = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'script_overview_actions',
+        study_group: 'student_lesson_plan',
+        event: 'open_student_lesson_plan',
+        data_json: JSON.stringify({
+          lesson_id: this.props.lesson.id,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
+  };
 
   render() {
     const {
@@ -224,6 +241,7 @@ class ProgressLesson extends React.Component {
                     icon="file-text"
                     color="purple"
                     target="_blank"
+                    onClick={this.onClickStudentLessonPlan}
                   />
                 </span>
               )}
@@ -238,7 +256,11 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {showTeacherInfo && viewAs === ViewType.Teacher && (
-          <ProgressLessonTeacherInfo lesson={lesson} lessonUrl={lessonUrl} />
+          <ProgressLessonTeacherInfo
+            lesson={lesson}
+            lessonUrl={lessonUrl}
+            onClickStudentLessonPlan={this.onClickStudentLessonPlan}
+          />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>
@@ -258,5 +280,6 @@ export default connect(state => ({
   lessonLockedForSection: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
-  selectedSectionId: state.teacherSections.selectedSectionId.toString()
+  selectedSectionId: state.teacherSections.selectedSectionId.toString(),
+  scriptId: state.progress.scriptId
 }))(ProgressLesson);
