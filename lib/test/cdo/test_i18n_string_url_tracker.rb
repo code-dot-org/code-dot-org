@@ -224,4 +224,17 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(:i18n, @firehose_stream)
     assert_equal(test_record, @firehose_record)
   end
+
+  def test_log_given_url_with_special_symbol_should_log_the_special_symbol
+    # Normally, if a special character such as a white space is in a URL,
+    # it would be URL encoded to "%20"; however we want it to be logged as
+    # a normal whitespace in order to make the data easier to read by analysts.
+    test_record = {string_key: 'string.key', url: 'https://code.org/url%20with%20spaces', source: 'test'}
+    expected_record = {string_key: 'string.key', url: 'https://code.org/url with spaces', source: 'test'}
+    FirehoseClient.instance.expects(:put_record).once
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    I18nStringUrlTracker.instance.send(:flush)
+    assert_equal(:i18n, @firehose_stream)
+    assert_equal(expected_record, @firehose_record)
+  end
 end
