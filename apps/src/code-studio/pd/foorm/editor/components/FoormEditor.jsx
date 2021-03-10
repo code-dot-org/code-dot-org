@@ -9,6 +9,7 @@ import {Tabs, Tab} from 'react-bootstrap';
 import FormSaveBar from '../form/FormSaveBar';
 import FoormEditorPreview from './FoormEditorPreview';
 import FoormEditorHeader from './FoormEditorHeader';
+import _ from 'lodash';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -81,6 +82,11 @@ class FoormEditor extends React.Component {
       is_friday_institute: false,
       workshop_agenda: 'module1'
     };
+
+    // use debounce to only call once per second when editing
+    this.previewFoorm = _.debounce(this.props.preparePreview, 1000, {
+      leading: true
+    });
   }
 
   componentDidMount() {
@@ -88,6 +94,8 @@ class FoormEditor extends React.Component {
     this.previewFoorm();
   }
 
+  // Component will update frequently because each debounced keystroke
+  // in the editor pane will produce a state change.
   componentDidUpdate(prevProps, prevState) {
     // call preview if we got new questions or we have switched
     // on live preview.
@@ -122,12 +130,6 @@ class FoormEditor extends React.Component {
         num_facilitators: num_facilitators,
         facilitators: facilitators
       });
-    }
-  };
-
-  previewFoorm = () => {
-    if (this.state.livePreviewStatus === PREVIEW_ON) {
-      this.props.preparePreview();
     }
   };
 

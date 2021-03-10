@@ -5,8 +5,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEditor from '../components/FoormEditor';
+import FoormLoadButtons from '../components/FoormLoadButtons';
 import {
   setLastSaved,
   setSaveError,
@@ -14,18 +14,17 @@ import {
   setHasJSONError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
-import _ from 'lodash';
 
 const styles = {
-  loadError: {
-    fontWeight: 'bold',
-    padding: '1em'
-  },
   surveyTitle: {
     marginBottom: 0
   },
   surveyState: {
     marginTop: 0
+  },
+  loadError: {
+    fontWeight: 'bold',
+    padding: '1em'
   }
 };
 
@@ -60,23 +59,20 @@ class FormEditorManager extends React.Component {
     };
   }
 
-  getFormattedConfigurationDropdownOptions() {
-    return this.props.availableForms.map((formNameAndVersion, i) => {
+  getDropdownOptions() {
+    return this.props.availableForms.map(formNameAndVersion => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
       const formId = formNameAndVersion['id'];
-      return (
-        <MenuItem
-          key={i}
-          eventKey={i}
-          onClick={() => this.loadConfiguration(formId)}
-        >
-          {`${formName}, version ${formVersion}`}
-        </MenuItem>
-      );
+
+      return {
+        id: formId,
+        text: `${formName}, version ${formVersion}`
+      };
     });
   }
 
+  // Callback for FoormLoadButtons
   loadConfiguration(formId) {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
@@ -106,21 +102,21 @@ class FormEditorManager extends React.Component {
       });
   }
 
-  initializeEmptyCodeMirror = () => {
-    this.props.setLastSaved(null);
-    this.props.setSaveError(null);
-    this.updateFormData({
+  // Callback for FoormLoadButtons
+  resetSelectedData() {
+    this.props.setFormData({
       questions: {},
       published: null,
       formName: null,
       formVersion: null,
       formId: null
     });
-    this.setState({
-      showCodeMirror: true,
-      hasLoadError: false
-    });
-  };
+  }
+
+  // Callback for FoormLoadButtons
+  showCodeMirror() {
+    this.setState({showCodeMirror: true});
+  }
 
   updateFormData(formData) {
     this.props.setFormData(formData);
@@ -129,39 +125,35 @@ class FormEditorManager extends React.Component {
     this.props.resetCodeMirror(formData['questions']);
   }
 
-  // use debounce to only call once per second
-  fillFormWithLibraryItems = _.debounce(
-    function() {
-      $.ajax({
-        url: '/api/v1/pd/foorm/forms/form_with_library_items',
-        type: 'post',
-        contentType: 'application/json',
-        processData: false,
-        data: JSON.stringify({
-          form_questions: this.props.questions
-        })
+  // Callback for FoormEditorPreview
+  fillFormWithLibraryItems() {
+    $.ajax({
+      url: '/api/v1/pd/foorm/forms/form_with_library_items',
+      type: 'post',
+      contentType: 'application/json',
+      processData: false,
+      data: JSON.stringify({
+        form_questions: this.props.questions
       })
-        .done(result => {
-          this.setState({
-            forceRerenderKey: this.state.forceRerenderKey + 1,
-            previewQuestions: result,
-            libraryError: false,
-            libraryErrorMessage: null
-          });
-        })
-        .fail(result => {
-          this.setState({
-            libraryError: true,
-            libraryErrorMessage:
-              (result.responseJSON && result.responseJSON.error) || 'unknown'
-          });
+    })
+      .done(result => {
+        this.setState({
+          forceRerenderKey: this.state.forceRerenderKey + 1,
+          previewQuestions: result,
+          libraryError: false,
+          libraryErrorMessage: null
         });
-    },
-    1000,
-    {leading: true}
-  );
+      })
+      .fail(result => {
+        this.setState({
+          libraryError: true,
+          libraryErrorMessage:
+            (result.responseJSON && result.responseJSON.error) || 'unknown'
+        });
+      });
+  }
 
-  listPreviewErrors() {
+  getPreviewErrors() {
     let errors = [];
 
     if (this.props.hasJSONError) {
@@ -180,7 +172,6 @@ class FormEditorManager extends React.Component {
     return errors;
   }
 
-  // bind this instead of using arrow function?
   renderHeaderTitle() {
     return (
       this.props.formName && (
@@ -216,14 +207,14 @@ class FormEditorManager extends React.Component {
           </a>{' '}
           to get started.
         </p>
-        <div>
-          <DropdownButton id="load_config" title="Load Form..." className="btn">
-            {this.getFormattedConfigurationDropdownOptions()}
-          </DropdownButton>
-          <Button onClick={this.initializeEmptyCodeMirror} className="btn">
-            New Form
-          </Button>
-        </div>
+        <FoormLoadButtons
+          resetCodeMirror={this.props.resetCodeMirror}
+          setSelectedData={this.props.setFormData}
+          resetSelectedData={() => this.resetSelectedData()}
+          showCodeMirror={() => this.showCodeMirror()}
+          onSelect={formId => this.loadConfiguration(formId)}
+          dropdownOptions={this.getDropdownOptions()}
+        />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
         )}
@@ -234,7 +225,7 @@ class FormEditorManager extends React.Component {
             resetCodeMirror={this.props.resetCodeMirror}
             preparePreview={() => this.fillFormWithLibraryItems()}
             previewQuestions={this.state.previewQuestions}
-            previewErrors={this.listPreviewErrors()}
+            previewErrors={this.getPreviewErrors()}
             forceRerenderKey={this.state.forceRerenderKey}
             headerTitle={this.renderHeaderTitle()}
             validateURL={'/api/v1/pd/foorm/forms/validate_form'}
