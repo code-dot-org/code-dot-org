@@ -52,7 +52,6 @@ function onSave() {
  */
 function loadFiles(success, failure, version) {
   const onFilesReady = (files, filesVersionId) => {
-    console.log('in onFilesReady');
     assetListStore.reset(files);
     const fileEntries = assetListStore.list().map(fileEntry => ({
       name: fileEntry.filename,
@@ -82,7 +81,6 @@ function loadFiles(success, failure, version) {
 }
 
 function populateFiles(fileEntries, success, failure) {
-  console.log('in populateFiles');
   if (fileEntries.length === 0) {
     // TODO: make starter code more customizable
     success();
@@ -101,7 +99,6 @@ function requestFileEntryAndWrite(fileEntry, success, failure) {
     .done(fileContent => {
       getStore().dispatch(setFileName(fileEntry.name));
       getStore().dispatch(setEditorText(fileContent));
-      console.log('about to call success');
       success();
     })
     .fail((jqXHR, textStatus, errorThrown) => {

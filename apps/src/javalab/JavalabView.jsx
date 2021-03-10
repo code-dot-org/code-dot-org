@@ -75,14 +75,10 @@ class JavalabView extends React.Component {
     appendOutputLog: PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-      loadSuccess: null
-    };
-  }
+  state = {
+    loading: true,
+    loadSuccess: null
+  };
 
   componentDidMount() {
     this.props.onMount();
