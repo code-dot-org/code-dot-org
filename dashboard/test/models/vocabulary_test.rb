@@ -28,7 +28,8 @@ class VocabularyTest < ActiveSupport::TestCase
 
   test 'vocabulary automatically sanitizes word when turning it into key' do
     vocab = create :vocabulary,
-      word: 'Some !! ßtring 123 ,with, "ILLEGAL" _characters_.'
+      word: 'Some !! ßtring 123 ,with, "ILLEGAL" _characters_.',
+      key: nil
     assert_equal vocab.key, "some_tring_with_illegal_characters_"
   end
 
@@ -41,8 +42,8 @@ class VocabularyTest < ActiveSupport::TestCase
 
   test 'vocabulary automatically uniquifies keys' do
     course_version = create :course_version
-    first = create :vocabulary, word: "Word", course_version: course_version
-    second = create :vocabulary, word: "Word", course_version: course_version
+    first = create :vocabulary, word: "Word", key: nil, course_version: course_version
+    second = create :vocabulary, word: "Word", key: nil, course_version: course_version
     assert_equal "word", first.key
     assert_equal "word_a", second.key
   end
