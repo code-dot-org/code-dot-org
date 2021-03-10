@@ -22,12 +22,12 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
-import InstructionsCSF from './InstructionsCSF';
+import InstructionsCSF, {UnconnectedInstructionsCSF} from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 import {hasInstructions} from './utils';
@@ -118,32 +118,6 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
-  },
-  collapserIcon: {
-    showHideButton: {
-      position: 'absolute',
-      top: 0,
-      margin: 0,
-      lineHeight: styleConstants['workspace-headers-height'] + 'px',
-      fontSize: 18,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.white
-      }
-    },
-    showHideButtonLtr: {
-      left: 8
-    },
-    showHideButtonRtl: {
-      right: 8
-    },
-    teacherOnlyColor: {
-      color: color.lightest_cyan,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.default_text
-      }
-    }
   }
 };
 
@@ -187,13 +161,17 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    isCollapsed: PropTypes.bool.isRequired,
+    shortInstructions: PropTypes.string,
+    shortInstructions2: PropTypes.string,
+    collapsible: PropTypes.bool,
+    collapsed: PropTypes.bool,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
+    ttsShortInstructionsUrl: PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
@@ -204,18 +182,21 @@ class TopInstructions extends Component {
     noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
     teacherMarkdown: PropTypes.string,
     hidden: PropTypes.bool.isRequired,
-    shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     widgetMode: PropTypes.bool,
+    isCSF: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
-    resizable: PropTypes.bool
+    resizable: PropTypes.bool,
+    skinId: PropTypes.string,
+    preview: PropTypes.bool
   };
 
   static defaultProps = {
-    resizable: true
+    resizable: true,
+    collapsible: true
   };
 
   constructor(props) {
@@ -332,7 +313,7 @@ class TopInstructions extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (
-      !nextProps.isCollapsed &&
+      !nextProps.collapsed &&
       nextProps.height < MIN_HEIGHT &&
       nextProps.height < nextProps.maxHeight &&
       !(
@@ -437,7 +418,7 @@ class TopInstructions extends Component {
    * updating our rendered height.
    */
   handleClickCollapser = () => {
-    if (this.props.isCollapsed) {
+    if (this.props.collapsed) {
       firehoseClient.putRecord({
         study: 'top-instructions',
         event: 'expand-instructions',
@@ -455,11 +436,11 @@ class TopInstructions extends Component {
       });
     }
 
-    const isCollapsed = !this.props.isCollapsed;
+    const collapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (isCollapsed && this.props.noInstructionsWhenCollapsed) {
+    if (collapsed && this.props.noInstructionsWhenCollapsed) {
       this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -561,7 +542,7 @@ class TopInstructions extends Component {
       hasContainedLevels
     } = this.props;
 
-    const isCSF = !this.props.noInstructionsWhenCollapsed;
+    const isCSF = this.props.isCSF || !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
     const widgetWidth = WIDGET_WIDTH + 'px';
 
@@ -632,13 +613,9 @@ class TopInstructions extends Component {
     const showContainedLevelAnswer =
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
-    const collapserIconStyles = {
-      ...styles.collapserIcon.showHideButton,
-      ...(this.props.isRtl
-        ? styles.collapserIcon.showHideButtonRtl
-        : styles.collapserIcon.showHideButtonLtr),
-      ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
-    };
+    const InstructionsCSFComponent = this.props.preview
+      ? UnconnectedInstructionsCSF
+      : InstructionsCSF;
 
     return (
       <div
@@ -723,25 +700,27 @@ class TopInstructions extends Component {
                 )}
             </div>
             {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-            {!this.props.isEmbedView &&
+            {this.props.collapsible &&
+              !this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
-                  isCollapsed={this.props.isCollapsed}
+                  collapsed={this.props.collapsed}
                   onClick={this.handleClickCollapser}
-                  style={collapserIconStyles}
+                  teacherOnly={teacherOnly}
+                  isRtl={this.props.isRtl}
                 />
               )}
           </div>
         </PaneHeader>
         <div
-          style={[this.props.isCollapsed && isCSDorCSP && commonStyles.hidden]}
+          style={[this.props.collapsed && isCSDorCSP && commonStyles.hidden]}
         >
           <div
             style={[
               isCSF &&
               !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
-                ? styles.csfBody
+                ? this.props.containerStyle || styles.csfBody
                 : this.props.containerStyle || styles.body,
               this.props.isMinecraft && craftStyles.instructionsBody
             ]}
@@ -769,7 +748,7 @@ class TopInstructions extends Component {
               {!this.props.hasContainedLevels &&
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
-                  <InstructionsCSF
+                  <InstructionsCSFComponent
                     ref={ref => {
                       if (ref) {
                         this.instructions = ref;
@@ -781,6 +760,23 @@ class TopInstructions extends Component {
                     teacherViewingStudentWork={
                       this.state.teacherViewingStudentWork
                     }
+                    isMinecraft={this.props.isMinecraft}
+                    isBlockly={this.props.isBlockly}
+                    isRtl={this.props.isRtl}
+                    collapsed={this.props.collapsed}
+                    longInstructions={this.props.longInstructions}
+                    shortInstructions={this.props.shortInstructions}
+                    shortInstructions2={this.props.shortInstructions2}
+                    height={this.props.height}
+                    maxHeight={this.props.maxHeight}
+                    ttsLongInstructionsUrl={this.props.ttsLongInstructionsUrl}
+                    ttsShortInstructionsUrl={this.props.ttsShortInstructionsUrl}
+                    noVisualization={this.props.noVisualization}
+                    setInstructionsRenderedHeight={
+                      this.props.setInstructionsRenderedHeight
+                    }
+                    skinId={this.props.skinId}
+                    collapsible={this.props.collapsible}
                   />
                 )}
               {!this.props.hasContainedLevels &&
@@ -797,7 +793,7 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                       isBlockly={this.props.isBlockly}
-                      collapsible={this.props.noInstructionsWhenCollapsed}
+                      collapsible={this.props.collapsible}
                     />
                   </div>
                 )}
@@ -870,9 +866,10 @@ export default connect(
     ),
     longInstructions: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
-    isCollapsed: state.instructions.isCollapsed,
+    collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
+    ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
     levelVideos: state.instructions.levelVideos,
     mapReference: state.instructions.mapReference,
     referenceLinks: state.instructions.referenceLinks,
@@ -884,8 +881,11 @@ export default connect(
     teacherMarkdown: state.instructions.teacherMarkdown,
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
+    shortInstructions2: state.instructions.shortInstructions2,
     isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode
+    widgetMode: state.pageConstants.widgetMode,
+    preview: false,
+    skinId: state.pageConstants.skinId
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

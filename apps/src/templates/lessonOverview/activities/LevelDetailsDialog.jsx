@@ -20,7 +20,7 @@ const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
 const VIDEO_MODAL_WIDTH = 700;
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
-const MAX_LEVEL_HEIGHT = 550;
+const MAX_LEVEL_HEIGHT = 400;
 
 const styles = {
   sublevelCards: {
@@ -34,6 +34,7 @@ class LevelDetailsDialog extends Component {
     scriptLevel: PropTypes.object.isRequired,
     handleClose: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isCSF: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired
   };
 
@@ -84,6 +85,14 @@ class LevelDetailsDialog extends Component {
         </div>
       );
     } else {
+      const isCSF = this.props.isCSF;
+      const containerStyle = isCSF
+        ? {
+            overflowX: 'hidden',
+            overflowY: 'scroll',
+            height: this.state.height - HEADER_HEIGHT
+          }
+        : {overflowY: 'scroll', height: this.state.height - HEADER_HEIGHT};
       // TODO: calculate more of these parameters based on the level and pages
       return (
         <UnconnectedTopInstructions
@@ -103,21 +112,20 @@ class LevelDetailsDialog extends Component {
           height={this.state.height}
           maxHeight={Math.min(this.state.maxHeight, MAX_LEVEL_HEIGHT)}
           expandedHeight={this.state.height}
-          isCollapsed={false}
+          collapsible={false}
+          resizable={false}
+          collapsed={false}
           hidden={false}
           isEmbedView={false}
+          isCSF={isCSF}
           mainStyle={{paddingBottom: 5}}
-          containerStyle={{
-            overflowY: 'scroll',
-            height: this.state.height - HEADER_HEIGHT
-          }}
-          setInstructionsRenderedHeight={height =>
-            this.setState({height: Math.min(height, MAX_LEVEL_HEIGHT)})
-          }
+          containerStyle={containerStyle}
+          setInstructionsRenderedHeight={height => this.setState({height})}
           setInstructionsMaxHeightNeeded={maxHeight =>
             this.setState({maxHeight})
           }
-          resizable={false}
+          preview={true}
+          skinId={level.skin}
         />
       );
     }
@@ -197,17 +205,16 @@ class LevelDetailsDialog extends Component {
     const {scriptLevel} = this.props;
     const level = this.state.selectedLevel;
     const preview = this.getComponentContent(level);
-    const levelSpecificStyling =
-      level.type === 'StandaloneVideo'
-        ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-        : {};
     return (
       <BaseDialog
         isOpen={true}
         handleClose={this.props.handleClose}
         fullWidth={level.type !== 'StandaloneVideo'}
-        style={{padding: 15, ...levelSpecificStyling}}
-        useUpdatedStyles
+        style={
+          level.type === 'StandaloneVideo'
+            ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
+            : {}
+        }
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}

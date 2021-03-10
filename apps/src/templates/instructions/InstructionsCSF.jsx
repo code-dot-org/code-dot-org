@@ -134,7 +134,7 @@ class InstructionsCSF extends React.Component {
     isBlockly: PropTypes.bool.isRequired,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
-    hideOverlay: PropTypes.func.isRequired,
+    hideOverlay: PropTypes.func,
     aniGifURL: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     isEmbedView: PropTypes.bool,
@@ -146,18 +146,19 @@ class InstructionsCSF extends React.Component {
         block: PropTypes.object, // XML
         video: PropTypes.string
       })
-    ).isRequired,
-    hasUnseenHint: PropTypes.bool.isRequired,
-    showNextHint: PropTypes.func.isRequired,
-    hasAuthoredHints: PropTypes.bool.isRequired,
+    ),
+    hasUnseenHint: PropTypes.bool,
+    showNextHint: PropTypes.func,
+    hasAuthoredHints: PropTypes.bool,
 
     collapsed: PropTypes.bool.isRequired,
+    collapsible: PropTypes.bool.isRequired,
 
     shortInstructions: PropTypes.string,
     shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
 
-    clearFeedback: PropTypes.func.isRequired,
+    clearFeedback: PropTypes.func,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
@@ -168,7 +169,6 @@ class InstructionsCSF extends React.Component {
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
-    textToSpeechEnabled: PropTypes.bool,
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
@@ -258,7 +258,8 @@ class InstructionsCSF extends React.Component {
       });
     }
 
-    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
+    const gotNewHint =
+      prevProps.hints && prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
       const images = ReactDOM.findDOMNode(
         this.instructions
@@ -429,9 +430,11 @@ class InstructionsCSF extends React.Component {
   };
 
   showHint = () => {
-    this.dismissHintPrompt();
-    this.props.showNextHint();
-    this.props.clearFeedback();
+    if (this.props.hints) {
+      this.dismissHintPrompt();
+      this.props.showNextHint();
+      this.props.clearFeedback();
+    }
   };
 
   shouldDisplayHintPrompt() {
@@ -439,6 +442,10 @@ class InstructionsCSF extends React.Component {
   }
 
   shouldDisplayCollapserButton() {
+    if (!this.props.collapsible) {
+      return false;
+    }
+
     // if we have "extra" (non-instruction) content, we should always
     // give the option of collapsing it
     if (
@@ -487,6 +494,7 @@ class InstructionsCSF extends React.Component {
   }
 
   getAvatar() {
+    console.log(this.props);
     // Show the "sad" avatar if there is failure feedback. Otherwise,
     // show the default avatar.
     return this.props.feedback && this.props.feedback.isFailure
@@ -597,7 +605,7 @@ class InstructionsCSF extends React.Component {
           >
             <ChatBubble
               ttsUrl={ttsUrl}
-              textToSpeechEnabled={this.props.textToSpeechEnabled}
+              textToSpeechEnabled={!!ttsUrl}
               isMinecraft={this.props.isMinecraft}
               skinId={this.props.skinId}
             >
@@ -613,7 +621,7 @@ class InstructionsCSF extends React.Component {
                 imgURL={this.props.aniGifURL}
                 inTopPane
                 isBlockly={this.props.isBlockly}
-                collapsible={true}
+                collapsible={this.props.collapsible}
               />
               {this.props.shortInstructions2 && (
                 <div className="secondary-instructions">
@@ -660,7 +668,6 @@ class InstructionsCSF extends React.Component {
                 message={this.props.feedback.message}
                 isMinecraft={this.props.isMinecraft}
                 skinId={this.props.skinId}
-                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
             {this.shouldDisplayHintPrompt() && (
@@ -670,7 +677,6 @@ class InstructionsCSF extends React.Component {
                 onDismiss={this.dismissHintPrompt}
                 isMinecraft={this.props.isMinecraft}
                 skinId={this.props.skinId}
-                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
           </div>
@@ -686,8 +692,8 @@ class InstructionsCSF extends React.Component {
               ]}
               collapsed={this.props.collapsed}
               onClick={this.props.handleClickCollapser}
-              isMinecraft={this.props.isMinecraft}
               isRtl={this.props.isRtl}
+              isMinecraft={this.props.isMinecraft}
             />
             {!this.props.collapsed && (
               <ScrollButtons
@@ -700,6 +706,7 @@ class InstructionsCSF extends React.Component {
                       ? craftStyles.scrollButtonsRtl
                       : craftStyles.scrollButtons)
                 ]}
+                isMinecraft={this.props.isMinecraft}
                 ref={c => {
                   this.scrollButtons = c;
                 }}
@@ -711,7 +718,6 @@ class InstructionsCSF extends React.Component {
                   RESIZER_HEIGHT -
                   styles.scrollButtons.top
                 }
-                isMinecraft={this.props.isMinecraft}
               />
             )}
           </div>
@@ -721,35 +727,23 @@ class InstructionsCSF extends React.Component {
   }
 }
 
+export const UnconnectedInstructionsCSF = Radium(InstructionsCSF);
 export default connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,
-      skinId: state.pageConstants.skinId,
-      isMinecraft: !!state.pageConstants.isMinecraft,
-      isBlockly: !!state.pageConstants.isBlockly,
+
       aniGifURL: state.pageConstants.aniGifURL,
+
       inputOutputTable: state.pageConstants.inputOutputTable,
-      isRtl: state.isRtl,
-      noVisualization: state.pageConstants.noVisualization,
+
       feedback: state.instructions.feedback,
-      collapsed: state.instructions.isCollapsed,
+
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       hasAuthoredHints: state.instructions.hasAuthoredHints,
       showNextHint: state.pageConstants.showNextHint,
-      height: state.instructions.renderedHeight,
-      maxHeight: Math.min(
-        state.instructions.maxAvailableHeight,
-        state.instructions.maxNeededHeight
-      ),
-      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
-      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
-      textToSpeechEnabled:
-        state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
-      shortInstructions: state.instructions.shortInstructions,
-      shortInstructions2: state.instructions.shortInstructions2,
-      longInstructions: state.instructions.longInstructions,
+
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar
     };
