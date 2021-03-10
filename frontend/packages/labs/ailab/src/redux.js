@@ -694,12 +694,11 @@ function isEmpty(object) {
 }
 
 export function getConvertedValue(state, rawValue, column) {
-  if (!isEmpty(state.featureNumberKey)) {
-    const convertedValue = getCategoricalColumns(state).includes(column)
-      ? getKeyByValue(state.featureNumberKey[column], rawValue)
-      : rawValue;
-    return convertedValue;
-  }
+  const convertedValue = getCategoricalColumns(state).includes(column) &&
+    !isEmpty(state.featureNumberKey)
+    ? getKeyByValue(state.featureNumberKey[column], rawValue)
+    : rawValue;
+  return convertedValue;
 }
 
 export function getConvertedAccuracyCheckExamples(state) {
@@ -718,13 +717,8 @@ export function getConvertedAccuracyCheckExamples(state) {
 }
 
 export function getConvertedLabel(state, rawLabel) {
-  if (state.labelColumn && !isEmpty(state.featureNumberKey)) {
-    const convertedLabel = getCategoricalColumns(state).includes(
-      state.labelColumn
-    )
-      ? getKeyByValue(state.featureNumberKey[state.labelColumn], rawLabel)
-      : rawLabel;
-    return convertedLabel;
+  if (state.labelColumn) {
+    return getConvertedValue(state, rawLabel, state.labelColumn);
   }
 }
 
@@ -752,7 +746,7 @@ export function getCompatibleTrainers(state) {
 }
 
 export function isRegression(state) {
-  const mlType = getMLType(state.selectedTrainer);
+  const mlType = getMLType(getSelectedTrainer(state));
   return mlType === MLTypes.REGRESSION;
 }
 
