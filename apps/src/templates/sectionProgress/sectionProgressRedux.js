@@ -48,7 +48,7 @@ const initialState = {
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
   isRefreshingProgress: false,
-  // DCDO flag for showing time spent and last updated in the progress table
+  // pilot flag for showing time spent and last updated in the progress table
   showSectionProgressDetails: false
 };
 
