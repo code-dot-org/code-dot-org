@@ -500,6 +500,7 @@ const lessonFromStage = stage =>
     'lockable',
     'stageNumber',
     'lesson_plan_html_url',
+    'student_lesson_plan_html_url',
     'description_student',
     'description_teacher'
   ]);
