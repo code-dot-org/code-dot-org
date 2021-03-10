@@ -58,18 +58,20 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     end
   end
 
-  test 'regular method sub_resource_links returns and does not modify' do
+  test 'regular method process returns and does not modify' do
     input = "[r first-resource]"
-    result = Services::MarkdownPreprocessor.sub_resource_links(input)
+    result = Services::MarkdownPreprocessor.process(input)
     assert_equal "[r first-resource]", input
     assert_equal "[First Resource](example.com/first)", result
   end
 
-  test 'bang method sub_resource_links! modifies and returns' do
-    input = "[r first-resource]"
-    result = Services::MarkdownPreprocessor.sub_resource_links!(input)
-    assert_equal "[First Resource](example.com/first)", input
-    assert_equal "[First Resource](example.com/first)", result
+  test 'bang method process! modifies and returns' do
+    input = "[v first_vocab]"
+    expected = "<span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span>"
+
+    result = Services::MarkdownPreprocessor.process!(input)
+    assert_equal expected, input
+    assert_equal expected, result
   end
 
   test 'sub_resource_links can substitute a basic resource link' do
@@ -131,6 +133,68 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   test 'sub_resource_links ignores unmatched resource keys' do
     input = "this string has a resource [r nonexistent-resource] link. And a [regular](link)"
     result = Services::MarkdownPreprocessor.sub_resource_links(input)
+    assert_equal input, result
+  end
+
+  test 'sub_vocab_definitions can substitute a basic vocab definition' do
+    input = "this string has a vocab [v first_vocab] definition."
+    expected = "this string has a vocab <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span> definition."
+
+    result = Services::MarkdownPreprocessor.sub_vocab_definitions(input)
+    assert_equal expected, result
+  end
+
+  test 'sub_vocab_definitions can handle multiple vocab definitions in a single string' do
+    input = "this string has [v second_vocab] two vocab [v first_vocab] definitions"
+    expected = "this string has <span class=\"vocab\" title=\"The second of the vocabulary entries.\">Second Vocabulary</span> two vocab <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span> definitions"
+
+    result = Services::MarkdownPreprocessor.sub_vocab_definitions(input)
+    assert_equal expected, result
+  end
+
+  test 'sub_vocab_definitions can handle complex markdown strings' do
+    input = <<~MARKDOWN
+      This is some more complex markdown content.
+
+      It has:
+
+      1. A list with [v first_vocab] a definition
+      2. A **formatted [v second_vocab] definition**
+
+      We also demonstrate that the markdown preprocessor we have doesn't
+      respect markdown, and will replace stuff that actual markdown would leave
+      untouched.
+
+      ```
+      like code blocks
+      [v first_vocab]
+      ```
+    MARKDOWN
+    expected = <<~MARKDOWN
+      This is some more complex markdown content.
+
+      It has:
+
+      1. A list with <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span> a definition
+      2. A **formatted <span class=\"vocab\" title=\"The second of the vocabulary entries.\">Second Vocabulary</span> definition**
+
+      We also demonstrate that the markdown preprocessor we have doesn't
+      respect markdown, and will replace stuff that actual markdown would leave
+      untouched.
+
+      ```
+      like code blocks
+      <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span>
+      ```
+    MARKDOWN
+
+    result = Services::MarkdownPreprocessor.sub_vocab_definitions(input)
+    assert_equal expected, result
+  end
+
+  test 'sub_vocab_definitions ignores unmatched vocab keys' do
+    input = "this string has a vocab [v nonexistent_vocab] definition."
+    result = Services::MarkdownPreprocessor.sub_vocab_definitions(input)
     assert_equal input, result
   end
 end
