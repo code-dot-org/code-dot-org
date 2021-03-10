@@ -103,11 +103,9 @@ class LevelDetailsDialog extends Component {
           height={this.state.height}
           maxHeight={Math.min(this.state.maxHeight, MAX_LEVEL_HEIGHT)}
           expandedHeight={this.state.height}
-          collapsible={false}
           collapsed={false}
           hidden={false}
           isEmbedView={false}
-          isCSF={false}
           mainStyle={{paddingBottom: 5}}
           containerStyle={{
             overflowY: 'scroll',
@@ -117,6 +115,7 @@ class LevelDetailsDialog extends Component {
           setInstructionsMaxHeightNeeded={maxHeight =>
             this.setState({maxHeight})
           }
+          resizable={false}
         />
       );
     }
