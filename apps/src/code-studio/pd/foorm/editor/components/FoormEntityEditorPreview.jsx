@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-class FoormEditorPreview extends Component {
+class FoormEntityEditorPreview extends Component {
   static propTypes = {
     previewQuestions: PropTypes.object,
     forceRerenderKey: PropTypes.number,
@@ -63,4 +63,4 @@ class FoormEditorPreview extends Component {
 
 export default connect(state => ({
   hasJSONError: state.foorm.hasJSONError
-}))(FoormEditorPreview);
+}))(FoormEntityEditorPreview);
