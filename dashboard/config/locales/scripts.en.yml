@@ -8,17 +8,20 @@ en:
         csd_2018_category_name: CS Discoveries ('18-'19)
         csd_2019_category_name: CS Discoveries ('19-'20)
         csd_2020_category_name: CS Discoveries ('20-'21)
+        csd_2021_category_name: CS Discoveries ('21-'22)
         csd_pilot_category_name: CS Discoveries Pilot
         csf_category_name: CS Fundamentals
         csf_2018_category_name: CS Fundamentals ('18-'19)
         csf_2019_category_name: CS Fundamentals ('19-'20)
         csf_2020_category_name: CS Fundamentals ('20-'21)
+        csf_2021_category_name: CS Fundamentals ('21-'22)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
         csp_category_name: CS Principles ('15-'16)
         csp_2018_category_name: CS Principles ('18-'19)
         csp_2019_category_name: CS Principles ('19-'20)
         csp_2020_category_name: CS Principles ('20-'21)
+        csp_2021_category_name: CS Principles ('21-'22)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Full Courses
@@ -21061,6 +21064,16 @@ en:
               name: Designing for Accessibility
               description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
               description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+            lesson-6:
+              name: Introducing Sprite Lab
+            lesson-7:
+              name: Making Sprites
+            lesson-8:
+              name: Sprites in Action
+            lesson-9:
+              name: Blank Space Stories
+            lesson-10:
+              name: Text and Prompts
           lesson_groups:
             ramp_up:
               display_name: Ramp Up
@@ -21094,8 +21107,8 @@ en:
             Programming with Angry Birds:
               key: Programming with Angry Birds
               name: Programming with Angry Birds
-              description_student: Learn about sequences and algorithms with Angry Birds.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_student: Create programs to help the Angry Bird move through the maze.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Debugging with Scrat:
               key: Debugging with Scrat
               name: Debugging with Scrat
@@ -21937,11 +21950,15 @@ en:
               name: Haiku Prototype
             Haiku Bot:
               name: Haiku Bot
+            Poem Bot:
+              name: Poem Bot
           lesson_groups:
             haiku bot:
               display_name: Haiku Bot
+            poem bot:
+              display_name: Poem Bot
           name: haikubot-pilot
-          title: Haiku Bot
+          title: Poem Bot
           description_audience: Grade 4, Grade 5
           description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
           description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Haiku Bot. Once they’ve built their Haiku Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"

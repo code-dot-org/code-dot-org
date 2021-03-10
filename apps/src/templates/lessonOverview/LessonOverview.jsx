@@ -16,7 +16,7 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Announcements from '../../code-studio/components/progress/Announcements';
 
 const styles = {
@@ -246,6 +246,24 @@ class LessonOverview extends Component {
                       <InlineMarkdown
                         markdown={`**${vocab.word}** - ${vocab.definition}`}
                       />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {lesson.programmingExpressions.length > 0 && (
+              <div id="unit-test-introduced-code">
+                <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+                <ul>
+                  {lesson.programmingExpressions.map(expression => (
+                    <li key={expression.name}>
+                      <a
+                        href={studio(expression.link)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {expression.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
