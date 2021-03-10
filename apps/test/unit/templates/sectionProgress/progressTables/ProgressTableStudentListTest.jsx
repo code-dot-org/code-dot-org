@@ -1,12 +1,8 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import {Provider} from 'react-redux';
-import {createStore, combineReducers} from 'redux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {shallow} from 'enzyme';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import * as Sticky from 'reactabular-sticky';
-import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
 import * as Virtualized from 'reactabular-virtualized';
 
 const TEST_STUDENT_1 = {
@@ -35,23 +31,8 @@ const DEFAULT_PROPS = {
 };
 
 const setUp = (overrideProps = {}) => {
-  const store = createStore(
-    combineReducers({
-      sectionProgress
-    }),
-    {
-      sectionProgress: {
-        showSectionProgressDetails: false
-      }
-    }
-  );
-
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return mount(
-    <Provider store={store}>
-      <ProgressTableStudentList {...props} />
-    </Provider>
-  );
+  return shallow(<ProgressTableStudentList {...props} />);
 };
 
 describe('ProgressTableStudentList', () => {
@@ -63,11 +44,12 @@ describe('ProgressTableStudentList', () => {
     expect(stickyHeaderComponent.contains(headers[1]));
   });
 
-  it('displays a ProgressTableStudentName for each student', () => {
+  it('displays a name for each student', () => {
     const wrapper = setUp();
-    expect(wrapper.find(ProgressTableStudentName)).to.have.length(2);
-    expect(wrapper.contains('Joe')).to.be.true;
-    expect(wrapper.contains('Jamie')).to.be.true;
+    const studentRows = wrapper.find(Virtualized.Body).props().rows;
+    expect(studentRows).to.have.length(2);
+    expect(studentRows.includes(TEST_STUDENT_1)).to.be.true;
+    expect(studentRows.includes(TEST_STUDENT_2)).to.be.true;
   });
 
   it('displays body with overflow scroll if needsGutter is true', () => {
