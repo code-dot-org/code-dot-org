@@ -9,6 +9,7 @@ import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionP
 import styleConstants from '@cdo/apps/styleConstants';
 import ProgressTableStudentList from './ProgressTableStudentList';
 import ProgressTableContentView from './ProgressTableContentView';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -55,6 +56,7 @@ class ProgressTableContainer extends React.Component {
     super(props);
     this.onScroll = this.onScroll.bind(this);
     this.onToggleRow = this.onToggleRow.bind(this);
+    this.recordToggleRow = this.recordToggleRow.bind(this);
     this.numDetailRows = props.lessonCellFormatters.length - 1;
     this.state = {
       rows: props.section.students.map(student => {
@@ -118,6 +120,23 @@ class ProgressTableContainer extends React.Component {
     } else {
       this.collapseDetailRows(rowData, rowIndex);
     }
+    this.recordToggleRow(!rowData.isExpanded, rowData.student.id);
+  }
+
+  recordToggleRow(expanding, studentId) {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'time_spent',
+        event: 'toggle_details',
+        data_json: JSON.stringify({
+          student_id: studentId,
+          section_id: this.props.section.id,
+          visible: expanding
+        })
+      },
+      {includeUserId: true}
+    );
   }
 
   expandDetailRows(rowData, rowIndex) {
