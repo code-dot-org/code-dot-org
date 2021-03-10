@@ -9,7 +9,8 @@ const defaultProps = {
     console.log('closed');
   },
   viewAs: ViewType.Teacher,
-  isRtl: false
+  isRtl: false,
+  isCSF: false
 };
 
 const standaloneVideoScriptLevel = {
@@ -111,6 +112,31 @@ const levelWithInstructions = {
   }
 };
 
+const csfLevelWithInstructions = {
+  url: '/s/coursef-2020/stage/16/puzzle/9/page/1',
+  level: {
+    type: 'Artist',
+    longInstructions:
+      'These are some long instructions!\n**Do this**\nSome more detailed instructions.',
+    teacherMarkdown: 'Just some markdown for teachers.',
+    mapReference: '/docs/csd-1718/html_tags/index.html',
+    skin: 'artist',
+    videos: [
+      {
+        autoplay: true,
+        download:
+          'https://videos.code.org/levelbuilder/weblab_introtohtml-mp4.mp4',
+        enable_fallback: true,
+        key: 'csd_weblab_intro_2',
+        name: 'Intro to Web Lab - Part 2',
+        src:
+          'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
+        thumbnail: '/c/video_thumbnails/csd_weblab_intro_2.jpg'
+      }
+    ]
+  }
+};
+
 export default storybook => {
   storybook.storiesOf('LevelDetailsDialog', module).addStoryTable([
     {
@@ -168,6 +194,18 @@ export default storybook => {
             {...defaultProps}
             isRtl
             scriptLevel={levelWithInstructions}
+          />
+        </Provider>
+      )
+    },
+    {
+      name: 'CSF TopInstructions',
+      story: () => (
+        <Provider store={getStore()}>
+          <LevelDetailsDialog
+            {...defaultProps}
+            isCSF
+            scriptLevel={csfLevelWithInstructions}
           />
         </Provider>
       )

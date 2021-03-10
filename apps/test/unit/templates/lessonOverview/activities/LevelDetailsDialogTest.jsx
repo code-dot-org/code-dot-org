@@ -13,7 +13,8 @@ describe('LevelDetailsDialogTest', () => {
     defaultProps = {
       handleClose: handleCloseSpy,
       viewAs: ViewType.Teacher,
-      isRtl: false
+      isRtl: false,
+      isCSF: false
     };
   });
 
@@ -178,6 +179,26 @@ describe('LevelDetailsDialogTest', () => {
     const wrapper = shallow(
       <LevelDetailsDialog
         {...defaultProps}
+        scriptLevel={{
+          id: 'scriptlevel',
+          url: 'level.url',
+          status: 'not_tried',
+          level: {
+            type: 'Weblab',
+            id: 'level',
+            longInstructions: 'long instructions'
+          }
+        }}
+      />
+    );
+    expect(wrapper.find('TopInstructions').length).to.equal(1);
+  });
+
+  it('can display a CSF puzzle level', () => {
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        {...defaultProps}
+        isCSF
         scriptLevel={{
           id: 'scriptlevel',
           url: 'level.url',
