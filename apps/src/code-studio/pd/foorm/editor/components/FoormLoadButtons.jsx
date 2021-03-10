@@ -9,11 +9,9 @@ import {
   setLastSavedQuestions
 } from '../foormEditorRedux';
 
-// This should probably be functional -- no state.
 class FoormLoadButtons extends React.Component {
   static propTypes = {
     resetCodeMirror: PropTypes.func,
-    namesAndVersions: PropTypes.array,
     resetSelectedData: PropTypes.func,
     onSelect: PropTypes.func,
     dropdownOptions: PropTypes.array,
