@@ -1968,7 +1968,7 @@ module.exports.categories = {
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: color.droplet_bright_blue,
+    rgb: color.droplet_blue,
     blocks: []
   }
 };
