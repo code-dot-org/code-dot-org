@@ -48,6 +48,10 @@ class JavalabEditor extends React.Component {
   constructor(props) {
     super(props);
 
+    this.activateRenameFile = this.activateRenameFile.bind(this);
+    this.renameFileComplete = this.renameFileComplete.bind(this);
+    this.onSave = onSave.bind(this);
+
     this.state = {
       renameFileActive: false,
       showFileManagementPanel: false,
@@ -80,13 +84,13 @@ class JavalabEditor extends React.Component {
     };
   };
 
-  renameFileComplete = e => {
+  renameFileComplete(e) {
     e.preventDefault();
     renameProjectFile(this.state.oldFilename, this.props.filename);
     this.setState({renameFileActive: false});
-  };
+  }
 
-  enableRenameFile() {
+  activateRenameFile() {
     this.setState({oldFilename: this.props.filename, renameFileActive: true});
   }
 
@@ -98,9 +102,7 @@ class JavalabEditor extends React.Component {
             <input
               type="text"
               value={this.props.filename}
-              onChange={e => {
-                this.props.setFilename(e.target.value);
-              }}
+              onChange={e => this.props.setFilename(e.target.value)}
             />
           </div>
           <input
@@ -120,7 +122,7 @@ class JavalabEditor extends React.Component {
         <div style={style.tab}>{this.props.filename}</div>
         <button
           type="button"
-          onClick={() => this.enableRenameFile()}
+          onClick={this.activateRenameFile}
           className="btn btn-default btn-sm"
           style={style.button}
         >
@@ -137,7 +139,7 @@ class JavalabEditor extends React.Component {
           <PaneButton
             id="javalab-editor-save"
             iconClass="fa fa-check-circle"
-            onClick={onSave}
+            onClick={this.onSave}
             headerHasFocus={true}
             isRtl={false}
             label="Commit Code"

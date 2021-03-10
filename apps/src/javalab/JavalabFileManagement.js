@@ -41,7 +41,7 @@ function onSave() {
       project.save();
     },
     () => {
-      console.warn(`Javalab: error file ${filename} not renamed`);
+      console.warn(`Javalab: error file ${filename} not saved`);
       project.showSaveError_();
     }
   );
@@ -73,7 +73,7 @@ function loadFiles(success, failure, version) {
         // list and no start version id
         onFilesReady([], null);
       } else {
-        console.error('files API failed, status: ' + xhr.status);
+        console.error('files API failed to get files, status: ' + xhr.status);
         failure();
       }
     },
