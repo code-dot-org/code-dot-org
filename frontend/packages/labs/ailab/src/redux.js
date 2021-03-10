@@ -26,8 +26,7 @@ import {
   ColumnTypes,
   MLTypes,
   TestDataLocations,
-  ResultsGrades,
-  ModelNameMaxLength
+  ResultsGrades
 } from "./constants.js";
 
 // Action types
@@ -1065,7 +1064,7 @@ function isPanelEnabled(state, panelId) {
   }
 
   if (panelId === "save") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name) || state.trainedModelDetails.name.length >= ModelNameMaxLength) {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
   }

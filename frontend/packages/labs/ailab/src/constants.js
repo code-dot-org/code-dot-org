@@ -26,8 +26,7 @@ export const ModelNameMaxLength = 256;
 export const saveMessages = {
   success: "Your model was saved!",
   failure: "There was an error. Your model did not save.",
-  name: "Please name your model.",
-  nameLength: `Model names can not exceed ${ModelNameMaxLength} characters.`
+  name: "Please name your model."
 };
 
 const labelColor = "rgb(254, 96, 3)"; // was 186

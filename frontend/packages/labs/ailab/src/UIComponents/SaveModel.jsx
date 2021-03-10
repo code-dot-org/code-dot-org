@@ -76,13 +76,6 @@ class SaveModel extends Component {
 
                   <label>{field.text}</label>
 
-                  {field.id === "name" && this.props.trainedModelDetails.name &&
-                  this.props.trainedModelDetails.name.length >= ModelNameMaxLength && (
-                    <div style={{...styles.smallText, ...styles.error}}>
-                      {saveMessages["nameLength"]}
-                    </div>
-                  )}
-
                   {field.type !== "checkbox" && !field.answer && (
                     <div>
                       <textarea
@@ -90,6 +83,7 @@ class SaveModel extends Component {
                         onChange={event =>
                           this.handleChange(event, field.id, field.isColumn)
                         }
+                        maxLength={field.id === "name" ? ModelNameMaxLength : ""}
                       />
                     </div>
                   )}
