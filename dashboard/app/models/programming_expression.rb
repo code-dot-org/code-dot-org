@@ -57,7 +57,6 @@ class ProgrammingExpression < ApplicationRecord
     # General
     when 'Advanced'
       '#19c3e1'
-      # Gamelab and Applab have different blue colors for this. Waiting to hear thoughts on what to do
     when 'Control'
       '#64B5F6'
     when 'Functions'
