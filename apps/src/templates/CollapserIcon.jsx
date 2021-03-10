@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 
-const collapseIconStyles = {
+const styles = {
   icon: {
     fontSize: '18px'
   }
@@ -23,7 +22,7 @@ function CollapserIcon({
       onClick={onClick}
       role="button"
       className={iconClass + ' fa'}
-      style={{...collapseIconStyles.icon, ...style}}
+      style={{...styles.icon, ...style}}
     />
   );
 }
@@ -42,4 +41,4 @@ CollapserIcon.defaultProps = {
   style: {}
 };
 
-export default Radium(CollapserIcon);
+export default CollapserIcon;
