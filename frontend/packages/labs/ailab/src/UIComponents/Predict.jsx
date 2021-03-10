@@ -39,7 +39,7 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
-        <div style={styles.largeText}>Test the Model</div>
+        <div style={styles.largeText}>Test The Model</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
             <form>
@@ -94,7 +94,7 @@ class Predict extends Component {
           onClick={this.onClickPredict}
           disabled={!this.props.getPredictAvailable}
         >
-          Predict!
+          Predict
         </button>
         {this.props.predictedLabel && (
           <div>

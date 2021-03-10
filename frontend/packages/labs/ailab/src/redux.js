@@ -1098,12 +1098,12 @@ export function getPanelButtons(state) {
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train A.I." }
+      ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train A.I." }
+      ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
@@ -1113,12 +1113,12 @@ export function getPanelButtons(state) {
   } else if (state.currentPanel === "results") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelEnabled(state, "saveModel")
-      ? { panel: "saveModel", text: "Continue" }
+      ? { panel: "saveModel", text: "Save" }
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
     next = isPanelEnabled(state, "save")
-      ? { panel: "save", text: "Save" }
+      ? { panel: "save", text: "Finish" }
       : null;
   }
 
