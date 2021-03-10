@@ -6,9 +6,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
-import FormSaveBar from '../form/FormSaveBar';
-import FoormEditorPreview from './FoormEditorPreview';
-import FoormEditorHeader from './FoormEditorHeader';
+import FoormFormSaveBar from '../form/FoormFormSaveBar';
+import FoormEntityEditorPreview from './FoormEntityEditorPreview';
+import FoormEntityEditorHeader from './FoormEntityEditorHeader';
 import _ from 'lodash';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
@@ -39,7 +39,7 @@ const styles = {
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 
-class FoormEditor extends React.Component {
+class FoormEntityEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
     resetCodeMirror: PropTypes.func.isRequired,
@@ -222,7 +222,7 @@ class FoormEditor extends React.Component {
   render() {
     return (
       <div>
-        <FoormEditorHeader
+        <FoormEntityEditorHeader
           livePreviewToggled={this.livePreviewToggled}
           livePreviewStatus={this.state.livePreviewStatus}
           validateURL={this.props.validateURL}
@@ -259,7 +259,7 @@ class FoormEditor extends React.Component {
             id="preview-tabs"
           >
             <Tab eventKey={'preview'} title={'Preview'}>
-              <FoormEditorPreview
+              <FoormEntityEditorPreview
                 previewQuestions={this.props.previewQuestions}
                 forceRerenderKey={this.props.forceRerenderKey}
                 errorMessages={this.props.previewErrors}
@@ -278,7 +278,7 @@ class FoormEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        <FormSaveBar
+        <FoormFormSaveBar
           formCategories={this.props.categories}
           resetCodeMirror={this.props.resetCodeMirror}
         />
@@ -289,4 +289,4 @@ class FoormEditor extends React.Component {
 
 export default connect(state => ({
   questions: state.foorm.questions || {}
-}))(FoormEditor);
+}))(FoormEntityEditor);

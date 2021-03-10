@@ -36,7 +36,7 @@ const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 const TIME_FORMAT = 'h:mm a';
 
-class FoormEditorHeader extends Component {
+class FoormEntityEditorHeader extends Component {
   static propTypes = {
     livePreviewToggled: PropTypes.func,
     livePreviewStatus: PropTypes.string,
@@ -143,4 +143,4 @@ class FoormEditorHeader extends Component {
 
 export default connect(state => ({
   questions: state.foorm.questions || {}
-}))(FoormEditorHeader);
+}))(FoormEntityEditorHeader);
