@@ -6,14 +6,9 @@ import {
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 import _ from 'lodash';
 
-let codeMirrorHelper = {
-  codeMirror: null
-};
+let codeMirror;
 
-codeMirrorHelper.populate = populate.bind(codeMirrorHelper);
-codeMirrorHelper.reset = reset.bind(codeMirrorHelper);
-
-function populate() {
+function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
 
   const updateQuestions = questions => {
@@ -32,14 +27,14 @@ function populate() {
     }
   }
 
-  this.codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
+  codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: _.debounce(onCodeMirrorChange, 250)
   });
 }
 
-function reset(json) {
-  if (this.codeMirror) {
-    this.codeMirror.setValue(JSON.stringify(json, null, 2));
+function resetCodeMirror(json) {
+  if (codeMirror) {
+    codeMirror.setValue(JSON.stringify(json, null, 2));
     getStore().dispatch(setHasJSONError(false));
   }
 }
@@ -54,4 +49,4 @@ const confirmNoUnsavedChanges = evt => {
   }
 };
 
-export {codeMirrorHelper, confirmNoUnsavedChanges};
+export {populateCodeMirror, resetCodeMirror, confirmNoUnsavedChanges};

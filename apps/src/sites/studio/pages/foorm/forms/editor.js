@@ -4,11 +4,14 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import FormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FormEditorManager';
-import {codeMirrorHelper, confirmNoUnsavedChanges} from './editorHelpers.js';
+import {
+  populateCodeMirror,
+  resetCodeMirror,
+  confirmNoUnsavedChanges
+} from './editorHelpers.js';
 import foorm, {
   setAvailableEntities
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
-import _ from 'lodash';
 
 import 'survey-react/survey.css';
 
@@ -23,8 +26,8 @@ $(document).ready(function() {
   ReactDOM.render(
     <Provider store={store}>
       <FormEditorManager
-        populateCodeMirror={codeMirrorHelper.populate}
-        resetCodeMirror={codeMirrorHelper.reset}
+        populateCodeMirror={populateCodeMirror}
+        resetCodeMirror={resetCodeMirror}
         categories={scriptData.categories}
       />
     </Provider>,
