@@ -10,6 +10,19 @@ is_course true
 is_migrated true
 
 lesson_group 'ramp_up', display_name: 'Loops'
+lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic', has_lesson_plan: true
+level 'CourseE_HOC 2018 Level_1_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_2_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_3_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_4_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_5_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_6_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_7a_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_8_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_9b_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_10_2021', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_11_2021', progression: 'Practice'
+
 lesson 'Programming and Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2021', progression: 'Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_2021', progression: 'Practice'
@@ -24,22 +37,6 @@ level 'ramp_artist_loops6_2021', progression: 'Practice'
 level 'ramp_artist_loops8_2021', progression: 'Challenge', challenge: true
 bonus 'courseC_artist_prog_challenge1_2021', progression: 'Challenge'
 bonus 'courseC_artist_prog_challenge2a_2021', progression: 'Challenge'
-
-lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic', has_lesson_plan: true
-level 'CourseE_HOC 2018 Level_1_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_2_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_3_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_4_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_5_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_6_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_7a_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_8_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_9b_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_10_2021', progression: 'Practice'
-level 'CourseE_HOC 2018 Level_11_2021', progression: 'Practice'
-
-lesson 'lesson-4', display_name: 'Be A Super Digital Citizen', has_lesson_plan: true, unplugged: true
-level 'csf_be_a_super_digital_citizen_2021', progression: 'Be a Super Digital Citizen'
 
 lesson 'Conditionals', display_name: 'Conditionals with the Farmer', has_lesson_plan: true
 level 'courseD_video_whileIntro_2021', progression: 'While Loops with the Farmer'
@@ -84,6 +81,9 @@ level 'Dance Party 7_2021', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_2021', progression: 'Mini-Project: Alien Dance Party'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
+lesson 'lesson-4', display_name: 'Be A Super Digital Citizen', has_lesson_plan: true, unplugged: true
+level 'csf_be_a_super_digital_citizen_2021', progression: 'Be a Super Digital Citizen'
+
 lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: true, unplugged: true
 level 'PrivatePersonalInformation-Unplugged_2021'
 

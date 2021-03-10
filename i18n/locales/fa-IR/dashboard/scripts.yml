@@ -2520,6 +2520,8 @@ fa:
               name: درس 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: مقدمه
             Loops:
               key: حلقه‌ها
               name: حلقه‌ها
@@ -2538,3 +2540,8 @@ fa:
             For Loops:
               key: حلقه های "برای"
               name: حلقه های "برای"
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: مقدمه
+            Introduction:
+              display_name: مقدمه

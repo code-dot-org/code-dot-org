@@ -6984,6 +6984,8 @@ is:
               name: Kennslustund 15
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Kynning
             Sequencing:
               key: Skipanaröð
               name: Skipanaröð
@@ -7008,12 +7010,18 @@ is:
             Sprite Lab:
               key: Kvikasmiðjan
               name: Kvikasmiðjan
+            Getting Started:
+              name: Fyrstu skrefin
+            Lesson Planning:
+              name: Gerð kennsluáætlana
           lesson_groups:
             k5_getting_started_1:
-              display_name: Fyrstu skrefin
+              display_name: Kynning
             k5_basic_concepts_1:
               display_name: Grunnhugtök forritunar og framkvæmd kennslu
             k5_diving_deeper_1:
               display_name: 'Kafað dýpra: Námskeið E og F'
             k5_next_steps_1:
               display_name: Næstu skref
+            Introduction:
+              display_name: Kynning
