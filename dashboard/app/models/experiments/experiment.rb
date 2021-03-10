@@ -124,6 +124,11 @@ class Experiment < ApplicationRecord
       name: 'fancygeometry-pilot',
       label: 'Fancy Geometry',
       allow_joining_via_url: true
+    },
+    {
+      name: 'section-progress-details-pilot',
+      label: 'Section Progress Details Pilot',
+      allow_joining_via_url: true
     }
   ]
 
