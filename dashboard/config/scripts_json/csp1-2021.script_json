@@ -18,12 +18,13 @@
           "/link/to/curriculum"
         ]
       ],
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-02 01:14:44 UTC",
+    "serialized_at": "2021-03-09 02:45:46 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -4523,7 +4524,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Computer Science is Changing Everything",
         "level_keys": [
@@ -4809,9 +4810,12 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget Video "
+        "progression": "Pixelation Widget Video ",
+        "level_keys": [
+          "U1 L9 Introduction to Pixelation_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4832,9 +4836,12 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4855,9 +4862,12 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4878,9 +4888,12 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4901,9 +4914,12 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4924,9 +4940,12 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4949,7 +4968,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 CFU pixel data_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4972,7 +4994,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4995,7 +5020,10 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L9 CFU Sampling_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5016,7 +5044,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "RGB Color",
         "level_keys": [
@@ -5042,7 +5070,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5068,7 +5096,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "More Shades of Color",
         "level_keys": [
@@ -5094,7 +5122,7 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5120,7 +5148,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5146,7 +5174,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Color Sampling",
         "level_keys": [
@@ -5172,7 +5200,7 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5538,7 +5566,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 1 Exam"
+        "progression": "Unit 1 Exam",
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": null,

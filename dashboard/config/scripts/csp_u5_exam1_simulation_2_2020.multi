@@ -11,26 +11,9 @@ right '`random(1,100) <= 60`'
 markdown <<MARKDOWN
 A restaurant knows from historical data that 60 out of 100 of its customers purchase a full meal while 40 out of 100 only order a side dish. The program below is intended to simulate the orders of 1000 customers.
 
-```
-fullMeal ← 0
-sideDish ← 0
-REPEAT 1000 TIMES
-{
-	IF (<MISSING CODE>)
-	{
-		fullMeal ← fullMeal + 1
-	}
-	ELSE
-	{
-		sideDish ← sideDish + 1
-	}
-}
-DISPLAY (fullMeal)
-DISPLAY ("full meals were ordered,")
-DISPLAY (sideDish)
-DISPLAY ("side dishes were ordered.")
-```
+![](https://images.code.org/9c47c2e2639f5a81648ac18c790e3063-image-1615248162500.01.57 PM.png)
 
 Which of the following can be used to replace `<MISSING CODE>` so that the simulation works as intended?
+
 
 MARKDOWN

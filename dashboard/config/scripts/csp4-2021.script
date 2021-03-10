@@ -20,7 +20,7 @@ level 'U4 L02 Thermostat App v1 Code_2021', progression: 'Investigation #1: Ther
 level 'U4 L02 Thermostat App v2_2021', progression: 'Investigation #2: Thermostat App v.2 (Level 3) - 10 mins'
 level 'U4 L02 Thermostat App v3_2021', progression: 'Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins'
 level 'U4 L02 Thermostat App v3 pt2_2021', progression: 'Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins'
-level 'U4 L02 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
+level 'U4 L02 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Variables Practice', display_name: 'Variables Practice', has_lesson_plan: true
 level 'U4 L03 Variables numbers practice 1_2021', progression: 'Assigning Numbers and Strings'
@@ -33,28 +33,28 @@ level 'U4 L03 Variables operator practice 6_2021', progression: 'Variables and O
 level 'U4 L03 Variable Scope: Local vs. Global_2021', progression: 'Debugging Scope Issues'
 level 'U4 L03 Scope Issue_2021', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4_2021', progression: 'Putting it Together'
-level 'U4L3 CFU Variables Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
-level 'U4L3 CFU Variables Randomness Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
+level 'U4L3 CFU Variables Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
+level 'U4L3 CFU Variables Randomness Psuedocode_2021', progression: 'Assessment: Check For Understanding: AP Practice', assessment: true
 
 lesson 'Variables Make', display_name: 'Variables Make', has_lesson_plan: true
-level 'U4 L04 Variables Make Project_2021', progression: 'Try the Photo Liker App'
-level 'U4 L04 Variables Make Project Submit_2021', progression: 'Make the Photo Liker App', assessment: true
+level 'U4 L04 Variables Make Project_2021', progression: 'Try the Photo Liker app'
+level 'U4 L04 Variables Make Project Submit_2021', progression: 'Make the Photo Liker app', assessment: true
 
 lesson_group 'csp_conditionals', display_name: 'Conditionals'
 lesson 'Conditionals Explore', display_name: 'Conditionals Explore', has_lesson_plan: true
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions_2021', progression: 'Conditionals: Boolean Expressions'
-level 'U4 L05 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
+level 'U4 L05 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 
 lesson 'Conditionals Investigate', display_name: 'Conditionals Investigate', has_lesson_plan: true
-level 'U4L06 Introduction to Conditionals: if Statements_2021', progression: 'If-Statements'
 level 'U4 L06 Lemon Hunter App v1 Code_2021', progression: 'If-Statements'
+level 'U4L06 Introduction to Conditionals: if Statements_2021', progression: 'If-Statements'
 level 'U4L06 Introduction to Conditionals: if-else Statements_2021', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: if-else-if Statements_2021', progression: 'If-Else Statements'
 level 'U4 L06 Lemon Hunter App v2 Code_2021', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021', progression: 'Logical Operators: AND OR'
 level 'U4 L06 Lemon Hunter App v3 Code_2021', progression: 'Logical Operators: AND OR'
-level 'Checking Multiple Conditions with If-elseif_2021', progression: 'Patterns: If-else-if'
-level 'U4 L06 CYU Exit Ticket_2021', progression: 'Check Your Understanding', assessment: true
+level 'U4 L06 CYU Exit Ticket_2021', progression: 'Patterns: If-else-if', assessment: true
+level 'Checking Multiple Conditions with If-elseif_2021', progression: 'Check Your Understanding'
 
 lesson 'Conditionals Practice', display_name: 'Conditionals Practice', has_lesson_plan: true
 level 'U4 L07 Conditionals Practice 1_2021', progression: 'Boolean expressions'

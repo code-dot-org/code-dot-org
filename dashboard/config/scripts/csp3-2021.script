@@ -67,7 +67,7 @@ lesson 'Project - Designing an App Part 4', display_name: 'Project   Designing a
 level 'CSP U3 L9 Add More Code_2021', progression: 'Add More Code'
 
 lesson 'Project - Designing an App Part 5', display_name: 'Project   Designing an App Part 5', has_lesson_plan: true
-level 'CSP U3 L10 Submit App_2021', progression: 'Submit Your App', assessment: true
+level 'CSP U3 L10 Submit App_2021', progression: 'Submit your app', assessment: true
 
 lesson 'Lesson 11: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 3 MC Assessment _2021', progression: 'Unit 3 Exam', assessment: true

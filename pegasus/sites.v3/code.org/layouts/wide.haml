@@ -18,12 +18,9 @@
   .push
 
 -if @header['theme'] == 'responsive_wide'
-  -if page_translated? && !partner_site?
+  .desktop-feature
+    = view :footer
+  .mobile-headers.mobile-feature
     = view :mobile_footer_responsive
-  -else
-    .desktop-feature
-      = view :footer
-    .mobile-headers.mobile-feature
-      = view :mobile_footer_responsive
 -else
   = view :footer
