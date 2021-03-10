@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getEmptyCellDetails, setCurrentColumn } from "../redux";
+import { setCurrentColumn } from "../redux";
 import { styles } from "../constants";
 
 class DataDisplay extends Component {
@@ -10,31 +10,9 @@ class DataDisplay extends Component {
     data: PropTypes.array,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
-    emptyCellDetails: PropTypes.array,
     setCurrentColumn: PropTypes.func,
     currentColumn: PropTypes.string,
     currentPanel: PropTypes.string
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showRawData: true,
-      showEmptyCellDetails: false
-    };
-  }
-
-  toggleRawData = () => {
-    this.setState({
-      showRawData: !this.state.showRawData
-    });
-  };
-
-  toggleEmptyCellDetails = () => {
-    this.setState({
-      showEmptyCellDetails: !this.state.showEmptyCellDetails
-    });
   };
 
   getColumnHeaderStyle = key => {
@@ -151,11 +129,6 @@ class DataDisplay extends Component {
             </table>
           </div>
         )}
-        {!this.state.showRawData && (
-          <button type="button" onClick={this.toggleRawData}>
-            show data
-          </button>
-        )}
         <div style={styles.mediumText}>
           There are {this.props.data.length} rows of data.
         </div>
@@ -169,7 +142,6 @@ export default connect(
     data: state.data,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
-    emptyCellDetails: getEmptyCellDetails(state),
     currentColumn: state.currentColumn,
     currentPanel: state.currentPanel
   }),
