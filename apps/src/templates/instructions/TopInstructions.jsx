@@ -161,7 +161,6 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    collapsible: PropTypes.bool,
     collapsed: PropTypes.bool,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func,
@@ -184,15 +183,13 @@ class TopInstructions extends Component {
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     widgetMode: PropTypes.bool,
-    isCSF: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool
   };
 
   static defaultProps = {
-    resizable: true,
-    collapsible: true
+    resizable: true
   };
 
   constructor(props) {
@@ -538,7 +535,7 @@ class TopInstructions extends Component {
       hasContainedLevels
     } = this.props;
 
-    const isCSF = this.props.isCSF || !this.props.noInstructionsWhenCollapsed;
+    const isCSF = !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
     const widgetWidth = WIDGET_WIDTH + 'px';
 
@@ -691,8 +688,7 @@ class TopInstructions extends Component {
                 )}
             </div>
             {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-            {this.props.collapsible &&
-              !this.props.isEmbedView &&
+            {!this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
                   collapsed={this.props.collapsed}
@@ -767,7 +763,7 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                       isBlockly={this.props.isBlockly}
-                      collapsible={this.props.collapsible}
+                      collapsible={this.props.noInstructionsWhenCollapsed}
                     />
                   </div>
                 )}
