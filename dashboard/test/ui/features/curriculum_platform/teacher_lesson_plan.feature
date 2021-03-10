@@ -1,4 +1,5 @@
 @no_ie
+@no_mobile
 Feature: Teacher Lesson Plan
 
   Scenario: Viewing Teacher Lesson Plan
