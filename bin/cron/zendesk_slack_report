@@ -42,7 +42,6 @@ MONITORING_GROUPS = {
   'pdot' => ['PDOT Amy', 'PDOT Laura', 'PDOT MeganH', 'PDOT Rosie', 'PDOT Tawny'],
   'plc-engineering' => ['PLC Tools'],
   'product' => ['Product'],
-  'reaching-out' => ['Outreach'],
   'regional_managers' => ['Outreach'],
   'star-labs-cabal' => ['*Labs']
 }
