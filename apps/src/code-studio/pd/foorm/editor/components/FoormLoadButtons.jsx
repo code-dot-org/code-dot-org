@@ -10,49 +10,46 @@ import {
 } from '../foormEditorRedux';
 
 function FoormLoadButtons(props) {
+  function getFormattedConfigurationDropdownOptions() {
+    return props.dropdownOptions.map((dropdownOption, i) => {
+      return renderMenuItem(
+        () => props.onSelect(dropdownOption['id']),
+        dropdownOption['text'],
+        i
+      );
+    });
+  }
+
+  function renderMenuItem(clickHandler, textToDisplay, key) {
+    return (
+      <MenuItem key={key} eventKey={key} onClick={clickHandler}>
+        {textToDisplay}
+      </MenuItem>
+    );
+  }
+
+  function initializeEmptyCodeMirror() {
+    props.resetSelectedData();
+    props.showCodeMirror();
+    props.resetCodeMirror({});
+
+    // Reset redux store
+    props.setLastSaved(null);
+    props.setSaveError(null);
+    props.setHasJSONError(false);
+    props.setLastSavedQuestions({});
+  }
+
   return (
     <div>
       <DropdownButton id="load_config" title="Load Form..." className="btn">
-        {getFormattedConfigurationDropdownOptions(
-          props.dropdownOptions,
-          props.onSelect
-        )}
+        {getFormattedConfigurationDropdownOptions()}
       </DropdownButton>
-      <Button onClick={() => initializeEmptyCodeMirror(props)} className="btn">
+      <Button onClick={() => initializeEmptyCodeMirror()} className="btn">
         New Form
       </Button>
     </div>
   );
-}
-
-function initializeEmptyCodeMirror(props) {
-  props.resetSelectedData();
-  props.showCodeMirror();
-  props.resetCodeMirror({});
-
-  // Reset redux store
-  props.setLastSaved(null);
-  props.setSaveError(null);
-  props.setHasJSONError(false);
-  props.setLastSavedQuestions({});
-}
-
-function renderMenuItem(clickHandler, textToDisplay, key) {
-  return (
-    <MenuItem key={key} eventKey={key} onClick={clickHandler}>
-      {textToDisplay}
-    </MenuItem>
-  );
-}
-
-function getFormattedConfigurationDropdownOptions(dropdownOptions, onSelect) {
-  return dropdownOptions.map((dropdownOption, i) => {
-    return renderMenuItem(
-      () => onSelect(dropdownOption['id']),
-      dropdownOption['text'],
-      i
-    );
-  });
 }
 
 FoormLoadButtons.propTypes = {
