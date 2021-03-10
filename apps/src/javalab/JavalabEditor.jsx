@@ -9,6 +9,7 @@ import PaneHeader, {
 import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState} from '@codemirror/state';
+import {renameProjectFile, onSave} from './JavalabFileManagement';
 
 const style = {
   editor: {
@@ -37,8 +38,6 @@ const style = {
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
-    onSave: PropTypes.func,
-    renameFile: PropTypes.func,
     // populated by redux
     setEditorText: PropTypes.func,
     setFilename: PropTypes.func,
@@ -83,7 +82,7 @@ class JavalabEditor extends React.Component {
 
   renameFileComplete = e => {
     e.preventDefault();
-    this.props.renameFile(this.state.oldFilename, this.props.filename);
+    renameProjectFile(this.state.oldFilename, this.props.filename);
     this.setState({renameFileActive: false});
   };
 
@@ -138,7 +137,7 @@ class JavalabEditor extends React.Component {
           <PaneButton
             id="javalab-editor-save"
             iconClass="fa fa-check-circle"
-            onClick={this.props.onSave}
+            onClick={onSave}
             headerHasFocus={true}
             isRtl={false}
             label="Commit Code"

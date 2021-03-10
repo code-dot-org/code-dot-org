@@ -1,5 +1,6 @@
 import React from 'react';
 import JavalabConsole from './JavalabConsole';
+import {loadFiles} from './JavalabFileManagement';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
@@ -65,9 +66,8 @@ const style = {
 class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
-    onSave: PropTypes.func.isRequired,
-    renameFile: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
+    suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -75,8 +75,24 @@ class JavalabView extends React.Component {
     appendOutputLog: PropTypes.func
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true,
+      loadSuccess: null
+    };
+  }
+
   componentDidMount() {
     this.props.onMount();
+    loadFiles(
+      /* success */
+      () => this.setState({loading: false, loadSuccess: true}),
+      /* failure */
+      () => this.setState({loading: false, loadSuccess: false}),
+      this.props.suppliedFilesVersionId
+    );
   }
 
   run = () => {
@@ -89,7 +105,7 @@ class JavalabView extends React.Component {
     this.props.appendOutputLog('Compiled!');
   };
 
-  render() {
+  renderJavalab() {
     return (
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
@@ -111,10 +127,7 @@ class JavalabView extends React.Component {
               </div>
             </div>
             <div style={style.editorAndConsole}>
-              <JavalabEditor
-                onSave={this.props.onSave}
-                renameFile={this.props.renameFile}
-              />
+              <JavalabEditor />
               <div style={style.consoleAndButtons}>
                 <div style={style.buttons}>
                   <button
@@ -164,6 +177,17 @@ class JavalabView extends React.Component {
           </div>
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
+    );
+  }
+
+  render() {
+    return this.state.loading ? (
+      <div className="loading" />
+    ) : this.state.loadSuccess ? (
+      this.renderJavalab()
+    ) : (
+      // TODO: improve error messaging/styling
+      <div>Sorry, we encountered an error</div>
     );
   }
 }
