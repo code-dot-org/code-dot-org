@@ -83,7 +83,6 @@ class Vocabulary < ApplicationRecord
     return if key
     key = common_sense_media ? "#{word}_csm" : word
     key = Vocabulary.sanitize_key(key)
-    key = Vocabulary.uniquify_key(key, course_version.id)
     self.key = key
   end
 
@@ -100,6 +99,10 @@ class Vocabulary < ApplicationRecord
   # achieve this through basic guess-and-check; simply append an
   # arbitrary incrementable value, and increment it until we
   # find one that works.
+  #
+  # NOTE that this is not currently used in production; it's
+  # currently only used by the ScriptSeedTest, to deal with
+  # the complex seeding logic used in that test.
   def self.uniquify_key(key, course_version_id)
     new_key = key.dup
     suffix = 'a'

@@ -314,9 +314,11 @@ module Services
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.vocabularies.first.update!(definition: 'updated definition')
+        key = Vocabulary.sanitize_key("#{lesson.name}-vocab-3")
+        key = Vocabulary.uniquify_key(key, script.course_version.id)
         lesson.vocabularies.create(
           word: 'new word',
-          key: "#{lesson.name}-vocab-3",
+          key: key,
           definition: "new definition",
           course_version: script.course_version
         )
