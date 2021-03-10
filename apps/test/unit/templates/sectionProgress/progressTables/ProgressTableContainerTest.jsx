@@ -1,9 +1,6 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import {Provider} from 'react-redux';
-import {createStore, combineReducers} from 'redux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {shallow} from 'enzyme';
 import {UnconnectedProgressTableContainer as ProgressTableContainer} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
@@ -40,23 +37,8 @@ const DEFAULT_PROPS = {
 };
 
 const setUp = (overrideProps = {}) => {
-  const store = createStore(
-    combineReducers({
-      sectionProgress
-    }),
-    {
-      sectionProgress: {
-        showSectionProgressDetails: false
-      }
-    }
-  );
-
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return mount(
-    <Provider store={store}>
-      <ProgressTableContainer {...props} />
-    </Provider>
-  );
+  return shallow(<ProgressTableContainer {...props} />);
 };
 
 describe('ProgressTableContainer', () => {
