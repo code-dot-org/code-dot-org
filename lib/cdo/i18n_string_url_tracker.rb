@@ -67,7 +67,9 @@ class I18nStringUrlTracker
     url = normalize_url(url)
     return unless string_key && url && source
 
-    add_to_buffer(string_key, url, source)
+    # Reverse the URL encoding on special characters so the human readable characters are logged.
+    logged_url = CGI.unescape(url)
+    add_to_buffer(string_key, logged_url, source)
   end
 
   private
