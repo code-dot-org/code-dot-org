@@ -59,6 +59,16 @@ module ScriptConstants
       EXPRESS_2020_NAME = 'express-2020'.freeze,
       PRE_READER_EXPRESS_2020_NAME = 'pre-express-2020'.freeze,
     ],
+    csf_2021: [
+      COURSEA_2021_NAME = 'coursea-2021'.freeze,
+      COURSEB_2021_NAME = 'courseb-2021'.freeze,
+      COURSEC_2021_NAME = 'coursec-2021'.freeze,
+      COURSED_2021_NAME = 'coursed-2021'.freeze,
+      COURSEE_2021_NAME = 'coursee-2021'.freeze,
+      COURSEF_2021_NAME = 'coursef-2021'.freeze,
+      EXPRESS_2021_NAME = 'express-2021'.freeze,
+      PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
@@ -119,6 +129,14 @@ module ScriptConstants
       CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
       CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
     ],
+    csd_2021: [
+      CSD1_2021_NAME = 'csd1-2021'.freeze,
+      CSD2_2021_NAME = 'csd2-2021'.freeze,
+      CSD3_2021_NAME = 'csd3-2021'.freeze,
+      CSD4_2021_NAME = 'csd4-2021'.freeze,
+      CSD5_2021_NAME = 'csd5-2021'.freeze,
+      CSD6_2021_NAME = 'csd6-2021'.freeze,
+    ],
     csd_2020: [
       CSD1_2020_NAME = 'csd1-2020'.freeze,
       CSD2_2020_NAME = 'csd2-2020'.freeze,
@@ -152,6 +170,18 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
+    csp_2021: [
+      CSP1_2021_NAME = 'csp1-2021'.freeze,
+      CSP2_2021_NAME = 'csp2-2021'.freeze,
+      CSP3_2021_NAME = 'csp3-2021'.freeze,
+      CSP4_2021_NAME = 'csp4-2021'.freeze,
+      CSP5_2021_NAME = 'csp5-2021'.freeze,
+      CSP6_2021_NAME = 'csp6-2021'.freeze,
+      CSP7_2021_NAME = 'csp7-2021'.freeze,
+      CSP8_2021_NAME = 'csp8-2021'.freeze,
+      CSP9_2021_NAME = 'csp9-2021'.freeze,
+      CSP10_2021_NAME = 'csp10-2021'.freeze,
+    ].freeze,
     csp_2020: [
       CSP1_2020_NAME = 'csp1-2020'.freeze,
       CSP2_2020_NAME = 'csp2-2020'.freeze,
