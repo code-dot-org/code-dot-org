@@ -1,17 +1,14 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert, expect} from '../../../util/reconfiguredChai';
-import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
-import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {UnconnectedStudentLessonOverview as StudentLessonOverview} from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 import {
   fakeStudentAnnouncement,
-  fakeTeacherAndStudentAnnouncement,
-  fakeTeacherAnnouncement
+  fakeTeacherAndStudentAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
 
-describe('LessonOverview', () => {
+describe('StudentLessonOverview', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
@@ -38,32 +35,24 @@ describe('LessonOverview', () => {
         },
         key: 'lesson-1',
         position: 1,
-        lockable: false,
         displayName: 'Lesson 1',
         overview: 'Lesson Overview',
-        purpose: 'The purpose of the lesson is for people to learn',
-        preparation: '- One',
-        assessmentOpportunities: 'Assessment Opportunities Details',
-        resources: {
-          Teacher: [
-            {
-              key: 'teacher-resource',
-              name: 'Teacher Resource',
-              url: 'fake.url',
-              type: 'Slides'
-            }
-          ],
-          Student: [
-            {
-              key: 'student-resource',
-              name: 'Student Resource',
-              url: 'fake.url',
-              download_url: 'download.fake.url',
-              type: 'Activity Guide'
-            }
-          ]
-        },
-        objectives: [{id: 1, description: 'what students will learn'}],
+        resources: [
+          {
+            key: 'student-resource',
+            name: 'Student Resource',
+            url: 'fake.url',
+            download_url: 'download.fake.url',
+            type: 'Activity Guide'
+          },
+          {
+            key: 'all-resource',
+            name: 'All Resource',
+            url: 'fake.url',
+            download_url: 'download.fake.url',
+            type: 'Activity Guide'
+          }
+        ],
         vocabularies: [
           {
             key: 'Algorithm',
@@ -80,13 +69,12 @@ describe('LessonOverview', () => {
       },
       activities: [],
       announcements: [],
-      viewAs: ViewType.Teacher,
       isSignedIn: true
     };
   });
 
   it('renders default props', () => {
-    const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
     expect(navLink.props().href).to.contain('/s/unit-1');
     expect(navLink.contains('< Unit 1')).to.be.true;
@@ -99,46 +87,26 @@ describe('LessonOverview', () => {
     expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
       'Lesson Overview'
     );
-    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
-      'The purpose of the lesson is for people to learn'
-    );
-    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain(
-      'Assessment Opportunities Details'
-    );
-    expect(enhancedSafeMarkdowns.at(3).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 
-    // The first contains the objective
+    // The first contains the vocabulary
     expect(inlineMarkdowns.at(0).props().markdown).to.contain(
-      'what students will learn'
-    );
-    // The second contains the vocabulary
-    expect(inlineMarkdowns.at(1).props().markdown).to.contain(
       '**Algorithm** - A list of steps to finish a task.'
     );
-
-    expect(wrapper.find('LessonAgenda').length).to.equal(1);
-  });
-
-  it('renders correct number of activities', () => {
-    const wrapper = shallow(
-      <LessonOverview {...defaultProps} activities={sampleActivities} />
-    );
-    expect(wrapper.find('Activity').length).to.equal(1);
   });
 
   it('has no announcements if none provided', () => {
-    const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
-  it('has provided teacher announcements if necessary', () => {
+  it('has student announcements', () => {
     const wrapper = shallow(
-      <LessonOverview
+      <StudentLessonOverview
         {...defaultProps}
         announcements={[
-          fakeTeacherAnnouncement,
+          fakeStudentAnnouncement,
           fakeTeacherAndStudentAnnouncement
         ]}
       />
@@ -146,25 +114,22 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
   });
 
-  it('has student announcement if viewing as student', () => {
-    const wrapper = shallow(
-      <LessonOverview
-        {...defaultProps}
-        viewAs={ViewType.Student}
-        announcements={[fakeStudentAnnouncement]}
-      />
-    );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
+  it('displays the student resources', () => {
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
+    const resourceSection = wrapper.find('#resource-section');
+    assert.equal(resourceSection.find('ul').length, 1);
+    assert.equal(resourceSection.find('li').length, 2);
   });
 
-  it('displays the resources', () => {
-    const wrapper = shallow(<LessonOverview {...defaultProps} />);
-    const resourceSection = wrapper.find('#resource-section');
-    assert.equal(resourceSection.find('ul').length, 2);
+  it('does not display the resources section if there are no student resources', () => {
+    let myProps = defaultProps;
+    myProps.lesson.resources = [];
+    const wrapper = shallow(<StudentLessonOverview {...myProps} />);
+    assert.equal(wrapper.find('#resource-section').length, 0);
   });
 
   it('displays the introduced code', () => {
-    const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const codeSection = wrapper.find('#unit-test-introduced-code');
     expect(codeSection.containsMatchingElement(<a>playSound</a>)).to.be.true;
   });
@@ -173,7 +138,7 @@ describe('LessonOverview', () => {
     const newDefaultProps = _.cloneDeep(defaultProps);
     newDefaultProps.lesson.programmingExpressions = [];
 
-    const wrapper = shallow(<LessonOverview {...newDefaultProps} />);
+    const wrapper = shallow(<StudentLessonOverview {...newDefaultProps} />);
     assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
   });
 });
