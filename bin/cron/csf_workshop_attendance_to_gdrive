@@ -34,8 +34,10 @@ def get_rows
     ]
   ]
 
+  subjects = [Pd::SharedWorkshopConstants::SUBJECT_CSF_101, Pd::SharedWorkshopConstants::SUBJECT_CSF_201]
+
   Pd::Workshop.
-    where(subject: Pd::SharedWorkshopConstants::SUBJECT_CSF_101).
+    where(subject: subjects).
     scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
     scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).find_each do |workshop|
       results << [

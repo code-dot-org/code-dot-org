@@ -292,7 +292,9 @@ Dashboard::Application.routes.draw do
     get 'instructions', to: 'scripts#instructions'
 
     ## TODO: Once we move levels over to /lessons as well combine the routing rules
-    resources :lessons, only: [:show], param: 'position'
+    resources :lessons, only: [:show], param: 'position' do
+      get 'student', to: 'lessons#student_lesson_plan'
+    end
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
@@ -717,8 +719,8 @@ Dashboard::Application.routes.draw do
 
       post 'ml_models/save', to: 'ml_models#save'
       get 'ml_models/names', to: 'ml_models#user_ml_model_names'
-      get 'ml_models/metadata/:model_id', to: 'ml_models#user_ml_model_metadata'
       get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
+      get 'ml_models/:model_id/metadata', to: 'ml_models#user_ml_model_metadata'
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
