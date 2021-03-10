@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import FormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FormEditorManager';
+import FoormFormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormEditorManager';
 import {
   populateCodeMirror,
   resetCodeMirror,
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
   ReactDOM.render(
     <Provider store={store}>
-      <FormEditorManager
+      <FoormFormEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         categories={scriptData.formCategories}

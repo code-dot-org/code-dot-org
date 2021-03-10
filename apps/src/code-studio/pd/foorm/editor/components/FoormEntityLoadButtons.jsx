@@ -9,7 +9,7 @@ import {
   setLastSavedQuestions
 } from '../foormEditorRedux';
 
-class FoormLoadButtons extends React.Component {
+class FoormEntityLoadButtons extends React.Component {
   static propTypes = {
     resetCodeMirror: PropTypes.func,
     resetSelectedData: PropTypes.func,
@@ -80,4 +80,4 @@ export default connect(
     setLastSavedQuestions: questions =>
       dispatch(setLastSavedQuestions(questions))
   })
-)(FoormLoadButtons);
+)(FoormEntityLoadButtons);
