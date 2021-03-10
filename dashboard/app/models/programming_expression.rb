@@ -9,6 +9,7 @@
 #  programming_environment_id :bigint           not null
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
+#  key                        :string(255)      not null
 #
 # Indexes
 #
@@ -20,5 +21,9 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_edit
     {key: name, name: name, programmingEnvironmentName: programming_environment.name}
+  end
+
+  def summarize_for_lesson_show
+    {name: name, link: "/docs/#{programming_environment.name}/#{key}/"}
   end
 end

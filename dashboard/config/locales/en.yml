@@ -581,6 +581,7 @@ en:
     tos_short: 'Terms'
     tos: 'Terms of Service'
     privacy: 'Privacy Policy'
+    privacy_updated: 'Privacy Policy (updated)'
     secure: 'Secure Version'
     report_abuse: 'Report Abuse'
     built_on_code_studio: 'Built on Code Studio'

@@ -7,10 +7,14 @@ curriculum_umbrella 'CSF'
 is_course true
 is_migrated true
 
-lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson_group 'lessonGroup-6', display_name: 'Digital Citizenship'
+lesson 'lesson-1', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
+level 'PowerOfWords-Unplugged_2021', progression: 'Power of Words - Unplugged Activity'
+
 lesson 'lesson-5', display_name: 'Password Power-Up', has_lesson_plan: true
 level 'csf_password_power-up_2021'
 
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming-Unplugged_2021', progression: 'Graph Paper Programming - Unplugged Activity'
 
@@ -214,8 +218,4 @@ lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
 level 'courseD_project_exemplars_2021', progression: 'Example projects'
 level 'courseD_EOC_2021', progression: 'Create your project'
-
-lesson_group 'lessonGroup-6', display_name: 'Digital Citizenship'
-lesson 'lesson-1', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
-level 'PowerOfWords-Unplugged_2021', progression: 'Power of Words - Unplugged Activity'
 
