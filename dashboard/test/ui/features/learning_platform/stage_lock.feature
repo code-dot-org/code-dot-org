@@ -2,6 +2,7 @@ Feature: Stage Locking
 
 Background:
   Given I create an authorized teacher-associated student named "bobby"
+  Given I create an authorized teacher-associated student named "billy"
 
 @eyes
 Scenario: Stage Locking Dialog
@@ -91,3 +92,54 @@ Scenario: Lock settings for students
   # in the future we will want the unsubmit button to be hidden instead.
   Then element ".unsubmitButton" is visible
 
+Scenario: Lock settings for students who never submit
+  # initially locked for student in summary view
+
+  When I am on "http://studio.code.org/s/allthethings"
+  And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
+
+  When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/1"
+  And I wait until element "#level-body" is visible
+  Then element "#locked-stage:contains(stage is currently locked)" is visible
+
+  # teacher unlocks
+
+  And I sign in as "Teacher_billy"
+  And I am on "http://studio.code.org/s/allthethings"
+  # Wait until detail view loads
+  And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
+  And I open the stage lock dialog
+  And I unlock the stage for students
+  And I wait until element ".modal-backdrop" is gone
+
+  # now unlocked/not tried for student
+
+  When I sign in as "billyy"
+  And I am on "http://studio.code.org/s/allthethings"
+  And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
+  Then I verify progress for stage 31 level 1 is "not_tried"
+  Then I verify progress for stage 31 level 2 is "not_tried"
+  Then I verify progress for stage 31 level 3 is "not_tried"
+  Then I verify progress for stage 31 level 4 is "not_tried"
+
+  # student does not submit assessment before teacher locks again
+
+  And I sign in as "Teacher_billy"
+  And I am on "http://studio.code.org/s/allthethings"
+  # Wait until detail view loads
+  And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
+  And I open the stage lock dialog
+  And I lock the stage for students
+  And I wait until element ".modal-backdrop" is gone
+
+  # now locked/not submitted for student
+
+  When I sign in as "billy"
+  And I am on "http://studio.code.org/s/allthethings"
+  And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  Then I verify progress for stage 31 level 1 is "not_started"
+  Then I verify progress for stage 31 level 2 is "not_started"
+  Then I verify progress for stage 31 level 3 is "not_started"
+  Then I verify progress for stage 31 level 4 is "not_started"

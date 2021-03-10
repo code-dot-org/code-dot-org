@@ -143,6 +143,10 @@ class UserLevel < ApplicationRecord
     unlocked_at && unlocked_at < AUTOLOCK_PERIOD.ago
   end
 
+  def locked?
+    return true unless unlocked_at && unlocked_at < AUTOLOCK_PERIOD.ago
+  end
+
   def locked?(stage)
     return false unless stage.lockable?
     return false if user.authorized_teacher?
