@@ -20,15 +20,15 @@ $(document).ready(function() {
   const store = getStore();
 
   const scriptData = getScriptData('props');
-  const namesAndVersions = scriptData.namesAndVersions;
-  getStore().dispatch(setAvailableEntities(namesAndVersions));
+  const formNamesAndVersions = scriptData.formNamesAndVersions;
+  getStore().dispatch(setAvailableEntities(formNamesAndVersions));
 
   ReactDOM.render(
     <Provider store={store}>
       <FormEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
-        categories={scriptData.categories}
+        categories={scriptData.formCategories}
       />
     </Provider>,
     document.getElementById('editor-container')
