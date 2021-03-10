@@ -27,9 +27,9 @@ class ProgrammingEnvironment < ApplicationRecord
     }
   end
 
-  def self.seed_all(blob="config/programming_environments/*.json")
+  def self.seed_all(glob="config/programming_environments/*.json")
     removed_records = all.pluck(:name)
-    Dir.glob(Rails.root.join(blob)).each do |path|
+    Dir.glob(Rails.root.join(glob)).each do |path|
       removed_records -= [ProgrammingEnvironment.seed_record(path)]
     end
     where(name: removed_records).destroy_all
