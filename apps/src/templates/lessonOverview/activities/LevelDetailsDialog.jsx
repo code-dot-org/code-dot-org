@@ -20,7 +20,7 @@ const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
 const VIDEO_MODAL_WIDTH = 700;
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
-const MAX_LEVEL_HEIGHT = 400;
+const MAX_LEVEL_HEIGHT = 550;
 
 const styles = {
   sublevelCards: {
@@ -111,7 +111,9 @@ class LevelDetailsDialog extends Component {
             overflowY: 'scroll',
             height: this.state.height - HEADER_HEIGHT
           }}
-          setInstructionsRenderedHeight={height => this.setState({height})}
+          setInstructionsRenderedHeight={height =>
+            this.setState({height: Math.min(height, MAX_LEVEL_HEIGHT)})
+          }
           setInstructionsMaxHeightNeeded={maxHeight =>
             this.setState({maxHeight})
           }
@@ -195,16 +197,17 @@ class LevelDetailsDialog extends Component {
     const {scriptLevel} = this.props;
     const level = this.state.selectedLevel;
     const preview = this.getComponentContent(level);
+    const levelSpecificStyling =
+      level.type === 'StandaloneVideo'
+        ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
+        : {};
     return (
       <BaseDialog
         isOpen={true}
         handleClose={this.props.handleClose}
         fullWidth={level.type !== 'StandaloneVideo'}
-        style={
-          level.type === 'StandaloneVideo'
-            ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-            : {}
-        }
+        style={{padding: 15, ...levelSpecificStyling}}
+        useUpdatedStyles
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
