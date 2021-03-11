@@ -1769,3 +1769,30 @@ bn:
               display_name: ভূমিকা
             lessonGroup-3:
               display_name: চলকগুলো
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: ভূমিকা
+            Loops:
+              key: চক্র
+              name: চক্র
+            Events:
+              key: ঘটনাবলী
+              name: ঘটনাবলী
+            Conditionals:
+              key: শর্তযুক্ত
+              name: শর্তযুক্ত
+            Functions:
+              key: ফাংশনগুলি
+              name: ফাংশনগুলি
+            Variables:
+              key: চলকগুলো
+              name: চলকগুলো
+            For Loops:
+              key: ফর লুপ
+              name: ফর লুপ
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: ভূমিকা
+            Introduction:
+              display_name: ভূমিকা

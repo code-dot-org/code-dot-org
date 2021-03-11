@@ -1,5 +1,6 @@
 import React from 'react';
 import JavalabConsole from './JavalabConsole';
+import {loadFiles} from './JavalabFileManagement';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
@@ -65,12 +66,30 @@ const style = {
 class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
+    onContinue: PropTypes.func.isRequired,
+    suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func
   };
+
+  state = {
+    loading: true,
+    loadSuccess: null
+  };
+
+  componentDidMount() {
+    this.props.onMount();
+    loadFiles(
+      /* success */
+      () => this.setState({loading: false, loadSuccess: true}),
+      /* failure */
+      () => this.setState({loading: false, loadSuccess: false}),
+      this.props.suppliedFilesVersionId
+    );
+  }
 
   run = () => {
     this.props.appendOutputLog('Running program...');
@@ -82,7 +101,7 @@ class JavalabView extends React.Component {
     this.props.appendOutputLog('Compiled!');
   };
 
-  render() {
+  renderJavalab() {
     return (
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
@@ -106,6 +125,26 @@ class JavalabView extends React.Component {
             <div style={style.editorAndConsole}>
               <JavalabEditor />
               <div style={style.consoleAndButtons}>
+                <div style={style.buttons}>
+                  <button
+                    type="button"
+                    style={style.singleButton}
+                    onClick={() => {}}
+                  >
+                    <FontAwesome icon="stop" className="fa-2x" />
+                    <br />
+                    Stop
+                  </button>
+                  <button
+                    type="button"
+                    style={style.singleButton}
+                    onClick={this.props.onContinue}
+                  >
+                    <FontAwesome icon="check" className="fa-2x" />
+                    <br />
+                    Continue
+                  </button>
+                </div>
                 <div style={style.buttons}>
                   <button
                     type="button"
@@ -134,6 +173,17 @@ class JavalabView extends React.Component {
           </div>
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
+    );
+  }
+
+  render() {
+    return this.state.loading ? (
+      <div className="loading" />
+    ) : this.state.loadSuccess ? (
+      this.renderJavalab()
+    ) : (
+      // TODO: improve error messaging/styling
+      <div>Sorry, we encountered an error</div>
     );
   }
 }

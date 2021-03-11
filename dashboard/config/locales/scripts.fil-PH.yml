@@ -18946,18 +18946,53 @@ fil:
             What is a Computer?:
               key: Ano ang isang Kompyuter?
               name: Ano ang isang Kompyuter?
+              description_teacher: Sa araling ito, ang mga estudyante ay magkakaroon
+                ng panimulang kahulugan ng isang kompyuter. Para masimulan ang aralin,
+                ang klase ay mag-iisip sa mga posibleng kahulugan para sa isang kompyuter
+                at ilagay ang mga resulta sa pag-iisip na ito sa pisara. Sunod nito,
+                ang mga estudyante ay magtatrabaho sa isang grupo para ayusin ang
+                mga larawan kung "isang kompyuter" ba o "hindi isang kompyuter" sa
+                poster na papel. Ang mga grupo ay maglagay sa kanilang mga poster
+                sa paligid ng silid at madaliang ipaliwanag ang nag-udyok sa kanila
+                na pumili sa ilang napakahirap na mga kategorisasyon. Ang guro ay
+                magpapakilala din ng isang kahulugan ng isang kompyuter at pahintulutan
+                ang mga estudyante na bumago sa kanilang mga poster ayon sa bagong
+                kahulugan.
             Input and Output:
               key: Input at Output
               name: Input at Output
             Processing:
               key: Pagproseso
               name: Pagproseso
+              description_teacher: Ang mga estudyante ay kukumpleto sa dalawang unplugged
+                na mga gawain sa pag-aayos ng baraha para tuklasin ang kahulugan ng
+                pagproseso at ang relasyon nito sa paglutas ng problema. Ang una ay
+                mayroong ilang mga kondisyon at ginagamit para ipakilala ang high-level
+                na kahulugan ng pagproseso. Ang sunod ay nagpapakila sa isang karadagang
+                mga kondisyon para mapuwersa ang mga estudyante na makagawa ng algoritmo
+                na palaging matagumpay ang pagproseso sa mga baraha. Ang estudyante
+                ay palaging mag-develop, mag-test, at magbahagi ng kanilang mga algoritmo
+                sa kanilang mga kamag-aral. Isang wrap-up na diskusyon ay nakapagpaisip
+                sa mga estudyante tungkol sa iba't ibang tipo ng paglutas ng problema
+                na nagagamit nila sa mga gawaing ito at ang halaga ng pagbuo ng isang
+                algoritmo para lutasin ang problema.
             Storage:
               key: Imbakan
               name: Imbakan
             Project - Propose an App:
               key: Proyekto - Pagmungkahi ng App
               name: Proyekto - Pagmungkahi ng App
+              description_teacher: Para tapusin ang kanilang pag-aaral sa proseso
+                ng paglutas ng problema at ang input/output/store/proseso na modelo
+                ng isang kompyuter, ang mga estudyante ay magmumungkahi ng isang app
+                na dinisenyo para lumutas ng problema sa totoong buhay. Ang proyektong
+                ito ay gagawin sa loob ng iilang mga araw at magresulta sa paglikha
+                ng mga estudyante ng isang poster na nagpapakita sa mga katangian
+                ng kanilang app na ipapakita nila sa kanilang mga kamag-aral. Ang
+                gabay ng proyekto ay nagbibigay ng sunod-sunod na mga instruksyon
+                para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
+                mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
+                pero maaari rin itong gawin na mag-isa lang.
           lesson_groups:
             cspSurvey:
               display_name: Pagsisiyasat
@@ -18987,6 +19022,16 @@ fil:
             Styling Text with CSS:
               key: Pag-style ng Teksto gamit ang CSS
               name: Pag-style ng Teksto gamit ang CSS
+              description_teacher: "Ang araling ito ay nagpapakilala sa CSS bilang
+                pamamaran para malagyan ng istilo ang mga elemento na nasa pahina.
+                Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para
+                sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na
+                nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho
+                sa isang HTML na page tungkol sa mga Guiness World Record holders,
+                magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
+                antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
+                sa mga istilo para sa mga teksto na elemento sa kanilang personal
+                na web na pahina.\r\n\r\n"
             Intellectual Property:
               key: Intelektwal na Pag-aari
               name: Intelektwal na Pag-aari
@@ -18996,6 +19041,15 @@ fil:
             Styling Elements with CSS:
               key: Pag-istilo sa mga Elemento gamit ang CSS
               name: Pag-istilo sa mga Elemento gamit ang CSS
+              description_teacher: Ang araling ito ay nagpapatuloy sa pagpapakilala
+                sa mga katangian ng istilo ng CSS, ngayon ay mas bigyan nating pansin
+                ang mga hindi-teksto na mga elemento. Ang mga estudyante ay magsisimula
+                sa pamamagitan ng pagtingin sa isang website tungkol sa Desserts of
+                the Worlds. Sila ay mag-imbestiga at mag-bago sa mga bagong CSS na
+                mga istilo sa website na ito. Pagkatapos magtrabaho sa Desserts na
+                pahina, ang mga estudyante ay gagamit sa kanilang kaalaman sa mga
+                bagong katangian ng CSS para makagawa pa na ibang pag-istilo sa kanilang
+                mga personal na website.
           lesson_groups:
             cspSurvey:
               display_name: Pagsisiyasat
@@ -19013,12 +19067,26 @@ fil:
             Programming for Entertainment:
               key: Pag-program para sa Libangan
               name: Pag-program para sa Libangan
+              description_student: Ang klase ay hinihikayat na isaalang-alang ang
+                mga "problema" ng pagkainip at pagpapahayag sa sarili, at para pag-isipan
+                kung paano nila haharapin ang ganoong mga problema sa kanilang sariling
+                buhay. Mula doon, sila ay tutuklas kung paano ang Computer Sciece
+                sa pangkalahatag, at lalo na sa pagprogram, may ginagampanan na papel
+                sa tiyak na uri ng paglilibang o bilang isang sasakyan sa pagpapahayag
+                ng sarili.
             Plotting Shapes:
               key: Pag-plot ng mga Hugis
               name: Pag-plot ng mga Hugis
             Drawing in Game Lab:
               key: Pagguhit sa Game Lab
               name: Pagguhit sa Game Lab
+              description_teacher: Ang mga estudyante ay ipapakilala sa Game Lab,
+                ang pang-program na kapaligiran para sa yunit na ito, at magsimulang
+                gamitin ito para iposisyon ang mga hugis sa screen. Matutunan nila
+                ang mga pangunahing konsepto sa pagsunod-sunod at pagdedebug, pati
+                na rin ang iilang mga simpleng mga utos. Sa bandang huli ng aralin,
+                ang mga estudyante ay makaka-program sa mga larawan gaya ng ginawa
+                nila sa pangdrowing na kagamitan sa nakaraang aralin.
             Variables:
               key: Mga variable
               name: Mga variable
@@ -19031,6 +19099,19 @@ fil:
             The Draw Loop:
               key: Ang Draw na Loop
               name: Ang Draw na Loop
+              description_teacher: Sa araling ito, ang mga estudyante ay ipapakilala
+                sa draw na loop, isa sa pinakasentro ng pang-program na pananaw sa
+                Game Lab. Para masimulan ang aralin, ang mga estudyante ay titingin
+                sa iilang pisikal na mga flipbooks para makita na ang pagkaroon ng
+                maraming mga frame na may iba't ibang larawan ay lilikha ng impresyon
+                ng paggalaw. Ang mga estudyante ay manonood ng isang video na nagpapaliwanag
+                kung paano ang draw loop nakakatulong sa Game Lab na maglikha ng parehang
+                impresyon sa kanilang mga programa. Ang mga estudyante ay magsama-sama
+                sa mga draw loop na may mga random na numero para imanipula ang ilang
+                mga simpleng mga animasyon na mga dot at pagkatapos ang mga may sprites
+                naman. Sa huli ng aralin, ang mga estudyante ay gagamit sa mga natutunan
+                nila para ma-update ang eksena ng kanilang sprite mula sa nakaraang
+                aralin.
             Sprite Movement:
               key: Galaw ng mga Sprite
               name: Galaw ng mga Sprite
@@ -19046,6 +19127,13 @@ fil:
             Velocity:
               key: Belosidad
               name: Belosidad
+              description_teacher: Pagkatapos ng isang maikling pagbalik-aral kung
+                paano ginagamit ang counter pattern para mapagalaw ang mga sprites
+                sa nakaraang aralin, ang mga estudyante ay ipapakilala sa mga katangian
+                na direktang nagtakda sa kaliksihan at bilis ng pag-ikot. Habang ginagamit
+                nila ang mga bagong katangian na ito sa iba't ibang pamamaraan, mabubuo
+                nila ang mga kakayahan na kakailanganin nila para makalikha ng isang
+                pangunahing side scroller na laro.
             Collision Detection:
               key: Pagtukoy sa mga Banggaan
               name: Pagtukoy sa mga Banggaan
@@ -19058,6 +19146,20 @@ fil:
             Functions:
               key: Mga function
               name: Mga function
+              description_teacher: Ang mga estudyante ay matututo kung pano lumikha
+                ng mga functions para maayos ang kanilang code, gawin itong mas madaling
+                mabasa, at matanggal ang mga inuulit na mga bloke ng code. Ang isang
+                unplugged na pangpapainit ang nagtutuklas kung paano ang mga direksyon
+                sa iba't ibang mga antas ng detalye ang maaaring nakakatulong depende
+                sa konteksto. Ang mga estudyante ay matututo na ang mataas na antas
+                o mas nilalahat na mga hakbang ang nagpapadaling maintindihan at mangatwiran
+                sa mga hakbang. Pagkatapos ang estudyante ay matututong lumikha ng
+                mga functionsa Game Lab. Sila ay gagamit ng mga function para magtanggal
+                ng mga mataas na mga bloke ng code mula sa kanilang draw loop at para
+                palitan ang mga paulit-ulit na mga piraso ng code sa isang function.
+                Sa huli ng aralin, ang mga estudyante ay gagamit sa mga kakayahang
+                ito para mag-ayos at magdagdag ng functionality sa huling bersyon
+                ng kanilang side scroller na laro.
             The Game Design Process:
               key: Ang Proseso ng Pagdisenyo ng Laro
               name: Ang Proseso ng Pagdisenyo ng Laro
@@ -19088,6 +19190,20 @@ fil:
             Analysis of Design:
               key: Pagsusuri ng Disenyo
               name: Pagsusuri ng Disenyo
+              description_teacher: Upang masimulan ang yunit na inilaan para sa grupong
+                paglutas ng problema at paggamit ng mga produkto para sa ibang mga
+                gumagamit, ang mga estudyante ay magsisimula sa pagsisiyasat sa disenyo
+                ng sari-saring mga tsarera. Ang mga estudyante ay magsusuri sa bawat
+                tsarera, magsusubok na matukoy kung paano ang partikular na pangangailangan
+                ng gumagamit ang nagdikta sa disenyo nito. Sa pamamagitan ng pagsaalang-alang
+                sa mga pagpipilian sa disenyo, ang pagsubok na itugma ang bawat teapot
+                sa potensyal na gumagamit, ang mga estudyante ay magsimulang makita
+                kung paano ang pagkuha ng paraan na naka-sentro sa gumagamit para
+                makapag-disenyo ng mga produkto (pareho sa pisikal at sa digital)
+                ay makakagawa sa mga produktong iyon para maging mas makabuluhan at
+                mas magagamit. Para tapusin ang gawain, ang mga estudyante ay tatanungin
+                na magmungkahi ng ilang mga pagbabago sa isa sa mga tsarera para maging
+                mas kapaki-pakibang at mas magagamit pa ito.
             Understanding Your User:
               key: Pag-uunawa sa Iyong Gumagamit
               name: Pag-uunawa sa Iyong Gumagamit
@@ -19100,6 +19216,12 @@ fil:
             Feedback and Testing:
               key: Feedback at Pagsubok
               name: Feedback at Pagsubok
+              description_student: Ang mga gumagamit ay nagsusubok ng app, at sila
+                ay nagkakaroon ng maraming mga feedback para sa developer. Ang klase
+                ay nangangailangang titingin sa lahat ng mga feedback na ito, magtukoy
+                sa mga karaniwang tema at mga pangangailangan, at magsimulang magbago
+                ng prototype para mas maabot pa natin ang mga pangangailangan ng mga
+                user.
             Identifying User Needs:
               key: Pagtukoy sa mga Pangangailangan ng Gumagamit
               name: Pagtukoy sa mga Pangangailangan ng Gumagamit
@@ -19112,6 +19234,16 @@ fil:
             Market Research:
               key: Pananaliksik sa Merkado
               name: Pananaliksik sa Merkado
+              description_teacher: Sa araling ito ang mga estudyante ay mananaliksik
+                ng mga apps na katulad sa balak nilang gawin upang mas maunawaan pa
+                nila ang pangangailangan ng kanilang mga gumagamit. Ang mga estudyante
+                ay magtatrabaho sa loob ng kanilang koponan para magsaliksik ng ibang
+                mga app sa Internet, pagkatapos ay susuriin nila ang mga nakita nilang
+                kawili-wili. Sa bandang huli ng araling ito, bawat koponan ay magkakaroon
+                ng mas malinaw na ideya tungkol sa tipo ng app na gusto nilang ilikha
+                at mas pahusayin pa kung sino ang kanilang mga target na mga gumagamit.
+                Bawat koponan ay gagawa ng isang listahan ng pagbanggit sa lahat ng
+                mga app na sinuri nila para gamitin sa kanilang huling presentasyon.
             Paper Prototypes:
               key: Papel na mga Prototype
               name: Papel na mga Prototype
@@ -19162,6 +19294,31 @@ fil:
             Project - App Presentation:
               key: Proyekto - Pagpapakita ng App
               name: Proyekto - Pagpapakita ng App
+            Build a Digital Prototype:
+              description_student: Pagkatapos mag-develop, mag-test at magtipon ng
+                mga feedback sa isang papel na prototype, ang mga koponan ay lilipat
+                na ngayon sa App Lab para mabuo ang sunod na iterasyon ng kanilang
+                mga app. Ang paggamit ng drap-and-drop na Mode ng Pag-disenyo, bawat
+                miyembro ng koponan ay bubuo ng hindi bababa sa isang pahina ng app
+                ng kanilang koponan, na nagtugon sa mga feedback na natanggap sa huling
+                ikot ng pag-test.
+            Events In AppLab:
+              description_student: Ang paggamit sa mga screen na dinisenyo ng klase
+                sa nakaraang aralin, ang mga koponan ay magsama-sama sa mga screen
+                sa isang app. Ang simpleng code ay maaari ring idagdag para makagawa
+                ng mga button na mga click para maglipat sa angkop na screen.
+            Bugs and Features:
+              description_student: Gamit ang mga feedback mula sa huling yugto na
+                pagsubok, ang mga koponan ay magsisimulang magpatupad sa mga pagbabago
+                na tumutugon sa mga pangangailangan ng kanilang mga gumagamit. Bawat
+                koponan ay sumubaybay at inuuna ang mga katangian na gusto nilang
+                idagdag at ang mga bug na kailangan nilang ayusin.
+            Updating Your Prototype:
+              description_student: Gamit ang mga feedback mula sa huling yugto na
+                pagsubok, ang mga koponan ay magsisimulang magpatupad sa mga pagbabago
+                na tumutugon sa mga pangangailangan ng kanilang mga gumagamit. Bawat
+                koponan ay sumubaybay at inuuna ang mga katangian na gusto nilang
+                idagdag at ang mga bug na kailangan nilang ayusin.
             Build a Paper Prototype:
               name: Papel na mga Prototype
           lesson_groups:
@@ -19215,6 +19372,14 @@ fil:
             Keeping Data Secret:
               key: Pagiging Sekreto ng mga Datos
               name: Pagiging Sekreto ng mga Datos
+              description_teacher: Ang mga estudyante ay magkakaroon ng talakayan
+                sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang
+                mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa
+                sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol
+                sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher
+                ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman.
+                Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan
+                ng parehong pisikal at diginal na seguridad.
             Combining Representations:
               key: Pagsasama-sama ng mga Representasyon
               name: Pagsasama-sama ng mga Representasyon
@@ -19239,6 +19404,23 @@ fil:
             Automating Data Decisions:
               key: Pag-Automate ng mga Datos na mga Desisyon
               name: Pag-Automate ng mga Datos na mga Desisyon
+            Project - Make a Recommendation:
+              description_teacher: Para tapusing ang yunit na ito, ang mga estudyante
+                ay magdidisenyo ng isang makina na tagarekomenda ayon sa mga datos
+                na nakolekta nila at nasuri mula sa kanilang mga kamag-aral. Pagkatapos
+                tingnan ang isang halimbawa ng isang app na taga-rekomenda, ang mga
+                estudyante ay susunod sa isang gabay sa proyekto para makompleto ang
+                iilang araw na gawaing ito. Sa unang iilang mga hakbang, ang mga estudyante
+                ay pipili kung ano ang opsyon na gusto nilang piliin ng gumagamit,
+                kung anong mga datos ang kakailanganin nila para makabigay ng rekomendasyon,
+                maglikha ng surbey, at magkolekta ng mga impormasyon tungkol sa mga
+                napili ng kanilang mga kamag-aral. Pagkatapos ay susuriin nila ang
+                mga datos at gamitin kung ano ang natutunan nila para maglikha ng
+                algoritmo para sa rekomendasyon. Sa huli, gagamitin nila ang kanilang
+                mga algoritmo para makagawa ng mga rekomendasyon sa iilang mga kamag-aral.
+                Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit
+                anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda
+                ng presentasyon sa klase.
           lesson_groups:
             csd5_1:
               display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
@@ -19397,12 +19579,61 @@ fil:
             Learn to Drag and Drop:
               key: Matutong Mag-Drag at Mag-Drop
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
             'Programming: Happy Maps':
               key: 'Pag-Program: Masayang mga Mapa'
               name: Happy Maps
+              description_teacher: Ang tulay mula sa mga algoritmo papunta sa pag-program
+                ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa
+                kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod
+                na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa
+                mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng
+                madaliang code.
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
             Programming with Rey and BB-8:
               key: Pag-Program kasama sina Rey at BB-8
               name: Pag-Program kasama sina Rey at BB-8
+            'Loops: Happy Loops':
+              description_teacher: Ang mga loop ay lubhang nakakatulong at makapangyarihan
+                na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong
+                ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin
+                ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga
+                problema.
+            Loops in Collector:
+              description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga
+                instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok
+                sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta
+                ng mga kayamanan sa Code.org.
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
+                gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
+                pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
+                ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga
+                kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
+                ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
+                ng kanilang sariling mga larawan gamit ang mga loop.
+            'Events: The Big Event':
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag
+                ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na
+                ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto
+                kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
+            Events in Play Lab:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
+                sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
+                na natutunan nila para lumikha ng isang laro na naka-animate. Oras
+                na para maging malikhain at gumawa ng istorya sa Play Lab!
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
@@ -19422,6 +19653,13 @@ fil:
             Move It, Move It:
               key: Galawin ito, Galawin ito
               name: Galawin ito, Galawin ito
+            Sequencing in Maze:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
             Programming in Maze:
               key: Pag-Program sa Maze
               name: Pag-Program sa Maze
@@ -19431,6 +19669,11 @@ fil:
             Loops in Harvester:
               key: Mga Loops sa Harvester
               name: Mga Loops sa Harvester
+            'Events: The Big Event':
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag
+                ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na
+                ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto
+                kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
@@ -19488,6 +19731,9 @@ fil:
             Build a Flappy Game:
               key: Bumuo ng Flappy na Laro
               name: Bumuo ng Flappy na Laro
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Ihanda ang iyong mga kamay para sa maraming pag-code!
+                Oras na para magsimulang bumuo ng iyong proyekto.
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
@@ -19522,6 +19768,13 @@ fil:
             Build a Star Wars Game:
               key: Bumuo ng Star Wars na Laro
               name: Bumuo ng Star Wars na Laro
+              description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong
+                sariling Star Wars na laro sa araling ito.
+              description_teacher: Sa araling ito, ang mga estudyante ay magsasanay
+                sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang
+                ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star
+                Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos
+                ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
             Dance Party:
               key: Dance Party
               name: Dance Party
@@ -19546,8 +19799,16 @@ fil:
             Artist Binary:
               key: Artist na Binary
               name: Artist na Binary
+            End of Course Project:
+              description_student: Ihanda ang iyong mga kamay para sa maraming pag-code!
+                Oras na para magsimulang bumuo ng iyong proyekto.
             lesson-6:
               name: Masdan ang Hinaharap
+            lesson-1:
+              name: Ang Kapangyarihan ng mga Salita
+              description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling
+                ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng
+                sabihin online.
           lesson_groups:
             csf_events:
               display_name: Mga event
@@ -19559,6 +19820,8 @@ fil:
               display_name: Binary
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            lessonGroup-6:
+              display_name: Digital na Pagkamamamayan
         coursee-2021:
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
             kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
@@ -19568,9 +19831,26 @@ fil:
           lessons:
             Conditionals:
               key: Mga conditional
+              description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung
+                ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya
+                at mahirap na mga seryeng ito.
+              description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante
+                sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while
+                loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa
+                ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program
+                ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang
+                kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang
+                maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga
+                pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan
+                ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay
+                ay true, kung hindi magpapatakbo ito ng iba.
             Private and Personal Information:
               key: Pribado at Personal na Impormasyon
               name: Pribado at Personal na Impormasyon
+              description_student: Ang internet ay masaya at kasabik-sabik, ngunit
+                importante din na manatiling ligtas. Ang araling ito ay nagtuturo
+                sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon
+                na pribado.
             Nested Loops in Bee:
               key: Mga Naka-Nest na mga Loop sa Bee
               name: Naka-nest na mga Loops sa Maze
@@ -19583,9 +19863,27 @@ fil:
             'Functions: Songwriting':
               key: 'Mga Function: Pagsusulat ng Awit'
               name: Pagsusulat ng Awit
+              description_student: Kahit ang mga rockstar ay nangangailangan ng mga
+                kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol
+                sa mga kakayahan gamit ang mga titik mula sa mga awitin.
+              description_teacher: Isa sa mga pinakadakilang istraktura sa mundo ng
+                computer science ay ang function. Ang mga function (minsang tinatawag
+                na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin
+                nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling
+                ito ay makakatulong sa mga estudyante na likas na makakaunawa kung
+                bakit ang pagsama-sama sa mga piraso ng code sa isang function ay
+                maaaring lubhang nakakatulong na pag-uugali.
             Functions in Artist:
               key: Mga Function sa Artist
               name: Mga Function sa Artist
+              description_student: Gumawa ng kumplikadong mga drowing nang mas madali
+                gamit ang mga function!
+              description_teacher: Ang mga estudyante ay ipapakilala sa paggamit ng
+                mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha
+                at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong
+                mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng
+                mga function sa pamamagitan ng pagtawag ng isang function sa loob
+                ng isa pa.
           lesson_groups:
             ramp_up:
               display_name: Pabilisin
@@ -19619,21 +19917,88 @@ fil:
             The Power of Words:
               key: Ang Kapangyarihan ng mga Salita
               name: Ang Kapangyarihan ng mga Salita
+              description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling
+                ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng
+                sabihin online.
             Envelope Variables:
               key: Balot ng mga Variables
               name: Balot ng mga Variables
+              description_student: 'Ang mga sobre at mga variable ay mayroong isang
+                bagay na magkatulad: pareho silang maaaring humawak ng mga mahahalagang
+                mga bagay. Dito matutunan mo kung ano ang mga variables at ang mga
+                kasindak-sindak na mga bagay na magagawa nila.'
+              description_teacher: Ang mga variable ay ginagamit bilang mga placeholder
+                para sa mga halaga gaya ng mga numero o mga salita. Ang mga variable
+                ay nagbibigay daan sa napakaraming kalayaan sa pag-program. Sa halip
+                na kailangang i-type ang isang parirala ng maraming beses o kailangan
+                tandaan ang isang malabong numero, ang mga siyentista sa kompyuter
+                ay maaaring gumagamit ng mga variable para mag-reperensya sa kanila.
+                Ang araling ito ay nakakatulong para ipaliwanag kung ano ang mga variables
+                at kung paano natin maaaring gamitin ang mga ito sa napakaraming iba't
+                ibang pamamaraan. Ang ideya ng mga variable hindi isang madaling konsepto
+                na maintindihan, kaya aming inirerekomenda na maglaan ng malaking
+                oras para sa diskusyon sa dulo ng aralin.
+            Variables as Constant in Artist:
+              description_student: Huwag kalimutan ng magdala ng pagkamalikhain sa
+                klase! Sa mga palaisipang ito ikaw ay gagawa ng hindi kapani-paniwalang
+                mga drowing gamit ang mga variable.
+            Variables that Change in Artist:
+              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas
+                sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa
+                Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang
+                mga variables maaaring gamitin para madaling isulat ang mga code at
+                madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga
+                estudyante ay magtatapos sa isang libreng laro na antas para ipakita
+                kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga
+                disenyo.
             Internet:
               key: Internet
               name: The Internet
+              description_student: Nagtataka ka na ba kung paano ang mga impormasyon
+                naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling
+                ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang
+                Internet gumagana.
+              description_teacher: Kahit na maraming mga tao ang gumamit ng Internet
+                araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana.
+                Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet,
+                habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address,
+                at ang DNS.
             For Loop Fun:
               key: Saya sa For Loop
               name: Saya sa For Loop
+              description_student: Magkakaroon ka ng napakasayang pag-aaral tungkol
+                sa mga `for` loop!
+              description_teacher: 'Alam natin na ang mga loop ay nagbibigay-daan
+                sa atin para magawa ang mga bagay-bagay nang paulit-ulit, ngunit ngayon
+                ay pag-aaralan natin kung paano gumamit ng mga loop na mayroong karagdagang
+                istraktura na binuo sa loob nito. Ang mga bagong istrakturang ito
+                ay nagbibigay-daan sa mga estudyante na makalikha ng code na mas makapangyarihan
+                at mas dynamic. '
             For Loops in Bee:
               key: Mga For Loops sa Bee
               name: Mga For Loops sa Bee
+              description_student: Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay
+                sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for`
+                loop!
+              description_teacher: Nagtatampok sa Bee, ang araling ito ay nakatuon
+                sa mga for loop at gamit ang isang lumalaking variable para malutas
+                ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula
+                sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga
+                aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas
+                epektibong maglutas ng mga kumplikadong mga problema.
             For Loops in Artist:
               key: Mga Loops sa Artist
               name: Mga Loops sa Artist
+              description_student: Maghanda na sa iyong susunod na obra maestra. Dito
+                ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang
+                mga larawan.
+              description_teacher: Sa araling ito, ang mga estudyante ay patuloy na
+                magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist.
+                Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan
+                ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for
+                loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli,
+                sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling
+                sining sa libreng laro na antas.
           lesson_groups:
             ramp_up:
               display_name: Pabilisin
@@ -19645,6 +20010,8 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+            lessonGroup-8:
+              display_name: Epekto ng Pag-Compute
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga
             event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga
             pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng
@@ -19686,6 +20053,8 @@ fil:
               name: Naka-nest na mga Loop sa Frozen
             'Looking Ahead with Minecraft ':
               name: Masdan ang Hinaharap
+              description_student: Iwasan ang laba! Dito matutunan mo ang tungkol
+                sa mga kondisyonal sa mundo ng Minecraft.
             If/Else with Bee:
               key: Mga Kondisyonal sa Bee
               name: Mga Kondisyonal sa Bee
@@ -19698,12 +20067,58 @@ fil:
             Functions with Artist:
               key: Mga Function sa Artist
               name: Mga Function sa Artist
+              description_student: Gumawa ng kumplikadong mga drowing nang mas madali
+                gamit ang mga function!
+              description_teacher: Ang mga estudyante ay ipapakilala sa paggamit ng
+                mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha
+                at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong
+                mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng
+                mga function sa pamamagitan ng pagtawag ng isang function sa loob
+                ng isa pa.
+            Variables with Artist:
+              description_student: Huwag kalimutan ng magdala ng pagkamalikhain sa
+                klase! Sa mga palaisipang ito ikaw ay gagawa ng hindi kapani-paniwalang
+                mga drowing gamit ang mga variable.
+            Changing Variables with Artist:
+              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas
+                sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa
+                Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang
+                mga variables maaaring gamitin para madaling isulat ang mga code at
+                madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga
+                estudyante ay magtatapos sa isang libreng laro na antas para ipakita
+                kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga
+                disenyo.
             For Loops with Bee:
               key: Mga For Loops sa Bee
               name: Mga For Loops sa Bee
+              description_student: Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay
+                sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for`
+                loop!
+              description_teacher: Nagtatampok sa Bee, ang araling ito ay nakatuon
+                sa mga for loop at gamit ang isang lumalaking variable para malutas
+                ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula
+                sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga
+                aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas
+                epektibong maglutas ng mga kumplikadong mga problema.
             For Loops with Artist:
               key: Mga Loops sa Artist
               name: Mga Loops sa Artist
+              description_student: Maghanda na sa iyong susunod na obra maestra. Dito
+                ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang
+                mga larawan.
+              description_teacher: Sa araling ito, ang mga estudyante ay patuloy na
+                magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist.
+                Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan
+                ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for
+                loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli,
+                sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling
+                sining sa libreng laro na antas.
+            Alien Dance Party:
+              description_student: Magsanay sa paggawa ng mga laro para ibahagi sa
+                iyong mga kaibigan at pamilya.
+            End of Course Project:
+              description_student: Ihanda ang iyong mga kamay para sa maraming pag-code!
+                Oras na para magsimulang bumuo ng iyong proyekto.
           lesson_groups:
             csf_loops:
               display_name: Mga loop
@@ -19732,11 +20147,38 @@ fil:
             Learn to Drag and Drop:
               key: Matutong Mag-Drag at Mag-Drop
               name: Matutong Mag-Drag at Mag-Drop
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
+            Sequencing with Scrat:
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
             Programming in with Angry Birds:
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               key: Pag-Program kasama sina Rey at BB-8
               name: Pag-Program kasama sina Rey at BB-8
+            Ocean Scene with Loops:
+              description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
+                gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
+                pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
+                ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga
+                kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
+                ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
+                ng kanilang sariling mga larawan gamit ang mga loop.
+            On the Move with Events:
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
+                sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
+                na natutunan nila para lumikha ng isang laro na naka-animate. Oras
+                na para maging malikhain at gumawa ng istorya sa Play Lab!
           lesson_groups:
             csf_loops:
               display_name: Mga loop
@@ -20503,3 +20945,34 @@ fil:
               name: Aralin 14
             lesson15:
               name: Araling 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Panimula
+            Loops:
+              key: Mga loop
+              name: Mga loop
+            Events:
+              key: Mga event
+              name: Mga event
+            Conditionals:
+              key: Mga conditional
+              name: Mga conditional
+            Functions:
+              key: Mga function
+              name: Mga function
+            Variables:
+              key: Mga variable
+              name: Mga variable
+            For Loops:
+              key: For Loops
+              name: For Loops
+            Getting Started:
+              name: Pagsisimula
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Panimula
+            k5_next_steps_1:
+              display_name: Mga susunod na Hakbang
+            Introduction:
+              display_name: Panimula

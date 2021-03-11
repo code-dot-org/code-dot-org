@@ -69,7 +69,9 @@ export const levelType = PropTypes.shape({
  * @property {bool} paired
  * A boolean indicating if a student was paired on a level.
  * @property {number} timeSpent
- * An optional value indicating the time a student spent on a level.
+ * The number of seconds a student spent on a level.
+ * @property {number} lastTimestamp
+ * A timestamp of the last time a student made progress on a level.
  * @property {array} pages
  * An optional array of recursive progress objects representing progress on
  * individual pages of a multi-page assessment
@@ -78,7 +80,8 @@ const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
   paired: PropTypes.bool.isRequired,
-  timeSpent: PropTypes.number
+  timeSpent: PropTypes.number.isRequired,
+  lastTimestamp: PropTypes.number.isRequired
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition
@@ -115,12 +118,16 @@ export const lessonType = PropTypes.shape({
  * @property {number} incompletePercent
  * @property {number} imperfectPercent
  * @property {number} completedPercent
+ * @property {number} timeSpent
+ * @property {number} lastTimestamp
  */
 export const studentLessonProgressType = PropTypes.shape({
   isStarted: PropTypes.bool.isRequired,
   incompletePercent: PropTypes.number.isRequired,
   imperfectPercent: PropTypes.number.isRequired,
-  completedPercent: PropTypes.number.isRequired
+  completedPercent: PropTypes.number.isRequired,
+  timeSpent: PropTypes.number.isRequired,
+  lastTimestamp: PropTypes.number.isRequired
 });
 
 /**

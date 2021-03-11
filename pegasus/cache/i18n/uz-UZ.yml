@@ -1512,7 +1512,7 @@ uz-UZ:
   frozen_shortdescription: Anna va Elza muzning sehri va go‘zalligini o‘rganayapti,
     ularga koddan foydalanib qo‘shilaylik.
   starwars_shortdescription: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
-    o'z Star Wars o‘yiningizni yarating.
+    o‘z Star Wars o‘yiningizni yarating.
   playlab_shortdescription: Play Lab yordamida hikoya yoki o‘yin yarating!
   infinity_shortdescription: Disney Infinity qahramonlari ishtirokidagi hikoya yoki
     o‘yin yaratish uchun Play Lab-dan foydalaning.
@@ -1728,7 +1728,7 @@ uz-UZ:
     va naqshlarini yaratasiz va qishning ajoyib joyini yaratasiz, so‘ngra do‘stlaringiz
     bilan baham ko‘rishingiz mumkin!
   starwars_longdescription: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
-    o'z Star Wars o‘yiningizni yarating.
+    o‘z Star Wars o‘yiningizni yarating.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -2458,3 +2458,9 @@ uz-UZ:
     ishtirok etishning ajoyib usuli!'
   codebytes_skinny_banner_english_only: Faqat ingliz tilida
   codebytes_skinny_banner_learn: 'Batafsil: [code.org/codebytes](%{code_bytes_url}).'
+  footer_privacy_policy: Maxfiylik siyosati
+  footer_about: Biz haqimizda
+  footer_partners: Hamkorlar
+  footer_donate: Xayriya qiling
+  footer_support: Qo‘llab-quvvatlash
+  footer_terms: Shartlar

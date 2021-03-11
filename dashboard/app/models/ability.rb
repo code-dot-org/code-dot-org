@@ -12,6 +12,7 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       Script, # see override below
+      Lesson, # see override below
       ScriptLevel, # see override below
       :reports,
       User,
@@ -198,6 +199,14 @@ class Ability
         user.persisted? || !script.login_required?
       end
     end
+    can [:read, :student_lesson_plan], Lesson do |lesson|
+      script = lesson.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        true
+      end
+    end
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
       if script.pilot?
@@ -266,6 +275,7 @@ class Ability
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
+        can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
     end
 
@@ -287,6 +297,7 @@ class Ability
         Level,
         UnitGroup,
         Script,
+        Lesson,
         ScriptLevel,
         UserLevel,
         UserScript,

@@ -280,6 +280,14 @@ class Script < ApplicationRecord
     visible_scripts.select {|s| s.family_name == 'csd6'}
   end
 
+  def self.text_to_speech_script_ids
+    all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
+  end
+
+  def self.pre_reader_script_ids
+    all_scripts.select(&:pre_reader_tts_level?).pluck(:id)
+  end
+
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
@@ -885,6 +893,25 @@ class Script < ApplicationRecord
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
+  def pre_reader_tts_level?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::PRE_READER_EXPRESS_NAME,
+      Script::COURSEA_2018_NAME,
+      Script::COURSEB_2018_NAME,
+      Script::PRE_READER_EXPRESS_2018_NAME,
+      Script::COURSEA_2019_NAME,
+      Script::COURSEB_2019_NAME,
+      Script::PRE_READER_EXPRESS_2019_NAME,
+      Script::COURSEA_2020_NAME,
+      Script::COURSEB_2020_NAME,
+      Script::PRE_READER_EXPRESS_2020_NAME,
+    ].include?(name)
+  end
+
   def text_to_speech_enabled?
     tts?
   end
@@ -1018,12 +1045,17 @@ class Script < ApplicationRecord
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
 
-      # More all lessons into the last lesson group so that we do not delete
+      # More all lessons into a temporary lesson group so that we do not delete
       # the lesson entries unless the lesson has been entirely removed from the
       # script
-      last_lesson_group = script.lesson_groups.last
+      temp_lg = LessonGroup.create!(
+        key: 'temp-will-be-deleted',
+        script: script,
+        user_facing: false,
+        position: script.lesson_groups.length + 1
+      )
       script.lessons.each do |l|
-        l.lesson_group = last_lesson_group
+        l.lesson_group = temp_lg
         l.save!
       end
 
@@ -1461,11 +1493,11 @@ class Script < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(is_student = false)
     {
       displayName: localized_title,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map(&:summarize_for_lesson_dropdown)
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
   end
 

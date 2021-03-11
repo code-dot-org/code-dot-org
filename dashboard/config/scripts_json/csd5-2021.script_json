@@ -19,11 +19,13 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-09 02:50:04 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -796,7 +798,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "e7fed683-5b06-451a-83b6-44bd6135abba",
@@ -810,7 +812,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "89d015e9-9fce-4748-a2dc-0a59c7fa8e10",
@@ -865,7 +867,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "364c003c-6567-4148-b6bf-7d18f5034bd5",
@@ -903,27 +905,27 @@
       }
     },
     {
-      "key": "94639435-f2c7-4bac-ad1c-0f31c772796c",
+      "key": "a4b08747-4de9-40a8-aad8-13d90f34fa57",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "94639435-f2c7-4bac-ad1c-0f31c772796c",
+        "lesson_activity.key": "a4b08747-4de9-40a8-aad8-13d90f34fa57",
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "a4b08747-4de9-40a8-aad8-13d90f34fa57",
+      "key": "94639435-f2c7-4bac-ad1c-0f31c772796c",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "a4b08747-4de9-40a8-aad8-13d90f34fa57",
+        "lesson_activity.key": "94639435-f2c7-4bac-ad1c-0f31c772796c",
         "lesson.key": "Structuring Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
@@ -948,7 +950,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "44ae7025-981f-4dae-b225-555618d67b2a",
@@ -958,27 +960,27 @@
       }
     },
     {
-      "key": "ed40a37e-edc1-426c-943e-6cb6094b4795",
+      "key": "6394e1b7-16b3-4b0c-a2d3-f25d0f9cd19b",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "ed40a37e-edc1-426c-943e-6cb6094b4795",
+        "lesson_activity.key": "6394e1b7-16b3-4b0c-a2d3-f25d0f9cd19b",
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "6394e1b7-16b3-4b0c-a2d3-f25d0f9cd19b",
+      "key": "ed40a37e-edc1-426c-943e-6cb6094b4795",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "6394e1b7-16b3-4b0c-a2d3-f25d0f9cd19b",
+        "lesson_activity.key": "ed40a37e-edc1-426c-943e-6cb6094b4795",
         "lesson.key": "Interpreting Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
@@ -1003,7 +1005,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "711c240c-07ab-449d-9ebb-b4bc6472d58a",
@@ -1017,7 +1019,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "49d23cd6-1f02-41fc-9a87-782b74221fc3",
@@ -1097,27 +1099,27 @@
       }
     },
     {
-      "key": "94c7c2fe-3c42-4a2c-9b8b-83b6d5a0627c",
+      "key": "ace4e69f-0b3e-4a35-8a7a-1aa199e38994",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "94c7c2fe-3c42-4a2c-9b8b-83b6d5a0627c",
+        "lesson_activity.key": "ace4e69f-0b3e-4a35-8a7a-1aa199e38994",
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "ace4e69f-0b3e-4a35-8a7a-1aa199e38994",
+      "key": "94c7c2fe-3c42-4a2c-9b8b-83b6d5a0627c",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "ace4e69f-0b3e-4a35-8a7a-1aa199e38994",
+        "lesson_activity.key": "94c7c2fe-3c42-4a2c-9b8b-83b6d5a0627c",
         "lesson.key": "Problem Solving with Big Data",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
@@ -1170,7 +1172,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "e2fa70c3-8c9d-4efa-a176-b4690bc9d425",
@@ -1198,7 +1200,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "558ee427-4fa3-4820-a16b-fe7dbfea3e4a",
@@ -1208,27 +1210,27 @@
       }
     },
     {
-      "key": "5da91a98-c077-456c-b830-c2c921a8bfcb",
+      "key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b",
       "position": 4,
       "properties": {
-        "name": "Programming Extension",
-        "duration": 120
+        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "5da91a98-c077-456c-b830-c2c921a8bfcb",
+        "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b",
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
       }
     },
     {
-      "key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b",
+      "key": "5da91a98-c077-456c-b830-c2c921a8bfcb",
       "position": 5,
       "properties": {
-        "name": "Levels"
+        "name": "Programming Extension",
+        "duration": 120
       },
       "seeding_key": {
-        "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b",
+        "lesson_activity.key": "5da91a98-c077-456c-b830-c2c921a8bfcb",
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
@@ -2985,14 +2987,8 @@
       "key": "a4878e11-13db-48d2-907c-c08afff5a2f1",
       "position": 1,
       "properties": {
-        "description": "**Review:** You may wish to begin this lesson with a quick review of the representation systems students have learned in this chapter. You may wish to point on in particular that a byte of information (8 bits) on has meaning if you know",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Jump to the Project:** Assess for yourself, based on students' understanding of the previous lesson, if you think these points from the previous lesson need to be reviewed. If not then just jump into the project. \r\n"
-          }
-        ]
+        "description": "**Prompt:** Throughout this unit, we’ve used binary systems to represent a wide variety of information from our world. Make a list of all the information we’ve represented in this unit so far.",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "a4878e11-13db-48d2-907c-c08afff5a2f1",
@@ -3003,7 +2999,13 @@
       "key": "1fcec88e-f931-4ece-95d2-966a9ce0d0eb",
       "position": 2,
       "properties": {
-        "description": "1. The system that is being used.\r\n2. The meaning of the information itself.\r\n\r\nWithout 1. you could not distinguish a number from a character from a line in an image. Even if you know what the information is (e.g. the number 8) you don't know necessarily if that number means a shoe size, an age, or a movie rating. These should be points that you can make based on the previous lesson."
+        "description": "**Discuss:** Have students write in their journals individually, then call on different students to share items from their list with the whole class. Keep track of the items they suggest in front of the room.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Students may remember that they’ve represented personal information like names, age, weight, etc using binary systems. They’ve also represented images using pixels, and represented text using ASCII. This brainstorm helps students review all of the tasks from this past unit, which they will need to rely on for today’s project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1fcec88e-f931-4ece-95d2-966a9ce0d0eb",
@@ -3011,10 +3013,33 @@
       }
     },
     {
+      "key": "b76749fc-2d2a-446d-89e7-e44cfde226fa",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "This is a great list, and it shows that there are a lot of things in our lives that we can represent using the binary systems we’ve learned. Today, we’re going to challenge ourselves and try to represent something more complex using just binary: we’re going to try and represent a story about our perfect day using just a binary system."
+      },
+      "seeding_key": {
+        "activity_section.key": "b76749fc-2d2a-446d-89e7-e44cfde226fa",
+        "lesson_activity.key": "3cc22b01-089f-4dab-b3e8-fc62116c4901"
+      }
+    },
+    {
+      "key": "551aa650-99b6-471b-9612-058a5279ef1b",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day:** How can I represent complex information using binary systems?"
+      },
+      "seeding_key": {
+        "activity_section.key": "551aa650-99b6-471b-9612-058a5279ef1b",
+        "lesson_activity.key": "3cc22b01-089f-4dab-b3e8-fc62116c4901"
+      }
+    },
+    {
       "key": "12af85e2-3f2d-421e-b2b6-16f8810d8835",
       "position": 1,
       "properties": {
-        "description": "**Group:** Students will need to work collaboratively on this project \r\n\r\n**Distribute:** Give students copies of the Project Guide\r\n\r\n\r\n\r\n#### Project Guide - Create a Representation\r\n\r\n**Prompt:** Close your eyes and think about your perfect day. What is the weather like? What will you do? Who's there with you? Spend a minute thinking about as many details as you can.\r\n\r\n\r\n**Step 1 - Describe Your Perfect Day:** Have students write down all the key details of their perfect day on their activity guides. It is fine for students to mix between bullets and complete sentences.\r\n\r\n**Step 2 - Share with a Partner:** Have students pick a neighbor to share their perfect day with. They should continue to update their information from Step 1 as they come up with more information about their perfect day."
+        "description": "**Group:** Have students sit in pairs so they can work collaboratively on this project.\n\n**Prompt:** Close your eyes and think about your perfect day. What is the weather like? What will you do? Who's there with you? Spend a minute thinking about as many details as you can. You don’t need to write down anything yet.\n\n**Distribute:** Give students copies of the Project Guide\n\n\n\n#### Project Guide - Create a Representation\n\n\n**Step 1 - Describe Your Perfect Day:** Have students write down all the key details of their perfect day on their activity guides. It is fine for students to mix between bullets and complete sentences.\n\n**Step 2 - Share with a Partner:** Have students pick a neighbor to share their perfect day with. They should continue to update their information from Step 1 as they come up with more information about their perfect day."
       },
       "seeding_key": {
         "activity_section.key": "12af85e2-3f2d-421e-b2b6-16f8810d8835",
@@ -3028,9 +3053,8 @@
         "description": "**Step 3 - Identify Information:** Have students assign the information about their perfect day to one of three categories, Numbers, Characters, or Images.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "**Choosing Categories:** This will likely prove a difficult step for some students. You may wish to model how to assign different information to different categories or as a class assign information from a few volunteers' perfect days.\r\n"
+            "markdown": "**Choosing Representations:** The goal here is to break up the “perfect day” into individual items, which can then be represented individually with a binary system. You may wish to model how to assign different information to different categories or as a class assign information from a few volunteers' perfect days."
           }
         ]
       },
@@ -3051,13 +3075,41 @@
       }
     },
     {
-      "key": "4e8ecb03-3abf-412e-96bb-102eb61294aa",
+      "key": "3975567d-cb31-416a-aa66-dc74ebb2aca6",
       "position": 4,
+      "properties": {
+        "remarks": true,
+        "description": "Hopefully, you noticed both you and your partner had some common information when describing your perfect day. I wonder if there are more things we have in common as an entire class? Let’s see if we can find enough pieces of common information that we can use to create a class-wide punchcard for all of us to represent our perfect day"
+      },
+      "seeding_key": {
+        "activity_section.key": "3975567d-cb31-416a-aa66-dc74ebb2aca6",
+        "lesson_activity.key": "e7fed683-5b06-451a-83b6-44bd6135abba"
+      }
+    },
+    {
+      "key": "fdf8c859-bb78-4442-9b6a-8065c023265c",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**ASCII and Binary:** Students will have access to the binary odometer and ASCII table in Code Studio. You may wish to give them paper copies if you are worried about computers being distracting for this otherwise unplugged activity\r\n\r\n**Use the Pixelator:** Students may wish to use the pixelator to compose their images. There's a level available on Code Studio. \r\n"
+          }
+        ],
+        "description": "**Display:** Display the punch card from the project guide. Emphasize that the card has space for three numbers, an eight-character word, and an image. Explain that the class will need to agree on how they are going to use each row from the numbers, characters, and image sections of the punch card."
+      },
+      "seeding_key": {
+        "activity_section.key": "fdf8c859-bb78-4442-9b6a-8065c023265c",
+        "lesson_activity.key": "e7fed683-5b06-451a-83b6-44bd6135abba"
+      }
+    },
+    {
+      "key": "4e8ecb03-3abf-412e-96bb-102eb61294aa",
+      "position": 6,
       "properties": {
         "description": "**Step 5 - Full Class Activity - Agree on Classwide Punch Card:** Display the punch card from the project guide somewhere the whole class can see it. Have partners share the categories of information they wish to represent. Explain that the class will need to agree how they are going to use each row from the numbers, characters, and image sections of the punch card.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Possible Systems:** Here's one possible system for the punch cards\r\n\r\n* Number 1: Temperature that day\r\n* Number 2: How many other people are there\r\n* Number 3: How long you're there in hours\r\n* Characters 1-10: Name of activity or location\r\n* Image: Image of the activity\r\n\r\n\r\n**Facilitating the Discussion:** Students will likely want to create systems that work really well for their information but not a classmates. Emphasize that systems are only useful if they're universal. A system that only works for one person isn't very useful and all systems will involve some tradeoffs.\r\n\r\n"
           }
@@ -3069,49 +3121,10 @@
       }
     },
     {
-      "key": "1ed0a006-87fd-4d5c-84ef-cef4052991ce",
-      "position": 5,
-      "properties": {
-        "description": "<!--"
-      },
-      "seeding_key": {
-        "activity_section.key": "1ed0a006-87fd-4d5c-84ef-cef4052991ce",
-        "lesson_activity.key": "e7fed683-5b06-451a-83b6-44bd6135abba"
-      }
-    },
-    {
-      "key": "a721390d-a530-4092-9af0-3438369a6dcb",
-      "position": 6,
-      "properties": {
-        "description": "><!-- place where you'd like the icon-->\r\n<!--"
-      },
-      "seeding_key": {
-        "activity_section.key": "a721390d-a530-4092-9af0-3438369a6dcb",
-        "lesson_activity.key": "e7fed683-5b06-451a-83b6-44bd6135abba"
-      }
-    },
-    {
-      "key": "fdf8c859-bb78-4442-9b6a-8065c023265c",
+      "key": "0702bf70-8cd5-4afe-a7a0-ee8a8af18ef8",
       "position": 7,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**ASCII and Binary:** Students will have access to the binary odometer and ASCII table in Code Studio. You may wish to give them paper copies if you are worried about computers being distracting for this otherwise unplugged activity\r\n\r\n**Use the Pixelator:** Students may wish to use the pixelator to compose their images. There's a level available on Code Studio. \r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fdf8c859-bb78-4442-9b6a-8065c023265c",
-        "lesson_activity.key": "e7fed683-5b06-451a-83b6-44bd6135abba"
-      }
-    },
-    {
-      "key": "0702bf70-8cd5-4afe-a7a0-ee8a8af18ef8",
-      "position": 8,
-      "properties": {
-        "description": "-->\r\n    \r\n**Step 6 - Fill Out Punch Card:** Display the system somewhere all students can see it. Have students fill out their punch cards using this class system.\r\n\r\n**Step 7 - Trade and Decode Punch Cards:** Students should find a new partner who is unfamiliar with their perfect day. They should trade punch cards and decode the information encoded their. There is space on the back of the activity guide to write\r\n\r\n* The number information and its meaning\r\n* The character information and its meaning\r\n* What they believe the image is showing\r\n\r\nAfterwards students should write what they believe happens in their classmate's perfect day in the space provided\r\n\r\n**Step 8 - Share and Reflect:** Partners should meet back up and compare their description of their classmate's perfect day to what they originally intended. what were they still able to capture? What was lost?"
+        "description": "\n**Step 6 - Fill Out Punch Card:** Display the system somewhere all students can see it. Have students fill out their punch cards using this class system.\n\n**Step 7 - Trade and Decode Punch Cards:** Students should find a new partner who is unfamiliar with their perfect day. They should trade punch cards and decode the information encoded their. There is space on the back of the activity guide to write\n\n* The number information and its meaning\n* The character information and its meaning\n* What they believe the image is showing\n\nAfterwards students should write what they believe happens in their classmate's perfect day in the space provided\n\n**Step 8 - Share and Reflect:** Partners should meet back up and compare their description of their classmate's perfect day to what they originally intended. what were they still able to capture? What was lost?"
       },
       "seeding_key": {
         "activity_section.key": "0702bf70-8cd5-4afe-a7a0-ee8a8af18ef8",
@@ -3122,7 +3135,7 @@
       "key": "ef08b5e7-d370-4566-87d1-9ee5d567fe4f",
       "position": 1,
       "properties": {
-        "description": "**Collect:** Students' project guides and punch cards. Make sure to keep track of who students have partnered with so that you can grade both their encoding and decoding work.\n\n**Prompt:** If you wish you may use the following prompts to debrief the project.\n\n* If you had been given another byte of information (another line on the punch card) how would you have wanted to use it?\n* If you could move one byte from one category (numbers, images, characters) to another, which would you switch?"
+        "description": "**Collect:** Students' project guides and punch cards. Make sure to keep track of who students have partnered with so that you can grade both their encoding and decoding work."
       },
       "seeding_key": {
         "activity_section.key": "ef08b5e7-d370-4566-87d1-9ee5d567fe4f",
@@ -3130,28 +3143,10 @@
       }
     },
     {
-      "key": "d3098cb9-8b7c-44fa-b333-fc9d825eab09",
+      "key": "89ef6969-5f33-411f-905d-93ffc791d9f8",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students silently write their ideas before sharing with a partner and eventually the whole class.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** These questions should help you assess on a high level whether students have understood the challenges of this activity. In their justifications for the first question they should be describing what information they'd want to capture and how they'd want to represent it. In the second question you should push them on why it's ok to lose the byte from one category and why that loss of information will be made up for by the new byte in another category.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d3098cb9-8b7c-44fa-b333-fc9d825eab09",
-        "lesson_activity.key": "89d015e9-9fce-4748-a2dc-0a59c7fa8e10"
-      }
-    },
-    {
-      "key": "89ef6969-5f33-411f-905d-93ffc791d9f8",
-      "position": 3,
-      "properties": {
-        "description": "&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "description": "**Code Studio:** Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
       },
       "seeding_key": {
         "activity_section.key": "89ef6969-5f33-411f-905d-93ffc791d9f8",
@@ -3162,7 +3157,6 @@
       "key": "b7b11aee-64ee-408f-b733-213d3ad26e0b",
       "position": 1,
       "properties": {
-        "name": "Reflection",
         "progression_name": "Reflection"
       },
       "seeding_key": {
@@ -3186,10 +3180,9 @@
       "key": "c74f28dc-8f61-443c-b03a-4943b65c8824",
       "position": 2,
       "properties": {
-        "description": "[slide] **Prompt** In your journal, when was the last time that you looked for information on the Internet?  Why did you need it?",
+        "description": "**Prompt** In your journal, when was the last time that you looked for information on the Internet?  Why did you need it?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is for students to realize that they use the Internet as an information resource to help them solve problems in their own lives.  As the students brainstorm why they go online, encourage them to frame their information search as one step in problem solving.\r\n"
           }
@@ -3227,7 +3220,7 @@
       "key": "8f7e2aed-a1e3-4e0d-bc5a-f300a3fc09da",
       "position": 5,
       "properties": {
-        "description": "[slide] **Question of the Day: How can we use data to solve problems in our community?**"
+        "description": "**Question of the Day: How can we use data to solve problems in our community?**"
       },
       "seeding_key": {
         "activity_section.key": "8f7e2aed-a1e3-4e0d-bc5a-f300a3fc09da",
@@ -3238,7 +3231,7 @@
       "key": "ae3ddab7-fce0-4134-a6ee-65f3f156abd2",
       "position": 1,
       "properties": {
-        "description": "[slide] Introduce students to the scenario they will encounter in in the activity guide.  You should aim to choose a location in your city or town that your students will be familiar with. If this isn't possible, you can use use an example location such as the Columbia Mall in Columbia, Missouri (MO)."
+        "description": "Introduce students to the scenario they will encounter in in the activity guide.  You should aim to choose a location in your city or town that your students will be familiar with. If this isn't possible, you can use use an example location such as the Columbia Mall in Columbia, Missouri (MO)."
       },
       "seeding_key": {
         "activity_section.key": "ae3ddab7-fce0-4134-a6ee-65f3f156abd2",
@@ -3261,7 +3254,7 @@
       "key": "6fc7958a-8055-43c0-b691-c935982236fd",
       "position": 3,
       "properties": {
-        "description": "[slide] **The Problem Solving Process:** Remind students of the problem solving process: Define, Prepare, Try, Reflect. We will use this process to solve today's problem.\r\n\r\n**Group:** Put students into groups of 3-4\r\n\r\n**Distribute:** Distribute copies of [r problem-solving-with-data], one per student.\r\n\r\n\r\n\r\n#### Solving a Data Problem"
+        "description": "**The Problem Solving Process:** Remind students of the problem solving process: Define, Prepare, Try, Reflect. We will use this process to solve today's problem.\n\n**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem-solving-with-data], one per student.\n\n\n\n#### Solving a Data Problem"
       },
       "seeding_key": {
         "activity_section.key": "6fc7958a-8055-43c0-b691-c935982236fd",
@@ -3272,7 +3265,7 @@
       "key": "928ac428-64ef-4359-ad63-12d175fa700e",
       "position": 4,
       "properties": {
-        "description": "[slide] **Prompt:** What is the problem you are trying to solve? Ask students to write down the problem in their activity guide, then allow them to discuss with a partner.",
+        "description": "**Prompt:** What is the problem you are trying to solve? Ask students to write down the problem in their activity guide, then allow them to discuss with a partner.",
         "name": "Define\r"
       },
       "seeding_key": {
@@ -3287,7 +3280,6 @@
         "description": "Allow students to share out their responses and discuss as a class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students should understand that it’s not just about having an opinion about what should be built, but to use data data to help decide what the city needs most.\r\n\r\n"
           }
@@ -3302,7 +3294,7 @@
       "key": "35745fa0-2097-414b-beb8-eca436c1d5b9",
       "position": 6,
       "properties": {
-        "description": "[slide] **Prompt**: What data do you need to solve your problem? Write down three types of data that might help you to decide what the city needs the most. In a moment, you'll be sharing these ideas with a group and deciding which ones to investigate.",
+        "description": "**Prompt**: What data do you need to solve your problem? Write down three types of data that might help you to decide what the city needs the most. In a moment, you'll be sharing these ideas with a group and deciding which ones to investigate.",
         "name": "Prepare\r"
       },
       "seeding_key": {
@@ -3317,7 +3309,6 @@
         "description": "**Circulate**: Give students a few minutes to complete this individually, then ask students to share their ideas with 2-3 other classmates in small groups. Encourage groups to continue adding types of data to their list as they get more ideas from their classmates.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If students are having trouble coming up with relevant data, you can try to lead them to some of the following: \r\n\r\n* What libraries, fire stations, or animal shelters are in the area? (map sites, such as Google Maps)\r\n* Are people happy with the existing services?  (review sites, such as Yelp)\r\n* How many people live in the city?  How large is the city?  (City web site, or Wikipedia)\r\n"
           }
@@ -3344,7 +3335,7 @@
       "key": "e8a4e18c-4eda-4882-a884-0c5948dfad13",
       "position": 9,
       "properties": {
-        "description": "[slide] **Circulate:**  Support groups as they try to locate the data online and record what they have found on the Activity Guide.\r\n\r\n[slide] **Share Out:** Bring the class back together to share the data. Record the results of the research somewhere public and in front of the classroom so everyone can see. When this is finished, you should have a class list of facts and information that students can use to help make a decision."
+        "description": "**Circulate:**  Support groups as they try to locate the data online and record what they have found on the Activity Guide.\n\n**Share Out:** Bring the class back together to share the data. Record the results of the research somewhere public and in front of the classroom so everyone can see. When this is finished, you should have a class list of facts and information that students can use to help make a decision."
       },
       "seeding_key": {
         "activity_section.key": "e8a4e18c-4eda-4882-a884-0c5948dfad13",
@@ -3355,7 +3346,7 @@
       "key": "799529e8-aa6b-44e9-a270-1db8052d7df3",
       "position": 10,
       "properties": {
-        "description": "[slide] **Discussion:** Allow each group to discuss what they think should be at the location and fill out the chart with their reasons and data.  Make sure students understand that they are allowed to use the data from the **whole class**, and not just that of their particular group. They should use at least two types of data to support their decision.\r\n\r\n**Circulate:** Support groups as they decide what should be built at the location.  If groups cannot come to an agreement, assure them that there is no \"right\" answer for this problem, but they should try to figure out what they can support with two types of data.",
+        "description": "**Discussion:** Allow each group to discuss what they think should be at the location and fill out the chart with their reasons and data.  Make sure students understand that they are allowed to use the data from the **whole class**, and not just that of their particular group. They should use at least two types of data to support their decision.\n\n**Circulate:** Support groups as they decide what should be built at the location.  If groups cannot come to an agreement, assure them that there is no \"right\" answer for this problem, but they should try to figure out what they can support with two types of data.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3367,10 +3358,9 @@
       "key": "fae06660-56ad-41e5-8af3-bbfbe36ebb97",
       "position": 11,
       "properties": {
-        "description": "[slide] **Share Out:** Have groups share out their decisions, as well as the reasons and data that support them. Assure them that it's fine to have multiple answers, as long as data is being used to support their ideas.",
+        "description": "**Share Out:** Have groups share out their decisions, as well as the reasons and data that support them. Assure them that it's fine to have multiple answers, as long as data is being used to support their ideas.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students should understand and be comfortable with the fact that the decisions that we make from data involve interpretation and prioritization.  They should be able to support their decisions using the data the class found.\r\n"
           }
@@ -3397,7 +3387,7 @@
       "key": "7080a972-d63e-4299-8260-f1df2f234857",
       "position": 13,
       "properties": {
-        "description": "[slide] Ask students to fill out the last portion of the worksheet, reminding them that more data might help them make a better decision.",
+        "description": "Ask students to fill out the last portion of the worksheet, reminding them that more data might help them make a better decision.",
         "name": "Reflect\r"
       },
       "seeding_key": {
@@ -3420,7 +3410,7 @@
       "key": "e4a88ac1-bdd6-4cc5-9996-56f3f2b0ea18",
       "position": 1,
       "properties": {
-        "description": "[slide] As students enter, have the warm-up slide projected on the board which contains 3 different representations from a \"Best Class Pet\" survey."
+        "description": "As students enter, have the warm-up slide projected on the board which contains 3 different representations from a \"Best Class Pet\" survey."
       },
       "seeding_key": {
         "activity_section.key": "e4a88ac1-bdd6-4cc5-9996-56f3f2b0ea18",
@@ -3446,7 +3436,6 @@
         "description": "**Discuss**: Have students journal individually, then share with a neighbor, and finally discuss as a whole class. You can record their ideas on the board to refer back to later in the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students should understand that different forms of data make it easier for people to make decisions.  They should also see that people often do best with visuals, such as the bar chart, while computer do better with numbers, such as the table.\r\n"
           }
@@ -3473,7 +3462,7 @@
       "key": "49c29c14-5e52-4a4a-b27b-dc1c7989fbb3",
       "position": 5,
       "properties": {
-        "description": "[slide] **Question of the Day: how can we make it easy for computers to process data?**"
+        "description": "**Question of the Day: how can we make it easy for computers to process data?**"
       },
       "seeding_key": {
         "activity_section.key": "49c29c14-5e52-4a4a-b27b-dc1c7989fbb3",
@@ -3484,7 +3473,7 @@
       "key": "c4c17534-67ea-42a2-814f-757f62782804",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students into pairs and give each pair a copy of [r structuring-data-2021].\r\n\r\n\r\n\r\n#### Structing Data Activity Guide\r\n\r\n[slide] Read the instructions together as a class, ensuring that students understand the problem that they are trying to solve (choosing a pizza topping for the pizza party)."
+        "description": "**Group:** Put students into pairs and give each pair a copy of [Structuring Data 2021 - Activity Guide](https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view).\n\n\n\n#### Structuring Data Activity Guide\n\nRead the instructions together as a class, ensuring that students understand the problem that they are trying to solve (choosing a pizza topping for the pizza party)."
       },
       "seeding_key": {
         "activity_section.key": "c4c17534-67ea-42a2-814f-757f62782804",
@@ -3495,7 +3484,7 @@
       "key": "81e66693-3476-4c0d-ae92-0428e702cedb",
       "position": 2,
       "properties": {
-        "description": "[slide] **Do This:** Have students create the bar chart for the set of raw data given. Some of the answers will intentionally not easily fall into the given choices.\r\n\r\n**Circulate:** Encourage students to use their best judgment on the answers that are difficult to put into the chart, and that these challenges are a normal part of the data problem solving process. Listen for students discussing & collaborating with their partners as they make these decisions.\r\n\r\n[slide] **Reflect**: Have students answer the reflection questions on the bottom of the activity guide."
+        "description": "**Do This:** Have students create the bar chart for the set of raw data given. Some of the answers will intentionally not easily fall into the given choices.\n\n**Circulate:** Encourage students to use their best judgment on the answers that are difficult to put into the chart, and that these challenges are a normal part of the data problem solving process. Listen for students discussing & collaborating with their partners as they make these decisions.\n\n**Reflect**: Have students answer the reflection questions at the bottom of the activity guide."
       },
       "seeding_key": {
         "activity_section.key": "81e66693-3476-4c0d-ae92-0428e702cedb",
@@ -3506,10 +3495,9 @@
       "key": "4701e66f-6c37-4ae3-a6d9-b94b4c45704c",
       "position": 3,
       "properties": {
-        "description": "[slide] **Discuss:** After students finish making the chart and filling out the reflection questions, have students share their answers with the class.",
+        "description": "**Discuss:** After students finish making the chart and filling out the reflection questions, have students share their answers with the class.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students should see that there are several ways that answers might be difficult to categorize, whether they are completely irrelevant, not specific enough, or not a given choice.   Ignore spelling for now if students don't bring it up.\r\n"
           }
@@ -3536,7 +3524,7 @@
       "key": "4668155e-befd-4113-bcad-1c7a7fa245be",
       "position": 5,
       "properties": {
-        "description": "**Discuss**: Ask students to discuss this prompt with a neighbor. As they do this, pull up the [Pizza Party Data App (TEMP LINK)](https://levelbuilder-studio.code.org/levels/24647?show_callouts=1) so all students can see it.\r\n\r\n[slide] **Pizza Party Data App**: Demonstrate the app to the class, explaining that this app has the same data you all had plus a little more. You can scroll through the first screen to see all of the data available, pointing out some new answers that may also be hard to categorize. \r\n\r\nEmphasize the \"Show Chart\" button at the top of the app and ask students to predict what the chart will look like on the next screen. You can ask students to share their ideas, but don’t interpret them as \"right\" or \"wrong\" - let students brainstorm a few guesses before clicking the button and revealing the next screen."
+        "description": "**Discuss**: Ask students to discuss this prompt with a neighbor. As they do this, pull up the [Pizza Party Data App](https://studio.code.org/s/csd5-preview-2021/stage/10/puzzle/2) so all students can see it.\n\n**Pizza Party Data App**: Demonstrate the app to the class, explaining that this app has the same data you all had plus a little more. You can scroll through the first screen to see all of the data available, pointing out some new answers that may also be hard to categorize. \n\nEmphasize the \"Show Chart\" button at the top of the app and ask students to predict what the chart will look like on the next screen. You can ask students to share their ideas, but don’t interpret them as \"right\" or \"wrong\" - let students brainstorm a few guesses before clicking the button and revealing the next screen."
       },
       "seeding_key": {
         "activity_section.key": "4668155e-befd-4113-bcad-1c7a7fa245be",
@@ -3547,10 +3535,9 @@
       "key": "28dfd4cd-0d62-4c35-bed0-d6038adf4813",
       "position": 6,
       "properties": {
-        "description": "[slide] **Prompt** Ask students to discuss in pairs why the chart looks the way it does and why wasn't the computer able to put everything into the correct category. Have students share their answers with the class.",
+        "description": "**Prompt** Ask students to discuss in pairs why the chart looks the way it does and why wasn't the computer able to put everything into the correct category. Have students share their answers with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students should notice that the computer used all the answers in the chart, even the ones that were irrelevant. Students should also notice that it didn’t correct any spelling or fix any differences in capitalization - for example, “Cheese” and “cheese” appear as two separate rows on the chart.\r\n\r\n"
           }
@@ -3577,7 +3564,7 @@
       "key": "2cfaae4a-38f3-42c4-9a02-2e2ce58a90df",
       "position": 8,
       "properties": {
-        "description": "Have students turn to the next page in their Activity Guide. We will use this page to help \"clean\" the data for a computer so it will be easier to interpret. \r\n\r\n[slide] **Do This:** Ask students to finish in pairs, cleaning the data and narrowing in on at most 7 choices from the answers. Then decide which pizza topping is the best choice."
+        "description": "Have students turn to the next page in their Activity Guide. We will use this page to help \"clean\" the data for a computer so it will be easier to interpret. \n\n**Do This:** Ask students to finish in pairs, cleaning the data and narrowing in on at most 7 choices from the answers. Then decide which pizza topping is the best choice."
       },
       "seeding_key": {
         "activity_section.key": "2cfaae4a-38f3-42c4-9a02-2e2ce58a90df",
@@ -3588,10 +3575,9 @@
       "key": "2bd9ece8-996d-4561-9ff9-b702ac019d12",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Prompt:**  What changes did you need to make to the data?  Was there any that you just needed to throw away completely?  Why?",
+        "description": "**Prompt:**  What changes did you need to make to the data?  Was there any that you just needed to throw away completely?  Why?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students should notice that some data, such as minor misspellings, could be easily \"cleaned\" into an appropriate category, but that other data, such as \"I will be absent\", needed to be removed from the set entirely.\r\n\r\n"
           }
@@ -3609,7 +3595,6 @@
         "description": "**Prompt:** This was a lot of work, and it was only about twenty votes.  How much time do you think it would take to clean the data for a nationwide survey?  Can you think of any ways to make sure that we got clean data from the beginning, to save us all of this work?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "In the end, students should realize that constraining a user's choices can help with this - for example, by using multiple choice rather than a write in answer. They may also bring up ignoring capitalization so “cheese” and “Cheese” aren’t two different results.\r\n  "
           }
@@ -3644,6 +3629,17 @@
       }
     },
     {
+      "key": "1a4b13b0-57db-449a-8ac5-95f37cfb2371",
+      "position": 1,
+      "properties": {
+        "progression_name": "Data Visualization"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a4b13b0-57db-449a-8ac5-95f37cfb2371",
+        "lesson_activity.key": "a4b08747-4de9-40a8-aad8-13d90f34fa57"
+      }
+    },
+    {
       "key": "197e10c6-aca0-4198-8c55-08b02638a517",
       "position": 1,
       "properties": {
@@ -3656,22 +3652,10 @@
       }
     },
     {
-      "key": "1a4b13b0-57db-449a-8ac5-95f37cfb2371",
-      "position": 1,
-      "properties": {
-        "name": "Data Visualization",
-        "progression_name": "Data Visualization"
-      },
-      "seeding_key": {
-        "activity_section.key": "1a4b13b0-57db-449a-8ac5-95f37cfb2371",
-        "lesson_activity.key": "a4b08747-4de9-40a8-aad8-13d90f34fa57"
-      }
-    },
-    {
       "key": "62ea0c97-f14e-43e1-8a84-1463b2d5aad7",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:**  As students enter, have the Warm-Up slide displayed on the board"
+        "description": "**Display:**  As students enter, have the Warm-Up slide displayed on the board"
       },
       "seeding_key": {
         "activity_section.key": "62ea0c97-f14e-43e1-8a84-1463b2d5aad7",
@@ -3709,7 +3693,6 @@
         "description": "**Share Out:** Have students share their choices and why.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "There is no one recommendation that is correct, but make sure students understand that although chocolate was the most popular cake flavor and cream cheese was the most popular icing flavor, only one person chose a chocolate cake with cream cheese icing.  \r\n\r\nIt's not enough to look at the two answers in isolation.  For example, if two cakes are chosen, chocolate cake with chocolate icing and carrot cake with cream cheese icing is much better than chocolate with cream cheese and carrot with chocolate.  Looking at the relationships between answers helps to see which choices go well together.\r\n\r\n"
           }
@@ -3736,7 +3719,7 @@
       "key": "1d463bfd-19ff-4316-a0c8-69720e2c2424",
       "position": 6,
       "properties": {
-        "description": "[slide] **Question of the Day**: How can patterns in data help us make decisions?"
+        "description": "**Question of the Day**: How can patterns in data help us make decisions?"
       },
       "seeding_key": {
         "activity_section.key": "1d463bfd-19ff-4316-a0c8-69720e2c2424",
@@ -3758,10 +3741,9 @@
       "key": "a6b0da50-c2de-4f78-98e0-5f01500c1845",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** Give each group a copy of the activity guide and data resource.",
+        "description": "**Distribute:** Give each group a copy of the activity guide and data resource.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Even though each of these sheets is only one page, it's best to print them separately, so that students can look at the survey results while they fill in the chart.\r\n"
           }
@@ -3788,7 +3770,7 @@
       "key": "3591c670-4906-4e67-9d94-e3f884a00e2f",
       "position": 4,
       "properties": {
-        "description": "#### Interpreting Data Activity Guide\r\n\r\n[slide] Read the instructions as a class, then direct students to look at the first table on the activity guide.\r\n\r\n\r\n[slide] **Slides:** Display the Finding Relationships Example slide then click-through the animations in the slide to model how to fill in the the chart with the class. For each row of the survey results, add one tally to the chart. After modeling the first five rows, allow students to complete the rest of the chart on their activity guide.\r\n\r\n\r\n[slide] **Prompt:** If someone likes cats, what activity is probably their favorite? What is one more interesting relationship between favorite pet and favorite activity?"
+        "description": "#### Interpreting Data Activity Guide\n\nRead the instructions as a class, then direct students to look at the first table on the activity guide.\n\n\n**Slides:** Display the Finding Relationships Example slide then click-through the animations in the slide to model how to fill in the the chart with the class. For each row of the survey results, add one tally to the chart. After modeling the first five rows, allow students to complete the rest of the chart on their activity guide.\n\n\n**Prompt:** If someone likes cats, what activity is probably their favorite? What is one more interesting relationship between favorite pet and favorite activity?"
       },
       "seeding_key": {
         "activity_section.key": "3591c670-4906-4e67-9d94-e3f884a00e2f",
@@ -3802,7 +3784,6 @@
         "description": "**Share-Out:** Allow students time to write down their answer, then check with their group before sharing out as a class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students should use the chart to find relationships between the preferences so that they can differentiate between subgroups. They may note that although people who chose cats tended to choose art, people who chose dogs tended to like music.\r\n\r\nMake sure that the class produces examples of the predictions working in both directions (pet to activity and activity to pet).  For example, people who like video games are likely to prefer dogs.\r\n"
           }
@@ -3817,10 +3798,9 @@
       "key": "c72ef18c-8a87-40ab-9a07-260f89fad275",
       "position": 6,
       "properties": {
-        "description": "[slide] **Do This:** Direct students to complete the worksheet in their groups.",
+        "description": "**Do This:** Direct students to complete the worksheet in their groups.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students may be tempted to think of reasons that different preferences are related.  Remind them that there is nothing in the survey that helps them to understand **why** a relationship is true, only that the relationship exists.\r\n"
           }
@@ -3846,7 +3826,7 @@
       "key": "aa92d473-1f54-4190-a643-1bd002b95062",
       "position": 8,
       "properties": {
-        "description": "[slide] **Share Out:** Before moving on to the reflection question, give students a chance to share out anything interesting that they learned about the relationships between the different preferences.\r\n\r\n\r\n[slide] **Prompt:** How could knowing relationships between these types of preferences help you to address a real world problem?"
+        "description": "**Share Out:** Before moving on to the reflection question, give students a chance to share out anything interesting that they learned about the relationships between the different preferences.\n\n\n**Prompt:** How could knowing relationships between these types of preferences help you to address a real-world problem?"
       },
       "seeding_key": {
         "activity_section.key": "aa92d473-1f54-4190-a643-1bd002b95062",
@@ -3860,7 +3840,6 @@
         "description": "Give students time to answer this on their activity guide, then have students share their thoughts with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Although there is no \"right\" answer to this question, students should realize that finding relationships between preferences may help them to predict one preference from knowing another.  This could be for a recommendation engine, to place ads, or to promote particular social media posts.\r\n\r\n"
           }
@@ -3872,13 +3851,23 @@
       }
     },
     {
+      "key": "ac5aab3e-3949-47a6-9695-9f97fbdb288e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Cake Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac5aab3e-3949-47a6-9695-9f97fbdb288e",
+        "lesson_activity.key": "6394e1b7-16b3-4b0c-a2d3-f25d0f9cd19b"
+      }
+    },
+    {
       "key": "46bfc542-d2d8-4124-a4cd-d7e53fff618e",
       "position": 1,
       "properties": {
         "description": "**Prompt:**",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This journal prompt looks forward to the end of chapter project, when students will use this process to solve a data problem of their choosing.\r\n"
           }
@@ -3902,22 +3891,10 @@
       }
     },
     {
-      "key": "ac5aab3e-3949-47a6-9695-9f97fbdb288e",
-      "position": 1,
-      "properties": {
-        "name": "Cake Survey",
-        "progression_name": "Cake Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "ac5aab3e-3949-47a6-9695-9f97fbdb288e",
-        "lesson_activity.key": "6394e1b7-16b3-4b0c-a2d3-f25d0f9cd19b"
-      }
-    },
-    {
       "key": "ff83c374-628a-4388-8d39-29a2a7030ab9",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** What decisions in your life are you already collecting data to help make? Are there any decisions you think data could help you make better?",
+        "description": "**Prompt:** What decisions in your life are you already collecting data to help make? Are there any decisions you think data could help you make better?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3932,7 +3909,6 @@
         "description": "**Discuss:** Invite a few students to share some of what they wrote with the class. There's no need to explore this question in great detail since you'll be able to return to it at the end of the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This should be a really quick opening conversation and it's entirely fine if students don't have any decisions they're currently making using data. You might point out a couple of examples (e.g. looking at weather to decide what to wear or review data about a product online) but it's fine to just use this to open the class and return to the question later.\r\n"
           }
@@ -3970,7 +3946,7 @@
       "key": "e27e7955-327c-420a-9219-ca2414154a18",
       "position": 1,
       "properties": {
-        "description": "**Group:** Have students sit in groups of 3-4\r\n\r\n**Distribute** Pass out one copy of the Problem Solving Process for Data to each group.\r\n\r\n[slide] **Prompt:** Which steps have we taken while solving problems over the last few lessons? Ask one person in each group to circle the answers they discuss.\r\n\r\n**Circulate:** Check in with groups as they circle different answers on the paper. As you finish checking in with each group, pass out a copy of the Making Decisions with Data activity guide."
+        "description": "**Group:** Have students sit in groups of 3-4\n\n**Distribute** Pass out one copy of the Problem Solving Process for Data to each group.\n\n**Prompt:** Which steps have we taken while solving problems over the last few lessons? Ask one person in each group to circle the answers they discuss.\n\n**Circulate:** Check in with groups as they circle different answers on the paper. As you finish checking in with each group, pass out a copy of the Making Decisions with Data activity guide."
       },
       "seeding_key": {
         "activity_section.key": "e27e7955-327c-420a-9219-ca2414154a18",
@@ -3992,10 +3968,9 @@
       "key": "3cf5b5f5-208d-4801-b616-a877e120f6ca",
       "position": 3,
       "properties": {
-        "description": "[slide] **Problem 1 - When to Post:** Read the Define and Prepare sections of the problem as a class. Give groups a chance to look at the data presented to them and reflect on the questions at the bottom of the activity guide.",
+        "description": "**Problem 1 - When to Post:** Read the Define and Prepare sections of the problem as a class. Give groups a chance to look at the data presented to them and reflect on the questions at the bottom of the activity guide.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Assign Roles:** Have groups assign someone responsible for sharing out the results of their discussion before looking at each decision. Alternate roles between problems.\r\n\r\n**Thought Partners:** Even though students are working in groups, there’s no need for groups to come to shared decisions.\r\n"
           }
@@ -4010,7 +3985,7 @@
       "key": "8fcd52ee-4a38-4955-ba48-f55f341831d0",
       "position": 4,
       "properties": {
-        "description": "[slide] **Do This:** Students should start by making a personal decision without writing it down. Then give groups a chance to discuss their decision with the group. \r\n\r\nOnce groups have had a chance to discuss they should record their decisions, even if they are different from one another. Let students know that one person from each group will share out a summary of their group discussion."
+        "description": "**Do This:** Students should start by making a personal decision without writing it down. Then give groups a chance to discuss their decision with the group. \n\nOnce groups have had a chance to discuss they should record their decisions, even if they are different from one another. Let students know that one person from each group will share out a summary of their group discussion."
       },
       "seeding_key": {
         "activity_section.key": "8fcd52ee-4a38-4955-ba48-f55f341831d0",
@@ -4021,10 +3996,9 @@
       "key": "c3c51f8c-dafe-485c-9fb6-9e10a686097d",
       "position": 5,
       "properties": {
-        "description": "[slide] **Share Out:** Have a member of each group share a summary of their group discussion. It’s okay if the group didn’t all gree",
+        "description": "**Share Out:** Have a member of each group share a summary of their group discussion. It’s okay if the group didn’t all gree",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Focus on the Data:** Early on reinforce the importance of students referring to the data as the source of their decision. If students think there's reasons not represented by the data that they'd want to make their decision ask them if there's other data they'd want to collect. For example:\r\n\r\n* Data from the weekend\r\n* Data from more than just one week\r\n* Data about what people are posting about (here there's no way to tell)\r\n"
           }
@@ -4039,7 +4013,7 @@
       "key": "296daea6-469d-4835-8253-cd6caecb04fa",
       "position": 6,
       "properties": {
-        "description": "[slide] **Problem 2 - Making Meals:** Have students repeat the process for this second problem. They should review the problem, make a personal decision without writing it, discuss with a group, record their final decision, and then be prepared to share out as a group.\r\n\r\n[slide] **Share Out:** Again have one member of each group share out a summary of their discussion."
+        "description": "**Problem 2 - Making Meals:** Have students repeat the process for this second problem. They should review the problem, make a personal decision without writing it, discuss with a group, record their final decision, and then be prepared to share out as a group.\n\n**Share Out:** Again have one member of each group share out a summary of their discussion."
       },
       "seeding_key": {
         "activity_section.key": "296daea6-469d-4835-8253-cd6caecb04fa",
@@ -4050,10 +4024,9 @@
       "key": "456fda46-f469-47e7-991c-6fd3efb1c0f6",
       "position": 7,
       "properties": {
-        "description": "[slide] **Problem 3 - Locker Selection:** Repeat the process a final time with this problem.",
+        "description": "**Problem 3 - Locker Selection:** Repeat the process a final time with this problem.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Interpreting the Chart:** The second and third problems have more complex tables of information that may be challenging for students to understand without some guidance. You may want to model how to read the charts in these two activities before asking students to use them for decision making. For example, ask students what a particular cell in a table means.\r\n\r\n**Where are my friends?:** Students often react to problem 3 by saying they care about other data, like where their friends' lockers are. Don't be afraid to say that for now they need to decide with the data they have. One of the goals of the lesson is to reflect on how data shapes the way we make decisions.\r\n"
           }
@@ -4068,7 +4041,7 @@
       "key": "161b3dce-d06f-402b-b029-1e218dd0cf26",
       "position": 8,
       "properties": {
-        "description": "[slide] **Share Out:** Have students share the results of their conversation with the class."
+        "description": "**Share Out:** Have students share the results of their conversation with the class."
       },
       "seeding_key": {
         "activity_section.key": "161b3dce-d06f-402b-b029-1e218dd0cf26",
@@ -4079,10 +4052,9 @@
       "key": "1d7c5ce3-6ee6-408f-9723-8fdfb8b2fda3",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** Do two people need to make the same decision from the same data? Have students reflect and share their responses with the class",
+        "description": "**Discuss:** Do two people need to make the same decision from the same data? Have students reflect and share their responses with the class",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This is a fairly nuanced question masquerading as a simple yes / no. Ask students to reflect on moments in today's activities where they think the data was more open to interpretation (e.g. locker decisions) and when it might be more cut and dried (e.g. when to post). While the goal of this discussion is to highlight the fact that two people shouldn't need to come to same conclusion from the same data, follow-ups are necessary to make this conversation most effective.\r\n"
           }
@@ -4112,7 +4084,6 @@
         "description": "**Discuss:** Have students share their responses",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This conversation can look back at moments when students wanted more or different data to help make their decisions. For example you might want to know where your friend's lockers are before deciding which one you want. This discussion leads into the concluding remarks of the lesson.\r\n"
           }
@@ -4139,10 +4110,9 @@
       "key": "1fd332bf-4d3a-4fb3-8585-11aa036c87ff",
       "position": 1,
       "properties": {
-        "description": "[slide]\r\n **Prompt:** Imagine you were going to program a computer to automatically select clothing from your closet for you in the morning. What kinds of data would this computer need? What kinds of rules would you want it to use?",
+        "description": "**Prompt:** Imagine you were going to program a computer to automatically select clothing from your closet for you in the morning. What kinds of data would this computer need? What kinds of rules would you want it to use?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion may be hard to keep small but the point is just to get students thinking about the fact that computers need data (inputs) and rules (i.e. an algorithm) for making a decision (output). So long as students have had a chance to see an example of those three components of the input-output-store-process model of the computer it's fine to move on. That said, here's some ideas students might mention\r\n\r\n* Inputs: The temperature, the weather, what kinds of events you have today, etc.\r\n* Rules: If temperature less than 60 bring a jacket, if fancy event put out fancy clothes, if sunny bring sunglasses, etc.\r\n"
           }
@@ -4181,7 +4151,7 @@
       "key": "4ca4c346-7448-41c7-adbb-f66b210d521e",
       "position": 4,
       "properties": {
-        "description": "[slide] **Question of the Day**: How can computers help us make decisions about data?"
+        "description": "**Question of the Day**: How can computers help us make decisions about data?"
       },
       "seeding_key": {
         "activity_section.key": "4ca4c346-7448-41c7-adbb-f66b210d521e",
@@ -4192,7 +4162,7 @@
       "key": "69f631cc-0e74-4730-b0fe-f21aceef7f89",
       "position": 1,
       "properties": {
-        "description": "[slide] **Distribute:** Copies of [r automating-data-decisions-1] and [r data-decisions-resource] to each student.\r\n\r\n\r\n\r\n#### Automating Data Decisions"
+        "description": "**Distribute:** Copies of [Automating Data Decisions - Activity Guide](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/edit) and [Automating Data Decisions - Resource](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/edit) to each student.\n\n\n\n#### Automating Data Decisions"
       },
       "seeding_key": {
         "activity_section.key": "69f631cc-0e74-4730-b0fe-f21aceef7f89",
@@ -4216,7 +4186,7 @@
       "key": "5c546880-1ae3-4cc4-be04-3d6288495c89",
       "position": 3,
       "properties": {
-        "description": "[slide] **Introduce Activity:** Read through the instructions as a class, ensuring that students understand how the algorithm works."
+        "description": "**Introduce Activity:** Read through the instructions as a class, ensuring that students understand how the algorithm works."
       },
       "seeding_key": {
         "activity_section.key": "5c546880-1ae3-4cc4-be04-3d6288495c89",
@@ -4227,10 +4197,9 @@
       "key": "1d708064-9b0b-4a56-bccf-715c91c2cf6d",
       "position": 4,
       "properties": {
-        "description": "[slide] **Prompt:** Based on what you see in the cross-tabulation tables, why do you think that someone created the first rule of the algorithm? Can you think of a different rule?",
+        "description": "**Prompt:** Based on what you see in the cross-tabulation tables, why do you think that someone created the first rule of the algorithm? Can you think of a different rule?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Ensure that students understand that the rule is based on the first row of the \"Vacation and Food\" table.  There is no one \"correct\" rule based on the data, but someone who prefers ice cream seems very likely to prefer the beach and somewhat likely to prefer an amusement park.\r\n"
           }
@@ -4245,7 +4214,7 @@
       "key": "cc284ad1-97ef-49a7-bec1-afcc0eaae2fb",
       "position": 5,
       "properties": {
-        "description": "[slide] **Do This:** Have students individually decide on the rules for their algorithms.  For each possible answer choice, the students should add points to at least one of the four options of beach, amusement park, national park, or big city.\r\n\r\n**Circulate:** Monitor student progress. Students only need to complete the first page of the activity guide for now. As most students finish, the class can transition to the next section of this activity."
+        "description": "**Do This:** Have students individually decide on the rules for their algorithms.  For each possible answer choice, the students should add points to at least one of the four options of the beach, amusement park, national park, or big city.\n\n**Circulate:** Monitor student progress. Students only need to complete the first page of the activity guide for now. As most students finish, the class can transition to the next section of this activity."
       },
       "seeding_key": {
         "activity_section.key": "cc284ad1-97ef-49a7-bec1-afcc0eaae2fb",
@@ -4256,7 +4225,7 @@
       "key": "cf5613ca-fce8-4969-936c-f0b14028ee74",
       "position": 6,
       "properties": {
-        "description": "**Group:** Assign students into groups of 3-4\r\n\r\n[slide] **Do This:** Have students in groups poll each other record their answers on the second page of the worksheet.  They then use their algorithms to recommend a vacation spot for that person.\r\n\r\n[slide] **Share Out:** Ask students to share out some of the vacation spots they were recommended and if they agree with the recommendations. This discussion connects the reflection questions where students consider changes they could make to improve their recommendations.\r\n\r\n[slide] **Reflect:** Have students individually complete the reflection questions at the bottom of the activity guide, then share with their groups to compare responses.",
+        "description": "**Group:** Assign students into groups of 3-4\n\n**Do This:** Have students in groups poll each other record their answers on the second page of the worksheet.  They then use their algorithms to recommend a vacation spot for that person.\n\n**Share Out:** Ask students to share out some of the vacation spots they were recommended and if they agree with the recommendations. This discussion connects the reflection questions where students consider changes they could make to improve their recommendations.\n\n**Reflect:** Have students individually complete the reflection questions at the bottom of the activity guide, then share with their groups to compare responses.",
         "name": "Testing the Algorithm\r"
       },
       "seeding_key": {
@@ -4268,13 +4237,6 @@
       "key": "0e82c23e-e31b-4369-a9d6-d9754109c6b6",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "Students should understand that automating decisions is convenient in many situations but may lose some elements that humans would consider in a decision. For example\r\n\r\n* Collecting data that's already clean limits what you might collect.\r\n* Automating decisions means sometimes you get a decision you wouldn't have made on your own\r\n\r\nThere are cases where we might want to automate a decision though. For example\r\n\r\n* Where a human might forget / get bored (e.g. automatically re-ordering food when your fridge is low, turning on / off A/C as temperature changes)\r\n* When there's lots of data to consider for a simple decision (e.g. looking through lots of products to find the one with the lowest price)\r\n\r\n"
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "0e82c23e-e31b-4369-a9d6-d9754109c6b6",
@@ -4285,7 +4247,13 @@
       "key": "a367b3e1-6f45-49c0-8429-9e2b607560a2",
       "position": 2,
       "properties": {
-        "description": " [slide] **Prompt:** Students can respond either in the Reflection section of the activity guide or in their journals:\r\n\r"
+        "description": " **Prompt:** Students can respond either in the Reflection section of the activity guide or in their journals:\n\n",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students should understand that automating decisions is convenient in many situations but may lose some elements that humans would consider in a decision. For example\n\n* Collecting data that's already clean limits what you might collect.\n* Automating decisions means sometimes you get a decision you wouldn't have made on your own\n\nThere are cases where we might want to automate a decision though. For example\n\n* Where a human might forget / get bored (e.g. automatically re-ordering food when your fridge is low, turning on / off A/C as temperature changes)\n* When there's lots of data to consider for a simple decision (e.g. looking through lots of products to find the one with the lowest price)\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a367b3e1-6f45-49c0-8429-9e2b607560a2",
@@ -4307,7 +4275,7 @@
       "key": "1d97d183-068b-4f5a-b823-e6b47f686a81",
       "position": 1,
       "properties": {
-        "description": "[slide] **Prompt:** In the last lesson, we saw how data could be collected through questions and used to make a recommendation. There are other ways our data can be collected that are happening all around us every day. What are some ways that apps, companies, or governments could be collecting data about you?",
+        "description": "**Prompt:** In the last lesson, we saw how data could be collected through questions and used to make a recommendation. There are other ways our data can be collected that are happening all around us every day. What are some ways that apps, companies, or governments could be collecting data about you?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -4322,7 +4290,6 @@
         "description": "**Discuss:** Have students journal individually, then share with a neighbor, and finally discuss as a whole class. You can record their ideas on the board to refer back to later in the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This is primarily a brainstorm. Some students may bring a lot more prior knowledge than others to the class and at this point they haven’t been explicitly taught anything about data collection outside of surveys. Aim primarily just to get ideas out and set the stage for the lesson. You’re aiming to change focus from surveys that 10-20 people take to the vast amounts of data they might know is collected by modern technological tools.\r\n"
           }
@@ -4360,7 +4327,7 @@
       "key": "1662b367-c675-4cd5-a1d3-6a1fc89f62c5",
       "position": 1,
       "properties": {
-        "description": "**Group:** Students may complete this activity individually or in pairs.\r\n\r\n[slide] **Distribute:** Give students copies of activity guide\r\n\r\n\r\n\r\n#### Data in the Real World"
+        "description": "**Group:** Students may complete this activity individually or in pairs.\n\n**Distribute:** Give students copies of activity guide\n\n\n\n#### Data in the Real World"
       },
       "seeding_key": {
         "activity_section.key": "1662b367-c675-4cd5-a1d3-6a1fc89f62c5",
@@ -4371,7 +4338,7 @@
       "key": "52798cdc-24aa-4256-9aa9-4e3450877690",
       "position": 2,
       "properties": {
-        "description": "[slide] **Web Pix**: Read the introduction to Web Pix on the first page. Give students a few minutes to write down their ideas and/or share them with a partner.  Let students know that they will **not** be able to answer the question about Netflix yet. If students finish early, ask them to think of other types of data and how they could be collected.\r\n\r\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Netflix video.",
+        "description": "**Web Pix**: Read the introduction to Web Pix on the first page. Give students a few minutes to write down their ideas and/or share them with a partner.  Let students know that they will **not** be able to answer the question about Netflix yet. If students finish early, ask them to think of other types of data and how they could be collected.\n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Netflix video.",
         "name": "Web Pix\r"
       },
       "seeding_key": {
@@ -4395,10 +4362,9 @@
       "key": "e84d2260-141b-4899-971d-0e0e33eb12d2",
       "position": 4,
       "properties": {
-        "description": "[slide] **Display:** Watch the Netflix video",
+        "description": "**Display:** Watch the Netflix video",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Accessing Videos:** These videos are embedded in the slides for this lesson and can also be downloaded from within this lesson plan. They can also be found in their own levels on Code Studio so students have access to these videos if they wish to them on their own or if they are absent for this lesson.\r\n"
           }
@@ -4413,10 +4379,9 @@
       "key": "caccc30a-07e9-465a-a077-65788e7b4f1b",
       "position": 5,
       "properties": {
-        "description": "[slide] **Discuss:** Have students answer the third question about Netflix. Allow students to share with a partner, then discuss with a group the types of data that Netflix collects to help it make recommendations.",
+        "description": "**Discuss:** Have students answer the third question about Netflix. Allow students to share with a partner, then discuss with a group the types of data that Netflix collects to help it make recommendations.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should understand that Netflix bases its suggestions not only on the survey data that users create, but also on the behavior of users as they use the site, such as what they watch and the ratings they give various videos.\r\n\r\n"
           }
@@ -4431,7 +4396,7 @@
       "key": "2837e4be-02be-4d45-91a4-2a155bfbb322",
       "position": 6,
       "properties": {
-        "description": "[slide] **Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \r\n\r\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\r\n\r\n[slide] **Display:** Watch the Waze video.",
+        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n**Display:** Watch the Waze video.",
         "name": "Routz\r"
       },
       "seeding_key": {
@@ -4443,10 +4408,9 @@
       "key": "83b2e7f4-a01c-491f-a3e1-29ac12d01a13",
       "position": 7,
       "properties": {
-        "description": "[slide] **Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Waze collects to help it find the best route.",
+        "description": "**Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Waze collects to help it find the best route.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should note that while some data is being intentionally added by the users, Waze also collects GPS/location data on each user without the user's active input.  Sensor data, such as time, temperature, and location, are automatically collected by computers without a user actively adding them.\r\n"
           }
@@ -4461,7 +4425,7 @@
       "key": "35b3c205-5ca5-43fa-b2ef-ee0f6d245722",
       "position": 8,
       "properties": {
-        "description": "[slide] **Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \r\n\r\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\r\n\r\n[slide] **Display:** Watch the Amazon video.",
+        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n**Display:** Watch the Amazon video.",
         "name": "Nyle\r"
       },
       "seeding_key": {
@@ -4473,10 +4437,9 @@
       "key": "f6b744db-baed-4e9d-bdf4-1f1399bf716a",
       "position": 9,
       "properties": {
-        "description": "[slide] **Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Amazon collects to help it find the best products to suggest.",
+        "description": "**Discuss:** Allow students to share with a partner, then lead a short discussion on the types of data that Amazon collects to help it find the best products to suggest.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** There are a few different aspects of the Amazon video that may be of interest.  \r\n\r\n* Just looking at something online produces data that can be used by advertisers or others.\r\n* Amazon decides what you might buy by looking at similar users and using their behavior to predict yours\r\n* Different types of data, such as \"clicks\", \"likes\" and \"purchases\", may be weighted differently\r\n* The user's needs are not the priority.  The advertiser's needs are. \r\n\r\nAny of these topics are relevant to the lesson, but the most important thing for students to realize is that they are not always aware when they are producing data.\r\n"
           }
@@ -4504,11 +4467,22 @@
       "key": "7a916afc-ac3b-49d1-ab1d-a073525cf437",
       "position": 11,
       "properties": {
-        "description": "[slide] **Reflection:** Ask students to fill out the chart at the bottom of the page that categorizes the different types of data.  Allow students to compare their answers with a partner."
+        "description": "**Reflection:** Ask students to fill out the chart at the bottom of the page that categorizes the different types of data.  Allow students to compare their answers with a partner."
       },
       "seeding_key": {
         "activity_section.key": "7a916afc-ac3b-49d1-ab1d-a073525cf437",
         "lesson_activity.key": "f99bbd39-3dca-43a4-ac09-0248fea7bf8f"
+      }
+    },
+    {
+      "key": "2b975e87-1254-453a-aee6-1dd1ef13f6eb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Problem Solving"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b975e87-1254-453a-aee6-1dd1ef13f6eb",
+        "lesson_activity.key": "ace4e69f-0b3e-4a35-8a7a-1aa199e38994"
       }
     },
     {
@@ -4530,7 +4504,6 @@
         "description": "**Discuss:** Ask students to share their ideas with their classmates.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This prompt is meant to help students make connections between their personal experiences with data collecting services and what they have learned in this lesson.  The goal here is to connect the examples students saw in today’s lesson to other apps, websites, or services that they may be aware of. If you need to prompt students you might suggest they think of social media websites, media websites, useful apps they or their family uses, etc.\r\n"
           }
@@ -4554,25 +4527,12 @@
       }
     },
     {
-      "key": "2b975e87-1254-453a-aee6-1dd1ef13f6eb",
-      "position": 1,
-      "properties": {
-        "name": "Problem Solving",
-        "progression_name": "Problem Solving"
-      },
-      "seeding_key": {
-        "activity_section.key": "2b975e87-1254-453a-aee6-1dd1ef13f6eb",
-        "lesson_activity.key": "ace4e69f-0b3e-4a35-8a7a-1aa199e38994"
-      }
-    },
-    {
       "key": "8ff48983-ab23-42db-8ad0-d0d690bafad5",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Has a computer ever made a recommendation for you? How do you think it learned how to do this?",
+        "description": "**Prompt:** Has a computer ever made a recommendation for you? How do you think it learned how to do this?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Answers may vary and may depend on prior experiences students have with recommendation systems or other types of artificial intelligence. Try to stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \r\n"
           }
@@ -4622,10 +4582,9 @@
       "key": "7d58d643-efce-44e7-a3e4-7b3492c72250",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Video:** Play the video \"What is Machine Learning\".",
+        "description": "**Video:** Play the video \"What is Machine Learning\".",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\r\n\r\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \r\n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\r\n\r\n\r\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\r\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \r\n"
           }
@@ -4652,10 +4611,9 @@
       "key": "f8f9a770-42a2-4c1d-9b51-52f46ff9360d",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students to Levels 3-5 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "description": "**Do This:** Direct students to Levels 2-4 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Every image in this part of the tutorial is fed into a neural network that has been pre-trained on a huge set of data called [ImageNet](http://www.image-net.org/). The database contains over 14 million hand-annotated images. ImageNet contains more than 20,000 categories with a typical category, such as \"balloon\" or \"strawberry\", consisting of several hundred images. When A.I. is scanning new images and making its own predictions in the tutorial, it is actually comparing the possible categories for the new image with the patterns it found in the training dataset.\r\n"
           }
@@ -4670,7 +4628,7 @@
       "key": "037d1080-4d96-41bc-93af-bef5eef2007a",
       "position": 4,
       "properties": {
-        "description": "[slide] **Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\r\n\r\n[slide] **Video:** Play the video \"Training Data & Bias\"."
+        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n**Video:** Play the video \"Training Data & Bias\"."
       },
       "seeding_key": {
         "activity_section.key": "037d1080-4d96-41bc-93af-bef5eef2007a",
@@ -4681,10 +4639,9 @@
       "key": "914c565c-fb6d-490c-a14a-b289ac56d720",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Prompt:** How do you think your training data influenced the results that A.I. produced?",
+        "description": "**Prompt:** How do you think your training data influenced the results that A.I. produced?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\r\n"
           }
@@ -4702,7 +4659,6 @@
         "description": "In the second half of the activity, you will teach A.I. about a word of your choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that you will end up with different results based on their training data. You might even intentionally train A.I. incorrectly to see what happens!",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "The fish in this tutorial are randomly generated based on some pre-defined components, including mouths, tails, eyes, scales, and fins, with a randomly chosen body color, shape, and size. Rather than looking at the actual image data, A.I. is now looking for patterns in these components based on how the student classifies each fish. It will be more likely to label a fish the same way the student would have if it has matching traits.\r\n"
           }
@@ -4718,7 +4674,7 @@
       "key": "0644d195-c0b2-4557-9f2c-116b259fe74a",
       "position": 7,
       "properties": {
-        "description": "[slide] **Do This:** Direct students to Levels 7-8 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
+        "description": "**Do This:** Direct students to Levels 6-7 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
       },
       "seeding_key": {
         "activity_section.key": "0644d195-c0b2-4557-9f2c-116b259fe74a",
@@ -4729,10 +4685,9 @@
       "key": "92b13324-8ae5-4796-9071-694683704daa",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?",
+        "description": "**Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \r\n"
           }
@@ -4747,7 +4702,7 @@
       "key": "bdb799bb-b8cb-4efe-b420-9142896c8aa4",
       "position": 9,
       "properties": {
-        "description": "[slide] **Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \r\n\r\n[slide] **Prompts:** \r\n\r\n* What are other ways human bias could appear in Machine Learning?\r\n* How can we try to avoid that bias?\r\n\r\nAllow students to discuss these prompts with a neighbor, then share out ideas to the full class. This may be the first time students are considering issues of bias in technology, so it's okay to not arrive at any solid conclusions and leave with more questions.\r\n\r\n[slide] **Display** Display the Problem Solving Process graphic with Empathy in the center."
+        "description": "**Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \n\n**Prompts:** \n\n* What are other ways human bias could appear in Machine Learning?\n* How can we try to avoid that bias?\n\nAllow students to discuss these prompts with a neighbor, then share out ideas to the full class. This may be the first time students are considering issues of bias in technology, so it's okay to not arrive at any solid conclusions and leave with more questions.\n\n**Display** Display the Problem Solving Process graphic with Empathy in the center."
       },
       "seeding_key": {
         "activity_section.key": "bdb799bb-b8cb-4efe-b420-9142896c8aa4",
@@ -4770,7 +4725,7 @@
       "key": "e67f18c9-668b-44fb-95aa-1908687d9f52",
       "position": 11,
       "properties": {
-        "description": "[slide] **Review:** Play the video \"Impact on Society\" which recaps the concepts discussed today."
+        "description": "**Review:** Play the video \"Impact on Society\" which recaps the concepts discussed today."
       },
       "seeding_key": {
         "activity_section.key": "e67f18c9-668b-44fb-95aa-1908687d9f52",
@@ -4781,10 +4736,9 @@
       "key": "7c5c8f29-ab7a-4891-b135-182f4222a591",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** What is your biggest takeaway from today's lesson, either about machine learning or how bias appears in technology?",
+        "description": "**Prompt:** What is your biggest takeaway from today's lesson, either about machine learning or how bias appears in technology?",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "You can share these stories with your class to help them see how AI will impact the future.\r\n\r\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\r\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\r\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\r\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\r\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\r\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\r\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\r\n"
           }
@@ -4811,14 +4765,14 @@
       "key": "7833e351-1d81-480d-bf06-6c70c8374072",
       "position": 1,
       "properties": {
-        "description": "**Review:**  Quickly review the different problems that students have seen in the chapter so far:",
+        "description": "**Prompt:** Thinking back over the last several lessons, list all of the times we’ve seen data that is used to make a recommendation. Here’s an example: we used survey data to make a recommendation about what pizza to order.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**A quick review:** This quick review serves to remind students of the types of problems that they can solve with data before they move onto defining their own data problem.  Students should move into working on the project as soon as possible.\r\n"
           }
-        ]
+        ],
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "7833e351-1d81-480d-bf06-6c70c8374072",
@@ -4829,7 +4783,13 @@
       "key": "375e017e-8620-4d95-a1f5-89fda22729ac",
       "position": 2,
       "properties": {
-        "description": "* Which pizza should we order?\r\n* Which ice cream should we choose?\r\n* What video should WebPix recommend?\r\n* Which route should a driver take?\r\n* Which product should Nyle recommend?\r\n\r\nPoint out that every data decision so far involves a recommendation or prediction, and introduce the project, in which students will use data to make a recommendation for a topic of their choice."
+        "description": "**Discuss:** Have students write independently first, then have students share with a partner and add any new examples to their list. Then ask students to share with the whole class.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This quick review serves to remind students of the types of problems that they can solve with data before they move onto defining their own data problem. Some examples that students may come up with include:\n\n- Which pizza should we order?\n- Which ice cream should we choose?\n- What video should WebPix recommend?\n- Which route should a driver take?\n- Which product should Nyle recommend?"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "375e017e-8620-4d95-a1f5-89fda22729ac",
@@ -4840,7 +4800,7 @@
       "key": "2fd97848-8352-45c5-b174-0404f39f43c2",
       "position": 3,
       "properties": {
-        "description": "We've looked at many different types of data problems, but they all have to do with making recommendations (such as the Top Video) or predictions (such as the shortest route).  Today, you're going to have a chance to use data to make your own recommendation, based on something that you are interested in.",
+        "description": "We've looked at many different types of data problems, but they all have to do with making recommendations (such as the Top Video) or predictions (such as the shortest route). Today, we’re going to start a project where you're going to use data to make your own recommendation, based on something that you are interested in.",
         "remarks": true
       },
       "seeding_key": {
@@ -4849,10 +4809,21 @@
       }
     },
     {
+      "key": "61aaac24-77d4-4333-80fd-75b90af1df58",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day:** How can I use data to make my own recommendations?"
+      },
+      "seeding_key": {
+        "activity_section.key": "61aaac24-77d4-4333-80fd-75b90af1df58",
+        "lesson_activity.key": "e2fa70c3-8c9d-4efa-a176-b4690bc9d425"
+      }
+    },
+    {
       "key": "24a8f1ab-d8eb-4738-b114-0534be713085",
       "position": 1,
       "properties": {
-        "description": "#### Solve a Data Problem\n\n**Group:** This project can be completed individually, but it is recommended that students work in pairs or at most groups of 3.\n\n**Distribute:** Give students copies of the project guide and review the instructions on the top of first page with students."
+        "description": "## Day 1 Activity\n\n**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide"
       },
       "seeding_key": {
         "activity_section.key": "24a8f1ab-d8eb-4738-b114-0534be713085",
@@ -4863,15 +4834,14 @@
       "key": "84929552-ebfc-43ef-a97d-f1857609d4ae",
       "position": 2,
       "properties": {
-        "description": "Send students to look at the sample app.",
+        "description": "**Overview:** Read through the Overview of the project with students and answer any questions.\n\n**Sample App:** Display the Sample App. Have the class participate in the quiz multiple times.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If students look at the code, most of it should be comprehensible.  The majority of the code works by sending users to new screens, which the students should remember from Unit 4.  The app also adds points to different vacation choices as the user clicks on different buttons.  This type of functionality should be familiar to students from Unit 3.  The only unfamiliar code should be the \"recommend()\" function, which finds the choice with the most points, then sends the user to that choice's screen.\n"
           }
         ],
-        "name": "The Sample App"
+        "name": "Project Guide - Make a Recommendation"
       },
       "seeding_key": {
         "activity_section.key": "84929552-ebfc-43ef-a97d-f1857609d4ae",
@@ -4882,7 +4852,13 @@
       "key": "ff9b8b39-860d-427b-9a2d-80c537bc539f",
       "position": 3,
       "properties": {
-        "description": "You may choose to ask students to look at the code, or just take the quiz to see how it works from the user perspective."
+        "description": "**Starting Off:** Have students answer the following question on their project guide:\n\n- What choice does the app help the user to make?\n- What data does it use to make that recommendation?\n- How do you think the creators of the app decided on the algorithm that they use to make the choice?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The first two questions are fairly straightforward. The app helps the user to choose a vacation spot, and it uses data about the user's food, superpower, and animal preferences.\n\nThe next question asks students to think about how algorithms are chosen. In a previous lesson, students designed an algorithm for this app by looking at cross-tabulation tables for people who had expressed different preferences. Remind students that the creators can use data they have collected to create their algorithm, rather than just making up their rules from their assumptions about the world."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ff9b8b39-860d-427b-9a2d-80c537bc539f",
@@ -4893,14 +4869,8 @@
       "key": "aea82025-7a34-4033-81e5-8468fd89be01",
       "position": 4,
       "properties": {
-        "description": "**Prompt** What choice does the app help the user to make?  What data does it use to make that recommendation?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "The first two questions are fairly straightforward.  The app helps the user to choose a vacation spot, and it uses data about the user's food, superpower, and animal preferences.\n\nThe next question asks students to think about how algorithms are chosen.  In a previous lesson, students designed an algorithm for this app by looking at cross tabulation tables for people who had expressed different preferences.  Remind students that the creators can use data they have collected to create their algorithm, rather than just making up their rules from their assumptions about the world.\n"
-          }
-        ]
+        "description": "In this project, we're going to use the data problem solving process to help us create our algorithm. We'll survey people to find the relationships between their preferences, then use what we've learned to create an algorithm that can recommend something to the user. You’ll be working with a partner, and your first step will be to think about the type of recommendation that you want to make, and the three questions that you will ask to help you make that recommendation.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "aea82025-7a34-4033-81e5-8468fd89be01",
@@ -4908,31 +4878,8 @@
       }
     },
     {
-      "key": "90bd9c7a-23e5-45a8-860e-b7795ec88a4a",
-      "position": 5,
-      "properties": {
-        "description": "**Prompt** How do you think the creators of the app decided on the algorithm that they use to make the choice?"
-      },
-      "seeding_key": {
-        "activity_section.key": "90bd9c7a-23e5-45a8-860e-b7795ec88a4a",
-        "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1"
-      }
-    },
-    {
-      "key": "6688be8b-84c2-4c24-ba45-45a4217ea28a",
-      "position": 6,
-      "properties": {
-        "description": "In this project, we're going to use the data problem solving process to help us create our algorithm.  We'll survey people to find the relationships between their preferences, then use what we've learned to create an algorithm that can recommend something to the user.  First, you and your partner should think about the type of recommendation that you want to make, and the three questions that you will ask to help you make that recommendation.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "6688be8b-84c2-4c24-ba45-45a4217ea28a",
-        "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1"
-      }
-    },
-    {
       "key": "eaf9b941-778e-468d-ae6e-e353b3d0942b",
-      "position": 7,
+      "position": 5,
       "properties": {
         "description": "**Step 1 - Define Your Problem:** Give students a few minutes to decide on their recommendation topic with their partner.",
         "name": "Define"
@@ -4944,12 +4891,11 @@
     },
     {
       "key": "4bc50ef6-5978-4a80-943a-49fc0cffb23e",
-      "position": 8,
+      "position": 6,
       "properties": {
         "description": "**Step 2 - Decide What Data You Need**",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "The lesson plan assumes a very rigid structure for the algorithm, with four possible recommendations based on three multiple choice questions, each with four answer choices.  You may want to give students more freedom in creating their survey and algorithm.\n"
           }
@@ -4963,9 +4909,9 @@
     },
     {
       "key": "187a7588-ecb2-4b52-8d9c-d87ca320216b",
-      "position": 9,
+      "position": 7,
       "properties": {
-        "description": "Give students time to think of the data that they need to help them make the recommendation to the user.\n\n**Step 3 - Create Your Survey**\n\nOnce students have decided on the data, they should put it in survey form.  In the initial survey, they will also need to include a question that asks about what they plan to recommend (e.g. a vacation spot).  They will use this data to make connections between a user's stated preferences and what they will eventually recommend."
+        "description": "Give students time to think of the data that they need to help them make the recommendation to the user.\n\n**Step 3 - Create Your Survey**\n\nOnce students have decided on the data, they should put it in survey form.  In the initial survey, they will also need to include a question that asks about what they plan to recommend (e.g. a vacation spot).  They will use this data to make connections between a user's stated preferences and what they will eventually recommend.\n\n####Day 1 Wrap-up\n\n**Collect:** Collect Project Guides and look over them for any issues that could cause problems for students in the next portion of the lesson. Before tomorrow’s lesson, students may also use this time to collect survey data from people outside the classroom."
       },
       "seeding_key": {
         "activity_section.key": "187a7588-ecb2-4b52-8d9c-d87ca320216b",
@@ -4974,16 +4920,9 @@
     },
     {
       "key": "43097b7a-83d4-475a-b618-96db7d3d4522",
-      "position": 10,
+      "position": 8,
       "properties": {
-        "description": "**Step 4 - Collect Your Survey Data**",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**When to Break:** After Step 3 or Step 4 is a good place to break after a first day. Collecting Project Guides at this point will allow you to look over them for any issues that could cause problems for students in the next portion of the lesson.  Students may also use this time to collect survey data from people outside the classroom.\n\n"
-          }
-        ]
+        "description": "##Day 2 Activity\n\n####Day 2 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####Project Guide - Make a Recommendation \n\n**Step 4 - Collect Your Survey Data:** Have students survey each other in the classroom. Ideally, students should give the survey to at least twenty people in order to make sure there is enough data to interpret in the next step. This will take a large portion of this class period."
       },
       "seeding_key": {
         "activity_section.key": "43097b7a-83d4-475a-b618-96db7d3d4522",
@@ -4992,9 +4931,9 @@
     },
     {
       "key": "db13f5b5-f1c0-4052-9a57-e23f3b55608f",
-      "position": 11,
+      "position": 9,
       "properties": {
-        "description": "Students should give the survey to at least twenty people, in order to make sure there is enough data to interpret in the next step.  \n\n**Step 5 - Interpret Your Data**\n\nGuide students in using cross tabulation to find relationships between the different user preferences.  If students are having trouble with this part of the project, you may want to share the exemplar with them or complete a few tables as a class."
+        "description": "**Step 5 - Interpret Your Data:** Guide students in using cross-tabulation to find relationships between the different user preferences. If students are having trouble with this part of the project, you may want to share the exemplar with them or complete a few tables as a class."
       },
       "seeding_key": {
         "activity_section.key": "db13f5b5-f1c0-4052-9a57-e23f3b55608f",
@@ -5003,12 +4942,11 @@
     },
     {
       "key": "2d923b7c-56a0-462a-b7c4-5350cfe28ac0",
-      "position": 12,
+      "position": 10,
       "properties": {
-        "description": "**Step 6 - Define Your Algorithm**",
+        "description": "**Step 6 - Define Your Algorithm:** Students use the relationships to create rules for their recommendation algorithm.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This step is slightly different from the algorithm assignment earlier in the chapter.  Make sure students understand that they should be creating rules based on the survey data that they have collected and interpreted, not what they believe to be true about the world.\n"
           }
@@ -5021,9 +4959,9 @@
     },
     {
       "key": "7dc83ff4-843e-4ef0-8b8f-fc42ec99c587",
-      "position": 13,
+      "position": 11,
       "properties": {
-        "description": "Students use the relationships to create rules for their recommendation algorithm."
+        "description": "####Day 2 Wrap-up\n\n**Collect:** Collect students' project guides and again do a quick check-in to make sure students are on track.\n\n##Day 3 Activity\n\n####Day 3 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####Project Guide - Make a Recommendation"
       },
       "seeding_key": {
         "activity_section.key": "7dc83ff4-843e-4ef0-8b8f-fc42ec99c587",
@@ -5032,16 +4970,9 @@
     },
     {
       "key": "831f4bc1-6ea7-4419-b83d-0382e78db075",
-      "position": 14,
+      "position": 12,
       "properties": {
-        "description": "**Step 7 - Try Out Your Algorithm**",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Another Break:** Just before Step 7 is another ideal place for a break. Collect students' project guides and again do a quick check-in to make sure students are on track. \n"
-          }
-        ]
+        "description": "**Step 7 - Try Out Your Algorithm:** Give students time to use their algorithm to make a recommendation to three of their classmates, then reflect on whether they believe the algorithm is effective.\n\n**Step 8 - Peer Review:** Read the instructions for Step 8 in the Project Guide. Clarify that the intent is to generate new ideas for how to improve your recommendation algorithm by having another team peer review it.\n\n**Distribute:** Pass out the Peer Review - Make a Recommendation worksheet to each student.\n\n####Peer Review - Make a Recommendation\n\n**Peer Review:** Have teams trade projects and complete a Peer Review for the other team. They should complete the chart and offer feedback to the team on their recommendation algorithm.\n\n**Creator’s Reflection:** Have teams look over the feedback and complete the Creator’s Reflection section of the activity guide. Teams should make edits to their Project Guide based on the feedback provided by another team.\n\n####Day 3 Wrap-up\n\n**Collect:** Collect students' project guides and again do a quick check-in to make sure students are on track."
       },
       "seeding_key": {
         "activity_section.key": "831f4bc1-6ea7-4419-b83d-0382e78db075",
@@ -5050,9 +4981,9 @@
     },
     {
       "key": "5eb7b7fb-3bd7-4ef4-bce1-ed0aeb6384a4",
-      "position": 15,
+      "position": 13,
       "properties": {
-        "description": "Give students time to use their algorithm to make a recommendation to three of their classmates, then reflect on whether they believe the algorithm is effective."
+        "description": "##Days 4 and 5 Activity\n\n####Day 4 Warm-Up\n\n**Distribute:** Re-distribute the Project Guides from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project."
       },
       "seeding_key": {
         "activity_section.key": "5eb7b7fb-3bd7-4ef4-bce1-ed0aeb6384a4",
@@ -5060,30 +4991,16 @@
       }
     },
     {
-      "key": "ae43b8a8-57b5-437f-b511-d7178d9e0faf",
-      "position": 16,
-      "properties": {
-        "description": "**Distribute:** peer review worksheet [r solve-a-data-problem-peer-review]\n\n**Step 8 - Peer Review:** Students should complete this peer review for another student's project guide.",
-        "name": "Peer Review"
-      },
-      "seeding_key": {
-        "activity_section.key": "ae43b8a8-57b5-437f-b511-d7178d9e0faf",
-        "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1"
-      }
-    },
-    {
       "key": "92566744-182e-416d-b7c7-2f5b2a92026b",
-      "position": 17,
+      "position": 14,
       "properties": {
-        "description": "**Step 9:** Students should incorporate their peer feedback by making edits in their project guides. Students should then design some kind of presentation of their work to share with their classmates. While you may choose many different formats, suggested content for the presentation is provided.",
+        "description": "**Step 9 - Finalize and Present:** Students should design some kind of presentation of their work to share with their classmates. While you may choose many different formats, suggested content for the presentation is provided. The presentation should include:\n\n- What choice you are helping the user to make\n- The types of data you collect to help the user make that choice\n- The relationships that you found when interpreting your survey data\n- The way you used this information to create your recommendation algorithm\n- The results of testing the algorithm on users",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**What kind of presentation?** The presentation can take any form you think best for your class: slides, poster, paper, etc.  Feel free to update the presentation rubic to fit your exact needs.\n"
           }
-        ],
-        "name": "Presentation"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "92566744-182e-416d-b7c7-2f5b2a92026b",
@@ -5091,10 +5008,21 @@
       }
     },
     {
+      "key": "2b7b1dfd-eb64-46b1-a225-5a4df7b10149",
+      "position": 15,
+      "properties": {
+        "description": "**Presentations:** Give teams time to present. Projects can be assessed using the rubric based on their presentation and project guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "2b7b1dfd-eb64-46b1-a225-5a4df7b10149",
+        "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1"
+      }
+    },
+    {
       "key": "22ca7a0f-899a-4cd3-8fbd-14afbf396317",
       "position": 1,
       "properties": {
-        "description": "**Collect:** The rubric is designed to help grade the completed project guide, presentation, and peer review rubric."
+        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
       },
       "seeding_key": {
         "activity_section.key": "22ca7a0f-899a-4cd3-8fbd-14afbf396317",
@@ -5102,32 +5030,25 @@
       }
     },
     {
-      "key": "3d40f066-a0cf-49d7-94ab-dcbb3bac428d",
-      "position": 2,
+      "key": "da18faf7-8529-4ebb-9cff-fc8b798ba5e5",
+      "position": 1,
       "properties": {
-        "description": "**Journal:** To close the unit either as a full class discussion or individual journal reflection ask students to write about",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** These prompts are one way you could bring the whole unit to a close. Students have explored the data problem solving process and now should be able to reflect more broadly on the implications of its widespread application. Many services students use every day and that make their lives easier or more interesting involve data problem solving. They have probably seen by now, however, that a lot of information about them, including information they didn't realize they were providing, is being collected. This final journal is a chance to reflect on these and other tradeoffs they've seen in this chapter.\r\n"
-          }
-        ]
+        "progression_name": "Sample App"
       },
       "seeding_key": {
-        "activity_section.key": "3d40f066-a0cf-49d7-94ab-dcbb3bac428d",
-        "lesson_activity.key": "558ee427-4fa3-4820-a16b-fe7dbfea3e4a"
+        "activity_section.key": "da18faf7-8529-4ebb-9cff-fc8b798ba5e5",
+        "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b"
       }
     },
     {
-      "key": "3989d2e6-4db5-4bb8-a9d2-ed53f12f0602",
-      "position": 3,
+      "key": "93bab638-a445-4465-97f2-5e2060ff8dc2",
+      "position": 2,
       "properties": {
-        "description": "* What's one thing you like about the way data is being used to solve problems in your life?\r\n* What's one thing you either don't like or concerns you about how data is being used to solve problems in your life?\r\n\r\n\r\n&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "progression_name": "Reflection"
       },
       "seeding_key": {
-        "activity_section.key": "3989d2e6-4db5-4bb8-a9d2-ed53f12f0602",
-        "lesson_activity.key": "558ee427-4fa3-4820-a16b-fe7dbfea3e4a"
+        "activity_section.key": "93bab638-a445-4465-97f2-5e2060ff8dc2",
+        "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b"
       }
     },
     {
@@ -5166,30 +5087,6 @@
       }
     },
     {
-      "key": "da18faf7-8529-4ebb-9cff-fc8b798ba5e5",
-      "position": 1,
-      "properties": {
-        "name": "Sample App",
-        "progression_name": "Sample App"
-      },
-      "seeding_key": {
-        "activity_section.key": "da18faf7-8529-4ebb-9cff-fc8b798ba5e5",
-        "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b"
-      }
-    },
-    {
-      "key": "93bab638-a445-4465-97f2-5e2060ff8dc2",
-      "position": 2,
-      "properties": {
-        "name": "Reflection",
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "93bab638-a445-4465-97f2-5e2060ff8dc2",
-        "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b"
-      }
-    },
-    {
       "key": "140f7280-d66a-44e2-8a0e-d1088807042d",
       "position": 1,
       "properties": {
@@ -5215,7 +5112,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5241,7 +5138,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5267,7 +5164,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5293,7 +5190,7 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5319,7 +5216,7 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5345,7 +5242,7 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5371,7 +5268,7 @@
       "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5397,7 +5294,7 @@
       "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5423,7 +5320,7 @@
       "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5449,7 +5346,7 @@
       "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5475,7 +5372,7 @@
       "chapter": 11,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5501,7 +5398,7 @@
       "chapter": 12,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary and Data",
         "level_keys": [
@@ -5527,7 +5424,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Representations",
         "level_keys": [
@@ -5553,7 +5450,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Representations",
         "level_keys": [
@@ -5579,7 +5476,7 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keeping Data Secret",
         "level_keys": [
@@ -5605,7 +5502,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keeping Data Secret",
         "level_keys": [
@@ -6640,11 +6537,11 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://studio.code.org/s/csd5-2019/stage/8/puzzle/1",
+      "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
       "key": "create-a-representation-exemplar-2019",
       "properties": {
-        "type": "Exemplars",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "create-a-representation-exemplar-2019"
@@ -6677,6 +6574,30 @@
       }
     },
     {
+      "name": "Sample Marked Rubric 1",
+      "url": "https://docs.google.com/document/d/1m00JmDi7nQhplCaQuGcLcy4Wr12NASBHnuRNw0ka11A/edit",
+      "key": "sample_marked_rubric",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubric"
+      }
+    },
+    {
+      "name": "Sample Marked Rubric 2",
+      "url": "https://docs.google.com/document/d/1CKiIik6T8Y-hk23FkP3Hh9nsLfGtJN2jD8uGXSA6-aA/edit",
+      "key": "sample_marked_rubric_2",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubric_2"
+      }
+    },
+    {
       "name": "Unit 5 Data & Society",
       "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
       "key": "unit-5-data-society",
@@ -6690,7 +6611,7 @@
     },
     {
       "name": "Problem Solving with Data",
-      "url": "https://studio.code.org/s/csd5-2019/stage/9/puzzle/1",
+      "url": "https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/edit",
       "key": "problem-solving-with-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6740,7 +6661,7 @@
     },
     {
       "name": "Structuring Data",
-      "url": "https://studio.code.org/s/csd5-2019/stage/11/puzzle/1",
+      "url": "https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/edit",
       "key": "structuring-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6764,7 +6685,7 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://studio.code.org/s/csd5-2019/stage/13/puzzle/1",
+      "url": "https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/edit",
       "key": "interpreting-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6814,7 +6735,7 @@
     },
     {
       "name": "Making Decisions With Data",
-      "url": "https://studio.code.org/s/csd5-2019/stage/12/puzzle/1",
+      "url": "https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit",
       "key": "making-decisions-with-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6864,7 +6785,7 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://studio.code.org/s/csd5-2019/stage/14/puzzle/1",
+      "url": "https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/edit",
       "key": "automating-data-decisions-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6953,7 +6874,7 @@
     },
     {
       "name": "Data in the Real World",
-      "url": "https://studio.code.org/s/csd5-2019/stage/10/puzzle/1",
+      "url": "https://docs.google.com/document/d/1HXqpl795GTX4WVgJB_HxPP31oIy49hTVg6x_GXPdgfY/edit",
       "key": "data-in-the-real-world-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -7029,18 +6950,6 @@
     },
     {
       "name": "Make a Recommendation",
-      "url": "https://studio.code.org/s/csd5-2019/stage/15/puzzle/1",
-      "key": "make-a-recommendation-exemplars-2019",
-      "properties": {
-        "type": "Exemplars",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "make-a-recommendation-exemplars-2019"
-      }
-    },
-    {
-      "name": "Make a Recommendation",
       "url": "https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/edit",
       "key": "solve-a-data-problem",
       "properties": {
@@ -7050,6 +6959,66 @@
       },
       "seeding_key": {
         "resource.key": "solve-a-data-problem"
+      }
+    },
+    {
+      "name": "Project Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
+      "key": "project_guide_exemplar",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "project_guide_exemplar"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 1",
+      "url": "https://docs.google.com/document/d/1MSb8Ue9fccQO674JoEkLTvDpqantz1BBBpdEy1zTrgo/edit",
+      "key": "sample_marked_rubrics_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_1"
+      }
+    },
+    {
+      "name": "Peer Review Exemplar 1 ",
+      "url": "https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/edit",
+      "key": "peer_review_exemplar_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_exemplar_1"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 2",
+      "url": "https://docs.google.com/document/d/1eDjhOW0uL8W8bRokTkfbw5R43ficUTZjhZYx_GTUxsY/edit",
+      "key": "sample_marked_rubrics_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_2"
+      }
+    },
+    {
+      "name": "Peer Review Exemplar 2",
+      "url": "https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ/edit",
+      "key": "peer_review_exemplar_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_exemplar_2"
       }
     }
   ],
@@ -7230,6 +7199,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "resource.key": "sample_marked_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "resource.key": "sample_marked_rubric_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Problem Solving and Data",
         "resource.key": "unit-5-data-society"
       }
@@ -7399,47 +7380,79 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "make-a-recommendation-exemplars-2019"
+        "resource.key": "solve-a-data-problem"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "solve-a-data-problem"
+        "resource.key": "project_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "sample_marked_rubrics_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "peer_review_exemplar_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "sample_marked_rubrics_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "peer_review_exemplar_2"
       }
     }
   ],
   "vocabularies": [
     {
-      "key": "Decode",
+      "key": "decode",
       "word": "Decode",
       "definition": "to change how information is represented so that it can be read by a person",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Decode"
+        "vocabulary.key": "decode"
       }
     },
     {
-      "key": "Encode",
+      "key": "encode",
       "word": "Encode",
       "definition": "to change how information is represented so that it can be read by a computer",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Encode"
+        "vocabulary.key": "encode"
       }
     },
     {
-      "key": "Decrypt",
+      "key": "decrypt",
       "word": "Decrypt",
       "definition": "to change information so that its hidden meaning is shown",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Decrypt"
+        "vocabulary.key": "decrypt"
       }
     },
     {
-      "key": "Encrypt",
+      "key": "encrypt",
       "word": "Encrypt",
       "definition": "to change information so that its meaning is hidden",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Encrypt"
+        "vocabulary.key": "encrypt"
       }
     }
   ],
@@ -7447,25 +7460,25 @@
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "vocabulary.key": "Decode"
+        "vocabulary.key": "decode"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "vocabulary.key": "Encode"
+        "vocabulary.key": "encode"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
-        "vocabulary.key": "Decrypt"
+        "vocabulary.key": "decrypt"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
-        "vocabulary.key": "Encrypt"
+        "vocabulary.key": "encrypt"
       }
     }
   ],

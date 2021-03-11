@@ -7,6 +7,10 @@ class HomeControllerTest < ActionController::TestCase
   setup do
     # stub properties so we don't try to hit pegasus db
     Properties.stubs(:get).returns nil
+
+    # ensure consistent query counts by calling Scripts.all_scripts to populate
+    # the script cache here
+    _ = Script.all_scripts
   end
 
   test "teacher without progress or assigned course/script redirected to index" do

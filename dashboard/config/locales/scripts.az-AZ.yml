@@ -1850,3 +1850,27 @@ az:
               name: Dərs 14
             lesson15:
               name: Dərs 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Giriş
+            Loops:
+              key: dövrlər
+              name: dövrlər
+            Events:
+              key: Hadisələr
+              name: Hadisələr
+            Conditionals:
+              key: Şərti ifadələr
+              name: Şərti ifadələr
+            Functions:
+              key: Funksiyalar
+              name: Funksiyalar
+            Variables:
+              key: dəyişənlər
+              name: dəyişənlər
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Giriş
+            Introduction:
+              display_name: Giriş
