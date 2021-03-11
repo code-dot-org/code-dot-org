@@ -12,21 +12,27 @@ class ProgrammingExpressionAutocompleteTest < ActiveSupport::TestCase
     assert_equal 'applab', matches[0][:programmingEnvironmentName]
   end
 
+  test "finds programming_expression with matching category" do
+    matches = ProgrammingExpressionAutocomplete.get_search_matches('Drawing', 5, nil)
+    assert_equal 1, matches.length
+    assert_equal 'background', matches[0][:name]
+  end
+
   test "finds multiple matches" do
-    matches = ProgrammingExpressionAutocomplete.get_search_matches('Sound', 5, nil)
-    assert_equal 3, matches.length
-    assert_equal ['stopSound', 'playSound', 'playSound'], matches.map {|m| m[:name]}
+    matches = ProgrammingExpressionAutocomplete.get_search_matches('play', 5, nil)
+    assert_equal 2, matches.length
+    assert_equal ['playSound-1', 'playSound-2'], matches.map {|m| m[:key]}
   end
 
   test "restricts matches by limit" do
-    matches = ProgrammingExpressionAutocomplete.get_search_matches('Sound', 1, nil)
+    matches = ProgrammingExpressionAutocomplete.get_search_matches('play', 1, nil)
     assert_equal 1, matches.length
   end
 
   test "restricts matches by programming environment id" do
     # There's a blocks with Sound in them in two programming environments
     # We should only get the one we requested
-    matches = ProgrammingExpressionAutocomplete.get_search_matches('Sound', 3, ProgrammingEnvironment.find_by(name: 'gamelab').id)
+    matches = ProgrammingExpressionAutocomplete.get_search_matches('play', 3, ProgrammingEnvironment.find_by(name: 'gamelab').id)
     assert_equal 1, matches.length
     assert_equal ProgrammingEnvironment.find_by(name: 'gamelab').id, ProgrammingExpression.find_by(key: matches[0][:key]).programming_environment_id
   end
