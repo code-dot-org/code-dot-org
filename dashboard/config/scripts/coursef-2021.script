@@ -11,6 +11,8 @@ is_migrated true
 
 lesson_group 'ramp_up', display_name: 'Ramp Up'
 lesson 'lesson-6', display_name: 'Introducing Sprite Lab', has_lesson_plan: true
+level 'CourseF_video_introSpriteLab_2021', progression: 'Video: Introducing Sprite Lab'
+level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
 
 lesson 'lesson-7', display_name: 'Making Sprites', has_lesson_plan: true
 

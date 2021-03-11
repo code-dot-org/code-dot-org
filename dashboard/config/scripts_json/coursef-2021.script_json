@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-11 19:37:52 UTC",
+    "serialized_at": "2021-03-11 23:09:37 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -654,6 +654,20 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2280825d-5ed7-404f-93b8-ea1fac41b4a4",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "156c9efe-8298-4b5e-9fdc-51dc2879f769",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "156c9efe-8298-4b5e-9fdc-51dc2879f769",
         "lesson.key": "lesson-7",
         "lesson_group.key": "ramp_up",
         "script.name": "coursef-2021"
@@ -1908,7 +1922,7 @@
       "key": "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5",
       "position": 3,
       "properties": {
-        "description": "**Do this:** Using the lesson warm up slides, or this ***sample project**, show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this **sprite** scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both **sprites** in this project, describe their **behaviors** (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** _What is the same or different about our instructions and this code?_ \n"
+        "description": "**Do this:** Using the lesson warm up slides, or this ***sample project**, show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this **sprite** scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both **sprites** in this project, describe their **behaviors** (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?\n"
       },
       "seeding_key": {
         "activity_section.key": "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5",
@@ -1919,11 +1933,102 @@
       "key": "d0b548d1-7ce0-46f1-98c6-2f83efb996c7",
       "position": 1,
       "properties": {
-        "name": "Making Sprites"
+        "name": "Making Sprites",
+        "description": "####Prediction (3 mins)\n\n**Do This:**  Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " In prediction puzzles students are asked to read a provided **program** and answer a question about it. The question must be answered before the student may press the “Run” button. While it is possible to use these questions as a form of assessment, keep in mind that they are often placed at the start of a lesson as a way to get students questioning things before they are even formally shown how something new works. "
+          }
+        ],
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "d0b548d1-7ce0-46f1-98c6-2f83efb996c7",
         "lesson_activity.key": "2280825d-5ed7-404f-93b8-ea1fac41b4a4"
+      }
+    },
+    {
+      "key": "3eb6f356-a55c-4c86-a056-e8af46058092",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:  Play the video, “How to Make a Sprite”",
+        "progression_name": "How to Make a Sprite Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "3eb6f356-a55c-4c86-a056-e8af46058092",
+        "lesson_activity.key": "2280825d-5ed7-404f-93b8-ea1fac41b4a4"
+      }
+    },
+    {
+      "key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192",
+      "position": 3,
+      "properties": {
+        "description": "####Skill Building and Practice (20 mins)\n\n**Transition:** Have students move to their computer and sign in. \n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Many lessons in this course include both “Skill Building” and “Practice” levels. In terms of assessment, all students should complete the skill building section. Practice levels can be used for differentiation or for providing more choice for students."
+          }
+        ],
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192",
+        "lesson_activity.key": "2280825d-5ed7-404f-93b8-ea1fac41b4a4"
+      }
+    },
+    {
+      "key": "c5589504-a584-4599-8ee2-22e32a2374da",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5589504-a584-4599-8ee2-22e32a2374da",
+        "lesson_activity.key": "2280825d-5ed7-404f-93b8-ea1fac41b4a4"
+      }
+    },
+    {
+      "key": "4e2fcf33-06aa-4650-913e-e2d763d86be7",
+      "position": 5,
+      "properties": {
+        "description": "####Free Play (10 mins)\n\n**Transition:** Students should now skip to the final level in the lesson where they will be able to make their own project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Free Play levels are designed to be a quick opportunity for students to apply what they have been learning in a creative way. Students should experiment with their own ideas and can be encouraged to share and collaborate with each other."
+          }
+        ],
+        "progression_name": "Free Play - Make a Scene"
+      },
+      "seeding_key": {
+        "activity_section.key": "4e2fcf33-06aa-4650-913e-e2d763d86be7",
+        "lesson_activity.key": "2280825d-5ed7-404f-93b8-ea1fac41b4a4"
+      }
+    },
+    {
+      "key": "a594c37e-142d-44f1-93c9-e49ecce1e716",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "remarks": true,
+        "description": "Today you learned how to write code to create programs in Sprite Lab. \n\n**Program** - An algorithm that has been coded into something that can be run by a machine.\n\n**Algorithm** - A list of steps to complete a task."
+      },
+      "seeding_key": {
+        "activity_section.key": "a594c37e-142d-44f1-93c9-e49ecce1e716",
+        "lesson_activity.key": "156c9efe-8298-4b5e-9fdc-51dc2879f769"
+      }
+    },
+    {
+      "key": "84a55315-a3fb-4f8c-a451-b167ff8700cb",
+      "position": 2,
+      "properties": {
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts: What advice would you have for a friend who is interested in creating their own programs in Sprite Lab?\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "84a55315-a3fb-4f8c-a451-b167ff8700cb",
+        "lesson_activity.key": "156c9efe-8298-4b5e-9fdc-51dc2879f769"
       }
     },
     {
@@ -4115,7 +4220,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Introducing Sprite Lab",
         "level_keys": [
@@ -4123,7 +4228,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_video_introSpriteLab_2021"
@@ -4141,12 +4246,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Exploration: Sample Apps"
+        "progression": "Exploration: Sample Apps",
+        "level_keys": [
+          "courseF_intro_apps"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_intro_apps"
@@ -4162,6 +4270,213 @@
     },
     {
       "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "d0b548d1-7ce0-46f1-98c6-2f83efb996c7"
+      },
+      "level_keys": [
+        "courseF_sprites_predict"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "How to Make a Sprite Video"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "3eb6f356-a55c-4c86-a056-e8af46058092"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_2021-2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      },
+      "level_keys": [
+        "courseF_sprites_make"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      },
+      "level_keys": [
+        "courseF_sprites_positioning"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      },
+      "level_keys": [
+        "courseF_sprites_moreSprites"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      },
+      "level_keys": [
+        "courseF_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      },
+      "level_keys": [
+        "courseF_sprites_behaviors"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c5589504-a584-4599-8ee2-22e32a2374da"
+      },
+      "level_keys": [
+        "courseF_sprites_practice"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play - Make a Scene"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "4e2fcf33-06aa-4650-913e-e2d763d86be7"
+      },
+      "level_keys": [
+        "courseF_sprites_freeplay"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4187,7 +4502,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -4213,7 +4528,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -4239,7 +4554,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -4265,7 +4580,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -4291,7 +4606,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -4317,7 +4632,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -4343,7 +4658,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -4369,7 +4684,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -4395,7 +4710,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -4421,7 +4736,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 22,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -4447,7 +4762,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 23,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -4473,7 +4788,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4499,7 +4814,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4525,7 +4840,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -4551,7 +4866,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -4577,7 +4892,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -4603,7 +4918,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -4629,7 +4944,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4655,7 +4970,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -4681,7 +4996,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -4707,7 +5022,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 33,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -4733,7 +5048,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4759,7 +5074,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4785,7 +5100,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -4811,7 +5126,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -4837,7 +5152,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -4863,7 +5178,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -4889,7 +5204,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4915,7 +5230,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -4941,7 +5256,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 42,
       "position": 9,
       "activity_section_position": 3,
       "assessment": null,
@@ -4967,7 +5282,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4993,7 +5308,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5019,7 +5334,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -5045,7 +5360,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5071,7 +5386,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -5097,7 +5412,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -5123,7 +5438,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -5150,7 +5465,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -5177,7 +5492,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -5203,7 +5518,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 52,
       "position": 10,
       "activity_section_position": 2,
       "assessment": null,
@@ -5229,7 +5544,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -5256,7 +5571,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 54,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -5282,7 +5597,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 55,
       "position": 13,
       "activity_section_position": 2,
       "assessment": null,
@@ -5308,7 +5623,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5334,7 +5649,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5360,7 +5675,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5386,7 +5701,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5412,7 +5727,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -5438,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -5464,7 +5779,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 62,
       "position": 7,
       "activity_section_position": 3,
       "assessment": null,
@@ -5490,7 +5805,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 63,
       "position": 8,
       "activity_section_position": 4,
       "assessment": null,
@@ -5516,7 +5831,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 64,
       "position": 9,
       "activity_section_position": 5,
       "assessment": null,
@@ -5542,7 +5857,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 65,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -5569,7 +5884,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 66,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -5595,7 +5910,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 67,
       "position": 12,
       "activity_section_position": 2,
       "assessment": null,
@@ -5621,7 +5936,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 68,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -5647,7 +5962,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5673,7 +5988,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5699,7 +6014,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5725,7 +6040,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5751,7 +6066,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5777,7 +6092,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 74,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5803,7 +6118,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 75,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -5829,7 +6144,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 76,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -5855,7 +6170,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 77,
       "position": 7,
       "activity_section_position": 3,
       "assessment": null,
@@ -5881,7 +6196,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 78,
       "position": 8,
       "activity_section_position": 4,
       "assessment": null,
@@ -5907,7 +6222,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 79,
       "position": 9,
       "activity_section_position": 5,
       "assessment": null,
@@ -5933,7 +6248,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5959,7 +6274,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 81,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5985,7 +6300,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 82,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6011,7 +6326,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 83,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6037,7 +6352,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 84,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -6063,7 +6378,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 85,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6090,7 +6405,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 86,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -6116,7 +6431,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6142,7 +6457,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6168,7 +6483,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6194,7 +6509,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6220,7 +6535,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6246,7 +6561,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6272,7 +6587,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 2,
       "assessment": null,
@@ -6298,7 +6613,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6324,7 +6639,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6350,7 +6665,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 96,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6375,7 +6690,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6400,7 +6715,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6425,7 +6740,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6450,7 +6765,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6475,7 +6790,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6500,7 +6815,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6525,7 +6840,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -6550,7 +6865,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6575,7 +6890,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6601,7 +6916,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6627,7 +6942,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6653,7 +6968,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6679,7 +6994,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6705,7 +7020,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -6731,7 +7046,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6757,7 +7072,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -6783,7 +7098,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 3,
       "assessment": null,
@@ -6809,7 +7124,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 4,
       "assessment": null,
@@ -6835,7 +7150,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 115,
       "position": 9,
       "activity_section_position": 5,
       "assessment": null,
@@ -6861,7 +7176,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 116,
       "position": 10,
       "activity_section_position": 6,
       "assessment": null,
@@ -6887,7 +7202,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 117,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -6914,7 +7229,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 118,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6940,7 +7255,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 119,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6966,7 +7281,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 120,
       "position": 14,
       "activity_section_position": 2,
       "assessment": null,
@@ -6992,7 +7307,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7018,7 +7333,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7044,7 +7359,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -7070,7 +7385,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -7096,7 +7411,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -7122,7 +7437,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -7148,7 +7463,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 5,
       "assessment": null,
@@ -7174,7 +7489,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 6,
       "assessment": null,
@@ -7200,7 +7515,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 7,
       "assessment": null,
@@ -7226,7 +7541,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 130,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -7252,7 +7567,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 131,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -7278,7 +7593,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 132,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -7304,7 +7619,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 133,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -7330,7 +7645,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 134,
       "position": 14,
       "activity_section_position": 2,
       "assessment": null,
@@ -7356,7 +7671,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 135,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7382,7 +7697,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 136,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7408,7 +7723,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 137,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -7434,7 +7749,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 138,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -7460,7 +7775,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 139,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -7486,7 +7801,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 140,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -7512,7 +7827,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 141,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -7538,7 +7853,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 142,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -7565,7 +7880,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 143,
       "position": 9,
       "activity_section_position": 2,
       "assessment": null,
@@ -7592,7 +7907,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7618,7 +7933,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 145,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7644,7 +7959,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 146,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -7670,7 +7985,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 147,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -7696,7 +8011,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 148,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -7722,7 +8037,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 149,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -7748,7 +8063,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 150,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -7774,7 +8089,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 151,
       "position": 8,
       "activity_section_position": 7,
       "assessment": null,
@@ -7800,7 +8115,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7826,7 +8141,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 153,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7875,6 +8190,114 @@
         "lesson_group.key": "ramp_up",
         "script.name": "coursef-2021",
         "activity_section.key": "e9148961-d1ba-4ce8-b9f6-79d0603b3122"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_predict",
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "d0b548d1-7ce0-46f1-98c6-2f83efb996c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_2021-2",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "3eb6f356-a55c-4c86-a056-e8af46058092"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_make",
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_positioning",
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_moreSprites",
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_properties",
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_behaviors",
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_practice",
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c5589504-a584-4599-8ee2-22e32a2374da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_freeplay",
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "4e2fcf33-06aa-4650-913e-e2d763d86be7"
       }
     },
     {
@@ -10275,6 +10698,16 @@
   ],
   "vocabularies": [
     {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
       "key": "user",
       "word": "User",
       "definition": "Someone who uses an object, including software and hardware.",
@@ -10282,6 +10715,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "user"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
       }
     },
     {
@@ -10365,6 +10818,36 @@
       }
     },
     {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
       "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
@@ -10382,6 +10865,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "constant"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
       }
     },
     {
@@ -10415,26 +10918,6 @@
       }
     },
     {
-      "key": "dsl_cable",
-      "word": "DSL/Cable",
-      "definition": "A method of sending information using telephone or television cables.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dsl_cable"
-      }
-    },
-    {
-      "key": "fiber_optic_cable",
-      "word": "Fiber Optic Cable",
-      "definition": "A connection that uses light to transmit information",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "fiber_optic_cable"
-      }
-    },
-    {
       "key": "internet",
       "word": "Internet",
       "definition": "A group of computers and servers that are connected to each other.",
@@ -10442,16 +10925,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "internet"
-      }
-    },
-    {
-      "key": "ip_address",
-      "word": "IP Address",
-      "definition": "A number assigned to any item that is connected to the Internet.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ip_address"
       }
     },
     {
@@ -10482,6 +10955,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "url"
+      }
+    },
+    {
+      "key": "dsl_cable",
+      "word": "DSL/Cable",
+      "definition": "A method of sending information using telephone or television cables.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dsl_cable"
+      }
+    },
+    {
+      "key": "fiber_optic_cable",
+      "word": "Fiber Optic Cable",
+      "definition": "A connection that uses light to transmit information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "fiber_optic_cable"
+      }
+    },
+    {
+      "key": "ip_address",
+      "word": "IP Address",
+      "definition": "A number assigned to any item that is connected to the Internet.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ip_address"
       }
     },
     {
@@ -10701,25 +11204,7 @@
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "dsl_cable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "fiber_optic_cable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
         "vocabulary.key": "internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "vocabulary.key": "ip_address"
       }
     },
     {
@@ -10738,6 +11223,24 @@
       "seeding_key": {
         "lesson.key": "Internet",
         "vocabulary.key": "url"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "dsl_cable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "fiber_optic_cable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "vocabulary.key": "ip_address"
       }
     },
     {
