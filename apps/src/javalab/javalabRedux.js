@@ -5,7 +5,8 @@ const SET_FILENAME = 'javalab/SET_FILENAME';
 const initialState = {
   consoleLogs: [],
   editorText: '',
-  filename: 'MyClass.java'
+  filename: 'MyClass.java',
+  filesChanged: false
 };
 
 export const appendInputLog = input => ({
@@ -38,7 +39,8 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_EDITOR_TEXT) {
     return {
       ...state,
-      editorText: action.editorText
+      editorText: action.editorText,
+      filesChanged: true
     };
   }
   if (action.type === SET_FILENAME) {
