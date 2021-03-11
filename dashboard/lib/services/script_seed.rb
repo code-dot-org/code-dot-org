@@ -158,6 +158,7 @@ module Services
       vocabularies_data = data['vocabularies']
       lessons_vocabularies_data = data['lessons_vocabularies']
       objectives_data = data['objectives']
+      lessons_standards_data = data['lessons_standards']
       seed_context = SeedContext.new
 
       Script.transaction do
@@ -196,6 +197,8 @@ module Services
         seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
         seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
+        seed_context.standards = Standard.all
+        seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
 
         seed_context.script
       end
@@ -480,6 +483,31 @@ module Services
       existing_objectives = Objective.joins(:lesson).where('stages.script_id' => seed_context.script.id)
       Objective.import! objectives_to_import, on_duplicate_key_update: get_columns(Objective)
       destroy_outdated_objects(Objective, existing_objectives, objectives_to_import, seed_context)
+    end
+
+    def self.import_lessons_standards(lessons_standards_data, seed_context)
+      lessons_standards_to_import = lessons_standards_data.map do |ls_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == ls_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        standard_id = seed_context.standards.select {|s| s.shortcode == ls_data['seeding_key']['standard.shortcode']}.first&.id
+        raise 'No standard found' if standard_id.nil?
+
+        LessonsStandard.new(
+          stage_id: lesson_id,
+          standard_id: standard_id
+        )
+      end
+
+      # destroy_outdated_objects won't work on LessonsStandard objects because
+      # they do not have an id field. Work around this by inefficiently deleting
+      # all LessonsStandards using 1 query per lesson, and then re-importing all
+      # LessonsStandards in a single query. It may be possible to eliminate
+      # these extra queries by adding an id column to the LessonsStandard model.
+      seed_context.lessons.each {|l| l.standards = []}
+
+      LessonsStandard.import! lessons_standards_to_import, on_duplicate_key_update: get_columns(LessonsStandard)
+      LessonsStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
