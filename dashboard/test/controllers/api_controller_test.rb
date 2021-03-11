@@ -19,7 +19,7 @@ class ApiControllerTest < ActionController::TestCase
       @students << student
       create(:follower, section: @section, student_user: student)
     end
-    @student_1, @student_2, @student_3, @student_4, @student_5 = @students
+    @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
     flappy = Script.get_from_cache(Script::FLAPPY_NAME)
     @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
@@ -257,39 +257,27 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal @student_flappy_1.name, flappy_section_response['stages'][lesson.id.to_s][0]['name']
   end
 
-  test "should get lock state when we have user_levels" do
-    script, level, lesson = create_script_with_lockable_lesson
-
-    # student_1 is unlocked
-    create :user_level, user: @student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
-
-    # student_2 can view answers
-    create :user_level, user: @student_2, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: Time.now
-
-    # student_3 has a user_level, but is still locked
-    create :user_level, user: @student_3, script: script, level: level, submitted: true, readonly_answers: false
-
-    # student_4 got autolocked while editing
-    create :user_level, user: @student_4, script: script, level: level, submitted: false, unlocked_at: 2.days.ago
-
-    # student_5 got autolocked while viewing answers
-    create :user_level, user: @student_5, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: 2.days.ago
-
-    # student_6 has never opened the assessment, assessment not yet unlocked
-    create :user_level, user: @student_6, script: script, level: level, submitted: false, unlocked_at: nil
-
-    # student_7 has never opened the assessment, though assessment was unlocked and then autolocked
-    create :user_level, user: @student_7, script: script, level: level, submitted: false, unlocked_at: 2.days.ago
-
+  # Helper for setting up student lock tests
+  def get_first_student_response(script, level, lesson)
     get :lockable_state, params: {section_id: @section.id, script_id: script.id}
     assert_response :success
     body = JSON.parse(response.body)
 
     student_responses = body[@section.id.to_s]['stages'][lesson.id.to_s]
-    assert_equal 7, student_responses.length
 
+    if student_responses
+      return student_responses[0]
+    else
+      return nil
+    end
+  end
+
+  test "student should show unlocked and not readonly" do
     # student_1 is unlocked
-    student_1_response = student_responses[0]
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+
+    student_1_response = get_first_student_response(script, level, lesson)
     assert_equal(
       {
         "user_id" => @student_1.id,
@@ -300,9 +288,14 @@ class ApiControllerTest < ActionController::TestCase
     )
     assert_equal false, student_1_response['locked']
     assert_equal false, student_1_response['readonly_answers']
+  end
 
-    # student_2 is unlocked
-    student_2_response = student_responses[1]
+  test "student should show unlocked and readonly" do
+    # student_2 is unlocked and can view answers
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_2, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: Time.now
+
+    student_2_response = get_first_student_response(script, level, lesson)
     assert_equal(
       {
         "user_id" => @student_2.id,
@@ -313,9 +306,14 @@ class ApiControllerTest < ActionController::TestCase
     )
     assert_equal false, student_2_response['locked']
     assert_equal true, student_2_response['readonly_answers']
+  end
 
-    # student_3 has a user_level, but is still locked
-    student_3_response = student_responses[2]
+  test "student should show locked and not readonly" do
+    # student_3 has a user level, but has submitted so is locked
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_3, script: script, level: level, submitted: true, readonly_answers: false
+
+    student_3_response = get_first_student_response(script, level, lesson)
     assert_equal(
       {
         "user_id" => @student_3.id,
@@ -326,9 +324,14 @@ class ApiControllerTest < ActionController::TestCase
     )
     assert_equal true, student_3_response['locked']
     assert_equal false, student_3_response['readonly_answers']
+  end
 
+  test "student has been autolocked" do
     # student_4 got autolocked while editing
-    student_4_response = student_responses[3]
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_4, script: script, level: level, submitted: false, unlocked_at: 2.days.ago
+
+    student_4_response = get_first_student_response(script, level, lesson)
     assert_equal(
       {
         "user_id" => @student_4.id,
@@ -339,9 +342,14 @@ class ApiControllerTest < ActionController::TestCase
     )
     assert_equal true, student_4_response['locked']
     assert_equal false, student_4_response['readonly_answers']
+  end
 
+  test "student has been autolocked while viewing answers" do
     # student_5 got autolocked while viewing answers
-    student_5_response = student_responses[4]
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_5, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: 2.days.ago
+
+    student_5_response = get_first_student_response(script, level, lesson)
     assert_equal(
       {
         "user_id" => @student_5.id,
@@ -352,9 +360,14 @@ class ApiControllerTest < ActionController::TestCase
     )
     assert_equal true, student_5_response['locked']
     assert_equal false, student_5_response['readonly_answers']
+  end
 
-    # student_6 is still locked, not readonly
-    student_6_response = student_responses[5]
+  test "student hasn't opened the assessment, assessment still locked" do
+    # student_6 has never opened the assessment, assessment not yet unlocked
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_6, script: script, level: level, submitted: false, unlocked_at: nil
+
+    student_6_response = get_first_student_response(script, level, lesson)
     assert_equal(
       {
         "user_id" => @student_6.id,
@@ -365,9 +378,14 @@ class ApiControllerTest < ActionController::TestCase
     )
     assert_equal true, student_6_response['locked']
     assert_equal false, student_6_response['readonly_answers']
+  end
 
-    # student_7 is locked again, not autosubmitted, not readonly
-    student_7_response = student_responses[6]
+  test "student never opened, though assessment was unlocked and has autolocked" do
+    # student_7 has never opened the assessment
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_7, script: script, level: level, submitted: false, unlocked_at: 2.days.ago
+
+    student_7_response = get_first_student_response(script, level, lesson)
     assert_equal(
       {
         "user_id" => @student_7.id,
