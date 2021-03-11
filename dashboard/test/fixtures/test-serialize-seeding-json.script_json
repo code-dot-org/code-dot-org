@@ -942,5 +942,8 @@
         "objective.key": "test-serialize-seeding-json-lg-1-l-2-objective-2"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }
