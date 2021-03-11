@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormLibraryEditor from './FoormLibraryEditor';
 import {
-  resetAvailableLibraries,
   resetAvailableLibraryQuestions,
   setLastSaved,
   setSaveError,
@@ -30,12 +29,11 @@ class FoormLibraryEditorManager extends React.Component {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
     libraryNamesAndVersions: PropTypes.array,
-    libraryCategories: PropTypes.array,
+    categories: PropTypes.array,
 
     // populated by redux
     libraryId: PropTypes.number,
     availableLibraries: PropTypes.array,
-    resetAvailableLibraries: PropTypes.func,
     availableLibraryQuestionsForCurrentLibrary: PropTypes.array,
     resetAvailableLibraryQuestions: PropTypes.func,
     setLastSaved: PropTypes.func,
@@ -53,8 +51,6 @@ class FoormLibraryEditorManager extends React.Component {
       showCodeMirror: false,
       hasLoadError: false
     };
-
-    this.props.resetAvailableLibraries(this.props.libraryNamesAndVersions);
   }
 
   getFormattedLibraryDropdownOptions() {
@@ -239,7 +235,7 @@ class FoormLibraryEditorManager extends React.Component {
         {this.state.showCodeMirror && (
           <FoormLibraryEditor
             populateCodeMirror={this.props.populateCodeMirror}
-            libraryCategories={this.props.libraryCategories}
+            categories={this.props.categories}
             resetCodeMirror={this.props.resetCodeMirror}
           />
         )}
@@ -251,14 +247,12 @@ class FoormLibraryEditorManager extends React.Component {
 export default connect(
   state => ({
     libraryQuestion: state.foorm.libraryQuestion || {},
-    availableLibraries: state.foorm.availableLibraries || [],
+    availableLibraries: state.foorm.availableEntities || [],
     availableLibraryQuestionsForCurrentLibrary:
       state.foorm.availableLibraryQuestionsForCurrentLibrary || [],
     libraryId: state.foorm.libraryId
   }),
   dispatch => ({
-    resetAvailableLibraries: librariesMetadata =>
-      dispatch(resetAvailableLibraries(librariesMetadata)),
     resetAvailableLibraryQuestions: libraryQuestionsMetadata =>
       dispatch(resetAvailableLibraryQuestions(libraryQuestionsMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
