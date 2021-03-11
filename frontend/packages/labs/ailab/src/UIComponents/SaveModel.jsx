@@ -19,10 +19,8 @@ class SaveModel extends Component {
     this.props.setTrainedModelDetail(field, event.target.value, isColumn);
   };
 
-  getFields = () => {
+  getColumnFields = () => {
     var fields = [];
-
-    fields.push({ id: "name", text: "What will you name the model?" });
 
     for (const columnDescription of this.props.columnDescriptions) {
       fields.push({
@@ -32,7 +30,11 @@ class SaveModel extends Component {
         answer: columnDescription.description
       });
     }
+    return fields;
+  }
 
+  getUsesFields = () => {
+    var fields = [];
     fields.push({
       id: "potentialUses",
       text: "How can this model be used?",
@@ -41,50 +43,43 @@ class SaveModel extends Component {
     fields.push({
       id: "potentialMisuses",
       text: "How can this model be potentially misused?",
+      description: "Consider whether this model was trained on data that can identify subgroups, whether the data has adequate representation of subgroups, and whether this data could be used to inform decisions central to human life.",
       placeholder: "Write a brief description."
-    });
-    fields.push({
-      id: "identifySubgroup",
-      type: "checkbox",
-      text: "Has this model been trained on data that can identify a subgroup?"
-    });
-    fields.push({
-      id: "representSubgroup",
-      type: "checkbox",
-      text: "Have we ensured the data has adequate representation of subgroups?"
-    });
-    fields.push({
-      id: "decisionsLife",
-      type: "checkbox",
-      text:
-        "Could this model be used to inform decisions central to human life?"
     });
 
     return fields;
   };
 
   render() {
+    const nameField = {
+      id: "name",
+      text: "What will you name the model? (required)"
+    };
+
     return (
       <div style={styles.panel}>
         <div style={styles.largeText}>Model Details</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
-            {this.getFields().map(field => {
+            <div key={nameField.id} style={styles.cardRow}>
+              <label>{nameField.text}</label>
+              <div>
+                <textarea
+                  rows="1"
+                  onChange={event =>
+                    this.handleChange(event, field.id, field.isColumn)
+                  }
+                />
+              </div>
+            </div>
+            {this.getColumnFields().map(field => {
               return (
                 <div key={field.id} style={styles.cardRow}>
-                  {field.type === "checkbox" && (
-                    <input
-                      type="checkbox"
-                      onChange={event => this.handleChange(event, field.id)}
-                    />
-                  )}
-
                   <label>{field.text}</label>
-
-                  {field.type !== "checkbox" && !field.answer && (
+                  {!field.answer && (
                     <div>
                       <textarea
-                        rows="2"
+                        rows="1"
                         onChange={event =>
                           this.handleChange(event, field.id, field.isColumn)
                         }
@@ -92,8 +87,29 @@ class SaveModel extends Component {
                       />
                     </div>
                   )}
-
-                  {field.type !== "checkbox" && field.answer && (
+                  {field.answer && (
+                    <div>{field.answer}</div>
+                  )}
+                </div>
+              );
+            })}
+            {this.getUsesFields().map(field => {
+              return (
+                <div key={field.id} style={styles.cardRow}>
+                  <label>{field.text}</label>
+                  <div>{field.description}</div>
+                  {!field.answer && (
+                    <div>
+                      <textarea
+                        rows="4"
+                        onChange={event =>
+                          this.handleChange(event, field.id, field.isColumn)
+                        }
+                        placeholder={field.placeholder}
+                      />
+                    </div>
+                  )}
+                  {field.answer && (
                     <div>{field.answer}</div>
                   )}
                 </div>
