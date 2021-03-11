@@ -671,6 +671,8 @@ class InstructionsCSF extends React.Component {
               ]}
               collapsed={this.props.collapsed}
               onClick={this.props.handleClickCollapser}
+              isMinecraft={this.props.isMinecraft}
+              isRtl={this.props.isRtl}
             />
             {!this.props.collapsed && (
               <ScrollButtons
