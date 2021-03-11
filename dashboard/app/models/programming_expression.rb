@@ -15,7 +15,7 @@
 #
 #  index_programming_expressions_on_name_and_category           (name,category)
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
-#  key_programming_environment                                  (key,programming_environment_id) UNIQUE
+#  programming_environment_key                                  (programming_environment_id,key) UNIQUE
 #
 class ProgrammingExpression < ApplicationRecord
   belongs_to :programming_environment
