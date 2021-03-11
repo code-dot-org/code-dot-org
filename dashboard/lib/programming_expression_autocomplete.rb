@@ -1,5 +1,5 @@
 class ProgrammingExpressionAutocomplete < AutocompleteHelper
-  def self.get_search_matches(query, limit, programming_environment_id)
+  def self.get_search_matches(query, limit, programming_environment_id=nil)
     limit = format_limit(limit)
 
     rows = ProgrammingExpression.limit(limit)

@@ -27,7 +27,7 @@ const styles = {
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '50%',
+    width: '100%',
     lineHeight: '30px'
   }
 };
@@ -88,7 +88,7 @@ class ProgrammingExpressionsEditor extends Component {
         }
       },
       {
-        property: 'programming_environment',
+        property: 'programmingEnvironmentName',
         header: {
           label: 'Programming Environment',
           props: {
@@ -208,9 +208,14 @@ class ProgrammingExpressionsEditor extends Component {
             onSearchSelect={e =>
               this.props.addProgrammingExpression(e.programmingExpression)
             }
-            additionalQueryParams={{
-              programmingEnvironmentId: this.state.programmingEnvironmentId
-            }}
+            additionalQueryParams={
+              this.state.programmingEnvironmentId
+                ? {
+                    programmingEnvironmentId: this.state
+                      .programmingEnvironmentId
+                  }
+                : {}
+            }
             searchUrl={'programmingexpressionsearch'}
             constructOptions={this.constructSearchOptions}
           />
