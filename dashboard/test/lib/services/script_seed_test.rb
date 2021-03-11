@@ -371,6 +371,7 @@ module Services
       expected_counts['LessonsResource'] -= 4
       expected_counts['LessonsVocabulary'] -= 4
       expected_counts['Objective'] -= 4
+      expected_counts['LessonsStandard'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -403,6 +404,7 @@ module Services
       expected_counts['LessonsResource'] -= 2
       expected_counts['LessonsVocabulary'] -= 2
       expected_counts['Objective'] -= 2
+      expected_counts['LessonsStandard'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -601,7 +603,8 @@ module Services
     def get_counts
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
-        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary, Objective
+        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary,
+        Objective, LessonsStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
 
