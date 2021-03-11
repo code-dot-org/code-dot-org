@@ -20,7 +20,7 @@ class ProgrammingExpression < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
 
   def summarize_for_edit
-    {key: name, name: name, programmingEnvironmentName: programming_environment.name}
+    {key: key, name: name, category: category, programmingEnvironmentName: programming_environment.name}
   end
 
   def summarize_for_lesson_show
