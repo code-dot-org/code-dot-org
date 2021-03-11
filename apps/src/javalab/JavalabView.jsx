@@ -67,6 +67,7 @@ class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
+    onCommitCode: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
@@ -123,7 +124,7 @@ class JavalabView extends React.Component {
               </div>
             </div>
             <div style={style.editorAndConsole}>
-              <JavalabEditor />
+              <JavalabEditor onCommitCode={this.props.onCommitCode} />
               <div style={style.consoleAndButtons}>
                 <div style={style.buttons}>
                   <button
