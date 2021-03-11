@@ -397,11 +397,11 @@
   ],
   "vocabularies": [
     {
-      "key": "Word",
+      "key": "word",
       "word": "Word",
       "definition": "This is a definition of the word word",
       "seeding_key": {
-        "vocabulary.key": "Word"
+        "vocabulary.key": "word"
       }
     }
   ],
@@ -409,7 +409,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "Word"
+        "vocabulary.key": "word"
       }
     }
   ],
