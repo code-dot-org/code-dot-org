@@ -314,9 +314,11 @@ module Services
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.vocabularies.first.update!(definition: 'updated definition')
+        key = Vocabulary.sanitize_key("#{lesson.name}-vocab-3")
+        key = Vocabulary.uniquify_key(key, script.course_version.id)
         lesson.vocabularies.create(
           word: 'new word',
-          key: "#{lesson.name}-vocab-3",
+          key: key,
           definition: "new definition",
           course_version: script.course_version
         )
@@ -780,7 +782,10 @@ module Services
         end
 
         (1..num_vocabularies_per_lesson).each do |v|
-          vocab = create :vocabulary, key: "#{lesson.name}-vocab-#{v}", course_version: course_version
+          key = "#{lesson.name}-vocab-#{v}"
+          key = Vocabulary.sanitize_key(key)
+          key = Vocabulary.uniquify_key(key, course_version.id)
+          vocab = create :vocabulary, key: key, course_version: course_version
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
         end
 
