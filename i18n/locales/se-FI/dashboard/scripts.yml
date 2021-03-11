@@ -6735,7 +6735,6 @@ se:
             Digital Sharing:
               key: Digitála Juohkin
               name: Digitála Juohkin
-              description_teacher: "Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.\n"
             'Functions: Songwriting':
               name: Lávlagiid čállit
           lesson_groups:
@@ -6837,8 +6836,8 @@ se:
             Sprite Lab:
               key: Sprite-lab
               name: Sprite-lab
+            Getting Started:
+              name: Álgge
           lesson_groups:
-            k5_getting_started_1:
-              display_name: Álgge
             k5_next_steps_1:
               display_name: Boahttevaš Lávkkit
