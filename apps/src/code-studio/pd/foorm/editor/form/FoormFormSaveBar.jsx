@@ -409,6 +409,8 @@ class FoormFormSaveBar extends Component {
   }
 }
 
+export const UnconnectedFoormFormSaveBar = FoormFormSaveBar;
+
 export default connect(
   state => ({
     formQuestions: state.foorm.questions || {},
