@@ -87,14 +87,15 @@ If you get a bunch of complaints about database, like missing tables or how some
 
 2. `RAILS_ENV=test bundle exec rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
 
-If you just want to run a single file of tests, you can run
-`bundle exec spring testunit ./path/to/your/test.rb`
+If you just want to run a single file of tests, from the dashboard directory you can run
+`bundle exec spring testunit ./path/to/your/test.rb` 
+(if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
 or
 `RAILS_ENV=test bundle exec spring testunit ./path/to/your/test.rb`
 
-To run a specific unit test, you can run
+To run a specific unit test, from the dashboard directory you can run
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
-The test name is `test_` concatenated with the name of the test listed in the test file.
+The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: If the test is called "testing some unit" you would use `--name test_testing_some_unit`.
 
 You can get a local coverage report with
 `COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`

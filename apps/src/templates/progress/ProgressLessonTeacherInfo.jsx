@@ -37,6 +37,7 @@ class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
     lessonUrl: PropTypes.string,
+    onClickStudentLessonPlan: PropTypes.func,
 
     // redux provided
     section: sectionShape,
@@ -118,6 +119,20 @@ class ProgressLessonTeacherInfo extends React.Component {
               color="blue"
               target="_blank"
               style={styles.button}
+            />
+          </div>
+        )}
+        {lesson.student_lesson_plan_html_url && (
+          <div style={styles.buttonContainer}>
+            <Button
+              __useDeprecatedTag
+              href={lesson.student_lesson_plan_html_url}
+              text={i18n.studentResources()}
+              icon="file-text"
+              color="purple"
+              target="_blank"
+              style={styles.button}
+              onClick={this.props.onClickStudentLessonPlan}
             />
           </div>
         )}

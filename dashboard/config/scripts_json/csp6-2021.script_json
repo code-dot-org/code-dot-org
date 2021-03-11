@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-01 18:27:57 UTC",
+    "serialized_at": "2021-03-09 02:48:13 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -77,7 +78,7 @@
       "properties": {
         "overview": "In this lesson students follow a demonstration of Linear Search before writing their own search algorithms. Following this, students are introduced to Binary Search after which they compare graphs of the search algorithms to determine which is most efficient. ",
         "student_overview": "Learn how computers describe how fast different algorithms are and the fact that different algorithms that solve the same problem may be faster than others.",
-        "purpose": "In the previous lesson students learned that there are many different ways to write an algorithm to solve a problem. However, not all solutions are good options, and some algorithms require many fewer steps to run than others. This lesson focuses on comparing Linear Search to Binary Search. The the length of the list being searched, the more efficient Binary Search is compared to Linear Search. That sai,d Binary Search has a constraint: the list must first be sorted. This lesson more broadly introduces students to thinking about the efficiency of an algorithm, an idea that will be explored more in future lessons.",
+        "purpose": "In the previous lesson students learned that there are many different ways to write an algorithm to solve a problem. However, not all solutions are good options, and some algorithms require many fewer steps to run than others. This lesson focuses on comparing Linear Search to Binary Search. The longer the length of the list being searched, the more efficient Binary Search is compared to Linear Search. That said, Binary Search has a constraint: the list must first be sorted. This lesson more broadly introduces students to thinking about the efficiency of an algorithm, an idea that will be explored more in future lessons.",
         "preparation": "* Preview the slides and click through all animations\r\n* Practice running Binary Search yourself",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
@@ -987,7 +988,7 @@
       "key": "8468c3da-573a-4a75-bb3e-cd42906dc0bb",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\r\n\r\n**Journal:** Students add the following vocabulary words and definitions to their journals: efficiency, linear search, binary search."
+        "description": "**Discuss:** *Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.*\n\n**Journal:** Students add the following vocabulary words and definitions to their journals: efficiency, linear search, binary search."
       },
       "seeding_key": {
         "activity_section.key": "8468c3da-573a-4a75-bb3e-cd42906dc0bb",
@@ -1044,7 +1045,7 @@
       "key": "a1dee69e-0914-4035-97ad-7aab30413277",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *What does it mean to say one algorithm is “more efficient” than another?*\n\n**Discussion Goal:** This discussion is a review from the previous lesson. Students should be free to refer to notes or their journals. You should might hear the following points.\n\n* One algorithm requires fewer steps to complete than another\n* \"The line for one algorithm curves below the other\"\n* More efficient algorithms are much more helpful as input size grows. The amount of work grows more slowly.\n\nYou may wish to refer to slides from previous lessons. \n"
+        "description": "[slide]  **Discuss:** *What does it mean to say one algorithm is “more efficient” than another?*\n\nHave students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** This discussion is a review from the previous lesson. Students should be free to refer to notes or their journals. You should might hear the following points.\n\n* One algorithm requires fewer steps to complete than another\n* \"The line for one algorithm curves below the other\"\n* More efficient algorithms are much more helpful as input size grows. The amount of work grows more slowly.\n\nYou may wish to refer to slides from previous lessons. \n"
       },
       "seeding_key": {
         "activity_section.key": "a1dee69e-0914-4035-97ad-7aab30413277",
@@ -1055,7 +1056,6 @@
       "key": "db08fc4e-afc3-4b90-884b-71c9981fbfdc",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
       },
       "seeding_key": {
         "activity_section.key": "db08fc4e-afc3-4b90-884b-71c9981fbfdc",
@@ -1806,7 +1806,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Ticket Generator",
         "level_keys": [
@@ -1936,7 +1936,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Traveling Salesman",
         "level_keys": [
@@ -1962,7 +1962,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [

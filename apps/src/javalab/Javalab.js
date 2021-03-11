@@ -5,6 +5,8 @@ import {getStore, registerReducers} from '../redux';
 import JavalabView from './JavalabView';
 import javalab from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -58,10 +60,16 @@ Javalab.prototype.init = function(config) {
 
   config.pinWorkspaceToBottom = true;
 
+  config.useFilesApi = true;
+
   config.getCode = this.getCode.bind(this);
+  const onContinue = this.onContinue.bind(this);
+
+  // if a version is provided in the url, use that version for files.
+  const suppliedFilesVersionId = queryParams('version');
 
   const onMount = () => {
-    // NOTE: Most other apps call studioApp.init().  Like WebLab, Ailab, and Fish, we don't.
+    // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
@@ -94,7 +102,11 @@ Javalab.prototype.init = function(config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <JavalabView onMount={onMount} />
+      <JavalabView
+        onMount={onMount}
+        onContinue={onContinue}
+        suppliedFilesVersionId={suppliedFilesVersionId}
+      />
     </Provider>,
     document.getElementById(config.containerId)
   );
@@ -119,7 +131,12 @@ Javalab.prototype.onContinue = function() {
 };
 
 Javalab.prototype.getCode = function() {
-  return '';
+  // store the file version as the source, as we do in WebLab
+  return this.getCurrentFilesVersionId();
+};
+
+Javalab.prototype.getCurrentFilesVersionId = function() {
+  return project.filesVersionId || this.initialFilesVersionId;
 };
 
 export default Javalab;
