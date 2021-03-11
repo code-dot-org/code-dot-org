@@ -20,7 +20,8 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :vocabularies, :lessons_vocabularies, :objectives, keyword_init: true
+      :lessons_resources, :vocabularies, :lessons_vocabularies, :objectives,
+      :standards, :lessons_standards, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -47,6 +48,7 @@ module Services
       vocabularies = script.lessons.map(&:vocabularies).flatten
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
       objectives = script.lessons.map(&:objectives).flatten
+      lessons_standards = script.lessons.map(&:lessons_standards).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -61,7 +63,8 @@ module Services
         lessons_resources: lessons_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
-        objectives: objectives
+        objectives: objectives,
+        lessons_standards: lessons_standards
       )
       scope = {seed_context: seed_context}
 
@@ -77,7 +80,8 @@ module Services
         lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json},
         vocabularies: vocabularies.map {|v| ScriptSeed::VocabularySerializer.new(v, scope: scope).as_json},
         lessons_vocabularies: lessons_vocabularies.map {|lv| ScriptSeed::LessonsVocabularySerializer.new(lv, scope: scope).as_json},
-        objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json}
+        objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
+        lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
       }
       JSON.pretty_generate(data)
     end
@@ -651,6 +655,14 @@ module Services
 
     class ObjectiveSerializer < ActiveModel::Serializer
       attributes :key, :properties, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LessonsStandardSerializer < ActiveModel::Serializer
+      attributes :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
