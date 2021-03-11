@@ -4,8 +4,8 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :course_offering do
-    sequence(:key) {|n| "bogus-course-offering-#{n}"}
-    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
+    sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
+    sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
   end
 
   factory :course_version do
