@@ -30,7 +30,8 @@ def acapela_text_to_audio_url(text, voice="rosie22k", speed=180, shape=100, cont
       metric_name: :AcapelaAPICall,
       dimensions: [
         {name: "Environment", value: CDO.rack_env},
-        {name: "Context", value: context}
+        {name: "Context", value: context},
+        {name: "Voice", value: voice}
       ],
       value: 1
     }
