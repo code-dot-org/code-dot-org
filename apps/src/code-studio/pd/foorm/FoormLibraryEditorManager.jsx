@@ -6,19 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
-import FoormLibraryEditor from './FoormLibraryEditor';
-// import {
-//   resetAvailableLibraryQuestions,
-//   setLastSaved,
-//   setSaveError,
-//   setLibraryQuestionData,
-//   setHasError,
-//   setLastSavedQuestion,
-//   setLibraryData
-// } from './library_editor/foormLibraryEditorRedux';
-
-// setLibraryQuestionData needs to be its own action
-// setLibraryData needs to be its own action
+import FoormEntityEditor from './editor/components/FoormEntityEditor';
 import {
   setAvailableSubEntities,
   setLastSaved,
@@ -28,13 +16,21 @@ import {
   setLastSavedQuestions,
   setLibraryData
 } from './editor/foormEditorRedux';
+import FoormLibrarySaveBar from '@cdo/apps/code-studio/pd/foorm/library_editor/FoormLibrarySaveBar';
 
+// TODO: dedupe these styles
 const styles = {
+  surveyTitle: {
+    marginBottom: 0
+  },
   loadError: {
     fontWeight: 'bold',
     padding: '1em'
   }
 };
+
+const JSONErrorMessage =
+  'There is a parsing error in the JSON being edited. Errors are noted on the left side of the editor.';
 
 class FoormLibraryEditorManager extends React.Component {
   static propTypes = {
@@ -44,8 +40,12 @@ class FoormLibraryEditorManager extends React.Component {
     categories: PropTypes.array,
 
     // populated by redux
+    questions: PropTypes.object,
+    hasJSONError: PropTypes.bool,
     libraryId: PropTypes.number,
     availableLibraries: PropTypes.array,
+    libraryName: PropTypes.string,
+    libraryQuestionName: PropTypes.string,
     availableLibraryQuestionsForCurrentLibrary: PropTypes.array,
     setAvailableLibraryQuestions: PropTypes.func,
     setLastSaved: PropTypes.func,
@@ -56,14 +56,12 @@ class FoormLibraryEditorManager extends React.Component {
     setLibraryData: PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showCodeMirror: false,
-      hasLoadError: false
-    };
-  }
+  state = {
+    showCodeMirror: false,
+    hasLoadError: false,
+    forceRerenderKey: 0,
+    previewQuestions: null
+  };
 
   getFormattedLibraryDropdownOptions() {
     return this.props.availableLibraries.map((libraryNameAndVersion, i) => {
@@ -151,6 +149,16 @@ class FoormLibraryEditorManager extends React.Component {
       });
   }
 
+  // Callback for FoormEntityEditor
+  updateLibraryQuestionPreview() {
+    this.setState({
+      previewQuestions: {
+        elements: [this.props.questions]
+      },
+      forceRerenderKey: this.state.forceRerenderKey + 1
+    });
+  }
+
   initializeNewLibrary = () => {
     this.props.setAvailableLibraryQuestions([]);
     this.props.setLibraryData({
@@ -193,6 +201,33 @@ class FoormLibraryEditorManager extends React.Component {
       this.props.availableLibraryQuestionsForCurrentLibrary
     );
   };
+
+  getPreviewErrors() {
+    return this.props.hasJSONError ? [JSONErrorMessage] : [];
+  }
+
+  renderHeaderTitle() {
+    return (
+      this.props.libraryName && (
+        <div>
+          <h2 style={styles.surveyTitle}>
+            {`Library Name: ${this.props.libraryName}`}
+            <br />
+            {`Library Question Name: ${this.props.libraryQuestionName}`}
+          </h2>
+        </div>
+      )
+    );
+  }
+
+  renderSaveBar() {
+    return (
+      <FoormLibrarySaveBar
+        libraryCategories={this.props.categories}
+        resetCodeMirror={this.props.resetCodeMirror}
+      />
+    );
+  }
 
   render() {
     return (
@@ -245,10 +280,20 @@ class FoormLibraryEditorManager extends React.Component {
           </div>
         )}
         {this.state.showCodeMirror && (
-          <FoormLibraryEditor
+          <FoormEntityEditor
             populateCodeMirror={this.props.populateCodeMirror}
             categories={this.props.categories}
             resetCodeMirror={this.props.resetCodeMirror}
+            preparePreview={() => this.updateLibraryQuestionPreview()}
+            previewQuestions={this.state.previewQuestions}
+            previewErrors={this.getPreviewErrors()}
+            forceRerenderKey={this.state.forceRerenderKey}
+            headerTitle={this.renderHeaderTitle()}
+            validateURL={
+              '/api/v1/pd/foorm/library_questions/validate_library_question'
+            }
+            validateDataKey={'question'}
+            saveBar={this.renderSaveBar()}
           />
         )}
       </div>
@@ -258,11 +303,13 @@ class FoormLibraryEditorManager extends React.Component {
 
 export default connect(
   state => ({
-    libraryQuestion: state.foorm.libraryQuestion || {},
+    questions: state.foorm.questions || {},
     availableLibraries: state.foorm.availableEntities || [],
     availableLibraryQuestionsForCurrentLibrary:
       state.foorm.availableSubEntities || [],
-    libraryId: state.foorm.libraryId
+    libraryId: state.foorm.libraryId,
+    libraryName: state.foorm.libraryName,
+    libraryQuestionName: state.foorm.libraryQuestionName
   }),
   dispatch => ({
     setAvailableLibraryQuestions: libraryQuestionsMetadata =>

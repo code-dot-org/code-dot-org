@@ -35,9 +35,9 @@ class FoormFormEditorManager extends React.Component {
     categories: PropTypes.array,
 
     // populated by redux
+    questions: PropTypes.object,
     hasJSONError: PropTypes.bool,
     availableForms: PropTypes.array,
-    questions: PropTypes.object,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
     isFormPublished: PropTypes.bool,
@@ -121,7 +121,7 @@ class FoormFormEditorManager extends React.Component {
     this.props.resetCodeMirror(formData['questions']);
   }
 
-  // Callback for FoormEditorPreview
+  // Callback for FoormEntityEditor
   fillFormWithLibraryItems() {
     $.ajax({
       url: '/api/v1/pd/foorm/forms/form_with_library_items',

@@ -131,7 +131,7 @@ export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_LIBRARY_QUESTION_DATA) {
     return {
       ...state,
-      libraryQuestion: action.libraryQuestionData['question'],
+      question: action.libraryQuestionData['question'],
       libraryQuestionName: action.libraryQuestionData['name'],
       libraryQuestionId: action.libraryQuestionData['id']
     };
