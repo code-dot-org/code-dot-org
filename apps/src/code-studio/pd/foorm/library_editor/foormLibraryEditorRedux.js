@@ -103,22 +103,22 @@ export default function foormLibraryEditorRedux(state = initialState, action) {
       hasError: action.hasError
     };
   }
-  if (action.type === SET_LIBRARY_QUESTION_DATA) {
-    return {
-      ...state,
-      libraryQuestion: action.libraryQuestionData['question'],
-      libraryQuestionName: action.libraryQuestionData['name'],
-      libraryQuestionId: action.libraryQuestionData['id']
-    };
-  }
-  if (action.type === SET_LIBRARY_DATA) {
-    return {
-      ...state,
-      libraryName: action.libraryData['name'],
-      libraryVersion: action.libraryData['version'],
-      libraryId: action.libraryData['id']
-    };
-  }
+  // if (action.type === SET_LIBRARY_QUESTION_DATA) {
+  //   return {
+  //     ...state,
+  //     libraryQuestion: action.libraryQuestionData['question'],
+  //     libraryQuestionName: action.libraryQuestionData['name'],
+  //     libraryQuestionId: action.libraryQuestionData['id']
+  //   };
+  // }
+  // if (action.type === SET_LIBRARY_DATA) {
+  //   return {
+  //     ...state,
+  //     libraryName: action.libraryData['name'],
+  //     libraryVersion: action.libraryData['version'],
+  //     libraryId: action.libraryData['id']
+  //   };
+  // }
   if (action.type === RESET_AVAILABLE_LIBRARIES) {
     return {
       ...state,
