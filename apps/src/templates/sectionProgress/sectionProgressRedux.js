@@ -37,6 +37,7 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
+  studentLessonProgressByScript: {},
   studentLastUpdateByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
@@ -104,6 +105,10 @@ export default function sectionProgress(state = initialState, action) {
       studentLevelProgressByScript: {
         ...state.studentLevelProgressByScript,
         ...action.data.studentLevelProgressByScript
+      },
+      studentLessonProgressByScript: {
+        ...state.studentLessonProgressByScript,
+        ...action.data.studentLessonProgressByScript
       },
       studentLastUpdateByScript: {
         ...state.studentLastUpdateByScript,

@@ -1,15 +1,10 @@
-// Interface for admins to try out Foorm configurations in real-time.
-// Includes a json editor with a starting configuration, along with
-// a preview button to preview the configuration in Foorm
-
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
+import FoormEntityEditorPreview from './FoormEntityEditorPreview';
+import FoormEntityEditorHeader from './FoormEntityEditorHeader';
 import _ from 'lodash';
-import FoormSaveBar from './editor/FoormSaveBar';
-import FoormEditorPreview from './editor/FoormEditorPreview';
-import FoormEditorHeader from './editor/FoormEditorHeader';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -39,18 +34,23 @@ const styles = {
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 
-class FoormEditor extends React.Component {
+// Interface for admins to try out Foorm "entity" (either a form or library question) in real-time.
+// Includes a json editor containing the loaded Foorm entity, along with
+// a preview button to preview the rendered entity in Foorm
+class FoormEntityEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
-    resetCodeMirror: PropTypes.func.isRequired,
-    formCategories: PropTypes.array,
+    preparePreview: PropTypes.func,
+    previewQuestions: PropTypes.object,
+    previewErrors: PropTypes.array,
+    forceRerenderKey: PropTypes.number,
+    headerTitle: PropTypes.node,
+    saveBar: PropTypes.node,
+    validateURL: PropTypes.string,
+    validateDataKey: PropTypes.string,
+
     // populated by redux
-    formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool,
-    formName: PropTypes.string,
-    formVersion: PropTypes.number,
-    formId: PropTypes.number
+    questions: PropTypes.object
   };
 
   constructor(props) {
@@ -58,8 +58,6 @@ class FoormEditor extends React.Component {
 
     this.state = {
       livePreviewStatus: PREVIEW_ON,
-      formKey: 0,
-      formPreviewQuestions: null,
       num_facilitators: 2,
       workshop_course: 'CS Principles',
       workshop_subject: '5-day Summer',
@@ -79,10 +77,13 @@ class FoormEditor extends React.Component {
       ],
       day: 1,
       is_friday_institute: false,
-      workshop_agenda: 'module1',
-      libraryError: false,
-      libraryErrorMessage: null
+      workshop_agenda: 'module1'
     };
+
+    // use debounce to only call once per second when editing
+    this.previewFoorm = _.debounce(this.props.preparePreview, 1000, {
+      leading: true
+    });
   }
 
   componentDidMount() {
@@ -90,11 +91,13 @@ class FoormEditor extends React.Component {
     this.previewFoorm();
   }
 
+  // Component will update frequently because each debounced keystroke
+  // in the editor pane will produce a state change.
   componentDidUpdate(prevProps, prevState) {
-    // call preview form if we got new form questions or we have switched
+    // call preview if we got new questions or we have switched
     // on live preview.
     if (
-      prevProps.formQuestions !== this.props.formQuestions ||
+      prevProps.questions !== this.props.questions ||
       (prevState.livePreviewStatus === PREVIEW_OFF &&
         this.state.livePreviewStatus === PREVIEW_ON)
     ) {
@@ -124,44 +127,6 @@ class FoormEditor extends React.Component {
         num_facilitators: num_facilitators,
         facilitators: facilitators
       });
-    }
-  };
-
-  // use debounce to only call once per second
-  fillFormWithLibraryItems = _.debounce(
-    function() {
-      $.ajax({
-        url: '/api/v1/pd/foorm/forms/form_with_library_items',
-        type: 'post',
-        contentType: 'application/json',
-        processData: false,
-        data: JSON.stringify({
-          form_questions: this.props.formQuestions
-        })
-      })
-        .done(result => {
-          this.setState({
-            formKey: this.state.formKey + 1,
-            formPreviewQuestions: result,
-            libraryError: false,
-            libraryErrorMessage: null
-          });
-        })
-        .fail(result => {
-          this.setState({
-            libraryError: true,
-            libraryErrorMessage:
-              (result.responseJSON && result.responseJSON.error) || 'unknown'
-          });
-        });
-    },
-    1000,
-    {leading: true}
-  );
-
-  previewFoorm = () => {
-    if (this.state.livePreviewStatus === PREVIEW_ON) {
-      this.fillFormWithLibraryItems();
     }
   };
 
@@ -254,11 +219,12 @@ class FoormEditor extends React.Component {
   render() {
     return (
       <div>
-        <FoormEditorHeader
-          formName={this.props.formName}
-          formVersion={this.props.formVersion}
+        <FoormEntityEditorHeader
           livePreviewToggled={this.livePreviewToggled}
           livePreviewStatus={this.state.livePreviewStatus}
+          validateURL={this.props.validateURL}
+          validateDataKey={this.props.validateDataKey}
+          headerTitle={this.props.headerTitle}
         />
         <div style={styles.foormEditor}>
           <Tabs
@@ -274,7 +240,7 @@ class FoormEditor extends React.Component {
                   // 3rd parameter specifies number of spaces to insert
                   // into the output JSON string for readability purposes.
                   // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-                  value={JSON.stringify(this.props.formQuestions, null, 2)}
+                  value={JSON.stringify(this.props.questions, null, 2)}
                   // Change handler is required for this element, but changes will be handled by the code mirror.
                   onChange={() => {}}
                 />
@@ -290,12 +256,11 @@ class FoormEditor extends React.Component {
             id="preview-tabs"
           >
             <Tab eventKey={'preview'} title={'Preview'}>
-              <FoormEditorPreview
-                libraryError={this.state.libraryError}
-                libraryErrorMessage={this.state.libraryErrorMessage}
-                formPreviewQuestions={this.state.formPreviewQuestions}
-                formKey={this.state.formKey}
-                surveyData={{
+              <FoormEntityEditorPreview
+                previewQuestions={this.props.previewQuestions}
+                forceRerenderKey={this.props.forceRerenderKey}
+                errorMessages={this.props.previewErrors}
+                foormData={{
                   facilitators: this.state.facilitators,
                   num_facilitators: this.state.num_facilitators,
                   workshop_course: this.state.workshop_course,
@@ -310,20 +275,12 @@ class FoormEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        <FoormSaveBar
-          formCategories={this.props.formCategories}
-          resetCodeMirror={this.props.resetCodeMirror}
-        />
+        {this.props.saveBar}
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  formQuestions: state.foorm.formQuestions || {},
-  isFormPublished: state.foorm.isFormPublished,
-  formHasError: state.foorm.hasError,
-  formName: state.foorm.formName,
-  formVersion: state.foorm.formVersion,
-  formId: state.foorm.formId
-}))(FoormEditor);
+  questions: state.foorm.questions || {}
+}))(FoormEntityEditor);
