@@ -16,7 +16,7 @@ class UpdateTtsI18nTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level.expects(:tts_upload_to_s3).with("translated short instructions\n")
+    level.expects(:tts_upload_to_s3).with {|text, _| text == "translated short instructions\n"}
     I18n.locale = test_locale
     update_level_tts_i18n(level)
   end
@@ -32,7 +32,7 @@ class UpdateTtsI18nTest < ActiveSupport::TestCase
     create :multi, name: 'contained level', long_instructions: "contained level long instructions"
     level = create :maze, name: 'containing level', contained_level_names: ['contained level']
 
-    level.expects(:tts_upload_to_s3).with("contained level long instructions\n")
+    level.expects(:tts_upload_to_s3).with {|text, _| text == "contained level long instructions\n"}
     I18n.locale = test_locale
     update_level_tts_i18n(level)
   end
