@@ -1,7 +1,3 @@
-// Parent component for editing Foorm forms. Will initially show a choice
-// between loading an existing configuration or an empty configuration.
-// After that choice is made, will render FoormEntityEditor with the chosen configuration to allow editing that form.
-
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -28,6 +24,9 @@ const styles = {
   }
 };
 
+// Parent component for editing Foorm forms. Will initially show a choice
+// between loading an existing form or an empty form.
+// After that choice is made, will render FoormEntityEditor with the chosen form to allow editing that form.
 class FoormFormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
