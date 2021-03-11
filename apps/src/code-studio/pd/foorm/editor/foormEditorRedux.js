@@ -1,7 +1,10 @@
 const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
+const SET_LIBRARY_QUESTION_DATA = 'foormEditor/SET_LIBRARY_QUESTION_DATA';
+const SET_LIBRARY_DATA = 'foormEditor/SET_LIBRARY_DATA';
 const SET_AVAILABLE_ENTITIES = 'foormEditor/SET_AVAILABLE_ENTITIES';
+const SET_AVAILABLE_SUB_ENTITIES = 'foormEditor/SET_AVAILABLE_SUB_ENTITIES';
 const ADD_AVAILABLE_ENTITY = 'foormEditor/ADD_AVAILABLE_ENTITY';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
@@ -22,6 +25,22 @@ export const setFormData = formData => ({
   formData
 });
 
+// libraryQuestionData is an object in the format
+// {name: 'a_question_name', question: {...questions...}}
+// where questions is a valid survey element in surveyJS format.
+export const setLibraryQuestionData = libraryQuestionData => ({
+  type: SET_LIBRARY_QUESTION_DATA,
+  libraryQuestionData
+});
+
+// libraryData is an object that contains
+// metadata about the currently selected library
+// (name, version, ID)
+export const setLibraryData = libraryData => ({
+  type: SET_LIBRARY_DATA,
+  libraryData
+});
+
 export const setHasJSONError = hasJSONError => ({
   type: SET_HAS_JSON_ERROR,
   hasJSONError
@@ -32,6 +51,14 @@ export const setHasJSONError = hasJSONError => ({
 export const setAvailableEntities = entitiesMetadata => ({
   type: SET_AVAILABLE_ENTITIES,
   entitiesMetadata
+});
+
+// "Sub-entities" are the list of library questions
+// in a selected library that a user can choose to edit.
+// There is no equivalent "sub-entity" when editing forms currently.
+export const setAvailableSubEntities = subEntitiesMetadata => ({
+  type: SET_AVAILABLE_SUB_ENTITIES,
+  subEntitiesMetadata
 });
 
 // An "entity" (form or library) is added to the list of forms or libraries that can be edited
@@ -60,6 +87,7 @@ const initialState = {
   questions: '',
   hasJSONError: false,
   availableEntities: [],
+  availableSubEntities: [],
   saveError: null,
   lastSaved: null,
   lastSavedQuestions: '',
@@ -67,7 +95,14 @@ const initialState = {
   isFormPublished: null,
   formName: null,
   formVersion: null,
-  formId: null
+  formId: null,
+  // State specific to Foorm Library editor
+  libraryQuestion: '',
+  libraryQuestionName: null,
+  libraryQuestionId: null,
+  libraryName: null,
+  libraryId: null,
+  libraryVersion: null
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -93,10 +128,32 @@ export default function foormEditorRedux(state = initialState, action) {
       formId: action.formData['id']
     };
   }
+  if (action.type === SET_LIBRARY_QUESTION_DATA) {
+    return {
+      ...state,
+      libraryQuestion: action.libraryQuestionData['question'],
+      libraryQuestionName: action.libraryQuestionData['name'],
+      libraryQuestionId: action.libraryQuestionData['id']
+    };
+  }
+  if (action.type === SET_LIBRARY_DATA) {
+    return {
+      ...state,
+      libraryName: action.libraryData['name'],
+      libraryVersion: action.libraryData['version'],
+      libraryId: action.libraryData['id']
+    };
+  }
   if (action.type === SET_AVAILABLE_ENTITIES) {
     return {
       ...state,
       availableEntities: action.entitiesMetadata
+    };
+  }
+  if (action.type === SET_AVAILABLE_SUB_ENTITIES) {
+    return {
+      ...state,
+      availableSubEntities: action.subEntitiesMetadata
     };
   }
   if (action.type === ADD_AVAILABLE_ENTITY) {
