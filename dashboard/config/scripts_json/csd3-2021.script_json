@@ -2808,7 +2808,7 @@
       "key": "ccd1c562-1214-4b3a-9385-da4c1ca21955",
       "position": 4,
       "properties": {
-        "description": "If we want our blocks to draw shapes in different ways they'll need more inputs that let us tell them how to draw. The inputs or openings in our blocks have a formal name, [v parameter]s, and today we're going to be learning more about how to use them.",
+        "description": "If we want our blocks to draw shapes in different ways they'll need more inputs that let us tell them how to draw. The inputs or openings in our blocks have a formal name, [v parameter/csd/2021]s, and today we're going to be learning more about how to use them.",
         "remarks": true
       },
       "seeding_key": {
