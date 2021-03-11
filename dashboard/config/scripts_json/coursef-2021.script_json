@@ -10275,373 +10275,293 @@
   ],
   "vocabularies": [
     {
-      "key": "Sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Sprite"
-      }
-    },
-    {
-      "key": "User",
+      "key": "user",
       "word": "User",
       "definition": "Someone who uses an object, including software and hardware.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
-      "key": "Behavior",
-      "word": "Behavior",
-      "definition": "An action that a sprite performs continuously until it’s told to stop.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Behavior"
-      }
-    },
-    {
-      "key": "Sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Sprite"
-      }
-    },
-    {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to complete a task.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Behavior",
+      "key": "behavior",
       "word": "Behavior",
       "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Behavior"
+        "vocabulary.key": "behavior"
       }
     },
     {
-      "key": "Sprite",
+      "key": "sprite",
       "word": "Sprite",
       "definition": "A graphic on the screen with a location, size, and appearance.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Loop"
-      }
-    },
-    {
-      "key": "Repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Repeat"
-      }
-    },
-    {
-      "key": "Variable",
+      "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
-      "key": "Variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Variable"
-      }
-    },
-    {
-      "key": "Constant",
+      "key": "constant",
       "word": "Constant",
       "definition": "A variable used throughout a program that never changes value",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Constant"
+        "vocabulary.key": "constant"
       }
     },
     {
-      "key": "Variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Variable"
-      }
-    },
-    {
-      "key": "Variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Variable"
-      }
-    },
-    {
-      "key": "Models and Simulations",
+      "key": "models_and_simulations",
       "word": "Models and Simulations",
       "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.\r\n\r\n",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Models and Simulations"
+        "vocabulary.key": "models_and_simulations"
       }
     },
     {
-      "key": "Machine Learning",
+      "key": "machine_learning",
       "word": "Machine Learning",
       "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Machine Learning"
+        "vocabulary.key": "machine_learning"
       }
     },
     {
-      "key": "DNS",
+      "key": "dns",
       "word": "DNS",
       "definition": "short for Domain Name System, this system translates domain names (like example.com) to IP addresses (like 93.184.216.34)",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "DNS"
+        "vocabulary.key": "dns"
       }
     },
     {
-      "key": "DSL/Cable",
+      "key": "dsl_cable",
       "word": "DSL/Cable",
       "definition": "A method of sending information using telephone or television cables.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "DSL/Cable"
+        "vocabulary.key": "dsl_cable"
       }
     },
     {
-      "key": "Fiber Optic Cable",
+      "key": "fiber_optic_cable",
       "word": "Fiber Optic Cable",
       "definition": "A connection that uses light to transmit information",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Fiber Optic Cable"
+        "vocabulary.key": "fiber_optic_cable"
       }
     },
     {
-      "key": "Internet",
+      "key": "internet",
       "word": "Internet",
       "definition": "A group of computers and servers that are connected to each other.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Internet"
+        "vocabulary.key": "internet"
       }
     },
     {
-      "key": "IP Address",
+      "key": "ip_address",
       "word": "IP Address",
       "definition": "A number assigned to any item that is connected to the Internet.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "IP Address"
+        "vocabulary.key": "ip_address"
       }
     },
     {
-      "key": "Packets",
+      "key": "packets",
       "word": "Packets",
       "definition": "Small chunks of information that have been carefully formed from larger chunks of information.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Packets"
+        "vocabulary.key": "packets"
       }
     },
     {
-      "key": "Servers",
+      "key": "servers",
       "word": "Servers",
       "definition": "Computers that exist only to provide things to others.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Servers"
+        "vocabulary.key": "servers"
       }
     },
     {
-      "key": "URL",
+      "key": "url",
       "word": "URL",
       "definition": "An easy-to-remember address for calling a web page (like www.code.org).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "URL"
+        "vocabulary.key": "url"
       }
     },
     {
-      "key": "Wi-Fi",
+      "key": "wi_fi",
       "word": "Wi-Fi",
       "definition": "A wireless method of sending information using radio waves.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Wi-Fi"
+        "vocabulary.key": "wi_fi"
       }
     },
     {
-      "key": "For Loop",
+      "key": "for_loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
-      "key": "For Loop",
+      "key": "for_loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
-      "key": "For Loop",
+      "key": "for_loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
-      "key": "Define",
+      "key": "define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Define"
+        "vocabulary.key": "define"
       }
     },
     {
-      "key": "Prepare",
+      "key": "prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Prepare"
+        "vocabulary.key": "prepare"
       }
     },
     {
-      "key": "Reflect",
+      "key": "reflect",
       "word": "Reflect",
       "definition": "Carefully think back on something with the intention of improving the outcome in the future",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Reflect"
+        "vocabulary.key": "reflect"
       }
     },
     {
-      "key": "Try",
+      "key": "try",
       "word": "Try",
       "definition": "Attempt to do something",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Try"
+        "vocabulary.key": "try"
       }
     }
   ],
@@ -10649,223 +10569,223 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "vocabulary.key": "Behavior"
+        "vocabulary.key": "behavior"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Learning Sprites with Sprite Lab",
-        "vocabulary.key": "Behavior"
+        "vocabulary.key": "behavior"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Learning Sprites with Sprite Lab",
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events with Sprite Lab",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with the Artist",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with the Artist",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in the Maze",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in the Maze",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Envelope Variables",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables as Constant in Artist",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables as Constant in Artist",
-        "vocabulary.key": "Constant"
+        "vocabulary.key": "constant"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables that Change in Bee",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables that Change in Artist",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Simulating Experiments",
-        "vocabulary.key": "Models and Simulations"
+        "vocabulary.key": "models_and_simulations"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "AI for Oceans",
-        "vocabulary.key": "Machine Learning"
+        "vocabulary.key": "machine_learning"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "DNS"
+        "vocabulary.key": "dns"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "DSL/Cable"
+        "vocabulary.key": "dsl_cable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "Fiber Optic Cable"
+        "vocabulary.key": "fiber_optic_cable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "Internet"
+        "vocabulary.key": "internet"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "IP Address"
+        "vocabulary.key": "ip_address"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "Packets"
+        "vocabulary.key": "packets"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "Servers"
+        "vocabulary.key": "servers"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "URL"
+        "vocabulary.key": "url"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Internet",
-        "vocabulary.key": "Wi-Fi"
+        "vocabulary.key": "wi_fi"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loop Fun",
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops in Bee",
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops in Artist",
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Define"
+        "vocabulary.key": "define"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Prepare"
+        "vocabulary.key": "prepare"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Reflect"
+        "vocabulary.key": "reflect"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Try"
+        "vocabulary.key": "try"
       }
     }
   ],

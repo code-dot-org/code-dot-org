@@ -11,41 +11,41 @@ const styles = {
 export default storybook => {
   return storybook.storiesOf('CollapserIcon', module).addStoryTable([
     {
-      name: 'CollapserIcon in normal-mode, extended',
+      name: 'CollapserIcon default, expanded',
       story: () => (
         <div style={styles.background}>
-          <CollapserIcon onClick={() => {}} collapsed={false} />
+          <CollapserIcon onClick={() => {}} isCollapsed={false} />
         </div>
       )
     },
     {
-      name: 'CollapserIcon in normal-mode, collapsed',
+      name: 'CollapserIcon default, collapsed',
       story: () => (
         <div style={styles.background}>
-          <CollapserIcon onClick={() => {}} collapsed={true} />
+          <CollapserIcon onClick={() => {}} isCollapsed={true} />
         </div>
       )
     },
     {
-      name: 'CollapserIcon in teacher-mode, extended',
+      name: 'CollapserIcon different icon, expanded',
       story: () => (
         <div style={styles.background}>
           <CollapserIcon
             onClick={() => {}}
-            collapsed={false}
-            teacherOnly={true}
+            isCollapsed={false}
+            expandedIconClass="fa-caret-down"
           />
         </div>
       )
     },
     {
-      name: 'CollapserIcon in teacher-mode, collapsed',
+      name: 'CollapserIcon custom style, expanded',
       story: () => (
         <div style={styles.background}>
           <CollapserIcon
             onClick={() => {}}
-            collapsed={true}
-            teacherOnly={true}
+            isCollapsed={false}
+            style={{color: 'red'}}
           />
         </div>
       )
