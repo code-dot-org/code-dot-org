@@ -10,4 +10,8 @@
 #
 class ProgrammingEnvironment < ApplicationRecord
   has_many :programming_expressions
+
+  def summarize_for_lesson_edit
+    {id: id, name: name}
+  end
 end

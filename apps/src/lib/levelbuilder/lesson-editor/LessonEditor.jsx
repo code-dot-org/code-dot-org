@@ -420,7 +420,11 @@ class LessonEditor extends Component {
               collapsed={true}
               fullWidth={true}
             >
-              <ProgrammingExpressionsEditor />
+              <ProgrammingExpressionsEditor
+                programmingEnvironments={
+                  this.props.initialLessonData.programmingEnvironments
+                }
+              />
             </CollapsibleEditorSection>
 
             <CollapsibleEditorSection

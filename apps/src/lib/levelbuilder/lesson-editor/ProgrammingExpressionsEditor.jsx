@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {programmingExpressionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {
+  programmingExpressionShape,
+  programmingEnvironmentShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import SearchBox from './SearchBox';
 import Dialog from '@cdo/apps/templates/Dialog';
@@ -29,11 +32,17 @@ const styles = {
     textAlign: 'center',
     width: '100%',
     lineHeight: '30px'
+  },
+  dropdown: {
+    width: '100%'
   }
 };
 
 class ProgrammingExpressionsEditor extends Component {
   static propTypes = {
+    programmingEnvironments: PropTypes.arrayOf(programmingEnvironmentShape)
+      .isRequired,
+
     // Provided by redux
     programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
       .isRequired,
@@ -46,7 +55,7 @@ class ProgrammingExpressionsEditor extends Component {
     this.state = {
       confirmRemovalDialogOpen: false,
       programmingExpressionForRemoval: null,
-      programmingEnvironmentId: null
+      programmingEnvironmentId: 0
     };
   }
 
@@ -147,10 +156,6 @@ class ProgrammingExpressionsEditor extends Component {
     programmingExpression
   });
 
-  afterProgrammingExpressionSave = programmingExpression => {
-    this.props.addProgrammingExpression(programmingExpression);
-  };
-
   constructSearchOptions = json => {
     const programmingExpressionKeysAdded = this.props.programmingExpressions.map(
       programmingExpression => programmingExpression.key
@@ -184,6 +189,9 @@ class ProgrammingExpressionsEditor extends Component {
 
   render() {
     const columns = this.getColumns();
+
+    console.log(this.state.programmingEnvironmentId);
+    console.log(this.props.programmingEnvironments);
     return (
       <div>
         {this.state.confirmRemovalDialogOpen && (
@@ -202,6 +210,25 @@ class ProgrammingExpressionsEditor extends Component {
         )}
         <div style={styles.search}>
           <label>
+            <strong>Select an IDE</strong>
+          </label>
+          <select
+            style={styles.dropdown}
+            value={this.state.programmingEnvironmentId}
+            onChange={e =>
+              this.setState({programmingEnvironmentId: e.target.value})
+            }
+          >
+            <option key={'empty-option'} value={0} />
+            {this.props.programmingEnvironments.map(environment => (
+              <option key={environment.id} value={environment.id}>
+                {environment.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div style={styles.search}>
+          <label>
             <strong>Select a programming expression to add</strong>
           </label>
           <SearchBox
@@ -209,7 +236,7 @@ class ProgrammingExpressionsEditor extends Component {
               this.props.addProgrammingExpression(e.programmingExpression)
             }
             additionalQueryParams={
-              this.state.programmingEnvironmentId
+              this.state.programmingEnvironmentId > 0
                 ? {
                     programmingEnvironmentId: this.state
                       .programmingEnvironmentId
