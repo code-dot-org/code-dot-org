@@ -1125,7 +1125,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # milestone post should cause it to become locked again
     user_level = UserLevel.find(user_level.id)
-    assert user_level.locked?(stage)
+    assert user_level.show_as_locked?(stage)
 
     # milestone post should also fail when we have an existing user_level that is locked
     post :milestone, params: milestone_params

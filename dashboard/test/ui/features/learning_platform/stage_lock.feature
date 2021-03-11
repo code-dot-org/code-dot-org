@@ -115,7 +115,7 @@ Scenario: Lock settings for students who never submit
 
   # now unlocked/not tried for student
 
-  When I sign in as "billyy"
+  When I sign in as "billy"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible

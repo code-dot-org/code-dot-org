@@ -452,8 +452,8 @@ class Lesson < ApplicationRecord
         },
         name: student.name,
         # if we don't have a user level, consider ourselves locked
-        locked: user_level ? user_level.locked?(self) : true,
-        readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
+        locked: user_level ? user_level.show_as_locked?(self) : true,
+        readonly_answers: user_level ? !user_level.show_as_locked?(self) && user_level.readonly_answers? : false
       }
     end
   end
