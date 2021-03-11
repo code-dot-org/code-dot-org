@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
-import i18n from '@cdo/locale';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import Button from '@cdo/apps/templates/Button';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import styleConstants from '@cdo/apps/styleConstants';
-import color from '@cdo/apps/util/color';
-import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
-import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
+import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+import styleConstants from '@cdo/apps/styleConstants';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Announcements from '../../code-studio/components/progress/Announcements';
 
 const styles = {
   frontPage: {
@@ -122,7 +125,20 @@ class LessonOverview extends Component {
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <LessonNavigationDropdown lesson={lesson} />
+            <div>
+              {lesson.lessonPlanPdfUrl && (
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.gray}
+                  download
+                  href={lesson.lessonPlanPdfUrl}
+                  style={{marginRight: 10}}
+                  target="_blank"
+                  text={i18n.printLessonPlan()}
+                />
+              )}
+              <LessonNavigationDropdown lesson={lesson} />
+            </div>
           </div>
         </div>
         {isSignedIn && (
@@ -220,6 +236,7 @@ class LessonOverview extends Component {
                 )}
               </div>
             )}
+
             {lesson.vocabularies.length > 0 && (
               <div>
                 <h2 style={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
@@ -229,6 +246,24 @@ class LessonOverview extends Component {
                       <InlineMarkdown
                         markdown={`**${vocab.word}** - ${vocab.definition}`}
                       />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {lesson.programmingExpressions.length > 0 && (
+              <div id="unit-test-introduced-code">
+                <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+                <ul>
+                  {lesson.programmingExpressions.map(expression => (
+                    <li key={expression.name}>
+                      <a
+                        href={studio(expression.link)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {expression.name}
+                      </a>
                     </li>
                   ))}
                 </ul>

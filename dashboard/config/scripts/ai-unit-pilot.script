@@ -2,14 +2,10 @@ login_required true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai-unit/"], ["vocabulary", "https://curriculum.code.org/ai-unit-pilot/ai-unit/vocab"], ["standardMappings", "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"]]
 curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
 
-lesson 'lesson1', display_name: 'Lesson 1A: AI for Oceans', has_lesson_plan: true
-level 'Oceans_Video_Machine_Learning', progression: 'Data and Machine Learning'
-level 'Oceans_FishVTrash', progression: 'Data and Machine Learning'
-level 'Oceans_CreaturesVTrashDemo', progression: 'Data and Machine Learning'
-level 'Oceans_CreaturesVTrash', progression: 'Data and Machine Learning'
-level 'Oceans_Video_Training_Data', progression: 'Data and Machine Learning'
-level 'Oceans_Short', progression: 'Data and Machine Learning'
-level 'Oceans_Long', progression: 'Data and Machine Learning'
+lesson 'lesson1', display_name: 'Introduction to Machine Learning A', has_lesson_plan: true
+level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
+level 'Oceans_Short', progression: 'Recognizing Fish Features'
+level 'Oceans_Long', progression: 'Recognizing Expressions'
 
 lesson 'lesson2', display_name: 'How Computers Learn (Unplugged)', has_lesson_plan: true
 
@@ -26,6 +22,7 @@ level 'ml-intro ai lab-intro video', progression: 'Video: Introduction to AI Lab
 level 'ml-intro categorical-tacos', progression: 'Dataset #1: Tacos'
 level 'ml-intro categorical-ice cream', progression: 'Dataset #2: Ice Cream'
 level 'ml-intro categorical-pizza', progression: 'Dataset #3: Pizza'
+level 'ml-intro categorical-food choices', progression: 'You Choose: Restaurant Recommendations'
 
 lesson 'lesson6', display_name: 'Classification on Planet Vapnik (Unplugged)', has_lesson_plan: true
 
@@ -33,9 +30,8 @@ lesson 'lesson7', display_name: 'Using Models in App Lab', has_lesson_plan: true
 level 'ml-models in applab-vacation example', progression: 'What is your Ideal Vacation?'
 level 'ml-import ai-import video', progression: 'Video: Importing Models to App Lab'
 level 'ml-models in applab-import 1', progression: 'Import Your Model'
-level 'ml-import ai-conditionals-video2', progression: 'Conditionals Video (Dan: delete later)'
-level 'ml-models in applab-screens-1', progression: 'Changing Screens'
 level 'ml-models in applab-screens-2', progression: 'Changing Screens'
+level 'ml-models in applab-screens-1', progression: 'Changing Screens'
 level 'ml-models in applab-screens-3', progression: 'Changing Screens'
 level 'ml-models in applab-practice choice', progression: 'You Choose: Quiz Apps'
 
@@ -46,6 +42,7 @@ level 'ml-model card-medical-1', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-2', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-3', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
+level 'Oceans_Video_Training_Data', progression: '(Slides) Bias in Machine Learning Video'
 
 lesson 'lesson9', display_name: 'Numerical Data in AI Lab', has_lesson_plan: true
 level 'ml-numerical ai lab-safari 1', progression: 'Safari Planner'
@@ -53,22 +50,22 @@ level 'ml-numerical ai lab-safari 1', progression: 'Safari Planner'
 lesson 'lesson10', display_name: 'Regression Quest (Unplugged)', has_lesson_plan: true
 
 lesson 'lesson11', display_name: 'Using Model Cards in App Lab', has_lesson_plan: true
-level 'ml-use model card-example1A', progression: '[[Example 1]] App'
-level 'ml-use model card-example1B', progression: '[[Example 1]] App'
-level 'ml-use model card-example1C', progression: '[[Example 1]] App'
-level 'ml-use model card-example1D', progression: '[[Example 1]] App'
-level 'ml-use model card-example1E', progression: '[[Example 1]] App'
-level 'ml-use model card-example2A', progression: '[[Example 2]] App'
-level 'ml-use model card-example2B', progression: '[[Example 2]] App'
-level 'ml-use model card-example2C', progression: '[[Example 2]] App'
-level 'ml-use model card-example2D', progression: '[[Example 2]] App'
-level 'ml-use model card-example2E', progression: '[[Example 2]] App'
+level 'ml-use model card-example1A', progression: 'Who Survived the Titanic?'
+level 'ml-use model card-example1B', progression: 'Who Survived the Titanic?'
+level 'ml-use model card-example1C', progression: 'Who Survived the Titanic?'
+level 'ml-use model card-example1D', progression: 'Who Survived the Titanic?'
+level 'ml-use model card-example1E', progression: 'Who Survived the Titanic?'
+level 'ml-use model card-example2A', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2B', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2C', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2D', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2E', progression: 'How Much Will Insurance Cost?'
 
 lesson 'lesson12', display_name: 'Making Data Decisions', has_lesson_plan: true
 
 lesson 'lesson13', display_name: 'Mini-Project: Make an App (2 Days)', has_lesson_plan: true
-
-lesson 'lesson14', display_name: 'Lesson 14', has_lesson_plan: true
+level 'ml-mini project-ai lab', progression: 'Make An App - AI Lab'
+level 'ml-mini project-app lab', progression: 'Make an App - App Lab'
 
 lesson 'lesson15', display_name: 'AI Code of Ethics (Unplugged)', has_lesson_plan: true
 
@@ -78,13 +75,15 @@ level 'csd-unit-5-goldilocks-principle-ai-lab-underfitted', progression: 'What W
 level 'csd-unit-5-goldilocks-principle-app-lab-overfitted', progression: 'What Is Your Net Worth?'
 level 'csd-unit-5-goldilocks-principle-ai-lab-overfitted', progression: 'What Is Your Net Worth?'
 
-lesson 'lesson17', display_name: 'Lesson 17', has_lesson_plan: true
-
 lesson 'lesson18', display_name: 'Planning Your App', has_lesson_plan: true
+level 'ml-planning app-ai lab', progression: 'App with Real-World Data - AI Lab'
 
-lesson 'lesson19', display_name: 'Project: App with Real World Data', has_lesson_plan: true
+lesson 'lesson19', display_name: 'Project: App with Real-World Data', has_lesson_plan: true
+level 'ml-final project-ai lab', progression: 'App with Real-World Data - AI Lab'
+level 'ml-final project-app lab', progression: 'App with Real-World Data - App Lab'
 
 lesson 'lesson20', display_name: 'TEMP LEVELS - DELETE LATER', has_lesson_plan: true
 level 'ml-model cards-medical app', progression: 'Medical Priority App (external app)'
 level 'ml-import ai-pixar placeholder', progression: 'Which Pixar Character Are You?'
+level 'Oceans_CreaturesVTrash', progression: 'Recognizing Ocean Animals'
 

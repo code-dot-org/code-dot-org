@@ -9,12 +9,19 @@
 #  programming_environment_id :bigint           not null
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
+#  key                        :string(255)      not null
 #
 # Indexes
 #
+#  index_programming_expressions_on_name_and_category           (name,category)
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
+#  programming_environment_key                                  (programming_environment_id,key) UNIQUE
 #
 class ProgrammingExpression < ApplicationRecord
   belongs_to :programming_environment
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
+
+  def summarize_for_lesson_show
+    {name: name, link: "/docs/#{programming_environment.name}/#{key}/"}
+  end
 end

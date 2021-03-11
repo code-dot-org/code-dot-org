@@ -259,12 +259,20 @@ class Button extends React.Component {
       ? styles.sizes[size]
       : {...styles.sizes[size], ...styles.updated};
 
+    // Opening links in new tabs with 'target=_blank' is inherently insecure.
+    // Unfortunately, we depend on this functionality in a couple of place.
+    // Fortunately, it is possible to partially mitigate some of the insecurity
+    // of this functionality by using the `rel` tag to block some of the
+    // potential exploits. Therefore, we do so here.
+    const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
+
     return (
       <Tag
         className={className}
         style={[styles.main, styles.colors[color], sizeStyle, style]}
         href={disabled ? 'javascript:void(0);' : href}
         target={target}
+        rel={rel}
         disabled={disabled}
         download={download}
         onClick={disabled ? null : onClick}
