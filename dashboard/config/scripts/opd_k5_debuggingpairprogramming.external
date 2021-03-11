@@ -1,0 +1,43 @@
+name 'OPD-K5 DebuggingPairProgramming'
+skip_dialog true
+markdown <<MARKDOWN
+# CS Teaching Strategies
+**Total Suggested Time:**
+
+Debugging is an essential skill and process in computer science.  Pair programming is a built-in CS teaching strategy in Code Studio that supports students in debugging and many of the student practices. Let's investigate how to include these CS teaching strategies among the CS teaching practices.
+
+## Debugging 
+
+Let's begin with some vocabulary.
+
+* **Bug:** Something that is going wrong with the code, an error.
+* **Debugging:** Finding and fixing “bugs” or the code to fix an error.
+* **Persistence:** A student practice of not giving up when trying things many different ways, many different times.
+
+**Task: Watch the video "Debugging."**
+
+**Task: Explore the Debugging Process Guide**
+
+Debugging is a skill each student will need to practice and strengthen overtime. Debugging as a skill can be thought of as active debugging as students practice debugging *while* coding.
+
+Debugging is also a process that all students can engage in, as a learning community, to learn how to debug. Debugging as a process can be thought of as reflective debugging as students participate in debugging as an entire class.
+
+**Task: Read about debugging in the CS Fundamentals Curriculum Guide.**
+
+## Pair Programming
+
+Pair programming is a technique in which two programmers work together at one computer.  The "driver" writes code while the "navigator" directs the design and setup of the code.  The two programmers switch roles often.  Students in CS Fundamentals courses engage in pair programming throughout many lessons.
+
+**Task: Watch the video "Pair Programming."**
+
+**Task: Read the Code.org support article, "How does pair programming on Code.org work?"**
+
+**Optional Task:** Read more about pair programming in the CS Fundamentals Curriculum Guide.
+
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+
+    
+
+MARKDOWN

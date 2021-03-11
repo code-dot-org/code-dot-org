@@ -12,6 +12,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   header: {
@@ -123,6 +124,24 @@ class StudentLessonOverview extends Component {
                   <InlineMarkdown
                     markdown={`**${vocab.word}** - ${vocab.definition}`}
                   />
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {lesson.programmingExpressions.length > 0 && (
+          <div id="unit-test-introduced-code">
+            <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+            <ul>
+              {lesson.programmingExpressions.map(expression => (
+                <li key={expression.name}>
+                  <a
+                    href={studio(expression.link)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {expression.name}
+                  </a>
                 </li>
               ))}
             </ul>

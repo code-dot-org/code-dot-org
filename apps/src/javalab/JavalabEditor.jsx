@@ -2,15 +2,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {setEditorText, setFileName} from './javalabRedux';
 import PropTypes from 'prop-types';
-import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
+import PaneHeader, {
+  PaneSection,
+  PaneButton
+} from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState} from '@codemirror/state';
+import {renameProjectFile, onSave} from './JavalabFileManagement';
 
 const style = {
   editor: {
     width: '100%',
-    height: 600,
+    height: 400,
     backgroundColor: '#282c34'
   },
   tabs: {
@@ -23,6 +27,11 @@ const style = {
   },
   button: {
     marginLeft: 10
+  },
+  renameForm: {
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -30,24 +39,30 @@ class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     // populated by redux
-    editorText: PropTypes.string,
     setEditorText: PropTypes.func,
-    fileName: PropTypes.string,
-    setFileName: PropTypes.func
+    setFilename: PropTypes.func,
+    filename: PropTypes.string,
+    editorText: PropTypes.string
   };
 
   constructor(props) {
     super(props);
 
+    this.activateRenameFile = this.activateRenameFile.bind(this);
+    this.renameFileComplete = this.renameFileComplete.bind(this);
+    this.onSave = onSave.bind(this);
+
     this.state = {
       renameFileActive: false,
-      showFileManagementPanel: false
+      showFileManagementPanel: false,
+      oldFilename: null
     };
   }
 
   componentDidMount() {
     this.editor = new EditorView({
       state: EditorState.create({
+        doc: this.props.editorText,
         extensions: editorSetup
       }),
       parent: this._codeMirror,
@@ -69,26 +84,34 @@ class JavalabEditor extends React.Component {
     };
   };
 
+  renameFileComplete(e) {
+    e.preventDefault();
+    renameProjectFile(this.state.oldFilename, this.props.filename);
+    this.setState({renameFileActive: false});
+  }
+
+  activateRenameFile() {
+    this.setState({oldFilename: this.props.filename, renameFileActive: true});
+  }
+
   displayFileRename() {
     return (
       <div style={style.tabs}>
-        <div style={style.tab}>
+        <form style={style.renameForm} onSubmit={this.renameFileComplete}>
+          <div style={style.tab}>
+            <input
+              type="text"
+              value={this.props.filename}
+              onChange={e => this.props.setFilename(e.target.value)}
+            />
+          </div>
           <input
-            type="text"
-            ariaLabel="file name"
-            value={this.props.fileName}
-            onChange={e => this.props.setFileName(e.target.value)}
-            onBlur={() => this.setState({renameFileActive: false})}
+            className="btn btn-default btn-sm"
+            style={style.button}
+            type="submit"
+            value="Save"
           />
-        </div>
-        <button
-          type="button"
-          onClick={() => this.setState({renameFileActive: false})}
-          className="btn btn-default btn-sm"
-          style={style.button}
-        >
-          Save
-        </button>
+        </form>
       </div>
     );
   }
@@ -96,10 +119,10 @@ class JavalabEditor extends React.Component {
   displayFileNameAndRenameButton() {
     return (
       <div style={style.tabs}>
-        <div style={style.tab}>{this.props.fileName}</div>
+        <div style={style.tab}>{this.props.filename}</div>
         <button
           type="button"
-          onClick={() => this.setState({renameFileActive: true})}
+          onClick={this.activateRenameFile}
           className="btn btn-default btn-sm"
           style={style.button}
         >
@@ -113,6 +136,14 @@ class JavalabEditor extends React.Component {
     return (
       <div style={this.props.style}>
         <PaneHeader hasFocus={true}>
+          <PaneButton
+            id="javalab-editor-save"
+            iconClass="fa fa-check-circle"
+            onClick={this.onSave}
+            headerHasFocus={true}
+            isRtl={false}
+            label="Commit Code"
+          />
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <div>
@@ -128,11 +159,11 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    editorText: state.javalab.editorText,
-    fileName: state.javalab.fileName
+    filename: state.javalab.filename,
+    editorText: state.javalab.editorText
   }),
   dispatch => ({
-    setEditorText: editorText => dispatch(setEditorText(editorText)),
-    setFileName: fileName => dispatch(setFileName(fileName))
+    setFilename: filename => dispatch(setFileName(filename)),
+    setEditorText: editorText => dispatch(setEditorText(editorText))
   })
 )(JavalabEditor);

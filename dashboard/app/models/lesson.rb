@@ -279,6 +279,9 @@ class Lesson < ApplicationRecord
       if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+        if script.include_student_lesson_plans && script.is_migrated
+          lesson_data[:student_lesson_plan_html_url] = script_lesson_student_path(script, self)
+        end
       end
 
       if script.hoc?
@@ -359,16 +362,18 @@ class Lesson < ApplicationRecord
       lockable: lockable,
       key: key,
       displayName: localized_name,
-      overview: overview || '',
+      overview: Services::MarkdownPreprocessor.process(overview || ''),
       announcements: announcements,
-      purpose: purpose || '',
-      preparation: preparation || '',
+      purpose: Services::MarkdownPreprocessor.process(purpose || ''),
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
-      assessmentOpportunities: assessment_opportunities
+      assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
+      lessonPlanPdfUrl: lesson_plan_pdf_url
     }
   end
 
@@ -382,7 +387,8 @@ class Lesson < ApplicationRecord
       overview: student_overview || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show)
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show)
     }
   end
 

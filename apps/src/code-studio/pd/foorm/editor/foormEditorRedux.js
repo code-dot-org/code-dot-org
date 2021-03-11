@@ -1,17 +1,17 @@
-const SET_FORM_QUESTIONS = 'foormEditor/SET_FORM_QUESTIONS';
-const SET_HAS_ERROR = 'foormEditor/SET_HAS_ERROR';
+const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
+const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const RESET_AVAILABLE_FORMS = 'foormEditor/RESET_AVAILABLE_FORMS';
-const ADD_AVAILABLE_FORM = 'foormEditor/ADD_AVAILABLE_FORMS';
+const SET_AVAILABLE_ENTITIES = 'foormEditor/SET_AVAILABLE_ENTITIES';
+const ADD_AVAILABLE_ENTITY = 'foormEditor/ADD_AVAILABLE_ENTITY';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
 
-// formQuestions is an object in surveyJS format that represents
-// a single survey
-export const setFormQuestions = formQuestions => ({
-  type: SET_FORM_QUESTIONS,
-  formQuestions
+// questions is an object in surveyJS format that represents
+// a valid survey.
+export const setQuestions = questions => ({
+  type: SET_QUESTIONS,
+  questions
 });
 
 // formData is an object in the format
@@ -22,19 +22,23 @@ export const setFormData = formData => ({
   formData
 });
 
-export const setHasError = hasError => ({
-  type: SET_HAS_ERROR,
-  hasError
+export const setHasJSONError = hasJSONError => ({
+  type: SET_HAS_JSON_ERROR,
+  hasJSONError
 });
 
-export const resetAvailableForms = formsMetadata => ({
-  type: RESET_AVAILABLE_FORMS,
-  formsMetadata
+// "Entities" are the list of forms or libraries from which a user can select to edit
+// in the Foorm form and library editors, respectively.
+export const setAvailableEntities = entitiesMetadata => ({
+  type: SET_AVAILABLE_ENTITIES,
+  entitiesMetadata
 });
 
-export const addAvilableForm = formMetadata => ({
-  type: ADD_AVAILABLE_FORM,
-  formMetadata
+// An "entity" (form or library) is added to the list of forms or libraries that can be edited
+// after a new form or library is created.
+export const addAvailableEntity = entityMetadata => ({
+  type: ADD_AVAILABLE_ENTITY,
+  entityMetadata
 });
 
 export const setLastSaved = lastSaved => ({
@@ -47,59 +51,60 @@ export const setSaveError = saveError => ({
   saveError
 });
 
-export const setLastSavedQuestions = formQuestions => ({
+export const setLastSavedQuestions = questions => ({
   type: SET_LAST_SAVED_QUESTIONS,
-  formQuestions
+  questions
 });
 
 const initialState = {
-  formQuestions: '',
-  isFormPublished: null,
-  hasError: false,
-  formName: null,
-  formVersion: null,
-  formId: null,
-  availableForms: [],
+  questions: '',
+  hasJSONError: false,
+  availableEntities: [],
   saveError: null,
   lastSaved: null,
-  lastSavedFormQuestions: ''
+  lastSavedQuestions: '',
+  // State specific to Foorm Form editor
+  isFormPublished: null,
+  formName: null,
+  formVersion: null,
+  formId: null
 };
 
 export default function foormEditorRedux(state = initialState, action) {
-  if (action.type === SET_FORM_QUESTIONS) {
+  if (action.type === SET_QUESTIONS) {
     return {
       ...state,
-      formQuestions: action.formQuestions
+      questions: action.questions
     };
   }
-  if (action.type === SET_HAS_ERROR) {
+  if (action.type === SET_HAS_JSON_ERROR) {
     return {
       ...state,
-      hasError: action.hasError
+      hasJSONError: action.hasJSONError
     };
   }
   if (action.type === SET_FORM_DATA) {
     return {
       ...state,
-      formQuestions: action.formData['questions'],
+      questions: action.formData['questions'],
       isFormPublished: action.formData['published'],
       formName: action.formData['name'],
       formVersion: action.formData['version'],
       formId: action.formData['id']
     };
   }
-  if (action.type === RESET_AVAILABLE_FORMS) {
+  if (action.type === SET_AVAILABLE_ENTITIES) {
     return {
       ...state,
-      availableForms: action.formsMetadata
+      availableEntities: action.entitiesMetadata
     };
   }
-  if (action.type === ADD_AVAILABLE_FORM) {
-    let newFormList = [...state.availableForms];
-    newFormList.push(action.formMetadata);
+  if (action.type === ADD_AVAILABLE_ENTITY) {
+    let newEntitiesList = [...state.availableEntities];
+    newEntitiesList.push(action.entityMetadata);
     return {
       ...state,
-      availableForms: newFormList
+      availableEntities: newEntitiesList
     };
   }
   if (action.type === SET_LAST_SAVED) {
@@ -117,7 +122,7 @@ export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_LAST_SAVED_QUESTIONS) {
     return {
       ...state,
-      lastSavedFormQuestions: action.formQuestions
+      lastSavedQuestions: action.questions
     };
   }
 

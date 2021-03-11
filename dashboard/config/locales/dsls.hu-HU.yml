@@ -1467,7 +1467,8 @@ hu-HU:
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1475,7 +1476,8 @@ hu-HU:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1483,7 +1485,8 @@ hu-HU:
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1491,7 +1494,8 @@ hu-HU:
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1963,7 +1967,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1971,7 +1976,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1979,7 +1985,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1987,7 +1994,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -2312,34 +2320,65 @@ hu-HU:
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+          feedback: Helyes!
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Nem tudom.
+          feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
-        - {}
+        - text: Nézd meg alaposan ezt a kódot! Ha a kódot lefuttatnánk (figyelmen
+            kívül hagyva az esetleges hibákat), hány kincset gyűjtene összesen Laurel?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
         - {}
       csf_safety_in_my_online_neighborhood:
@@ -2452,3 +2491,8 @@ hu-HU:
           # Kövesda digitális nyomot
 
           ## Milyen információk azok, amiket biztonságosan megoszthatsz, amik részei lehetnek a digitális lábnyomodnak?
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Gonoszkodás a képernyőn
+
+          Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki gonosz veled az interneten

@@ -1282,6 +1282,8 @@ ActiveRecord::Schema.define(version: 2021_03_11_162705) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "key", null: false
+    t.index ["name", "category"], name: "index_programming_expressions_on_name_and_category", type: :fulltext
+    t.index ["programming_environment_id", "key"], name: "programming_environment_key", unique: true
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 

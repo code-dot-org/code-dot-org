@@ -1717,3 +1717,9 @@
   codebytes_skinny_banner_description: 'Dołącz do nas każdego dnia Tygodnia Edukacji Informatycznej z CodeBytes, na 20-minutowe interaktywne lekcje informatyki. Transmisja na żywo dwa razy dziennie, CodeBytes to dla uczniów świetny sposób na udział w wirtualnej #HourOfCode!'
   codebytes_skinny_banner_english_only: "Tylko w języku angielskim"
   codebytes_skinny_banner_learn: "Dowiedz się więcej tutaj [code.org/codebytes](%{code_bytes_url})."
+  footer_privacy_policy: "Polityka prywatności"
+  footer_about: "O programie"
+  footer_partners: "Partnerzy"
+  footer_donate: "Podaruj"
+  footer_support: "Wsparcie"
+  footer_terms: "Warunki"

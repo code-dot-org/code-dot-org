@@ -1,5 +1,5 @@
-lesson_group 'haiku bot', display_name: 'Haiku Bot'
-lesson 'Haiku Bot', display_name: 'Haiku Bot', has_lesson_plan: false
-level 'haiku_prompt1', progression: 'Prompt 1'
-level 'haiku_prototype_choice', progression: 'Haiku Prototype'
+lesson_group 'poem bot', display_name: 'Poem Bot'
+lesson 'Poem Bot', display_name: 'Poem Bot', has_lesson_plan: false
+level 'haiku_prototype_choice1', progression: 'Poem Bot Prototype'
+level 'Poem Bot_Fat Level', progression: 'Code Your Poem Bot'
 

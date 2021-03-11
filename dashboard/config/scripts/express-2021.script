@@ -9,25 +9,8 @@ curriculum_umbrella 'CSF'
 is_course true
 is_migrated true
 
-lesson_group 'csf_warmup', display_name: 'Warm Up'
-lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: true
-level 'CourseD_Dance_2020_vid1_2021'
-level 'CourseD_Dance_2020_01_2021'
-level 'CourseD_Dance_2020_vid2_2021'
-level 'CourseD_Dance_2020_02_2021'
-level 'CourseD_Dance_2020_03_2021'
-level 'CourseD_Dance_2020_vid3_2021'
-level 'CourseD_Dance_2020_04_2021'
-level 'CourseD_Dance_2020_05_2021'
-level 'CourseD_Dance_2020_06_2021'
-level 'CourseD_Dance_2020_vid4_2021'
-level 'CourseD_Dance_2020_07_2021'
-level 'CourseD_Dance_2020_08_2021'
-level 'CourseD_Dance_2020_09_2021'
-level 'CourseD_Dance_2020_vid5_2021'
-level 'CourseD_Dance_2020_10_2021'
-bonus 'CourseD_Dance_2020_bonus1_2021'
-bonus 'CourseD_Dance_2020_bonus3_2021'
+lesson_group 'lessonGroup-9', display_name: 'Warm Up'
+lesson 'lesson-1', display_name: 'Dance Party', has_lesson_plan: true
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Programming with Angry Birds', display_name: 'Programming with Angry Birds', has_lesson_plan: true
