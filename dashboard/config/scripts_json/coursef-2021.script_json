@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-08 19:21:39 UTC",
+    "serialized_at": "2021-03-09 23:37:08 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -123,12 +123,87 @@
   ],
   "lessons": [
     {
-      "key": "Functions in Minecraft",
-      "name": "Functions in Minecraft",
+      "key": "lesson-6",
+      "name": "Introducing Sprite Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Making Sprites",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Sprites in Action",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Blank Space Stories",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Text and Prompts",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "Functions in Minecraft",
+      "name": "Functions in Minecraft",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "overview": "Students will begin to understand how **functions** can be helpful in this fun and interactive Minecraft adventure!",
         "student_overview": "Can you figure out how to use **functions** for the most efficient code?",
@@ -145,10 +220,10 @@
     {
       "key": "Learning Sprites with Sprite Lab",
       "name": "Swimming Fish with Sprite Lab",
-      "absolute_position": 2,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 7,
       "properties": {
         "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that sprites will take continuously until they are stopped.",
         "student_overview": "Learn how to create and edit sprites.",
@@ -165,10 +240,10 @@
     {
       "key": "Events with Sprite Lab",
       "name": "Alien Dance Party with Sprite Lab",
-      "absolute_position": 3,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 8,
       "properties": {
         "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as **events** to create an \"alien dance party\".   ",
         "student_overview": "Create an interactive project that can be shared with classmates.",
@@ -185,10 +260,10 @@
     {
       "key": "Loops with the Artist",
       "name": "Drawing with Loops",
-      "absolute_position": 4,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 9,
       "properties": {
         "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
         "student_overview": "In this lesson, **loops** make it easy to make even cooler images with Artist!",
@@ -205,10 +280,10 @@
     {
       "key": "Nested Loops in the Maze",
       "name": "Nested Loops in Maze",
-      "absolute_position": 5,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 10,
       "properties": {
         "overview": "In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.",
         "student_overview": "**Loops** inside **loops** inside **loops**. What does this mean? This lesson will teach you what happens when you place a **loop** inside another **loop**.",
@@ -225,10 +300,10 @@
     {
       "key": "lesson-1",
       "name": "Designing for Accessibility",
-      "absolute_position": 6,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 11,
       "properties": {
         "overview": "In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
         "student_overview": "In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
@@ -245,10 +320,10 @@
     {
       "key": "Envelope Variables",
       "name": "Envelope Variables",
-      "absolute_position": 7,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 12,
       "properties": {
         "overview": "Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.",
         "student_overview": "Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.",
@@ -266,10 +341,10 @@
     {
       "key": "Variables as Constant in Artist",
       "name": "Variables with Artist",
-      "absolute_position": 8,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 13,
       "properties": {
         "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.",
         "student_overview": "Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using **variables**.",
@@ -286,10 +361,10 @@
     {
       "key": "Variables that Change in Bee",
       "name": "Changing Variables with Bee",
-      "absolute_position": 9,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 14,
       "properties": {
         "overview": "This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. ",
         "student_overview": "This bee loves **variables**!",
@@ -306,10 +381,10 @@
     {
       "key": "Variables that Change in Artist",
       "name": "Changing Variables with Artist",
-      "absolute_position": 10,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 15,
       "properties": {
         "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
         "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs.",
@@ -326,10 +401,10 @@
     {
       "key": "Simulating Experiments",
       "name": "Simulating Experiments",
-      "absolute_position": 11,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 16,
       "properties": {
         "overview": "By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.",
         "student_overview": "Run simulations on the computer and experiment by changing variables.",
@@ -346,10 +421,10 @@
     {
       "key": "AI for Oceans",
       "name": "AI For Oceans",
-      "absolute_position": 12,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 17,
       "properties": {
         "overview": "Students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\n\nThis lesson will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\n",
         "student_overview": "Students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
@@ -365,10 +440,10 @@
     {
       "key": "Internet",
       "name": "The Internet",
-      "absolute_position": 13,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 18,
       "properties": {
         "overview": "Even though many people use the **internet** daily, not very many know how it works. In this lesson, students will pretend to flow through the **internet**, all the while learning about connections, **URLs**, **IP Addresses**, and the **DNS**.",
         "student_overview": "Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.",
@@ -386,10 +461,10 @@
     {
       "key": "For Loop Fun",
       "name": "For Loop Fun",
-      "absolute_position": 14,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 19,
       "properties": {
         "overview": "We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. ",
         "student_overview": "You're going to have loads of fun learning about `for` loops!",
@@ -407,10 +482,10 @@
     {
       "key": "For Loops in Bee",
       "name": "For Loops with Bee",
-      "absolute_position": 15,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 20,
       "properties": {
         "overview": "Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
         "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!",
@@ -427,10 +502,10 @@
     {
       "key": "For Loops in Artist",
       "name": "For Loops with Artist",
-      "absolute_position": 16,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 21,
       "properties": {
         "overview": "In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.",
         "student_overview": "Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.",
@@ -447,10 +522,10 @@
     {
       "key": "Editing Behaviors",
       "name": "Behaviors in Sprite Lab",
-      "absolute_position": 17,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 22,
       "properties": {
         "overview": "Here, students will use Sprite Lab to create their own customized behaviors.",
         "student_overview": "Learn to program your own sprite behaviors!",
@@ -467,10 +542,10 @@
     {
       "key": "Virtual Pet",
       "name": "Virtual Pet with Sprite Lab",
-      "absolute_position": 18,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 23,
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
@@ -487,10 +562,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 19,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 24,
       "properties": {
         "overview": "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates.",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
@@ -5294,7 +5369,7 @@
       "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5320,7 +5395,7 @@
       "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5346,7 +5421,7 @@
       "chapter": 62,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Artist: Variables Video",
         "level_keys": [
@@ -5372,7 +5447,7 @@
       "chapter": 63,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5398,7 +5473,7 @@
       "chapter": 64,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5424,7 +5499,7 @@
       "chapter": 65,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5450,7 +5525,7 @@
       "chapter": 66,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5476,7 +5551,7 @@
       "chapter": 67,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5502,7 +5577,7 @@
       "chapter": 68,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5528,7 +5603,7 @@
       "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5554,7 +5629,7 @@
       "chapter": 70,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5580,7 +5655,7 @@
       "chapter": 71,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5606,7 +5681,7 @@
       "chapter": 72,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5632,7 +5707,7 @@
       "chapter": 73,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5658,7 +5733,7 @@
       "chapter": 74,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5685,7 +5760,7 @@
       "chapter": 75,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5711,7 +5786,7 @@
       "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5737,7 +5812,7 @@
       "chapter": 77,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5763,7 +5838,7 @@
       "chapter": 78,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5789,7 +5864,7 @@
       "chapter": 79,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5815,7 +5890,7 @@
       "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5841,7 +5916,7 @@
       "chapter": 81,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5867,7 +5942,7 @@
       "chapter": 82,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5970,7 +6045,7 @@
       "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Machine_Learning_2021"
@@ -5995,8 +6070,11 @@
       "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_FishVTrash_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6017,8 +6095,11 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrashDemo_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6039,8 +6120,11 @@
       "chapter": 89,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrash_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6061,8 +6145,11 @@
       "chapter": 90,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Training_Data_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6083,8 +6170,11 @@
       "chapter": 91,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Short_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6105,8 +6195,11 @@
       "chapter": 92,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Societal_Implications_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6127,8 +6220,11 @@
       "chapter": 93,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Long_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6149,7 +6245,7 @@
       "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Internet - Unplugged Activity",
         "level_keys": [
@@ -6201,7 +6297,7 @@
       "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6227,7 +6323,7 @@
       "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6253,7 +6349,7 @@
       "chapter": 98,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loops and Repeat Blocks",
         "level_keys": [
@@ -6279,7 +6375,7 @@
       "chapter": 99,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6305,7 +6401,7 @@
       "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6331,7 +6427,7 @@
       "chapter": 101,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6357,7 +6453,7 @@
       "chapter": 102,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6383,7 +6479,7 @@
       "chapter": 103,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6409,7 +6505,7 @@
       "chapter": 104,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6435,7 +6531,7 @@
       "chapter": 105,
       "position": 10,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6461,7 +6557,7 @@
       "chapter": 106,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6488,7 +6584,7 @@
       "chapter": 107,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6514,7 +6610,7 @@
       "chapter": 108,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6540,7 +6636,7 @@
       "chapter": 109,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6566,7 +6662,7 @@
       "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Intro to For Loops",
         "level_keys": [
@@ -6592,7 +6688,7 @@
       "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6618,7 +6714,7 @@
       "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6644,7 +6740,7 @@
       "chapter": 113,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6670,7 +6766,7 @@
       "chapter": 114,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6696,7 +6792,7 @@
       "chapter": 115,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6722,7 +6818,7 @@
       "chapter": 116,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6748,7 +6844,7 @@
       "chapter": 117,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6774,7 +6870,7 @@
       "chapter": 118,
       "position": 9,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6800,7 +6896,7 @@
       "chapter": 119,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6826,7 +6922,7 @@
       "chapter": 120,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6852,7 +6948,7 @@
       "chapter": 121,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6878,7 +6974,7 @@
       "chapter": 122,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6904,7 +7000,7 @@
       "chapter": 123,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6930,7 +7026,7 @@
       "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6956,7 +7052,7 @@
       "chapter": 125,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6982,7 +7078,7 @@
       "chapter": 126,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7008,7 +7104,7 @@
       "chapter": 127,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7034,7 +7130,7 @@
       "chapter": 128,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7060,7 +7156,7 @@
       "chapter": 129,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7086,7 +7182,7 @@
       "chapter": 130,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7112,16 +7208,16 @@
       "chapter": 131,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "behaviors 6_2021"
-        ],
-        "progression": "Challenge",
-        "challenge": true
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 6_2021"
@@ -7139,16 +7235,16 @@
       "chapter": 132,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
+        "challenge": true,
         "level_keys": [
           "behaviors 7_2021"
-        ],
-        "progression": "Challenge",
-        "challenge": true
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 7_2021"
@@ -7166,7 +7262,7 @@
       "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7192,7 +7288,7 @@
       "chapter": 134,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7218,7 +7314,7 @@
       "chapter": 135,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7244,7 +7340,7 @@
       "chapter": 136,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7270,7 +7366,7 @@
       "chapter": 137,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7296,7 +7392,7 @@
       "chapter": 138,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7322,7 +7418,7 @@
       "chapter": 139,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
@@ -7348,7 +7444,7 @@
       "chapter": 140,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Virtual Pet",
         "level_keys": [

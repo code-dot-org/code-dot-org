@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-09 17:43:27 UTC",
+    "serialized_at": "2021-03-10 18:12:08 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -169,10 +169,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
-        "student_overview": "Learn about sequences and algorithms with Angry Birds.",
-        "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class. \r\n - Make sure every student has a [r think-spot-journal]",
+        "overview": "Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.",
+        "student_overview": "Create programs to help the Angry Bird move through the maze.",
+        "purpose": "In this lesson, students will develop programming skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Locate or reprint supplies for ***Happy Maps**.\n - Make sure each student has a ***Think Spot Journal - Reflection Journal**.\n - Cut enough ***Unplugged Blockly Blocks (Grades K-1) - Manipulatives** of each direction (N, S, E, W) to give two sets to every pair of students (if you choose Bridging Option #1).",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -717,11 +717,62 @@
       }
     },
     {
+      "key": "21f7a935-c3ff-4593-a261-53d0d4c29e21",
+      "position": 2,
+      "properties": {
+        "name": "Activity (30-45 minutes)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "bc6111e2-2d2b-4d09-ba39-ad4f401202c0",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 7
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc6111e2-2d2b-4d09-ba39-ad4f401202c0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "799dfe1a-eb2a-48ce-a32b-c5fd8e2dab37",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "799dfe1a-eb2a-48ce-a32b-c5fd8e2dab37",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "2a7b8b85-749e-4574-9b55-ea869f31e600",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2a7b8b85-749e-4574-9b55-ea869f31e600",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021"
+      }
+    },
+    {
       "key": "451d1011-c2d2-4728-8491-c1d6b48602d4",
       "position": 1,
       "properties": {
-        "name": "Previewing Online Puzzles as a Class",
-        "duration": 3
+        "name": "Warm Up",
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "451d1011-c2d2-4728-8491-c1d6b48602d4",
@@ -734,8 +785,8 @@
       "key": "31556bce-b390-464f-8967-98a8275247d3",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "name": "Bridging Activity - Choose One",
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "31556bce-b390-464f-8967-98a8275247d3",
@@ -748,8 +799,8 @@
       "key": "171c9649-255a-4357-b532-6e6dc632285a",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "name": "Previewing Online Puzzles as a Class",
+        "duration": 3
       },
       "seeding_key": {
         "lesson_activity.key": "171c9649-255a-4357-b532-6e6dc632285a",
@@ -762,11 +813,38 @@
       "key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Main Activity",
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "160b0f38-c5d3-4b28-b797-981888824dcf",
+      "position": 5,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "160b0f38-c5d3-4b28-b797-981888824dcf",
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "fdc83a09-7d91-45c6-a7a7-ec0cce218f97",
+      "position": 6,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fdc83a09-7d91-45c6-a7a7-ec0cce218f97",
         "lesson.key": "Programming with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021"
@@ -2372,16 +2450,239 @@
       }
     },
     {
+      "key": "6744756e-e610-4ef4-83a4-7ba02d82551e",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering ***Dance Party: Unplugged** before this lesson. This brief lesson introduces students to the idea of events triggering different dance moves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6744756e-e610-4ef4-83a4-7ba02d82551e",
+        "lesson_activity.key": "4e59783c-7761-4afe-9775-d8c51ca075d0"
+      }
+    },
+    {
+      "key": "af98f91b-4ac2-4500-97b0-2437e960cb76",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "Today we're going to do something really creative. What's your favorite way to be creative?"
+      },
+      "seeding_key": {
+        "activity_section.key": "af98f91b-4ac2-4500-97b0-2437e960cb76",
+        "lesson_activity.key": "4e59783c-7761-4afe-9775-d8c51ca075d0"
+      }
+    },
+    {
+      "key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
+      "position": 4,
+      "properties": {
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist (all ages)** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
+        "lesson_activity.key": "4e59783c-7761-4afe-9775-d8c51ca075d0"
+      }
+    },
+    {
+      "key": "88b00482-3c11-4079-9869-faaa51c340c2",
+      "position": 1,
+      "properties": {
+        "name": "Code Your Own Dance Party",
+        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist (all ages).**. We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list ***Spotify Playlist.** If you would like to use the filtered list with older students, you can share ***Spotify Playlist for Under 13** with your classroom."
+      },
+      "seeding_key": {
+        "activity_section.key": "88b00482-3c11-4079-9869-faaa51c340c2",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "3784bbbc-0c26-4337-9d77-805b9a2bb6ae",
+      "position": 2,
+      "properties": {
+        "name": "Level by Level Support",
+        "description": "#### Level 1 - Video",
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3784bbbc-0c26-4337-9d77-805b9a2bb6ae",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "5283ba21-7c54-44c0-a4c2-00c1f5d240e6",
+      "position": 3,
+      "properties": {
+        "description": "#### Level 2\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5283ba21-7c54-44c0-a4c2-00c1f5d240e6",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "0200789e-428c-4393-84ee-6c7a48948c36",
+      "position": 4,
+      "properties": {
+        "description": "#### Level 3 - Video\n\n#### Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n#### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n",
+        "progression_name": "Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60",
+      "position": 5,
+      "properties": {
+        "description": "#### Level 6 - Video\n\n#### Level 7\n\n* Levels 7-8 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Level 8\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Level 9\n\n* Level 9 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n",
+        "progression_name": "Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "7e0f9f67-19cb-455a-bd75-d771183b8773",
+      "position": 6,
+      "properties": {
+        "description": "#### Level 10 - Video\n\n#### Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n",
+        "progression_name": "Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "1a057037-bf26-4ab2-830f-80a5d94f87c7",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1a057037-bf26-4ab2-830f-80a5d94f87c7",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "97583afa-79d7-487a-a962-9366e1d17bba",
+      "position": 8,
+      "properties": {
+        "description": "#### Level 14 - Video",
+        "progression_name": "Wrap-up"
+      },
+      "seeding_key": {
+        "activity_section.key": "97583afa-79d7-487a-a962-9366e1d17bba",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "86741327-b7d6-4dfb-b703-f23be6b2a7dc",
+      "position": 9,
+      "properties": {
+        "description": "#### Level 15\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else!",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "86741327-b7d6-4dfb-b703-f23be6b2a7dc",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "436d2aa5-5369-462c-acdd-5ae81d6b0423",
+      "position": 10,
+      "properties": {
+        "description": "#### Lesson Extras",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "436d2aa5-5369-462c-acdd-5ae81d6b0423",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "5d59e7e4-25f4-4278-b777-878c7df2681b",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5d59e7e4-25f4-4278-b777-878c7df2681b",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "93b0085f-79bb-48eb-a786-f20c04016a31",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "duration": "5",
+        "description": "- Pose a prompt that has multiple answers such as “What is something you enjoyed about today's activity?” or “What is the connection between creativity and computer science?\""
+      },
+      "seeding_key": {
+        "activity_section.key": "93b0085f-79bb-48eb-a786-f20c04016a31",
+        "lesson_activity.key": "bc6111e2-2d2b-4d09-ba39-ad4f401202c0"
+      }
+    },
+    {
+      "key": "27ea0cc5-96b4-462d-8d1c-7bb30d7e6776",
+      "position": 1,
+      "properties": {
+        "name": "Assessment",
+        "duration": "2",
+        "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door. Try to populate the board with lots of great ideas about what CS is and why it matters."
+      },
+      "seeding_key": {
+        "activity_section.key": "27ea0cc5-96b4-462d-8d1c-7bb30d7e6776",
+        "lesson_activity.key": "799dfe1a-eb2a-48ce-a32b-c5fd8e2dab37"
+      }
+    },
+    {
+      "key": "163a2d46-638a-490a-81b4-f34a3d78a096",
+      "position": 1,
+      "properties": {
+        "name": "Cross-Curricular Opportunity",
+        "description": "\n### Survival of the Dancers (45-60 minutes)\n\n![](https://images.code.org/f3f1ac23b2159ea18328486c61a7cf24-scienceSmall.png)\n**Computer Science + Science**\n\n[Survival of the Dancers](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing)  is an optional activity aligned to Next Generation Science Standards, written by our teacher community. Using Dance Party, students will select at least one organism (dancer) which is well suited for the environment (world) they create. Students are encouraged to utilize the “properties” blocks of code to customize the characteristics of each organism (dancer). \n\n*Standards Addressed:*\n\n- **NGSS.3-LS4-2:** Use evidence to construct an explanation for how the variations in characteristics among individuals of the same species may provide advantages in surviving, finding mates, and reproducing. \n\n- **NGSS.3-LS4-3:** Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all. \n\n- **OPTIONAL EXTENSION: NGSS.3-LS4-4:** Make a claim about the merit of a solution to a problem caused when the environment changes and the types of plants and animals that live there may change.\n\n\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "163a2d46-638a-490a-81b4-f34a3d78a096",
+        "lesson_activity.key": "2a7b8b85-749e-4574-9b55-ea869f31e600"
+      }
+    },
+    {
       "key": "7edf6127-ab31-4537-8365-0a01a3b0cddf",
       "position": 1,
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Some students may struggle with turning their bird in the correct direction, particularly when the bird isn't facing up. Remind students that when we say turn left or right, we're giving directions from the bird's point of view.\r\n\r\n\r\n"
+            "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n![](https://images.code.org/6a342b29c7ba3c62d475eefe4b7b7fcf-compass.png)\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  "
           }
-        ]
+        ],
+        "name": "Review Unplugged Activity",
+        "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well."
       },
       "seeding_key": {
         "activity_section.key": "7edf6127-ab31-4537-8365-0a01a3b0cddf",
@@ -2392,14 +2693,7 @@
       "key": "bc1fef64-3b0a-4034-9356-bba8160f04f8",
       "position": 2,
       "properties": {
-        "description": "**Model:** Pull up Puzzle 5 to do in front of the class. While working through this puzzle with the class, remind students that making mistakes is okay and remind them that the only way to be successful is to be persistent.",
-        "tips": [
-          {
-            "key": "content",
-            "type": "contentCorner",
-            "markdown": "### Teaching this course as a class?\r\nOur grade-aligned CS Fundamentals courses use unplugged lessons to build community and introduce tricky computer science concepts, including **sequencing**. Check out the lesson [My Robotic Friends](https://curriculum.code.org/csf-19/coursec/3/) from [Course C](https://curriculum.code.org/csf-19/coursec/) and [Graph Paper Programming](https://curriculum.code.org/csf-19/coursed/1/) from [Course D](https://curriculum.code.org/csf-19/coursed/)!\r\n"
-          }
-        ]
+        "description": "**Display:** Show students a picture from the \"Move It, Move It\" exercise that you completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"Move It, Move It.\"    \n\n- *What would you do when when you saw the \"North\" arrow?*\n- *How about the \"East\" arrow?*\n\n**Transition:** Once you are satisfied that your students remember \"Move It, Move It\", you can move into the Bridging Activity."
       },
       "seeding_key": {
         "activity_section.key": "bc1fef64-3b0a-4034-9356-bba8160f04f8",
@@ -2407,27 +2701,10 @@
       }
     },
     {
-      "key": "8fe85af5-a0d2-4fe9-a4ff-abb9c1bdf9a5",
-      "position": 3,
-      "properties": {
-        "description": "**Discuss:** Does anyone know how to solve this puzzle?\r\n\r\nAs the teacher, you should decide if you will have the students tell you how to solve it from their seats, or come to the computer to drag the actual blocks in one-by-one.\r\n\r\n**Transition:** Now that students have seen an online puzzle in practice, they should be ready to start solving puzzles of their own.  Continue to the lab or bring out their classroom machines."
-      },
-      "seeding_key": {
-        "activity_section.key": "8fe85af5-a0d2-4fe9-a4ff-abb9c1bdf9a5",
-        "lesson_activity.key": "451d1011-c2d2-4728-8491-c1d6b48602d4"
-      }
-    },
-    {
       "key": "98556f6d-05be-48c2-ac46-0e96a39ba0d4",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
-          }
-        ]
+        "description": "This activity will help bring the unplugged concepts from Move It, Move It into the online world that the students are moving into. Choose *one* of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "98556f6d-05be-48c2-ac46-0e96a39ba0d4",
@@ -2435,24 +2712,26 @@
       }
     },
     {
-      "key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c",
+      "key": "18943341-4b85-4632-8852-5ee464fe5e5e",
       "position": 2,
       "properties": {
+        "name": "Unplugged Activity Using Paper Blocks",
+        "description": "**Distribute:** Give students ***Blockly Blocks** with cardinal commands like `E →` (East) and `W ←` (West). \n\n**Display:** Choose a map from the ***Move It, Move It - Map Activity** and display it for the class to see. \n\n**Model:** Beginning at the start location, use your finger to show students what each block does.  Show them how the `E →` corresponds to the right arrow and moves the the \"robot\" one step to the right.  Do the same for each of the other three.\n\n**Think:** By this point, the class should know how to reach a goal using arrows. How would you reach a goal using Blockly blocks?\n\n**Pair:** Now, have the students program from their desks using the paper Blockly blocks.  Make sure that they understand that the blocks need to go from top to bottom and they all need to be connected!\n\n**Share:** Have pairs discuss their answers with elbow partners.  Did everybody get the same thing?\n\n###-Or-"
       },
       "seeding_key": {
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c",
+        "activity_section.key": "18943341-4b85-4632-8852-5ee464fe5e5e",
         "lesson_activity.key": "31556bce-b390-464f-8967-98a8275247d3"
       }
     },
     {
-      "key": "3119ff23-34a4-4a94-ac8e-eb7a76f7aa15",
+      "key": "31a4e87a-c8d5-48c7-b211-823de2999888",
       "position": 3,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize [r pair-programming-vid] whenever possible during the activity.\r\n - Encourage students with questions/challenges to start by asking their partner.\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\r\n\r\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\r\n\r\n - Did anyone feel frustrated during any of the puzzles?\r\n - Did anyone notice the need to be persistent?\r\n\r\n**Transition:** Have students grab their Thinkspot Journals and take a moment to leave lessons for themselves.",
-        "name": "Online Puzzles\r"
+        "name": "Online Puzzles using Arrows",
+        "description": "**Display:** Show students the play space from one of the puzzles corresponding to this lesson. We recommend puzzle 5. \n\n**Think:** Ask students to imagine that this puzzle is just like the maps, but instead, it's a bird trying to get to the pig.  How can they write a program to get the bird to the pig using arrows?\n\n**Pair:** Using just the symbols from the ***Happy Map Game Pieces**, have students lay out a pattern that they think will get the bird to the pig. \n\n**Share:** Ask the students to share their answers with the class. Did anyone else have the same answer?"
       },
       "seeding_key": {
-        "activity_section.key": "3119ff23-34a4-4a94-ac8e-eb7a76f7aa15",
+        "activity_section.key": "31a4e87a-c8d5-48c7-b211-823de2999888",
         "lesson_activity.key": "31556bce-b390-464f-8967-98a8275247d3"
       }
     },
@@ -2460,8 +2739,7 @@
       "key": "2765363f-4649-4b42-b4ae-245c6f5347ad",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better.",
-        "name": "Journaling\r"
+        "description": "Students should now be ready to see a real puzzle in action!\n    \n**Model:** Pull up Puzzle 5 to do in front of the class. This will be the same puzzle that they just saw in the bridging activity. While working through this puzzle with the class, remind students that making mistakes is okay and remind them that the only way to be successful is to be persistent. Tie the the issues into ideas that they've seen in previous lessons, such as what to do when a program doesn't work (debug it!) or how to get through the frustration that can come with working on a computer.\n\nNext, you'll need to describe how the blocks in the workspace move the bird toward the pig.  Show students how to drag blocks from the toolbox and connect them beneath the `when run` block, but don't solve the puzzle.\n\n**Discuss:** Think about how we would get the bird to the pig using arrows.  How do we use these blocks instead?\n\nHave students use their fingers to point the direction that the bird should go next.  Once you feel like you have a classroom consensus, try to get students to put into words which block will make that action happen.  Roll your mouse over different options and have them shout \"Yes\" or \"No\".\n\nDrag blocks into place one at a time, then click \"Run\" after each one.  This will not only let them see how far the bird has gone, but set good habits for when they start working to solve their own puzzles.\n\nContinue this pattern, fixing bugs as they arise, until the bird successfully gets to the pig.\n\n**Transition:** Now that students have seen an online puzzle in practice, they should be ready to start solving puzzles of their own.  Continue to the lab or bring out their classroom machines."
       },
       "seeding_key": {
         "activity_section.key": "2765363f-4649-4b42-b4ae-245c6f5347ad",
@@ -2472,11 +2750,117 @@
       "key": "c2ffeebf-7869-4f20-af40-999820727fe2",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Create Your Own**\r\n\r\nIn small groups, let students design their own mazes and challenge each other to write programs to solve them. For added fun, make life-size mazes with students as the pig and bird."
+        "description": "#### Additional Demonstration\n\nWe've included some multiple choice prediction levels that are difficult for non-readers. Alternatively, these could be used after finishing the stage as a review for the class.\n\nPrediction Levels:\n\n - [Programming in Maze #1](https://studio.code.org/levels/8730)\n - [Programming in Maze #2](https://studio.code.org/levels/8729)",
+        "name": "Programming with Angry Birds"
       },
       "seeding_key": {
         "activity_section.key": "c2ffeebf-7869-4f20-af40-999820727fe2",
         "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "7b5f9e78-8c46-4ffa-ab19-355d6d63624b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pair Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b5f9e78-8c46-4ffa-ab19-355d6d63624b",
+        "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7",
+        "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "955d1fd6-b45a-4f4d-8c32-e60031f41935",
+      "position": 4,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "955d1fd6-b45a-4f4d-8c32-e60031f41935",
+        "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "5c2218aa-1499-47a7-a606-11c067735cc6",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c2218aa-1499-47a7-a606-11c067735cc6",
+        "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "6ae01f75-c26d-432f-9775-8a1743d620d7",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ae01f75-c26d-432f-9775-8a1743d620d7",
+        "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "02d18e9f-46ac-4658-8397-3896b78baea0",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Show the students the *right* way to help classmates by:\n\n - Don't sit in their chair\n - Don't use their keyboard\n - Don't touch their mouse\n - Make sure the classmate can describe the solution before you walk away\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "02d18e9f-46ac-4658-8397-3896b78baea0",
+        "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "d09eb753-cf01-4cfa-b252-0e6d4faa4f97",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming - Student Video** whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - Did anyone feel frustrated during any of the puzzles?\n - Did anyone notice the need to be persistent?\n\n**Transition:** Have students grab their ***Thinkspot Journals* and take a moment to leave lessons for themselves."
+      },
+      "seeding_key": {
+        "activity_section.key": "d09eb753-cf01-4cfa-b252-0e6d4faa4f97",
+        "lesson_activity.key": "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c"
+      }
+    },
+    {
+      "key": "0cf25b1a-ce7f-42e1-9460-f17762284ea3",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Images** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw something that you shouldn't do while helping a friend with a Code.org puzzle"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cf25b1a-ce7f-42e1-9460-f17762284ea3",
+        "lesson_activity.key": "160b0f38-c5d3-4b28-b797-981888824dcf"
+      }
+    },
+    {
+      "key": "40f4df14-8aed-40b1-85e7-573b721ab1c9",
+      "position": 1,
+      "properties": {
+        "description": "In small groups, let students design their own mazes on paper and challenge other students or groups to write programs to solve them. For added fun, make life-size mazes with students as the pig and bird."
+      },
+      "seeding_key": {
+        "activity_section.key": "40f4df14-8aed-40b1-85e7-573b721ab1c9",
+        "lesson_activity.key": "fdc83a09-7d91-45c6-a7a7-ec0cce218f97"
       }
     },
     {
@@ -4046,330 +4430,671 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_video_maze_2021"
-        ]
+        "progression": "Warm Up"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_video_maze_2021"
+          "CourseD_Dance_2020_vid1_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "3784bbbc-0c26-4337-9d77-805b9a2bb6ae"
       },
       "level_keys": [
-        "courseC_video_maze_2021"
+        "CourseD_Dance_2020_vid1_2021"
       ]
     },
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming1_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming1_2021"
+          "CourseD_Dance_2020_01_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "5283ba21-7c54-44c0-a4c2-00c1f5d240e6"
       },
       "level_keys": [
-        "courseC_maze_programming1_2021"
+        "CourseD_Dance_2020_01_2021"
       ]
     },
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming2_2021"
-        ]
+        "progression": "Events"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming2_2021"
+          "CourseD_Dance_2020_vid2_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
       },
       "level_keys": [
-        "courseC_maze_programming2_2021"
+        "CourseD_Dance_2020_vid2_2021"
       ]
     },
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming3_2021"
-        ]
+        "progression": "Events"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming3_2021"
+          "CourseD_Dance_2020_02_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
       },
       "level_keys": [
-        "courseC_maze_programming3_2021"
+        "CourseD_Dance_2020_02_2021"
       ]
     },
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming4_2021"
-        ]
+        "progression": "Events"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming4_2021"
+          "CourseD_Dance_2020_03_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
       },
       "level_keys": [
-        "courseC_maze_programming4_2021"
+        "CourseD_Dance_2020_03_2021"
       ]
     },
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming5_2021"
-        ]
+        "progression": "Measures"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming5_2021"
+          "CourseD_Dance_2020_vid3_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       },
       "level_keys": [
-        "courseC_maze_programming5_2021"
+        "CourseD_Dance_2020_vid3_2021"
       ]
     },
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming6_2021"
-        ]
+        "progression": "Measures"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming6_2021"
+          "CourseD_Dance_2020_04_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       },
       "level_keys": [
-        "courseC_maze_programming6_2021"
+        "CourseD_Dance_2020_04_2021"
       ]
     },
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseC_maze_programming7_2021"
-        ]
+        "progression": "Measures"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming7_2021"
+          "CourseD_Dance_2020_05_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       },
       "level_keys": [
-        "courseC_maze_programming7_2021"
+        "CourseD_Dance_2020_05_2021"
       ]
     },
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming8_2021"
-        ]
+        "progression": "Measures"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming8_2021"
+          "CourseD_Dance_2020_06_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       },
       "level_keys": [
-        "courseC_maze_programming8_2021"
+        "CourseD_Dance_2020_06_2021"
       ]
     },
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming8_predict1_2021"
-        ]
+        "progression": "Properties"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming8_predict1_2021"
+          "CourseD_Dance_2020_vid4_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
       },
       "level_keys": [
-        "courseC_maze_programming8_predict1_2021"
+        "CourseD_Dance_2020_vid4_2021"
       ]
     },
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming9_2021"
-        ]
+        "progression": "Properties"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming9_2021"
+          "CourseD_Dance_2020_07_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
       },
       "level_keys": [
-        "courseC_maze_programming9_2021"
+        "CourseD_Dance_2020_07_2021"
       ]
     },
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming_challenge1_2021"
-        ]
+        "progression": "Properties"
       },
       "named_level": null,
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming_challenge1_2021"
+          "CourseD_Dance_2020_08_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
       },
       "level_keys": [
-        "courseC_maze_programming_challenge1_2021"
+        "CourseD_Dance_2020_08_2021"
       ]
     },
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": 13,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_programming_challenge2_2021"
-        ]
+        "progression": "Properties"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_09_2021"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "97583afa-79d7-487a-a962-9366e1d17bba"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid5_2021"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "86741327-b7d6-4dfb-b703-f23be6b2a7dc"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_10_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_maze_programming_challenge2_2021"
+          "CourseD_Dance_2020_bonus1_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "436d2aa5-5369-462c-acdd-5ae81d6b0423"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus1_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "436d2aa5-5369-462c-acdd-5ae81d6b0423"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus3_2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Pair Programming"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "elementary_video_pairProgramming_2021"
         ],
         "lesson.key": "Programming with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7b5f9e78-8c46-4ffa-ab19-355d6d63624b"
       },
       "level_keys": [
-        "courseC_maze_programming_challenge2_2021"
+        "elementary_video_pairProgramming_2021"
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq1_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      },
+      "level_keys": [
+        "courseA_maze_seq1_2021"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq5_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      },
+      "level_keys": [
+        "courseA_maze_seq5_2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq5a_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      },
+      "level_keys": [
+        "courseA_maze_seq5a_2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq6_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      },
+      "level_keys": [
+        "courseA_maze_seq6_2021"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq8_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      },
+      "level_keys": [
+        "courseA_maze_seq8_2021"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq10_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "955d1fd6-b45a-4f4d-8c32-e60031f41935"
+      },
+      "level_keys": [
+        "courseA_maze_seq10_2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq11_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "5c2218aa-1499-47a7-a606-11c067735cc6"
+      },
+      "level_keys": [
+        "courseA_maze_seq11_2021"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq12_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "5c2218aa-1499-47a7-a606-11c067735cc6"
+      },
+      "level_keys": [
+        "courseA_maze_seq12_2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq13_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "5c2218aa-1499-47a7-a606-11c067735cc6"
+      },
+      "level_keys": [
+        "courseA_maze_seq13_2021"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq_challenge1_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "6ae01f75-c26d-432f-9775-8a1743d620d7"
+      },
+      "level_keys": [
+        "courseA_maze_seq_challenge1_2021"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "named_level": null,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq_challenge2_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "6ae01f75-c26d-432f-9775-8a1743d620d7"
+      },
+      "level_keys": [
+        "courseA_maze_seq_challenge2_2021"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4394,7 +5119,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -4419,7 +5144,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -4444,7 +5169,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -4469,7 +5194,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -4494,7 +5219,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -4519,7 +5244,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -4544,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 37,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -4570,7 +5295,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 38,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -4595,7 +5320,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 39,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -4620,7 +5345,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 40,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -4645,7 +5370,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 41,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -4670,7 +5395,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4695,7 +5420,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -4720,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -4745,7 +5470,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -4770,7 +5495,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -4795,7 +5520,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -4820,7 +5545,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -4845,7 +5570,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -4871,7 +5596,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -4896,7 +5621,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 51,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -4921,7 +5646,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 52,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -4946,7 +5671,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 53,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -4971,7 +5696,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 54,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -4996,7 +5721,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 55,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -5021,7 +5746,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 56,
       "position": 15,
       "activity_section_position": 15,
       "assessment": null,
@@ -5046,7 +5771,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5071,7 +5796,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5096,7 +5821,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5121,7 +5846,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5146,7 +5871,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5171,7 +5896,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -5196,7 +5921,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 63,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -5221,7 +5946,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 64,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -5247,7 +5972,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 65,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -5272,7 +5997,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 66,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -5297,7 +6022,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 67,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -5322,7 +6047,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 68,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -5347,7 +6072,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5372,7 +6097,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5397,7 +6122,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5422,7 +6147,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5447,7 +6172,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5472,7 +6197,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -5497,7 +6222,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -5522,7 +6247,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -5547,7 +6272,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 77,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -5572,7 +6297,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 78,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -5598,7 +6323,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 79,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -5623,7 +6348,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 80,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -5648,7 +6373,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 81,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -5673,7 +6398,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 82,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -5698,7 +6423,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 83,
       "position": 15,
       "activity_section_position": 15,
       "assessment": null,
@@ -5723,7 +6448,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 84,
       "position": 16,
       "activity_section_position": 16,
       "assessment": null,
@@ -5748,7 +6473,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5773,7 +6498,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5798,7 +6523,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5823,7 +6548,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5848,7 +6573,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5873,7 +6598,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -5898,7 +6623,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -5923,7 +6648,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -5948,7 +6673,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -5973,7 +6698,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 94,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -5998,7 +6723,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 95,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -6023,7 +6748,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 96,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -6048,7 +6773,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6073,7 +6798,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6098,7 +6823,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6123,7 +6848,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6148,7 +6873,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -6173,7 +6898,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -6198,7 +6923,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -6223,7 +6948,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -6248,7 +6973,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -6273,7 +6998,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -6299,7 +7024,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 107,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -6324,7 +7049,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 108,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -6349,7 +7074,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 109,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -6374,7 +7099,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 110,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -6399,7 +7124,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 111,
       "position": 15,
       "activity_section_position": 15,
       "assessment": null,
@@ -6424,7 +7149,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6449,7 +7174,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 113,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6474,7 +7199,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 114,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6499,7 +7224,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 115,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6524,7 +7249,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 116,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -6549,7 +7274,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 117,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -6574,7 +7299,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 118,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6599,7 +7324,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 119,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6624,7 +7349,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 120,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6649,7 +7374,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 121,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6674,7 +7399,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 122,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -6699,7 +7424,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 123,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -6724,7 +7449,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 124,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -6749,7 +7474,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 125,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -6774,7 +7499,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 126,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -6799,7 +7524,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 127,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -6824,7 +7549,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 128,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -6849,7 +7574,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 129,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -6874,7 +7599,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 130,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -6899,7 +7624,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 131,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -6924,7 +7649,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6949,7 +7674,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 133,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6974,7 +7699,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 134,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6999,7 +7724,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 135,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -7024,7 +7749,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 136,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -7049,7 +7774,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 137,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -7074,7 +7799,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 138,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -7099,7 +7824,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 139,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -7124,7 +7849,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 140,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -7149,7 +7874,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 141,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -7174,7 +7899,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 142,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -7200,7 +7925,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 143,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -7225,7 +7950,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 144,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -7250,7 +7975,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 145,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -7275,7 +8000,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 146,
       "position": 15,
       "activity_section_position": 15,
       "assessment": null,
@@ -7300,7 +8025,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7325,7 +8050,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 148,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -7350,7 +8075,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 149,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -7375,7 +8100,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 150,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -7400,7 +8125,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 151,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -7425,7 +8150,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 152,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -7450,7 +8175,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 153,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -7475,7 +8200,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 154,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -7500,7 +8225,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 155,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -7525,7 +8250,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 156,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -7551,7 +8276,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 157,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -7576,7 +8301,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 158,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -7601,7 +8326,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 159,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -7626,7 +8351,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 160,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -7651,7 +8376,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 161,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7676,7 +8401,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 162,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -7701,7 +8426,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 163,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -7726,7 +8451,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 164,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -7751,7 +8476,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 165,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -7776,7 +8501,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 166,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -7801,7 +8526,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 167,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -7826,7 +8551,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 168,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -7851,7 +8576,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 169,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -7876,7 +8601,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 170,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -7901,7 +8626,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 171,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -7926,7 +8651,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 172,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7951,7 +8676,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 173,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -7976,7 +8701,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 174,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -8001,7 +8726,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 175,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -8026,7 +8751,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 176,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -8051,7 +8776,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 177,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -8076,7 +8801,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 178,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -8101,7 +8826,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 179,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -8126,7 +8851,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 180,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -8152,7 +8877,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 181,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -8177,7 +8902,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 182,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -8202,7 +8927,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 183,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -8227,7 +8952,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 184,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -8252,7 +8977,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 185,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -8277,7 +9002,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 186,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -8302,7 +9027,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 187,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -8327,7 +9052,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 188,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -8352,7 +9077,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 189,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -8377,7 +9102,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 190,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -8403,7 +9128,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 191,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -8428,7 +9153,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 192,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -8453,7 +9178,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 193,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -8478,7 +9203,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 194,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -8503,7 +9228,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 195,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -8528,7 +9253,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 196,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -8553,7 +9278,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 197,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -8578,7 +9303,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 198,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -8603,7 +9328,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 199,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -8628,7 +9353,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 200,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -8653,7 +9378,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 201,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -8678,7 +9403,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 202,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -8703,7 +9428,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 203,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -8728,7 +9453,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 204,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -8753,7 +9478,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 205,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -8778,7 +9503,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 206,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -8803,7 +9528,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 207,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -8828,7 +9553,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 208,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8853,7 +9578,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 209,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8878,7 +9603,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 210,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8903,7 +9628,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 211,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8928,7 +9653,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 212,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8953,7 +9678,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 213,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8978,7 +9703,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 214,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -9003,7 +9728,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 215,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -9028,7 +9753,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 216,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -9053,7 +9778,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 217,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -9078,7 +9803,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 218,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -9104,7 +9829,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 219,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -9129,7 +9854,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 220,
       "position": 13,
       "activity_section_position": 13,
       "assessment": false,
@@ -9154,7 +9879,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 221,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -9179,7 +9904,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 222,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -9204,7 +9929,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 223,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -9229,7 +9954,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 224,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -9254,7 +9979,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 225,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -9279,7 +10004,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 226,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -9304,7 +10029,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 227,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -9329,7 +10054,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 228,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -9354,7 +10079,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 229,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -9379,7 +10104,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 230,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -9405,7 +10130,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 231,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -9430,7 +10155,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 232,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -9455,7 +10180,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 233,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -9480,7 +10205,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 234,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -9505,7 +10230,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 235,
       "position": 15,
       "activity_section_position": 15,
       "assessment": null,
@@ -9530,7 +10255,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 236,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -9555,7 +10280,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 237,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -9580,7 +10305,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 238,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -9605,7 +10330,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 239,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -9630,7 +10355,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 240,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -9655,7 +10380,7 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 241,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -9680,7 +10405,7 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 242,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -9705,7 +10430,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 243,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -9730,7 +10455,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 244,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -9755,7 +10480,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 245,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -9780,7 +10505,7 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 246,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -9805,7 +10530,7 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 247,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -9830,7 +10555,7 @@
       ]
     },
     {
-      "chapter": 232,
+      "chapter": 248,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -9855,7 +10580,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 249,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -9880,7 +10605,7 @@
       ]
     },
     {
-      "chapter": 234,
+      "chapter": 250,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -9905,7 +10630,7 @@
       ]
     },
     {
-      "chapter": 235,
+      "chapter": 251,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -9930,7 +10655,7 @@
       ]
     },
     {
-      "chapter": 236,
+      "chapter": 252,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -9956,7 +10681,7 @@
       ]
     },
     {
-      "chapter": 237,
+      "chapter": 253,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -9981,7 +10706,7 @@
       ]
     },
     {
-      "chapter": 238,
+      "chapter": 254,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -10006,7 +10731,7 @@
       ]
     },
     {
-      "chapter": 239,
+      "chapter": 255,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -10031,7 +10756,7 @@
       ]
     },
     {
-      "chapter": 240,
+      "chapter": 256,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -10056,7 +10781,7 @@
       ]
     },
     {
-      "chapter": 241,
+      "chapter": 257,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -10081,7 +10806,7 @@
       ]
     },
     {
-      "chapter": 242,
+      "chapter": 258,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -10106,7 +10831,7 @@
       ]
     },
     {
-      "chapter": 243,
+      "chapter": 259,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -10131,7 +10856,7 @@
       ]
     },
     {
-      "chapter": 244,
+      "chapter": 260,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -10156,7 +10881,7 @@
       ]
     },
     {
-      "chapter": 245,
+      "chapter": 261,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -10181,7 +10906,7 @@
       ]
     },
     {
-      "chapter": 246,
+      "chapter": 262,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -10206,7 +10931,7 @@
       ]
     },
     {
-      "chapter": 247,
+      "chapter": 263,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -10231,7 +10956,7 @@
       ]
     },
     {
-      "chapter": 248,
+      "chapter": 264,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -10256,7 +10981,7 @@
       ]
     },
     {
-      "chapter": 249,
+      "chapter": 265,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -10281,7 +11006,7 @@
       ]
     },
     {
-      "chapter": 250,
+      "chapter": 266,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -10306,7 +11031,7 @@
       ]
     },
     {
-      "chapter": 251,
+      "chapter": 267,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -10331,7 +11056,7 @@
       ]
     },
     {
-      "chapter": 252,
+      "chapter": 268,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -10356,7 +11081,7 @@
       ]
     },
     {
-      "chapter": 253,
+      "chapter": 269,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -10381,7 +11106,7 @@
       ]
     },
     {
-      "chapter": 254,
+      "chapter": 270,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -10406,7 +11131,7 @@
       ]
     },
     {
-      "chapter": 255,
+      "chapter": 271,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -10431,7 +11156,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 272,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -10456,7 +11181,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 273,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -10481,7 +11206,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 274,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -10507,7 +11232,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 275,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -10532,7 +11257,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 276,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -10557,7 +11282,7 @@
       ]
     },
     {
-      "chapter": 261,
+      "chapter": 277,
       "position": 15,
       "activity_section_position": 15,
       "assessment": null,
@@ -10582,7 +11307,7 @@
       ]
     },
     {
-      "chapter": 262,
+      "chapter": 278,
       "position": 16,
       "activity_section_position": 16,
       "assessment": null,
@@ -10607,7 +11332,7 @@
       ]
     },
     {
-      "chapter": 263,
+      "chapter": 279,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -10632,7 +11357,7 @@
       ]
     },
     {
-      "chapter": 264,
+      "chapter": 280,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -10657,7 +11382,7 @@
       ]
     },
     {
-      "chapter": 265,
+      "chapter": 281,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -10682,7 +11407,7 @@
       ]
     },
     {
-      "chapter": 266,
+      "chapter": 282,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -10707,7 +11432,7 @@
       ]
     },
     {
-      "chapter": 267,
+      "chapter": 283,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -10732,7 +11457,7 @@
       ]
     },
     {
-      "chapter": 268,
+      "chapter": 284,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -10757,7 +11482,7 @@
       ]
     },
     {
-      "chapter": 269,
+      "chapter": 285,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -10782,7 +11507,7 @@
       ]
     },
     {
-      "chapter": 270,
+      "chapter": 286,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -10807,7 +11532,7 @@
       ]
     },
     {
-      "chapter": 271,
+      "chapter": 287,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -10832,7 +11557,7 @@
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 288,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -10857,7 +11582,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 289,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -10882,7 +11607,7 @@
       ]
     },
     {
-      "chapter": 274,
+      "chapter": 290,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -10907,7 +11632,7 @@
       ]
     },
     {
-      "chapter": 275,
+      "chapter": 291,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -10932,7 +11657,7 @@
       ]
     },
     {
-      "chapter": 276,
+      "chapter": 292,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -10957,7 +11682,7 @@
       ]
     },
     {
-      "chapter": 277,
+      "chapter": 293,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -10982,7 +11707,7 @@
       ]
     },
     {
-      "chapter": 278,
+      "chapter": 294,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -11007,7 +11732,7 @@
       ]
     },
     {
-      "chapter": 279,
+      "chapter": 295,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -11032,7 +11757,7 @@
       ]
     },
     {
-      "chapter": 280,
+      "chapter": 296,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -11057,7 +11782,7 @@
       ]
     },
     {
-      "chapter": 281,
+      "chapter": 297,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -11082,7 +11807,7 @@
       ]
     },
     {
-      "chapter": 282,
+      "chapter": 298,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -11107,7 +11832,7 @@
       ]
     },
     {
-      "chapter": 283,
+      "chapter": 299,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -11132,7 +11857,7 @@
       ]
     },
     {
-      "chapter": 284,
+      "chapter": 300,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -11157,7 +11882,7 @@
       ]
     },
     {
-      "chapter": 285,
+      "chapter": 301,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -11182,7 +11907,7 @@
       ]
     },
     {
-      "chapter": 286,
+      "chapter": 302,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -11207,7 +11932,7 @@
       ]
     },
     {
-      "chapter": 287,
+      "chapter": 303,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -11232,7 +11957,7 @@
       ]
     },
     {
-      "chapter": 288,
+      "chapter": 304,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -11257,7 +11982,7 @@
       ]
     },
     {
-      "chapter": 289,
+      "chapter": 305,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -11282,7 +12007,7 @@
       ]
     },
     {
-      "chapter": 290,
+      "chapter": 306,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -11307,7 +12032,7 @@
       ]
     },
     {
-      "chapter": 291,
+      "chapter": 307,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -11332,7 +12057,7 @@
       ]
     },
     {
-      "chapter": 292,
+      "chapter": 308,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -11357,7 +12082,7 @@
       ]
     },
     {
-      "chapter": 293,
+      "chapter": 309,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -11382,7 +12107,7 @@
       ]
     },
     {
-      "chapter": 294,
+      "chapter": 310,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -11407,7 +12132,7 @@
       ]
     },
     {
-      "chapter": 295,
+      "chapter": 311,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -11432,7 +12157,7 @@
       ]
     },
     {
-      "chapter": 296,
+      "chapter": 312,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -11457,7 +12182,7 @@
       ]
     },
     {
-      "chapter": 297,
+      "chapter": 313,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -11482,7 +12207,7 @@
       ]
     },
     {
-      "chapter": 298,
+      "chapter": 314,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -11507,7 +12232,7 @@
       ]
     },
     {
-      "chapter": 299,
+      "chapter": 315,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -11532,7 +12257,7 @@
       ]
     },
     {
-      "chapter": 300,
+      "chapter": 316,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -11557,7 +12282,7 @@
       ]
     },
     {
-      "chapter": 301,
+      "chapter": 317,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -11582,7 +12307,7 @@
       ]
     },
     {
-      "chapter": 302,
+      "chapter": 318,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -11607,7 +12332,7 @@
       ]
     },
     {
-      "chapter": 303,
+      "chapter": 319,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -11632,7 +12357,7 @@
       ]
     },
     {
-      "chapter": 304,
+      "chapter": 320,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -11657,7 +12382,7 @@
       ]
     },
     {
-      "chapter": 305,
+      "chapter": 321,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -11682,7 +12407,7 @@
       ]
     },
     {
-      "chapter": 306,
+      "chapter": 322,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -11707,7 +12432,7 @@
       ]
     },
     {
-      "chapter": 307,
+      "chapter": 323,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -11732,7 +12457,7 @@
       ]
     },
     {
-      "chapter": 308,
+      "chapter": 324,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -11757,7 +12482,7 @@
       ]
     },
     {
-      "chapter": 309,
+      "chapter": 325,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -11782,7 +12507,7 @@
       ]
     },
     {
-      "chapter": 310,
+      "chapter": 326,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -11807,7 +12532,7 @@
       ]
     },
     {
-      "chapter": 311,
+      "chapter": 327,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -11832,7 +12557,7 @@
       ]
     },
     {
-      "chapter": 312,
+      "chapter": 328,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -11857,7 +12582,7 @@
       ]
     },
     {
-      "chapter": 313,
+      "chapter": 329,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -11883,7 +12608,7 @@
       ]
     },
     {
-      "chapter": 314,
+      "chapter": 330,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -11912,158 +12637,350 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "courseC_video_maze_2021",
+        "level.key": "CourseD_Dance_2020_vid1_2021",
         "script_level.level_keys": [
-          "courseC_video_maze_2021"
+          "CourseD_Dance_2020_vid1_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "3784bbbc-0c26-4337-9d77-805b9a2bb6ae"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming1_2021",
+        "level.key": "CourseD_Dance_2020_01_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming1_2021"
+          "CourseD_Dance_2020_01_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "5283ba21-7c54-44c0-a4c2-00c1f5d240e6"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming2_2021",
+        "level.key": "CourseD_Dance_2020_vid2_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming2_2021"
+          "CourseD_Dance_2020_vid2_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming3_2021",
+        "level.key": "CourseD_Dance_2020_02_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming3_2021"
+          "CourseD_Dance_2020_02_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming4_2021",
+        "level.key": "CourseD_Dance_2020_03_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming4_2021"
+          "CourseD_Dance_2020_03_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming5_2021",
+        "level.key": "CourseD_Dance_2020_vid3_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming5_2021"
+          "CourseD_Dance_2020_vid3_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming6_2021",
+        "level.key": "CourseD_Dance_2020_04_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming6_2021"
+          "CourseD_Dance_2020_04_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming7_2021",
+        "level.key": "CourseD_Dance_2020_05_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming7_2021"
+          "CourseD_Dance_2020_05_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming8_2021",
+        "level.key": "CourseD_Dance_2020_06_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming8_2021"
+          "CourseD_Dance_2020_06_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming8_predict1_2021",
+        "level.key": "CourseD_Dance_2020_vid4_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming8_predict1_2021"
+          "CourseD_Dance_2020_vid4_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming9_2021",
+        "level.key": "CourseD_Dance_2020_07_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming9_2021"
+          "CourseD_Dance_2020_07_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming_challenge1_2021",
+        "level.key": "CourseD_Dance_2020_08_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming_challenge1_2021"
+          "CourseD_Dance_2020_08_2021"
         ],
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_maze_programming_challenge2_2021",
+        "level.key": "CourseD_Dance_2020_09_2021",
         "script_level.level_keys": [
-          "courseC_maze_programming_challenge2_2021"
+          "CourseD_Dance_2020_09_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid5_2021",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "97583afa-79d7-487a-a962-9366e1d17bba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_10_2021",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "86741327-b7d6-4dfb-b703-f23be6b2a7dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus1_2021",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "436d2aa5-5369-462c-acdd-5ae81d6b0423"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus3_2021",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "436d2aa5-5369-462c-acdd-5ae81d6b0423"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "elementary_video_pairProgramming_2021",
+        "script_level.level_keys": [
+          "elementary_video_pairProgramming_2021"
         ],
         "lesson.key": "Programming with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "a2643c4c-358c-470d-9c0d-cb3f13b5d31c"
+        "activity_section.key": "7b5f9e78-8c46-4ffa-ab19-355d6d63624b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq1_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq1_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq5_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq5_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq5a_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq5a_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq6_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq6_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq8_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq8_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq10_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq10_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "955d1fd6-b45a-4f4d-8c32-e60031f41935"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq11_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq11_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "5c2218aa-1499-47a7-a606-11c067735cc6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq12_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq12_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "5c2218aa-1499-47a7-a606-11c067735cc6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq13_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq13_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "5c2218aa-1499-47a7-a606-11c067735cc6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq_challenge1_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq_challenge1_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "6ae01f75-c26d-432f-9775-8a1743d620d7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq_challenge2_2021",
+        "script_level.level_keys": [
+          "courseA_maze_seq_challenge2_2021"
+        ],
+        "lesson.key": "Programming with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "express-2021",
+        "activity_section.key": "6ae01f75-c26d-432f-9775-8a1743d620d7"
       }
     },
     {
@@ -15681,6 +16598,54 @@
   ],
   "resources": [
     {
+      "name": "Dance Party Project Guide",
+      "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+      "key": "dance-party-project-guide",
+      "properties": {
+        "type": "Worksheet",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "dance-party-project-guide"
+      }
+    },
+    {
+      "name": "Spotify Playlist (all ages)",
+      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
+      "key": "dance-party-playlist",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "dance-party-playlist"
+      }
+    },
+    {
+      "name": "Spotify Play List (Under 13)",
+      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
+      "key": "spotify_play_list_under_13_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "spotify_play_list_under_13_"
+      }
+    },
+    {
+      "name": "Dance Party: Unplugged",
+      "url": "https://curriculum.code.org/hoc/unplugged/4/",
+      "key": "dance_party_unplugged_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "dance_party_unplugged_2"
+      }
+    },
+    {
       "name": "Think Spot Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
@@ -15691,6 +16656,78 @@
       },
       "seeding_key": {
         "resource.key": "think-spot-journal"
+      }
+    },
+    {
+      "name": "Move It, Move It",
+      "url": "https://drive.google.com/open?id=1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg",
+      "key": "move_it_move_it",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "move_it_move_it"
+      }
+    },
+    {
+      "name": "Unplugged Blockly Blocks (Grades K-1)",
+      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
+      "key": "unplugged_blockly_blocks_grades_k-1_",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Happy Map Game Pieces",
+      "url": "https://drive.google.com/open?id=19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k",
+      "key": "happy_map_game_pieces",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "happy_map_game_pieces"
+      }
+    },
+    {
+      "name": "Compass Rose",
+      "url": "https://drive.google.com/open?id=1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE",
+      "key": "compass_rose",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "compass_rose"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image"
       }
     },
     {
@@ -16085,8 +17122,68 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "dance-party-project-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "dance-party-playlist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "spotify_play_list_under_13_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "dance_party_unplugged_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "resource.key": "think-spot-journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "move_it_move_it"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "happy_map_game_pieces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "compass_rose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "feeling_faces_-_emotion_image"
       }
     },
     {
@@ -16272,6 +17369,46 @@
   ],
   "vocabularies": [
     {
+      "key": "code",
+      "word": "code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
@@ -16282,33 +17419,13 @@
       }
     },
     {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "sequencing",
-      "word": "Sequencing",
-      "definition": "Putting commands in correct order so computers can read the commands.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequencing"
+        "vocabulary.key": "programming"
       }
     },
     {
@@ -16805,6 +17922,30 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "vocabulary.key": "algorithm"
       }
@@ -16812,19 +17953,7 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "sequencing"
+        "vocabulary.key": "programming"
       }
     },
     {
@@ -17124,6 +18253,36 @@
   ],
   "objectives": [
     {
+      "key": "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09"
+      }
+    },
+    {
+      "key": "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c",
+      "properties": {
+        "description": "Develop programs that respond to user input"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c"
+      }
+    },
+    {
+      "key": "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2",
+      "properties": {
+        "description": "Create dance animations with code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2"
+      }
+    },
+    {
       "key": "8c021568-46ed-4243-a4d1-f2037138c01a",
       "properties": {
         "description": "Translate movements into a series of commands."
@@ -17131,16 +18290,6 @@
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "objective.key": "8c021568-46ed-4243-a4d1-f2037138c01a"
-      }
-    },
-    {
-      "key": "bd1f550d-bd88-4106-bfbb-9b228029f55b",
-      "properties": {
-        "description": "Identify and locate bugs in a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
-        "objective.key": "bd1f550d-bd88-4106-bfbb-9b228029f55b"
       }
     },
     {

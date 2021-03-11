@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-03-10T18:47:38.000Z",
+  "level_num": "custom",
+  "user_id": 838,
+  "properties": {
+    "encrypted": "false",
+    "title": "CSP Basic Free Response",
+    "long_instructions": "## Prompt: Is water wet?\r\n1. First ordered list item\r\n2. Another item\r\n  * Unordered sub-list. \r\n1. Actual numbers don't matter, just that it's a number\r\n  1. Ordered sub-list\r\n4. And another item.\r\n\r\n   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).\r\n\r\n   To have a line break without a paragraph, you will need to use two trailing spaces.  \r\n   Note that this line is separate, but within the same paragraph.  \r\n   (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)\r\n\r\n* Unordered list can use asterisks\r\n- Or minuses\r\n+ Or pluses\r\n\r\n\r\n",
+    "height": "150",
+    "placeholder": "type your answer here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

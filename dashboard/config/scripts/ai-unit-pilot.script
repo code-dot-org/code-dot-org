@@ -6,8 +6,6 @@ lesson 'lesson1', display_name: 'Introduction to Machine Learning A', has_lesson
 level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
 level 'Oceans_Short', progression: 'Recognizing Fish Features'
 level 'Oceans_Long', progression: 'Recognizing Expressions'
-level 'Oceans_CreaturesVTrashDemo', progression: '(Teacher Only) Creatures V Trash'
-level 'Oceans_Video_Machine_Learning', progression: '(Slides) Intro to AI Video'
 
 lesson 'lesson2', display_name: 'How Computers Learn (Unplugged)', has_lesson_plan: true
 
