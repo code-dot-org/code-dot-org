@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
+import PhraseBuilder from "./UIComponents/PhraseBuilder";
 import CrossTab from "./UIComponents/CrossTab";
 import ScatterPlot from "./UIComponents/ScatterPlot";
 import DataCard from "./UIComponents/DataCard";
@@ -127,6 +128,23 @@ class App extends Component {
     dataToSave: PropTypes.object
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      columnRefs: {}
+    };
+  }
+
+  setColumnRef = (columnId, ref) => {
+
+    if (ref) {
+      const rect = ref.getBoundingClientRect();
+      this.state.columnRefs[columnId] = rect.left + rect.width;
+      console.log(columnId, ref, ref.getBoundingClientRect());
+    }
+  }
+
   render() {
     const {
       panelButtons,
@@ -151,15 +169,17 @@ class App extends Component {
           </BodyContainer>
         )}
 
-        {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
+        {["dataDisplay"].includes(currentPanel) && (
           <BodyContainer>
             <ContainerLeft>
-              <DataDisplay />
+              <DataDisplay setColumnRef={this.setColumnRef}/>
             </ContainerLeft>
+            <ColumnInspector columnRefs={this.state.columnRefs}/>
             <ContainerRight>
-              {currentPanel === "dataDisplayLabel" && <ColumnInspector />}
-              {currentPanel === "dataDisplayFeatures" && <CrossTab />}
-              {currentPanel === "dataDisplayFeatures" && <ScatterPlot />}
+              <PhraseBuilder />
+              {false && currentPanel === "dataDisplayLabel" && <ColumnInspector />}
+              {false && currentPanel === "dataDisplayFeatures" && <CrossTab />}
+              {false && currentPanel === "dataDisplayFeatures" && <ScatterPlot />}
             </ContainerRight>
           </BodyContainer>
         )}

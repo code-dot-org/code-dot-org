@@ -13,7 +13,8 @@ class DataDisplay extends Component {
     emptyCellDetails: PropTypes.array,
     setCurrentColumn: PropTypes.func,
     currentColumn: PropTypes.string,
-    currentPanel: PropTypes.string
+    currentPanel: PropTypes.string,
+    setColumnRef: PropTypes.func
   };
 
   constructor(props) {
@@ -41,19 +42,19 @@ class DataDisplay extends Component {
     let style;
 
     if (key === this.props.currentColumn) {
-      if (key === this.props.labelColumn) {
+      /*if (key === this.props.labelColumn) {
         style = styles.dataDisplayHeaderLabelSelected;
       } else if (this.props.selectedFeatures.includes(key)) {
         style = styles.dataDisplayHeaderFeatureSelected;
-      } else {
+      } else */ {
         style = styles.dataDisplayHeaderSelected;
       }
     } else {
-      if (key === this.props.labelColumn) {
+      /* if (false && key === this.props.labelColumn) {
         style = styles.dataDisplayHeaderLabelUnselected;
-      } else if (this.props.selectedFeatures.includes(key)) {
+      } else if (false && this.props.selectedFeatures.includes(key)) {
         style = styles.dataDisplayHeaderFeatureUnselected;
-      } else {
+      } else */ {
         style = styles.dataDisplayHeaderUnselected;
       }
     }
@@ -65,19 +66,19 @@ class DataDisplay extends Component {
     let style;
 
     if (key === this.props.currentColumn) {
-      if (key === this.props.labelColumn) {
+      /* if (key === this.props.labelColumn) {
         style = styles.dataDisplayCellLabelSelected;
       } else if (this.props.selectedFeatures.includes(key)) {
         style = styles.dataDisplayCellFeatureSelected;
-      } else {
+      } else */ {
         style = styles.dataDisplayCellSelected;
       }
     } else {
-      if (key === this.props.labelColumn) {
+      /* if (key === this.props.labelColumn) {
         style = styles.dataDisplayCellLabelUnselected;
       } else if (this.props.selectedFeatures.includes(key)) {
         style = styles.dataDisplayCellFeatureUnselected;
-      } else {
+      } else */ {
         style = styles.dataDisplayCellUnselected;
       }
     }
@@ -86,7 +87,7 @@ class DataDisplay extends Component {
   };
 
   render() {
-    const { data, setCurrentColumn, currentPanel } = this.props;
+    const { data, setCurrentColumn, currentPanel, setColumnRef } = this.props;
 
     return (
       <div id="data-display" style={styles.panel}>
@@ -95,7 +96,7 @@ class DataDisplay extends Component {
           <span style={styles.statementLabel}>
             {this.props.labelColumn || "..."}
           </span>
-          {currentPanel === "dataDisplayFeatures" && (
+          {true && (
             <span>
               {" "}
               based on{" "}
@@ -109,7 +110,7 @@ class DataDisplay extends Component {
           )}
         </div>
         {this.state.showRawData && (
-          <div style={styles.tableParent}>
+          <div style={styles.tableParent} onScroll={() => setCurrentColumn(undefined)}>
             <table style={styles.dataDisplayTable}>
               <thead>
                 <tr>
@@ -120,6 +121,7 @@ class DataDisplay extends Component {
                           key={key}
                           style={this.getColumnHeaderStyle(key)}
                           onClick={() => setCurrentColumn(key)}
+                          ref={ref => setColumnRef(key, ref)}
                         >
                           {key}
                         </th>

@@ -363,5 +363,30 @@ export const styles = {
   floatLeft: {
     float: "left",
     margin: 20
+  },
+
+  phraseBuilder: {
+    fontSize: 24
+  },
+
+  phraseBuilderHeader: {
+    backgroundColor: "grey",
+    color: "white",
+    padding: 15
+  },
+
+  popupClose: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    cursor: "pointer"
+  },
+
+  phraseBuilderFeatureRemove: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    cursor: "pointer",
+    fontSize: 12
   }
 };

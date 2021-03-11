@@ -13,6 +13,10 @@ import {
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 import { Bar } from "react-chartjs-2";
+import ScatterPlot from "./ScatterPlot";
+import CrossTab from "./CrossTab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const barData = {
   labels: [],
@@ -52,7 +56,8 @@ class ColumnInspector extends Component {
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
-    hideSpecifyColumns: PropTypes.bool
+    hideSpecifyColumns: PropTypes.bool,
+    columnRefs: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -96,12 +101,36 @@ class ColumnInspector extends Component {
 
     const maxLabelsInHistogram = 4;
 
+    let leftPosition = 0;
+
+    if (currentColumnData) {
+      if (this.props.columnRefs[currentColumnData.id]) {
+        leftPosition = this.props.columnRefs[currentColumnData.id];
+        //console.log(this.props.columnRefs[currentColumnData.id].getBoundingClientRect());
+      }
+    }
+
+    console.log("rendering column inspector!");
+
     return (
       currentColumnData && (
         <div
           id="column-inspector"
-          style={{ ...styles.panel, ...styles.rightPanel }}
+          style={{
+            ...styles.panel,
+            ...styles.rightPanel,
+            ...{
+              position: "absolute",
+              border: "1px solid",
+              top: 90,
+              left: leftPosition,
+              height: "initial"
+            }
+          }}
         >
+          <div onClick={this.onClose} style={styles.popupClose}>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
           <div style={styles.largeText}>Column Information</div>
           <form>
             <div>
@@ -137,7 +166,7 @@ class ColumnInspector extends Component {
               </label>
 
               {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                <div>
+                <div style={{float: "left", width: "50%"}}>
                   {barData.labels.length <= maxLabelsInHistogram && (
                     <Bar
                       data={barData}
@@ -155,6 +184,11 @@ class ColumnInspector extends Component {
                   )}
                 </div>
               )}
+
+              <div style={{float: "left", width: "50%"}}>
+                <ScatterPlot/>
+                <CrossTab />
+              </div>
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>

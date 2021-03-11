@@ -63,6 +63,7 @@ const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_COLUMN_REF = "SET_COLUMN_REF";
 
 // Action creators
 export function setMode(mode) {
@@ -210,6 +211,10 @@ export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
+export function setColumnRef(columnId, ref) {
+  return { type: SET_COLUMN_REF, columnId, ref };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -238,7 +243,8 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined
+  saveStatus: undefined,
+  columnRefs: {}
 };
 
 // Reducer
@@ -319,10 +325,12 @@ export default function rootReducer(state = initialState, action) {
   }
 
   if (action.type === ADD_SELECTED_FEATURE) {
-    return {
-      ...state,
-      selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
-    };
+    if (!state.selectedFeatures.includes(action.selectedFeature)) {
+      return {
+        ...state,
+        selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
+      };
+    }
   }
 
   if (action.type === REMOVE_SELECTED_FEATURE) {
@@ -462,42 +470,16 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_COLUMN) {
-    if (state.currentPanel === "dataDisplayLabel") {
-      if (action.currentColumn === state.labelColumn) {
-        return state;
-        /*return {
-          ...state,
-          labelColumn: undefined,
-          currentColumn: undefined
-        };*/
-      } else if (!state.selectedFeatures.includes(action.currentColumn)) {
-        return {
-          ...state,
-          labelColumn: action.currentColumn,
-          currentColumn: action.currentColumn
-        };
-      } else {
-        return state;
-      }
-    } else if (state.currentPanel === "dataDisplayFeatures") {
-      if (state.selectedFeatures.includes(action.currentColumn)) {
-        return {
-          ...state,
-          selectedFeatures: state.selectedFeatures.filter(
-            item => item !== action.currentColumn
-          ),
-          currentColumn: undefined
-        };
-      } else if (action.currentColumn !== state.labelColumn) {
-        return {
-          ...state,
-          selectedFeatures: [...state.selectedFeatures, action.currentColumn],
-          currentColumn: action.currentColumn
-        };
-      } else {
-        return state;
-      }
+    if (state.currentColumn === action.currentColumn) {
+      return {
+        ...state,
+        currentColumn: undefined
+      };
     }
+    return {
+      ...state,
+      currentColumn: action.currentColumn
+    };
   }
   if (action.type === SET_RESULTS_PHASE) {
     return {
@@ -509,6 +491,16 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       saveStatus: action.status
+    };
+  }
+  if (action.type === SET_COLUMN_REF) {
+    return {
+      ...state,
+      columnRefs: {
+        ...state.columnRefs,
+        action: action.columnId,
+        ref: action.ref
+      }
     };
   }
   return state;
@@ -596,7 +588,10 @@ export function getContinuousColumns(state) {
 }
 
 export function getSelectableFeatures(state) {
-  return getFeatures(state).filter(column => column !== state.labelColumn);
+  return getFeatures(state).filter(
+    column =>
+      column !== state.labelColumn && !state.selectedFeatures.includes(column)
+  );
 }
 
 export function getSelectableLabels(state) {
@@ -1083,18 +1078,13 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next = isPanelEnabled(state, "dataDisplayLabel")
-      ? { panel: "dataDisplayLabel", text: "Continue" }
+    next = isPanelEnabled(state, "dataDisplay")
+      ? { panel: "dataDisplay", text: "Continue" }
       : null;
-  } else if (state.currentPanel === "dataDisplayLabel") {
+  } else if (state.currentPanel === "dataDisplay") {
     prev = isPanelEnabled(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
       : null;
-    next = isPanelEnabled(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Continue" }
-      : null;
-  } else if (state.currentPanel === "dataDisplayFeatures") {
-    prev = { panel: "dataDisplayLabel", text: "Back" };
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")
