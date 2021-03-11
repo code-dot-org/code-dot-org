@@ -106,6 +106,7 @@ Javalab.prototype.init = function(config) {
       <JavalabView
         onMount={onMount}
         onContinue={onContinue}
+        onCommitCode={onCommitCode}
         suppliedFilesVersionId={suppliedFilesVersionId}
       />
     </Provider>,
@@ -132,7 +133,6 @@ Javalab.prototype.onContinue = function() {
 };
 
 Javalab.prototype.getCodeAsync = function() {
-  console.log('in get code async');
   return new Promise((resolve, reject) => {
     onSave(
       /* success */
@@ -146,5 +146,9 @@ Javalab.prototype.getCodeAsync = function() {
 Javalab.prototype.getCurrentFilesVersionId = function() {
   return project.filesVersionId;
 };
+
+function onCommitCode() {
+  project.autosave();
+}
 
 export default Javalab;

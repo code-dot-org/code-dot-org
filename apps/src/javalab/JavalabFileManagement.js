@@ -32,10 +32,23 @@ function onSave(success, failure) {
   if (filesChanged) {
     const filename = getStore().getState().javalab.filename;
     const editorText = getStore().getState().javalab.editorText;
-    filesApi.putFile(filename, editorText, success, failure);
-    getStore().dispatch(setFilesChanged(false));
+    filesApi.putFile(
+      filename,
+      editorText,
+      /* success */
+      () => {
+        // reset files changed to false on success
+        getStore().dispatch(setFilesChanged(false));
+        if (success) {
+          success();
+        }
+      },
+      failure
+    );
   } else {
-    success(null, project.filesVersionId);
+    if (success) {
+      success(null, project.filesVersionId);
+    }
   }
 }
 
