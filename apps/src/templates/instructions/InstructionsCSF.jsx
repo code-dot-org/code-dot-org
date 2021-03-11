@@ -718,7 +718,7 @@ export default connect(
       isRtl: state.isRtl,
       noVisualization: state.pageConstants.noVisualization,
       feedback: state.instructions.feedback,
-      collapsed: state.instructions.collapsed,
+      collapsed: state.instructions.isCollapsed,
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       hasAuthoredHints: state.instructions.hasAuthoredHints,
