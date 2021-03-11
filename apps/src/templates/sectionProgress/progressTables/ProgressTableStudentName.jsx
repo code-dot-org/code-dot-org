@@ -1,22 +1,30 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import firehoseClient from '../../../lib/util/firehose';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
 const styles = {
   link: {
-    color: color.teal
+    color: color.teal,
+    verticalAlign: 'middle'
   },
   tooltip: {
     display: 'flex',
     textAlign: 'center'
+  },
+  collapser: {
+    paddingRight: '10px',
+    fontSize: '20px',
+    verticalAlign: 'middle'
   }
 };
-export default class ProgressTableStudentName extends React.PureComponent {
+class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     studentId: PropTypes.number.isRequired,
@@ -24,7 +32,10 @@ export default class ProgressTableStudentName extends React.PureComponent {
     scriptId: PropTypes.number,
     lastTimestamp: PropTypes.number,
     localeCode: PropTypes.string,
-    studentUrl: PropTypes.string.isRequired
+    studentUrl: PropTypes.string.isRequired,
+
+    // redux provided
+    showSectionProgressDetails: PropTypes.bool
   };
 
   constructor(props) {
@@ -89,6 +100,16 @@ export default class ProgressTableStudentName extends React.PureComponent {
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
+        {this.props.showSectionProgressDetails && (
+          // TODO: handle onClick to expand and collapse rows
+          <CollapserIcon
+            isCollapsed={true}
+            onClick={() => {}}
+            collapsedIconClass="fa-caret-right"
+            expandedIconClass="fa-caret-down"
+            style={styles.collapser}
+          />
+        )}
         {this.renderTooltip()}
         <a
           style={styles.link}
@@ -101,3 +122,9 @@ export default class ProgressTableStudentName extends React.PureComponent {
     );
   }
 }
+
+export const UnconnectedProgressTableStudentName = ProgressTableStudentName;
+
+export default connect(state => ({
+  showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
+}))(ProgressTableStudentName);
