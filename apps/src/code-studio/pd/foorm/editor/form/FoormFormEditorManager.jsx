@@ -73,7 +73,7 @@ class FoormFormEditorManager extends React.Component {
   }
 
   // Callback for FoormLoadButtons
-  loadConfiguration(formId) {
+  loadFormData(formId) {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
@@ -158,7 +158,7 @@ class FoormFormEditorManager extends React.Component {
 
     if (this.props.hasJSONError) {
       errors.push(
-        'There is a parsing error in the JSON configuration. Errors are noted on the left side of the editor.'
+        'There is a parsing error in the JSON being edited. Errors are noted on the left side of the editor.'
       );
     }
     if (this.state.libraryError) {
@@ -221,7 +221,7 @@ class FoormFormEditorManager extends React.Component {
           setSelectedData={this.props.setFormData}
           resetSelectedData={() => this.resetSelectedData()}
           showCodeMirror={() => this.showCodeMirror()}
-          onSelect={formId => this.loadConfiguration(formId)}
+          onSelect={formId => this.loadFormData(formId)}
           dropdownOptions={this.getDropdownOptions()}
         />
         {this.state.hasLoadError && (

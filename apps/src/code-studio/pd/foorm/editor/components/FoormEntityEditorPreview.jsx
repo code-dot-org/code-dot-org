@@ -1,4 +1,3 @@
-// Preview panel for Foorm editor.
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -15,6 +14,7 @@ const styles = {
   }
 };
 
+// Preview panel for Foorm editor.
 class FoormEntityEditorPreview extends Component {
   static propTypes = {
     previewQuestions: PropTypes.object,
@@ -38,24 +38,22 @@ class FoormEntityEditorPreview extends Component {
 
   render() {
     return (
-      <div className="foorm-preview">
-        <div style={styles.previewBox}>
-          {this.renderErrorMessages()}
-          {this.props.previewQuestions &&
-            !this.props.hasJSONError &&
-            !(this.props.errorMessages && this.props.errorMessages.length) && (
-              // key allows us to force re-render when preview is called
-              <Foorm
-                formQuestions={this.props.previewQuestions}
-                formName={'preview'}
-                formVersion={0}
-                submitApi={'/none'}
-                key={`form-${this.props.forceRerenderKey}`}
-                surveyData={this.props.surveyData}
-                inEditorMode={true}
-              />
-            )}
-        </div>
+      <div style={styles.previewBox}>
+        {this.renderErrorMessages()}
+        {this.props.previewQuestions &&
+          !this.props.hasJSONError &&
+          !(this.props.errorMessages && this.props.errorMessages.length) && (
+            // key allows us to force re-render when preview is called
+            <Foorm
+              formQuestions={this.props.previewQuestions}
+              formName={'preview'}
+              formVersion={0}
+              submitApi={'/none'}
+              key={`form-${this.props.forceRerenderKey}`}
+              surveyData={this.props.surveyData}
+              inEditorMode={true}
+            />
+          )}
       </div>
     );
   }
