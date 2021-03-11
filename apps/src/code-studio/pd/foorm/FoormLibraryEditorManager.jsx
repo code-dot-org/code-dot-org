@@ -7,15 +7,27 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormLibraryEditor from './FoormLibraryEditor';
+// import {
+//   resetAvailableLibraryQuestions,
+//   setLastSaved,
+//   setSaveError,
+//   setLibraryQuestionData,
+//   setHasError,
+//   setLastSavedQuestion,
+//   setLibraryData
+// } from './library_editor/foormLibraryEditorRedux';
+
+// setLibraryQuestionData needs to be its own action
+// setLibraryData needs to be its own action
 import {
-  resetAvailableLibraryQuestions,
+  setAvailableSubEntities,
   setLastSaved,
   setSaveError,
   setLibraryQuestionData,
-  setHasError,
-  setLastSavedQuestion,
+  setHasJSONError,
+  setLastSavedQuestions,
   setLibraryData
-} from './library_editor/foormLibraryEditorRedux';
+} from './editor/foormEditorRedux';
 
 const styles = {
   loadError: {
@@ -35,12 +47,12 @@ class FoormLibraryEditorManager extends React.Component {
     libraryId: PropTypes.number,
     availableLibraries: PropTypes.array,
     availableLibraryQuestionsForCurrentLibrary: PropTypes.array,
-    resetAvailableLibraryQuestions: PropTypes.func,
+    setAvailableLibraryQuestions: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setLibraryQuestionData: PropTypes.func,
-    setHasError: PropTypes.func,
-    setLastSavedQuestion: PropTypes.func,
+    setHasJSONError: PropTypes.func,
+    setLastSavedQuestions: PropTypes.func,
     setLibraryData: PropTypes.func
   };
 
@@ -101,7 +113,7 @@ class FoormLibraryEditorManager extends React.Component {
       type: 'get'
     })
       .done(result => {
-        this.props.resetAvailableLibraryQuestions(result);
+        this.props.setAvailableLibraryQuestions(result);
         this.setState({
           hasLoadError: false
         });
@@ -140,7 +152,7 @@ class FoormLibraryEditorManager extends React.Component {
   }
 
   initializeNewLibrary = () => {
-    this.props.resetAvailableLibraryQuestions([]);
+    this.props.setAvailableLibraryQuestions([]);
     this.props.setLibraryData({
       name: null,
       version: null,
@@ -170,8 +182,8 @@ class FoormLibraryEditorManager extends React.Component {
 
   updateLibraryQuestionData = libraryQuestionData => {
     this.props.setLibraryQuestionData(libraryQuestionData);
-    this.props.setHasError(false);
-    this.props.setLastSavedQuestion(libraryQuestionData['question']);
+    this.props.setHasJSONError(false);
+    this.props.setLastSavedQuestions(libraryQuestionData['question']);
     this.props.resetCodeMirror(libraryQuestionData['question']);
   };
 
@@ -249,19 +261,19 @@ export default connect(
     libraryQuestion: state.foorm.libraryQuestion || {},
     availableLibraries: state.foorm.availableEntities || [],
     availableLibraryQuestionsForCurrentLibrary:
-      state.foorm.availableLibraryQuestionsForCurrentLibrary || [],
+      state.foorm.availableSubEntities || [],
     libraryId: state.foorm.libraryId
   }),
   dispatch => ({
-    resetAvailableLibraryQuestions: libraryQuestionsMetadata =>
-      dispatch(resetAvailableLibraryQuestions(libraryQuestionsMetadata)),
+    setAvailableLibraryQuestions: libraryQuestionsMetadata =>
+      dispatch(setAvailableSubEntities(libraryQuestionsMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLibraryQuestionData: libraryQuestionData =>
       dispatch(setLibraryQuestionData(libraryQuestionData)),
-    setHasError: hasError => dispatch(setHasError(hasError)),
-    setLastSavedQuestion: libraryQuestion =>
-      dispatch(setLastSavedQuestion(libraryQuestion)),
+    setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+    setLastSavedQuestions: libraryQuestion =>
+      dispatch(setLastSavedQuestions(libraryQuestion)),
     setLibraryData: libraryData => dispatch(setLibraryData(libraryData))
   })
 )(FoormLibraryEditorManager);
