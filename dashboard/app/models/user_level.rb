@@ -144,15 +144,15 @@ class UserLevel < ApplicationRecord
   end
 
   def locked?
-    return true unless unlocked_at && unlocked_at < AUTOLOCK_PERIOD.ago
+    return true unless unlocked_at && unlocked_at > AUTOLOCK_PERIOD.ago
   end
 
-  def locked?(stage)
+  def show_as_locked?(stage)
     return false unless stage.lockable?
     return false if user.authorized_teacher?
     return false if readonly_answers
     return true unless unlocked_at
-    return has_autolocked?(stage) || submitted?
+    return locked? || submitted?
   end
 
   # First ScriptLevel in this Script containing this Level.

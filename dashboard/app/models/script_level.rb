@@ -311,7 +311,7 @@ class ScriptLevel < ApplicationRecord
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
-    user_level.nil? || user_level.locked?(lesson)
+    user_level.nil? || user_level.show_as_locked?(lesson)
   end
 
   def previous_level
