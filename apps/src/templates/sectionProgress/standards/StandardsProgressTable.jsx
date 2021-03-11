@@ -69,7 +69,7 @@ class StandardsProgressTable extends Component {
   getColumns = () => {
     let dataColumns = [
       {
-        property: 'concept',
+        property: 'category_description',
         header: {
           label: i18n.standardConcept(),
           props: {
@@ -90,7 +90,7 @@ class StandardsProgressTable extends Component {
         }
       },
       {
-        property: 'organization_id',
+        property: 'shortcode',
         header: {
           label: i18n.standardIdentifier(),
           props: {
