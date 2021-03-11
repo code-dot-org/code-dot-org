@@ -394,8 +394,25 @@ class ApiControllerTest < ActionController::TestCase
       },
       student_7_response['user_level_data']
     )
+    user_level_data = student_7_response['user_level_data']
+    user_level = UserLevel.find_by(user_level_data)
     assert_equal true, student_7_response['locked']
     assert_equal false, student_7_response['readonly_answers']
+    assert_equal false, user_level.submitted?
+
+    # Now, unlock the assessment again to simulate a retake scenario
+    updates = [
+      {
+        user_level_data: user_level_data,
+        locked: false,
+        readonly_answers: false
+      }
+    ]
+
+    post :update_lockable_state, params: {updates: updates}
+    assert_equal false, user_level.locked?
+    assert_equal false, user_level.submitted?
+    assert_equal false, user_level.readonly_answers?
   end
 
   test "should update lockable state for new user_levels" do
@@ -416,6 +433,7 @@ class ApiControllerTest < ActionController::TestCase
 
     post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
+    assert_equal false, user_level.locked?
     assert_equal false, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
     assert_not_nil user_level.unlocked_at
@@ -456,11 +474,13 @@ class ApiControllerTest < ActionController::TestCase
     post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.submitted?
+    assert_equal false, user_level.locked?
     assert_equal false, user_level.readonly_answers?
     assert_not_nil user_level.unlocked_at
 
     user_level2 = UserLevel.find_by(user_level_data2)
     assert_equal false, user_level2.submitted?
+    assert_equal false, user_level2.locked?
     assert_equal false, user_level2.readonly_answers?
     assert_not_nil user_level2.unlocked_at
   end
@@ -488,6 +508,7 @@ class ApiControllerTest < ActionController::TestCase
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
       assert_equal false, user_level.submitted?
+      assert_equal true, user_level.locked?
       assert_equal false, user_level.readonly_answers?
       assert_nil user_level.unlocked_at
       # update_lockable_state does not modify updated_at
@@ -508,6 +529,7 @@ class ApiControllerTest < ActionController::TestCase
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
       assert_equal true, user_level.submitted?
+      assert_equal false, user_level.locked?
       assert_equal true, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at
       assert_equal expected_updated_at, user_level.updated_at
@@ -527,6 +549,7 @@ class ApiControllerTest < ActionController::TestCase
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
       assert_equal true, user_level.submitted?
+      assert_equal true, user_level.locked?
       assert_equal false, user_level.readonly_answers?
       assert_nil user_level.unlocked_at
       assert_equal expected_updated_at, user_level.updated_at
@@ -546,6 +569,7 @@ class ApiControllerTest < ActionController::TestCase
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
       assert_equal false, user_level.submitted?
+      assert_equal false, user_level.locked?
       assert_equal false, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at
       assert_equal expected_updated_at, user_level.updated_at
