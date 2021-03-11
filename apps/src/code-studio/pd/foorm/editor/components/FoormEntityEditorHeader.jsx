@@ -1,5 +1,3 @@
-// Metadata and buttons for the Foorm Editor. Shows name and version,
-// live preview toggle, and validate button/validation status.
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
@@ -36,6 +34,8 @@ const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 const TIME_FORMAT = 'h:mm a';
 
+// Metadata and buttons for the Foorm Editor. Shows name and version,
+// live preview toggle, and validate button/validation status.
 class FoormEntityEditorHeader extends Component {
   static propTypes = {
     livePreviewToggled: PropTypes.func,

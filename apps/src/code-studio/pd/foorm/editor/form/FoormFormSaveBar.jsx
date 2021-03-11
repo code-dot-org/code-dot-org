@@ -1,5 +1,3 @@
-// Save bar that stays at bottom of the screen of the Foorm Editor when editing forms.
-// Shows last saved time, any errors, and requires confirmation for published forms.
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
@@ -98,6 +96,8 @@ const confirmationDialogNames = {
   publish: 'publish'
 };
 
+// Save bar that stays at bottom of the screen of the Foorm Editor when editing forms.
+// Shows last saved time, any errors, and requires confirmation for published forms.
 class FoormFormSaveBar extends Component {
   static propTypes = {
     formCategories: PropTypes.array,

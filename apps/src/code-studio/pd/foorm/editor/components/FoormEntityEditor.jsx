@@ -1,7 +1,3 @@
-// Interface for admins to try out Foorm configurations in real-time.
-// Includes a json editor with a starting configuration, along with
-// a preview button to preview the configuration in Foorm
-
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -39,6 +35,9 @@ const styles = {
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 
+// Interface for admins to try out Foorm "entity" (either a form or library question) in real-time.
+// Includes a json editor containing the loaded Foorm entity, along with
+// a preview button to preview the rendered entity in Foorm
 class FoormEntityEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
