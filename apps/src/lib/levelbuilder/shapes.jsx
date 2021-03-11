@@ -92,6 +92,11 @@ export const vocabularyShape = PropTypes.shape({
   commonSenseMedia: PropTypes.bool.isRequired
 });
 
+export const programmingEnvironmentShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
 export const programmingExpressionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
