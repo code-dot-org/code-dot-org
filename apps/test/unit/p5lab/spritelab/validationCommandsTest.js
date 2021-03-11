@@ -5,14 +5,20 @@ import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 
 describe('Validation Commands', () => {
   it('getTitle', () => {
-    expect(commands.getTitle()).to.deep.equal({title: '', subtitle: ''});
+    expect(commands.getTitle()).to.deep.equal({
+      title: undefined,
+      subtitle: undefined
+    });
     worldCommands.showTitleScreen('my title', 'my subtitle');
     expect(commands.getTitle()).to.deep.equal({
       title: 'my title',
       subtitle: 'my subtitle'
     });
     worldCommands.hideTitleScreen();
-    expect(commands.getTitle()).to.deep.equal({title: '', subtitle: ''});
+    expect(commands.getTitle()).to.deep.equal({
+      title: undefined,
+      subtitle: undefined
+    });
   });
 
   it('getPrintLog', () => {

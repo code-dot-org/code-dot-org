@@ -2,7 +2,7 @@
   "addCSSButton": "Add CSS",
   "addImageButton": "Add Image",
   "addHTMLButton": "Add HTML",
-  "confirmExitWithUnsavedChanges": "Do you want to exit with unsaved changes?",
+  "currentProjectCapacity": "{currentMegabytes}MB of {totalMegabytes}MB used",
   "errorSavingProject": "Something didn't work while auto-saving your project. Check your internet connection and try manually saving. If this problem persists, try reloading the page to start over.",
   "refreshPreview": "Refresh and Save",
   "toggleInspectorOn": "Inspector: Off",

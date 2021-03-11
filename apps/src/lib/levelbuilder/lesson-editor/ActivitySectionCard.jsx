@@ -421,8 +421,9 @@ class ActivitySectionCard extends Component {
     );
   };
 
-  handleUploadImage = url => {
-    this.appendMarkdownSyntax(`\n\n![](${url})`);
+  handleUploadImage = (url, expandable) => {
+    const param = expandable ? 'expandable' : '';
+    this.appendMarkdownSyntax(`\n\n![${param}](${url})`);
   };
 
   render() {

@@ -4153,6 +4153,10 @@ ga:
             Relay Programming:
               key: Códáil Sealaíochta
               name: Códáil Sealaíochta
+              description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr
+                ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
+                chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun
+                ríomhchlár a scríobh, treoir i ndiaidh treorach.
             Dance Party:
               key: Cóisir Dhamhsa
               name: Cóisir Dhamhsa
@@ -4180,6 +4184,8 @@ ga:
             csf_binary:
               display_name: Dénártha
             csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-6:
               display_name: Saoránacht Dhigiteach
         coursee-2021:
           lessons:
@@ -4320,3 +4326,42 @@ ga:
               display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
             cspSurvey:
               display_name: Suirbhé
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Réamhrá
+            Sequencing:
+              key: Seicheamhú
+              name: Seicheamhú
+            Loops:
+              key: Lúba
+              name: Lúba
+            Events:
+              key: Teagmhais
+              name: Teagmhais
+            Conditionals:
+              key: Coinníollacha
+              name: Coinníollacha
+            Functions:
+              key: Feidhmeanna
+              name: Feidhmeanna
+            Variables:
+              key: Athróga
+              name: Athróga
+            For Loops:
+              key: Lúba "Do Gach"
+              name: Lúba "Do Gach"
+            Sprite Lab:
+              key: Saotharlann na Sprideanna
+              name: Saotharlann na Sprideanna
+            Lesson Planning:
+              name: Ceachtanna a Phleanáil
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Réamhrá
+            k5_basic_concepts_1:
+              display_name: Bunchoincheapa Códála agus Cleachtadh Múinteoireachta
+            k5_diving_deeper_1:
+              display_name: 'Níos Doimhne: Cúrsaí E agus F'
+            Introduction:
+              display_name: Réamhrá

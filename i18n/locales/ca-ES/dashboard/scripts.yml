@@ -2261,6 +2261,8 @@ ca:
               display_name: Binari
             csf_digcit:
               display_name: Ciutadania digital
+            lessonGroup-6:
+              display_name: Ciutadania digital
         coursee-2021:
           description_audience: 'De 8 a 12 anys'
           lessons:
@@ -2319,3 +2321,33 @@ ca:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introducció
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Esdeveniments
+              name: Esdeveniments
+            Conditionals:
+              key: Condicionals
+              name: Condicionals
+            Functions:
+              key: Funcions
+              name: Funcions
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Per bucles
+              name: Per bucles
+            Sprite Lab:
+              key: Laboratori de personatges
+              name: Laboratori de personatges
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introducció
+            Introduction:
+              display_name: Introducció
