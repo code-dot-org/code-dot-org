@@ -10,6 +10,7 @@ import {
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
+import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 import foorm, {
   setFormData
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
@@ -32,19 +33,22 @@ describe('FoormEditor', () => {
 
     store = getStore();
 
-    const headerTitle = React.createElement('h1', null, 'A title');
+    const HeaderTitle = React.createElement('h1', null, 'A title');
+    const SaveBar = React.createElement(FoormFormSaveBar, {
+      resetCodeMirror: () => {},
+      formCategories: ['surveys/pd', 'surveys/teacher']
+    });
 
     defaultProps = {
       populateCodeMirror: () => {},
-      resetCodeMirror: () => {},
-      categories: ['surveys/pd', 'surveys/teacher'],
       preparePreview: () => {},
       previewQuestions: {},
       previewErrors: [],
       forceRerenderKey: 0,
-      headerTitle: headerTitle,
+      headerTitle: HeaderTitle,
       validateURL: '/a/fake/url',
-      validateDataKey: 'a_string'
+      validateDataKey: 'a_string',
+      saveBar: SaveBar
     };
   });
 
