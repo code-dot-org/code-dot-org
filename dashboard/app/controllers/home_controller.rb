@@ -152,6 +152,8 @@ class HomeController < ApplicationController
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:donorName] = current_user.school_donor_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
+      @homepage_data[:preReaderScriptIds] = Script.pre_reader_script_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school

@@ -16,7 +16,7 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadScript');
+    sinon.stub(progressLoader, 'loadScriptProgress');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},
@@ -51,7 +51,7 @@ describe('SectionProgress', () => {
   });
 
   afterEach(() => {
-    progressLoader.loadScript.restore();
+    progressLoader.loadScriptProgress.restore();
   });
 
   it('loading data shows loading icon', () => {

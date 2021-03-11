@@ -11,6 +11,7 @@ import scriptSelection, {
 import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
+import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 
 export function wrapTable(table) {
   return (
@@ -79,6 +80,9 @@ function buildSectionProgress(students, scriptData) {
   return {
     scriptDataByScript: {[scriptData.id]: scriptData},
     studentLevelProgressByScript: {[scriptData.id]: progress},
+    studentLessonProgressByScript: {
+      [scriptData.id]: lessonProgressForSection(progress, scriptData.stages)
+    },
     studentLastUpdateByScript: {[scriptData.id]: lastUpdates}
   };
 }
@@ -92,28 +96,32 @@ function randomProgress() {
         status: LevelStatus.perfect,
         result: TestResults.MINIMUM_OPTIMAL_RESULT,
         paired: paired,
-        time_spent: 5
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
     case 1:
       return {
         status: LevelStatus.attempted,
         result: TestResults.LEVEL_STARTED,
         paired: paired,
-        time_spent: 3
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
     case 2:
       return {
         status: LevelStatus.passed,
         result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
-        time_spent: 3
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
     default:
       return {
         status: LevelStatus.not_tried,
         result: TestResults.NO_TESTS_RUN,
         paired: paired,
-        time_spent: 0
+        timeSpent: rand * paired,
+        lastTimestamp: Date.now()
       };
   }
 }

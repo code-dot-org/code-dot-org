@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-01 17:09:30 UTC",
+    "serialized_at": "2021-03-10 17:18:08 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -1289,7 +1290,7 @@
       "key": "0af7ecf5-186e-4120-a92e-c4746565b975",
       "position": 5,
       "properties": {
-        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functionsvariables1.svg) |**Say:** Today we are going to explore Variables. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables2.svg) |**Say:** We're going to be thinking about how computers work with information. We're going to call one \"piece\" of information a \"value\". Right now there are two different types of values: numbers and strings. There are a few ways to tell them apart. Numbers work the way you normally think of numbers. They are made of the digits 0 through 9. We are going to put numbers on yellow sticky notes. When we write numbers you don't need quotes. Strings are made of any characters you can see on the keyboard which means all these examples count as strings. Strings go inside double quotes. You can see how it would be important to tell the number 123 apart from the string \"123\".  <br><br> **Do This:** Make one string and one number and hold it up at your table. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables3.svg) | **Say:** Operator is just a fancy name for the plus, minus, multiply, and divide symbols. An expression is a combination of two sticky notes and an operator. When I ask you \"what's 2 plus 3\" you say \"5\"! You just \"evaluated\" the expression 2+3, or figure out what the value is. Since 5 is a number, we put it on a yellow sticky. When evaluating an expression, we follow order of operations - just like in math class. <br><br> **Do This:** Evaluate the expression 5-1 and make a sticky note. Make sure you pick the correct color and decide if you need quotes or not!   |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables4.svg) | **Say:** This table shows the different ways we can create expressions. We can use all four operators with numbers the normal way. When you want to use strings, you can only use the + operator and it connects the two words together. If you're connecting a number and a string, the number first gets converted to a string. <br><br> **Do This:** With your partner make a sticky note for each of these 5 expressions and we'll share as a class. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through to see the answers. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables5.svg) | **Say:** We're going to call the plastic baggies on your table \"variables\". Variables can hold at most one value, or sticky note. They have names that use no quotes, include no spaces, and must start with a letter. For now just practice making a variable with your partner. <br><br> **Do This:** Make one variable with any name you like. Share it with another group. Make sure you use a whiteboard marker so we can reuse the baggies later.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables6.svg) | **Say:** We can evaluate expressions that include variable names. To do that, first make a copy of the sticky note inside the variable. Then evaluate the expression the way you normally would. These two examples show you how. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables7.svg) | **Do This:** Evaluate these expressions. Make sure to pay attention to whether it evaluates to a string or a number. <br><br> **Note:** Have students share their answers by holding up the sticky notes for each solution. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. | \r\n|![](https://curriculum.code.org/media/uploads/CSPVariables8.svg) | **Say:** Now let's write programs. We're going to stop using sticky notes, but will highlight strings and numbers to help you remember the difference. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables9.svg) | **Say:** Here's what a program looks like. The var command tells the computer to create a variable. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables10.svg) | **Say:** The left arrow is called the \"assignment operator\". That's just a fancy word for \"put this value in the baggy\". If we wanted to read line 01 we would say \"pow gets 3\". We know that variables can only hold one sticky note or value. So if we try to assign a variable that already has a value in it, we just throw the old one away. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. <br><br> **Say:** In a computer you don't actually put the old number in a trash can, it's totally deleted! The numbers are stored as electrical charges somewhere in your computer's memory. When you assign a new number to a variable it actually erases the old number, and stores  the new number in its place. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables11.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are following the rules correctly.  No baggies should have more than one sticky note in them. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables12.svg) | **Say:** Now let's combine what we've learned. You can use assignment with expressions. In order for this to work you need to evaluate first, then assign. This makes sense because we know we can only put one sticky note in the variable baggy. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables13.svg) | **Do This:** Run the program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are evaluating before they assign. Reinforce the language \"gets\" for the assignment operator. For example, line 02 would read \"fly gets two plus day\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables14.svg) | **Say:** We're not going to highlight our strings and numbers anymore. We can just use double quotes around the strings to tell the difference.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables15.svg) | **Do This:** Run through this program together as a class. <br><br> **Note:** Reinforce: <br><br> Evaluate,  then assign <br><br> As shown on line 04, there's no special \"connection\" made between variables. All we're doing is moving information around. <br><br> Variables only hold one value, the old one is \"thrown away\" (again, what's happening is that assignment replaces the electric charges somewhere inside the computer so the old value is actually \"erased\" or \"deleted\") <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions_slide22.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Have students hold up their two baggies when they're done. Make sure students are evaluating and then assigning. Call out that last three lines which can be a little nutty to think about. You're using a variable's value as part of the assignment. This lets it \"count up by one\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables17.svg) | **Do This:** Review the key takeaways with students. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables18.svg) | **Say:** In some programming languages the assignment operator is not written with an arrow but is written as an equal sign. |\r\n|![](https://curriculum.code.org/media/uploads/CSPVariables19.svg) | **Say:** Here's how the assignment operator looks in Javascript. We'll see more of this in the next lesson! <br><br> **Note:** In math = means \"are equal forever\". In programming = means \"put this value in this variable\".|"
+        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://images.code.org/bdab647a379b05779e8a662940d4d167-U4L1_1.svg.png) |**Say:** Today we are going to explore Variables. |\n|![expandable](https://images.code.org/1fd29fd04665f395029bcb24ac55e009-CSPVariables2.svg.png) |**Say:** We're going to be thinking about how computers work with information. We're going to call one \"piece\" of information a \"value\". Right now there are two different types of values: numbers and strings. There are a few ways to tell them apart. Numbers work the way you normally think of numbers. They are made of the digits 0 through 9. We are going to put numbers on yellow sticky notes. When we write numbers you don't need quotes. Strings are made of any characters you can see on the keyboard which means all these examples count as strings. Strings go inside double quotes. You can see how it would be important to tell the number 123 apart from the string \"123\".  <br><br> **Do This:** Make one string and one number and hold it up at your table. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables3.svg) | **Say:** Operator is just a fancy name for the plus, minus, multiply, and divide symbols. An expression is a combination of two sticky notes and an operator. When I ask you \"what's 2 plus 3\" you say \"5\"! You just \"evaluated\" the expression 2+3, or figure out what the value is. Since 5 is a number, we put it on a yellow sticky. When evaluating an expression, we follow order of operations - just like in math class. <br><br> **Do This:** Evaluate the expression 5-1 and make a sticky note. Make sure you pick the correct color and decide if you need quotes or not!   |\n|![](https://curriculum.code.org/media/uploads/CSPVariables4.svg) | **Say:** This table shows the different ways we can create expressions. We can use all four operators with numbers the normal way. When you want to use strings, you can only use the + operator and it connects the two words together. If you're connecting a number and a string, the number first gets converted to a string. <br><br> **Do This:** With your partner make a sticky note for each of these 5 expressions and we'll share as a class. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through to see the answers. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables5.svg) | **Say:** We're going to call the plastic baggies on your table \"variables\". Variables can hold at most one value, or sticky note. They have names that use no quotes, include no spaces, and must start with a letter. For now just practice making a variable with your partner. <br><br> **Do This:** Make one variable with any name you like. Share it with another group. Make sure you use a whiteboard marker so we can reuse the baggies later.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables6.svg) | **Say:** We can evaluate expressions that include variable names. To do that, first make a copy of the sticky note inside the variable. Then evaluate the expression the way you normally would. These two examples show you how. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables7.svg) | **Do This:** Evaluate these expressions. Make sure to pay attention to whether it evaluates to a string or a number. <br><br> **Note:** Have students share their answers by holding up the sticky notes for each solution. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. | \n|![](https://curriculum.code.org/media/uploads/CSPVariables8.svg) | **Say:** Now let's write programs. We're going to stop using sticky notes, but will highlight strings and numbers to help you remember the difference. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables9.svg) | **Say:** Here's what a program looks like. The var command tells the computer to create a variable. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables10.svg) | **Say:** The left arrow is called the \"assignment operator\". That's just a fancy word for \"put this value in the baggy\". If we wanted to read line 01 we would say \"pow gets 3\". We know that variables can only hold one sticky note or value. So if we try to assign a variable that already has a value in it, we just throw the old one away. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. <br><br> **Say:** In a computer you don't actually put the old number in a trash can, it's totally deleted! The numbers are stored as electrical charges somewhere in your computer's memory. When you assign a new number to a variable it actually erases the old number, and stores  the new number in its place. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables11.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are following the rules correctly.  No baggies should have more than one sticky note in them. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables12.svg) | **Say:** Now let's combine what we've learned. You can use assignment with expressions. In order for this to work you need to evaluate first, then assign. This makes sense because we know we can only put one sticky note in the variable baggy. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables13.svg) | **Do This:** Run the program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are evaluating before they assign. Reinforce the language \"gets\" for the assignment operator. For example, line 02 would read \"fly gets two plus day\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables14.svg) | **Say:** We're not going to highlight our strings and numbers anymore. We can just use double quotes around the strings to tell the difference.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables15.svg) | **Do This:** Run through this program together as a class. <br><br> **Note:** Reinforce: <br><br> Evaluate,  then assign <br><br> As shown on line 04, there's no special \"connection\" made between variables. All we're doing is moving information around. <br><br> Variables only hold one value, the old one is \"thrown away\" (again, what's happening is that assignment replaces the electric charges somewhere inside the computer so the old value is actually \"erased\" or \"deleted\") <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions_slide22.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Have students hold up their two baggies when they're done. Make sure students are evaluating and then assigning. Call out that last three lines which can be a little nutty to think about. You're using a variable's value as part of the assignment. This lets it \"count up by one\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables17.svg) | **Do This:** Review the key takeaways with students. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables18.svg) | **Say:** In some programming languages the assignment operator is not written with an arrow but is written as an equal sign. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables19.svg) | **Say:** Here's how the assignment operator looks in Javascript. We'll see more of this in the next lesson! <br><br> **Note:** In math = means \"are equal forever\". In programming = means \"put this value in this variable\".|\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0af7ecf5-186e-4120-a92e-c4746565b975",
@@ -1870,7 +1871,7 @@
       "key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
       "position": 3,
       "properties": {
-        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n[slide] **Discuss:** \n\n* What does this app do?\n  * It lets a user \"like\" an image and add comments to it. \n* What are the inputs?\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* What are the outputs?\n  * The number showing how many thumbs up the image has. \n* What's one piece of information that might be stored in a variable?\n  * The number of likes and all the comments added so far. "
+        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n[slide] **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. "
       },
       "seeding_key": {
         "activity_section.key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
@@ -2564,7 +2565,7 @@
       "key": "0762e48d-f16c-4caa-b03a-8c935ee87352",
       "position": 2,
       "properties": {
-        "description": "[slide] **Discuss:** \n\n* What does this app do?\n\t* Generates a ticket to a museum based on input data from the user.\n* What are the inputs?\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* What are the outputs?\n\t* The ticket generated at the bottom of the screen\t\n* What variables do you think would be necessary for this app to work?\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* What kinds of conditional logic do you think are necessary to make it work?\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
+        "description": "[slide] **Discuss:** \n\n* *What does this app do?*\n\t* Generates a ticket to a museum based on input data from the user.\n* *What are the inputs?*\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* *What are the outputs?*\n\t* The ticket generated at the bottom of the screen\t\n* *What variables do you think would be necessary for this app to work?*\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* *What kinds of conditional logic do you think are necessary to make it work?*\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
         "progression_name": "Try to the Museum Ticket Generator App"
       },
       "seeding_key": {
@@ -2691,7 +2692,7 @@
       "key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
       "position": 3,
       "properties": {
-        "description": "* In Style 1, what line of the song do you sing after line 09? What about in Style 2?\n* Style 2 uses fewer lines to write. Are there fewer lyrics to sing?\n* What are the benefits of writing a song in Style 2? \n\nHave students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Discussion Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
+        "description": "* *In Style 1, what line of the song do you sing after line 09? What about in Style 2?*\n* *Style 2 uses fewer lines to write. Are there fewer lyrics to sing?*\n* *What are the benefits of writing a song in Style 2?*\n\nHave students silently consider these prompts on their own, then share with a neighbor, and finally move to a full class discussion.\n\n\n**Discussion Goal:** This lesson does not feature a large hands-on explore segment, but students should still get a quick introduction to the concept of a function before jumping in the code to try it out. Run this discussion to help motivate the ideas underlying functions. Here are the main points to bring out.\n\n  \t* In Style 1 you read line 10 after line 09. This is a the normal order we're used to.\n\n  \t* In Style 2 you sing the lyrics “out of order”. After line 09 you’re going to sing line 35\n\n  \t* It’s shorter to write the song but it’s the same song and will take the same time / lyrics to sing.\n\n  \t* Style 2 removes repetition and it also makes it a little easier to understand the overall structure of the song\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f35768cd-c97a-43c1-bced-e1dabb81b8ff",
@@ -3081,7 +3082,7 @@
       "key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be",
       "position": 2,
       "properties": {
-        "description": "If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n[slide] **Discuss:**\n\n* What does this app do?\n\t* Display a quote with user-defined fonts and background colors.\n* What are the inputs?\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* What are the outputs?\n\t* The fully designed quote displayed at the bottom of the screen\t\n* How could a function be used in this app?\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
+        "description": "If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n[slide] **Discuss:**\n\n* *What does this app do?*\n\t* Display a quote with user-defined fonts and background colors.\n* *What are the inputs?*\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* *What are the outputs?*\n\t* The fully designed quote displayed at the bottom of the screen\t\n* *How could a function be used in this app?*\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
         "progression_name": "Quote Maker App"
       },
       "seeding_key": {
@@ -3247,7 +3248,7 @@
       "key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
       "position": 4,
       "properties": {
-        "description": "* What does this app do?\r\n* What are the inputs?\r\n* What are the outputs?\r\n* What variables do you think would be necessary for this app to work?\r\n* What kinds of conditional logic do you think are necessary to make it work?\r\n* How could a function be used in this app?\r\n\r\n\r\n[slide] **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
+        "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n[slide] **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
@@ -3590,7 +3591,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
@@ -3616,7 +3617,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Poetry App_2021"
@@ -3642,7 +3643,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Thermostat App_2021"
@@ -3668,7 +3669,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L02 CYU MC_2021"
@@ -3686,7 +3687,7 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
@@ -3712,7 +3713,7 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
@@ -3738,7 +3739,7 @@
       "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
         "level_keys": [
@@ -3764,7 +3765,7 @@
       "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
@@ -3790,7 +3791,7 @@
       "chapter": 9,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
@@ -3842,7 +3843,7 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3868,7 +3869,7 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3894,7 +3895,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3920,7 +3921,7 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3946,7 +3947,7 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3972,7 +3973,7 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3998,7 +3999,7 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4024,7 +4025,7 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4050,7 +4051,7 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4076,7 +4077,7 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Putting it Together",
         "level_keys": [
@@ -4154,7 +4155,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Try the Photo Liker app",
         "level_keys": [
@@ -4206,7 +4207,7 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Conditionals: Boolean Expressions",
         "level_keys": [
@@ -4258,7 +4259,7 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Statements",
         "level_keys": [
@@ -4284,7 +4285,7 @@
       "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Statements",
         "level_keys": [
@@ -4310,7 +4311,7 @@
       "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Else Statements",
         "level_keys": [
@@ -4336,7 +4337,7 @@
       "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Else Statements",
         "level_keys": [
@@ -4362,7 +4363,7 @@
       "chapter": 31,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Else Statements",
         "level_keys": [
@@ -4388,7 +4389,7 @@
       "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Logical Operators: AND OR",
         "level_keys": [
@@ -4414,7 +4415,7 @@
       "chapter": 33,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Logical Operators: AND OR",
         "level_keys": [
@@ -4466,7 +4467,7 @@
       "chapter": 35,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Check Your Understanding",
         "level_keys": [
@@ -4492,7 +4493,7 @@
       "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Boolean expressions",
         "level_keys": [
@@ -4518,7 +4519,7 @@
       "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Boolean expressions",
         "level_keys": [
@@ -4544,7 +4545,7 @@
       "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Boolean expressions",
         "level_keys": [
@@ -4570,7 +4571,7 @@
       "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Statements",
         "level_keys": [
@@ -4596,7 +4597,7 @@
       "chapter": 40,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Statements",
         "level_keys": [
@@ -4622,7 +4623,7 @@
       "chapter": 41,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Statements",
         "level_keys": [
@@ -4648,7 +4649,7 @@
       "chapter": 42,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Statements",
         "level_keys": [
@@ -4674,7 +4675,7 @@
       "chapter": 43,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "If-Statements",
         "level_keys": [
@@ -4700,7 +4701,7 @@
       "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Logical Operators",
         "level_keys": [
@@ -4726,7 +4727,7 @@
       "chapter": 45,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Logical Operators",
         "level_keys": [
@@ -4804,7 +4805,7 @@
       "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Try to the Museum Ticket Generator App",
         "level_keys": [
@@ -4856,7 +4857,7 @@
       "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Explore Functions",
         "level_keys": [
@@ -4882,7 +4883,7 @@
       "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -4908,7 +4909,7 @@
       "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -4934,7 +4935,7 @@
       "chapter": 53,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -4960,7 +4961,7 @@
       "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Update Screen Pattern",
         "level_keys": [
@@ -5012,7 +5013,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5038,7 +5039,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5064,7 +5065,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5090,7 +5091,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5116,7 +5117,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5142,7 +5143,7 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5168,7 +5169,7 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5194,7 +5195,7 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -5220,7 +5221,7 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -5272,7 +5273,7 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Quote Maker App",
         "level_keys": [
@@ -5324,7 +5325,7 @@
       "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -5350,7 +5351,7 @@
       "chapter": 69,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -5376,7 +5377,7 @@
       "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Create the Screens",
         "level_keys": [
@@ -5402,7 +5403,7 @@
       "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Create the Variables",
         "level_keys": [
@@ -5428,7 +5429,7 @@
       "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Create the Function",
         "level_keys": [
@@ -5454,7 +5455,7 @@
       "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Add onEvents",
         "level_keys": [
@@ -5480,7 +5481,7 @@
       "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Test Your Decision Maker App",
         "level_keys": [

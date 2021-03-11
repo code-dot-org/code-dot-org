@@ -8,8 +8,7 @@ var totalPauseTime = 0;
 var currentPauseStartTime = 0;
 
 export var background;
-export var title = '';
-export var subtitle = '';
+export var screenText = {};
 export var defaultSpriteSize = 100;
 export var printLog = [];
 export var promptVars = {};
@@ -20,12 +19,12 @@ export function reset() {
   inputEvents = [];
   behaviors = [];
   background = 'white';
-  title = subtitle = '';
   userInputEventCallbacks = {};
   defaultSpriteSize = 100;
   totalPauseTime = 0;
   printLog = [];
   promptVars = {};
+  screenText = {};
 }
 
 export function startPause(time) {
