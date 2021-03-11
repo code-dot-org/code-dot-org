@@ -14,7 +14,7 @@ import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import programmingExpressionsEditor, {
-  initprogrammingExpressions
+  initProgrammingExpressions
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import {Provider} from 'react-redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
@@ -41,7 +41,7 @@ $(document).ready(function() {
   store.dispatch(initResources(lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
   store.dispatch(
-    initprogrammingExpressions(lessonData.programmingExpressions || [])
+    initProgrammingExpressions(lessonData.programmingExpressions || [])
   );
 
   ReactDOM.render(

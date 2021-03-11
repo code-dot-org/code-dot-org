@@ -4,7 +4,6 @@ import {programmingExpressionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import SearchBox from './SearchBox';
 import Dialog from '@cdo/apps/templates/Dialog';
-import AddProgrammingExpressionDialog from './AddProgrammingExpressionDialog';
 import {connect} from 'react-redux';
 import {
   addProgrammingExpression,
@@ -30,16 +29,6 @@ const styles = {
     textAlign: 'center',
     width: '50%',
     lineHeight: '30px'
-  },
-  addButton: {
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    fontSize: 14,
-    padding: 7,
-    textAlign: 'center',
-    marginTop: 10,
-    marginLeft: 0
   }
 };
 
@@ -57,7 +46,7 @@ class ProgrammingExpressionsEditor extends Component {
     this.state = {
       confirmRemovalDialogOpen: false,
       programmingExpressionForRemoval: null,
-      newProgrammingExpressionDialogOpen: false
+      programmingEnvironmentId: null
     };
   }
 
@@ -87,7 +76,7 @@ class ProgrammingExpressionsEditor extends Component {
         header: {
           label: 'Name',
           props: {
-            style: {width: '20%'}
+            style: {width: '30%'}
           }
         },
         cell: {
@@ -103,7 +92,23 @@ class ProgrammingExpressionsEditor extends Component {
         header: {
           label: 'Programming Environment',
           props: {
-            style: {width: '70%'}
+            style: {width: '30%'}
+          }
+        },
+        cell: {
+          props: {
+            style: {
+              ...lessonEditorTableStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'category',
+        header: {
+          label: 'Category',
+          props: {
+            style: {width: '30%'}
           }
         },
         cell: {
@@ -135,16 +140,12 @@ class ProgrammingExpressionsEditor extends Component {
   }
 
   constructProgrammingExpressionOption = programmingExpression => ({
-    value: programmingExpression.name,
+    value: programmingExpression.key,
     label: `${programmingExpression.name} - ${
       programmingExpression.programmingEnvironmentName
     }`,
     programmingExpression
   });
-
-  handleAddProgrammingExpressionClick = () => {
-    this.setState({newProgrammingExpressionDialogOpen: true});
-  };
 
   afterProgrammingExpressionSave = programmingExpression => {
     this.props.addProgrammingExpression(programmingExpression);
@@ -185,17 +186,6 @@ class ProgrammingExpressionsEditor extends Component {
     const columns = this.getColumns();
     return (
       <div>
-        {this.state.newProgrammingExpressionDialogOpen && (
-          <AddProgrammingExpressionDialog
-            handleClose={() =>
-              this.setState({
-                newProgrammingExpressionDialogOpen: false,
-                programmingExpressionForEdit: null
-              })
-            }
-            afterSave={this.afterProgrammingExpressionSave}
-          />
-        )}
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
             body={`Are you sure you want to remove the programming expression "${
@@ -218,6 +208,9 @@ class ProgrammingExpressionsEditor extends Component {
             onSearchSelect={e =>
               this.props.addProgrammingExpression(e.programmingExpression)
             }
+            additionalQueryParams={{
+              programmingEnvironmentId: this.state.programmingEnvironmentId
+            }}
             searchUrl={'programmingexpressionsearch'}
             constructOptions={this.constructSearchOptions}
           />
@@ -226,14 +219,6 @@ class ProgrammingExpressionsEditor extends Component {
           <Table.Header />
           <Table.Body rows={this.props.programmingExpressions} rowKey="key" />
         </Table.Provider>
-        <button
-          onClick={this.handleAddProgrammingExpressionClick}
-          style={styles.addButton}
-          type="button"
-        >
-          <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
-          Programming Expression
-        </button>
       </div>
     );
   }
