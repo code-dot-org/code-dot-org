@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-10 17:18:08 UTC",
+    "serialized_at": "2021-03-10 23:41:45 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -548,6 +548,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "cee0dcb2-21af-48b5-822f-15617dfe0bad",
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "f11c21d8-b12a-48d6-8fe7-868cbe66681d",
+      "position": 4,
+      "properties": {
+        "name": "Tess figuring out expandable images"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f11c21d8-b12a-48d6-8fe7-868cbe66681d",
         "lesson.key": "Variables Explore",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021"
@@ -1342,6 +1355,18 @@
       "seeding_key": {
         "activity_section.key": "c053bf2e-bfac-4b36-a882-c3b3d8506eb7",
         "lesson_activity.key": "cee0dcb2-21af-48b5-822f-15617dfe0bad"
+      }
+    },
+    {
+      "key": "5c6adbb9-9338-4745-b5aa-5d20045b2a71",
+      "position": 1,
+      "properties": {
+        "name": "To be deleted",
+        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://images.code.org/bdab647a379b05779e8a662940d4d167-U4L1_1.svg.png) |**Say:** Today we are going to explore Variables. |\n\n\n\n\n\n\n\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c6adbb9-9338-4745-b5aa-5d20045b2a71",
+        "lesson_activity.key": "f11c21d8-b12a-48d6-8fe7-868cbe66681d"
       }
     },
     {
