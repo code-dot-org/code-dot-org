@@ -1340,7 +1340,7 @@ ActiveRecord::Schema.define(version: 2021_03_11_162705) do
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id"
   end
 
-  create_table "resources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "resources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "url", null: false
     t.string "key", null: false
@@ -1350,13 +1350,6 @@ ActiveRecord::Schema.define(version: 2021_03_11_162705) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
-  end
-
-  create_table "resources_scripts", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.bigint "script_id", null: false
-    t.bigint "resource_id", null: false
-    t.index ["resource_id", "script_id"], name: "index_resources_scripts_on_resource_id_and_script_id"
-    t.index ["script_id", "resource_id"], name: "index_resources_scripts_on_script_id_and_resource_id", unique: true
   end
 
   create_table "school_districts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
