@@ -7416,43 +7416,43 @@
   ],
   "vocabularies": [
     {
-      "key": "Decode",
+      "key": "decode",
       "word": "Decode",
       "definition": "to change how information is represented so that it can be read by a person",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Decode"
+        "vocabulary.key": "decode"
       }
     },
     {
-      "key": "Encode",
+      "key": "encode",
       "word": "Encode",
       "definition": "to change how information is represented so that it can be read by a computer",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Encode"
+        "vocabulary.key": "encode"
       }
     },
     {
-      "key": "Decrypt",
+      "key": "decrypt",
       "word": "Decrypt",
       "definition": "to change information so that its hidden meaning is shown",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Decrypt"
+        "vocabulary.key": "decrypt"
       }
     },
     {
-      "key": "Encrypt",
+      "key": "encrypt",
       "word": "Encrypt",
       "definition": "to change information so that its meaning is hidden",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Encrypt"
+        "vocabulary.key": "encrypt"
       }
     }
   ],
@@ -7460,25 +7460,25 @@
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "vocabulary.key": "Decode"
+        "vocabulary.key": "decode"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "vocabulary.key": "Encode"
+        "vocabulary.key": "encode"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
-        "vocabulary.key": "Decrypt"
+        "vocabulary.key": "decrypt"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
-        "vocabulary.key": "Encrypt"
+        "vocabulary.key": "encrypt"
       }
     }
   ],

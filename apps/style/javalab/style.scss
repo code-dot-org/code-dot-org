@@ -12,3 +12,17 @@ body {
 .main {
   padding: 0;
 }
+
+.cm-content, .cm-gutter { 
+  min-height: 390px;
+}
+
+.cm-gutters { margin: 1px; }
+
+.cm-scroller { overflow: auto; }
+
+.cm-wrap { border: 1px solid silver }
+
+#codeWorkspace {
+  border: none !important;
+}
