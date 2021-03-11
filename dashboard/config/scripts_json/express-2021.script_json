@@ -17379,543 +17379,543 @@
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Programming",
+      "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Programming",
+      "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Command",
+      "key": "command",
       "word": "Command",
       "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Command"
+        "vocabulary.key": "command"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "While Loop",
+      "key": "while_loop",
       "word": "While Loop",
       "definition": "A loop that continues to repeat while a condition is true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Until",
+      "key": "until",
       "word": "Until",
       "definition": "A command that tells you to do something only up to the point that something becomes true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Until"
+        "vocabulary.key": "until"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "While Loop",
+      "key": "while_loop",
       "word": "While Loop",
       "definition": "A loop that continues to repeat while a condition is true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Constant",
+      "key": "constant",
       "word": "Constant",
       "definition": "A variable used throughout a program that never changes value",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Constant"
+        "vocabulary.key": "constant"
       }
     },
     {
-      "key": "Variable",
+      "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
-      "key": "Variable",
+      "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
-      "key": "Variable",
+      "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
-      "key": "For Loop",
+      "key": "for_loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
-      "key": "For Loop",
+      "key": "for_loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
-      "key": "Behavior",
+      "key": "behavior",
       "word": "Behavior",
       "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Behavior"
+        "vocabulary.key": "behavior"
       }
     },
     {
-      "key": "Sprite",
+      "key": "sprite",
       "word": "Sprite",
       "definition": "A graphic on the screen with a location, size, and appearance.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Define",
+      "key": "define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Define"
+        "vocabulary.key": "define"
       }
     },
     {
-      "key": "Prepare",
+      "key": "prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Prepare"
+        "vocabulary.key": "prepare"
       }
     },
     {
-      "key": "Reflect",
+      "key": "reflect",
       "word": "Reflect",
       "definition": "Carefully think back on something with the intention of improving the outcome in the future",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Reflect"
+        "vocabulary.key": "reflect"
       }
     },
     {
-      "key": "Try",
+      "key": "try",
       "word": "Try",
       "definition": "Attempt to do something",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Try"
+        "vocabulary.key": "try"
       }
     }
   ],
@@ -17929,325 +17929,325 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging with Scrat",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging with Scrat",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sticker Art with Loops",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sticker Art with Loops",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
-        "vocabulary.key": "Command"
+        "vocabulary.key": "command"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Snowflakes with Anna and Elsa",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Snowflakes with Anna and Elsa",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Looking Ahead with Minecraft ",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Looking Ahead with Minecraft ",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops with the Farmer",
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Until"
+        "vocabulary.key": "until"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Harvesting with Conditionals",
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Harvester",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Artist",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables with Artist",
-        "vocabulary.key": "Constant"
+        "vocabulary.key": "constant"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables with Artist",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Changing Variables with Bee",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Changing Variables with Artist",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops with Bee",
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops with Artist",
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
-        "vocabulary.key": "Behavior"
+        "vocabulary.key": "behavior"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Alien Dance Party",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Define"
+        "vocabulary.key": "define"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Prepare"
+        "vocabulary.key": "prepare"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Reflect"
+        "vocabulary.key": "reflect"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Try"
+        "vocabulary.key": "try"
       }
     }
   ],
