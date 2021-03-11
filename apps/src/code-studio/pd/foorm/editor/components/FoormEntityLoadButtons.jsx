@@ -24,7 +24,7 @@ class FoormEntityLoadButtons extends React.Component {
     setLastSavedQuestions: PropTypes.func
   };
 
-  getFormattedConfigurationDropdownOptions() {
+  getDropdownOptions() {
     return this.props.dropdownOptions.map((dropdownOption, i) => {
       return this.renderMenuItem(
         () => this.props.onSelect(dropdownOption['id']),
@@ -58,7 +58,7 @@ class FoormEntityLoadButtons extends React.Component {
     return (
       <div>
         <DropdownButton id="load_config" title="Load Form..." className="btn">
-          {this.getFormattedConfigurationDropdownOptions()}
+          {this.getDropdownOptions()}
         </DropdownButton>
         <Button
           onClick={() => this.initializeEmptyCodeMirror()}
