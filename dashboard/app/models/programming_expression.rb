@@ -19,6 +19,10 @@ class ProgrammingExpression < ApplicationRecord
   belongs_to :programming_environment
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
 
+  def summarize_for_edit
+    {key: key, name: name, category: category, programmingEnvironmentName: programming_environment.name}
+  end
+
   def summarize_for_lesson_show
     {name: name, link: "/docs/#{programming_environment.name}/#{key}/"}
   end
