@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_05_183735) do
+ActiveRecord::Schema.define(version: 2021_03_11_162705) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1281,6 +1281,7 @@ ActiveRecord::Schema.define(version: 2021_03_05_183735) do
     t.bigint "programming_environment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "key", null: false
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
@@ -1337,7 +1338,7 @@ ActiveRecord::Schema.define(version: 2021_03_05_183735) do
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id"
   end
 
-  create_table "resources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "resources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "url", null: false
     t.string "key", null: false
@@ -1347,6 +1348,13 @@ ActiveRecord::Schema.define(version: 2021_03_05_183735) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
+  end
+
+  create_table "resources_scripts", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "script_id", null: false
+    t.bigint "resource_id", null: false
+    t.index ["resource_id", "script_id"], name: "index_resources_scripts_on_resource_id_and_script_id"
+    t.index ["script_id", "resource_id"], name: "index_resources_scripts_on_script_id_and_resource_id", unique: true
   end
 
   create_table "school_districts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1714,6 +1722,13 @@ ActiveRecord::Schema.define(version: 2021_03_05_183735) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_unit_groups_on_name"
+  end
+
+  create_table "unit_groups_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "unit_group_id"
+    t.integer "resource_id"
+    t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
+    t.index ["unit_group_id", "resource_id"], name: "index_unit_groups_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
   create_table "user_geos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
