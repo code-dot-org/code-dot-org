@@ -10,6 +10,7 @@ import {
   setHasJSONError,
   setLastSavedQuestions
 } from '../foormEditorRedux';
+import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 
 const styles = {
   surveyTitle: {
@@ -190,6 +191,15 @@ class FoormFormEditorManager extends React.Component {
     );
   }
 
+  renderSaveBar() {
+    return (
+      <FoormFormSaveBar
+        formCategories={this.props.categories}
+        resetCodeMirror={this.props.resetCodeMirror}
+      />
+    );
+  }
+
   render() {
     return (
       <div>
@@ -229,6 +239,7 @@ class FoormFormEditorManager extends React.Component {
             headerTitle={this.renderHeaderTitle()}
             validateURL={'/api/v1/pd/foorm/forms/validate_form'}
             validateDataKey={'form_questions'}
+            saveBar={this.renderSaveBar()}
           />
         )}
       </div>

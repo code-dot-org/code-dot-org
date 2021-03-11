@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
-import FoormFormSaveBar from '../form/FoormFormSaveBar';
 import FoormEntityEditorPreview from './FoormEntityEditorPreview';
 import FoormEntityEditorHeader from './FoormEntityEditorHeader';
 import _ from 'lodash';
@@ -41,13 +40,12 @@ const PREVIEW_OFF = 'preview-off';
 class FoormEntityEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
-    resetCodeMirror: PropTypes.func.isRequired,
-    categories: PropTypes.array,
     preparePreview: PropTypes.func,
     previewQuestions: PropTypes.object,
     previewErrors: PropTypes.array,
     forceRerenderKey: PropTypes.number,
     headerTitle: PropTypes.node,
+    saveBar: PropTypes.node,
     validateURL: PropTypes.string,
     validateDataKey: PropTypes.string,
 
@@ -277,10 +275,7 @@ class FoormEntityEditor extends React.Component {
             </Tab>
           </Tabs>
         </div>
-        <FoormFormSaveBar
-          formCategories={this.props.categories}
-          resetCodeMirror={this.props.resetCodeMirror}
-        />
+        {this.props.saveBar}
       </div>
     );
   }
