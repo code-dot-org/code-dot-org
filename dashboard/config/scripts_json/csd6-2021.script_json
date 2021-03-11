@@ -10314,93 +10314,93 @@
   ],
   "vocabularies": [
     {
-      "key": "Innovation",
+      "key": "innovation",
       "word": "Innovation",
       "definition": "A new or improved idea, device, product, etc, or the development thereof",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Innovation"
+        "vocabulary.key": "innovation"
       }
     },
     {
-      "key": "Analog",
+      "key": "analog",
       "word": "Analog",
       "definition": "Any continuously changing signal that is not restricted to finite set of values. For example, the wave forms of spoken words are an analog signal.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Analog"
+        "vocabulary.key": "analog"
       }
     },
     {
-      "key": "Digital",
+      "key": "digital",
       "word": "Digital",
       "definition": "Data or signals represented by a finite number of values. Analog signals (which can have infinite values) must be converted to digital in order to be computed with.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Digital"
+        "vocabulary.key": "digital"
       }
     },
     {
-      "key": "Array",
+      "key": "array",
       "word": "Array",
       "definition": "A data structure in JavaScript used to represent a list.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Array"
+        "vocabulary.key": "array"
       }
     },
     {
-      "key": "Array",
+      "key": "array",
       "word": "Array",
       "definition": "A data structure in JavaScript used to represent a list.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Array"
+        "vocabulary.key": "array"
       }
     },
     {
-      "key": "For Loop",
+      "key": "for_loop",
       "word": "For Loop",
       "definition": "Loops that have a predetermined beginning, end, and increment (step interval).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
-      "key": "Parameter",
+      "key": "parameter",
       "word": "Parameter",
       "definition": "An extra piece of information passed to a function to customize it for a specific need",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Parameter"
+        "vocabulary.key": "parameter"
       }
     },
     {
-      "key": "Prototype",
+      "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
-      "key": "Circuit",
+      "key": "circuit",
       "word": "Circuit",
       "definition": "A device that provides a path for an electric current to flow, often modifying that current. In computers, circuits allow for simple logical and mathematical operations using electricity.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Circuit"
+        "vocabulary.key": "circuit"
       }
     }
   ],
@@ -10408,55 +10408,55 @@
     {
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
-        "vocabulary.key": "Innovation"
+        "vocabulary.key": "innovation"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
-        "vocabulary.key": "Analog"
+        "vocabulary.key": "analog"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
-        "vocabulary.key": "Digital"
+        "vocabulary.key": "digital"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
-        "vocabulary.key": "Array"
+        "vocabulary.key": "array"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
-        "vocabulary.key": "Array"
+        "vocabulary.key": "array"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
-        "vocabulary.key": "For Loop"
+        "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
-        "vocabulary.key": "Parameter"
+        "vocabulary.key": "parameter"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
-        "vocabulary.key": "Circuit"
+        "vocabulary.key": "circuit"
       }
     }
   ],
