@@ -4,14 +4,14 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   setup do
     create :resource, key: 'first-resource', name: "First Resource", url: "example.com/first"
     create :resource, key: 'second-resource', name: "Second Resource", url: "example.com/second"
-    create :vocabulary, key: 'first-vocab', word: "First Vocabulary", definition: "The first of the vocabulary entries."
-    create :vocabulary, key: 'second-vocab', word: "Second Vocabulary", definition: "The second of the vocabulary entries."
+    create :vocabulary, key: 'first_vocab', word: "First Vocabulary", definition: "The first of the vocabulary entries."
+    create :vocabulary, key: 'second_vocab', word: "Second Vocabulary", definition: "The second of the vocabulary entries."
   end
 
   test 'process method invokes both resource and vocab substitutions' do
-    input = "A string containing both a Resource link [r first-resource] and a Vocab link [v first-vocab]"
+    input = "A string containing both a Resource link [r first-resource] and a Vocab link [v first_vocab]"
     result = Services::MarkdownPreprocessor.process(input)
-    expected = "A string containing both a Resource link [First Resource](example.com/first) and a Vocab link [v first-vocab]"
+    expected = "A string containing both a Resource link [First Resource](example.com/first) and a Vocab link [v first_vocab]"
     assert_equal expected, result
   end
 
@@ -42,7 +42,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   end
 
   test 'process caching can be modified with options' do
-    input = "[r first-resource][v first-vocab]"
+    input = "[r first-resource][v first_vocab]"
 
     # populate the cache
     Services::MarkdownPreprocessor.process(input)
