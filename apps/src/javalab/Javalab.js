@@ -7,6 +7,7 @@ import javalab from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {onSave} from './JavalabFileManagement';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -62,7 +63,7 @@ Javalab.prototype.init = function(config) {
 
   config.useFilesApi = true;
 
-  config.getCode = this.getCode.bind(this);
+  config.getCodeAsync = this.getCodeAsync.bind(this);
   const onContinue = this.onContinue.bind(this);
 
   // if a version is provided in the url, use that version for files.
@@ -130,13 +131,20 @@ Javalab.prototype.onContinue = function() {
   });
 };
 
-Javalab.prototype.getCode = function() {
-  // store the file version as the source, as we do in WebLab
-  return this.getCurrentFilesVersionId();
+Javalab.prototype.getCodeAsync = function() {
+  console.log('in get code async');
+  return new Promise((resolve, reject) => {
+    onSave(
+      /* success */
+      () => resolve(this.getCurrentFilesVersionId() || ''),
+      /* failure - couldn't save files, don't try to overwrite any sources */
+      () => reject()
+    );
+  });
 };
 
 Javalab.prototype.getCurrentFilesVersionId = function() {
-  return project.filesVersionId || this.initialFilesVersionId;
+  return project.filesVersionId;
 };
 
 export default Javalab;

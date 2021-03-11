@@ -9,7 +9,11 @@ import PaneHeader, {
 import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState} from '@codemirror/state';
-import {renameProjectFile, onSave} from './JavalabFileManagement';
+import {
+  renameProjectFile,
+  onSave,
+  onProjectChanged
+} from './JavalabFileManagement';
 
 const style = {
   editor: {
@@ -51,11 +55,12 @@ class JavalabEditor extends React.Component {
     this.activateRenameFile = this.activateRenameFile.bind(this);
     this.renameFileComplete = this.renameFileComplete.bind(this);
     this.onSave = onSave.bind(this);
+    this.onProjectChanged = onProjectChanged.bind(this);
 
     this.state = {
       renameFileActive: false,
       showFileManagementPanel: false,
-      oldFilename: null
+      newFilename: null
     };
   }
 
@@ -80,18 +85,21 @@ class JavalabEditor extends React.Component {
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
         this.props.setEditorText(tr.newDoc.toString());
+        this.onProjectChanged();
       }
     };
   };
 
   renameFileComplete(e) {
     e.preventDefault();
-    renameProjectFile(this.state.oldFilename, this.props.filename);
+    renameProjectFile(this.props.filename, this.state.newFilename);
+    this.props.setFilename(this.state.newFilename);
+    this.onProjectChanged();
     this.setState({renameFileActive: false});
   }
 
   activateRenameFile() {
-    this.setState({oldFilename: this.props.filename, renameFileActive: true});
+    this.setState({newFilename: this.props.filename, renameFileActive: true});
   }
 
   displayFileRename() {
@@ -101,8 +109,8 @@ class JavalabEditor extends React.Component {
           <div style={style.tab}>
             <input
               type="text"
-              value={this.props.filename}
-              onChange={e => this.props.setFilename(e.target.value)}
+              value={this.state.newFilename}
+              onChange={e => this.setState({newFilename: e.target.value})}
             />
           </div>
           <input

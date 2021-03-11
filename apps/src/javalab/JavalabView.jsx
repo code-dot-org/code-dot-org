@@ -50,7 +50,7 @@ const style = {
     flexDirection: 'column'
   },
   singleButton: {
-    // this matches the current ace editor theme we are using
+    // this matches the current code mirror theme we are using
     // TODO: either add to color.scss or use a color from there depending
     // on final theme choice.
     backgroundColor: '#272822',
