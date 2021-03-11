@@ -21066,10 +21066,14 @@ en:
               description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
             lesson-6:
               name: Introducing Sprite Lab
-              description_student: 
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
               description_teacher: Students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.
             lesson-7:
               name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write **programs**, and learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. '
             lesson-8:
               name: Sprites in Action
             lesson-9:
