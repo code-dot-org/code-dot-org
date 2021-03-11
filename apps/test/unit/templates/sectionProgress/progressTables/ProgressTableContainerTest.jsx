@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {UnconnectedProgressTableContainer as ProgressTableContainer} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
@@ -38,7 +38,7 @@ const DEFAULT_PROPS = {
 
 const setUp = (overrideProps = {}) => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return mount(<ProgressTableContainer {...props} />);
+  return shallow(<ProgressTableContainer {...props} />);
 };
 
 describe('ProgressTableContainer', () => {

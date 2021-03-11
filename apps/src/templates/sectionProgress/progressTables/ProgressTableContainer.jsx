@@ -60,12 +60,14 @@ class ProgressTableContainer extends React.Component {
         parseInt(progressTableStyles.ROW_HEIGHT)
     );
     const initialRows = Math.min(this.props.section.students.length, maxRows);
-    this.studentList.bodyComponent.setState({
-      amountOfRowsToRender: initialRows
-    });
-    this.contentView.bodyComponent.setState({
-      amountOfRowsToRender: initialRows
-    });
+    this.studentList &&
+      this.studentList.bodyComponent.setState({
+        amountOfRowsToRender: initialRows
+      });
+    this.contentView &&
+      this.contentView.bodyComponent.setState({
+        amountOfRowsToRender: initialRows
+      });
   }
 
   onScroll(e) {
