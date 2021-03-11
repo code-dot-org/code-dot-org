@@ -64,6 +64,7 @@ module Services
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
         objectives: objectives,
+        standards: Standard.all,
         lessons_standards: lessons_standards
       )
       scope = {seed_context: seed_context}
