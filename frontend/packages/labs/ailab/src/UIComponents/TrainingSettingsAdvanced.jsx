@@ -13,7 +13,7 @@ import {
 } from "../redux";
 import { styles } from "../constants";
 
-class SelectTrainer extends Component {
+class TrainingSettingsAdvanced extends Component {
   static propTypes = {
     showChooseReserve: PropTypes.bool,
     showSelectTrainer: PropTypes.bool,
@@ -152,4 +152,4 @@ export default connect(
       dispatch(setKValue(kValue));
     }
   })
-)(SelectTrainer);
+)(TrainingSettingsAdvanced);

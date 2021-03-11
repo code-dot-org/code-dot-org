@@ -17,9 +17,14 @@ class DataCard extends Component {
 
     const card = metadata && metadata.card;
 
+    const dataLengthLimit = 20000;
+    if (dataLength > dataLengthLimit) {
+      window.alert('Warning: Datasets with more than 20,000 rows will slow down the user experience.');
+    }
+
     return dataLength !== 0 && (
       <div id="data-card" style={{...styles.panel, ...styles.rightPanel}}>
-        <div style={styles.largeText}>Data Information</div>
+        <div style={styles.largeText}>Details</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
             <span style={styles.bold}>Name:</span>

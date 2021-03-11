@@ -51,7 +51,8 @@ class ColumnInspector extends Component {
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
-    setCurrentColumn: PropTypes.func
+    setCurrentColumn: PropTypes.func,
+    hideSpecifyColumns: PropTypes.bool
   };
 
   handleChangeDataType = (event, feature) => {
@@ -93,7 +94,7 @@ class ColumnInspector extends Component {
       barData.datasets[0].label = currentColumnData.id;
     }
 
-    const maxLabelsInHistogram = 4;
+    const maxLabelsInHistogram = 5;
 
     return (
       currentColumnData && (
@@ -105,30 +106,55 @@ class ColumnInspector extends Component {
           <form>
             <div>
               <label>
-                <div>
-                  {currentColumnData.id}: {currentColumnData.dataType}
-                </div>
-
+                <div>{currentColumnData.id}</div>
+                <div>Data Type:</div>
+                {this.props.hideSpecifyColumns && (
+                  <div> {currentColumnData.dataType} </div>
+                )}
+                {!this.props.hideSpecifyColumns && (
+                  <select
+                    onChange={event =>
+                      this.handleChangeDataType(event, currentColumnData.id)
+                    }
+                    value={currentColumnData.dataType}
+                  >
+                    {Object.values(ColumnTypes).map((option, index) => {
+                      return (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      );
+                    })}
+                  </select>
+                )}
                 {currentColumnData.description && (
                   <div>
                     <br />
                     <div>{currentColumnData.description}</div>
+                    <br />
                   </div>
                 )}
               </label>
 
-              {currentColumnData.dataType === ColumnTypes.CATEGORICAL &&
-                barData.labels.length <= maxLabelsInHistogram && (
-                  <div>
-                    <br />
+              {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                <div>
+                  {barData.labels.length <= maxLabelsInHistogram && (
                     <Bar
                       data={barData}
                       width={100}
                       height={150}
                       options={chartOptions}
                     />
-                  </div>
-                )}
+                  )}
+                  {barData.labels.length > maxLabelsInHistogram && (
+                    <div>
+                      {barData.labels.length} values were found in this column.
+                      A graph is only shown when there are{" "}
+                      {maxLabelsInHistogram} or fewer.
+                    </div>
+                  )}
+                </div>
+              )}
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>
@@ -165,7 +191,8 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    rangesByColumn: getRangesByColumn(state)
+    rangesByColumn: getRangesByColumn(state),
+    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

@@ -1,12 +1,16 @@
 export const ColumnTypes = {
   CATEGORICAL: "categorical",
-  CONTINUOUS: "continuous",
-  OTHER: "other"
+  CONTINUOUS: "numerical"
 };
 
 export const MLTypes = {
   CLASSIFICATION: "classification",
   REGRESSION: "regression"
+};
+
+export const ResultsGrades = {
+  CORRECT: "correct",
+  INCORRECT: "incorrect"
 };
 
 export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
@@ -194,11 +198,10 @@ export const styles = {
     width: "100%"
   },
 
-  finePrint: {
+  tableParent: {
     overflow: "scroll",
     overflowWrap: "break-word",
     fontSize: 10,
-    padding: 10,
     boxSizing: "border-box",
     borderRadius: 5,
     backgroundColor: "white"
@@ -206,7 +209,9 @@ export const styles = {
 
   dataDisplayHeader: {
     paddingLeft: 20,
-    textAlign: "right"
+    textAlign: "right",
+    position: "sticky",
+    top: 0
   },
   dataDisplayHeaderLabelSelected: {
     backgroundColor: labelColor,

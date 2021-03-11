@@ -58,7 +58,7 @@ class DataDisplay extends Component {
       }
     }
 
-    return {...style, ...styles.dataDisplayHeader};
+    return { ...style, ...styles.dataDisplayHeader };
   };
 
   getColumnCellStyle = key => {
@@ -82,7 +82,7 @@ class DataDisplay extends Component {
       }
     }
 
-    return {...style, ...styles.dataDisplayCell};
+    return { ...style, ...styles.dataDisplayCell };
   };
 
   render() {
@@ -92,18 +92,14 @@ class DataDisplay extends Component {
       <div id="data-display" style={styles.panel}>
         <div style={styles.statement}>
           Predict{" "}
-          <span
-            style={styles.statementLabel}
-          >
+          <span style={styles.statementLabel}>
             {this.props.labelColumn || "..."}
           </span>
           {currentPanel === "dataDisplayFeatures" && (
             <span>
               {" "}
               based on{" "}
-              <span
-                style={styles.statementFeature}
-              >
+              <span style={styles.statementFeature}>
                 {this.props.selectedFeatures.length > 0
                   ? this.props.selectedFeatures.join(", ")
                   : ".."}
@@ -112,55 +108,49 @@ class DataDisplay extends Component {
             </span>
           )}
         </div>
-        <div style={styles.scrollableContents}>
-          <div style={styles.scrollingContents}>
-            {this.state.showRawData && (
-              <div >
-                <div style={styles.finePrint}>
-                  <table style={styles.dataDisplayTable}>
-                    <thead>
-                      <tr>
+        {this.state.showRawData && (
+          <div style={styles.tableParent}>
+            <table style={styles.dataDisplayTable}>
+              <thead>
+                <tr>
+                  {data.length > 0 &&
+                    Object.keys(data[0]).map(key => {
+                      return (
+                        <th
+                          key={key}
+                          style={this.getColumnHeaderStyle(key)}
+                          onClick={() => setCurrentColumn(key)}
+                        >
+                          {key}
+                        </th>
+                      );
+                    })}
+                </tr>
+              </thead>
+              <tbody>
+                {data.length > 0 &&
+                  data.map((row, index) => {
+                    return (
+                      <tr key={index}>
                         {data.length > 0 &&
-                          Object.keys(data[0]).map(key => {
+                          Object.keys(row).map(key => {
                             return (
-                              <th
+                              <td
                                 key={key}
-                                style={this.getColumnHeaderStyle(key)}
+                                style={this.getColumnCellStyle(key)}
                                 onClick={() => setCurrentColumn(key)}
                               >
-                                {key}
-                              </th>
+                                {row[key]}
+                              </td>
                             );
                           })}
                       </tr>
-                    </thead>
-                    <tbody>
-                      {data.length > 0 &&
-                        data.map((row, index) => {
-                          return (
-                            <tr key={index}>
-                              {data.length > 0 &&
-                                Object.keys(row).map(key => {
-                                  return (
-                                    <td
-                                      key={key}
-                                      style={this.getColumnCellStyle(key)}
-                                      onClick={() => setCurrentColumn(key)}
-                                    >
-                                      {row[key]}
-                                    </td>
-                                  );
-                                })}
-                            </tr>
-                          );
-                        })}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
+                    );
+                  })}
+              </tbody>
+            </table>
           </div>
-        </div>
+        )}
         {!this.state.showRawData && (
           <button type="button" onClick={this.toggleRawData}>
             show data

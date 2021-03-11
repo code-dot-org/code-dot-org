@@ -1,31 +1,51 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
-import SpecifyColumns from "./UIComponents/SpecifyColumns";
-import SpecifyColumnsInfo from "./UIComponents/SpecifyColumnsInfo";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import CrossTab from "./UIComponents/CrossTab";
 import ScatterPlot from "./UIComponents/ScatterPlot";
 import DataCard from "./UIComponents/DataCard";
-import SelectTrainer from "./UIComponents/SelectTrainer";
+import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import { getPanelButtons, setCurrentPanel, validationMessages } from "./redux";
+import {
+  getPanelButtons,
+  setCurrentPanel,
+  validationMessages,
+  getTrainedModelDataToSave
+} from "./redux";
 
 class PanelButtons extends Component {
   static propTypes = {
     panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func
+    setCurrentPanel: PropTypes.func,
+    onContinue: PropTypes.func,
+    startSaveTrainedModel: PropTypes.func,
+    dataToSave: PropTypes.object
+  };
+
+  onClickPrev = () => {
+    this.props.setCurrentPanel(this.props.panelButtons.prev.panel);
+  };
+
+  onClickNext = () => {
+    if (this.props.panelButtons.next.panel === "save") {
+      this.props.startSaveTrainedModel(this.props.dataToSave);
+    } else if (this.props.panelButtons.next.panel === "continue") {
+      this.props.onContinue();
+    } else {
+      this.props.setCurrentPanel(this.props.panelButtons.next.panel);
+    }
   };
 
   render() {
-    const { panelButtons, setCurrentPanel } = this.props;
+    const { panelButtons } = this.props;
 
     return (
       <div>
@@ -34,7 +54,7 @@ class PanelButtons extends Component {
             <button
               type="button"
               style={styles.navButton}
-              onClick={() => setCurrentPanel(panelButtons.prev.panel)}
+              onClick={this.onClickPrev}
             >
               &#9664; &nbsp;
               {panelButtons.prev.text}
@@ -47,7 +67,7 @@ class PanelButtons extends Component {
             <button
               type="button"
               style={styles.navButton}
-              onClick={() => setCurrentPanel(panelButtons.next.panel)}
+              onClick={this.onClickNext}
             >
               {panelButtons.next.text}
               &nbsp; &#9654;
@@ -101,8 +121,10 @@ class App extends Component {
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
-    saveTrainedModel: PropTypes.func,
-    resultsPhase: PropTypes.number
+    onContinue: PropTypes.func,
+    resultsPhase: PropTypes.number,
+    startSaveTrainedModel: PropTypes.func,
+    dataToSave: PropTypes.object
   };
 
   render() {
@@ -110,8 +132,10 @@ class App extends Component {
       panelButtons,
       currentPanel,
       setCurrentPanel,
-      saveTrainedModel,
-      resultsPhase
+      onContinue,
+      resultsPhase,
+      dataToSave,
+      startSaveTrainedModel
     } = this.props;
 
     return (
@@ -123,17 +147,6 @@ class App extends Component {
             </ContainerLeft>
             <ContainerRight>
               <DataCard />
-            </ContainerRight>
-          </BodyContainer>
-        )}
-
-        {currentPanel === "specifyColumns" && (
-          <BodyContainer>
-            <ContainerLeft>
-              <SpecifyColumns />
-            </ContainerLeft>
-            <ContainerRight>
-              <SpecifyColumnsInfo />
             </ContainerRight>
           </BodyContainer>
         )}
@@ -154,7 +167,7 @@ class App extends Component {
         {currentPanel === "selectTrainer" && (
           <BodyContainer>
             <ContainerFullWidth>
-              <SelectTrainer />
+              <TrainingSettings />
             </ContainerFullWidth>
           </BodyContainer>
         )}
@@ -183,7 +196,7 @@ class App extends Component {
         {currentPanel === "saveModel" && (
           <BodyContainer>
             <ContainerFullWidth>
-              <SaveModel saveTrainedModel={saveTrainedModel} />
+              <SaveModel />
             </ContainerFullWidth>
           </BodyContainer>
         )}
@@ -192,6 +205,9 @@ class App extends Component {
           panelButtons={panelButtons}
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
+          onContinue={onContinue}
+          startSaveTrainedModel={startSaveTrainedModel}
+          dataToSave={dataToSave}
         />
       </div>
     );
@@ -203,7 +219,8 @@ export default connect(
     panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
     validationMessages: validationMessages(state),
-    resultsPhase: state.resultsPhase
+    resultsPhase: state.resultsPhase,
+    dataToSave: getTrainedModelDataToSave(state)
   }),
   dispatch => ({
     setCurrentPanel(panel) {

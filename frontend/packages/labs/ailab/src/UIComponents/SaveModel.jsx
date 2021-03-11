@@ -2,67 +2,46 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  setTrainedModelDetail,
-  getTrainedModelDataToSave,
-  getSelectedColumnDescriptions
-} from "../redux";
+import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
 import { styles, saveMessages } from "../constants";
 
 class SaveModel extends Component {
   static propTypes = {
-    saveTrainedModel: PropTypes.func,
     trainedModel: PropTypes.object,
     setTrainedModelDetail: PropTypes.func,
     trainedModelDetails: PropTypes.object,
-    dataToSave: PropTypes.object,
     labelColumn: PropTypes.string,
-    columnDescriptions: PropTypes.array
+    columnDescriptions: PropTypes.array,
+    saveStatus: PropTypes.string
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      saveMessage: null
-    };
-  }
 
   handleChange = (event, field, isColumn) => {
     this.props.setTrainedModelDetail(field, event.target.value, isColumn);
   };
 
-  catchResponse = response => {
-    this.setState({ saveMessage: saveMessages[response.status] });
-  };
-
-  onClickSave = () => {
-    this.setState({ saveMessage: null });
-    if (this.props.trainedModelDetails.name === undefined) {
-      this.setState({ saveMessage: saveMessages["name"] });
-    } else {
-      this.props.saveTrainedModel(this.props.dataToSave, this.catchResponse);
-    }
-  };
-
   getFields = () => {
     var fields = [];
 
-    fields.push({ id: "name", text: "Name" });
+    fields.push({ id: "name", text: "What will you name the model?" });
 
     for (const columnDescription of this.props.columnDescriptions) {
       fields.push({
         id: columnDescription.id,
         isColumn: true,
-        text: "Describe " + columnDescription.id,
+        text: "Description for: " + columnDescription.id,
         answer: columnDescription.description
       });
     }
 
-    fields.push({ id: "potentialUses", text: "How can this model be used?" });
+    fields.push({
+      id: "potentialUses",
+      text: "How can this model be used?",
+      placeholder: "Write a brief description."
+    });
     fields.push({
       id: "potentialMisuses",
-      text: "How can this model be potentially misused?"
+      text: "How can this model be potentially misused?",
+      placeholder: "Write a brief description."
     });
     fields.push({
       id: "identifySubgroup",
@@ -87,7 +66,7 @@ class SaveModel extends Component {
   render() {
     return (
       <div style={styles.panel}>
-        <div style={styles.largeText}>Save the Trained Model</div>
+        <div style={styles.largeText}>Model Details</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             {this.getFields().map(field => {
@@ -109,6 +88,7 @@ class SaveModel extends Component {
                         onChange={event =>
                           this.handleChange(event, field.id, field.isColumn)
                         }
+                        placeholder={field.placeholder}
                       />
                     </div>
                   )}
@@ -122,16 +102,9 @@ class SaveModel extends Component {
           </div>
         </div>
         <div>
-          <button
-            type="button"
-            onClick={this.onClickSave}
-            style={styles.regularButton}
-          >
-            Save Trained Model
-          </button>
-          {this.state.saveMessage && (
+          {this.props.saveStatus && (
             <div style={{ position: "absolute", bottom: 0 }}>
-              {this.state.saveMessage}
+              {saveMessages[this.props.saveStatus]}
             </div>
           )}
         </div>
@@ -144,8 +117,8 @@ export default connect(
   state => ({
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
-    dataToSave: getTrainedModelDataToSave(state),
-    columnDescriptions: getSelectedColumnDescriptions(state)
+    columnDescriptions: getSelectedColumnDescriptions(state),
+    saveStatus: state.saveStatus
   }),
   dispatch => ({
     setTrainedModelDetail(field, value, isColumn) {
