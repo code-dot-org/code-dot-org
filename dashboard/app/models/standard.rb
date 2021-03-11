@@ -81,4 +81,16 @@ class Standard < ApplicationRecord
   def self.seed
     seed_from_csv("config/standards.csv")
   end
+
+  def self.seed_all
+    Framework.all.each do |framework|
+      filename = "config/standards/#{framework.shortcode}_standards.csv"
+      CSV.foreach(filename, {headers: true}) do |row|
+        standard = Standard.find_or_initialize_by(framework: framework, shortcode: row['standard'])
+        standard.category = StandardCategory.find_by!(shortcode: row['category'])
+        standard.description = row['description']
+        standard.save! if standard.changed?
+      end
+    end
+  end
 end
