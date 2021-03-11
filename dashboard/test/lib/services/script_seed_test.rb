@@ -725,15 +725,20 @@ module Services
         is_migrated: true
       )
 
+      # Make sure that family name and version year each conform to the
+      # expected formats.
+      family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
+      version_year = "1999"
+
       if with_unit_group
-        unit_group = create :unit_group, family_name: "#{name_prefix}-family", version_year: "#{name_prefix}-version"
+        unit_group = create :unit_group, family_name: family_name, version_year: version_year
         create :unit_group_unit, unit_group: unit_group, script: script, position: 1
         CourseOffering.add_course_offering(unit_group)
       else
         script.update!(
           is_course: true,
-          family_name: "#{name_prefix}-family",
-          version_year: "#{name_prefix}-version"
+          family_name: family_name,
+          version_year: version_year
         )
         CourseOffering.add_course_offering(script)
       end

@@ -17,7 +17,7 @@
 class CourseOffering < ApplicationRecord
   has_many :course_versions
 
-  KEY_CHAR_RE = /[a-z-]/
+  KEY_CHAR_RE = /[a-z\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key,
     with: KEY_RE,
