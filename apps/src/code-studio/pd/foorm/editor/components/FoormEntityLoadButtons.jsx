@@ -14,7 +14,7 @@ class FoormEntityLoadButtons extends React.Component {
     resetCodeMirror: PropTypes.func,
     resetSelectedData: PropTypes.func,
     onSelect: PropTypes.func,
-    dropdownOptions: PropTypes.array,
+    foormEntities: PropTypes.array,
     showCodeMirror: PropTypes.func,
 
     // populated by redux
@@ -25,7 +25,7 @@ class FoormEntityLoadButtons extends React.Component {
   };
 
   getDropdownOptions() {
-    return this.props.dropdownOptions.map((dropdownOption, i) => {
+    return this.props.foormEntities.map((dropdownOption, i) => {
       return this.renderMenuItem(
         () => this.props.onSelect(dropdownOption['id']),
         dropdownOption['text'],

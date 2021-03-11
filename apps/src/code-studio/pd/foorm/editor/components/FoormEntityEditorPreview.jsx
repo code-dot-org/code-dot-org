@@ -19,7 +19,7 @@ class FoormEntityEditorPreview extends Component {
   static propTypes = {
     previewQuestions: PropTypes.object,
     forceRerenderKey: PropTypes.number,
-    surveyData: PropTypes.object,
+    foormData: PropTypes.object,
     errorMessages: PropTypes.array,
 
     // Populated by Redux
@@ -37,20 +37,22 @@ class FoormEntityEditorPreview extends Component {
   }
 
   render() {
+    const {previewQuestions, errorMessages} = this.props;
+
     return (
       <div style={styles.previewBox}>
         {this.renderErrorMessages()}
-        {this.props.previewQuestions &&
+        {previewQuestions &&
           !this.props.hasJSONError &&
-          !(this.props.errorMessages && this.props.errorMessages.length) && (
+          !(errorMessages && errorMessages.length) && (
             // key allows us to force re-render when preview is called
             <Foorm
-              formQuestions={this.props.previewQuestions}
+              formQuestions={previewQuestions}
               formName={'preview'}
               formVersion={0}
               submitApi={'/none'}
               key={`form-${this.props.forceRerenderKey}`}
-              surveyData={this.props.surveyData}
+              surveyData={this.props.foormData}
               inEditorMode={true}
             />
           )}

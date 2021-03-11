@@ -48,18 +48,14 @@ class FoormFormEditorManager extends React.Component {
     setLastSavedFormQuestions: PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    showCodeMirror: false,
+    hasLoadError: false,
+    forceRerenderKey: 0,
+    previewQuestions: null
+  };
 
-    this.state = {
-      showCodeMirror: false,
-      hasLoadError: false,
-      forceRerenderKey: 0,
-      previewQuestions: null
-    };
-  }
-
-  getDropdownOptions() {
+  getAvailableFormChoices() {
     return this.props.availableForms.map(formNameAndVersion => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
@@ -222,7 +218,7 @@ class FoormFormEditorManager extends React.Component {
           resetSelectedData={() => this.resetSelectedData()}
           showCodeMirror={() => this.showCodeMirror()}
           onSelect={formId => this.loadFormData(formId)}
-          dropdownOptions={this.getDropdownOptions()}
+          foormEntities={this.getAvailableFormChoices()}
         />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>

@@ -260,7 +260,7 @@ class FoormEntityEditor extends React.Component {
                 previewQuestions={this.props.previewQuestions}
                 forceRerenderKey={this.props.forceRerenderKey}
                 errorMessages={this.props.previewErrors}
-                surveyData={{
+                foormData={{
                   facilitators: this.state.facilitators,
                   num_facilitators: this.state.num_facilitators,
                   workshop_course: this.state.workshop_course,
