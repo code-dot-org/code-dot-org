@@ -219,4 +219,22 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     result = Services::MarkdownPreprocessor.sub_vocab_definitions(input)
     assert_equal input, result
   end
+
+  test 'build_key_re' do
+    module Foo
+      KEY_CHAR_RE = /f/
+    end
+
+    basic_re = Services::MarkdownPreprocessor.build_key_re('test', [Foo])
+    # see https://stackoverflow.com/a/34026971/1810460 for an explanation of `?-mix`
+    assert_equal(/\[test ((?-mix:f)+)\]/, basic_re)
+    assert_match(basic_re, "[test ffffffff]")
+
+    module Bar
+      KEY_CHAR_RE = /b/
+    end
+
+    assert_equal(/\[test ((?-mix:f)+)\/((?-mix:b)+)\]/, Services::MarkdownPreprocessor.build_key_re('test', [Foo, Bar]))
+    assert_equal(/\[test ((?-mix:b)+)\/((?-mix:f)+)\]/, Services::MarkdownPreprocessor.build_key_re('test', [Bar, Foo]))
+  end
 end
