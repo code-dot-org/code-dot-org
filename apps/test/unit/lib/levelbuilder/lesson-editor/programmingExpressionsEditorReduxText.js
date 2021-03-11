@@ -9,12 +9,14 @@ const getInitialState = () => [
     id: 1,
     key: 'programmingExpression-1',
     name: 'playSound',
+    category: 'UI controls',
     programmingEnvironmentName: 'applab'
   },
   {
     id: 2,
     key: 'programmingExpression-2',
     name: 'stopSound',
+    category: 'UI controls',
     programmingEnvironmentName: 'applab'
   }
 ];
@@ -30,6 +32,7 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
         id: 1,
         key: 'programmingExpression-3',
         name: 'repeatSound',
+        category: 'UI controls',
         programmingEnvironmentName: 'applab'
       })
     );
