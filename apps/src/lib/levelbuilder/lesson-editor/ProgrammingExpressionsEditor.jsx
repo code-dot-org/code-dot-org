@@ -152,7 +152,7 @@ class ProgrammingExpressionsEditor extends Component {
     value: programmingExpression.key,
     label: `${programmingExpression.name} - ${
       programmingExpression.programmingEnvironmentName
-    }`,
+    } - ${programmingExpression.category}`,
     programmingExpression
   });
 
