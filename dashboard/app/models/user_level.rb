@@ -163,7 +163,6 @@ class UserLevel < ApplicationRecord
     return false unless stage.lockable?
     return false if user.authorized_teacher?
     return false if readonly_answers
-    return true unless unlocked_at
     return locked? || submitted?
   end
 
@@ -184,8 +183,10 @@ class UserLevel < ApplicationRecord
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
+    current_submit = user_level.submitted
+
     user_level.assign_attributes(
-      submitted: readonly_answers,
+      submitted: readonly_answers || current_submit,
       readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete

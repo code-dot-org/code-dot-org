@@ -326,6 +326,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, student_3_response['readonly_answers']
     user_level_data = student_3_response['user_level_data']
     user_level = UserLevel.find_by(user_level_data)
+    assert_equal true, user_level.submitted
 
     # Now, unlock the assessment again, confirm still submitted
     updates = [
@@ -337,6 +338,7 @@ class ApiControllerTest < ActionController::TestCase
     ]
 
     post :update_lockable_state, params: {updates: updates}
+    user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.locked?
     assert_equal true, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
@@ -374,8 +376,14 @@ class ApiControllerTest < ActionController::TestCase
       },
       student_5_response['user_level_data']
     )
+
+    user_level_data = student_5_response['user_level_data']
+    user_level = UserLevel.find_by(user_level_data)
     assert_equal true, student_5_response['locked']
     assert_equal false, student_5_response['readonly_answers']
+    assert_equal true, user_level.locked?
+    assert_equal true, user_level.submitted?
+    assert_equal false, user_level.readonly_answers?
   end
 
   test "student hasn't opened the assessment, assessment still locked" do
@@ -417,6 +425,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.submitted?
 
     # Now, unlock the assessment again to simulate a retake scenario
+    user_level.delete
+    assert_nil UserLevel.find_by(user_level_data)
     updates = [
       {
         user_level_data: user_level_data,
@@ -426,6 +436,7 @@ class ApiControllerTest < ActionController::TestCase
     ]
 
     post :update_lockable_state, params: {updates: updates}
+    user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.locked?
     assert_equal false, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
@@ -584,7 +595,7 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal false, user_level.submitted?
+      assert_equal true, user_level.submitted?
       assert_equal false, user_level.locked?
       assert_equal false, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at

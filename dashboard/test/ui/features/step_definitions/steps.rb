@@ -1723,7 +1723,7 @@ end
 
 Then /^I lock the stage for students$/ do
   # lock assessment
-  @browser.execute_script("$('.modal-body button').second().click()")
+  @browser.execute_script('$(".modal-body button:contains(Lock)").click()')
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
