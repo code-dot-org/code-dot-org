@@ -1,1 +1,13 @@
-{"func":"random","category":"Math","paletteParams":["min","max"],"params":["1","5"],"type":"value"}
+{
+  "func": "random",
+  "category": "Math",
+  "paletteParams": [
+    "min",
+    "max"
+  ],
+  "params": [
+    "1",
+    "5"
+  ],
+  "type": "value"
+}

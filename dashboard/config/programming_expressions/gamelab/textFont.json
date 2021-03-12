@@ -1,1 +1,10 @@
-{"func":"textFont","category":"Drawing","paletteParams":["font"],"params":["\"Arial\""]}
+{
+  "func": "textFont",
+  "category": "Drawing",
+  "paletteParams": [
+    "font"
+  ],
+  "params": [
+    "\"Arial\""
+  ]
+}

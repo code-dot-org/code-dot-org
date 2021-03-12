@@ -1,1 +1,6 @@
-{"func":"maxDepth","category":"Groups","modeOptionName":"*.maxDepth","type":"value"}
+{
+  "func": "maxDepth",
+  "category": "Groups",
+  "modeOptionName": "*.maxDepth",
+  "type": "value"
+}

@@ -1,1 +1,12 @@
-{"func":"group.bounce","category":"Groups","paletteParams":["target"],"params":["target"],"modeOptionName":"group_bounce","noAutocomplete":true}
+{
+  "func": "group.bounce",
+  "category": "Groups",
+  "paletteParams": [
+    "target"
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "group_bounce",
+  "noAutocomplete": true
+}

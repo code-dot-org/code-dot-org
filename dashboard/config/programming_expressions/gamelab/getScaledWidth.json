@@ -1,1 +1,6 @@
-{"func":"getScaledWidth","category":"Sprites","modeOptionName":"*.getScaledWidth","type":"value"}
+{
+  "func": "getScaledWidth",
+  "category": "Sprites",
+  "modeOptionName": "*.getScaledWidth",
+  "type": "value"
+}

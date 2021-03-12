@@ -1,1 +1,5 @@
-{"func":"leftEdge","category":"Sprites","type":"readonlyproperty"}
+{
+  "func": "leftEdge",
+  "category": "Sprites",
+  "type": "readonlyproperty"
+}

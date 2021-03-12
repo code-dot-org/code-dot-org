@@ -1,1 +1,10 @@
-{"func":"angleMode","category":"Math","paletteParams":["mode"],"params":["DEGREES"]}
+{
+  "func": "angleMode",
+  "category": "Math",
+  "paletteParams": [
+    "mode"
+  ],
+  "params": [
+    "DEGREES"
+  ]
+}

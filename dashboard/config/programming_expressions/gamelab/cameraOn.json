@@ -1,1 +1,4 @@
-{"func":"camera.on","category":"World"}
+{
+  "func": "camera.on",
+  "category": "World"
+}

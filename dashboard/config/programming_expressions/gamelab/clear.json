@@ -1,1 +1,5 @@
-{"func":"clear","category":"Groups","modeOptionName":"*.clear"}
+{
+  "func": "clear",
+  "category": "Groups",
+  "modeOptionName": "*.clear"
+}

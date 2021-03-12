@@ -1,1 +1,6 @@
-{"func":"toUpperCase","category":"Variables","modeOptionName":"*.toUpperCase","type":"value"}
+{
+  "func": "toUpperCase",
+  "category": "Variables",
+  "modeOptionName": "*.toUpperCase",
+  "type": "value"
+}

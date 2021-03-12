@@ -1,1 +1,11 @@
-{"func":"mouseWentUp","paletteParams":["button"],"params":["\"leftButton\""],"category":"World","type":"value"}
+{
+  "func": "mouseWentUp",
+  "paletteParams": [
+    "button"
+  ],
+  "params": [
+    "\"leftButton\""
+  ],
+  "category": "World",
+  "type": "value"
+}

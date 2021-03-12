@@ -1,1 +1,4 @@
-{"func":"createEdgeSprites","category":"Sprites"}
+{
+  "func": "createEdgeSprites",
+  "category": "Sprites"
+}

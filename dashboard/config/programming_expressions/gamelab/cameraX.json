@@ -1,1 +1,5 @@
-{"func":"camera.x","category":"World","type":"property"}
+{
+  "func": "camera.x",
+  "category": "World",
+  "type": "property"
+}

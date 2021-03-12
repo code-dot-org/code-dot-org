@@ -1,1 +1,6 @@
-{"func":"lifetime","category":"Sprites","modeOptionName":"*.lifetime","type":"property"}
+{
+  "func": "lifetime",
+  "category": "Sprites",
+  "modeOptionName": "*.lifetime",
+  "type": "property"
+}

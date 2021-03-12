@@ -1,1 +1,11 @@
-{"func":"asin","category":"Math","paletteParams":["value"],"params":["0"],"type":"value"}
+{
+  "func": "asin",
+  "category": "Math",
+  "paletteParams": [
+    "value"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "value"
+}

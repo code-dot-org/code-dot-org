@@ -1,1 +1,5 @@
-{"func":"topEdge","category":"Sprites","type":"readonlyproperty"}
+{
+  "func": "topEdge",
+  "category": "Sprites",
+  "type": "readonlyproperty"
+}

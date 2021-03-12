@@ -1,1 +1,13 @@
-{"func":"setVelocity","category":"Sprites","paletteParams":["x","y"],"params":["1","1"],"modeOptionName":"*.setVelocity"}
+{
+  "func": "setVelocity",
+  "category": "Sprites",
+  "paletteParams": [
+    "x",
+    "y"
+  ],
+  "params": [
+    "1",
+    "1"
+  ],
+  "modeOptionName": "*.setVelocity"
+}

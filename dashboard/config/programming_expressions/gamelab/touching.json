@@ -1,1 +1,7 @@
-{"func":"touching","category":"Sprites","modeOptionName":"*.touching","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "touching",
+  "category": "Sprites",
+  "modeOptionName": "*.touching",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

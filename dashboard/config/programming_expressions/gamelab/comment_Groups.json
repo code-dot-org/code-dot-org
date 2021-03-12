@@ -1,1 +1,6 @@
-{"func":"comment_Groups","block":"// Comment","expansion":"// ","category":"Groups"}
+{
+  "func": "comment_Groups",
+  "block": "// Comment",
+  "expansion": "// ",
+  "category": "Groups"
+}

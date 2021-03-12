@@ -1,1 +1,5 @@
-{"func":"declareNoAssign_x","block":"var x;","category":"Variables"}
+{
+  "func": "declareNoAssign_x",
+  "block": "var x;",
+  "category": "Variables"
+}

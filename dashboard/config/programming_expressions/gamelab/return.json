@@ -1,1 +1,5 @@
-{"func":"return","block":"return __;","category":"Functions"}
+{
+  "func": "return",
+  "block": "return __;",
+  "category": "Functions"
+}

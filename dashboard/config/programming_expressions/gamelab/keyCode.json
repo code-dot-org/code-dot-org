@@ -1,1 +1,6 @@
-{"func":"keyCode","category":"World","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "keyCode",
+  "category": "World",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

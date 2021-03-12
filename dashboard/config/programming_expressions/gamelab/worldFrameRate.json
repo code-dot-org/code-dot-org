@@ -1,1 +1,5 @@
-{"func":"World.frameRate","category":"World","type":"property"}
+{
+  "func": "World.frameRate",
+  "category": "World",
+  "type": "property"
+}

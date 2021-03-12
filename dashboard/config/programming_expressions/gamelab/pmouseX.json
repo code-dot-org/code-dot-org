@@ -1,1 +1,6 @@
-{"func":"pmouseX","category":"World","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "pmouseX",
+  "category": "World",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

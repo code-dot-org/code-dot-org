@@ -1,1 +1,11 @@
-{"func":"setVelocityYEach","category":"Groups","paletteParams":["velocityY"],"params":["3"],"modeOptionName":"*.setVelocityYEach"}
+{
+  "func": "setVelocityYEach",
+  "category": "Groups",
+  "paletteParams": [
+    "velocityY"
+  ],
+  "params": [
+    "3"
+  ],
+  "modeOptionName": "*.setVelocityYEach"
+}

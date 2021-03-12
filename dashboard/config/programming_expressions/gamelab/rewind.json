@@ -1,1 +1,6 @@
-{"func":"rewind","category":"Animations","modeOptionName":"*.rewind","noAutocomplete":true}
+{
+  "func": "rewind",
+  "category": "Animations",
+  "modeOptionName": "*.rewind",
+  "noAutocomplete": true
+}

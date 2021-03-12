@@ -1,1 +1,5 @@
-{"func":"camera.isActive","category":"World","type":"value"}
+{
+  "func": "camera.isActive",
+  "category": "World",
+  "type": "value"
+}

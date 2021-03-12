@@ -1,1 +1,6 @@
-{"func":"mouseIsPressed","category":"World","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "mouseIsPressed",
+  "category": "World",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

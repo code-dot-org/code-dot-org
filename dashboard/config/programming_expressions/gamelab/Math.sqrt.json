@@ -1,1 +1,9 @@
-{"func":"Math.sqrt","category":"Math","type":"value","params":["__"],"docFunc":"mathSqrt"}
+{
+  "func": "Math.sqrt",
+  "category": "Math",
+  "type": "value",
+  "params": [
+    "__"
+  ],
+  "docFunc": "mathSqrt"
+}
