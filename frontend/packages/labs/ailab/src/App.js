@@ -173,13 +173,6 @@ class App extends Component {
             <ColumnInspector columnRefs={this.columnRefs} />
             <ContainerRight>
               <PhraseBuilder />
-              {false && currentPanel === "dataDisplayLabel" && (
-                <ColumnInspector />
-              )}
-              {false && currentPanel === "dataDisplayFeatures" && <CrossTab />}
-              {false && currentPanel === "dataDisplayFeatures" && (
-                <ScatterPlot />
-              )}
             </ContainerRight>
           </BodyContainer>
         )}

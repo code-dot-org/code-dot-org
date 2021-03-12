@@ -989,8 +989,7 @@ export function getPredictAvailable(state) {
 const panelList = [
   { id: "selectDataset", label: "Import" },
   { id: "specifyColumns", label: "Columns" },
-  { id: "dataDisplayLabel", label: "Label" },
-  { id: "dataDisplayFeatures", label: "Features" },
+  { id: "dataDisplay", label: "Data" },
   { id: "selectTrainer", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
@@ -1010,18 +1009,6 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "specifyColumns") {
     if (state.data.length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayLabel") {
-    if (state.data.length === 0) {
-      return false;
-    }
-  }
-
-  if (panelId === "dataDisplayFeatures") {
-    if (!state.labelColumn) {
       return false;
     }
   }
@@ -1096,7 +1083,7 @@ export function getPanelButtons(state) {
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
-    prev = { panel: "dataDisplayFeatures", text: "Back" };
+    prev = { panel: "dataDisplay", text: "Back" };
     next = isPanelEnabled(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
@@ -1106,7 +1093,7 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = { panel: "dataDisplayFeatures", text: "Back" };
+    prev = { panel: "dataDisplay", text: "Back" };
     next = isPanelEnabled(state, "saveModel")
       ? { panel: "saveModel", text: "Save" }
       : { panel: "continue", text: "Continue" };
