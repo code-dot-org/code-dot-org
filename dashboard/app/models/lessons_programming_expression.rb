@@ -25,7 +25,7 @@ class LessonsProgrammingExpression < ApplicationRecord
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
   def seeding_key(seed_context)
     my_lesson = seed_context.lessons.select {|l| l.id == lesson_id}.first
-    my_programming_expression = ProgrammingExpression.find_by(id: programming_expression_id)
+    my_programming_expression = seed_context.programming_expressions.select {|pe| pe.id == programming_expression_id}.first
     {
       'lesson.key' => my_lesson.key,
       'programming_expression.key' => my_programming_expression.key
