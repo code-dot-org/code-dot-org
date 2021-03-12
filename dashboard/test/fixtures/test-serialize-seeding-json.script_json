@@ -12,7 +12,6 @@
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
-    "serialized_at": "2021-03-12 02:50:09 UTC",
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
