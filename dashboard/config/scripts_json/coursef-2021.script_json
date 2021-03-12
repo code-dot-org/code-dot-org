@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-12 19:56:50 UTC",
+    "serialized_at": "2021-03-12 23:04:37 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -207,6 +207,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "In this activity, students will use fill-in-the-blank stories (similar to Mad Libs) as a context for understanding how computers take and store input from a user, then use it later as a program runs. ",
+        "student_overview": "In this activity, you will use fill-in-the-blank stories (similar to Mad Libs) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. ",
+        "purpose": "This lesson provides a shared context that will be helpful for understanding how **variables** work when students return to programming.",
+        "preparation": "Obtain 6 envelopes (also suitable: paper or index cards, folded in half). \n\n- Label the front of each envelope with large letters: object, liquid, number, adjective, body part, number\n-  Print copies of the student worksheet (or post the digital version to your LMS).\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -251,7 +255,7 @@
     },
     {
       "key": "Variables that Change in Artist",
-      "name": "Changing Variables with Artist",
+      "name": "Using Variables with the Artist",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -271,15 +275,15 @@
     },
     {
       "key": "Nested Loops in the Maze",
-      "name": "Nested Loops in Maze",
+      "name": "Programming with the Bee",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.",
-        "student_overview": "**Loops** inside **loops** inside **loops**. What does this mean? This lesson will teach you what happens when you place a **loop** inside another **loop**.",
-        "purpose": "In this introduction to _nested loops_, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* repeated patterns to develop these _nested loops_. This stage starts off by encouraging students try to solve a puzzle where the code is irritating and complex to write out the long way. After a video introduces _nested loops_, students are shown an example and asked to predict what will happen when a loop is put inside of another loop. This progression leads into plenty of practice for students to solidify and build on their understanding of looping in programming.",
+        "overview": "In this online activity, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.",
+        "student_overview": "This lesson will teach you what happens when you place a **loop** inside another **loop**.",
+        "purpose": "This lesson introduces (or reviews) how Bee puzzles work and introduces students to _nested loops_. The next lesson will return to variables.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -785,6 +789,60 @@
       "seeding_key": {
         "lesson_activity.key": "4cd953ae-9546-4cdf-b6ea-860212b4875f",
         "lesson.key": "Virtual Pet",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "a9ccd961-d02e-484a-9d5f-e16bcfce3f58",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9ccd961-d02e-484a-9d5f-e16bcfce3f58",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "e62e3105-f2ad-444d-a15c-0b455f02b05c",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e62e3105-f2ad-444d-a15c-0b455f02b05c",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "ramp_up",
         "script.name": "coursef-2021"
       }
@@ -2310,6 +2368,128 @@
       }
     },
     {
+      "key": "c03754de-e580-4e9f-b58e-af136a073898",
+      "position": 1,
+      "properties": {
+        "name": "Introduction",
+        "description": "####Blank Space Stories (5 mins)\n\n**Do this:** Show the first blank space story (Favorite Meal) on the board. \n\n**Prompt:** _How do you think this blank space story works? What do you notice about the labels for each blank space?_\n\nIt’s important that students understand one person typically provides the words designated by each label without seeing the story first. Students may notice that each space has a unique label.\n\n####Favorite Meal [5 mins]\n\n**Do This:**\nPrepare the first three envelopes for demonstration.\nIf using the slides, advance the animation to show the three purple boxes. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c03754de-e580-4e9f-b58e-af136a073898",
+        "lesson_activity.key": "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737"
+      }
+    },
+    {
+      "key": "7a4a67f6-dfb0-42ee-a28c-b6604100abde",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "\nIn a moment, I’ll have volunteers to help us fill in the blank. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a4a67f6-dfb0-42ee-a28c-b6604100abde",
+        "lesson_activity.key": "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737"
+      }
+    },
+    {
+      "key": "ffa7ea29-3325-4d95-8766-4411729f47d9",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Facilitate handing out and collecting the envelopes marked “object”, “liquid”, and “number”. Once collected, keep the envelopes closed and begin reading the story. Only when you reach each blank, open the envelope and read the value stored.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffa7ea29-3325-4d95-8766-4411729f47d9",
+        "lesson_activity.key": "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737"
+      }
+    },
+    {
+      "key": "437d0e58-a47c-4ea2-8125-501e4c0b154f",
+      "position": 4,
+      "properties": {
+        "description": "####Party Games (5 mins)\n\n**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You request and store the information from the user and then work out how to put the story together. To involved more students and have them act out this model, assign roles:\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n_Users:_ Submit the words needed to complete the story.\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief (5 mins)\n\n**Discuss:** How is writing a blank space story different from writing a normal story?"
+      },
+      "seeding_key": {
+        "activity_section.key": "437d0e58-a47c-4ea2-8125-501e4c0b154f",
+        "lesson_activity.key": "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737"
+      }
+    },
+    {
+      "key": "fefc9dd6-ed1d-411b-ae3e-75a95da347b9",
+      "position": 1,
+      "properties": {
+        "name": "Create Your Own Story (20 mins)",
+        "remarks": true,
+        "description": "In today’s activity, you’ll work with a group to create your own blank space story. "
+      },
+      "seeding_key": {
+        "activity_section.key": "fefc9dd6-ed1d-411b-ae3e-75a95da347b9",
+        "lesson_activity.key": "a9ccd961-d02e-484a-9d5f-e16bcfce3f58"
+      }
+    },
+    {
+      "key": "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Pass out the ***lesson worksheet** and go over the instructions. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Writing a blank space story can be surprisingly challenging. It can be helpful to give students suggestions of themes to inspire and focus their writing. Consider having students work on this task in groups so they can collaborate.\n\n**Topic suggestions:**\n- imaginary class field trip\n\n- unusual holiday\n\n- movie review\n\n- morning routine\n\n- a day at the beach\n\n- how to fly a kite\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6",
+        "lesson_activity.key": "a9ccd961-d02e-484a-9d5f-e16bcfce3f58"
+      }
+    },
+    {
+      "key": "964a07f1-99da-434f-ae2c-26a3aa6b8d7a",
+      "position": 1,
+      "properties": {
+        "description": "####Share Your Stories (10 mins)\n**Do This:** Pair up two groups and have them take turns sharing their stories. \n\nIf you have enough time and materials, give students their own envelopes to label and exchange. This will help students build the right mental model for how this exchange works when they transition back to programming.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "964a07f1-99da-434f-ae2c-26a3aa6b8d7a",
+        "lesson_activity.key": "e62e3105-f2ad-444d-a15c-0b455f02b05c"
+      }
+    },
+    {
+      "key": "035f92b6-2d03-4fec-adc4-a15a1b620f08",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "description": "####Connecting to Computer Science (10 mins)\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "035f92b6-2d03-4fec-adc4-a15a1b620f08",
+        "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
+      }
+    },
+    {
+      "key": "220a9c31-c877-4fe2-83ef-722e93bed0a5",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "The blank spaces in these stories work like containers for information. Each container also has a label. In computer science, we call something like this a variable."
+      },
+      "seeding_key": {
+        "activity_section.key": "220a9c31-c877-4fe2-83ef-722e93bed0a5",
+        "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
+      }
+    },
+    {
+      "key": "b764363d-61f2-4d3d-b352-d0a985e2076a",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion:** How do these stories relate to how computers get information from a user?\n\nThe lesson slides include 3 sample apps that all ask the user for text, such as a word, search term, or username. Guide students to make connections between blank space stories and the input functionality of real apps. Each app is prompting the user for information that would be stored in a variable.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b764363d-61f2-4d3d-b352-d0a985e2076a",
+        "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
+      }
+    },
+    {
       "key": "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3",
       "position": 1,
       "properties": {
@@ -2404,8 +2584,8 @@
       "key": "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf",
       "position": 1,
       "properties": {
-        "description": "It might be helpful to remind students of \"Variables that Change in Bee,\" since **variables** will be used in a similar way here.\n\n- How can we change the value of a **variable** inside of a loop?\n- Do we have to change the value of a **variable** only by one each time?",
-        "name": "Introduction\r"
+        "description": "It might be helpful to remind students of what they know about variables so far?\n\n- How are variables like a box or container?\n- Once information is stored in a variable, how do we use it later in a program?",
+        "name": "Review"
       },
       "seeding_key": {
         "activity_section.key": "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf",
@@ -2462,7 +2642,7 @@
       "key": "910b513b-27b0-40c5-9793-782805d1da8e",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Have you tried mixing multiple variables into one program?  What might that look like? When would it be helpful?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Have you tried mixing multiple variables into one program?  What might that look like? When would it be helpful?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2474,7 +2654,7 @@
       "key": "92794e43-3dbb-4bf1-8326-f9ed17ef86b7",
       "position": 1,
       "properties": {
-        "description": "Briefly review with the class what loops are and why we use them.\n\n - *What do loops do?*\n    - Loops repeat a set of commands. (see vocabulary on command if students don't recognize it)\n - *How do we use loops?*\n    - We use loops to create a pattern made of repeated actions.\n\nTell the class that they will now be doing something super cool: using loops inside loops. Ask the class to predict what kinds of things we would be using a loop inside of a loop for.\n\n*If a loop repeats a pattern, then looping a loop would repeat a pattern of patterns!*\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
+        "description": "Briefly review with the class what loops are and why we use them.\n\n - *What do loops do?*\n    - Loops repeat a set of commands. \n - *How do we use loops?*\n    - We use loops to create a pattern made of repeated actions.\n\nTell the class that they will now be doing something super cool: using loops inside loops. Ask the class to predict what kinds of things we would be using a loop inside of a loop for.\n\n*If a loop repeats a pattern, then looping a loop would repeat a pattern of patterns!*\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2486,8 +2666,6 @@
       "key": "3f6c9b0e-3d5e-4a26-932f-5df310c1c8b6",
       "position": 1,
       "properties": {
-        "description": "We highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nAlso, have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks you can use, so if students like to write out the long answer to find the repeats, paper can be useful.",
-        "name": "Nested Loops in Maze"
       },
       "seeding_key": {
         "activity_section.key": "3f6c9b0e-3d5e-4a26-932f-5df310c1c8b6",
@@ -2498,7 +2676,7 @@
       "key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20",
@@ -2509,7 +2687,7 @@
       "key": "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6",
       "position": 3,
       "properties": {
-        "progression_name": "Nested Loops with the Bee"
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6",
@@ -2517,57 +2695,18 @@
       }
     },
     {
-      "key": "92fe0950-9345-449a-abfd-7ef182e98281",
+      "key": "6cef858a-437c-47a3-9c8a-1229f634948a",
       "position": 4,
       "properties": {
-        "progression_name": "Prediction"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson can be challenging. Consider using \"pair programming\" so students can collaborate and support each other."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "92fe0950-9345-449a-abfd-7ef182e98281",
-        "lesson_activity.key": "f77093dc-7c10-4fac-b5a3-510056ad6c61"
-      }
-    },
-    {
-      "key": "66c65659-e870-45aa-a864-61b501ef121b",
-      "position": 5,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b",
-        "lesson_activity.key": "f77093dc-7c10-4fac-b5a3-510056ad6c61"
-      }
-    },
-    {
-      "key": "885785a2-f698-44f7-b00a-1529e3d3b0ce",
-      "position": 6,
-      "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "885785a2-f698-44f7-b00a-1529e3d3b0ce",
-        "lesson_activity.key": "f77093dc-7c10-4fac-b5a3-510056ad6c61"
-      }
-    },
-    {
-      "key": "6f07e6a9-7d36-43e2-88a9-c7c977d7a5cb",
-      "position": 7,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "6f07e6a9-7d36-43e2-88a9-c7c977d7a5cb",
-        "lesson_activity.key": "f77093dc-7c10-4fac-b5a3-510056ad6c61"
-      }
-    },
-    {
-      "key": "2b14df0c-9eb2-43fa-9e00-706a523c4631",
-      "position": 8,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "2b14df0c-9eb2-43fa-9e00-706a523c4631",
+        "activity_section.key": "6cef858a-437c-47a3-9c8a-1229f634948a",
         "lesson_activity.key": "f77093dc-7c10-4fac-b5a3-510056ad6c61"
       }
     },
@@ -2575,7 +2714,7 @@
       "key": "1e7ed1a3-de4a-4a92-9732-80d71572719d",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What is a nested loop?\n - Can you draw a puzzle that would use a nested loop? Try coding the solution to your own puzzle.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What is a nested loop?\n - Can you draw a puzzle that would use a nested loop? Try coding the solution to your own puzzle.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2587,7 +2726,7 @@
       "key": "3d33fa77-1fa9-4e46-921f-fd661884b23f",
       "position": 1,
       "properties": {
-        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-05-16-15.16.20.png\" style=\"max-width: 400px;\">\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  Suppose all of the flowers/honeycomb in this picture had the same amount of nectar/honey. How would you solve this puzzle?\n\n**Share:** Let students share their ideas until you decide on one that the entire class is good with.\n\n**Discuss:**\nNow, imagine that we didn't want to have to write a separate chunk of code for each set of flowers and honeycomb.  How could we use a variable to have our loop do this for us?\n\n",
+        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n![](https://images.code.org/a79f4f074b2018d6e17e38c99539cd69-mapcopy.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  Suppose all of the flowers/honeycomb in this picture had the same amount of nectar/honey. How would you solve this puzzle?\n\n**Share:** Let students share their ideas until you decide on one that the entire class is good with.\n\n**Discuss:**\nNow, imagine that we didn't want to have to write a separate chunk of code for each set of flowers and honeycomb.  How could we use a variable to have our loop do this for us?\n\n",
         "name": "Introduction",
         "tips": [
           {
@@ -5436,9 +5575,9 @@
       "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseD_bee_nestedLoops1a_2021"
         ]
@@ -5462,9 +5601,55 @@
       "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee2"
+        ],
+        "lesson.key": "Nested Loops in the Maze",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20"
+      },
+      "level_keys": [
+        "courseF_bee2"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee1"
+        ],
+        "lesson.key": "Nested Loops in the Maze",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20"
+      },
+      "level_keys": [
+        "courseF_bee1"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "courseD_bee_nestedLoops1_2021"
         ]
@@ -5485,21 +5670,18 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 3,
+      "chapter": 46,
+      "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Nested Loops with the Bee",
-        "level_keys": [
-          "courseD_video_nestedLoops_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_video_nestedLoops_2021"
+          "courseF_bee_practice"
         ],
         "lesson.key": "Nested Loops in the Maze",
         "lesson_group.key": "lessonGroup-8",
@@ -5507,275 +5689,14 @@
         "activity_section.key": "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6"
       },
       "level_keys": [
-        "courseD_video_nestedLoops_2021"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Prediction",
-        "level_keys": [
-          "courseD_bee_nestedLoops2_predict1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops2_predict1_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "92fe0950-9345-449a-abfd-7ef182e98281"
-      },
-      "level_keys": [
-        "courseD_bee_nestedLoops2_predict1_2021"
-      ]
-    },
-    {
-      "chapter": 46,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_bee_nestedLoops2_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops2_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      },
-      "level_keys": [
-        "courseD_bee_nestedLoops2_2021"
+        "courseF_bee_practice"
       ]
     },
     {
       "chapter": 47,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_maze_nestedLoops3_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops3_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      },
-      "level_keys": [
-        "courseD_maze_nestedLoops3_2021"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_maze_nestedLoops4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops4_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      },
-      "level_keys": [
-        "courseD_maze_nestedLoops4_2021"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_maze_nestedLoops5_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops5_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      },
-      "level_keys": [
-        "courseD_maze_nestedLoops5_2021"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 9,
-      "activity_section_position": 5,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_maze_nestedLoops6_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops6_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      },
-      "level_keys": [
-        "courseD_maze_nestedLoops6_2021"
-      ]
-    },
-    {
-      "chapter": 51,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Challenge",
-        "challenge": true,
-        "level_keys": [
-          "courseD_bee_nestedLoops7_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops7_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "885785a2-f698-44f7-b00a-1529e3d3b0ce"
-      },
-      "level_keys": [
-        "courseD_bee_nestedLoops7_2021"
-      ]
-    },
-    {
-      "chapter": 52,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_bee_nestedLoops8_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops8_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "6f07e6a9-7d36-43e2-88a9-c7c977d7a5cb"
-      },
-      "level_keys": [
-        "courseD_bee_nestedLoops8_2021"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseD_bee_nestedLoops9_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops9_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "6f07e6a9-7d36-43e2-88a9-c7c977d7a5cb"
-      },
-      "level_keys": [
-        "courseD_bee_nestedLoops9_2021"
-      ]
-    },
-    {
-      "chapter": 54,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Prediction",
-        "level_keys": [
-          "courseD_bee_nestedLoops9_predict2_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops9_predict2_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "2b14df0c-9eb2-43fa-9e00-706a523c4631"
-      },
-      "level_keys": [
-        "courseD_bee_nestedLoops9_predict2_2021"
-      ]
-    },
-    {
-      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5798,10 +5719,10 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5824,10 +5745,10 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5850,10 +5771,10 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5876,10 +5797,10 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5902,10 +5823,10 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5929,10 +5850,10 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5955,7 +5876,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5981,7 +5902,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6007,7 +5928,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6033,7 +5954,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6059,7 +5980,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -6085,7 +6006,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6111,7 +6032,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -6137,7 +6058,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 61,
       "position": 7,
       "activity_section_position": 3,
       "assessment": null,
@@ -6163,7 +6084,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 62,
       "position": 8,
       "activity_section_position": 4,
       "assessment": null,
@@ -6189,7 +6110,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 63,
       "position": 9,
       "activity_section_position": 5,
       "assessment": null,
@@ -6215,7 +6136,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 64,
       "position": 10,
       "activity_section_position": 6,
       "assessment": null,
@@ -6241,7 +6162,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 65,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -6268,7 +6189,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 66,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6294,7 +6215,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 67,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6320,7 +6241,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 68,
       "position": 14,
       "activity_section_position": 2,
       "assessment": null,
@@ -6346,7 +6267,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6372,7 +6293,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6398,7 +6319,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6424,7 +6345,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -6450,7 +6371,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -6476,7 +6397,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -6502,7 +6423,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 5,
       "assessment": null,
@@ -6528,7 +6449,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": 6,
       "assessment": null,
@@ -6554,7 +6475,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 77,
       "position": 9,
       "activity_section_position": 7,
       "assessment": null,
@@ -6580,7 +6501,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 78,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -6606,7 +6527,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 79,
       "position": 11,
       "activity_section_position": 1,
       "assessment": null,
@@ -6632,7 +6553,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 80,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -6658,7 +6579,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 81,
       "position": 13,
       "activity_section_position": 1,
       "assessment": null,
@@ -6684,7 +6605,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 82,
       "position": 14,
       "activity_section_position": 2,
       "assessment": null,
@@ -6710,7 +6631,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6736,7 +6657,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6762,7 +6683,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6787,7 +6708,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6812,7 +6733,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6837,7 +6758,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6862,7 +6783,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6887,7 +6808,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6912,7 +6833,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 91,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6937,7 +6858,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 92,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -6962,7 +6883,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 93,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6987,7 +6908,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7013,7 +6934,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7039,7 +6960,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7065,7 +6986,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7091,7 +7012,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7117,7 +7038,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7143,7 +7064,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -7169,7 +7090,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -7195,7 +7116,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -7221,7 +7142,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -7247,7 +7168,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -7273,7 +7194,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 105,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -7300,7 +7221,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 106,
       "position": 9,
       "activity_section_position": 2,
       "assessment": null,
@@ -7327,7 +7248,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7353,7 +7274,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7379,7 +7300,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 109,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -7405,7 +7326,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 110,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -7431,7 +7352,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 111,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -7457,7 +7378,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 112,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -7483,7 +7404,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 113,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -7509,7 +7430,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 114,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -7535,7 +7456,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 115,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -7561,7 +7482,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 116,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -7587,7 +7508,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 117,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -7613,7 +7534,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 118,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -7639,7 +7560,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 119,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -7665,7 +7586,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 120,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7691,7 +7612,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 121,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7717,7 +7638,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 122,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -7743,7 +7664,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 123,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -7769,7 +7690,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 124,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -7795,7 +7716,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 125,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -7821,7 +7742,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 126,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -7847,7 +7768,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 127,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -7873,7 +7794,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 128,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -7899,7 +7820,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 129,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -7925,7 +7846,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7951,7 +7872,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7977,7 +7898,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -8003,7 +7924,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -8029,7 +7950,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -8055,7 +7976,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -8081,7 +8002,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -8107,7 +8028,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 137,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -8133,7 +8054,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 138,
       "position": 9,
       "activity_section_position": 3,
       "assessment": null,
@@ -8159,10 +8080,10 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 139,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8185,10 +8106,10 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 140,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8211,10 +8132,10 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 141,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8237,10 +8158,10 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 142,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8263,10 +8184,10 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 143,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8289,10 +8210,10 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 144,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8315,10 +8236,10 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 145,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8848,6 +8769,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseF_bee2",
+        "script_level.level_keys": [
+          "courseF_bee2"
+        ],
+        "lesson.key": "Nested Loops in the Maze",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee1",
+        "script_level.level_keys": [
+          "courseF_bee1"
+        ],
+        "lesson.key": "Nested Loops in the Maze",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseD_bee_nestedLoops1_2021",
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1_2021"
@@ -8860,134 +8805,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_video_nestedLoops_2021",
+        "level.key": "courseF_bee_practice",
         "script_level.level_keys": [
-          "courseD_video_nestedLoops_2021"
+          "courseF_bee_practice"
         ],
         "lesson.key": "Nested Loops in the Maze",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021",
         "activity_section.key": "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_bee_nestedLoops2_predict1_2021",
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops2_predict1_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "92fe0950-9345-449a-abfd-7ef182e98281"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_bee_nestedLoops2_2021",
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops2_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_maze_nestedLoops3_2021",
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops3_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_maze_nestedLoops4_2021",
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops4_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_maze_nestedLoops5_2021",
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops5_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_maze_nestedLoops6_2021",
-        "script_level.level_keys": [
-          "courseD_maze_nestedLoops6_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "66c65659-e870-45aa-a864-61b501ef121b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_bee_nestedLoops7_2021",
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops7_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "885785a2-f698-44f7-b00a-1529e3d3b0ce"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_bee_nestedLoops8_2021",
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops8_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "6f07e6a9-7d36-43e2-88a9-c7c977d7a5cb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_bee_nestedLoops9_2021",
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops9_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "6f07e6a9-7d36-43e2-88a9-c7c977d7a5cb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_bee_nestedLoops9_predict2_2021",
-        "script_level.level_keys": [
-          "courseD_bee_nestedLoops9_predict2_2021"
-        ],
-        "lesson.key": "Nested Loops in the Maze",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "coursef-2021",
-        "activity_section.key": "2b14df0c-9eb2-43fa-9e00-706a523c4631"
       }
     },
     {
@@ -10265,6 +10090,29 @@
       }
     },
     {
+      "name": "Variables: Blank Space Stories",
+      "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/edit?usp=sharing",
+      "key": "variables_blank_space_stories",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "variables_blank_space_stories"
+      }
+    },
+    {
+      "name": "Blank Space Stories - Worksheet",
+      "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
+      "key": "blank_space_stories_-_worksheet",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "blank_space_stories_-_worksheet"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
@@ -10703,6 +10551,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "variables_blank_space_stories"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "blank_space_stories_-_worksheet"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Variables that Change in Artist",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -10957,6 +10817,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
       }
     },
     {
@@ -11331,6 +11201,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops with the Artist",
         "vocabulary.key": "loop"
       }
@@ -11605,6 +11481,46 @@
       "seeding_key": {
         "lesson.key": "Virtual Pet",
         "objective.key": "cb9ec256-91d1-4dde-8cff-69bdb063aa0a"
+      }
+    },
+    {
+      "key": "106cae6e-93eb-48ca-b7bf-c8017b52139d",
+      "properties": {
+        "description": "Declare a variable"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "106cae6e-93eb-48ca-b7bf-c8017b52139d"
+      }
+    },
+    {
+      "key": "7c2d78e6-377a-491c-9be0-3378e4a9357e",
+      "properties": {
+        "description": "Assign a variable a value"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "7c2d78e6-377a-491c-9be0-3378e4a9357e"
+      }
+    },
+    {
+      "key": "41ddf297-8c92-42c1-8157-97ba0660483d",
+      "properties": {
+        "description": "Call a variable multiple times in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "41ddf297-8c92-42c1-8157-97ba0660483d"
+      }
+    },
+    {
+      "key": "55e42aa4-7f88-4f0f-9d90-97716ef3ab75",
+      "properties": {
+        "description": "Determine the relationship between how a variable is defined, stored, and retrieved when we press “Run” on a program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "55e42aa4-7f88-4f0f-9d90-97716ef3ab75"
       }
     },
     {
